@@ -30,38 +30,36 @@ class KAboutApplicationPersonListDelegate : public KWidgetItemDelegate
 {
     Q_OBJECT
 public:
-    KAboutApplicationPersonListDelegate( QAbstractItemView *itemView,
-                                         QObject *parent = 0 );
+    KAboutApplicationPersonListDelegate(QAbstractItemView *itemView,
+                                        QObject *parent = 0);
 
     ~KAboutApplicationPersonListDelegate() {}
 
-    void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
-    QSize sizeHint( const QStyleOptionViewItem &option, const QModelIndex &index ) const;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
     QList< QWidget *> createItemWidgets(const QModelIndex &index) const;
 
-    void updateItemWidgets( const QList<QWidget *> widgets,
-                            const QStyleOptionViewItem &option,
-                            const QPersistentModelIndex &index ) const;
+    void updateItemWidgets(const QList<QWidget *> widgets,
+                           const QStyleOptionViewItem &option,
+                           const QPersistentModelIndex &index) const;
 
 private Q_SLOTS:
-    void launchUrl( QAction *action ) const;
+    void launchUrl(QAction *action) const;
 
 private:
-    int heightForString( const QString &string, int lineWidth, const QStyleOptionViewItem &option ) const;
-    QString buildTextForProfile( const KAboutApplicationPersonProfile &profile ) const;
-    QRect widgetsRect( const QStyleOptionViewItem &option, const QPersistentModelIndex &index ) const;
+    int heightForString(const QString &string, int lineWidth, const QStyleOptionViewItem &option) const;
+    QString buildTextForProfile(const KAboutApplicationPersonProfile &profile) const;
+    QRect widgetsRect(const QStyleOptionViewItem &option, const QPersistentModelIndex &index) const;
 
-    enum DelegateWidgets
-    {
+    enum DelegateWidgets {
         TextLabel = 0,
         MainLinks,
         SocialLinks
     };
 
-    enum MainLinkActions
-    {
+    enum MainLinkActions {
         EmailAction = 0,
         HomepageAction,
         VisitProfileAction

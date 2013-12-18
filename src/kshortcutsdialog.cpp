@@ -54,7 +54,6 @@
 /*                                                                      */
 /************************************************************************/
 
-
 QKeySequence primarySequence(const QList<QKeySequence> &sequences)
 {
     return sequences.isEmpty() ? QKeySequence() : sequences.at(0);
@@ -64,7 +63,6 @@ QKeySequence alternateSequence(const QList<QKeySequence> &sequences)
 {
     return sequences.size() <= 1 ? QKeySequence() : sequences.at(1);
 }
-
 
 class KShortcutsDialog::KShortcutsDialogPrivate
 {
@@ -78,7 +76,7 @@ public:
     {
     }
 
-    QList<KActionCollection*> m_collections;
+    QList<KActionCollection *> m_collections;
 
     void changeShortcutScheme(const QString &scheme)
     {
@@ -96,7 +94,7 @@ public:
             // passing an empty stream forces the clients to reread the XML
             KXMLGUIClient *client = const_cast<KXMLGUIClient *>(collection->parentGUIClient());
             if (client) {
-                client->setXMLGUIBuildDocument( QDomDocument() );
+                client->setXMLGUIBuildDocument(QDomDocument());
             }
         }
 
@@ -116,7 +114,7 @@ public:
         }
 
         QApplication::restoreOverrideCursor();
-     }
+    }
 
     void undoChanges()
     {
@@ -138,13 +136,12 @@ public:
     }
 
     KShortcutsDialog *q;
-    KShortcutsEditor* m_keyChooser; // ### move
-    KShortcutSchemesEditor* m_schemeEditor;
+    KShortcutsEditor *m_keyChooser; // ### move
+    KShortcutSchemesEditor *m_schemeEditor;
     QPushButton *m_detailsButton;
 };
 
-
-KShortcutsDialog::KShortcutsDialog( KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent )
+KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
     : QDialog(parent), d(new KShortcutsDialogPrivate(this))
 {
     setWindowTitle(i18n("Configure Shortcuts"));
@@ -153,12 +150,12 @@ KShortcutsDialog::KShortcutsDialog( KShortcutsEditor::ActionTypes types, KShortc
     QVBoxLayout *layout = new QVBoxLayout;
     setLayout(layout);
 
-    d->m_keyChooser = new KShortcutsEditor( this, types, allowLetterShortcuts );
+    d->m_keyChooser = new KShortcutsEditor(this, types, allowLetterShortcuts);
     layout->addWidget(d->m_keyChooser);
 
     d->m_schemeEditor = new KShortcutSchemesEditor(this);
-    connect( d->m_schemeEditor, SIGNAL(shortcutsSchemeChanged(QString)),
-             this, SLOT(changeShortcutScheme(QString)) );
+    connect(d->m_schemeEditor, SIGNAL(shortcutsSchemeChanged(QString)),
+            this, SLOT(changeShortcutScheme(QString)));
     d->m_schemeEditor->hide();
     layout->addWidget(d->m_schemeEditor);
 
@@ -179,24 +176,22 @@ KShortcutsDialog::KShortcutsDialog( KShortcutsEditor::ActionTypes types, KShortc
     connect(buttonBox->button(QDialogButtonBox::Reset), SIGNAL(clicked()),
             d->m_keyChooser, SLOT(allDefault()));
     connect(d->m_detailsButton, SIGNAL(clicked()), this, SLOT(toggleDetails()));
-    connect(printButton, SIGNAL(clicked()), d->m_keyChooser, SLOT(printShortcuts()) );
+    connect(printButton, SIGNAL(clicked()), d->m_keyChooser, SLOT(printShortcuts()));
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(undoChanges()));
 
     connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
 
-    KConfigGroup group( KSharedConfig::openConfig(), "KShortcutsDialog Settings" );
-    resize( group.readEntry( "Dialog Size", sizeHint() ) );
+    KConfigGroup group(KSharedConfig::openConfig(), "KShortcutsDialog Settings");
+    resize(group.readEntry("Dialog Size", sizeHint()));
 }
-
 
 KShortcutsDialog::~KShortcutsDialog()
 {
-    KConfigGroup group( KSharedConfig::openConfig(), "KShortcutsDialog Settings" );
-    group.writeEntry( "Dialog Size", size(), KConfigGroup::Persistent|KConfigGroup::Global );
+    KConfigGroup group(KSharedConfig::openConfig(), "KShortcutsDialog Settings");
+    group.writeEntry("Dialog Size", size(), KConfigGroup::Persistent | KConfigGroup::Global);
     delete d;
 }
-
 
 void KShortcutsDialog::addCollection(KActionCollection *collection, const QString &title)
 {
@@ -204,8 +199,7 @@ void KShortcutsDialog::addCollection(KActionCollection *collection, const QStrin
     d->m_collections << collection;
 }
 
-
-QList<KActionCollection*> KShortcutsDialog::actionCollections() const
+QList<KActionCollection *> KShortcutsDialog::actionCollections() const
 {
     return d->m_collections;
 }
@@ -232,7 +226,7 @@ QSize KShortcutsDialog::sizeHint() const
 }
 
 int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts,
-                          QWidget *parent, bool saveSettings)
+                                QWidget *parent, bool saveSettings)
 {
     //qDebug(125) << "KShortcutsDialog::configureKeys( KActionCollection*, " << saveSettings << " )";
     KShortcutsDialog dlg(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
@@ -243,4 +237,3 @@ int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor:
 #include "moc_kshortcutsdialog.cpp"
 #include "moc_kshortcutsdialog_p.cpp"
 
-//kate: space-indent on; indent-width 4; replace-tabs on;tab-width 4;

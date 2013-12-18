@@ -33,28 +33,28 @@
 #include <QTreeWidgetItemIterator>
 
 KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool allowLetterShortcuts)
- : KExtendableItemDelegate(parent),
-   m_allowLetterShortcuts(allowLetterShortcuts),
-   m_editor(0)
+    : KExtendableItemDelegate(parent),
+      m_allowLetterShortcuts(allowLetterShortcuts),
+      m_editor(0)
 {
     Q_ASSERT(qobject_cast<QAbstractItemView *>(parent));
 
-    QPixmap pixmap( 16, 16 );
-    pixmap.fill( QColor( Qt::transparent ) );
-    QPainter p( &pixmap );
+    QPixmap pixmap(16, 16);
+    pixmap.fill(QColor(Qt::transparent));
+    QPainter p(&pixmap);
     QStyleOption option;
     option.rect = pixmap.rect();
 
     bool isRtl = QApplication::isRightToLeft();
-    QApplication::style()->drawPrimitive( isRtl ? QStyle::PE_IndicatorArrowLeft : QStyle::PE_IndicatorArrowRight, &option, &p );
+    QApplication::style()->drawPrimitive(isRtl ? QStyle::PE_IndicatorArrowLeft : QStyle::PE_IndicatorArrowRight, &option, &p);
     p.end();
-    setExtendPixmap( pixmap );
+    setExtendPixmap(pixmap);
 
-    pixmap.fill( QColor( Qt::transparent ) );
-    p.begin( &pixmap );
-    QApplication::style()->drawPrimitive( QStyle::PE_IndicatorArrowDown, &option, &p );
+    pixmap.fill(QColor(Qt::transparent));
+    p.begin(&pixmap);
+    QApplication::style()->drawPrimitive(QStyle::PE_IndicatorArrowDown, &option, &p);
     p.end();
-    setContractPixmap( pixmap );
+    setContractPixmap(pixmap);
 
     parent->installEventFilter(this);
 
@@ -66,7 +66,6 @@ KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool all
     connect(parent, SIGNAL(collapsed(QModelIndex)), this, SLOT(itemCollapsed(QModelIndex)));
 }
 
-
 void KShortcutsEditorDelegate::stealShortcut(
     const QKeySequence &seq,
     QAction *action)
@@ -77,8 +76,8 @@ void KShortcutsEditorDelegate::stealShortcut(
     QTreeWidgetItemIterator it(view, QTreeWidgetItemIterator::NoChildren);
 
     for (; (*it); ++it) {
-        KShortcutsEditorItem* item = dynamic_cast<KShortcutsEditorItem *>(*it);
-        if (item && item->data(0, ObjectRole).value<QObject*>() == action) {
+        KShortcutsEditorItem *item = dynamic_cast<KShortcutsEditorItem *>(*it);
+        if (item && item->data(0, ObjectRole).value<QObject *>() == action) {
 
             // We found the action, snapshot the current state. Steal the
             // shortcut. We will save the change later.
@@ -86,13 +85,13 @@ void KShortcutsEditorDelegate::stealShortcut(
             const QKeySequence primary = cut.isEmpty() ? QKeySequence() : cut.at(0);
             const QKeySequence alternate = cut.size() <= 1 ? QKeySequence() : cut.at(1);
 
-            if (   primary.matches(seq) != QKeySequence::NoMatch
-                || seq.matches(primary) != QKeySequence::NoMatch) {
+            if (primary.matches(seq) != QKeySequence::NoMatch
+                    || seq.matches(primary) != QKeySequence::NoMatch) {
                 item->setKeySequence(LocalPrimary, QKeySequence());
             }
 
-            if (   alternate.matches(seq) != QKeySequence::NoMatch
-                || seq.matches(alternate) != QKeySequence::NoMatch) {
+            if (alternate.matches(seq) != QKeySequence::NoMatch
+                    || seq.matches(alternate) != QKeySequence::NoMatch) {
                 item->setKeySequence(LocalAlternate, QKeySequence());
             }
             break;
@@ -101,15 +100,13 @@ void KShortcutsEditorDelegate::stealShortcut(
 
 }
 
-
 QSize KShortcutsEditorDelegate::sizeHint(const QStyleOptionViewItem &option,
-                                         const QModelIndex &index) const
+        const QModelIndex &index) const
 {
     QSize ret(KExtendableItemDelegate::sizeHint(option, index));
     ret.rheight() += 4;
     return ret;
 }
-
 
 //slot
 void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
@@ -146,8 +143,8 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
     if (!isExtended(index)) {
         //we only want maximum ONE extender open at any time.
         if (m_editingIndex.isValid()) {
-            KShortcutsEditorItem *oldItem = KShortcutsEditorPrivate::itemFromIndex(view, 
-                                                                                    m_editingIndex);
+            KShortcutsEditorItem *oldItem = KShortcutsEditorPrivate::itemFromIndex(view,
+                                            m_editingIndex);
             Q_ASSERT(oldItem); //here we really expect nothing but a real KShortcutsEditorItem
 
             oldItem->setNameBold(false);
@@ -155,15 +152,15 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
         }
 
         m_editingIndex = index;
-        QWidget *viewport = static_cast<QAbstractItemView*>(parent())->viewport();
+        QWidget *viewport = static_cast<QAbstractItemView *>(parent())->viewport();
 
         if (column >= LocalPrimary && column <= GlobalAlternate) {
             ShortcutEditWidget *editor = new ShortcutEditWidget(viewport,
-                      index.data(DefaultShortcutRole).value<QKeySequence>(),
-                      index.data(ShortcutRole).value<QKeySequence>(),
-                      m_allowLetterShortcuts);
-            if (column==GlobalPrimary) {
-                QObject *action = index.data(ObjectRole).value<QObject*>();
+                    index.data(DefaultShortcutRole).value<QKeySequence>(),
+                    index.data(ShortcutRole).value<QKeySequence>(),
+                    m_allowLetterShortcuts);
+            if (column == GlobalPrimary) {
+                QObject *action = index.data(ObjectRole).value<QObject *>();
                 connect(
                     action, SIGNAL(globalShortcutChanged(QKeySequence)),
                     editor, SLOT(setKeySequence(QKeySequence)));
@@ -179,9 +176,9 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
             // For global shortcuts check against the kde standard shortcuts
             if (column == GlobalPrimary || column == GlobalAlternate) {
                 editor->setCheckForConflictsAgainst(
-                        KKeySequenceWidget::LocalShortcuts
-                            | KKeySequenceWidget::GlobalShortcuts
-                            | KKeySequenceWidget::StandardShortcuts );
+                    KKeySequenceWidget::LocalShortcuts
+                    | KKeySequenceWidget::GlobalShortcuts
+                    | KKeySequenceWidget::StandardShortcuts);
             }
 
             editor->setCheckActionCollections(m_checkActionCollections);
@@ -197,8 +194,9 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
         } else if (column == ShapeGesture) {
             m_editor = new QLabel(QStringLiteral("<i>A towel</i>"), viewport);
 
-        } else
+        } else {
             return;
+        }
 
         m_editor->installEventFilter(this);
         item->setNameBold(true);
@@ -213,7 +211,6 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
         m_editor = 0;
     }
 }
-
 
 //slot
 void KShortcutsEditorDelegate::itemCollapsed(QModelIndex index)
@@ -234,7 +231,6 @@ void KShortcutsEditorDelegate::itemCollapsed(QModelIndex index)
     }
 }
 
-
 //slot
 void KShortcutsEditorDelegate::hiddenBySearchLine(QTreeWidgetItem *item, bool hidden)
 {
@@ -247,7 +243,6 @@ void KShortcutsEditorDelegate::hiddenBySearchLine(QTreeWidgetItem *item, bool hi
         itemActivated(m_editingIndex); //this will *close* the item's editor because it's already open
     }
 }
-
 
 bool KShortcutsEditorDelegate::eventFilter(QObject *o, QEvent *e)
 {
@@ -307,7 +302,6 @@ bool KShortcutsEditorDelegate::eventFilter(QObject *o, QEvent *e)
     return false;
 }
 
-
 //slot
 void KShortcutsEditorDelegate::keySequenceChanged(const QKeySequence &seq)
 {
@@ -315,9 +309,8 @@ void KShortcutsEditorDelegate::keySequenceChanged(const QKeySequence &seq)
     emit shortcutChanged(ret, m_editingIndex);
 }
 
-
 void KShortcutsEditorDelegate::setCheckActionCollections(
-    const QList<KActionCollection*> checkActionCollections )
+    const QList<KActionCollection *> checkActionCollections)
 {
     m_checkActionCollections = checkActionCollections;
 }

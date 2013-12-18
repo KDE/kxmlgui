@@ -28,30 +28,27 @@
 
 MainWindow::MainWindow()
 {
-    QTimer::singleShot( 2*1000, this, SLOT(showMessage()) );
+    QTimer::singleShot(2 * 1000, this, SLOT(showMessage()));
 
-    setCentralWidget( new QLabel( QStringLiteral("foo"), this ) );
+    setCentralWidget(new QLabel(QStringLiteral("foo"), this));
 
-    menuBar()->addAction( QStringLiteral("hi") );
+    menuBar()->addAction(QStringLiteral("hi"));
 }
 
 void MainWindow::showMessage()
 {
     statusBar()->show();
-    statusBar()->showMessage( QStringLiteral("test") );
+    statusBar()->showMessage(QStringLiteral("test"));
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("kmainwindowtest"));
     QApplication app(argc, argv);
 
-    MainWindow* mw = new MainWindow; // deletes itself when closed
+    MainWindow *mw = new MainWindow; // deletes itself when closed
     mw->show();
 
     return app.exec();
 }
 
-
-/* vim: et sw=4 ts=4
- */

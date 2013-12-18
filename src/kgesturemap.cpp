@@ -30,25 +30,22 @@
  code.
  */
 
-class KGestureMapContainer {
+class KGestureMapContainer
+{
 public:
     KGestureMap gestureMap;
 };
 
-
 Q_GLOBAL_STATIC(KGestureMapContainer, g_instance)
-
 
 KGestureMap::~KGestureMap()
 {
 }
 
-
 KGestureMap *KGestureMap::self()
 {
     return &g_instance()->gestureMap;
 }
-
 
 KGestureMap::KGestureMap()
 {
@@ -57,15 +54,16 @@ KGestureMap::KGestureMap()
     //It would be nice to install the filter on demand. Unfortunately,
     //undesired behavior might result due to changing invocation
     //orders of different event filters.
-    if (qApp)
+    if (qApp) {
         qApp->installEventFilter(this);
+    }
 }
-
 
 void KGestureMap::setShapeGesture(QAction *act, const KShapeGesture &gesture)
 {
-    if (!gesture.isValid() || !act)
+    if (!gesture.isValid() || !act) {
         return;
+    }
     qDebug() << "KGestureMap::addGesture(KShapeGesture ...)";
     if (m_shapeGestures.contains(gesture)) {
         qWarning() << "Replacing an action for a gesture already taken";
@@ -73,11 +71,11 @@ void KGestureMap::setShapeGesture(QAction *act, const KShapeGesture &gesture)
     m_shapeGestures.insert(gesture, act);
 }
 
-
 void KGestureMap::setRockerGesture(QAction *act, const KRockerGesture &gesture)
 {
-    if (!gesture.isValid() || !act)
+    if (!gesture.isValid() || !act) {
         return;
+    }
     qDebug() << "KGestureMap::addGesture(KRockerGesture ...)";
     if (m_rockerGestures.contains(gesture)) {
         qWarning() << "Replacing an action for a gesture already taken";
@@ -87,8 +85,9 @@ void KGestureMap::setRockerGesture(QAction *act, const KRockerGesture &gesture)
 
 void KGestureMap::setDefaultShapeGesture(QAction *act, const KShapeGesture &gesture)
 {
-    if (!gesture.isValid() || !act)
+    if (!gesture.isValid() || !act) {
         return;
+    }
     qDebug() << "KGestureMap::addGesture(KShapeGesture ...)";
     if (m_defaultShapeGestures.contains(gesture)) {
         qWarning() << "Replacing an action for a gesture already taken";
@@ -96,11 +95,11 @@ void KGestureMap::setDefaultShapeGesture(QAction *act, const KShapeGesture &gest
     m_defaultShapeGestures.insert(gesture, act);
 }
 
-
 void KGestureMap::setDefaultRockerGesture(QAction *act, const KRockerGesture &gesture)
 {
-    if (!gesture.isValid() || !act)
+    if (!gesture.isValid() || !act) {
         return;
+    }
     qDebug() << "KGestureMap::addGesture(KRockerGesture ...)";
     if (m_defaultRockerGestures.contains(gesture)) {
         qWarning() << "Replacing an action for a gesture already taken";
@@ -108,12 +107,12 @@ void KGestureMap::setDefaultRockerGesture(QAction *act, const KRockerGesture &ge
     m_defaultRockerGestures.insert(gesture, act);
 }
 
-void KGestureMap::removeAllGestures(QAction* kact)
+void KGestureMap::removeAllGestures(QAction *kact)
 {
     KShapeGesture activeGesture;
     ShapeGestureHash::iterator si = m_shapeGestures.begin();
     ShapeGestureHash::iterator send = m_shapeGestures.end();
-    for ( ; si != send; ++si) {
+    for (; si != send; ++si) {
         if (si.value() == kact) {
             m_shapeGestures.remove(si.key());
             break;
@@ -122,7 +121,7 @@ void KGestureMap::removeAllGestures(QAction* kact)
 
     si = m_defaultShapeGestures.begin();
     send = m_defaultShapeGestures.end();
-    for ( ; si != send; ++si) {
+    for (; si != send; ++si) {
         if (si.value() == kact) {
             m_defaultShapeGestures.remove(si.key());
             break;
@@ -131,7 +130,7 @@ void KGestureMap::removeAllGestures(QAction* kact)
 
     RockerGestureHash::iterator ri = m_rockerGestures.begin();
     RockerGestureHash::iterator rend = m_rockerGestures.end();
-    for ( ; ri != rend; ++ri) {
+    for (; ri != rend; ++ri) {
         if (ri.value() == kact) {
             m_rockerGestures.remove(ri.key());
             break;
@@ -140,7 +139,7 @@ void KGestureMap::removeAllGestures(QAction* kact)
 
     ri = m_defaultRockerGestures.begin();
     rend = m_defaultRockerGestures.end();
-    for ( ; ri != rend; ++ri) {
+    for (; ri != rend; ++ri) {
         if (ri.value() == kact) {
             m_defaultRockerGestures.remove(ri.key());
             break;
@@ -153,24 +152,22 @@ QAction *KGestureMap::findAction(const KShapeGesture &gesture) const
     return m_shapeGestures.value(gesture);
 }
 
-
 QAction *KGestureMap::findAction(const KRockerGesture &gesture) const
 {
     return m_rockerGestures.value(gesture);
 }
-
 
 void KGestureMap::installEventFilterOnMe(QApplication *app)
 {
     app->installEventFilter(this);
 }
 
-KShapeGesture KGestureMap::shapeGesture(const QAction* kact) const
+KShapeGesture KGestureMap::shapeGesture(const QAction *kact) const
 {
     KShapeGesture activeGesture;
     ShapeGestureHash::const_iterator it = m_shapeGestures.constBegin();
     ShapeGestureHash::const_iterator end = m_shapeGestures.constEnd();
-    for ( ; it != end; ++it) {
+    for (; it != end; ++it) {
         if (it.value() == kact) {
             activeGesture = it.key();
             break;
@@ -179,12 +176,12 @@ KShapeGesture KGestureMap::shapeGesture(const QAction* kact) const
     return activeGesture;
 }
 
-KShapeGesture KGestureMap::defaultShapeGesture(const QAction* kact) const
+KShapeGesture KGestureMap::defaultShapeGesture(const QAction *kact) const
 {
     KShapeGesture defaultGesture;
     ShapeGestureHash::const_iterator it = m_defaultShapeGestures.constBegin();
     ShapeGestureHash::const_iterator end = m_defaultShapeGestures.constEnd();
-    for ( ; it != end; ++it) {
+    for (; it != end; ++it) {
         if (it.value() == kact) {
             defaultGesture = it.key();
             break;
@@ -193,12 +190,12 @@ KShapeGesture KGestureMap::defaultShapeGesture(const QAction* kact) const
     return defaultGesture;
 }
 
-KRockerGesture KGestureMap::rockerGesture(const QAction* kact) const
+KRockerGesture KGestureMap::rockerGesture(const QAction *kact) const
 {
     KRockerGesture activeGesture;
     RockerGestureHash::const_iterator it = m_rockerGestures.constBegin();
     RockerGestureHash::const_iterator end = m_rockerGestures.constEnd();
-    for ( ; it != end; ++it) {
+    for (; it != end; ++it) {
         if (it.value() == kact) {
             activeGesture = it.key();
             break;
@@ -207,12 +204,12 @@ KRockerGesture KGestureMap::rockerGesture(const QAction* kact) const
     return activeGesture;
 }
 
-KRockerGesture KGestureMap::defaultRockerGesture(const QAction* kact) const
+KRockerGesture KGestureMap::defaultRockerGesture(const QAction *kact) const
 {
     KRockerGesture defaultGesture;
     RockerGestureHash::const_iterator it = m_defaultRockerGestures.constBegin();
     RockerGestureHash::const_iterator end = m_defaultRockerGestures.constEnd();
-    for ( ; it != end; ++it) {
+    for (; it != end; ++it) {
         if (it.value() == kact) {
             defaultGesture = it.key();
             break;
@@ -220,7 +217,6 @@ KRockerGesture KGestureMap::defaultRockerGesture(const QAction* kact) const
     }
     return defaultGesture;
 }
-
 
 inline int KGestureMap::bitCount(int n)
 {
@@ -232,17 +228,16 @@ inline int KGestureMap::bitCount(int n)
     return count;
 }
 
-
 void KGestureMap::handleAction(QAction *kact)
 {
-    if (!kact)
+    if (!kact) {
         return;
+    }
     qDebug() << "handleAction";
     //TODO: only activate in the action's context, just like keyboard shortcuts
     kact->trigger();
     return;
 }
-
 
 void KGestureMap::matchShapeGesture()
 {
@@ -252,7 +247,7 @@ void KGestureMap::matchShapeGesture()
     QAction *bestMatch = 0;
 
     for (QHash<KShapeGesture, QAction *>::const_iterator it = m_shapeGestures.constBegin();
-        it != m_shapeGestures.constEnd(); ++it) {
+            it != m_shapeGestures.constEnd(); ++it) {
         dist = m_shapeGesture.distance(it.key(), 1000.0);
         if (dist < minDist) {
             minDist = dist;
@@ -262,14 +257,12 @@ void KGestureMap::matchShapeGesture()
     handleAction(bestMatch);
 }
 
-
 //slot
 void KGestureMap::stopAcquisition()
 {
     m_gestureTimeout.stop();
     m_acquiring = false;
 }
-
 
 //TODO: Probably kwin, kded and others should not have a gesture map.
 //Maybe making them friends and providing a private "die()" function would work.
@@ -302,8 +295,9 @@ bool KGestureMap::eventFilter(QObject *obj, QEvent *e)
         return false;
     }
 
-    if (type < QEvent::MouseButtonPress || type > QEvent::MouseMove)
+    if (type < QEvent::MouseButtonPress || type > QEvent::MouseMove) {
         return false;
+    }
 
     QMouseEvent *me = static_cast<QMouseEvent *>(e);
     if (type == QEvent::MouseButtonPress) {
@@ -319,16 +313,18 @@ bool KGestureMap::eventFilter(QObject *obj, QEvent *e)
             m_points.clear();
             m_points.append(me->pos());
             return true;
-        } else if (nButtonsDown != 2)
+        } else if (nButtonsDown != 2) {
             return false;
+        }
 
         //rocker gestures. do not trigger any movement gestures from now on.
         stopAcquisition();
         int buttonHeld = me->buttons() ^ me->button();
         m_rockerGesture.setButtons(static_cast<Qt::MouseButton>(buttonHeld), me->button());
         QAction *match = m_rockerGestures.value(m_rockerGesture);
-        if (!match)
+        if (!match) {
             return false;
+        }
         handleAction(match);
         return true;
     }
@@ -339,8 +335,9 @@ bool KGestureMap::eventFilter(QObject *obj, QEvent *e)
             //abort to avoid using too much memory. 1010 points should be enough
             //for everyone! :)
             //next reallocation of m_points would happen at 1012 items
-            if (m_points.size() > 1010)
+            if (m_points.size() > 1010) {
                 stopAcquisition();
+            }
             return true;
         } else if (type == QEvent::MouseButtonRelease && me->button() == Qt::RightButton) {
             stopAcquisition();
@@ -350,7 +347,7 @@ bool KGestureMap::eventFilter(QObject *obj, QEvent *e)
             //then try all remaining gestures for sufficiently small distance
             int dist = 0;
             for (int i = 1; i < m_points.size(); i++) {
-                dist += (m_points[i] - m_points[i-1]).manhattanLength();
+                dist += (m_points[i] - m_points[i - 1]).manhattanLength();
                 if (dist > 40) {
                     matchShapeGesture();
                     return true;

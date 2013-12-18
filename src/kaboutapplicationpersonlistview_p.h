@@ -26,10 +26,10 @@ namespace KDEPrivate
 class KAboutApplicationPersonListView : public QListView
 {
 public:
-    KAboutApplicationPersonListView( QWidget *parent = 0 );
+    KAboutApplicationPersonListView(QWidget *parent = 0);
 
 protected:
-    void wheelEvent( QWheelEvent *e );
+    void wheelEvent(QWheelEvent *e);
 
 };
 

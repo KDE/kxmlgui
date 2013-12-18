@@ -53,7 +53,7 @@ int SMTPClientStatus[] = {
 
 #define SMTP_READ_BUFFER_SIZE 256
 
-class SMTP:public QObject
+class SMTP: public QObject
 {
     Q_OBJECT
 public:
@@ -61,18 +61,27 @@ public:
                   int timeout = DEFAULT_SMTP_TIMEOUT);
     ~SMTP();
 
-    void setServerHost(const QString& serverhost);
+    void setServerHost(const QString &serverhost);
     void setPort(unsigned short int port);
     void setTimeOut(int timeout);
 
-    bool isConnected(){return connected;}
-    bool isFinished(){return finished;}
-    QString getLastLine(){return lastLine;}
+    bool isConnected()
+    {
+        return connected;
+    }
+    bool isFinished()
+    {
+        return finished;
+    }
+    QString getLastLine()
+    {
+        return lastLine;
+    }
 
-    void setSenderAddress(const QString& sender);
-    void setRecipientAddress(const QString& recipient);
-    void setMessageSubject(const QString& subject);
-    void setMessageBody(const QString& message);
+    void setSenderAddress(const QString &sender);
+    void setRecipientAddress(const QString &recipient);
+    void setMessageSubject(const QString &subject);
+    void setMessageBody(const QString &message);
     void setMessageHeader(const QString &header);
 
     typedef enum {
@@ -83,7 +92,7 @@ public:
         ReadyData = 354,      // server ready to receive data
         Error = 501,          // error
         Unknown = 550        // user unknown
-    }SMTPServerStatus;
+    } SMTPServerStatus;
 
     typedef enum {
         Init = 50,            // not logged in yet
@@ -96,7 +105,7 @@ public:
         Quit = 400,           // sent Quit, got 221
         Out = 450,            // finished, logged out
         CError = 500           // didn't finish, had error or connection drop
-    }SMTPClientStatus;
+    } SMTPClientStatus;
 
     typedef enum {
         NoError = 0,
@@ -107,7 +116,7 @@ public:
         UnknownResponse = 20,
         UnknownUser = 30,
         Command = 40
-    }SMTPError;
+    } SMTPError;
 
 protected:
     void processLine(QString *line);

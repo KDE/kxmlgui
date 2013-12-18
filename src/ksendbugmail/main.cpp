@@ -36,25 +36,26 @@
 
 #include "smtp.h"
 
-void BugMailer::slotError(int errornum) {
+void BugMailer::slotError(int errornum)
+{
     QString lstr;
 
-    switch(errornum) {
-        case SMTP::ConnectError:
-            lstr = i18n("Error connecting to server.");
-            break;
-        case SMTP::NotConnected:
-            lstr = i18n("Not connected.");
-            break;
-        case SMTP::ConnectTimeout:
-            lstr = i18n("Connection timed out.");
-            break;
-        case SMTP::InteractTimeout:
-            lstr = i18n("Time out waiting for server interaction.");
-            break;
-        default:
-            lstr = sm->getLastLine().trimmed();
-            lstr = i18n("Server said: \"%1\"", lstr);
+    switch (errornum) {
+    case SMTP::ConnectError:
+        lstr = i18n("Error connecting to server.");
+        break;
+    case SMTP::NotConnected:
+        lstr = i18n("Not connected.");
+        break;
+    case SMTP::ConnectTimeout:
+        lstr = i18n("Connection timed out.");
+        break;
+    case SMTP::InteractTimeout:
+        lstr = i18n("Time out waiting for server interaction.");
+        break;
+    default:
+        lstr = sm->getLastLine().trimmed();
+        lstr = i18n("Server said: \"%1\"", lstr);
     }
     // qDebug() << lstr;
 
@@ -64,12 +65,14 @@ void BugMailer::slotError(int errornum) {
     qApp->exit(1);
 }
 
-void BugMailer::slotSend() {
+void BugMailer::slotSend()
+{
     // qDebug();
     qApp->exit(0);
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
     QCoreApplication a(argc, argv);
     a.setApplicationName("ksendbugmail");
@@ -91,20 +94,21 @@ int main(int argc, char **argv) {
         recipient = parser.value("recipient");
         subject = parser.value("subject");
     }
-    if (recipient.isEmpty())
+    if (recipient.isEmpty()) {
         recipient = "submit@bugs.kde.org";
-    else {
+    } else {
         if (recipient.at(0) == '\'') {
             recipient = recipient.mid(1).left(recipient.length() - 2);
         }
     }
     // qDebug() << "recp" << recipient;
 
-    if (subject.isEmpty())
+    if (subject.isEmpty()) {
         subject = "(no subject)";
-    else {
-        if (subject.at(0) == '\'')
+    } else {
+        if (subject.at(0) == '\'') {
             subject = subject.mid(1).left(subject.length() - 2);
+        }
     }
     QTextStream input(stdin, QIODevice::ReadOnly);
     input.setCodec("UTF-8");
@@ -120,24 +124,27 @@ int main(int argc, char **argv) {
     QString fromaddr = emailConfig.getSetting(KEMailSettings::EmailAddress);
     if (!fromaddr.isEmpty()) {
         QString name = emailConfig.getSetting(KEMailSettings::RealName);
-        if (!name.isEmpty())
+        if (!name.isEmpty()) {
             fromaddr = name + QLatin1String(" <") + fromaddr + QString::fromLatin1(">");
+        }
     } else {
         struct passwd *p;
         p = getpwuid(getuid());
         fromaddr = QLatin1String(p->pw_name);
         fromaddr += '@';
         char buffer[256];
-	buffer[0] = '\0';
-        if(!gethostname(buffer, sizeof(buffer)))
-	    buffer[sizeof(buffer)-1] = '\0';
+        buffer[0] = '\0';
+        if (!gethostname(buffer, sizeof(buffer))) {
+            buffer[sizeof(buffer) - 1] = '\0';
+        }
         fromaddr += buffer;
     }
     // qDebug() << "fromaddr \"" << fromaddr << "\"";
 
     QString  server = emailConfig.getSetting(KEMailSettings::OutServer);
-    if (server.isEmpty())
-        server=QLatin1String("bugs.kde.org");
+    if (server.isEmpty()) {
+        server = QLatin1String("bugs.kde.org");
+    }
 
     SMTP *sm = new SMTP;
     BugMailer bm(sm);

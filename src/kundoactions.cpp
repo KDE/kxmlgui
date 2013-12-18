@@ -48,7 +48,7 @@ QAction *KUndoActions::createRedoAction(QUndoStack *undoStack, KActionCollection
     return action;
 }
 
-QAction *KUndoActions::createUndoAction(QUndoStack* undoStack, KActionCollection* actionCollection, const QString& actionName)
+QAction *KUndoActions::createUndoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName)
 {
     QAction *action = undoStack->createUndoAction(actionCollection);
 

@@ -50,56 +50,56 @@ class KAboutData;
 class XMLGUI_EXPORT KAboutApplicationDialog : public QDialog
 {
     Q_OBJECT
-    Q_FLAGS( Options )
-    public:
+    Q_FLAGS(Options)
+public:
 
-        /**
-         * Defines some options which can be applied to the about dialog
-         *
-         * @since 4.4
-         */
-        enum Option {
-            NoOptions       = 0x0, ///< No options, show the standard about dialog
-            HideTranslators = 0x1, ///< Don't show the translators tab
-            HideKdeVersion  = 0x2  ///< Don't show the KDE version next to the application name and version
-        };
-        Q_DECLARE_FLAGS( Options, Option )
+    /**
+     * Defines some options which can be applied to the about dialog
+     *
+     * @since 4.4
+     */
+    enum Option {
+        NoOptions       = 0x0, ///< No options, show the standard about dialog
+        HideTranslators = 0x1, ///< Don't show the translators tab
+        HideKdeVersion  = 0x2  ///< Don't show the KDE version next to the application name and version
+    };
+    Q_DECLARE_FLAGS(Options, Option)
 
-        /**
-         * Constructor. Creates a fully featured "About Application" dialog box.
-         *
-         * @param aboutData A KAboutData object which data
-         *        will be used for filling the dialog.
-         * @param opts Additional options that can be applied, such as hiding the KDE version
-         *             or the translators tab.
-         * @param parent The parent of the dialog box. You should use the
-         *        toplevel window so that the dialog becomes centered.
-         *
-         * @since 4.4
-         */
-        explicit KAboutApplicationDialog(const KAboutData &aboutData, Options opts, QWidget *parent = 0);
+    /**
+     * Constructor. Creates a fully featured "About Application" dialog box.
+     *
+     * @param aboutData A KAboutData object which data
+     *        will be used for filling the dialog.
+     * @param opts Additional options that can be applied, such as hiding the KDE version
+     *             or the translators tab.
+     * @param parent The parent of the dialog box. You should use the
+     *        toplevel window so that the dialog becomes centered.
+     *
+     * @since 4.4
+     */
+    explicit KAboutApplicationDialog(const KAboutData &aboutData, Options opts, QWidget *parent = 0);
 
-        /**
-         * Constructor. Creates a fully featured "About Application" dialog box.
-         *
-         * @param aboutData A pointer to a KAboutData object which data
-         *        will be used for filling the dialog.
-         * @param parent The parent of the dialog box. You should use the
-         *        toplevel window so that the dialog becomes centered.
-         */
-        explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = 0);
+    /**
+     * Constructor. Creates a fully featured "About Application" dialog box.
+     *
+     * @param aboutData A pointer to a KAboutData object which data
+     *        will be used for filling the dialog.
+     * @param parent The parent of the dialog box. You should use the
+     *        toplevel window so that the dialog becomes centered.
+     */
+    explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = 0);
 
-        virtual ~KAboutApplicationDialog();
+    virtual ~KAboutApplicationDialog();
 
-    private:
-        class Private;
-        Private* const d;
+private:
+    class Private;
+    Private *const d;
 
-        Q_PRIVATE_SLOT( d, void _k_showLicense(const QString&) )
+    Q_PRIVATE_SLOT(d, void _k_showLicense(const QString &))
 
-        Q_DISABLE_COPY( KAboutApplicationDialog )
+    Q_DISABLE_COPY(KAboutApplicationDialog)
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS( KAboutApplicationDialog::Options )
+Q_DECLARE_OPERATORS_FOR_FLAGS(KAboutApplicationDialog::Options)
 
 #endif

@@ -32,20 +32,20 @@ namespace KDEPrivate
 
 class ToolBarHandler : public QObject, public KXMLGUIClient
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new tool bar handler for the supplied
      * @param mainWindow.
      */
-    explicit ToolBarHandler( KXmlGuiWindow *mainWindow );
+    explicit ToolBarHandler(KXmlGuiWindow *mainWindow);
 
     /**
      * Creates a new tool bar handler for the supplied
      * @param mainWindow and with the supplied parent.
      */
-    ToolBarHandler( KXmlGuiWindow *mainWindow, QObject *parent );
+    ToolBarHandler(KXmlGuiWindow *mainWindow, QObject *parent);
 
     /**
      * Destroys the tool bar handler.
@@ -57,14 +57,14 @@ class ToolBarHandler : public QObject, public KXMLGUIClient
      */
     QAction *toolBarMenuAction();
 
-  public Q_SLOTS:
+public Q_SLOTS:
     void setupActions();
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void clientAdded( KXMLGUIClient* ) )
+    Q_PRIVATE_SLOT(d, void clientAdded(KXMLGUIClient *))
 };
 
 } // namespace KDEPrivate

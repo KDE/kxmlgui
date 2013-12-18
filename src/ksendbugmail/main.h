@@ -24,10 +24,14 @@
 
 class SMTP;
 
-class BugMailer : public QObject {
+class BugMailer : public QObject
+{
     Q_OBJECT
 public:
-    BugMailer(SMTP* s) : QObject(0), sm(s) { setObjectName( "mailer" ); }
+    BugMailer(SMTP *s) : QObject(0), sm(s)
+    {
+        setObjectName("mailer");
+    }
 
 public Q_SLOTS:
     void slotError(int);

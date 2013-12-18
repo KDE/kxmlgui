@@ -44,7 +44,6 @@ class KShortcutsEditorPrivate;
 // free of conflicts. If it is not, nothing will crash, but your users
 // won't like the resulting behavior.
 
-
 /**
  * @short Widget for configuration of KAccel and KGlobalAccel.
  *
@@ -63,82 +62,81 @@ class KShortcutsEditorPrivate;
  */
 class XMLGUI_EXPORT KShortcutsEditor : public QWidget
 {
-	Q_OBJECT
-	Q_PROPERTY(ActionTypes actionTypes READ actionTypes WRITE setActionTypes)
+    Q_OBJECT
+    Q_PROPERTY(ActionTypes actionTypes READ actionTypes WRITE setActionTypes)
 
 public:
-	enum ActionType {
-		/// Actions which are triggered by any keypress in a widget which has the action added to it
-		WidgetAction      = Qt::WidgetShortcut      /*0*/,
-		/// Actions which are triggered by any keypress in a window which has the action added to it or its child widget(s)
-		WindowAction      = Qt::WindowShortcut      /*1*/,
-		/// Actions which are triggered by any keypress in the application
-		ApplicationAction = Qt::ApplicationShortcut /*2*/,
-		/// Actions which are triggered by any keypress in the windowing system
-		GlobalAction      = 4,
-		/// All actions
-		AllActions        = 0xffffffff
-	};
-	Q_DECLARE_FLAGS(ActionTypes, ActionType)
+    enum ActionType {
+        /// Actions which are triggered by any keypress in a widget which has the action added to it
+        WidgetAction      = Qt::WidgetShortcut      /*0*/,
+        /// Actions which are triggered by any keypress in a window which has the action added to it or its child widget(s)
+        WindowAction      = Qt::WindowShortcut      /*1*/,
+        /// Actions which are triggered by any keypress in the application
+        ApplicationAction = Qt::ApplicationShortcut /*2*/,
+        /// Actions which are triggered by any keypress in the windowing system
+        GlobalAction      = 4,
+        /// All actions
+        AllActions        = 0xffffffff
+    };
+    Q_DECLARE_FLAGS(ActionTypes, ActionType)
 
-	enum LetterShortcuts {
-		/// Shortcuts without a modifier are not allowed,
-		/// so 'A' would not be valid, whereas 'Ctrl+A' would be.
-		/// This only applies to printable characters, however.
-		/// 'F1', 'Insert' etc. could still be used.
-		LetterShortcutsDisallowed = 0,
-		/// Letter shortcuts are allowed
-		LetterShortcutsAllowed
-	};
+    enum LetterShortcuts {
+        /// Shortcuts without a modifier are not allowed,
+        /// so 'A' would not be valid, whereas 'Ctrl+A' would be.
+        /// This only applies to printable characters, however.
+        /// 'F1', 'Insert' etc. could still be used.
+        LetterShortcutsDisallowed = 0,
+        /// Letter shortcuts are allowed
+        LetterShortcutsAllowed
+    };
 
-	/**
-	 * Constructor.
-	 *
-	 * @param collection the KActionCollection to configure
-	 * @param parent parent widget
-	 * @param actionTypes types of actions to display in this widget.
-	 * @param allowLetterShortcuts set to LetterShortcutsDisallowed if unmodified alphanumeric
-	 *  keys ('A', '1', etc.) are not permissible shortcuts.
-	 */
-	KShortcutsEditor(KActionCollection *collection, QWidget *parent, ActionTypes actionTypes = AllActions, LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
+    /**
+     * Constructor.
+     *
+     * @param collection the KActionCollection to configure
+     * @param parent parent widget
+     * @param actionTypes types of actions to display in this widget.
+     * @param allowLetterShortcuts set to LetterShortcutsDisallowed if unmodified alphanumeric
+     *  keys ('A', '1', etc.) are not permissible shortcuts.
+     */
+    KShortcutsEditor(KActionCollection *collection, QWidget *parent, ActionTypes actionTypes = AllActions, LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
 
-	/**
-	 * \overload
-	 *
-	 * Creates a key chooser without a starting action collection.
-	 *
-	 * @param parent parent widget
-	 * @param actionTypes types of actions to display in this widget.
-	 * @param allowLetterShortcuts set to LetterShortcutsDisallowed if unmodified alphanumeric
-	 *  keys ('A', '1', etc.) are not permissible shortcuts.
-	 */
-	explicit KShortcutsEditor( QWidget* parent, ActionTypes actionTypes = AllActions, LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed );
+    /**
+     * \overload
+     *
+     * Creates a key chooser without a starting action collection.
+     *
+     * @param parent parent widget
+     * @param actionTypes types of actions to display in this widget.
+     * @param allowLetterShortcuts set to LetterShortcutsDisallowed if unmodified alphanumeric
+     *  keys ('A', '1', etc.) are not permissible shortcuts.
+     */
+    explicit KShortcutsEditor(QWidget *parent, ActionTypes actionTypes = AllActions, LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
 
-	/// Destructor
-	virtual ~KShortcutsEditor();
+    /// Destructor
+    virtual ~KShortcutsEditor();
 
     /**
      * Are the unsaved changes?
      */
     bool isModified() const;
 
-	/**
-	 * Removes all action collections from the editor
-	 */
-	void clearCollections();
+    /**
+     * Removes all action collections from the editor
+     */
+    void clearCollections();
 
-	/**
-	 * Insert an action collection, i.e. add all its actions to the ones
-	 * already associated with the KShortcutsEditor object.
-	 * @param title subtree title of this collection of shortcut.
-	 */
-	void addCollection(KActionCollection *, const QString &title = QString());
+    /**
+     * Insert an action collection, i.e. add all its actions to the ones
+     * already associated with the KShortcutsEditor object.
+     * @param title subtree title of this collection of shortcut.
+     */
+    void addCollection(KActionCollection *, const QString &title = QString());
 
-
-	/**
+    /**
      * Undo all change made since the last commit().
-	 */
-	void undoChanges();
+     */
+    void undoChanges();
 
     /**
      * Save the changes.
@@ -159,7 +157,6 @@ public:
      */
     void commit();
 
-
     /**
      * Removes all configured shortcuts.
      */
@@ -179,7 +176,7 @@ public:
      *               applications config object
      *
      */
-    void writeConfiguration( KConfigGroup* config = 0 ) const;
+    void writeConfiguration(KConfigGroup *config = 0) const;
 
     /**
      * Export the current setting to configuration @p config.
@@ -190,9 +187,9 @@ public:
      * @param config Config object
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void exportConfiguration( KConfig *config) const;
+    XMLGUI_DEPRECATED void exportConfiguration(KConfig *config) const;
 #endif
-    void exportConfiguration( KConfigBase *config) const;
+    void exportConfiguration(KConfigBase *config) const;
 
     /**
      * Import the settings from configuration @p config.
@@ -203,9 +200,9 @@ public:
      * @param config Config object
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void importConfiguration( KConfig *config);
+    XMLGUI_DEPRECATED void importConfiguration(KConfig *config);
 #endif
-    void importConfiguration( KConfigBase *config);
+    void importConfiguration(KConfigBase *config);
 
     /**
      * Sets the types of actions to display in this widget.
@@ -221,37 +218,36 @@ public:
      */
     ActionTypes actionTypes() const;
 
-
 Q_SIGNALS:
-	/**
-	 * Emitted when an action's shortcut has been changed.
-	 **/
-	void keyChange();
+    /**
+     * Emitted when an action's shortcut has been changed.
+     **/
+    void keyChange();
 
 public Q_SLOTS:
-	/**
-	 * Resize columns to width required
-	 */
-	void resizeColumns();
+    /**
+     * Resize columns to width required
+     */
+    void resizeColumns();
 
-	/**
-	 * Set all shortcuts to their default values (bindings).
-	 **/
-	void allDefault();
+    /**
+     * Set all shortcuts to their default values (bindings).
+     **/
+    void allDefault();
 
-        /**
-         * Opens a printing dialog to print all the shortcuts
-         */
-        void printShortcuts() const;
-
-private:
-	Q_PRIVATE_SLOT(d, void capturedShortcut(QVariant, const QModelIndex &))
+    /**
+     * Opens a printing dialog to print all the shortcuts
+     */
+    void printShortcuts() const;
 
 private:
-	friend class KShortcutsDialog;
-	friend class KShortcutsEditorPrivate;
-	KShortcutsEditorPrivate *const d;
-	Q_DISABLE_COPY(KShortcutsEditor)
+    Q_PRIVATE_SLOT(d, void capturedShortcut(QVariant, const QModelIndex &))
+
+private:
+    friend class KShortcutsDialog;
+    friend class KShortcutsEditorPrivate;
+    KShortcutsEditorPrivate *const d;
+    Q_DISABLE_COPY(KShortcutsEditor)
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KShortcutsEditor::ActionTypes)

@@ -23,7 +23,6 @@
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
 
-
 */
 
 #ifndef KMAINWINDOW_P_H
@@ -44,11 +43,11 @@ class KMainWindow;
 class KMainWindowPrivate
 {
 public:
-    bool autoSaveSettings:1;
-    bool settingsDirty:1;
-    bool autoSaveWindowSize:1;
-    bool sizeApplied:1;
-    bool shuttingDown:1;
+    bool autoSaveSettings: 1;
+    bool settingsDirty: 1;
+    bool autoSaveWindowSize: 1;
+    bool sizeApplied: 1;
+    bool shuttingDown: 1;
     KConfigGroup autoSaveGroup;
     QTimer *settingsTimer;
     QTimer *sizeTimer;
@@ -84,7 +83,7 @@ public:
     ~KMWSessionManager();
 
 private Q_SLOTS:
-    bool saveState(QSessionManager&);
+    bool saveState(QSessionManager &);
 };
 
 #endif

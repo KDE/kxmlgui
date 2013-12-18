@@ -17,8 +17,8 @@ class TestWindow  : public KXmlGuiWindow
     Q_OBJECT
 
 public:
-    TestWindow (QWidget *parent=0);
-    ~TestWindow ();
+    TestWindow(QWidget *parent = 0);
+    ~TestWindow();
 
 public Q_SLOTS:
     void beFixed();
@@ -31,7 +31,7 @@ public Q_SLOTS:
     void slotList(const QString &str);
     void slotOpen();
     void slotCompletion();
-    void slotCompletionsMenu(QAction* action);
+    void slotCompletionsMenu(QAction *action);
     void slotInsertClock();
     void slotLined();
     void slotImportant();
@@ -44,7 +44,7 @@ public Q_SLOTS:
     void slotGoGoGoo();
     void slotInsertListInCombo();
     void slotMakeItem3Current();
-    void slotToggled(QAction* action);
+    void slotToggled(QAction *action);
 
 protected:
     QMenu *itemsMenu;
@@ -52,10 +52,10 @@ protected:
     QStatusBar *statusBar;
     KToolBar *tb;
     KToolBar *tb1;
-    class QLineEdit* testLineEdit;
-    class QComboBox* testComboBox;
-    QAction* fileNewAction;
-    QAction* exitAction;
+    class QLineEdit *testLineEdit;
+    class QComboBox *testComboBox;
+    QAction *fileNewAction;
+    QAction *exitAction;
     bool lineL;
     bool exitB;
     bool greenF;

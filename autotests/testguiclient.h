@@ -31,17 +31,18 @@
 class TestGuiClient : public KXMLGUIClient
 {
 public:
-    TestGuiClient(const QByteArray& xml = QByteArray())
+    TestGuiClient(const QByteArray &xml = QByteArray())
         : KXMLGUIClient()
     {
-        if (!xml.isNull())
+        if (!xml.isNull()) {
             setXML(QString::fromLatin1(xml));
+        }
     }
-    void setXMLFilePublic(const QString& file, bool merge = false, bool setXMLDoc = true)
+    void setXMLFilePublic(const QString &file, bool merge = false, bool setXMLDoc = true)
     {
-      	setXMLFile(file, merge, setXMLDoc);
+        setXMLFile(file, merge, setXMLDoc);
     }
-    void createGUI(const QByteArray& xml, bool withUiStandards = false)
+    void createGUI(const QByteArray &xml, bool withUiStandards = false)
     {
         if (withUiStandards) {
             QString uis = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("ui/ui_standards.rc"));
@@ -51,23 +52,24 @@ public:
 
         setXML(QString::fromLatin1(xml), true);
     }
-    void createActions(const QStringList& actionNames)
+    void createActions(const QStringList &actionNames)
     {
-        KActionCollection* coll = actionCollection();
-        Q_FOREACH(const QString& actionName, actionNames) {
+        KActionCollection *coll = actionCollection();
+        Q_FOREACH (const QString &actionName, actionNames) {
             coll->addAction(actionName)->setText(QStringLiteral("Action"));
         }
     }
 
     // Find a toolbar (created by this guiclient)
-    KToolBar* toolBarByName(const QString& name) {
+    KToolBar *toolBarByName(const QString &name)
+    {
         //qDebug() << "containers:" << factory()->containers("ToolBar");
-        QWidget* toolBarW = factory()->container(name, this);
+        QWidget *toolBarW = factory()->container(name, this);
         if (!toolBarW) {
             qWarning() << "No toolbar found with name" << name;
         }
         Q_ASSERT(toolBarW);
-        KToolBar* toolBar = qobject_cast<KToolBar *>(toolBarW);
+        KToolBar *toolBar = qobject_cast<KToolBar *>(toolBarW);
         Q_ASSERT(toolBar);
         return toolBar;
     }

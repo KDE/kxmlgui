@@ -36,23 +36,23 @@ class QUndoStack;
  */
 namespace KUndoActions
 {
-    /**
-     * Creates an redo action with the default shortcut and icon and adds it to @p actionCollection
-     * @param undoStack the QUndoStack the action triggers the redo on
-     * @param actionCollection the KActionCollection that should be the parent of the action
-     * @param actionName the created action's object name, empty string will set it to the KDE default
-     * @return the created action.
-     */
-    XMLGUI_EXPORT QAction *createRedoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName = QString());
+/**
+ * Creates an redo action with the default shortcut and icon and adds it to @p actionCollection
+ * @param undoStack the QUndoStack the action triggers the redo on
+ * @param actionCollection the KActionCollection that should be the parent of the action
+ * @param actionName the created action's object name, empty string will set it to the KDE default
+ * @return the created action.
+ */
+XMLGUI_EXPORT QAction *createRedoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName = QString());
 
-    /**
-     * Creates an undo action with the default KDE shortcut and icon and adds it to @p actionCollection
-     * @param undoStack the QUndoStack the action triggers the undo on
-     * @param actionCollection the KActionCollection that should be the parent of the action
-     * @param actionName the created action's object name, empty string will set it to the KDE default
-     * @return the created action.
-     */
-    XMLGUI_EXPORT QAction *createUndoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName = QString());
+/**
+ * Creates an undo action with the default KDE shortcut and icon and adds it to @p actionCollection
+ * @param undoStack the QUndoStack the action triggers the undo on
+ * @param actionCollection the KActionCollection that should be the parent of the action
+ * @param actionName the created action's object name, empty string will set it to the KDE default
+ * @return the created action.
+ */
+XMLGUI_EXPORT QAction *createUndoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName = QString());
 }
 
 #endif

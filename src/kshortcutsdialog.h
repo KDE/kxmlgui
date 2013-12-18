@@ -22,7 +22,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef KSHORTCUTSDIALOG_H
 #define KSHORTCUTSDIALOG_H
 
@@ -70,81 +69,80 @@
  */
 class XMLGUI_EXPORT KShortcutsDialog : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	/**
-	 * Constructs a KShortcutsDialog as a child of @p parent.
-	 * Set @p allowLetterShortcuts to false if unmodified alphanumeric
-	 * keys ('A', '1', etc.) are not permissible shortcuts.
-	 */
-	explicit KShortcutsDialog(KShortcutsEditor::ActionTypes types = KShortcutsEditor::AllActions,
-                        KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
-                        QWidget *parent = 0);
+    /**
+     * Constructs a KShortcutsDialog as a child of @p parent.
+     * Set @p allowLetterShortcuts to false if unmodified alphanumeric
+     * keys ('A', '1', etc.) are not permissible shortcuts.
+     */
+    explicit KShortcutsDialog(KShortcutsEditor::ActionTypes types = KShortcutsEditor::AllActions,
+                              KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
+                              QWidget *parent = 0);
 
-	/**
-	 * Destructor. Deletes all resources used by a KShortcutsDialog object.
-	 */
-	virtual ~KShortcutsDialog();
+    /**
+     * Destructor. Deletes all resources used by a KShortcutsDialog object.
+     */
+    virtual ~KShortcutsDialog();
 
-	/**
-	 * Add all actions of the collection to the ones displayed and configured
-	 * by the dialog.
-	 *
-	 * @param title the title associated with the collection (if null, the
-	 * KAboutData::progName() of the collection's componentData is used)
-	 */
-	void addCollection(KActionCollection *, const QString &title = QString());
+    /**
+     * Add all actions of the collection to the ones displayed and configured
+     * by the dialog.
+     *
+     * @param title the title associated with the collection (if null, the
+     * KAboutData::progName() of the collection's componentData is used)
+     */
+    void addCollection(KActionCollection *, const QString &title = QString());
 
-	/**
-	 * @return the list of action collections that are available for configuration in the dialog.
-	 */
-	QList<KActionCollection*> actionCollections() const;
+    /**
+     * @return the list of action collections that are available for configuration in the dialog.
+     */
+    QList<KActionCollection *> actionCollections() const;
 
-	/**
-	 * Run the dialog and call writeSettings() on the action collections
-	 * that were added if @p bSaveSettings is true.
-	 */
-	bool configure(bool saveSettings = true);
+    /**
+     * Run the dialog and call writeSettings() on the action collections
+     * that were added if @p bSaveSettings is true.
+     */
+    bool configure(bool saveSettings = true);
 
-	/** @see QWidget::sizeHint() */
-	virtual QSize sizeHint() const;
+    /** @see QWidget::sizeHint() */
+    virtual QSize sizeHint() const;
 
-	/**
-	 * Pops up a modal dialog for configuring key settings. The new
-	 * shortcut settings will become active if the user presses OK.
-	 *
-	 * @param collection the KActionCollection to configure
-	 * @param allowLetterShortcuts set to KShortcutsEditor::LetterShortcutsDisallowed if unmodified alphanumeric
-	 *  keys ('A', '1', etc.) are not permissible shortcuts.
-	 * @param parent the parent widget to attach to
-	 * @param bSaveSettings if true, the settings will also be saved back
-	 * by calling writeSettings() on the action collections that were added.
-	 *
-	 * @return Accept if the dialog was closed with OK, Reject otherwise.
-	 */
-	static int configure( KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts =
-                          KShortcutsEditor::LetterShortcutsAllowed, QWidget* parent = 0, bool bSaveSettings = true);
+    /**
+     * Pops up a modal dialog for configuring key settings. The new
+     * shortcut settings will become active if the user presses OK.
+     *
+     * @param collection the KActionCollection to configure
+     * @param allowLetterShortcuts set to KShortcutsEditor::LetterShortcutsDisallowed if unmodified alphanumeric
+     *  keys ('A', '1', etc.) are not permissible shortcuts.
+     * @param parent the parent widget to attach to
+     * @param bSaveSettings if true, the settings will also be saved back
+     * by calling writeSettings() on the action collections that were added.
+     *
+     * @return Accept if the dialog was closed with OK, Reject otherwise.
+     */
+    static int configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts =
+                             KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent = 0, bool bSaveSettings = true);
 
 Q_SIGNALS:
-        /**
-         * emitted after ok is clicked and settings are saved
-         */
-        void saved();
+    /**
+     * emitted after ok is clicked and settings are saved
+     */
+    void saved();
 
 private:
-	Q_PRIVATE_SLOT(d, void changeShortcutScheme(const QString &))
-	Q_PRIVATE_SLOT(d, void save())
-	Q_PRIVATE_SLOT(d, void undoChanges())
-	Q_PRIVATE_SLOT(d, void toggleDetails())
+    Q_PRIVATE_SLOT(d, void changeShortcutScheme(const QString &))
+    Q_PRIVATE_SLOT(d, void save())
+    Q_PRIVATE_SLOT(d, void undoChanges())
+    Q_PRIVATE_SLOT(d, void toggleDetails())
 
-	class KShortcutsDialogPrivate;
-	friend class KShortcutsDialogPrivate;
-	class KShortcutsDialogPrivate *const d;
+    class KShortcutsDialogPrivate;
+    friend class KShortcutsDialogPrivate;
+    class KShortcutsDialogPrivate *const d;
 
-	Q_DISABLE_COPY(KShortcutsDialog)
+    Q_DISABLE_COPY(KShortcutsDialog)
 };
 
 #endif // KSHORTCUTSDIALOG_H
 
-//kate: space-indent off; indent-width 4; replace-tabs off;tab-width 4;

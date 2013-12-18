@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("krichtexteditor"));
     QApplication app(argc, argv);
-    KRichTextEditor* mw = new KRichTextEditor();
+    KRichTextEditor *mw = new KRichTextEditor();
     mw->show();
     app.exec();
 }

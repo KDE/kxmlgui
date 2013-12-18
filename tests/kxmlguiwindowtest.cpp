@@ -87,8 +87,8 @@ void MainWindow::setupActions()
     //      are shown misplaced. KMainWindow uses a 500 ms timer to save window settings.
 #ifdef REPRODUCE_TOOLBAR_BUG
     QTimer::singleShot(1000, this, SLOT(slotCreate())); // more than 500 ms so the main window has saved settings.
-                                                        // We can think of this case on natural applications when they
-                                                        // load plugins and change parts. It can take 1 second perfectly.
+    // We can think of this case on natural applications when they
+    // load plugins and change parts. It can take 1 second perfectly.
 #else
     QTimer::singleShot(0, this, SLOT(slotCreate()));
 #endif
@@ -101,7 +101,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Because we use a full path in setXMLFile, we need to call setLocalXMLFile too.
     // In your apps, just pass a relative filename to setXMLFile instead.
     setLocalXMLFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
-                                                     QStringLiteral("kxmlguiwindowtest/kxmlguiwindowtestui.rc"));
+                    QStringLiteral("kxmlguiwindowtest/kxmlguiwindowtestui.rc"));
 
     setCentralWidget(new QTextEdit(this));
     setupActions();

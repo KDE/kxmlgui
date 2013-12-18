@@ -36,7 +36,7 @@ void Client::slotSec()
     qDebug() << "Client::slotSec()";
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("test"));
     QApplication app(argc, argv);
@@ -44,41 +44,40 @@ int main( int argc, char **argv )
 
     KMainWindow *mainwindow = new KMainWindow;
 
-    QLineEdit* line = new QLineEdit( mainwindow );
-    mainwindow->setCentralWidget( line );
+    QLineEdit *line = new QLineEdit(mainwindow);
+    mainwindow->setCentralWidget(line);
 
     mainwindow->show();
 
-    KXMLGUIBuilder *builder = new KXMLGUIBuilder( mainwindow );
+    KXMLGUIBuilder *builder = new KXMLGUIBuilder(mainwindow);
 
-    KXMLGUIFactory *factory = new KXMLGUIFactory( builder );
+    KXMLGUIFactory *factory = new KXMLGUIFactory(builder);
 
     Client *shell = new Client;
     shell->setComponentName(QStringLiteral("konqueror"), QLatin1String("Konqueror"));
 
-    a = new QAction( QIcon::fromTheme( QStringLiteral("view-split-left-right") ), QLatin1String("Split"), shell );
-    shell->actionCollection()->addAction( QStringLiteral("splitviewh"), a );
+    a = new QAction(QIcon::fromTheme(QStringLiteral("view-split-left-right")), QLatin1String("Split"), shell);
+    shell->actionCollection()->addAction(QStringLiteral("splitviewh"), a);
 
-    shell->setXMLFile( QFINDTESTDATA("kxmlguitest_shell.rc") );
+    shell->setXMLFile(QFINDTESTDATA("kxmlguitest_shell.rc"));
 
-    factory->addClient( shell );
+    factory->addClient(shell);
 
     Client *part = new Client;
 
-    a = new QAction( QIcon::fromTheme( QStringLiteral("zoom-out") ), QLatin1String("decfont"), part );
-    part->actionCollection()->addAction( QStringLiteral("decFontSizes"), a );
-    a = new QAction( QIcon::fromTheme( QStringLiteral("security-low") ), QLatin1String("sec"), part );
-    part->actionCollection()->addAction( QStringLiteral("security"), a );
+    a = new QAction(QIcon::fromTheme(QStringLiteral("zoom-out")), QLatin1String("decfont"), part);
+    part->actionCollection()->addAction(QStringLiteral("decFontSizes"), a);
+    a = new QAction(QIcon::fromTheme(QStringLiteral("security-low")), QLatin1String("sec"), part);
+    part->actionCollection()->addAction(QStringLiteral("security"), a);
     part->actionCollection()->setDefaultShortcuts(a, QList<QKeySequence>() << Qt::ALT + Qt::Key_1);
-    a->connect( a, SIGNAL(triggered(bool)), part, SLOT(slotSec()) );
+    a->connect(a, SIGNAL(triggered(bool)), part, SLOT(slotSec()));
 
-    part->setXMLFile( QFINDTESTDATA("kxmlguitest_part.rc") );
+    part->setXMLFile(QFINDTESTDATA("kxmlguitest_part.rc"));
 
-    factory->addClient( part );
-    for ( int i = 0; i < 10; ++i )
-    {
-        factory->removeClient( part );
-        factory->addClient( part );
+    factory->addClient(part);
+    for (int i = 0; i < 10; ++i) {
+        factory->removeClient(part);
+        factory->addClient(part);
     }
 
     return app.exec();

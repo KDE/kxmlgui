@@ -51,17 +51,18 @@ void TabConnectedWidget::paintEvent(QPaintEvent *e)
 
 ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq,
                                        const QKeySequence &activeSeq, bool allowLetterShortcuts)
- : TabConnectedWidget(viewport),
-   m_defaultKeySequence(defaultSeq),
-   m_isUpdating(false)
+    : TabConnectedWidget(viewport),
+      m_defaultKeySequence(defaultSeq),
+      m_isUpdating(false)
 {
     QGridLayout *layout = new QGridLayout(this);
 
     m_defaultRadio = new QRadioButton(i18n("Default:"), this);
     m_defaultLabel = new QLabel(i18nc("No shortcut defined", "None"), this);
     QString defaultText = defaultSeq.toString(QKeySequence::NativeText);
-    if (defaultText.isEmpty())
+    if (defaultText.isEmpty()) {
         defaultText = i18nc("No shortcut defined", "None");
+    }
     m_defaultLabel->setText(defaultText);
 
     m_customRadio = new QRadioButton(i18n("Custom:"), this);
@@ -81,9 +82,8 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
     connect(m_customEditor, SIGNAL(keySequenceChanged(QKeySequence)),
             this, SLOT(setCustom(QKeySequence)));
     connect(m_customEditor, SIGNAL(stealShortcut(QKeySequence,KAction*)),
-        this, SIGNAL(stealShortcut(QKeySequence,KAction*)));
+            this, SIGNAL(stealShortcut(QKeySequence,KAction*)));
 }
-
 
 KKeySequenceWidget::ShortcutTypes ShortcutEditWidget::checkForConflictsAgainst() const
 {
@@ -93,11 +93,12 @@ KKeySequenceWidget::ShortcutTypes ShortcutEditWidget::checkForConflictsAgainst()
 //slot
 void ShortcutEditWidget::defaultToggled(bool checked)
 {
-    if (m_isUpdating)
+    if (m_isUpdating) {
         return;
+    }
 
     m_isUpdating = true;
-    if  (checked) {
+    if (checked) {
         // The default key sequence should be activated. We check first if this is
         // possible.
         if (m_customEditor->isKeySequenceAvailable(m_defaultKeySequence)) {
@@ -116,33 +117,28 @@ void ShortcutEditWidget::defaultToggled(bool checked)
     m_isUpdating = false;
 }
 
-
 void ShortcutEditWidget::setCheckActionCollections(
-        const QList<KActionCollection*> checkActionCollections)
+    const QList<KActionCollection *> checkActionCollections)
 {
     // We just forward them to out KKeySequenceWidget.
     m_customEditor->setCheckActionCollections(checkActionCollections);
 }
-
 
 void ShortcutEditWidget::setCheckForConflictsAgainst(KKeySequenceWidget::ShortcutTypes types)
 {
     m_customEditor->setCheckForConflictsAgainst(types);
 }
 
-
 void ShortcutEditWidget::setComponentName(const QString componentName)
 {
     m_customEditor->setComponentName(componentName);
 }
-
 
 void ShortcutEditWidget::setMultiKeyShortcutsAllowed(bool allowed)
 {
     // We just forward them to out KKeySequenceWidget.
     m_customEditor->setMultiKeyShortcutsAllowed(allowed);
 }
-
 
 bool ShortcutEditWidget::multiKeyShortcutsAllowed() const
 {
@@ -152,8 +148,9 @@ bool ShortcutEditWidget::multiKeyShortcutsAllowed() const
 //slot
 void ShortcutEditWidget::setCustom(const QKeySequence &seq)
 {
-    if (m_isUpdating)
+    if (m_isUpdating) {
         return;
+    }
 
     // seq is a const reference to a private variable of KKeySequenceWidget.
     // Somewhere below we possible change that one. But we want to emit seq
@@ -170,7 +167,6 @@ void ShortcutEditWidget::setCustom(const QKeySequence &seq)
     m_isUpdating = false;
 }
 
-
 void ShortcutEditWidget::setKeySequence(const QKeySequence &activeSeq)
 {
     if (activeSeq.toString(QKeySequence::NativeText) == m_defaultLabel->text()) {
@@ -180,7 +176,7 @@ void ShortcutEditWidget::setKeySequence(const QKeySequence &activeSeq)
         m_customRadio->setChecked(true);
         // m_customEditor->setKeySequence does some stuff we only want to
         // execute when the sequence really changes.
-        if (activeSeq!=m_customEditor->keySequence()) {
+        if (activeSeq != m_customEditor->keySequence()) {
             m_customEditor->setKeySequence(activeSeq);
         }
     }

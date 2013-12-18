@@ -39,55 +39,55 @@ class QWidget;
  */
 class XMLGUI_EXPORT KXMLGUIBuilder
 {
- public:
+public:
 
-  explicit KXMLGUIBuilder( QWidget *widget );
-  virtual ~KXMLGUIBuilder();
+    explicit KXMLGUIBuilder(QWidget *widget);
+    virtual ~KXMLGUIBuilder();
 
-  /* @internal */
-  KXMLGUIClient *builderClient() const;
-  /* @internal */
-  void setBuilderClient( KXMLGUIClient *client );
-  /* @internal */
-  QWidget *widget();
+    /* @internal */
+    KXMLGUIClient *builderClient() const;
+    /* @internal */
+    void setBuilderClient(KXMLGUIClient *client);
+    /* @internal */
+    QWidget *widget();
 
-  virtual QStringList containerTags() const;
+    virtual QStringList containerTags() const;
 
-  /**
-   * Creates a container (menubar/menu/toolbar/statusbar/separator/...)
-   * from an element in the XML file
-   *
-   * @param parent The parent for the container
-   * @param index The index where the container should be inserted
-   *              into the parent container/widget
-   * @param element The element from the DOM tree describing the
-   *                container (use it to access container specified
-   *                attributes or child elements)
-   * @param action The action created for this container; used for e.g. passing to removeContainer.
-   */
-  virtual QWidget *createContainer( QWidget *parent, int index,
-          const QDomElement &element, QAction* &containerAction );
+    /**
+     * Creates a container (menubar/menu/toolbar/statusbar/separator/...)
+     * from an element in the XML file
+     *
+     * @param parent The parent for the container
+     * @param index The index where the container should be inserted
+     *              into the parent container/widget
+     * @param element The element from the DOM tree describing the
+     *                container (use it to access container specified
+     *                attributes or child elements)
+     * @param action The action created for this container; used for e.g. passing to removeContainer.
+     */
+    virtual QWidget *createContainer(QWidget *parent, int index,
+                                     const QDomElement &element, QAction *&containerAction);
 
-  /**
-   * Removes the given (and previously via createContainer )
-   * created container.
-   *
-   */
-  virtual void removeContainer( QWidget *container, QWidget *parent,
-				QDomElement &element, QAction* containerAction );
+    /**
+     * Removes the given (and previously via createContainer )
+     * created container.
+     *
+     */
+    virtual void removeContainer(QWidget *container, QWidget *parent,
+                                 QDomElement &element, QAction *containerAction);
 
-  virtual QStringList customTags() const;
+    virtual QStringList customTags() const;
 
-  virtual QAction* createCustomElement( QWidget *parent, int index, const QDomElement &element );
+    virtual QAction *createCustomElement(QWidget *parent, int index, const QDomElement &element);
 
-  virtual void removeCustomElement( QWidget *parent, QAction* action );
+    virtual void removeCustomElement(QWidget *parent, QAction *action);
 
-  virtual void finalizeGUI( KXMLGUIClient *client );
+    virtual void finalizeGUI(KXMLGUIClient *client);
 
 protected:
-  virtual void virtual_hook( int id, void* data );
+    virtual void virtual_hook(int id, void *data);
 private:
-  KXMLGUIBuilderPrivate * const d;
+    KXMLGUIBuilderPrivate *const d;
 };
 
 #endif

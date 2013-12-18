@@ -33,7 +33,6 @@
 #include <QSaveFile>
 #include <QStatusBar>
 
-
 KRichTextEditor::KRichTextEditor() : KXmlGuiWindow()
 {
     setupActions();

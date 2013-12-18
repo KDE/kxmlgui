@@ -34,18 +34,21 @@ namespace KXMLGUI
 
 struct BuildState;
 
-class ActionList : public QList<QAction*>
+class ActionList : public QList<QAction *>
 {
 public:
     ActionList() {}
-    ActionList( const QList<QAction*> &rhs )
-        : QList<QAction*>( rhs )
+    ActionList(const QList<QAction *> &rhs)
+        : QList<QAction *>(rhs)
     {}
-    ActionList &operator=( const QList<QAction*> &rhs )
-    { QList<QAction*>::operator=( rhs ); return *this; }
+    ActionList &operator=(const QList<QAction *> &rhs)
+    {
+        QList<QAction *>::operator=(rhs);
+        return *this;
+    }
 
-    void plug( QWidget *container, int index ) const;
-    void unplug( QWidget *container ) const;
+    void plug(QWidget *container, int index) const;
+    void unplug(QWidget *container) const;
 };
 
 typedef QMap< QString, ActionList > ActionListMap;
@@ -62,24 +65,22 @@ typedef QMap< QString, ActionList > ActionListMap;
  *
  * A ContainerClient always belongs to a ContainerNode.
  */
-struct ContainerClient
-{
+struct ContainerClient {
     KXMLGUIClient *client;
     ActionList actions;
-    QList<QAction*> customElements;
+    QList<QAction *> customElements;
     QString groupName; //is empty if no group client
     ActionListMap actionLists;
     QString mergingName;
 };
-typedef QList<ContainerClient*> ContainerClientList;
+typedef QList<ContainerClient *> ContainerClientList;
 
 struct ContainerNode;
 
-struct MergingIndex
-{
+struct MergingIndex {
     int value; // the actual index value, used as index for plug() or createContainer() calls
     QString mergingName; // the name of the merging index (i.e. the name attribute of the
-                         // Merge or DefineGroup tag)
+    // Merge or DefineGroup tag)
     QString clientName; // the name of the client that defined this index
 };
 typedef QList<MergingIndex> MergingIndexList;
@@ -103,15 +104,14 @@ typedef QList<MergingIndex> MergingIndexList;
  * position.
  * (used when no merging index is used for a certain action, custom element or sub-container)
  */
-struct ContainerNode
-{
-    ContainerNode( QWidget *_container, const QString &_tagName, const QString &_name,
-                   ContainerNode *_parent = 0L, KXMLGUIClient *_client = 0L,
-                   KXMLGUIBuilder *_builder = 0L, QAction* containerAction = 0,
-                   const QString &_mergingName = QString(),
-                   const QString &groupName = QString(),
-                   const QStringList &customTags = QStringList(),
-                   const QStringList &containerTags = QStringList() );
+struct ContainerNode {
+    ContainerNode(QWidget *_container, const QString &_tagName, const QString &_name,
+                  ContainerNode *_parent = 0L, KXMLGUIClient *_client = 0L,
+                  KXMLGUIBuilder *_builder = 0L, QAction *containerAction = 0,
+                  const QString &_mergingName = QString(),
+                  const QString &groupName = QString(),
+                  const QStringList &customTags = QStringList(),
+                  const QStringList &containerTags = QStringList());
     ~ContainerNode();
 
     ContainerNode *parent;
@@ -120,7 +120,7 @@ struct ContainerNode
     QStringList builderCustomTags;
     QStringList builderContainerTags;
     QWidget *container;
-    QAction* containerAction;
+    QAction *containerAction;
 
     QString tagName;
     QString name;
@@ -128,86 +128,89 @@ struct ContainerNode
     QString groupName; //is empty if the container is in no group
 
     ContainerClientList clients;
-    QList<ContainerNode*> children;
+    QList<ContainerNode *> children;
 
     int index;
     MergingIndexList mergingIndices;
 
     QString mergingName;
 
-    void clearChildren() { qDeleteAll(children); children.clear(); }
-    void removeChild( ContainerNode* child );
+    void clearChildren()
+    {
+        qDeleteAll(children);
+        children.clear();
+    }
+    void removeChild(ContainerNode *child);
     // Removes the child referred to by childIterator.next()
-    void removeChild( QMutableListIterator<ContainerNode*>& childIterator );
+    void removeChild(QMutableListIterator<ContainerNode *> &childIterator);
 
-    MergingIndexList::Iterator findIndex( const QString &name );
-    ContainerNode *findContainerNode( QWidget *container );
-    ContainerNode *findContainer( const QString &_name, bool tag );
-    ContainerNode *findContainer( const QString &name, const QString &tagName,
-                                  const QList<QWidget*> *excludeList,
-                                  KXMLGUIClient *currClient );
+    MergingIndexList::Iterator findIndex(const QString &name);
+    ContainerNode *findContainerNode(QWidget *container);
+    ContainerNode *findContainer(const QString &_name, bool tag);
+    ContainerNode *findContainer(const QString &name, const QString &tagName,
+                                 const QList<QWidget *> *excludeList,
+                                 KXMLGUIClient *currClient);
 
-    ContainerClient *findChildContainerClient( KXMLGUIClient *currentGUIClient,
-                                               const QString &groupName,
-                                               const MergingIndexList::Iterator &mergingIdx );
+    ContainerClient *findChildContainerClient(KXMLGUIClient *currentGUIClient,
+            const QString &groupName,
+            const MergingIndexList::Iterator &mergingIdx);
 
-    void plugActionList( BuildState &state );
-    void plugActionList( BuildState &state, const MergingIndexList::Iterator &mergingIdxIt );
+    void plugActionList(BuildState &state);
+    void plugActionList(BuildState &state, const MergingIndexList::Iterator &mergingIdxIt);
 
-    void unplugActionList( BuildState &state );
-    void unplugActionList( BuildState &state, const MergingIndexList::Iterator &mergingIdxIt );
+    void unplugActionList(BuildState &state);
+    void unplugActionList(BuildState &state, const MergingIndexList::Iterator &mergingIdxIt);
 
-    void adjustMergingIndices( int offset, const MergingIndexList::Iterator &it );
+    void adjustMergingIndices(int offset, const MergingIndexList::Iterator &it);
 
-    bool destruct( QDomElement element, BuildState &state );
-    void destructChildren( const QDomElement &element, BuildState &state );
-    static QDomElement findElementForChild( const QDomElement &baseElement,
-                                            ContainerNode *childNode );
-    void unplugActions( BuildState &state );
-    void unplugClient( ContainerClient *client );
+    bool destruct(QDomElement element, BuildState &state);
+    void destructChildren(const QDomElement &element, BuildState &state);
+    static QDomElement findElementForChild(const QDomElement &baseElement,
+                                           ContainerNode *childNode);
+    void unplugActions(BuildState &state);
+    void unplugClient(ContainerClient *client);
 
     void reset();
 
-    int calcMergingIndex( const QString &mergingName,
-                          MergingIndexList::Iterator &it,
-                          BuildState &state,
-                          bool ignoreDefaultMergingIndex );
+    int calcMergingIndex(const QString &mergingName,
+                         MergingIndexList::Iterator &it,
+                         BuildState &state,
+                         bool ignoreDefaultMergingIndex);
 };
 
-typedef QList<ContainerNode*> ContainerNodeList;
+typedef QList<ContainerNode *> ContainerNodeList;
 
 class BuildHelper
 {
 public:
-    BuildHelper( BuildState &state,
-                 ContainerNode *node );
+    BuildHelper(BuildState &state,
+                ContainerNode *node);
 
-    void build( const QDomElement &element );
+    void build(const QDomElement &element);
 
 private:
-    void processElement( const QDomElement &element );
+    void processElement(const QDomElement &element);
 
-    void processActionOrCustomElement( const QDomElement &e, bool isActionTag );
-    bool processActionElement( const QDomElement &e, int idx );
-    bool processCustomElement( const QDomElement &e, int idx );
+    void processActionOrCustomElement(const QDomElement &e, bool isActionTag);
+    bool processActionElement(const QDomElement &e, int idx);
+    bool processCustomElement(const QDomElement &e, int idx);
 
-    void processStateElement( const QDomElement &element );
+    void processStateElement(const QDomElement &element);
 
-    void processMergeElement( const QString &tag, const QString &name, const QDomElement &e );
+    void processMergeElement(const QString &tag, const QString &name, const QDomElement &e);
 
-    void processContainerElement( const QDomElement &e, const QString &tag,
-                                  const QString &name );
+    void processContainerElement(const QDomElement &e, const QString &tag,
+                                 const QString &name);
 
+    QWidget *createContainer(QWidget *parent, int index, const QDomElement &element,
+                             QAction *&containerAction, KXMLGUIBuilder **builder);
 
-    QWidget *createContainer( QWidget *parent, int index, const QDomElement &element,
-                              QAction*& containerAction, KXMLGUIBuilder **builder );
-
-    int calcMergingIndex( const QDomElement &element, MergingIndexList::Iterator &it, QString &group );
+    int calcMergingIndex(const QDomElement &element, MergingIndexList::Iterator &it, QString &group);
 
     QStringList customTags;
     QStringList containerTags;
 
-    QList<QWidget*> containerList;
+    QList<QWidget *> containerList;
 
     ContainerClient *containerClient;
 
@@ -218,9 +221,8 @@ private:
     ContainerNode *parentNode;
 };
 
-struct BuildState
-{
-    BuildState() : guiClient( 0 ), builder( 0 ), clientBuilder( 0 ) {}
+struct BuildState {
+    BuildState() : guiClient(0), builder(0), clientBuilder(0) {}
 
     void reset();
 
@@ -248,5 +250,4 @@ typedef QStack<BuildState> BuildStateStack;
 }
 
 #endif
-/* vim: et sw=4
- */
+

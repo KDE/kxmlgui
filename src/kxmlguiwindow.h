@@ -23,7 +23,6 @@
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
 
-
 */
 
 #ifndef KXMLGUIWINDOW_H
@@ -62,11 +61,11 @@ class XMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, v
 {
     XMLGUI_DECLARE_PRIVATE(KXmlGuiWindow)
     Q_OBJECT
-    Q_PROPERTY( bool hasMenuBar READ hasMenuBar )
-    Q_PROPERTY( bool autoSaveSettings READ autoSaveSettings )
-    Q_PROPERTY( QString autoSaveGroup READ autoSaveGroup )
-    Q_PROPERTY( bool standardToolBarMenuEnabled READ isStandardToolBarMenuEnabled WRITE setStandardToolBarMenuEnabled )
-    Q_FLAGS( StandardWindowOption )
+    Q_PROPERTY(bool hasMenuBar READ hasMenuBar)
+    Q_PROPERTY(bool autoSaveSettings READ autoSaveSettings)
+    Q_PROPERTY(QString autoSaveGroup READ autoSaveGroup)
+    Q_PROPERTY(bool standardToolBarMenuEnabled READ isStandardToolBarMenuEnabled WRITE setStandardToolBarMenuEnabled)
+    Q_FLAGS(StandardWindowOption)
 
 public:
     /**
@@ -103,7 +102,7 @@ public:
      * for the composer windows "composer#".
      *
      */
-    explicit KXmlGuiWindow( QWidget* parent = 0, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS );
+    explicit KXmlGuiWindow(QWidget *parent = 0, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS);
 
     /**
      * \brief Destructor.
@@ -141,8 +140,7 @@ public:
      *
      * @param xmlfile The local xmlfile (relative or absolute)
      */
-    void createGUI( const QString &xmlfile = QString() );
-
+    void createGUI(const QString &xmlfile = QString());
 
     /**
      * Sets whether KMainWindow should provide a menu that allows showing/hiding
@@ -160,9 +158,8 @@ public:
      *
      * Note that you should enable this feature before calling createGUI() ( or similar ) .
      */
-    void setStandardToolBarMenuEnabled( bool enable );
+    void setStandardToolBarMenuEnabled(bool enable);
     bool isStandardToolBarMenuEnabled() const;
-
 
     /**
      * Sets whether KMainWindow should provide a menu that allows showing/hiding
@@ -188,8 +185,7 @@ public:
     /**
      * @see setupGUI()
      */
-    enum StandardWindowOption
-    {
+    enum StandardWindowOption {
         /**
          * adds action to show/hide the toolbar(s) and adds
          * action to configure the toolbar(s).
@@ -256,7 +252,7 @@ public:
      *          the @p options parameter.
      *
      */
-    void setupGUI( StandardWindowOptions options = Default, const QString& xmlfile = QString() );
+    void setupGUI(StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
     /**
      * Configures the current windows and its actions in the typical KDE
@@ -275,7 +271,7 @@ public:
      * @warning If you are calling createGUI yourself, remember to remove the Create flag from
      *          the @p options parameter. Also, call setupGUI always after you call createGUI.
      */
-    void setupGUI( const QSize& defaultSize, StandardWindowOptions options = Default, const QString& xmlfile = QString() );
+    void setupGUI(const QSize &defaultSize, StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
     /**
      * Returns a pointer to the mainwindows action responsible for the toolbars menu
@@ -288,12 +284,12 @@ public:
     void setupToolbarMenuActions();
 
     // KDE5 TODO: change it to "using KXMLGUIBuilder::finalizeGUI;"
-    virtual void finalizeGUI( KXMLGUIClient *client );
+    virtual void finalizeGUI(KXMLGUIClient *client);
 
     /**
      * @internal
      */
-    void finalizeGUI( bool force );
+    void finalizeGUI(bool force);
 
     // reimplemented for internal reasons
     virtual void applyMainWindowSettings(const KConfigGroup &config, bool force = false);
@@ -325,8 +321,8 @@ public Q_SLOTS:
      * can "reverse" the state (disable the actions which should be
      * enabled, and vice-versa) if specified.
      */
-     void slotStateChanged(const QString &newstate,
-                           bool reverse);
+    void slotStateChanged(const QString &newstate,
+                          bool reverse);
 
 protected:
     /**
@@ -334,14 +330,14 @@ protected:
      * if needed, once all constructor code for the main window has run.
      * Also reimplemented to catch when a QDockWidget is added or removed.
      */
-    virtual bool event( QEvent * event );
+    virtual bool event(QEvent *event);
 
 protected Q_SLOTS:
-   /**
-    * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
-    * @see configureToolbars()
-    */
-   virtual void saveNewToolbarConfig();
+    /**
+     * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
+     * @see configureToolbars()
+     */
+    virtual void saveNewToolbarConfig();
 
 private:
     Q_PRIVATE_SLOT(k_func(), void _k_slotFactoryMakingChanges(bool))

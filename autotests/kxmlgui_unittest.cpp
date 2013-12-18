@@ -46,10 +46,10 @@ enum Flags {
     AddModifiedToolBars = 2,
     AddActionProperties = 4,
     AddModifiedMenus = 8
-    // next item is 16
+                       // next item is 16
 };
 
-static void createXmlFile(QFile& file, int version, int flags, const QByteArray& toplevelTag = "gui")
+static void createXmlFile(QFile &file, int version, int flags, const QByteArray &toplevelTag = "gui")
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
@@ -63,7 +63,7 @@ static void createXmlFile(QFile& file, int version, int flags, const QByteArray&
             "<text>&amp;File</text>\n"
             "<Action name=\"file_open\" />\n"
             "</Menu>\n"
-            );
+        );
     }
     file.write("</MenuBar>\n");
     if (flags & AddToolBars) {
@@ -75,7 +75,7 @@ static void createXmlFile(QFile& file, int version, int flags, const QByteArray&
             "<ToolBar name=\"bookmarkToolBar\">\n"
             "  <text>Bookmark Toolbar</text>\n"
             "</ToolBar>\n"
-            );
+        );
     }
     if (flags & AddModifiedToolBars) {
         file.write(
@@ -86,21 +86,21 @@ static void createXmlFile(QFile& file, int version, int flags, const QByteArray&
             "<ToolBar name=\"bookmarkToolBar\">\n"
             "  <text>Modified toolbars</text>\n"
             "</ToolBar>\n"
-            );
+        );
     }
     if (flags & AddActionProperties) {
         file.write(
             "<ActionProperties>\n"
             "  <Action shortcut=\"F9\" name=\"konq_sidebartng\" />\n"
             "</ActionProperties>\n"
-            );
+        );
     }
     file.write("</" + toplevelTag + ">\n");
 }
 
 static void clickApply(KEditToolBar *dialog)
 {
-    QDialogButtonBox *box = dialog->findChild<QDialogButtonBox*>();
+    QDialogButtonBox *box = dialog->findChild<QDialogButtonBox *>();
     Q_ASSERT(box != 0);
     box->button(QDialogButtonBox::Apply)->setEnabled(true);
     box->button(QDialogButtonBox::Apply)->click();
@@ -111,8 +111,9 @@ void KXmlGui_UnitTest::initTestCase()
     QStandardPaths::enableTestMode(true);
     // Leftover configuration breaks testAutoSaveSettings
     const QString configFile = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "kxmlgui_unittestrc");
-    if (!configFile.isEmpty())
+    if (!configFile.isEmpty()) {
         QFile::remove(configFile);
+    }
 }
 
 void KXmlGui_UnitTest::testFindVersionNumber_data()
@@ -121,23 +122,23 @@ void KXmlGui_UnitTest::testFindVersionNumber_data()
     QTest::addColumn<QString>("version");
 
     QTest::newRow("simple test") <<
-        "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
-        "<gui version=\"3\" name=\"foo\"/>\n" << "3";
+                                 "<?xml version = '1.0'?>\n"
+                                 "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+                                 "<gui version=\"3\" name=\"foo\"/>\n" << "3";
     QTest::newRow("two digits") <<
-        "<?xml version = '1.0'?>\n"
-        "<kpartgui version=\"42\" name=\"foo\"/>\n" << "42";
+                                "<?xml version = '1.0'?>\n"
+                                "<kpartgui version=\"42\" name=\"foo\"/>\n" << "42";
     QTest::newRow("with spaces") << // as found in dirfilterplugin.rc for instance
-        "<?xml version = '1.0'?>\n"
-        "<gui version = \"1\" name=\"foo\"/>\n" << "1";
+                                 "<?xml version = '1.0'?>\n"
+                                 "<gui version = \"1\" name=\"foo\"/>\n" << "1";
     QTest::newRow("with a dot") << // as was found in autorefresh.rc
-        "<?xml version = '1.0'?>\n"
-        "<gui version = \"0.2\" name=\"foo\"/>\n" << QString() /*error*/;
+                                "<?xml version = '1.0'?>\n"
+                                "<gui version = \"0.2\" name=\"foo\"/>\n" << QString() /*error*/;
     QTest::newRow("with a comment") << // as found in kmail.rc
-        "<!DOCTYPE kpartgui>\n"
-        "<!-- This file should be synchronized with kmail_part.rc to provide\n"
-        "the same menu entries at the same place in KMail and Kontact  -->\n"
-        "<kpartgui version=\"452\" name=\"kmmainwin\">\n" << "452";
+                                    "<!DOCTYPE kpartgui>\n"
+                                    "<!-- This file should be synchronized with kmail_part.rc to provide\n"
+                                    "the same menu entries at the same place in KMail and Kontact  -->\n"
+                                    "<kpartgui version=\"452\" name=\"kmmainwin\">\n" << "452";
 }
 
 void KXmlGui_UnitTest::testFindVersionNumber()
@@ -210,7 +211,6 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionNothingKept()
     createXmlFile(fileV1, 1, NoFlags);
     fileToVersionMap.insert(fileV1.fileName(), 1);
 
-
     QStringList files;
     files << fileV2.fileName() << fileV5.fileName() << fileV1.fileName();
 
@@ -256,7 +256,6 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     createXmlFile(fileV1, 1, AddToolBars);
     fileToVersionMap.insert(fileV1.fileName(), 1);
 
-
     QStringList files;
     files << fileV2.fileName() << fileV5.fileName() << fileV1.fileName();
 
@@ -281,32 +280,34 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     QVERIFY(finalDoc.contains("<Action name=\"home\""));
 }
 
-static QStringList collectMenuNames(KXMLGUIFactory& factory)
+static QStringList collectMenuNames(KXMLGUIFactory &factory)
 {
-    QList<QWidget*> containers = factory.containers("Menu");
+    QList<QWidget *> containers = factory.containers("Menu");
     QStringList containerNames;
-    Q_FOREACH(QWidget* w, containers) {
+    Q_FOREACH (QWidget *w, containers) {
         containerNames << w->objectName();
     }
     return containerNames;
 }
 
 #if 0
-static void debugActions(const QList<QAction*>& actions)
+static void debugActions(const QList<QAction *> &actions)
 {
-    Q_FOREACH(QAction* action, actions)
+    Q_FOREACH (QAction *action, actions) {
         qDebug() << (action->isSeparator() ? QString("separator") : action->objectName());
+    }
 }
 #endif
 
-static void checkActions(const QList<QAction*>& actions, const QStringList& expectedActions)
+static void checkActions(const QList<QAction *> &actions, const QStringList &expectedActions)
 {
     for (int i = 0; i < expectedActions.count(); ++i) {
-        QAction* action = actions[i];
-        if (action->isSeparator())
+        QAction *action = actions[i];
+        if (action->isSeparator()) {
             QCOMPARE(QString("separator"), expectedActions[i]);
-        else
+        } else {
             QCOMPARE(action->objectName(), expectedActions[i]);
+        }
     }
     QCOMPARE(actions.count(), expectedActions.count());
 }
@@ -333,7 +334,6 @@ void KXmlGui_UnitTest::testPartMerging()
         "</MenuBar>\n"
         "</gui>\n";
 
-
     TestGuiClient hostClient;
     hostClient.createActions(QStringList() << "go_up" << "go_back" << "go_forward" << "go_home"
                              << "host_after_merge" << "host_after_merge_2" << "last_from_host"
@@ -344,11 +344,11 @@ void KXmlGui_UnitTest::testPartMerging()
     KXMLGUIFactory factory(&builder);
     factory.addClient(&hostClient);
 
-    QWidget* goMenuW = factory.container("go", &hostClient);
+    QWidget *goMenuW = factory.container("go", &hostClient);
     QVERIFY(goMenuW);
-    QMenu* goMenu = qobject_cast<QMenu *>(goMenuW);
+    QMenu *goMenu = qobject_cast<QMenu *>(goMenuW);
     QVERIFY(goMenu);
-    QMenu* fileMenu = qobject_cast<QMenu *>(factory.container("file", &hostClient));
+    QMenu *fileMenu = qobject_cast<QMenu *>(factory.container("file", &hostClient));
 
     //debugActions(goMenu->actions());
     checkActions(goMenu->actions(), QStringList()
@@ -393,8 +393,8 @@ void KXmlGui_UnitTest::testPartMerging()
 
     TestGuiClient partClient(partXml);
     partClient.createActions(QStringList() << "go_previous" << "go_next" << "first_page" <<
-            "last_page" << "last_from_part" << "action_in_merge_group" << "undefined_group" <<
-            "action_in_placed_merge" << "other_file_action" );
+                             "last_page" << "last_from_part" << "action_in_merge_group" << "undefined_group" <<
+                             "action_in_placed_merge" << "other_file_action");
     factory.addClient(&partClient);
 
     //debugActions(goMenu->actions());
@@ -421,8 +421,8 @@ void KXmlGui_UnitTest::testPartMerging()
                  << "action_in_merge_group"
                  // End of <DefineGroup>
                  << "last_from_host"
-        );
-        checkActions(fileMenu->actions(), QStringList()
+                );
+    checkActions(fileMenu->actions(), QStringList()
                  << "file_new"
                  << "action_in_placed_merge"
                  << "file_open"
@@ -457,7 +457,7 @@ void KXmlGui_UnitTest::testPartMergingSettings() // #252911
     KXMLGUIBuilder builder(&mainWindow);
     KXMLGUIFactory factory(&builder);
     factory.addClient(&hostClient);
-    QWidget* settingsMenu = qobject_cast<QMenu *>(factory.container("settings", &hostClient));
+    QWidget *settingsMenu = qobject_cast<QMenu *>(factory.container("settings", &hostClient));
     QVERIFY(settingsMenu);
     //debugActions(settingsMenu->actions());
 
@@ -500,78 +500,78 @@ void KXmlGui_UnitTest::testUiStandardsMerging_data()
     // Merging an empty menu (or a menu with only non-existing actions) would make
     // the empty menu appear at the end after all other menus (fixed for KDE-4.2)
     QTest::newRow("empty file menu, implicit settings menu")
-        << QByteArray(xmlBegin + "<Menu name=\"file\"/>\n" + xmlEnd)
-        << (QStringList() << "options_configure_toolbars")
-        << (QStringList() << "settings");
+            << QByteArray(xmlBegin + "<Menu name=\"file\"/>\n" + xmlEnd)
+            << (QStringList() << "options_configure_toolbars")
+            << (QStringList() << "settings");
     QTest::newRow("file menu with non existing action, implicit settings menu")
-        << QByteArray(xmlBegin + "<Menu name=\"file\"><Action name=\"foo\"/></Menu>\n" + xmlEnd)
-        << (QStringList() << "options_configure_toolbars")
-        << (QStringList() << "settings");
+            << QByteArray(xmlBegin + "<Menu name=\"file\"><Action name=\"foo\"/></Menu>\n" + xmlEnd)
+            << (QStringList() << "options_configure_toolbars")
+            << (QStringList() << "settings");
     QTest::newRow("file menu with existing action, implicit settings menu")
-        << QByteArray(xmlBegin + "<Menu name=\"file\"><Action name=\"open\"/></Menu>\n" + xmlEnd)
-        << (QStringList() << "open" << "options_configure_toolbars")
-        << (QStringList() << "file" << "settings");
+            << QByteArray(xmlBegin + "<Menu name=\"file\"><Action name=\"open\"/></Menu>\n" + xmlEnd)
+            << (QStringList() << "open" << "options_configure_toolbars")
+            << (QStringList() << "file" << "settings");
     QTest::newRow("implicit file and settings menu")
-        << QByteArray(xmlBegin + xmlEnd)
-        << (QStringList() << "file_open" << "options_configure_toolbars")
-        << (QStringList() << "file" << "settings"); // we could check that file_open is in the mainToolBar, too
+            << QByteArray(xmlBegin + xmlEnd)
+            << (QStringList() << "file_open" << "options_configure_toolbars")
+            << (QStringList() << "file" << "settings"); // we could check that file_open is in the mainToolBar, too
 
     // Check that unknown non-empty menus are added at the "MergeLocal" position (before settings).
     QTest::newRow("foo menu added at the end")
-        << QByteArray(xmlBegin + "<Menu name=\"foo\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
-        << (QStringList() << "file_open" << "options_configure_toolbars" << "foo_action")
-        << (QStringList() << "file" << "foo" << "settings");
+            << QByteArray(xmlBegin + "<Menu name=\"foo\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
+            << (QStringList() << "file_open" << "options_configure_toolbars" << "foo_action")
+            << (QStringList() << "file" << "foo" << "settings");
 
     QTest::newRow("Bille's testcase: menu patch + menu edit")
-        << QByteArray(xmlBegin + "<Menu name=\"patch\"><Action name=\"patch_generate\"/></Menu>\n"
-        + "<Menu name=\"edit\"><Action name=\"edit_foo\"/></Menu>\n"
-        + xmlEnd)
-        << (QStringList() << "file_open" << "patch_generate" << "edit_foo")
-        << (QStringList() << "file" << "edit" << "patch");
+            << QByteArray(xmlBegin + "<Menu name=\"patch\"><Action name=\"patch_generate\"/></Menu>\n"
+                          + "<Menu name=\"edit\"><Action name=\"edit_foo\"/></Menu>\n"
+                          + xmlEnd)
+            << (QStringList() << "file_open" << "patch_generate" << "edit_foo")
+            << (QStringList() << "file" << "edit" << "patch");
     QTest::newRow("Bille's testcase: menu patch + menu edit, lowercase tag")
-        << QByteArray(xmlBegin + "<Menu name=\"patch\"><Action name=\"patch_generate\"/></Menu>\n"
-        + "<menu name=\"edit\"><Action name=\"edit_foo\"/></menu>\n"
-        + xmlEnd)
-        << (QStringList() << "file_open" << "patch_generate" << "edit_foo")
-        << (QStringList() << "file" << "edit" << "patch");
+            << QByteArray(xmlBegin + "<Menu name=\"patch\"><Action name=\"patch_generate\"/></Menu>\n"
+                          + "<menu name=\"edit\"><Action name=\"edit_foo\"/></menu>\n"
+                          + xmlEnd)
+            << (QStringList() << "file_open" << "patch_generate" << "edit_foo")
+            << (QStringList() << "file" << "edit" << "patch");
 
     // Check that <Menu append="..."> allows to insert menus at specific positions
     QTest::newRow("Menu append")
-        << QByteArray(xmlBegin + "<Menu name=\"foo\" append=\"settings_merge\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
-        << (QStringList() << "file_open" << "options_configure_toolbars" << "foo_action" << "help_contents")
-        << (QStringList() << "file" << "settings" << "foo" << "help");
+            << QByteArray(xmlBegin + "<Menu name=\"foo\" append=\"settings_merge\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
+            << (QStringList() << "file_open" << "options_configure_toolbars" << "foo_action" << "help_contents")
+            << (QStringList() << "file" << "settings" << "foo" << "help");
     QTest::newRow("Custom first menu")
-        << QByteArray(xmlBegin + "<Menu name=\"foo\" append=\"first_menu\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
-        << (QStringList() << "edit_undo" << "foo_action" << "help_contents")
-        << (QStringList() << "foo" << "edit" << "help");
+            << QByteArray(xmlBegin + "<Menu name=\"foo\" append=\"first_menu\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
+            << (QStringList() << "edit_undo" << "foo_action" << "help_contents")
+            << (QStringList() << "foo" << "edit" << "help");
 
     // Tests for noMerge="1"
     QTest::newRow("noMerge empty file menu, implicit settings menu")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n" + xmlEnd)
-        << (QStringList() << "file_open" << "options_configure_toolbars")
-        << (QStringList() << "file" << "settings"); // we keep empty menus, see #186382
+            << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n" + xmlEnd)
+            << (QStringList() << "file_open" << "options_configure_toolbars")
+            << (QStringList() << "file" << "settings"); // we keep empty menus, see #186382
     QTest::newRow("noMerge empty file menu, file_open moved elsewhere")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
-        << (QStringList() << "file_open")
-        << (QStringList() << "file" << "foo");
+            << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
+            << (QStringList() << "file_open")
+            << (QStringList() << "file" << "foo");
     QTest::newRow("noMerge file menu with open before new")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"><Action name=\"file_open\"/><Action name=\"file_new\"/></Menu>" + xmlEnd)
-        << (QStringList() << "file_open" << "file_new")
-        << (QStringList() << "file"); // TODO check the order of the actions in the menu? how?
+            << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"><Action name=\"file_open\"/><Action name=\"file_new\"/></Menu>" + xmlEnd)
+            << (QStringList() << "file_open" << "file_new")
+            << (QStringList() << "file"); // TODO check the order of the actions in the menu? how?
 
     // Tests for deleted="true"
     QTest::newRow("deleted file menu, implicit settings menu")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"/>\n" + xmlEnd)
-        << (QStringList() << "file_open" << "options_configure_toolbars")
-        << (QStringList() << "settings");
+            << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"/>\n" + xmlEnd)
+            << (QStringList() << "file_open" << "options_configure_toolbars")
+            << (QStringList() << "settings");
     QTest::newRow("deleted file menu, file_open moved elsewhere")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
-        << (QStringList() << "file_open")
-        << (QStringList() << "foo");
+            << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
+            << (QStringList() << "file_open")
+            << (QStringList() << "foo");
     QTest::newRow("deleted file menu with actions (contradiction)")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"><Action name=\"file_open\"/><Action name=\"file_new\"/></Menu>" + xmlEnd)
-        << (QStringList() << "file_open" << "file_new")
-        << (QStringList());
+            << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"><Action name=\"file_open\"/><Action name=\"file_new\"/></Menu>" + xmlEnd)
+            << (QStringList() << "file_open" << "file_new")
+            << (QStringList());
 
 }
 
@@ -624,9 +624,9 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
     KXMLGUIFactory factory(&builder);
     factory.addClient(&client);
 
-    QWidget* menuW = factory.container("groups", &client);
+    QWidget *menuW = factory.container("groups", &client);
     QVERIFY(menuW);
-    QMenu* menu = qobject_cast<QMenu *>(menuW);
+    QMenu *menu = qobject_cast<QMenu *>(menuW);
     QVERIFY(menu);
 
     //debugActions(menu->actions());
@@ -636,10 +636,10 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
 
     qDebug() << "Now plugging the actionlist";
 
-    QAction* action1 = new QAction(this);
+    QAction *action1 = new QAction(this);
     action1->setObjectName("action1");
     action1->setShortcuts(QKeySequence::listFromString("Ctrl+2"));
-    QList<QAction*> actionList;
+    QList<QAction *> actionList;
     actionList << action1;
     client.plugActionList("view_groups_list", actionList);
     QCOMPARE(QKeySequence::listToString(action1->shortcuts()), QString("Ctrl+2"));
@@ -697,12 +697,12 @@ void KXmlGui_UnitTest::testHiddenToolBar()
     mainWindow.createActions(QStringList() << "go_up");
     mainWindow.createGUI();
 
-    KToolBar* mainToolBar = mainWindow.toolBarByName("mainToolBar");
+    KToolBar *mainToolBar = mainWindow.toolBarByName("mainToolBar");
     QVERIFY(mainToolBar->isHidden());
 
-    KXMLGUIFactory* factory = mainWindow.guiFactory();
+    KXMLGUIFactory *factory = mainWindow.guiFactory();
     QVERIFY(!factory->container("visibleToolBar", &mainWindow)->isHidden());
-    KToolBar* hiddenToolBar = qobject_cast<KToolBar *>(factory->container("hiddenToolBar", &mainWindow));
+    KToolBar *hiddenToolBar = qobject_cast<KToolBar *>(factory->container("hiddenToolBar", &mainWindow));
     qDebug() << hiddenToolBar;
     QVERIFY(hiddenToolBar->isHidden());
 
@@ -750,9 +750,9 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
         mw.reallyResize(800, 600);
         QTest::qWait(200);
 
-        KToolBar* mainToolBar = mw.toolBarByName("mainToolBar");
+        KToolBar *mainToolBar = mw.toolBarByName("mainToolBar");
         QCOMPARE(mw.toolBarArea(mainToolBar), Qt::TopToolBarArea);
-        KToolBar* secondToolBar = mw.toolBarByName("secondToolBar");
+        KToolBar *secondToolBar = mw.toolBarByName("secondToolBar");
         QCOMPARE((int)mw.toolBarArea(secondToolBar), (int)Qt::TopToolBarArea); // REFERENCE #1 (see below)
 
         // Move second toolbar to bottom
@@ -785,9 +785,9 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
         QTest::qWait(200);
 
         // Check toolbar positions were restored
-        KToolBar* mainToolBar = mw2.toolBarByName("mainToolBar");
+        KToolBar *mainToolBar = mw2.toolBarByName("mainToolBar");
         QCOMPARE(mw2.toolBarArea(mainToolBar), Qt::TopToolBarArea);
-        KToolBar* secondToolBar = mw2.toolBarByName("secondToolBar");
+        KToolBar *secondToolBar = mw2.toolBarByName("secondToolBar");
         QCOMPARE(mw2.toolBarArea(secondToolBar), Qt::BottomToolBarArea);
         mw2.applyMainWindowSettings(mw2.autoSaveConfigGroup());
         QCOMPARE(mw2.toolBarArea(secondToolBar), Qt::BottomToolBarArea);
@@ -818,7 +818,7 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
     mainWindow.setAutoSaveSettings(cg);
     mainWindow.createActions(QStringList() << "go_up" << "file_new" << "game_new");
     mainWindow.createGUI();
-    KXMLGUIFactory* factory = mainWindow.guiFactory();
+    KXMLGUIFactory *factory = mainWindow.guiFactory();
 
     //qDebug() << "containers:" << factory->containers("ToolBar");
     QVERIFY(!factory->container("mainToolBar", &mainWindow));
@@ -841,7 +841,8 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
     mainWindow.close();
 }
 
-void KXmlGui_UnitTest::testTopLevelSeparator() {
+void KXmlGui_UnitTest::testTopLevelSeparator()
+{
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
         "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
@@ -882,7 +883,7 @@ void KXmlGui_UnitTest::testMenuNames()
     checkActions(mainWindow.menuBar()->actions(), QStringList()
                  << "filemenu"
                  << "separator"
-                 << "help" );
+                 << "help");
 }
 
 // Test what happens when the application's rc file isn't found
@@ -893,10 +894,11 @@ void KXmlGui_UnitTest::testMenusNoXmlFile()
     mainWindow.createGUIBad();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "help" );
+                 << "help");
 }
 
-void KXmlGui_UnitTest::testXMLFileReplacement() {
+void KXmlGui_UnitTest::testXMLFileReplacement()
+{
     // to differentiate "original" and replacement xml file, one is created with "modified" toolbars
     QTemporaryFile fileOrig;
     QVERIFY(fileOrig.open());
@@ -951,7 +953,8 @@ void KXmlGui_UnitTest::testXMLFileReplacement() {
     QVERIFY(!xml.contains("<ActionProperties>")); // but no local xml file
 }
 
-void KXmlGui_UnitTest::testClientDestruction() { // #170806
+void KXmlGui_UnitTest::testClientDestruction()   // #170806
+{
     const QByteArray hostXml =
         "<?xml version = '1.0'?>\n"
         "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
@@ -963,24 +966,24 @@ void KXmlGui_UnitTest::testClientDestruction() { // #170806
         "</MenuBar>\n"
         "</gui>";
     const QByteArray xml = "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
-        "<gui version=\"1\" name=\"foo\" >\n"
-        "<MenuBar>\n"
-        " <Menu name=\"file\"><text>&amp;File</text>\n"
-        "  <Action name=\"file_open\"/>\n"
-        "  <Action name=\"file_quit\"/>\n"
-        " </Menu>\n"
-        "</MenuBar>\n"
-        "</gui>";
+                           "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+                           "<gui version=\"1\" name=\"foo\" >\n"
+                           "<MenuBar>\n"
+                           " <Menu name=\"file\"><text>&amp;File</text>\n"
+                           "  <Action name=\"file_open\"/>\n"
+                           "  <Action name=\"file_quit\"/>\n"
+                           " </Menu>\n"
+                           "</MenuBar>\n"
+                           "</gui>";
 
     TestXmlGuiWindow mainWindow(hostXml);
-    TestGuiClient* client = new TestGuiClient(xml);
+    TestGuiClient *client = new TestGuiClient(xml);
     client->createActions(QStringList() << "file_open" << "file_quit");
     mainWindow.insertChildClient(client);
     mainWindow.createGUI();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "file" << "separator" << "help" );
+                 << "file" << "separator" << "help");
 
     QVERIFY(mainWindow.factory()->clients().contains(client));
     delete client;
@@ -988,5 +991,5 @@ void KXmlGui_UnitTest::testClientDestruction() { // #170806
 
     // No change, because deletion is fast, it doesn't do manual unplugging.
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "file" << "separator" << "help" );
+                 << "file" << "separator" << "help");
 }

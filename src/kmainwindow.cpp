@@ -1,28 +1,28 @@
- /* This file is part of the KDE libraries
-     Copyright
-     (C) 2000 Reginald Stadlbauer (reggie@kde.org)
-     (C) 1997 Stephan Kulow (coolo@kde.org)
-     (C) 1997-2000 Sven Radej (radej@kde.org)
-     (C) 1997-2000 Matthias Ettrich (ettrich@kde.org)
-     (C) 1999 Chris Schlaeger (cs@kde.org)
-     (C) 2002 Joseph Wenninger (jowenn@kde.org)
-     (C) 2005-2006 Hamish Rodda (rodda@kde.org)
-     (C) 2000-2008 David Faure (faure@kde.org)
+/* This file is part of the KDE libraries
+    Copyright
+    (C) 2000 Reginald Stadlbauer (reggie@kde.org)
+    (C) 1997 Stephan Kulow (coolo@kde.org)
+    (C) 1997-2000 Sven Radej (radej@kde.org)
+    (C) 1997-2000 Matthias Ettrich (ettrich@kde.org)
+    (C) 1999 Chris Schlaeger (cs@kde.org)
+    (C) 2002 Joseph Wenninger (jowenn@kde.org)
+    (C) 2005-2006 Hamish Rodda (rodda@kde.org)
+    (C) 2000-2008 David Faure (faure@kde.org)
 
-     This library is free software; you can redistribute it and/or
-     modify it under the terms of the GNU Library General Public
-     License version 2 as published by the Free Software Foundation.
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License version 2 as published by the Free Software Foundation.
 
-     This library is distributed in the hope that it will be useful,
-     but WITHOUT ANY WARRANTY; without even the implied warranty of
-     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-     Library General Public License for more details.
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Library General Public License for more details.
 
-     You should have received a copy of the GNU Library General Public License
-     along with this library; see the file COPYING.LIB.  If not, write to
-     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-     Boston, MA 02110-1301, USA.
- */
+    You should have received a copy of the GNU Library General Public License
+    along with this library; see the file COPYING.LIB.  If not, write to
+    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+    Boston, MA 02110-1301, USA.
+*/
 
 #include "kmainwindow.h"
 
@@ -100,7 +100,7 @@ DockResizeListener::~DockResizeListener()
 
 bool DockResizeListener::eventFilter(QObject *watched, QEvent *event)
 {
-    switch( event->type() ) {
+    switch (event->type()) {
     case QEvent::Resize:
     case QEvent::Move:
     case QEvent::Hide:
@@ -124,30 +124,30 @@ KMWSessionManager::~KMWSessionManager()
 {
 }
 
-bool KMWSessionManager::saveState(QSessionManager&)
+bool KMWSessionManager::saveState(QSessionManager &)
 {
-    KConfig* config = KConfigGui::sessionConfig();
-    if ( KMainWindow::memberList().count() ){
+    KConfig *config = KConfigGui::sessionConfig();
+    if (KMainWindow::memberList().count()) {
         // According to Jochen Wilhelmy <digisnap@cs.tu-berlin.de>, this
         // hook is useful for better document orientation
         KMainWindow::memberList().first()->saveGlobalProperties(config);
     }
 
     int n = 0;
-    foreach (KMainWindow* mw, KMainWindow::memberList()) {
+    foreach (KMainWindow *mw, KMainWindow::memberList()) {
         n++;
         mw->savePropertiesInternal(config, n);
     }
 
-    KConfigGroup group( config, "Number" );
-    group.writeEntry("NumberOfWindows", n );
+    KConfigGroup group(config, "Number");
+    group.writeEntry("NumberOfWindows", n);
     return true;
 }
 
 Q_GLOBAL_STATIC(KMWSessionManager, ksm)
-Q_GLOBAL_STATIC(QList<KMainWindow*>, sMemberList)
+Q_GLOBAL_STATIC(QList<KMainWindow *>, sMemberList)
 
-KMainWindow::KMainWindow( QWidget* parent, Qt::WindowFlags f )
+KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags f)
     : QMainWindow(parent, f), k_ptr(new KMainWindowPrivate)
 {
     k_ptr->init(this);
@@ -170,7 +170,7 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 
     q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, 0, q));
 
-    q->setAttribute( Qt::WA_DeleteOnClose );
+    q->setAttribute(Qt::WA_DeleteOnClose);
 
     helpMenu = 0;
 
@@ -184,7 +184,7 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     // force KMWSessionManager creation
     ksm();
 
-    sMemberList()->append( q );
+    sMemberList()->append(q);
 
     settingsDirty = false;
     autoSaveSettings = false;
@@ -200,16 +200,17 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     sizeApplied = false;
 }
 
-static bool endsWithHashNumber( const QString& s )
+static bool endsWithHashNumber(const QString &s)
 {
-    for( int i = s.length() - 1;
-         i > 0;
-         --i )
-    {
-        if( s[ i ] == QLatin1Char('#') && i != s.length() - 1 )
-            return true; // ok
-        if( !s[ i ].isDigit())
+    for (int i = s.length() - 1;
+            i > 0;
+            --i) {
+        if (s[ i ] == QLatin1Char('#') && i != s.length() - 1) {
+            return true;    // ok
+        }
+        if (!s[ i ].isDigit()) {
             break;
+        }
     }
     return false;
 }
@@ -218,9 +219,9 @@ static inline bool isValidDBusObjectPathCharacter(const QChar &c)
 {
     register ushort u = c.unicode();
     return (u >= QLatin1Char('a') && u <= QLatin1Char('z'))
-            || (u >= QLatin1Char('A') && u <= QLatin1Char('Z'))
-            || (u >= QLatin1Char('0') && u <= QLatin1Char('9'))
-            || (u == QLatin1Char('_')) || (u == QLatin1Char('/'));
+           || (u >= QLatin1Char('A') && u <= QLatin1Char('Z'))
+           || (u >= QLatin1Char('0') && u <= QLatin1Char('9'))
+           || (u == QLatin1Char('_')) || (u == QLatin1Char('/'));
 }
 
 void KMainWindowPrivate::polish(KMainWindow *q)
@@ -232,68 +233,66 @@ void KMainWindowPrivate::polish(KMainWindow *q)
     const QString name = q->objectName();
     bool startNumberingImmediately = true;
     bool tryReuse = false;
-    if ( name.isEmpty() )
-    {   // no name given
+    if (name.isEmpty()) {
+        // no name given
         objname = QStringLiteral("MainWindow#");
-    }
-    else if( name.endsWith( QLatin1Char( '#' ) ) )
-    {   // trailing # - always add a number  - KWin uses this for better grouping
+    } else if (name.endsWith(QLatin1Char('#'))) {
+        // trailing # - always add a number  - KWin uses this for better grouping
         objname = name;
-    }
-    else if( endsWithHashNumber( name ))
-    {   // trailing # with a number - like above, try to use the given number first
+    } else if (endsWithHashNumber(name)) {
+        // trailing # with a number - like above, try to use the given number first
         objname = name;
         tryReuse = true;
         startNumberingImmediately = false;
-    }
-    else
-    {
+    } else {
         objname = name;
         startNumberingImmediately = false;
     }
 
     s = objname;
-    if ( startNumberingImmediately )
+    if (startNumberingImmediately) {
         s += QLatin1Char('1');
+    }
 
-    for(;;) {
-        const QList<QWidget*> list = qApp->topLevelWidgets();
+    for (;;) {
+        const QList<QWidget *> list = qApp->topLevelWidgets();
         bool found = false;
-        foreach ( QWidget* w, list ) {
-            if( w != q && w->objectName() == s )
-            {
+        foreach (QWidget *w, list) {
+            if (w != q && w->objectName() == s) {
                 found = true;
                 break;
             }
         }
-        if( !found )
+        if (!found) {
             break;
-        if( tryReuse ) {
-            objname = name.left( name.length() - 1 ); // lose the hash
+        }
+        if (tryReuse) {
+            objname = name.left(name.length() - 1);   // lose the hash
             unusedNumber = 0; // start from 1 below
             tryReuse = false;
         }
-        s.setNum( ++unusedNumber );
+        s.setNum(++unusedNumber);
         s = objname + s;
     }
-    q->setObjectName( s );
+    q->setObjectName(s);
     q->winId(); // workaround for setWindowRole() crashing, and set also window role, just in case TT
-    q->setWindowRole( s ); // will keep insisting that object name suddenly should not be used for window role
+    q->setWindowRole(s);   // will keep insisting that object name suddenly should not be used for window role
 
     dbusName = QLatin1Char('/') + QCoreApplication::applicationName() + QLatin1Char('/');
     dbusName += q->objectName().replace(QLatin1Char('/'), QLatin1Char('_'));
     // Clean up for dbus usage: any non-alphanumeric char should be turned into '_'
     const int len = dbusName.length();
-    for ( int i = 0; i < len; ++i ) {
-        if ( !isValidDBusObjectPathCharacter( dbusName[i] ) )
+    for (int i = 0; i < len; ++i) {
+        if (!isValidDBusObjectPathCharacter(dbusName[i])) {
             dbusName[i] = QLatin1Char('_');
+        }
     }
 
     QDBusConnection::sessionBus().registerObject(dbusName, q, QDBusConnection::ExportScriptableSlots |
-                                       QDBusConnection::ExportScriptableProperties |
-                                       QDBusConnection::ExportNonScriptableSlots |
-                                       QDBusConnection::ExportNonScriptableProperties |
-                                       QDBusConnection::ExportAdaptors);
+            QDBusConnection::ExportScriptableProperties |
+            QDBusConnection::ExportNonScriptableSlots |
+            QDBusConnection::ExportNonScriptableProperties |
+            QDBusConnection::ExportAdaptors);
 }
 
 void KMainWindowPrivate::setSettingsDirty(CallCompression callCompression)
@@ -333,33 +332,35 @@ void KMainWindowPrivate::setSizeDirty()
 
 KMainWindow::~KMainWindow()
 {
-    sMemberList()->removeAll( this );
+    sMemberList()->removeAll(this);
     delete static_cast<QObject *>(k_ptr->dockResizeListener);  //so we don't get anymore events after k_ptr is destroyed
     delete k_ptr;
 }
 
 #ifndef KDE_NO_DEPRECATED
-QMenu* KMainWindow::helpMenu( const QString &aboutAppText, bool showWhatsThis )
+QMenu *KMainWindow::helpMenu(const QString &aboutAppText, bool showWhatsThis)
 {
     K_D(KMainWindow);
-    if(!d->helpMenu) {
-        if ( aboutAppText.isEmpty() )
-            d->helpMenu = new KHelpMenu( this, KAboutData::applicationData(), showWhatsThis);
-        else
-            d->helpMenu = new KHelpMenu( this, aboutAppText, showWhatsThis );
+    if (!d->helpMenu) {
+        if (aboutAppText.isEmpty()) {
+            d->helpMenu = new KHelpMenu(this, KAboutData::applicationData(), showWhatsThis);
+        } else {
+            d->helpMenu = new KHelpMenu(this, aboutAppText, showWhatsThis);
+        }
 
-        if (!d->helpMenu)
+        if (!d->helpMenu) {
             return 0;
+        }
     }
 
     return d->helpMenu->menu();
 }
 
-QMenu* KMainWindow::customHelpMenu( bool showWhatsThis )
+QMenu *KMainWindow::customHelpMenu(bool showWhatsThis)
 {
     K_D(KMainWindow);
     if (!d->helpMenu) {
-        d->helpMenu = new KHelpMenu( this, QString(), showWhatsThis );
+        d->helpMenu = new KHelpMenu(this, QString(), showWhatsThis);
         connect(d->helpMenu, SIGNAL(showAboutApplication()),
                 this, SLOT(showAboutApplication()));
     }
@@ -368,78 +369,86 @@ QMenu* KMainWindow::customHelpMenu( bool showWhatsThis )
 }
 #endif
 
-bool KMainWindow::canBeRestored( int number )
+bool KMainWindow::canBeRestored(int number)
 {
-    if ( !qApp->isSessionRestored() )
+    if (!qApp->isSessionRestored()) {
         return false;
+    }
     KConfig *config = KConfigGui::sessionConfig();
-    if ( !config )
+    if (!config) {
         return false;
+    }
 
-    KConfigGroup group( config, QStringLiteral("Number") );
-    const int n = group.readEntry( QStringLiteral("NumberOfWindows"), 1 );
+    KConfigGroup group(config, QStringLiteral("Number"));
+    const int n = group.readEntry(QStringLiteral("NumberOfWindows"), 1);
     return number >= 1 && number <= n;
 }
 
-const QString KMainWindow::classNameOfToplevel( int number )
+const QString KMainWindow::classNameOfToplevel(int number)
 {
-    if ( !qApp->isSessionRestored() )
+    if (!qApp->isSessionRestored()) {
         return QString();
+    }
     KConfig *config = KConfigGui::sessionConfig();
-    if ( !config )
+    if (!config) {
         return QString();
+    }
     QString s;
-    s.setNum( number );
-    s.prepend( QStringLiteral("WindowProperties") );
+    s.setNum(number);
+    s.prepend(QStringLiteral("WindowProperties"));
 
-    KConfigGroup group( config, s );
-    if ( !group.hasKey( QStringLiteral("ClassName") ) )
+    KConfigGroup group(config, s);
+    if (!group.hasKey(QStringLiteral("ClassName"))) {
         return QString();
-    else
-        return group.readEntry( QStringLiteral("ClassName") );
+    } else {
+        return group.readEntry(QStringLiteral("ClassName"));
+    }
 }
 
-bool KMainWindow::restore( int number, bool show )
+bool KMainWindow::restore(int number, bool show)
 {
-    if ( !canBeRestored( number ) )
+    if (!canBeRestored(number)) {
         return false;
+    }
     KConfig *config = KConfigGui::sessionConfig();
-    if ( readPropertiesInternal( config, number ) ){
-        if ( show )
+    if (readPropertiesInternal(config, number)) {
+        if (show) {
             KMainWindow::show();
+        }
         return false;
     }
     return false;
 }
 
-void KMainWindow::setCaption( const QString &caption )
+void KMainWindow::setCaption(const QString &caption)
 {
-    setPlainCaption( caption );
+    setPlainCaption(caption);
 }
 
-void KMainWindow::setCaption( const QString &caption, bool modified )
+void KMainWindow::setCaption(const QString &caption, bool modified)
 {
-    setPlainCaption( caption );
-    setWindowModified( modified );
+    setPlainCaption(caption);
+    setWindowModified(modified);
 }
 
-void KMainWindow::setPlainCaption( const QString &caption )
+void KMainWindow::setPlainCaption(const QString &caption)
 {
-	setWindowTitle(caption);
+    setWindowTitle(caption);
 }
 
-void KMainWindow::appHelpActivated( void )
+void KMainWindow::appHelpActivated(void)
 {
     K_D(KMainWindow);
-    if( !d->helpMenu ) {
-        d->helpMenu = new KHelpMenu( this );
-        if ( !d->helpMenu )
+    if (!d->helpMenu) {
+        d->helpMenu = new KHelpMenu(this);
+        if (!d->helpMenu) {
             return;
+        }
     }
     d->helpMenu->appHelpActivated();
 }
 
-void KMainWindow::closeEvent ( QCloseEvent *e )
+void KMainWindow::closeEvent(QCloseEvent *e)
 {
     K_D(KMainWindow);
 
@@ -457,18 +466,21 @@ void KMainWindow::closeEvent ( QCloseEvent *e )
         e->accept();
 
         int not_withdrawn = 0;
-        foreach (KMainWindow* mw, KMainWindow::memberList()) {
-            if ( !mw->isHidden() && mw->isTopLevel() && mw != this )
+        foreach (KMainWindow *mw, KMainWindow::memberList()) {
+            if (!mw->isHidden() && mw->isTopLevel() && mw != this) {
                 not_withdrawn++;
-        }
-
-        if ( not_withdrawn <= 0 ) { // last window close accepted?
-            if ( !queryExit() || d->shuttingDown ) {
-              // cancel closing, it's stupid to end up with no windows at all....
-              e->ignore();
             }
         }
-    } else e->ignore(); //if the window should not be closed, don't close it
+
+        if (not_withdrawn <= 0) {   // last window close accepted?
+            if (!queryExit() || d->shuttingDown) {
+                // cancel closing, it's stupid to end up with no windows at all....
+                e->ignore();
+            }
+        }
+    } else {
+        e->ignore();    //if the window should not be closed, don't close it
+    }
 }
 
 bool KMainWindow::queryExit()
@@ -481,15 +493,15 @@ bool KMainWindow::queryClose()
     return true;
 }
 
-void KMainWindow::saveGlobalProperties( KConfig*  )
+void KMainWindow::saveGlobalProperties(KConfig *)
 {
 }
 
-void KMainWindow::readGlobalProperties( KConfig*  )
+void KMainWindow::readGlobalProperties(KConfig *)
 {
 }
 
-void KMainWindow::savePropertiesInternal( KConfig *config, int number )
+void KMainWindow::savePropertiesInternal(KConfig *config, int number)
 {
     K_D(KMainWindow);
     const bool oldASWS = d->autoSaveWindowSize;
@@ -520,45 +532,49 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     //qDebug(200) << "KMainWindow::saveMainWindowSettings " << cg.name();
 
     // Called by session management - or if we want to save the window size anyway
-    if ( d->autoSaveWindowSize )
-        KWindowConfig::saveWindowSize( windowHandle(), cg );
+    if (d->autoSaveWindowSize) {
+        KWindowConfig::saveWindowSize(windowHandle(), cg);
+    }
 
     // One day will need to save the version number, but for now, assume 0
     // Utilise the QMainWindow::saveState() functionality.
     const QByteArray state = saveState();
     cg.writeEntry("State", state.toBase64());
 
-    QStatusBar* sb = internalStatusBar(this);
+    QStatusBar *sb = internalStatusBar(this);
     if (sb) {
-       if(!cg.hasDefault("StatusBar") && !sb->isHidden() )
-           cg.revertToDefault("StatusBar");
-       else
-           cg.writeEntry("StatusBar", sb->isHidden() ? "Disabled" : "Enabled");
+        if (!cg.hasDefault("StatusBar") && !sb->isHidden()) {
+            cg.revertToDefault("StatusBar");
+        } else {
+            cg.writeEntry("StatusBar", sb->isHidden() ? "Disabled" : "Enabled");
+        }
     }
 
-    QMenuBar* mb = internalMenuBar(this);
+    QMenuBar *mb = internalMenuBar(this);
     if (mb) {
-       const QString MenuBar = QStringLiteral("MenuBar");
-       if(!cg.hasDefault("MenuBar") && !mb->isHidden() )
-           cg.revertToDefault("MenuBar");
-       else
-           cg.writeEntry("MenuBar", mb->isHidden() ? "Disabled" : "Enabled");
+        const QString MenuBar = QStringLiteral("MenuBar");
+        if (!cg.hasDefault("MenuBar") && !mb->isHidden()) {
+            cg.revertToDefault("MenuBar");
+        } else {
+            cg.writeEntry("MenuBar", mb->isHidden() ? "Disabled" : "Enabled");
+        }
     }
 
-    if ( !autoSaveSettings() || cg.name() == autoSaveGroup() ) {
+    if (!autoSaveSettings() || cg.name() == autoSaveGroup()) {
         // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
-        if(!cg.hasDefault("ToolBarsMovable") && !KToolBar::toolBarsLocked())
+        if (!cg.hasDefault("ToolBarsMovable") && !KToolBar::toolBarsLocked()) {
             cg.revertToDefault("ToolBarsMovable");
-        else
+        } else {
             cg.writeEntry("ToolBarsMovable", KToolBar::toolBarsLocked() ? "Disabled" : "Enabled");
+        }
     }
 
     int n = 1; // Toolbar counter. toolbars are counted from 1,
-    foreach (KToolBar* toolbar, toolBars()) {
+    foreach (KToolBar *toolbar, toolBars()) {
         QString group(QStringLiteral("Toolbar"));
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
-        group += (toolbar->objectName().isEmpty() ? QString::number(n) : QLatin1Char(' ')+toolbar->objectName());
+        group += (toolbar->objectName().isEmpty() ? QString::number(n) : QLatin1Char(' ') + toolbar->objectName());
 
         KConfigGroup toolbarGroup(&cg, group);
         toolbar->saveSettings(toolbarGroup);
@@ -566,15 +582,16 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     }
 }
 
-bool KMainWindow::readPropertiesInternal( KConfig *config, int number )
+bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
 {
     K_D(KMainWindow);
 
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
 
-    if ( number == 1 )
-        readGlobalProperties( config );
+    if (number == 1) {
+        readGlobalProperties(config);
+    }
 
     // in order they are in toolbar list
     QString s;
@@ -584,11 +601,12 @@ bool KMainWindow::readPropertiesInternal( KConfig *config, int number )
     KConfigGroup cg(config, s);
 
     // restore the object name (window role)
-    if ( cg.hasKey("ObjectName" ) )
+    if (cg.hasKey("ObjectName")) {
         setObjectName(cg.readEntry("ObjectName"));
+    }
 
     d->sizeApplied = false; // since we are changing config file, reload the size of the window
-                            // if necessary. Do it before the call to applyMainWindowSettings.
+    // if necessary. Do it before the call to applyMainWindowSettings.
     applyMainWindowSettings(cg); // Menubar, statusbar and toolbar settings.
 
     s.setNum(number);
@@ -615,38 +633,41 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg, bool force)
         d->sizeApplied = true;
     }
 
-    QStatusBar* sb = internalStatusBar(this);
+    QStatusBar *sb = internalStatusBar(this);
     if (sb) {
         QString entry = cg.readEntry("StatusBar", "Enabled");
-        if ( entry == QStringLiteral("Disabled") )
-           sb->hide();
-        else
-           sb->show();
+        if (entry == QStringLiteral("Disabled")) {
+            sb->hide();
+        } else {
+            sb->show();
+        }
     }
 
-    QMenuBar* mb = internalMenuBar(this);
+    QMenuBar *mb = internalMenuBar(this);
     if (mb) {
-        QString entry = cg.readEntry ("MenuBar", "Enabled");
-        if ( entry == QStringLiteral("Disabled") )
-           mb->hide();
-        else
-           mb->show();
+        QString entry = cg.readEntry("MenuBar", "Enabled");
+        if (entry == QStringLiteral("Disabled")) {
+            mb->hide();
+        } else {
+            mb->show();
+        }
     }
 
-    if ( !autoSaveSettings() || cg.name() == autoSaveGroup() ) { // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
-        QString entry = cg.readEntry ("ToolBarsMovable", "Disabled");
-        if ( entry == QStringLiteral("Disabled") )
+    if (!autoSaveSettings() || cg.name() == autoSaveGroup()) {   // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
+        QString entry = cg.readEntry("ToolBarsMovable", "Disabled");
+        if (entry == QStringLiteral("Disabled")) {
             KToolBar::setToolBarsLocked(true);
-        else
+        } else {
             KToolBar::setToolBarsLocked(false);
+        }
     }
 
     int n = 1; // Toolbar counter. toolbars are counted from 1,
-    foreach (KToolBar* toolbar, toolBars()) {
+    foreach (KToolBar *toolbar, toolBars()) {
         QString group(QStringLiteral("Toolbar"));
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
-        group += (toolbar->objectName().isEmpty() ? QString::number(n) : QLatin1Char(' ')+toolbar->objectName());
+        group += (toolbar->objectName().isEmpty() ? QString::number(n) : QLatin1Char(' ') + toolbar->objectName());
 
         KConfigGroup toolbarGroup(&cg, group);
         toolbar->applySettings(toolbarGroup, force);
@@ -670,14 +691,14 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg, bool force)
 }
 
 #ifndef KDE_NO_DEPRECATED
-void KMainWindow::restoreWindowSize( const KConfigGroup & cg )
+void KMainWindow::restoreWindowSize(const KConfigGroup &cg)
 {
     KWindowConfig::restoreWindowSize(windowHandle(), cg);
 }
 #endif
 
 #ifndef KDE_NO_DEPRECATED
-void KMainWindow::saveWindowSize( KConfigGroup & cg ) const
+void KMainWindow::saveWindowSize(KConfigGroup &cg) const
 {
     KWindowConfig::saveWindowSize(windowHandle(), cg);
 }
@@ -695,13 +716,13 @@ bool KMainWindow::settingsDirty() const
     return d->settingsDirty;
 }
 
-void KMainWindow::setAutoSaveSettings( const QString & groupName, bool saveWindowSize )
+void KMainWindow::setAutoSaveSettings(const QString &groupName, bool saveWindowSize)
 {
     setAutoSaveSettings(KConfigGroup(KSharedConfig::openConfig(), groupName), saveWindowSize);
 }
 
-void KMainWindow::setAutoSaveSettings( const KConfigGroup & group,
-                                       bool saveWindowSize )
+void KMainWindow::setAutoSaveSettings(const KConfigGroup &group,
+                                      bool saveWindowSize)
 {
     K_D(KMainWindow);
     d->autoSaveSettings = true;
@@ -746,17 +767,17 @@ KConfigGroup KMainWindow::autoSaveConfigGroup() const
 void KMainWindow::saveAutoSaveSettings()
 {
     K_D(KMainWindow);
-    Q_ASSERT( d->autoSaveSettings );
+    Q_ASSERT(d->autoSaveSettings);
     //qDebug(200) << "KMainWindow::saveAutoSaveSettings -> saving settings";
     saveMainWindowSettings(d->autoSaveGroup);
     d->autoSaveGroup.sync();
     d->settingsDirty = false;
 }
 
-bool KMainWindow::event( QEvent* ev )
+bool KMainWindow::event(QEvent *ev)
 {
     K_D(KMainWindow);
-    switch( ev->type() ) {
+    switch (ev->type()) {
 #ifdef Q_OS_WIN
     case QEvent::Move:
 #endif
@@ -766,59 +787,57 @@ bool KMainWindow::event( QEvent* ev )
     case QEvent::Polish:
         d->polish(this);
         break;
-    case QEvent::ChildPolished:
-        {
-            QChildEvent *event = static_cast<QChildEvent*>(ev);
-            QDockWidget *dock = qobject_cast<QDockWidget*>(event->child());
-            KToolBar *toolbar = qobject_cast<KToolBar*>(event->child());
-            QMenuBar *menubar = qobject_cast<QMenuBar*>(event->child());
-            if (dock) {
-                connect(dock, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),
-                        this, SLOT(setSettingsDirty()));
-                connect(dock, SIGNAL(visibilityChanged(bool)),
-                        this, SLOT(setSettingsDirty()), Qt::QueuedConnection);
-                connect(dock, SIGNAL(topLevelChanged(bool)),
-                        this, SLOT(setSettingsDirty()));
+    case QEvent::ChildPolished: {
+        QChildEvent *event = static_cast<QChildEvent *>(ev);
+        QDockWidget *dock = qobject_cast<QDockWidget *>(event->child());
+        KToolBar *toolbar = qobject_cast<KToolBar *>(event->child());
+        QMenuBar *menubar = qobject_cast<QMenuBar *>(event->child());
+        if (dock) {
+            connect(dock, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),
+                    this, SLOT(setSettingsDirty()));
+            connect(dock, SIGNAL(visibilityChanged(bool)),
+                    this, SLOT(setSettingsDirty()), Qt::QueuedConnection);
+            connect(dock, SIGNAL(topLevelChanged(bool)),
+                    this, SLOT(setSettingsDirty()));
 
-                // there is no signal emitted if the size of the dock changes,
-                // hence install an event filter instead
-                dock->installEventFilter(k_ptr->dockResizeListener);
-            } else if (toolbar) {
-                // there is no signal emitted if the size of the toolbar changes,
-                // hence install an event filter instead
-                toolbar->installEventFilter(k_ptr->dockResizeListener);
-            } else if (menubar) {
-                // there is no signal emitted if the size of the menubar changes,
-                // hence install an event filter instead
-                menubar->installEventFilter(k_ptr->dockResizeListener);
-            }
+            // there is no signal emitted if the size of the dock changes,
+            // hence install an event filter instead
+            dock->installEventFilter(k_ptr->dockResizeListener);
+        } else if (toolbar) {
+            // there is no signal emitted if the size of the toolbar changes,
+            // hence install an event filter instead
+            toolbar->installEventFilter(k_ptr->dockResizeListener);
+        } else if (menubar) {
+            // there is no signal emitted if the size of the menubar changes,
+            // hence install an event filter instead
+            menubar->installEventFilter(k_ptr->dockResizeListener);
         }
-        break;
-    case QEvent::ChildRemoved:
-        {
-            QChildEvent *event = static_cast<QChildEvent*>(ev);
-            QDockWidget *dock = qobject_cast<QDockWidget*>(event->child());
-            KToolBar *toolbar = qobject_cast<KToolBar*>(event->child());
-            QMenuBar *menubar = qobject_cast<QMenuBar*>(event->child());
-            if (dock) {
-                disconnect(dock, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),
-                           this, SLOT(setSettingsDirty()));
-                disconnect(dock, SIGNAL(visibilityChanged(bool)),
-                           this, SLOT(setSettingsDirty()));
-                disconnect(dock, SIGNAL(topLevelChanged(bool)),
-                           this, SLOT(setSettingsDirty()));
-                dock->removeEventFilter(k_ptr->dockResizeListener);
-            } else if (toolbar) {
-                toolbar->removeEventFilter(k_ptr->dockResizeListener);
-            } else if (menubar) {
-                menubar->removeEventFilter(k_ptr->dockResizeListener);
-            }
+    }
+    break;
+    case QEvent::ChildRemoved: {
+        QChildEvent *event = static_cast<QChildEvent *>(ev);
+        QDockWidget *dock = qobject_cast<QDockWidget *>(event->child());
+        KToolBar *toolbar = qobject_cast<KToolBar *>(event->child());
+        QMenuBar *menubar = qobject_cast<QMenuBar *>(event->child());
+        if (dock) {
+            disconnect(dock, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),
+                       this, SLOT(setSettingsDirty()));
+            disconnect(dock, SIGNAL(visibilityChanged(bool)),
+                       this, SLOT(setSettingsDirty()));
+            disconnect(dock, SIGNAL(topLevelChanged(bool)),
+                       this, SLOT(setSettingsDirty()));
+            dock->removeEventFilter(k_ptr->dockResizeListener);
+        } else if (toolbar) {
+            toolbar->removeEventFilter(k_ptr->dockResizeListener);
+        } else if (menubar) {
+            menubar->removeEventFilter(k_ptr->dockResizeListener);
         }
-        break;
+    }
+    break;
     default:
         break;
     }
-    return QMainWindow::event( ev );
+    return QMainWindow::event(ev);
 }
 
 bool KMainWindow::hasMenuBar()
@@ -831,13 +850,12 @@ void KMainWindowPrivate::_k_shuttingDown()
     // Needed for Qt <= 3.0.3 at least to prevent reentrancy
     // when queryExit() shows a dialog. Check before removing!
     static bool reentrancy_protection = false;
-    if (!reentrancy_protection)
-    {
-       reentrancy_protection = true;
-       shuttingDown = true;
-       // call the virtual queryExit
-       q->queryExit();
-       reentrancy_protection = false;
+    if (!reentrancy_protection) {
+        reentrancy_protection = true;
+        shuttingDown = true;
+        // call the virtual queryExit
+        q->queryExit();
+        reentrancy_protection = false;
     }
 }
 
@@ -861,32 +879,38 @@ void KMainWindowPrivate::_k_slotSaveAutoSaveSize()
     }
 }
 
-KToolBar *KMainWindow::toolBar( const QString& name )
+KToolBar *KMainWindow::toolBar(const QString &name)
 {
     QString childName = name;
-    if (childName.isEmpty())
-       childName = QStringLiteral("mainToolBar");
+    if (childName.isEmpty()) {
+        childName = QStringLiteral("mainToolBar");
+    }
 
-    KToolBar *tb = findChild<KToolBar*>(childName);
-    if ( tb )
+    KToolBar *tb = findChild<KToolBar *>(childName);
+    if (tb) {
         return tb;
+    }
 
-    KToolBar* toolbar = new KToolBar(childName, this); // non-XMLGUI toolbar
+    KToolBar *toolbar = new KToolBar(childName, this); // non-XMLGUI toolbar
     return toolbar;
 }
 
-QList<KToolBar*> KMainWindow::toolBars() const
+QList<KToolBar *> KMainWindow::toolBars() const
 {
-    QList<KToolBar*> ret;
+    QList<KToolBar *> ret;
 
-    foreach (QObject* child, children())
-        if (KToolBar* toolBar = qobject_cast<KToolBar*>(child))
+    foreach (QObject *child, children())
+        if (KToolBar *toolBar = qobject_cast<KToolBar *>(child)) {
             ret.append(toolBar);
+        }
 
     return ret;
 }
 
-QList<KMainWindow*> KMainWindow::memberList() { return *sMemberList(); }
+QList<KMainWindow *> KMainWindow::memberList()
+{
+    return *sMemberList();
+}
 
 QString KMainWindow::dbusName() const
 {

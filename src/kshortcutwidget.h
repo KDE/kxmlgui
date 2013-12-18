@@ -59,7 +59,7 @@ public:
      *
      * @since 4.1
      */
-    void setCheckActionCollections(const QList<KActionCollection *>& actionCollections);
+    void setCheckActionCollections(const QList<KActionCollection *> &actionCollections);
 
     /**
      * @deprecated since 4.1
@@ -68,7 +68,7 @@ public:
      * a shortcut from an action.
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setCheckActionList(const QList<QAction*> &checkList);
+    XMLGUI_DEPRECATED void setCheckActionList(const QList<QAction *> &checkList);
 #endif
 
 Q_SIGNALS:

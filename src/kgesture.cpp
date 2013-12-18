@@ -25,7 +25,7 @@
 inline float metric(float dx, float dy)
 {
     //square root of that or not? - not square root has possible advantages
-    return (dx*dx + dy*dy);
+    return (dx * dx + dy * dy);
 }
 
 class KShapeGesturePrivate
@@ -35,9 +35,9 @@ public:
     {
     }
     KShapeGesturePrivate(const KShapeGesturePrivate &other)
-      : m_shape(other.m_shape),
-        m_lengthTo(other.m_lengthTo),
-        m_curveLength(other.m_curveLength)
+        : m_shape(other.m_shape),
+          m_lengthTo(other.m_lengthTo),
+          m_curveLength(other.m_curveLength)
     {
     }
     QPolygon m_shape;
@@ -51,13 +51,11 @@ KShapeGesture::KShapeGesture()
 {
 }
 
-
 KShapeGesture::KShapeGesture(const QPolygon &shape)
     : d(new KShapeGesturePrivate)
 {
     setShape(shape);
 }
-
 
 KShapeGesture::KShapeGesture(const QString &description)
     : d(new KShapeGesturePrivate)
@@ -72,11 +70,13 @@ KShapeGesture::KShapeGesture(const QString &description)
     while (it != sl.constEnd()) {
         x = (*it).toInt(&ok);
         ++it;
-        if (!ok || it == sl.constEnd())
+        if (!ok || it == sl.constEnd()) {
             break;
+        }
         y = (*it).toInt(&ok);
-        if (!ok)
+        if (!ok) {
             break;
+        }
         ++it;
         poly.append(QPoint(x, y));
     }
@@ -88,18 +88,15 @@ KShapeGesture::KShapeGesture(const QString &description)
     setShape(poly);
 }
 
-
 KShapeGesture::KShapeGesture(const KShapeGesture &other)
     : d(new KShapeGesturePrivate(*(other.d)))
 {
 }
 
-
 KShapeGesture::~KShapeGesture()
 {
     delete d;
 }
-
 
 void KShapeGesture::setShape(const QPolygon &shape)
 {
@@ -117,7 +114,7 @@ void KShapeGesture::setShape(const QPolygon &shape)
     float xScale = bounding.width() ? 100.0 / bounding.width() : 1.0;
     float yScale = bounding.height() ? 100.0 / bounding.height() : 1.0;
     d->m_shape.translate(-bounding.left(), -bounding.top());
-    for (int i=0; i < d->m_shape.size(); i++) {
+    for (int i = 0; i < d->m_shape.size(); i++) {
         d->m_shape[i].setX((int)(xScale * (float)d->m_shape[i].x()));
         d->m_shape[i].setY((int)(yScale * (float)d->m_shape[i].y()));
     }
@@ -131,39 +128,36 @@ void KShapeGesture::setShape(const QPolygon &shape)
 
     int prevX = d->m_shape[0].x();
     int prevY = d->m_shape[0].y();
-    for (int i=1; i < d->m_shape.size(); i++) {
+    for (int i = 1; i < d->m_shape.size(); i++) {
         int curX = d->m_shape[i].x();
         int curY = d->m_shape[i].y();
-        d->m_curveLength += metric(curX-prevX, curY - prevY);
+        d->m_curveLength += metric(curX - prevX, curY - prevY);
         d->m_lengthTo.append(d->m_curveLength);
         prevX = curX;
         prevY = curY;
     }
 }
 
-
 void KShapeGesture::setShapeName(const QString &friendlyName)
 {
     d->m_friendlyName = friendlyName;
 }
-
 
 QString KShapeGesture::shapeName() const
 {
     return d->m_friendlyName;
 }
 
-
 bool KShapeGesture::isValid() const
 {
     return !d->m_shape.isEmpty();
 }
 
-
 QString KShapeGesture::toString() const
 {
-    if (!isValid())
+    if (!isValid()) {
         return QString();
+    }
 
     //TODO: what if the name contains a "," or ";"? Limit the name to letters?
     QString ret = d->m_friendlyName;
@@ -178,7 +172,6 @@ QString KShapeGesture::toString() const
 
     return ret;
 }
-
 
 QByteArray KShapeGesture::toSvg(const QString &attributes) const
 {
@@ -199,7 +192,7 @@ QByteArray KShapeGesture::toSvg(const QString &attributes) const
     ret.append(",");
     ret.append(QString::number(d->m_shape[0].y()).toUtf8());
 
-    for (int i=1; i < d->m_shape.size(); i++) {
+    for (int i = 1; i < d->m_shape.size(); i++) {
         ret.append("L");
         ret.append(QString::number(d->m_shape[i].x()).toUtf8());
         ret.append(",");
@@ -211,7 +204,6 @@ QByteArray KShapeGesture::toSvg(const QString &attributes) const
     ret.append(epilog2);
     return ret;
 }
-
 
 /*
   algorithm: iterate in order over 30 points on our shape and measure the
@@ -263,23 +255,24 @@ float KShapeGesture::distance(const KShapeGesture &other, float abortThreshold) 
     omx = (o_shape[1].x() - ox) / strokeLength;
     omy = (o_shape[1].y() - oy) / strokeLength;
     oposition = 0.0;
-    dist = metric(ox-x, oy-y);
+    dist = metric(ox - x, oy - y);
 
     for (int i = 0; i <= 30; i++) {
         //go to comparison point on our own polygon
         //30.0001 to prevent getting out-of-bounds pointIndex
         desiredPosition = d->m_curveLength / 30.0001 * (float)i;
-        if (desiredPosition > d->m_lengthTo[pointIndex+1]) {
+        if (desiredPosition > d->m_lengthTo[pointIndex + 1]) {
 
-            while (desiredPosition > d->m_lengthTo[pointIndex+1])
+            while (desiredPosition > d->m_lengthTo[pointIndex + 1]) {
                 pointIndex++;
+            }
 
             x = d->m_shape[pointIndex].x();
             y = d->m_shape[pointIndex].y();
             position = d->m_lengthTo[pointIndex];
-            strokeLength = d->m_lengthTo[pointIndex+1] - position;
-            mx = (d->m_shape[pointIndex+1].x() - x) / strokeLength;
-            my = (d->m_shape[pointIndex+1].y() - y) / strokeLength;
+            strokeLength = d->m_lengthTo[pointIndex + 1] - position;
+            mx = (d->m_shape[pointIndex + 1].x() - x) / strokeLength;
+            my = (d->m_shape[pointIndex + 1].y() - y) / strokeLength;
         }
         x += mx * (desiredPosition - position);
         y += my * (desiredPosition - position);
@@ -288,22 +281,23 @@ float KShapeGesture::distance(const KShapeGesture &other, float abortThreshold) 
         //set up upper bound of search interval on other shape
         desiredPosition = qMin(oposition + other.d->m_curveLength / 15.00005,
                                other.d->m_curveLength - 0.0001);
-        if (i == 0 || desiredPosition > o_lengthTo[opointIndexB+1]) {
+        if (i == 0 || desiredPosition > o_lengthTo[opointIndexB + 1]) {
 
-            while (desiredPosition > o_lengthTo[opointIndexB+1])
+            while (desiredPosition > o_lengthTo[opointIndexB + 1]) {
                 opointIndexB++;
+            }
 
             oxB = o_shape[opointIndexB].x();
             oyB = o_shape[opointIndexB].y();
             opositionB = o_lengthTo[opointIndexB];
-            strokeLength = o_lengthTo[opointIndexB+1] - opositionB;
-            omxB = (o_shape[opointIndexB+1].x() - oxB) / strokeLength;
-            omyB = (o_shape[opointIndexB+1].y() - oyB) / strokeLength;
+            strokeLength = o_lengthTo[opointIndexB + 1] - opositionB;
+            omxB = (o_shape[opointIndexB + 1].x() - oxB) / strokeLength;
+            omyB = (o_shape[opointIndexB + 1].y() - oyB) / strokeLength;
         }
         oxB += omxB * (desiredPosition - opositionB);
         oyB += omyB * (desiredPosition - opositionB);
         opositionB = desiredPosition;
-        distB = metric(oxB-x, oyB-y);
+        distB = metric(oxB - x, oyB - y);
 
         //binary search for nearest point on other shape
         for (int j = 0; j < 6; j++) {
@@ -315,40 +309,42 @@ float KShapeGesture::distance(const KShapeGesture &other, float abortThreshold) 
                 omxB = omx; omyB = omy;
                 opointIndexB = opointIndex; opositionB = oposition;
 
-                if (desiredPosition > o_lengthTo[opointIndexB+1]) {
+                if (desiredPosition > o_lengthTo[opointIndexB + 1]) {
 
-                    while (desiredPosition > o_lengthTo[opointIndexB+1])
+                    while (desiredPosition > o_lengthTo[opointIndexB + 1]) {
                         opointIndexB++;
+                    }
 
                     oxB = o_shape[opointIndexB].x();
                     oyB = o_shape[opointIndexB].y();
                     opositionB = o_lengthTo[opointIndexB];
-                    strokeLength = o_lengthTo[opointIndexB+1] - opositionB;
-                    omxB = (o_shape[opointIndexB+1].x() - oxB) / strokeLength;
-                    omyB = (o_shape[opointIndexB+1].y() - oyB) / strokeLength;
+                    strokeLength = o_lengthTo[opointIndexB + 1] - opositionB;
+                    omxB = (o_shape[opointIndexB + 1].x() - oxB) / strokeLength;
+                    omyB = (o_shape[opointIndexB + 1].y() - oyB) / strokeLength;
                 }
                 oxB += omxB * (desiredPosition - opositionB);
                 oyB += omyB * (desiredPosition - opositionB);
                 opositionB = desiredPosition;
-                distB = metric(oxB-x, oyB-y);
+                distB = metric(oxB - x, oyB - y);
             } else {
                 //advance lower bound to desiredPosition
-                if (desiredPosition > o_lengthTo[opointIndex+1]) {
+                if (desiredPosition > o_lengthTo[opointIndex + 1]) {
 
-                    while (desiredPosition > o_lengthTo[opointIndex+1])
+                    while (desiredPosition > o_lengthTo[opointIndex + 1]) {
                         opointIndex++;
+                    }
 
                     ox = o_shape[opointIndex].x();
                     oy = o_shape[opointIndex].y();
                     oposition = o_lengthTo[opointIndex];
-                    strokeLength = o_lengthTo[opointIndex+1] - oposition;
-                    omx = (o_shape[opointIndex+1].x() - ox) / strokeLength;
-                    omy = (o_shape[opointIndex+1].y() - oy) / strokeLength;
+                    strokeLength = o_lengthTo[opointIndex + 1] - oposition;
+                    omx = (o_shape[opointIndex + 1].x() - ox) / strokeLength;
+                    omy = (o_shape[opointIndex + 1].y() - oy) / strokeLength;
                 }
                 ox += omx * (desiredPosition - oposition);
                 oy += omy * (desiredPosition - oposition);
                 oposition = desiredPosition;
-                dist = metric(ox-x, oy-y);
+                dist = metric(ox - x, oy - y);
             }
         }
         retval += qMin(dist, distB);
@@ -356,7 +352,6 @@ float KShapeGesture::distance(const KShapeGesture &other, float abortThreshold) 
     //scale value to make it roughly invariant against step width
     return retval / 30.0;
 }
-
 
 KShapeGesture &KShapeGesture::operator=(const KShapeGesture &other)
 {
@@ -366,12 +361,12 @@ KShapeGesture &KShapeGesture::operator=(const KShapeGesture &other)
     return *this;
 }
 
-
 bool KShapeGesture::operator==(const KShapeGesture &other) const
 {
     //a really fast and workable shortcut
-    if (fabs(d->m_curveLength - other.d->m_curveLength) > 0.1)
+    if (fabs(d->m_curveLength - other.d->m_curveLength) > 0.1) {
         return false;
+    }
     return d->m_shape == other.d->m_shape;
 }
 
@@ -384,12 +379,12 @@ uint KShapeGesture::hashable() const
 {
     uint hash = 0;
 
-    foreach (const QPoint &point, d->m_shape)
+    foreach (const QPoint &point, d->m_shape) {
         hash += qHash(point.x()) + qHash(point.y());
+    }
 
     return hash;
 }
-
 
 /********************************************************
  * KRockerGesture *
@@ -399,13 +394,13 @@ class KRockerGesturePrivate
 {
 public:
     KRockerGesturePrivate()
-      : m_hold(Qt::NoButton),
-        m_thenPush(Qt::NoButton)
+        : m_hold(Qt::NoButton),
+          m_thenPush(Qt::NoButton)
     {
     }
     KRockerGesturePrivate(const KRockerGesturePrivate &other)
-      : m_hold(other.m_hold),
-        m_thenPush(other.m_thenPush)
+        : m_hold(other.m_hold),
+          m_thenPush(other.m_thenPush)
     {
     }
     Qt::MouseButton m_hold;
@@ -413,23 +408,22 @@ public:
 };
 
 KRockerGesture::KRockerGesture()
- : d( new KRockerGesturePrivate )
+    : d(new KRockerGesturePrivate)
 {
 }
 
-
 KRockerGesture::KRockerGesture(Qt::MouseButton hold, Qt::MouseButton thenPush)
- : d( new KRockerGesturePrivate )
+    : d(new KRockerGesturePrivate)
 {
     setButtons(hold, thenPush);
 }
 
-
 KRockerGesture::KRockerGesture(const QString &description)
- : d( new KRockerGesturePrivate )
+    : d(new KRockerGesturePrivate)
 {
-    if (description.length() != 2)
+    if (description.length() != 2) {
         return;
+    }
 
     Qt::MouseButton hold, thenPush;
     Qt::MouseButton *current = &hold;
@@ -459,18 +453,15 @@ KRockerGesture::KRockerGesture(const QString &description)
     d->m_thenPush = thenPush;
 }
 
-
 KRockerGesture::KRockerGesture(const KRockerGesture &other)
- : d( new KRockerGesturePrivate(*(other.d)) )
+    : d(new KRockerGesturePrivate(*(other.d)))
 {
 }
-
 
 KRockerGesture::~KRockerGesture()
 {
     delete d;
 }
-
 
 void KRockerGesture::setButtons(Qt::MouseButton hold, Qt::MouseButton thenPush)
 {
@@ -501,13 +492,11 @@ void KRockerGesture::setButtons(Qt::MouseButton hold, Qt::MouseButton thenPush)
     d->m_thenPush = thenPush;
 }
 
-
 void KRockerGesture::getButtons(Qt::MouseButton *hold, Qt::MouseButton *thenPush) const
 {
     *hold = d->m_hold;
     *thenPush = d->m_thenPush;
 }
-
 
 QString KRockerGesture::mouseButtonName(Qt::MouseButton button)
 {
@@ -527,29 +516,28 @@ QString KRockerGesture::mouseButtonName(Qt::MouseButton button)
     }
 }
 
-
 QString KRockerGesture::rockerName() const
 {
-    if (!isValid())
+    if (!isValid()) {
         return QString();
-        //return i18nc("an invalid mouse gesture of type \"hold down one button, then press another button\"",
-        //             "invalid rocker gesture");
+    }
+    //return i18nc("an invalid mouse gesture of type \"hold down one button, then press another button\"",
+    //             "invalid rocker gesture");
     else
         return i18nc("a kind of mouse gesture: hold down one mouse button, then press another button",
                      "Hold %1, then push %2", mouseButtonName(d->m_hold), mouseButtonName(d->m_thenPush));
 }
-
 
 bool KRockerGesture::isValid() const
 {
     return (d->m_hold != Qt::NoButton);
 }
 
-
 QString KRockerGesture::toString() const
 {
-    if (!isValid())
+    if (!isValid()) {
         return QString();
+    }
     QString ret;
     int button = d->m_hold;
     char desc;
@@ -579,14 +567,12 @@ QString KRockerGesture::toString() const
     return ret;
 }
 
-
 KRockerGesture &KRockerGesture::operator=(const KRockerGesture &other)
 {
     d->m_hold = other.d->m_hold;
     d->m_thenPush = other.d->m_thenPush;
     return *this;
 }
-
 
 bool KRockerGesture::operator==(const KRockerGesture &other) const
 {

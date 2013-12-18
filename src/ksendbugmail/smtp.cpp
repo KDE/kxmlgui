@@ -50,9 +50,9 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
     uname(&uts);
     domainName = uts.nodename;
 
-
-    if(domainName.isEmpty())
+    if (domainName.isEmpty()) {
         domainName = "somemachine.example.net";
+    }
 
     // qDebug() << "SMTP object created";
 
@@ -72,7 +72,7 @@ SMTP::~SMTP()
     timeOutTimer.stop();
 }
 
-void SMTP::setServerHost(const QString& serverhost)
+void SMTP::setServerHost(const QString &serverhost)
 {
     serverHost = serverhost;
 }
@@ -87,41 +87,45 @@ void SMTP::setTimeOut(int timeout)
     timeOut = timeout;
 }
 
-void SMTP::setSenderAddress(const QString& sender)
+void SMTP::setSenderAddress(const QString &sender)
 {
     senderAddress = sender;
     int index = senderAddress.indexOf('<');
-    if (index == -1)
+    if (index == -1) {
         return;
+    }
     senderAddress = senderAddress.mid(index + 1);
     index =  senderAddress.indexOf('>');
-    if (index != -1)
+    if (index != -1) {
         senderAddress = senderAddress.left(index);
+    }
     senderAddress = senderAddress.simplified();
     while (1) {
         index =  senderAddress.indexOf(' ');
-        if (index != -1)
-            senderAddress = senderAddress.mid(index + 1); // take one side
-        else
+        if (index != -1) {
+            senderAddress = senderAddress.mid(index + 1);    // take one side
+        } else {
             break;
+        }
     }
     index = senderAddress.indexOf('@');
-    if (index == -1)
-        senderAddress.append("@localhost"); // won't go through without a local mail system
+    if (index == -1) {
+        senderAddress.append("@localhost");    // won't go through without a local mail system
+    }
 
 }
 
-void SMTP::setRecipientAddress(const QString& recipient)
+void SMTP::setRecipientAddress(const QString &recipient)
 {
     recipientAddress = recipient;
 }
 
-void SMTP::setMessageSubject(const QString& subject)
+void SMTP::setMessageSubject(const QString &subject)
 {
     messageSubject = subject;
 }
 
-void SMTP::setMessageBody(const QString& message)
+void SMTP::setMessageBody(const QString &message)
 {
     messageBody = message;
 }
@@ -145,16 +149,17 @@ void SMTP::closeConnection(void)
 
 void SMTP::sendMessage(void)
 {
-    if(!connected)
+    if (!connected) {
         connectTimerTick();
-    if(state == Finished && connected){
+    }
+    if (state == Finished && connected) {
         // qDebug() << "state was == Finished\n";
         finished = false;
         state = In;
         writeString = QString::fromLatin1("helo %1\r\n").arg(domainName);
         sock->write(writeString.toLatin1().constData(), writeString.length());
     }
-    if(connected){
+    if (connected) {
         // qDebug() << "enabling read on sock...\n";
         interactTimer.setSingleShot(true);
         interactTimer.start(timeOut);
@@ -213,21 +218,24 @@ void SMTP::socketReadyToRead()
     // qDebug() << "socketRead() called...";
     interactTimer.stop();
 
-    if (!sock)
+    if (!sock) {
         return;
+    }
 
-    n = sock->read(readBuffer, SMTP_READ_BUFFER_SIZE-1);
-    if (n < 0)
-	return;
+    n = sock->read(readBuffer, SMTP_READ_BUFFER_SIZE - 1);
+    if (n < 0) {
+        return;
+    }
     readBuffer[n] = 0;
     lineBuffer += readBuffer;
     nl = lineBuffer.indexOf('\n');
-    if(nl == -1)
+    if (nl == -1) {
         return;
+    }
     lastLine = lineBuffer.left(nl);
     lineBuffer = lineBuffer.right(lineBuffer.length() - nl - 1);
     processLine(&lastLine);
-    if(connected) {
+    if (connected) {
         interactTimer.setSingleShot(true);
         interactTimer.start(timeOut);
     }
@@ -246,8 +254,9 @@ void SMTP::socketClosed()
     timeOutTimer.stop();
     // qDebug() << "connection terminated";
     connected = false;
-    if (sock)
+    if (sock) {
         sock->deleteLater();
+    }
     sock = 0;
     emit connectionClosed();
 }
@@ -259,7 +268,7 @@ void SMTP::processLine(QString *line)
 
     i = line->indexOf(' ');
     tmpstr = line->left(i);
-    if(i > 3) {
+    if (i > 3) {
         // qDebug() << "warning: SMTP status code longer than 3 digits: " << tmpstr;
     }
     stat = tmpstr.toInt();
@@ -268,7 +277,7 @@ void SMTP::processLine(QString *line)
 
     // qDebug() << "smtp state: [" << stat << "][" << *line << "]";
 
-    switch(stat){
+    switch (stat) {
     case Greet:     //220
         state = In;
         writeString = QString::fromLatin1("helo %1\r\n").arg(domainName);
@@ -279,7 +288,7 @@ void SMTP::processLine(QString *line)
         state = Quit;
         break;
     case Successful://250
-        switch(state){
+        switch (state) {
         case In:
             state = Ready;
             writeString = QString::fromLatin1("mail from: %1\r\n").arg(senderAddress);
@@ -289,13 +298,13 @@ void SMTP::processLine(QString *line)
         case Ready:
             state = SentFrom;
             writeString = QString::fromLatin1("rcpt to: %1\r\n").arg(recipientAddress);
-             // qDebug() << "out: " << writeString;
+            // qDebug() << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case SentFrom:
             state = SentTo;
             writeString = QLatin1String("data\r\n");
-             // qDebug() << "out: " << writeString;
+            // qDebug() << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case Data:

@@ -22,28 +22,28 @@
 namespace KDEPrivate
 {
 
-KAboutApplicationPersonListView::KAboutApplicationPersonListView( QWidget *parent )
-    : QListView( parent )
+KAboutApplicationPersonListView::KAboutApplicationPersonListView(QWidget *parent)
+    : QListView(parent)
 {
-    setVerticalScrollMode( ScrollPerPixel );
-    setFrameShape( QFrame::NoFrame );
+    setVerticalScrollMode(ScrollPerPixel);
+    setFrameShape(QFrame::NoFrame);
 
     QPalette p = palette();
-    QColor c = p.color( QPalette::Base );
-    c.setAlpha( 0 );
-    p.setColor( QPalette::Base, c );
-    setBackgroundRole( QPalette::Base );
-    setPalette( p );
-    setSelectionMode( NoSelection );
-    setEditTriggers( NoEditTriggers );
+    QColor c = p.color(QPalette::Base);
+    c.setAlpha(0);
+    p.setColor(QPalette::Base, c);
+    setBackgroundRole(QPalette::Base);
+    setPalette(p);
+    setSelectionMode(NoSelection);
+    setEditTriggers(NoEditTriggers);
 }
 
-void KAboutApplicationPersonListView::wheelEvent( QWheelEvent *e )
+void KAboutApplicationPersonListView::wheelEvent(QWheelEvent *e)
 {
     //HACK: Workaround for Qt bug 7232: Smooth scrolling (scroll per pixel) in ItemViews
     //      does not work as expected.
-    verticalScrollBar()->setSingleStep( 3 );
-    QListView::wheelEvent( e );
+    verticalScrollBar()->setSingleStep(3);
+    QListView::wheelEvent(e);
 }
 
 } //namespace KDEPrivate

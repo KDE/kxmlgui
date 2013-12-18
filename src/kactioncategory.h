@@ -35,8 +35,6 @@ struct KActionCategoryPrivate;
 
 class QAction;
 
-
-
 /**
  * Categorize actions for KShortcutsEditor.
  *
@@ -94,17 +92,17 @@ class QAction;
  * \endcode
  */
 class XMLGUI_EXPORT KActionCategory : public QObject
-    {
+{
     Q_OBJECT
 
-    Q_PROPERTY( QString text READ text WRITE setText )
+    Q_PROPERTY(QString text READ text WRITE setText)
 
 public:
 
     /**
      * Default constructor
      */
-    explicit KActionCategory(const QString &text, KActionCollection *parent=NULL);
+    explicit KActionCategory(const QString &text, KActionCollection *parent = NULL);
 
     /**
      * Destructor
@@ -120,46 +118,46 @@ public:
      * corresponding method of KActionCollection.
      */
     //@{
-    QAction * addAction(const QString &name, QAction *action);
-
-    QAction * addAction(
-            KStandardAction::StandardAction actionType,
-            const QObject *receiver = NULL,
-            const char *member = NULL);
-
-    QAction * addAction(
-            KStandardAction::StandardAction actionType,
-            const QString &name,
-            const QObject *receiver = NULL,
-            const char *member = NULL);
+    QAction *addAction(const QString &name, QAction *action);
 
     QAction *addAction(
-            const QString &name,
-            const QObject *receiver = NULL,
-            const char *member = NULL);
+        KStandardAction::StandardAction actionType,
+        const QObject *receiver = NULL,
+        const char *member = NULL);
+
+    QAction *addAction(
+        KStandardAction::StandardAction actionType,
+        const QString &name,
+        const QObject *receiver = NULL,
+        const char *member = NULL);
+
+    QAction *addAction(
+        const QString &name,
+        const QObject *receiver = NULL,
+        const char *member = NULL);
 
     template<class ActionType>
     ActionType *add(
-            const QString &name,
-            const QObject *receiver = NULL,
-            const char *member = NULL)
-        {
+        const QString &name,
+        const QObject *receiver = NULL,
+        const char *member = NULL)
+    {
         ActionType *action = collection()->add<ActionType>(name, receiver, member);
         addAction(action);
         return action;
-        }
+    }
 
     //@}
 
     /**
      * Returns the actions belonging to this category
       */
-    const QList<QAction*> actions() const;
+    const QList<QAction *> actions() const;
 
     /**
      * The action collection this category is associated with.
      */
-    KActionCollection * collection() const;
+    KActionCollection *collection() const;
 
     /**
      * The action categorys descriptive text
@@ -169,7 +167,7 @@ public:
     /**
      * Set the action categorys descriptive text.
      */
-    void setText(const QString& text);
+    void setText(const QString &text);
 
 private:
 
@@ -189,6 +187,5 @@ private:
     //! Implementation details
     KActionCategoryPrivate *const d;
 };
-
 
 #endif /* #ifndef KACTIONCATEGORY_H */

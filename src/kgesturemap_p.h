@@ -48,7 +48,7 @@ public:
     void removeAllGestures(QAction *kact);
     QAction *findAction(const KShapeGesture &gesture) const;
     QAction *findAction(const KRockerGesture &gesture) const;
-    KShapeGesture shapeGesture(const QAction *kact ) const;
+    KShapeGesture shapeGesture(const QAction *kact) const;
     KShapeGesture defaultShapeGesture(const QAction *kact) const;
     KRockerGesture rockerGesture(const QAction *kact) const;
     KRockerGesture defaultRockerGesture(const QAction *kact) const;
@@ -70,8 +70,8 @@ private:
     void matchShapeGesture();
 
     //this is an internal class so don't bother with a d-pointer
-    typedef QHash< KShapeGesture, QAction* > ShapeGestureHash;
-    typedef QHash< KRockerGesture, QAction* > RockerGestureHash;
+    typedef QHash< KShapeGesture, QAction * > ShapeGestureHash;
+    typedef QHash< KRockerGesture, QAction * > RockerGestureHash;
     ShapeGestureHash m_shapeGestures;
     ShapeGestureHash m_defaultShapeGestures;
     RockerGestureHash m_rockerGestures;

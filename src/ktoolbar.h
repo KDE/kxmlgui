@@ -36,24 +36,24 @@ class KConfig;
 class KMainWindow;
 class KXMLGUIClient;
 
- /**
-  * @short Floatable toolbar with auto resize.
-  *
-  * A KDE-style toolbar.
-  *
-  * KToolBar can be used as a standalone widget, but KMainWindow
-  * provides easy factories and management of one or more toolbars.
-  *
-  * KToolBar uses a global config group to load toolbar settings on
-  * construction. It will reread this config group on a
-  * KApplication::appearanceChanged() signal.
-  *
-  * @note If you can't depend on KXmlGui but you want to integrate with KDE, you can use QToolBar with:
-  *    Set ToolButtonStyle to Qt::ToolButtonFollowStyle, this will make QToolBar use the settings for "Main Toolbar"
-  *    Additionally set QToolBar::setProperty("otherToolbar", true) to use settings for "Other toolbars"
-  *    Settings from "Other toolbars" will only work on widget styles derived from KStyle
-  * @author Reginald Stadlbauer <reggie@kde.org>, Stephan Kulow <coolo@kde.org>, Sven Radej <radej@kde.org>, Hamish Rodda <rodda@kde.org>.
-  */
+/**
+ * @short Floatable toolbar with auto resize.
+ *
+ * A KDE-style toolbar.
+ *
+ * KToolBar can be used as a standalone widget, but KMainWindow
+ * provides easy factories and management of one or more toolbars.
+ *
+ * KToolBar uses a global config group to load toolbar settings on
+ * construction. It will reread this config group on a
+ * KApplication::appearanceChanged() signal.
+ *
+ * @note If you can't depend on KXmlGui but you want to integrate with KDE, you can use QToolBar with:
+ *    Set ToolButtonStyle to Qt::ToolButtonFollowStyle, this will make QToolBar use the settings for "Main Toolbar"
+ *    Additionally set QToolBar::setProperty("otherToolbar", true) to use settings for "Other toolbars"
+ *    Settings from "Other toolbars" will only work on widget styles derived from KStyle
+ * @author Reginald Stadlbauer <reggie@kde.org>, Stephan Kulow <coolo@kde.org>, Sven Radej <radej@kde.org>, Hamish Rodda <rodda@kde.org>.
+ */
 class XMLGUI_EXPORT KToolBar : public QToolBar
 {
     Q_OBJECT
@@ -92,7 +92,7 @@ public:
      * @param parent      The standard toolbar parent (usually a KMainWindow)
      * @param readConfig  whether to apply the configuration (global and application-specific)
      */
-    explicit KToolBar(const QString& objectName, QWidget* parent, bool readConfig = true);
+    explicit KToolBar(const QString &objectName, QWidget *parent, bool readConfig = true);
 
     /**
      * Alternate constructor with additional arguments, e.g. to choose in which area
@@ -106,7 +106,7 @@ public:
      * @param isMainToolBar  True for the "main toolbar", false for other toolbars. Different settings apply.
      * @param readConfig  whether to apply the configuration (global and application-specific)
      */
-    KToolBar(const QString& objectName, QMainWindow* parentWindow, Qt::ToolBarArea area, bool newLine = false,
+    KToolBar(const QString &objectName, QMainWindow *parentWindow, Qt::ToolBarArea area, bool newLine = false,
              bool isMainToolBar = false, bool readConfig = true); // KDE5: remove, I don't think anyone is using this.
 
     /**
@@ -117,12 +117,12 @@ public:
     /**
      * Returns the main window that this toolbar is docked with.
      */
-    KMainWindow* mainWindow() const;
+    KMainWindow *mainWindow() const;
 
     /**
      * Convenience function to set icon size
      */
-    void setIconDimensions( int size );
+    void setIconDimensions(int size);
 
     /**
      * Returns the default size for this type of toolbar.
@@ -138,7 +138,7 @@ public:
      * @deprecated use setContextMenuPolicy
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setContextMenuEnabled( bool enable = true );
+    XMLGUI_DEPRECATED void setContextMenuEnabled(bool enable = true);
 #endif
 
     /**
@@ -153,7 +153,7 @@ public:
     /**
      * Save the toolbar settings to group @p configGroup in @p config.
      */
-    void saveSettings( KConfigGroup &cg );
+    void saveSettings(KConfigGroup &cg);
 
     /**
      * Read the toolbar settings from group @p configGroup in @p config
@@ -163,42 +163,42 @@ public:
      * "force global settings, i.e. ignore @p cg", but only for visibility/position/index,
      * not for icon size etc. Only visibility is still controlled by this.
      */
-    void applySettings( const KConfigGroup &cg, bool forceGlobal = false );
+    void applySettings(const KConfigGroup &cg, bool forceGlobal = false);
 
     /**
      * Sets the XML gui client.
      * @deprecated use addXMLGUIClient.
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setXMLGUIClient( KXMLGUIClient *client );
+    XMLGUI_DEPRECATED void setXMLGUIClient(KXMLGUIClient *client);
 #endif
 
     /**
      * Adds an XML gui client that uses this toolbar
      * @since 4.8.1
      */
-    void addXMLGUIClient( KXMLGUIClient *client );
+    void addXMLGUIClient(KXMLGUIClient *client);
 
     /**
      * Removes an XML gui client that uses this toolbar
      * @since 4.8.5
      */
-    void removeXMLGUIClient( KXMLGUIClient *client );
+    void removeXMLGUIClient(KXMLGUIClient *client);
 
     /**
      * Load state from an XML @param element, called by KXMLGUIBuilder.
      */
-    void loadState( const QDomElement &element );
+    void loadState(const QDomElement &element);
 
     /**
      * Save state into an XML @param element, called by KXMLGUIBuilder.
      */
-    void saveState( QDomElement &element ) const;
+    void saveState(QDomElement &element) const;
 
     /**
      * Reimplemented to support context menu activation on disabled tool buttons.
      */
-    bool eventFilter( QObject* watched, QEvent* event );
+    bool eventFilter(QObject *watched, QEvent *event);
 
     /**
      * Returns the global setting for "Icon Text" for the main toolbar
@@ -216,7 +216,7 @@ public:
      * called by KEditToolbar and should generally be set to disabled whenever
      * KEditToolbar is not active.
      */
-    static void setToolBarsEditable( bool editable );
+    static void setToolBarsEditable(bool editable);
 
     /**
      * Returns whether the toolbars are locked (i.e., moving of the toobars disallowed).
@@ -226,7 +226,7 @@ public:
     /**
      * Allows you to lock and unlock all toolbars (i.e., disallow/allow moving of the toobars).
      */
-    static void setToolBarsLocked( bool locked );
+    static void setToolBarsLocked(bool locked);
 
     /**
      * Emits a dbus signal to tell all toolbars in all applications, that the user settings have
@@ -235,40 +235,40 @@ public:
      */
     static void emitToolbarStyleChanged();
 
-  protected Q_SLOTS:
+protected Q_SLOTS:
     virtual void slotMovableChanged(bool movable);
 
-  protected:
-    virtual void contextMenuEvent( QContextMenuEvent* );
-    virtual void actionEvent( QActionEvent* );
+protected:
+    virtual void contextMenuEvent(QContextMenuEvent *);
+    virtual void actionEvent(QActionEvent *);
 
     // Draggable toolbar configuration
-    virtual void dragEnterEvent( QDragEnterEvent* );
-    virtual void dragMoveEvent( QDragMoveEvent* );
-    virtual void dragLeaveEvent( QDragLeaveEvent* );
-    virtual void dropEvent( QDropEvent* );
-    virtual void mousePressEvent( QMouseEvent* );
-    virtual void mouseMoveEvent( QMouseEvent* );
-    virtual void mouseReleaseEvent( QMouseEvent* );
+    virtual void dragEnterEvent(QDragEnterEvent *);
+    virtual void dragMoveEvent(QDragMoveEvent *);
+    virtual void dragLeaveEvent(QDragLeaveEvent *);
+    virtual void dropEvent(QDropEvent *);
+    virtual void mousePressEvent(QMouseEvent *);
+    virtual void mouseMoveEvent(QMouseEvent *);
+    virtual void mouseReleaseEvent(QMouseEvent *);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void slotAppearanceChanged() )
-    Q_PRIVATE_SLOT( d, void slotContextAboutToShow() )
-    Q_PRIVATE_SLOT( d, void slotContextAboutToHide() )
-    Q_PRIVATE_SLOT( d, void slotContextLeft() )
-    Q_PRIVATE_SLOT( d, void slotContextRight() )
-    Q_PRIVATE_SLOT( d, void slotContextShowText() )
-    Q_PRIVATE_SLOT( d, void slotContextTop() )
-    Q_PRIVATE_SLOT( d, void slotContextBottom() )
-    Q_PRIVATE_SLOT( d, void slotContextIcons() )
-    Q_PRIVATE_SLOT( d, void slotContextText() )
-    Q_PRIVATE_SLOT( d, void slotContextTextRight() )
-    Q_PRIVATE_SLOT( d, void slotContextTextUnder() )
-    Q_PRIVATE_SLOT( d, void slotContextIconSize() )
-    Q_PRIVATE_SLOT( d, void slotLockToolBars( bool ) )
+    Q_PRIVATE_SLOT(d, void slotAppearanceChanged())
+    Q_PRIVATE_SLOT(d, void slotContextAboutToShow())
+    Q_PRIVATE_SLOT(d, void slotContextAboutToHide())
+    Q_PRIVATE_SLOT(d, void slotContextLeft())
+    Q_PRIVATE_SLOT(d, void slotContextRight())
+    Q_PRIVATE_SLOT(d, void slotContextShowText())
+    Q_PRIVATE_SLOT(d, void slotContextTop())
+    Q_PRIVATE_SLOT(d, void slotContextBottom())
+    Q_PRIVATE_SLOT(d, void slotContextIcons())
+    Q_PRIVATE_SLOT(d, void slotContextText())
+    Q_PRIVATE_SLOT(d, void slotContextTextRight())
+    Q_PRIVATE_SLOT(d, void slotContextTextUnder())
+    Q_PRIVATE_SLOT(d, void slotContextIconSize())
+    Q_PRIVATE_SLOT(d, void slotLockToolBars(bool))
 };
 
 #endif

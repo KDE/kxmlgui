@@ -27,7 +27,8 @@ class QDialogButtonBox;
 class QLineEdit;
 class QCheckBox;
 
-namespace KDEPrivate {
+namespace KDEPrivate
+{
 
 class ToolBarItem;
 class KEditToolBarWidgetPrivate;
@@ -36,21 +37,22 @@ class ToolBarListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    ToolBarListWidget(QWidget *parent=0);
+    ToolBarListWidget(QWidget *parent = 0);
 
-    void makeVisible(QListWidgetItem* item)
+    void makeVisible(QListWidgetItem *item)
     {
         scrollTo(indexFromItem(item));
     }
 
-    ToolBarItem* currentItem() const;
+    ToolBarItem *currentItem() const;
 
-    void setActiveList(bool isActiveList) {
+    void setActiveList(bool isActiveList)
+    {
         m_activeList = isActiveList;
     }
 
 Q_SIGNALS:
-    void dropped(ToolBarListWidget* list, int index, ToolBarItem* item, bool sourceIsActiveList);
+    void dropped(ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList);
 
 protected:
     virtual Qt::DropActions supportedDropActions() const
@@ -62,13 +64,14 @@ protected:
         return QStringList() << QStringLiteral("application/x-kde-action-list");
     }
 
-    virtual QMimeData* mimeData(const QList<QListWidgetItem*> items) const;
+    virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const;
 
-    virtual bool dropMimeData(int index, const QMimeData * data, Qt::DropAction action);
+    virtual bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action);
 
     // Skip internal dnd handling in QListWidget ---- how is one supposed to figure this out
     // without reading the QListWidget code !?
-    virtual void dropEvent(QDropEvent* ev) {
+    virtual void dropEvent(QDropEvent *ev)
+    {
         QAbstractItemView::dropEvent(ev);
     }
 
@@ -133,8 +136,8 @@ public:
      * @param collection The collection of actions to work on
      * @param parent This widget's parent
      */
-    explicit KEditToolBarWidget( KActionCollection *collection,
-                                 QWidget *parent = 0L);
+    explicit KEditToolBarWidget(KActionCollection *collection,
+                                QWidget *parent = 0L);
 
     /**
      * Main constructor.
@@ -149,7 +152,7 @@ public:
      * @param factory Your application's factory object
      * @param parent This widget's parent
      */
-    explicit KEditToolBarWidget( QWidget *parent = 0L );
+    explicit KEditToolBarWidget(QWidget *parent = 0L);
 
     /**
      * Destructor.  Note that any changes done in this widget will
@@ -183,9 +186,9 @@ public:
      *
      * @see KEditToolBar
      */
-    void load( const QString& resourceFile,
-               bool global = true,
-               const QString& defaultToolBar = QString() );
+    void load(const QString &resourceFile,
+              bool global = true,
+              const QString &defaultToolBar = QString());
 
     /**
      * Loads the toolbar configuration into the widget. Should be called before being shown.
@@ -200,8 +203,8 @@ public:
      *
      * @see KEditToolBar
      */
-    void load( KXMLGUIFactory* factory,
-               const QString& defaultToolBar = QString() );
+    void load(KXMLGUIFactory *factory,
+              const QString &defaultToolBar = QString());
 
     /**
      * @internal Reimplemented for internal purposes.
@@ -245,7 +248,7 @@ private:
 
     Q_PRIVATE_SLOT(d, void slotProcessExited())
 
-    Q_PRIVATE_SLOT(d, void slotDropped(ToolBarListWidget*, int, ToolBarItem*, bool))
+    Q_PRIVATE_SLOT(d, void slotDropped(ToolBarListWidget *, int, ToolBarItem *, bool))
 
 private:
     friend class KEditToolBarWidgetPrivate;

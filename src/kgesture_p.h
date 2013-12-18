@@ -32,7 +32,6 @@
  -"rocker" (i.e. two mouse button) gestures
  */
 
-
 class KShapeGesturePrivate;
 //TODO: implement operator== for special situations like in KKeyChooser.
 class XMLGUI_EXPORT KShapeGesture
@@ -139,7 +138,7 @@ public:
     uint hashable() const;
 
 private:
-    KShapeGesturePrivate * const d;
+    KShapeGesturePrivate *const d;
 };
 
 inline uint qHash(const KShapeGesture &key)
@@ -235,7 +234,7 @@ public:
     uint hashable() const;
 
 private:
-    KRockerGesturePrivate * const d;
+    KRockerGesturePrivate *const d;
 };
 
 inline uint qHash(const KRockerGesture &key)

@@ -24,7 +24,8 @@
 
 #include <QDialog>
 
-namespace KDEPrivate {
+namespace KDEPrivate
+{
 
 /**
  * @short Standard "About KDE" dialog box
@@ -44,21 +45,21 @@ class KAboutKdeDialog : public QDialog
 {
     Q_OBJECT
 
-    public:
-        /**
-         * Constructor. Creates a fully featured "About KDE" dialog box.
-         * Note that this dialog is made modeless in the KHelpMenu class so
-         * the users may expect a modeless dialog.
-         *
-         * @param parent The parent of the dialog box. You should use the
-         *        toplevel window so that the dialog becomes centered.
-         */
-        explicit KAboutKdeDialog(QWidget *parent = 0);
+public:
+    /**
+     * Constructor. Creates a fully featured "About KDE" dialog box.
+     * Note that this dialog is made modeless in the KHelpMenu class so
+     * the users may expect a modeless dialog.
+     *
+     * @param parent The parent of the dialog box. You should use the
+     *        toplevel window so that the dialog becomes centered.
+     */
+    explicit KAboutKdeDialog(QWidget *parent = 0);
 
-    private:
-        class Private;
-        Private* const d;
-        Q_DISABLE_COPY( KAboutKdeDialog )
+private:
+    class Private;
+    Private *const d;
+    Q_DISABLE_COPY(KAboutKdeDialog)
 };
 
 }

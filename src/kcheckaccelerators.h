@@ -60,8 +60,6 @@ class QTextBrowser;
  there are shown all conflicts grouped by accelerator, and a list of all used
  accelerators.
 
-
-
  COPY WIDGET TEXT:
 
  You can copy widgets' texts to find them in translation files faster by middle-clicking them.
@@ -83,11 +81,11 @@ class KCheckAccelerators: public QObject
 {
     Q_OBJECT
 public:
-    KCheckAccelerators(QObject* parent, int key, bool autoCheck, bool copyWidgetText);
+    KCheckAccelerators(QObject *parent, int key, bool autoCheck, bool copyWidgetText);
     /**
      * Re-implemented to filter the parent's events.
      */
-    bool eventFilter(QObject*, QEvent* e);
+    bool eventFilter(QObject *, QEvent *e);
 
 private:
     void checkAccelerators(bool automatic);

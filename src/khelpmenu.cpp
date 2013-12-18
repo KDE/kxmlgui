@@ -61,10 +61,10 @@ class KHelpMenuPrivate
 {
 public:
     KHelpMenuPrivate()
-      : mSwitchApplicationLanguage(0),
-	mActionsCreated(false),
-        mSwitchApplicationLanguageAction(0),
-        mAboutData(KAboutData::applicationData())
+        : mSwitchApplicationLanguage(0),
+          mActionsCreated(false),
+          mSwitchApplicationLanguageAction(0),
+          mAboutData(KAboutData::applicationData())
     {
         mMenu = 0;
         mAboutApp = 0;
@@ -85,7 +85,7 @@ public:
         delete mSwitchApplicationLanguage;
     }
 
-    void createActions(KHelpMenu* q);
+    void createActions(KHelpMenu *q);
 
     QMenu *mMenu;
     QDialog *mAboutApp;
@@ -106,35 +106,36 @@ public:
     KAboutData mAboutData;
 };
 
-KHelpMenu::KHelpMenu( QWidget *parent, const QString &aboutAppText,
-		      bool showWhatsThis )
-  : QObject(parent), d(new KHelpMenuPrivate)
+KHelpMenu::KHelpMenu(QWidget *parent, const QString &aboutAppText,
+                     bool showWhatsThis)
+    : QObject(parent), d(new KHelpMenuPrivate)
 {
-  d->mAboutAppText = aboutAppText;
-  d->mShowWhatsThis = showWhatsThis;
-  d->mParent = parent;
-  d->createActions(this);
+    d->mAboutAppText = aboutAppText;
+    d->mShowWhatsThis = showWhatsThis;
+    d->mParent = parent;
+    d->createActions(this);
 }
 
 KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData,
-                      bool showWhatsThis)
-  : QObject(parent), d(new KHelpMenuPrivate)
+                     bool showWhatsThis)
+    : QObject(parent), d(new KHelpMenuPrivate)
 {
-  d->mShowWhatsThis = showWhatsThis;
-  d->mParent = parent;
-  d->mAboutData = aboutData;
-  d->createActions(this);
+    d->mShowWhatsThis = showWhatsThis;
+    d->mParent = parent;
+    d->mAboutData = aboutData;
+    d->createActions(this);
 }
 
 KHelpMenu::~KHelpMenu()
 {
-  delete d;
+    delete d;
 }
 
-void KHelpMenuPrivate::createActions(KHelpMenu* q)
+void KHelpMenuPrivate::createActions(KHelpMenu *q)
 {
-    if (mActionsCreated)
+    if (mActionsCreated) {
         return;
+    }
     mActionsCreated = true;
 
     if (KAuthorized::authorizeKAction(QStringLiteral("help_contents"))) {
@@ -152,13 +153,14 @@ void KHelpMenuPrivate::createActions(KHelpMenu* q)
         // Is more than one language installed?
         const QStringList localeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("locale"), QStandardPaths::LocateDirectory);
         int numFiles = 0;
-        Q_FOREACH(const QString& localeDir, localeDirs) {
+        Q_FOREACH (const QString &localeDir, localeDirs) {
             const QStringList entries = QDir(localeDir).entryList(QDir::Dirs);
-            Q_FOREACH(const QString& d, entries) {
+            Q_FOREACH (const QString &d, entries) {
                 if (QFile::exists(localeDir + QLatin1Char('/') + d + QStringLiteral("/entry.desktop"))) {
                     ++numFiles;
-                    if (numFiles > 1)
+                    if (numFiles > 1) {
                         break;
+                    }
                 }
             }
         }
@@ -177,87 +179,88 @@ void KHelpMenuPrivate::createActions(KHelpMenu* q)
 }
 
 // Used in the non-xml-gui case, like kfind or ksnapshot's help button.
-QMenu* KHelpMenu::menu()
+QMenu *KHelpMenu::menu()
 {
-  if( !d->mMenu )
-  {
-    d->mMenu = new QMenu();
-    connect( d->mMenu, SIGNAL(destroyed()), this, SLOT(menuDestroyed()));
+    if (!d->mMenu) {
+        d->mMenu = new QMenu();
+        connect(d->mMenu, SIGNAL(destroyed()), this, SLOT(menuDestroyed()));
 
-    d->mMenu->setTitle(i18n("&Help"));
+        d->mMenu->setTitle(i18n("&Help"));
 
-    d->createActions(this);
+        d->createActions(this);
 
-    bool need_separator = false;
-    if (d->mHandBookAction) {
-      d->mMenu->addAction(d->mHandBookAction);
-      need_separator = true;
+        bool need_separator = false;
+        if (d->mHandBookAction) {
+            d->mMenu->addAction(d->mHandBookAction);
+            need_separator = true;
+        }
+
+        if (d->mWhatsThisAction) {
+            d->mMenu->addAction(d->mWhatsThisAction);
+            need_separator = true;
+        }
+
+        if (d->mReportBugAction) {
+            if (need_separator) {
+                d->mMenu->addSeparator();
+            }
+            d->mMenu->addAction(d->mReportBugAction);
+            need_separator = true;
+        }
+
+        if (d->mSwitchApplicationLanguageAction) {
+            if (need_separator) {
+                d->mMenu->addSeparator();
+            }
+            d->mMenu->addAction(d->mSwitchApplicationLanguageAction);
+            need_separator = true;
+        }
+
+        if (need_separator) {
+            d->mMenu->addSeparator();
+        }
+
+        if (d->mAboutAppAction) {
+            d->mMenu->addAction(d->mAboutAppAction);
+        }
+
+        if (d->mAboutKDEAction) {
+            d->mMenu->addAction(d->mAboutKDEAction);
+        }
     }
 
-    if (d->mWhatsThisAction) {
-      d->mMenu->addAction(d->mWhatsThisAction);
-      need_separator = true;
-    }
-
-    if (d->mReportBugAction) {
-      if (need_separator)
-        d->mMenu->addSeparator();
-      d->mMenu->addAction(d->mReportBugAction);
-      need_separator = true;
-    }
-
-    if (d->mSwitchApplicationLanguageAction) {
-        if (need_separator)
-          d->mMenu->addSeparator();
-        d->mMenu->addAction(d->mSwitchApplicationLanguageAction);
-        need_separator = true;
-    }
-
-    if (need_separator)
-      d->mMenu->addSeparator();
-
-    if (d->mAboutAppAction) {
-      d->mMenu->addAction(d->mAboutAppAction);
-    }
-
-    if (d->mAboutKDEAction) {
-      d->mMenu->addAction(d->mAboutKDEAction);
-    }
-  }
-
-  return d->mMenu;
+    return d->mMenu;
 }
 
-QAction *KHelpMenu::action( MenuId id ) const
+QAction *KHelpMenu::action(MenuId id) const
 {
-  switch (id)
-  {
+    switch (id) {
     case menuHelpContents:
-      return d->mHandBookAction;
-    break;
+        return d->mHandBookAction;
+        break;
 
     case menuWhatsThis:
-      return d->mWhatsThisAction;
-    break;
+        return d->mWhatsThisAction;
+        break;
 
     case menuReportBug:
-      return d->mReportBugAction;
-    break;
+        return d->mReportBugAction;
+        break;
 
     case menuSwitchLanguage:
-      return d->mSwitchApplicationLanguageAction;
-    break;
+        return d->mSwitchApplicationLanguageAction;
+        break;
 
     case menuAboutApp:
-      return d->mAboutAppAction;
-    break;
+        return d->mAboutAppAction;
+        break;
 
     case menuAboutKDE:
-      return d->mAboutKDEAction;
-    break;
-  }
+        return d->mAboutKDEAction;
+        break;
+    }
 
-  return 0;
+    return 0;
 }
 
 void KHelpMenu::appHelpActivated()
@@ -265,151 +268,131 @@ void KHelpMenu::appHelpActivated()
     QDesktopServices::openUrl(QUrl(QStringLiteral("help:/")));
 }
 
-
 void KHelpMenu::aboutApplication()
 {
-  if (receivers(SIGNAL(showAboutApplication())) > 0)
-  {
-    emit showAboutApplication();
-  }
-  else  // if (d->mAboutData)
-  {
-    if( !d->mAboutApp )
-    {
-      d->mAboutApp = new KAboutApplicationDialog( d->mAboutData, d->mParent );
-      connect( d->mAboutApp, SIGNAL(finished(int)), this, SLOT(dialogFinished()) );
+    if (receivers(SIGNAL(showAboutApplication())) > 0) {
+        emit showAboutApplication();
+    } else { // if (d->mAboutData)
+        if (!d->mAboutApp) {
+            d->mAboutApp = new KAboutApplicationDialog(d->mAboutData, d->mParent);
+            connect(d->mAboutApp, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
+        }
+        d->mAboutApp->show();
     }
-    d->mAboutApp->show();
-  }
 #if 0 // KF5: when can this happen?
-  else
-  {
-    if( !d->mAboutApp )
-    {
-      d->mAboutApp = new QDialog( d->mParent, Qt::Dialog );
-      QString caption = QGuiApplication::applicationDisplayName();
-      if (caption.isEmpty())
-          caption = QCoreApplication::applicationName();
-      d->mAboutApp->setWindowTitle(i18n("About %1", caption));
-      d->mAboutApp->setObjectName( QStringLiteral("about") );
-      connect( d->mAboutApp, SIGNAL(finished(int)), this, SLOT(dialogFinished()) );
+    else {
+        if (!d->mAboutApp) {
+            d->mAboutApp = new QDialog(d->mParent, Qt::Dialog);
+            QString caption = QGuiApplication::applicationDisplayName();
+            if (caption.isEmpty()) {
+                caption = QCoreApplication::applicationName();
+            }
+            d->mAboutApp->setWindowTitle(i18n("About %1", caption));
+            d->mAboutApp->setObjectName(QStringLiteral("about"));
+            connect(d->mAboutApp, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
 
-      const int spacingHint = d->mAboutApp->style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-      const int marginHint = d->mAboutApp->style()->pixelMetric(QStyle::PM_DefaultChildMargin);
+            const int spacingHint = d->mAboutApp->style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
+            const int marginHint = d->mAboutApp->style()->pixelMetric(QStyle::PM_DefaultChildMargin);
 
-      QVBoxLayout *vbox = new QVBoxLayout;
-      d->mAboutApp->setLayout(vbox);
+            QVBoxLayout *vbox = new QVBoxLayout;
+            d->mAboutApp->setLayout(vbox);
 
-      QHBoxLayout *hbox = new QHBoxLayout;
-      hbox->setSpacing(spacingHint*3);
-      hbox->setMargin(marginHint*1);
+            QHBoxLayout *hbox = new QHBoxLayout;
+            hbox->setSpacing(spacingHint * 3);
+            hbox->setMargin(marginHint * 1);
 
-      const int size = IconSize(KIconLoader::Dialog);
-      QLabel *label1 = new QLabel(d->mAboutApp);
-      label1->setPixmap( qApp->windowIcon().pixmap(size,size) );
-      QLabel *label2 = new QLabel(d->mAboutApp);
-      label2->setText( d->mAboutAppText );
+            const int size = IconSize(KIconLoader::Dialog);
+            QLabel *label1 = new QLabel(d->mAboutApp);
+            label1->setPixmap(qApp->windowIcon().pixmap(size, size));
+            QLabel *label2 = new QLabel(d->mAboutApp);
+            label2->setText(d->mAboutAppText);
 
-      hbox->addWidget( label1 );
-      hbox->addWidget( label2 );
+            hbox->addWidget(label1);
+            hbox->addWidget(label2);
 
-      vbox->addLayout(hbox);
+            vbox->addLayout(hbox);
 
-      QDialogButtonBox *buttonBox = new QDialogButtonBox(d->mAboutApp);
-      buttonBox->setStandardButtons(QDialogButtonBox::Close);
-      connect(buttonBox, SIGNAL(accepted()), d->mAboutApp, SLOT(accept()));
-      connect(buttonBox, SIGNAL(rejected()), d->mAboutApp, SLOT(reject()));
-      vbox->addWidget(buttonBox);
+            QDialogButtonBox *buttonBox = new QDialogButtonBox(d->mAboutApp);
+            buttonBox->setStandardButtons(QDialogButtonBox::Close);
+            connect(buttonBox, SIGNAL(accepted()), d->mAboutApp, SLOT(accept()));
+            connect(buttonBox, SIGNAL(rejected()), d->mAboutApp, SLOT(reject()));
+            vbox->addWidget(buttonBox);
+        }
+        d->mAboutApp->show();
     }
-    d->mAboutApp->show();
-  }
 #endif
 }
 
-
 void KHelpMenu::aboutKDE()
 {
-  if( !d->mAboutKDE )
-  {
-    d->mAboutKDE = new KAboutKdeDialog( d->mParent );
-    connect( d->mAboutKDE, SIGNAL(finished()), this, SLOT(dialogFinished()) );
-  }
-  d->mAboutKDE->show();
+    if (!d->mAboutKDE) {
+        d->mAboutKDE = new KAboutKdeDialog(d->mParent);
+        connect(d->mAboutKDE, SIGNAL(finished()), this, SLOT(dialogFinished()));
+    }
+    d->mAboutKDE->show();
 }
-
 
 void KHelpMenu::reportBug()
 {
-  if( !d->mBugReport )
-  {
-    d->mBugReport = new KBugReport(d->mAboutData, d->mParent);
-    connect( d->mBugReport, SIGNAL(finished()),this,SLOT(dialogFinished()) );
-  }
-  d->mBugReport->show();
+    if (!d->mBugReport) {
+        d->mBugReport = new KBugReport(d->mAboutData, d->mParent);
+        connect(d->mBugReport, SIGNAL(finished()), this, SLOT(dialogFinished()));
+    }
+    d->mBugReport->show();
 }
-
 
 void KHelpMenu::switchApplicationLanguage()
 {
-  if ( !d->mSwitchApplicationLanguage )
-  {
-    d->mSwitchApplicationLanguage = new KSwitchLanguageDialog( d->mParent );
-    connect( d->mSwitchApplicationLanguage, SIGNAL(finished()), this, SLOT(dialogFinished()) );
-  }
-  d->mSwitchApplicationLanguage->show();
+    if (!d->mSwitchApplicationLanguage) {
+        d->mSwitchApplicationLanguage = new KSwitchLanguageDialog(d->mParent);
+        connect(d->mSwitchApplicationLanguage, SIGNAL(finished()), this, SLOT(dialogFinished()));
+    }
+    d->mSwitchApplicationLanguage->show();
 }
-
 
 void KHelpMenu::dialogFinished()
 {
-  QTimer::singleShot( 0, this, SLOT(timerExpired()) );
+    QTimer::singleShot(0, this, SLOT(timerExpired()));
 }
-
 
 void KHelpMenu::timerExpired()
 {
-  if( d->mAboutKDE && !d->mAboutKDE->isVisible() )
-  {
-    delete d->mAboutKDE; d->mAboutKDE = 0;
-  }
+    if (d->mAboutKDE && !d->mAboutKDE->isVisible()) {
+        delete d->mAboutKDE; d->mAboutKDE = 0;
+    }
 
-  if( d->mBugReport && !d->mBugReport->isVisible() )
-  {
-    delete d->mBugReport; d->mBugReport = 0;
-  }
+    if (d->mBugReport && !d->mBugReport->isVisible()) {
+        delete d->mBugReport; d->mBugReport = 0;
+    }
 
-  if ( d->mSwitchApplicationLanguage && !d->mSwitchApplicationLanguage->isVisible() )
-  {
-    delete d->mSwitchApplicationLanguage; d->mSwitchApplicationLanguage = 0;
-  }
+    if (d->mSwitchApplicationLanguage && !d->mSwitchApplicationLanguage->isVisible()) {
+        delete d->mSwitchApplicationLanguage; d->mSwitchApplicationLanguage = 0;
+    }
 
-  if( d->mAboutApp && !d->mAboutApp->isVisible() )
-  {
-    delete d->mAboutApp; d->mAboutApp = 0;
-  }
+    if (d->mAboutApp && !d->mAboutApp->isVisible()) {
+        delete d->mAboutApp; d->mAboutApp = 0;
+    }
 }
-
 
 void KHelpMenu::menuDestroyed()
 {
-  d->mMenu = 0;
+    d->mMenu = 0;
 }
-
 
 void KHelpMenu::contextHelpActivated()
 {
-  QWhatsThis::enterWhatsThisMode();
+    QWhatsThis::enterWhatsThisMode();
 #pragma message("Revive QX11EmbedWidget in Qt5")
 #if 0
-  QWidget* w = QApplication::widgetAt( QCursor::pos() );
-  while ( w && !w->isTopLevel() && !qobject_cast<QX11EmbedWidget*>(w)  )
-      w = w->parentWidget();
+    QWidget *w = QApplication::widgetAt(QCursor::pos());
+    while (w && !w->isTopLevel() && !qobject_cast<QX11EmbedWidget *>(w)) {
+        w = w->parentWidget();
+    }
 #ifdef __GNUC__
 #warning how to enter whats this mode for a QX11EmbedWidget?
 #endif
 //   if ( w && qobject_cast<QX11EmbedWidget*>(w) )
-//	  (( QX11EmbedWidget*) w )->enterWhatsThisMode();
+//    (( QX11EmbedWidget*) w )->enterWhatsThisMode();
 #endif
 }
-
 

@@ -40,80 +40,80 @@ class KBugReportPrivate;
  */
 class XMLGUI_EXPORT KBugReport : public QDialog
 {
-  Q_OBJECT
-  
+    Q_OBJECT
+
 public:
-  /**
-   * Creates a bug-report dialog.
-   * Note that you shouldn't have to do this manually,
-   * since KHelpMenu takes care of the menu item
-   * for "Report Bug..." and of creating a KBugReport dialog.
-   */
-  explicit KBugReport(const KAboutData& aboutData, QWidget *parent = 0L);
-  
-  /**
-   * Destructor
-   */
-  virtual ~KBugReport();
+    /**
+     * Creates a bug-report dialog.
+     * Note that you shouldn't have to do this manually,
+     * since KHelpMenu takes care of the menu item
+     * for "Report Bug..." and of creating a KBugReport dialog.
+     */
+    explicit KBugReport(const KAboutData &aboutData, QWidget *parent = 0L);
 
-  /**
-   * The message body of the bug report
-   * @return The message body of the bug report.
-   */
-  QString messageBody() const;
-  
-  /**
-   * Sets the message body of the bug report.
-   */
-  void setMessageBody(const QString &messageBody);
+    /**
+     * Destructor
+     */
+    virtual ~KBugReport();
 
-  /**
-    * OK has been clicked
-   */
-  virtual void accept();
-  
+    /**
+     * The message body of the bug report
+     * @return The message body of the bug report.
+     */
+    QString messageBody() const;
+
+    /**
+     * Sets the message body of the bug report.
+     */
+    void setMessageBody(const QString &messageBody);
+
+    /**
+      * OK has been clicked
+     */
+    virtual void accept();
+
 private:
-  /**
-   * "Configure email" has been clicked - this calls kcmshell4 System/email
-   */
-  Q_PRIVATE_SLOT(d, void _k_slotConfigureEmail())
-  
-  /**
-   * Sets the "From" field from the e-mail configuration
-   * Called at creation time, but also after "Configure email" is closed.
-   */
-  Q_PRIVATE_SLOT(d, void _k_slotSetFrom())
+    /**
+     * "Configure email" has been clicked - this calls kcmshell4 System/email
+     */
+    Q_PRIVATE_SLOT(d, void _k_slotConfigureEmail())
 
-  /**
-   * Application combo selection changed (and was activated)
-   */
-  Q_PRIVATE_SLOT(d, void _k_appChanged(int))
-  
-  /**
-   * Update the url to match the current os, compiler, selected app, etc
-   */
-  Q_PRIVATE_SLOT(d, void _k_updateUrl())
+    /**
+     * Sets the "From" field from the e-mail configuration
+     * Called at creation time, but also after "Configure email" is closed.
+     */
+    Q_PRIVATE_SLOT(d, void _k_slotSetFrom())
+
+    /**
+     * Application combo selection changed (and was activated)
+     */
+    Q_PRIVATE_SLOT(d, void _k_appChanged(int))
+
+    /**
+     * Update the url to match the current os, compiler, selected app, etc
+     */
+    Q_PRIVATE_SLOT(d, void _k_updateUrl())
 
 protected:
-  /**
-   * A complete copy of the bug report
-   * @return QString copy of the bug report.
-   */
-  QString text() const;
-  
-  /**
-   * Attempt to e-mail the bug report.
-   * @return true on success
-   */
-  bool sendBugReport();
+    /**
+     * A complete copy of the bug report
+     * @return QString copy of the bug report.
+     */
+    QString text() const;
 
-  virtual void closeEvent(QCloseEvent *e);
-  
+    /**
+     * Attempt to e-mail the bug report.
+     * @return true on success
+     */
+    bool sendBugReport();
+
+    virtual void closeEvent(QCloseEvent *e);
+
 private:
-  friend class KBugReportPrivate;
-  KBugReportPrivate *const d;
-  
-  Q_DISABLE_COPY(KBugReport)
+    friend class KBugReportPrivate;
+    KBugReportPrivate *const d;
+
+    Q_DISABLE_COPY(KBugReport)
 };
 
 #endif

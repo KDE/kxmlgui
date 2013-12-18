@@ -27,7 +27,7 @@
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>
 
-QTEST_MAIN( KMainWindow_UnitTest)
+QTEST_MAIN(KMainWindow_UnitTest)
 
 void KMainWindow_UnitTest::initTestCase()
 {
@@ -39,58 +39,58 @@ void KMainWindow_UnitTest::testDefaultName()
     KMainWindow mw;
     mw.show();
     mw.ensurePolished();
-    QCOMPARE( mw.objectName(), QString::fromLatin1( "MainWindow#1" ) );
+    QCOMPARE(mw.objectName(), QString::fromLatin1("MainWindow#1"));
     KMainWindow mw2;
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE( mw2.objectName(), QString::fromLatin1( "MainWindow#2" ) );
+    QCOMPARE(mw2.objectName(), QString::fromLatin1("MainWindow#2"));
 }
 
 void KMainWindow_UnitTest::testFixedName()
 {
     KMainWindow mw;
-    mw.setObjectName( "mymainwindow" );
+    mw.setObjectName("mymainwindow");
     mw.show();
     mw.ensurePolished();
-    QCOMPARE( mw.objectName(), QString::fromLatin1( "mymainwindow" ) );
+    QCOMPARE(mw.objectName(), QString::fromLatin1("mymainwindow"));
     KMainWindow mw2;
-    mw2.setObjectName( "mymainwindow" );
+    mw2.setObjectName("mymainwindow");
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE( mw2.objectName(), QString::fromLatin1( "mymainwindow2" ) );
+    QCOMPARE(mw2.objectName(), QString::fromLatin1("mymainwindow2"));
 }
 
 void KMainWindow_UnitTest::testNameWithHash()
 {
     KMainWindow mw;
-    mw.setObjectName( "composer#" );
+    mw.setObjectName("composer#");
     mw.show();
     mw.ensurePolished();
-    QCOMPARE( mw.objectName(), QString::fromLatin1( "composer#1" ) );
+    QCOMPARE(mw.objectName(), QString::fromLatin1("composer#1"));
     KMainWindow mw2;
-    mw2.setObjectName( "composer#" );
+    mw2.setObjectName("composer#");
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE( mw2.objectName(), QString::fromLatin1( "composer#2" ) );
+    QCOMPARE(mw2.objectName(), QString::fromLatin1("composer#2"));
     KMainWindow mw4;
-    mw4.setObjectName( "composer#4" );
+    mw4.setObjectName("composer#4");
     mw4.show();
     mw4.ensurePolished();
-    QCOMPARE( mw4.objectName(), QString::fromLatin1( "composer#4" ) );
+    QCOMPARE(mw4.objectName(), QString::fromLatin1("composer#4"));
 }
 
 void KMainWindow_UnitTest::testNameWithSpecialChars()
 {
     KMainWindow mw;
-    mw.setObjectName( "a#@_test/" );
+    mw.setObjectName("a#@_test/");
     mw.show();
     mw.ensurePolished();
-    QCOMPARE( mw.dbusName(), QString::fromLatin1( "/kmainwindow_unittest/a___test_" ) );
+    QCOMPARE(mw.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_"));
     KMainWindow mw2;
-    mw2.setObjectName( "a#@_test/" );
+    mw2.setObjectName("a#@_test/");
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE( mw2.dbusName(), QString::fromLatin1( "/kmainwindow_unittest/a___test_2" ) );
+    QCOMPARE(mw2.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_2"));
 }
 
 static bool s_mainWindowDeleted;
@@ -98,25 +98,29 @@ class MyMainWindow : public KMainWindow
 {
 public:
     MyMainWindow() : KMainWindow(),
-                     m_queryClosedCalled( false ),
-                     m_queryExitCalled( false )
+        m_queryClosedCalled(false),
+        m_queryExitCalled(false)
     {
     }
-    /*reimp*/ bool queryClose() {
+    /*reimp*/ bool queryClose()
+    {
         m_queryClosedCalled = true;
         return true;
     }
-    /*reimp*/ bool queryExit() {
+    /*reimp*/ bool queryExit()
+    {
         m_queryExitCalled = true;
         return true;
     }
-    ~MyMainWindow() {
+    ~MyMainWindow()
+    {
         s_mainWindowDeleted = true;
     }
     bool m_queryClosedCalled;
     bool m_queryExitCalled;
 
-    void reallyResize(int width, int height) {
+    void reallyResize(int width, int height)
+    {
         const QSize oldSize = size();
 
         resize(width, height);
@@ -135,13 +139,13 @@ void KMainWindow_UnitTest::testDeleteOnClose()
 {
     QEventLoopLocker locker; // don't let the deref in KMainWindow quit the app.
     s_mainWindowDeleted = false;
-    MyMainWindow* mw = new MyMainWindow;
-    QVERIFY( mw->testAttribute( Qt::WA_DeleteOnClose ) );
+    MyMainWindow *mw = new MyMainWindow;
+    QVERIFY(mw->testAttribute(Qt::WA_DeleteOnClose));
     mw->close();
-    QVERIFY( mw->m_queryClosedCalled );
-    QVERIFY( mw->m_queryExitCalled );
-    qApp->sendPostedEvents( mw, QEvent::DeferredDelete );
-    QVERIFY( s_mainWindowDeleted );
+    QVERIFY(mw->m_queryClosedCalled);
+    QVERIFY(mw->m_queryExitCalled);
+    qApp->sendPostedEvents(mw, QEvent::DeferredDelete);
+    QVERIFY(s_mainWindowDeleted);
 }
 
 void KMainWindow_UnitTest::testSaveWindowSize()
@@ -150,14 +154,14 @@ void KMainWindow_UnitTest::testSaveWindowSize()
     KConfigGroup cfg(KSharedConfig::openConfig(), "TestWindowSize");
 
     {
-    MyMainWindow mw;
-    mw.show();
-    KToolBar* tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
-    tb->setObjectName("testtb");
-    mw.reallyResize(800, 600);
-    QTest::qWait(200);
-    mw.saveMainWindowSettings(cfg);
-    mw.close();
+        MyMainWindow mw;
+        mw.show();
+        KToolBar *tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
+        tb->setObjectName("testtb");
+        mw.reallyResize(800, 600);
+        QTest::qWait(200);
+        mw.saveMainWindowSettings(cfg);
+        mw.close();
     }
 
     KMainWindow mw2;
@@ -175,14 +179,14 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
     const QString group("AutoSaveTestGroup");
 
     {
-    MyMainWindow mw;
-    mw.show();
-    KToolBar* tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
-    tb->setObjectName("testtb");
-    mw.setAutoSaveSettings(group);
-    mw.reallyResize(800, 600);
-    QTest::qWait(200);
-    mw.close();
+        MyMainWindow mw;
+        mw.show();
+        KToolBar *tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
+        tb->setObjectName("testtb");
+        mw.setAutoSaveSettings(group);
+        mw.reallyResize(800, 600);
+        QTest::qWait(200);
+        mw.close();
     }
 
     KMainWindow mw2;
@@ -199,13 +203,13 @@ void KMainWindow_UnitTest::testNoAutoSave()
     const QString group("AutoSaveTestGroup");
 
     {
-    // A mainwindow with autosaving, but not of the window size.
-    MyMainWindow mw;
-    mw.show();
-    mw.setAutoSaveSettings(group, false);
-    mw.reallyResize(750, 550);
-    QTest::qWait(200);
-    mw.close();
+        // A mainwindow with autosaving, but not of the window size.
+        MyMainWindow mw;
+        mw.show();
+        mw.setAutoSaveSettings(group, false);
+        mw.reallyResize(750, 550);
+        QTest::qWait(200);
+        mw.close();
     }
 
     KMainWindow mw2;
@@ -221,7 +225,7 @@ void KMainWindow_UnitTest::testWidgetWithStatusBar()
     // KMainWindow::statusBar() should not find any indirect QStatusBar child
     // (e.g. in a case like konqueror, with one statusbar per frame)
     MyMainWindow mw;
-    QWidget* frame1 = new QWidget(&mw);
-    QStatusBar* frameStatusBar = new QStatusBar(frame1);
+    QWidget *frame1 = new QWidget(&mw);
+    QStatusBar *frameStatusBar = new QStatusBar(frame1);
     QVERIFY(mw.statusBar() != frameStatusBar);
 }

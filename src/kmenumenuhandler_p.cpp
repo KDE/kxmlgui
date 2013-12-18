@@ -1,5 +1,4 @@
 /* This file is part of the KDE project
-// vim: sw=4 sts=4 et tw=100
    Copyright (C) 2006  Olivier Goffart  <ogoffart@kde.org>
 
    This library is free software; you can redistribute it and/or
@@ -42,18 +41,17 @@
 #include <kselectaction.h>
 #include <klocalizedstring.h>
 
-namespace KDEPrivate {
-
-KMenuMenuHandler::KMenuMenuHandler( KXMLGUIBuilder *builder )
-  : QObject() , m_builder(builder), m_popupMenu(0), m_popupAction(0), m_contextMenu(0)
+namespace KDEPrivate
 {
-  m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
-  connect(m_toolbarAction , SIGNAL(triggered(int)) , this , SLOT(slotAddToToolBar(int)));
+
+KMenuMenuHandler::KMenuMenuHandler(KXMLGUIBuilder *builder)
+    : QObject(), m_builder(builder), m_popupMenu(0), m_popupAction(0), m_contextMenu(0)
+{
+    m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
+    connect(m_toolbarAction, SIGNAL(triggered(int)), this, SLOT(slotAddToToolBar(int)));
 }
 
-
-
-void KMenuMenuHandler::insertMenu( QMenu *popup )
+void KMenuMenuHandler::insertMenu(QMenu *popup)
 {
     popup->installEventFilter(this);
 }
@@ -75,16 +73,16 @@ bool KMenuMenuHandler::eventFilter(QObject *watched, QEvent *event)
         break;
 
     case QEvent::ContextMenu: {
-            QContextMenuEvent *e = static_cast<QContextMenuEvent *>(event);
-            QMenu *menu = static_cast<QMenu *>(watched);
-            if (e->reason() == QContextMenuEvent::Mouse) {
-                showContextMenu(menu, e->pos());
-            } else if (menu->activeAction()) {
-                showContextMenu(menu, menu->actionGeometry(menu->activeAction()).center());
-            }
+        QContextMenuEvent *e = static_cast<QContextMenuEvent *>(event);
+        QMenu *menu = static_cast<QMenu *>(watched);
+        if (e->reason() == QContextMenuEvent::Mouse) {
+            showContextMenu(menu, e->pos());
+        } else if (menu->activeAction()) {
+            showContextMenu(menu, menu->actionGeometry(menu->activeAction()).center());
         }
-        event->accept();
-        return true;
+    }
+    event->accept();
+    return true;
 
     default:
         break;
@@ -93,24 +91,23 @@ bool KMenuMenuHandler::eventFilter(QObject *watched, QEvent *event)
     return false;
 }
 
-
 void KMenuMenuHandler::buildToolbarAction()
 {
-  KMainWindow *window=qobject_cast<KMainWindow*>(m_builder->widget());
-  if(!window)
-    return;
-  QStringList toolbarlist;
-  foreach(KToolBar *b , window->toolBars())
-  {
-    toolbarlist << (b->windowTitle().isEmpty() ? b->objectName() : b->windowTitle());
-  }
-  m_toolbarAction->setItems(toolbarlist);
+    KMainWindow *window = qobject_cast<KMainWindow *>(m_builder->widget());
+    if (!window) {
+        return;
+    }
+    QStringList toolbarlist;
+    foreach (KToolBar *b, window->toolBars()) {
+        toolbarlist << (b->windowTitle().isEmpty() ? b->objectName() : b->windowTitle());
+    }
+    m_toolbarAction->setItems(toolbarlist);
 }
 
-static KActionCollection* findParentCollection(KXMLGUIFactory* factory, QAction* action)
+static KActionCollection *findParentCollection(KXMLGUIFactory *factory, QAction *action)
 {
-    foreach(KXMLGUIClient *client, factory->clients()) {
-        KActionCollection* collection = client->actionCollection();
+    foreach (KXMLGUIClient *client, factory->clients()) {
+        KActionCollection *collection = client->actionCollection();
         // if the call to actions() is too slow, add KActionCollection::contains(QAction*).
         if (collection->actions().contains(action)) {
             return collection;
@@ -121,8 +118,9 @@ static KActionCollection* findParentCollection(KXMLGUIFactory* factory, QAction*
 
 void KMenuMenuHandler::slotSetShortcut()
 {
-    if(!m_popupMenu || !m_popupAction)
+    if (!m_popupMenu || !m_popupAction) {
         return;
+    }
 
     QDialog dialog(m_builder->widget());
     dialog.setLayout(new QVBoxLayout);
@@ -137,70 +135,67 @@ void KMenuMenuHandler::slotSetShortcut()
     connect(&box, SIGNAL(rejected()), &dialog, SLOT(reject()));
     dialog.layout()->addWidget(&box);
 
-    KActionCollection* parentCollection = 0;
-    if(dynamic_cast<KXMLGUIClient*>(m_builder))
-    {
-        QList<KActionCollection*> checkCollections;
-        KXMLGUIFactory *factory=dynamic_cast<KXMLGUIClient*>(m_builder)->factory();
+    KActionCollection *parentCollection = 0;
+    if (dynamic_cast<KXMLGUIClient *>(m_builder)) {
+        QList<KActionCollection *> checkCollections;
+        KXMLGUIFactory *factory = dynamic_cast<KXMLGUIClient *>(m_builder)->factory();
         parentCollection = findParentCollection(factory, m_popupAction);
-        foreach(KXMLGUIClient *client, factory->clients()) {
+        foreach (KXMLGUIClient *client, factory->clients()) {
             checkCollections += client->actionCollection();
         }
         swidget.setCheckActionCollections(checkCollections);
     }
 
-    if(dialog.exec())
-    {
+    if (dialog.exec()) {
         m_popupAction->setShortcuts(swidget.shortcut());
         swidget.applyStealShortcut();
-        if(parentCollection)
+        if (parentCollection) {
             parentCollection->writeSettings();
+        }
     }
 }
 
-
 void KMenuMenuHandler::slotAddToToolBar(int tb)
 {
-    KMainWindow *window=qobject_cast<KMainWindow*>(m_builder->widget());
-    if(!window)
+    KMainWindow *window = qobject_cast<KMainWindow *>(m_builder->widget());
+    if (!window) {
         return;
+    }
 
-    if(!m_popupMenu || !m_popupAction)
+    if (!m_popupMenu || !m_popupAction) {
         return;
+    }
 
-    KXMLGUIFactory *factory = dynamic_cast<KXMLGUIClient*>(m_builder)->factory();
+    KXMLGUIFactory *factory = dynamic_cast<KXMLGUIClient *>(m_builder)->factory();
     QString actionName = m_popupAction->objectName(); // set by KActionCollection::addAction
     KActionCollection *collection = 0;
     if (factory) {
         collection = findParentCollection(factory, m_popupAction);
     }
-    if(!collection) {
-         qWarning() << "Cannot find the action collection for action " << actionName;
-         return;
+    if (!collection) {
+        qWarning() << "Cannot find the action collection for action " << actionName;
+        return;
     }
 
-    KToolBar *toolbar=window->toolBars()[tb];
+    KToolBar *toolbar = window->toolBars()[tb];
     toolbar->addAction(m_popupAction);
 
-    const KXMLGUIClient* client = collection->parentGUIClient ();
+    const KXMLGUIClient *client = collection->parentGUIClient();
     QString xmlFile = client->localXMLFile();
     QDomDocument document;
-    document.setContent(KXMLGUIFactory::readConfigFile( client->xmlFile(), client->componentName()));
+    document.setContent(KXMLGUIFactory::readConfigFile(client->xmlFile(), client->componentName()));
     QDomElement elem = document.documentElement().toElement();
 
-    const QLatin1String tagToolBar( "ToolBar" );
-    const QLatin1String attrNoEdit( "noEdit" );
-    const QLatin1String attrName( "name" );
+    const QLatin1String tagToolBar("ToolBar");
+    const QLatin1String attrNoEdit("noEdit");
+    const QLatin1String attrName("name");
 
     QDomElement toolbarElem;
-    QDomNode n=elem.firstChild();
-    for( ; !n.isNull(); n = n.nextSibling() )
-    {
+    QDomNode n = elem.firstChild();
+    for (; !n.isNull(); n = n.nextSibling()) {
         QDomElement elem = n.toElement();
-        if (!elem.isNull() && elem.tagName() == tagToolBar && elem.attribute( attrName ) == toolbar->objectName() )
-        {
-            if(elem.attribute( attrNoEdit ) == QStringLiteral("true"))
-            {
+        if (!elem.isNull() && elem.tagName() == tagToolBar && elem.attribute(attrName) == toolbar->objectName()) {
+            if (elem.attribute(attrNoEdit) == QStringLiteral("true")) {
                 qWarning() << "The toolbar is not editable";
                 return;
             }
@@ -208,11 +203,10 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
             break;
         }
     }
-    if(toolbarElem.isNull())
-    {
-        toolbarElem=document.createElement( tagToolBar );
-        toolbarElem.setAttribute( attrName, toolbar->objectName() );
-        elem.appendChild( toolbarElem );
+    if (toolbarElem.isNull()) {
+        toolbarElem = document.createElement(tagToolBar);
+        toolbarElem.setAttribute(attrName, toolbar->objectName());
+        elem.appendChild(toolbarElem);
     }
 
     KXMLGUIFactory::findActionByName(toolbarElem, actionName, true);
@@ -232,8 +226,8 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
     m_contextMenu = new QMenu;
     m_contextMenu->addAction(i18n("Configure Shortcut..."), this, SLOT(slotSetShortcut()));
 
-    KMainWindow *window = qobject_cast<KMainWindow*>(m_builder->widget());
-    if(window) {
+    KMainWindow *window = qobject_cast<KMainWindow *>(m_builder->widget());
+    if (window) {
         m_contextMenu->addAction(m_toolbarAction);
         buildToolbarAction();
     }

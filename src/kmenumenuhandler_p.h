@@ -17,10 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef kmenumenuhandler_p_h
 #define kmenumenuhandler_p_h
-
 
 #include <QObject>
 
@@ -30,7 +28,8 @@ class QMenu;
 class KXMLGUIBuilder;
 class KSelectAction;
 
-namespace KDEPrivate {
+namespace KDEPrivate
+{
 
 /**
  * @internal
@@ -40,19 +39,19 @@ namespace KDEPrivate {
  */
 class KMenuMenuHandler : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  KMenuMenuHandler(KXMLGUIBuilder *b);
-  ~KMenuMenuHandler() {}
-  void insertMenu( QMenu *menu );
+    KMenuMenuHandler(KXMLGUIBuilder *b);
+    ~KMenuMenuHandler() {}
+    void insertMenu(QMenu *menu);
     bool eventFilter(QObject *watched, QEvent *event);
-  
-  private Q_SLOTS:
+
+private Q_SLOTS:
     void slotSetShortcut();
     void buildToolbarAction();
     void slotAddToToolBar(int);
-    
-  private:
+
+private:
     void showContextMenu(QMenu *menu, const QPoint &pos);
 
     KXMLGUIBuilder *m_builder;
@@ -60,8 +59,7 @@ public:
     QMenu *m_popupMenu;
     QAction *m_popupAction;
     QMenu *m_contextMenu;
-    
-    
+
 };
 
 } //END namespace KDEPrivate

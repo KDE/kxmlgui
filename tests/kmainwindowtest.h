@@ -33,5 +33,4 @@ private Q_SLOTS:
 };
 
 #endif // KMAINWINDOWTEST_H
-/* vim: et sw=4 ts=4
- */
+

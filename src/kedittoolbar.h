@@ -1,4 +1,3 @@
-// -*- mode: c++; c-basic-offset: 2 -*-
 /* This file is part of the KDE libraries
    Copyright (C) 2000 Kurt Granroth <granroth@kde.org>
    Copyright (C) 2006 Hamish Rodda <rodda@kde.org>
@@ -71,103 +70,103 @@ class XMLGUI_EXPORT KEditToolBar : public QDialog
 {
     Q_OBJECT
 public:
-  /**
-   * Old constructor for apps that do not use components.
-   * This constructor is somewhat deprecated, since it doesn't work
-   * with any KXMLGuiClient being added to the mainwindow.
-   * You really want to use the other constructor.
-   *
-   * You @em must pass along your collection of actions (some of which appear in your toolbars).
-   *
-   * @param collection The collection of actions to work on.
-   * @param parent The parent of the dialog.
-   */
-  explicit KEditToolBar(KActionCollection *collection,
-                        QWidget* parent = 0);
+    /**
+     * Old constructor for apps that do not use components.
+     * This constructor is somewhat deprecated, since it doesn't work
+     * with any KXMLGuiClient being added to the mainwindow.
+     * You really want to use the other constructor.
+     *
+     * You @em must pass along your collection of actions (some of which appear in your toolbars).
+     *
+     * @param collection The collection of actions to work on.
+     * @param parent The parent of the dialog.
+     */
+    explicit KEditToolBar(KActionCollection *collection,
+                          QWidget *parent = 0);
 
-  /**
-   * Main constructor.
-   *
-   * The main parameter, @p factory, is a pointer to the
-   * XML GUI factory object for your application.  It contains a list
-   * of all of the GUI clients (along with the action collections and
-   * xml files) and the toolbar editor uses that.
-   *
-   * Use this like so:
-   * \code
-   * KEditToolBar edit(factory());
-   * if (edit.exec())
-   * ...
-   * \endcode
-   *
-   * @param factory Your application's factory object
-   * @param parent The usual parent for the dialog.
-   */
-  explicit KEditToolBar( KXMLGUIFactory* factory,
-                         QWidget* parent = 0 );
+    /**
+     * Main constructor.
+     *
+     * The main parameter, @p factory, is a pointer to the
+     * XML GUI factory object for your application.  It contains a list
+     * of all of the GUI clients (along with the action collections and
+     * xml files) and the toolbar editor uses that.
+     *
+     * Use this like so:
+     * \code
+     * KEditToolBar edit(factory());
+     * if (edit.exec())
+     * ...
+     * \endcode
+     *
+     * @param factory Your application's factory object
+     * @param parent The usual parent for the dialog.
+     */
+    explicit KEditToolBar(KXMLGUIFactory *factory,
+                          QWidget *parent = 0);
 
-  /// destructor
-  ~KEditToolBar();
+    /// destructor
+    ~KEditToolBar();
 
-  /**
-   * Sets the default toolbar that will be selected when the dialog is shown.
-   * If not set, or QString() is passed in, the global default tool bar name
-   * will be used.
-   * @param toolBarName the name of the tool bar
-   * @see setGlobalDefaultToolBar
-   */
-  void setDefaultToolBar( const QString& toolBarName );
+    /**
+     * Sets the default toolbar that will be selected when the dialog is shown.
+     * If not set, or QString() is passed in, the global default tool bar name
+     * will be used.
+     * @param toolBarName the name of the tool bar
+     * @see setGlobalDefaultToolBar
+     */
+    void setDefaultToolBar(const QString &toolBarName);
 
-  /**
-   * The name (absolute or relative) of your application's UI resource file
-   * is assumed to be share/apps/appname/appnameui.rc though this can be
-   * overridden by calling this method.
-   *
-   * The global parameter controls whether or not the
-   * global resource file is used.  If this is @p true, then you may
-   * edit all of the actions in your toolbars -- global ones and
-   * local one.  If it is @p false, then you may edit only your
-   * application's entries.  The only time you should set this to
-   * false is if your application does not use the global resource
-   * file at all (very rare).
-   *
-   * @param xmlfile The application's local resource file.
-   * @param global If @p true, then the global resource file will also
-   *               be parsed.
-   */
-  void setResourceFile( const QString& file, bool global = true );
+    /**
+     * The name (absolute or relative) of your application's UI resource file
+     * is assumed to be share/apps/appname/appnameui.rc though this can be
+     * overridden by calling this method.
+     *
+     * The global parameter controls whether or not the
+     * global resource file is used.  If this is @p true, then you may
+     * edit all of the actions in your toolbars -- global ones and
+     * local one.  If it is @p false, then you may edit only your
+     * application's entries.  The only time you should set this to
+     * false is if your application does not use the global resource
+     * file at all (very rare).
+     *
+     * @param xmlfile The application's local resource file.
+     * @param global If @p true, then the global resource file will also
+     *               be parsed.
+     */
+    void setResourceFile(const QString &file, bool global = true);
 
-  /**
-   * Sets the default toolbar which will be auto-selected for all
-   * KEditToolBar instances. Can be overridden on a per-dialog basis
-   * by calling setDefaultToolBar( const QString& ) on the dialog.
-   *   @param  toolbarName  the name of the tool bar
-   */
-  static void setGlobalDefaultToolBar(const char *toolBarName); // TODO should be const QString&
+    /**
+     * Sets the default toolbar which will be auto-selected for all
+     * KEditToolBar instances. Can be overridden on a per-dialog basis
+     * by calling setDefaultToolBar( const QString& ) on the dialog.
+     *   @param  toolbarName  the name of the tool bar
+     */
+    static void setGlobalDefaultToolBar(const char *toolBarName); // TODO should be const QString&
 
 Q_SIGNALS:
-  /**
-   * Signal emitted when 'apply' or 'ok' is clicked or toolbars were reset.
-   * Connect to it, to plug action lists and to call applyMainWindowSettings
-   * (see sample code in this class's documentation)
-   */
-  void newToolBarConfig();
+    /**
+     * Signal emitted when 'apply' or 'ok' is clicked or toolbars were reset.
+     * Connect to it, to plug action lists and to call applyMainWindowSettings
+     * (see sample code in this class's documentation)
+     */
+    void newToolBarConfig();
 
-  QT_MOC_COMPAT void newToolbarConfig();
+    QT_MOC_COMPAT void newToolbarConfig();
 
 protected:
-  virtual void showEvent(QShowEvent* event);
-  virtual void hideEvent(QHideEvent* event);
+    virtual void showEvent(QShowEvent *event);
+    virtual void hideEvent(QHideEvent *event);
 
 private:
-  friend class KEditToolBarPrivate;
-  KEditToolBarPrivate *const d;
+    friend class KEditToolBarPrivate;
+    KEditToolBarPrivate *const d;
 
-  Q_PRIVATE_SLOT( d, void _k_slotButtonClicked(QAbstractButton*) )
-  Q_PRIVATE_SLOT( d, void _k_acceptOK(bool) )
-  Q_PRIVATE_SLOT( d, void _k_enableApply(bool) )
+    Q_PRIVATE_SLOT(d, void _k_slotButtonClicked(QAbstractButton *))
+    Q_PRIVATE_SLOT(d, void _k_acceptOK(bool))
+    Q_PRIVATE_SLOT(d, void _k_enableApply(bool))
 
-  Q_DISABLE_COPY(KEditToolBar)
+    Q_DISABLE_COPY(KEditToolBar)
 };
 
 #endif // _KEDITTOOLBAR_H

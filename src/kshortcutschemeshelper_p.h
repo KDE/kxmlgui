@@ -24,7 +24,8 @@
 class KActionCollection;
 class KXMLGUIClient;
 
-class KShortcutSchemesHelper {
+class KShortcutSchemesHelper
+{
 public:
 
     /**
@@ -38,7 +39,7 @@ public:
      *  @return true if the action collection was exported
     */
     static bool exportActionCollection(KActionCollection *collection, const QString &schemeName,
-        const QString& dir = QString());
+                                       const QString &dir = QString());
 
     /**
      * @return the current shortcut scheme name for the application.

@@ -66,12 +66,12 @@ Q_SIGNALS:
     void signalAppearanceChanged();
 
 protected:
-    bool eventFilter(QObject * watched, QEvent * event);
+    bool eventFilter(QObject *watched, QEvent *event);
 
 private:
     void changeGlobalIconSizeSetting(int, int);
     void deleteGlobalIconSizeSetting();
-    void changeGlobalToolButtonStyleSetting(const QString&, const QString&);
+    void changeGlobalToolButtonStyleSetting(const QString &, const QString &);
     void deleteGlobalToolButtonStyleSetting();
     QByteArray m_xml;
     bool m_showWasCalled;
@@ -131,7 +131,7 @@ void tst_KToolBar::init()
 void tst_KToolBar::cleanup()
 {
     QFile::remove(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') +
-                                                   QStringLiteral("tst_KToolBar"));
+                  QStringLiteral("tst_KToolBar"));
     deleteGlobalIconSizeSetting();
     deleteGlobalToolButtonStyleSetting();
 }
@@ -143,7 +143,7 @@ void tst_KToolBar::ktoolbar()
     KToolBar bar(&kmw);
     QCOMPARE(bar.mainWindow(), &kmw);
     // Asking KMainWindow for a KToolBar (more common)
-    KToolBar* mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
+    KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
     QCOMPARE(mainToolBar->mainWindow(), &kmw);
 }
 
@@ -165,8 +165,8 @@ void tst_KToolBar::testIconSizeNoXmlGui()
     KConfigGroup group(&config, "group");
     {
         KMainWindow kmw;
-        KToolBar* mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
-        KToolBar* otherToolBar = kmw.toolBar(QStringLiteral("otherToolBar"));
+        KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = kmw.toolBar(QStringLiteral("otherToolBar"));
 
         // Default settings (applied by applyAppearanceSettings)
         QCOMPARE(mainToolBar->iconSize().width(), KIconLoader::global()->currentSize(KIconLoader::MainToolbar));
@@ -183,18 +183,19 @@ void tst_KToolBar::testIconSizeNoXmlGui()
         kmw.saveMainWindowSettings(group);
         QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
         // was it the default value?
-        if (iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar))
+        if (iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar)) {
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
-        else
+        } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
+        }
     }
 
     {
         // Recreate, load, compare.
         KMainWindow kmw;
-        KToolBar* mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
-        KToolBar* otherToolBar = kmw.toolBar(QStringLiteral("otherToolBar"));
-        KToolBar* cleanToolBar = kmw.toolBar(QStringLiteral("cleanToolBar"));
+        KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = kmw.toolBar(QStringLiteral("otherToolBar"));
+        KToolBar *cleanToolBar = kmw.toolBar(QStringLiteral("cleanToolBar"));
         QCOMPARE(mainToolBar->iconSize().width(), KIconLoader::global()->currentSize(KIconLoader::MainToolbar));
         QCOMPARE(otherToolBar->iconSize().width(), KIconLoader::global()->currentSize(KIconLoader::Toolbar));
         QCOMPARE(cleanToolBar->iconSize().width(), KIconLoader::global()->currentSize(KIconLoader::Toolbar));
@@ -255,11 +256,11 @@ void tst_KToolBar::testIconSizeXmlGui()
         TestXmlGuiWindow kmw(m_xml);
         kmw.createActions(QStringList() << "go_up");
         kmw.createGUI();
-        KToolBar* mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
-        KToolBar* otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
-        KToolBar* cleanToolBar = kmw.toolBarByName(QStringLiteral("cleanToolBar"));
-        KToolBar* bigToolBar = kmw.toolBarByName(QStringLiteral("bigToolBar"));
-        KToolBar* bigUnchangedToolBar = kmw.toolBarByName(QStringLiteral("bigUnchangedToolBar"));
+        KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
+        KToolBar *cleanToolBar = kmw.toolBarByName(QStringLiteral("cleanToolBar"));
+        KToolBar *bigToolBar = kmw.toolBarByName(QStringLiteral("bigToolBar"));
+        KToolBar *bigUnchangedToolBar = kmw.toolBarByName(QStringLiteral("bigUnchangedToolBar"));
 
         // Default settings (applied by applyAppearanceSettings)
         QCOMPARE(mainToolBar->iconSize().width(), KIconLoader::global()->currentSize(KIconLoader::MainToolbar));
@@ -281,10 +282,11 @@ void tst_KToolBar::testIconSizeXmlGui()
         QVERIFY(group.groupList().count() >= 6); // one subgroup for each toolbar
         // was it the default size? (for the main toolbar, we only check that one)
         const bool usingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
-        if (usingDefaultSize)
+        if (usingDefaultSize) {
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
-        else
+        } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
+        }
 
         // Now emulate a change of the kde-global setting (#168480#c12)
         changeGlobalIconSizeSetting(25, 16);
@@ -350,8 +352,8 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
     KConfigGroup group(&config, "group");
     {
         KMainWindow kmw;
-        KToolBar* mainToolBar = kmw.toolBar("mainToolBar");
-        KToolBar* otherToolBar = kmw.toolBar("otherToolBar");
+        KToolBar *mainToolBar = kmw.toolBar("mainToolBar");
+        KToolBar *otherToolBar = kmw.toolBar("otherToolBar");
 
         // Default settings (applied by applyAppearanceSettings)
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)mainToolBarDefaultStyle);
@@ -365,17 +367,18 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
         // Save settings
         kmw.saveMainWindowSettings(group);
         QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
-        if (selectedDefaultForMainToolbar)
+        if (selectedDefaultForMainToolbar) {
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("ToolButtonStyle"));
-        else
+        } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("ToolButtonStyle"));
+        }
     }
 
     {
         // Recreate, load, compare.
         KMainWindow kmw;
-        KToolBar* mainToolBar = kmw.toolBar("mainToolBar");
-        KToolBar* otherToolBar = kmw.toolBar("otherToolBar");
+        KToolBar *mainToolBar = kmw.toolBar("mainToolBar");
+        KToolBar *otherToolBar = kmw.toolBar("otherToolBar");
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)mainToolBarDefaultStyle);
         kmw.applyMainWindowSettings(group);
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)toolButtonStyle);
@@ -384,15 +387,17 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
         // Now change KDE-global setting
         changeGlobalToolButtonStyleSetting("IconOnly", "TextOnly");
 
-        if (selectedDefaultForMainToolbar)
+        if (selectedDefaultForMainToolbar) {
             QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)Qt::ToolButtonIconOnly);
-        else
+        } else {
             QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)toolButtonStyle);
+        }
 
-        if (selectedDefaultForOtherToolbar)
+        if (selectedDefaultForOtherToolbar) {
             QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)Qt::ToolButtonTextOnly);
-        else
+        } else {
             QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)toolButtonStyle);
+        }
     }
 }
 
@@ -405,13 +410,13 @@ void tst_KToolBar::testToolButtonStyleXmlGui_data()
     QTest::addColumn<Qt::ToolButtonStyle>("expectedStyleCleanToolbar"); // should always follow kde-global -> always textonly.
 
     QTest::newRow("Qt::ToolButtonTextUnderIcon") << Qt::ToolButtonTextUnderIcon <<
-        Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextOnly;
+            Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextOnly;
     QTest::newRow("Qt::ToolButtonTextBesideIcon") << Qt::ToolButtonTextBesideIcon <<
-        Qt::ToolButtonIconOnly /* was default -> using kde global */ << Qt::ToolButtonTextBesideIcon << Qt::ToolButtonTextOnly;
+            Qt::ToolButtonIconOnly /* was default -> using kde global */ << Qt::ToolButtonTextBesideIcon << Qt::ToolButtonTextOnly;
     QTest::newRow("Qt::ToolButtonIconOnly") << Qt::ToolButtonIconOnly <<
-        Qt::ToolButtonIconOnly << Qt::ToolButtonIconOnly << Qt::ToolButtonTextOnly;
+                                            Qt::ToolButtonIconOnly << Qt::ToolButtonIconOnly << Qt::ToolButtonTextOnly;
     QTest::newRow("Qt::ToolButtonTextOnly") << Qt::ToolButtonTextOnly <<
-        Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly;
+                                            Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly;
 }
 
 void tst_KToolBar::testToolButtonStyleXmlGui()
@@ -427,9 +432,9 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
         TestXmlGuiWindow kmw(m_xml);
         kmw.createActions(QStringList() << "go_up");
         kmw.createGUI();
-        KToolBar* mainToolBar = kmw.toolBarByName("mainToolBar");
-        KToolBar* otherToolBar = kmw.toolBarByName("otherToolBar");
-        KToolBar* cleanToolBar = kmw.toolBarByName("cleanToolBar");
+        KToolBar *mainToolBar = kmw.toolBarByName("mainToolBar");
+        KToolBar *otherToolBar = kmw.toolBarByName("otherToolBar");
+        KToolBar *cleanToolBar = kmw.toolBarByName("cleanToolBar");
 
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)mainToolBarDefaultStyle);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)Qt::ToolButtonTextUnderIcon); // from xml
@@ -452,7 +457,7 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
     }
 }
 
-void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString& mainToolBar, const QString& otherToolBars)
+void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar, const QString &otherToolBars)
 {
     KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
     group.writeEntry("ToolButtonStyle", mainToolBar);
@@ -483,8 +488,8 @@ void tst_KToolBar::testToolBarPosition()
     TestXmlGuiWindow kmw(m_xml);
     kmw.createActions(QStringList() << "go_up");
     kmw.createGUI();
-    KToolBar* mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
-    KToolBar* otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
+    KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
+    KToolBar *otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
     QCOMPARE(kmw.toolBarArea(mainToolBar), Qt::TopToolBarArea);
     QCOMPARE(kmw.toolBarArea(otherToolBar), Qt::BottomToolBarArea);
 }
@@ -506,11 +511,11 @@ void tst_KToolBar::testXmlGuiSwitching()
 
     {
         //qDebug() << "Added gui client";
-        KToolBar* mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
-        KToolBar* otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
-        KToolBar* bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
-        KToolBar* hiddenToolBar = firstClient.toolBarByName(QStringLiteral("hiddenToolBar"));
-        KToolBar* secondHiddenToolBar = firstClient.toolBarByName(QStringLiteral("secondHiddenToolBar"));
+        KToolBar *mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
+        KToolBar *bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
+        KToolBar *hiddenToolBar = firstClient.toolBarByName(QStringLiteral("hiddenToolBar"));
+        KToolBar *secondHiddenToolBar = firstClient.toolBarByName(QStringLiteral("secondHiddenToolBar"));
         QCOMPARE(hiddenToolBar->isHidden(), true);
         QCOMPARE(secondHiddenToolBar->isHidden(), true);
         // Make (unsaved) changes as user
@@ -532,12 +537,12 @@ void tst_KToolBar::testXmlGuiSwitching()
 
     kmw.guiFactory()->addClient(&firstClient);
     //qDebug() << "Re-added gui client";
-    KToolBar* mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
-    KToolBar* otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
-    KToolBar* bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
-    KToolBar* cleanToolBar = firstClient.toolBarByName(QStringLiteral("cleanToolBar"));
-    KToolBar* hiddenToolBar = firstClient.toolBarByName(QStringLiteral("hiddenToolBar"));
-    KToolBar* secondHiddenToolBar = firstClient.toolBarByName(QStringLiteral("secondHiddenToolBar"));
+    KToolBar *mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
+    KToolBar *otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
+    KToolBar *bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
+    KToolBar *cleanToolBar = firstClient.toolBarByName(QStringLiteral("cleanToolBar"));
+    KToolBar *hiddenToolBar = firstClient.toolBarByName(QStringLiteral("hiddenToolBar"));
+    KToolBar *secondHiddenToolBar = firstClient.toolBarByName(QStringLiteral("secondHiddenToolBar"));
     QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)Qt::ToolButtonTextBesideIcon);
     QCOMPARE(mainToolBar->isHidden(), false);
     QCOMPARE(kmw.toolBarArea(mainToolBar), Qt::RightToolBarArea);
@@ -573,11 +578,11 @@ void tst_KToolBar::testXmlGuiSwitching()
         TestGuiClient firstClient(m_xml);
         kmw2.guiFactory()->addClient(&firstClient);
 
-        KToolBar* mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
-        KToolBar* otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
-        KToolBar* bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
-        KToolBar* hiddenToolBar = firstClient.toolBarByName(QStringLiteral("hiddenToolBar"));
-        KToolBar* secondHiddenToolBar = firstClient.toolBarByName(QStringLiteral("secondHiddenToolBar"));
+        KToolBar *mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
+        KToolBar *bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
+        KToolBar *hiddenToolBar = firstClient.toolBarByName(QStringLiteral("hiddenToolBar"));
+        KToolBar *secondHiddenToolBar = firstClient.toolBarByName(QStringLiteral("secondHiddenToolBar"));
         QCOMPARE(bigToolBar->isHidden(), false);
         QCOMPARE(hiddenToolBar->isHidden(), true);
         QCOMPARE(secondHiddenToolBar->isHidden(), true);
@@ -600,7 +605,7 @@ void tst_KToolBar::testXmlGuiSwitching()
     }
 }
 
-bool tst_KToolBar::eventFilter(QObject * watched, QEvent * event)
+bool tst_KToolBar::eventFilter(QObject *watched, QEvent *event)
 {
     Q_UNUSED(watched);
     if (event->type() == QEvent::Show) {

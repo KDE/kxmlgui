@@ -61,13 +61,11 @@ enum ColumnDesignation {
     Id
 };
 
-
 enum MyRoles {
     ShortcutRole = Qt::UserRole,
     DefaultShortcutRole,
     ObjectRole
 };
-
 
 /**
  * Type used for QTreeWidgetItems
@@ -81,7 +79,6 @@ enum ItemTypes {
 
 QKeySequence primarySequence(const QList<QKeySequence> &sequences);
 QKeySequence alternateSequence(const QList<QKeySequence> &sequences);
-
 
 /**
  * Mixes the KShortcutWidget into the treeview used by KShortcutsEditor. When selecting an shortcut
@@ -111,7 +108,7 @@ public:
      *
      * @see KKeySequenceWidget::setCheckActionCollections
      */
-    void setCheckActionCollections(const QList<KActionCollection*> checkActionCollections );
+    void setCheckActionCollections(const QList<KActionCollection *> checkActionCollections);
 
 Q_SIGNALS:
     void shortcutChanged(QVariant, const QModelIndex &);
@@ -125,7 +122,7 @@ private:
     QWidget *m_editor;
 
     //! List of actionCollections to check for conflicts.
-    QList<KActionCollection*> m_checkActionCollections;
+    QList<KActionCollection *> m_checkActionCollections;
 
 private Q_SLOTS:
     void itemActivated(QModelIndex index);
@@ -134,7 +131,7 @@ private Q_SLOTS:
      * When the user collapses a hole subtree of shortcuts then remove eventually
      * extended items. Else we get that artefact bug. See above.
      */
-    void itemCollapsed(QModelIndex index );
+    void itemCollapsed(QModelIndex index);
 
     /**
      * If the user allowed stealing a shortcut we want to be able to undo
@@ -151,7 +148,6 @@ private Q_SLOTS:
 
 };
 
-
 /**
  * That widget draws the decoration for KShortCutWidget. That widget is currently the only user.
  *
@@ -162,11 +158,10 @@ class TabConnectedWidget : public QWidget
     Q_OBJECT
 public:
     TabConnectedWidget(QWidget *parent)
-     : QWidget(parent) {}
+        : QWidget(parent) {}
 protected:
     void paintEvent(QPaintEvent *pe);
 };
-
 
 /**
  * Edit a shortcut. Let you select between using the default shortcut and configuring your own.
@@ -181,8 +176,7 @@ public:
                        bool allowLetterShortcuts);
 
     //! @see KKeySequenceWidget::setCheckActionCollections()
-    void setCheckActionCollections( const QList<KActionCollection*> checkActionCollections);
-
+    void setCheckActionCollections(const QList<KActionCollection *> checkActionCollections);
 
     //@{
     //! @see KKeySequenceWidget::checkAgainstStandardShortcuts()
@@ -231,8 +225,8 @@ Q_DECLARE_METATYPE(KShapeGesture)
 Q_DECLARE_METATYPE(KRockerGesture)
 #endif
 
-
-class KShortcutSchemesEditor: public QGroupBox {
+class KShortcutSchemesEditor: public QGroupBox
+{
     Q_OBJECT
 public:
     KShortcutSchemesEditor(KShortcutsDialog *parent);
@@ -247,7 +241,7 @@ private Q_SLOTS:
     void saveAsDefaultsForScheme();
 
 Q_SIGNALS:
-    void shortcutsSchemeChanged(const QString&);
+    void shortcutsSchemeChanged(const QString &);
 
 protected:
     void updateDeleteButton();
@@ -260,7 +254,6 @@ private:
 
     KShortcutsDialog *m_dialog;
 };
-
 
 class QAction;
 #if 0
@@ -308,7 +301,10 @@ public:
     bool isModified(uint column) const;
     bool isModified() const;
 
-    void setNameBold(bool flag) { m_isNameBold = flag; }
+    void setNameBold(bool flag)
+    {
+        m_isNameBold = flag;
+    }
 
 private:
     friend class KShortcutsEditorPrivate;
@@ -343,7 +339,6 @@ private:
 
 };
 
-
 // NEEDED FOR KShortcutsEditorPrivate
 #include "ui_kshortcutsdialog.h"
 
@@ -353,9 +348,13 @@ class QTreeWidgetHack : public QTreeWidget
 {
 public:
     QTreeWidgetItem *itemFromIndex(const QModelIndex &index) const
-        { return QTreeWidget::itemFromIndex(index); }
+    {
+        return QTreeWidget::itemFromIndex(index);
+    }
     QModelIndex indexFromItem(QTreeWidgetItem *item, int column) const
-        { return QTreeWidget::indexFromItem(item, column); }
+    {
+        return QTreeWidget::indexFromItem(item, column);
+    }
 };
 
 /**
@@ -370,8 +369,8 @@ public:
 
     KShortcutsEditorPrivate(KShortcutsEditor *q);
 
-    void initGUI( KShortcutsEditor::ActionTypes actionTypes, KShortcutsEditor::LetterShortcuts allowLetterShortcuts );
-    void appendToView( uint nList, const QString &title = QString() );
+    void initGUI(KShortcutsEditor::ActionTypes actionTypes, KShortcutsEditor::LetterShortcuts allowLetterShortcuts);
+    void appendToView(uint nList, const QString &title = QString());
     //used in appendToView
     QTreeWidgetItem *findOrMakeItem(QTreeWidgetItem *parent, const QString &name);
 
@@ -429,9 +428,7 @@ public:
 
 };
 
-
 Q_DECLARE_METATYPE(KShortcutsEditorItem *)
 
 #endif /* KSHORTCUTSDIALOG_P_H */
 
-//kate: space-indent on; indent-width 4; replace-tabs on;tab-width 4;

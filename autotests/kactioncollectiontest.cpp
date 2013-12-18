@@ -31,13 +31,13 @@ void tst_KActionCollection::clear()
     collection->clear();
     QVERIFY(collection->isEmpty());
 
-    QVERIFY( action1.isNull() );
-    QVERIFY( action2.isNull() );
-    QVERIFY( action3.isNull() );
-    QVERIFY( action4.isNull() );
-    QVERIFY( action5.isNull() );
-    QVERIFY( action6.isNull() );
-    QVERIFY( action7.isNull() );
+    QVERIFY(action1.isNull());
+    QVERIFY(action2.isNull());
+    QVERIFY(action3.isNull());
+    QVERIFY(action4.isNull());
+    QVERIFY(action5.isNull());
+    QVERIFY(action6.isNull());
+    QVERIFY(action7.isNull());
 }
 
 void tst_KActionCollection::deleted()
@@ -48,8 +48,8 @@ void tst_KActionCollection::deleted()
     QVERIFY(collection->isEmpty());
 
     // Delete action's parent -> automatically removed from collection
-    QWidget* myWidget = new QWidget(0);
-    QPointer<QAction> action = new QAction( /*i18n()*/ "Foo", myWidget);
+    QWidget *myWidget = new QWidget(0);
+    QPointer<QAction> action = new QAction(/*i18n()*/ "Foo", myWidget);
     collection->addAction("foo", action);
     delete myWidget;
     QVERIFY(collection->isEmpty());
@@ -58,8 +58,8 @@ void tst_KActionCollection::deleted()
     // Delete action's parent, but the action was added to another widget with setAssociatedWidget
     // and that widget gets deleted first.
     myWidget = new QWidget(0);
-    QWidget* myAssociatedWidget = new QWidget(myWidget); // child widget
-    action = new QAction( /*i18n()*/ "Foo", myWidget); // child action
+    QWidget *myAssociatedWidget = new QWidget(myWidget); // child widget
+    action = new QAction(/*i18n()*/ "Foo", myWidget);  // child action
     collection->addAction("foo", action);
     collection->addAssociatedWidget(myAssociatedWidget);
     QVERIFY(myAssociatedWidget->actions().contains(action));
@@ -85,7 +85,7 @@ void tst_KActionCollection::writeSettings()
     defaultShortcut << Qt::Key_A << Qt::Key_B;
 
     QList<QKeySequence> temporaryShortcut;
-    temporaryShortcut << Qt::Key_C <<Qt::Key_D;
+    temporaryShortcut << Qt::Key_C << Qt::Key_D;
 
     QAction *actionWithDifferentShortcut = new QAction(this);
     collection->setDefaultShortcuts(actionWithDifferentShortcut, defaultShortcut);
@@ -127,7 +127,7 @@ void tst_KActionCollection::readSettings()
     defaultShortcut << Qt::Key_A << Qt::Key_B;
 
     QList<QKeySequence> temporaryShortcut;
-    temporaryShortcut << Qt::Key_C <<Qt::Key_D;
+    temporaryShortcut << Qt::Key_C << Qt::Key_D;
 
     cfg.writeEntry("normalAction", QKeySequence::listToString(defaultShortcut));
     cfg.writeEntry("immutable", QKeySequence::listToString(defaultShortcut));
@@ -216,16 +216,16 @@ void tst_KActionCollection::testSetShortcuts()
 {
     QAction *action = new QAction(i18n("Next Unread &Folder"), this);
     collection->addAction("go_next_unread_folder", action);
-    action->setShortcut(QKeySequence(Qt::ALT+Qt::Key_Plus));
-    collection->setDefaultShortcut(action, QKeySequence(Qt::ALT+Qt::Key_Plus));
+    action->setShortcut(QKeySequence(Qt::ALT + Qt::Key_Plus));
+    collection->setDefaultShortcut(action, QKeySequence(Qt::ALT + Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
-    shortcut << QKeySequence( Qt::CTRL+Qt::Key_Plus );
-    action->setShortcuts( shortcut );
+    shortcut << QKeySequence(Qt::CTRL + Qt::Key_Plus);
+    action->setShortcuts(shortcut);
     QCOMPARE(QKeySequence::listToString(action->shortcuts()), QString("Alt++; Ctrl++"));
 
     // Simpler way:
     QList<QKeySequence> shortcut2;
-    shortcut2 << QKeySequence( Qt::ALT+Qt::Key_Plus ) << QKeySequence( Qt::CTRL+Qt::Key_Plus );
+    shortcut2 << QKeySequence(Qt::ALT + Qt::Key_Plus) << QKeySequence(Qt::CTRL + Qt::Key_Plus);
     QCOMPARE(QKeySequence::listToString(shortcut2), QString("Alt++; Ctrl++"));
 }
 
@@ -242,15 +242,11 @@ void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
 void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
 {
     KActionCollection collection(static_cast<QObject *>(0));
-    QAction* cut = KStandardAction::cut(&collection);
-    QAction* a = collection.action(KStandardAction::name(KStandardAction::Cut));
+    QAction *cut = KStandardAction::cut(&collection);
+    QAction *a = collection.action(KStandardAction::name(KStandardAction::Cut));
     QVERIFY(a);
     QVERIFY(a == cut);
 }
 
-
 QTEST_MAIN(tst_KActionCollection)
 
-
-/* vim: et sw=4 ts=4
- */

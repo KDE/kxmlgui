@@ -37,25 +37,29 @@
 class TestXmlGuiWindow : public KXmlGuiWindow
 {
 public:
-    TestXmlGuiWindow(const QByteArray& xml = QByteArray()) : KXmlGuiWindow() {
+    TestXmlGuiWindow(const QByteArray &xml = QByteArray()) : KXmlGuiWindow()
+    {
         QVERIFY(m_userFile.open());
         m_userFile.write(xml);
         m_fileName = m_userFile.fileName(); // remember filename
         Q_ASSERT(!m_fileName.isEmpty());
         m_userFile.close(); // write to disk
     }
-    void createGUI() {
+    void createGUI()
+    {
         // This merges in ui_standards.rc, too.
         KXmlGuiWindow::createGUI(m_fileName);
         // just so that we can use kedittoolbar (because m_fileName is absolute)
         setLocalXMLFile(QStringLiteral("kxmlgui_unittest.rc"));
     }
-    void createGUIBad() {
+    void createGUIBad()
+    {
         KXmlGuiWindow::createGUI(QStringLiteral("dontexist.rc"));
     }
 
     // Same as in KMainWindow_UnitTest
-    void reallyResize(int width, int height) {
+    void reallyResize(int width, int height)
+    {
         const QSize oldSize = size();
         resize(width, height);
         // Send the pending resize event (resize() only sets Qt::WA_PendingResizeEvent)
@@ -65,31 +69,33 @@ public:
 
     // KMainWindow::toolBar(name) creates it if not found, and we don't want that.
     // Also this way we test container() rather than just doing a findChild.
-    KToolBar* toolBarByName(const QString& name) {
-        KXMLGUIFactory* factory = guiFactory();
+    KToolBar *toolBarByName(const QString &name)
+    {
+        KXMLGUIFactory *factory = guiFactory();
         //qDebug() << "containers:" << factory->containers("ToolBar");
-        QWidget* toolBarW = factory->container(name, this);
+        QWidget *toolBarW = factory->container(name, this);
         if (!toolBarW) {
             qWarning() << "No toolbar found with name" << name;
         }
         Q_ASSERT(toolBarW);
-        KToolBar* toolBar = qobject_cast<KToolBar *>(toolBarW);
+        KToolBar *toolBar = qobject_cast<KToolBar *>(toolBarW);
         Q_ASSERT(toolBar);
         return toolBar;
     }
-    QMenu* menuByName(const QString& name) {
-        KXMLGUIFactory* factory = guiFactory();
-        QWidget* menuW = factory->container(name, this);
+    QMenu *menuByName(const QString &name)
+    {
+        KXMLGUIFactory *factory = guiFactory();
+        QWidget *menuW = factory->container(name, this);
         Q_ASSERT(menuW);
-        QMenu* menu = qobject_cast<QMenu *>(menuW);
+        QMenu *menu = qobject_cast<QMenu *>(menuW);
         Q_ASSERT(menu);
         return menu;
     }
 
-    void createActions(const QStringList& actionNames)
+    void createActions(const QStringList &actionNames)
     {
-        KActionCollection* coll = actionCollection();
-        Q_FOREACH(const QString& actionName, actionNames) {
+        KActionCollection *coll = actionCollection();
+        Q_FOREACH (const QString &actionName, actionNames) {
             coll->addAction(actionName)->setText(QStringLiteral("Action"));
         }
     }

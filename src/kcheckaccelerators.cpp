@@ -54,14 +54,16 @@ public Q_SLOTS:
         QString sKey = cg.readEntry(QStringLiteral("CheckAccelerators")).trimmed();
         int key = 0;
         if (!sKey.isEmpty()) {
-          QList<QKeySequence> cuts = QKeySequence::listFromString(sKey);
-          if (!cuts.isEmpty())
-            key = cuts.first()[0];
+            QList<QKeySequence> cuts = QKeySequence::listFromString(sKey);
+            if (!cuts.isEmpty()) {
+                key = cuts.first()[0];
+            }
         }
         const bool autoCheck = cg.readEntry(QStringLiteral("AutoCheckAccelerators"), true);
         const bool copyWidgetText = cg.readEntry(QStringLiteral("CopyWidgetText"), false);
-        if (!copyWidgetText && key == 0 && !autoCheck)
+        if (!copyWidgetText && key == 0 && !autoCheck) {
             return;
+        }
 
         new KCheckAccelerators(qApp, key, autoCheck, copyWidgetText);
         deleteLater();
@@ -72,13 +74,13 @@ static void startupFunc()
 {
     // Call initiateIfNeeded once we're in the event loop
     // This is to prevent using KSharedConfig before main() can set the app name
-    KCheckAcceleratorsInitializer* initializer = new KCheckAcceleratorsInitializer;
+    KCheckAcceleratorsInitializer *initializer = new KCheckAcceleratorsInitializer;
     QMetaObject::invokeMethod(initializer, "initiateIfNeeded", Qt::QueuedConnection);
 }
 
 Q_COREAPP_STARTUP_FUNCTION(startupFunc)
 
-KCheckAccelerators::KCheckAccelerators(QObject* parent, int key_, bool autoCheck_, bool copyWidgetText_)
+KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck_, bool copyWidgetText_)
     : QObject(parent)
     , key(key_)
     , block(false)
@@ -86,99 +88,103 @@ KCheckAccelerators::KCheckAccelerators(QObject* parent, int key_, bool autoCheck
     , copyWidgetText(copyWidgetText_)
     , drklash(0)
 {
-    setObjectName( QStringLiteral("kapp_accel_filter") );
+    setObjectName(QStringLiteral("kapp_accel_filter"));
 
-    KConfigGroup cg( KSharedConfig::openConfig(), QStringLiteral("Development") );
-    alwaysShow = cg.readEntry( QStringLiteral("AlwaysShowCheckAccelerators"), false );
-    copyWidgetTextCommand = cg.readEntry( QStringLiteral("CopyWidgetTextCommand"), QString() );
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Development"));
+    alwaysShow = cg.readEntry(QStringLiteral("AlwaysShowCheckAccelerators"), false);
+    copyWidgetTextCommand = cg.readEntry(QStringLiteral("CopyWidgetTextCommand"), QString());
 
-    parent->installEventFilter( this );
-    connect( &autoCheckTimer, SIGNAL(timeout()), SLOT(autoCheckSlot()));
+    parent->installEventFilter(this);
+    connect(&autoCheckTimer, SIGNAL(timeout()), SLOT(autoCheckSlot()));
 }
 
-bool KCheckAccelerators::eventFilter(QObject* obj, QEvent* e)
+bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
 {
-    if ( block )
+    if (block) {
         return false;
+    }
 
-    switch ( e->type() ) { // just simplify debuggin
+    switch (e->type()) {   // just simplify debuggin
     case QEvent::ShortcutOverride:
-        if ( key && (static_cast<QKeyEvent*>(e)->key() == key) ) {
-    	    block = true;
-	    checkAccelerators( false );
-	    block = false;
-	    e->accept();
-	    return true;
-	}
+        if (key && (static_cast<QKeyEvent *>(e)->key() == key)) {
+            block = true;
+            checkAccelerators(false);
+            block = false;
+            e->accept();
+            return true;
+        }
         break;
     case QEvent::ChildAdded:
     case QEvent::ChildRemoved:
         // Only care about widgets; this also avoids starting the timer in other threads
-        if ( !static_cast<QChildEvent *>(e)->child()->isWidgetType() )
+        if (!static_cast<QChildEvent *>(e)->child()->isWidgetType()) {
             break;
-        // fall-through
+        }
+    // fall-through
     case QEvent::Resize:
     case QEvent::LayoutRequest:
     case QEvent::WindowActivate:
     case QEvent::WindowDeactivate:
-        if( autoCheck ) {
-            autoCheckTimer.setSingleShot( true );
-            autoCheckTimer.start( 20 ); // 20 ms
+        if (autoCheck) {
+            autoCheckTimer.setSingleShot(true);
+            autoCheckTimer.start(20);   // 20 ms
         }
         break;
     //case QEvent::MouseButtonDblClick:
     case QEvent::MouseButtonPress:
-        if ( copyWidgetText && static_cast<QMouseEvent*>(e)->button() == Qt::MidButton ) {
+        if (copyWidgetText && static_cast<QMouseEvent *>(e)->button() == Qt::MidButton) {
             //kWarning()<<"obj"<<obj;
-            QWidget* w=static_cast<QWidget*>(obj)->childAt(static_cast<QMouseEvent*>(e)->pos());
-            if (!w)
-                w=static_cast<QWidget*>(obj);
-            if (!w)
+            QWidget *w = static_cast<QWidget *>(obj)->childAt(static_cast<QMouseEvent *>(e)->pos());
+            if (!w) {
+                w = static_cast<QWidget *>(obj);
+            }
+            if (!w) {
                 return false;
+            }
             //kWarning()<<"MouseButtonDblClick"<<w;
             QString text;
-            if (qobject_cast<QLabel*>(w))
-                text=static_cast<QLabel*>(w)->text();
-            else if (qobject_cast<QAbstractButton*>(w))
-                text=static_cast<QAbstractButton*>(w)->text();
-            else if (qobject_cast<QComboBox*>(w))
-                text=static_cast<QComboBox*>(w)->currentText();
-            else if (qobject_cast<QTabBar*>(w))
-                text=static_cast<QTabBar*>(w)->tabText(  static_cast<QTabBar*>(w)->tabAt(static_cast<QMouseEvent*>(e)->pos())  );
-            else if (qobject_cast<QGroupBox*>(w))
-                text=static_cast<QGroupBox*>(w)->title();
-            else if (qobject_cast<QMenu*>(obj))
-            {
-                QAction* a=static_cast<QMenu*>(obj)->actionAt(static_cast<QMouseEvent*>(e)->pos());
-                if (!a)
+            if (qobject_cast<QLabel *>(w)) {
+                text = static_cast<QLabel *>(w)->text();
+            } else if (qobject_cast<QAbstractButton *>(w)) {
+                text = static_cast<QAbstractButton *>(w)->text();
+            } else if (qobject_cast<QComboBox *>(w)) {
+                text = static_cast<QComboBox *>(w)->currentText();
+            } else if (qobject_cast<QTabBar *>(w)) {
+                text = static_cast<QTabBar *>(w)->tabText(static_cast<QTabBar *>(w)->tabAt(static_cast<QMouseEvent *>(e)->pos()));
+            } else if (qobject_cast<QGroupBox *>(w)) {
+                text = static_cast<QGroupBox *>(w)->title();
+            } else if (qobject_cast<QMenu *>(obj)) {
+                QAction *a = static_cast<QMenu *>(obj)->actionAt(static_cast<QMouseEvent *>(e)->pos());
+                if (!a) {
                     return false;
-                text=a->text();
-                if (text.isEmpty())
-                    text=a->iconText();
+                }
+                text = a->text();
+                if (text.isEmpty()) {
+                    text = a->iconText();
+                }
             }
-            if (text.isEmpty())
+            if (text.isEmpty()) {
                 return false;
+            }
 
-            if (static_cast<QMouseEvent*>(e)->modifiers() == Qt::ControlModifier)
+            if (static_cast<QMouseEvent *>(e)->modifiers() == Qt::ControlModifier) {
                 text.remove(QChar::fromLatin1('&'));
+            }
 
             //kWarning()<<KGlobal::activeComponent().catalogName()<<text;
-            if (copyWidgetTextCommand.isEmpty())
-            {
+            if (copyWidgetTextCommand.isEmpty()) {
                 QClipboard *clipboard = QApplication::clipboard();
                 clipboard->setText(text);
-            }
-            else
-            {
-                QProcess* script=new QProcess(this);
+            } else {
+                QProcess *script = new QProcess(this);
                 script->start(copyWidgetTextCommand.arg(text).arg(QFile::decodeName(KLocalizedString::applicationDomain())));
-                connect(script,SIGNAL(finished(int,QProcess::ExitStatus)),script,SLOT(deleteLater()));
+                connect(script, SIGNAL(finished(int,QProcess::ExitStatus)), script, SLOT(deleteLater()));
             }
             e->accept();
             return true;
 
             //kWarning()<<"MouseButtonDblClick"<<static_cast<QWidget*>(obj)->childAt(static_cast<QMouseEvent*>(e)->globalPos());
-	}
+        }
         return false;
     case QEvent::Timer:
     case QEvent::MouseMove:
@@ -193,72 +199,77 @@ bool KCheckAccelerators::eventFilter(QObject* obj, QEvent* e)
 
 void KCheckAccelerators::autoCheckSlot()
 {
-    if( block )
-    {
-        autoCheckTimer.setSingleShot( true );
-        autoCheckTimer.start( 20 );
+    if (block) {
+        autoCheckTimer.setSingleShot(true);
+        autoCheckTimer.start(20);
         return;
     }
     block = true;
-    checkAccelerators( !alwaysShow );
+    checkAccelerators(!alwaysShow);
     block = false;
 }
 
 void KCheckAccelerators::createDialog(QWidget *actWin, bool automatic)
 {
-    if ( drklash )
+    if (drklash) {
         return;
-
-    drklash = new QDialog( actWin );
-    drklash->setAttribute( Qt::WA_DeleteOnClose );
-    drklash->setObjectName( QStringLiteral("kapp_accel_check_dlg") );
-    drklash->setWindowTitle( i18nc("@title:window", "Dr. Klash' Accelerator Diagnosis" ));
-    drklash->resize( 500, 460 );
-    QVBoxLayout* layout = new QVBoxLayout( drklash );
-    drklash_view = new QTextBrowser( drklash );
-    layout->addWidget( drklash_view);
-    QCheckBox* disableAutoCheck = NULL;
-    if( automatic )  {
-        disableAutoCheck = new QCheckBox( i18nc("@option:check","Disable automatic checking" ), drklash );
-        connect(disableAutoCheck, SIGNAL(toggled(bool)), SLOT(slotDisableCheck(bool)));
-        layout->addWidget( disableAutoCheck );
     }
-    QPushButton* btnClose = new QPushButton( i18nc("@action:button", "Close" ), drklash );
-    btnClose->setDefault( true );
-    layout->addWidget( btnClose );
-    connect( btnClose, SIGNAL(clicked()), drklash, SLOT(close()) );
-    if (disableAutoCheck)
+
+    drklash = new QDialog(actWin);
+    drklash->setAttribute(Qt::WA_DeleteOnClose);
+    drklash->setObjectName(QStringLiteral("kapp_accel_check_dlg"));
+    drklash->setWindowTitle(i18nc("@title:window", "Dr. Klash' Accelerator Diagnosis"));
+    drklash->resize(500, 460);
+    QVBoxLayout *layout = new QVBoxLayout(drklash);
+    drklash_view = new QTextBrowser(drklash);
+    layout->addWidget(drklash_view);
+    QCheckBox *disableAutoCheck = NULL;
+    if (automatic)  {
+        disableAutoCheck = new QCheckBox(i18nc("@option:check", "Disable automatic checking"), drklash);
+        connect(disableAutoCheck, SIGNAL(toggled(bool)), SLOT(slotDisableCheck(bool)));
+        layout->addWidget(disableAutoCheck);
+    }
+    QPushButton *btnClose = new QPushButton(i18nc("@action:button", "Close"), drklash);
+    btnClose->setDefault(true);
+    layout->addWidget(btnClose);
+    connect(btnClose, SIGNAL(clicked()), drklash, SLOT(close()));
+    if (disableAutoCheck) {
         disableAutoCheck->setFocus();
-    else
+    } else {
         drklash_view->setFocus();
+    }
 }
 
 void KCheckAccelerators::slotDisableCheck(bool on)
 {
     autoCheck = !on;
-    if (!on)
+    if (!on) {
         autoCheckSlot();
+    }
 }
 
-void KCheckAccelerators::checkAccelerators( bool automatic )
+void KCheckAccelerators::checkAccelerators(bool automatic)
 {
-    QWidget* actWin = qApp->activeWindow();
-    if ( !actWin )
+    QWidget *actWin = qApp->activeWindow();
+    if (!actWin) {
         return;
+    }
 
     KAcceleratorManager::manage(actWin);
     QString a, c, r;
     KAcceleratorManager::last_manage(a, c,  r);
 
-    if (automatic) // for now we only show dialogs on F12 checks
+    if (automatic) { // for now we only show dialogs on F12 checks
         return;
+    }
 
-    if (c.isEmpty() && r.isEmpty() && (automatic || a.isEmpty()))
+    if (c.isEmpty() && r.isEmpty() && (automatic || a.isEmpty())) {
         return;
+    }
 
     QString s;
 
-    if ( ! c.isEmpty() )  {
+    if (! c.isEmpty())  {
         s += i18n("<h2>Accelerators changed</h2>");
         s += QStringLiteral("<table border><tr><th><b>");
         s += i18n("Old Text");
@@ -269,7 +280,7 @@ void KCheckAccelerators::checkAccelerators( bool automatic )
         s += QStringLiteral("</table>");
     }
 
-    if ( ! r.isEmpty() )  {
+    if (! r.isEmpty())  {
         s += i18n("<h2>Accelerators removed</h2>");
         s += QStringLiteral("<table border><tr><th><b>");
         s += i18n("Old Text");
@@ -278,7 +289,7 @@ void KCheckAccelerators::checkAccelerators( bool automatic )
         s += QStringLiteral("</table>");
     }
 
-    if ( ! a.isEmpty() )  {
+    if (! a.isEmpty())  {
         s += i18n("<h2>Accelerators added (just for your info)</h2>");
         s += QStringLiteral("<table border><tr><th><b>");
         s += i18n("New Text");

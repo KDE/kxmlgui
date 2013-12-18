@@ -34,7 +34,6 @@ class QAction;
 class KAboutData;
 class KHelpMenuPrivate;
 
-
 /**
  * @short Standard %KDE help menu with dialog boxes.
  *
@@ -108,9 +107,9 @@ class KHelpMenuPrivate;
 
 class XMLGUI_EXPORT KHelpMenu : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Constructor.
      *
@@ -122,8 +121,8 @@ class XMLGUI_EXPORT KHelpMenu : public QObject
      *        added to the dialog.
      *
      */
-    explicit KHelpMenu( QWidget *parent=0, const QString &aboutAppText=QString(),
-                        bool showWhatsThis=true );
+    explicit KHelpMenu(QWidget *parent = 0, const QString &aboutAppText = QString(),
+                       bool showWhatsThis = true);
 
     /**
      * Constructor.
@@ -138,8 +137,8 @@ class XMLGUI_EXPORT KHelpMenu : public QObject
      * @param showWhatsThis Decides whether a "Whats this" entry will be
      *        added to the dialog.
      */
-    KHelpMenu( QWidget *parent, const KAboutData &aboutData,
-               bool showWhatsThis=true );
+    KHelpMenu(QWidget *parent, const KAboutData &aboutData,
+              bool showWhatsThis = true);
 
     /**
      * Destructor
@@ -161,25 +160,24 @@ class XMLGUI_EXPORT KHelpMenu : public QObject
      */
     QMenu *menu();
 
-    enum MenuId
-    {
-      menuHelpContents = 0,
-      menuWhatsThis = 1,
-      menuAboutApp = 2,
-      menuAboutKDE = 3,
-      menuReportBug = 4,
-      menuSwitchLanguage = 5
+    enum MenuId {
+        menuHelpContents = 0,
+        menuWhatsThis = 1,
+        menuAboutApp = 2,
+        menuAboutKDE = 3,
+        menuReportBug = 4,
+        menuSwitchLanguage = 5
     };
 
     /**
      * Returns the QAction * associated with the given parameter
      * Will return NULL pointers if menu() has not been called
-     * 
-     * @param id The id of the action of which you want to get QAction * 
+     *
+     * @param id The id of the action of which you want to get QAction *
      */
-    QAction *action( MenuId id ) const;
+    QAction *action(MenuId id) const;
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Opens the help page for the application. The application name is
      * used as a key to determine what to display and the system will attempt
@@ -218,7 +216,7 @@ class XMLGUI_EXPORT KHelpMenu : public QObject
      */
     void switchApplicationLanguage();
 
-  private Q_SLOTS:
+private Q_SLOTS:
     /**
      * Connected to the menu pointer (if created) to detect a delete
      * operation on the pointer. You should not delete the pointer in your
@@ -239,7 +237,7 @@ class XMLGUI_EXPORT KHelpMenu : public QObject
      */
     void timerExpired();
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted from aboutApplication() if no
      * "about application" string has been defined. The standard
@@ -249,9 +247,8 @@ class XMLGUI_EXPORT KHelpMenu : public QObject
      */
     void showAboutApplication();
 
-  private:
+private:
     KHelpMenuPrivate *const d;
 };
-
 
 #endif

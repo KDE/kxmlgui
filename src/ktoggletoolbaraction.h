@@ -48,7 +48,7 @@ class XMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
 {
     Q_OBJECT
 
-  public:
+public:
     /**
      * Create a KToggleToolbarAction that manages the toolbar
      * named toolBarName. This can be either the name of a
@@ -57,7 +57,7 @@ class XMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
      *
      * @param The action's parent object.
      */
-    KToggleToolBarAction(const char* toolBarName, const QString& text, QObject *parent);
+    KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent);
 
     /**
      * Create a KToggleToolbarAction that manages the @param toolBar.
@@ -82,14 +82,14 @@ class XMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
     /**
      * Reimplemented from @see QObject.
      */
-    virtual bool eventFilter( QObject* watched, QEvent* event );
+    virtual bool eventFilter(QObject *watched, QEvent *event);
 
-  private Q_SLOTS:
-    virtual void slotToggled( bool checked );
+private Q_SLOTS:
+    virtual void slotToggled(bool checked);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif
