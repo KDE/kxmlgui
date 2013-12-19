@@ -101,15 +101,16 @@ static void copy_dir(const QString &from, const QDir &to)
 // It is only called once.
 void tst_KToolBar::initTestCase()
 {
+    // start with a clean place to put data
     QStandardPaths::setTestModeEnabled(true);
+    QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
+    QVERIFY(testDataDir.absolutePath().contains(QStringLiteral("qttest")));
+    testDataDir.removeRecursively();
+    testDataDir.mkpath(".");
 
     // copy a minimal icon theme to where KIconTheme will find it, in case oxygen-icons is not
     // installed
-    QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
-    QDir testIconsDir = QDir(testDataDir.absoluteFilePath(QStringLiteral("icons")));
-    QVERIFY(testIconsDir.absolutePath().contains(QStringLiteral("qttest")));
-    testIconsDir.removeRecursively();
-    copy_dir(QFINDTESTDATA("icons"), testDataDir);
+    copy_dir(QFINDTESTDATA("icons"), QDir(testDataDir.filePath(QStringLiteral("icons"))));
 
     m_xml =
         "<?xml version = '1.0'?>\n"
