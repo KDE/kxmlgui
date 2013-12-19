@@ -110,7 +110,7 @@ void tst_KToolBar::initTestCase()
 
     // copy a minimal icon theme to where KIconTheme will find it, in case oxygen-icons is not
     // installed
-    copy_dir(QFINDTESTDATA("icons"), QDir(testDataDir.filePath(QStringLiteral("icons"))));
+    copy_dir(QFINDTESTDATA("icons"), testDataDir);
 
     m_xml =
         "<?xml version = '1.0'?>\n"
