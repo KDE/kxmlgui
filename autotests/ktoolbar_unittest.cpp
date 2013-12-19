@@ -21,9 +21,13 @@
 #include "testxmlguiwindow.h"
 #include "testguiclient.h"
 
-#include <QTest>
-#include <QSignalSpy>
 #include <QDBusConnection>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 #include <QToolButton>
 
 #include <ktoolbar.h>
@@ -79,10 +83,34 @@ private:
 
 QTEST_MAIN(tst_KToolBar)
 
+static void copy_dir(const QString &from, const QDir &to)
+{
+    QDir src = QDir(from);
+    QDir dest = QDir(to.filePath(src.dirName()));
+    to.mkpath(src.dirName());
+    foreach (const QFileInfo &fileInfo, src.entryInfoList(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot)) {
+        if (fileInfo.isDir()) {
+            copy_dir(fileInfo.filePath(), dest);
+        } else {
+            QFile::copy(fileInfo.filePath(), dest.filePath(fileInfo.fileName()));
+        }
+    }
+}
+
 // This will be called before the first test function is executed.
 // It is only called once.
 void tst_KToolBar::initTestCase()
 {
+    QStandardPaths::setTestModeEnabled(true);
+
+    // copy a minimal icon theme to where KIconTheme will find it, in case oxygen-icons is not
+    // installed
+    QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
+    QDir testIconsDir = QDir(testDataDir.absoluteFilePath(QStringLiteral("icons")));
+    QVERIFY(testIconsDir.absolutePath().contains(QStringLiteral("qttest")));
+    testIconsDir.removeRecursively();
+    copy_dir(QFINDTESTDATA("icons"), testDataDir);
+
     m_xml =
         "<?xml version = '1.0'?>\n"
         "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
@@ -120,6 +148,10 @@ void tst_KToolBar::initTestCase()
 // It is only called once.
 void tst_KToolBar::cleanupTestCase()
 {
+    QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
+    QDir testIconsDir = QDir(testDataDir.absoluteFilePath(QStringLiteral("icons")));
+    QVERIFY(testIconsDir.absolutePath().contains(QStringLiteral("qttest")));
+    testIconsDir.removeRecursively();
 }
 
 // This will be called before each test function is executed.
