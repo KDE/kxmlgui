@@ -42,6 +42,10 @@ Q_DECLARE_METATYPE(Qt::MouseButton)
 Q_DECLARE_METATYPE(Qt::MouseButtons)
 Q_DECLARE_METATYPE(Qt::KeyboardModifiers)
 
+// Ensure everything uses test paths, including stuff run before main, such as the KdePlatformThemePlugin
+void enableTestMode() { QStandardPaths::enableTestMode(true); }
+Q_CONSTRUCTOR_FUNCTION(enableTestMode)
+
 class tst_KToolBar : public QObject
 {
     Q_OBJECT
@@ -102,7 +106,6 @@ static void copy_dir(const QString &from, const QDir &to)
 void tst_KToolBar::initTestCase()
 {
     // start with a clean place to put data
-    QStandardPaths::setTestModeEnabled(true);
     QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
     QVERIFY(testDataDir.absolutePath().contains(QStringLiteral("qttest")));
     testDataDir.removeRecursively();
