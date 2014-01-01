@@ -67,6 +67,8 @@ add_library(KF5XmlGui ${xmlgui_SRCS})
 generate_export_header(KF5XmlGui BASE_NAME XmlGui)
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
+target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/xmlgui>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/XmlGui>")
+
 target_link_libraries(KF5XmlGui
 PUBLIC
     Qt5::DBus           #QDBus connect to signal in KToolBar
@@ -93,37 +95,45 @@ set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION_STRING}
                                            EXPORT_NAME XmlGui
 )
 
+ecm_generate_headers(
+  KAboutApplicationDialog
+  KActionCategory
+  KActionCollection
+  KBugReport
+  KEditToolBar
+  KHelpMenu
+  KKeySequenceWidget
+  KMainWindow
+  KShortcutsDialog
+  KShortcutsEditor
+  KShortcutWidget
+  KToggleToolBarAction
+  KToolBar
+  KXMLGUIBuilder
+  KXMLGUIClient
+  KXMLGUIFactory
+  KXmlGuiWindow
+  KUndoActions
+  KHelpClient
+
+  MODULE_NAME XmlGui
+  REQUIRED_HEADERS XmlGui_HEADERS
+)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/XmlGui DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel)
+
 install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
-  kaboutapplicationdialog.h
-  kactioncategory.h
-  kactioncollection.h
-  kbugreport.h
-  kedittoolbar.h
   kgesture_p.h
   kgesturemap_p.h
-  khelpmenu.h
-  kkeysequencewidget.h
-  kmainwindow.h
-  kshortcutsdialog.h
-  kshortcutseditor.h
-  kshortcutwidget.h
-  ktoggletoolbaraction.h
-  ktoolbar.h
-  kxmlguibuilder.h
-  kxmlguiclient.h
-  kxmlguifactory.h
-  kxmlguiwindow.h
-  kundoactions.h
-  khelpclient.h
   ${CMAKE_CURRENT_BINARY_DIR}/xmlgui_export.h
-  DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+  ${XmlGui_HEADERS}
+  DESTINATION ${INCLUDE_INSTALL_DIR}/xmlgui COMPONENT Devel
 )
 
 install( FILES ui_standards.rc  DESTINATION  ${CONFIG_INSTALL_DIR}/ui )
 
-install( FILES
+install(FILES
  aboutkde.png
  thumb_frame.png
  DESTINATION  ${DATA_INSTALL_DIR}/kxmlgui/pics )
