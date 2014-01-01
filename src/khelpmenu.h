@@ -22,7 +22,7 @@
 #ifndef KHELPMENU_H
 #define KHELPMENU_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QtCore/QObject>
 #include <QtCore/QString>
@@ -105,7 +105,7 @@ class KHelpMenuPrivate;
  * @author Espen Sand (espen@kde.org)
  */
 
-class XMLGUI_EXPORT KHelpMenu : public QObject
+class KXMLGUI_EXPORT KHelpMenu : public QObject
 {
     Q_OBJECT
 

@@ -25,7 +25,7 @@
 #ifndef KSHORTCUTSDIALOG_H
 #define KSHORTCUTSDIALOG_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QDialog>
 
@@ -67,7 +67,7 @@
  * @author Hamish Rodda <rodda@kde.org> (KDE 4 porting)
  * @author Michael Jansen <kde@michael-jansen.biz>
  */
-class XMLGUI_EXPORT KShortcutsDialog : public QDialog
+class KXMLGUI_EXPORT KShortcutsDialog : public QDialog
 {
     Q_OBJECT
 

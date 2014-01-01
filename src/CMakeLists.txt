@@ -15,7 +15,7 @@ configure_file(
     ${CMAKE_CURRENT_BINARY_DIR}/kaboutapplicationconfigattica_p.h
 )
 
-set(xmlgui_SRCS
+set(kxmlgui_SRCS
   kaboutapplicationdialog.cpp
   kaboutapplicationpersonlistdelegate_p.cpp
   kaboutapplicationpersonlistview_p.cpp
@@ -56,18 +56,18 @@ set(xmlgui_SRCS
   khelpclient.cpp
 )
 
-set( xmlgui_UI
+set(kxmlgui_UI
    kshortcutsdialog.ui
    kshortcutwidget.ui
 )
 
-qt5_wrap_ui(xmlgui_SRCS ${xmlgui_UI} )
+qt5_wrap_ui(kxmlgui_SRCS ${xmlgui_UI} )
 
-add_library(KF5XmlGui ${xmlgui_SRCS})
-generate_export_header(KF5XmlGui BASE_NAME XmlGui)
+add_library(KF5XmlGui ${kxmlgui_SRCS})
+generate_export_header(KF5XmlGui BASE_NAME KXmlGui)
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
-target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/xmlgui>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/XmlGui>")
+target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kxmlgui>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KXmlGui>")
 
 target_link_libraries(KF5XmlGui
 PUBLIC
@@ -116,19 +116,19 @@ ecm_generate_headers(
   KUndoActions
   KHelpClient
 
-  MODULE_NAME XmlGui
-  REQUIRED_HEADERS XmlGui_HEADERS
+  MODULE_NAME KXmlGui
+  REQUIRED_HEADERS KXmlGui_HEADERS
 )
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/XmlGui DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KXmlGui DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel)
 
 install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   kgesture_p.h
   kgesturemap_p.h
-  ${CMAKE_CURRENT_BINARY_DIR}/xmlgui_export.h
-  ${XmlGui_HEADERS}
-  DESTINATION ${INCLUDE_INSTALL_DIR}/xmlgui COMPONENT Devel
+  ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
+  ${KXmlGui_HEADERS}
+  DESTINATION ${INCLUDE_INSTALL_DIR}/kxmlgui COMPONENT Devel
 )
 
 install( FILES ui_standards.rc  DESTINATION  ${CONFIG_INSTALL_DIR}/ui )

@@ -21,7 +21,7 @@
 #ifndef KHELPCLIENT_H
 #define KHELPCLIENT_H
 
-#include "xmlgui_export.h"
+#include "kxmlgui_export.h"
 #include <QtCore/QString>
 #include <QtCore/QByteArray>
 
@@ -40,7 +40,7 @@ namespace KHelpClient
  *           "" ( empty string ) is the default
  * @since 5.0
  */
-XMLGUI_EXPORT void invokeHelp(const QString &anchor = QString(), const QString &appname = QString());
+KXMLGUI_EXPORT void invokeHelp(const QString &anchor = QString(), const QString &appname = QString());
 }
 
 #endif /* KHELPCLIENT_H */

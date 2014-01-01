@@ -21,7 +21,7 @@
 #ifndef KACTIONCATEGORY_H
 #define KACTIONCATEGORY_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QtCore/QObject>
 #include <QtCore/QString>
@@ -91,7 +91,7 @@ class QAction;
  *
  * \endcode
  */
-class XMLGUI_EXPORT KActionCategory : public QObject
+class KXMLGUI_EXPORT KActionCategory : public QObject
 {
     Q_OBJECT
 

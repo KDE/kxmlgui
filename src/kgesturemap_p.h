@@ -31,7 +31,7 @@ class QApplication;
 class QAction;
 class QEvent;
 
-class XMLGUI_EXPORT KGestureMap : public QObject
+class KXMLGUI_EXPORT KGestureMap : public QObject
 {
     Q_OBJECT
 public:

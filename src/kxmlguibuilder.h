@@ -20,7 +20,7 @@
 #ifndef kxmlguibuilder_h
 #define kxmlguibuilder_h
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 class KXMLGUIBuilderPrivate;
 class KXMLGUIClient;
@@ -37,7 +37,7 @@ class QWidget;
  * The virtual methods are mostly for historical reasons, there isn't really
  * a need to derive from KXMLGUIBuilder anymore.
  */
-class XMLGUI_EXPORT KXMLGUIBuilder
+class KXMLGUI_EXPORT KXMLGUIBuilder
 {
 public:
 

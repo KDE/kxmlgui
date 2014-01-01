@@ -28,7 +28,7 @@
 #define KTOGGLETOOLBARACTION_H
 
 #include <ktoggleaction.h>
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 class KToolBar;
 
@@ -44,7 +44,7 @@ class KToolBar;
  * signal. It will be emitted after the toolbar's
  * visibility has changed, whenever it changes.
  */
-class XMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
+class KXMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
 {
     Q_OBJECT
 

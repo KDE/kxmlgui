@@ -24,7 +24,7 @@
 
 #include <QDialog>
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QtCore/QFlags>
 
@@ -47,7 +47,7 @@ class KAboutData;
  * @author Urs Wolfer uwolfer @ kde.org
  */
 
-class XMLGUI_EXPORT KAboutApplicationDialog : public QDialog
+class KXMLGUI_EXPORT KAboutApplicationDialog : public QDialog
 {
     Q_OBJECT
     Q_FLAGS(Options)

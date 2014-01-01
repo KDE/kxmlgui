@@ -19,7 +19,7 @@
 #ifndef KXMLGUICLIENT_H
 #define KXMLGUICLIENT_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QtCore/QMap>
 #include <QtCore/QStringList>
@@ -45,7 +45,7 @@ class KEditToolBarWidget;
  * GUI from actions and an XML document, and can be dynamically merged
  * with other KXMLGUIClients.
  */
-class XMLGUI_EXPORT KXMLGUIClient
+class KXMLGUI_EXPORT KXMLGUIClient
 {
     friend class KDEPrivate::KEditToolBarWidget; // for setXMLFile(3 args)
 public:

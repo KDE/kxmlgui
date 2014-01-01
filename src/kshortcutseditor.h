@@ -25,7 +25,7 @@
 #ifndef KSHORTCUTSEDITOR_H
 #define KSHORTCUTSEDITOR_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QWidget>
 
@@ -60,7 +60,7 @@ class KShortcutsEditorPrivate;
  * @author Hamish Rodda <rodda@kde.org> (KDE 4 porting)
  * @author Michael Jansen <kde@michael-jansen.biz>
  */
-class XMLGUI_EXPORT KShortcutsEditor : public QWidget
+class KXMLGUI_EXPORT KShortcutsEditor : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(ActionTypes actionTypes READ actionTypes WRITE setActionTypes)
@@ -187,7 +187,7 @@ public:
      * @param config Config object
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void exportConfiguration(KConfig *config) const;
+    KXMLGUI_DEPRECATED void exportConfiguration(KConfig *config) const;
 #endif
     void exportConfiguration(KConfigBase *config) const;
 
@@ -200,7 +200,7 @@ public:
      * @param config Config object
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void importConfiguration(KConfig *config);
+    KXMLGUI_DEPRECATED void importConfiguration(KConfig *config);
 #endif
     void importConfiguration(KConfigBase *config);
 

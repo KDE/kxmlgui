@@ -26,7 +26,7 @@
 #ifndef KACTIONCOLLECTION_H
 #define KACTIONCOLLECTION_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 #include <kstandardaction.h>
 
 #include <QtCore/QObject>
@@ -52,7 +52,7 @@ class QString;
  * to the actions within, you have to call associateWidget() or
  * addAssociatedWidget() to have them working.
  */
-class XMLGUI_EXPORT KActionCollection : public QObject
+class KXMLGUI_EXPORT KActionCollection : public QObject
 {
     friend class KXMLGUIClient;
 

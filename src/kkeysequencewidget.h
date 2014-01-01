@@ -21,7 +21,7 @@
 #ifndef KKEYSEQUENCEWIDGET_H
 #define KKEYSEQUENCEWIDGET_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QtCore/QList>
 #include <QPushButton>
@@ -45,7 +45,7 @@ class KActionCollection;
  * @author Mark Donohoe <donohoe@kde.org>
  * @internal
  */
-class XMLGUI_EXPORT KKeySequenceWidget: public QWidget
+class KXMLGUI_EXPORT KKeySequenceWidget: public QWidget
 {
     Q_OBJECT
 
@@ -230,7 +230,7 @@ public:
      * a shortcut from an action.
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setCheckActionList(const QList<QAction *> &checkList);
+    KXMLGUI_DEPRECATED void setCheckActionList(const QList<QAction *> &checkList);
 #endif
 
     /**

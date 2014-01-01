@@ -25,7 +25,7 @@
 #ifndef KTOOLBAR_H
 #define KTOOLBAR_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QToolBar>
 
@@ -54,7 +54,7 @@ class KXMLGUIClient;
  *    Settings from "Other toolbars" will only work on widget styles derived from KStyle
  * @author Reginald Stadlbauer <reggie@kde.org>, Stephan Kulow <coolo@kde.org>, Sven Radej <radej@kde.org>, Hamish Rodda <rodda@kde.org>.
  */
-class XMLGUI_EXPORT KToolBar : public QToolBar
+class KXMLGUI_EXPORT KToolBar : public QToolBar
 {
     Q_OBJECT
 
@@ -138,7 +138,7 @@ public:
      * @deprecated use setContextMenuPolicy
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setContextMenuEnabled(bool enable = true);
+    KXMLGUI_DEPRECATED void setContextMenuEnabled(bool enable = true);
 #endif
 
     /**
@@ -147,7 +147,7 @@ public:
      * @deprecated use contextMenuPolicy
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED bool contextMenuEnabled() const;
+    KXMLGUI_DEPRECATED bool contextMenuEnabled() const;
 #endif
 
     /**
@@ -170,7 +170,7 @@ public:
      * @deprecated use addXMLGUIClient.
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setXMLGUIClient(KXMLGUIClient *client);
+    KXMLGUI_DEPRECATED void setXMLGUIClient(KXMLGUIClient *client);
 #endif
 
     /**

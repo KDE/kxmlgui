@@ -29,7 +29,7 @@
 #ifndef KMAINWINDOW_H
 #define KMAINWINDOW_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QMainWindow>
 #include <QtCore/QMetaClassInfo>
@@ -100,7 +100,7 @@ class KToolBar;
  * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej (radej@kde.org). Maintained by David Faure (faure@kde.org)
  */
 
-class XMLGUI_EXPORT KMainWindow : public QMainWindow
+class KXMLGUI_EXPORT KMainWindow : public QMainWindow
 {
     friend class KMWSessionManager;
     friend class DockResizeListener;
@@ -179,7 +179,7 @@ public:
      * @deprecated use KHelpMenu directly
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED QMenu *helpMenu(const QString &aboutAppText = QString(),
+    KXMLGUI_DEPRECATED QMenu *helpMenu(const QString &aboutAppText = QString(),
                                       bool showWhatsThis = true);
 #endif
 
@@ -207,7 +207,7 @@ public:
      * @deprecated use XMLGUI instead, or KHelpMenu directly
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED QMenu *customHelpMenu(bool showWhatsThis = true);
+    KXMLGUI_DEPRECATED QMenu *customHelpMenu(bool showWhatsThis = true);
 #endif
 
     /**
@@ -596,7 +596,7 @@ protected:
      * @deprecated use KWindowConfig::saveWindowSize
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void saveWindowSize(KConfigGroup &config) const;
+    KXMLGUI_DEPRECATED void saveWindowSize(KConfigGroup &config) const;
 #endif
 
     /**
@@ -604,7 +604,7 @@ protected:
      * @deprecated use KWindowConfig::restoreWindowSize
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void restoreWindowSize(const KConfigGroup &config);
+    KXMLGUI_DEPRECATED void restoreWindowSize(const KConfigGroup &config);
 #endif
 
 protected Q_SLOTS:
@@ -634,7 +634,7 @@ protected Q_SLOTS:
     * @deprecated use KHelpMenu
     */
 #ifndef KDE_NO_DEPRECATED
-    virtual XMLGUI_DEPRECATED void showAboutApplication() {}
+    virtual KXMLGUI_DEPRECATED void showAboutApplication() {}
 #endif
 
     /**

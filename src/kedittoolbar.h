@@ -21,7 +21,7 @@
 
 #include <QDialog>
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 class KActionCollection;
 
@@ -66,7 +66,7 @@ class KXMLGUIFactory;
  * @author Kurt Granroth <granroth@kde.org>
  * @maintainer David Faure <faure@kde.org>
  */
-class XMLGUI_EXPORT KEditToolBar : public QDialog
+class KXMLGUI_EXPORT KEditToolBar : public QDialog
 {
     Q_OBJECT
 public:

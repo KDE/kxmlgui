@@ -19,7 +19,7 @@
 #ifndef KSHORTCUTWIDGET_H
 #define KSHORTCUTWIDGET_H
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QKeySequence>
 #include <QList>
@@ -31,7 +31,7 @@ class KShortcutWidgetPrivate;
 /**
  * \image html kshortcutwidget.png "KDE Shortcut Widget"
  */
-class XMLGUI_EXPORT KShortcutWidget : public QWidget
+class KXMLGUI_EXPORT KShortcutWidget : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
@@ -68,7 +68,7 @@ public:
      * a shortcut from an action.
      */
 #ifndef KDE_NO_DEPRECATED
-    XMLGUI_DEPRECATED void setCheckActionList(const QList<QAction *> &checkList);
+    KXMLGUI_DEPRECATED void setCheckActionList(const QList<QAction *> &checkList);
 #endif
 
 Q_SIGNALS:

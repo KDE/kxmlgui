@@ -20,7 +20,7 @@
 #ifndef kxmlguifactory_h
 #define kxmlguifactory_h
 
-#include <xmlgui_export.h>
+#include <kxmlgui_export.h>
 
 #include <QtCore/QObject>
 
@@ -60,7 +60,7 @@ class BuildHelper;
  * according to the XML and the merging rules of previously inserted clients. Container widgets
  * are built via a KXMLGUIBuilder , which has to be provided with the KXMLGUIFactory constructor.
  */
-class XMLGUI_EXPORT KXMLGUIFactory : public QObject
+class KXMLGUI_EXPORT KXMLGUIFactory : public QObject
 {
     friend class KXMLGUI::BuildHelper;
     Q_OBJECT

@@ -57,7 +57,7 @@ class KXmlGuiWindowPrivate;
 
  */
 
-class XMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
+class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
 {
     XMLGUI_DECLARE_PRIVATE(KXmlGuiWindow)
     Q_OBJECT
