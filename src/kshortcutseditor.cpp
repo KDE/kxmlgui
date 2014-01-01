@@ -47,6 +47,7 @@
 #include <kmessagebox.h>
 #include "kactioncollection.h"
 #include "kactioncategory.h"
+#include <ktreewidgetsearchline.h>
 
 //---------------------------------------------------------------------
 // KShortcutsEditor
