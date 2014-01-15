@@ -50,11 +50,6 @@
 #include <klocalizedstring.h>
 #include <kstandardaction.h>
 
-#pragma message("Revive QX11EmbedWidget in Qt5")
-#if 0
-#include <QX11EmbedWidget>
-#endif
-
 using namespace KDEPrivate;
 
 class KHelpMenuPrivate
@@ -382,17 +377,5 @@ void KHelpMenu::menuDestroyed()
 void KHelpMenu::contextHelpActivated()
 {
     QWhatsThis::enterWhatsThisMode();
-#pragma message("Revive QX11EmbedWidget in Qt5")
-#if 0
-    QWidget *w = QApplication::widgetAt(QCursor::pos());
-    while (w && !w->isTopLevel() && !qobject_cast<QX11EmbedWidget *>(w)) {
-        w = w->parentWidget();
-    }
-#ifdef __GNUC__
-#warning how to enter whats this mode for a QX11EmbedWidget?
-#endif
-//   if ( w && qobject_cast<QX11EmbedWidget*>(w) )
-//    (( QX11EmbedWidget*) w )->enterWhatsThisMode();
-#endif
 }
 
