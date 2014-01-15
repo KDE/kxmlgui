@@ -28,8 +28,6 @@ set(QT_REQUIRED_VERSION 5.2.0)
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
 
 if(NOT WIN32)
-    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED X11Extras)
-
     find_package(X11)
     set_package_properties(X11 PROPERTIES TYPE OPTIONAL)
     set(HAVE_X11 ${X11_FOUND})
