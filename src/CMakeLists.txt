@@ -1,9 +1,5 @@
 add_subdirectory(ksendbugmail)
 
-if (X11_FOUND)
-   set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} ${X11_LIBRARIES})
-endif ()
-
 if (HAVE_ATTICA)
    set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::KF5Attica)
 endif ()

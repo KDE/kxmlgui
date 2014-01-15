@@ -38,8 +38,6 @@
 
 #include "kactioncollection.h"
 
-#include "config-xmlgui.h"
-
 uint qHash(const QKeySequence &seq)
 {
     return qHash(seq.toString());
@@ -645,7 +643,7 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
             if (modifierKeys & Qt::CTRL) {
                 s += KKeyServer::modToStringUser(Qt::CTRL) + QLatin1Char('+');
             }
-#elif HAVE_X11
+#else
             if (modifierKeys & Qt::CTRL) {
                 s += KKeyServer::modToStringUser(Qt::CTRL) + QLatin1Char('+');
             }

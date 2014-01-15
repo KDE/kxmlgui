@@ -27,12 +27,6 @@ ecm_setup_version(${KF5_VERSION}
 set(QT_REQUIRED_VERSION 5.2.0)
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
 
-if(NOT WIN32)
-    find_package(X11)
-    set_package_properties(X11 PROPERTIES TYPE OPTIONAL)
-    set(HAVE_X11 ${X11_FOUND})
-endif()
-
 if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
     find_package(KF5ItemViews ${KF5_VERSION} REQUIRED)
     find_package(KF5Config ${KF5_VERSION} REQUIRED)
