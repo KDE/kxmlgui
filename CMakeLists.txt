@@ -45,14 +45,14 @@ if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
     find_package(KF5WindowSystem ${KF5_VERSION} REQUIRED)
 endif()
 
-set(LibAttica_MIN_VERSION "1.0.0")
-find_package(LibAttica ${LibAttica_MIN_VERSION} CONFIG)
-set_package_properties(LibAttica PROPERTIES DESCRIPTION "A Qt library that implements the Open Collaboration Services API"
+set(KF5Attica_MIN_VERSION "1.0.0")
+find_package(KF5Attica ${KF5Attica_MIN_VERSION} CONFIG)
+set_package_properties(KF5Attica PROPERTIES DESCRIPTION "A Qt library that implements the Open Collaboration Services API"
                        PURPOSE "Support for Get Hot New Stuff in KXMLGUI"
                        URL "https://projects.kde.org/attica"
                        TYPE OPTIONAL
                       )
-set (HAVE_ATTICA ${LibAttica_FOUND})
+set (HAVE_ATTICA ${KF5Attica_FOUND})
 
 # Subdirectories
 add_subdirectory(src)
