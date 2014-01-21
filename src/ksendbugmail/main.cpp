@@ -18,13 +18,11 @@
  */
 
 #include "main.h"
-#include <sys/types.h>
-#include <pwd.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include <qplatformdefs.h>
 
 #include <QtCore/QTextStream>
 #include <QApplication>
+#include <QHostInfo>
 
 #include <kemailsettings.h>
 #include <klocalizedstring.h>
@@ -35,6 +33,8 @@
 #include <qcommandlineoption.h>
 
 #include "smtp.h"
+#include "../systeminformation_p.h"
+
 
 void BugMailer::slotError(int errornum)
 {
@@ -128,16 +128,9 @@ int main(int argc, char **argv)
             fromaddr = name + QLatin1String(" <") + fromaddr + QString::fromLatin1(">");
         }
     } else {
-        struct passwd *p;
-        p = getpwuid(getuid());
-        fromaddr = QLatin1String(p->pw_name);
+        fromaddr = SystemInformation::userName();
         fromaddr += '@';
-        char buffer[256];
-        buffer[0] = '\0';
-        if (!gethostname(buffer, sizeof(buffer))) {
-            buffer[sizeof(buffer) - 1] = '\0';
-        }
-        fromaddr += buffer;
+        fromaddr += QHostInfo::localHostName();
     }
     // qDebug() << "fromaddr \"" << fromaddr << "\"";
 

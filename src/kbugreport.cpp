@@ -45,13 +45,9 @@
 #include <ktextedit.h>
 #include <ktitlewidget.h>
 
-#include <stdio.h>
-#include <pwd.h>
-#include <unistd.h>
-#include <sys/utsname.h>
-
 #include "kdepackages.h"
 #include "../kxmlgui_version.h"
+#include "systeminformation_p.h"
 #include "config-xmlgui.h"
 
 class KBugReportPrivate
@@ -214,12 +210,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
     tmpLabel = new QLabel(i18n("OS:"), this);
     glay->addWidget(tmpLabel, ++row, 0);
-
-    struct utsname unameBuf;
-    uname(&unameBuf);
-    d->os = QString::fromLatin1(unameBuf.sysname) +
-            QStringLiteral(" (") + QString::fromLatin1(unameBuf.machine) + QLatin1String(") ") +
-            QStringLiteral("release ") + QString::fromLatin1(unameBuf.release);
+    d->os = SystemInformation::operatingSystemVersion();
 
     tmpLabel = new QLabel(d->os, this);
     tmpLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
@@ -411,9 +402,7 @@ void KBugReportPrivate::_k_slotSetFrom()
     KConfigGroup profileGrp(&emailConf, profile);
     QString fromaddr = profileGrp.readEntry("EmailAddress");
     if (fromaddr.isEmpty()) {
-        struct passwd *p;
-        p = getpwuid(getuid());
-        fromaddr = QString::fromLatin1(p->pw_name);
+        fromaddr = SystemInformation::userName();
     } else {
         QString name = profileGrp.readEntry("FullName");
         if (!name.isEmpty()) {

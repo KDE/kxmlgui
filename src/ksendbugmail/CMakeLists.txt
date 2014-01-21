@@ -14,6 +14,9 @@ target_link_libraries(ksendbugmail
    KF5::ConfigCore # KEmailSettings
    KF5::I18n
 )
+if(WIN32)
+    target_link_libraries(ksendbugmail Secur32) # GetUserNameEx()
+endif()
 
 install(TARGETS ksendbugmail DESTINATION ${LIBEXEC_INSTALL_DIR} )
 

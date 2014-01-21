@@ -18,18 +18,16 @@
  */
 
 #include "smtp.h"
+#include "../systeminformation_p.h"
 
-#include <sys/utsname.h>
-#include <unistd.h>
 #include <stdio.h>
 
 #include <QDebug>
 #include <QSslSocket>
+#include <QHostInfo>
 
 SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
 {
-    struct utsname uts;
-
     serverHost = serverhost;
     hostPort = port;
     timeOut = timeout * 1000;
@@ -47,9 +45,7 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
     state = Init;
     serverState = None;
 
-    uname(&uts);
-    domainName = uts.nodename;
-
+    domainName = QHostInfo::localDomainName();
     if (domainName.isEmpty()) {
         domainName = "somemachine.example.net";
     }
