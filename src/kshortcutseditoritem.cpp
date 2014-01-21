@@ -208,7 +208,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
 bool KShortcutsEditorItem::operator<(const QTreeWidgetItem &other) const
 {
     const int column = treeWidget() ? treeWidget()->sortColumn() : 0;
-    return m_collator(text(column), other.text(column)) < 0;
+    return m_collator.compare(text(column), other.text(column)) < 0;
 }
 
 QKeySequence KShortcutsEditorItem::keySequence(uint column) const
