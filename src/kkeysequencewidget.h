@@ -97,7 +97,7 @@ public:
         None           = 0x00,      //!< No checking for conflicts
         LocalShortcuts = 0x01,      //!< Check with local shortcuts. @see setCheckActionCollections()
         StandardShortcuts = 0x02,   //!< Check against standard shortcuts. @see KStandardShortcut
-        GlobalShortcuts = 0x03      //!< Check against global shortcuts. @see KGlobalAccel
+        GlobalShortcuts = 0x04      //!< Check against global shortcuts. @see KGlobalAccel
     };
     Q_DECLARE_FLAGS(ShortcutTypes, ShortcutType)
 

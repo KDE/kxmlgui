@@ -200,7 +200,7 @@ KKeySequenceWidgetPrivate::KKeySequenceWidgetPrivate(KKeySequenceWidget *q)
     , isRecording(false)
     , multiKeyShortcutsAllowed(true)
     , componentName()
-    , checkAgainstShortcutTypes(KKeySequenceWidget::LocalShortcuts & KKeySequenceWidget::GlobalShortcuts)
+    , checkAgainstShortcutTypes(KKeySequenceWidget::LocalShortcuts | KKeySequenceWidget::GlobalShortcuts)
     , stealActions()
 {}
 
