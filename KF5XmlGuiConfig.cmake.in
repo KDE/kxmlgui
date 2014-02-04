@@ -18,9 +18,5 @@ include("${CMAKE_CURRENT_LIST_DIR}/KF5XmlGuiTargets.cmake")
 # XmlGui optionally adds KF5::KF5Attica to its public link interface
 set(XmlGUI_NEEDS_ATTICA @HAVE_ATTICA@)
 if(XmlGUI_NEEDS_ATTICA)
-  include(FeatureSummary)
-  find_package(KF5Attica @KF5Attica_MIN_VERSION@ CONFIG)
-  set_package_properties(KF5Attica PROPERTIES TYPE REQUIRED
-                                              PURPOSE "Support for Get Hot New Stuff in XMLGUI"
-                        )
+  find_dependency(KF5Attica @KF5Attica_MIN_VERSION@)
 endif()
