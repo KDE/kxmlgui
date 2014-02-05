@@ -1,7 +1,7 @@
 add_subdirectory(ksendbugmail)
 
 if (HAVE_ATTICA)
-   set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::KF5Attica)
+   set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::Attica)
 endif ()
 if(WIN32)
     set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} Secur32) # GetUserNameEx()
