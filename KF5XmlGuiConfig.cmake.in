@@ -15,8 +15,8 @@ find_dependency(Qt5Xml @QT_REQUIRED_VERSION@)
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5XmlGuiTargets.cmake")
 
-# XmlGui optionally adds KF5::KF5Attica to its public link interface
+# XmlGui optionally adds KF5::Attica to its public link interface
 set(XmlGUI_NEEDS_ATTICA @HAVE_ATTICA@)
 if(XmlGUI_NEEDS_ATTICA)
-  find_dependency(KF5Attica @KF5Attica_MIN_VERSION@)
+  find_dependency(KF5Attica "@KF5_VERSION@")
 endif()
