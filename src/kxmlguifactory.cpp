@@ -167,6 +167,7 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
 /**
  * Removes all QDomComment objects from the specified node and all its children.
  */
+/*
 static void removeDOMComments(QDomNode &node)
 {
     QDomNode n = node.firstChild();
@@ -181,7 +182,7 @@ static void removeDOMComments(QDomNode &node)
             removeDOMComments(tmp);
         }
     }
-}
+}*/
 
 KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
     : QObject(parent), d(new KXMLGUIFactoryPrivate)

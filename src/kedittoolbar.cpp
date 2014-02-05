@@ -57,7 +57,7 @@ static const char *const separatorstring = I18N_NOOP("--- separator ---");
 
 #define SEPARATORSTRING i18n(separatorstring)
 
-static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
+//static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
 
 typedef QList<QDomElement> ToolBarList;
 
