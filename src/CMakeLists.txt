@@ -93,7 +93,8 @@ set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION_STRING}
                                            EXPORT_NAME XmlGui
 )
 
-ecm_generate_headers(
+ecm_generate_headers(KXmlGui_HEADERS
+  HEADER_NAMES
   KAboutApplicationDialog
   KActionCategory
   KActionCollection
@@ -114,10 +115,8 @@ ecm_generate_headers(
   KUndoActions
   KHelpClient
 
-  MODULE_NAME KXmlGui
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KXmlGui DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel)
 
 install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
