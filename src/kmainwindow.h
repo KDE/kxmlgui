@@ -389,6 +389,14 @@ public:
      */
     QString dbusName() const;
 
+    /**
+     * @returns Always @c false
+     * @deprecated since 5.0, the functionality got removed
+     **/
+#ifndef KXMLGUI_NO_DEPRECATED
+    KXMLGUI_DEPRECATED bool initialGeometrySet() const { return false; }
+#endif
+
 public Q_SLOTS:
     /**
      * Makes a KDE compliant caption (window title).
