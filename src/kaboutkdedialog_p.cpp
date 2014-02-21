@@ -43,7 +43,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     setWindowTitle(i18n("About KDE"));
 
     KTitleWidget *titleWidget = new KTitleWidget(this);
-    titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</b></html>",
+    titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font><br /><b>Frameworks Version %1</b></html>",
                               QStringLiteral(KXMLGUI_VERSION_STRING)));
     titleWidget->setPixmap(QIcon::fromTheme(QStringLiteral("kde")).pixmap(48), KTitleWidget::ImageLeft);
 
@@ -57,7 +57,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
                         "<b>KDE</b> is a world-wide network of software engineers, artists, writers, translators and facilitators "
                         "who are committed to <a href=\"%1\">Free Software</a> development. "
                         "This community has created hundreds of Free Software applications as part of the KDE "
-                        "Development Platform and KDE Software Distribution.<br /><br />"
+                        "frameworks, workspaces and applications.<br /><br />"
                         "KDE is a cooperative enterprise in which no single entity controls the "
                         "efforts or products of KDE to the exclusion of others. Everyone is welcome to join and "
                         "contribute to KDE, including you.<br /><br />"

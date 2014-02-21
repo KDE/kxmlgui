@@ -102,7 +102,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
                                   aboutData.displayName(), aboutData.version()));
     else
         titleWidget->setText(i18nc("Program name, version and KDE platform version; do not translate 'Development Platform'",
-                                   "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE Development Platform %3</html>",
+                                   "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE Frameworks %3</html>",
                                    aboutData.displayName(), aboutData.version(), QStringLiteral(KXMLGUI_VERSION_STRING)));
 
     //Then the tab bar...
