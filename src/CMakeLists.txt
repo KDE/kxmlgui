@@ -52,7 +52,6 @@ set(kxmlgui_SRCS
   kxmlguiwindow.cpp
   kundoactions.cpp
   kcheckaccelerators.cpp
-  khelpclient.cpp
 )
 
 set(kxmlgui_UI
@@ -113,7 +112,6 @@ ecm_generate_headers(KXmlGui_HEADERS
   KXMLGUIFactory
   KXmlGuiWindow
   KUndoActions
-  KHelpClient
 
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
