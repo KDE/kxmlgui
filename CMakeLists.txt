@@ -21,7 +21,8 @@ set(KF5_VERSION "4.96.0")
 ecm_setup_version(${KF5_VERSION}
                   VARIABLE_PREFIX KXMLGUI
                   VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_version.h"
-                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfigVersion.cmake")
+                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfigVersion.cmake"
+                  SOVERSION 5)
 
 # Dependencies
 set(QT_REQUIRED_VERSION 5.2.0)
