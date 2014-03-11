@@ -63,7 +63,7 @@ class QTextBrowser;
  COPY WIDGET TEXT:
 
  You can copy widgets' texts to find them in translation files faster by middle-clicking them.
- Put the following lines in ~/.kde4/share/config/kdeglobals (or in rc file for specific app):
+ Put the following lines in ~/.config/kdeglobals (or in rc file for specific app):
 
  \code
  [Development]
