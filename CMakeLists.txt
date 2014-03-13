@@ -25,8 +25,8 @@ ecm_setup_version(${KF5_VERSION}
                   SOVERSION 5)
 
 # Dependencies
-set(QT_REQUIRED_VERSION 5.2.0)
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
+set(REQUIRED_QT_VERSION 5.2.0)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
 
 find_package(KF5ItemViews ${KF5_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_VERSION} REQUIRED)
