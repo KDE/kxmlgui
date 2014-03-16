@@ -81,8 +81,8 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
             this, SLOT(defaultToggled(bool)));
     connect(m_customEditor, SIGNAL(keySequenceChanged(QKeySequence)),
             this, SLOT(setCustom(QKeySequence)));
-    connect(m_customEditor, SIGNAL(stealShortcut(QKeySequence,KAction*)),
-            this, SIGNAL(stealShortcut(QKeySequence,KAction*)));
+    connect(m_customEditor, SIGNAL(stealShortcut(QKeySequence,QAction*)),
+            this, SIGNAL(stealShortcut(QKeySequence,QAction*)));
 }
 
 KKeySequenceWidget::ShortcutTypes ShortcutEditWidget::checkForConflictsAgainst() const

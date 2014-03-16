@@ -125,6 +125,12 @@ public:
     static int configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts =
                              KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent = 0, bool bSaveSettings = true);
 
+public Q_SLOTS:
+    /**
+     * @reimp
+     */
+    void accept() Q_DECL_OVERRIDE;
+
 Q_SIGNALS:
     /**
      * emitted after ok is clicked and settings are saved
@@ -133,7 +139,6 @@ Q_SIGNALS:
 
 private:
     Q_PRIVATE_SLOT(d, void changeShortcutScheme(const QString &))
-    Q_PRIVATE_SLOT(d, void save())
     Q_PRIVATE_SLOT(d, void undoChanges())
     Q_PRIVATE_SLOT(d, void toggleDetails())
 

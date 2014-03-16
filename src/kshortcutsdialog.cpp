@@ -72,7 +72,8 @@ public:
         : q(q),
           m_keyChooser(0),
           m_schemeEditor(0),
-          m_detailsButton(0)
+          m_detailsButton(0),
+          m_saveSettings(false)
     {
     }
 
@@ -139,6 +140,7 @@ public:
     KShortcutsEditor *m_keyChooser; // ### move
     KShortcutSchemesEditor *m_schemeEditor;
     QPushButton *m_detailsButton;
+    bool m_saveSettings;
 };
 
 KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
@@ -207,10 +209,7 @@ QList<KActionCollection *> KShortcutsDialog::actionCollections() const
 //FIXME should there be a setSaveSettings method?
 bool KShortcutsDialog::configure(bool saveSettings)
 {
-    disconnect(this, SIGNAL(okClicked()), this, SLOT(save()));
-    if (saveSettings) {
-        connect(this, SIGNAL(okClicked()), this, SLOT(save()));
-    }
+    d->m_saveSettings = saveSettings;
     if (isModal()) {
         int retcode = exec();
         return retcode;
@@ -218,6 +217,14 @@ bool KShortcutsDialog::configure(bool saveSettings)
         show();
         return false;
     }
+}
+
+void KShortcutsDialog::accept()
+{
+    if (d->m_saveSettings) {
+        d->save();
+    }
+    QDialog::accept();
 }
 
 QSize KShortcutsDialog::sizeHint() const
