@@ -217,11 +217,12 @@ void tst_KToolBar::testIconSizeNoXmlGui()
 
         // Save settings
         kmw.saveMainWindowSettings(group);
-        QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
         // was it the default value?
         if (iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar)) {
+            QCOMPARE(group.groupList().count(), 0); // nothing to save
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
         } else {
+            QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
         }
     }
@@ -315,10 +316,10 @@ void tst_KToolBar::testIconSizeXmlGui()
 
         // Save settings
         kmw.saveMainWindowSettings(group);
-        QVERIFY(group.groupList().count() >= 6); // one subgroup for each toolbar
         // was it the default size? (for the main toolbar, we only check that one)
         const bool usingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
         if (usingDefaultSize) {
+            QVERIFY(!group.groupList().contains("Toolbar mainToolBar"));
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
         } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
