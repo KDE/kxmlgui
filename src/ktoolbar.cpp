@@ -146,6 +146,7 @@ public:
     static Qt::ToolButtonStyle toolButtonStyleFromString(const QString &style);
     static QString toolButtonStyleToString(Qt::ToolButtonStyle);
     static Qt::ToolBarArea positionFromString(const QString &position);
+    static Qt::ToolButtonStyle toolButtonStyleSetting();
 
     KToolBar *q;
     bool isMainToolBar : 1;
@@ -514,12 +515,19 @@ void KToolBar::Private::slotAppearanceChanged()
     applyCurrentSettings();
 }
 
+Qt::ToolButtonStyle KToolBar::Private::toolButtonStyleSetting()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
+    const QString fallback = KToolBar::Private::toolButtonStyleToString(Qt::ToolButtonTextBesideIcon);
+    return KToolBar::Private::toolButtonStyleFromString(group.readEntry("ToolButtonStyle", fallback));
+}
+
 void KToolBar::Private::loadKDESettings()
 {
     iconSizeSettings[Level_KDEDefault] = q->iconSizeDefault();
 
     if (isMainToolBar) {
-        toolButtonStyleSettings[Level_KDEDefault] = q->toolButtonStyleSetting();
+        toolButtonStyleSettings[Level_KDEDefault] = toolButtonStyleSetting();
     } else {
         const QString fallBack = toolButtonStyleToString(Qt::ToolButtonTextBesideIcon);
         /**
@@ -906,13 +914,6 @@ void KToolBar::contextMenuEvent(QContextMenuEvent *event)
 #endif
 
     QToolBar::contextMenuEvent(event);
-}
-
-Qt::ToolButtonStyle KToolBar::toolButtonStyleSetting()
-{
-    KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
-    const QString fallback = Private::toolButtonStyleToString(Qt::ToolButtonTextBesideIcon);
-    return KToolBar::Private::toolButtonStyleFromString(group.readEntry("ToolButtonStyle", fallback));
 }
 
 void KToolBar::loadState(const QDomElement &element)

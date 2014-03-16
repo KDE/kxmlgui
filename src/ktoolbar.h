@@ -201,12 +201,6 @@ public:
     bool eventFilter(QObject *watched, QEvent *event);
 
     /**
-     * Returns the global setting for "Icon Text" for the main toolbar
-     * @return global setting for "Icon Text" for the main toolbar
-     */
-    static Qt::ToolButtonStyle toolButtonStyleSetting(); // KDE5: make private and file-static, nobody is calling this
-
-    /**
      * Returns whether the toolbars are currently editable (drag & drop of actions).
      */
     static bool toolBarsEditable();
