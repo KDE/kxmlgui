@@ -32,6 +32,12 @@ QTEST_MAIN(KMainWindow_UnitTest)
 void KMainWindow_UnitTest::initTestCase()
 {
     QStandardPaths::enableTestMode(true);
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/kmainwindow_unittestrc"));
+}
+
+void KMainWindow_UnitTest::cleanupTestCase()
+{
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/kmainwindow_unittestrc"));
 }
 
 void KMainWindow_UnitTest::testDefaultName()
@@ -128,6 +134,9 @@ public:
         // Send the pending resize event (resize() only sets Qt::WA_PendingResizeEvent)
         QResizeEvent e(size(), oldSize);
         QApplication::sendEvent(this, &e);
+
+        QCOMPARE(this->width(), width);
+        QCOMPARE(this->height(), height);
     }
 };
 
@@ -159,7 +168,8 @@ void KMainWindow_UnitTest::testSaveWindowSize()
         KToolBar *tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
         tb->setObjectName("testtb");
         mw.reallyResize(800, 600);
-        QTest::qWait(200);
+        QTRY_COMPARE(mw.size(), QSize(800, 600));
+        QTRY_COMPARE(mw.windowHandle()->size(), QSize(800, 600));
         mw.saveMainWindowSettings(cfg);
         mw.close();
     }
@@ -170,8 +180,8 @@ void KMainWindow_UnitTest::testSaveWindowSize()
     tb->setObjectName("testtb");
     mw2.resize(500, 500);
     mw2.applyMainWindowSettings(cfg);
-    QTest::qWait(200);
-    QCOMPARE(mw2.size(), QSize(800, 600));
+
+    QTRY_COMPARE(mw2.size(), QSize(800, 600));
 }
 
 void KMainWindow_UnitTest::testAutoSaveSettings()
@@ -185,7 +195,6 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
         tb->setObjectName("testtb");
         mw.setAutoSaveSettings(group);
         mw.reallyResize(800, 600);
-        QTest::qWait(200);
         mw.close();
     }
 
@@ -194,8 +203,7 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
     KToolBar *tb = new KToolBar(&mw2);
     tb->setObjectName("testtb");
     mw2.setAutoSaveSettings(group);
-    QTest::qWait(200);
-    QCOMPARE(mw2.size(), QSize(800, 600));
+    QTRY_COMPARE(mw2.size(), QSize(800, 600));
 }
 
 void KMainWindow_UnitTest::testNoAutoSave()
@@ -208,7 +216,6 @@ void KMainWindow_UnitTest::testNoAutoSave()
         mw.show();
         mw.setAutoSaveSettings(group, false);
         mw.reallyResize(750, 550);
-        QTest::qWait(200);
         mw.close();
     }
 
@@ -216,8 +223,7 @@ void KMainWindow_UnitTest::testNoAutoSave()
     mw2.show();
     mw2.setAutoSaveSettings(group, false);
     // NOT 750, 550! (the 800,600 comes from testAutoSaveSettings)
-    QTest::qWait(200);
-    QCOMPARE(mw2.size(), QSize(800, 600));
+    QTRY_COMPARE(mw2.size(), QSize(800, 600));
 }
 
 void KMainWindow_UnitTest::testWidgetWithStatusBar()
