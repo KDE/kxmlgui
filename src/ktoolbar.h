@@ -158,12 +158,8 @@ public:
     /**
      * Read the toolbar settings from group @p configGroup in @p config
      * and apply them.
-     *
-     * @param forceGlobal is deprecated. In kde3 it used to mean
-     * "force global settings, i.e. ignore @p cg", but only for visibility/position/index,
-     * not for icon size etc. Only visibility is still controlled by this.
      */
-    void applySettings(const KConfigGroup &cg, bool forceGlobal = false);
+    void applySettings(const KConfigGroup &cg);
 
     /**
      * Sets the XML gui client.

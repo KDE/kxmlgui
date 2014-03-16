@@ -292,7 +292,7 @@ public:
     void finalizeGUI(bool force);
 
     // reimplemented for internal reasons
-    virtual void applyMainWindowSettings(const KConfigGroup &config, bool force = false);
+    void applyMainWindowSettings(const KConfigGroup &config) Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     /**

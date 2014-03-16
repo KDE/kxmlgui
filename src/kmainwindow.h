@@ -371,9 +371,10 @@ public:
      * groups in the config file and apply them.
      *
      * @param config Config group to read the settings from.
-     * @param forceGlobal see the same argument in KToolBar::applySettings
+     * KF5 porting note: the unused bool argument was removed, make sure to remove it from your
+     * reimplementations too! And add a Q_DECL_OVERRIDE for good measure.
      */
-    virtual void applyMainWindowSettings(const KConfigGroup &config, bool forceGlobal = false);
+    virtual void applyMainWindowSettings(const KConfigGroup &config);
 
     /**
      * Save settings for statusbar, menubar and toolbar to their respective

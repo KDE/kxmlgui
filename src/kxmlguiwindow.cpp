@@ -368,10 +368,10 @@ void KXmlGuiWindow::finalizeGUI(bool /*force*/)
     }
 }
 
-void KXmlGuiWindow::applyMainWindowSettings(const KConfigGroup &config, bool force)
+void KXmlGuiWindow::applyMainWindowSettings(const KConfigGroup &config)
 {
     K_D(KXmlGuiWindow);
-    KMainWindow::applyMainWindowSettings(config, force);
+    KMainWindow::applyMainWindowSettings(config);
     QStatusBar *sb = findChild<QStatusBar *>();
     if (sb && d->showStatusBarAction) {
         d->showStatusBarAction->setChecked(!sb->isHidden());
