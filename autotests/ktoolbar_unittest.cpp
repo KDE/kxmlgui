@@ -403,10 +403,11 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
 
         // Save settings
         kmw.saveMainWindowSettings(group);
-        QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
         if (selectedDefaultForMainToolbar) {
+            QCOMPARE(group.groupList().count(), 0); // nothing to save
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("ToolButtonStyle"));
         } else {
+            QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("ToolButtonStyle"));
         }
     }
