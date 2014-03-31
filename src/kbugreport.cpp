@@ -40,6 +40,7 @@
 #include <kaboutdata.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
+#include <kemailsettings.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <ktextedit.h>
@@ -390,21 +391,12 @@ void KBugReportPrivate::_k_slotSetFrom()
     m_process = 0;
     m_configureEmail->setEnabled(true);
 
-    // ### KDE4: why oh why is KEMailSettings in kio?
-    KConfig emailConf(QString::fromLatin1("emaildefaults"));
-
-    KConfigGroup cg(&emailConf, "Defaults");
-    // find out the default profile
-    QString profile = QString::fromLatin1("PROFILE_");
-    profile += cg.readEntry(QString::fromLatin1("Profile"),
-                            QString::fromLatin1("Default"));
-
-    KConfigGroup profileGrp(&emailConf, profile);
-    QString fromaddr = profileGrp.readEntry("EmailAddress");
+    KEMailSettings emailSettings;
+    QString fromaddr = emailSettings.getSetting(KEMailSettings::EmailAddress);
     if (fromaddr.isEmpty()) {
         fromaddr = SystemInformation::userName();
     } else {
-        QString name = profileGrp.readEntry("FullName");
+        QString name = emailSettings.getSetting(KEMailSettings::RealName);
         if (!name.isEmpty()) {
             fromaddr = name + QString::fromLatin1(" <") + fromaddr + QString::fromLatin1(">");
         }
