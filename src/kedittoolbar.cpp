@@ -24,7 +24,6 @@
 #include <QAction>
 #include <QDialogButtonBox>
 #include <QtXml/QDomDocument>
-#include <QtCore/QProcess>
 #include <QLayout>
 #include <QtCore/QDir>
 #include <QtCore/QFile>
@@ -41,6 +40,7 @@
 #include <QLineEdit>
 #include <QDebug>
 
+#include <kicondialog.h>
 #include <klistwidgetsearchline.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
@@ -419,7 +419,6 @@ public:
         m_componentName = cName;
         m_isPart   = false;
         m_helpArea = 0L;
-        m_kdialogProcess = 0;
         // We want items with an icon to align with items without icon
         // So we use an empty QPixmap for that
         const int iconSize = widget->style()->pixelMetric(QStyle::PM_SmallIconSize);
@@ -445,8 +444,6 @@ public:
 
     void slotChangeIcon();
     void slotChangeIconText();
-
-    void slotProcessExited();
 
     void slotDropped(ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList);
 
@@ -546,9 +543,7 @@ public:
     QLabel *m_helpArea;
     QPushButton *m_changeIcon;
     QPushButton *m_changeIconText;
-    QProcess *m_kdialogProcess;
     bool m_isPart : 1;
-    bool m_hasKDialog : 1;
     bool m_loadedOnce : 1;
 };
 
@@ -1054,9 +1049,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     // "change icon" button
     m_changeIcon = new QPushButton(i18n("Change &Icon..."), m_widget);
     m_changeIcon->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-icons")));
-    QString kdialogExe = QStandardPaths::findExecutable(QStringLiteral("kdialog"));
-    m_hasKDialog = !kdialogExe.isEmpty();
-    m_changeIcon->setEnabled(m_hasKDialog && m_activeList->currentItem());
+    m_changeIcon->setEnabled(m_activeList->currentItem());
 
     QObject::connect(m_changeIcon, SIGNAL(clicked()),
                      m_widget, SLOT(slotChangeIcon()));
@@ -1362,7 +1355,6 @@ void KEditToolBarWidgetPrivate::slotActiveSelectionChanged()
     m_removeAction->setEnabled(toolitem);
 
     m_changeIcon->setEnabled(toolitem &&
-                             m_hasKDialog &&
                              toolitem->internalTag() == QStringLiteral("Action"));
 
     m_changeIconText->setEnabled(toolitem &&
@@ -1593,44 +1585,36 @@ void KEditToolBarWidgetPrivate::updateLocal(QDomElement &elem)
 
 void KEditToolBarWidgetPrivate::slotChangeIcon()
 {
-    // We can't use KIconChooser here, since it's in libkio
-    // ##### KDE4: reconsider this, e.g. move KEditToolBar to libkio,
-    // ##### or better, dlopen libkfile from here like kio does.
-
-    //if the process is already running (e.g. when somebody clicked the change button twice (see #127149)) - do nothing...
-    //otherwise m_kdialogProcess will be overwritten and set to zero in slotProcessExited()...crash!
-    if (m_kdialogProcess && m_kdialogProcess->state() == QProcess::Running) {
-        return;
-    }
-
     m_currentXmlData->dump();
     Q_ASSERT(m_currentXmlData->type() != XmlData::Merged);
 
-    m_kdialogProcess = new QProcess;
-    QString kdialogExe = QStandardPaths::findExecutable(QStringLiteral("kdialog"));
-    QStringList arguments;
-    arguments << QStringLiteral("--caption")
-              << i18n("Change Icon")
-              << QStringLiteral("--embed")
-              << QString::number((quintptr)m_widget->window()->winId())
-              << QStringLiteral("--geticon")
-              << QStringLiteral("Toolbar")
-              << QStringLiteral("Actions");
-    m_kdialogProcess->setReadChannel(QProcess::StandardOutput);
-    m_kdialogProcess->start(kdialogExe, arguments, QIODevice::ReadOnly | QIODevice::Text);
-    if (!m_kdialogProcess->waitForStarted()) {
-        //FIXME
-        //qCritical(240) << "Can't run " <kactioncol< kdialogExe << endl;
-        delete m_kdialogProcess;
-        m_kdialogProcess = 0;
+    QString icon = KIconDialog::getIcon(KIconLoader::Toolbar,
+            KIconLoader::Action,
+            false, 0, false, // all defaults
+            m_widget,
+            i18n("Change Icon"));
+
+    if (icon.isEmpty()) {
         return;
     }
 
-    m_activeList->setEnabled(false);   // don't change the current item
-    m_toolbarCombo->setEnabled(false);   // don't change the current toolbar
+    ToolBarItem *item = m_activeList->currentItem();
+    //qDebug() << item;
+    if (item) {
+        item->setIcon(QIcon::fromTheme(icon));
 
-    QObject::connect(m_kdialogProcess, SIGNAL(finished(int,QProcess::ExitStatus)),
-                     m_widget, SLOT(slotProcessExited()));
+        m_currentXmlData->m_isModified = true;
+
+        // Get hold of ActionProperties tag
+        QDomElement elem = KXMLGUIFactory::actionPropertiesElement(m_currentXmlData->domDocument());
+        // Find or create an element for this action
+        QDomElement act_elem = KXMLGUIFactory::findActionByName(elem, item->internalName(), true /*create*/);
+        Q_ASSERT(!act_elem.isNull());
+        act_elem.setAttribute(QStringLiteral("icon"), icon);
+
+        // we're modified, so let this change
+        emit m_widget->enableOk(true);
+    }
 }
 
 void KEditToolBarWidgetPrivate::slotChangeIconText()
@@ -1679,52 +1663,6 @@ void KEditToolBarWidgetPrivate::slotChangeIconText()
         // we're modified, so let this change
         emit m_widget->enableOk(true);
     }
-}
-
-void KEditToolBarWidgetPrivate::slotProcessExited()
-{
-    m_activeList->setEnabled(true);
-    m_toolbarCombo->setEnabled(true);
-
-    QString icon;
-
-    if (!m_kdialogProcess) {
-        qCritical() << "Something is wrong here! m_kdialogProcess is zero!" << endl;
-        return;
-    }
-
-    icon = QString::fromLocal8Bit(m_kdialogProcess->readLine());
-    icon = icon.left(icon.indexOf(QLatin1Char('\n')));
-    //qDebug(240) << "icon=" << icon;
-    if (m_kdialogProcess->exitStatus() != QProcess::NormalExit ||
-            icon.isEmpty()) {
-        delete m_kdialogProcess;
-        m_kdialogProcess = 0;
-        return;
-    }
-
-    ToolBarItem *item = m_activeList->currentItem();
-    //qDebug() << item;
-    if (item) {
-        item->setIcon(QIcon::fromTheme(icon));
-
-        Q_ASSERT(m_currentXmlData->type() != XmlData::Merged);
-
-        m_currentXmlData->m_isModified = true;
-
-        // Get hold of ActionProperties tag
-        QDomElement elem = KXMLGUIFactory::actionPropertiesElement(m_currentXmlData->domDocument());
-        // Find or create an element for this action
-        QDomElement act_elem = KXMLGUIFactory::findActionByName(elem, item->internalName(), true /*create*/);
-        Q_ASSERT(!act_elem.isNull());
-        act_elem.setAttribute(QStringLiteral("icon"), icon);
-
-        // we're modified, so let this change
-        emit m_widget->enableOk(true);
-    }
-
-    delete m_kdialogProcess;
-    m_kdialogProcess = 0;
 }
 
 void KEditToolBarWidgetPrivate::slotDropped(ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList)
