@@ -86,10 +86,10 @@ int main(int argc, char **argv)
     {
         QCommandLineParser parser;
         parser.addVersionOption();
-        parser.setApplicationDescription(QCoreApplication::translate("main", "Sends a bug report by email"));
+        parser.setApplicationDescription(i18n("Sends a bug report by email."));
         parser.addHelpOption();
-        parser.addOption(QCommandLineOption(QStringList() << "subject", QCoreApplication::translate("main", "Subject line"), "argument"));
-        parser.addOption(QCommandLineOption(QStringList() << "recipient", QCoreApplication::translate("main", "Recipient"), "argument", "submit@bugs.kde.org"));
+        parser.addOption(QCommandLineOption(QStringList() << "subject", i18n("The subject line of the email."), "argument"));
+        parser.addOption(QCommandLineOption(QStringList() << "recipient", i18n("The email address to send the bug report to."), "argument", "submit@bugs.kde.org"));
         parser.process(a);
         recipient = parser.value("recipient");
         subject = parser.value("subject");
