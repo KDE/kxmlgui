@@ -1,10 +1,10 @@
-# libkxmlgui
+# KXMLGUI
 
 Framework for managing menu and toolbar actions
 
 ## Introduction
 
-libkxmlgui provides a framework for managing menu and toolbar actions in an
+KXMLGUI provides a framework for managing menu and toolbar actions in an
 abstract way. The actions are configured through a XML description and hooks
 in the application code. The framework supports merging of multiple
 description for example for integrating actions from plugins.
