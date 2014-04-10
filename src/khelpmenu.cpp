@@ -145,21 +145,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     }
 
     if (KAuthorized::authorizeKAction(QStringLiteral("switch_application_language"))) {
-        // Is more than one language installed?
-        const QStringList localeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("locale"), QStandardPaths::LocateDirectory);
-        int numFiles = 0;
-        Q_FOREACH (const QString &localeDir, localeDirs) {
-            const QStringList entries = QDir(localeDir).entryList(QDir::Dirs);
-            Q_FOREACH (const QString &d, entries) {
-                if (QFile::exists(localeDir + QLatin1Char('/') + d + QStringLiteral("/entry.desktop"))) {
-                    ++numFiles;
-                    if (numFiles > 1) {
-                        break;
-                    }
-                }
-            }
-        }
-        if (numFiles > 1) {
+        if (KLocalizedString::availableApplicationTranslations().count() > 1) {
             mSwitchApplicationLanguageAction = KStandardAction::create(KStandardAction::SwitchApplicationLanguage, q, SLOT(switchApplicationLanguage()), q);
         }
     }
