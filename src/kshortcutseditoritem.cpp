@@ -131,7 +131,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
                    || m_action->property("isShortcutConfigurable").toBool();
         case GlobalPrimary:
         case GlobalAlternate:
-            if (KGlobalAccel::self()->hasShortcut(m_action)) {
+            if (!KGlobalAccel::self()->hasShortcut(m_action)) {
                 return false;
             }
             return true;
