@@ -86,7 +86,7 @@ class KToolBar;
  * readProperties(). To save special data about your data, reimplement
  * saveGlobalProperties(). To warn user that application or
  * windows have unsaved data on close or logout, reimplement
- * queryClose() and/or queryExit().
+ * queryClose().
  *
  * You have to implement session restoring also in your main() function.
  * There are also kRestoreMainWindows convenience functions which
@@ -464,11 +464,11 @@ protected:
     virtual bool event(QEvent *event);
 
     /**
-     * Reimplemented to call the queryClose() and queryExit() handlers.
+     * Reimplemented to autosave settings and call queryClose().
      *
-     * We recommend that you reimplement the handlers rather than closeEvent().
+     * We recommend that you reimplement queryClose() rather than closeEvent().
      * If you do it anyway, ensure to call the base implementation to keep
-     * queryExit() running.
+     * the feature of auto-saving window settings working.
      */
     virtual void closeEvent(QCloseEvent *);
 
@@ -479,7 +479,8 @@ protected:
     // also doesn't make sense in apps with multiple mainwindows.
     // And saving configuration in something called queryExit()? IMHO
     // one can e.g. use QCoreApplication::aboutToQuit(), which if nothing else
-    // has at least better fitting name.
+    // has at least better fitting name (but don't connect it to a slot in the mainwindow,
+    // which might be deleted first; this needs to go to a more global object).
     // See also KApplication::sessionSaving().
     // This stuff should get changed somehow, so that it at least doesn't
     // mess with session management.
@@ -491,16 +492,10 @@ protected:
        function other than indicating severe errors. Better ask the
        user on queryClose() (see below).
 
-       A typical usage of queryExit() is to write configuration data back.
-       Note that the application may continue to run after queryExit()
-       (the user may have canceled a shutdown), so you should not do any cleanups
-       here. The purpose of queryExit() is purely to prepare the application
-       (with possible user interaction) so it can safely be closed later (without
-       user interaction).
-
        If you need to do serious things on exit (like shutting a
-       dial-up connection down), connect to the signal
-    QCoreApplication::aboutToQuit().
+       dial-up connection down), connect the signal QCoreApplication::aboutToQuit(),
+       to a slot in a global object like a settings class (not a window, which can be
+       deleted first when closing the window, which then triggers quitting the application).
 
        Default implementation returns @p true. Returning @p false will
        cancel the exiting. In the latter case, the last window will
