@@ -323,7 +323,7 @@ public:
      *   "virtual QSize sizeHint() const;" to specify a default size rather
      *   than letting QWidget::adjust use the default size of 0x0.
      */
-    void setAutoSaveSettings(const QString &groupName = QStringLiteral("MainWindow"),
+    void setAutoSaveSettings(const QString &groupName = QLatin1String("MainWindow"),
                              bool saveWindowSize = true);
 
     /**
