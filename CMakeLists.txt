@@ -47,6 +47,7 @@ set_package_properties(KF5Attica PROPERTIES DESCRIPTION "A Qt library that imple
 set (HAVE_ATTICA ${KF5Attica_FOUND})
 
 # Subdirectories
+add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
 add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(autotests)
