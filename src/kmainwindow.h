@@ -472,7 +472,7 @@ protected:
      */
     virtual void closeEvent(QCloseEvent *);
 
-    // KDE4 This seems to be flawed to me. Either the app has only one
+    // KF5: This seems to be flawed to me. Either the app has only one
     // mainwindow, so queryClose() is enough, or if it can have more of them,
     // then the windows should take care of themselves, and queryExit()
     // would be useful only for the annoying 'really quit' dialog, which
