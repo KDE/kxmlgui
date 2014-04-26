@@ -65,7 +65,7 @@ add_library(KF5XmlGui ${kxmlgui_SRCS})
 generate_export_header(KF5XmlGui BASE_NAME KXmlGui)
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
-target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KXmlGui>")
+target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KXmlGui>")
 
 target_link_libraries(KF5XmlGui
 PUBLIC
@@ -116,14 +116,14 @@ ecm_generate_headers(KXmlGui_HEADERS
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
 
-install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   kgesture_p.h
   kgesturemap_p.h
   ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
   ${KXmlGui_HEADERS}
-  DESTINATION ${INCLUDE_INSTALL_DIR}/KXmlGui COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KXmlGui COMPONENT Devel
 )
 
 install( FILES ui_standards.rc  DESTINATION  ${CONFIG_INSTALL_DIR}/ui )
