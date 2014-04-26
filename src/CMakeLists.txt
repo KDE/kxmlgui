@@ -131,7 +131,7 @@ install( FILES ui_standards.rc  DESTINATION  ${CONFIG_INSTALL_DIR}/ui )
 install(FILES
  aboutkde.png
  thumb_frame.png
- DESTINATION  ${DATA_INSTALL_DIR}/kxmlgui/pics )
+ DESTINATION  ${KF5_DATA_INSTALL_DIR}/kxmlgui/pics )
 
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME)
