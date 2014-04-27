@@ -472,41 +472,6 @@ protected:
      */
     virtual void closeEvent(QCloseEvent *);
 
-    // KF5: This seems to be flawed to me. Either the app has only one
-    // mainwindow, so queryClose() is enough, or if it can have more of them,
-    // then the windows should take care of themselves, and queryExit()
-    // would be useful only for the annoying 'really quit' dialog, which
-    // also doesn't make sense in apps with multiple mainwindows.
-    // And saving configuration in something called queryExit()? IMHO
-    // one can e.g. use QCoreApplication::aboutToQuit(), which if nothing else
-    // has at least better fitting name (but don't connect it to a slot in the mainwindow,
-    // which might be deleted first; this needs to go to a more global object).
-    // See also KApplication::sessionSaving().
-    // This stuff should get changed somehow, so that it at least doesn't
-    // mess with session management.
-    /**
-       Called before the very last window is closed, either by the
-       user or indirectly by the session manager.
-
-       It is not recommended to do any user interaction in this
-       function other than indicating severe errors. Better ask the
-       user on queryClose() (see below).
-
-       If you need to do serious things on exit (like shutting a
-       dial-up connection down), connect the signal QCoreApplication::aboutToQuit(),
-       to a slot in a global object like a settings class (not a window, which can be
-       deleted first when closing the window, which then triggers quitting the application).
-
-       Default implementation returns @p true. Returning @p false will
-       cancel the exiting. In the latter case, the last window will
-       remain visible. If KApplication::sessionSaving() is true, refusing
-       the exit will also cancel KDE logout.
-
-       @see queryClose()
-       @see KApplication::sessionSaving()
-     */
-    virtual bool queryExit();
-
     /**
        Called before the window is closed, either by the user or indirectly by
        the session manager.
@@ -538,7 +503,6 @@ protected:
        its location might not be properly saved. In addition, the session shutdown
        may be canceled, in which case the document should remain open.
 
-       @see queryExit()
        @see KApplication::sessionSaving()
     */
     virtual bool queryClose();
@@ -668,7 +632,6 @@ protected:
 
     KMainWindowPrivate *const k_ptr;
 private:
-    Q_PRIVATE_SLOT(k_func(), void _k_shuttingDown())
     Q_PRIVATE_SLOT(k_func(), void _k_slotSettingsChanged(int))
     Q_PRIVATE_SLOT(k_func(), void _k_slotSaveAutoSaveSize())
 };

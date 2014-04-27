@@ -175,7 +175,6 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     helpMenu = 0;
 
     //actionCollection()->setWidget( this );
-    QObject::connect(qApp, SIGNAL(aboutToQuit()), q, SLOT(_k_shuttingDown()));
 #if 0
     QObject::connect(KGlobalSettings::self(), SIGNAL(settingsChanged(int)),
                      q, SLOT(_k_slotSettingsChanged(int)));
@@ -192,7 +191,6 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     //d->kaccel = actionCollection()->kaccel();
     settingsTimer = 0;
     sizeTimer = 0;
-    shuttingDown = false;
 
     dockResizeListener = new DockResizeListener(_q);
     letDirtySettings = true;
@@ -464,28 +462,9 @@ void KMainWindow::closeEvent(QCloseEvent *e)
 
     if (queryClose()) {
         e->accept();
-
-        int not_withdrawn = 0;
-        foreach (KMainWindow *mw, KMainWindow::memberList()) {
-            if (!mw->isHidden() && mw->isTopLevel() && mw != this) {
-                not_withdrawn++;
-            }
-        }
-
-        if (not_withdrawn <= 0) {   // last window close accepted?
-            if (!queryExit() || d->shuttingDown) {
-                // cancel closing, it's stupid to end up with no windows at all....
-                e->ignore();
-            }
-        }
     } else {
         e->ignore();    //if the window should not be closed, don't close it
     }
-}
-
-bool KMainWindow::queryExit()
-{
-    return true;
 }
 
 bool KMainWindow::queryClose()
@@ -843,20 +822,6 @@ bool KMainWindow::event(QEvent *ev)
 bool KMainWindow::hasMenuBar()
 {
     return internalMenuBar(this);
-}
-
-void KMainWindowPrivate::_k_shuttingDown()
-{
-    // Needed for Qt <= 3.0.3 at least to prevent reentrancy
-    // when queryExit() shows a dialog. Check before removing!
-    static bool reentrancy_protection = false;
-    if (!reentrancy_protection) {
-        reentrancy_protection = true;
-        shuttingDown = true;
-        // call the virtual queryExit
-        q->queryExit();
-        reentrancy_protection = false;
-    }
 }
 
 void KMainWindowPrivate::_k_slotSettingsChanged(int category)
