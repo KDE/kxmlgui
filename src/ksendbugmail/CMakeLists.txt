@@ -18,5 +18,5 @@ if(WIN32)
     target_link_libraries(ksendbugmail Secur32) # GetUserNameEx()
 endif()
 
-#install(TARGETS ksendbugmail DESTINATION ${KF5_LIBEXEC_INSTALL_DIR} )
+install(TARGETS ksendbugmail DESTINATION ${KF5_LIBEXEC_INSTALL_DIR} )
 
