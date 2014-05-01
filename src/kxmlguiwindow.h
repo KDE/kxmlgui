@@ -30,7 +30,7 @@
 
 #include "kxmlguiclient.h"
 #include "kxmlguibuilder.h"
-#include <kmainwindow.h>
+#include "kmainwindow.h"
 #include <QtCore/QMetaClassInfo>
 
 class KMenu;
