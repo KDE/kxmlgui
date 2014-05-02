@@ -74,7 +74,7 @@ public:
 
 private:
     /**
-     * "Configure email" has been clicked - this calls kcmshell4 System/email
+     * "Configure email" has been clicked - this calls kcmshell5 System/email
      */
     Q_PRIVATE_SLOT(d, void _k_slotConfigureEmail())
 
