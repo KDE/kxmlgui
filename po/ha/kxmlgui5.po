@@ -1,0 +1,1724 @@
+# Hausa translation for kdelibs strings.
+# Copyright 2009 Adriaan de Groot, Mustapha Abubakar, Ibrahim Dasuna
+# This file is distributed under the same license as the kdelibs package.
+#
+# Adriaan de Groot <groot@kde.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:56+0000\n"
+"PO-Revision-Date: 2009-03-17 11:22+0100\n"
+"Last-Translator: Adriaan de Groot <groot@kde.org>\n"
+"Language-Team: Hausa <kde-i18n-doc@lists.kde.org>\n"
+"Language: ha\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 0.2\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Mustapha Abubakar,Adriaan de Groot,Ibrahim Dasuna"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ",groot@kde.org,"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "Bayani akan %1"
+
+#: kaboutapplicationdialog.cpp:101
+#, kde-format
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:105
+#, kde-format
+msgctxt ""
+"Program name, version and KDE platform version; do not translate "
+"'Development Platform'"
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
+"Frameworks %3</html>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:144
+#, kde-format
+msgid "License: %1"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:156
+msgid "&About"
+msgstr "&Game da"
+
+#: kaboutapplicationdialog.cpp:176
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"Yi amfani da <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> domin "
+"sanar da matsaloli.\n"
+
+#: kaboutapplicationdialog.cpp:180 kaboutapplicationdialog.cpp:184
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "Sanar da matsaloli ga <a href=\"mailto:%1\">%2</a>.\n"
+
+#: kaboutapplicationdialog.cpp:211
+msgid "A&uthor"
+msgstr "&Mawallafi"
+
+#: kaboutapplicationdialog.cpp:211
+msgid "A&uthors"
+msgstr "&Mawallafa"
+
+#: kaboutapplicationdialog.cpp:238
+msgid "&Thanks To"
+msgstr "G&odiya ga"
+
+#: kaboutapplicationdialog.cpp:277
+msgid "T&ranslation"
+msgstr "Ma&ffassara"
+
+#: kaboutapplicationdialog.cpp:309
+msgid "License Agreement"
+msgstr "Yarjejeniyar lasisi"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:59
+#, fuzzy
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Sauran mataimaka:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:64
+msgid "Visit contributor's homepage"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:125
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr "Sauran mataimaka:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:131
+#: kaboutapplicationpersonlistdelegate_p.cpp:167
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:138
+#: kaboutapplicationpersonlistdelegate_p.cpp:170
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:161
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:164
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:262
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr ""
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr ""
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr ""
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "Bayani akan KDE"
+
+#: kaboutkdedialog_p.cpp:46
+#, kde-format
+msgid ""
+"<html><font size=\"5\">KDE - Be Free!</font><br /><b>Frameworks Version %1</"
+"b></html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:56
+#, kde-format
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:75
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:93
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:115
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:134
+msgctxt "About KDE"
+msgid "&About"
+msgstr "&Game da"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Report Bugs or Wishes"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Join KDE"
+msgstr "&Tarayya da KDE"
+
+#: kaboutkdedialog_p.cpp:137
+msgid "&Support KDE"
+msgstr "&Temakama KDE"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr ""
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr ""
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Daga:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "Haɗawa wasikan lantarki"
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr ""
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Zuwa:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "&Aika"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "Aika bayanin matsala."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "Aika wannan bayanin matsala zuwa %1."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr ""
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr ""
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr ""
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "Tsarin budanarwa:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "Mehadawa:"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "Mahimmanchi"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "Tsanani"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "Mantikar Tsanani"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "Matsala"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "Abinda zan so"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "Fassara"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "Abinda wasika yerkoni tsa"
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr ""
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr ""
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr ""
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr ""
+
+#: kcheckaccelerators.cpp:221
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr ""
+
+#: kcheckaccelerators.cpp:228
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr ""
+
+#: kcheckaccelerators.cpp:232
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Rufe"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr ""
+
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+msgid "Old Text"
+msgstr ""
+
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+msgid "New Text"
+msgstr ""
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr ""
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr ""
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr ""
+
+#: kedittoolbar.cpp:343
+msgid "Change Text"
+msgstr ""
+
+#: kedittoolbar.cpp:354
+msgid "Icon te&xt:"
+msgstr ""
+
+#: kedittoolbar.cpp:359
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+
+#: kedittoolbar.cpp:612
+msgid "Configure Toolbars"
+msgstr ""
+
+#: kedittoolbar.cpp:671
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+
+#: kedittoolbar.cpp:671
+msgid "Reset Toolbars"
+msgstr ""
+
+#: kedittoolbar.cpp:671
+msgid "Reset"
+msgstr ""
+
+#: kedittoolbar.cpp:998
+msgid "&Toolbar:"
+msgstr ""
+
+#: kedittoolbar.cpp:1013
+msgid "A&vailable actions:"
+msgstr ""
+
+#: kedittoolbar.cpp:1028 kedittoolbar.cpp:1047
+msgid "Filter"
+msgstr ""
+
+#: kedittoolbar.cpp:1031
+msgid "Curr&ent actions:"
+msgstr ""
+
+#: kedittoolbar.cpp:1050
+msgid "Change &Icon..."
+msgstr ""
+
+#: kedittoolbar.cpp:1058
+msgid "Change Te&xt..."
+msgstr ""
+
+#: kedittoolbar.cpp:1210
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr ""
+
+#: kedittoolbar.cpp:1230
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+
+#: kedittoolbar.cpp:1232
+msgid "<Merge>"
+msgstr ""
+
+#: kedittoolbar.cpp:1234
+#, kde-format
+msgid "<Merge %1>"
+msgstr ""
+
+#: kedittoolbar.cpp:1240
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+
+#: kedittoolbar.cpp:1241
+#, kde-format
+msgid "ActionList: %1"
+msgstr ""
+
+#: kedittoolbar.cpp:1341 kedittoolbar.cpp:1368
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr ""
+
+#: kedittoolbar.cpp:1595
+msgid "Change Icon"
+msgstr ""
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr ""
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr ""
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr ""
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr ""
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr ""
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "&Agaji"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr ""
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:144
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:233
+#: kkeysequencewidget.cpp:619 kshortcutseditor.cpp:619
+#: kshortcutseditor.cpp:637
+msgid "Reassign"
+msgstr ""
+
+#: kkeysequencewidget.cpp:214
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:218
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr ""
+
+#: kkeysequencewidget.cpp:223
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:242
+msgid "Shortcut conflict"
+msgstr ""
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+
+#: kkeysequencewidget.cpp:273
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: kkeysequencewidget.cpp:465
+msgid "Reserved Shortcut"
+msgstr ""
+
+#: kkeysequencewidget.cpp:466
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: kkeysequencewidget.cpp:613
+msgid "Conflict with Standard Application Shortcut"
+msgstr ""
+
+#: kkeysequencewidget.cpp:614
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+
+#: kkeysequencewidget.cpp:659
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr ""
+
+#: kkeysequencewidget.cpp:666 kshortcuteditwidget.cpp:61
+#: kshortcuteditwidget.cpp:64
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr ""
+
+#: kkeysequencewidget.cpp:706
+msgid "The key you just pressed is not supported by Qt."
+msgstr ""
+
+#: kkeysequencewidget.cpp:707
+msgid "Unsupported Key"
+msgstr ""
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr ""
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr ""
+
+#: ksendbugmail/main.cpp:45
+msgid "Error connecting to server."
+msgstr ""
+
+#: ksendbugmail/main.cpp:48
+msgid "Not connected."
+msgstr ""
+
+#: ksendbugmail/main.cpp:51
+msgid "Connection timed out."
+msgstr ""
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, kde-format
+msgid "Server said: \"%1\""
+msgstr ""
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "Aika bayanin matsala."
+
+#: ksendbugmail/main.cpp:91
+msgid "The subject line of the email."
+msgstr ""
+
+#: ksendbugmail/main.cpp:92
+msgid "The email address to send the bug report to."
+msgstr ""
+
+#: kshortcuteditwidget.cpp:60
+msgid "Default:"
+msgstr ""
+
+#: kshortcuteditwidget.cpp:68
+msgid "Custom:"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:43
+msgid "Shortcut Schemes"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:62
+msgid "Current scheme:"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:72
+msgid "New..."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:78
+msgid "More Actions"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:82
+msgid "Save as Scheme Defaults"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:101
+msgid "Name for New Scheme"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:102
+msgid "Name for new scheme:"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:102
+msgid "New Scheme"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:108
+msgid "A scheme with this name already exists."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:137
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:167
+msgid "Export to Location"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:175
+msgid "Could not export shortcuts scheme because the location is invalid."
+msgstr ""
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr ""
+
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr ""
+
+#: kshortcutsdialog.cpp:168
+msgid "Print"
+msgstr ""
+
+#: kshortcutsdialog.cpp:175
+msgid "Reset to Defaults"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "Aiki"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "Gajeran hanya"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "Wata gajeran hanya"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr ""
+
+#: kshortcutseditor.cpp:614 kshortcutseditor.cpp:632
+msgid "Key Conflict"
+msgstr ""
+
+#: kshortcutseditor.cpp:615
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+
+#: kshortcutseditor.cpp:633
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+
+#: kshortcutseditor.cpp:680
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:698 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:699 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr ""
+
+#: kshortcutseditor.cpp:700
+msgid "Global:"
+msgstr ""
+
+#: kshortcutseditor.cpp:715
+msgid "Action Name"
+msgstr ""
+
+#: kshortcutseditor.cpp:719
+msgid "Shortcuts"
+msgstr ""
+
+#: kshortcutseditor.cpp:723
+msgid "Description"
+msgstr ""
+
+#: kshortcutseditoritem.cpp:51
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:277 kswitchlanguagedialog_p.cpp:299
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:278 kswitchlanguagedialog_p.cpp:300
+msgid "Application Language Changed"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:361
+msgid "Primary language:"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:361
+msgid "Fallback language:"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:380
+msgid "Remove"
+msgstr "Cire"
+
+#: kswitchlanguagedialog_p.cpp:391
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:392
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+
+#: ktoolbar.cpp:303
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr ""
+
+#: ktoolbar.cpp:306
+#, fuzzy
+#| msgid "Settings"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Tsarawa"
+
+#: ktoolbar.cpp:308
+#, fuzzy
+#| msgid "Translation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Fassara"
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr ""
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr ""
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr ""
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr ""
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr ""
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr ""
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr ""
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr ""
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr ""
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr ""
+
+#: ktoolbar.cpp:337
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr ""
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr ""
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr ""
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr ""
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr ""
+
+#: ktoolbar.cpp:403
+msgid "Lock Toolbar Positions"
+msgstr ""
+
+#: ktoolbar.cpp:1348
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr ""
+
+#: ktoolbar.cpp:1349
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr ""
+
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr ""
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr ""
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr ""
+
+#: kxmlguibuilder.cpp:183 kxmlguibuilder.cpp:336
+msgid "No text"
+msgstr ""
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr ""
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr ""
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr ""
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr ""
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr ""
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr ""
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr ""
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr ""
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "&Tsarawa"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr ""
+
+#~ msgid "&License Agreement"
+#~ msgstr "Yarjejeniyar &lasisi"
+
+#~ msgid "Author"
+#~ msgstr "Mawallafi"
+
+#~ msgid "Other Contributors:"
+#~ msgstr "Sauran mataimaka:"
+
+#~ msgid "&Language:"
+#~ msgstr "&Yare:"
+
+#~ msgid "am"
+#~ msgstr "safe"
+
+#~ msgid "pm"
+#~ msgstr "yamma"
+
+#~ msgid "Today"
+#~ msgstr "Yau"
+
+#~ msgid "Yesterday"
+#~ msgstr "Jiya"
+
+#~ msgid "KDE Daemon"
+#~ msgstr "KDE Fatalwa"
+
+#~ msgctxt "show help"
+#~ msgid "&Help"
+#~ msgstr "&Agaji"
+
+#, fuzzy
+#~| msgid "Close the current document."
+#~ msgid "Create new document"
+#~ msgstr "Rufe wannan -dokumen-"
+
+#, fuzzy
+#~| msgid "&Close Document"
+#~ msgid "Save document"
+#~ msgstr "&Rufe -dokumen-"
+
+#~ msgid "&Close"
+#~ msgstr "&Rufe"
+
+#, fuzzy
+#~| msgid "&Close Document"
+#~ msgid "Close document"
+#~ msgstr "&Rufe -dokumen-"
+
+#, fuzzy
+#~| msgid "&Close Document"
+#~ msgid "Print document"
+#~ msgstr "&Rufe -dokumen-"
+
+#~ msgid "Configure &Notifications..."
+#~ msgstr "Haɗawa &Sanerwa"
+
+#~ msgid "&About %1"
+#~ msgstr "&Bayani akan %1"
+
+#~ msgid "About &KDE"
+#~ msgstr "Bayani akan &KDE"
+
+#~ msgid "Configure"
+#~ msgstr "Haɗawa"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "9"
+#~ msgstr "9"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "16"
+#~ msgstr "16"
+
+#~ msgctxt "@action:button filter-yes"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@action:button filter-no"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@action:button filter-continue"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@action:button filter-cancel"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgctxt "@action:button post-filter"
+#~ msgid "."
+#~ msgstr "."
+
+#~ msgid "Question"
+#~ msgstr "Tambaya"
+
+#~ msgid "Information"
+#~ msgstr "Bayani"
+
+#~ msgid "Password:"
+#~ msgstr "Harrufan sirri:"
+
+#~ msgid "Username:"
+#~ msgstr "Sunan shiga:"
+
+#~ msgid "Stop"
+#~ msgstr "Tsaya"
+
+#~ msgctxt "@action"
+#~ msgid "Close"
+#~ msgstr "Rufe"
+
+#~ msgctxt "@action"
+#~ msgid "Help"
+#~ msgstr "Agaji"
+
+#~ msgctxt "@action"
+#~ msgid "Configure Notifications"
+#~ msgstr "Haɗawa Sanerwa"
+
+#~ msgctxt "@action"
+#~ msgid "About KDE"
+#~ msgstr "Bayani akan KDE"
+
+#~ msgid "Default language:"
+#~ msgstr "Yaren farko:"
+
+#~ msgid "&Yes"
+#~ msgstr "&Ee"
+
+#~ msgid "Yes"
+#~ msgstr "Ee"
+
+#~ msgid "&No"
+#~ msgstr "&A'a"
+
+#~ msgid "No"
+#~ msgstr "A'a"
+
+#~ msgid "Close the current window or document"
+#~ msgstr "Rufe wannan tagar"
+
+#~ msgid "&Close Window"
+#~ msgstr "&Rufe taga"
+
+#~ msgid "Close the current window."
+#~ msgstr "Rufe wannan tagar."
+
+#~ msgid "&Close Document"
+#~ msgstr "&Rufe -dokumen-"
+
+#~ msgid "Close the current document."
+#~ msgstr "Rufe wannan -dokumen-"
+
+#, fuzzy
+#~| msgid "Today"
+#~ msgctxt "@option today"
+#~ msgid "Today"
+#~ msgstr "Yau"
+
+#, fuzzy
+#~| msgid "Yesterday"
+#~ msgctxt "@option yesterday"
+#~ msgid "Yesterday"
+#~ msgstr "Jiya"
+
+#~ msgid "&Remove"
+#~ msgstr "&Cire"
+
+#~ msgid "Description:"
+#~ msgstr "ƙwatan tawa:"
+
+#~ msgid "Pause"
+#~ msgstr "Dakata"
+
+#~ msgid "Settings"
+#~ msgstr "Tsarawa"
+
+#~ msgid "Quit"
+#~ msgstr "Kashi"
+
+#~ msgid "Quit application..."
+#~ msgstr "Rufewa -afelikashon-"
+
+#~ msgid "?"
+#~ msgstr "?"
+
+#~ msgid "Author:"
+#~ msgstr "Mawallafi:"
+
+#~ msgid "GPL"
+#~ msgstr "GPL"
+
+#~ msgid "LGPL"
+#~ msgstr "LGPL"
+
+#~ msgid "BSD"
+#~ msgstr "BSD"
+
+#~ msgid "Language:"
+#~ msgstr "Yare:"
+
+#~ msgid "Configure Notifications"
+#~ msgstr "Haɗawa Sanerwa"
+
+#, fuzzy
+#~| msgid "Settings"
+#~ msgid "Apply Settings"
+#~ msgstr "Tsarawa"
+
+#~ msgid "Color for links"
+#~ msgstr "Launin ma'isa"
+
+#~ msgid "What color links should be that have not yet been clicked on"
+#~ msgstr ""
+#~ "Wani launi ma'isa kake so launin ma'isar ya kasance wanda ba a taɓa ba"
+
+#~ msgid "Color for visited links"
+#~ msgstr "Launin ma'isar da aka taɓa"
+
+#~ msgid "What country"
+#~ msgstr "Wacce ƙasa"
+
+#~ msgid ""
+#~ "Used to determine how to display numbers, currency and time/date, for "
+#~ "example"
+#~ msgstr "ƙasarce take zaɓar haruffa, lambobi da lokaci da take amfani dashi"
+
+#~ msgid "Path to the autostart directory"
+#~ msgstr "Hanyan jakar farawa da kai"
+
+#, fuzzy
+#~| msgid "About %1"
+#~ msgctxt "Used only for plugins"
+#~ msgid "About %1"
+#~ msgstr "Bayani akan %1"
+
+#, fuzzy
+#~| msgid "Today"
+#~ msgctxt ""
+#~ "referring to a filter on the modification and usage date of files/"
+#~ "resources"
+#~ msgid "Today"
+#~ msgstr "Yau"
+
+#, fuzzy
+#~| msgid "Yesterday"
+#~ msgctxt ""
+#~ "referring to a filter on the modification and usage date of files/"
+#~ "resources"
+#~ msgid "Yesterday"
+#~ msgstr "Jiya"
+
+#, fuzzy
+#~| msgid "A&uthor"
+#~ msgid "Before"
+#~ msgstr "&Mawallafi"
+
+#, fuzzy
+#~| msgid "A&uthor"
+#~ msgctxt ""
+#~ "@option:check An item in a list of resources that allows to query for "
+#~ "more resources to put in the list"
+#~ msgid "More..."
+#~ msgstr "&Mawallafi"
+
+#, fuzzy
+#~| msgid "&Close Document"
+#~ msgctxt "@option:check A filter on file type"
+#~ msgid "Documents"
+#~ msgstr "&Rufe -dokumen-"
+
+#~ msgid "Start"
+#~ msgstr "Tada"
+
+#~ msgid "What time is it? Click to update."
+#~ msgstr "Ƙarfe nawa? Denna don sabuntawa."
+
+#, fuzzy
+#~| msgid "Today"
+#~ msgctxt "@info/plain"
+#~ msgid "today"
+#~ msgstr "Yau"
+
+#~ msgctxt "@item Author name in about dialog"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~| msgid "Question"
+#~ msgid "description"
+#~ msgstr "Tambaya"
+
+#, fuzzy
+#~| msgid "Author"
+#~ msgid "Autor Name"
+#~ msgstr "Mawallafi"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Indian National month 10 - LongNamePossessive"
+#~ msgid "of Paush"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Indian National month 10 - ShortName"
+#~ msgid "Pau"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Indian National month 10 - LongName"
+#~ msgid "Paush"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 2 - ShortNamePossessive"
+#~ msgid "of Pao"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 7 - ShortNamePossessive"
+#~ msgid "of Par"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 8 - ShortNamePossessive"
+#~ msgid "of Pam"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 9 - ShortNamePossessive"
+#~ msgid "of Pas"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 10 - ShortNamePossessive"
+#~ msgid "of Pan"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 2 - LongNamePossessive"
+#~ msgid "of Paope"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 4 - LongNamePossessive"
+#~ msgid "of Kiahk"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 8 - LongNamePossessive"
+#~ msgid "of Parmoute"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 9 - LongNamePossessive"
+#~ msgid "of Pashons"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 10 - LongNamePossessive"
+#~ msgid "of Paone"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 2 - ShortName"
+#~ msgid "Pao"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "Coptic month 6 - ShortName"
+#~ msgid "Mes"
+#~ msgstr "Ee"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 7 - ShortName"
+#~ msgid "Par"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "am"
+#~ msgctxt "Coptic month 8 - ShortName"
+#~ msgid "Pam"
+#~ msgstr "safe"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 9 - ShortName"
+#~ msgid "Pas"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 10 - ShortName"
+#~ msgid "Pan"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 2 - LongName"
+#~ msgid "Paope"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Author"
+#~ msgctxt "Coptic month 3 - LongName"
+#~ msgid "Hathor"
+#~ msgstr "Mawallafi"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 8 - LongName"
+#~ msgid "Parmoute"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 9 - LongName"
+#~ msgid "Pashons"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic month 10 - LongName"
+#~ msgid "Paone"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "Coptic weekday 1 - ShortDayName"
+#~ msgid "Pes"
+#~ msgstr "Ee"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic weekday 2 - ShortDayName"
+#~ msgid "Psh"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic weekday 6 - ShortDayName"
+#~ msgid "Psa"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Coptic weekday 1 - LongDayName"
+#~ msgid "Pesnau"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Ethiopian month 4 - ShortNamePossessive"
+#~ msgid "of Tah"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Ethiopian month 13 - ShortNamePossessive"
+#~ msgid "of Pag"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Ethiopian month 13 - LongNamePossessive"
+#~ msgid "of Pagumen"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "Ethiopian month 1 - ShortName"
+#~ msgid "Mes"
+#~ msgstr "Ee"
+
+#, fuzzy
+#~| msgid "am"
+#~ msgctxt "Ethiopian month 11 - ShortName"
+#~ msgid "Ham"
+#~ msgstr "safe"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Ethiopian month 13 - ShortName"
+#~ msgid "Pag"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Ethiopian month 13 - LongName"
+#~ msgid "Pagumen"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "am"
+#~ msgctxt "Ethiopian weekday 4 - ShortDayName"
+#~ msgid "Ham"
+#~ msgstr "safe"
+
+#, fuzzy
+#~| msgid "Pause"
+#~ msgctxt "Ethiopian weekday 4 - LongDayName"
+#~ msgid "Hamus"
+#~ msgstr "Dakata"
+
+#, fuzzy
+#~| msgid "Action"
+#~ msgid "Long Action"
+#~ msgstr "Aiki"
+
+#~ msgid "Path for the trash can"
+#~ msgstr "Hanyan zubar da shara"
+
+#~ msgid "Path to documents folder"
+#~ msgstr "Hanyan jakar -dokumen-"
