@@ -49,6 +49,9 @@ set (HAVE_ATTICA ${KF5Attica_FOUND})
 
 # Subdirectories
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
+if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+    ki18n_install(po)
+endif()
 add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(autotests)
