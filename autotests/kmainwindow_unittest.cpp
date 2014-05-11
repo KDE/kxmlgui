@@ -32,12 +32,12 @@ QTEST_MAIN(KMainWindow_UnitTest)
 void KMainWindow_UnitTest::initTestCase()
 {
     QStandardPaths::enableTestMode(true);
-    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/kmainwindow_unittestrc"));
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/kxmlgui-kmainwindow_unittestrc"));
 }
 
 void KMainWindow_UnitTest::cleanupTestCase()
 {
-    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/kmainwindow_unittestrc"));
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/kxmlgui-kmainwindow_unittestrc"));
 }
 
 void KMainWindow_UnitTest::testDefaultName()
@@ -91,12 +91,12 @@ void KMainWindow_UnitTest::testNameWithSpecialChars()
     mw.setObjectName("a#@_test/");
     mw.show();
     mw.ensurePolished();
-    QCOMPARE(mw.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_"));
+    QCOMPARE(mw.dbusName(), QString::fromLatin1("/kxmlgui_kmainwindow_unittest/a___test_"));
     KMainWindow mw2;
     mw2.setObjectName("a#@_test/");
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE(mw2.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_2"));
+    QCOMPARE(mw2.dbusName(), QString::fromLatin1("/kxmlgui_kmainwindow_unittest/a___test_2"));
 }
 
 static bool s_mainWindowDeleted;
@@ -150,7 +150,7 @@ void KMainWindow_UnitTest::testDeleteOnClose()
 
 void KMainWindow_UnitTest::testSaveWindowSize()
 {
-    QCOMPARE(KSharedConfig::openConfig()->name(), QString::fromLatin1("kmainwindow_unittestrc"));
+    QCOMPARE(KSharedConfig::openConfig()->name(), QString::fromLatin1("kxmlgui-kmainwindow_unittestrc"));
     KConfigGroup cfg(KSharedConfig::openConfig(), "TestWindowSize");
 
     {
