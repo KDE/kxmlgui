@@ -28,16 +28,16 @@ int main(int argc, char **argv)
     a.setQuitOnLastWindowClosed(false);
 
     // First a bug report to bugs.kde.org
-    KAboutData about(QStringLiteral("kbugreporttest"), QString(),
+    KAboutData about(QStringLiteral("kbugreporttest"),
                      i18n("kbugreporttest"), QStringLiteral("version"));
     KBugReport rep(about);
     rep.exec();
 
     // Then a bug report by email.
     // Change the email address to check if it worked :)
-    KAboutData about1(QStringLiteral("kbugreporttest"), QString(),
+    KAboutData about1(QStringLiteral("kbugreporttest"),
                       i18n("kbugreporttest"), QStringLiteral("version"),
-                      i18n("description"), KAboutData::License_Unknown,
+                      i18n("description"), KAboutLicense::Unknown,
                       i18n("copyright"), i18n("bug report tool"),
                       QString(), QStringLiteral("null@bugs.kde.org"));
     KBugReport rep1(about1);

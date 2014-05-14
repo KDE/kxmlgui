@@ -141,7 +141,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
 
         QLabel *showLicenseLabel = new QLabel;
         showLicenseLabel->setText(QString::fromLatin1("<a href=\"%1\">%2</a>").arg(QString::number(i),
-                                  i18n("License: %1", license.name(KAboutData::FullName))));
+                                  i18n("License: %1", license.name(KAboutLicense::FullName))));
         showLicenseLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
         connect(showLicenseLabel, SIGNAL(linkActivated(QString)), q, SLOT(_k_showLicense(QString)));
 
