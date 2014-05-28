@@ -114,6 +114,7 @@ void KXmlGui_UnitTest::initTestCase()
     if (!configFile.isEmpty()) {
         qDebug() << "Removing old config file";
         QFile::remove(configFile);
+        KSharedConfig::openConfig()->reparseConfiguration();
     }
 }
 
