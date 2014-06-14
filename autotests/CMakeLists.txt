@@ -13,6 +13,5 @@ ecm_add_tests(
    kmainwindow_unittest.cpp
    ktoolbar_unittest.cpp
    kxmlgui_unittest.cpp
-   NAME_PREFIX "kxmlgui-"
    LINK_LIBRARIES Qt5::Test KF5::I18n KF5::IconThemes KF5::XmlGui
 )
