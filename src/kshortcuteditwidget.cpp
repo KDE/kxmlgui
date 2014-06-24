@@ -31,6 +31,7 @@
 #include <QLabel>
 
 #include <klocalizedstring.h>
+#include <kglobalaccel.h>
 
 #include "kkeysequencewidget.h"
 
@@ -53,7 +54,8 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
                                        const QKeySequence &activeSeq, bool allowLetterShortcuts)
     : TabConnectedWidget(viewport),
       m_defaultKeySequence(defaultSeq),
-      m_isUpdating(false)
+      m_isUpdating(false),
+      m_action(Q_NULLPTR)
 {
     QGridLayout *layout = new QGridLayout(this);
 
@@ -83,6 +85,14 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
             this, SLOT(setCustom(QKeySequence)));
     connect(m_customEditor, SIGNAL(stealShortcut(QKeySequence,QAction*)),
             this, SIGNAL(stealShortcut(QKeySequence,QAction*)));
+    connect(KGlobalAccel::self(), &KGlobalAccel::globalShortcutChanged,
+        [this](QAction *action, const QKeySequence &seq) {
+            if (action != m_action) {
+                return;
+            }
+            setKeySequence(seq);
+        }
+    );
 }
 
 KKeySequenceWidget::ShortcutTypes ShortcutEditWidget::checkForConflictsAgainst() const
@@ -143,6 +153,11 @@ void ShortcutEditWidget::setMultiKeyShortcutsAllowed(bool allowed)
 bool ShortcutEditWidget::multiKeyShortcutsAllowed() const
 {
     return m_customEditor->multiKeyShortcutsAllowed();
+}
+
+void ShortcutEditWidget::setAction(QObject *action)
+{
+    m_action = action;
 }
 
 //slot

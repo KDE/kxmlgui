@@ -193,6 +193,8 @@ public:
     //! @see KKeySequenceWidget::setComponentName
     void setComponentName(const QString componentName);
 
+    void setAction(QObject *action);
+
 public Q_SLOTS:
 
     //! Set the displayed sequences
@@ -218,6 +220,7 @@ private:
     QRadioButton *m_customRadio;
     KKeySequenceWidget *m_customEditor;
     bool m_isUpdating;
+    QObject *m_action;
 };
 
 #if 0

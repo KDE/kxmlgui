@@ -161,9 +161,7 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
                     m_allowLetterShortcuts);
             if (column == GlobalPrimary) {
                 QObject *action = index.data(ObjectRole).value<QObject *>();
-                connect(
-                    action, SIGNAL(globalShortcutChanged(QKeySequence)),
-                    editor, SLOT(setKeySequence(QKeySequence)));
+                editor->setAction(action);
                 editor->setMultiKeyShortcutsAllowed(false);
                 QString componentName = action->property("componentName").toString();
                 if (componentName.isEmpty()) {
