@@ -314,13 +314,23 @@ protected:
      * to KXmlGuiWindow::setupGUI() or KXmlGuiWindow::createGUI().
      *
      * @param file Either an absolute path for the file, or simply the
-     *             filename, which will then be assumed to be installed
-     *             in the "data" resource, under a directory named like
-     *             the component name.
+     *             filename. See below for details.
      *             If you pass an absolute path here, make sure to also call
      *             setLocalXMLFile, otherwise toolbar editing won't work.
      * @param merge Whether to merge with the global document.
      * @param setXMLDoc Specify whether to call setXML. Default is true.
+     *
+     * The preferred way to call this method is with a simple filename for the @p file argument.
+     * Since KF 5.1, the file will then be assumed to be installed in DATADIR/kxmlgui5/, under a directory
+     * named after the component name.
+     * You should use ${KXMLGUI_INSTALL_DIR}/componentname in your CMakeLists.txt file, to install
+     * the .rc file(s).
+     *
+     * Compatibility notes:
+     * Fallback lookups exist to older locations: DATADIR/componentname/file and DATADIR/file.
+     * The latter was there so that setXMLFile("componentname/filename") worked (but this was
+     * undocumented). Do not do this anymore after porting to KXMLGUI_INSTALL_DIR, use
+     * setComponentName("componentname") and setXMLFile("filename").
      **/
     virtual void setXMLFile(const QString &file, bool merge = false, bool setXMLDoc = true);
 

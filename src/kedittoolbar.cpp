@@ -700,7 +700,8 @@ void KEditToolBarPrivate::defaultClicked()
         if (slash) {
             m_file = m_file.mid(slash);
         }
-        const QString xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
+        const QString xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
+            QStringLiteral("/kxmlgui5/") + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
 
         if (QFile::exists(xml_file))
             if (!QFile::remove(xml_file)) {

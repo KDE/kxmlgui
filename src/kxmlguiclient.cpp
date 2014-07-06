@@ -169,7 +169,7 @@ QString KXMLGUIClient::localXMLFile() const
         return QString();
     }
 
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kxmlgui5/") +
            componentName() + QLatin1Char('/') + d->m_xmlFile;
 }
 
@@ -222,8 +222,14 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
         allFiles.append(file);
     } else {
         const QString filter = componentName() + QLatin1Char('/') + _file;
-        allFiles = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, filter) +
-                   QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, _file);
+        allFiles = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + filter); // KF >= 5.1
+        const QStringList compatFiles =
+                   QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, filter) + // kdelibs4, KF 5.0
+                   QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, _file); // kdelibs4, KF 5.0, caller passes component name
+        if (allFiles.isEmpty() && !compatFiles.isEmpty()) {
+            qWarning() << "KXMLGUI file found at deprecated location" << compatFiles << "-- please use ${KXMLGUI_INSTALL_DIR} to install this file instead.";
+        }
+        allFiles += compatFiles;
     }
     if (allFiles.isEmpty() && !_file.isEmpty()) {
         // if a non-empty file gets passed and we can't find it,
