@@ -67,7 +67,7 @@ public:
      * in which action collection to call the writeSettings method after stealing
      * a shortcut from an action.
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void setCheckActionList(const QList<QAction *> &checkList);
 #endif
 

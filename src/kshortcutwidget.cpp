@@ -78,7 +78,7 @@ QList<QKeySequence> KShortcutWidget::shortcut() const
     return ret;
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
 void KShortcutWidget::setCheckActionList(const QList<QAction *> &checkList)
 {
     d->ui.priEditor->setCheckActionList(checkList);

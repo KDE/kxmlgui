@@ -148,7 +148,7 @@ public:
      * @param enable If false, then the context menu will be disabled
      * @deprecated use setContextMenuPolicy
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void setContextMenuEnabled(bool enable = true);
 #endif
 
@@ -157,7 +157,7 @@ public:
      * @return true if the context menu is disabled
      * @deprecated use contextMenuPolicy
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED bool contextMenuEnabled() const;
 #endif
 
@@ -176,7 +176,7 @@ public:
      * Sets the XML gui client.
      * @deprecated use addXMLGUIClient.
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void setXMLGUIClient(KXMLGUIClient *client);
 #endif
 

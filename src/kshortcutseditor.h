@@ -186,7 +186,7 @@ public:
      *
      * @param config Config object
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void exportConfiguration(KConfig *config) const;
 #endif
     void exportConfiguration(KConfigBase *config) const;
@@ -199,7 +199,7 @@ public:
      *
      * @param config Config object
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void importConfiguration(KConfig *config);
 #endif
     void importConfiguration(KConfigBase *config);

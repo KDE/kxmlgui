@@ -161,7 +161,7 @@ void KShortcutsEditor::clearConfiguration()
     d->clearConfiguration();
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
 void KShortcutsEditor::importConfiguration(KConfig *config)
 {
     d->importConfiguration(config);
@@ -173,7 +173,7 @@ void KShortcutsEditor::importConfiguration(KConfigBase *config)
     d->importConfiguration(config);
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
 void KShortcutsEditor::exportConfiguration(KConfig *config) const
 {
     exportConfiguration(static_cast<KConfigBase *>(config));

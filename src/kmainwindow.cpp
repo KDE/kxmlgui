@@ -335,7 +335,7 @@ KMainWindow::~KMainWindow()
     delete k_ptr;
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
 QMenu *KMainWindow::helpMenu(const QString &aboutAppText, bool showWhatsThis)
 {
     K_D(KMainWindow);
@@ -669,14 +669,14 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     d->letDirtySettings = oldLetDirtySettings;
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
 void KMainWindow::restoreWindowSize(const KConfigGroup &cg)
 {
     KWindowConfig::restoreWindowSize(windowHandle(), cg);
 }
 #endif
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
 void KMainWindow::saveWindowSize(KConfigGroup &cg) const
 {
     KWindowConfig::saveWindowSize(windowHandle(), cg);

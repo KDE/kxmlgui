@@ -178,7 +178,7 @@ public:
      * @return A standard help menu.
      * @deprecated use KHelpMenu directly
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED QMenu *helpMenu(const QString &aboutAppText = QString(),
                                       bool showWhatsThis = true);
 #endif
@@ -206,7 +206,7 @@ public:
      * @return A standard help menu.
      * @deprecated use XMLGUI instead, or KHelpMenu directly
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED QMenu *customHelpMenu(bool showWhatsThis = true);
 #endif
 
@@ -562,7 +562,7 @@ protected:
      * For inherited classes
      * @deprecated use KWindowConfig::saveWindowSize
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void saveWindowSize(KConfigGroup &config) const;
 #endif
 
@@ -570,7 +570,7 @@ protected:
      * For inherited classes
      * @deprecated use KWindowConfig::restoreWindowSize
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void restoreWindowSize(const KConfigGroup &config);
 #endif
 
@@ -600,7 +600,7 @@ protected Q_SLOTS:
     * \endcode
     * @deprecated use KHelpMenu
     */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KXMLGUI_NO_DEPRECATED
     virtual KXMLGUI_DEPRECATED void showAboutApplication() {}
 #endif
 
