@@ -59,7 +59,7 @@ set(kxmlgui_UI
    kshortcutwidget.ui
 )
 
-qt5_wrap_ui(kxmlgui_SRCS ${kxmlgui_UI} )
+ki18n_wrap_ui(kxmlgui_SRCS ${kxmlgui_UI} )
 
 add_library(KF5XmlGui ${kxmlgui_SRCS})
 generate_export_header(KF5XmlGui BASE_NAME KXmlGui)
