@@ -179,13 +179,24 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         const QString text = textElem.text();
         const QString context = textElem.attribute(d->attrContext);
 
+        //qDebug(260) << "DOMAIN" << KLocalizedString::applicationDomain();
+        //qDebug(260) << "ELEMENT TEXT:" << text;
+
         if (text.isEmpty()) { // still no luck
             i18nText = i18n("No text");
         } else if (context.isEmpty()) {
-            i18nText = i18n(qPrintable(text));
+            i18nText = i18n(text.toUtf8().constData());
+            if (i18nText == text)  { // try with app domain
+                i18nText = i18nd(KLocalizedString::applicationDomain().constData(), text.toUtf8().constData());
+            }
         } else {
-            i18nText = i18nc(qPrintable(context), qPrintable(text));
+            i18nText = i18nc(context.toUtf8().constData(), text.toUtf8().constData());
+            if (i18nText == text)  { // try with app domain
+                i18nText = i18ndc(KLocalizedString::applicationDomain().constData(), context.toUtf8().constData(), text.toUtf8().constData());
+            }
         }
+
+        //qDebug(260) << "ELEMENT i18n TEXT:" << i18nText;
 
         const QString icon = element.attribute(d->attrIcon);
         QIcon pix;
