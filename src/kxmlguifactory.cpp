@@ -387,11 +387,9 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
         //qDebug() << action->objectName() << "default=" << defaultShortcut.toString() << "active=" << activeShortcut.toString();
 
         // Check if we have an empty default shortcut and an non empty
-        // custom shortcut. This should only happen if a developer called
-        // QAction::setShortcut on an KAction. Print out a warning and
-        // correct the mistake
+        // custom shortcut. Print out a warning and correct the mistake.
         if ((!activeShortcut.isEmpty()) && defaultShortcut.isEmpty()) {
-            qCritical() << "Shortcut for KAction " << action->objectName() << action->text() << "set with QShortcut::setShortcut()! See KAction documentation.";
+            qCritical() << "Shortcut for action " << action->objectName() << action->text() << "set with QAction::setShortcut()! Use KActionCollection::setDefaultShortcut(s) instead.";
             action->setProperty("_k_DefaultShortcut", QVariant::fromValue(activeShortcut));
         } else {
             action->setProperty("_k_DefaultShortcut", QVariant::fromValue(defaultShortcut));
