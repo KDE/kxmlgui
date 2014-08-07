@@ -163,6 +163,8 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
         xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
             QStringLiteral("/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
 
+    QFileInfo fileInfo(xml_file);
+    QDir().mkpath(fileInfo.absolutePath());
     QFile file(xml_file);
     if (xml_file.isEmpty() || !file.open(QIODevice::WriteOnly)) {
         qCritical() << "Could not write to" << filename;
