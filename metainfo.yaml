@@ -7,3 +7,7 @@ platforms:
 portingAid: false
 deprecated: false
 release: true
+libraries:
+ - qmake: KXmlGui
+   cmake: "KF5::XmlGui"
+cmakename: KF5XmlGui
