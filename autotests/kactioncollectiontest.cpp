@@ -100,13 +100,11 @@ void tst_KActionCollection::writeSettings()
 
     QAction *actionWithSameShortcut = new QAction(this);
     collection->setDefaultShortcuts(actionWithSameShortcut, defaultShortcut);
-    actionWithSameShortcut->setShortcuts(defaultShortcut);
     collection->addAction("actionWithSameShortcut", actionWithSameShortcut);
 
     cfg.writeEntry("actionToDelete", QString("Foobar"));
     QAction *actionToDelete = new QAction(this);
     collection->setDefaultShortcuts(actionToDelete, defaultShortcut);
-    actionToDelete->setShortcuts(defaultShortcut);
     collection->addAction("actionToDelete", actionToDelete);
 
     collection->writeSettings(&cfg);
@@ -144,8 +142,8 @@ void tst_KActionCollection::readSettings()
 
     QAction *empty = new QAction(this);
     collection->addAction("empty", empty);
-    empty->setShortcuts(temporaryShortcut);
     collection->setDefaultShortcuts(empty, defaultShortcut);
+    empty->setShortcuts(temporaryShortcut);
     QCOMPARE(QKeySequence::listToString(empty->shortcuts()), QKeySequence::listToString(temporaryShortcut));
 
     collection->readSettings(&cfg);
@@ -216,7 +214,6 @@ void tst_KActionCollection::testSetShortcuts()
 {
     QAction *action = new QAction(i18n("Next Unread &Folder"), this);
     collection->addAction("go_next_unread_folder", action);
-    action->setShortcut(QKeySequence(Qt::ALT + Qt::Key_Plus));
     collection->setDefaultShortcut(action, QKeySequence(Qt::ALT + Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
     shortcut << QKeySequence(Qt::CTRL + Qt::Key_Plus);

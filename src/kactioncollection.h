@@ -465,6 +465,8 @@ public:
 
     /**
      * Set the default shortcut for the given action.
+     * Since 5.2, this also calls action->setShortcut(shortcut), i.e. the default shortcut is
+     * made active initially.
      *
      * @param action the action for which the default shortcut should be set.
      * @param shortcut the shortcut to use for the given action in its specified shortcutContext()
@@ -474,6 +476,8 @@ public:
 
     /**
      * Set the default shortcuts for the given action.
+     * Since 5.2, this also calls action->setShortcuts(shortcuts), i.e. the default shortcut is
+     * made active initially.
      *
      * @param action the action for which the default shortcut should be set.
      * @param shortcuts the shortcuts to use for the given action in its specified shortcutContext()

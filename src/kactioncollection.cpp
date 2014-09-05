@@ -407,8 +407,10 @@ void KActionCollection::setDefaultShortcut(QAction *action, const QKeySequence &
 
 void KActionCollection::setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts)
 {
+    action->setShortcuts(shortcuts);
     action->setProperty("defaultShortcuts", QVariant::fromValue(shortcuts));
 }
+
 bool KActionCollection::isShortcutsConfigurable(QAction *action) const
 {
     // Considered as true by default
