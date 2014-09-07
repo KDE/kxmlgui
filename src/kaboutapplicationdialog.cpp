@@ -84,11 +84,9 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     //Set up the title widget...
     KTitleWidget *titleWidget = new KTitleWidget(q);
 
-    QIcon windowIcon;
-    if (!aboutData.programIconName().isEmpty()) {
+    QIcon windowIcon = qApp->windowIcon();
+    if (windowIcon.isNull() && !aboutData.programIconName().isEmpty()) {
         windowIcon = QIcon::fromTheme(aboutData.programIconName());
-    } else {
-        windowIcon = qApp->windowIcon();
     }
     titleWidget->setPixmap(windowIcon.pixmap(64, 64), KTitleWidget::ImageLeft);
     if (aboutData.programLogo().canConvert<QPixmap>()) {
