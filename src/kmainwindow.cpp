@@ -45,6 +45,7 @@
 #include <QStatusBar>
 #include <QStyle>
 #include <QWidget>
+#include <QWindow>
 #include <QDBusConnection>
 
 #include <ktoggleaction.h>
@@ -608,7 +609,12 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     d->letDirtySettings = false;
 
     if (!d->sizeApplied) {
+        winId(); // ensure there's a window created
         KWindowConfig::restoreWindowSize(windowHandle(), cg);
+        // NOTICE: QWindow::setGeometry() does NOT impact the backing QWidget geometry even if the platform
+        // window was created -> QTBUG-40584. We therefore copy the size here.
+        // TODO: remove once this was resolved in QWidget QPA
+        resize(windowHandle()->size());
         d->sizeApplied = true;
     }
 
