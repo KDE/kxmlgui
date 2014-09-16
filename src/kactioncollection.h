@@ -463,6 +463,7 @@ public:
      */
     QList<QKeySequence> defaultShortcuts(QAction *action) const;
 
+    //TODO KF6: Make setDefaultShortcut static
     /**
      * Set the default shortcut for the given action.
      * Since 5.2, this also calls action->setShortcut(shortcut), i.e. the default shortcut is
