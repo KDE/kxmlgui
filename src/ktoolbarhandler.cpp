@@ -34,9 +34,9 @@
 
 namespace
 {
-const char *actionListName = "show_menu_and_toolbar_actionlist";
+const char actionListName[] = "show_menu_and_toolbar_actionlist";
 
-const char *guiDescription = ""
+const char guiDescription[] = ""
                              "<!DOCTYPE kpartgui><kpartgui name=\"StandardToolBarMenuHandler\">"
                              "<MenuBar>"
                              "    <Menu name=\"settings\">"
