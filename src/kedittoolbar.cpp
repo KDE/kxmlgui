@@ -53,7 +53,7 @@
 
 #include "../kxmlgui_version.h"
 
-static const char *const separatorstring = I18N_NOOP("--- separator ---");
+static const char separatorstring[] = I18N_NOOP("--- separator ---");
 
 #define SEPARATORSTRING i18n(separatorstring)
 
