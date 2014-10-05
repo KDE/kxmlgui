@@ -321,6 +321,10 @@ protected:
      * @param setXMLDoc Specify whether to call setXML. Default is true.
      *
      * The preferred way to call this method is with a simple filename for the @p file argument.
+     *
+     * Since KF 5.4, the file will then be assumed to be installed in a Qt resource in :/kxmlgui5/,
+     * under a directory named after the component name.
+     *
      * Since KF 5.1, the file will then be assumed to be installed in DATADIR/kxmlgui5/, under a directory
      * named after the component name.
      * You should use ${KXMLGUI_INSTALL_DIR}/componentname in your CMakeLists.txt file, to install
