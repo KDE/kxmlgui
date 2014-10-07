@@ -223,17 +223,20 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
     } else {
         const QString filter = componentName() + QLatin1Char('/') + _file;
 
+        // files on filesystem
+        allFiles << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + filter); // KF >= 5.1
+
         // KF >= 5.4 (resource file)
         const QString qrcFile(QStringLiteral(":/kxmlgui5/") + filter);
         if (QFile::exists(qrcFile)) {
             allFiles << qrcFile;
         }
 
-        // then all files on filesystem
-        allFiles << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + filter); // KF >= 5.1
+        // then compat locations
         const QStringList compatFiles =
                    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, filter) + // kdelibs4, KF 5.0
                    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, _file); // kdelibs4, KF 5.0, caller passes component name
+
         if (allFiles.isEmpty() && !compatFiles.isEmpty()) {
             qWarning() << "KXMLGUI file found at deprecated location" << compatFiles << "-- please use ${KXMLGUI_INSTALL_DIR} to install this file instead.";
         }

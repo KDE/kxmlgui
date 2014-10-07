@@ -123,11 +123,11 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
     if (!QDir::isRelativePath(filename)) {
         xml_file = filename;
     } else {
-        // KF >= 5.4 (resource file)
-        xml_file = QStringLiteral(":/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
+        // KF >= 5.1 (KXMLGUI_INSTALL_DIR)
+        xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
         if (!QFile::exists(xml_file)) {
-            // KF >= 5.1 (KXMLGUI_INSTALL_DIR)
-            xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
+            // KF >= 5.4 (resource file)
+            xml_file = QStringLiteral(":/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
         }
 
         bool warn = false;
