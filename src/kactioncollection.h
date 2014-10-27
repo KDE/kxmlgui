@@ -484,7 +484,7 @@ public:
      * @param shortcuts the shortcuts to use for the given action in its specified shortcutContext()
      * @since 5.0
      */
-    void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
+    Q_INVOKABLE void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
 
     /**
      * Returns true if the given action's shortcuts may be configured by the user.
