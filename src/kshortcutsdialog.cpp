@@ -165,17 +165,18 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     d->m_detailsButton->setText(i18n("&Details") + QStringLiteral(" >>"));
 
     QPushButton *printButton = new QPushButton;
-    printButton->setText(i18n("Print"));
-    printButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print")));
+    KGuiItem::assign(printButton, KStandardGuiItem::print());
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
     buttonBox->addButton(d->m_detailsButton, QDialogButtonBox::ActionRole);
     buttonBox->addButton(printButton, QDialogButtonBox::ActionRole);
-    buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Reset);
-    buttonBox->button(QDialogButtonBox::Reset)->setText(i18n("Reset to Defaults"));
+    buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults);
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), KStandardGuiItem::ok());
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
     layout->addWidget(buttonBox);
 
-    connect(buttonBox->button(QDialogButtonBox::Reset), SIGNAL(clicked()),
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), SIGNAL(clicked()),
             d->m_keyChooser, SLOT(allDefault()));
     connect(d->m_detailsButton, SIGNAL(clicked()), this, SLOT(toggleDetails()));
     connect(printButton, SIGNAL(clicked()), d->m_keyChooser, SLOT(printShortcuts()));

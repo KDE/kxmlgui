@@ -193,6 +193,10 @@ KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
     buttonBox->setStandardButtons(QDialogButtonBox::Ok
                                   | QDialogButtonBox::Cancel
                                   | QDialogButtonBox::RestoreDefaults);
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), KStandardGuiItem::ok());
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
+
     topLayout->addWidget(buttonBox);
 
     connect(buttonBox, SIGNAL(accepted()), this, SLOT(slotOk()));

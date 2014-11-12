@@ -622,6 +622,10 @@ void KEditToolBarPrivate::init()
                                     | QDialogButtonBox::Ok
                                     | QDialogButtonBox::Apply
                                     | QDialogButtonBox::Cancel);
+    KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Ok), KStandardGuiItem::ok());
+    KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Apply), KStandardGuiItem::apply());
+    KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
+    KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
     q->connect(m_buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(_k_slotButtonClicked(QAbstractButton*)));
     q->connect(m_buttonBox, SIGNAL(rejected()), SLOT(reject()));
     m_layout->addWidget(m_buttonBox);

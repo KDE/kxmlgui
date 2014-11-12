@@ -25,7 +25,7 @@
 */
 
 #include <QAction>
-#include <QApplication>
+#include <QCoreApplication>
 #include <QShortcutEvent>
 
 #include <klocalizedstring.h>
@@ -45,7 +45,7 @@ public:
             QShortcutEvent *se = static_cast<QShortcutEvent *>(event);
             if (se->isAmbiguous()) {
                 KMessageBox::information(
-                    NULL,  // No widget to be seen around here
+                    Q_NULLPTR,  // No widget to be seen around here
                     i18n("The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
                          "from the 'Settings' menu to solve the ambiguity.\n"
                          "No action will be triggered.",
@@ -66,4 +66,3 @@ void _k_installConflictDetector()
 }
 
 Q_COREAPP_STARTUP_FUNCTION(_k_installConflictDetector)
-
