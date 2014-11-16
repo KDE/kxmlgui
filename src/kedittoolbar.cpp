@@ -174,7 +174,11 @@ QString XmlData::toolBarText(const QDomElement &it) const
     if (txt.isEmpty()) {
         name = it.attribute(attrName);
     } else {
-        name = i18n(txt.constData());
+        QByteArray domain = it.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
+        if (domain.isEmpty()) {
+            domain = KLocalizedString::applicationDomain();
+        }
+        name = i18nd(domain.constData(), txt.constData());
     }
 
     // the name of the toolbar might depend on whether or not

@@ -61,6 +61,7 @@ public:
     QString attrName;
     QString attrLineSeparator;
 
+    QString attrDomain;
     QString attrText1;
     QString attrText2;
     QString attrContext;
@@ -90,6 +91,7 @@ KXMLGUIBuilder::KXMLGUIBuilder(QWidget *widget)
     d->attrName = QStringLiteral("name");
     d->attrLineSeparator = QStringLiteral("lineseparator");
 
+    d->attrDomain = QStringLiteral("translationDomain");
     d->attrText1 = QStringLiteral("text");
     d->attrText2 = QStringLiteral("Text");
     d->attrContext = QStringLiteral("context");
@@ -184,15 +186,15 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
 
         if (text.isEmpty()) { // still no luck
             i18nText = i18n("No text");
-        } else if (context.isEmpty()) {
-            i18nText = i18n(text.toUtf8().constData());
-            if (i18nText == text)  { // try with app domain
-                i18nText = i18nd(KLocalizedString::applicationDomain().constData(), text.toUtf8().constData());
-            }
         } else {
-            i18nText = i18nc(context.toUtf8().constData(), text.toUtf8().constData());
-            if (i18nText == text)  { // try with app domain
-                i18nText = i18ndc(KLocalizedString::applicationDomain().constData(), context.toUtf8().constData(), text.toUtf8().constData());
+            QByteArray domain = element.ownerDocument().documentElement().attribute(d->attrDomain).toUtf8();
+            if (domain.isEmpty()) {
+                domain = KLocalizedString::applicationDomain();
+            }
+            if (context.isEmpty()) {
+                i18nText = i18nd(domain.constData(), text.toUtf8().constData());
+            } else {
+                i18nText = i18ndc(domain.constData(), context.toUtf8().constData(), text.toUtf8().constData());
             }
         }
 
@@ -346,7 +348,11 @@ QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const Q
             if (text.isEmpty()) {
                 i18nText = i18n("No text");
             } else {
-                i18nText = i18n(qPrintable(text));
+                QByteArray domain = element.ownerDocument().documentElement().attribute(d->attrDomain).toUtf8();
+                if (domain.isEmpty()) {
+                    domain = KLocalizedString::applicationDomain();
+                }
+                i18nText = i18nd(domain.constData(), qPrintable(text));
             }
 
             QString icon = element.attribute(d->attrIcon);

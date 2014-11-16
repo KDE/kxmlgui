@@ -22,6 +22,7 @@
   name CDATA #REQUIRED
   version CDATA #REQUIRED
   library CDATA #IMPLIED
+  translationDomain CDATA #IMPLIED
 >
 
 <!-- DEPRECATED: The old root element that must enclose all other tags in the document. -->
@@ -30,6 +31,7 @@
   name CDATA #REQUIRED
   version CDATA #REQUIRED
   library CDATA #IMPLIED
+  translationDomain CDATA #IMPLIED
 >
 
 <!-- Allows standard actions to be customized -->

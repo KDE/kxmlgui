@@ -937,11 +937,15 @@ void KToolBar::loadState(const QDomElement &element)
             }
         }
 
+        QByteArray domain = element.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
+        if (domain.isEmpty()) {
+            domain = KLocalizedString::applicationDomain();
+        }
         QString i18nText;
         if (!text.isEmpty() && !context.isEmpty()) {
-            i18nText = i18nc(context.constData(), text.constData());
+            i18nText = i18ndc(domain.constData(), context.constData(), text.constData());
         } else if (!text.isEmpty()) {
-            i18nText = i18n(text.constData());
+            i18nText = i18nd(domain.constData(), text.constData());
         }
 
         if (!i18nText.isEmpty()) {

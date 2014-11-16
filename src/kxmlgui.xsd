@@ -440,6 +440,7 @@
             <xsd:attribute name="name" type="identifier"/>
             <xsd:attribute name="version" type="xsd:positiveInteger" />
             <xsd:attribute name="library" type="identifier" use="optional" />
+            <xsd:attribute name="translationDomain" type="identifier" use="optional" />
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>
