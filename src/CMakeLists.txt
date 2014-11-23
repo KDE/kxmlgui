@@ -52,6 +52,7 @@ set(kxmlgui_SRCS
   kxmlguiwindow.cpp
   kundoactions.cpp
   kcheckaccelerators.cpp
+  debug.cpp
 )
 
 set(kxmlgui_UI
