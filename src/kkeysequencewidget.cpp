@@ -243,7 +243,7 @@ void KKeySequenceWidgetPrivate::wontStealShortcut(QAction *item, const QKeySeque
     QString msg(i18n("<qt>The '%1' key combination is already used by the <b>%2</b> action.<br>"
                      "Please select a different one.</qt>", seq.toString(QKeySequence::NativeText),
                      KLocalizedString::removeAcceleratorMarker(item->text())));
-    KMessageBox::sorry(q, msg);
+    KMessageBox::sorry(q, msg, title);
 }
 
 KKeySequenceWidget::KKeySequenceWidget(QWidget *parent)
