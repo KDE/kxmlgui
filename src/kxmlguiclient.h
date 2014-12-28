@@ -303,6 +303,8 @@ protected:
      *
      * Call this first in the inherited class constructor.
      * (At least before setXMLFile().)
+     * @param componentName the name of the directory where the XMLGUI files will be found
+     * @param componentDisplayName a user-visible name (e.g. for the toolbar editor)
      */
     virtual void setComponentName(const QString &componentName, const QString &componentDisplayName);
 

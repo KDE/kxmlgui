@@ -237,8 +237,9 @@ public:
      * \warning Don't call this method on a KActionCollection that contains
      * actions. This is not supported.
      *
-     * \param componentData the KComponentName which is to be associated with this action collection,
-     * or QString() to indicate the app name.
+     * \param componentData the name which is to be associated with this action collection,
+     * or QString() to indicate the app name. This is used to load/save settings into XML files.
+     * KXmlGuiClient::setComponentName takes care of calling this.
      */
     void setComponentName(const QString &componentName);
 
@@ -248,6 +249,7 @@ public:
     /**
      * Set the component display name associated with this action collection.
      * (e.g. for the toolbar editor)
+     * KXmlGuiClient::setComponentName takes care of calling this.
      */
     void setComponentDisplayName(const QString &displayName);
 
