@@ -15,7 +15,7 @@ target_link_libraries(ksendbugmail
    KF5::I18n
 )
 if(WIN32)
-    target_link_libraries(ksendbugmail Secur32) # GetUserNameEx()
+    target_link_libraries(ksendbugmail secur32) # GetUserNameEx()
 endif()
 
 install(TARGETS ksendbugmail DESTINATION ${KDE_INSTALL_LIBEXECDIR_KF5} )

@@ -4,7 +4,7 @@ if (HAVE_ATTICA)
    set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::Attica)
 endif ()
 if(WIN32)
-    set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} Secur32) # GetUserNameEx()
+    set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} secur32) # GetUserNameEx()
 endif()
 
 configure_file(config-xmlgui.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xmlgui.h )
