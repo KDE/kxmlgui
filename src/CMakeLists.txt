@@ -66,7 +66,7 @@ add_library(KF5XmlGui ${kxmlgui_SRCS})
 generate_export_header(KF5XmlGui BASE_NAME KXmlGui)
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
-target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KXmlGui>")
+target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui>")
 
 target_link_libraries(KF5XmlGui
 PUBLIC
@@ -124,16 +124,16 @@ install(FILES
   kgesturemap_p.h
   ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
   ${KXmlGui_HEADERS}
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KXmlGui COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui COMPONENT Devel
 )
 
-install( FILES ui_standards.rc  DESTINATION  ${CONFIG_INSTALL_DIR}/ui )
+install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
 
 install(FILES
  aboutkde.png
  thumb_frame.png
- DESTINATION  ${KF5_DATA_INSTALL_DIR}/kxmlgui/pics )
+ DESTINATION  ${KDE_INSTALL_DATADIR_KF5}/kxmlgui/pics )
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KXmlGui)
+ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
