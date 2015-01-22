@@ -39,6 +39,8 @@
 
 #include <assert.h>
 
+static const QString ATTR_NAME=QStringLiteral("name");
+
 class KXMLGUIClientPrivate
 {
 public:
@@ -137,7 +139,7 @@ KActionCollection *KXMLGUIClient::actionCollection() const
 
 QAction *KXMLGUIClient::action(const QDomElement &element) const
 {
-    return actionCollection()->action(element.attribute(QStringLiteral("name")));
+    return actionCollection()->action(element.attribute(ATTR_NAME));
 }
 
 QString KXMLGUIClient::componentName() const
@@ -329,7 +331,11 @@ void KXMLGUIClient::setDOMDocument(const QDomDocument &document, bool merge)
 }
 
 // if (equals(a,b)) is more readable than if (a.compare(b, Qt::CaseInsensitive)==0)
-static bool equalstr(const QString &a, const QString &b)
+static inline bool equalstr(const QString &a, const QString &b)
+{
+    return a.compare(b, Qt::CaseInsensitive) == 0;
+}
+static inline bool equalstr(const QString &a, const QLatin1String &b)
 {
     return a.compare(b, Qt::CaseInsensitive) == 0;
 }
@@ -339,13 +345,12 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
     const QLatin1String tagAction("Action");
     const QLatin1String tagMerge("Merge");
     const QLatin1String tagSeparator("Separator");
-    const QLatin1String attrName("name");
-    const QLatin1String attrAppend("append");
-    const QLatin1String attrWeakSeparator("weakSeparator");
     const QLatin1String tagMergeLocal("MergeLocal");
     const QLatin1String tagText("text");
-    const QLatin1String attrAlreadyVisited("alreadyVisited");
-    const QLatin1String attrNoMerge("noMerge");
+    const QLatin1String attrAppend("append");
+    const QString       attrWeakSeparator(QStringLiteral("weakSeparator"));
+    const QString       attrAlreadyVisited(QStringLiteral("alreadyVisited"));
+    const QString       attrNoMerge(QStringLiteral("noMerge"));
     const QLatin1String attrOne("1");
 
     // there is a possibility that we don't want to merge in the
@@ -382,7 +387,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
             // if there's an action tag in the global tree and the action is
             // not implemented, then we remove the element
             if (equalstr(tag, tagAction)) {
-                const QString name =  e.attribute(attrName);
+                const QString name =  e.attribute(ATTR_NAME);
                 if (!actionCollection->action(name) ||
                         !KAuthorized::authorizeKAction(name)) {
                     // remove this child as we aren't using it
@@ -430,7 +435,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
                     }
 
                     QString itAppend(newChild.attribute(attrAppend));
-                    QString elemName(e.attribute(attrName));
+                    QString elemName(e.attribute(ATTR_NAME));
 
                     if ((itAppend.isNull() && elemName.isEmpty()) ||
                             (itAppend == elemName)) {
@@ -529,14 +534,14 @@ bool KXMLGUIClientPrivate::isEmptyContainer(const QDomElement &base, KActionColl
 
         const QString tag = e.tagName();
 
-        if (equalstr(tag, QStringLiteral("Action"))) {
+        if (equalstr(tag, QLatin1String("Action"))) {
             // if base contains an implemented action, then we must not get
             // deleted (note that the actionCollection contains both,
             // "global" and "local" actions)
-            if (actionCollection->action(e.attribute(QStringLiteral("name")))) {
+            if (actionCollection->action(e.attribute(ATTR_NAME))) {
                 return false;
             }
-        } else if (equalstr(tag, QStringLiteral("Separator"))) {
+        } else if (equalstr(tag, QLatin1String("Separator"))) {
             // if we have a separator which has *not* the weak attribute
             // set, then it must be owned by the "local" tree in which case
             // we must not get deleted either
@@ -546,12 +551,12 @@ bool KXMLGUIClientPrivate::isEmptyContainer(const QDomElement &base, KActionColl
             }
         }
 
-        else if (equalstr(tag, QStringLiteral("merge"))) {
+        else if (equalstr(tag, QLatin1String("merge"))) {
             continue;
         }
 
         // a text tag is NOT enough to spare this container
-        else if (equalstr(tag, QStringLiteral("text"))) {
+        else if (equalstr(tag, QLatin1String("text"))) {
             continue;
         }
 
@@ -579,14 +584,14 @@ QDomElement KXMLGUIClientPrivate::findMatchingElement(const QDomElement &base, c
 
         const QString tag = e.tagName();
         // skip all action and merge tags as we will never use them
-        if (equalstr(tag, QStringLiteral("Action"))
-                || equalstr(tag, QStringLiteral("MergeLocal"))) {
+        if (equalstr(tag, QLatin1String("Action"))
+                || equalstr(tag, QLatin1String("MergeLocal"))) {
             continue;
         }
 
         // now see if our tags are equivalent
         if (equalstr(tag, base.tagName()) &&
-                e.attribute(QStringLiteral("name")) == base.attribute(QLatin1String("name"))) {
+                e.attribute(ATTR_NAME) == base.attribute(ATTR_NAME)) {
             return e;
         }
     }

@@ -50,8 +50,8 @@ class KCheckAcceleratorsInitializer : public QObject
 public Q_SLOTS:
     void initiateIfNeeded()
     {
-        KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Development"));
-        QString sKey = cg.readEntry(QStringLiteral("CheckAccelerators")).trimmed();
+        KConfigGroup cg(KSharedConfig::openConfig(), "Development");
+        QString sKey = cg.readEntry("CheckAccelerators").trimmed();
         int key = 0;
         if (!sKey.isEmpty()) {
             QList<QKeySequence> cuts = QKeySequence::listFromString(sKey);
@@ -59,8 +59,8 @@ public Q_SLOTS:
                 key = cuts.first()[0];
             }
         }
-        const bool autoCheck = cg.readEntry(QStringLiteral("AutoCheckAccelerators"), true);
-        const bool copyWidgetText = cg.readEntry(QStringLiteral("CopyWidgetText"), false);
+        const bool autoCheck = cg.readEntry("AutoCheckAccelerators", true);
+        const bool copyWidgetText = cg.readEntry("CopyWidgetText", false);
         if (!copyWidgetText && key == 0 && !autoCheck) {
             return;
         }
@@ -90,9 +90,9 @@ KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck
 {
     setObjectName(QStringLiteral("kapp_accel_filter"));
 
-    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Development"));
-    alwaysShow = cg.readEntry(QStringLiteral("AlwaysShowCheckAccelerators"), false);
-    copyWidgetTextCommand = cg.readEntry(QStringLiteral("CopyWidgetTextCommand"), QString());
+    KConfigGroup cg(KSharedConfig::openConfig(), "Development");
+    alwaysShow = cg.readEntry("AlwaysShowCheckAccelerators", false);
+    copyWidgetTextCommand = cg.readEntry("CopyWidgetTextCommand", QString());
 
     parent->installEventFilter(this);
     connect(&autoCheckTimer, SIGNAL(timeout()), SLOT(autoCheckSlot()));

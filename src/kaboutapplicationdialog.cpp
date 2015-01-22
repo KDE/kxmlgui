@@ -170,7 +170,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
             bugsLabel->setContentsMargins(4, 2, 0, 4);
             bugsLabel->setOpenExternalLinks(true);
             if (!aboutData.customAuthorTextEnabled()) {
-                if (aboutData.bugAddress().isEmpty() || aboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
+                if (aboutData.bugAddress().isEmpty() || aboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
                     bugsLabel->setText(i18n("Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report bugs.\n"));
                 } else {
                     if ((aboutData.authors().count() == 1) &&

@@ -60,6 +60,8 @@
 
 //#include <ctype.h>
 
+static const char WINDOW_PROPERTIES[]="WindowProperties";
+
 static QMenuBar *internalMenuBar(KMainWindow *mw)
 {
     return mw->findChild<QMenuBar *>(QString(), Qt::FindDirectChildrenOnly);
@@ -378,8 +380,8 @@ bool KMainWindow::canBeRestored(int number)
         return false;
     }
 
-    KConfigGroup group(config, QStringLiteral("Number"));
-    const int n = group.readEntry(QStringLiteral("NumberOfWindows"), 1);
+    KConfigGroup group(config, "Number");
+    const int n = group.readEntry("NumberOfWindows", 1);
     return number >= 1 && number <= n;
 }
 
@@ -392,15 +394,12 @@ const QString KMainWindow::classNameOfToplevel(int number)
     if (!config) {
         return QString();
     }
-    QString s;
-    s.setNum(number);
-    s.prepend(QStringLiteral("WindowProperties"));
 
-    KConfigGroup group(config, s);
-    if (!group.hasKey(QStringLiteral("ClassName"))) {
+    KConfigGroup group(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(number)).constData());
+    if (!group.hasKey("ClassName")) {
         return QString();
     } else {
-        return group.readEntry(QStringLiteral("ClassName"));
+        return group.readEntry("ClassName");
     }
 }
 
@@ -487,10 +486,7 @@ void KMainWindow::savePropertiesInternal(KConfig *config, int number)
     const bool oldASWS = d->autoSaveWindowSize;
     d->autoSaveWindowSize = true; // make saveMainWindowSettings save the window size
 
-    QString s;
-    s.setNum(number);
-    s.prepend(QStringLiteral("WindowProperties"));
-    KConfigGroup cg(config, s);
+    KConfigGroup cg(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(number)).constData());
 
     // store objectName, className, Width and Height  for later restoring
     // (Only useful for session management)
@@ -499,8 +495,7 @@ void KMainWindow::savePropertiesInternal(KConfig *config, int number)
 
     saveMainWindowSettings(cg); // Menubar, statusbar and Toolbar settings.
 
-    s.setNum(number);
-    cg = KConfigGroup(config, s);
+    cg = KConfigGroup(config, QByteArray::number(number).constData());
     saveProperties(cg);
 
     d->autoSaveWindowSize = oldASWS;
@@ -532,7 +527,6 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
 
     QMenuBar *mb = internalMenuBar(this);
     if (mb) {
-        const QString MenuBar = QStringLiteral("MenuBar");
         if (!cg.hasDefault("MenuBar") && !mb->isHidden()) {
             cg.revertToDefault("MenuBar");
         } else {
@@ -551,12 +545,12 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
 
     int n = 1; // Toolbar counter. toolbars are counted from 1,
     foreach (KToolBar *toolbar, toolBars()) {
-        QString group(QStringLiteral("Toolbar"));
+        QByteArray groupName("Toolbar");
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
-        group += (toolbar->objectName().isEmpty() ? QString::number(n) : QLatin1Char(' ') + toolbar->objectName());
+        groupName += (toolbar->objectName().isEmpty() ? QByteArray::number(n) : QByteArray(" ").append(toolbar->objectName().toUtf8()));
 
-        KConfigGroup toolbarGroup(&cg, group);
+        KConfigGroup toolbarGroup(&cg, groupName.constData());
         toolbar->saveSettings(toolbarGroup);
         n++;
     }
@@ -574,11 +568,7 @@ bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
     }
 
     // in order they are in toolbar list
-    QString s;
-    s.setNum(number);
-    s.prepend(QStringLiteral("WindowProperties"));
-
-    KConfigGroup cg(config, s);
+    KConfigGroup cg(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(number)).constData());
 
     // restore the object name (window role)
     if (cg.hasKey("ObjectName")) {
@@ -589,8 +579,7 @@ bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
     // if necessary. Do it before the call to applyMainWindowSettings.
     applyMainWindowSettings(cg); // Menubar, statusbar and toolbar settings.
 
-    s.setNum(number);
-    KConfigGroup grp(config, s);
+    KConfigGroup grp(config, QByteArray::number(number).constData());
     readProperties(grp);
 
     d->letDirtySettings = oldLetDirtySettings;
@@ -621,40 +610,28 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     QStatusBar *sb = internalStatusBar(this);
     if (sb) {
         QString entry = cg.readEntry("StatusBar", "Enabled");
-        if (entry == QStringLiteral("Disabled")) {
-            sb->hide();
-        } else {
-            sb->show();
-        }
+        sb->setVisible( entry != QLatin1String("Disabled") );
     }
 
     QMenuBar *mb = internalMenuBar(this);
     if (mb) {
         QString entry = cg.readEntry("MenuBar", "Enabled");
-        if (entry == QStringLiteral("Disabled")) {
-            mb->hide();
-        } else {
-            mb->show();
-        }
+        mb->setVisible( entry != QLatin1String("Disabled") );
     }
 
     if (!autoSaveSettings() || cg.name() == autoSaveGroup()) {   // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
         QString entry = cg.readEntry("ToolBarsMovable", "Disabled");
-        if (entry == QStringLiteral("Disabled")) {
-            KToolBar::setToolBarsLocked(true);
-        } else {
-            KToolBar::setToolBarsLocked(false);
-        }
+        KToolBar::setToolBarsLocked(entry == QLatin1String("Disabled"));
     }
 
     int n = 1; // Toolbar counter. toolbars are counted from 1,
     foreach (KToolBar *toolbar, toolBars()) {
-        QString group(QStringLiteral("Toolbar"));
+        QByteArray groupName("Toolbar");
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
-        group += (toolbar->objectName().isEmpty() ? QString::number(n) : QLatin1Char(' ') + toolbar->objectName());
+        groupName += (toolbar->objectName().isEmpty() ? QByteArray::number(n) : QByteArray(" ").append(toolbar->objectName().toUtf8()));
 
-        KConfigGroup toolbarGroup(&cg, group);
+        KConfigGroup toolbarGroup(&cg, groupName.constData());
         toolbar->applySettings(toolbarGroup);
         n++;
     }

@@ -523,7 +523,7 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
 
         // If the action name starts with unnamed- spit out a warning. That name
         // will change at will and will break loading writing
-        if (actionName.startsWith(QStringLiteral("unnamed-"))) {
+        if (actionName.startsWith(QLatin1String("unnamed-"))) {
             qCritical() << "Skipped exporting Shortcut for action without name " << action->text() << "!";
             continue;
         }
@@ -591,7 +591,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
 
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
-        if (actionName.startsWith(QStringLiteral("unnamed-"))) {
+        if (actionName.startsWith(QLatin1String("unnamed-"))) {
             qCritical() << "Skipped writing shortcut for action " << actionName << "(" << action->text() << ")!";
             continue;
         }
@@ -657,7 +657,7 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
 
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
-        if (actionName.startsWith(QStringLiteral("unnamed-"))) {
+        if (actionName.startsWith(QLatin1String("unnamed-"))) {
             qCritical() << "Skipped saving Shortcut for action without name " << action->text() << "!";
             continue;
         }

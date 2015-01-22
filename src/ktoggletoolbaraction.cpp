@@ -64,11 +64,7 @@ KToggleToolBarAction::KToggleToolBarAction(KToolBar *toolBar, const QString &tex
     d->toolBar->installEventFilter(this);
 
     d->beingToggled = true;
-
-    if (d->toolBar->isVisible()) {
-        setChecked(true);
-    }
-
+    setChecked(d->toolBar->isVisible());
     d->beingToggled = false;
 }
 
@@ -118,13 +114,7 @@ void KToggleToolBarAction::slotToggled(bool checked)
 {
     if (!d->beingToggled && d->toolBar && checked != d->toolBar->isVisible()) {
         d->beingToggled = true;
-
-        if (checked) {
-            d->toolBar->show();
-        } else {
-            d->toolBar->hide();
-        }
-
+        d->toolBar->setVisible(checked);
         d->beingToggled = false;
 
         QMainWindow *mw = d->toolBar->mainWindow();
