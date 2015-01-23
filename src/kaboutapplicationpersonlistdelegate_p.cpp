@@ -32,11 +32,13 @@
 namespace KDEPrivate
 {
 
-static const int AVATAR_HEIGHT = 50;
-static const int AVATAR_WIDTH = 50;
-static const int MAIN_LINKS_HEIGHT = 32;
-static const int SOCIAL_LINKS_HEIGHT = 26;
-static const int MAX_SOCIAL_LINKS = 9;
+enum {
+    AVATAR_HEIGHT = 50,
+    AVATAR_WIDTH = 50,
+    MAIN_LINKS_HEIGHT = 32,
+    SOCIAL_LINKS_HEIGHT = 26,
+    MAX_SOCIAL_LINKS = 9
+};
 
 KAboutApplicationPersonListDelegate::KAboutApplicationPersonListDelegate(
     QAbstractItemView *itemView,
