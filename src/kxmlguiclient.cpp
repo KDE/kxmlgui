@@ -39,8 +39,6 @@
 
 #include <assert.h>
 
-static const QString ATTR_NAME=QStringLiteral("name");
-
 class KXMLGUIClientPrivate
 {
 public:
@@ -139,7 +137,7 @@ KActionCollection *KXMLGUIClient::actionCollection() const
 
 QAction *KXMLGUIClient::action(const QDomElement &element) const
 {
-    return actionCollection()->action(element.attribute(ATTR_NAME));
+    return actionCollection()->action(element.attribute(QStringLiteral("name")));
 }
 
 QString KXMLGUIClient::componentName() const
@@ -348,6 +346,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
     const QLatin1String tagMergeLocal("MergeLocal");
     const QLatin1String tagText("text");
     const QLatin1String attrAppend("append");
+    const QString       attrName(QStringLiteral("name"));
     const QString       attrWeakSeparator(QStringLiteral("weakSeparator"));
     const QString       attrAlreadyVisited(QStringLiteral("alreadyVisited"));
     const QString       attrNoMerge(QStringLiteral("noMerge"));
@@ -387,7 +386,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
             // if there's an action tag in the global tree and the action is
             // not implemented, then we remove the element
             if (equalstr(tag, tagAction)) {
-                const QString name =  e.attribute(ATTR_NAME);
+                const QString name =  e.attribute(attrName);
                 if (!actionCollection->action(name) ||
                         !KAuthorized::authorizeKAction(name)) {
                     // remove this child as we aren't using it
@@ -435,7 +434,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
                     }
 
                     QString itAppend(newChild.attribute(attrAppend));
-                    QString elemName(e.attribute(ATTR_NAME));
+                    QString elemName(e.attribute(attrName));
 
                     if ((itAppend.isNull() && elemName.isEmpty()) ||
                             (itAppend == elemName)) {
@@ -538,7 +537,7 @@ bool KXMLGUIClientPrivate::isEmptyContainer(const QDomElement &base, KActionColl
             // if base contains an implemented action, then we must not get
             // deleted (note that the actionCollection contains both,
             // "global" and "local" actions)
-            if (actionCollection->action(e.attribute(ATTR_NAME))) {
+            if (actionCollection->action(e.attribute(QStringLiteral("name")))) {
                 return false;
             }
         } else if (equalstr(tag, QLatin1String("Separator"))) {
@@ -591,7 +590,7 @@ QDomElement KXMLGUIClientPrivate::findMatchingElement(const QDomElement &base, c
 
         // now see if our tags are equivalent
         if (equalstr(tag, base.tagName()) &&
-                e.attribute(ATTR_NAME) == base.attribute(ATTR_NAME)) {
+                e.attribute(QStringLiteral("name")) == base.attribute(QStringLiteral("name"))) {
             return e;
         }
     }
