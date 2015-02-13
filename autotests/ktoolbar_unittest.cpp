@@ -74,7 +74,7 @@ Q_SIGNALS:
     void signalAppearanceChanged();
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
 private:
     void changeGlobalIconSizeSetting(int, int);

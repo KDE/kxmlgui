@@ -155,8 +155,8 @@ Q_SIGNALS:
     QT_MOC_COMPAT void newToolbarConfig();
 
 protected:
-    virtual void showEvent(QShowEvent *event);
-    virtual void hideEvent(QHideEvent *event);
+    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+    void hideEvent(QHideEvent *event) Q_DECL_OVERRIDE;
 
 private:
     friend class KEditToolBarPrivate;

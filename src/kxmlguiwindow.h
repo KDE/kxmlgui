@@ -284,7 +284,7 @@ public:
     void setupToolbarMenuActions();
 
     // KDE5 TODO: change it to "using KXMLGUIBuilder::finalizeGUI;"
-    virtual void finalizeGUI(KXMLGUIClient *client);
+    void finalizeGUI(KXMLGUIClient *client) Q_DECL_OVERRIDE;
 
     /**
      * @internal
@@ -330,7 +330,7 @@ protected:
      * if needed, once all constructor code for the main window has run.
      * Also reimplemented to catch when a QDockWidget is added or removed.
      */
-    virtual bool event(QEvent *event);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     /**

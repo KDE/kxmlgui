@@ -82,10 +82,10 @@ public:
     /**
      * Reimplemented from @see QObject.
      */
-    virtual bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    virtual void slotToggled(bool checked);
+    void slotToggled(bool checked) Q_DECL_OVERRIDE;
 
 private:
     class Private;

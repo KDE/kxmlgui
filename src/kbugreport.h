@@ -70,7 +70,7 @@ public:
     /**
       * OK has been clicked
      */
-    virtual void accept();
+    void accept() Q_DECL_OVERRIDE;
 
 private:
     /**
@@ -107,7 +107,7 @@ protected:
      */
     bool sendBugReport();
 
-    virtual void closeEvent(QCloseEvent *e);
+    void closeEvent(QCloseEvent *e) Q_DECL_OVERRIDE;
 
 private:
     friend class KBugReportPrivate;

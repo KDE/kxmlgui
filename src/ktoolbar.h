@@ -205,7 +205,7 @@ public:
     /**
      * Reimplemented to support context menu activation on disabled tool buttons.
      */
-    bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Returns whether the toolbars are currently editable (drag & drop of actions).
@@ -240,17 +240,17 @@ protected Q_SLOTS:
     virtual void slotMovableChanged(bool movable);
 
 protected:
-    virtual void contextMenuEvent(QContextMenuEvent *);
-    virtual void actionEvent(QActionEvent *);
+    void contextMenuEvent(QContextMenuEvent *) Q_DECL_OVERRIDE;
+    void actionEvent(QActionEvent *) Q_DECL_OVERRIDE;
 
     // Draggable toolbar configuration
-    virtual void dragEnterEvent(QDragEnterEvent *);
-    virtual void dragMoveEvent(QDragMoveEvent *);
-    virtual void dragLeaveEvent(QDragLeaveEvent *);
-    virtual void dropEvent(QDropEvent *);
-    virtual void mousePressEvent(QMouseEvent *);
-    virtual void mouseMoveEvent(QMouseEvent *);
-    virtual void mouseReleaseEvent(QMouseEvent *);
+    void dragEnterEvent(QDragEnterEvent *) Q_DECL_OVERRIDE;
+    void dragMoveEvent(QDragMoveEvent *) Q_DECL_OVERRIDE;
+    void dragLeaveEvent(QDragLeaveEvent *) Q_DECL_OVERRIDE;
+    void dropEvent(QDropEvent *) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 
 private:
     class Private;

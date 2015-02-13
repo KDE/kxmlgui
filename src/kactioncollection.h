@@ -291,7 +291,7 @@ Q_SIGNALS:
 
 protected:
     /// Overridden to perform connections when someone wants to know whether an action was highlighted or triggered
-    virtual void connectNotify(const QMetaMethod &signal);
+    void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     virtual void slotActionTriggered();

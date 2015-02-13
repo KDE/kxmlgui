@@ -107,7 +107,7 @@ public:
     bool configure(bool saveSettings = true);
 
     /** @see QWidget::sizeHint() */
-    virtual QSize sizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
     /**
      * Pops up a modal dialog for configuring key settings. The new

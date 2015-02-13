@@ -85,7 +85,7 @@ class DockResizeListener : public QObject
 public:
     DockResizeListener(KMainWindow *win);
     virtual ~DockResizeListener();
-    virtual bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
 private:
     KMainWindow *m_win;

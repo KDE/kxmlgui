@@ -44,7 +44,7 @@ public:
     KMenuMenuHandler(KXMLGUIBuilder *b);
     ~KMenuMenuHandler() {}
     void insertMenu(QMenu *menu);
-    bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void slotSetShortcut();

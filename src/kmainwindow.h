@@ -461,7 +461,7 @@ protected:
      * if needed, once all constructor code for the main window has run.
      * Also reimplemented to catch when a QDockWidget is added or removed.
      */
-    virtual bool event(QEvent *event);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Reimplemented to autosave settings and call queryClose().
@@ -470,7 +470,7 @@ protected:
      * If you do it anyway, ensure to call the base implementation to keep
      * the feature of auto-saving window settings working.
      */
-    virtual void closeEvent(QCloseEvent *);
+    void closeEvent(QCloseEvent *) Q_DECL_OVERRIDE;
 
     /**
        Called before the window is closed, either by the user or indirectly by

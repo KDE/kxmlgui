@@ -35,15 +35,15 @@ public:
 
     ~KAboutApplicationPersonListDelegate() {}
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    QList< QWidget *> createItemWidgets(const QModelIndex &index) const;
+    QList< QWidget *> createItemWidgets(const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     void updateItemWidgets(const QList<QWidget *> widgets,
                            const QStyleOptionViewItem &option,
-                           const QPersistentModelIndex &index) const;
+                           const QPersistentModelIndex &index) const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void launchUrl(QAction *action) const;

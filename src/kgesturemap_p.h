@@ -37,7 +37,7 @@ class KXMLGUI_EXPORT KGestureMap : public QObject
 public:
     static KGestureMap *self();
 
-    virtual bool eventFilter(QObject *obj, QEvent *e);
+    bool eventFilter(QObject *obj, QEvent *e) Q_DECL_OVERRIDE;
     void setShapeGesture(QAction *kact, const KShapeGesture &gesture);
     void setRockerGesture(QAction *kact, const KRockerGesture &gesture);
     void setDefaultShapeGesture(QAction *kact, const KShapeGesture &gesture);

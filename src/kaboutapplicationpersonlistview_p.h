@@ -29,7 +29,7 @@ public:
     KAboutApplicationPersonListView(QWidget *parent = 0);
 
 protected:
-    void wheelEvent(QWheelEvent *e);
+    void wheelEvent(QWheelEvent *e) Q_DECL_OVERRIDE;
 
 };
 
