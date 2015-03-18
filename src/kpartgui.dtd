@@ -134,6 +134,7 @@
 <!-- Used to insert titles, only for popup menus -->
 <!ELEMENT title (#PCDATA)>
 <!ATTLIST title
+  translationDomain CDATA #IMPLIED
   icon CDATA #IMPLIED
 >
 
@@ -141,6 +142,7 @@
   the menu's shortcut key -->
 <!ELEMENT text (#PCDATA)>
 <!ATTLIST text
+  translationDomain CDATA #IMPLIED
   context CDATA #IMPLIED
 >
 

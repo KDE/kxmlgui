@@ -125,7 +125,10 @@
                     
                 </xsd:documentation>
             </xsd:annotation>
-            <xsd:extension base="xsd:string"/>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="translationDomain" type="identifier" use="optional" />
+                <xsd:attribute name="context" type="xsd:string" use="optional" />
+            </xsd:extension>
         </xsd:simpleContent>
         
         

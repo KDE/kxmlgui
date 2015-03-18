@@ -922,24 +922,29 @@ void KToolBar::loadState(const QDomElement &element)
 
     {
         QDomNode textNode = element.namedItem(QStringLiteral("text"));
+        QByteArray domain;
         QByteArray text;
         QByteArray context;
         if (textNode.isElement()) {
             QDomElement textElement = textNode.toElement();
+            domain = textElement.attribute(QStringLiteral("translationDomain")).toUtf8();
             text = textElement.text().toUtf8();
             context = textElement.attribute(QStringLiteral("context")).toUtf8();
         } else {
             textNode = element.namedItem(QStringLiteral("Text"));
             if (textNode.isElement()) {
                 QDomElement textElement = textNode.toElement();
+                domain = textElement.attribute(QStringLiteral("translationDomain")).toUtf8();
                 text = textElement.text().toUtf8();
                 context = textElement.attribute(QStringLiteral("context")).toUtf8();
             }
         }
 
-        QByteArray domain = element.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
         if (domain.isEmpty()) {
-            domain = KLocalizedString::applicationDomain();
+            domain = element.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
+            if (domain.isEmpty()) {
+                domain = KLocalizedString::applicationDomain();
+            }
         }
         QString i18nText;
         if (!text.isEmpty() && !context.isEmpty()) {

@@ -36,6 +36,7 @@
 #include <QDebug>
 
 #include <kauthorized.h>
+#include <klocalizedstring.h>
 
 #include <assert.h>
 
@@ -48,6 +49,9 @@ public:
           m_parent(0L),
           m_builder(0L)
     {
+        m_textTagNames.append(QLatin1String("text"));
+        m_textTagNames.append(QLatin1String("Text"));
+        m_textTagNames.append(QLatin1String("title"));
     }
     ~KXMLGUIClientPrivate()
     {
@@ -73,6 +77,7 @@ public:
     KXMLGUIBuilder *m_builder;
     QString m_xmlFile;
     QString m_localXMLFile;
+    QStringList m_textTagNames;
 
     // Actions to enable/disable on a state change
     QMap<QString, KXMLGUIClient::StateChange> m_actionsStateMap;
@@ -280,6 +285,36 @@ void KXMLGUIClient::replaceXMLFile(const QString &xmlfile, const QString &localx
     setXMLFile(xmlfile, merge);
 }
 
+// The top document element may have translation domain attribute set,
+// or the translation domain may be implicitly the application domain.
+// This domain must be used to fetch translations for all text elements
+// in the document that do not have their own domain attribute.
+// In order to preserve this semantics through document mergings,
+// the top or application domain must be propagated to all text elements
+// lacking their own domain attribute.
+static void propagateTranslationDomain(QDomDocument &doc, const QStringList tagNames)
+{
+    const QLatin1String attrDomain("translationDomain");
+    QDomElement base = doc.documentElement();
+    QString domain = base.attribute(attrDomain);
+    if (domain.isEmpty()) {
+        domain = QString::fromUtf8(KLocalizedString::applicationDomain());
+        if (domain.isEmpty()) {
+            return;
+        }
+    }
+    foreach (const QString &tagName, tagNames) {
+        QDomNodeList textNodes = base.elementsByTagName(tagName);
+        for (int i = 0; i < textNodes.length(); ++i) {
+            QDomElement e = textNodes.item(i).toElement();
+            QString localDomain = e.attribute(attrDomain);
+            if (localDomain.isEmpty()) {
+                 e.setAttribute(attrDomain, domain);
+            }
+        }
+    }
+}
+
 void KXMLGUIClient::setXML(const QString &document, bool merge)
 {
     QDomDocument doc;
@@ -289,6 +324,7 @@ void KXMLGUIClient::setXML(const QString &document, bool merge)
     // in which case you only get ui_standards.rc layout.
     bool result = document.isEmpty() || doc.setContent(document, &errorMsg, &errorLine, &errorColumn);
     if (result) {
+        propagateTranslationDomain(doc, d->m_textTagNames);
         setDOMDocument(doc, merge);
     } else {
 #ifdef NDEBUG

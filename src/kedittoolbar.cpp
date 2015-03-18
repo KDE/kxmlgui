@@ -174,9 +174,12 @@ QString XmlData::toolBarText(const QDomElement &it) const
     if (txt.isEmpty()) {
         name = it.attribute(attrName);
     } else {
-        QByteArray domain = it.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
+        QByteArray domain = it.namedItem(QStringLiteral("text")).toElement().attribute(QStringLiteral("translationDomain")).toUtf8();
         if (domain.isEmpty()) {
-            domain = KLocalizedString::applicationDomain();
+            domain = it.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
+            if (domain.isEmpty()) {
+                domain = KLocalizedString::applicationDomain();
+            }
         }
         name = i18nd(domain.constData(), txt.constData());
     }

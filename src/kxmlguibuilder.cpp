@@ -187,9 +187,12 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         if (text.isEmpty()) { // still no luck
             i18nText = i18n("No text");
         } else {
-            QByteArray domain = element.ownerDocument().documentElement().attribute(d->attrDomain).toUtf8();
+            QByteArray domain = textElem.attribute(d->attrDomain).toUtf8();
             if (domain.isEmpty()) {
-                domain = KLocalizedString::applicationDomain();
+                domain = element.ownerDocument().documentElement().attribute(d->attrDomain).toUtf8();
+                if (domain.isEmpty()) {
+                    domain = KLocalizedString::applicationDomain();
+                }
             }
             if (context.isEmpty()) {
                 i18nText = i18nd(domain.constData(), text.toUtf8().constData());
@@ -348,9 +351,12 @@ QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const Q
             if (text.isEmpty()) {
                 i18nText = i18n("No text");
             } else {
-                QByteArray domain = element.ownerDocument().documentElement().attribute(d->attrDomain).toUtf8();
+                QByteArray domain = element.attribute(d->attrDomain).toUtf8();
                 if (domain.isEmpty()) {
-                    domain = KLocalizedString::applicationDomain();
+                    domain = element.ownerDocument().documentElement().attribute(d->attrDomain).toUtf8();
+                    if (domain.isEmpty()) {
+                        domain = KLocalizedString::applicationDomain();
+                    }
                 }
                 i18nText = i18nd(domain.constData(), qPrintable(text));
             }
