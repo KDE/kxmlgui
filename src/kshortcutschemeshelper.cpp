@@ -25,11 +25,13 @@
 #include <QtXml/QDomDocument>
 #include <QStandardPaths>
 
+#include <QDir>
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
 
 #include "kactioncollection.h"
 #include "kxmlguiclient.h"
+#include "debug.h"
 
 bool KShortcutSchemesHelper::exportActionCollection(KActionCollection *collection,
         const QString &schemeName, const QString &dir)
@@ -41,17 +43,17 @@ bool KShortcutSchemesHelper::exportActionCollection(KActionCollection *collectio
 
     QString schemeFileName;
     if (!dir.isEmpty()) {
-        schemeFileName = dir + QStringLiteral("shortcuts/") + client->componentName() + schemeName;
+        const QString dirPath = dir + QStringLiteral("shortcuts/");
+        QDir().mkpath(dirPath);
+        schemeFileName = dirPath + client->componentName() + schemeName;
     } else {
         schemeFileName = shortcutSchemeFileName(client, schemeName);
     }
-
     QFile schemeFile(schemeFileName);
     if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
-        //qDebug() << "COULD NOT WRITE" << schemeFileName;
+        qCDebug(DEBUG_KXMLGUI) << "COULD NOT WRITE" << schemeFileName;
         return false;
     }
-
     QDomDocument doc;
     QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
     docElem.setAttribute(QStringLiteral("version"), QLatin1String("1"));
