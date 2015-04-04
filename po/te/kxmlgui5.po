@@ -1,0 +1,1263 @@
+# translation of kdelibs4.po to Telugu
+#
+#
+# Purushottam Boyanapalli <boyanapalli@gmail.com>, 2005.
+# విజయ్ కిరణ్ కముజు <infyquest@gmail.com>, 2007.
+# pavithran <pavithran.s@gmail.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2008, 2009.
+# sreekalyanbapatla <sreekalyan3@gmail.com>, 2013.
+# GVS.Giri <gvs.giri@swecha.net>, 2013.
+# Bhuvan Krishna <bhuvan@swecha.org>,2013.
+# Naveen Kandimalla <naveen@swecha.net>,2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-03-19 08:36+0000\n"
+"PO-Revision-Date: 2013-11-04 23:55+0630\n"
+"Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
+"Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
+"4;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "విజయ్ కిరణ్ కముజు,కృష్ణబాబు కె, భువన్ కృష్ణ, జి వి యస్ గిరి, శ్రీ కళ్యన్న్, ననిన్"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"infyquest@gmail.com,kkrothap@redhat.com,bhuvan@swecha.org,gvs.giri@swecha."
+"net,sreekalyan3@gmail.com,naveen@swecha.net"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "%1 గురించి"
+
+#: kaboutapplicationdialog.cpp:99
+#, kde-format
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br /><b>వివరణం %2</b><br />&nbsp;</html>"
+
+#: kaboutapplicationdialog.cpp:103
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">%1</font><br/><b>version %2</b><br/>Using KDE %3</"
+#| "html>"
+msgctxt ""
+"Program name, version and KDE platform version; do not translate "
+"'Development Platform'"
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
+"Frameworks %3</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br/><b>వివరణం %2</b><br/>కెడిఈ %3వాడుతు</html>"
+
+#: kaboutapplicationdialog.cpp:142
+#, kde-format
+msgid "License: %1"
+msgstr "లెసెన్సు: %1"
+
+#: kaboutapplicationdialog.cpp:154
+msgid "&About"
+msgstr "(&A) గురించి"
+
+#: kaboutapplicationdialog.cpp:174
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"తప్పులను తెలియచేయుటకు <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"నివాడండి.\n"
+
+#: kaboutapplicationdialog.cpp:178 kaboutapplicationdialog.cpp:182
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "తప్పులను <a href=\"mailto:%1\">%2</a>కు తెలియచేయండి\n"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthor"
+msgstr "(&u) మూలకర్త"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthors"
+msgstr "(&u) మూలకర్తలు"
+
+#: kaboutapplicationdialog.cpp:236
+msgid "&Thanks To"
+msgstr "(&T) ధన్యవాదములు"
+
+#: kaboutapplicationdialog.cpp:275
+msgid "T&ranslation"
+msgstr "(&r) అనువాదము"
+
+#: kaboutapplicationdialog.cpp:307
+msgid "License Agreement"
+msgstr "లైసెన్సు ఒప్పందం"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "ఎలక్ట్రానిక్ఉత్తరం మిగిలిన దాతలు:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+msgid "Visit contributor's homepage"
+msgstr "కంట్రిభ్యూటర్స్ హొమ్ పుటను వీక్షించుట"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"ఇ-తపాలా దాత\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr "దాత హొమ్ పేజ్ వీక్షించుట%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"కంట్రిభ్యూటర్స్ స్ధూలవివరం ను వీక్షించుటకు %1\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"కంట్రిభ్యూటర్స్  పుటను వీక్షించుటకు \n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"కంట్రిభ్యూటర్స్ బ్లాగ్ వీక్షించుటకు\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1 "
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1,%2"
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "ఇతర"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "బ్లా"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "హొమ్ పు"
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "కెడిఈ గురించి"
+
+#: kaboutkdedialog_p.cpp:46
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid ""
+"<html><font size=\"5\">KDE - Be Free!</font><br /><b>Frameworks Version %1</"
+"b></html>"
+msgstr ""
+"<html><font size=\"5\">KDE రంగస్థల పరియావరణ స్వేచ్ఛగ</font><br /><b>వివరణ %1</b></"
+"html>"
+
+#: kaboutkdedialog_p.cpp:56
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"%1\">Free Software</a> development. This community has created hundreds "
+#| "of Free Software applications as part of the KDE Development Platform and "
+#| "KDE Software Distribution.<br /><br />KDE is a cooperative enterprise in "
+#| "which no single entity controls the efforts or products of KDE to the "
+#| "exclusion of others. Everyone is welcome to join and contribute to KDE, "
+#| "including you.<br /><br />Visit <a href=\"%2\">%2</a> for more "
+#| "information about the KDE community and the software we produce.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html><b>కెడిఈ రంగస్థల పర్యావరణం</b> కెడిఈ జట్టుచే వ్రాయబడింది మరయు సంరక్షించబదుతుంది, ప్రపంచ "
+"వ్యాప్తంగా సాఫ్ట్ వేర్ ఇంజినీర్లు <a href=\"%1\">స్వతంత్ర సాఫ్ట్వేర్</a> వికాసానికి నిబద్దులైవున్నరు."
+"<br /><br />ఏ ఒక్క గుంపు, కంపెని లేక సంస్థ కెడిఈ మూల కొడ్ ను నియంత్రించటంలేదు.అందరూ కెడిఈ "
+"కు సహాయము పడవచ్చు.<br /><br />కెడిఈ ప్రాజెక్ట్ గురించి మరింత సమాచారం కొరకు <a href=\"%2\">"
+"%2</a> ను సంప్రదించండి.</html> "
+
+#: kaboutkdedialog_p.cpp:75
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>ఈ సాప్ట్వేర్ ఎల్లప్పుడు అభివృద్ది చేయుటకు kde సిబ్బంది సిద్దంగా ఉంటుంది. అందుకు మీరు సహాయ "
+"పడగలరు మీరు ఉపయోగించు సమయంలో పని చేయని యెడల తెలియజేయగలరు<br/><br/> kde bug tracking "
+"వ్యవస్థను కలిగి ఉన్నది. చూడండి<a href=\"%1\">%1</a>\"Help\" menu నుండి \"Report "
+"Bug...\"ను ఉపయోగించండి.<br/><br/> మీరు ఈ సాప్ట్వేర్ ను అభివృధ్ధి పరుచుటకు సలహాలు కలిగి "
+"ఉన్నట్లైతే bug tracking system నందు ఖాతా తెరుచుటకు ఆహ్వానిస్తున్నాము.</html>"
+
+#: kaboutkdedialog_p.cpp:93
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:115
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:134
+msgctxt "About KDE"
+msgid "&About"
+msgstr "(&A) గురించి"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Report Bugs or Wishes"
+msgstr "(&R) తప్పులు లేక కోరికలను తెలియచేయండి"
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Join KDE"
+msgstr "(&J) కెడిఈ లో చేరండి "
+
+#: kaboutkdedialog_p.cpp:137
+msgid "&Support KDE"
+msgstr "(&S) కెడిఈ కి సహాయంచెయండి"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"కీ క్రమము '%1' యెటూకాకుండా వుంది. అనిశ్చితిని పరిష్కరించుటకు\n"
+"'అమరికలు' మెనూనుండి 'శీఘ్రమార్గములను ఆకృతీకరించు' ను\n"
+"వుపయోగించుము. ఏ చర్య ప్రయోగించబడదు."
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr "ఎటూకాని శీఘ్రమార్గము గుర్తించబడింది"
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "తప్పుల నివెదిక అందించు"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr "మీ ఈమెయిల్ చిరునామా. తప్పైన, 'ఈ-మెయిల్ ను అమర్చు' బటన్ ను వాడి మార్చండి"
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "ఇట్లు: "
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "ఈ-మెయిల్ ను అమర్చు..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr "ఈ తప్పుల నివేదిక ఈ ఈమెయిల్ చిరునామాకు పంపబడును."
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "వద్దకు :"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "(&S) పంపు"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "తప్పుల నివేదిక పంపు."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "ఈ తప్పుల నివేదిక %1 కు పంపు."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr "మీరు సమర్పించాలి అన్న దరకాస్థు "
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "అప్లికేషన్:"
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"ఈ వర్షన్ యొక్క దరకాస్ధు - దయచేసి నిర్థారించుకోండి ఏ కొత్త వర్షన్ కొడ అందుబాటులో లేదు ఒక బగ్ నివేదికను "
+"పంపించేఅంతవరకు "
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "వివరణం:"
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr "వివరనం అమర్చుట కుదరదు (ప్రాగ్రామర్ దోషం)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "నిర్వహణా వ్యవస్థ:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "కంపైలర్"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "(&v) ఉధృతి"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "సంక్లిష్ట"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "ముఖ్యమైన"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "సాధారణ"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "కోరికల జాబితా"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "అనువాదము"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "(&u) విషయము:"
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"మీరు అందించే తప్పుల నివేదిక కొరకు వచనం వ్రాయండి(సాద్యమైనంత వరకు ఆంగ్లములో).\n"
+"మీరు \"పంపించు\" బటన్ నొక్కిన, ఒక తపాలా సందేశం ఈ ప్రోగ్రామ్ సంరక్షకునికి పంపబడును.\n"
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>తప్పుల నివేదిక అందించుటకు, క్రింది బటన్ ను నొక్కండి.ఇది ఒక వెబ్ బ్రౌజర్ విండొను <a href="
+"\"http://bugs.kde.org\">http://bugs.kde.org</a>కు తెరువబడును అక్కడ మీరు ఒక "
+"ఫారంను నింపవసివుంటుది.పైన చూపించబడిన సమాచారం ఆ సెర్వర్ కు పంపబడును.</qt>"
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr "&L బగ్ నివేదిక విజర్డ్ను ప్రారంభించు"
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "తెలియని"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr "తపకుండ మిరు పేర్కొన రెండు ఒక విషయం మరియు ఒక వివరణకి ముందు నివేదిక పంపవచ్చు."
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"బగ్ నివేదికని పంపడనికి సాద్యం కాదు. \n"
+"దయచేసి మాన్యువల్గా బగ్ నివేదికను సమర్పించండి.... \n"
+"సూచనలకొరకు దినిని చుడండి http://bugs.kde.org/"
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr "పంపబడిన బగ్ నివేదిక, ధన్యవాదాలు మీ ఇన్పుట్ కొరకు. "
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"మూసివెయ్యి మరియు విస్మరించు\n"
+"సవరించిన సందేశాలు?"
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr "సందేశము మూసివేయుము"
+
+#: kcheckaccelerators.cpp:221
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "డా. క్లాష్ వారి ఎక్సెలరెటర్ కారణనిర్ణయం"
+
+#: kcheckaccelerators.cpp:228
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "స్వయం తనఖి చెయకు"
+
+#: kcheckaccelerators.cpp:232
+msgctxt "@action:button"
+msgid "Close"
+msgstr "మూసివెయుము"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>ఎక్సెలరెటర్లు మార్చబడినవి</h2>"
+
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+#, fuzzy
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "వచనం కనుగొనుట"
+
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "Show Text"
+msgid "New Text"
+msgstr "పాటాన్ని  చూపుము"
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>ఎక్సెలరెటర్లు తీసివేయబడినవి</h2>"
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>ఎక్సెలరెటర్లు కలపడినవి (మీ సమాచారం కొరకు)</h2>"
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "--- విభాజిక ---"
+
+#: kedittoolbar.cpp:350
+msgid "Change Text"
+msgstr "పాటాన్ని  మార్చు..."
+
+#: kedittoolbar.cpp:361
+msgid "Icon te&xt:"
+msgstr "లింకు పాట:"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr "(&H)పనిముట్ల పట్టా పాఠచిహ్నం తొ ఉంటే పాఠం అదృశ్యమొతుంది"
+
+#: kedittoolbar.cpp:619
+msgid "Configure Toolbars"
+msgstr "పనిముట్ల పట్టీలను ఆకృతీకరించుము"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"మీరు ఈ అప్లికేషన్ యొక్క ఉపకరణ పట్టీని యదావిధిగా రీసెట్ చెయ్యాలి అనుకుంటున్నారా? మార్పులు వెంటనే "
+"అమలుచేయబడును."
+
+#: kedittoolbar.cpp:682
+msgid "Reset Toolbars"
+msgstr "పనిముట్లపట్టీలు పునఃఅమర్పు చేయుము"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "పునః అమర్పు"
+
+#: kedittoolbar.cpp:1010
+msgid "&Toolbar:"
+msgstr "(&T) పనిముట్లపట్టీ:"
+
+#: kedittoolbar.cpp:1025
+msgid "A&vailable actions:"
+msgstr "(&v) అందుబాటులో వున్న చర్యలు:"
+
+#: kedittoolbar.cpp:1040 kedittoolbar.cpp:1059
+msgid "Filter"
+msgstr "వడపో"
+
+#: kedittoolbar.cpp:1043
+msgid "Curr&ent actions:"
+msgstr "(&e) ఇప్పటి చర్యలు:"
+
+#: kedittoolbar.cpp:1062
+msgid "Change &Icon..."
+msgstr "(&I) ప్రతిమను మార్చు..."
+
+#: kedittoolbar.cpp:1070
+msgid "Change Te&xt..."
+msgstr "(&I) పాటము మార్చు..."
+
+#: kedittoolbar.cpp:1222
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1242
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr "ఈ అంశం ఈ భాగానికి అనుసంధానించి ఉన్న అన్ని అంశాలను భర్తీ చేయును."
+
+#: kedittoolbar.cpp:1244
+msgid "<Merge>"
+msgstr "<కలుపు>"
+
+#: kedittoolbar.cpp:1246
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<కలుపు %1>"
+
+#: kedittoolbar.cpp:1252
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+
+#: kedittoolbar.cpp:1253
+#, kde-format
+msgid "ActionList: %1"
+msgstr "చర్యలజాబితా: %1"
+
+#: kedittoolbar.cpp:1353 kedittoolbar.cpp:1380
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1607
+msgid "Change Icon"
+msgstr "ప్రతిమను మార్చు..."
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "ఎడమ బటన్"
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "మద్య బటన్"
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "కుడి బటన్"
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "సరికాని బటన్"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "%1 కలిగివుండుము, అప్పుడు %2 నెట్టుము"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "(&H) సహాయము"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "అనువర్తనం %2 నందు చర్య %3 కొరకు శీఘ్రమార్గము '%1'\n"
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "శీఘ్రమార్గము '%2\"క్రింది కీ సమ్మేళములతో విభేదించింది:\n"
+msgstr[1] "శీఘ్రమార్గము '%2' క్రింది కీ సమ్మేళములతో విభేదించింది:\n"
+msgstr[2] "శీఘ్రమార్గము '%2' క్రింది కీ సమ్మేళములతో విభేదించింది:\n"
+msgstr[3] "శీఘ్రమార్గము '%2' క్రింది కీ సమ్మేళములతో విభేదించింది:\n"
+msgstr[4] "శీఘ్రమార్గము '%2' క్రింది కీ సమ్మేళములతో విభేదించింది:\n"
+
+#: kkeysequencewidget.cpp:144
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "నియంత్రిత వసుదైక శీఘ్రమార్గంతొ ఘర్షణ"
+msgstr[1] "నియంత్రిత వసుదైక శీఘ్రమార్గంతొ విభేదలు"
+msgstr[2] "నియంత్రిత వసుదైక శీఘ్రమార్గంతొ విభేదలు"
+msgstr[3] "నియంత్రిత వసుదైక శీఘ్రమార్గంతొ విభేదలు"
+msgstr[4] "నియంత్రిత వసుదైక శీఘ్రమార్గంతొ విభేదలు"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:233
+#: kkeysequencewidget.cpp:619 kshortcutseditor.cpp:619
+#: kshortcutseditor.cpp:637
+msgid "Reassign"
+msgstr "మళ్లి నియమించు"
+
+#: kkeysequencewidget.cpp:214
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "శీఘ్రమార్గం విభేదము"
+msgstr[1] "శీఘ్ర మార్గం విభేదలు"
+msgstr[2] "శీఘ్ర మార్గం విభేదలు"
+msgstr[3] "శీఘ్ర మార్గం విభేదలు"
+msgstr[4] "శీఘ్ర మార్గం విభేదలు"
+
+#: kkeysequencewidget.cpp:218
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "చర్య '%1'కొరకు శీఘ్రమార్గము(లు) '%2'\n"
+
+#: kkeysequencewidget.cpp:223
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#: kkeysequencewidget.cpp:242
+msgid "Shortcut conflict"
+msgstr "శీఘ్ర మార్గం విభేదము"
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+
+#: kkeysequencewidget.cpp:273
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: kkeysequencewidget.cpp:465
+msgid "Reserved Shortcut"
+msgstr "నిలిపిఉంచి శీఘ్ర మార్గము"
+
+#: kkeysequencewidget.cpp:466
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: kkeysequencewidget.cpp:613
+msgid "Conflict with Standard Application Shortcut"
+msgstr "ప్రామాణిక కార్యక్రమ శీఘ్రమార్గంతొ ఘర్షణ"
+
+#: kkeysequencewidget.cpp:614
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+
+#: kkeysequencewidget.cpp:659
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "ఇన్పుట్"
+
+#: kkeysequencewidget.cpp:666 kshortcuteditwidget.cpp:63
+#: kshortcuteditwidget.cpp:66
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "ఏదీ వద్దు"
+
+#: kkeysequencewidget.cpp:706
+msgid "The key you just pressed is not supported by Qt."
+msgstr "మీరు వాడిన మీట qt సహాయము తీసుకోలేదు"
+
+#: kkeysequencewidget.cpp:707
+msgid "Unsupported Key"
+msgstr "మద్దతు చేయని కీ"
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr "పనిముట్లపట్టీకు జతచేయుము"
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr "శీఘ్రమార్గంను అమర్చు..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "సర్వర్ విషయాన్ని సృష్టించు "
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "కనబడలేదు"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "అనుసంధానమునకు  సమయం అయిపొయినది"
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "సెర్వర్: %1"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "తప్పుల నివేదిక పంపు."
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "డైలాగ్ పరిమాణం"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "ఈ తప్పుల నివేదిక ఈ ఈమెయిల్ చిరునామాకు పంపబడును."
+
+#: kshortcuteditwidget.cpp:62
+msgid "Default:"
+msgstr "అప్రమేయం:"
+
+#: kshortcuteditwidget.cpp:70
+msgid "Custom:"
+msgstr "నిర్దేశితమైన:"
+
+#: kshortcutschemeseditor.cpp:43
+msgid "Shortcut Schemes"
+msgstr "శీఘ్ర మార్గాల స్కీములు"
+
+#: kshortcutschemeseditor.cpp:62
+msgid "Current scheme:"
+msgstr "ప్రస్తుత స్కీము:"
+
+#: kshortcutschemeseditor.cpp:72
+msgid "New..."
+msgstr "కొత్త..."
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr "తొలగించు"
+
+#: kshortcutschemeseditor.cpp:78
+msgid "More Actions"
+msgstr "మరిన్ని చర్యలు"
+
+#: kshortcutschemeseditor.cpp:82
+msgid "Save as Scheme Defaults"
+msgstr "స్కీమా అప్రమేయాలలా భద్రపరచుము"
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr "స్కీమును ఎగుమతి చేయుము..."
+
+#: kshortcutschemeseditor.cpp:101
+msgid "Name for New Scheme"
+msgstr "కొత్త స్కీమా కొరకు పేరు"
+
+#: kshortcutschemeseditor.cpp:102
+msgid "Name for new scheme:"
+msgstr "కొత్త స్కీమా కొరకు నామము:"
+
+#: kshortcutschemeseditor.cpp:102
+msgid "New Scheme"
+msgstr "కొత్త స్కీమా"
+
+#: kshortcutschemeseditor.cpp:108
+msgid "A scheme with this name already exists."
+msgstr "ఈ పేరుతో వొక స్కీమా యిప్పటికే వుంది."
+
+#: kshortcutschemeseditor.cpp:137
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"మీరు నిజంగా ఈ స్కీమా %1ను తొలగించుదామని అనుకొనుచున్నారా?\n"
+"ఇది సిస్టమ్ వ్యాప్తి శీఘ్రమార్గ స్కీమాలను తొలగించదని గమనించండి."
+
+#: kshortcutschemeseditor.cpp:167
+msgid "Export to Location"
+msgstr "స్థానమునకు ఎగుమతిచేయుము"
+
+#: kshortcutschemeseditor.cpp:175
+msgid "Could not export shortcuts scheme because the location is invalid."
+msgstr "శీఘ్రమార్గ స్కీమాను ఎగుమతి చేయలేదు యెంచేతంటే ఆ స్థానము సరైనదికాదు."
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr "ప్రస్తుత శీఘ్రమార్గ స్కీము సవరించబడింది. మరియొక దానికి మారుటకు ముందుగా భద్రపరచవలెనా?"
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr "(&D) వివరములు"
+
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr "శీఘ్రమార్గాలను అమర్చండి"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ఇచట ప్రవేశపెట్టుట ద్వారా షార్టుకట్ నామములు (ఉ.దా. నకలు) లేదా కీ సమ్మేళనాలు (ఉ.దా. Ctrl+C) కొరకు "
+"యింటరాక్టివుగా శోధించుము."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"ఇచట మీరు కీ బైండింగ్సు యొక్క జాబితాను చూడవచ్చు, అంటే చర్యల మద్య సంభందాలు (ఉ.దా. 'నకలు') ఎడమ "
+"నిలువువరుస నందు చూపబడుతుంది మరియు కీలు లేదా కీల సమ్మేళనం (ఉ.దా. Ctrl+C) కుడి నిలువువరుస "
+"నందు చూపబడుతుంది."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "చర్య"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "శీఘ్ర మార్గం"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "ప్రత్యామ్నాయము"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr "సార్వత్రిక"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr "సార్వత్రిక ప్రత్యామ్నాయం"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr "మౌస్ బటన్ గెస్ట్యూర్"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr "మౌస్ షేప్ గెస్ట్యూర్"
+
+#: kshortcutseditor.cpp:614 kshortcutseditor.cpp:632
+msgid "Key Conflict"
+msgstr "ముఖ్యమైన ఘర్షణ"
+
+#: kshortcutseditor.cpp:615
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+
+#: kshortcutseditor.cpp:633
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+
+#: kshortcutseditor.cpp:680
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "%1 కొరకు శీఘ్రమార్గాలు"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:698 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr "ముఖ్యమైన:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:699 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr "ప్రత్యామ్నాయము:"
+
+#: kshortcutseditor.cpp:700
+msgid "Global:"
+msgstr "సార్వత్రిక:"
+
+#: kshortcutseditor.cpp:715
+msgid "Action Name"
+msgstr "చర్యా నామము"
+
+#: kshortcutseditor.cpp:719
+msgid "Shortcuts"
+msgstr "శీఘ్ర మార్గాలు"
+
+#: kshortcutseditor.cpp:723
+msgid "Description"
+msgstr "వర్ణన"
+
+#: kshortcutseditoritem.cpp:51
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr "అనువర్తనము భాషను మార్చు"
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr "ఇ కార్యక్షేత్రం ఏ భాషలో వుండలొ ఏంపికచేసుకొండి: "
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr "ఫాల్‌బ్యాక్ భాషను జతచేయుము"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr "సరైన తర్జుమ లేకా పొతె మరియోక  భాషను జతపరిచి వడుతది."
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr "ఈ కార్యక్షేత్రం భాష మరింది. తదుపరి సమయంలొ కార్యక్షేత్రం ప్రారంభంయెనపుడు ప్రభావం మరుతుంది  "
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+msgid "Application Language Changed"
+msgstr "కార్యక్రమపు భాష మార్చబడింది"
+
+#: kswitchlanguagedialog_p.cpp:365
+msgid "Primary language:"
+msgstr "ప్రాధమిక భాష:"
+
+#: kswitchlanguagedialog_p.cpp:365
+msgid "Fallback language:"
+msgstr "ఫాల్‌బ్యాక్ భాష:"
+
+#: kswitchlanguagedialog_p.cpp:384
+msgid "Remove"
+msgstr "తొలగించు"
+
+#: kswitchlanguagedialog_p.cpp:395
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr "ఇది మీరు మొదటిగ ఉపయోగిచే "
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr "ఇది మీరు మొదటిగ ఉపయోగిచే ప్రధామ "
+
+#: ktoolbar.cpp:303
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "పాటాన్ని  చూపుము"
+
+#: ktoolbar.cpp:306
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "పనిముట్లపట్టీ "
+
+#: ktoolbar.cpp:308
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "దిశ "
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "పైన"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "ఎడమ"
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "కుడి"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "క్రింద"
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr "వచన స్థానము"
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr "ప్రతిమలు మాత్రమే"
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr "వాచకం మాత్రమే"
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr "ప్రతిమల పక్కన వచనం"
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr "ప్రతిమల క్రింద వచనం"
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr "ప్రతిమ పరిమాణము"
+
+#: ktoolbar.cpp:337
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "అప్రమేయ"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "చిన్న (%1x%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "మద్యస్తం (%1x%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "పెద్ద (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "అతి పెద్ద (%1x%2)"
+
+#: ktoolbar.cpp:403
+msgid "Lock Toolbar Positions"
+msgstr "పనిముట్ల పట్టీలు తాళం వే"
+
+#: ktoolbar.cpp:1357
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbar.cpp:1358
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr "పనిముట్ల పట్టీలు చూపించా"
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr "పునరాచరణ"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "సరిచేయు"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+msgid "No text"
+msgstr "వచనము లేదు"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "(&F) దస్త్రం"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "(&G) ఆట"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "(&E) సరిదిద్దు"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "(&M) జరుపుము"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "(&V) చూడు"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "(&G) వెళ్ళు"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "(&B) పేజీ గుర్తులు"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "(&T) పనిముట్లు"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "(&S) అమరికలు"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr "ప్రధాన పనిముట్ల పట్టీ"
