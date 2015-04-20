@@ -290,11 +290,11 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     q->layout()->setMargin(0);
     ui.searchFilter->searchLine()->setTreeWidget(ui.list); // Plug into search line
     ui.list->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui.list->header()->hideSection(GlobalAlternate);  //not expected to be very useful
     ui.list->header()->hideSection(ShapeGesture);  //mouse gestures didn't make it in time...
     ui.list->header()->hideSection(RockerGesture);
     if (!(actionTypes & KShortcutsEditor::GlobalAction)) {
         ui.list->header()->hideSection(GlobalPrimary);
+        ui.list->header()->hideSection(GlobalAlternate);
     } else if (!(actionTypes & ~KShortcutsEditor::GlobalAction)) {
         ui.list->header()->hideSection(LocalPrimary);
         ui.list->header()->hideSection(LocalAlternate);
@@ -334,8 +334,10 @@ void KShortcutsEditorPrivate::setActionTypes(KShortcutsEditor::ActionTypes types
     QHeaderView *header = ui.list->header();
     if (actionTypes & KShortcutsEditor::GlobalAction) {
         header->showSection(GlobalPrimary);
+        header->showSection(GlobalAlternate);
     } else {
         header->hideSection(GlobalPrimary);
+        header->hideSection(GlobalAlternate);
     }
     if (actionTypes & ~KShortcutsEditor::GlobalAction) {
         header->showSection(LocalPrimary);
@@ -586,6 +588,7 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
             QString actionName = item->data(Id).toString();
             QList<QKeySequence> sc = QKeySequence::listFromString(globalShortcutsGroup.readEntry(actionName, QString()));
             changeKeyShortcut(item, GlobalPrimary, primarySequence(sc));
+            changeKeyShortcut(item, GlobalAlternate, alternateSequence(sc));
         }
     }
 
@@ -698,6 +701,7 @@ void KShortcutsEditorPrivate::printShortcuts() const
     shortcutTitleToColumn << qMakePair(i18n("Main:"), LocalPrimary);
     shortcutTitleToColumn << qMakePair(i18n("Alternate:"), LocalAlternate);
     shortcutTitleToColumn << qMakePair(i18n("Global:"), GlobalPrimary);
+    shortcutTitleToColumn << qMakePair(i18n("Global alternate:"), GlobalAlternate);
 
     for (int i = 0; i < root->childCount(); i++) {
         QTreeWidgetItem *item = root->child(i);
