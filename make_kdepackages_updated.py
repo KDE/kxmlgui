@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
 # Script to automatically update the "kdepackages.h" file
@@ -5,6 +6,7 @@
 #
 import string
 import urllib
+import re
 
 def unescape(text):
     text = text.replace("&nbsp;"," ")
@@ -15,46 +17,40 @@ def unescape(text):
 
 print "Fetching products and components from bugs.kde.org..."
 
-pkg = open("kdepackages.h","w")
-pkg.write("// DO NOT EDIT - EDIT bugs/Maintainers instead\n")
+pkg = open("src/kdepackages.h","w")
+pkg.write("// DO NOT EDIT - EDIT products in bugs.kde.org and run ./make_kdepackages_updated.py in kxmlgui to update\n")
 pkg.write("const char * const packages[] = {\n")
 
 data = urllib.urlopen('http://bugs.kde.org/describecomponents.cgi').read()
 
-for line in string.split(data,' '):
-  if line.count("describecomponents.cgi") > 0:
-    index1 = line.index("\">")+2
-    product = line[index1:len(line)]
-    index2 = product.index("<")
-    product = product[0:index2]
-
-    link = "describecomponents.cgi?product="
-    index1 = line.index(link)
-    link = line[index1:len(line)]
-    index2 = link.index("\"")
-    link = link[0:index2]
+for line in string.split(data,'\n'):
+  print "====parsing:"
+  #print line
+  match = re.search('(describecomponents.cgi\?product=.*)">(.*)</a>', line)
+  if match:
+    product = match.group(2)
+    link = match.group(1)
 
     link = 'http://bugs.kde.org/' + link
     data2 = urllib.urlopen(link).read()
 
     productname = unescape(product)
     print productname
-    pkg.write("\"" + productname + "\",\n")
+    pkg.write("    \"" + productname + "\",\n")
     data2 = string.split(data2,'\n')
     iter = 0
     end = len(data2)
+    print "link: " + link
     while( iter < end-1 ):
       iter = iter+1
       line = data2[iter]
-      if line.count("<td rowspan=\"2\">")>0:
-        iter = iter+1
-        line = data2[iter]
-        index1 = line.index("\">")+2
-        product = line[index1:len(line)]
-        index2 = product.index("<")
-        product = unescape(product[0:index2])
+      match = re.search('amp;resolution=---">(.*)</a>', line)
+      if match:
+        product = match.group(1)
+        product = unescape(product)
+        print "found component: " + product
         if product!="general":
-          pkg.write("\"" + productname + "/" + product + "\",\n")
+          pkg.write("    \"" + productname + "/" + product + "\",\n")
           print productname + "/" + product
 
 pkg.write("0 };\n")
