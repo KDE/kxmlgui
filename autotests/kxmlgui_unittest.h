@@ -46,6 +46,7 @@ private Q_SLOTS:
     void testMenuNames();
     void testClientDestruction();
     void testMenusNoXmlFile();
+    void testShortcuts();
 };
 
 #endif

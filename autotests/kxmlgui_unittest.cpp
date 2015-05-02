@@ -995,3 +995,39 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
     checkActions(mainWindow.menuBar()->actions(), QStringList()
                  << "file" << "separator" << "help");
 }
+
+void KXmlGui_UnitTest::testShortcuts()
+{
+    const QByteArray xml = "<?xml version = '1.0'?>\n"
+                           "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+                           "<gui version=\"1\" name=\"foo\" >\n"
+                           "<MenuBar>\n"
+                           " <Menu name=\"file\"><text>&amp;File</text>\n"
+                           "  <Action name=\"file_open\" shortcut=\"Ctrl+O\"/>\n"
+                           "  <Action name=\"file_quit\" shortcut=\"Ctrl+Q; Ctrl+D\"/>\n"
+                           " </Menu>\n"
+                           "</MenuBar>\n"
+                           "<ActionProperties scheme=\"Default\">\n"
+                           "  <Action shortcut=\"Ctrl+O\" name=\"file_open\"/>\n"
+                           "  <Action shortcut=\"Ctrl+Q; Ctrl+D\" name=\"file_quit\"/>\n"
+                           "</ActionProperties>\n"
+                           "</gui>";
+
+    TestGuiClient client;
+    client.createActions(QStringList() << "file_open" << "file_quit");
+    client.createGUI(xml, false /*ui_standards.rc*/);
+
+    KMainWindow mainWindow;
+    KXMLGUIBuilder builder(&mainWindow);
+    KXMLGUIFactory factory(&builder);
+    factory.addClient(&client);
+
+    QAction* actionOpen = client.action("file_open");
+    QAction* actionQuit = client.action("file_quit");
+    QVERIFY(actionOpen && actionQuit);
+    QCOMPARE(actionOpen->shortcuts(), QList<QKeySequence>() << QKeySequence("Ctrl+O"));
+    // #345411
+    QCOMPARE(actionQuit->shortcuts(), QList<QKeySequence>() << QKeySequence("Ctrl+Q") << QKeySequence("Ctrl+D"));
+
+    factory.removeClient(&client);
+}

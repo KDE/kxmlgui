@@ -666,12 +666,13 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
     QVariant propertyValue;
 
     QVariant::Type propertyType = action->property(attrName.toLatin1().constData()).type();
+    bool isShortcut = (propertyType == QVariant::KeySequence);
 
     if (propertyType == QVariant::Int) {
         propertyValue = QVariant(attribute.value().toInt());
     } else if (propertyType == QVariant::UInt) {
         propertyValue = QVariant(attribute.value().toUInt());
-    } else if (propertyType == QVariant::UserType && action->property(attrName.toLatin1().constData()).userType() == qMetaTypeId<QList<QKeySequence> >()) {
+    } else if (isShortcut) {
         // Setting the shortcut by property also sets the default shortcut (which is incorrect), so we have to do it directly
         if (attrName == QStringLiteral("globalShortcut")) {
             KGlobalAccel::self()->setShortcut(action, QKeySequence::listFromString(attribute.value()));
@@ -684,7 +685,7 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
     } else {
         propertyValue = QVariant(attribute.value());
     }
-    if (!action->setProperty(attrName.toLatin1().constData(), propertyValue)) {
+    if (!isShortcut && !action->setProperty(attrName.toLatin1().constData(), propertyValue)) {
         qWarning() << "Error: Unknown action property " << attrName << " will be ignored!";
     }
 }
