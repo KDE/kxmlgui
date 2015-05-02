@@ -10,8 +10,12 @@ include(ECMAddTests)
 ecm_add_tests(
    kactioncategorytest.cpp
    kactioncollectiontest.cpp
+   LINK_LIBRARIES Qt5::Test KF5::XmlGui
+)
+ecm_add_tests(
    kmainwindow_unittest.cpp
    ktoolbar_unittest.cpp
    kxmlgui_unittest.cpp
-   LINK_LIBRARIES Qt5::Test KF5::I18n KF5::IconThemes KF5::XmlGui
+   GUI
+   LINK_LIBRARIES Qt5::Test KF5::IconThemes KF5::XmlGui
 )

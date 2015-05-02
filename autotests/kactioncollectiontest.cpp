@@ -1,6 +1,5 @@
 #include <QtTestWidgets>
 #include "kactioncollectiontest.h"
-#include <klocalizedstring.h>
 #include <QAction>
 #include <QtCore/QPointer>
 
@@ -212,7 +211,7 @@ KConfigGroup tst_KActionCollection::clearConfig()
 
 void tst_KActionCollection::testSetShortcuts()
 {
-    QAction *action = new QAction(i18n("Next Unread &Folder"), this);
+    QAction *action = new QAction(/*i18n*/("Next Unread &Folder"), this);
     collection->addAction("go_next_unread_folder", action);
     collection->setDefaultShortcut(action, QKeySequence(Qt::ALT + Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
