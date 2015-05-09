@@ -127,8 +127,10 @@ KMWSessionManager::~KMWSessionManager()
 {
 }
 
-bool KMWSessionManager::saveState(QSessionManager &)
+bool KMWSessionManager::saveState(QSessionManager &sm)
 {
+    KConfigGui::setSessionConfig(sm.sessionId(), sm.sessionKey());
+
     KConfig *config = KConfigGui::sessionConfig();
     if (KMainWindow::memberList().count()) {
         // According to Jochen Wilhelmy <digisnap@cs.tu-berlin.de>, this
@@ -144,6 +146,19 @@ bool KMWSessionManager::saveState(QSessionManager &)
 
     KConfigGroup group(config, "Number");
     group.writeEntry("NumberOfWindows", n);
+
+    // store new status to disk
+    config->sync();
+
+    // generate discard command for new file
+    QString localFilePath =  QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + config->name();
+    if (QFile::exists(localFilePath)) {
+        QStringList discard;
+        discard << QLatin1String("rm");
+        discard << localFilePath;
+        sm.setDiscardCommand(discard);
+    }
+
     return true;
 }
 
