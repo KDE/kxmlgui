@@ -88,20 +88,14 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     if (windowIcon.isNull() && !aboutData.programIconName().isEmpty()) {
         windowIcon = QIcon::fromTheme(aboutData.programIconName());
     }
-    titleWidget->setPixmap(windowIcon.pixmap(64, 64), KTitleWidget::ImageLeft);
+    titleWidget->setPixmap(windowIcon.pixmap(48, 48), KTitleWidget::ImageLeft);
     if (aboutData.programLogo().canConvert<QPixmap>()) {
         titleWidget->setPixmap(aboutData.programLogo().value<QPixmap>(), KTitleWidget::ImageLeft);
     } else if (aboutData.programLogo().canConvert<QImage>()) {
         titleWidget->setPixmap(QPixmap::fromImage(aboutData.programLogo().value<QImage>()), KTitleWidget::ImageLeft);
     }
 
-    if (opt & HideKdeVersion)
-        titleWidget->setText(i18n("<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>",
-                                  aboutData.displayName(), aboutData.version()));
-    else
-        titleWidget->setText(i18nc("Program name, version and KDE platform version; do not translate 'Development Platform'",
-                                   "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE Frameworks %3</html>",
-                                   aboutData.displayName(), aboutData.version(), QStringLiteral(KXMLGUI_VERSION_STRING)));
+    titleWidget->setText(i18n("<html><font size=\"5\">%1</font></html>", aboutData.displayName()));
 
     //Then the tab bar...
     QTabWidget *tabWidget = new QTabWidget;
@@ -152,6 +146,26 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     aboutWidget->setLayout(aboutLayout);
 
     tabWidget->addTab(aboutWidget, i18n("&About"));
+
+    // Version
+    QWidget *versionWidget = new QWidget(q);
+    QVBoxLayout *versionLayout = new QVBoxLayout;
+    QLabel *versionLabel = new QLabel(i18n("<b>Version %1</b>", aboutData.version()));
+    versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    versionLayout->addWidget(versionLabel);
+    if (!(opt & HideKdeVersion)) {
+        QLabel *versionLabel = new QLabel(
+            i18n("Using:<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
+                 QStringLiteral(KXMLGUI_VERSION_STRING),
+                 QString::fromLocal8Bit(qVersion()),
+                 QStringLiteral(QT_VERSION_STR),
+                 QGuiApplication::platformName()));
+        versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+        versionLayout->addWidget(versionLabel);
+    }
+    versionLayout->addStretch();
+    versionWidget->setLayout(versionLayout);
+    tabWidget->addTab(versionWidget, i18n("&Version"));
 
     //Palette needed at least for translators...
     QPalette transparentBackgroundPalette;
