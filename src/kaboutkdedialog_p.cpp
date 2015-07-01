@@ -43,8 +43,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     setWindowTitle(i18n("About KDE"));
 
     KTitleWidget *titleWidget = new KTitleWidget(this);
-    titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font><br /><b>Frameworks Version %1</b></html>",
-                              QStringLiteral(KXMLGUI_VERSION_STRING)));
+    titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font></html>"));
     titleWidget->setPixmap(QIcon::fromTheme(QStringLiteral("kde")).pixmap(48), KTitleWidget::ImageLeft);
 
     QLabel *about = new QLabel;
