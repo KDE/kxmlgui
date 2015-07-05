@@ -1,0 +1,1363 @@
+# translation of kdelibs4.po to Greek
+# translation of kdelibs4.po to
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Last MAJOR revision (whole file) (29-03-2003 - Stergios Dramis).
+#
+# Dimitris Kamenopoulos <d.kamenopoulos@mail.ntua.gr>, 2000-2002.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2002-2004.
+# Κώστας Μπουκουβάλας <quantis@hellug.gr>, 2005.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2006, 2007, 2008, 2009.
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Σπύρος Γεωργαράς <sngeorgaras@otenet.gr>, 2008.
+# Petros <pvidalis@gmail.com>, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010, 2011.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2010, 2011, 2012, 2013, 2014.
+# nikos, 2011.
+# Stelios <sstavra@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-07-02 09:07+0000\n"
+"PO-Revision-Date: 2014-01-04 09:52+0100\n"
+"Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Πέτρος Βιδάλης"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org, p_vidalis@hotmail.com"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "Σχετικά με το %1"
+
+#: kaboutapplicationdialog.cpp:99
+#, kde-format
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br /><b>έκδοση %2</b><br />&nbsp;</html>"
+
+#: kaboutapplicationdialog.cpp:103
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">%1</font><br/><b>version %2</b><br/>Using KDE %3</"
+#| "html>"
+msgctxt ""
+"Program name, version and KDE platform version; do not translate "
+"'Development Platform'"
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
+"Frameworks %3</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br/><b>έκδοση %2</b><br/>χρησιμοποιώντας το "
+"KDE %3</html>"
+
+#: kaboutapplicationdialog.cpp:142
+#, kde-format
+msgid "License: %1"
+msgstr "Άδεια: %1"
+
+#: kaboutapplicationdialog.cpp:154
+msgid "&About"
+msgstr "&Σχετικά"
+
+#: kaboutapplicationdialog.cpp:174
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"Παρακαλώ χρησιμοποιήστε το <a href=\"http//bugs.kde.org\">http://bugs.kde."
+"org</a> για να αναφέρετε σφάλματα.\n"
+
+#: kaboutapplicationdialog.cpp:178 kaboutapplicationdialog.cpp:182
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "Παρακαλώ αναφέρετε σφάλματα στο <a href=\"mailto:%1\">%2</a>.\n"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthor"
+msgstr "&Συγγραφέας"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthors"
+msgstr "Συ&γγραφείς"
+
+#: kaboutapplicationdialog.cpp:236
+msgid "&Thanks To"
+msgstr "Ευ&χαριστίες"
+
+#: kaboutapplicationdialog.cpp:275
+msgid "T&ranslation"
+msgstr "Μετά&φραση"
+
+#: kaboutapplicationdialog.cpp:307
+msgid "License Agreement"
+msgstr "Άδεια χρήσης"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Αποστολή αλληλογραφίας στον συνεισφέροντα"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+msgid "Visit contributor's homepage"
+msgstr "Επισκεφθείτε την ιστοσελίδα του συντελεστή"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"Στείλτε μήνυμα σε συντελεστή\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"Επισκεφθείτε την ιστοσελίδα του συντελεστή\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"Επισκεφθείτε το προφίλ συντελεστή στο %1\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"Επισκεφθείτε τη σελίδα του συντελεστή\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"Επισκεφθείτε το ιστολόγιο του συντελεστή\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "Άλλο"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "Ιστολόγιο"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "Προσωπική σελίδα"
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "Σχετικά με το KDE"
+
+#: kaboutkdedialog_p.cpp:46
+#, fuzzy
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+"<html><font size=\"5\">KDE - Ελευθερωθείτε!</font><br /><b>έκδοση πλατφόρμας "
+"%1</b></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"%1\">Free Software</a> development. This community has created hundreds "
+#| "of Free Software applications as part of the KDE Development Platform and "
+#| "KDE Software Distribution.<br /><br />KDE is a cooperative enterprise in "
+#| "which no single entity controls the efforts or products of KDE to the "
+#| "exclusion of others. Everyone is welcome to join and contribute to KDE, "
+#| "including you.<br /><br />Visit <a href=\"%2\">%2</a> for more "
+#| "information about the KDE community and the software we produce.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html>Το <b>Περιβάλλον επιφάνειας εργασίας KDE</b> γράφεται και συντηρείται "
+"από την ομάδα του KDE, ένα παγκόσμιο δίκτυο μηχανικών λογισμικού,"
+"καλλιτεχνών, συγγραφέων, μεταφραστών και διαμεσολαβητών αφιερωμένο στην "
+"ανάπτυξη <a href=\"%1\">ελεύθερου λογισμικού</a>. Αυτή η κοινότητα έχει "
+"δημιουργήσει εκατοντάδες εφαρμογές ελεύθερου λογισμικού ως κομμάτι της "
+"πλατφόρμας ανάπτυξης του KDE και της διανομής λογισμικού KDE.<br /><br /> "
+"Καμία ομάδα, εταιρεία ή οργανισμός δεν ελέγχει τον πηγαίο κώδικα του KDE. Η "
+"συνεισφορά οποιουδήποτε στην ανάπτυξη του KDE είναι ευπρόσδεκτη. <br /> <br /"
+">Επισκεφτείτε το <a href=\"%2\">%2</a> για περισσότερες πληροφορίες. </html>"
+
+#: kaboutkdedialog_p.cpp:74
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>Το λογισμικό μπορεί πάντα να βελτιωθεί, και η ομάδα του KDE είναι "
+"έτοιμη να πράξει αντίστοιχα. Ωστόσο, εσείς - οι χρήστες - πρέπει να μας "
+"ενημερώνετε όταν κάτι δε δουλεύει σωστά ή θα μπορούσε να γίνει καλύτερα.<br /"
+"><br />Το KDE έχει ένα σύστημα παρακολούθησης σφαλμάτων. Επισκεφθείτε το <a "
+"href=\"%1\">%1</a>  ή χρησιμοποιήστε το διάλογο \"Αναφορά σφάλματος\" από το "
+"μενού \"Βοήθεια\" για να αναφέρετε σφάλματα.<br /><br />Αν έχετε μια πρόταση "
+"για βελτίωση τότε μπορείτε ελεύθερα να χρησιμοποιήσετε το σύστημα "
+"παρακολούθησης σφαλμάτων για να την υποβάλετε. Βεβαιωθείτε ότι "
+"χρησιμοποιείτε το επίπεδο σοβαρότητας \"Λίστα ευχών\".</html>"
+
+#: kaboutkdedialog_p.cpp:92
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>Δε χρειάζεται να είστε προγραμματιστής για να γίνετε μέλος της ομάδας "
+"του KDE. Μπορείτε να μπείτε στις εθνικές ομάδες που μεταφράζουν τα "
+"περιβάλλοντα των προγραμμάτων. Μπορείτε να προσφέρετε γραφικά, θέματα, ήχους "
+"και βελτιωμένη τεκμηρίωση. Εσείς αποφασίζετε!<br /><br /> Επισκεφθείτε το <a "
+"href=\"%1\">%1</a> για πληροφορίες σχετικά με κάποια έργα στα οποία μπορείτε "
+"να συμμετάσχετε.<br /><br /> Αν χρειάζεστε περισσότερες πληροφορίες ή "
+"τεκμηρίωση, τότε μια επίσκεψη στο <a href=\"%2\">%2</a> θα σας προσφέρει ότι "
+"χρειάζεστε.</html>"
+
+#: kaboutkdedialog_p.cpp:114
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>Το KDE είναι διαθέσιμο δωρεάν, αλλά η κατασκευή του κοστίζει.<br /"
+"><br />Έτσι, η Ομάδα του KDE ίδρυσε το KDE Association, έναν μη κερδοσκοπικό "
+"οργανισμό με έδρα το Tuebingen της Γερμανίας. Το KDE Association "
+"αντιπροσωπεύει το KDE σε νομικά και οικονομικά θέματα. Δείτε το <a href="
+"\"%1\">%1</a> για πληροφορίες σχετικά με το KDE Association.<br /> <br />Η "
+"Ομάδα του KDE χρειάζεται οικονομική υποστήριξη. Τα περισσότερα από τα "
+"χρήματα χρησιμοποιούνται για την κάλυψη μελών της ομάδας και άλλων σε έξοδα "
+"που τους προέκυψαν κατά τη συνεισφορά τους στο KDE. Σας ενθαρρύνουμε να "
+"υποστηρίξετε το KDE με μια οικονομική δωρεά, χρησιμοποιώντας έναν από τους "
+"τρόπους που περιγράφονται στο <a href=\"%2\">%2</a>.<br /><br />Σας "
+"ευχαριστούμε πολύ εκ των προτέρων για τη βοήθειά σας.</html>"
+
+#: kaboutkdedialog_p.cpp:133
+msgctxt "About KDE"
+msgid "&About"
+msgstr "Σ&χετικά"
+
+#: kaboutkdedialog_p.cpp:134
+msgid "&Report Bugs or Wishes"
+msgstr "Ανα&φορά σφαλμάτων ή επιθυμιών"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Join KDE"
+msgstr "Συ&μμετοχή στην ομάδα του KDE"
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Support KDE"
+msgstr "&Υποστήριξη του KDE"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"Η ακολουθία πλήκτρων '%1' είναι διφορούμενη. Χρησιμοποιήστε τη 'Διαμόρφωση "
+"συντομεύσεων'\n"
+"από το μενού 'Ρυθμίσεων' για την επίλυση του προβλήματος.\n"
+"Δεν θα ενεργοποιηθεί καμία ενέργεια."
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr "Ανίχνευση διφορούμενης συντόμευσης"
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "Υποβολή αναφοράς σφάλματος"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Η διεύθυνση της ηλ. αλληλογραφίας σας. Αν δεν είναι σωστή, χρησιμοποιήστε το "
+"κουμπί Διαμόρφωση email για να την αλλάξετε"
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Από:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "Διαμόρφωση ηλ. αλληλογραφίας..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr ""
+"Η διεύθυνση αλληλογραφίας στην οποία στέλνεται αυτή η αναφορά σφάλματος."
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Προς:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "Α&ποστολή"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "Αποστολή αναφοράς σφάλματος."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "Αποστολή αυτής της αναφοράς σφάλματος στο %1."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"Η εφαρμογή για την οποία θέλετε να υποβάλετε αναφορά σφάλματος. Αν δεν είναι "
+"η σωστή, παρακαλώ χρησιμοποιήστε το μενού Αναφορά σφάλματος της σωστής "
+"εφαρμογής"
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "Εφαρμογή: "
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"Η έκδοση αυτής της εφαρμογής - παρακαλώ βεβαιωθείτε ότι δε διατίθεται "
+"νεότερη έκδοση προτού στείλετε μια αναφορά σφάλματος"
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr "δεν υπάρχει έκδοση (σφάλμα του προγραμματιστή)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "Λειτουργικό σύστημα:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "Μεταγλωττιστής:"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "Σο&βαρότητα"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "Κρίσιμη"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "Μεγάλη"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "Κανονική"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "Λίστα επιθυμιών"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "Μετάφραση"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "&Θέμα: "
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Εισάγετε το κείμενο (αν γίνεται στα Αγγλικά) που θέλετε να περιλαμβάνει η "
+"αναφορά σφάλματός σας.\n"
+"Αν πατήσετε \"Αποστολή\", ένα μήνυμα αλληλογραφίας θα σταλεί στο συντηρητή "
+"αυτού του προγράμματος.\n"
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>Για την υποβολή αναφοράς σφάλματος, κάντε κλικ στον παρακάτω σύνδεσμο.\n"
+"Αυτό θα ανοίξει ένα παράθυρο περιήγησης στο <a href=\"http://bugs.kde.org"
+"\">http://bugs.kde.org</a>  όπου θα βρείτε μια φόρμα να συμπληρώσετε. Οι "
+"παραπάνω πληροφορίες θα μεταφερθούν σε αυτόν τον εξυπηρετητή.</qt>"
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr "&Εκκίνηση του οδηγού αναφοράς σφάλματος"
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "άγνωστο"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Πρέπει να καθορίσετε και θέμα και περιγραφή για να μπορεί να σταλεί η "
+"αναφορά."
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Επιλέξατε σοβαρότητα <b>Κρίσιμη</b>. Παρακαλώ σημειώστε πως αυτό το "
+"επίπεδο σοβαρότητας προορίζεται μόνο για σφάλματα που </p><ul><li>προκαλούν "
+"κατάρρευση ασυσχέτιστων εφαρμογών στο σύστημα (ή και όλου του συστήματος)</"
+"li><li>προκαλούν σοβαρή απώλεια δεδομένων</li><li>εισάγουν τρύπες ασφάλειας "
+"στο σύστημα όπου το πρόγραμμα είναι εγκατεστημένο</li></ul>\n"
+"<p>Το σφάλμα που αναφέρετε προκαλεί καμία από τις παραπάνω ζημιές; Αν όχι "
+"παρακαλώ επιλέξτε μικρότερη σοβαρότητα. Ευχαριστώ.</p>"
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Επιλέξατε σοβαρότητα <b>Μεγάλη</b>. Παρακαλώ σημειώστε πως αυτό το "
+"επίπεδο σοβαρότητας προορίζεται μόνο για σφάλματα που </p><ul><li>καθιστούν "
+"το υπό συζήτηση πρόγραμμα άχρηστο ή σχεδόν άχρηστο</li><li>προκαλούν απώλεια "
+"δεδομένων</li><li>εισάγουν μια τρύπα ασφάλειας, επιτρέποντας πρόσβαση στους "
+"λογαριασμούς των χρηστών αυτού του προγράμματος</li></ul>\n"
+"<p>Το σφάλμα που αναφέρετε προκαλεί καμία από τις παραπάνω ζημιές; Αν όχι "
+"παρακαλώ επιλέξτε μικρότερη σοβαρότητα. Ευχαριστώ.</p>"
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"Δεν είναι δυνατό να αποσταλεί η αναφορά σφάλματος.\n"
+"Παρακαλώ στείλτε την αναφορά σφάλματος χειροκίνητα....\n"
+"Δείτε το http://bugs.kde.org/ για οδηγίες."
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr "Η αναφορά σφάλματος εστάλη, ευχαριστούμε για τη βοήθεια."
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"Κλείσιμο και απόρριψη\n"
+"επεξεργασμένου μηνύματος;"
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr "Κλείσιμο μηνύματος"
+
+#: kcheckaccelerators.cpp:221
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Διάγνωση του Dr. Klash για τα πλήκτρα επιτάχυνσης"
+
+#: kcheckaccelerators.cpp:228
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Απενεργοποίηση αυτομάτου ελέγχου"
+
+#: kcheckaccelerators.cpp:232
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Πλήκτρα επιτάχυνσης άλλαξαν</h2>"
+
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+#, fuzzy
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "Αναζήτηση κειμένου"
+
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "Show Text"
+msgid "New Text"
+msgstr "Εμφάνιση κειμένου"
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Πλήκτρα επιτάχυνσης αφαιρέθηκαν</h2>"
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr ""
+"<h2>Πλήκτρα επιτάχυνσης προστέθηκαν (για να σας πληροφορήσουμε μόνο)</h2>"
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "--- διαχωριστικό ---"
+
+#: kedittoolbar.cpp:350
+msgid "Change Text"
+msgstr "Τροποποίηση κειμένου"
+
+#: kedittoolbar.cpp:361
+msgid "Icon te&xt:"
+msgstr "Κείμενο ει&κονιδίου:"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+"&Απόκρυψη κειμένου όταν η γραμμή εργαλείων εμφανίζει κείμενο μαζί με τα "
+"εικονίδια"
+
+#: kedittoolbar.cpp:619
+msgid "Configure Toolbars"
+msgstr "Διαμόρφωση γραμμών εργαλείων"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"Θέλετε πραγματικά να επαναφέρετε όλες τις γραμμές εργαλείων της εφαρμογής "
+"στην προκαθορισμένη κατάστασή τους; Οι αλλαγές θα εφαρμοστούν άμεσα."
+
+#: kedittoolbar.cpp:682
+msgid "Reset Toolbars"
+msgstr "Επαναφορά γραμμών εργαλείων"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "Επαναφορά"
+
+#: kedittoolbar.cpp:1010
+msgid "&Toolbar:"
+msgstr "&Γραμμή εργαλείων:"
+
+#: kedittoolbar.cpp:1025
+msgid "A&vailable actions:"
+msgstr "Διαθέσιμες ενέρ&γειες:"
+
+#: kedittoolbar.cpp:1040 kedittoolbar.cpp:1059
+msgid "Filter"
+msgstr "Φίλτρο"
+
+#: kedittoolbar.cpp:1043
+msgid "Curr&ent actions:"
+msgstr "&Τρέχουσες ενέργειες:"
+
+#: kedittoolbar.cpp:1062
+msgid "Change &Icon..."
+msgstr "Αλλαγή &εικονιδίου..."
+
+#: kedittoolbar.cpp:1070
+msgid "Change Te&xt..."
+msgstr "Τροποποίηση &κειμένου..."
+
+#: kedittoolbar.cpp:1222
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1242
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"Αυτό το στοιχείο θα αντικατασταθεί με όλα τα στοιχεία ενός ενσωματωμένου "
+"συστατικού."
+
+#: kedittoolbar.cpp:1244
+msgid "<Merge>"
+msgstr "<Μίξη>"
+
+#: kedittoolbar.cpp:1246
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<Μίξη %1>"
+
+#: kedittoolbar.cpp:1252
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Αυτή είναι μια δυναμική λίστα ενεργειών. Μπορείτε να τη μετακινήσετε, αλλά "
+"αν την αφαιρέσετε δε θα μπορείτε να την προσθέσετε ξανά."
+
+#: kedittoolbar.cpp:1253
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Λίστα ενεργειών: %1"
+
+#: kedittoolbar.cpp:1353 kedittoolbar.cpp:1380
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1607
+msgid "Change Icon"
+msgstr "Αλλαγή εικονιδίου"
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "αριστερό κουμπί"
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "μεσαίο κουμπί"
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "δεξί κουμπί"
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "μη έγκυρο κουμπί"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "Κρατήστε πατημένο το %1, έπειτα πιέστε %2"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "&Βοήθεια"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "Ο συνδυασμός πλήκτρων '%1' της εφαρμογής %2 για την ενέργεια %3\n"
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "Η συντόμευση '%2' συγκρούεται με τον παρακάτω συνδυασμό πλήκτρων:\n"
+msgstr[1] ""
+"Οι συντομεύσεις '%2' συγκρούονται με τους παρακάτω συνδυασμούς πλήκτρων:\n"
+
+#: kkeysequencewidget.cpp:144
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Σύγκρουση με καθολική συντόμευση"
+msgstr[1] "Σύγκρουση με καθολικές συντομεύσεις"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:233
+#: kkeysequencewidget.cpp:619 kshortcutseditor.cpp:622
+#: kshortcutseditor.cpp:640
+msgid "Reassign"
+msgstr "Επανάθεση"
+
+#: kkeysequencewidget.cpp:214
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Σύγκρουση συντόμευσης"
+msgstr[1] "Συγκρούσεις συντόμευσης"
+
+#: kkeysequencewidget.cpp:218
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Συντόμευση '%1' για την ενέργεια '%2'\n"
+
+#: kkeysequencewidget.cpp:223
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"Η συντόμευση « %2 » είναι διφορούμενη με την ακόλουθη συντόμευση "
+"πληκτρολογίου.\n"
+" Επιθυμείτε την ανάθεσή μιας κενής συντόμευσης σε αυτή την ενέργεια;\n"
+"%3"
+msgstr[1] ""
+"Η συντόμευση « %2 » είναι διφορούμενη με τις ακόλουθες συντομεύσεις "
+"πληκτρολογίου.\n"
+" Επιθυμείτε την ανάθεσή μιας κενής συντόμευσης σε αυτές τις ενέργειες;\n"
+"%3"
+
+#: kkeysequencewidget.cpp:242
+msgid "Shortcut conflict"
+msgstr "Σύγκρουση συντόμευσης"
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>Ο συνδυασμός πλήκτρων « %1 » χρησιμοποιείται ήδη από την ενέργεια <b>%2</"
+"b>.<br>Παρακαλώ επιλέξτε κάποιον άλλον.</qt>"
+
+#: kkeysequencewidget.cpp:273
+#, fuzzy
+#| msgid ""
+#| "Click on the button, then enter the shortcut like you would in the "
+#| "program.\n"
+#| "Example for Ctrl+a: hold the Ctrl key and press a."
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Πατήστε το κουμπί, έπειτα εισάγετε την συντόμευση που επιθυμείτε στο "
+"πρόγραμμα.\n"
+"Παράδειγμα για Ctrl+a: κρατήστε πατημένο το Ctrl και πιέστε το a."
+
+#: kkeysequencewidget.cpp:465
+msgid "Reserved Shortcut"
+msgstr "Δεσμευμένη συντόμευση"
+
+#: kkeysequencewidget.cpp:466
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"Το πλήκτρο F12 είναι δεσμευμένο στα Windows και δεν μπορεί χρησιμοποιηθεί "
+"για καθολική συντόμευση.\n"
+"Παρακαλώ επιλέξτε μία άλλη."
+
+#: kkeysequencewidget.cpp:613
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Σύγκρουση με πρότυπη συντόμευση εφαρμογής"
+
+#: kkeysequencewidget.cpp:614
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Ο συνδυασμός πλήκτρων « %1 » χρησιμοποιείται ήδη για την τυπική ενέργεια « "
+"%2 » η οποία είναι σε χρήση από διάφορες εφαρμογές.\n"
+"Επιθυμείτε πραγματικά τη χρήση της ως καθολική συντόμευση επίσης;"
+
+#: kkeysequencewidget.cpp:659
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Είσοδος"
+
+#: kkeysequencewidget.cpp:666 kshortcuteditwidget.cpp:63
+#: kshortcuteditwidget.cpp:66
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Καμία"
+
+#: kkeysequencewidget.cpp:706
+msgid "The key you just pressed is not supported by Qt."
+msgstr "Το πλήκτρο που μόλις πιέσατε δεν υποστηρίζεται από την Qt."
+
+#: kkeysequencewidget.cpp:707
+msgid "Unsupported Key"
+msgstr "Μη υποστηριζόμενο πλήκτρο"
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr "Προσθήκη στη γραμμή εργαλείων"
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr "Διαμόρφωση συντόμευσης..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "Δημιουργία περιεχομένου στον διακομιστή"
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "Δε βρέθηκε"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "Λήξη χρονικού ορίου"
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "Εξυπηρετητής: %1"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "Αποστολή αναφοράς σφάλματος."
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "Το μέγεθος του διαλόγου"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr ""
+"Η διεύθυνση αλληλογραφίας στην οποία στέλνεται αυτή η αναφορά σφάλματος."
+
+#: kshortcuteditwidget.cpp:62
+msgid "Default:"
+msgstr "Προκαθορισμένο:"
+
+#: kshortcuteditwidget.cpp:70
+msgid "Custom:"
+msgstr "Προσαρμοσμένο:"
+
+#: kshortcutschemeseditor.cpp:43
+msgid "Shortcut Schemes"
+msgstr "Θέματα συντομεύσεων"
+
+#: kshortcutschemeseditor.cpp:62
+msgid "Current scheme:"
+msgstr "Τρέχον θέμα:"
+
+#: kshortcutschemeseditor.cpp:72
+msgid "New..."
+msgstr "Νέο..."
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: kshortcutschemeseditor.cpp:78
+msgid "More Actions"
+msgstr "Περισσότερες ενέργειες"
+
+#: kshortcutschemeseditor.cpp:82
+msgid "Save as Scheme Defaults"
+msgstr "Αποθήκευση ως προκαθορισμένο θέμα"
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr "Εξαγωγή θέματος..."
+
+#: kshortcutschemeseditor.cpp:101
+msgid "Name for New Scheme"
+msgstr "Όνομα για το νέο θέμα"
+
+#: kshortcutschemeseditor.cpp:102
+msgid "Name for new scheme:"
+msgstr "Όνομα νέου θέματος:"
+
+#: kshortcutschemeseditor.cpp:102
+msgid "New Scheme"
+msgstr "Νέο θέμα"
+
+#: kshortcutschemeseditor.cpp:108
+msgid "A scheme with this name already exists."
+msgstr "Ένα θέμα με το όνομα αυτό υπάρχει ήδη."
+
+#: kshortcutschemeseditor.cpp:137
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"Επιθυμείτε πραγματικά τη διαγραφή του θέματος %1;\n"
+" Σημειώστε ότι αυτό δεν αφαιρεί θέματα συντομεύσεων του συστήματος."
+
+#: kshortcutschemeseditor.cpp:167
+msgid "Export to Location"
+msgstr "Εξαγωγή στην τοποθεσία"
+
+#: kshortcutschemeseditor.cpp:175
+msgid "Could not export shortcuts scheme because the location is invalid."
+msgstr ""
+"Αδυναμία εξαγωγής θέματος συντομεύσεων επειδή η τοποθεσία δεν είναι έγκυρη."
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+"Το τρέχον θέμα συντομεύσεων τροποποιήθηκε. Αποθήκευση πριν την εναλλαγή στο "
+"νέο;"
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr "&Λεπτομέρειες"
+
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr "Διαμόρφωση συντομεύσεων"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Αλληλεπιδραστική αναζήτηση για ονόματα συντομεύσεων (π.χ. Αντιγραφή) ή "
+"συνδυασμούς πλήκτρων(π.χ. Ctrl+C) με την πληκτρολόγηση τους εδώ."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Εδώ μπορείτε να δείτε μια λίστα των συντομεύσεων πλήκτρων, δηλ. συσχετίσεων "
+"μεταξύ ενεργειών (π.χ. 'Αντιγραφή') που φαίνονται στην αριστερή στήλη και "
+"πλήκτρων ή συνδυασμών πλήκτρων (π.χ. CTRL-V), που φαίνονται στη δεξιά στήλη."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "Ενέργεια"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "Συντόμευση"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "Εναλλακτική"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr "Καθολική"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr "Εναλλακτική καθολική"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr "Χειρονομία κουμπιού ποντικιού"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr "Χειρονομία σχήματος ποντικιού"
+
+#: kshortcutseditor.cpp:617 kshortcutseditor.cpp:635
+msgid "Key Conflict"
+msgstr "Σύγκρουση συνδυασμών"
+
+#: kshortcutseditor.cpp:618
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Η χειρονομία σχήματος '%1' έχει ήδη δεσμευθεί για την ενέργεια \"%2\".\n"
+"Επιθυμείτε την ανάθεσή της από αυτήν την ενέργεια στην τρέχουσα;"
+
+#: kshortcutseditor.cpp:636
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Ο συνδυασμός πλήκτρων '%1' έχει ήδη δεσμευθεί για την ενέργεια \"%2\".\n"
+"Επιθυμείτε την ανάθεσή του από αυτήν την ενέργεια στην τρέχουσα;"
+
+#: kshortcutseditor.cpp:683
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Συντομεύσεις για %1"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:701 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr "Κύριο:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:702 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr "Εναλλακτικό:"
+
+#: kshortcutseditor.cpp:703
+msgid "Global:"
+msgstr "Καθολική:"
+
+#: kshortcutseditor.cpp:704
+#, fuzzy
+#| msgid "Global Alternate"
+msgid "Global alternate:"
+msgstr "Εναλλακτική καθολική"
+
+#: kshortcutseditor.cpp:719
+msgid "Action Name"
+msgstr "Όνομα ενέργειας"
+
+#: kshortcutseditor.cpp:723
+msgid "Shortcuts"
+msgstr "Συντομεύσεις"
+
+#: kshortcutseditor.cpp:727
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: kshortcutseditoritem.cpp:51
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr "Εναλλαγή γλώσσας εφαρμογής"
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr ""
+"Παρακαλώ επιλέξτε τη γλώσσα που θα χρησιμοποιηθεί γι' αυτήν την εφαρμογή:"
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr "Προσθήκη αναπληρωματικής γλώσσας"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"Προσθήκη μιας επιπλέον γλώσσας που θα χρησιμοποιηθεί αν οι υπόλοιπες "
+"μεταφράσεις δεν είναι σωστές."
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"Η γλώσσα αυτής της εφαρμογής τροποποιήθηκε. Η αλλαγή θα έχει ισχύ κατά την "
+"επόμενη εκκίνηση της εφαρμογής."
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+msgid "Application Language Changed"
+msgstr "Τροποποίηση γλώσσας εφαρμογής"
+
+#: kswitchlanguagedialog_p.cpp:365
+msgid "Primary language:"
+msgstr "Κύρια γλώσσα:"
+
+#: kswitchlanguagedialog_p.cpp:365
+msgid "Fallback language:"
+msgstr "Αναπληρωματική γλώσσα:"
+
+#: kswitchlanguagedialog_p.cpp:384
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: kswitchlanguagedialog_p.cpp:395
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+"Αυτή είναι η κύρια γλώσσα της εφαρμογής η οποία θα χρησιμοποιηθεί πρώτη "
+"μεταξύ των υπολοίπων γλωσσών."
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"Αυτή η γλώσσα θα χρησιμοποιηθεί αν κάθε προηγούμενη γλώσσα δεν περιέχει "
+"σωστή μετάφραση."
+
+#: ktoolbar.cpp:303
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Εμφάνιση κειμένου"
+
+#: ktoolbar.cpp:306
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Ρυθμίσεις γραμμών εργαλείων"
+
+#: ktoolbar.cpp:308
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Προσανατολισμός"
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Πάνω"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Δεξιά"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "Κάτω"
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr "Θέση κειμένου"
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr "Μόνο εικονίδια"
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr "Μόνο κείμενο"
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr "Κείμενο δίπλα στα εικονίδια"
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr "Κείμενο κάτω από τα εικονίδια"
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr "Μέγεθος εικονιδίων"
+
+#: ktoolbar.cpp:337
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Προκαθορισμένο"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Μικρό (%1x%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Μεσαίο (%1x%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Μεγάλο (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Τεράστιο (%1x%2)"
+
+#: ktoolbar.cpp:403
+msgid "Lock Toolbar Positions"
+msgstr "Κλείδωμα θέσης γραμμών εργαλείων"
+
+#: ktoolbar.cpp:1357
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbar.cpp:1358
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr "Εμφάνιση γραμμών εργαλείων"
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr "Επαναφορά"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "Αναίρεση"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+msgid "No text"
+msgstr "Χωρίς κείμενο"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "&Αρχείο"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "Παιχ&νίδι"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "&Επεξεργασία"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Μετακίνηση"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "Π&ροβολή"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "Μ&ετάβαση"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "&Σελιδοδείκτες"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "Ερ&γαλεία"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "Ρ&υθμίσεις"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr "Κύρια γραμμή εργαλείων"

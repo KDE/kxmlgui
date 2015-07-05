@@ -1,0 +1,1326 @@
+# Vietnamese translation for kdelibs.
+# Copyright © 2007 KDE i18n Project for Vietnamese.
+#
+# Clytie Siddall <clytie@riverland.net.au>, 2006-2007.
+# Hoàng Đức Hiếu <hieu.d.hoang@gmail.com>, 2008, 2011.
+# Lê Hoàng Phương <herophuong93@gmail.com>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-07-02 09:07+0000\n"
+"PO-Revision-Date: 2012-09-23 18:43+0800\n"
+"Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
+"Language-Team: American English <kde-i18n-vi@kde.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.5\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nhóm Việt hoá KDE"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-vi@kde.org"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "Giới thiệu về %1"
+
+#: kaboutapplicationdialog.cpp:99
+#, kde-format
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br/><b>Phiên bản %2</b><br/>&nbsp;</html>"
+
+#: kaboutapplicationdialog.cpp:103
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">%1</font><br/><b>version %2</b><br/>Using KDE %3</"
+#| "html>"
+msgctxt ""
+"Program name, version and KDE platform version; do not translate "
+"'Development Platform'"
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
+"Frameworks %3</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br/><b>phiên bản %2</b><br/>Dùng KDE %3</"
+"html>"
+
+#: kaboutapplicationdialog.cpp:142
+#, kde-format
+msgid "License: %1"
+msgstr "Giấy phép: %1"
+
+#: kaboutapplicationdialog.cpp:154
+msgid "&About"
+msgstr "&Giới thiệu"
+
+#: kaboutapplicationdialog.cpp:174
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"Vui lòng thông báo lỗi bằng <a href=\"http://bugs.kde.org\">Bugzilla</a>.\n"
+
+#: kaboutapplicationdialog.cpp:178 kaboutapplicationdialog.cpp:182
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "Vui lòng thông báo lỗi nào cho <a href=\"mailto:%1\">%2</a>.\n"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthor"
+msgstr "Tác &giả"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthors"
+msgstr "Tác &giả"
+
+#: kaboutapplicationdialog.cpp:236
+msgid "&Thanks To"
+msgstr "&Cám ơn :"
+
+#: kaboutapplicationdialog.cpp:275
+msgid "T&ranslation"
+msgstr "Bản &dịch"
+
+#: kaboutapplicationdialog.cpp:307
+msgid "License Agreement"
+msgstr "Điều kiện giấy phép"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Gửi thư cho người đóng góp"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+msgid "Visit contributor's homepage"
+msgstr "Xem trang chủ của người đóng góp"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"Gửi thư cho người đóng góp\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"Xem trang chủ của người đóng góp\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"Ghé thăm hồ sơ người đóng góp tại %1\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"Xem trang của người đóng góp\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"Xem blog của người đóng góp\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "Khác"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "Blog"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "Trang chủ"
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "Giới thiệu về KDE"
+
+#: kaboutkdedialog_p.cpp:46
+#, fuzzy
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+"<html><font size=\"5\">KDE - Hãy được tự do!</font><br /><b>Phiên bản nền "
+"tảng %1</b></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"%1\">Free Software</a> development. This community has created hundreds "
+#| "of Free Software applications as part of the KDE Development Platform and "
+#| "KDE Software Distribution.<br /><br />KDE is a cooperative enterprise in "
+#| "which no single entity controls the efforts or products of KDE to the "
+#| "exclusion of others. Everyone is welcome to join and contribute to KDE, "
+#| "including you.<br /><br />Visit <a href=\"%2\">%2</a> for more "
+#| "information about the KDE community and the software we produce.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> là một mạng lưới toàn cầu của các kỹ sư phần mềm, nghệ sĩ, "
+"nhà văn, nhà biên dịch và các mạnh thường quân, những người đã đóng góp vào "
+"sự phát triển  <a href=\"%1\">Phần mềm tự do</a>. Cộng đồng này đã tạo hàng "
+"trăm các ứng dụng Phần mềm tự do như một phần của Nền tảng phát triển KDE và "
+"Bản phân phối phần mềm KDE. <br /><br />KDE là một tổ chức hợp tác mà không "
+"một đơn thể nào chi phối các cố gắng hoặc các sản phẩm của KDE mà không có "
+"sự tham gia của các thành viên khác. Tất cả mọi người đều tham gia và đóng "
+"góp vào KDE, kể cả bạn. <br /><br />Ghé thăm <a href=\"%2\">%2</a> để biết "
+"thêm thông tin về cộng đồng KDE và những phần mềm mà chúng tôi tạo ra.</html>"
+
+#: kaboutkdedialog_p.cpp:74
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>Phần mềm luôn cần được cải thiện, và nhóm KDE luôn sẵn sàng làm như "
+"vậy. Tuy nhiên, bạn - một người dùng - hãy nói với chúng tôi khi có điều gì "
+"đó hoạt động không như mong đợi hay có thể làm tốt hơn.<br /><br />KDE có "
+"một hệ thống theo dõi lỗi. Hãy ghé thăm <a href=\"%1\">%1</a> hoặc sử dụng "
+"hộp thoại \"Báo cáo lỗi...\" từ trình đơn \"Trợ giúp\" để báo lỗi.<br /><br /"
+">Nếu bạn có gợi ý cải thiện phần mềm thì bạn luôn được chào đón sử dụng hệ "
+"thống theo dõi lỗi của chúng tôi để đăng mong ước của bạn. Hãy chắc rằng bạn "
+"đặt tính quan trọng là \"Wishlist\" nhé.</html>"
+
+#: kaboutkdedialog_p.cpp:92
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>Bạn không cần phải là một nhà phát triển phần mềm để trở thành một "
+"thành viên của nhóm KDE. Bạn có thể tham gia vào nhóm dịch giao diện phần "
+"mềm của nước bạn. Bạn cũng có thể cung cấp đồ họa, sắc thái, âm thanh và cải "
+"thiện tài liệu. Điều đó do bạn quyết định!<br /><br />Hãy ghé thăm<a href="
+"\"%1\">%1</a> để biết thêm thông tin về vài dự án bạn có thể tham gia.<br /"
+"><br />Nếu bạn cần thêm thông tin hay tài liệu thì hãy xem <a href=\"%2\">"
+"%2</a>.</html>"
+
+#: kaboutkdedialog_p.cpp:114
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>Phần mềm KDE luôn miễn phí, nhưng việc tạo ra nó thì không như vậy."
+"<br /> <br />Để hỗ trợ sự phát triển, cộng đồng KDE đã thành lập KDE e.V., "
+"một tổ chức phi lợi nhuận hợp pháp tại Đức. KDE e.V. đại diện cho cộng đồng "
+"KDE về mặt pháp danh và tài chính. Xem <a href=\"%1\">%1</a> để biết thêm về "
+"KDE e.V.<br /><br />KDE hưởng lợi từ nhiều nguồn đóng góp, bao gồm cả tài "
+"chính. Chúng tôi sử dụng quỹ để hoàn trả những phí tổn mà các thành viên đã "
+"chịu khi họ đóng góp. Quỹ còn được dùng để hỗ trợ pháp lý và tổ chức các hội "
+"thảo.<br /><br />Chúng tôi khuyến khích bạn hỗ trợ các cố gắng của chúng tôi "
+"với một khoản ủng hộ tài chính nhỏ, sử dụng một trong các cách miêu tả tại "
+"<a href=\"%2\">%2</a>.<br /><br />Chúng tôi sẽ cám ơn bạn rất nhiều vì sự hỗ "
+"trợ của bạn.</html>"
+
+#: kaboutkdedialog_p.cpp:133
+msgctxt "About KDE"
+msgid "&About"
+msgstr "&Giới thiệu"
+
+#: kaboutkdedialog_p.cpp:134
+msgid "&Report Bugs or Wishes"
+msgstr "Thông &báo lỗi hay yêu cầu"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Join KDE"
+msgstr "&Tham gia KDE"
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Support KDE"
+msgstr "&Hỗ trợ KDE"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"Chuỗi phím '%1' không rõ ràng. Hãy sử dụng 'Cấu hình phím tắt'\n"
+"từ trình đơn 'Thiết lập' để xử lý việc này.\n"
+"Không có hành động nào sẽ được thực hiện."
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr "Đã phát hiện phím tắt không rõ ràng"
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "Gởi báo cáo lỗi"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Địa chỉ thư điện tử của bạn. Nếu không đúng, hãy nhấn nút Cấu hình thư để "
+"thay đổi nó."
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Từ:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "Cấu hình thư..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr "Địa chỉ thư điện tử sẽ nhận báo cáo lỗi này."
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Tới:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "&Gởi"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "Gởi báo cáo lỗi."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "Gởi báo cáo lỗi này cho %1."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"Ứng dụng về mà bạn muốn thông báo lỗi. Nếu không đúng, hãy sử dụng mục trình "
+"đơn \"Thông báo lỗi\" của ứng dụng đúng."
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "Ứng dụng: "
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"Phiên bản của ứng dụng này. Vui lòng kiểm tra xem chưa có phiên bản mới hơn "
+"công bố, trước khi gởi báo cáo lỗi."
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "Phiên bản:"
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr "chưa đặt phiên bản (lỗi lập trình)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "HĐH:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "Bộ biên dịch:"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "Độ &quan trọng"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "Nghiêm trọng"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "Quan trọng"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "Chuẩn"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "Yêu cầu"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "Bản dịch"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "&Chủ đề: "
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Hãy nhập đoạn (bằng tiếng Anh nếu có thể) bạn muốn gồm có trong báo cáo "
+"lỗi.\n"
+"Khi bạn bấm nút \"Gởi\", thư báo cáo lỗi sẽ được gởi cho nhà duy trì chương "
+"trình này.\n"
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>Để thông báo lỗi, hãy nhấn vào cái nút bên dưới. Việc này sẽ mở một cửa "
+"sổ trình duyệt Mạng ở địa chỉ của <a href=\"http://bugs.kde.org\">bộ theo "
+"dõi lỗi KDE</a> mà cung cấp đơn cần điền vào. Thông tin bên trên sẽ được "
+"truyền cho máy phục vụ đó.</qt>"
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr "&Khởi chạy trợ lý thông báo lỗi"
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "không rõ"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Bạn phải ghi rõ cả chủ đề lẫn mô tả đều trước khi có gởi được báo cáo này."
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Bạn đã chọn độ quan trọng <b>Nghiêm trọng</b>. Vui lòng ghi chú rằng độ "
+"quan trọng này dành cho lỗi</p><ul><li>hỏng phần mềm không liên quan với hệ "
+"thống (hoặc hỏng toàn bộ hệ thống)</li><li>gây ra mất dữ liệu nghiêmtrọng</"
+"li><li>cho thấy một lỗ bảo mật vào hệ thống nơi gói đó được cài đặt</li></"
+"ul>\n"
+"<p>Lỗi bạn đang thông báo có gây thiệt hại nào trên không? Nếu không, vui "
+"lòng chọn độ quan trọng thấp hơn. Cám ơn bạn!</p>"
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Bạn đã chọn độ quan trọng <b>Quan trọng</b>. Vui lòng ghi chú rằng độ "
+"quan trọng này dành cho lỗi</p><ul><li>làm cho gói đó không có khả năng sử "
+"dụng hoặc hầu hết như thế</li><li>gây ra mất dữ liệu</li><li>cho thấy một lỗ "
+"bảo mật mà cho phép truy cập vào tài khoản của người dùng nào dùng gói đó</"
+"li></ul>\n"
+"<p>Lỗi bạn đang thông báo có gây thiệt hại nào trên không? Nếu không, vui "
+"lòng chọn độ quan trọng thấp hơn. Cám ơn bạn !</p>"
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"Không thể gởi báo cáo lỗi này.\n"
+"Vui lòng tự thông báo lỗi ...\n"
+"Xem http://bugs.kde.org/ để được hướng dẫn."
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr ""
+"Báo cáo lỗi đã được gởi.\n"
+"Cám ơn bạn đã nhập thông tin hữu ích."
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"Đóng và hủy thư\n"
+"đã soạn thảo không?"
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr "Đóng thư"
+
+#: kcheckaccelerators.cpp:221
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Chẩn đoán trình tăng tốc Dr.Klash"
+
+#: kcheckaccelerators.cpp:228
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Tắt kiểm tra tự động"
+
+#: kcheckaccelerators.cpp:232
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Đóng"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Phím tắt đã thay đổi</h2>"
+
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+#, fuzzy
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "Tìm đoạn"
+
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "Show Text"
+msgid "New Text"
+msgstr "Hiện văn bản"
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Phím tắt bị gỡ bỏ</h2>"
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>Phím tắt đã thêm (chỉ cho bạn tin tức này thôi)</h2>"
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "━━ bộ phân cách ━━"
+
+#: kedittoolbar.cpp:350
+msgid "Change Text"
+msgstr "Thay văn bản"
+
+#: kedittoolbar.cpp:361
+msgid "Icon te&xt:"
+msgstr "Văn bản biểu &tượng:"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr "Ẩn &văn bản khi thanh công cụ hiện chữ bên cạnh biểu tượng"
+
+#: kedittoolbar.cpp:619
+msgid "Configure Toolbars"
+msgstr "Cấu hình Thanh công cụ"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"Bạn thật sự muốn đặt lại mọi thanh công cụ của ứng dụng này thành giá trị "
+"mặc định không? Các thay đổi sẽ được áp dụng ngay."
+
+#: kedittoolbar.cpp:682
+msgid "Reset Toolbars"
+msgstr "Đặt lại thanh công cụ"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "Đặt lại"
+
+#: kedittoolbar.cpp:1010
+msgid "&Toolbar:"
+msgstr "&Thanh công cụ :"
+
+#: kedittoolbar.cpp:1025
+msgid "A&vailable actions:"
+msgstr "Hành động có &sẵn:"
+
+#: kedittoolbar.cpp:1040 kedittoolbar.cpp:1059
+msgid "Filter"
+msgstr "Bộ lọc"
+
+#: kedittoolbar.cpp:1043
+msgid "Curr&ent actions:"
+msgstr "Hành động &hiện có :"
+
+#: kedittoolbar.cpp:1062
+msgid "Change &Icon..."
+msgstr "Đổi &biểu tượng..."
+
+#: kedittoolbar.cpp:1070
+msgid "Change Te&xt..."
+msgstr "Thay văn &bản..."
+
+#: kedittoolbar.cpp:1222
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1242
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"Yếu tố này sẽ được thay thế bằng tất cả các yếu tố của một thành phần nhúng."
+
+#: kedittoolbar.cpp:1244
+msgid "<Merge>"
+msgstr "<Trộn>"
+
+#: kedittoolbar.cpp:1246
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<Trộn %1>"
+
+#: kedittoolbar.cpp:1252
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Đây là danh sách động các hành động. Di chuyển được, nhưng sau khi gỡ bỏ nó, "
+"không thể thêm lại."
+
+#: kedittoolbar.cpp:1253
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Danh sách hành động: %1"
+
+#: kedittoolbar.cpp:1353 kedittoolbar.cpp:1380
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1607
+msgid "Change Icon"
+msgstr "Thay biểu tượng"
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "nút trái"
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "nút giữa"
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "nút phải"
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "nút không hợp lệ"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "Ấn giữ %1, rồi bấm %2"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "Trợ g&iúp"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "Phím tắt '%1' trong Ứng dụng %2 cho hành động %3\n"
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "Phím tắt '%2' xung đột với các tổ hợp phím sau:\n"
+
+#: kkeysequencewidget.cpp:144
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Xung đột với phím tắt toàn hệ thống"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:233
+#: kkeysequencewidget.cpp:619 kshortcutseditor.cpp:622
+#: kshortcutseditor.cpp:640
+msgid "Reassign"
+msgstr "Gán lại"
+
+#: kkeysequencewidget.cpp:214
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Xung đột phím tắt"
+
+#: kkeysequencewidget.cpp:218
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Phím tắt '%1' cho hành động '%2'\n"
+
+#: kkeysequencewidget.cpp:223
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"Phím tắt \"%2\" không rõ ràng với các phím tắt sau.\n"
+"Bạn có muốn gán phím tắt rỗng cho các hành động này?\n"
+"%3"
+
+#: kkeysequencewidget.cpp:242
+msgid "Shortcut conflict"
+msgstr "Xung đột phím tắt"
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>Tổ hợp phím '%1' đã được dùng bởi hành động <b>%2</b>. <br />Hãy chọn tổ "
+"hợp phím khác.</qt>"
+
+#: kkeysequencewidget.cpp:273
+#, fuzzy
+#| msgid ""
+#| "Click on the button, then enter the shortcut like you would in the "
+#| "program.\n"
+#| "Example for Ctrl+a: hold the Ctrl key and press a."
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Nhấn vào nút, sau đó nhập phím tắt bạn muốn dùng.\n"
+"Ví dụ cho Ctrl + a: nhấn phím Ctrl và nhấn a."
+
+#: kkeysequencewidget.cpp:465
+msgid "Reserved Shortcut"
+msgstr "Phím tắt dự trữ"
+
+#: kkeysequencewidget.cpp:466
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"Phím F12 được dự trữ cho cửa sổ, vì vậy không thể dùng làm phím tắt toàn hệ "
+"thống.\n"
+"Hãy chọn phím khác."
+
+#: kkeysequencewidget.cpp:613
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Xung đột với phím tắt ứng dụng chuẩn"
+
+#: kkeysequencewidget.cpp:614
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Tổ hợp phím '%1' cũng được dùng cho hành động chuẩn \"%2\" do nhiều ứng dụng "
+"sử dụng.\n"
+"Bạn có muốn sử dụng nó như một phím tắt toàn hệ thống không?"
+
+#: kkeysequencewidget.cpp:659
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Gõ"
+
+#: kkeysequencewidget.cpp:666 kshortcuteditwidget.cpp:63
+#: kshortcuteditwidget.cpp:66
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Không"
+
+#: kkeysequencewidget.cpp:706
+msgid "The key you just pressed is not supported by Qt."
+msgstr "Phím bạn vừa nhấn không được hỗ trợ bởi Qt."
+
+#: kkeysequencewidget.cpp:707
+msgid "Unsupported Key"
+msgstr "Phím không hỗ trợ"
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr "Thêm vào thanh công cụ"
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr "Cấu hình phím tắt..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "Tạo nội dung trên máy chủ"
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "Không tìm thấy"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "Kết nối đã quá giờ"
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "Máy phục vụ: %1"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "Gởi báo cáo lỗi."
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "Cỡ hộp thoại"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "Địa chỉ thư điện tử sẽ nhận báo cáo lỗi này."
+
+#: kshortcuteditwidget.cpp:62
+msgid "Default:"
+msgstr "Mặc định:"
+
+#: kshortcuteditwidget.cpp:70
+msgid "Custom:"
+msgstr "Tùy chọn:"
+
+#: kshortcutschemeseditor.cpp:43
+msgid "Shortcut Schemes"
+msgstr "Giản đồ lối tắt"
+
+#: kshortcutschemeseditor.cpp:62
+msgid "Current scheme:"
+msgstr "Giản đồ hiện tại:"
+
+#: kshortcutschemeseditor.cpp:72
+msgid "New..."
+msgstr "Mới..."
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr "Xoá bỏ"
+
+#: kshortcutschemeseditor.cpp:78
+msgid "More Actions"
+msgstr "Thêm hành động"
+
+#: kshortcutschemeseditor.cpp:82
+msgid "Save as Scheme Defaults"
+msgstr "Lưu thành Giản đồ mặc định"
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr "Xuất giản đồ..."
+
+#: kshortcutschemeseditor.cpp:101
+msgid "Name for New Scheme"
+msgstr "Tên cho giản đồ mới"
+
+#: kshortcutschemeseditor.cpp:102
+msgid "Name for new scheme:"
+msgstr "Tên cho giản đồ mới:"
+
+#: kshortcutschemeseditor.cpp:102
+msgid "New Scheme"
+msgstr "Giản đồ mới"
+
+#: kshortcutschemeseditor.cpp:108
+msgid "A scheme with this name already exists."
+msgstr "Đã tồn tại một giản đồ với tên này."
+
+#: kshortcutschemeseditor.cpp:137
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"Bạn có thực sự muốn xóa giản đồ %1?\n"
+"Lưu ý rằng điều này sẽ gỡ bỏ toàn bộ các giản đồ phím tắt toàn hệ thống."
+
+#: kshortcutschemeseditor.cpp:167
+msgid "Export to Location"
+msgstr "Xuất ra địa điểm"
+
+#: kshortcutschemeseditor.cpp:175
+msgid "Could not export shortcuts scheme because the location is invalid."
+msgstr "Không thể xuất giản đồ phím tắt vì vị trí không hợp lệ."
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+"Giản đồ phím tắt hiện tại đã thay đổi. Lưu trước khi chuyển sang cái mới?"
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr "&Chi tiết"
+
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr "Cấu hình phím tắt"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Tìm kiếm tương tác các tên phím tắt (v.d. Chép) hoặc tổ hợp phím (v.d. Ctrl"
+"+C) bằng cách gõ chúng vào đây."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Ở đây bạn xem được danh sách các tổ hợp phím, tức là cách liên quan hành "
+"động (v.d. Chép) được hiển thị trong cột bên trái, và phím hay kết hợp phím "
+"(v.d. Ctrl+C) được hiển thị trong cột bên phải."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "Hành động"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "Phím tắt"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "Xen kẽ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr "Toàn cục"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr "Xen kẽ toàn cục"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr "Điệu bộ nút chuột"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr "Điệu bộ hình chuột"
+
+#: kshortcutseditor.cpp:617 kshortcutseditor.cpp:635
+msgid "Key Conflict"
+msgstr "Phím xung đột"
+
+#: kshortcutseditor.cpp:618
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Điệu bộ hình \"%1\" đã được gán cho hành động \"%2\".\n"
+"Bạn có muốn gán lại nó từ hành động này đến điều hiện thời không?"
+
+#: kshortcutseditor.cpp:636
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Điệu bộ đu \"%1\" đã được gán cho hành động \"%2\".\n"
+"Bạn có muốn gán lại nó từ hành động này đến điều hiện thời không?"
+
+#: kshortcutseditor.cpp:683
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Lối tắt cho %1"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:701 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr "Chính:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:702 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr "Xen kẽ:"
+
+#: kshortcutseditor.cpp:703
+msgid "Global:"
+msgstr "Toàn cục:"
+
+#: kshortcutseditor.cpp:704
+#, fuzzy
+#| msgid "Global Alternate"
+msgid "Global alternate:"
+msgstr "Xen kẽ toàn cục"
+
+#: kshortcutseditor.cpp:719
+msgid "Action Name"
+msgstr "Tên hành động"
+
+#: kshortcutseditor.cpp:723
+msgid "Shortcuts"
+msgstr "Phím tắt"
+
+#: kshortcutseditor.cpp:727
+msgid "Description"
+msgstr "Mô tả"
+
+#: kshortcutseditoritem.cpp:51
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr "Đổi ngôn ngữ ứng dụng"
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr "Hãy chọn ngôn ngữ cần dùng cho ứng dụng này:"
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr "Thêm ngôn ngữ phụ"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr "Thêm ngôn ngữ khác để dùng nếu bản dịch khác bị hỏng."
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"Ngôn ngữ cho ứng dụng này bị thay đổi. Thay đổi sẽ có tác động lần kế tiếp "
+"bạn khởi chạy ứng dụng này."
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+msgid "Application Language Changed"
+msgstr "Ngôn ngữ ứng dụng bị thay đổi"
+
+#: kswitchlanguagedialog_p.cpp:365
+msgid "Primary language:"
+msgstr "Ngôn ngữ chính:"
+
+#: kswitchlanguagedialog_p.cpp:365
+msgid "Fallback language:"
+msgstr "Ngôn ngữ phụ :"
+
+#: kswitchlanguagedialog_p.cpp:384
+msgid "Remove"
+msgstr "Bỏ"
+
+#: kswitchlanguagedialog_p.cpp:395
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr "Đây là ngôn ngữ ứng dụng chính mà sẽ được dùng trước các ngôn ngữ khác"
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"Đây là ngôn ngữ phụ mà sẽ được dùng nếu bất kỳ ngôn ngữ  nào trước nó chứa "
+"bản dịch hỏng."
+
+#: ktoolbar.cpp:303
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Hiện văn bản"
+
+#: ktoolbar.cpp:306
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Thiết lập thanh công cụ"
+
+#: ktoolbar.cpp:308
+#, fuzzy
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Hướng"
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Trên"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Trái"
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Phải"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "Dưới"
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr "Vị trí nhãn"
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr "Chỉ có hình"
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr "Chỉ có chữ"
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr "Chữ cạnh hình"
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr "Chữ dưới hình"
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr "Cỡ biểu tượng"
+
+#: ktoolbar.cpp:337
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Mặc định"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Nhỏ (%1x%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Vừa (%1x%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Lớn (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Rất lớn (%1x%2)"
+
+#: ktoolbar.cpp:403
+msgid "Lock Toolbar Positions"
+msgstr "Khoá vị trí thanh công cụ"
+
+#: ktoolbar.cpp:1357
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbar.cpp:1358
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr "Thanh công cụ đang hiện"
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr "Làm lại"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "Hồi lại"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+msgid "No text"
+msgstr "Không có văn bản"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "&Tập tin"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "Trò &chơi"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "&Hiệu chỉnh"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Chu&yển"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "&Xem"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "&Tới"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "Đánh &dấu"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "&Công cụ"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "Thiết &lập"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr "Thanh công cụ chính"

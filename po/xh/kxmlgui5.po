@@ -1,0 +1,1424 @@
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to Xhosa
+# K Desktop Environment - kdelibs
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+# Thelma Lungcuzo <thelma@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-07-02 09:07+0000\n"
+"PO-Revision-Date: 2002-12-13 17:20SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, fuzzy
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Igama elitsha lenginginya."
+
+#, fuzzy
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Igama elitsha lenginginya."
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "Malunga ne %1"
+
+#: kaboutapplicationdialog.cpp:99
+#, kde-format
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:103
+#, kde-format
+msgctxt ""
+"Program name, version and KDE platform version; do not translate "
+"'Development Platform'"
+msgid ""
+"<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
+"Frameworks %3</html>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:142
+#, fuzzy, kde-format
+msgid "License: %1"
+msgstr "Umsinga wesandi Phezulu"
+
+#: kaboutapplicationdialog.cpp:154
+msgid "&About"
+msgstr "&Malunga"
+
+#: kaboutapplicationdialog.cpp:174
+#, fuzzy
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"Nceda sebenzisa i http://bugs.kde.org ukuchaza amagciwane, ungabhaleli "
+"ababhali nkqo.\n"
+
+#: kaboutapplicationdialog.cpp:178 kaboutapplicationdialog.cpp:182
+#, fuzzy, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr ""
+"Nceda sebenzisa i http://bugs.kde.org ukuchaza amagciwane, ungabhaleli "
+"ababhali nkqo.\n"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthor"
+msgstr "Um&bhali"
+
+#: kaboutapplicationdialog.cpp:209
+msgid "A&uthors"
+msgstr "&Ababhali"
+
+#: kaboutapplicationdialog.cpp:236
+msgid "&Thanks To"
+msgstr "&Enkosi Ku"
+
+#: kaboutapplicationdialog.cpp:275
+msgid "T&ranslation"
+msgstr "&Uguqulelo lomsebenzi kolunye ulwimi"
+
+#: kaboutapplicationdialog.cpp:307
+#, fuzzy
+#| msgid "&License Agreement"
+msgid "License Agreement"
+msgstr "&Isivumelwano Selayisenisi"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+#, fuzzy
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Abanye Abanikeli:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+#, fuzzy
+#| msgid "Homepage"
+msgid "Visit contributor's homepage"
+msgstr "Homepage"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr "Abanye Abanikeli:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr "Homepage"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr "Homepage"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr "Homepage"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, fuzzy, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, fuzzy, kde-format
+#| msgctxt "concatenation of dates and time"
+#| msgid "%1 %2"
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1 %2"
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+#, fuzzy
+#| msgid "Other"
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "Enye"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+#, fuzzy
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "Ikhubazekile"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+#, fuzzy
+#| msgid "Homepage"
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "Homepage"
+
+#: kaboutkdedialog_p.cpp:43
+#, fuzzy
+msgid "About KDE"
+msgstr "Malunga ne &KDE"
+
+#: kaboutkdedialog_p.cpp:46
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"I<b>Imekobume ye K Desktop</b> ibhaliwe kwaye yalondolozwa liqela le KDE, "
+"umsebenzi womnatha kwihlabathi-jikelele lodweliso lwenkqubo ye khomputha "
+"labenjini ezibophelelekileyo kudweliso lwenkqubo yecomputer ekhululekileyo "
+"ebheka phambili.<br><br>Akukho qela lilodwa, nkampani okanye qela lithile "
+"elilawula iikhowudi yemvelaphi ye KDE.Wonke ubani wamkelekile ukunikela kwi "
+"KDE.<br><br>Ndwendwela<A HREF=\"http://www.kde.org/\">http://www.kde.org/</"
+"A>Xa ufuna ulwazi oluphangaleleyo Kwiprojekti ye KDE."
+
+#: kaboutkdedialog_p.cpp:74
+#, fuzzy, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"Udweliso lwenkqubo lwe khomputha soloko luphuculwa, kwaye Iqela KDE "
+"lukulungele ukwenza oko. Ngoko, wena -msebenzisi-kufuneka usixelele xa kukho "
+"into engasebenziyo njengoko kulindelekile okanye enokwenziwa ngcono."
+"<br><br>Imekobume ye K Desktop inendlela yomkhondo webug. Ndwendwela <A "
+"HREF=/\"http://bugs.kde.org/\">http:bugs.kde.org/</A> okanye sebenzisa "
+"\"Ingxelo Bug\"incoko yababini isuka ku\"Uncedo\" imenu yokuchaza ibugs."
+"<br><br>Ukuba une siphakamiso sokunyusela ngoko waqmkelekile ukusebenzisa "
+"indlela yomkhondo ukubhalisa umnqweno wakho. Qinisekisa ukuba usebenzisa "
+"Ubungqongo obubizwa \"Uluhlulomnqweno\""
+
+#: kaboutkdedialog_p.cpp:92
+#, fuzzy, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"Akufunekanga ubengumbhekisi phambili wodweliso lwenkqubo ye khomputha ukuze "
+"ubelilungu leqela leKDE Ungazibandakanya namaqela obuzwe aguqulela kolunye "
+"ulwimi izinto ezinjongene nodweliso lweenkqubo.Unga bonelela ngemizobo,"
+"ngemixholo yokuxoxwa,izandi kunye namaxwebhu anyuselweyo.Uya gqiba!"
+"<br><br>Ndwendwela<A HREF=\"http://www.kde.org/jobs.html\">//www.kde.org/"
+"jobs.html</A>ngo lwazi lwezinye iiprojekti apho uthatha khona inxaxheba."
+"<br><br>Ukuba ufuna ulwazi oluphangaleleyo okanye ngexwebhu, ngoko "
+"undwendwelo ku<A HREF=\"http://mbhekisi phambili.kde.org/\">http://mbhekisi "
+"phambili.kde.org/</A>uzakuku bonelela  ngokufunayo."
+
+#: kaboutkdedialog_p.cpp:114
+#, fuzzy, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"KDE ifumaneka simahla, kodwa ukuyenza i KDE akukho simahla.<br><br>Yiyo "
+"lonto Iqela le KDE liqalise Umbutho, ongenanzuzo oqaliswe ngokusesikweni e "
+"Tuebingen, Germany. Umbutho we KDE umele Iprojekti ye KDE kwizinto zomthetho "
+"nezorhwebo. Bona <a href=\"http://www.kde.org/kde-ev/\">http://www.kde.org/"
+"kde-ev/<a> xa ufuna ulwazi malunga Nombutho we KDE. <br><br>Iqela le KDE "
+"lilufuna uncedo lwemali. Inxenye yemali isetyenziswa ukubatala amalungu "
+"nezinye indleko zabancedisi ngexesha bencedisa kwi Projekti ye KDE. "
+"Uyakuthazwa ukuba uxhase ngokunikezela ngemali, usebenzise enye yendlela "
+"ezichazwe kwi <a href=\"http://www.kde.org/support.html\">http://www.kde.org/"
+"support.html</a>.<br><br>Enkosi ngenxaso yakho."
+
+#: kaboutkdedialog_p.cpp:133
+msgctxt "About KDE"
+msgid "&About"
+msgstr "&Malunga"
+
+#: kaboutkdedialog_p.cpp:134
+msgid "&Report Bugs or Wishes"
+msgstr "&Yenza ingxelo Zamagciwane okanye Iminqwenelo"
+
+#: kaboutkdedialog_p.cpp:135
+#, fuzzy
+#| msgid "&Join the KDE Team"
+msgid "&Join KDE"
+msgstr "&yiba lilungu Leqela le KDE"
+
+#: kaboutkdedialog_p.cpp:136
+#, fuzzy
+msgid "&Support KDE"
+msgstr "&Ixhasa i KDE"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr ""
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "Ngenisa inxelo yeGciwane"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Idilesi yakho ye email. Ukuba ayilunganga, sebenzisa iqhosa loqwalaselo lwe "
+"Email ukuyitshintsha"
+
+#: kbugreport.cpp:131
+#, fuzzy
+#| msgid "From:"
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Ivela ku:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "Qwalasela i Email..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr "Idilesi ye email eli gciwane ethunyelwe kuyo."
+
+#: kbugreport.cpp:147
+#, fuzzy
+#| msgid "To:"
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Iya ku:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "&Thumela"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "Thumela ingxelo yegciwane."
+
+#: kbugreport.cpp:157
+#, fuzzy, kde-format
+msgid "Send this bug report to %1."
+msgstr "Thumela lengxelo yegciwane kuluhlu lwegciwane lwe KDE."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"Isicelo onqwenela ukusingenisela ingxelo yegciwane - ukuba ayilunganga, "
+"nceda sebenzisa umba we menu Yengxelo Yegciwane yesicelo esilungileyo"
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "Isicelo: "
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"Uguqulelo lwesi sicelo sebenzi lesi sicelo - nceda qinisekisa ukuba akukho "
+"nguqulelo yamsebenzi intsha ekhoyo phambi kokuthumela ingxelo yegciwane"
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "Uguqulelo lomsebenzi kolunye ulwimi:"
+
+#: kbugreport.cpp:199
+#, fuzzy
+#| msgid "no version set (programmer error!)"
+msgid "no version set (programmer error)"
+msgstr ""
+"akukho sicwangciso sanguqulelo samsebenzi kolunye ulwimi (imposiso "
+"yomdwelisi woluhlu!)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "OS:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "Umqokeleli ndawonye:"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "&Ubungqongqo"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "Ufumaneko lwempazamo"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "Ingcwaba"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "Isiqhelo"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "Uluhlu lomnqweno"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "Uguqulelo lomsebenzi kolunye ulwimi"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "&Umxholo: "
+
+#: kbugreport.cpp:256
+#, fuzzy
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Faka umbhalo oshicilelweyo Ngesingesi ukuba kuyimfuneko) ofuna "
+"ukuwungenisela ingxelo yegciwane.\n"
+"Ukuba ucinezela \"Thumela\", umyalezo ngeposi uzakuthunyelwa kumlondolozi \n"
+"woludweliso lwenkqubo nakuluhlu lwegciwane le KDE."
+
+#: kbugreport.cpp:279
+#, fuzzy
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"Ukungenisa ingxelo yegciwane, nqakraza kwikhonkco elingezantsi.\n"
+"Le iyakuvula iwindow yokukhangela imiba yeweb kwihttp://bugs.kde.org apho "
+"uyakufumana ifomu yokuyigcwalisa.\n"
+"Lenkcazelo iboniswe ngasentla izakunikezelwa kumncedi."
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr ""
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "engaziwayo"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Kufuneka ukhankanye yomibini imixholo kunye nenkcazelo phambi kokuba "
+"kuthunyelwe ingxelo."
+
+#: kbugreport.cpp:425
+#, fuzzy
+#| msgid ""
+#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
+#| "system (or the whole system)</li><li>cause serious data loss</"
+#| "li><li>introduce a security hole on the system where the affected package "
+#| "is installed</li></ul>\n"
+#| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#| "does not, please select a lower severity. Thank you!</p>"
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Ukhethe ubungnqongqo <b>Ebalulekileyo</b>. Nceda qaphela ukuba "
+"obubungqongo bujolise kuphela kumagciwane a</p><ul><li>phula udweliso "
+"lwenkqubo yekhomputha ezingazalaniyo kulendlela (okanye indlela yonke)</"
+"li><li>yenza idata ezimiseleyo ilahleko</li><li>yazisa umgqobho wokhuseleko "
+"kule ndlela apho umsebenzi ochaphazelekayo ugcinwayo</li></ul>\n"
+"<p>Ingaba ibug onika ingxelo ngayo yenza umonakalo ongentla? Ukuba ayiyenzi, "
+"nceda khetha ubucaka obucothayo. Enkosi!</p>"
+
+#: kbugreport.cpp:437
+#, fuzzy
+#| msgid ""
+#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#| "intended only for bugs that</p><ul><li>make the package in question "
+#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#| "security hole allowing access to the accounts of users who use the "
+#| "affected package</li></ul>\n"
+#| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#| "does not, please select a lower severity. Thank you!</p>"
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Ukhethe ubungqongo <b>Ingcwaba</b>. Nceda qaphela ukuba obu bucaka "
+"bujolise kuphela kwibugs eze</p><ul><li>ezenza umsebenzi kumbuzo "
+"ongasetyenziswanga okanye kakhulu kwi</li><li>zenza ilahleko yedata</"
+"li><li>yazisa umgqobho wokhuseleko ivumela unikezelo lwamatyala "
+"kubasebenzisi abasebenzisa lo msebenzi uchaphazelekayo </li></ ul>\n"
+"<p>Ingaba ibug onika ingxelo ngayo yenza umonakalo ongentla ?Ukuba ayiwenzi, "
+"nceda khetha ubucaka obucothayo. Enkosi!</p>"
+
+#: kbugreport.cpp:451
+#, fuzzy
+#| msgid ""
+#| "Unable to send the bug report.\n"
+#| "Please submit a bug report manually...\n"
+#| "See http://bugs.kde.org/ for instructions."
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"Ayikwazanga ukuthumela ingxelo yegciwane.\n"
+"Ncerda ngenisa ingxelo yegciwane ngokwesandla...\n"
+"Bona http://bugs.kde.org/ ngokwemiyalelo."
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr "Ingxelo yegciwane ithunyelwe, enkosi ngengeniso yakho."
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"Vala kwaye ulahle ngaphandle\n"
+"umyalezo ohleliweyo?"
+
+#: kbugreport.cpp:468
+#, fuzzy
+msgid "Close Message"
+msgstr "Vala umyalezo"
+
+#: kcheckaccelerators.cpp:221
+#, fuzzy
+#| msgid "Dr. Klash' Accelerator Diagnosis"
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Ugonyo Lwesiniki-mandla luka Dr. Klash' "
+
+#: kcheckaccelerators.cpp:228
+#, fuzzy
+#| msgid "&Disable automatic checking"
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "&Khubaza ukhangelo oluzenzekelayo"
+
+#: kcheckaccelerators.cpp:232
+#, fuzzy
+#| msgid "Close"
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Vala"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr ""
+
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+#, fuzzy
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "Fumana Okubhaliweyo"
+
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+#, fuzzy
+#| msgid "Show help"
+msgid "New Text"
+msgstr "Bonisa uncedo"
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr ""
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr ""
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "--- umahluli ---"
+
+#: kedittoolbar.cpp:350
+#, fuzzy
+msgid "Change Text"
+msgstr "Tshintsha..."
+
+#: kedittoolbar.cpp:361
+#, fuzzy
+#| msgid "Find Text"
+msgid "Icon te&xt:"
+msgstr "Fumana Okubhaliweyo"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+
+#: kedittoolbar.cpp:619
+#, fuzzy
+msgid "Configure Toolbars"
+msgstr "Qwalasela Iibars zezixhobo"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+
+#: kedittoolbar.cpp:682
+#, fuzzy
+msgid "Reset Toolbars"
+msgstr "Ibar yezixhobo"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "Cwangcisa kwakhona"
+
+#: kedittoolbar.cpp:1010
+#, fuzzy
+msgid "&Toolbar:"
+msgstr "&Ibar yesixhobo:"
+
+#: kedittoolbar.cpp:1025
+msgid "A&vailable actions:"
+msgstr "&Iintshukumo ezikhoyo:"
+
+#: kedittoolbar.cpp:1040 kedittoolbar.cpp:1059
+#, fuzzy
+msgid "Filter"
+msgstr "&Isihluzo:"
+
+#: kedittoolbar.cpp:1043
+msgid "Curr&ent actions:"
+msgstr "Iintshukumo za&ngoku:"
+
+#: kedittoolbar.cpp:1062
+#, fuzzy
+msgid "Change &Icon..."
+msgstr "Tshintsha..."
+
+#: kedittoolbar.cpp:1070
+#, fuzzy
+msgid "Change Te&xt..."
+msgstr "Tshintsha..."
+
+#: kedittoolbar.cpp:1222
+#, fuzzy, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1242
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"Ingxenye izakubuyiselwa ngazo zonke iingxenye ezilungiselelwe umgaqo "
+"ojikelezileyo."
+
+#: kedittoolbar.cpp:1244
+msgid "<Merge>"
+msgstr "<Merge>"
+
+#: kedittoolbar.cpp:1246
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<Merge %1>"
+
+#: kedittoolbar.cpp:1252
+#, fuzzy
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Olu luluhlu olutshintshayo lweentshukumo. Ungayihambisa, kodwa ukuba "
+"uyayisusa awusokuze ukwazi ukuyidibanisa kwakhona."
+
+#: kedittoolbar.cpp:1253
+#, kde-format
+msgid "ActionList: %1"
+msgstr "ActionList: %1"
+
+#: kedittoolbar.cpp:1353 kedittoolbar.cpp:1380
+#, fuzzy, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1607
+#, fuzzy
+msgid "Change Icon"
+msgstr "Tshintsha..."
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr ""
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr ""
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr ""
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr ""
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr ""
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "&Uncedo"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr ""
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:144
+#, fuzzy
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Ungqubano Neendlela ezimfutshane Zamazwe"
+msgstr[1] "Ungqubano Neendlela ezimfutshane Zamazwe"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:233
+#: kkeysequencewidget.cpp:619 kshortcutseditor.cpp:622
+#: kshortcutseditor.cpp:640
+#, fuzzy
+msgid "Reassign"
+msgstr "Isirashiya"
+
+#: kkeysequencewidget.cpp:214
+#, fuzzy
+#| msgid "Shortcut"
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Indlela emfutshane"
+msgstr[1] "Indlela emfutshane"
+
+#: kkeysequencewidget.cpp:218
+#, fuzzy, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Ulwazi lwetyala"
+
+#: kkeysequencewidget.cpp:223
+#, fuzzy, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
+"Nceda khetha indibaniselwano yesinye isitshixo."
+msgstr[1] ""
+"Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
+"Nceda khetha indibaniselwano yesinye isitshixo."
+
+#: kkeysequencewidget.cpp:242
+#, fuzzy
+#| msgid "Shortcut"
+msgid "Shortcut conflict"
+msgstr "Indlela emfutshane"
+
+#: kkeysequencewidget.cpp:243
+#, fuzzy, kde-format
+#| msgid ""
+#| "The '%1' key combination has already been allocated to the \"%2\" "
+#| "action.\n"
+#| "Please choose a unique key combination."
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
+"Nceda khetha indibaniselwano yesinye isitshixo."
+
+#: kkeysequencewidget.cpp:273
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: kkeysequencewidget.cpp:465
+#, fuzzy
+#| msgid "Shortcut"
+msgid "Reserved Shortcut"
+msgstr "Indlela emfutshane"
+
+#: kkeysequencewidget.cpp:466
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: kkeysequencewidget.cpp:613
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Ungqubano Nesicelo Esisezantsi Sendlela emfutshane"
+
+#: kkeysequencewidget.cpp:614
+#, fuzzy, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
+"Nceda khetha indibaniselwano yesinye isitshixo."
+
+#: kkeysequencewidget.cpp:659
+#, fuzzy
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "&Igalelo Elisuka"
+
+#: kkeysequencewidget.cpp:666 kshortcuteditwidget.cpp:63
+#: kshortcuteditwidget.cpp:66
+#, fuzzy
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Akukho nanye"
+
+#: kkeysequencewidget.cpp:706
+msgid "The key you just pressed is not supported by Qt."
+msgstr ""
+
+#: kkeysequencewidget.cpp:707
+#, fuzzy
+msgid "Unsupported Key"
+msgstr "Engenasihloko"
+
+#: kmenumenuhandler_p.cpp:50
+#, fuzzy
+msgid "Add to Toolbar"
+msgstr "&Yongeza Kwimibala Yesiko"
+
+#: kmenumenuhandler_p.cpp:227
+#, fuzzy
+#| msgid "Configure S&hortcuts..."
+msgid "Configure Shortcut..."
+msgstr "Qwalasela Ii&ndlela ezimfutshane..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy
+msgid "Error connecting to server."
+msgstr "Imposiso ngexesha ukhetha ifayile ye GSM:"
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy
+#| msgid "locally connected"
+msgid "Not connected."
+msgstr "idityaniswe ngobulali"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy
+#| msgid "Continue"
+msgid "Connection timed out."
+msgstr "Qhubekeka"
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "<Merge %1>"
+msgid "Server said: \"%1\""
+msgstr "<Merge %1>"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "Thumela ingxelo yegciwane."
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy
+msgid "The subject line of the email."
+msgstr "Utsuphe Losuku"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "Idilesi ye email eli gciwane ethunyelwe kuyo."
+
+#: kshortcuteditwidget.cpp:62
+#, fuzzy
+#| msgid "Default"
+msgid "Default:"
+msgstr "Ezokwendalo"
+
+#: kshortcuteditwidget.cpp:70
+#, fuzzy
+msgid "Custom:"
+msgstr "I&siko"
+
+#: kshortcutschemeseditor.cpp:43
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Shortcut Schemes"
+msgstr "Ezimfutshane"
+
+#: kshortcutschemeseditor.cpp:62
+#, fuzzy
+#| msgid "Curr&ent actions:"
+msgid "Current scheme:"
+msgstr "Iintshukumo za&ngoku:"
+
+#: kshortcutschemeseditor.cpp:72
+#, fuzzy
+#| msgid "New List..."
+msgid "New..."
+msgstr "Uluhlu Olutsha..."
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr "Cima"
+
+#: kshortcutschemeseditor.cpp:78
+#, fuzzy
+#| msgid "Action"
+msgid "More Actions"
+msgstr "Intshukumo"
+
+#: kshortcutschemeseditor.cpp:82
+#, fuzzy
+#| msgid "Defaults"
+msgid "Save as Scheme Defaults"
+msgstr "Okwendalo"
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:101
+msgid "Name for New Scheme"
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:102
+#, fuzzy
+#| msgid "Curr&ent actions:"
+msgid "Name for new scheme:"
+msgstr "Iintshukumo za&ngoku:"
+
+#: kshortcutschemeseditor.cpp:102
+#, fuzzy
+#| msgid "Curr&ent actions:"
+msgid "New Scheme"
+msgstr "Iintshukumo za&ngoku:"
+
+#: kshortcutschemeseditor.cpp:108
+#, fuzzy
+msgid "A scheme with this name already exists."
+msgstr ""
+"Isiqinisekiso esinelo gama sele sikhona. Uqinisekile ukuba unqwenela "
+"ukuyibuyisela?"
+
+#: kshortcutschemeseditor.cpp:137
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:167
+#, fuzzy
+msgid "Export to Location"
+msgstr "Khetha inyanga"
+
+#: kshortcutschemeseditor.cpp:175
+msgid "Could not export shortcuts scheme because the location is invalid."
+msgstr ""
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr "&Iinkcukacha"
+
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr "Qwalasela Ezimfutshane"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Apha ungabona uluhlu lwezibophelelo ezingundoqo, oko kukuthi usondelelwano "
+"phakathi kweentshukumo (umzekelo'.khuphela') kubonisiwe kumhlathi osekhohlo "
+"kunye nezitshixo okanye indibaniselayezitshixo (umzekelo. CTRL-V) eboniswe "
+"kumhlathi osekunene."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "Intshukumo"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "Indlela emfutshane"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "Hambelana"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, fuzzy
+#| msgid "Alternate"
+msgid "Global Alternate"
+msgstr "Hambelana"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr ""
+
+#: kshortcutseditor.cpp:617 kshortcutseditor.cpp:635
+msgid "Key Conflict"
+msgstr "Ungqubano Olungundoqo"
+
+#: kshortcutseditor.cpp:618
+#, fuzzy, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
+"Nceda khetha indibaniselwano yesinye isitshixo."
+
+#: kshortcutseditor.cpp:636
+#, fuzzy, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
+"Nceda khetha indibaniselwano yesinye isitshixo."
+
+#: kshortcutseditor.cpp:683
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Ezimfutshane"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:701 kshortcutwidget.ui:22
+#, fuzzy
+#| msgid "Chain:"
+msgid "Main:"
+msgstr "Ikhonkco:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:702 kshortcutwidget.ui:52
+#, fuzzy
+#| msgid "Alternate"
+msgid "Alternate:"
+msgstr "Hambelana"
+
+#: kshortcutseditor.cpp:703
+msgid "Global:"
+msgstr ""
+
+#: kshortcutseditor.cpp:704
+#, fuzzy
+#| msgid "Alternate"
+msgid "Global alternate:"
+msgstr "Hambelana"
+
+#: kshortcutseditor.cpp:719
+#, fuzzy
+#| msgid "Additional Names"
+msgid "Action Name"
+msgstr "Amagama Ongezelelweyo"
+
+#: kshortcutseditor.cpp:723
+msgid "Shortcuts"
+msgstr "Ezimfutshane"
+
+#: kshortcutseditor.cpp:727
+#, fuzzy
+#| msgid "Description:"
+msgid "Description"
+msgstr "Uchazo:"
+
+#: kshortcutseditoritem.cpp:51
+#, fuzzy, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+#, fuzzy
+msgid "Switch Application Language"
+msgstr "icwangcisa igama lesicelo."
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:184
+#, fuzzy
+msgid "Add Fallback Language"
+msgstr "Ixabiso &lendalo:"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+#, fuzzy
+msgid "Application Language Changed"
+msgstr "Izicelo"
+
+#: kswitchlanguagedialog_p.cpp:365
+#, fuzzy
+msgid "Primary language:"
+msgstr "Ixabiso &lendalo:"
+
+#: kswitchlanguagedialog_p.cpp:365
+#, fuzzy
+msgid "Fallback language:"
+msgstr "Ixabiso &lendalo:"
+
+#: kswitchlanguagedialog_p.cpp:384
+msgid "Remove"
+msgstr "Susa"
+
+#: kswitchlanguagedialog_p.cpp:395
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+
+#: ktoolbar.cpp:303
+#, fuzzy
+#| msgid "Show help"
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Bonisa uncedo"
+
+#: ktoolbar.cpp:306
+#, fuzzy
+#| msgid "Toolbar Menu"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Menu yesixhobo se bar"
+
+#: ktoolbar.cpp:308
+#, fuzzy
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Uhlengahlengiso"
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Phezulu"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Ekhohlo"
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Ekunene"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "Ezantsi"
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr "Indawo Yombhalo"
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr "Icons Kuphela"
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr "Umbhalo Kuphela"
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr "Umbhalo Ecaleni Kophawu lomfanekiso"
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr "Umbhalo Ngezantsi Kweemphwu Zomsebenzi"
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr "Ubungakanani Bphawu lomfanekiso"
+
+#: ktoolbar.cpp:337
+#, fuzzy
+#| msgid "Default"
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Ezokwendalo"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Ncinane (%1x%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Phakathi (%1x%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Nkulu (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, fuzzy, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Nkulu (%1x%2)"
+
+#: ktoolbar.cpp:403
+#, fuzzy
+msgid "Lock Toolbar Positions"
+msgstr "Ibar yezixhobo"
+
+#: ktoolbar.cpp:1357
+#, fuzzy, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbar.cpp:1358
+#, fuzzy, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbarhandler.cpp:101
+#, fuzzy
+#| msgid "Toolbars"
+msgid "Toolbars Shown"
+msgstr "Ibar yezixhobo"
+
+#: kundoactions.cpp:43
+#, fuzzy
+#| msgid "Redo"
+msgid "Redo"
+msgstr "Yenza kwakhona"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "Sukwenza"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+#, fuzzy
+msgid "No text"
+msgstr "Akukho mbhalo!"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "&Ifayile"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "&Umdlalo"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "&Hlela"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, fuzzy
+#| msgid "&Move"
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Shukuma"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "&Imboniselo"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "&Hamba"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "&Amanqaku eencwadi"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "&Izixhobo"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "&Izicwangciso"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr "Isixhobo se bar Engundoqo"
