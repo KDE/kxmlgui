@@ -584,27 +584,29 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
             }
 
             KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
+            const QString actionId = item->data(Id).toString();
+            if (!globalShortcutsGroup.hasKey(actionId))
+                continue;
 
-            QString actionName = item->data(Id).toString();
-            QList<QKeySequence> sc = QKeySequence::listFromString(globalShortcutsGroup.readEntry(actionName, QString()));
+            QList<QKeySequence> sc = QKeySequence::listFromString(globalShortcutsGroup.readEntry(actionId, QString()));
             changeKeyShortcut(item, GlobalPrimary, primarySequence(sc));
             changeKeyShortcut(item, GlobalAlternate, alternateSequence(sc));
         }
     }
 
-    KConfigGroup localShortcutsGroup(config, QStringLiteral("Shortcuts"));
     if (actionTypes & ~KShortcutsEditor::GlobalAction) {
-
+        const KConfigGroup localShortcutsGroup(config, QStringLiteral("Shortcuts"));
         for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
 
             if (!(*it)->parent()) {
                 continue;
             }
-
             KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
+            const QString actionId = item->data(Id).toString();
+            if (!localShortcutsGroup.hasKey(actionId))
+                continue;
 
-            QString actionName = item->data(Name).toString();
-            QList<QKeySequence> sc = QKeySequence::listFromString(localShortcutsGroup.readEntry(actionName, QString()));
+            QList<QKeySequence> sc = QKeySequence::listFromString(localShortcutsGroup.readEntry(actionId, QString()));
             changeKeyShortcut(item, LocalPrimary, primarySequence(sc));
             changeKeyShortcut(item, LocalAlternate, alternateSequence(sc));
         }
