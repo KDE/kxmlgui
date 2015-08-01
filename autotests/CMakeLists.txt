@@ -1,5 +1,5 @@
 
-find_package(Qt5 5.2.0 CONFIG REQUIRED Xml Test)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Xml Test)
 
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
