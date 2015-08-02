@@ -15,4 +15,9 @@
 
 #include "debug.h"
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+// logging category for this framework, default: log stuff >= warning
+Q_LOGGING_CATEGORY(DEBUG_KXMLGUI, "kf5.kxmlgui", QtWarningMsg)
+#else
 Q_LOGGING_CATEGORY(DEBUG_KXMLGUI, "kf5.kxmlgui")
+#endif
