@@ -318,18 +318,36 @@ KSwitchLanguageDialogPrivate::KSwitchLanguageDialogPrivate(
     //NOTE: do NOT use "p" in constructor, it is not fully constructed
 }
 
+static bool stripCountryCode(QString *languageCode)
+{
+    const int idx = languageCode->indexOf(QLatin1String("_"));
+    if (idx != -1) {
+        *languageCode = languageCode->left(idx);
+        return true;
+    }
+    return false;
+}
+
 void KSwitchLanguageDialogPrivate::fillApplicationLanguages(KLanguageButton *button)
 {
     QLocale defaultLocale;
     QLocale cLocale(QLocale::C);
     QLocale::setDefault(cLocale);
+    QSet<QString> insertedLanguges;
 
-    //we start with 2, because the 0 is AnyLanguage and 1 is C
-    for (int i = 2; i <= QLocale::LastLanguage; ++i) {
-        QLocale l(static_cast<QLocale::Language>(i));
+    const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    foreach(const QLocale &l, allLocales) {
         QString languageCode = l.name();
-        if (l != cLocale && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
-            button->insertLanguage(languageCode);
+        if (l != cLocale) {
+            if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+                button->insertLanguage(languageCode, l.nativeLanguageName());
+                insertedLanguges << languageCode;
+            } else if (stripCountryCode(&languageCode)) {
+                if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+                    button->insertLanguage(languageCode, l.nativeLanguageName());
+                    insertedLanguges << languageCode;
+                }
+            }
         }
     }
 
@@ -347,10 +365,23 @@ QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
     if (languagesList.isEmpty()) {
         QLocale l;
         languagesList = l.uiLanguages();
+
+        // We get en-US here but we use en_US
+        for (int i = 0; i < languagesList.count(); ++i) {
+            languagesList[i].replace(QLatin1String("-"), QLatin1String("_"));
+        }
     }
 
     for (int i = 0; i < languagesList.count();) {
-        if (!KLocalizedString::isApplicationTranslatedInto(languagesList[i])) {
+        QString languageCode = languagesList[i];
+        if (!KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+            if (stripCountryCode(&languageCode)) {
+                if (KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+                    languagesList[i] = languageCode;
+                    ++i;
+                    continue;
+                }
+            }
             languagesList.removeAt(i);
         } else {
             ++i;
