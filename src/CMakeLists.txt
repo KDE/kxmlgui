@@ -52,8 +52,9 @@ set(kxmlgui_SRCS
   kxmlguiwindow.cpp
   kundoactions.cpp
   kcheckaccelerators.cpp
-  debug.cpp
 )
+
+ecm_qt_declare_logging_category(kxmlgui_SRCS HEADER debug.h IDENTIFIER DEBUG_KXMLGUI CATEGORY_NAME kf5.kxmlgui)
 
 set(kxmlgui_UI
    kshortcutsdialog.ui
