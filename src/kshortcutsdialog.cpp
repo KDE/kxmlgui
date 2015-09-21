@@ -242,6 +242,17 @@ int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor:
     return dlg.configure(saveSettings);
 }
 
+void KShortcutsDialog::importConfiguration(const QString &path)
+{
+    KConfig config(path);
+    d->m_keyChooser->importConfiguration(static_cast<KConfigBase *>(&config));
+}
+
+void KShortcutsDialog::exportConfiguration(const QString &path) const
+{
+    KConfig config(path);
+    d->m_keyChooser->exportConfiguration(static_cast<KConfigBase *>(&config));
+}
+
 #include "moc_kshortcutsdialog.cpp"
 #include "moc_kshortcutsdialog_p.cpp"
-

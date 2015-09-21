@@ -125,6 +125,20 @@ public:
     static int configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts =
                              KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent = 0, bool bSaveSettings = true);
 
+    /**
+     * Imports a shortcuts set up from @p path
+     *
+     * @since 5.15
+     */
+    void importConfiguration(const QString &path);
+
+    /**
+     * Exports a shortcuts set up from @p path
+     *
+     * @since 5.15
+     */
+    void exportConfiguration(const QString &path) const;
+
 public Q_SLOTS:
     /**
      * @reimp

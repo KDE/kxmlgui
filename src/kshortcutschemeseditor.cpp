@@ -83,7 +83,8 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
                                this, SLOT(saveAsDefaultsForScheme()));
     moreActionsMenu->addAction(i18n("Export Scheme..."),
                                this, SLOT(exportShortcutsScheme()));
-
+    moreActionsMenu->addAction(i18n("Import Scheme..."),
+                               this, SLOT(importShortcutsScheme()));
     moreActions->setMenu(moreActionsMenu);
 
     l->addStretch(1);
@@ -164,26 +165,23 @@ QString KShortcutSchemesEditor::currentScheme()
 void KShortcutSchemesEditor::exportShortcutsScheme()
 {
     //ask user about dir
-    QString exportTo = QFileDialog::getExistingDirectory(this, i18n("Export to Location"), QDir::currentPath());
-    if (exportTo.isEmpty()) {
+    QString path = QFileDialog::getSaveFileName(this, i18n("Export Shortcuts"), QDir::currentPath(), i18n("Shortcuts (*.shortcuts)"));
+    if (path.isEmpty()) {
         return;
     }
 
-    QDir schemeRoot(exportTo);
+    m_dialog->exportConfiguration(path);
+}
 
-    if (!schemeRoot.exists(exportTo)) {
-        KMessageBox::error(this, i18n("Could not export shortcuts scheme because the location is invalid."));
+void KShortcutSchemesEditor::importShortcutsScheme()
+{
+    //ask user about dir
+    QString path = QFileDialog::getOpenFileName(this, i18n("Import Shortcuts"), QDir::currentPath(), i18n("Shortcuts (*.shortcuts)"));
+    if (path.isEmpty()) {
         return;
     }
 
-    foreach (KActionCollection *collection, m_dialog->actionCollections()) {
-        const KXMLGUIClient *client = collection->parentGUIClient();
-        if (!client) {
-            continue;
-        }
-        KShortcutSchemesHelper::exportActionCollection(collection,
-                currentScheme(), exportTo + QLatin1Char('/'));
-    }
+    m_dialog->importConfiguration(path);
 }
 
 void KShortcutSchemesEditor::saveAsDefaultsForScheme()
