@@ -341,6 +341,13 @@ protected:
     virtual void setXMLFile(const QString &file, bool merge = false, bool setXMLDoc = true);
 
     /**
+     * Return the full path to the ui_standards.rc, might return a resource path.
+     * @return full path to ui_standards.rc, always non-empty.
+     * @since 5.16
+     */
+    static QString standardsXmlFileLocation();
+
+    /**
      * Load the ui_standards.rc file. Usually followed by setXMLFile(xmlFile, true), for merging.
      * @since 4.6
      */

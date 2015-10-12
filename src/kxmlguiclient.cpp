@@ -199,20 +199,20 @@ void KXMLGUIClient::setComponentName(const QString &componentName, const QString
     }
 }
 
-void KXMLGUIClient::loadStandardsXmlFile()
+QString KXMLGUIClient::standardsXmlFileLocation()
 {
     QString file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("ui/ui_standards.rc"));
     if (file.isEmpty()) {
-        // fallback to resource, to allow to use the rc file compiled into this framework
+        // fallback to resource, to allow to use the rc file compiled into this framework, must exist!
         file = QStringLiteral(":/kxmlgui5/ui_standards.rc");
-        if (!QFile::exists(file)) {
-            qWarning() << "ui/ui_standards.rc not found in" << QStandardPaths::standardLocations(QStandardPaths::GenericConfigLocation)
-            << "and neither in the :/kxmlgui5 resource directory";
-        }
-    } else {
-        const QString doc = KXMLGUIFactory::readConfigFile(file);
-        setXML(doc);
+        Q_ASSERT(QFile::exists(file));
     }
+    return file;
+}
+
+void KXMLGUIClient::loadStandardsXmlFile()
+{
+    setXML(KXMLGUIFactory::readConfigFile(standardsXmlFileLocation()));
 }
 
 void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
