@@ -21,7 +21,6 @@
 #ifndef TESTGUICLIENT_H
 #define TESTGUICLIENT_H
 
-#include <QStandardPaths>
 #include <QtTest/QTest>
 
 #include <ktoolbar.h>
@@ -45,9 +44,7 @@ public:
     void createGUI(const QByteArray &xml, bool withUiStandards = false)
     {
         if (withUiStandards) {
-            QString uis = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("ui/ui_standards.rc"));
-            QVERIFY(!uis.isEmpty());
-            setXMLFile(uis);
+            setXMLFile(KXMLGUIClient::standardsXmlFileLocation());
         }
 
         setXML(QString::fromLatin1(xml), true);
