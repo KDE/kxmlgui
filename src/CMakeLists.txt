@@ -54,6 +54,9 @@ set(kxmlgui_SRCS
   kcheckaccelerators.cpp
 )
 
+# add the resource file
+qt5_add_resources(kxmlgui_SRCS kxmlgui.qrc)
+
 ecm_qt_declare_logging_category(kxmlgui_SRCS HEADER debug.h IDENTIFIER DEBUG_KXMLGUI CATEGORY_NAME kf5.kxmlgui)
 
 set(kxmlgui_UI
@@ -129,12 +132,8 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui COMPONENT Devel
 )
 
+# install this file to be compatible, it is bundled in the resource file, too
 install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
-
-install(FILES
- aboutkde.png
- thumb_frame.png
- DESTINATION  ${KDE_INSTALL_DATADIR_KF5}/kxmlgui/pics )
 
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui)

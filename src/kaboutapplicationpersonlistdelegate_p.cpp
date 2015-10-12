@@ -233,7 +233,7 @@ void KAboutApplicationPersonListDelegate::paint(QPainter *painter,
             painter->drawPixmap(point, pixmap);
 
             QPoint framePoint(point.x() - 5, point.y() - 5);
-            QPixmap framePixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/kxmlgui/pics/thumb_frame.png")));
+            QPixmap framePixmap(QStringLiteral(":/kxmlgui5/thumb_frame.png"));
             painter->drawPixmap(framePoint, framePixmap.scaled(pixmap.width() + 10, pixmap.height() + 10));
         }
     }
