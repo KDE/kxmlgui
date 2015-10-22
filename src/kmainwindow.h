@@ -131,6 +131,12 @@ public:
      * kmw->setObjectName(...);
      * \endcode
      *
+     * Since the KDE Frameworks 5.16 release, KMainWindow will also enter information regarding
+     * the application's translators by default, using KAboutData::setTranslator(). This only occurs
+     * if no translators are already assigned in KAboutData (see KAboutData::setTranslator() for
+     * details -- the auto-assignment here uses the same translated strings as specified for that
+     * function).
+     *
      * IMPORTANT: For session management and window management to work
      * properly, all main windows in the application should have a
      * different name. If you don't do it, KMainWindow will create

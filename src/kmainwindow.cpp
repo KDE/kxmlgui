@@ -203,6 +203,19 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 
     sMemberList()->append(q);
 
+    // If application is translated, load translator information for use in
+    // KAboutApplicationDialog or other getters. The context and messages below
+    // both must be exactly as listed, and are forced to be loaded from the
+    // application's own message catalog instead of kxmlgui's.
+    KAboutData aboutData(KAboutData::applicationData());
+    if (aboutData.translators().isEmpty()) {
+        aboutData.setTranslator(
+                i18ndc(Q_NULLPTR, "NAME OF TRANSLATORS", "Your names"),
+                i18ndc(Q_NULLPTR, "EMAIL OF TRANSLATORS", "Your emails"));
+
+        KAboutData::setApplicationData(aboutData);
+    }
+
     settingsDirty = false;
     autoSaveSettings = false;
     autoSaveWindowSize = true; // for compatibility
