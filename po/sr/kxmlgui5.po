@@ -1,0 +1,1353 @@
+# Translation of kxmlgui5.po into Serbian.
+# Marko Rosic <roske@kde.org.yu>, 2003.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kxmlgui5\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-10-22 08:39+0000\n"
+"PO-Revision-Date: 2015-09-27 19:15+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"X-Wrapping: fine\n"
+"X-Associated-UI-Catalogs: kconfigwidgets5\n"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "О %1|/|О $[дат %1]"
+
+#: kaboutapplicationdialog.cpp:98
+#, kde-format
+msgid "<html><font size=\"5\">%1</font></html>"
+msgstr "<html><font size=\"5\">%1</font></html>"
+
+#: kaboutapplicationdialog.cpp:136
+#, kde-format
+msgid "License: %1"
+msgstr "Лиценца: %1"
+
+#: kaboutapplicationdialog.cpp:148
+msgid "&About"
+msgstr "&О програму"
+
+#: kaboutapplicationdialog.cpp:153
+#, kde-format
+msgid "<b>Version %1</b>"
+msgstr "<b>издање %1</b>"
+
+#: kaboutapplicationdialog.cpp:158
+#, kde-format
+msgid ""
+"Using:<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "
+"<em>%4</em> windowing system</li></ul>"
+msgstr ""
+"Користи се:<ul><li>Радни оквири КДЕ‑а %1</li><li>КуТ %2 (градња према %3)</"
+"li><li>прозорски систем <em>%4</em></li></ul>"
+
+#: kaboutapplicationdialog.cpp:168
+msgid "&Version"
+msgstr "&Издање"
+
+#: kaboutapplicationdialog.cpp:188
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"<html>Користите <link>http://bugs.kde.org</link> за пријављивање грешака.</"
+"html>\n"
+
+#: kaboutapplicationdialog.cpp:192 kaboutapplicationdialog.cpp:196
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "<html>Пријављујте грешке на <link url='mailto:%1'>%2</link>.</html>\n"
+
+#: kaboutapplicationdialog.cpp:223
+msgid "A&uthor"
+msgstr "&Аутор"
+
+#: kaboutapplicationdialog.cpp:223
+msgid "A&uthors"
+msgstr "А&утори"
+
+#: kaboutapplicationdialog.cpp:250
+msgid "&Thanks To"
+msgstr "&Захвалнице"
+
+#: kaboutapplicationdialog.cpp:289
+msgid "T&ranslation"
+msgstr "&Превод"
+
+#: kaboutapplicationdialog.cpp:321
+msgid "License Agreement"
+msgstr "&Уговор о коришћењу"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Пишите доприносиоцу е‑поштом"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+msgid "Visit contributor's homepage"
+msgstr "Посетите домаћу страницу доприносиоца"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"Пишите доприносиоцу е‑поштом\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"Посетите домаћу страницу доприносиоца\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"Посетите профил доприносиоца на %1\n"
+"%2|/|Посетите профил доприносиоца на $[лок %1]\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"Посетите страницу доприносиоца\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"Посетите блог доприносиоца\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1|/|$[ном %1] (<i>$[_изв %1]</i>)"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "(непознато)|/|$[својства лок '(непознатом)']"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "блог|/|$[својства лок 'блогу']"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "домаћа страница|/|$[својства лок 'домаћој страници']"
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "О КДЕ‑у"
+
+#: kaboutkdedialog_p.cpp:46
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr "<html><font size=\"5\">КДЕ — ка слободи!</font></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, kde-format
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html><p><b>КДЕ</b> је светска мрежа софтверских инжењера, графичара, "
+"писаца, преводилаца и организатора који су посвећени развоју <link "
+"url='%1'>слободног софтвера</link>. Ова заједница је створила стотине "
+"слободних програма као део радних оквира, радних простора и програма.</"
+"p><p>КДЕ је заједнички подухват у којем не постоји један ентитет који би "
+"управљао напорима и резултатима тако да искључује друге. Сви су добродошли "
+"да се прикључе и допринесу КДЕ‑у.</p><p>Посетите <link url='%2'>%2</link> за "
+"детаљније информације о заједници КДЕ‑а и софтверу који развијамо.</p></html>"
+
+#: kaboutkdedialog_p.cpp:74
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html><p>Софтвер увек може бити побољшан, и тим КДЕ‑а постојано ради на "
+"томе. Ипак, ви — корисник — морате известити програмере када нешто не ради "
+"како је очекивано, или може бити урађено на бољи начин.</p><p>КДЕ поседује "
+"систем за праћење грешака. Посетите <link url='%1'>%1</link> или употребите "
+"дијалог <interface>Пријави грешку...</interface> из менија <interface>Помоћ</"
+"interface>, како бисте пријавили уочене проблеме.</p><p>Уколико имате "
+"предлог за побољшање, такође можете искористити систем за праћење грешака да "
+"региструјете своју жељу. Не заборавите да тада озбиљност извештаја поставите "
+"на <i>wishlist</i> (списак жеља).</p></html>"
+
+#: kaboutkdedialog_p.cpp:92
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html><p>Не морате бити програмер да бисте постали члан тима. Можете се "
+"придружити језичким тимовима који преводе програмска сучеља. Можете цртати "
+"графику, теме, снимати звуке, или писати документацију. На вама је да "
+"одлучите!</p><p>Посетите <link url='%1'>%1</link> за детаље о неким "
+"пројектима у којима можете учествовати.</p><p>Ако вам је потребно још "
+"информација или документације, посетите <link url='%2'>%2</link> и пронаћи "
+"ћете што вас занима.</p></html>"
+
+#: kaboutkdedialog_p.cpp:114
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html><p>Софтвер КДЕ‑а је доступан бесплатно, и то ће увек бити тако, али се "
+"у његово стварање улажу средства.</p><p>Ради подршке развоју, заједница "
+"КДЕ‑а је оформила КДЕ е.В., непрофитну организацију са седиштем у Немачкој. "
+"КДЕ е.В. представља заједницу КДЕ‑а у правним и финансијским питањима. "
+"Погледајте <link url='%1'>%1</link> за информације о КДЕ‑у е.В..</p><p>КДЕ‑у "
+"значе разноврсни видови подршке, укључујући и финансијску. Новчаним "
+"средствима покривамо издатке настале током доприношења, члановима и другима. "
+"Средства се такође користе за законску заштиту и организовање конференција и "
+"сусрета.</p><p>Желимо да вас подстакнемо да подржите КДЕ новчаном донацијом, "
+"на један од начина описаних на <link url='%2'>%2</link>.</p><p>Унапред вам "
+"се захваљујемо на подршци.</p></html>"
+
+#: kaboutkdedialog_p.cpp:133
+msgctxt "About KDE"
+msgid "&About"
+msgstr "&О пројекту"
+
+#: kaboutkdedialog_p.cpp:134
+msgid "&Report Bugs or Wishes"
+msgstr "Пријавите &грешке или жеље"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Join KDE"
+msgstr "При&дружите се КДЕ‑у"
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Support KDE"
+msgstr "&Подржите КДЕ"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"<html><p>Двосмислена комбинација тастера <shortcut>%1</shortcut>.</"
+"p><p>Употребите <interface>Подешавање пречица</interface> из менија "
+"<interface>Подешавање</interface> да је разрешите, а дотле неће окидати "
+"ниједну радњу.</p></html>"
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr "Откривена двосмислена пречица"
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "Пошаљи извештај о грешци"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"<html>Ваша адреса е‑поште. Уколико није исправна, употребите дугме "
+"<interface>Подеси е‑пошту...</interface> да бисте је променили.</html>"
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Од:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "Подеси е‑пошту..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr "Адреса е‑поште на коју се шаље извештај."
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "За:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "&Пошаљи"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "Пошаљи извештај о грешци."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "Пошаљи овај извештај о грешци на %1."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"<html>Програм за који желите да пријавите грешку — ако није овај, употребите "
+"ставку <interface>Пријави грешку...</interface> у менију помоћи тог програма."
+"</html>"
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "Програм: "
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"Издање овог програма — проверите да ли постоји новије пре него што пошаљете "
+"извештај о грешци."
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "Издање:"
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr "издање није постављено (грешка програмера)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "ОС:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "Компилатор:"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "&Озбиљност"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "критична"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "висока"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "нормална"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "списак жеља"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "превод"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "&Наслов: "
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Унесите текст (на енглеском, уколико је могуће) који желите да пошаљете као "
+"извештај.\n"
+"Када притиснете <interface>Пошаљи</interface>, порука ће бити послата "
+"одржаваоцу овог програма.\n"
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>Кликните на дугме испод да предате извештај. Тада ће се отворити прозор "
+"веб прегледача на адреси <link>http://bugs.kde.org</link>, где ћете добити "
+"формулар који треба попунити. Горенаведени подаци биће предати на тај сервер."
+"</qt>"
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr "&Покрени Чаробњак за пријаву грешака"
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "непознато"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr "Морате навести и наслов и опис пре него што пошаљете извештај."
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Изабрали сте <b>критичну</b> озбиљност. Имајте на уму да је ова озбиљност "
+"намењена само за грешке које:</p><ul><li>руше насумичне програме на систему "
+"(или цео систем)</li><li>изазивају озбиљан губитак података</li><li>уводе "
+"безбедносне пропусте у систем где је овај програм инсталиран</li></ul>\n"
+"<p>Да ли грешка коју пријављујете заиста повлачи нешто од горе наведеног? "
+"Ако не, изаберите неку мању озбиљност. Хвала.</p>"
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Изабрали сте <b>високу</b> озбиљност. Имајте на уму да је ова озбиљност "
+"намењена само за грешке које:</p><ul> <li>чине програм углавном или потпуно "
+"неупотребљивим</li><li>изазивају губитак података</li><li>уводе безбедносне "
+"пропусте дозвољавајући приступ налозима корисника који користе овај програм</"
+"li></ul>\n"
+"<p>Да ли грешка коју пријављујете заиста повлачи нешто од горе наведеног? "
+"Ако не, изаберите неку мању озбиљност. Хвала.</p>"
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"Не могу да пошаљем извештај о грешци.\n"
+"Покушајте да га предате ручно.\n"
+"Потражите упутства на <link>http://bugs.kde.org/</link>."
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr "Извештај је послат, хвала вам на сарадњи."
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"Затворити и одбацити\n"
+"измењену поруку?"
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr "Затвори поруку"
+
+#: kcheckaccelerators.cpp:221
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Дијагноза пречица Др. Судара"
+
+#: kcheckaccelerators.cpp:228
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Искључи аутоматску проверу"
+
+#: kcheckaccelerators.cpp:232
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Затвори"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Пречице су измењене</h2>"
+
+# >> @title:column
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+msgid "Old Text"
+msgstr "стари текст"
+
+# >> @title:column
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+msgid "New Text"
+msgstr "нови текст"
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Пречице су уклоњене</h2>"
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>Пречице су додате (тек да знате)</h2>"
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "--- раздвајач ---"
+
+# >> @title:window
+#: kedittoolbar.cpp:350
+msgid "Change Text"
+msgstr "Промена текста"
+
+#: kedittoolbar.cpp:361
+msgid "Icon te&xt:"
+msgstr "&Текст иконе:"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr "&Сакриј текст када на траци алатки стоји поред икона"
+
+# >> @title:window
+#: kedittoolbar.cpp:619
+msgid "Configure Toolbars"
+msgstr "Подешавање трака алатки"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"Желите ли заиста да вратите све траке алатки у овом програму на "
+"подразумевано? Промене ће одмах бити примењене."
+
+# >> @title:window
+#: kedittoolbar.cpp:682
+msgid "Reset Toolbars"
+msgstr "Ресетовање трака алатки"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "Ресетуј"
+
+#: kedittoolbar.cpp:1010
+msgid "&Toolbar:"
+msgstr "&Трака алатки:"
+
+#: kedittoolbar.cpp:1025
+msgid "A&vailable actions:"
+msgstr "&Доступне радње:"
+
+#: kedittoolbar.cpp:1040 kedittoolbar.cpp:1059
+msgid "Filter"
+msgstr "Филтер"
+
+#: kedittoolbar.cpp:1043
+msgid "Curr&ent actions:"
+msgstr "&Тренутне радње:"
+
+#: kedittoolbar.cpp:1062
+msgid "Change &Icon..."
+msgstr "Промени &икону..."
+
+#: kedittoolbar.cpp:1070
+msgid "Change Te&xt..."
+msgstr "Промени &текст..."
+
+#: kedittoolbar.cpp:1222
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1|/|$[Списковно %1]"
+
+#: kedittoolbar.cpp:1242
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr "Овај елемент ће бити замењен свим елементима угнежђене компоненте."
+
+#: kedittoolbar.cpp:1244
+msgid "<Merge>"
+msgstr "&lt;стапање&gt;"
+
+#: kedittoolbar.cpp:1246
+#, kde-format
+msgid "<Merge %1>"
+msgstr "&lt;стапање %1&gt;"
+
+#: kedittoolbar.cpp:1252
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Ово је динамички списак радњи. Можете га померати, али ако га уклоните "
+"нећете моћи поново да га додате."
+
+#: kedittoolbar.cpp:1253
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Списак радњи: %1"
+
+#: kedittoolbar.cpp:1353 kedittoolbar.cpp:1380
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+# >> @title:window
+#: kedittoolbar.cpp:1607
+msgid "Change Icon"
+msgstr "Промена иконе"
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "лево дугме"
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "средње дугме"
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "десно дугме"
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "неважеће дугме"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "Држите %1, па притисните %2"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "По&моћ"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr ""
+"Пречица <shortcut>%1</shortcut> у програму <application>%2</application> за "
+"радњу %3\n"
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је с наредним комбинацијама "
+"тастера:\n"
+msgstr[1] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је с наредним комбинацијама "
+"тастера:\n"
+msgstr[2] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је с наредним комбинацијама "
+"тастера:\n"
+msgstr[3] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је с наредном комбинацијом "
+"тастера:\n"
+
+#: kkeysequencewidget.cpp:144
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Сукоб са регистрованим глобалним пречицама"
+msgstr[1] "Сукоб са регистрованим глобалним пречицама"
+msgstr[2] "Сукоб са регистрованим глобалним пречицама"
+msgstr[3] "Сукоб са регистрованом глобалном пречицом"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:233
+#: kkeysequencewidget.cpp:619 kshortcutseditor.cpp:624
+#: kshortcutseditor.cpp:642
+msgid "Reassign"
+msgstr "Поново додели"
+
+#: kkeysequencewidget.cpp:214
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Сукоб пречица"
+msgstr[1] "Сукоб пречица"
+msgstr[2] "Сукоб пречица"
+msgstr[3] "Сукоб пречице"
+
+#: kkeysequencewidget.cpp:218
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Пречице <shortcut>%1</shortcut> за радњу „%2“\n"
+
+#: kkeysequencewidget.cpp:223
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је са следећим пречицама.\n"
+"Желите ли да доделите празну пречицу овим радњама?\n"
+"%3"
+msgstr[1] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је са следећим пречицама.\n"
+"Желите ли да доделите празну пречицу овим радњама?\n"
+"%3"
+msgstr[2] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је са следећим пречицама.\n"
+"Желите ли да доделите празну пречицу овим радњама?\n"
+"%3"
+msgstr[3] ""
+"Пречица <shortcut>%2</shortcut> у сукобу је са следећом пречицом.\n"
+"Желите ли да доделите празну пречицу овој радњи?\n"
+"%3"
+
+#: kkeysequencewidget.cpp:242
+msgid "Shortcut conflict"
+msgstr "Сукоб пречица"
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>Комбинацију тастера <shortcut>%1</shortcut> већ користи радња <b>%2</b>."
+"<br/>Изаберите другу комбинацију.</qt>"
+
+#: kkeysequencewidget.cpp:273
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Кликните на дугме, па унесите пречицу као што бисте у програму.\n"
+"Пример за Ctrl+A: држите тастер Ctrl и притисните A."
+
+#: kkeysequencewidget.cpp:465
+msgid "Reserved Shortcut"
+msgstr "Резервисана пречица"
+
+#: kkeysequencewidget.cpp:466
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"Тастер F12 је резервисан на Виндоузу, па се не може користити као глобална "
+"пречица.\n"
+"Изаберите неку другу."
+
+#: kkeysequencewidget.cpp:613
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Сукоб са стандардном програмском пречицом"
+
+#: kkeysequencewidget.cpp:614
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Комбинација тастера <shortcut>%1</shortcut> већ је додељена стандардној "
+"радњи „%2“, коју користе неки програми.\n"
+"Желите ли заиста да је користите и као глобалну пречицу?"
+
+#: kkeysequencewidget.cpp:659
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "унесите..."
+
+#: kkeysequencewidget.cpp:666 kshortcuteditwidget.cpp:63
+#: kshortcuteditwidget.cpp:66
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "ниједна"
+
+#: kkeysequencewidget.cpp:712
+msgid "The key you just pressed is not supported by Qt."
+msgstr "КуТ не подржава тастер који сте управо притиснули."
+
+#: kkeysequencewidget.cpp:713
+msgid "Unsupported Key"
+msgstr "Неподржани тастер"
+
+#: kmainwindow.cpp:213
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Топлица Танасковић,Часлав Илић"
+
+#: kmainwindow.cpp:214
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr "Додај на траку алатки"
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr "Подеси пречицу..."
+
+#: ksendbugmail/main.cpp:45
+msgid "Error connecting to server."
+msgstr "Грешка у повезивању на сервер."
+
+#: ksendbugmail/main.cpp:48
+msgid "Not connected."
+msgstr "Није повезан."
+
+#: ksendbugmail/main.cpp:51
+msgid "Connection timed out."
+msgstr "Истекло је време за везу."
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr "Истекло је време за размену са сервером."
+
+#: ksendbugmail/main.cpp:58
+#, kde-format
+msgid "Server said: \"%1\""
+msgstr "Сервер одговара: „%1“"
+
+#: ksendbugmail/main.cpp:89
+msgid "Sends a bug report by email."
+msgstr "Шаље извештај о грешци е‑поштом."
+
+# rewrite-msgid: /line//
+# rewrite-msgid: /email/message/
+#: ksendbugmail/main.cpp:91
+msgid "The subject line of the email."
+msgstr "Наслов поруке."
+
+#: ksendbugmail/main.cpp:92
+msgid "The email address to send the bug report to."
+msgstr "Адреса е‑поште на коју се шаље извештај."
+
+#: kshortcuteditwidget.cpp:62
+msgid "Default:"
+msgstr "Подразумевана:"
+
+#: kshortcuteditwidget.cpp:70
+msgid "Custom:"
+msgstr "Посебна:"
+
+#: kshortcutschemeseditor.cpp:43
+msgid "Shortcut Schemes"
+msgstr "Шеме пречица"
+
+#: kshortcutschemeseditor.cpp:62
+msgid "Current scheme:"
+msgstr "Текућа шема:"
+
+# >> @action:button New scheme
+#: kshortcutschemeseditor.cpp:72
+msgid "New..."
+msgstr "Нова..."
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr "Обриши"
+
+#: kshortcutschemeseditor.cpp:78
+msgid "More Actions"
+msgstr "Још радњи"
+
+#: kshortcutschemeseditor.cpp:82
+msgid "Save as Scheme Defaults"
+msgstr "Сачувај као подразумевано за шеме"
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr "Извези шему..."
+
+#: kshortcutschemeseditor.cpp:86
+msgid "Import Scheme..."
+msgstr "Увези шему..."
+
+#: kshortcutschemeseditor.cpp:102
+msgid "Name for New Scheme"
+msgstr "Име нове шеме"
+
+#: kshortcutschemeseditor.cpp:103
+msgid "Name for new scheme:"
+msgstr "Име за нову шему:"
+
+#: kshortcutschemeseditor.cpp:103
+msgid "New Scheme"
+msgstr "Нова шема"
+
+#: kshortcutschemeseditor.cpp:109
+msgid "A scheme with this name already exists."
+msgstr "Истоимена шема већ постоји."
+
+#: kshortcutschemeseditor.cpp:138
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"Желите ли заиста да обришете шему „%1“?\n"
+"Ово неће уклонити шеме пречица важеће широм система."
+
+# >> @title:window
+#: kshortcutschemeseditor.cpp:168
+msgid "Export Shortcuts"
+msgstr "Извоз пречица"
+
+# >> @item
+#: kshortcutschemeseditor.cpp:168 kshortcutschemeseditor.cpp:179
+msgid "Shortcuts (*.shortcuts)"
+msgstr "пречице (*.shortcuts)"
+
+# >> @title:window
+#: kshortcutschemeseditor.cpp:179
+msgid "Import Shortcuts"
+msgstr "Увоз пречица"
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr "Текућа шема пречица је измењена. Сачувати је пре пребацивања на нову?"
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr "&Детаљи"
+
+# >> @title:window
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr "Подешавање пречица"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Интерактивно тражење по имену пречице (нпр. „Копирај“) или комбинацији "
+"тастера (нпр. <shortcut>Ctrl+C</shortcut>)."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Списак пречица са тастатуре, тј. веза између радњи (нпр. „Копирај“) "
+"приказаних у левој колони, и тастера или комбинација тастера (нпр. "
+"<shortcut>Ctrl+V</shortcut>) приказаних у десној колони."
+
+# >> @title:column
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "радња"
+
+# >> @title:column
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "пречица"
+
+# >> @title:column Alternative shortcut
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "алтернативна"
+
+# >> @title:column Alternative shortcut
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr "глобална"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr "глоб. алтернативна"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr "гест дугмадима миша"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr "гест покретом миша"
+
+#: kshortcutseditor.cpp:619 kshortcutseditor.cpp:637
+msgid "Key Conflict"
+msgstr "Сукоб пречица"
+
+#: kshortcutseditor.cpp:620
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Гест покретом %1 већ је додељен радњи „%2“.\n"
+"Желите ли ипак да га уместо тога доделите текућој радњи?"
+
+#: kshortcutseditor.cpp:638
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Гест клацкањем %1 већ је додељен радњи „%2“.\n"
+"Желите ли ипак да га уместо тога доделите текућој радњи?"
+
+#: kshortcutseditor.cpp:685
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Пречице за %1|/|Пречице за $[аку %1]"
+
+# >> Main shortcut
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:703 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr "Главна:"
+
+# >> Alternate shortcut
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:704 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr "Алтернативна:"
+
+# >> Global shortcut
+#: kshortcutseditor.cpp:705
+msgid "Global:"
+msgstr "Глобална:"
+
+#: kshortcutseditor.cpp:706
+msgid "Global alternate:"
+msgstr "Глобална алтернативна:"
+
+#: kshortcutseditor.cpp:721
+msgid "Action Name"
+msgstr "Назив радње"
+
+#: kshortcutseditor.cpp:725
+msgid "Shortcuts"
+msgstr "Пречице"
+
+#: kshortcutseditor.cpp:729
+msgid "Description"
+msgstr "Опис"
+
+# It may happen that action name was shortened for the toolbar/menu/etc.
+# and has set a "long" name. Use it here if available.
+#: kshortcutseditoritem.cpp:51
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1|/|$[Списковно %1]"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr "Промени језик програма"
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr "Изаберите језик који желите да користите за овај програм:"
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr "Додај позадински језик"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"Додаје један или више језика на које се може спасти у случају да главни "
+"језик не садржи одговарајући превод."
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"Језик овог програма је измењен. Промена ће се исказати по следећем покретању "
+"програма."
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+msgid "Application Language Changed"
+msgstr "Промењен језик програма"
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid "Primary language:"
+msgstr "Главни језик:"
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid "Fallback language:"
+msgstr "Позадински језик:"
+
+#: kswitchlanguagedialog_p.cpp:415
+msgid "Remove"
+msgstr "Уклони"
+
+#: kswitchlanguagedialog_p.cpp:426
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr "Ово је главни језик програма, у којем ће се прво тражити сви преводи."
+
+#: kswitchlanguagedialog_p.cpp:427
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"Овај ће језик бити употребљен у случају да ниједан претходни не садржи "
+"одговарајући превод."
+
+#: ktoolbar.cpp:303
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Приказ текста"
+
+#: ktoolbar.cpp:306
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Поставке траке алатки"
+
+#: ktoolbar.cpp:308
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Усмерење"
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "врх"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "лево"
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "десно"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "дно"
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr "Положај текста"
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr "само иконе"
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr "само текст"
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr "текст поред икона"
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr "текст испод икона"
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr "Величина икона"
+
+#: ktoolbar.cpp:337
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "подразумеване"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "мале (%1×%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "средње (%1×%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "велике (%1×%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "огромне (%1×%2)"
+
+#: ktoolbar.cpp:403
+msgid "Lock Toolbar Positions"
+msgstr "Закључај положаје трака алатки"
+
+#: ktoolbar.cpp:1357
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1|/|$[Наредбено %1]"
+
+#: ktoolbar.cpp:1358
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1|/|$[Списковно %1]"
+
+# >> @title:menu
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr "Приказане траке алатки"
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr "Понови"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "Опозови"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+msgid "No text"
+msgstr "Без текста"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "&Фајл"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "&Игра"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "&Уређивање"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Потез"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "&Приказ"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "&Кретање"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "&Обележивачи"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "&Алатке"
+
+# >! ctxt: @title:menu standard application menu
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "П&одешавање"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr "Главна трака"
