@@ -1041,11 +1041,11 @@ void KToolBar::saveState(QDomElement &current) const
 {
     Q_ASSERT(!current.isNull());
 
-    current.setAttribute(QStringLiteral("tempXml"), QLatin1String("true"));
+    current.setAttribute(QStringLiteral("tempXml"), QStringLiteral("true"));
 
-    current.setAttribute(QStringLiteral("noMerge"), QLatin1String("1"));
+    current.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
     current.setAttribute(QStringLiteral("position"), d->getPositionAsString().toLower());
-    current.setAttribute(QStringLiteral("hidden"), isHidden() ? QLatin1String("true") : QLatin1String("false"));
+    current.setAttribute(QStringLiteral("hidden"), isHidden() ? QStringLiteral("true") : QStringLiteral("false"));
 
     const int currentIconSize = iconSize().width();
     if (currentIconSize == d->iconSizeSettings.defaultValue()) {

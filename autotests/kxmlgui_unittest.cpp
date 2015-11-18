@@ -284,7 +284,7 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
 
 static QStringList collectMenuNames(KXMLGUIFactory &factory)
 {
-    QList<QWidget *> containers = factory.containers("Menu");
+    QList<QWidget *> containers = factory.containers(QStringLiteral("Menu"));
     QStringList containerNames;
     Q_FOREACH (QWidget *w, containers) {
         containerNames << w->objectName();
@@ -337,37 +337,37 @@ void KXmlGui_UnitTest::testPartMerging()
         "</gui>\n";
 
     TestGuiClient hostClient;
-    hostClient.createActions(QStringList() << "go_up" << "go_back" << "go_forward" << "go_home"
-                             << "host_after_merge" << "host_after_merge_2" << "last_from_host"
-                             << "file_new" << "file_open" << "file_quit");
+    hostClient.createActions(QStringList() << QStringLiteral("go_up") << QStringLiteral("go_back") << QStringLiteral("go_forward") << QStringLiteral("go_home")
+                             << QStringLiteral("host_after_merge") << QStringLiteral("host_after_merge_2") << QStringLiteral("last_from_host")
+                             << QStringLiteral("file_new") << QStringLiteral("file_open") << QStringLiteral("file_quit"));
     hostClient.createGUI(hostXml, true /*ui_standards.rc*/);
     KMainWindow mainWindow;
     KXMLGUIBuilder builder(&mainWindow);
     KXMLGUIFactory factory(&builder);
     factory.addClient(&hostClient);
 
-    QWidget *goMenuW = factory.container("go", &hostClient);
+    QWidget *goMenuW = factory.container(QStringLiteral("go"), &hostClient);
     QVERIFY(goMenuW);
     QMenu *goMenu = qobject_cast<QMenu *>(goMenuW);
     QVERIFY(goMenu);
-    QMenu *fileMenu = qobject_cast<QMenu *>(factory.container("file", &hostClient));
+    QMenu *fileMenu = qobject_cast<QMenu *>(factory.container(QStringLiteral("file"), &hostClient));
 
     //debugActions(goMenu->actions());
     checkActions(goMenu->actions(), QStringList()
-                 << "go_up"
-                 << "go_back"
-                 << "go_forward"
-                 << "go_home"
-                 << "separator"
-                 << "host_after_merge"
-                 << "host_after_merge_2"
-                 << "separator"
-                 << "last_from_host");
+                 << QStringLiteral("go_up")
+                 << QStringLiteral("go_back")
+                 << QStringLiteral("go_forward")
+                 << QStringLiteral("go_home")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("host_after_merge")
+                 << QStringLiteral("host_after_merge_2")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("last_from_host"));
     checkActions(fileMenu->actions(), QStringList()
-                 << "file_new"
-                 << "file_open"
-                 << "separator"
-                 << "file_quit");
+                 << QStringLiteral("file_new")
+                 << QStringLiteral("file_open")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("file_quit"));
 
     qDebug() << "Now merging the part";
 
@@ -394,43 +394,43 @@ void KXmlGui_UnitTest::testPartMerging()
         "</kpartgui>\n";
 
     TestGuiClient partClient(partXml);
-    partClient.createActions(QStringList() << "go_previous" << "go_next" << "first_page" <<
-                             "last_page" << "last_from_part" << "action_in_merge_group" << "undefined_group" <<
-                             "action_in_placed_merge" << "other_file_action");
+    partClient.createActions(QStringList() << QStringLiteral("go_previous") << QStringLiteral("go_next") << QStringLiteral("first_page") <<
+                             QStringLiteral("last_page") << QStringLiteral("last_from_part") << QStringLiteral("action_in_merge_group") << QStringLiteral("undefined_group") <<
+                             QStringLiteral("action_in_placed_merge") << QStringLiteral("other_file_action"));
     factory.addClient(&partClient);
 
     //debugActions(goMenu->actions());
     checkActions(goMenu->actions(), QStringList()
-                 << "go_up"
-                 << "go_back"
-                 << "go_forward"
-                 << "go_home"
-                 << "separator"
+                 << QStringLiteral("go_up")
+                 << QStringLiteral("go_back")
+                 << QStringLiteral("go_forward")
+                 << QStringLiteral("go_home")
+                 << QStringLiteral("separator")
                  // Contents of the <Merge>:
-                 << "go_previous"
-                 << "go_next"
-                 << "separator"
-                 << "first_page"
-                 << "last_page"
-                 << "separator"
-                 << "undefined_group"
-                 << "last_from_part"
+                 << QStringLiteral("go_previous")
+                 << QStringLiteral("go_next")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("first_page")
+                 << QStringLiteral("last_page")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("undefined_group")
+                 << QStringLiteral("last_from_part")
                  // End of <Merge>
-                 << "host_after_merge"
-                 << "host_after_merge_2"
-                 << "separator"
+                 << QStringLiteral("host_after_merge")
+                 << QStringLiteral("host_after_merge_2")
+                 << QStringLiteral("separator")
                  // Contents of <DefineGroup>
-                 << "action_in_merge_group"
+                 << QStringLiteral("action_in_merge_group")
                  // End of <DefineGroup>
-                 << "last_from_host"
+                 << QStringLiteral("last_from_host")
                 );
     checkActions(fileMenu->actions(), QStringList()
-                 << "file_new"
-                 << "action_in_placed_merge"
-                 << "file_open"
-                 << "separator"
-                 << "file_quit"
-                 << "other_file_action");
+                 << QStringLiteral("file_new")
+                 << QStringLiteral("action_in_placed_merge")
+                 << QStringLiteral("file_open")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("file_quit")
+                 << QStringLiteral("other_file_action"));
     factory.removeClient(&partClient);
     factory.removeClient(&hostClient);
 }
@@ -452,14 +452,14 @@ void KXmlGui_UnitTest::testPartMergingSettings() // #252911
 //        " </Menu>\n"
         "</MenuBar></gui>\n";
     TestGuiClient hostClient;
-    hostClient.createActions(QStringList() << "options_configure_keybinding" << "options_configure_toolbars");
+    hostClient.createActions(QStringList() << QStringLiteral("options_configure_keybinding") << QStringLiteral("options_configure_toolbars"));
     hostClient.createGUI(hostXml, true /*ui_standards.rc*/);
     //qDebug() << hostClient.domDocument().toString();
     KMainWindow mainWindow;
     KXMLGUIBuilder builder(&mainWindow);
     KXMLGUIFactory factory(&builder);
     factory.addClient(&hostClient);
-    QWidget *settingsMenu = qobject_cast<QMenu *>(factory.container("settings", &hostClient));
+    QWidget *settingsMenu = qobject_cast<QMenu *>(factory.container(QStringLiteral("settings"), &hostClient));
     QVERIFY(settingsMenu);
     //debugActions(settingsMenu->actions());
 
@@ -473,14 +473,14 @@ void KXmlGui_UnitTest::testPartMergingSettings() // #252911
         " </Menu>\n"
         "</MenuBar></gui>\n";
     TestGuiClient partClient(partXml);
-    partClient.createActions(QStringList() << "configure_klinkstatus");
+    partClient.createActions(QStringList() << QStringLiteral("configure_klinkstatus"));
     factory.addClient(&partClient);
     //debugActions(settingsMenu->actions());
     checkActions(settingsMenu->actions(), QStringList()
-                 << "separator" // that's ok, QMenuPrivate::filterActions won't show it
-                 << "options_configure_keybinding"
-                 << "options_configure_toolbars"
-                 << "configure_klinkstatus");
+                 << QStringLiteral("separator") // that's ok, QMenuPrivate::filterActions won't show it
+                 << QStringLiteral("options_configure_keybinding")
+                 << QStringLiteral("options_configure_toolbars")
+                 << QStringLiteral("configure_klinkstatus"));
     factory.removeClient(&partClient);
     factory.removeClient(&hostClient);
 }
@@ -503,76 +503,76 @@ void KXmlGui_UnitTest::testUiStandardsMerging_data()
     // the empty menu appear at the end after all other menus (fixed for KDE-4.2)
     QTest::newRow("empty file menu, implicit settings menu")
             << QByteArray(xmlBegin + "<Menu name=\"file\"/>\n" + xmlEnd)
-            << (QStringList() << "options_configure_toolbars")
-            << (QStringList() << "settings");
+            << (QStringList() << QStringLiteral("options_configure_toolbars"))
+            << (QStringList() << QStringLiteral("settings"));
     QTest::newRow("file menu with non existing action, implicit settings menu")
             << QByteArray(xmlBegin + "<Menu name=\"file\"><Action name=\"foo\"/></Menu>\n" + xmlEnd)
-            << (QStringList() << "options_configure_toolbars")
-            << (QStringList() << "settings");
+            << (QStringList() << QStringLiteral("options_configure_toolbars"))
+            << (QStringList() << QStringLiteral("settings"));
     QTest::newRow("file menu with existing action, implicit settings menu")
             << QByteArray(xmlBegin + "<Menu name=\"file\"><Action name=\"open\"/></Menu>\n" + xmlEnd)
-            << (QStringList() << "open" << "options_configure_toolbars")
-            << (QStringList() << "file" << "settings");
+            << (QStringList() << QStringLiteral("open") << QStringLiteral("options_configure_toolbars"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("settings"));
     QTest::newRow("implicit file and settings menu")
             << QByteArray(xmlBegin + xmlEnd)
-            << (QStringList() << "file_open" << "options_configure_toolbars")
-            << (QStringList() << "file" << "settings"); // we could check that file_open is in the mainToolBar, too
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("options_configure_toolbars"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("settings")); // we could check that file_open is in the mainToolBar, too
 
     // Check that unknown non-empty menus are added at the "MergeLocal" position (before settings).
     QTest::newRow("foo menu added at the end")
             << QByteArray(xmlBegin + "<Menu name=\"foo\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
-            << (QStringList() << "file_open" << "options_configure_toolbars" << "foo_action")
-            << (QStringList() << "file" << "foo" << "settings");
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("options_configure_toolbars") << QStringLiteral("foo_action"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("foo") << QStringLiteral("settings"));
 
     QTest::newRow("Bille's testcase: menu patch + menu edit")
             << QByteArray(xmlBegin + "<Menu name=\"patch\"><Action name=\"patch_generate\"/></Menu>\n"
                           + "<Menu name=\"edit\"><Action name=\"edit_foo\"/></Menu>\n"
                           + xmlEnd)
-            << (QStringList() << "file_open" << "patch_generate" << "edit_foo")
-            << (QStringList() << "file" << "edit" << "patch");
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("patch_generate") << QStringLiteral("edit_foo"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("edit") << QStringLiteral("patch"));
     QTest::newRow("Bille's testcase: menu patch + menu edit, lowercase tag")
             << QByteArray(xmlBegin + "<Menu name=\"patch\"><Action name=\"patch_generate\"/></Menu>\n"
                           + "<menu name=\"edit\"><Action name=\"edit_foo\"/></menu>\n"
                           + xmlEnd)
-            << (QStringList() << "file_open" << "patch_generate" << "edit_foo")
-            << (QStringList() << "file" << "edit" << "patch");
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("patch_generate") << QStringLiteral("edit_foo"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("edit") << QStringLiteral("patch"));
 
     // Check that <Menu append="..."> allows to insert menus at specific positions
     QTest::newRow("Menu append")
             << QByteArray(xmlBegin + "<Menu name=\"foo\" append=\"settings_merge\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
-            << (QStringList() << "file_open" << "options_configure_toolbars" << "foo_action" << "help_contents")
-            << (QStringList() << "file" << "settings" << "foo" << "help");
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("options_configure_toolbars") << QStringLiteral("foo_action") << QStringLiteral("help_contents"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("settings") << QStringLiteral("foo") << QStringLiteral("help"));
     QTest::newRow("Custom first menu")
             << QByteArray(xmlBegin + "<Menu name=\"foo\" append=\"first_menu\"><Action name=\"foo_action\"/></Menu>\n" + xmlEnd)
-            << (QStringList() << "edit_undo" << "foo_action" << "help_contents")
-            << (QStringList() << "foo" << "edit" << "help");
+            << (QStringList() << QStringLiteral("edit_undo") << QStringLiteral("foo_action") << QStringLiteral("help_contents"))
+            << (QStringList() << QStringLiteral("foo") << QStringLiteral("edit") << QStringLiteral("help"));
 
     // Tests for noMerge="1"
     QTest::newRow("noMerge empty file menu, implicit settings menu")
             << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n" + xmlEnd)
-            << (QStringList() << "file_open" << "options_configure_toolbars")
-            << (QStringList() << "file" << "settings"); // we keep empty menus, see #186382
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("options_configure_toolbars"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("settings")); // we keep empty menus, see #186382
     QTest::newRow("noMerge empty file menu, file_open moved elsewhere")
             << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
-            << (QStringList() << "file_open")
-            << (QStringList() << "file" << "foo");
+            << (QStringList() << QStringLiteral("file_open"))
+            << (QStringList() << QStringLiteral("file") << QStringLiteral("foo"));
     QTest::newRow("noMerge file menu with open before new")
             << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"><Action name=\"file_open\"/><Action name=\"file_new\"/></Menu>" + xmlEnd)
-            << (QStringList() << "file_open" << "file_new")
-            << (QStringList() << "file"); // TODO check the order of the actions in the menu? how?
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("file_new"))
+            << (QStringList() << QStringLiteral("file")); // TODO check the order of the actions in the menu? how?
 
     // Tests for deleted="true"
     QTest::newRow("deleted file menu, implicit settings menu")
             << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"/>\n" + xmlEnd)
-            << (QStringList() << "file_open" << "options_configure_toolbars")
-            << (QStringList() << "settings");
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("options_configure_toolbars"))
+            << (QStringList() << QStringLiteral("settings"));
     QTest::newRow("deleted file menu, file_open moved elsewhere")
             << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
-            << (QStringList() << "file_open")
-            << (QStringList() << "foo");
+            << (QStringList() << QStringLiteral("file_open"))
+            << (QStringList() << QStringLiteral("foo"));
     QTest::newRow("deleted file menu with actions (contradiction)")
             << QByteArray(xmlBegin + "<Menu name=\"file\" deleted=\"true\"><Action name=\"file_open\"/><Action name=\"file_new\"/></Menu>" + xmlEnd)
-            << (QStringList() << "file_open" << "file_new")
+            << (QStringList() << QStringLiteral("file_open") << QStringLiteral("file_new"))
             << (QStringList());
 
 }
@@ -620,37 +620,37 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
         "</gui>";
 
     TestGuiClient client(xml);
-    client.createActions(QStringList() << "view_add_to_new_group");
+    client.createActions(QStringList() << QStringLiteral("view_add_to_new_group"));
     KMainWindow mainWindow;
     KXMLGUIBuilder builder(&mainWindow);
     KXMLGUIFactory factory(&builder);
     factory.addClient(&client);
 
-    QWidget *menuW = factory.container("groups", &client);
+    QWidget *menuW = factory.container(QStringLiteral("groups"), &client);
     QVERIFY(menuW);
     QMenu *menu = qobject_cast<QMenu *>(menuW);
     QVERIFY(menu);
 
     //debugActions(menu->actions());
     checkActions(menu->actions(), QStringList()
-                 << "separator" // that's ok, QMenuPrivate::filterActions won't show it
-                 << "view_add_to_new_group");
+                 << QStringLiteral("separator") // that's ok, QMenuPrivate::filterActions won't show it
+                 << QStringLiteral("view_add_to_new_group"));
 
     qDebug() << "Now plugging the actionlist";
 
     QAction *action1 = new QAction(this);
-    action1->setObjectName("action1");
-    action1->setShortcuts(QKeySequence::listFromString("Ctrl+2"));
+    action1->setObjectName(QStringLiteral("action1"));
+    action1->setShortcuts(QKeySequence::listFromString(QStringLiteral("Ctrl+2")));
     QList<QAction *> actionList;
     actionList << action1;
-    client.plugActionList("view_groups_list", actionList);
+    client.plugActionList(QStringLiteral("view_groups_list"), actionList);
     QCOMPARE(QKeySequence::listToString(action1->shortcuts()), QString("Ctrl+2"));
 
     //debugActions(menu->actions());
     checkActions(menu->actions(), QStringList()
-                 << "action1"
-                 << "separator"
-                 << "view_add_to_new_group");
+                 << QStringLiteral("action1")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("view_add_to_new_group"));
 
     qDebug() << "Now remove+add gui client";
 
@@ -659,19 +659,19 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
     factory.removeClient(&client);
     factory.addClient(&client);
     // We need to get the container widget again, it was re-created.
-    menuW = factory.container("groups", &client);
+    menuW = factory.container(QStringLiteral("groups"), &client);
     QVERIFY(menuW);
     menu = qobject_cast<QMenu *>(menuW);
     //debugActions(menu->actions());
     checkActions(menu->actions(), QStringList()
-                 << "separator"   // yep, it removed the actionlist thing...
-                 << "view_add_to_new_group");
+                 << QStringLiteral("separator")   // yep, it removed the actionlist thing...
+                 << QStringLiteral("view_add_to_new_group"));
     qDebug() << "Now plugging the actionlist again";
-    client.plugActionList("view_groups_list", actionList);
+    client.plugActionList(QStringLiteral("view_groups_list"), actionList);
     checkActions(menu->actions(), QStringList()
-                 << "action1"
-                 << "separator"
-                 << "view_add_to_new_group");
+                 << QStringLiteral("action1")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("view_add_to_new_group"));
     factory.removeClient(&client);
 }
 
@@ -696,15 +696,15 @@ void KXmlGui_UnitTest::testHiddenToolBar()
     KConfigGroup cg(KSharedConfig::openConfig(), "testHiddenToolBar");
     TestXmlGuiWindow mainWindow(xml);
     mainWindow.setAutoSaveSettings(cg);
-    mainWindow.createActions(QStringList() << "go_up");
+    mainWindow.createActions(QStringList() << QStringLiteral("go_up"));
     mainWindow.createGUI();
 
-    KToolBar *mainToolBar = mainWindow.toolBarByName("mainToolBar");
+    KToolBar *mainToolBar = mainWindow.toolBarByName(QStringLiteral("mainToolBar"));
     QVERIFY(mainToolBar->isHidden());
 
     KXMLGUIFactory *factory = mainWindow.guiFactory();
     QVERIFY(!factory->container("visibleToolBar", &mainWindow)->isHidden());
-    KToolBar *hiddenToolBar = qobject_cast<KToolBar *>(factory->container("hiddenToolBar", &mainWindow));
+    KToolBar *hiddenToolBar = qobject_cast<KToolBar *>(factory->container(QStringLiteral("hiddenToolBar"), &mainWindow));
     qDebug() << hiddenToolBar;
     QVERIFY(hiddenToolBar->isHidden());
 
@@ -745,16 +745,16 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
         mw.reallyResize(400, 400);
         QTest::qWait(200);
 
-        mw.createActions(QStringList() << "go_up");
+        mw.createActions(QStringList() << QStringLiteral("go_up"));
         mw.createGUI();
 
         // Resize again, should be saved
         mw.reallyResize(800, 600);
         QTest::qWait(200);
 
-        KToolBar *mainToolBar = mw.toolBarByName("mainToolBar");
+        KToolBar *mainToolBar = mw.toolBarByName(QStringLiteral("mainToolBar"));
         QCOMPARE(mw.toolBarArea(mainToolBar), Qt::TopToolBarArea);
-        KToolBar *secondToolBar = mw.toolBarByName("secondToolBar");
+        KToolBar *secondToolBar = mw.toolBarByName(QStringLiteral("secondToolBar"));
         QCOMPARE((int)mw.toolBarArea(secondToolBar), (int)Qt::TopToolBarArea); // REFERENCE #1 (see below)
 
         // Move second toolbar to bottom
@@ -779,7 +779,7 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
         // Check window size was restored
         QCOMPARE(mw2.size(), QSize(800, 600));
 
-        mw2.createActions(QStringList() << "go_up");
+        mw2.createActions(QStringList() << QStringLiteral("go_up"));
         mw2.createGUI();
 
         // Force window layout to happen
@@ -787,9 +787,9 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
         QTest::qWait(200);
 
         // Check toolbar positions were restored
-        KToolBar *mainToolBar = mw2.toolBarByName("mainToolBar");
+        KToolBar *mainToolBar = mw2.toolBarByName(QStringLiteral("mainToolBar"));
         QCOMPARE(mw2.toolBarArea(mainToolBar), Qt::TopToolBarArea);
-        KToolBar *secondToolBar = mw2.toolBarByName("secondToolBar");
+        KToolBar *secondToolBar = mw2.toolBarByName(QStringLiteral("secondToolBar"));
         QCOMPARE(mw2.toolBarArea(secondToolBar), Qt::BottomToolBarArea);
         mw2.applyMainWindowSettings(mw2.autoSaveConfigGroup());
         QCOMPARE(mw2.toolBarArea(secondToolBar), Qt::BottomToolBarArea);
@@ -818,7 +818,7 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
     KConfigGroup cg(KSharedConfig::openConfig(), "testDeletedToolBar");
     TestXmlGuiWindow mainWindow(xml);
     mainWindow.setAutoSaveSettings(cg);
-    mainWindow.createActions(QStringList() << "go_up" << "file_new" << "game_new");
+    mainWindow.createActions(QStringList() << QStringLiteral("go_up") << QStringLiteral("file_new") << QStringLiteral("game_new"));
     mainWindow.createGUI();
     KXMLGUIFactory *factory = mainWindow.guiFactory();
 
@@ -860,11 +860,11 @@ void KXmlGui_UnitTest::testTopLevelSeparator()
     mainWindow.createGUI();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "before_separator"
-                 << "separator"
-                 << "after_separator"
-                 << "separator"
-                 << "help");
+                 << QStringLiteral("before_separator")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("after_separator")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("help"));
 }
 
 // Check that the objectName() of the menus is set from the name in the XML file
@@ -883,9 +883,9 @@ void KXmlGui_UnitTest::testMenuNames()
     mainWindow.createGUI();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "filemenu"
-                 << "separator"
-                 << "help");
+                 << QStringLiteral("filemenu")
+                 << QStringLiteral("separator")
+                 << QStringLiteral("help"));
 }
 
 // Test what happens when the application's rc file isn't found
@@ -896,7 +896,7 @@ void KXmlGui_UnitTest::testMenusNoXmlFile()
     mainWindow.createGUIBad();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "help");
+                 << QStringLiteral("help"));
 }
 
 void KXmlGui_UnitTest::testXMLFileReplacement()
@@ -980,12 +980,12 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
 
     TestXmlGuiWindow mainWindow(hostXml);
     TestGuiClient *client = new TestGuiClient(xml);
-    client->createActions(QStringList() << "file_open" << "file_quit");
+    client->createActions(QStringList() << QStringLiteral("file_open") << QStringLiteral("file_quit"));
     mainWindow.insertChildClient(client);
     mainWindow.createGUI();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "file" << "separator" << "help");
+                 << QStringLiteral("file") << QStringLiteral("separator") << QStringLiteral("help"));
 
     QVERIFY(mainWindow.factory()->clients().contains(client));
     delete client;
@@ -993,7 +993,7 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
 
     // No change, because deletion is fast, it doesn't do manual unplugging.
     checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << "file" << "separator" << "help");
+                 << QStringLiteral("file") << QStringLiteral("separator") << QStringLiteral("help"));
 }
 
 void KXmlGui_UnitTest::testShortcuts()
@@ -1014,7 +1014,7 @@ void KXmlGui_UnitTest::testShortcuts()
                            "</gui>";
 
     TestGuiClient client;
-    client.createActions(QStringList() << "file_open" << "file_quit");
+    client.createActions(QStringList() << QStringLiteral("file_open") << QStringLiteral("file_quit"));
     client.createGUI(xml, false /*ui_standards.rc*/);
 
     KMainWindow mainWindow;

@@ -359,7 +359,7 @@ static QDomElement findActionPropertiesElement(const QDomDocument &doc)
     QDomElement e = doc.documentElement().firstChildElement();
     for (; !e.isNull(); e = e.nextSiblingElement()) {
         if (QString::compare(e.tagName(), tagActionProp, Qt::CaseInsensitive) == 0
-                && (e.attribute(QStringLiteral("scheme"), QLatin1String("Default")) == schemeName)) {
+                && (e.attribute(QStringLiteral("scheme"), QStringLiteral("Default")) == schemeName)) {
             return e;
         }
     }

@@ -58,7 +58,7 @@ private:
 
 void MainWindow::slotTest()
 {
-    KMessageBox::information(0, QStringLiteral("Test"), QLatin1String("Test"));
+    KMessageBox::information(0, QStringLiteral("Test"), QStringLiteral("Test"));
 }
 
 void MainWindow::slotCreate()

@@ -54,9 +54,9 @@ int main(int argc, char **argv)
     KXMLGUIFactory *factory = new KXMLGUIFactory(builder);
 
     Client *shell = new Client;
-    shell->setComponentName(QStringLiteral("konqueror"), QLatin1String("Konqueror"));
+    shell->setComponentName(QStringLiteral("konqueror"), QStringLiteral("Konqueror"));
 
-    a = new QAction(QIcon::fromTheme(QStringLiteral("view-split-left-right")), QLatin1String("Split"), shell);
+    a = new QAction(QIcon::fromTheme(QStringLiteral("view-split-left-right")), QStringLiteral("Split"), shell);
     shell->actionCollection()->addAction(QStringLiteral("splitviewh"), a);
 
     shell->setXMLFile(QFINDTESTDATA("kxmlguitest_shell.rc"));
@@ -65,9 +65,9 @@ int main(int argc, char **argv)
 
     Client *part = new Client;
 
-    a = new QAction(QIcon::fromTheme(QStringLiteral("zoom-out")), QLatin1String("decfont"), part);
+    a = new QAction(QIcon::fromTheme(QStringLiteral("zoom-out")), QStringLiteral("decfont"), part);
     part->actionCollection()->addAction(QStringLiteral("decFontSizes"), a);
-    a = new QAction(QIcon::fromTheme(QStringLiteral("security-low")), QLatin1String("sec"), part);
+    a = new QAction(QIcon::fromTheme(QStringLiteral("security-low")), QStringLiteral("sec"), part);
     part->actionCollection()->addAction(QStringLiteral("security"), a);
     part->actionCollection()->setDefaultShortcuts(a, QList<QKeySequence>() << Qt::ALT + Qt::Key_1);
     a->connect(a, SIGNAL(triggered(bool)), part, SLOT(slotSec()));

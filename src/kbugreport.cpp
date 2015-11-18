@@ -198,8 +198,8 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     if (d->m_strVersion.isEmpty()) {
         d->m_strVersion = i18n("no version set (programmer error)");
     }
-    d->kde_version = QString::fromLatin1(KXMLGUI_VERSION_STRING);
-    d->kde_version += QStringLiteral(", ") + QString::fromLatin1(XMLGUI_DISTRIBUTION_TEXT);
+    d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING);
+    d->kde_version += QStringLiteral(", ") + QLatin1String(XMLGUI_DISTRIBUTION_TEXT);
     if (!d->submitBugWeb) {
         d->m_strVersion += QLatin1Char(' ') + d->kde_version;
     }
@@ -219,7 +219,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
     tmpLabel = new QLabel(i18n("Compiler:"), this);
     glay->addWidget(tmpLabel, ++row, 0);
-    tmpLabel = new QLabel(QString::fromLatin1(XMLGUI_COMPILER_VERSION), this);
+    tmpLabel = new QLabel(QLatin1String(XMLGUI_COMPILER_VERSION), this);
     tmpLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
     glay->addWidget(tmpLabel, row, 1, 1, 2);
 
@@ -324,7 +324,7 @@ void KBugReportPrivate::_k_updateUrl()
 {
     url = QUrl(QStringLiteral("https://bugs.kde.org/enter_bug.cgi"));
     QUrlQuery query;
-    query.addQueryItem(QStringLiteral("format"), QLatin1String("guided"));    // use the guided form
+    query.addQueryItem(QStringLiteral("format"), QStringLiteral("guided"));    // use the guided form
 
     // the string format is product/component, where component is optional
     QStringList list = appcombo->currentText().split(QLatin1Char('/'));
@@ -375,7 +375,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
     }
     m_process = new QProcess;
     QObject::connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
-    m_process->start(QString::fromLatin1("kcmshell5"), QStringList() << QString::fromLatin1("kcm_useraccount"));
+    m_process->start(QStringLiteral("kcmshell5"), QStringList() << QLatin1String("kcm_useraccount"));
     if (!m_process->waitForStarted()) {
         //qDebug() << "Couldn't start kcmshell5..";
         delete m_process;
@@ -398,7 +398,7 @@ void KBugReportPrivate::_k_slotSetFrom()
     } else {
         QString name = emailSettings.getSetting(KEMailSettings::RealName);
         if (!name.isEmpty()) {
-            fromaddr = name + QString::fromLatin1(" <") + fromaddr + QString::fromLatin1(">");
+            fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1String(">");
         }
     }
     m_from->setText(fromaddr);
@@ -480,7 +480,7 @@ QString KBugReport::text() const
     // Prepend the pseudo-headers to the contents of the mail
     QString severity = d->severityButtons[d->currentSeverity()]->objectName();
     QString appname = d->appcombo->currentText();
-    QString os = QString::fromLatin1("OS: %1 (%2)\n").
+    QString os = QStringLiteral("OS: %1 (%2)\n").
                  arg(QStringLiteral(XMLGUI_COMPILING_OS)).
                  arg(QStringLiteral(XMLGUI_DISTRIBUTION_TEXT));
     QString bodyText;
@@ -499,23 +499,23 @@ QString KBugReport::text() const
         }
     if (severity == QStringLiteral("i18n") && QLocale().language() != QLocale::system().language()) {
         // Case 1 : i18n bug
-        QString package = QString::fromLatin1("i18n_%1").arg(QLocale::languageToString(QLocale().language()));
+        QString package = QStringLiteral("i18n_%1").arg(QLocale::languageToString(QLocale().language()));
         package = package.replace(QLatin1Char('_'), QLatin1Char('-'));
-        return QString::fromLatin1("Package: %1").arg(package) +
-               QString::fromLatin1("\n"
+        return QStringLiteral("Package: %1").arg(package) +
+               QStringLiteral("\n"
                                    "Application: %1\n"
                                    // not really i18n's version, so better here IMHO
                                    "Version: %2\n").arg(appname).arg(d->m_strVersion) +
-               os + QString::fromLatin1("\n") + bodyText;
+               os + QLatin1String("\n") + bodyText;
     } else {
         appname = appname.replace(QLatin1Char('_'), QLatin1Char('-'));
         // Case 2 : normal bug
-        return QString::fromLatin1("Package: %1\n"
+        return QStringLiteral("Package: %1\n"
                                    "Version: %2\n"
                                    "Severity: %3\n")
                .arg(appname).arg(d->m_strVersion).arg(severity) +
-               QString::fromLatin1("Compiler: %1\n").arg(QStringLiteral(XMLGUI_COMPILER_VERSION)) +
-               os + QString::fromLatin1("\n") + bodyText;
+               QStringLiteral("Compiler: %1\n").arg(QStringLiteral(XMLGUI_COMPILER_VERSION)) +
+               os + QLatin1String("\n") + bodyText;
     }
 }
 
@@ -533,7 +533,7 @@ bool KBugReport::sendBugReport()
 
     QProcess proc;
     QStringList args;
-    args << QStringLiteral("--subject") << d->m_subject->text() << QLatin1String("--recipient") << recipient;
+    args << QStringLiteral("--subject") << d->m_subject->text() << QStringLiteral("--recipient") << recipient;
     proc.start(command, args);
     //qDebug() << command << args;
     if (!proc.waitForStarted()) {

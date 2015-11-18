@@ -109,7 +109,7 @@ void tst_KToolBar::initTestCase()
     QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
     QVERIFY(testDataDir.absolutePath().contains(QStringLiteral("qttest")));
     testDataDir.removeRecursively();
-    testDataDir.mkpath(".");
+    testDataDir.mkpath(QStringLiteral("."));
 
     // copy a minimal icon theme to where KIconTheme will find it, in case oxygen-icons is not
     // installed
@@ -197,7 +197,7 @@ void tst_KToolBar::testIconSizeNoXmlGui_data()
 void tst_KToolBar::testIconSizeNoXmlGui()
 {
     QFETCH(int, iconSize);
-    KConfig config("tst_KToolBar");
+    KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
         KMainWindow kmw;
@@ -287,11 +287,11 @@ void tst_KToolBar::testIconSizeXmlGui()
     QFETCH(int, expectedSizeOtherToolbar);
     QFETCH(int, expectedSizeCleanToolbar);
     QFETCH(int, expectedSizeBigToolbar);
-    KConfig config("tst_KToolBar");
+    KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
         TestXmlGuiWindow kmw(m_xml);
-        kmw.createActions(QStringList() << "go_up");
+        kmw.createActions(QStringList() << QStringLiteral("go_up"));
         kmw.createGUI();
         KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
         KToolBar *otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
@@ -385,12 +385,12 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
     const bool selectedDefaultForMainToolbar = toolButtonStyle == mainToolBarDefaultStyle;
     const bool selectedDefaultForOtherToolbar = toolButtonStyle == Qt::ToolButtonTextBesideIcon;
 
-    KConfig config("tst_KToolBar");
+    KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
         KMainWindow kmw;
-        KToolBar *mainToolBar = kmw.toolBar("mainToolBar");
-        KToolBar *otherToolBar = kmw.toolBar("otherToolBar");
+        KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = kmw.toolBar(QStringLiteral("otherToolBar"));
 
         // Default settings (applied by applyAppearanceSettings)
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)mainToolBarDefaultStyle);
@@ -415,15 +415,15 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
     {
         // Recreate, load, compare.
         KMainWindow kmw;
-        KToolBar *mainToolBar = kmw.toolBar("mainToolBar");
-        KToolBar *otherToolBar = kmw.toolBar("otherToolBar");
+        KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = kmw.toolBar(QStringLiteral("otherToolBar"));
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)mainToolBarDefaultStyle);
         kmw.applyMainWindowSettings(group);
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)toolButtonStyle);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)toolButtonStyle);
 
         // Now change KDE-global setting
-        changeGlobalToolButtonStyleSetting("IconOnly", "TextOnly");
+        changeGlobalToolButtonStyleSetting(QStringLiteral("IconOnly"), QStringLiteral("TextOnly"));
 
         if (selectedDefaultForMainToolbar) {
             QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)Qt::ToolButtonIconOnly);
@@ -464,15 +464,15 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
     QFETCH(Qt::ToolButtonStyle, expectedStyleOtherToolbar);
     QFETCH(Qt::ToolButtonStyle, expectedStyleCleanToolbar);
     const Qt::ToolButtonStyle mainToolBarDefaultStyle = Qt::ToolButtonTextBesideIcon; // was TextUnderIcon before KDE-4.4.0
-    KConfig config("tst_KToolBar");
+    KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
         TestXmlGuiWindow kmw(m_xml);
-        kmw.createActions(QStringList() << "go_up");
+        kmw.createActions(QStringList() << QStringLiteral("go_up"));
         kmw.createGUI();
-        KToolBar *mainToolBar = kmw.toolBarByName("mainToolBar");
-        KToolBar *otherToolBar = kmw.toolBarByName("otherToolBar");
-        KToolBar *cleanToolBar = kmw.toolBarByName("cleanToolBar");
+        KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
+        KToolBar *otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
+        KToolBar *cleanToolBar = kmw.toolBarByName(QStringLiteral("cleanToolBar"));
 
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)mainToolBarDefaultStyle);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)Qt::ToolButtonTextUnderIcon); // from xml
@@ -486,7 +486,7 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
         kmw.saveMainWindowSettings(group);
 
         // Now change KDE-global setting
-        changeGlobalToolButtonStyleSetting("IconOnly", "TextOnly");
+        changeGlobalToolButtonStyleSetting(QStringLiteral("IconOnly"), QStringLiteral("TextOnly"));
 
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)expectedStyleMainToolbar);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)expectedStyleOtherToolbar);
@@ -524,7 +524,7 @@ void tst_KToolBar::deleteGlobalToolButtonStyleSetting()
 void tst_KToolBar::testToolBarPosition()
 {
     TestXmlGuiWindow kmw(m_xml);
-    kmw.createActions(QStringList() << "go_up");
+    kmw.createActions(QStringList() << QStringLiteral("go_up"));
     kmw.createGUI();
     KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
     KToolBar *otherToolBar = kmw.toolBarByName(QStringLiteral("otherToolBar"));
@@ -542,7 +542,7 @@ void tst_KToolBar::testXmlGuiSwitching()
         "</MenuBar>\n"
         "</gui>\n";
     TestXmlGuiWindow kmw(windowXml);
-    kmw.createActions(QStringList() << "go_up");
+    kmw.createActions(QStringList() << QStringLiteral("go_up"));
     kmw.createGUI();
     TestGuiClient firstClient(m_xml);
     kmw.guiFactory()->addClient(&firstClient);
@@ -598,7 +598,7 @@ void tst_KToolBar::testXmlGuiSwitching()
     QCOMPARE(otherToolBar->iconSize().width(), 35);
 
     // Now save, and check what we saved
-    KConfig config("tst_KToolBar");
+    KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     kmw.saveMainWindowSettings(group);
     QCOMPARE(group.group("Toolbar bigToolBar").readEntry("IconSize", 0), 35);
@@ -611,7 +611,7 @@ void tst_KToolBar::testXmlGuiSwitching()
     // Recreate window and apply config; is hidden toolbar shown as expected?
     {
         TestXmlGuiWindow kmw2(windowXml);
-        kmw2.createActions(QStringList() << "go_up");
+        kmw2.createActions(QStringList() << QStringLiteral("go_up"));
         kmw2.createGUI();
         TestGuiClient firstClient(m_xml);
         kmw2.guiFactory()->addClient(&firstClient);

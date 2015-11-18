@@ -55,12 +55,12 @@ void KMainWindow_UnitTest::testDefaultName()
 void KMainWindow_UnitTest::testFixedName()
 {
     KMainWindow mw;
-    mw.setObjectName("mymainwindow");
+    mw.setObjectName(QStringLiteral("mymainwindow"));
     mw.show();
     mw.ensurePolished();
     QCOMPARE(mw.objectName(), QString::fromLatin1("mymainwindow"));
     KMainWindow mw2;
-    mw2.setObjectName("mymainwindow");
+    mw2.setObjectName(QStringLiteral("mymainwindow"));
     mw2.show();
     mw2.ensurePolished();
     QCOMPARE(mw2.objectName(), QString::fromLatin1("mymainwindow2"));
@@ -69,17 +69,17 @@ void KMainWindow_UnitTest::testFixedName()
 void KMainWindow_UnitTest::testNameWithHash()
 {
     KMainWindow mw;
-    mw.setObjectName("composer#");
+    mw.setObjectName(QStringLiteral("composer#"));
     mw.show();
     mw.ensurePolished();
     QCOMPARE(mw.objectName(), QString::fromLatin1("composer#1"));
     KMainWindow mw2;
-    mw2.setObjectName("composer#");
+    mw2.setObjectName(QStringLiteral("composer#"));
     mw2.show();
     mw2.ensurePolished();
     QCOMPARE(mw2.objectName(), QString::fromLatin1("composer#2"));
     KMainWindow mw4;
-    mw4.setObjectName("composer#4");
+    mw4.setObjectName(QStringLiteral("composer#4"));
     mw4.show();
     mw4.ensurePolished();
     QCOMPARE(mw4.objectName(), QString::fromLatin1("composer#4"));
@@ -88,12 +88,12 @@ void KMainWindow_UnitTest::testNameWithHash()
 void KMainWindow_UnitTest::testNameWithSpecialChars()
 {
     KMainWindow mw;
-    mw.setObjectName("a#@_test/");
+    mw.setObjectName(QStringLiteral("a#@_test/"));
     mw.show();
     mw.ensurePolished();
     QCOMPARE(mw.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_"));
     KMainWindow mw2;
-    mw2.setObjectName("a#@_test/");
+    mw2.setObjectName(QStringLiteral("a#@_test/"));
     mw2.show();
     mw2.ensurePolished();
     QCOMPARE(mw2.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_2"));
@@ -157,7 +157,7 @@ void KMainWindow_UnitTest::testSaveWindowSize()
         MyMainWindow mw;
         mw.show();
         KToolBar *tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
-        tb->setObjectName("testtb");
+        tb->setObjectName(QStringLiteral("testtb"));
         mw.reallyResize(800, 600);
         QTRY_COMPARE(mw.size(), QSize(800, 600));
         QTRY_COMPARE(mw.windowHandle()->size(), QSize(800, 600));
@@ -168,7 +168,7 @@ void KMainWindow_UnitTest::testSaveWindowSize()
     KMainWindow mw2;
     mw2.show();
     KToolBar *tb = new KToolBar(&mw2);
-    tb->setObjectName("testtb");
+    tb->setObjectName(QStringLiteral("testtb"));
     mw2.resize(500, 500);
     mw2.applyMainWindowSettings(cfg);
 
@@ -177,13 +177,13 @@ void KMainWindow_UnitTest::testSaveWindowSize()
 
 void KMainWindow_UnitTest::testAutoSaveSettings()
 {
-    const QString group("AutoSaveTestGroup");
+    const QString group(QStringLiteral("AutoSaveTestGroup"));
 
     {
         MyMainWindow mw;
         mw.show();
         KToolBar *tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
-        tb->setObjectName("testtb");
+        tb->setObjectName(QStringLiteral("testtb"));
         mw.setAutoSaveSettings(group);
         mw.reallyResize(800, 600);
         mw.close();
@@ -192,14 +192,14 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
     KMainWindow mw2;
     mw2.show();
     KToolBar *tb = new KToolBar(&mw2);
-    tb->setObjectName("testtb");
+    tb->setObjectName(QStringLiteral("testtb"));
     mw2.setAutoSaveSettings(group);
     QTRY_COMPARE(mw2.size(), QSize(800, 600));
 }
 
 void KMainWindow_UnitTest::testNoAutoSave()
 {
-    const QString group("AutoSaveTestGroup");
+    const QString group(QStringLiteral("AutoSaveTestGroup"));
 
     {
         // A mainwindow with autosaving, but not of the window size.

@@ -127,7 +127,7 @@ public:
         const bool isVisible = m_schemeEditor->isVisible();
 
         m_schemeEditor->setVisible(!isVisible);
-        m_detailsButton->setText(i18n("&Details") + (isVisible ? QStringLiteral(" >>") : QLatin1String(" <<")));
+        m_detailsButton->setText(i18n("&Details") + (isVisible ? QStringLiteral(" >>") : QStringLiteral(" <<")));
     }
 
     void save()

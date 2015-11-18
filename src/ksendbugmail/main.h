@@ -30,7 +30,7 @@ class BugMailer : public QObject
 public:
     BugMailer(SMTP *s) : QObject(0), sm(s)
     {
-        setObjectName("mailer");
+        setObjectName(QStringLiteral("mailer"));
     }
 
 public Q_SLOTS:

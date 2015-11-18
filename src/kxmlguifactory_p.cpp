@@ -240,7 +240,7 @@ void ContainerNode::plugActionList(BuildState &state)
 
 void ContainerNode::plugActionList(BuildState &state, const MergingIndexList::Iterator &mergingIdxIt)
 {
-    static const QString &tagActionList = QString::fromLatin1("actionlist");
+    static const QString &tagActionList = QLatin1String("actionlist");
 
     MergingIndex mergingIdx = *mergingIdxIt;
 
@@ -286,7 +286,7 @@ void ContainerNode::unplugActionList(BuildState &state)
 
 void ContainerNode::unplugActionList(BuildState &state, const MergingIndexList::Iterator &mergingIdxIt)
 {
-    static const QString &tagActionList = QString::fromLatin1("actionlist");
+    static const QString &tagActionList = QLatin1String("actionlist");
 
     MergingIndex mergingIdx = *mergingIdxIt;
 

@@ -49,9 +49,9 @@ public:
           m_parent(0L),
           m_builder(0L)
     {
-        m_textTagNames.append(QLatin1String("text"));
-        m_textTagNames.append(QLatin1String("Text"));
-        m_textTagNames.append(QLatin1String("title"));
+        m_textTagNames.append(QStringLiteral("text"));
+        m_textTagNames.append(QStringLiteral("Text"));
+        m_textTagNames.append(QStringLiteral("title"));
     }
     ~KXMLGUIClientPrivate()
     {

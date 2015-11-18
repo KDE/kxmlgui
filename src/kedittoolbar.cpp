@@ -932,7 +932,7 @@ bool KEditToolBarWidget::save()
             if (menuElement.isNull()) {
                 continue;
             }
-            menuElement.setAttribute(QStringLiteral("noMerge"), QLatin1String("1"));
+            menuElement.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
         }
 
         //qDebug() << (*it).domDocument().toString();
@@ -1083,12 +1083,12 @@ void KEditToolBarWidgetPrivate::setupLayout()
     QObject::connect(m_upAction, SIGNAL(clicked()), m_widget, SLOT(slotUpButton()));
 
     m_insertAction = new QToolButton(m_widget);
-    m_insertAction->setIcon(QIcon::fromTheme(QApplication::isRightToLeft() ? QStringLiteral("go-previous") : QLatin1String("go-next")));
+    m_insertAction->setIcon(QIcon::fromTheme(QApplication::isRightToLeft() ? QStringLiteral("go-previous") : QStringLiteral("go-next")));
     m_insertAction->setEnabled(false);
     QObject::connect(m_insertAction, SIGNAL(clicked()), m_widget, SLOT(slotInsertButton()));
 
     m_removeAction = new QToolButton(m_widget);
-    m_removeAction->setIcon(QIcon::fromTheme(QApplication::isRightToLeft() ? QStringLiteral("go-next") : QLatin1String("go-previous")));
+    m_removeAction->setIcon(QIcon::fromTheme(QApplication::isRightToLeft() ? QStringLiteral("go-next") : QStringLiteral("go-previous")));
     m_removeAction->setEnabled(false);
     QObject::connect(m_removeAction, SIGNAL(clicked()), m_widget, SLOT(slotRemoveButton()));
 
@@ -1451,7 +1451,7 @@ void KEditToolBarWidgetPrivate::insertActive(ToolBarItem *item, ToolBarItem *bef
     }
 
     // and set this container as a noMerge
-    m_currentToolBarElem.setAttribute(QStringLiteral("noMerge"), QLatin1String("1"));
+    m_currentToolBarElem.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
 
     // update the local doc
     updateLocal(m_currentToolBarElem);
@@ -1473,7 +1473,7 @@ void KEditToolBarWidgetPrivate::removeActive(ToolBarItem *item)
         m_currentToolBarElem.removeChild(elem);
 
         // and set this container as a noMerge
-        m_currentToolBarElem.setAttribute(QStringLiteral("noMerge"), QLatin1String("1"));
+        m_currentToolBarElem.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
 
         // update the local doc
         updateLocal(m_currentToolBarElem);
@@ -1527,7 +1527,7 @@ void KEditToolBarWidgetPrivate::moveActive(ToolBarItem *item, ToolBarItem *befor
     }
 
     // and set this container as a noMerge
-    m_currentToolBarElem.setAttribute(QStringLiteral("noMerge"), QLatin1String("1"));
+    m_currentToolBarElem.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
 
     // update the local doc
     updateLocal(m_currentToolBarElem);
@@ -1666,10 +1666,10 @@ void KEditToolBarWidgetPrivate::slotChangeIconText()
         QDomElement act_elem = KXMLGUIFactory::findActionByName(elem, item->internalName(), true /*create*/);
         Q_ASSERT(!act_elem.isNull());
         if (iconTextChanged) {
-            act_elem.setAttribute(QString::fromLatin1("iconText"), iconText);
+            act_elem.setAttribute(QStringLiteral("iconText"), iconText);
         }
         if (hiddenChanged) {
-            act_elem.setAttribute(QString::fromLatin1("priority"), hidden ? QAction::LowPriority : QAction::NormalPriority);
+            act_elem.setAttribute(QStringLiteral("priority"), hidden ? QAction::LowPriority : QAction::NormalPriority);
         }
 
         // we're modified, so let this change

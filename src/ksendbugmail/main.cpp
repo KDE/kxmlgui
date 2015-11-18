@@ -75,8 +75,8 @@ int main(int argc, char **argv)
 {
 
     QCoreApplication a(argc, argv);
-    a.setApplicationName("ksendbugmail");
-    a.setApplicationVersion("1.0");
+    a.setApplicationName(QStringLiteral("ksendbugmail"));
+    a.setApplicationVersion(QStringLiteral("1.0"));
 
     KLocalizedString::setApplicationDomain("kxmlgui5");
 
@@ -88,14 +88,14 @@ int main(int argc, char **argv)
         parser.addVersionOption();
         parser.setApplicationDescription(i18n("Sends a bug report by email."));
         parser.addHelpOption();
-        parser.addOption(QCommandLineOption(QStringList() << "subject", i18n("The subject line of the email."), "argument"));
-        parser.addOption(QCommandLineOption(QStringList() << "recipient", i18n("The email address to send the bug report to."), "argument", "submit@bugs.kde.org"));
+        parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("subject"), i18n("The subject line of the email."), QStringLiteral("argument")));
+        parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("recipient"), i18n("The email address to send the bug report to."), QStringLiteral("argument"), QStringLiteral("submit@bugs.kde.org")));
         parser.process(a);
-        recipient = parser.value("recipient");
-        subject = parser.value("subject");
+        recipient = parser.value(QStringLiteral("recipient"));
+        subject = parser.value(QStringLiteral("subject"));
     }
     if (recipient.isEmpty()) {
-        recipient = "submit@bugs.kde.org";
+        recipient = QStringLiteral("submit@bugs.kde.org");
     } else {
         if (recipient.at(0) == '\'') {
             recipient = recipient.mid(1).left(recipient.length() - 2);
@@ -104,7 +104,7 @@ int main(int argc, char **argv)
     // qDebug() << "recp" << recipient;
 
     if (subject.isEmpty()) {
-        subject = "(no subject)";
+        subject = QStringLiteral("(no subject)");
     } else {
         if (subject.at(0) == '\'') {
             subject = subject.mid(1).left(subject.length() - 2);
@@ -125,7 +125,7 @@ int main(int argc, char **argv)
     if (!fromaddr.isEmpty()) {
         QString name = emailConfig.getSetting(KEMailSettings::RealName);
         if (!name.isEmpty()) {
-            fromaddr = name + QLatin1String(" <") + fromaddr + QString::fromLatin1(">");
+            fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1String(">");
         }
     } else {
         fromaddr = SystemInformation::userName();
@@ -136,7 +136,7 @@ int main(int argc, char **argv)
 
     QString  server = emailConfig.getSetting(KEMailSettings::OutServer);
     if (server.isEmpty()) {
-        server = QLatin1String("bugs.kde.org");
+        server = QStringLiteral("bugs.kde.org");
     }
 
     SMTP *sm = new SMTP;
@@ -149,7 +149,7 @@ int main(int argc, char **argv)
     sm->setSenderAddress(fromaddr);
     sm->setRecipientAddress(recipient);
     sm->setMessageSubject(subject);
-    sm->setMessageHeader(QString::fromLatin1("From: %1\r\nTo: %2\r\n").arg(fromaddr).arg(QString(recipient)));
+    sm->setMessageHeader(QStringLiteral("From: %1\r\nTo: %2\r\n").arg(fromaddr).arg(QString(recipient)));
     sm->setMessageBody(text);
     sm->sendMessage();
 

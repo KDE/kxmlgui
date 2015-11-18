@@ -40,7 +40,7 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList< KAboutPe
     , m_providerUrl(providerUrl)
 {
     if (m_providerUrl.isEmpty()) {
-        m_providerUrl = QString::fromLatin1("https://api.opendesktop.org/v1/");
+        m_providerUrl = QStringLiteral("https://api.opendesktop.org/v1/");
     }
 
     bool hasOcsUsernames = false;

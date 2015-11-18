@@ -113,7 +113,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     }
 
     if (!aboutData.homepage().isEmpty()) {
-        aboutPageText += QLatin1Char('\n') + QString::fromLatin1("<a href=\"%1\">%1</a>").arg(aboutData.homepage()) + QLatin1Char('\n');
+        aboutPageText += QLatin1Char('\n') + QStringLiteral("<a href=\"%1\">%1</a>").arg(aboutData.homepage()) + QLatin1Char('\n');
     }
     aboutPageText = aboutPageText.trimmed();
 
@@ -132,7 +132,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
         const KAboutLicense &license = aboutData.licenses().at(i);
 
         QLabel *showLicenseLabel = new QLabel;
-        showLicenseLabel->setText(QString::fromLatin1("<a href=\"%1\">%2</a>").arg(QString::number(i),
+        showLicenseLabel->setText(QStringLiteral("<a href=\"%1\">%2</a>").arg(QString::number(i),
                                   i18n("License: %1", license.name(KAboutLicense::FullName))));
         showLicenseLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
         connect(showLicenseLabel, SIGNAL(linkActivated(QString)), q, SLOT(_k_showLicense(QString)));

@@ -125,7 +125,7 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
         action = mainLinks->actions().at(EmailAction);
         action->setToolTip(i18nc("Action to send an email to a contributor",
                                  "Email contributor\n%1", profile.email()));
-        action->setData(QString::fromLatin1("mailto:%1").arg(profile.email()));
+        action->setData(QStringLiteral("mailto:%1").arg(profile.email()));
         action->setVisible(true);
     }
     if (!profile.homepage().isEmpty()) {

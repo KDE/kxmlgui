@@ -56,7 +56,7 @@ bool KShortcutSchemesHelper::exportActionCollection(KActionCollection *collectio
     }
     QDomDocument doc;
     QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
-    docElem.setAttribute(QStringLiteral("version"), QLatin1String("1"));
+    docElem.setAttribute(QStringLiteral("version"), QStringLiteral("1"));
     docElem.setAttribute(QStringLiteral("name"), client->componentName());
     doc.appendChild(docElem);
     QDomElement elem = doc.createElement(QStringLiteral("ActionProperties"));

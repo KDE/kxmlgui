@@ -32,11 +32,11 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
     hostPort = port;
     timeOut = timeout * 1000;
 
-    senderAddress = "user@example.net";
-    recipientAddress = "user@example.net";
-    messageSubject = "(no subject)";
-    messageBody = "empty";
-    messageHeader = "";
+    senderAddress = QStringLiteral("user@example.net");
+    recipientAddress = QStringLiteral("user@example.net");
+    messageSubject = QStringLiteral("(no subject)");
+    messageBody = QStringLiteral("empty");
+    messageHeader = QLatin1String("");
 
     connected = false;
     finished = false;
@@ -47,7 +47,7 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
 
     domainName = QHostInfo::localDomainName();
     if (domainName.isEmpty()) {
-        domainName = "somemachine.example.net";
+        domainName = QStringLiteral("somemachine.example.net");
     }
 
     // qDebug() << "SMTP object created";
@@ -152,7 +152,7 @@ void SMTP::sendMessage(void)
         // qDebug() << "state was == Finished\n";
         finished = false;
         state = In;
-        writeString = QString::fromLatin1("helo %1\r\n").arg(domainName);
+        writeString = QStringLiteral("helo %1\r\n").arg(domainName);
         sock->write(writeString.toLatin1().constData(), writeString.length());
     }
     if (connected) {
@@ -276,7 +276,7 @@ void SMTP::processLine(QString *line)
     switch (stat) {
     case Greet:     //220
         state = In;
-        writeString = QString::fromLatin1("helo %1\r\n").arg(domainName);
+        writeString = QStringLiteral("helo %1\r\n").arg(domainName);
         // qDebug() << "out: " << writeString;
         sock->write(writeString.toLatin1().constData(), writeString.length());
         break;
@@ -287,19 +287,19 @@ void SMTP::processLine(QString *line)
         switch (state) {
         case In:
             state = Ready;
-            writeString = QString::fromLatin1("mail from: %1\r\n").arg(senderAddress);
+            writeString = QStringLiteral("mail from: %1\r\n").arg(senderAddress);
             // qDebug() << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case Ready:
             state = SentFrom;
-            writeString = QString::fromLatin1("rcpt to: %1\r\n").arg(recipientAddress);
+            writeString = QStringLiteral("rcpt to: %1\r\n").arg(recipientAddress);
             // qDebug() << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case SentFrom:
             state = SentTo;
-            writeString = QLatin1String("data\r\n");
+            writeString = QStringLiteral("data\r\n");
             // qDebug() << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
@@ -318,9 +318,9 @@ void SMTP::processLine(QString *line)
         break;
     case ReadyData: //354
         state = Data;
-        writeString = QString::fromLatin1("Subject: %1\r\n").arg(messageSubject);
+        writeString = QStringLiteral("Subject: %1\r\n").arg(messageSubject);
         writeString += messageHeader;
-        writeString += "\r\n";
+        writeString += QLatin1String("\r\n");
         writeString += messageBody;
         writeString += QLatin1String(".\r\n");
         // qDebug() << "out: " << writeString;
