@@ -13,7 +13,7 @@
 
 <!--The root element that must enclose all other tags in the document. This element
   replaces the kpartgui element used previously.
-  
+
   NOTE: do not forget to increase the version attribute for each change in
   your file or the changes will not be taken!!
   -->
@@ -93,7 +93,7 @@
      menubar.
      Attributes:
      - name of the action: this is matched with the KAction name.
-     - group: this is used to control the placement of the action when merging 
+     - group: this is used to control the placement of the action when merging
               e.g. a part, it matches the name of a DefineGroup in the mainwindow's rc file.
      - append: this is used to control the placement of the action during the
                merging with ui_standards.rc. This is mapped to MergeLocal tags there.
@@ -122,6 +122,7 @@
 <!ATTLIST Separator
   lineSeparator (true|false) "true"
   weakSeparator (true|false) "true"
+  append CDATA #IMPLIED
   group CDATA #IMPLIED
 >
 
