@@ -502,17 +502,13 @@ QString KBugReport::text() const
         QString package = QStringLiteral("i18n_%1").arg(QLocale::languageToString(QLocale().language()));
         package = package.replace(QLatin1Char('_'), QLatin1Char('-'));
         return QStringLiteral("Package: %1").arg(package) +
-               QStringLiteral("\n"
-                                   "Application: %1\n"
+               QStringLiteral("\nApplication: %1\nVersion: %2\n").arg(appname, d->m_strVersion) +
                                    // not really i18n's version, so better here IMHO
-                                   "Version: %2\n").arg(appname).arg(d->m_strVersion) +
-               os + QLatin1String("\n") + bodyText;
+                                   os + QLatin1String("\n") + bodyText;
     } else {
         appname = appname.replace(QLatin1Char('_'), QLatin1Char('-'));
         // Case 2 : normal bug
-        return QStringLiteral("Package: %1\n"
-                                   "Version: %2\n"
-                                   "Severity: %3\n")
+        return QStringLiteral("Package: %1\nVersion: %2\nSeverity: %3\n")
                .arg(appname).arg(d->m_strVersion).arg(severity) +
                QStringLiteral("Compiler: %1\n").arg(QStringLiteral(XMLGUI_COMPILER_VERSION)) +
                os + QLatin1String("\n") + bodyText;
