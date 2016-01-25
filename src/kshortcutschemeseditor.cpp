@@ -49,7 +49,7 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     // List files in the shortcuts subdir, each one is a theme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
     const QStringList shortcutsDir = QStandardPaths::locateAll(QStandardPaths::DataLocation, QStringLiteral("shortcuts"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, shortcutsDir) {
-        Q_FOREACH (const QString &file, QDir(dir).entryList(QDir::NoDotAndDotDot)) {
+        Q_FOREACH (const QString &file, QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot)) {
             schemes << file;
         }
     }
