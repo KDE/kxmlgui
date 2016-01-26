@@ -3,6 +3,9 @@ add_subdirectory(ksendbugmail)
 if (HAVE_ATTICA)
    set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::Attica)
 endif ()
+if (HAVE_GLOBALACCEL)
+   set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::GlobalAccel)
+endif ()
 if(WIN32)
     set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} secur32) # GetUserNameEx()
 endif()
@@ -89,7 +92,6 @@ PRIVATE
     KF5::IconThemes         #KIconLoader and KIconThemes in KToolBar
     KF5::TextWidgets        #KTextEdit in kbugreport
     KF5::WindowSystem       #KKeyServer in kkeysequencewidget
-    KF5::GlobalAccel         #KActionCollection and shortcut widgets
     ${XMLGUI_EXTRA_LIBS}
 )
 

@@ -24,6 +24,8 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "config-xmlgui.h"
+
 #include "kactioncollection.h"
 
 #include "kactioncategory.h"
@@ -33,7 +35,9 @@
 
 #include <kauthorized.h>
 #include <kconfiggroup.h>
-#include <kglobalaccel.h>
+#if HAVE_GLOBALACCEL
+# include <kglobalaccel.h>
+#endif
 #include <ksharedconfig.h>
 
 #include <QtXml/QDomDocument>
@@ -62,7 +66,12 @@ public:
 
     void setComponentForAction(QAction *action)
     {
-        if (!KGlobalAccel::self()->hasShortcut(action)) {
+#if HAVE_GLOBALACCEL
+        bool hasGlobalShortcut = KGlobalAccel::self()->hasShortcut(action);
+#else
+        bool hasGlobalShortcut = false;
+#endif
+        if (!hasGlobalShortcut) {
             action->setProperty("componentName", m_componentName);
             action->setProperty("componentDisplayName", m_componentDisplayName);
         }
@@ -254,6 +263,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
             // settings to disk. Both for local and global shortcuts.
             qCDebug(DEBUG_KXMLGUI) << "Registering action " << objectName << " under new name " << indexName;
             // If there is a global shortcuts it's a very bad idea.
+#if HAVE_GLOBALACCEL
             if (KGlobalAccel::self()->hasShortcut(action)) {
                 // In debug mode assert
                 Q_ASSERT(!KGlobalAccel::self()->hasShortcut(action));
@@ -261,6 +271,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
                 qCritical() << "Changing action name from " << objectName << " to " << indexName << "\nignored because of active global shortcut.";
                 indexName = objectName;
             }
+#endif
         }
 
         // Set the new name
@@ -445,6 +456,7 @@ void KActionCollection::setConfigGlobal(bool global)
 
 void KActionCollection::importGlobalShortcuts(KConfigGroup *config)
 {
+#if HAVE_GLOBALACCEL
     Q_ASSERT(config);
     if (!config || !config->exists()) {
         return;
@@ -469,6 +481,9 @@ void KActionCollection::importGlobalShortcuts(KConfigGroup *config)
             }
         }
     }
+#else
+    Q_UNUSED(config);
+#endif
 }
 
 void KActionCollection::readSettings(KConfigGroup *config)
@@ -505,6 +520,7 @@ void KActionCollection::readSettings(KConfigGroup *config)
 
 void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAll) const
 {
+#if HAVE_GLOBALACCEL
     Q_ASSERT(config);
     if (!config) {
         return;
@@ -555,6 +571,10 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
     }
 
     config->sync();
+#else
+    Q_UNUSED(config);
+    Q_UNUSED(writeAll);
+#endif
 }
 
 bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
@@ -599,7 +619,9 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
         bool bSameAsDefault = (action->shortcuts() == q->defaultShortcuts(action));
         qCDebug(DEBUG_KXMLGUI) << "name = " << actionName
                  << " shortcut = " << QKeySequence::listToString(action->shortcuts())
+#if HAVE_GLOBALACCEL
                  << " globalshortcut = " << QKeySequence::listToString(KGlobalAccel::self()->shortcut(action))
+#endif
                  << " def = " << QKeySequence::listToString(q->defaultShortcuts(action));
 
         // now see if this element already exists

@@ -30,6 +30,8 @@ ecm_setup_version(${KF5_VERSION}
                   PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfigVersion.cmake"
                   SOVERSION 5)
 
+option(FORCE_DISABLE_KGLOBALACCEL "Force building KXmlGui without KGlobalAccel. Doing this will break global shortcut support. [default=OFF]" OFF)
+
 # Dependencies
 set(REQUIRED_QT_VERSION 5.3.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
@@ -37,7 +39,6 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus Xml Network
 find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5ItemViews ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
-find_package(KF5GlobalAccel ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5ConfigWidgets ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5IconThemes ${KF5_DEP_VERSION} REQUIRED)
@@ -45,13 +46,17 @@ find_package(KF5TextWidgets ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5WidgetsAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5WindowSystem ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5Attica ${KF5_DEP_VERSION})
-
 set_package_properties(KF5Attica PROPERTIES DESCRIPTION "A Qt library that implements the Open Collaboration Services API"
                        PURPOSE "Support for Get Hot New Stuff in KXMLGUI"
                        URL "https://projects.kde.org/attica"
                        TYPE OPTIONAL
                       )
 set (HAVE_ATTICA ${KF5Attica_FOUND})
+
+if (NOT FORCE_DISABLE_KGLOBALACCEL)
+    find_package(KF5GlobalAccel ${KF5_DEP_VERSION} REQUIRED)
+endif()
+set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
 
 # Subdirectories
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")

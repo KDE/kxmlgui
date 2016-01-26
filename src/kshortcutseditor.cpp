@@ -22,6 +22,7 @@
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
 */
+#include "config-xmlgui.h"
 
 #include "kshortcutseditor.h"
 
@@ -43,7 +44,9 @@
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <kglobalaccel.h>
+#if HAVE_GLOBALACCEL
+# include <kglobalaccel.h>
+#endif
 #include <kmessagebox.h>
 #include "kactioncollection.h"
 #include "kactioncategory.h"
@@ -292,7 +295,13 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     ui.list->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui.list->header()->hideSection(ShapeGesture);  //mouse gestures didn't make it in time...
     ui.list->header()->hideSection(RockerGesture);
-    if (!(actionTypes & KShortcutsEditor::GlobalAction)) {
+#if HAVE_GLOBALACCEL
+    bool hideGlobals = !(actionTypes & KShortcutsEditor::GlobalAction);
+#else
+    bool hideGlobals = true;
+#endif
+
+    if (hideGlobals) {
         ui.list->header()->hideSection(GlobalPrimary);
         ui.list->header()->hideSection(GlobalAlternate);
     } else if (!(actionTypes & ~KShortcutsEditor::GlobalAction)) {
@@ -388,11 +397,13 @@ void KShortcutsEditorPrivate::allDefault()
             changeKeyShortcut(item, LocalAlternate, alternate);
         }
 
+#if HAVE_GLOBALACCEL
         if (KGlobalAccel::self()->shortcut(act) != KGlobalAccel::self()->defaultShortcut(act)) {
             QList<QKeySequence> defaultShortcut = KGlobalAccel::self()->defaultShortcut(act);
             changeKeyShortcut(item, GlobalPrimary, primarySequence(defaultShortcut));
             changeKeyShortcut(item, GlobalAlternate, alternateSequence(defaultShortcut));
         }
+#endif
 
 #if 0
         KShapeGesture actShapeGesture = KGestureMap::self()->shapeGesture(act);

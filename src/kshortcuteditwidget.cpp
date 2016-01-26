@@ -22,6 +22,7 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "config-xmlgui.h"
 #include "kshortcutsdialog_p.h"
 
 #include <QPainter>
@@ -31,7 +32,9 @@
 #include <QLabel>
 
 #include <klocalizedstring.h>
-#include <kglobalaccel.h>
+#if HAVE_GLOBALACCEL
+# include <kglobalaccel.h>
+#endif
 
 #include "kkeysequencewidget.h"
 
@@ -85,6 +88,7 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
             this, SLOT(setCustom(QKeySequence)));
     connect(m_customEditor, SIGNAL(stealShortcut(QKeySequence,QAction*)),
             this, SIGNAL(stealShortcut(QKeySequence,QAction*)));
+#if HAVE_GLOBALACCEL
     connect(KGlobalAccel::self(), &KGlobalAccel::globalShortcutChanged,
         [this](QAction *action, const QKeySequence &seq) {
             if (action != m_action) {
@@ -93,6 +97,7 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
             setKeySequence(seq);
         }
     );
+#endif
 }
 
 KKeySequenceWidget::ShortcutTypes ShortcutEditWidget::checkForConflictsAgainst() const

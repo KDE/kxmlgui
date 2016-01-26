@@ -17,6 +17,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+#include "config-xmlgui.h"
 
 #include "kxmlguifactory.h"
 
@@ -42,7 +43,9 @@
 
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>
-#include <kglobalaccel.h>
+#if HAVE_GLOBALACCEL
+# include <kglobalaccel.h>
+#endif
 
 Q_DECLARE_METATYPE(QList<QKeySequence>)
 
@@ -675,7 +678,9 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
     } else if (isShortcut) {
         // Setting the shortcut by property also sets the default shortcut (which is incorrect), so we have to do it directly
         if (attrName == QStringLiteral("globalShortcut")) {
+#if HAVE_GLOBALACCEL
             KGlobalAccel::self()->setShortcut(action, QKeySequence::listFromString(attribute.value()));
+#endif
         } else {
             action->setShortcuts(QKeySequence::listFromString(attribute.value()));
         }

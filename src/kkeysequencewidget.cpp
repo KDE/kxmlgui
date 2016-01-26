@@ -19,6 +19,8 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "config-xmlgui.h"
+
 #include "kkeysequencewidget.h"
 #include "kkeysequencewidget_p.h"
 
@@ -34,7 +36,9 @@
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kkeyserver.h>
-#include <kglobalaccel.h>
+#if HAVE_GLOBALACCEL
+# include <kglobalaccel.h>
+#endif
 
 #include "kactioncollection.h"
 
@@ -112,6 +116,7 @@ public:
         doneRecording();
     }
 
+#if HAVE_GLOBALACCEL
     bool promptStealShortcutSystemwide(
         QWidget *parent,
         const QHash<QKeySequence, QList<KGlobalShortcutInfo> > &shortcuts,
@@ -146,6 +151,7 @@ public:
         return KMessageBox::warningContinueCancel(parent, message, title, KGuiItem(i18n("Reassign")))
                == KMessageBox::Continue;
     }
+#endif
 
 //private slot
     void doneRecording(bool validate = true);
@@ -471,6 +477,7 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
     }
 #endif
 
+#if HAVE_GLOBALACCEL
     if (!(checkAgainstShortcutTypes & KKeySequenceWidget::GlobalShortcuts)) {
         return false;
     }
@@ -501,6 +508,10 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
         KGlobalAccel::stealShortcutSystemwide(keySequence[i]);
     }
     return false;
+#else
+    Q_UNUSED(keySequence);
+    return false;
+#endif
 }
 
 bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QKeySequence &needle)
