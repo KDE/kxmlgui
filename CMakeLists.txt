@@ -17,7 +17,7 @@ include(ECMGenerateHeaders)
 
 include(GenerateExportHeader)
 include(KDEInstallDirs)
-include(KDEFrameworkCompilerSettings)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMQtDeclareLoggingCategory)
 
