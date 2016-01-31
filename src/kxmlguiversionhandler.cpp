@@ -271,7 +271,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
     for (; docIt != docEnd; ++docIt) {
         const QString versionStr = findVersionNumber((*docIt).data);
         if (versionStr.isEmpty()) {
-            //qDebug(260) << "found no version in" << (*docIt).file;
+            //qCDebug(DEBUG_KXMLGUI) << "found no version in" << (*docIt).file;
             continue;
         }
 
@@ -280,11 +280,11 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
         if (!ok) {
             continue;
         }
-        //qDebug(260) << "found version" << version << "for" << (*docIt).file;
+        //qCDebug(DEBUG_KXMLGUI) << "found version" << version << "for" << (*docIt).file;
 
         if (version > bestVersion) {
             best = docIt;
-            //qDebug(260) << "best version is now " << version;
+            //qCDebug(DEBUG_KXMLGUI) << "best version is now " << version;
             bestVersion = version;
         }
     }
@@ -344,7 +344,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
         m_doc = (*best).data;
         m_file = (*best).file;
     } else {
-        //qDebug(260) << "returning first one...";
+        //qCDebug(DEBUG_KXMLGUI) << "returning first one...";
         m_doc = allDocuments.first().data;
         m_file = allDocuments.first().file;
     }

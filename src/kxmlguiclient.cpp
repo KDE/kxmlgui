@@ -324,7 +324,7 @@ void KXMLGUIClient::setXML(const QString &document, bool merge)
 {
     QDomDocument doc;
     QString errorMsg;
-    int errorLine, errorColumn;
+    int errorLine = 0, errorColumn = 0;
     // QDomDocument raises a parse error on empty document, but we accept no app-specific document,
     // in which case you only get ui_standards.rc layout.
     bool result = document.isEmpty() || doc.setContent(document, &errorMsg, &errorLine, &errorColumn);
@@ -356,7 +356,7 @@ void KXMLGUIClient::setDOMDocument(const QDomDocument &document, bool merge)
         // strange to it
         base = d->m_doc.documentElement();
 
-        //qDebug(260) << "Result of xmlgui merging:" << d->m_doc.toString();
+        //qCDebug(DEBUG_KXMLGUI) << "Result of xmlgui merging:" << d->m_doc.toString();
 
         // we want some sort of failsafe.. just in case
         if (base.isNull()) {
@@ -735,7 +735,7 @@ void KXMLGUIClient::addStateActionEnabled(const QString &state,
     StateChange stateChange = getActionsToChangeForState(state);
 
     stateChange.actionsToEnable.append(action);
-    //qDebug(260) << "KXMLGUIClient::addStateActionEnabled( " << state << ", " << action << ")";
+    //qCDebug(DEBUG_KXMLGUI) << "KXMLGUIClient::addStateActionEnabled( " << state << ", " << action << ")";
 
     d->m_actionsStateMap.insert(state, stateChange);
 }
@@ -746,7 +746,7 @@ void KXMLGUIClient::addStateActionDisabled(const QString &state,
     StateChange stateChange = getActionsToChangeForState(state);
 
     stateChange.actionsToDisable.append(action);
-    //qDebug(260) << "KXMLGUIClient::addStateActionDisabled( " << state << ", " << action << ")";
+    //qCDebug(DEBUG_KXMLGUI) << "KXMLGUIClient::addStateActionDisabled( " << state << ", " << action << ")";
 
     d->m_actionsStateMap.insert(state, stateChange);
 }

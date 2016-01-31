@@ -26,6 +26,7 @@
 #include "kxmlguibuilder.h"
 #include "kshortcutsdialog.h"
 #include "kactioncollection.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QtCore/QDir>
@@ -38,7 +39,6 @@
 #include <QtCore/QVariant>
 #include <QTextCodec>
 #include <QStandardPaths>
-#include <QDebug>
 
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>
@@ -146,7 +146,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
         }
 
         if (warn) {
-            qWarning() << "KXMLGUI file found at deprecated location" << xml_file << "-- please use ${KXMLGUI_INSTALL_DIR} to install these files instead.";
+            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file << "-- please use ${KXMLGUI_INSTALL_DIR} to install these files instead.";
         }
     }
 
@@ -228,7 +228,7 @@ KXMLGUIFactory::~KXMLGUIFactory()
 
 void KXMLGUIFactory::addClient(KXMLGUIClient *client)
 {
-    //qDebug(260) << client;
+    //qCDebug(DEBUG_KXMLGUI) << client;
     if (client->factory()) {
         if (client->factory() == this) {
             return;
@@ -251,7 +251,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
         d->m_clients.append(client);
     }
     //else
-    //qDebug(260) << "XMLGUI client already added " << client;
+    //qCDebug(DEBUG_KXMLGUI) << "XMLGUI client already added " << client;
 
     // Tell the client that plugging in is process and
     //  let it know what builder widget its mainwindow shortcuts
@@ -325,10 +325,10 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
               unaddedActions += action->objectName() + ' ';
 
         if (!unaddedActions.isEmpty())
-          qWarning() << "The following actions are not plugged into the gui (shortcuts will not work): " << unaddedActions;
+          qCWarning(DEBUG_KXMLGUI) << "The following actions are not plugged into the gui (shortcuts will not work): " << unaddedActions;
     */
 
-//    qDebug() << "addClient took " << dt.elapsed();
+//    qCDebug(DEBUG_KXMLGUI) << "addClient took " << dt.elapsed();
 }
 
 void KXMLGUIFactory::refreshActionProperties()
@@ -393,7 +393,7 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
         // Check if the default shortcut is set
         QList<QKeySequence> defaultShortcut = action->property("defaultShortcuts").value<QList<QKeySequence> >();
         QList<QKeySequence> activeShortcut = action->shortcuts();
-        //qDebug() << action->objectName() << "default=" << defaultShortcut.toString() << "active=" << activeShortcut.toString();
+        //qCDebug(DEBUG_KXMLGUI) << action->objectName() << "default=" << defaultShortcut.toString() << "active=" << activeShortcut.toString();
 
         // Check if we have an empty default shortcut and an non empty
         // custom shortcut. Print out a warning and correct the mistake.
@@ -408,7 +408,7 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
 
 void KXMLGUIFactory::changeShortcutScheme(const QString &scheme)
 {
-    //qDebug(260) << "Changing shortcut scheme to" << scheme;
+    qCDebug(DEBUG_KXMLGUI) << "Changing shortcut scheme to" << scheme;
     KConfigGroup cg = KSharedConfig::openConfig()->group("Shortcut Schemes");
     cg.writeEntry("Current Scheme", scheme);
 
@@ -422,7 +422,7 @@ void KXMLGUIFactory::forgetClient(KXMLGUIClient *client)
 
 void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
 {
-    //qDebug(260) << client;
+    //qCDebug(DEBUG_KXMLGUI) << client;
 
     // don't try to remove the client's GUI if we didn't build it
     if (!client || client->factory() != this) {
@@ -443,7 +443,7 @@ void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
         removeClient(child);
     }
 
-    //qDebug(260) << "calling removeRecursive";
+    //qCDebug(DEBUG_KXMLGUI) << "calling removeRecursive";
 
     d->pushState();
 
@@ -686,7 +686,7 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
         propertyValue = QVariant(attribute.value());
     }
     if (!isShortcut && !action->setProperty(attrName.toLatin1().constData(), propertyValue)) {
-        qWarning() << "Error: Unknown action property " << attrName << " will be ignored!";
+        qCWarning(DEBUG_KXMLGUI) << "Error: Unknown action property " << attrName << " will be ignored!";
     }
 }
 
@@ -703,7 +703,7 @@ QDomDocument KXMLGUIFactoryPrivate::shortcutSchemeDoc(KXMLGUIClient *client)
         QString schemeFileName = KShortcutSchemesHelper::shortcutSchemeFileName(client, schemeName);
         QFile schemeFile(schemeFileName);
         if (schemeFile.open(QIODevice::ReadOnly)) {
-//             qDebug(260) << "Found shortcut scheme" << schemeFileName;
+            qCDebug(DEBUG_KXMLGUI) << "Found shortcut scheme XML" << schemeFileName;
             doc.setContent(&schemeFile);
         }
     }
@@ -729,7 +729,7 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(KXMLGUIClient *client, const QLi
             QVariant savedDefaultShortcut = action->property("_k_DefaultShortcut");
             if (savedDefaultShortcut.isValid()) {
                 QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence> >();
-                //qDebug() << "scheme said" << shortcut.toString() << "for action" << kaction->objectName();
+                //qCDebug(DEBUG_KXMLGUI) << "scheme said" << shortcut.toString() << "for action" << kaction->objectName();
                 action->setShortcuts(shortcut);
                 action->setProperty("defaultShortcuts", QVariant::fromValue(shortcut));
             }
@@ -745,12 +745,12 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(KXMLGUIClient *client, const QLi
 
     //Check if we really have the shortcut configuration here
     if (!actionPropElement.isNull()) {
-        //qDebug(260) << "Applying shortcut scheme for XMLGUI client" << client->componentName();
+        //qCDebug(DEBUG_KXMLGUI) << "Applying shortcut scheme for XMLGUI client" << client->componentName();
 
         //Apply all shortcuts we have
         applyActionProperties(actionPropElement, KXMLGUIFactoryPrivate::SetDefaultShortcut);
         //} else {
-        //qDebug(260) << "Invalid shortcut scheme file";
+        //qCDebug(DEBUG_KXMLGUI) << "Invalid shortcut scheme file";
     }
 }
 

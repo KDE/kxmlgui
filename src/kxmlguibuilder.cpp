@@ -181,8 +181,8 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         const QString text = textElem.text();
         const QString context = textElem.attribute(d->attrContext);
 
-        //qDebug(260) << "DOMAIN" << KLocalizedString::applicationDomain();
-        //qDebug(260) << "ELEMENT TEXT:" << text;
+        //qCDebug(DEBUG_KXMLGUI) << "DOMAIN" << KLocalizedString::applicationDomain();
+        //qCDebug(DEBUG_KXMLGUI) << "ELEMENT TEXT:" << text;
 
         if (text.isEmpty()) { // still no luck
             i18nText = i18n("No text");
@@ -201,7 +201,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
             }
         }
 
-        //qDebug(260) << "ELEMENT i18n TEXT:" << i18nText;
+        //qCDebug(DEBUG_KXMLGUI) << "ELEMENT i18n TEXT:" << i18nText;
 
         const QString icon = element.attribute(d->attrIcon);
         QIcon pix;
@@ -407,7 +407,7 @@ void KXMLGUIBuilder::finalizeGUI(KXMLGUIClient *)
     KToolBar *toolbar = 0;
     QListIterator<KToolBar> it(((KMainWindow *)d->m_widget)->toolBarIterator());
     while ((toolbar = it.current())) {
-        //qDebug(260) << "KXMLGUIBuilder::finalizeGUI toolbar=" << (void*)toolbar;
+        //qCDebug(DEBUG_KXMLGUI) << "KXMLGUIBuilder::finalizeGUI toolbar=" << (void*)toolbar;
         ++it;
         toolbar->positionYourself();
     }
