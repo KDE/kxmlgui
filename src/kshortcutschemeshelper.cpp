@@ -34,21 +34,15 @@
 #include "debug.h"
 
 bool KShortcutSchemesHelper::exportActionCollection(KActionCollection *collection,
-        const QString &schemeName, const QString &dir)
+        const QString &schemeName)
 {
     const KXMLGUIClient *client = collection->parentGUIClient();
     if (!client) {
         return false;
     }
 
-    QString schemeFileName;
-    if (!dir.isEmpty()) {
-        const QString dirPath = dir + QStringLiteral("shortcuts/");
-        QDir().mkpath(dirPath);
-        schemeFileName = dirPath + client->componentName() + schemeName;
-    } else {
-        schemeFileName = shortcutSchemeFileName(client, schemeName);
-    }
+    const QString schemeFileName = shortcutSchemeFileName(client, schemeName);
+    QDir().mkpath(QFileInfo(schemeFileName).absolutePath());
     QFile schemeFile(schemeFileName);
     if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
         qCDebug(DEBUG_KXMLGUI) << "COULD NOT WRITE" << schemeFileName;
