@@ -506,7 +506,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
             else {
                 QDomElement matchingElement = findMatchingElement(e, additive);
                 if (!matchingElement.isNull()) {
-                    matchingElement.setAttribute(attrAlreadyVisited, (uint)1);
+                    matchingElement.setAttribute(attrAlreadyVisited, uint(1));
 
                     if (mergeXML(e, matchingElement, actionCollection)) {
                         base.removeChild(e);
