@@ -1,0 +1,1327 @@
+# translation of kdelibs4.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Umesh Rudrapatna <urudrapatna@yahoo.com>, 2007.
+# Umesh Rudrapatna <umeshrs@gmail.com>, 2007, 2008, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-02-04 07:18+0000\n"
+"PO-Revision-Date: 2010-06-24 18:32+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:271
+#, kde-format
+msgid "About %1"
+msgstr "%1 ಬಗ್ಗೆ"
+
+#: kaboutapplicationdialog.cpp:98
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">%1</font></html>"
+msgstr ""
+"<html><font size=\"5\">ಕೆಡಿಇ - ಮುಕ್ತವಾಗಿರಿ!</font><br /><b>ಪ್ಲಾಟ್‌ಫಾರ್ಮಿನ ಆವೃತ್ತಿ "
+"%1</b></html>"
+
+#: kaboutapplicationdialog.cpp:136
+#, kde-format
+msgid "License: %1"
+msgstr "ಪರವಾನಗಿ: %1"
+
+#: kaboutapplicationdialog.cpp:148
+msgid "&About"
+msgstr "ಬಗ್ಗೆ(&A)"
+
+#: kaboutapplicationdialog.cpp:153
+#, fuzzy, kde-format
+#| msgid "<br />Version: %1"
+msgid "<b>Version %1</b>"
+msgstr "<br />ಆವೃತ್ತಿ: %1"
+
+#: kaboutapplicationdialog.cpp:158
+#, kde-format
+msgid ""
+"Using:<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "
+"<em>%4</em> windowing system</li></ul>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:168
+#, fuzzy
+#| msgid "Version:"
+msgid "&Version"
+msgstr "ಆವೃತ್ತಿ:"
+
+#: kaboutapplicationdialog.cpp:188
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"ದೋಷಗಳನ್ನು ವರದಿಮಾಡಲು ದಯವಿಟ್ಟು ಬಳಸಿ <a href=\"http://bugs.kde.org\">http://bugs."
+"kde.org</a>\n"
+
+#: kaboutapplicationdialog.cpp:192 kaboutapplicationdialog.cpp:196
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "ದಯವಿಟ್ಟು <a href=\"mailto:%1\">%2</a>.ಗೆ ದೋಷಗಳನ್ನು ವರದಿಮಾಡಿ.\n"
+
+#: kaboutapplicationdialog.cpp:223
+msgid "A&uthor"
+msgstr "ಕರ್ತೃ(&A)"
+
+#: kaboutapplicationdialog.cpp:223
+msgid "A&uthors"
+msgstr "ಕರ್ತೃಗಳು(&u)"
+
+#: kaboutapplicationdialog.cpp:250
+msgid "&Thanks To"
+msgstr "ಇವರಿಗೆ ಧನ್ಯವಾದಗಳು(&T)"
+
+#: kaboutapplicationdialog.cpp:289
+msgid "T&ranslation"
+msgstr "ಭಾಷಾಂತರ(&r)"
+
+#: kaboutapplicationdialog.cpp:321
+msgid "License Agreement"
+msgstr "ಪರವಾನಗಿ ಒಪ್ಪಂದ"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+#, fuzzy
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "ಇತರ ಸಹಭಾಗಿಗಳು:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+#, fuzzy
+#| msgid "Homepage"
+msgid "Visit contributor's homepage"
+msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr "ಇತರ ಸಹಭಾಗಿಗಳು:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+#| "available'"
+#| msgid "%1, %2."
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1, %2."
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Other"
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "ಇತರೆ"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr ""
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+#, fuzzy
+#| msgid "Homepage"
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "KDE ಬಗ್ಗ"
+
+#: kaboutkdedialog_p.cpp:46
+#, fuzzy
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+"<html><font size=\"5\">ಕೆಡಿಇ - ಮುಕ್ತವಾಗಿರಿ!</font><br /><b>ಪ್ಲಾಟ್‌ಫಾರ್ಮಿನ ಆವೃತ್ತಿ "
+"%1</b></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html>The <b>K Desktop Environment</b> is written and maintained by the "
+#| "KDE Team, a world-wide network of software engineers committed to <a href="
+#| "\"http://www.gnu.org/philosophy/free-sw.html\">Free Software</a> "
+#| "development.<br /><br />No single group, company or organization controls "
+#| "the KDE source code. Everyone is welcome to contribute to KDE.<br /><br /"
+#| ">Visit <a href=\"http://www.kde.org/\">http://www.kde.org</a> for more "
+#| "information on the KDE project.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html><b>K ಗಣಕಪರಿಸರ</b> ವು <a href=\"http://www.gnu.org/philosophy/free-sw."
+"html\">ಮುಕ್ತ ತಂತ್ರಾಂಶ</a> ಅಭಿವೃದ್ಧಿಗೆ ಕಂಕಣಬದ್ಧರಾದ ತಂತ್ರಾಂಶ ಅಭಿವೃದ್ಧಿಗಾರರ ವಿಶ್ವವ್ಯಾಪಿ "
+"KDE ತಂಡದಿಂದ ರಚಿಸಲ್ಪಟ್ಟು ಪಾಲಿಸಲಾಗುತ್ತಿದೆ.<br /><br />KDE ಆಕರವು (source) ಯಾವುದೇ "
+"ಒಂದು ಗುಂಪು, ಅಥವಾ ಕಂಪನಿ ಅಥವಾ ಸಂಸ್ಥೆಯ ಅಧೀನದಲ್ಲಿಲ್ಲ. KDE ಯು ಎಲ್ಲರನ್ನೂ ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ "
+"ಪಾಲ್ಗೊಳ್ಳಲು ಆಹ್ವಾನಿಸುತ್ತದೆ.<br/><br/>ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ <a href=\"http://www.kde."
+"org/\">http://www.kde.org</a> ಸಂಪರ್ಕಿಸಿ.</html>"
+
+#: kaboutkdedialog_p.cpp:74
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:92
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:114
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:133
+msgctxt "About KDE"
+msgid "&About"
+msgstr "ಬಗ್ಗೆ(&A)"
+
+#: kaboutkdedialog_p.cpp:134
+msgid "&Report Bugs or Wishes"
+msgstr "ದೋಷಗಳನ್ನು ಅಥವಾ ನಿಮ್ಮ ಬಯಕೆಗಳನ್ನು ವರದಿಮಾಡಿ(&R)"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Join KDE"
+msgstr "KDE ತಂಡವನ್ನು ಸೇರಿರಿ(&J)"
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Support KDE"
+msgstr "KDE ಯನ್ನು ಸಮರ್ಥಿಸಿ(&S)"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"'%1' ಕೀಲಿಕೈ ಸರಣಿ ಅಸ್ಪಷ್ಟವಾಗಿದೆ. 'ಸಂಯೋಜನೆ'ಗಳ ಪರಿವಿಡಿಯಿಂದ 'ಶೀಘ್ರಮಾರ್ಗಗಳನ್ನು "
+"ಸಂಯೋಜಿಸು' ವನ್ನು ಬಳಸಿ, ಅಸ್ಪಷ್ಟತೆತೆಯನ್ನು ಕೊನೆಗಾಣಿಸು. \n"
+"ಯಾವುದೇ ಕ್ರಿಯೆಯೂ ಪ್ರಚೋದಿತಗೊಳ್ಳುವುದಿಲ್ಲ (ಟ್ರಿಗರ್)."
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr "ಅಸ್ಪಷ್ಟವಾದ ಶೀಘ್ರಮಾರ್ಗವು ಕಂಡುಬಂದಿತು"
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "ದೋಷ ವರದಿಯನ್ನು ಮಂಡಿಸಿ"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"ನಿಮ್ಮ ವಿಅಂಚೆ ವಿಳಾಸ. ತಪ್ಪಿದ್ದಲ್ಲಿ, ವಿಅಂಚೆ ಸಂರಚಿಸಿ ಗುಂಡಿಯನ್ನು ಬಳಸಿ ಇದನ್ನು ಪರಿವರ್ತಿಸಿ"
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "ಇಂದ:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "ವಿಅಂಚೆ ಸಂರಚಿಸಿ..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr "ದೋಷ ವರದಿಯನ್ನು ಕಳುಹಿಸಲಾದ ವಿಅಂಚೆ."
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "ಗೆ:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "ಕಳುಹಿಸು(&S)"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "ದೋಷ ವರದಿಯನ್ನು ರವಾನಿಸಿ."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "%1 ಗೆ ದೋಷ ವರದಿಯನ್ನು ರವಾನಿಸಿ."
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"ಈ ಅನ್ವಯಿಕದ ಮೇಲೆ ದೋಷ ವರದಿ - ಇದು ತಪ್ಪಿದ್ದ ಪಕ್ಷದಲ್ಲಿ ದಯವಿಟ್ಟು ಸರಿಯಾದ ಅನ್ವಯಿಕದ Report "
+"Bug ಪರಿವಿಡಿ ವಸ್ತುವನ್ನು ಬಳಸಿ"
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "ಅನ್ವಯಿಕ (application):  "
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"ಈ ಅನ್ವಯಿಕದ ಆವೃತ್ತಿ - ದೋಷ ವರದಿಯನ್ನು ಒಪ್ಪಿಸುವ ಮೊದಲು ಹೊಸದಾದ ಯಾವುದೇ ಆವೃತ್ತಿ ಇಲ್ಲವೆಂದು "
+"ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ"
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "ಆವೃತ್ತಿ:"
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr "ಯಾವುದೇ ಆವೃತ್ತಿ ನಿಗದಿಗೊಂಡಿಲ್ಲ (ವಿಧಿಸಂಚಯಿಯ (ಪ್ರೊಗ್ರಾಮರ್) ದೋಷ)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "OS:"
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "ಸಂಕಲಕ (compiler):"
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "ತೀಕ್ಷ್ಣತೆ(&v)"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "ವಿಷಮ (critical)"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "ಗಂಭೀರ (grave)"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "ಸಾಧಾರಣ"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "ಬಯಕೆಪಟ್ಟಿ"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "ಭಾಷಾಂತರ"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "ವಿಷಯ(&u): "
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"ದೋಷ ವರದಿಗಾಗಿ ನೀವು ಒಪ್ಪಿಸಬೇಕೆಂದಿರುವ ಪಠ್ಯವನ್ನು ನಮೂದಿಸಿ (ಸಾಧ್ಯವಾದರೆ ಇಂಗ್ಲೀಷಿನಲ್ಲಿ).\n"
+"ನೀವು \"ರವಾನಿಸು\" ಒತ್ತಿದರೆ, ಈ ಕ್ರಮವಿಧಿಯ ಪಾಲಕರಿಗೆ ಒಂದು ಅಂಚೆ ಸಂದೇಶ "
+"ಕಳುಹಿಸಲಾಗುತ್ತದೆ.\n"
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr "ದೋಷ ವರದಿ ಮೋಡಿಕಾರ (wizard) ಅನ್ನು ಪ್ರಾರಂಭಿಸು(&L)"
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "ಅಜ್ಞಾತ"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"ವರದಿಯನ್ನು ಕಳುಹಿಸುವ ಮೊದಲು ನೀವು ಒಂದು ವಿಷಯ ಹಾಗೂ ವಿವರಣೆಯನ್ನು ನಿರ್ದಿಷ್ಟಗೊಳಿಸಬೇಕು."
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"ದೋಷ ವರದಿಯನ್ನು ಕಳುಹಿಸಲಾಗಲಿಲ್ಲ.\n"
+"ದಯವಿಟ್ಟು ನೀವೆ ಕೈಯಾರೆ ಒಂದು ದೋಷ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ...\n"
+"ಸೂಚನೆಗಳಿಗಾಗಿ http://bugs.kde.org/ ನೋಡಿ."
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr "ದೋಷ ವರದಿ ಕಳುಹಿಸಲ್ಪಟ್ಟಿತು, ಸೂಚನೆಗೆ ನಿಮಗೆ ಧನ್ಯವಾದಗಳು."
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"ಮುಚ್ಚಿ ತ್ಯಜಿಸು\n"
+"ಸಂದೆಶವನ್ನು ಸಂಪಾದಿಸಬೇಕೆ?"
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr "ಸಂದೇಶವನ್ನು ಮುಚ್ಚು"
+
+#: kcheckaccelerators.cpp:221
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "ಡಾ. ಕ್ಲ್ಯಾಶ್ ವೇಗವರ್ಧಕ ಪರೀಕ್ಷೆ"
+
+#: kcheckaccelerators.cpp:228
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "ಸ್ವಯಂಚಾಲಿತ ಪರೀಕ್ಷಣೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು"
+
+#: kcheckaccelerators.cpp:232
+msgctxt "@action:button"
+msgid "Close"
+msgstr "ಮುಚ್ಚು"
+
+#: kcheckaccelerators.cpp:273
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>ವೇಗವರ್ಧಕಗಳು ಬದಲಿಯಾಗಿವೆ</h2>"
+
+#: kcheckaccelerators.cpp:275 kcheckaccelerators.cpp:286
+#, fuzzy
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "ಪಠ್ಯ ಹುಡುಕು"
+
+#: kcheckaccelerators.cpp:277 kcheckaccelerators.cpp:295
+#, fuzzy
+#| msgid "Show help"
+msgid "New Text"
+msgstr "ಸಹಾಯ ತೋರಿಸು"
+
+#: kcheckaccelerators.cpp:284
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>ವೇಗವರ್ಧಕಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಗಿದೆ</h2>"
+
+#: kcheckaccelerators.cpp:293
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>ವೇಗವರ್ಧಕಗಳನ್ನು ಸೇರಿಸಲಾಯಿತು(ನಿಮ್ಮ ಮಾಹಿತಿಗೆ ಮಾತ್ರ)</h2>"
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "--- ವಿಭಾಜಕ ---"
+
+#: kedittoolbar.cpp:350
+msgid "Change Text"
+msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು"
+
+#: kedittoolbar.cpp:361
+#, fuzzy
+#| msgid "Link Text:"
+msgid "Icon te&xt:"
+msgstr "ಕೊಂಡಿ ಪಠ್ಯ:"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+
+#: kedittoolbar.cpp:619
+msgid "Configure Toolbars"
+msgstr "ಉಪಕರಣಪಟ್ಟಿಯನ್ನು ಸಂರಚಿಸು"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"ನೀವು ನಿಜಕ್ಕೂ ಈ ಅನ್ವಯಿಕದ ಎಲ್ಲಾ ಉಪಕರಣಪಟ್ಟಿಗಳನ್ನು ಅವುಗಳ ಪೂರ್ವಸಂಯೋಜಿತ ಸ್ಥಿತಿಗೆ "
+"ಮರುಸಿದ್ಧಗೊಳಿಸಬೇಕೆಂದಿದ್ದೀರೇನು? ಬದವಾವಣೆಗಳು ತತ್ಷಣವೇ ಜಾರಿಗೊಳ್ಳುತ್ತವೆ."
+
+#: kedittoolbar.cpp:682
+msgid "Reset Toolbars"
+msgstr "ಉಪಕರಣಪಟ್ಟಿಗಳನ್ನು ಮರುಸಿದ್ಧಗೊಳಿಸು"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "ಮರುಸಿದ್ಧಗೊಳಿಸು (ರಿಸೆಟ್)"
+
+#: kedittoolbar.cpp:1010
+msgid "&Toolbar:"
+msgstr "ಉಪಕರಣಪಟ್ಟಿ(&T):"
+
+#: kedittoolbar.cpp:1025
+msgid "A&vailable actions:"
+msgstr "ಲಭ್ಯವಿರುವ ಕ್ರಿಯೆಗಳು(&v):"
+
+#: kedittoolbar.cpp:1040 kedittoolbar.cpp:1059
+msgid "Filter"
+msgstr "ಶೋಧಕ (ಫಿಲ್ಟರ್)"
+
+#: kedittoolbar.cpp:1043
+msgid "Curr&ent actions:"
+msgstr "ಪ್ರಸ್ತುತ ಕ್ರಿಯೆಗಳು(&e):"
+
+#: kedittoolbar.cpp:1062
+msgid "Change &Icon..."
+msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು(&I)..."
+
+#: kedittoolbar.cpp:1070
+msgid "Change Te&xt..."
+msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು(&x)..."
+
+#: kedittoolbar.cpp:1222
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1242
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"ಈ ಅಂಶವು ಎಲ್ಲಾ ಅಂಶಗಳನ್ನೊಳಗೊಂಡ ಒಂದು ಹುದು ಅಂಶದಿಂದ (embedded component) "
+"ಬದಲಾಯಿಸಲ್ಪಡುತ್ತದೆ."
+
+#: kedittoolbar.cpp:1244
+msgid "<Merge>"
+msgstr "<ಒಂದಾಗಿಸು>"
+
+#: kedittoolbar.cpp:1246
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<%1 ಅನ್ನು ಒಂದಾಗಿಸು>"
+
+#: kedittoolbar.cpp:1252
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"ಇದು ಕ್ರಿಯೆಗಳ ಒಂದು ಪರಿವರ್ತನಶೀಲ (dynamic) ಪಟ್ಟಿ. ಇದನ್ನು ನೀವು ಜರುಗಿಸಬಹುದು, ಆದರೆ "
+"ನೀವು ಇದನ್ನು ತೆಗೆದುಹಾಕಿದರೆ, ಇದಕ್ಕೆ ಮತ್ತೆ ಸೇರಿಸಲಾಗುವುದಿಲ್ಲ."
+
+#: kedittoolbar.cpp:1253
+#, kde-format
+msgid "ActionList: %1"
+msgstr "ಕ್ರಿಯಾಪಟ್ಟಿ: %1"
+
+#: kedittoolbar.cpp:1353 kedittoolbar.cpp:1380
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1607
+msgid "Change Icon"
+msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು"
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "ಎಡ ಗುಂಡಿ"
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "ಮಧ್ಯ ಗುಂಡಿ"
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "ಬಲ ಗುಂಡಿ"
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "ಅಮಾನ್ಯ ಗುಂಡಿ"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "%1 ಅನ್ನು ಹಿಡಿದು, %2 ಅನ್ನು ದೂಡಿ"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:169 ui_standards.rc:177
+msgid "&Help"
+msgstr "ಸಹಾಯ(&H)"
+
+#: kkeysequencewidget.cpp:133
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "%2 ಅನ್ವಯದ %3 ಕ್ರಿಯೆಗೆ '%1' ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)\n"
+
+#: kkeysequencewidget.cpp:143
+#, fuzzy, kde-format
+#| msgid "The shortcut '%1' conflicts with the following key combinations:\n"
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "'%1' ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕೆಳಕಂಡ ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯೊಡನೆ ಕಲಹದಲ್ಲಿದೆ:\n"
+msgstr[1] "'%1' ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕೆಳಕಂಡ ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯೊಡನೆ ಕಲಹದಲ್ಲಿದೆ:\n"
+
+#: kkeysequencewidget.cpp:149
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "ನೊಂದಾಯಿತ ಸಾರ್ವತ್ರಿಕ ಸಮೀಪಮಾರ್ಗದೊಡನೆ ಅಸಮಂಜಸತೆ"
+msgstr[1] "ನೊಂದಾಯಿತ ಸಾರ್ವತ್ರಿಕ ಸಮೀಪಮಾರ್ಗಗಳೊಡನೆ ಅಸಮಂಜಸತೆ"
+
+#: kkeysequencewidget.cpp:151 kkeysequencewidget.cpp:239
+#: kkeysequencewidget.cpp:630 kshortcutseditor.cpp:635
+#: kshortcutseditor.cpp:653
+msgid "Reassign"
+msgstr "ಮರುನಿಗದಿಗೊಳಿಸು"
+
+#: kkeysequencewidget.cpp:220
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಅಸಮಂಜಸತೆ"
+msgstr[1] "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಅಸಮಂಜಸತೆಗಳು"
+
+#: kkeysequencewidget.cpp:224
+#, fuzzy, kde-format
+#| msgid "Shortcut(s) '%1' for action '%2'\n"
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "'%2' ಕ್ರಿಯೆಗೆ '%1' ಸಮೀಪಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)\n"
+
+#: kkeysequencewidget.cpp:229
+#, fuzzy, kde-format
+#| msgid ""
+#| "The \"%1\" shortcut is ambiguous with the following shortcuts.\n"
+#| "Do you want to assign an empty shortcut to these actions?\n"
+#| "%2"
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"\"%1\" ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕೆಳಕಂಡ ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯೊಡನೆ ಕಲಹದಲ್ಲಿದೆ:\n"
+"ನೀವು ರಿಕ್ತ ಶೀಘ್ರಮಾರ್ಗವನ್ನು ಈ ಕ್ರಿಯೆಗಳಿಗೆ ನಿಗದಿಗೊಳಿಸಲಿಚ್ಛಿಸುವಿರೇನು?\n"
+"%2"
+msgstr[1] ""
+"\"%1\" ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕೆಳಕಂಡ ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯೊಡನೆ ಕಲಹದಲ್ಲಿದೆ:\n"
+"ನೀವು ರಿಕ್ತ ಶೀಘ್ರಮಾರ್ಗವನ್ನು ಈ ಕ್ರಿಯೆಗಳಿಗೆ ನಿಗದಿಗೊಳಿಸಲಿಚ್ಛಿಸುವಿರೇನು?\n"
+"%2"
+
+#: kkeysequencewidget.cpp:248
+msgid "Shortcut conflict"
+msgstr "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕಲಹ"
+
+#: kkeysequencewidget.cpp:249
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt><b>%2</b> ಕ್ರಿಯೆಯು  '%1' ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯನ್ನು ಈಗಾಗಲೇ ಬಳಸುತ್ತಿದೆ. <br> "
+"ದಯವಿಟ್ಟು ಬೇರೊಂದನ್ನು ಆರಿಸು.</qt>"
+
+#: kkeysequencewidget.cpp:279
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: kkeysequencewidget.cpp:471
+msgid "Reserved Shortcut"
+msgstr "ಕಾದಿರಿಸಲಾದ ಸಮೀಪಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)"
+
+#: kkeysequencewidget.cpp:472
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: kkeysequencewidget.cpp:624
+msgid "Conflict with Standard Application Shortcut"
+msgstr "ಮಾನಕ (standard) ಅನ್ವಯಿಕ ಸಮೀಪಮಾರ್ಗಗಳೊಡನೆ ಕಲಹ"
+
+#: kkeysequencewidget.cpp:625
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"'%1' ಕೀಲಿಕೈ ಹೊಂದಾಣಿಕೆಯು ಅನೇಕ ಅನ್ವಯಿಕಗಳು ಬಳಸುವ ಮಾನಕ (standard) ಕ್ರಿಯೆ \"%2\" ಗೆ "
+"ಈಗಾಗಲೇ ನಿಗದಿಗೊಳಿಸಲಾಗೆದೆ.\n"
+"ನೀವು ನಿಜಕ್ಕೂ ಇದನ್ನು ಸಾರ್ವತ್ರಿಕ ಸಮೀಪಮಾರ್ಗವಾಗಿ ಬಳಸಲಿಚ್ಛಿಸುವಿರೇನು?"
+
+#: kkeysequencewidget.cpp:670
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "ಆದಾನ (ಇನ್ ಪುಟ್)"
+
+#: kkeysequencewidget.cpp:677 kshortcuteditwidget.cpp:66
+#: kshortcuteditwidget.cpp:69
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "ಯಾವುದೂ ಇಲ್ಲ"
+
+#: kkeysequencewidget.cpp:723
+msgid "The key you just pressed is not supported by Qt."
+msgstr "ನೀವು ಈಗ ಒತ್ತಿದ ಕೀಲಿಕೈಗೆ Qt ಯ ಬೆಂಬಲವಿಲ್ಲ."
+
+#: kkeysequencewidget.cpp:724
+msgid "Unsupported Key"
+msgstr "ಬೆಂಬಲವಿಲ್ಲದೆ ಇರುವ ಕೀಲಿ"
+
+#: kmainwindow.cpp:208
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ಉಮೇಶ್ ರುದ್ರಪಟ್ಟಣ, ಸಿದ್ಧಾರೂಢ ಪಿ ಟಿ, ಶಂಕರ ಪ್ರಸಾದ್ ಎಂ ವಿ"
+
+#: kmainwindow.cpp:209
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "umeshrs@gmail.com, siddharudh@gmail.com, svenkate@redhat.com"
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr "ಉಪಕರಣಪಟ್ಟಿಗೆ ಸೇರಿಸು"
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr "ಶೀಘ್ರ ಮಾರ್ಗವನ್ನು (ಶಾರ್ಟ್ ಕಟ್) ಸಂರಚಿಸು..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "ಪರಿಚಾರಕದಲ್ಲಿ ವಿಷಯವನ್ನು ರಚಿಸಿ"
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "ಸಂಪರ್ಕ ಸಮಯ ಮೀರಿತು"
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "ಪರಿಚಾರಕ (server): %1"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "ದೋಷ ವರದಿಯನ್ನು ರವಾನಿಸಿ."
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "ಸಂವಾದದ ಗಾತ್ರ"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "ದೋಷ ವರದಿಯನ್ನು ಕಳುಹಿಸಲಾದ ವಿಅಂಚೆ."
+
+#: kshortcuteditwidget.cpp:65
+msgid "Default:"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ:"
+
+#: kshortcuteditwidget.cpp:73
+msgid "Custom:"
+msgstr "ಇಚ್ಛೆಯ (ಕಸ್ಟಮ್):"
+
+#: kshortcutschemeseditor.cpp:43
+msgid "Shortcut Schemes"
+msgstr "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಪದ್ಧತಿಗಳು"
+
+# #| msgid "Curr&ent actions:"
+#: kshortcutschemeseditor.cpp:62
+msgid "Current scheme:"
+msgstr "ಪ್ರಸ್ತುತ ಪದ್ಧತಿ:"
+
+#: kshortcutschemeseditor.cpp:72
+msgid "New..."
+msgstr "ಹೊಸ..."
+
+#: kshortcutschemeseditor.cpp:75
+msgid "Delete"
+msgstr "ಅಳಿಸಿಹಾಕು"
+
+#: kshortcutschemeseditor.cpp:78
+msgid "More Actions"
+msgstr "ಇನ್ನಷ್ಟು ಕ್ರಿಯೆಗಳು"
+
+# #| msgid "&Defaults"
+#: kshortcutschemeseditor.cpp:82
+msgid "Save as Scheme Defaults"
+msgstr "ಪದ್ಧತಿಯ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಉಳಿಸು"
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Export Scheme..."
+msgstr "ಪದ್ಧತಿಯನ್ನು ರಫ್ತುಮಾಡು..."
+
+#: kshortcutschemeseditor.cpp:86
+#, fuzzy
+#| msgid "Export Scheme..."
+msgid "Import Scheme..."
+msgstr "ಪದ್ಧತಿಯನ್ನು ರಫ್ತುಮಾಡು..."
+
+#: kshortcutschemeseditor.cpp:102
+msgid "Name for New Scheme"
+msgstr "ಹೊಸ ಪದ್ಧತಿಗೆ ಹೆಸರು"
+
+# #| msgid "Curr&ent actions:"
+#: kshortcutschemeseditor.cpp:103
+msgid "Name for new scheme:"
+msgstr "ಹೊಸ ಪದ್ಧತಿಗೆ ಹೆಸರು:"
+
+# #| msgid "Curr&ent actions:"
+#: kshortcutschemeseditor.cpp:103
+msgid "New Scheme"
+msgstr "ಹೊಸ ಪದ್ಧತಿ (ಸ್ಕೀಮ್)"
+
+#: kshortcutschemeseditor.cpp:109
+msgid "A scheme with this name already exists."
+msgstr "ಈ ಹೆಸರಿನ ಪದ್ಧತಿ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ"
+
+#: kshortcutschemeseditor.cpp:138
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"%1 ಪದ್ಧತಿಯನ್ನು ನಿಜಕ್ಕೂ ತೆಗೆದುಹಾಕಬೇಕೆಂದಿದ್ದೀಯೇನು?\n"
+"ಇದು ಯಾವುದೇ ವ್ಯವಸ್ಥಾದ್ಯಂತದ ಶೀಘ್ರಮಾರ್ಗ ಪದ್ಧತಿಯನ್ನೂ ತೆಗೆದುಹಾಗುವುದಿಲ್ಲ."
+
+#: kshortcutschemeseditor.cpp:168
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Export Shortcuts"
+msgstr "ಸಮೀಪಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)"
+
+#: kshortcutschemeseditor.cpp:168 kshortcutschemeseditor.cpp:179
+#, fuzzy
+#| msgid "Shortcut Conflict(s)"
+msgid "Shortcuts (*.shortcuts)"
+msgstr "ಸಮೀಪಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕಲಹ(ಗಳು)"
+
+#: kshortcutschemeseditor.cpp:179
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Import Shortcuts"
+msgstr "ಸಮೀಪಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)"
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+"ಪ್ರಸ್ತುತ ಶೀಘ್ರಮಾರ್ಗ ಪದ್ಧತಿಯನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿದೆ. ಹೊಸ ಪದ್ಧತಿಗೆ ಬದಲಾಗುವ ಮೊದಲು ಇದನ್ನು "
+"ಉಳಿಸುವುದೇ?"
+
+#: kshortcutsdialog.cpp:130 kshortcutsdialog.cpp:165
+msgid "&Details"
+msgstr "ವಿವರಗಳು(&D)"
+
+#: kshortcutsdialog.cpp:149
+msgid "Configure Shortcuts"
+msgstr "ಸಮೀಪಮಾರ್ಗಗಳನ್ನು ಸಂರಚಿಸಿ"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ಸಮೀಪಮಾರ್ಗಗಳ (ಶಾರ್ಟ್ ಕಟ್) ಹೆಸರುಗಳಿಗೆ ಪಾರಸ್ಪರಿಕವಾಗಿ ಹುಡುಕು. (ಉ.ದಾ. ನಕಲಿಸು (copy), "
+"ಅಥವಾ ಕೀಲಿಕೈಗಳ ಸೇರುವಿಕೆ (ಉ.ದಾ. Ctrl+C) ಯನ್ನು ಇಲ್ಲಿ ಬೆರಳಚ್ಚಿಸುವುದರೊಂದಿಗೆ ಹುಡುಕು."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"ಇಲ್ಲಿ ನೀವು ಕೀಲಿಕೈಗಳ ನಿಬಂಧನೆಗಳ ಪಟ್ಟಿಯನ್ನು (ಬೈಂಡಿಂಗ್) ನೋಡಬಹುದು, ಅಂದರೆ ಎಡ "
+"ಲಂಬಸಾಲಿನಲ್ಲಿನ ಕ್ರಿಯೆಗಳ (ಉ.ದಾ. ನಕಲಿಸು (copy)) ಮತ್ತು ಬಲ ಲಂಬಸಾಲಿನ (ಉ.ದಾ. Ctrl+ನ) "
+"ನಂತಹ ಕೀಲಿಕೈಗಳ ಸೇರುವಿಕೆಯ ನಡುವಿನ ಸಂಬಂಧವನ್ನು ಕಾಣಬಹುದು."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "ಹಕ್ರಿಯೆ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "ಸಮೀಪಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "ಪರ್ಯಾಯ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr "ಸಾರ್ವತ್ರಿಕ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr "ಸಾರ್ವತ್ರಿಕ ಪರ್ಯಾಯ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr "ತೆರೆಸೂಚಿ ಗುಂಡಿಯ ವರ್ತನೆ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr "ತೆರೆಸೂಚಿ ಆಕಾರ ವರ್ತನೆ"
+
+#: kshortcutseditor.cpp:630 kshortcutseditor.cpp:648
+msgid "Key Conflict"
+msgstr "ಕೀಲಿಕೈ ಕಲಹಗಳು"
+
+#: kshortcutseditor.cpp:631
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"'%1' ಆಕಾರ ವರ್ತನೆಯು (shape gesture) ಈಗಾಗಲೇ \"%2\" ಕ್ರಿಯೆಗೆ ನಿಗದಿಗೊಳಿಸಲಾಗಿದೆ.\n"
+"ನೀವು ಅದನ್ನು ಆ ಕ್ರಿಯೆಯಿಂದ ಪ್ರಸಕ್ತ ಕ್ರಿಯೆಗೆ ಮರುನಿಗದಿಗೊಳಿಸಬೇಕೆಂದಿದ್ದೀರೇನು?"
+
+#: kshortcutseditor.cpp:649
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"'%1' ಅಮುಕು ವರ್ತನೆಯು (rocker gesture) ಈಗಾಗಲೇ \"%2\" ಕ್ರಿಯೆಗೆ ನಿಗದಿಗೊಳಿಸಲಾಗಿದೆ.\n"
+"ನೀವು ಅದನ್ನು ಆ ಕ್ರಿಯೆಯಿಂದ ಪ್ರಸಕ್ತ ಕ್ರಿಯೆಗೆ ಮರುನಿಗದಿಗೊಳಿಸಬೇಕೆಂದಿದ್ದೀರೇನು?"
+
+#: kshortcutseditor.cpp:696
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "%1 ಕ್ಕೆ ಶೀಘ್ರಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:714 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr "ಮುಖ್ಯ:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:715 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr "ಪರ್ಯಾಯ:"
+
+#: kshortcutseditor.cpp:716
+msgid "Global:"
+msgstr "ಸಾರ್ವತ್ರಿಕ:"
+
+#: kshortcutseditor.cpp:717
+#, fuzzy
+#| msgid "Global Alternate"
+msgid "Global alternate:"
+msgstr "ಸಾರ್ವತ್ರಿಕ ಪರ್ಯಾಯ"
+
+#: kshortcutseditor.cpp:732
+msgid "Action Name"
+msgstr "ಕ್ರಿಯೆಯ ಹೆಸರು"
+
+#: kshortcutseditor.cpp:736
+msgid "Shortcuts"
+msgstr "ಸಮೀಪಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)"
+
+#: kshortcutseditor.cpp:740
+msgid "Description"
+msgstr "ವಿವರಣೆ"
+
+#: kshortcutseditoritem.cpp:54
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr "ಅನ್ವಯದ ಭಾಷೆಯನ್ನು ಬದಲಾಯಿಸಿ"
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr "ಈ ಅನ್ಯಯಕ್ಕೆ ಬಳಸಬೇಕಾದ ಭಾಷೆಯನ್ನು ಆರಿಸಿರಿ:"
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr "ವೈಫಲ್ಯಾಶ್ರಯ (fallback) ಭಾಷೆಯನ್ನು ಸೇರಿಸಿ"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"ಸಧ್ಯದ ಅನುವಾದಗಳು ಸಮರ್ಪಕವಾಗಿಲ್ಲದಿದ್ದ ಪಕ್ಷದಲ್ಲಿ ಬಳಸಬೇಕಾದ ಮತ್ತೊಂದು ಭಾಷೆಯನ್ನು ಸೇರಿಸುತ್ತದೆ."
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"ಈ ಅನ್ವಯದ ಭಾಷೆ ಬದಲಾಗಿದೆ. ಈ ಬದಲಾವಣೆಯು ಮುಂದಿನ ಬಾರಿ ನೀವು ಅನ್ವಯವನ್ನು ಪ್ರಾರಂಭಿಸಿದಾಗ "
+"ವ್ಯಕ್ತವಾಗುತ್ತದೆ."
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+msgid "Application Language Changed"
+msgstr "ಅನ್ವಯಿಕದ ಭಾಷೆ ಬದಲಾಗಿದೆ"
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid "Primary language:"
+msgstr "ಪ್ರಮುಖ ಭಾಷೆ:"
+
+#: kswitchlanguagedialog_p.cpp:396
+msgid "Fallback language:"
+msgstr "ವೈಫಲ್ಯಾಶ್ರಯ ಭಾಷೆ:"
+
+#: kswitchlanguagedialog_p.cpp:415
+msgid "Remove"
+msgstr "ತೆಗೆದುಹಾಕು"
+
+#: kswitchlanguagedialog_p.cpp:426
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+"ಇದು ಅನ್ವಯಿಕದ ಪ್ರಮುಖ ಭಾಷೆಯಾಗಿದ್ದು ಇದನ್ನು ಇನ್ನಿತರ ಭಾಷೆಗಳನ್ನು ಉಪಯೋಗಿಸುವ ಮೊದಲು "
+"ಬಳಸಲಾಗುತ್ತದೆ."
+
+#: kswitchlanguagedialog_p.cpp:427
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"ಹಿಂದಿನ ಭಾಷೆಗಳು ಸಮರ್ಪಕವಾದ ಅನುವಾದಗಳನ್ನು ಒಲಗೊಂಡಿರದಿದ್ದ ಪಕ್ಷದಲ್ಲಿ ಈ ಭಾಷೆಯನ್ನು "
+"ಬಳಸಲಾಗುವುದು."
+
+#: ktoolbar.cpp:303
+#, fuzzy
+#| msgid "Show help"
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "ಸಹಾಯ ತೋರಿಸು"
+
+#: ktoolbar.cpp:306
+#, fuzzy
+#| msgid "Toolbar Settings"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "ಉಪಕರಣಪಟ್ಟಿ ಸಂಯೋಜನೆಗಳು"
+
+#: ktoolbar.cpp:308
+#, fuzzy
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "ನಿಲುವು (ಓರಿಯೆಂಟೇಶನ್)"
+
+#: ktoolbar.cpp:310
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "ಮೇಲಿನ/ಮೊದಲ"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "ಎಡ"
+
+#: ktoolbar.cpp:313
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "ಬಲ"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "ಕೆಳಗೆ"
+
+#: ktoolbar.cpp:322
+msgid "Text Position"
+msgstr "ಪಠ್ಯ ಸ್ಥಳ"
+
+#: ktoolbar.cpp:324
+msgid "Icons Only"
+msgstr "ಚಿಹ್ನೆ ಮಾತ್ರ"
+
+#: ktoolbar.cpp:325
+msgid "Text Only"
+msgstr "ಪಠ್ಯ ಮಾತ್ರ"
+
+#: ktoolbar.cpp:326
+msgid "Text Alongside Icons"
+msgstr "ಚಿಹ್ನೆಗಳ ಪಕ್ಕದಲ್ಲಿ ಪಠ್ಯ"
+
+#: ktoolbar.cpp:327
+msgid "Text Under Icons"
+msgstr "ಚಿಹ್ನೆಗಳ ಕೆಳಗೆ ಪಠ್ಯ"
+
+#: ktoolbar.cpp:335
+msgid "Icon Size"
+msgstr "ಚಿಹ್ನೆ ಗಾತ್ರ"
+
+#: ktoolbar.cpp:337
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "ಚಿಕ್ಕದು (%1x%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "ಮಧ್ಯಮ (%1x%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "ದೊಡ್ಡದು (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "ಅತಿ ದೊಡ್ಡದು (%1x%2)"
+
+#: ktoolbar.cpp:403
+#, fuzzy
+#| msgid "Lock Toolbars"
+msgid "Lock Toolbar Positions"
+msgstr "ಉಪಕರಣಪಟ್ಟಿಕೆಗಳನ್ನು ಬಂಧಿಸು"
+
+#: ktoolbar.cpp:1357
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbar.cpp:1358
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr "ತೋರಿಸಲಾದ ಉಪಕರಣಪಟ್ಟಿಗಳು"
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr "ಮತ್ತೆಮಾಡು"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "ಹಿಮ್ಮೆಟ್ಟು"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+msgid "No text"
+msgstr "ಪಠ್ಯವಿಲ್ಲ"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "ಕಡತ(&F)"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "ಆಟ(&G)"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "ಸಂಪಾದನೆ(&E)"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "ಚಲಿಸು(&M)"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "ನೋಟ(&V)"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "ಹೋಗು(&G)"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "ಪುಟ ಗುರುತುಗಳು(&B)"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "ಉಪಕರಣಗಳು(&T)"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "ಸಂಯೋಜನೆಗಳು(&S)"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:194
+msgid "Main Toolbar"
+msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
