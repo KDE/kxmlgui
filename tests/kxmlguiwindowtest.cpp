@@ -63,7 +63,7 @@ void MainWindow::slotTest()
 
 void MainWindow::slotCreate()
 {
-    setupGUI(ToolBar);
+    setupGUI(ToolBar|Keys);
     createGUI(xmlFile());
 
     if (autoSaveConfigGroup().isValid()) {
