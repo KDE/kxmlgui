@@ -47,7 +47,7 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
     // to even save all shortcuts to a single shortcuts file -> set the boolean below to true
     // to create an all-in-one scheme.
     // Maybe we need a checkbox for this? Or an env var for contributors to set, rather? End users don't care.
-    const bool saveToApplicationFile = true;
+    const bool saveToApplicationFile = false;
 
     QMap<QString, KActionCollection *> collectionsByClientName;
     foreach (KActionCollection *coll, collections) {
