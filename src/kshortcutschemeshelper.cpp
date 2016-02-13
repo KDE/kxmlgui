@@ -86,12 +86,12 @@ QString KShortcutSchemesHelper::shortcutSchemeFileName(const KXMLGUIClient *clie
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
            client->componentName() + QStringLiteral("/shortcuts/") +
-           client->componentName() + schemeName;
+           schemeName;
 }
 
 QString KShortcutSchemesHelper::applicationShortcutSchemeFileName(const QString &schemeName)
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
            QCoreApplication::applicationName() + QStringLiteral("/shortcuts/") +
-           QCoreApplication::applicationName() + schemeName;
+           schemeName;
 }
