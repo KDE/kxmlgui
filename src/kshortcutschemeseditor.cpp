@@ -38,6 +38,7 @@
 #include "kshortcutschemeshelper_p.h"
 #include "kactioncollection.h"
 #include "kxmlguiclient.h"
+#include <debug.h>
 
 KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     : QGroupBox(i18n("Shortcut Schemes"), parent), m_dialog(parent)
@@ -46,15 +47,18 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 
     QStringList schemes;
     schemes << QStringLiteral("Default");
-    // List files in the shortcuts subdir, each one is a theme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
-    const QStringList shortcutsDir = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QCoreApplication::applicationName() + QStringLiteral("/shortcuts"), QStandardPaths::LocateDirectory);
-    Q_FOREACH (const QString &dir, shortcutsDir) {
+    // List files in the shortcuts subdir, each one is a scheme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
+    const QStringList shortcutsDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QCoreApplication::applicationName() + QStringLiteral("/shortcuts"), QStandardPaths::LocateDirectory);
+    qCDebug(DEBUG_KXMLGUI) << "shortcut scheme dirs:" << shortcutsDirs;
+    Q_FOREACH (const QString &dir, shortcutsDirs) {
         Q_FOREACH (const QString &file, QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot)) {
+            qCDebug(DEBUG_KXMLGUI) << "shortcut scheme file:" << file;
             schemes << file;
         }
     }
 
     const QString currentScheme = group.readEntry("Current Scheme", "Default");
+    qCDebug(DEBUG_KXMLGUI) << "Current Scheme" << currentScheme;
 
     QHBoxLayout *l = new QHBoxLayout(this);
 
@@ -64,7 +68,13 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     m_schemesList = new QComboBox(this);
     m_schemesList->setEditable(false);
     m_schemesList->addItems(schemes);
-    m_schemesList->setCurrentIndex(m_schemesList->findText(currentScheme));
+    m_schemesList->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    const int schemeIdx = m_schemesList->findText(currentScheme);
+    if (schemeIdx > -1) {
+        m_schemesList->setCurrentIndex(schemeIdx);
+    } else {
+        qCWarning(DEBUG_KXMLGUI) << "Current scheme" << currentScheme << "not found in" << shortcutsDirs;
+    }
     schemesLabel->setBuddy(m_schemesList);
     l->addWidget(m_schemesList);
 
