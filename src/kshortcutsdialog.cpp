@@ -127,7 +127,12 @@ public:
         const bool isVisible = m_schemeEditor->isVisible();
 
         m_schemeEditor->setVisible(!isVisible);
-        m_detailsButton->setText(i18n("&Details") + (isVisible ? QStringLiteral(" >>") : QStringLiteral(" <<")));
+        m_detailsButton->setText(detailsButtonText() + (isVisible ? QStringLiteral(" >>") : QStringLiteral(" <<")));
+    }
+
+    static QString detailsButtonText()
+    {
+        return i18n("Manage &Schemes");
     }
 
     void save()
@@ -162,7 +167,7 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     layout->addWidget(d->m_schemeEditor);
 
     d->m_detailsButton = new QPushButton;
-    d->m_detailsButton->setText(i18n("&Details") + QStringLiteral(" >>"));
+    d->m_detailsButton->setText(KShortcutsDialogPrivate::detailsButtonText() + QStringLiteral(" >>"));
 
     QPushButton *printButton = new QPushButton;
     KGuiItem::assign(printButton, KStandardGuiItem::print());

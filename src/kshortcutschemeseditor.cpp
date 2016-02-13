@@ -88,7 +88,7 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     l->addWidget(moreActions);
 
     QMenu *moreActionsMenu = new QMenu(this);
-    moreActionsMenu->addAction(i18n("Save as Scheme Defaults"),
+    moreActionsMenu->addAction(i18n("Save shortcuts to scheme"),
                                this, SLOT(saveAsDefaultsForScheme()));
     moreActionsMenu->addAction(i18n("Export Scheme..."),
                                this, SLOT(exportShortcutsScheme()));
