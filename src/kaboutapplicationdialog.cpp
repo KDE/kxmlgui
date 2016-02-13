@@ -345,7 +345,7 @@ void KAboutApplicationDialog::Private::_k_showLicense(const QString &number)
     // try to allow enough height for a reasonable number of lines to be shown
     const int idealHeight = metrics.height() * 30;
 
-    dialog->resize(dialog->sizeHint().expandedTo(QSize((int)idealWidth, idealHeight)));
+    dialog->resize(dialog->sizeHint().expandedTo(QSize(qRound(idealWidth), idealHeight)));
     dialog->adjustSize();
     dialog->show();
 }

@@ -439,7 +439,7 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
             // if there's a separator defined in the global tree, then add an
             // attribute, specifying that this is a "weak" separator
             else if (equalstr(tag, tagSeparator)) {
-                e.setAttribute(attrWeakSeparator, (uint)1);
+                e.setAttribute(attrWeakSeparator, uint(1));
 
                 // okay, hack time. if the last item was a weak separator OR
                 // this is the first item in a container, then we nuke the

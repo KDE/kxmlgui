@@ -110,7 +110,6 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
         } else {
             return QIcon();
         }
-        break;
     case Qt::WhatsThisRole:
         return m_action->whatsThis();
     case Qt::ToolTipRole:
@@ -205,7 +204,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
         }
     }
     case ObjectRole:
-        return qVariantFromValue((QObject *)m_action);
+        return qVariantFromValue(static_cast<QObject *>(m_action));
 
     default:
         break;

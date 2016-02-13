@@ -42,11 +42,6 @@
 
 #include "kactioncollection.h"
 
-uint qHash(const QKeySequence &seq)
-{
-    return qHash(seq.toString());
-}
-
 class KKeySequenceWidgetPrivate
 {
 public:
@@ -514,7 +509,7 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
 #endif
 }
 
-bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QKeySequence &needle)
+static bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QKeySequence &needle)
 {
     if (needle.isEmpty()) {
         return false;
