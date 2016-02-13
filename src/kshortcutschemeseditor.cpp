@@ -119,7 +119,7 @@ void KShortcutSchemesEditor::newScheme()
         return;
     }
 
-    const QString newSchemeFileName = KShortcutSchemesHelper::applicationShortcutSchemeFileName(newName);
+    const QString newSchemeFileName = KShortcutSchemesHelper::writableApplicationShortcutSchemeFileName(newName);
     QDir().mkpath(QFileInfo(newSchemeFileName).absolutePath());
     QFile schemeFile(newSchemeFileName);
     if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
@@ -151,7 +151,7 @@ Note that this will not remove any system wide shortcut schemes.", currentScheme
     }
 
     //delete the scheme for the app itself
-    QFile::remove(KShortcutSchemesHelper::applicationShortcutSchemeFileName(currentScheme()));
+    QFile::remove(KShortcutSchemesHelper::writableApplicationShortcutSchemeFileName(currentScheme()));
 
     //delete all scheme files we can find for xmlguiclients in the user directories
     foreach (KActionCollection *collection, m_dialog->actionCollections()) {
@@ -159,7 +159,7 @@ Note that this will not remove any system wide shortcut schemes.", currentScheme
         if (!client) {
             continue;
         }
-        QFile::remove(KShortcutSchemesHelper::shortcutSchemeFileName(client->componentName(), currentScheme()));
+        QFile::remove(KShortcutSchemesHelper::writableShortcutSchemeFileName(client->componentName(), currentScheme()));
     }
 
     m_schemesList->removeItem(m_schemesList->findText(currentScheme()));

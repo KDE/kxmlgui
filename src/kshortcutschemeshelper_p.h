@@ -45,10 +45,20 @@ public:
     /**
      * @return the name of the (writable) file to save the shortcut scheme to.
     */
-    static QString shortcutSchemeFileName(const QString &componentName, const QString &schemeName);
+    static QString writableShortcutSchemeFileName(const QString &componentName, const QString &schemeName);
 
     /**
      * @return the name of the scheme file for application itself.
+    */
+    static QString writableApplicationShortcutSchemeFileName(const QString &schemeName);
+
+    /**
+     * @return the name of the file to read the shortcut scheme from.
+    */
+    static QString shortcutSchemeFileName(const QString &componentName, const QString &schemeName);
+
+    /**
+     * @return the name of the scheme file for application itself, for reading.
     */
     static QString applicationShortcutSchemeFileName(const QString &schemeName);
 };

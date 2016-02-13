@@ -92,8 +92,7 @@ public:
     void configureAction(QAction *action, const QDomAttr &attribute,
                          ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
 
-    QDomDocument shortcutSchemeDoc(KXMLGUIClient *client);
-    void applyShortcutScheme(KXMLGUIClient *client, const QList<QAction *> &actions, const QDomDocument &scheme);
+    void applyShortcutScheme(const QString &schemeName, KXMLGUIClient *client, const QList<QAction *> &actions);
     void refreshActionProperties(KXMLGUIClient *client, const QList<QAction *> &actions, const QDomDocument &doc);
     void saveDefaultActionProperties(const QList<QAction *> &actions);
 
@@ -372,8 +371,25 @@ static QDomElement findActionPropertiesElement(const QDomDocument &doc)
 void KXMLGUIFactoryPrivate::refreshActionProperties(KXMLGUIClient *client, const QList<QAction *> &actions, const QDomDocument &doc)
 {
     // try to find and apply shortcuts schemes
-    QDomDocument scheme = shortcutSchemeDoc(client);
-    applyShortcutScheme(client, actions, scheme);
+    const QString schemeName = KShortcutSchemesHelper::currentShortcutSchemeName();
+    //qCDebug(DEBUG_KXMLGUI) << client->componentName() << ": applying shortcut scheme" << schemeName;
+
+    if (schemeName != QLatin1String("Default")) {
+        applyShortcutScheme(schemeName, client, actions);
+    } else {
+        // apply saved default shortcuts
+        Q_FOREACH (QAction *action, actions) {
+            QVariant savedDefaultShortcut = action->property("_k_DefaultShortcut");
+            if (savedDefaultShortcut.isValid()) {
+                QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence> >();
+                action->setShortcuts(shortcut);
+                action->setProperty("defaultShortcuts", QVariant::fromValue(shortcut));
+                qCDebug(DEBUG_KXMLGUI) << "scheme said" << action->shortcut().toString() << "for action" << action->objectName();
+            } else {
+                action->setShortcuts(QList<QKeySequence>());
+            }
+        }
+    }
 
     // try to find and apply user-defined shortcuts
     const QDomElement actionPropElement = findActionPropertiesElement(doc);
@@ -695,50 +711,34 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
     }
 }
 
-QDomDocument KXMLGUIFactoryPrivate::shortcutSchemeDoc(KXMLGUIClient *client)
+void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLGUIClient *client, const QList<QAction *> &actions)
 {
-    // Get the name of the current shorcut scheme
-    KConfigGroup cg = KSharedConfig::openConfig()->group("Shortcut Schemes");
-    QString schemeName = cg.readEntry("Current Scheme", "Default");
-
-    QDomDocument doc;
-    if (schemeName != QStringLiteral("Default")) {
-        // Find the document for the shortcut scheme using both current application path
-        // and current xmlguiclient path but making a preference to app path
-        QString schemeFileName = KShortcutSchemesHelper::shortcutSchemeFileName(client->componentName(), schemeName);
-        QFile schemeFile(schemeFileName);
-        if (schemeFile.open(QIODevice::ReadOnly)) {
-            qCDebug(DEBUG_KXMLGUI) << "Found shortcut scheme XML" << schemeFileName;
-            doc.setContent(&schemeFile);
-        }
-    }
-    return doc;
-}
-
-void KXMLGUIFactoryPrivate::applyShortcutScheme(KXMLGUIClient *client, const QList<QAction *> &actions, const QDomDocument &scheme)
-{
-    Q_UNUSED(client)
-    KConfigGroup cg = KSharedConfig::openConfig()->group("Shortcut Schemes");
-    QString schemeName = cg.readEntry("Current Scheme", "Default");
-
     //First clear all existing shortcuts
-    if (schemeName != QStringLiteral("Default")) {
-        Q_FOREACH (QAction *action, actions) {
-            action->setShortcuts(QList<QKeySequence>());
-            // We clear the default shortcut as well because the shortcut scheme will set its own defaults
-            action->setProperty("defaultShortcuts", QVariant::fromValue(QList<QKeySequence>()));
-        }
-    } else {
-        // apply saved default shortcuts
-        Q_FOREACH (QAction *action, actions) {
-            QVariant savedDefaultShortcut = action->property("_k_DefaultShortcut");
-            if (savedDefaultShortcut.isValid()) {
-                QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence> >();
-                //qCDebug(DEBUG_KXMLGUI) << "scheme said" << shortcut.toString() << "for action" << kaction->objectName();
-                action->setShortcuts(shortcut);
-                action->setProperty("defaultShortcuts", QVariant::fromValue(shortcut));
-            }
-        }
+    Q_FOREACH (QAction *action, actions) {
+        action->setShortcuts(QList<QKeySequence>());
+        // We clear the default shortcut as well because the shortcut scheme will set its own defaults
+        action->setProperty("defaultShortcuts", QVariant::fromValue(QList<QKeySequence>()));
+    }
+
+    // Find the document for the shortcut scheme using the current application path.
+    // This allows to install a single XML file for a shortcut scheme for kdevelop
+    // rather than 10.
+    // Also look for the current xmlguiclient path.
+    // Per component xml files make sense for making kmail shortcuts available in kontact.
+    QString schemeFileName = KShortcutSchemesHelper::shortcutSchemeFileName(client->componentName(), schemeName);
+    if (schemeFileName.isEmpty()) {
+        schemeFileName = KShortcutSchemesHelper::applicationShortcutSchemeFileName(schemeName);
+    }
+    if (schemeFileName.isEmpty()) {
+        qCWarning(DEBUG_KXMLGUI) << client->componentName() << ": shortcut scheme file not found:" << schemeName << "after trying" << QCoreApplication::applicationName() << "and" << client->componentName();
+        return;
+    }
+
+    QDomDocument scheme;
+    QFile schemeFile(schemeFileName);
+    if (schemeFile.open(QIODevice::ReadOnly)) {
+        qCDebug(DEBUG_KXMLGUI) << client->componentName() << ": found shortcut scheme XML" << schemeFileName;
+        scheme.setContent(&schemeFile);
     }
 
     if (scheme.isNull()) {

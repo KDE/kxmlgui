@@ -43,22 +43,23 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
     // holding the actions for hiding/showing toolbars), so we need to save them
     // together, otherwise they will overwrite each other's file on disk.
 
+    // For cases like kdevelop (many guiclients not reused in other apps) it's simpler
+    // to even save all shortcuts to a single shortcuts file -> set the boolean below to true
+    // to create an all-in-one scheme.
+    // Maybe we need a checkbox for this? Or an env var for contributors to set, rather? End users don't care.
+    const bool saveToApplicationFile = true;
+
     QMap<QString, KActionCollection *> collectionsByClientName;
     foreach (KActionCollection *coll, collections) {
         const KXMLGUIClient *client = coll->parentGUIClient();
         if (client) {
-            collectionsByClientName.insertMulti(client->componentName(), coll);
+            const QString key = saveToApplicationFile ? QCoreApplication::applicationName() : client->componentName();
+            collectionsByClientName.insertMulti(key, coll);
         }
     }
     foreach (const QString &componentName, collectionsByClientName.uniqueKeys()) {
-        const QString schemeFileName = shortcutSchemeFileName(componentName, schemeName);
-        qCDebug(DEBUG_KXMLGUI) << "saving to" << schemeFileName;
-        QDir().mkpath(QFileInfo(schemeFileName).absolutePath());
-        QFile schemeFile(schemeFileName);
-        if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
-            qCDebug(DEBUG_KXMLGUI) << "COULD NOT WRITE" << schemeFileName;
-            return false;
-        }
+
+        qCDebug(DEBUG_KXMLGUI) << "Considering component" << componentName;
         QDomDocument doc;
         QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
         docElem.setAttribute(QStringLiteral("version"), QStringLiteral("1"));
@@ -75,9 +76,9 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
                     continue;
                 }
 
-                QString actionName = action->objectName();
-                QString shortcut = QKeySequence::listToString(action->shortcuts());
-                qCDebug(DEBUG_KXMLGUI) << "action" << actionName << "has shortcut" << shortcut;
+                const QString actionName = action->objectName();
+                const QString shortcut = QKeySequence::listToString(action->shortcuts());
+                //qCDebug(DEBUG_KXMLGUI) << "action" << actionName << "has shortcut" << shortcut;
                 if (!shortcut.isEmpty()) {
                     QDomElement act_elem = doc.createElement(QStringLiteral("Action"));
                     act_elem.setAttribute(QStringLiteral("name"), actionName);
@@ -87,8 +88,22 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
             }
         }
 
-        QTextStream out(&schemeFile);
-        out << doc.toString(2);
+
+        const QString schemeFileName = writableShortcutSchemeFileName(componentName, schemeName);
+        if (elem.childNodes().isEmpty()) {
+            QFile::remove(schemeFileName);
+        } else {
+            qCDebug(DEBUG_KXMLGUI) << "saving to" << schemeFileName;
+            QDir().mkpath(QFileInfo(schemeFileName).absolutePath());
+            QFile schemeFile(schemeFileName);
+            if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
+                qCDebug(DEBUG_KXMLGUI) << "COULD NOT WRITE" << schemeFileName;
+                return false;
+            }
+
+            QTextStream out(&schemeFile);
+            out << doc.toString(2);
+        }
     }
     return true;
 }
@@ -98,16 +113,30 @@ QString KShortcutSchemesHelper::currentShortcutSchemeName()
     return KSharedConfig::openConfig()->group("Shortcut Schemes").readEntry("Current Scheme", "Default");
 }
 
-QString KShortcutSchemesHelper::shortcutSchemeFileName(const QString &componentName, const QString &schemeName)
+QString KShortcutSchemesHelper::writableShortcutSchemeFileName(const QString &componentName, const QString &schemeName)
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
            componentName + QStringLiteral("/shortcuts/") +
            schemeName;
 }
 
-QString KShortcutSchemesHelper::applicationShortcutSchemeFileName(const QString &schemeName)
+QString KShortcutSchemesHelper::writableApplicationShortcutSchemeFileName(const QString &schemeName)
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
            QCoreApplication::applicationName() + QStringLiteral("/shortcuts/") +
            schemeName;
+}
+
+QString KShortcutSchemesHelper::shortcutSchemeFileName(const QString &componentName, const QString &schemeName)
+{
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                  componentName + QStringLiteral("/shortcuts/") +
+                                  schemeName);
+}
+
+QString KShortcutSchemesHelper::applicationShortcutSchemeFileName(const QString &schemeName)
+{
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                  QCoreApplication::applicationName() + QStringLiteral("/shortcuts/") +
+                                  schemeName);
 }
