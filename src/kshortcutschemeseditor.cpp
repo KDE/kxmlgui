@@ -110,9 +110,10 @@ void KShortcutSchemesEditor::newScheme()
     }
 
     const QString newSchemeFileName = KShortcutSchemesHelper::applicationShortcutSchemeFileName(newName);
-
+    QDir().mkpath(QFileInfo(newSchemeFileName).absolutePath());
     QFile schemeFile(newSchemeFileName);
     if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
+        qCWarning(DEBUG_KXMLGUI) << "Couldn't write to" << newSchemeFileName;
         return;
     }
 
