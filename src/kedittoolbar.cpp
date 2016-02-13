@@ -1523,7 +1523,7 @@ void KEditToolBarWidgetPrivate::moveActive(ToolBarItem *item, ToolBarItem *befor
     if (!before) {
         m_currentToolBarElem.insertBefore(e, m_currentToolBarElem.firstChild());
     } else {
-        m_currentToolBarElem.insertAfter(e, findElementForToolBarItem((ToolBarItem *)before));
+        m_currentToolBarElem.insertAfter(e, findElementForToolBarItem(before));
     }
 
     // and set this container as a noMerge
