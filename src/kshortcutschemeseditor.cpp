@@ -57,7 +57,6 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     const QString currentScheme = group.readEntry("Current Scheme", "Default");
 
     QHBoxLayout *l = new QHBoxLayout(this);
-    l->setMargin(0);
 
     QLabel *schemesLabel = new QLabel(i18n("Current scheme:"), this);
     l->addWidget(schemesLabel);
