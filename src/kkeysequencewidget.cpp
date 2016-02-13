@@ -42,6 +42,13 @@
 
 #include "kactioncollection.h"
 
+#if HAVE_GLOBALACCEL
+static uint qHash(const QKeySequence &seq)
+{
+    return qHash(seq.toString());
+}
+#endif
+
 class KKeySequenceWidgetPrivate
 {
 public:
