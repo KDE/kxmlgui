@@ -42,7 +42,7 @@
 
 #include "kactioncollection.h"
 
-#if HAVE_GLOBALACCEL
+#if HAVE_GLOBALACCEL && QT_VERSION < QT_VERSION_CHECK(5, 6, 0)
 static uint qHash(const QKeySequence &seq)
 {
     return qHash(seq.toString());
