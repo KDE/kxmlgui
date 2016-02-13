@@ -705,7 +705,7 @@ QDomDocument KXMLGUIFactoryPrivate::shortcutSchemeDoc(KXMLGUIClient *client)
     if (schemeName != QStringLiteral("Default")) {
         // Find the document for the shortcut scheme using both current application path
         // and current xmlguiclient path but making a preference to app path
-        QString schemeFileName = KShortcutSchemesHelper::shortcutSchemeFileName(client, schemeName);
+        QString schemeFileName = KShortcutSchemesHelper::shortcutSchemeFileName(client->componentName(), schemeName);
         QFile schemeFile(schemeFileName);
         if (schemeFile.open(QIODevice::ReadOnly)) {
             qCDebug(DEBUG_KXMLGUI) << "Found shortcut scheme XML" << schemeFileName;
@@ -766,6 +766,7 @@ int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
                          qobject_cast<QWidget *>(parent()));
     Q_FOREACH (KXMLGUIClient *client, d->m_clients) {
         if (client) {
+            qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
             dlg.addCollection(client->actionCollection());
         }
     }

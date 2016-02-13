@@ -33,47 +33,63 @@
 #include "kxmlguiclient.h"
 #include "debug.h"
 
-bool KShortcutSchemesHelper::exportActionCollection(KActionCollection *collection,
+bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *> &collections,
         const QString &schemeName)
 {
-    const KXMLGUIClient *client = collection->parentGUIClient();
-    if (!client) {
-        return false;
-    }
+    // Every action collection is associated with a KXMLGUIClient
+    // (at least if it was added by KXMLGUIFactory::configureShortcuts)
 
-    const QString schemeFileName = shortcutSchemeFileName(client, schemeName);
-    QDir().mkpath(QFileInfo(schemeFileName).absolutePath());
-    QFile schemeFile(schemeFileName);
-    if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
-        qCDebug(DEBUG_KXMLGUI) << "COULD NOT WRITE" << schemeFileName;
-        return false;
-    }
-    QDomDocument doc;
-    QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
-    docElem.setAttribute(QStringLiteral("version"), QStringLiteral("1"));
-    docElem.setAttribute(QStringLiteral("name"), client->componentName());
-    doc.appendChild(docElem);
-    QDomElement elem = doc.createElement(QStringLiteral("ActionProperties"));
-    docElem.appendChild(elem);
+    // Some GUI clients have the same name (e.g. the child client for a mainwindow
+    // holding the actions for hiding/showing toolbars), so we need to save them
+    // together, otherwise they will overwrite each other's file on disk.
 
-    // now, iterate through our actions
-    Q_FOREACH (QAction *action, collection->actions()) {
-        if (!action) {
-            continue;
-        }
-
-        QString actionName = action->objectName();
-        QString shortcut = QKeySequence::listToString(action->shortcuts());
-        if (!shortcut.isEmpty()) {
-            QDomElement act_elem = doc.createElement(QStringLiteral("Action"));
-            act_elem.setAttribute(QStringLiteral("name"), actionName);
-            act_elem.setAttribute(QStringLiteral("shortcut"), shortcut);
-            elem.appendChild(act_elem);
+    QMap<QString, KActionCollection *> collectionsByClientName;
+    foreach (KActionCollection *coll, collections) {
+        const KXMLGUIClient *client = coll->parentGUIClient();
+        if (client) {
+            collectionsByClientName.insertMulti(client->componentName(), coll);
         }
     }
+    foreach (const QString &componentName, collectionsByClientName.uniqueKeys()) {
+        const QString schemeFileName = shortcutSchemeFileName(componentName, schemeName);
+        qCDebug(DEBUG_KXMLGUI) << "saving to" << schemeFileName;
+        QDir().mkpath(QFileInfo(schemeFileName).absolutePath());
+        QFile schemeFile(schemeFileName);
+        if (!schemeFile.open(QFile::WriteOnly | QFile::Truncate)) {
+            qCDebug(DEBUG_KXMLGUI) << "COULD NOT WRITE" << schemeFileName;
+            return false;
+        }
+        QDomDocument doc;
+        QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
+        docElem.setAttribute(QStringLiteral("version"), QStringLiteral("1"));
+        docElem.setAttribute(QStringLiteral("name"), componentName);
+        doc.appendChild(docElem);
+        QDomElement elem = doc.createElement(QStringLiteral("ActionProperties"));
+        docElem.appendChild(elem);
 
-    QTextStream out(&schemeFile);
-    out << doc.toString(2);
+        foreach (KActionCollection *collection, collectionsByClientName.values(componentName)) {
+            qCDebug(DEBUG_KXMLGUI) << "Saving shortcut scheme for action collection with" << collection->actions().count() << "actions";
+
+            foreach (QAction *action, collection->actions()) {
+                if (!action) {
+                    continue;
+                }
+
+                QString actionName = action->objectName();
+                QString shortcut = QKeySequence::listToString(action->shortcuts());
+                qCDebug(DEBUG_KXMLGUI) << "action" << actionName << "has shortcut" << shortcut;
+                if (!shortcut.isEmpty()) {
+                    QDomElement act_elem = doc.createElement(QStringLiteral("Action"));
+                    act_elem.setAttribute(QStringLiteral("name"), actionName);
+                    act_elem.setAttribute(QStringLiteral("shortcut"), shortcut);
+                    elem.appendChild(act_elem);
+                }
+            }
+        }
+
+        QTextStream out(&schemeFile);
+        out << doc.toString(2);
+    }
     return true;
 }
 
@@ -82,10 +98,10 @@ QString KShortcutSchemesHelper::currentShortcutSchemeName()
     return KSharedConfig::openConfig()->group("Shortcut Schemes").readEntry("Current Scheme", "Default");
 }
 
-QString KShortcutSchemesHelper::shortcutSchemeFileName(const KXMLGUIClient *client, const QString &schemeName)
+QString KShortcutSchemesHelper::shortcutSchemeFileName(const QString &componentName, const QString &schemeName)
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
-           client->componentName() + QStringLiteral("/shortcuts/") +
+           componentName + QStringLiteral("/shortcuts/") +
            schemeName;
 }
 

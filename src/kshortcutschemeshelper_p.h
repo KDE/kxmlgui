@@ -29,13 +29,13 @@ class KShortcutSchemesHelper
 public:
 
     /**
-     * Saves actions from the collection to shortcut scheme file.
+     * Saves actions from these collections to the shortcut scheme file.
      *
-     * This doesn't save anything if there's no parent xmlgui client for action collection.
+     * This doesn't save anything for action collections without a parent xmlgui client.
      *
-     *  @return true if the action collection was exported
+     *  @return true if the shortcut scheme was successfully saved.
     */
-    static bool exportActionCollection(KActionCollection *collection, const QString &schemeName);
+    static bool saveShortcutScheme(const QList<KActionCollection *> &collections, const QString &schemeName);
 
     /**
      * @return the current shortcut scheme name for the application.
@@ -45,14 +45,12 @@ public:
     /**
      * @return the name of the (writable) file to save the shortcut scheme to.
     */
-    static QString shortcutSchemeFileName(const KXMLGUIClient *client, const QString &schemeName);
+    static QString shortcutSchemeFileName(const QString &componentName, const QString &schemeName);
 
     /**
      * @return the name of the scheme file for application itself.
     */
     static QString applicationShortcutSchemeFileName(const QString &schemeName);
-
-    static bool saveShortcutScheme();
 };
 
 #endif

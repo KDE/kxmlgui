@@ -159,7 +159,7 @@ Note that this will not remove any system wide shortcut schemes.", currentScheme
         if (!client) {
             continue;
         }
-        QFile::remove(KShortcutSchemesHelper::shortcutSchemeFileName(client, currentScheme()));
+        QFile::remove(KShortcutSchemesHelper::shortcutSchemeFileName(client->componentName(), currentScheme()));
     }
 
     m_schemesList->removeItem(m_schemesList->findText(currentScheme()));
@@ -196,8 +196,11 @@ void KShortcutSchemesEditor::importShortcutsScheme()
 
 void KShortcutSchemesEditor::saveAsDefaultsForScheme()
 {
-    foreach (KActionCollection *collection, m_dialog->actionCollections()) {
-        KShortcutSchemesHelper::exportActionCollection(collection, currentScheme());
+    if (KShortcutSchemesHelper::saveShortcutScheme(m_dialog->actionCollections(), currentScheme())) {
+        KMessageBox::information(this, i18n("Shortcut scheme successfully saved."));
+    } else {
+        // We'd need to return to return more than a bool, to show more details here.
+        KMessageBox::sorry(this, i18n("Error saving the shortcut scheme."));
     }
 }
 
