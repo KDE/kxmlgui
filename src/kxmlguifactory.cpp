@@ -384,7 +384,7 @@ void KXMLGUIFactoryPrivate::refreshActionProperties(KXMLGUIClient *client, const
                 QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence> >();
                 action->setShortcuts(shortcut);
                 action->setProperty("defaultShortcuts", QVariant::fromValue(shortcut));
-                qCDebug(DEBUG_KXMLGUI) << "scheme said" << action->shortcut().toString() << "for action" << action->objectName();
+                //qCDebug(DEBUG_KXMLGUI) << "scheme said" << action->shortcut().toString() << "for action" << action->objectName();
             } else {
                 action->setShortcuts(QList<QKeySequence>());
             }
