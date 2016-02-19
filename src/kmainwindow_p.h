@@ -81,7 +81,8 @@ public:
     ~KMWSessionManager();
 
 private Q_SLOTS:
-    bool saveState(QSessionManager &);
+    void saveState(QSessionManager &);
+    void commitData(QSessionManager &);
 };
 
 #endif

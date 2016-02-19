@@ -121,13 +121,15 @@ KMWSessionManager::KMWSessionManager()
 {
     connect(qApp, SIGNAL(saveStateRequest(QSessionManager&)),
             this, SLOT(saveState(QSessionManager&)));
+    connect(qApp, SIGNAL(commitDataRequest(QSessionManager&)),
+            this, SLOT(commitData(QSessionManager&)));
 }
 
 KMWSessionManager::~KMWSessionManager()
 {
 }
 
-bool KMWSessionManager::saveState(QSessionManager &sm)
+void KMWSessionManager::saveState(QSessionManager &sm)
 {
     KConfigGui::setSessionConfig(sm.sessionId(), sm.sessionKey());
 
@@ -158,8 +160,42 @@ bool KMWSessionManager::saveState(QSessionManager &sm)
         discard << localFilePath;
         sm.setDiscardCommand(discard);
     }
+}
 
-    return true;
+void KMWSessionManager::commitData(QSessionManager &sm)
+{
+    if (!sm.allowsInteraction()) {
+        return;
+    }
+
+    /*
+       Purpose of this exercise: invoke queryClose() without actually closing the
+       windows, because
+       - queryClose() may contain session management code, so it must be invoked
+       - actually closing windows may quit the application - cf.
+         QGuiApplication::quitOnLastWindowClosed()
+       - quitting the application and thus closing the session manager connection
+         violates the X11 XSMP protocol.
+         The exact requirement of XSMP that would be broken is,
+         in the description of the client's state machine:
+
+           save-yourself-done: (changing state is forbidden)
+
+         Closing the session manager connection causes a state change.
+         Worst of all, that is a real problem with ksmserver - it will not save
+         applications that quit on their own in state save-yourself-done.
+     */
+    foreach (KMainWindow *window, KMainWindow::memberList()) {
+        if (window->testAttribute(Qt::WA_WState_Hidden)) {
+            continue;
+        }
+        QCloseEvent e;
+        QApplication::sendEvent(window, &e);
+        if (!e.isAccepted()) {
+            sm.cancel();
+            return;
+        }
+    }
 }
 
 Q_GLOBAL_STATIC(KMWSessionManager, ksm)
@@ -180,7 +216,9 @@ KMainWindow::KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlag
 void KMainWindowPrivate::init(KMainWindow *_q)
 {
     q = _q;
-
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
+#endif
     q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, 0, q));
 
     q->setAttribute(Qt::WA_DeleteOnClose);
