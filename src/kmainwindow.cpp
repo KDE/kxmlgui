@@ -216,7 +216,7 @@ KMainWindow::KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlag
 void KMainWindowPrivate::init(KMainWindow *_q)
 {
     q = _q;
-#if QT_VERSION >= QT_VERSION_CHECK(5, 7, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
     QGuiApplication::setFallbackSessionManagementEnabled(false);
 #endif
     q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, 0, q));
