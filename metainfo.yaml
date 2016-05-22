@@ -11,3 +11,7 @@ libraries:
  - qmake: KXmlGui
    cmake: "KF5::XmlGui"
 cmakename: KF5XmlGui
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 3
