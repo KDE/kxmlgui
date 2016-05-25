@@ -69,6 +69,7 @@ private Q_SLOTS:
     void testToolButtonStyleXmlGui();
     void testToolBarPosition();
     void testXmlGuiSwitching();
+    void testKAuthorizedDisableToggleAction();
 
 Q_SIGNALS:
     void signalAppearanceChanged();
@@ -110,6 +111,10 @@ void tst_KToolBar::initTestCase()
     QVERIFY(testDataDir.absolutePath().contains(QStringLiteral("qttest")));
     testDataDir.removeRecursively();
     testDataDir.mkpath(QStringLiteral("."));
+
+    // setup action restriction so we can test whether this actually disables some functionality
+    KConfigGroup actionRestrictions(KSharedConfig::openConfig(), "KDE Action Restrictions");
+    actionRestrictions.writeEntry("action/options_show_toolbar", false);
 
     // copy a minimal icon theme to where KIconTheme will find it, in case oxygen-icons is not
     // installed
@@ -640,6 +645,16 @@ void tst_KToolBar::testXmlGuiSwitching()
         QCOMPARE(hiddenToolBar->isHidden(), false);
         QCOMPARE(secondHiddenToolBar->isHidden(), true);
         QVERIFY(!m_showWasCalled);
+    }
+}
+
+void tst_KToolBar::testKAuthorizedDisableToggleAction()
+{
+    TestXmlGuiWindow kmw(m_xml);
+    kmw.createGUI();
+
+    foreach (KToolBar *toolbar, kmw.toolBars()) {
+        QVERIFY(!toolbar->toggleViewAction()->isEnabled());
     }
 }
 
