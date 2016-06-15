@@ -179,7 +179,8 @@ public:
         menuAboutApp = 2,
         menuAboutKDE = 3,
         menuReportBug = 4,
-        menuSwitchLanguage = 5
+        menuSwitchLanguage = 5,
+        menuDonate = 6 //< @since 5.24
     };
 
     /**
@@ -228,6 +229,12 @@ public Q_SLOTS:
      * Opens the changing default application language dialog box.
      */
     void switchApplicationLanguage();
+
+    /**
+     * Opens the donate url.
+     * @since 5.24
+     */
+    void donate();
 
 private Q_SLOTS:
     /**

@@ -249,6 +249,7 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
         QAction *switchLanguageAction = d->helpMenu->action(KHelpMenu::menuSwitchLanguage);
         QAction *aboutAppAction = d->helpMenu->action(KHelpMenu::menuAboutApp);
         QAction *aboutKdeAction = d->helpMenu->action(KHelpMenu::menuAboutKDE);
+        QAction *donateAction = d->helpMenu->action(KHelpMenu::menuDonate);
 
         if (helpContentsAction) {
             actions->addAction(helpContentsAction->objectName(), helpContentsAction);
@@ -267,6 +268,9 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
         }
         if (aboutKdeAction) {
             actions->addAction(aboutKdeAction->objectName(), aboutKdeAction);
+        }
+        if (donateAction) {
+            actions->addAction(donateAction->objectName(), donateAction);
         }
     }
 

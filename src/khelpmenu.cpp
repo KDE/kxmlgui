@@ -65,6 +65,7 @@ public:
         mAboutApp = 0;
         mAboutKDE = 0;
         mBugReport = 0;
+        mDonateAction = 0;
         mHandBookAction = 0;
         mWhatsThisAction = 0;
         mReportBugAction = 0;
@@ -77,6 +78,7 @@ public:
         delete mAboutApp;
         delete mAboutKDE;
         delete mBugReport;
+        delete mDonateAction;
         delete mSwitchApplicationLanguage;
     }
 
@@ -86,6 +88,7 @@ public:
     QDialog *mAboutApp;
     KAboutKdeDialog *mAboutKDE;
     KBugReport *mBugReport;
+    QAction *mDonateAction;
     KSwitchLanguageDialog *mSwitchApplicationLanguage;
 
 // TODO evaluate if we use static_cast<QWidget*>(parent()) instead of mParent to win that bit of memory
@@ -144,6 +147,12 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
         mReportBugAction = KStandardAction::reportBug(q, SLOT(reportBug()), q);
     }
 
+    if (KAuthorized::authorizeKAction(QStringLiteral("help_donate")) && mAboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
+        mDonateAction = new QAction(i18n("&Donate"), q);
+        mDonateAction->setObjectName(QStringLiteral("help_donate"));
+        QObject::connect(mDonateAction, &QAction::triggered, q, &KHelpMenu::donate);
+    }
+
     if (KAuthorized::authorizeKAction(QStringLiteral("switch_application_language"))) {
         if (KLocalizedString::availableApplicationTranslations().count() > 1) {
             mSwitchApplicationLanguageAction = KStandardAction::create(KStandardAction::SwitchApplicationLanguage, q, SLOT(switchApplicationLanguage()), q);
@@ -186,6 +195,14 @@ QMenu *KHelpMenu::menu()
                 d->mMenu->addSeparator();
             }
             d->mMenu->addAction(d->mReportBugAction);
+            need_separator = true;
+        }
+
+        if (d->mDonateAction) {
+            if (need_separator) {
+                d->mMenu->addSeparator();
+            }
+            d->mMenu->addAction(d->mDonateAction);
             need_separator = true;
         }
 
@@ -238,6 +255,10 @@ QAction *KHelpMenu::action(MenuId id) const
 
     case menuAboutKDE:
         return d->mAboutKDEAction;
+        break;
+
+    case menuDonate:
+        return d->mDonateAction;
         break;
     }
 
@@ -329,6 +350,11 @@ void KHelpMenu::switchApplicationLanguage()
         connect(d->mSwitchApplicationLanguage, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
     }
     d->mSwitchApplicationLanguage->show();
+}
+
+void KHelpMenu::donate()
+{
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://www.kde.org/donate?app=%1").arg(d->mAboutData.componentName())));
 }
 
 void KHelpMenu::dialogFinished()
