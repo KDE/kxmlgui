@@ -640,17 +640,20 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
 
     QAction *action1 = new QAction(this);
     action1->setObjectName(QStringLiteral("action1"));
-    action1->setShortcuts(QKeySequence::listFromString(QStringLiteral("Ctrl+2")));
-    QList<QAction *> actionList;
-    actionList << action1;
+    client.actionCollection()->setDefaultShortcut(action1, QKeySequence(QStringLiteral("Ctrl+2")));
+    QAction *action2 = new QAction(this);
+    action2->setObjectName(QStringLiteral("action2"));
+    const QList<QAction *> actionList = { action1, action2 };
     client.plugActionList(QStringLiteral("view_groups_list"), actionList);
     QCOMPARE(QKeySequence::listToString(action1->shortcuts()), QString("Ctrl+2"));
 
+    const QStringList expectedActions = {
+        QStringLiteral("action1"),
+        QStringLiteral("action2"),
+        QStringLiteral("separator"),
+        QStringLiteral("view_add_to_new_group") };
     //debugActions(menu->actions());
-    checkActions(menu->actions(), QStringList()
-                 << QStringLiteral("action1")
-                 << QStringLiteral("separator")
-                 << QStringLiteral("view_add_to_new_group"));
+    checkActions(menu->actions(), expectedActions);
 
     qDebug() << "Now remove+add gui client";
 
@@ -668,10 +671,7 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
                  << QStringLiteral("view_add_to_new_group"));
     qDebug() << "Now plugging the actionlist again";
     client.plugActionList(QStringLiteral("view_groups_list"), actionList);
-    checkActions(menu->actions(), QStringList()
-                 << QStringLiteral("action1")
-                 << QStringLiteral("separator")
-                 << QStringLiteral("view_add_to_new_group"));
+    checkActions(menu->actions(), expectedActions);
     factory.removeClient(&client);
 }
 
