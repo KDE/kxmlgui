@@ -49,7 +49,6 @@ public:
     }
 
     void plug(QWidget *container, int index) const;
-    void unplug(QWidget *container) const;
 };
 
 typedef QMap< QString, ActionList > ActionListMap;
@@ -84,7 +83,7 @@ struct MergingIndex {
     // Merge or DefineGroup tag)
     QString clientName; // the name of the client that defined this index
 };
-typedef QList<MergingIndex> MergingIndexList;
+typedef QList<MergingIndex> MergingIndexList; /// #### TODO: use QVector !!!
 
 /*
  * Here we store detailed information about a container, its clients (client=a guiclient having actions
@@ -143,6 +142,7 @@ struct ContainerNode {
     }
     void removeChild(ContainerNode *child);
     void deleteChild(ContainerNode *child);
+    void removeActions(const QList<QAction *> &actions);
 
     MergingIndexList::iterator findIndex(const QString &name);
     ContainerNode *findContainer(const QString &_name, bool tag);
@@ -160,7 +160,7 @@ struct ContainerNode {
     void unplugActionList(BuildState &state);
     void unplugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt);
 
-    void adjustMergingIndices(int offset, const MergingIndexList::iterator &it);
+    void adjustMergingIndices(int offset, const MergingIndexList::iterator &it, const QString &currentClientName);
 
     bool destruct(QDomElement element, BuildState &state);
     void destructChildren(const QDomElement &element, BuildState &state);

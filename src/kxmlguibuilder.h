@@ -80,7 +80,9 @@ public:
 
     virtual QAction *createCustomElement(QWidget *parent, int index, const QDomElement &element);
 
-    virtual void removeCustomElement(QWidget *parent, QAction *action);
+    // KF6 TODO: REMOVE
+    /// @internal, @deprecated, do not use
+    virtual KXMLGUI_DEPRECATED void removeCustomElement(QWidget *parent, QAction *action);
 
     virtual void finalizeGUI(KXMLGUIClient *client);
 

@@ -513,19 +513,9 @@ void KXMLGUIFactory::resetContainer(const QString &containerName, bool useTagNam
     }
 
     ContainerNode *container = d->m_rootNode->findContainer(containerName, useTagName);
-
-    if (!container) {
-        return;
+    if (container && container->parent) {
+        container->parent->removeChild(container);
     }
-
-    ContainerNode *parent = container->parent;
-    if (!parent) {
-        return;
-    }
-
-    //  resetInternal( container );
-
-    parent->removeChild(container);
 }
 
 QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool tag)

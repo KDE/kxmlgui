@@ -26,6 +26,7 @@
 #include <QWidget>
 #include <QDebug>
 
+#include "debug.h"
 #include <assert.h>
 
 using namespace KXMLGUI;
@@ -43,15 +44,6 @@ void ActionList::plug(QWidget *container, int index) const
     Q_FOREACH (QAction *action, *this) {
         container->insertAction(before, action);
         // before = action; // BUG FIX: do not insert actions in reverse order.
-    }
-}
-
-void ActionList::unplug(QWidget *container) const
-{
-    Q_FOREACH (QAction *action, *this) {
-        if (container->actions().contains(action)) {
-            container->removeAction(action);
-        }
     }
 }
 
@@ -86,7 +78,7 @@ void ContainerNode::removeChild(ContainerNode *child)
 void ContainerNode::deleteChild(ContainerNode *child)
 {
     MergingIndexList::iterator mergingIt = findIndex(child->mergingName);
-    adjustMergingIndices(-1, mergingIt);
+    adjustMergingIndices(-1, mergingIt, QString());
     delete child;
 }
 
@@ -220,20 +212,14 @@ void ContainerNode::plugActionList(BuildState &state, const MergingIndexList::it
 {
     static const QString &tagActionList = QLatin1String("actionlist");
 
-    MergingIndex mergingIdx = *mergingIdxIt;
-
-    QString k(mergingIdx.mergingName);
-
-    if (k.indexOf(tagActionList) == -1) {
-        return;
-    }
-
-    k = k.mid(tagActionList.length());
-
+    const MergingIndex &mergingIdx = *mergingIdxIt;
     if (mergingIdx.clientName != state.clientName) {
         return;
     }
-
+    if (!mergingIdx.mergingName.startsWith(tagActionList)) {
+        return;
+    }
+    const QString k = mergingIdx.mergingName.mid(tagActionList.length());
     if (k != state.actionListName) {
         return;
     }
@@ -246,7 +232,7 @@ void ContainerNode::plugActionList(BuildState &state, const MergingIndexList::it
 
     state.actionList.plug(container, mergingIdx.value);
 
-    adjustMergingIndices(state.actionList.count(), mergingIdxIt);
+    adjustMergingIndices(state.actionList.count(), mergingIdxIt, QString());
 }
 
 void ContainerNode::unplugActionList(BuildState &state)
@@ -293,21 +279,22 @@ void ContainerNode::unplugActionList(BuildState &state, const MergingIndexList::
         return;
     }
 
-    lIt.value().unplug(container);
-
-    adjustMergingIndices(-int(lIt.value().count()), mergingIdxIt);
+    removeActions(lIt.value());
 
     client->actionLists.erase(lIt);
 }
 
 void ContainerNode::adjustMergingIndices(int offset,
-        const MergingIndexList::iterator &it)
+                                         const MergingIndexList::iterator &it,
+                                         const QString &currentClientName)
 {
     MergingIndexList::iterator mergingIt = it;
     MergingIndexList::iterator mergingEnd = mergingIndices.end();
 
     for (; mergingIt != mergingEnd; ++mergingIt) {
-        (*mergingIt).value += offset;
+        if ((*mergingIt).clientName != currentClientName) {
+            (*mergingIt).value += offset;
+        }
     }
 
     index += offset;
@@ -399,55 +386,41 @@ void ContainerNode::unplugActions(BuildState &state)
     }
 }
 
+void ContainerNode::removeActions(const QList<QAction *> &actions)
+{
+    for (QAction *action : actions) {
+        const int pos = container->actions().indexOf(action);
+        if (pos != -1) {
+            container->removeAction(action);
+            for (MergingIndex &idx : mergingIndices) {
+                if (idx.value > pos) {
+                    --idx.value;
+                }
+            }
+            --index;
+        }
+    }
+}
+
 void ContainerNode::unplugClient(ContainerClient *client)
 {
     assert(builder);
-
-    // now quickly remove all custom elements (i.e. separators) and unplug all actions
-
-    QList<QAction *>::ConstIterator custIt = client->customElements.constBegin();
-    QList<QAction *>::ConstIterator custEnd = client->customElements.constEnd();
-    for (; custIt != custEnd; ++custIt) {
-        builder->removeCustomElement(container, *custIt);
-    }
 
     KToolBar *bar = qobject_cast<KToolBar *>(container);
     if (bar) {
         bar->removeXMLGUIClient(client->client);
     }
 
-    client->actions.unplug(container);
-
-    // now adjust all merging indices
-
-    MergingIndexList::iterator mergingIt = findIndex(client->mergingName);
-
-    adjustMergingIndices(- int(client->actions.count()
-                               + client->customElements.count()),
-                         mergingIt);
+    // now quickly remove all custom elements (i.e. separators) and unplug all actions
+    removeActions(client->customElements);
+    removeActions(client->actions);
 
     // unplug all actionslists
 
     ActionListMap::ConstIterator alIt = client->actionLists.constBegin();
     ActionListMap::ConstIterator alEnd = client->actionLists.constEnd();
     for (; alIt != alEnd; ++alIt) {
-        alIt.value().unplug(container);
-
-        // construct the merging index key (i.e. like named merging) , find the
-        // corresponding merging index and adjust all indices
-        QString mergingKey = alIt.key();
-        mergingKey.prepend(QStringLiteral("actionlist"));
-
-        MergingIndexList::iterator mIt = findIndex(mergingKey);
-        if (mIt == mergingIndices.end()) {
-            continue;
-        }
-
-        adjustMergingIndices(-int(alIt.value().count()), mIt);
-
-        // remove the actionlists' merging index
-        // ### still needed? we clean up below anyway?
-        mergingIndices.erase(mIt);
+        removeActions(alIt.value());
     }
 }
 
@@ -508,10 +481,13 @@ int BuildHelper::calcMergingIndex(const QDomElement &element, MergingIndexList::
     int idx;
     if (haveGroup) {
         idx = parentNode->calcMergingIndex(group, it, m_state, ignoreDefaultMergingIndex);
-    } else if (m_state.currentClientMergingIt == parentNode->mergingIndices.end()) {
-        idx = parentNode->index;
     } else {
-        idx = (*m_state.currentClientMergingIt).value;
+        it = m_state.currentClientMergingIt;
+        if (it == parentNode->mergingIndices.end()) {
+            idx = parentNode->index;
+        } else {
+            idx = (*it).value;
+        }
     }
 
     return idx;
@@ -590,10 +566,9 @@ void BuildHelper::processActionOrCustomElement(const QDomElement &e, bool isActi
         guiElementCreated = processCustomElement(e, idx);
     }
 
-    if (guiElementCreated)
+    if (guiElementCreated) {
         // adjust any following merging indices and the current running index for the container
-    {
-        parentNode->adjustMergingIndices(1, it);
+        parentNode->adjustMergingIndices(1, it, m_state.clientName);
     }
 }
 
@@ -604,10 +579,11 @@ bool BuildHelper::processActionElement(const QDomElement &e, int idx)
     // look up the action and plug it in
     QAction *action = m_state.guiClient->action(e);
 
-    //qCDebug(DEBUG_KXMLGUI) << "BuildHelper::processActionElement " << e.attribute( "name" ) << " -> " << action << " (in " << m_state.guiClient->actionCollection() << ")";
     if (!action) {
         return false;
     }
+
+    //qCDebug(DEBUG_KXMLGUI) << e.attribute(QStringLiteral("name")) << "->" << action << "inserting at idx=" << idx;
 
     QAction *before = nullptr;
     if (idx >= 0 && idx < parentNode->container->actions().count()) {
@@ -737,7 +713,8 @@ void BuildHelper::processMergeElement(const QString &tag, const QString &name, c
         ignoreDefaultMergingIndex = true;
     }
 
-    // re-calculate the running default and client merging indices.
+    // re-calculate the running default and client merging indices
+    // (especially important in case the QList data got reallocated due to growing!)
     m_state.currentDefaultMergingIt = parentNode->findIndex(defaultMergingName);
     parentNode->calcMergingIndex(QString(), m_state.currentClientMergingIt,
                                  m_state, ignoreDefaultMergingIndex);
@@ -767,7 +744,7 @@ void BuildHelper::processContainerElement(const QDomElement &e, const QString &t
             return;
         }
 
-        parentNode->adjustMergingIndices(1, it);
+        parentNode->adjustMergingIndices(1, it, m_state.clientName);
 
         // Check that the container widget is not already in parentNode.
         Q_ASSERT(std::find_if(parentNode->children.constBegin(), parentNode->children.constEnd(),

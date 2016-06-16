@@ -292,19 +292,19 @@ static QStringList collectMenuNames(KXMLGUIFactory &factory)
     return containerNames;
 }
 
-#if 0
-static void debugActions(const QList<QAction *> &actions)
+void debugActions(const QList<QAction *> &actions)
 {
     Q_FOREACH (QAction *action, actions) {
         qDebug() << (action->isSeparator() ? QString("separator") : action->objectName());
     }
 }
-#endif
 
 static void checkActions(const QList<QAction *> &actions, const QStringList &expectedActions)
 {
     for (int i = 0; i < expectedActions.count(); ++i) {
-        QAction *action = actions[i];
+        if (i >= actions.count())
+            break;
+        QAction *action = actions.at(i);
         if (action->isSeparator()) {
             QCOMPARE(QString("separator"), expectedActions[i]);
         } else {
@@ -322,12 +322,14 @@ void KXmlGui_UnitTest::testPartMerging()
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"go\"><text>&amp;Go</text>\n"
-        "  <!-- go_up, go_back, go_forward, go_home: coming from ui_standards.rc -->\n"
+        "  <!-- go_up, go_back, go_forward, go_home, separator: coming from ui_standards.rc -->\n"
+        "  <DefineGroup name=\"before_merge\"/>\n"
         "  <Merge/>\n"
         "  <Action name=\"host_after_merge\"/>\n"
         "  <Action name=\"host_after_merge_2\"/>\n"
         "  <Separator/>\n"
         "  <DefineGroup name=\"new_merge\"/>\n"
+        "  <Title>Section title</Title>\n"
         "  <Action name=\"last_from_host\"/>\n"
         " </Menu>\n"
         " <Menu name=\"file\"><text>&amp;File</text>\n"
@@ -346,6 +348,8 @@ void KXmlGui_UnitTest::testPartMerging()
     KXMLGUIFactory factory(&builder);
     factory.addClient(&hostClient);
 
+    const QString hostDomDoc = hostClient.domDocument().toString();
+
     QWidget *goMenuW = factory.container(QStringLiteral("go"), &hostClient);
     QVERIFY(goMenuW);
     QMenu *goMenu = qobject_cast<QMenu *>(goMenuW);
@@ -362,6 +366,7 @@ void KXmlGui_UnitTest::testPartMerging()
                  << QStringLiteral("host_after_merge")
                  << QStringLiteral("host_after_merge_2")
                  << QStringLiteral("separator")
+                 << QStringLiteral("separator") // <Title> separator
                  << QStringLiteral("last_from_host"));
     checkActions(fileMenu->actions(), QStringList()
                  << QStringLiteral("file_new")
@@ -376,12 +381,13 @@ void KXmlGui_UnitTest::testPartMerging()
         "<kpartgui version=\"1\" name=\"part\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"go\"><text>&amp;Go</text>\n"
-        "  <Action name=\"go_previous\"/>\n"
-        "  <Action name=\"go_next\"/>\n"
+        "  <Action name=\"go_previous\" group=\"before_merge\"/>\n"
+        "  <Action name=\"go_next\" group=\"before_merge\"/>\n"
         "  <Separator/>\n"
         "  <Action name=\"first_page\"/>\n"
         "  <Action name=\"last_page\"/>\n"
-        "  <Separator/>\n"
+        "  <Title>Part Section</Title>\n"
+        "  <ActionList name=\"action_list\"/>\n"
         "  <Action name=\"action_in_merge_group\" group=\"new_merge\"/>\n"
         "  <Action name=\"undefined_group\" group=\"no_such_merge\"/>\n"
         "  <Action name=\"last_from_part\"/>\n"
@@ -396,42 +402,54 @@ void KXmlGui_UnitTest::testPartMerging()
     TestGuiClient partClient(partXml);
     partClient.createActions(QStringList() << QStringLiteral("go_previous") << QStringLiteral("go_next") << QStringLiteral("first_page") <<
                              QStringLiteral("last_page") << QStringLiteral("last_from_part") << QStringLiteral("action_in_merge_group") << QStringLiteral("undefined_group") <<
-                             QStringLiteral("action_in_placed_merge") << QStringLiteral("other_file_action"));
-    factory.addClient(&partClient);
+                             QStringLiteral("action_in_placed_merge") << QStringLiteral("other_file_action") <<
+                             QStringLiteral("action1") << QStringLiteral("action2"));
+    const QList<QAction *> actionList = { partClient.actionCollection()->action(QStringLiteral("action1")),
+                                          partClient.actionCollection()->action(QStringLiteral("action2")) };
 
-    //debugActions(goMenu->actions());
-    checkActions(goMenu->actions(), QStringList()
-                 << QStringLiteral("go_up")
-                 << QStringLiteral("go_back")
-                 << QStringLiteral("go_forward")
-                 << QStringLiteral("go_home")
-                 << QStringLiteral("separator")
-                 // Contents of the <Merge>:
-                 << QStringLiteral("go_previous")
-                 << QStringLiteral("go_next")
-                 << QStringLiteral("separator")
-                 << QStringLiteral("first_page")
-                 << QStringLiteral("last_page")
-                 << QStringLiteral("separator")
-                 << QStringLiteral("undefined_group")
-                 << QStringLiteral("last_from_part")
-                 // End of <Merge>
-                 << QStringLiteral("host_after_merge")
-                 << QStringLiteral("host_after_merge_2")
-                 << QStringLiteral("separator")
-                 // Contents of <DefineGroup>
-                 << QStringLiteral("action_in_merge_group")
-                 // End of <DefineGroup>
-                 << QStringLiteral("last_from_host")
+    for (int i = 0 ; i < 5 ; ++i) {
+        //qDebug() << "addClient, iteration" << i;
+        factory.addClient(&partClient);
+        partClient.plugActionList(QStringLiteral("action_list"), actionList);
+
+        //debugActions(goMenu->actions());
+        checkActions(goMenu->actions(), QStringList()
+                << QStringLiteral("go_up")
+                << QStringLiteral("go_back")
+                << QStringLiteral("go_forward")
+                << QStringLiteral("go_home")
+                << QStringLiteral("separator")
+                << QStringLiteral("go_previous")
+                << QStringLiteral("go_next")
+                // Contents of the <Merge>:
+                << QStringLiteral("separator")
+                << QStringLiteral("first_page")
+                << QStringLiteral("last_page")
+                << QStringLiteral("separator") // <title> in the part
+                << QStringLiteral("action1")
+                << QStringLiteral("action2")
+                << QStringLiteral("undefined_group")
+                << QStringLiteral("last_from_part")
+                // End of <Merge>
+                << QStringLiteral("host_after_merge")
+                << QStringLiteral("host_after_merge_2")
+                << QStringLiteral("separator")
+                // Contents of <DefineGroup>
+                << QStringLiteral("action_in_merge_group")
+                // End of <DefineGroup>
+                << QStringLiteral("separator") // <title> is a separator qaction with text
+                << QStringLiteral("last_from_host")
                 );
-    checkActions(fileMenu->actions(), QStringList()
-                 << QStringLiteral("file_new")
-                 << QStringLiteral("action_in_placed_merge")
-                 << QStringLiteral("file_open")
-                 << QStringLiteral("separator")
-                 << QStringLiteral("file_quit")
-                 << QStringLiteral("other_file_action"));
-    factory.removeClient(&partClient);
+        checkActions(fileMenu->actions(), QStringList()
+                << QStringLiteral("file_new")
+                << QStringLiteral("action_in_placed_merge")
+                << QStringLiteral("file_open")
+                << QStringLiteral("separator")
+                << QStringLiteral("file_quit")
+                << QStringLiteral("other_file_action"));
+        factory.removeClient(&partClient);
+        QCOMPARE(hostClient.domDocument().toString(), hostDomDoc);
+    }
     factory.removeClient(&hostClient);
 }
 
@@ -614,7 +632,8 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
         " <Menu name=\"groups\"><text>Add to Group</text>\n"
         "  <ActionList name=\"view_groups_list\"/>\n"
         "  <Separator />"
-        "   <Action name=\"view_add_to_new_group\" />\n"
+        "  <Action name=\"view_add_to_new_group\" />\n"
+        "  <ActionList name=\"second_list\"/>\n"
         " </Menu>\n"
         "</MenuBar>\n"
         "</gui>";
@@ -647,12 +666,20 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
     client.plugActionList(QStringLiteral("view_groups_list"), actionList);
     QCOMPARE(QKeySequence::listToString(action1->shortcuts()), QString("Ctrl+2"));
 
-    const QStringList expectedActions = {
+    const QStringList expectedActionsOneList = {
         QStringLiteral("action1"),
         QStringLiteral("action2"),
         QStringLiteral("separator"),
         QStringLiteral("view_add_to_new_group") };
     //debugActions(menu->actions());
+    checkActions(menu->actions(), expectedActionsOneList);
+
+    QAction *action3 = new QAction(this);
+    action3->setObjectName(QStringLiteral("action3"));
+    const QList<QAction *> secondActionList = { action3 };
+    client.plugActionList(QStringLiteral("second_list"), secondActionList);
+    QStringList expectedActions = expectedActionsOneList;
+    expectedActions << QStringLiteral("action3");
     checkActions(menu->actions(), expectedActions);
 
     qDebug() << "Now remove+add gui client";
@@ -670,6 +697,7 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
                  << QStringLiteral("separator")   // yep, it removed the actionlist thing...
                  << QStringLiteral("view_add_to_new_group"));
     qDebug() << "Now plugging the actionlist again";
+    client.plugActionList(QStringLiteral("second_list"), secondActionList);
     client.plugActionList(QStringLiteral("view_groups_list"), actionList);
     checkActions(menu->actions(), expectedActions);
     factory.removeClient(&client);
