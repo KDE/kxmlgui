@@ -141,11 +141,9 @@ struct ContainerNode {
         children.clear();
     }
     void removeChild(ContainerNode *child);
-    // Removes the child referred to by childIterator.next()
-    void removeChild(QMutableListIterator<ContainerNode *> &childIterator);
+    void deleteChild(ContainerNode *child);
 
-    MergingIndexList::Iterator findIndex(const QString &name);
-    ContainerNode *findContainerNode(QWidget *container);
+    MergingIndexList::iterator findIndex(const QString &name);
     ContainerNode *findContainer(const QString &_name, bool tag);
     ContainerNode *findContainer(const QString &name, const QString &tagName,
                                  const QList<QWidget *> *excludeList,
@@ -153,15 +151,15 @@ struct ContainerNode {
 
     ContainerClient *findChildContainerClient(KXMLGUIClient *currentGUIClient,
             const QString &groupName,
-            const MergingIndexList::Iterator &mergingIdx);
+            const MergingIndexList::iterator &mergingIdx);
 
     void plugActionList(BuildState &state);
-    void plugActionList(BuildState &state, const MergingIndexList::Iterator &mergingIdxIt);
+    void plugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt);
 
     void unplugActionList(BuildState &state);
-    void unplugActionList(BuildState &state, const MergingIndexList::Iterator &mergingIdxIt);
+    void unplugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt);
 
-    void adjustMergingIndices(int offset, const MergingIndexList::Iterator &it);
+    void adjustMergingIndices(int offset, const MergingIndexList::iterator &it);
 
     bool destruct(QDomElement element, BuildState &state);
     void destructChildren(const QDomElement &element, BuildState &state);
@@ -173,7 +171,7 @@ struct ContainerNode {
     void reset();
 
     int calcMergingIndex(const QString &mergingName,
-                         MergingIndexList::Iterator &it,
+                         MergingIndexList::iterator &it,
                          BuildState &state,
                          bool ignoreDefaultMergingIndex);
 };
@@ -205,7 +203,7 @@ private:
     QWidget *createContainer(QWidget *parent, int index, const QDomElement &element,
                              QAction *&containerAction, KXMLGUIBuilder **builder);
 
-    int calcMergingIndex(const QDomElement &element, MergingIndexList::Iterator &it, QString &group);
+    int calcMergingIndex(const QDomElement &element, MergingIndexList::iterator &it, QString &group);
 
     QStringList customTags;
     QStringList containerTags;
@@ -233,8 +231,8 @@ struct BuildState {
 
     KXMLGUIClient *guiClient;
 
-    MergingIndexList::Iterator currentDefaultMergingIt;
-    MergingIndexList::Iterator currentClientMergingIt;
+    MergingIndexList::iterator currentDefaultMergingIt;
+    MergingIndexList::iterator currentClientMergingIt;
 
     KXMLGUIBuilder *builder;
     QStringList builderCustomTags;
