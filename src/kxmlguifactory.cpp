@@ -147,7 +147,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
             warn = true;
         }
 
-        if (warn) {
+        if (warn && !xml_file.isEmpty()) {
             qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file << "-- please use ${KXMLGUI_INSTALL_DIR} to install these files instead.";
         }
     }
