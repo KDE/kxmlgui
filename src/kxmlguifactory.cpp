@@ -59,8 +59,6 @@ public:
     KXMLGUIFactoryPrivate()
     {
         m_rootNode = new ContainerNode(0L, QString(), QString());
-        m_defaultMergingName = QStringLiteral("<default>");
-        tagActionList = QStringLiteral("actionlist");
         attrName = QStringLiteral("name");
     }
     ~KXMLGUIFactoryPrivate()
@@ -98,8 +96,6 @@ public:
 
     ContainerNode *m_rootNode;
 
-    QString m_defaultMergingName;
-
     /*
      * Contains the container which is searched for in ::container .
      */
@@ -109,8 +105,6 @@ public:
      * List of all clients
      */
     QList<KXMLGUIClient *> m_clients;
-
-    QString tagActionList;
 
     QString attrName;
 
@@ -188,26 +182,6 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
     file.close();
     return true;
 }
-
-/**
- * Removes all QDomComment objects from the specified node and all its children.
- */
-/*
-static void removeDOMComments(QDomNode &node)
-{
-    QDomNode n = node.firstChild();
-    while (!n.isNull()) {
-        if (n.nodeType() == QDomNode::CommentNode) {
-            QDomNode tmp = n;
-            n = n.nextSibling();
-            node.removeChild(tmp);
-        } else {
-            QDomNode tmp = n;
-            n = n.nextSibling();
-            removeDOMComments(tmp);
-        }
-    }
-}*/
 
 KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
     : QObject(parent), d(new KXMLGUIFactoryPrivate)
@@ -297,9 +271,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
     client->setFactory(this);
 
     // call the finalizeGUI method, to fix up the positions of toolbars for example.
-    // ### FIXME : obey client builder
-    // --- Well, toolbars have a bool "positioned", so it doesn't really matter,
-    // if we call positionYourself on all of them each time. (David)
+    // Note: the client argument is ignored
     d->builder->finalizeGUI(d->guiClient);
 
     // reset some variables, for safety

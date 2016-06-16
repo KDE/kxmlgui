@@ -32,7 +32,7 @@ using namespace KXMLGUI;
 
 void ActionList::plug(QWidget *container, int index) const
 {
-    QAction *before = 0L; // Insert after end of widget's current actions (default).
+    QAction *before = nullptr; // Insert after end of widget's current actions (default).
 
     if ((index < 0) || (index > container->actions().count())) {
         qWarning() << "Index " << index << " is not within range (0 - " << container->actions().count();
@@ -131,7 +131,7 @@ ContainerNode *ContainerNode::findContainer(const QString &name, const QString &
         const QList<QWidget *> *excludeList,
         KXMLGUIClient * /*currClient*/)
 {
-    ContainerNode *res = 0L;
+    ContainerNode *res = nullptr;
     ContainerNodeList::ConstIterator nIt = children.constBegin();
 
     if (!name.isEmpty()) {
@@ -458,7 +458,7 @@ void ContainerNode::reset()
     }
 
     if (client) {
-        client->setFactory(0L);
+        client->setFactory(nullptr);
     }
 }
 
@@ -467,19 +467,11 @@ int ContainerNode::calcMergingIndex(const QString &mergingName,
                                     BuildState &state,
                                     bool ignoreDefaultMergingIndex)
 {
-    MergingIndexList::iterator mergingIt;
+    const MergingIndexList::iterator mergingIt = findIndex(mergingName.isEmpty() ? state.clientName : mergingName);
+    const MergingIndexList::iterator mergingEnd = mergingIndices.end();
 
-    if (mergingName.isEmpty()) {
-        mergingIt = findIndex(state.clientName);
-    } else {
-        mergingIt = findIndex(mergingName);
-    }
-
-    MergingIndexList::iterator mergingEnd = mergingIndices.end();
-    it = mergingEnd;
-
-    if ((mergingIt == mergingEnd && state.currentDefaultMergingIt == mergingEnd) ||
-            ignoreDefaultMergingIndex) {
+    if (ignoreDefaultMergingIndex || (mergingIt == mergingEnd && state.currentDefaultMergingIt == mergingEnd)) {
+        it = mergingEnd;
         return index;
     }
 
@@ -617,9 +609,9 @@ bool BuildHelper::processActionElement(const QDomElement &e, int idx)
         return false;
     }
 
-    QAction *before = 0L;
+    QAction *before = nullptr;
     if (idx >= 0 && idx < parentNode->container->actions().count()) {
-        before = parentNode->container->actions()[idx];
+        before = parentNode->container->actions().at(idx);
     }
 
     parentNode->container->insertAction(before, action);
@@ -709,9 +701,8 @@ void BuildHelper::processMergeElement(const QString &tag, const QString &name, c
 
     if (tag == tagDefineGroup) {
         mergingName.prepend(attrGroup);    //avoid possible name clashes by prepending
-    }
-    // "group" to group definitions
-    else if (tag == tagActionList) {
+                                           // "group" to group definitions
+    } else if (tag == tagActionList) {
         mergingName.prepend(tagActionList);
     }
 
@@ -735,15 +726,14 @@ void BuildHelper::processMergeElement(const QString &tag, const QString &name, c
     newIdx.mergingName = mergingName;
     newIdx.clientName = m_state.clientName;
 
-    // if that merging index is "inside" another one, then append it right after the "parent" .
+    // if that merging index is "inside" another one, then append it right after the "parent".
     if (mIt != parentNode->mergingIndices.end()) {
         parentNode->mergingIndices.insert(++mIt, newIdx);
     } else {
         parentNode->mergingIndices.append(newIdx);
     }
 
-    if (mergingName == defaultMergingName)
-    {
+    if (mergingName == defaultMergingName) {
         ignoreDefaultMergingIndex = true;
     }
 
@@ -826,7 +816,7 @@ QWidget *BuildHelper::createContainer(QWidget *parent, int index,
                                       const QDomElement &element, QAction *&containerAction,
                                       KXMLGUIBuilder **builder)
 {
-    QWidget *res = 0L;
+    QWidget *res = nullptr;
 
     if (m_state.clientBuilder) {
         res = m_state.clientBuilder->createContainer(parent, index, element, containerAction);

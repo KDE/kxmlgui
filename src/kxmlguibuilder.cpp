@@ -400,20 +400,9 @@ void KXMLGUIBuilder::setBuilderClient(KXMLGUIClient *client)
 void KXMLGUIBuilder::finalizeGUI(KXMLGUIClient *)
 {
     KXmlGuiWindow *window = qobject_cast<KXmlGuiWindow *>(d->m_widget);
-    if (!window) {
-        return;
+    if (window) {
+        window->finalizeGUI(false);
     }
-#if 0
-    KToolBar *toolbar = 0;
-    QListIterator<KToolBar> it(((KMainWindow *)d->m_widget)->toolBarIterator());
-    while ((toolbar = it.current())) {
-        //qCDebug(DEBUG_KXMLGUI) << "KXMLGUIBuilder::finalizeGUI toolbar=" << (void*)toolbar;
-        ++it;
-        toolbar->positionYourself();
-    }
-#else
-    window->finalizeGUI(false);
-#endif
 }
 
 void KXMLGUIBuilder::virtual_hook(int, void *)
