@@ -24,6 +24,7 @@
 #include <QtXml/QDomElement>
 #include <QStack>
 #include <QAction>
+#include <QDebug>
 
 class QWidget;
 class KXMLGUIClient;
@@ -174,6 +175,8 @@ struct ContainerNode {
                          MergingIndexList::iterator &it,
                          BuildState &state,
                          bool ignoreDefaultMergingIndex);
+
+    void dump(int offset = 0);
 };
 
 typedef QList<ContainerNode *> ContainerNodeList;
@@ -246,6 +249,8 @@ struct BuildState {
 typedef QStack<BuildState> BuildStateStack;
 
 }
+
+QDebug operator<<(QDebug stream, const KXMLGUI::MergingIndex &mi);
 
 #endif
 

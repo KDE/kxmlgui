@@ -492,6 +492,16 @@ int ContainerNode::calcMergingIndex(const QString &mergingName,
     return (*it).value;
 }
 
+void ContainerNode::dump(int offset)
+{
+    QString indent; indent.fill(QLatin1Char(' '), offset);
+    qDebug() << qPrintable(indent) << name << tagName << groupName << mergingName << mergingIndices;
+    Q_FOREACH (ContainerNode *child, children) {
+        child->dump(offset + 2);
+    }
+}
+
+// TODO: return a struct with 3 members rather than 1 ret val + 2 out params
 int BuildHelper::calcMergingIndex(const QDomElement &element, MergingIndexList::iterator &it, QString &group)
 {
     const QLatin1String attrGroup("group");
@@ -853,3 +863,8 @@ void BuildState::reset()
     currentDefaultMergingIt = currentClientMergingIt = MergingIndexList::iterator();
 }
 
+QDebug operator<<(QDebug stream, const MergingIndex &mi) {
+    QDebugStateSaver saver(stream);
+    stream.nospace() << "clientName=" << mi.clientName << " mergingName=" << mi.mergingName << " value=" << mi.value;
+    return stream;
+}
