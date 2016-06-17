@@ -83,7 +83,7 @@ struct MergingIndex {
     // Merge or DefineGroup tag)
     QString clientName; // the name of the client that defined this index
 };
-typedef QList<MergingIndex> MergingIndexList; /// #### TODO: use QVector !!!
+typedef QVector<MergingIndex> MergingIndexList;
 
 /*
  * Here we store detailed information about a container, its clients (client=a guiclient having actions

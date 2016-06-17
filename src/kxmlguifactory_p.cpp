@@ -307,7 +307,7 @@ bool ContainerNode::destruct(QDomElement element, BuildState &state)   //krazy:e
     unplugActions(state);
 
     // remove all merging indices the client defined
-    QMutableListIterator<MergingIndex> cmIt = mergingIndices;
+    QMutableVectorIterator<MergingIndex> cmIt = mergingIndices;
     while (cmIt.hasNext())
         if (cmIt.next().clientName == state.clientName) {
             cmIt.remove();
