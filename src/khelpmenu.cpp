@@ -78,7 +78,6 @@ public:
         delete mAboutApp;
         delete mAboutKDE;
         delete mBugReport;
-        delete mDonateAction;
         delete mSwitchApplicationLanguage;
     }
 
@@ -147,7 +146,8 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
         mReportBugAction = KStandardAction::reportBug(q, SLOT(reportBug()), q);
     }
 
-    if (KAuthorized::authorizeKAction(QStringLiteral("help_donate")) && mAboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
+    if (KAuthorized::authorizeKAction(QStringLiteral("help_donate"))
+        && mAboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
         mDonateAction = new QAction(i18n("&Donate"), q);
         mDonateAction->setObjectName(QStringLiteral("help_donate"));
         QObject::connect(mDonateAction, &QAction::triggered, q, &KHelpMenu::donate);
