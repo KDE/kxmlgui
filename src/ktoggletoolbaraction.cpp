@@ -31,6 +31,8 @@
 #include <QtCore/QEvent>
 #include <QtCore/QPointer>
 
+#include <KAuthorized>
+
 #include <klocalizedstring.h>
 
 #include "kmainwindow.h"
@@ -39,9 +41,12 @@
 class KToggleToolBarAction::Private
 {
 public:
-    Private()
+    Private(KToggleToolBarAction *q)
         : toolBarName(0), toolBar(0), beingToggled(false)
     {
+        const bool authorized = KAuthorized::authorizeKAction(QStringLiteral("options_show_toolbar"));
+        q->setEnabled(authorized);
+        q->setVisible(authorized);
     }
 
     QByteArray toolBarName;
@@ -51,14 +56,14 @@ public:
 
 KToggleToolBarAction::KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent)
     : KToggleAction(text, parent),
-      d(new Private)
+      d(new Private(this))
 {
     d->toolBarName = toolBarName;
 }
 
 KToggleToolBarAction::KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent)
     : KToggleAction(text, parent),
-      d(new Private)
+      d(new Private(this))
 {
     d->toolBar = toolBar;
     d->toolBar->installEventFilter(this);
