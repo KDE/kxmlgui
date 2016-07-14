@@ -126,7 +126,8 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
                           "<a href=\"%2\">%2</a>."
                           "<br /><br />Thank you very much in advance for your support.</html>",
                           QStringLiteral("http://ev.kde.org/"),
-                          QStringLiteral("http://www.kde.org/community/donations/")) + QLatin1String("<br /><br />")); // FIXME: ugly <br /> at the end...
+                          QStringLiteral("http://www.kde.org/community/donations/")));
+    support->setMinimumSize(support->sizeHint());
 
     QTabWidget *tabWidget = new QTabWidget;
     tabWidget->setUsesScrollButtons(false);
