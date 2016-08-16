@@ -148,9 +148,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_donate"))
         && mAboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
-        mDonateAction = new QAction(i18n("&Donate"), q);
-        mDonateAction->setObjectName(QStringLiteral("help_donate"));
-        QObject::connect(mDonateAction, &QAction::triggered, q, &KHelpMenu::donate);
+        mDonateAction = KStandardAction::donate(q, &KHelpMenu::donate, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("switch_application_language"))) {
