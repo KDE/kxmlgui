@@ -12,8 +12,8 @@ description for example for integrating actions from plugins.
 ## Kiosk
 
 KXMLGui makes use of the Kiosk authorization functionality of KConfig (see the
-KAuthorized namespace in that framework).  Notably, KAction instances added to a
-KActionCollection are disabled if KAuthorized::authorizeKAction() reports that
+KAuthorized namespace in that framework).  Notably, QAction instances added to a
+KActionCollection are disabled if KAuthorized::authorizeAction() reports that
 they are not authorized.  The items on the standard help menu (KHelpMenu) can
 likewise be disabled based on Kiosk settings, and toolbar editing can be
 restricted.

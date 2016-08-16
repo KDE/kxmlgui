@@ -268,7 +268,7 @@ void KToolBar::Private::init(bool readConfig, bool _isMainToolBar)
         q->setMovable(!KToolBar::toolBarsLocked());
     }
 
-    q->toggleViewAction()->setEnabled(KAuthorized::authorizeKAction(QStringLiteral("options_show_toolbar")));
+    q->toggleViewAction()->setEnabled(KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar")));
 
     connect(q, SIGNAL(movableChanged(bool)),
             q, SLOT(slotMovableChanged(bool)));

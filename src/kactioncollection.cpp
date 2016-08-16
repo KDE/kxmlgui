@@ -296,7 +296,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
         return action;
     }
 
-    if (!KAuthorized::authorizeKAction(indexName)) {
+    if (!KAuthorized::authorizeAction(indexName)) {
         // Disable this action
         action->setEnabled(false);
         action->setVisible(false);

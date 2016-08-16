@@ -164,7 +164,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
 
         QString name = element.attribute(d->attrName);
 
-        if (!KAuthorized::authorizeKAction(name)) {
+        if (!KAuthorized::authorizeAction(name)) {
             return 0;
         }
 
