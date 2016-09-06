@@ -1,0 +1,1355 @@
+# translation of kdelibs4.po to Thai
+# Copyright (C) 2003,2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003,2004, 2005.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2005, 2008, 2010.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2006, 2007.
+# Narachai Sakorn <narachai@gmail.com>, 2008.
+# Phuwanat Sakornsakolpat <narachai@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-08-18 07:19+0000\n"
+"PO-Revision-Date: 2010-12-31 22:47+0700\n"
+"Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:290
+#, kde-format
+msgid "About %1"
+msgstr "เกี่ยวกับ %1"
+
+#: kaboutapplicationdialog.cpp:98
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">%1</font></html>"
+msgstr ""
+"<html><font size=\"5\">KDE - สู่เสรี !</font><br /><b>แพลตฟอร์มรุ่น %1</b></html>"
+
+#: kaboutapplicationdialog.cpp:136
+#, kde-format
+msgid "License: %1"
+msgstr "สัญญาอนุญาต: %1"
+
+#: kaboutapplicationdialog.cpp:148
+msgid "&About"
+msgstr "เ&กี่ยวกับ"
+
+#: kaboutapplicationdialog.cpp:153
+#, fuzzy, kde-format
+#| msgid "<br />Version: %1"
+msgid "<b>Version %1</b>"
+msgstr "<br />รุ่น: %1"
+
+#: kaboutapplicationdialog.cpp:158
+#, kde-format
+msgid ""
+"Using:<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "
+"<em>%4</em> windowing system</li></ul>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:168
+#, fuzzy
+#| msgid "Version:"
+msgid "&Version"
+msgstr "รุ่น:"
+
+#: kaboutapplicationdialog.cpp:188
+msgid ""
+"Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report "
+"bugs.\n"
+msgstr ""
+"โปรดไปที่ <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"เพื่อรายงานข้อผิดพลาด\n"
+
+#: kaboutapplicationdialog.cpp:192 kaboutapplicationdialog.cpp:196
+#, kde-format
+msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "โปรดรายงานข้อผิดพลาดไปยัง <a href=\"mailto:%1\">%2</a>\n"
+
+#: kaboutapplicationdialog.cpp:223
+msgid "A&uthor"
+msgstr "&ผู้เขียน"
+
+#: kaboutapplicationdialog.cpp:223
+msgid "A&uthors"
+msgstr "&ผู้เขียน"
+
+#: kaboutapplicationdialog.cpp:250
+msgid "&Thanks To"
+msgstr "ขอ&ขอบคุณ"
+
+#: kaboutapplicationdialog.cpp:289
+msgid "T&ranslation"
+msgstr "การแปล&ภาษา"
+
+#: kaboutapplicationdialog.cpp:321
+msgid "License Agreement"
+msgstr "ข้อตกลงในสัญญาอนุญาต"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+#, fuzzy
+#| msgid "Email contributor"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "ส่งอีเมลถึงผู้มีส่วนร่วม"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+msgid "Visit contributor's homepage"
+msgstr "เยี่ยมชมหน้าเว็บของผู้มีส่วนร่วม"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"ส่งอีเมลถึงผู้มีส่วนร่วม\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"เยี่ยมชมหน้าเว็บของผู้มีส่วนร่วม\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"ดูข้อมูลโพรไฟล์ของผู้มีส่วนร่วม บน %1\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"เยี่ยมชมหน้าเว็บของผู้มีส่วนร่วม\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"เยี่ยมชมบล็อกของผู้มีส่วนร่วม\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "บล็อก"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "หน้าเว็บ"
+
+#: kaboutkdedialog_p.cpp:43
+msgid "About KDE"
+msgstr "เกี่ยวกับ KDE"
+
+#: kaboutkdedialog_p.cpp:46
+#, fuzzy
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+"<html><font size=\"5\">KDE - สู่เสรี !</font><br /><b>แพลตฟอร์มรุ่น %1</b></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"%1\">Free Software</a> development. This community has created hundreds "
+#| "of Free Software applications as part of the KDE Development Platform and "
+#| "KDE Software Distribution.<br /><br />KDE is a cooperative enterprise in "
+#| "which no single entity controls the efforts or products of KDE to the "
+#| "exclusion of others. Everyone is welcome to join and contribute to KDE, "
+#| "including you.<br /><br />Visit <a href=\"%2\">%2</a> for more "
+#| "information about the KDE community and the software we produce.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> นั้นเป็นเครือข่ายของวิศวกรซอฟต์แวร์, ศิลปิน, นักเขียน, นักแปลภาษา "
+"และผู้ช่วยแก้ไขข้อบกพร่องต่าง ๆ ของโปรแกรม ผู้ซึ่งมีส่วนร่วมกับในการพัฒนา<a href="
+"\"%1\">ซอฟต์แวร์เสรี</a> ซึ่งชุมชนนี้ได้สร้างสรรค์โปรแกรมเสรีที่ไม่เสียค่าใช้จำนวนนับร้อย ๆ "
+"โปรแกรม เพื่อให้โปรแกรมเหล่านั้นได้มาเป็นส่วนหนึ่งของแพลตฟอร์มการพัฒนา KDE (KDE "
+"Development Platform) และผู้แจกจ่ายซอฟต์แวร์ KDE (KDE Software Distribution)<br /"
+"><br /> KDE มีการทำงานร่วมกันในระดับเอนเทอร์ไพรซ์ ซึ่งจะไม่มีหน่วยงานหรือองค์กรใด ๆ "
+"ที่สามารถจะควบคุมผลงานของ KDE ไว้แต่พียงผู้เดียว หรือกีดกันคนอื่น ๆ ได้ ทุก ๆ คนไม่ว่าจะเป็นใคร "
+"ก็สามารถเข้ามามีส่วนร่วมกับ KDE ได้ รวมถึงคุณด้วยเช่นเดียวกัน<br /><br /> ลองแวะเยี่ยมที่ <a "
+"href=\"%2\">%2</a> เพื่อดูข้อมูลรายละเอียดเพิ่มเติมเกี่ยวกับชุมชน KDE รวมถึงซอฟต์แวร์ต่าง ๆ "
+"ที่เราได้สร้างสรรค์ขึ้นมา</html>"
+
+#: kaboutkdedialog_p.cpp:74
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>โดยปกติแล้ว ซอฟต์แวร์นั้นสามารถจะถูกปรับปรุงให้ดีขึ้นได้อยู่เสมอ และทีม KDE "
+"ก็พร้อมและทำเช่นนั้นอยู่แล้ว อย่างไรก็ตาม คุณเอง - ซึ่งเป็นผู้ใช้งาน - "
+"ควรจะต้องบอกกับเราหากมีบางสิ่งที่ไม่ทำงานอย่างที่ควรจะเป็น หรือน่าจะทำงานได้ดีกว่านี้ <br /"
+"><br />KDE นั้นมีระบบติดตามข้อผิดพลาดอยู่ ลองดูที่ <a href=\"%1\">%1</a> หรือใช้กล่องโต้ตอบ "
+"\"รายงานข้อผิดพลาด...\" จากเมนู \"ช่วยเหลือ\" เพื่อใช้ในการรายงานข้อผิดพลาดได้ <br /"
+"><br />และหากคุณมีคำแนะนำในการปรับปรุงบางอย่าง "
+"คุณก็สามารถใช้ระบบติดตามข้อผิดพลาดเพื่อลงทะเบียนสิ่งที่คุณอยากให้มีเพิ่มเติมก็ได้เช่นกัน "
+"แต่โปรดตรวจสอบด้วยว่าคุณได้เลือกใช้ระดับความเข้มงวดไว้ที่ระดับ \"สิ่งที่อยากให้มี\" แล้ว</html>"
+
+#: kaboutkdedialog_p.cpp:92
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>แม้ว่าคุณจะไม่ได้เป็นนักพัฒนาซอฟต์แวร์ แต่ก็สามารถเข้าร่วมเป็นสมาชิกคนหนึ่งของทีม KDE "
+"ได้เช่นกัน โดยคุณสามารถเข้าร่วมกับทีมซึ่งทำการแปลส่วนติดต่อผู้ใช้ของโปรแกรมของแต่ละชาติได้ "
+"หรืออาจจะจัดทำภาพกราฟิก, ชุดตกแต่ง, เสียง และทำการปรับปรุงเอกสารช่วยใช้งานต่าง ๆ "
+"ก็ได้เช่นกัน แน่นอน คุณเป็นผู้ตัดสินใจเอง !<br /><br />ลองไปเยี่ยมชมที่ <a href=\"%1\">%1</"
+"a> เพื่อดูข้อมูลของบางโครงการที่คุณสามารถเข้าร่วมได้ <br /><br /"
+">หากคุณต้องการข้อมูลหรือเอกสารต่าง ๆ เพิ่มเติม ลองไปดูที่ <a href=\"%2\">%2</a> "
+"ซึ่งจะมีสิ่งที่คุณต้องการอยู่</html>"
+
+#: kaboutkdedialog_p.cpp:114
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>KDE มีให้ใช้งานโดยไม่เสียค่าใช้จ่าย แต่ค่าใช้จ่ายที่เราพบนั้น "
+"เกิดขึ้นจากการสร้างมันขึ้นมา<br /><br />ด้วยเหตุนี้ ทางชุมชน KDE จึงได้ตั้งองค์กร KDE e.V. "
+"ซึ่งเป็นองค์กรที่ไม่หวังผลกำไรขึ้นมา โดยตั้งขึ้นอย่างถูกกฎหมาย ณ เมือง Tuebingen "
+"ประเทศเยอรมันนี และจากนั้นเป็นต้นมา KDE e.V. ก็ได้เป็นตัวแทนของชุมชน KDE "
+"ทั้งในด้านกฎหมายและด้านการเงิน หากต้องการข้อมูลเพิ่มเติมเกี่ยวกับองค์กร KDE e.V. สามารถดูได้ที่ "
+"<a href=\"%1\">%1</a> <br /><br />ปัจจุบัน KDE "
+"ยังคงได้รับประโยชน์จากการสนับสนุนหลากหลายด้าน รวมถึงทางด้านการเงินด้วย "
+"สำหรับด้านเงินกองทุนนั้น เงินกองทุนบางส่วนของเรา ได้ถูกใช้จ่ายให้กับสมาชิกและบุคคลอื่น ๆ "
+"ที่อาจจะพบเจอกับเหตุการณ์ที่ไม่คาดคิดในระหว่างที่มีส่วนร่วมในการทำงานกับ KDE และเงินทุนส่วนมาก "
+"จะถูกใช้ในการสนับสนุนทางด้านกฎหมาย การจัดการสัมมนา และการประชุมในด้านต่าง ๆ <br /> "
+"<br />เรายังคงต้องการการสนับสนุนทางด้านการเงินจากคุณ "
+"เพื่อเป็นกำลังใจให้กับการทำงานของพวกเรา ซึ่งคุณสามารถจะบริจาคผ่านวิธีการต่าง ๆ ซึ่งอธิบายไว้ที่ "
+"<a href=\"%2\">%2</a> ได้<br /><br /"
+">เราขอขอบคุณล่วงหน้าสำหรับการสนับสนุนที่จะได้รับจากคุณ</html>"
+
+#: kaboutkdedialog_p.cpp:134
+msgctxt "About KDE"
+msgid "&About"
+msgstr "เ&กี่ยวกับ"
+
+#: kaboutkdedialog_p.cpp:135
+msgid "&Report Bugs or Wishes"
+msgstr "แ&จ้งข้อผิดพลาดหรือสิ่งที่ต้องการ"
+
+#: kaboutkdedialog_p.cpp:136
+msgid "&Join KDE"
+msgstr "เข้า&ร่วมกับ KDE"
+
+#: kaboutkdedialog_p.cpp:137
+msgid "&Support KDE"
+msgstr "&สนับสนุน KDE"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"ลำดับปุ่มพิมพ์ '%1' ไม่ชัดเจน ใช้ 'ปรับแต่งปุ่มพิมพ์ลัด'\n"
+"จากเมนู 'ตั้งค่า' เพื่อแก้ปัญหาความไม่ชัดเจน\n"
+"ดังนั้นจะไม่มีการเรียกการกระทำใด ๆ"
+
+#: kactionconflictdetector.cpp:53
+msgid "Ambiguous shortcut detected"
+msgstr "ตรวจพบปุ่มพิมพ์ลัดที่คลุมเครือ"
+
+#: kbugreport.cpp:97 kbugreport.cpp:119
+msgid "Submit Bug Report"
+msgstr "ส่งรายงานข้อผิดพลาด"
+
+#: kbugreport.cpp:130
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr "ที่อยู่อีเมลของคุณ หากไม่ถูกต้องให้ใช้ปุ่มการปรับแต่งอีเมลเพื่อเปลี่ยนค่า"
+
+#: kbugreport.cpp:131
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "จาก:"
+
+#: kbugreport.cpp:139
+msgid "Configure Email..."
+msgstr "ปรับแต่งอีเมล..."
+
+#: kbugreport.cpp:146
+msgid "The email address this bug report is sent to."
+msgstr "ที่อยู่อีเมลที่จะใช้ในการรายงานข้อผิดพลาดนี้"
+
+#: kbugreport.cpp:147
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "ถึง:"
+
+#: kbugreport.cpp:156
+msgid "&Send"
+msgstr "&ส่ง"
+
+#: kbugreport.cpp:156
+msgid "Send bug report."
+msgstr "ส่งรายงานข้อผิดพลาด"
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "ส่งรายงานข้อผิดพลาดนี้ไปยัง %1"
+
+#: kbugreport.cpp:165
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"โปรแกรมที่คุณต้องการรายงานข้อผิดพลาด - ถ้าไม่ถูกต้อง "
+"โปรดใช้รายการของเมนูรายงานข้อผิดพลาดให้เป็นโปรแกรมที่ถูกต้อง"
+
+#: kbugreport.cpp:166
+msgid "Application: "
+msgstr "โปรแกรม: "
+
+#: kbugreport.cpp:193
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"รุ่นของโปรแกรมนี้ - โปรดตรวจสอบให้แน่ใจว่าไม่มีรุ่นที่ใหม่กว่านี้ ก่อนจะทำการส่งรายงานข้อผิดพลาด"
+
+#: kbugreport.cpp:194
+msgid "Version:"
+msgstr "รุ่น:"
+
+#: kbugreport.cpp:199
+msgid "no version set (programmer error)"
+msgstr "ไม่มีการตั้งค่ารุ่น (โปรแกรมเมอร์ลืม !)"
+
+#: kbugreport.cpp:212
+msgid "OS:"
+msgstr "ระบบปฏิบัติการ: "
+
+#: kbugreport.cpp:220
+msgid "Compiler:"
+msgstr "คอมไพเลอร์: "
+
+#: kbugreport.cpp:228
+msgid "Se&verity"
+msgstr "ความรุนแ&รง"
+
+#: kbugreport.cpp:230
+msgid "Critical"
+msgstr "วิกฤติ"
+
+#: kbugreport.cpp:230
+msgid "Grave"
+msgstr "สูง"
+
+#: kbugreport.cpp:230
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "ธรรมดา"
+
+#: kbugreport.cpp:230
+msgid "Wishlist"
+msgstr "สิ่งที่ต้องการเพิ่ม"
+
+#: kbugreport.cpp:230
+msgid "Translation"
+msgstr "การแปลภาษา"
+
+#: kbugreport.cpp:248
+msgid "S&ubject: "
+msgstr "เ&รื่อง: "
+
+#: kbugreport.cpp:256
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"ป้อนข้อความ (เป็นภาษาอังกฤษถ้าเป็นไปได้) ที่คุณประสงค์จะรายงานข้อผิดพลาด\n"
+"ถ้าคุณกด 'ส่ง' ข้อความแจ้งรายงานจะถูกส่งไปยังผู้ดูแลโปรแกรมนี้ทางอีเมล\n"
+
+#: kbugreport.cpp:279
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>คลิกที่ปุ่มด้านล่างนี้เพื่อทำการส่งรายงานข้อผิดพลาด โดยจะเป็นการเรียกเปิดเว็บเบราว์เซอร์ขึ้นมา "
+"แล้วเรียกไปที่ <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> "
+"ให้โดยอัตโนมัติ จากนั้นคุณจะพบกับแบบฟอร์มเพื่อใช้ป้อนข้อมูล "
+"และข้อมูลที่แสดงอยู่ด้านบนจะถูกส่งไปที่หน้าเว็บของแม่ข่ายดังกล่าวด้วย</qt>"
+
+#: kbugreport.cpp:294
+msgid "&Launch Bug Report Wizard"
+msgstr "เรีย&กตัวช่วยการรายงานข้อผิดพลาด"
+
+#: kbugreport.cpp:357
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "ไม่ทราบ"
+
+#: kbugreport.cpp:416
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr "คุณต้องกำหนดทั้งเรื่องและรายละเอียด ก่อนที่จะทำการส่งรายงานข้อผิดพลาด"
+
+#: kbugreport.cpp:425
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>คุณเลือกระดับความรุนแรงไว้ที่ <b>วิกฤติ</b> โปรดจำไว้ว่าระดับความรุนแรงนี้ "
+"มีจุดประสงค์จะใช้กับข้อผิดพลาดเท่านั้น ซึ่ง</p><ul><li>อาจจะทำให้ซอฟต์แวร์ในระบบ "
+"(หรือระบบทั้งหมด) ที่ไม่เกี่ยวข้องหยุดทำงานได้</li><li>ส่งผลให้เกิดข้อมูลสูญหายอย่างหนัก</li> "
+"<li>อาจนำมาซึ่งช่องโหว่ของระบบความปลอดภัยของระบบ</li></ul>\n"
+"<p>ข้อผิดพลาดที่คุณรายงานนี้ สร้างความเสียหายอย่างมากต่อคุณหรือไม่ ? ถ้าไม่ใช่ "
+"โปรดเลือกระดับความรุนแรงที่ต่ำกว่านี้ ขอบคุณ !</p>"
+
+#: kbugreport.cpp:437
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>คุณได้เลือกระดับความรุนแรง <b>สูง</b> โปรดจำไว้ว่าระดับความรุนแรงนี้ "
+"มีจุดประสงค์จะใช้กับข้อผิดพลาดเท่านั้น ซึ่ง:</p><ul><li>อาจจะทำให้แพกเกจที่อยู่ในคำถาม "
+"ไม่สามารถทำงานได้ หรืออาจจะ</li><li>ส่งผลให้เกิดข้อมูลสูญหายได้</"
+"li><li>อาจนำมาซึ่งช่องโหว่ของระบบความปลอดภัยระบบ</li></ul>\n"
+"<p>ข้อผิดพลาดที่คุณรายงานนี้สร้างความเสียหายอย่างมากต่อคุณหรือไม่ ? ถ้าไม่ใช่ "
+"โปรดเลือกระดับความรุนแรงที่ต่ำกว่านี้ ขอขอบคุณ</p>"
+
+#: kbugreport.cpp:451
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See http://bugs.kde.org/ for instructions."
+msgstr ""
+"ไม่สามารถส่งรายงานข้อผิดพลาดได้\n"
+"โปรดรายงานข้อผิดพลาดด้วยตัวคุณเอง...\n"
+"กรุณาดูคำแนะนำที่ http://bugs.kde.org/"
+
+#: kbugreport.cpp:459
+msgid "Bug report sent, thank you for your input."
+msgstr "รายงานข้อผิดพลาดถูกส่งไปแล้ว ขอขอบคุณที่สละเวลาให้ข้อมูล"
+
+#: kbugreport.cpp:467
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr "ปิดและละทิ้งข้อความที่ได้แก้ไขไปหรือไม่ ?"
+
+#: kbugreport.cpp:468
+msgid "Close Message"
+msgstr "ปิดข้อความ"
+
+#: kcheckaccelerators.cpp:229
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "ตรวจปัญหาปุ่มพิมพ์ลัดโดย ด็อกเตอร์ Klash"
+
+#: kcheckaccelerators.cpp:236
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "ปิดการตรวจสอบอัตโนมัติ"
+
+#: kcheckaccelerators.cpp:240
+msgctxt "@action:button"
+msgid "Close"
+msgstr "ปิด"
+
+#: kcheckaccelerators.cpp:281
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>มีการแก้ไขปุ่มพิมพ์ลัด</h2>"
+
+#: kcheckaccelerators.cpp:283 kcheckaccelerators.cpp:294
+#, fuzzy
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "ค้นหาข้อความ"
+
+#: kcheckaccelerators.cpp:285 kcheckaccelerators.cpp:303
+#, fuzzy
+#| msgid "Show help"
+msgid "New Text"
+msgstr "แสดงความช่วยเหลือ"
+
+#: kcheckaccelerators.cpp:292
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>มีการลบปุ่มพิมพ์ลัด</h2>"
+
+#: kcheckaccelerators.cpp:301
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>มีการเพิ่มปุ่มพิมพ์ลัด (สำหรับข้อมูลของคุณ)</h2>"
+
+#: kedittoolbar.cpp:56
+msgid "--- separator ---"
+msgstr "--- ตัวแบ่ง ---"
+
+#: kedittoolbar.cpp:350
+msgid "Change Text"
+msgstr "เปลี่ยนข้อความ"
+
+#: kedittoolbar.cpp:361
+msgid "Icon te&xt:"
+msgstr "&ข้อความของไอคอน:"
+
+#: kedittoolbar.cpp:366
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr "ซ่&อนข้อความเมื่อแถบเครื่องมือแสดงข้อความอยู่ทางด้านข้างของไอคอนซ่อนข้อความเมื่อแ"
+
+#: kedittoolbar.cpp:619
+msgid "Configure Toolbars"
+msgstr "ปรับแต่งแถบเครื่องมือ"
+
+#: kedittoolbar.cpp:682
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"คุณต้องการปรับค่าแถบเครื่องมือของโปรแกรมนี้ให้กลับไปใช้ค่าปริยายของมันจริงหรือไม่? "
+"การเปลี่ยนแปลงจะถูกปรับใช้ในทันที"
+
+#: kedittoolbar.cpp:682
+msgid "Reset Toolbars"
+msgstr "ปรับแถบเครื่องมือกลับค่าเดิม"
+
+#: kedittoolbar.cpp:682
+msgid "Reset"
+msgstr "ปรับกลับค่าเดิม"
+
+#: kedittoolbar.cpp:1005
+msgid "&Toolbar:"
+msgstr "แถบเ&ครื่องมือ:"
+
+#: kedittoolbar.cpp:1020
+msgid "A&vailable actions:"
+msgstr "การกระทำที่มีใ&ห้เลือก:"
+
+#: kedittoolbar.cpp:1035 kedittoolbar.cpp:1054
+msgid "Filter"
+msgstr "ตัวกรอง"
+
+#: kedittoolbar.cpp:1038
+msgid "Curr&ent actions:"
+msgstr "การกระทำ&ปัจจุบัน:"
+
+#: kedittoolbar.cpp:1057
+msgid "Change &Icon..."
+msgstr "เปลี่ยนภาพไ&อคอน..."
+
+#: kedittoolbar.cpp:1065
+msgid "Change Te&xt..."
+msgstr "เปลี่ยน&ข้อความ..."
+
+#: kedittoolbar.cpp:1217
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1237
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr "ส่วนประกอบนี้จะแทนที่ส่วนประกอบของคอมโพเนนท์ที่ถูกฝังอยู่ทั้งหมด"
+
+#: kedittoolbar.cpp:1239
+msgid "<Merge>"
+msgstr "<ผนวกรวม>"
+
+#: kedittoolbar.cpp:1241
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<ผนวกรวม %1>"
+
+#: kedittoolbar.cpp:1247
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"นี่เป็นรายการการกระทำที่ไม่คงที่ คุณสามารถย้ายมันได้ แต่ถ้าคุณได้เอามันออกไป "
+"จะไม่สามารถทำการเพิ่มมันได้อีก"
+
+#: kedittoolbar.cpp:1248
+#, kde-format
+msgid "ActionList: %1"
+msgstr "รายการการกระทำ: %1"
+
+#: kedittoolbar.cpp:1348 kedittoolbar.cpp:1375
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1602
+msgid "Change Icon"
+msgstr "เปลี่ยนภาพไอคอน"
+
+#: kgesture.cpp:505
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "ปุ่มซ้าย"
+
+#: kgesture.cpp:508
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "ปุ่มกลาง"
+
+#: kgesture.cpp:511
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "ปุ่มขวา"
+
+#: kgesture.cpp:514
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "ปุ่มที่ไม่ถูกต้อง"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "กด %1 ค้างไว้ แล้วกด %2"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:176 ui_standards.rc:177
+msgid "&Help"
+msgstr "&ช่วยเหลือ"
+
+#: kkeysequencewidget.cpp:135
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "ปุ่มพิมพ์ลัด '%1' ในโปรแกรม %2 สำหรับการกระทำ %3\n"
+
+#: kkeysequencewidget.cpp:145
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "ปุ่มพิมพ์ลัด '%2' ขัดแย้งกับการจับคู่ปุ่มพิมพ์ต่อไปนี้:\n"
+
+#: kkeysequencewidget.cpp:151
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "ขัดแย้งกับปุ่มพิมพ์ลัดที่ได้ลงทะเบียนไว้ส่วนกลาง"
+
+#: kkeysequencewidget.cpp:153 kkeysequencewidget.cpp:241
+#: kkeysequencewidget.cpp:632 kshortcutseditor.cpp:635
+#: kshortcutseditor.cpp:653
+msgid "Reassign"
+msgstr "กำหนดใหม่"
+
+#: kkeysequencewidget.cpp:222
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "ปุ่มพิมพ์ลัดขัดแย้งกัน"
+
+#: kkeysequencewidget.cpp:226
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "ปุ่มพิมพ์ลัด '%1' ของการกระทำ '%2'\n"
+
+#: kkeysequencewidget.cpp:231
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"ปุ่มพิมพ์ลัด \"%2\" ดูคลุมเครือกับปุ่มพิมพ์ลัดต่อไปนี้\n"
+"คุณต้องการจะกำหนดปุ่มพิมพ์ลัดว่างไปยังการการกระทำเหล่านี้หรือไม่ ?\n"
+"%3"
+
+#: kkeysequencewidget.cpp:250
+msgid "Shortcut conflict"
+msgstr "ปุ่มพิมพ์ลัดขัดแย้งกัน"
+
+#: kkeysequencewidget.cpp:251
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>การจับคู่ปุ่มพิมพ์ '%1' ถูกใช้โดยการกระทำ <b>%2</b> อยู่แล้ว<br>โปรดเลือกแบบอื่น</qt>"
+
+#: kkeysequencewidget.cpp:281
+#, fuzzy
+#| msgid ""
+#| "Click on the button, then enter the shortcut like you would in the "
+#| "program.\n"
+#| "Example for Ctrl+a: hold the Ctrl key and press a."
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"คลิกบนปุ่ม จากนั้นป้อนปุ่มพิมพ์ลัดที่คุณต้องการจะใช้ในโปรแกรม\n"
+"ตัวอย่างเช่น Ctrl+a: กดปุ่มพิมพ์ Ctrl ค้างเอาไว้ ตามด้วยการกดปุมพิมพ์ a"
+
+#: kkeysequencewidget.cpp:473
+msgid "Reserved Shortcut"
+msgstr "ปุ่มพิมพ์ลัดที่ถูกสงวนไว้"
+
+#: kkeysequencewidget.cpp:474
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"ปุ่มพิมพ์ F12 นั้นถูกสงวนไว้บนระบบวินโดวส์ "
+"ดังนั้นจึงไม่สามารถนำมาใช้งานเป็นปุ่มพิมพ์ลัดใช้งานส่วนรวมได้\n"
+"โปรดเลือกปุ่มพิมพ์อื่น ๆ"
+
+#: kkeysequencewidget.cpp:626
+msgid "Conflict with Standard Application Shortcut"
+msgstr "เกิดความขัดแย้งกับปุ่มพิมพ์ลัดมาตรฐานของโปรแกรม"
+
+#: kkeysequencewidget.cpp:627
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"ปุ่มพิมพ์ลัด '%1' นี้ ถูกจองไว้ใช้งานกับการกระทำมาตรฐาน \"%2\" ซึ่งมีบางโปรแกรมใช้อยู่\n"
+"คุณต้องการจะใช้มันเป็นปุ่มพิมพ์ลัดใช้งานส่วนรวมของมันเช่นกันหรือไม่ ?"
+
+#: kkeysequencewidget.cpp:672
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "กดปุ่มพิมพ์"
+
+#: kkeysequencewidget.cpp:679 kshortcuteditwidget.cpp:66
+#: kshortcuteditwidget.cpp:69
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "ไม่มี"
+
+#: kkeysequencewidget.cpp:725
+msgid "The key you just pressed is not supported by Qt."
+msgstr "ปุ่มพิมพ์ที่คุณเพิ่งกด ยังไม่ถูกรองรับโดย Qt"
+
+#: kkeysequencewidget.cpp:726
+msgid "Unsupported Key"
+msgstr "ปุ่มพิมพ์ที่ยังไม่รองรับ"
+
+#: kmainwindow.cpp:246
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
+
+#: kmainwindow.cpp:247
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com, drrider@gmail.com"
+
+#: kmenumenuhandler_p.cpp:50
+msgid "Add to Toolbar"
+msgstr "เพิ่มไปยังแถบเครื่องมือ"
+
+#: kmenumenuhandler_p.cpp:227
+msgid "Configure Shortcut..."
+msgstr "ปรับแต่งปุ่มพิมพ์ลัด..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "สร้างเนื้อหาบนเซิร์ฟเวอร์"
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "ค้นไม่พบ"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "หมดเวลาการเชื่อมต่อ"
+
+#: ksendbugmail/main.cpp:54
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "เครื่องแม่ข่าย: %1"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "ส่งรายงานข้อผิดพลาด"
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "ขนาดของกล่องโต้ตอบ"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "ที่อยู่อีเมลที่จะใช้ในการรายงานข้อผิดพลาดนี้"
+
+#: kshortcuteditwidget.cpp:65
+msgid "Default:"
+msgstr "ค่าปริยาย:"
+
+#: kshortcuteditwidget.cpp:73
+msgid "Custom:"
+msgstr "กำหนดเอง:"
+
+#: kshortcutschemeseditor.cpp:44
+msgid "Shortcut Schemes"
+msgstr "ชุดปุ่มพิมพ์ลัด"
+
+#: kshortcutschemeseditor.cpp:65
+msgid "Current scheme:"
+msgstr "ชุดปุ่มพิมพ์ลัดปัจจุบัน:"
+
+#: kshortcutschemeseditor.cpp:81
+msgid "New..."
+msgstr "สร้าง..."
+
+#: kshortcutschemeseditor.cpp:84
+msgid "Delete"
+msgstr "ลบ"
+
+#: kshortcutschemeseditor.cpp:87
+msgid "More Actions"
+msgstr "การกระทำเพิ่มเติม"
+
+#: kshortcutschemeseditor.cpp:91
+#, fuzzy
+#| msgid "Shortcut Schemes"
+msgid "Save shortcuts to scheme"
+msgstr "ชุดปุ่มพิมพ์ลัด"
+
+#: kshortcutschemeseditor.cpp:93
+msgid "Export Scheme..."
+msgstr "ส่งออกชุดปุ่มพิมพ์ลัด..."
+
+#: kshortcutschemeseditor.cpp:95
+#, fuzzy
+#| msgid "Export Scheme..."
+msgid "Import Scheme..."
+msgstr "ส่งออกชุดปุ่มพิมพ์ลัด..."
+
+#: kshortcutschemeseditor.cpp:111
+msgid "Name for New Scheme"
+msgstr "ชื่อของชุดปุ่มพิมพ์ลัดตัวใหม่"
+
+#: kshortcutschemeseditor.cpp:112
+msgid "Name for new scheme:"
+msgstr "ชื่อของชุดปุ่มพิมพ์ลัดตัวใหม่:"
+
+#: kshortcutschemeseditor.cpp:112
+msgid "New Scheme"
+msgstr "ชุดปุ่มพิมพ์ลัดตัวใหม่"
+
+#: kshortcutschemeseditor.cpp:118
+msgid "A scheme with this name already exists."
+msgstr "มีชุดปุ่มพิมพ์ลัดที่ชื่อนี้อยู่ก่อนแล้ว"
+
+#: kshortcutschemeseditor.cpp:148
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"คุณต้องการจะลบชุดปุ่มพิมพ์ลัด %1 จริงหรือไม่ ?\n"
+"โปรดจำไว้ว่า มันไม่ได้เป็นการลบชุดปุ่มพิมพ์ลัดใด ๆ ของระบบ"
+
+#: kshortcutschemeseditor.cpp:178
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Export Shortcuts"
+msgstr "ปุ่มพิมพ์ลัด"
+
+#: kshortcutschemeseditor.cpp:178 kshortcutschemeseditor.cpp:189
+#, fuzzy
+#| msgid "Shortcut Conflict(s)"
+msgid "Shortcuts (*.shortcuts)"
+msgstr "ปุ่มพิมพ์ลัดขัดแย้งกัน"
+
+#: kshortcutschemeseditor.cpp:189
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Import Shortcuts"
+msgstr "ปุ่มพิมพ์ลัด"
+
+#: kshortcutschemeseditor.cpp:200
+#, fuzzy
+#| msgid "Content file successfully uploaded."
+msgid "Shortcut scheme successfully saved."
+msgstr "ทำการอัปโหลดเนื้อหาของแฟ้มเสร็จสมบูรณ์แล้ว"
+
+#: kshortcutschemeseditor.cpp:203
+msgid "Error saving the shortcut scheme."
+msgstr ""
+
+#: kshortcutsdialog.cpp:85
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr "ชุดปุ่มพิมพ์ลัดปัจจุบันถูกแก้ไข จะให้จัดเก็บค่าก่อนจะเปลี่ยนเป็นตัวใหม่หรือไม่ ?"
+
+#: kshortcutsdialog.cpp:135
+#, fuzzy
+#| msgid "New Scheme"
+msgid "Manage &Schemes"
+msgstr "ชุดปุ่มพิมพ์ลัดตัวใหม่"
+
+#: kshortcutsdialog.cpp:154
+msgid "Configure Shortcuts"
+msgstr "ปรับแต่งปุ่มพิมพ์ลัด"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ค้นหาชื่อของปุ่มพิมพ์ลัด (ตัวอย่างเช่น คัดลอก) หรือรูปแบบการกดปุ่มของแป้นพิมพ์ (ตัวอย่าง เช่น Ctrl"
+"+C) แบบปฎิสัมพันธ์ โดยป้อนคำค้นที่นี่"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"คุณสามารถเห็นการจับคู่ปุ่มพิมพ์ที่กำหนดไว้แล้วที่นี่ โดยมีความสัมพันธ์ระหว่างการกระทำ (เช่น "
+"'คัดลอก') จะถูกแสดงไว้ในคอลัมน์ด้านซ้าย และปุ่มพิมพ์ที่ถูกจับคู่ไว้ (เช่น CTRL+V) "
+"จะถูกแสดงไว้ในคอลัมน์ด้านขวา"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+msgid "Action"
+msgstr "การกระทำ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+msgid "Shortcut"
+msgstr "ปุ่มพิมพ์ลัด"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+msgid "Alternate"
+msgstr "ทางเลือกอื่น"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+msgid "Global"
+msgstr "ทั้งระบบ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+msgid "Global Alternate"
+msgstr "ทางเลือกอื่นของทั้งระบบ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+msgid "Mouse Button Gesture"
+msgstr "รูปแบบการกดปุ่มเมาส์"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+msgid "Mouse Shape Gesture"
+msgstr "รูปแบบการเคลื่อนเมาส์"
+
+#: kshortcutseditor.cpp:630 kshortcutseditor.cpp:648
+msgid "Key Conflict"
+msgstr "ปุ่มพิมพ์ลัดขัดแย้งกัน"
+
+#: kshortcutseditor.cpp:631
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"รูปแบบการลากเมาส์ '%1' นี้ ถูกจองไว้ใช้งานกับการกระทำ \"%2\" แล้ว\n"
+"คุณต้องการเปลี่ยนมันจากการกระทำนั้น มาเป็นการกระทำปัจจุบันแทนหรือไม่ ?"
+
+#: kshortcutseditor.cpp:649
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"รูปแบบการเขย่า '%1' นี้ ถูกจองไว้ใช้งานกับการกระทำ \"%2\" แล้ว\n"
+"คุณต้องการเปลี่ยนมันจากการกระทำนั้น มาเป็นการกระทำปัจจุบันแทนหรือไม่ ?"
+
+#: kshortcutseditor.cpp:696
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "ปุ่มพิมพ์ลัดสำหรับ %1"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:714 kshortcutwidget.ui:22
+msgid "Main:"
+msgstr "ปุ่มพิมพ์ลัดหลัก:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:715 kshortcutwidget.ui:52
+msgid "Alternate:"
+msgstr "ปุ่มพิมพ์ลัดอื่น:"
+
+#: kshortcutseditor.cpp:716
+msgid "Global:"
+msgstr "ทั้งระบบ:"
+
+#: kshortcutseditor.cpp:717
+#, fuzzy
+#| msgid "Global Alternate"
+msgid "Global alternate:"
+msgstr "ทางเลือกอื่นของทั้งระบบ"
+
+#: kshortcutseditor.cpp:732
+msgid "Action Name"
+msgstr "ชื่อการกระทำ"
+
+#: kshortcutseditor.cpp:736
+msgid "Shortcuts"
+msgstr "ปุ่มพิมพ์ลัด"
+
+#: kshortcutseditor.cpp:740
+msgid "Description"
+msgstr "รายละเอียด"
+
+#: kshortcutseditoritem.cpp:54
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:152
+msgid "Switch Application Language"
+msgstr "เปลี่ยนภาษาของโปรแกรม"
+
+#: kswitchlanguagedialog_p.cpp:157
+msgid "Please choose the language which should be used for this application:"
+msgstr "โปรดเลือกภาษาที่ควรจะใช้กับโปรแกรมนี้:"
+
+#: kswitchlanguagedialog_p.cpp:184
+msgid "Add Fallback Language"
+msgstr "เพิ่มภาษาปริยาย:"
+
+#: kswitchlanguagedialog_p.cpp:185
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr "เพิ่มหนึ่งภาษาหรือมากกว่า ซึ่งจะถูกใช้หากการแปลภาษาอื่น ๆ ไม่มีคำแปลที่เหมาะสม"
+
+#: kswitchlanguagedialog_p.cpp:281 kswitchlanguagedialog_p.cpp:303
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr "ภาษาของโปรแกรมนี้ถูกเปลี่ยน การเปลี่ยนแปลงจะมีผลเมื่อมีการเริ่มงานโปรแกรมครั้งต่อไป"
+
+#: kswitchlanguagedialog_p.cpp:282 kswitchlanguagedialog_p.cpp:304
+msgid "Application Language Changed"
+msgstr "ภาษาของโปรแกรมถูกเปลี่ยน"
+
+#: kswitchlanguagedialog_p.cpp:401
+msgid "Primary language:"
+msgstr "ภาษาหลัก:"
+
+#: kswitchlanguagedialog_p.cpp:401
+msgid "Fallback language:"
+msgstr "ภาษาปริยาย:"
+
+#: kswitchlanguagedialog_p.cpp:420
+msgid "Remove"
+msgstr "เอาออก"
+
+#: kswitchlanguagedialog_p.cpp:431
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr "นี่คือภาษาหลักของโปรแกรมซึ่งจะถูกใช้ก่อนภาษาอื่น ๆ"
+
+#: kswitchlanguagedialog_p.cpp:432
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr "นี่คือภาษาที่จะใช้ถ้าภาษาที่ใช้ก่อนหน้านี้ไม่มีคำแปลที่เหมาะสม"
+
+#: ktoolbar.cpp:305
+#, fuzzy
+#| msgid "Show help"
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "แสดงความช่วยเหลือ"
+
+#: ktoolbar.cpp:308
+#, fuzzy
+#| msgid "Toolbar Settings"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "ตั้งค่าแถบเครื่องมือ"
+
+#: ktoolbar.cpp:310
+#, fuzzy
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "ทิศทางการวาง"
+
+#: ktoolbar.cpp:312
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "ด้านบน"
+
+#: ktoolbar.cpp:314
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "ด้านซ้าย"
+
+#: ktoolbar.cpp:315
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "ด้านขวา"
+
+#: ktoolbar.cpp:316
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "ด้านล่าง"
+
+#: ktoolbar.cpp:324
+msgid "Text Position"
+msgstr "ตำแหน่งข้อความ"
+
+#: ktoolbar.cpp:326
+msgid "Icons Only"
+msgstr "แสดงไอคอนเท่านั้น"
+
+#: ktoolbar.cpp:327
+msgid "Text Only"
+msgstr "แสดงข้อความเท่านั้น"
+
+#: ktoolbar.cpp:328
+msgid "Text Alongside Icons"
+msgstr "ข้อความอยู่ด้านข้างไอคอน"
+
+#: ktoolbar.cpp:329
+msgid "Text Under Icons"
+msgstr "ข้อความอยู่ด้านล่างไอคอน"
+
+#: ktoolbar.cpp:337
+msgid "Icon Size"
+msgstr "ขนาดไอคอน"
+
+#: ktoolbar.cpp:339
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "ค่าปริยาย"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "เล็ก (%1x%2)"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "ปานกลาง (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "ใหญ่ (%1x%2)"
+
+#: ktoolbar.cpp:362 ktoolbar.cpp:383
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "ใหญ่มาก (%1x%2)"
+
+#: ktoolbar.cpp:405
+msgid "Lock Toolbar Positions"
+msgstr "ล็อคตำแหน่งแถบเครื่องมือ"
+
+#: ktoolbar.cpp:1359
+#, kde-format
+msgctxt "@action:intoolbar Text label of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbar.cpp:1360
+#, kde-format
+msgctxt "@info:tooltip Tooltip of toolbar button"
+msgid "%1"
+msgstr "%1"
+
+#: ktoolbarhandler.cpp:101
+msgid "Toolbars Shown"
+msgstr "แสดงแถบเครื่องมือ"
+
+#: kundoactions.cpp:43
+msgid "Redo"
+msgstr "ทำซ้ำ"
+
+#: kundoactions.cpp:62
+msgid "Undo"
+msgstr "เลิกทำ"
+
+#: kxmlguibuilder.cpp:188 kxmlguibuilder.cpp:352
+msgid "No text"
+msgstr "ไม่มีข้อความ"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+msgid "&File"
+msgstr "แ&ฟ้ม"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+msgid "&Game"
+msgstr "เ&กม"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+msgid "&Edit"
+msgstr "แ&ก้ไข"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&ย้าย"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+msgid "&View"
+msgstr "&มุมมอง"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+msgid "&Go"
+msgstr "ไ&ป"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+msgid "&Bookmarks"
+msgstr "ที่&คั่นหน้า"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+msgid "&Tools"
+msgstr "เ&ครื่องมือ"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+msgid "&Settings"
+msgstr "&ตั้งค่า"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:196
+msgid "Main Toolbar"
+msgstr "แถบเครื่องมือหลัก"
