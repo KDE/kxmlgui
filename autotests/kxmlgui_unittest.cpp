@@ -173,12 +173,12 @@ void KXmlGui_UnitTest::testVersionHandlerSameVersion()
     KXmlGuiVersionHandler versionHandler(files);
     QCOMPARE(versionHandler.finalFile(), firstFile);
     QString finalDoc = versionHandler.finalDocument();
-    QVERIFY(finalDoc.startsWith("<?xml"));
+    QVERIFY(finalDoc.startsWith(QStringLiteral("<?xml")));
     // Check that the shortcuts defined by the user were kept
-    QVERIFY(finalDoc.contains("<ActionProperties>"));
-    QVERIFY(finalDoc.contains("sidebartng"));
+    QVERIFY(finalDoc.contains(QStringLiteral("<ActionProperties>")));
+    QVERIFY(finalDoc.contains(QStringLiteral("sidebartng")));
     // Check that the toolbars modified by the user were kept
-    QVERIFY(finalDoc.contains("<Action name=\"home\""));
+    QVERIFY(finalDoc.contains(QStringLiteral("<Action name=\"home\"")));
 
     QVERIFY(userFile.open());
     const QString userFileContents = QString::fromUtf8(userFile.readAll());
@@ -223,8 +223,8 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionNothingKept()
     KXmlGuiVersionHandler versionHandler(files);
     QCOMPARE(fileToVersionMap.value(versionHandler.finalFile()), 5);
     QString finalDoc = versionHandler.finalDocument();
-    QVERIFY(finalDoc.startsWith("<?xml"));
-    QVERIFY(finalDoc.contains("version=\"5\""));
+    QVERIFY(finalDoc.startsWith(QStringLiteral("<?xml")));
+    QVERIFY(finalDoc.contains(QStringLiteral("version=\"5\"")));
 
     QVERIFY(fileV5.open());
     const QString fileV5Contents = QString::fromUtf8(fileV5.readAll());
@@ -271,15 +271,15 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     QCOMPARE(fileToVersionMap.value(versionHandler.finalFile()), 2);
     const QString finalDoc = versionHandler.finalDocument();
     //qDebug() << finalDoc;
-    QVERIFY(finalDoc.startsWith("<?xml"));
-    QVERIFY(finalDoc.contains("version=\"5\""));
+    QVERIFY(finalDoc.startsWith(QStringLiteral("<?xml")));
+    QVERIFY(finalDoc.contains(QStringLiteral("version=\"5\"")));
     // Check that the shortcuts defined by the user were kept
-    QVERIFY(finalDoc.contains("<ActionProperties>"));
-    QVERIFY(finalDoc.contains("sidebartng"));
+    QVERIFY(finalDoc.contains(QStringLiteral("<ActionProperties>")));
+    QVERIFY(finalDoc.contains(QStringLiteral("sidebartng")));
     // Check that the menus modified by the app are still there
-    QVERIFY(finalDoc.contains("<Action name=\"file_open\""));
+    QVERIFY(finalDoc.contains(QStringLiteral("<Action name=\"file_open\"")));
     // Check that the toolbars modified by the user were kept
-    QVERIFY(finalDoc.contains("<Action name=\"home\""));
+    QVERIFY(finalDoc.contains(QStringLiteral("<Action name=\"home\"")));
 }
 
 static QStringList collectMenuNames(KXMLGUIFactory &factory)
@@ -306,7 +306,7 @@ static void checkActions(const QList<QAction *> &actions, const QStringList &exp
             break;
         QAction *action = actions.at(i);
         if (action->isSeparator()) {
-            QCOMPARE(QString("separator"), expectedActions[i]);
+            QCOMPARE(QStringLiteral("separator"), expectedActions[i]);
         } else {
             QCOMPARE(action->objectName(), expectedActions[i]);
         }
@@ -607,8 +607,8 @@ void KXmlGui_UnitTest::testUiStandardsMerging()
 
     const QDomDocument domDocument = client.domDocument();
     const QDomElement docElem = domDocument.documentElement();
-    QCOMPARE(docElem.attribute("name"), QString("foo")); // not standard_containers from ui_standards.rc
-    QCOMPARE(docElem.attribute("version"), QString("1")); // not standard_containers from ui_standards.rc
+    QCOMPARE(docElem.attribute(QStringLiteral("name")), QStringLiteral("foo")); // not standard_containers from ui_standards.rc
+    QCOMPARE(docElem.attribute(QStringLiteral("version")), QStringLiteral("1")); // not standard_containers from ui_standards.rc
 
     KMainWindow mainWindow;
     KXMLGUIBuilder builder(&mainWindow);
@@ -664,7 +664,7 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
     action2->setObjectName(QStringLiteral("action2"));
     const QList<QAction *> actionList = { action1, action2 };
     client.plugActionList(QStringLiteral("view_groups_list"), actionList);
-    QCOMPARE(QKeySequence::listToString(action1->shortcuts()), QString("Ctrl+2"));
+    QCOMPARE(QKeySequence::listToString(action1->shortcuts()), QStringLiteral("Ctrl+2"));
 
     const QStringList expectedActionsOneList = {
         QStringLiteral("action1"),
@@ -731,7 +731,7 @@ void KXmlGui_UnitTest::testHiddenToolBar()
     QVERIFY(mainToolBar->isHidden());
 
     KXMLGUIFactory *factory = mainWindow.guiFactory();
-    QVERIFY(!factory->container("visibleToolBar", &mainWindow)->isHidden());
+    QVERIFY(!factory->container(QStringLiteral("visibleToolBar"), &mainWindow)->isHidden());
     KToolBar *hiddenToolBar = qobject_cast<KToolBar *>(factory->container(QStringLiteral("hiddenToolBar"), &mainWindow));
     qDebug() << hiddenToolBar;
     QVERIFY(hiddenToolBar->isHidden());
@@ -741,7 +741,7 @@ void KXmlGui_UnitTest::testHiddenToolBar()
     // KEditToolBar loads the stuff in showEvent...
     QShowEvent ev; qApp->sendEvent(&editToolBar, &ev);
     clickApply(&editToolBar);
-    QVERIFY(qobject_cast<KToolBar *>(factory->container("hiddenToolBar", &mainWindow))->isHidden());
+    QVERIFY(qobject_cast<KToolBar *>(factory->container(QStringLiteral("hiddenToolBar"), &mainWindow))->isHidden());
 
     mainWindow.close();
 }
@@ -851,22 +851,22 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
     KXMLGUIFactory *factory = mainWindow.guiFactory();
 
     //qDebug() << "containers:" << factory->containers("ToolBar");
-    QVERIFY(!factory->container("mainToolBar", &mainWindow));
-    QVERIFY(!factory->container("visibleToolBar", &mainWindow)->isHidden());
-    QVERIFY(!factory->container("deletedToolBar", &mainWindow));
-    QVERIFY(factory->container("file", &mainWindow)); // File menu was created
-    QVERIFY(!factory->container("game", &mainWindow)); // Game menu was not created
+    QVERIFY(!factory->container(QStringLiteral("mainToolBar"), &mainWindow));
+    QVERIFY(!factory->container(QStringLiteral("visibleToolBar"), &mainWindow)->isHidden());
+    QVERIFY(!factory->container(QStringLiteral("deletedToolBar"), &mainWindow));
+    QVERIFY(factory->container(QStringLiteral("file"), &mainWindow)); // File menu was created
+    QVERIFY(!factory->container(QStringLiteral("game"), &mainWindow)); // Game menu was not created
 
     // Now open KEditToolBar, just to check it doesn't crash.
     KEditToolBar editToolBar(factory);
     // KEditToolBar loads the stuff in showEvent...
     QShowEvent ev; qApp->sendEvent(&editToolBar, &ev);
     clickApply(&editToolBar);
-    QVERIFY(!factory->container("mainToolBar", &mainWindow));
-    QVERIFY(!factory->container("visibleToolBar", &mainWindow)->isHidden());
-    QVERIFY(!factory->container("deletedToolBar", &mainWindow));
-    QVERIFY(factory->container("file", &mainWindow));
-    QVERIFY(!factory->container("game", &mainWindow));
+    QVERIFY(!factory->container(QStringLiteral("mainToolBar"), &mainWindow));
+    QVERIFY(!factory->container(QStringLiteral("visibleToolBar"), &mainWindow)->isHidden());
+    QVERIFY(!factory->container(QStringLiteral("deletedToolBar"), &mainWindow));
+    QVERIFY(factory->container(QStringLiteral("file"), &mainWindow));
+    QVERIFY(!factory->container(QStringLiteral("game"), &mainWindow));
 
     mainWindow.close();
 }
@@ -954,23 +954,23 @@ void KXmlGui_UnitTest::testXMLFileReplacement()
     client.setXMLFilePublic(filenameOrig);
     QString xml = client.domDocument().toString();
     //qDebug() << xml;
-    QVERIFY(xml.contains("<Action name=\"print\""));
-    QVERIFY(!xml.contains("<Action name=\"home\""));
-    QVERIFY(!xml.contains("<ActionProperties>"));
+    QVERIFY(xml.contains(QStringLiteral("<Action name=\"print\"")));
+    QVERIFY(!xml.contains(QStringLiteral("<Action name=\"home\"")));
+    QVERIFY(!xml.contains(QStringLiteral("<ActionProperties>")));
 
     // now test the replacement (+ local file)
     client.replaceXMLFile(filenameReplace, filenameLocal);
     xml = client.domDocument().toString();
-    QVERIFY(!xml.contains("<Action name=\"print\""));
-    QVERIFY(xml.contains("<Action name=\"home\""));
-    QVERIFY(xml.contains("<ActionProperties>"));
+    QVERIFY(!xml.contains(QStringLiteral("<Action name=\"print\"")));
+    QVERIFY(xml.contains(QStringLiteral("<Action name=\"home\"")));
+    QVERIFY(xml.contains(QStringLiteral("<ActionProperties>")));
 
     // re-check after a reload
     client.reloadXML();
     QString reloadedXml = client.domDocument().toString();
-    QVERIFY(!reloadedXml.contains("<Action name=\"print\""));
-    QVERIFY(reloadedXml.contains("<Action name=\"home\""));
-    QVERIFY(reloadedXml.contains("<ActionProperties>"));
+    QVERIFY(!reloadedXml.contains(QStringLiteral("<Action name=\"print\"")));
+    QVERIFY(reloadedXml.contains(QStringLiteral("<Action name=\"home\"")));
+    QVERIFY(reloadedXml.contains(QStringLiteral("<ActionProperties>")));
 
     // Check what happens when the local file doesn't exist
     TestGuiClient client2;
@@ -978,9 +978,9 @@ void KXmlGui_UnitTest::testXMLFileReplacement()
     client2.replaceXMLFile(filenameReplace, filenameLocal);
     xml = client2.domDocument().toString();
     //qDebug() << xml;
-    QVERIFY(!xml.contains("<Action name=\"print\""));
-    QVERIFY(xml.contains("<Action name=\"home\"")); // modified toolbars
-    QVERIFY(!xml.contains("<ActionProperties>")); // but no local xml file
+    QVERIFY(!xml.contains(QStringLiteral("<Action name=\"print\"")));
+    QVERIFY(xml.contains(QStringLiteral("<Action name=\"home\""))); // modified toolbars
+    QVERIFY(!xml.contains(QStringLiteral("<ActionProperties>"))); // but no local xml file
 }
 
 void KXmlGui_UnitTest::testClientDestruction()   // #170806
@@ -1053,9 +1053,9 @@ void KXmlGui_UnitTest::testShortcuts()
     QAction* actionOpen = client.action("file_open");
     QAction* actionQuit = client.action("file_quit");
     QVERIFY(actionOpen && actionQuit);
-    QCOMPARE(actionOpen->shortcuts(), QList<QKeySequence>() << QKeySequence("Ctrl+O"));
+    QCOMPARE(actionOpen->shortcuts(), QList<QKeySequence>() << QKeySequence(QStringLiteral("Ctrl+O")));
     // #345411
-    QCOMPARE(actionQuit->shortcuts(), QList<QKeySequence>() << QKeySequence("Ctrl+Q") << QKeySequence("Ctrl+D"));
+    QCOMPARE(actionQuit->shortcuts(), QList<QKeySequence>() << QKeySequence(QStringLiteral("Ctrl+Q")) << QKeySequence(QStringLiteral("Ctrl+D")));
 
     factory.removeClient(&client);
 }

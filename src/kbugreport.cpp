@@ -375,7 +375,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
     }
     m_process = new QProcess;
     QObject::connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
-    m_process->start(QStringLiteral("kcmshell5"), QStringList() << QLatin1String("kcm_useraccount"));
+    m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcm_useraccount"));
     if (!m_process->waitForStarted()) {
         //qDebug() << "Couldn't start kcmshell5..";
         delete m_process;
@@ -481,8 +481,8 @@ QString KBugReport::text() const
     QString severity = d->severityButtons[d->currentSeverity()]->objectName();
     QString appname = d->appcombo->currentText();
     QString os = QStringLiteral("OS: %1 (%2)\n").
-                 arg(QStringLiteral(XMLGUI_COMPILING_OS)).
-                 arg(QStringLiteral(XMLGUI_DISTRIBUTION_TEXT));
+                 arg(QStringLiteral(XMLGUI_COMPILING_OS),
+                     QStringLiteral(XMLGUI_DISTRIBUTION_TEXT));
     QString bodyText;
     /*  for(int i = 0; i < m_lineedit->numLines(); i++)
       {
@@ -509,7 +509,7 @@ QString KBugReport::text() const
         appname = appname.replace(QLatin1Char('_'), QLatin1Char('-'));
         // Case 2 : normal bug
         return QStringLiteral("Package: %1\nVersion: %2\nSeverity: %3\n")
-               .arg(appname).arg(d->m_strVersion).arg(severity) +
+               .arg(appname, d->m_strVersion, severity) +
                QStringLiteral("Compiler: %1\n").arg(QStringLiteral(XMLGUI_COMPILER_VERSION)) +
                os + QLatin1String("\n") + bodyText;
     }

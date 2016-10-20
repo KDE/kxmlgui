@@ -320,7 +320,7 @@ void TestWindow::slotExit()
         exitB = false;
     } else {
         if (tb->actions().count() >= 7) {
-            tb->insertAction(tb->actions()[6], exitAction);
+            tb->insertAction(tb->actions().at(6), exitAction);
         } else {
             tb->addAction(exitAction);
         }

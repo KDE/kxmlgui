@@ -134,10 +134,10 @@ void KMWSessionManager::saveState(QSessionManager &sm)
     KConfigGui::setSessionConfig(sm.sessionId(), sm.sessionKey());
 
     KConfig *config = KConfigGui::sessionConfig();
-    if (KMainWindow::memberList().count()) {
+    if (!KMainWindow::memberList().isEmpty()) {
         // According to Jochen Wilhelmy <digisnap@cs.tu-berlin.de>, this
         // hook is useful for better document orientation
-        KMainWindow::memberList().first()->saveGlobalProperties(config);
+        KMainWindow::memberList().at(0)->saveGlobalProperties(config);
     }
 
     int n = 0;

@@ -149,7 +149,7 @@ int main(int argc, char **argv)
     sm->setSenderAddress(fromaddr);
     sm->setRecipientAddress(recipient);
     sm->setMessageSubject(subject);
-    sm->setMessageHeader(QStringLiteral("From: %1\r\nTo: %2\r\n").arg(fromaddr).arg(QString(recipient)));
+    sm->setMessageHeader(QStringLiteral("From: %1\r\nTo: %2\r\n").arg(fromaddr, recipient));
     sm->setMessageBody(text);
     sm->sendMessage();
 

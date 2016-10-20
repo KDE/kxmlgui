@@ -443,7 +443,7 @@ void KToolBar::Private::adjustSeparatorVisibility()
     int separatorToShow = -1;
 
     for (int index = 0; index < q->actions().count(); ++index) {
-        QAction *action = q->actions()[ index ];
+        QAction *action = q->actions().at(index);
         if (action->isSeparator()) {
             if (visibleNonSeparator) {
                 separatorToShow = index;
@@ -455,7 +455,7 @@ void KToolBar::Private::adjustSeparatorVisibility()
             if (action->isVisible()) {
                 visibleNonSeparator = true;
                 if (separatorToShow != -1) {
-                    q->actions()[ separatorToShow ]->setVisible(true);
+                    q->actions().at(separatorToShow)->setVisible(true);
                     separatorToShow = -1;
                 }
             }
@@ -463,7 +463,7 @@ void KToolBar::Private::adjustSeparatorVisibility()
     }
 
     if (separatorToShow != -1) {
-        q->actions()[ separatorToShow ]->setVisible(false);
+        q->actions().at(separatorToShow)->setVisible(false);
     }
 }
 
@@ -1133,7 +1133,7 @@ void KToolBar::dragEnterEvent(QDragEnterEvent *event)
             }
         }
 
-        if (d->actionsBeingDragged.count()) {
+        if (!d->actionsBeingDragged.isEmpty()) {
             QAction *overAction = actionAt(event->pos());
 
             QFrame *dropIndicatorWidget = new QFrame(this);
@@ -1173,7 +1173,7 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
                     // Check to see if the indicator is already in the right spot
                     int dropIndicatorIndex = actions().indexOf(d->dropIndicatorAction);
                     if (dropIndicatorIndex + 1 < actions().count()) {
-                        if (actions()[ dropIndicatorIndex + 1 ] == overAction) {
+                        if (actions().at(dropIndicatorIndex + 1) == overAction) {
                             break;
                         }
                     } else if (!overAction) {

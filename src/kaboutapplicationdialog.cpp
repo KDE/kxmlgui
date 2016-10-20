@@ -188,10 +188,10 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
                     bugsLabel->setText(i18n("Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report bugs.\n"));
                 } else {
                     if ((aboutData.authors().count() == 1) &&
-                            (aboutData.authors().first().emailAddress() == aboutData.bugAddress())) {
+                            (aboutData.authors().at(0).emailAddress() == aboutData.bugAddress())) {
                         bugsLabel->setText(i18n("Please report bugs to <a href=\"mailto:%1\">%2</a>.\n",
-                                                aboutData.authors().first().emailAddress(),
-                                                aboutData.authors().first().emailAddress()));
+                                                aboutData.authors().at(0).emailAddress(),
+                                                aboutData.authors().at(0).emailAddress()));
                     } else {
                         bugsLabel->setText(i18n("Please report bugs to <a href=\"mailto:%1\">%2</a>.\n",
                                                 aboutData.bugAddress(), aboutData.bugAddress()));

@@ -324,7 +324,7 @@ void tst_KToolBar::testIconSizeXmlGui()
         // was it the default size? (for the main toolbar, we only check that one)
         const bool usingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
         if (usingDefaultSize) {
-            QVERIFY(!group.groupList().contains("Toolbar mainToolBar"));
+            QVERIFY(!group.groupList().contains(QStringLiteral("Toolbar mainToolBar")));
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
         } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));

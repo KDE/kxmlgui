@@ -136,7 +136,7 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
     }
 
     // Check if the models wants us to edit the item at index
-    if (!index.data(ShowExtensionIndicatorRole).value<bool>()) {
+    if (!index.data(ShowExtensionIndicatorRole).toBool()) {
         return;
     }
 

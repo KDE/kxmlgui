@@ -956,7 +956,7 @@ void KEditToolBarWidget::rebuildKXMLGUIClients()
     //qDebug(240) << "factory: " << clients.count() << " clients";
 
     // remove the elements starting from the last going to the first
-    if (!clients.count()) {
+    if (clients.isEmpty()) {
         return;
     }
 
@@ -1342,7 +1342,7 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
 
 void KEditToolBarWidgetPrivate::slotInactiveSelectionChanged()
 {
-    if (m_inactiveList->selectedItems().count()) {
+    if (!m_inactiveList->selectedItems().isEmpty()) {
         m_insertAction->setEnabled(true);
         QString statusText = static_cast<ToolBarItem *>(m_inactiveList->selectedItems().first())->statusText();
         m_helpArea->setText(i18nc("@label Action tooltip in toolbar editor, below the action list", "%1", statusText));

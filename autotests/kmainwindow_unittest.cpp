@@ -45,11 +45,11 @@ void KMainWindow_UnitTest::testDefaultName()
     KMainWindow mw;
     mw.show();
     mw.ensurePolished();
-    QCOMPARE(mw.objectName(), QString::fromLatin1("MainWindow#1"));
+    QCOMPARE(mw.objectName(), QStringLiteral("MainWindow#1"));
     KMainWindow mw2;
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE(mw2.objectName(), QString::fromLatin1("MainWindow#2"));
+    QCOMPARE(mw2.objectName(), QStringLiteral("MainWindow#2"));
 }
 
 void KMainWindow_UnitTest::testFixedName()
@@ -58,12 +58,12 @@ void KMainWindow_UnitTest::testFixedName()
     mw.setObjectName(QStringLiteral("mymainwindow"));
     mw.show();
     mw.ensurePolished();
-    QCOMPARE(mw.objectName(), QString::fromLatin1("mymainwindow"));
+    QCOMPARE(mw.objectName(), QStringLiteral("mymainwindow"));
     KMainWindow mw2;
     mw2.setObjectName(QStringLiteral("mymainwindow"));
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE(mw2.objectName(), QString::fromLatin1("mymainwindow2"));
+    QCOMPARE(mw2.objectName(), QStringLiteral("mymainwindow2"));
 }
 
 void KMainWindow_UnitTest::testNameWithHash()
@@ -72,17 +72,17 @@ void KMainWindow_UnitTest::testNameWithHash()
     mw.setObjectName(QStringLiteral("composer#"));
     mw.show();
     mw.ensurePolished();
-    QCOMPARE(mw.objectName(), QString::fromLatin1("composer#1"));
+    QCOMPARE(mw.objectName(), QStringLiteral("composer#1"));
     KMainWindow mw2;
     mw2.setObjectName(QStringLiteral("composer#"));
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE(mw2.objectName(), QString::fromLatin1("composer#2"));
+    QCOMPARE(mw2.objectName(), QStringLiteral("composer#2"));
     KMainWindow mw4;
     mw4.setObjectName(QStringLiteral("composer#4"));
     mw4.show();
     mw4.ensurePolished();
-    QCOMPARE(mw4.objectName(), QString::fromLatin1("composer#4"));
+    QCOMPARE(mw4.objectName(), QStringLiteral("composer#4"));
 }
 
 void KMainWindow_UnitTest::testNameWithSpecialChars()
@@ -91,12 +91,12 @@ void KMainWindow_UnitTest::testNameWithSpecialChars()
     mw.setObjectName(QStringLiteral("a#@_test/"));
     mw.show();
     mw.ensurePolished();
-    QCOMPARE(mw.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_"));
+    QCOMPARE(mw.dbusName(), QStringLiteral("/kmainwindow_unittest/a___test_"));
     KMainWindow mw2;
     mw2.setObjectName(QStringLiteral("a#@_test/"));
     mw2.show();
     mw2.ensurePolished();
-    QCOMPARE(mw2.dbusName(), QString::fromLatin1("/kmainwindow_unittest/a___test_2"));
+    QCOMPARE(mw2.dbusName(), QStringLiteral("/kmainwindow_unittest/a___test_2"));
 }
 
 static bool s_mainWindowDeleted;
@@ -150,7 +150,7 @@ void KMainWindow_UnitTest::testDeleteOnClose()
 
 void KMainWindow_UnitTest::testSaveWindowSize()
 {
-    QCOMPARE(KSharedConfig::openConfig()->name(), QString::fromLatin1("kmainwindow_unittestrc"));
+    QCOMPARE(KSharedConfig::openConfig()->name(), QStringLiteral("kmainwindow_unittestrc"));
     KConfigGroup cfg(KSharedConfig::openConfig(), "TestWindowSize");
 
     {

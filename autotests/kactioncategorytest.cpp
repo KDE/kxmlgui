@@ -13,8 +13,8 @@ void tst_KActionCategory::tstCreation()
     KActionCategory category2(QStringLiteral("category2"), &collection);
 
     // Check that the name is correct
-    QCOMPARE(category1.text(), QString("category1"));
-    QCOMPARE(category2.text(), QString("category2"));
+    QCOMPARE(category1.text(), QStringLiteral("category1"));
+    QCOMPARE(category2.text(), QStringLiteral("category2"));
 
     // Check that the parent is correct
     QCOMPARE(category1.collection(), &collection);
@@ -28,7 +28,7 @@ void tst_KActionCategory::tstCreation()
 
     // Change the text
     category1.setText(QStringLiteral("Other Text"));
-    QCOMPARE(category1.text(), QString("Other Text"));
+    QCOMPARE(category1.text(), QStringLiteral("Other Text"));
 }
 
 void tst_KActionCategory::tstSynchronization()
@@ -126,7 +126,7 @@ void tst_KActionCategory::tstActionCreation()
     //         const QObject *receiver = NULL,
     //         const char *member = NULL);
     QAction *action4 = category.addAction(KStandardAction::Quit, QStringLiteral("myownname"));
-    QCOMPARE(action4->objectName(), QString("myownname"));
+    QCOMPARE(action4->objectName(), QStringLiteral("myownname"));
     QCOMPARE(category.actions().count(action4), 1);
     QCOMPARE(collection.actions().count(action4), 1);
 

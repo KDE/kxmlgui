@@ -250,7 +250,7 @@ void ContainerNode::unplugActionList(BuildState &state)
 
 void ContainerNode::unplugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt)
 {
-    static const QString &tagActionList = QLatin1String("actionlist");
+    static const QString &tagActionList = QStringLiteral("actionlist");
 
     MergingIndex mergingIdx = *mergingIdxIt;
 
@@ -615,7 +615,7 @@ void BuildHelper::processStateElement(const QDomElement &element)
 {
     QString stateName = element.attribute(QStringLiteral("name"));
 
-    if (stateName.isNull() || !stateName.length()) {
+    if (stateName.isNull() || stateName.isEmpty()) {
         return;
     }
 

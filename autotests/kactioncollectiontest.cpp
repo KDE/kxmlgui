@@ -162,12 +162,12 @@ void tst_KActionCollection::insertReplaces1()
 
     collection->addAction(QStringLiteral("a"), a);
     QVERIFY(collection->actions().contains(a));
-    QVERIFY(collection->action("a") == a);
+    QVERIFY(collection->action(QStringLiteral("a")) == a);
 
     collection->addAction(QStringLiteral("a"), b);
     QVERIFY(!collection->actions().contains(a));
     QVERIFY(collection->actions().contains(b));
-    QVERIFY(collection->action("a") == b);
+    QVERIFY(collection->action(QStringLiteral("a")) == b);
 
     delete a;
     delete b;
@@ -183,21 +183,21 @@ void tst_KActionCollection::insertReplaces2()
 
     collection->addAction(QStringLiteral("a"), a);
     QVERIFY(collection->actions().contains(a));
-    QVERIFY(collection->action("a") == a);
+    QVERIFY(collection->action(QStringLiteral("a")) == a);
 
     // Simple test: Just add it twice
     collection->addAction(QStringLiteral("b"), a);
     QVERIFY(collection->actions().contains(a));
-    QVERIFY(!collection->action("a"));
-    QVERIFY(collection->action("b") == a);
+    QVERIFY(!collection->action(QStringLiteral("a")));
+    QVERIFY(collection->action(QStringLiteral("b")) == a);
 
     // Complex text: Mesh with the objectname
     a->setObjectName(QStringLiteral("c"));
     collection->addAction(QStringLiteral("d"), a);
     QVERIFY(collection->actions().contains(a));
-    QVERIFY(!collection->action("b"));
-    QVERIFY(!collection->action("c"));
-    QVERIFY(collection->action("d") == a);
+    QVERIFY(!collection->action(QStringLiteral("b")));
+    QVERIFY(!collection->action(QStringLiteral("c")));
+    QVERIFY(collection->action(QStringLiteral("d")) == a);
 
     delete a;
 }
@@ -211,18 +211,18 @@ KConfigGroup tst_KActionCollection::clearConfig()
 
 void tst_KActionCollection::testSetShortcuts()
 {
-    QAction *action = new QAction(/*i18n*/("Next Unread &Folder"), this);
+    QAction *action = new QAction(/*i18n*/(QStringLiteral("Next Unread &Folder")), this);
     collection->addAction(QStringLiteral("go_next_unread_folder"), action);
     collection->setDefaultShortcut(action, QKeySequence(Qt::ALT + Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
     shortcut << QKeySequence(Qt::CTRL + Qt::Key_Plus);
     action->setShortcuts(shortcut);
-    QCOMPARE(QKeySequence::listToString(action->shortcuts()), QString("Alt++; Ctrl++"));
+    QCOMPARE(QKeySequence::listToString(action->shortcuts()), QStringLiteral("Alt++; Ctrl++"));
 
     // Simpler way:
     QList<QKeySequence> shortcut2;
     shortcut2 << QKeySequence(Qt::ALT + Qt::Key_Plus) << QKeySequence(Qt::CTRL + Qt::Key_Plus);
-    QCOMPARE(QKeySequence::listToString(shortcut2), QString("Alt++; Ctrl++"));
+    QCOMPARE(QKeySequence::listToString(shortcut2), QStringLiteral("Alt++; Ctrl++"));
 }
 
 void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()

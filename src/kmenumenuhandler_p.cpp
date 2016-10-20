@@ -177,7 +177,7 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
         return;
     }
 
-    KToolBar *toolbar = window->toolBars()[tb];
+    KToolBar *toolbar = window->toolBars().at(tb);
     toolbar->addAction(m_popupAction);
 
     const KXMLGUIClient *client = collection->parentGUIClient();
