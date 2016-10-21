@@ -615,7 +615,7 @@ void BuildHelper::processStateElement(const QDomElement &element)
 {
     QString stateName = element.attribute(QStringLiteral("name"));
 
-    if (stateName.isNull() || stateName.isEmpty()) {
+    if (stateName.isEmpty()) {
         return;
     }
 
