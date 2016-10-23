@@ -29,7 +29,8 @@
 #include <kxmlgui_export.h>
 #include <kstandardaction.h>
 
-#include <QtCore/QObject>
+#include <QObject>
+#include <QAction>
 
 class QAction;
 class KXMLGUIClient;
@@ -445,6 +446,47 @@ public:
         }
         addAction(name, a);
         return a;
+    }
+
+    /**
+     * This is the same as add(const QString &name, const QObject *receiver = 0, const char *member = 0) using
+     * new style connect syntax
+     *
+     * @param name The internal name of the action (e.g. "file-open").
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param member The slot or lambda to connect the triggered(bool) signal to.
+     * @return new action of the given type ActionType.
+     *
+     * @see add(const QString &, const QObject *, const char *)
+     * @since 5.28
+     */
+    template<class ActionType, class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, ActionType>::type *add(
+        const QString &name, const Receiver *receiver, Func slot)
+    {
+        ActionType *a = new ActionType(this);
+        connect(a, &QAction::triggered, receiver, slot);
+        addAction(name, a);
+        return a;
+    }
+
+    /**
+     * This is the same as addAction(const QString &name, const QObject *receiver = 0, const char *member = 0) using
+     * new style connect syntax
+     *
+     * @param name The internal name of the action (e.g. "file-open").
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param member The slot or lambda to connect the triggered(bool) signal to.
+     * @return new action of the given type ActionType.
+     *
+     * @see addAction(const QString &, const QObject *, const char *)
+     * @since 5.28
+     */
+    template<class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, QAction>::type *addAction(
+        const QString &name, const Receiver *receiver, Func slot)
+    {
+        return add<QAction>(name, receiver, slot);
     }
 
     /**
