@@ -454,7 +454,7 @@ public:
      *
      * @param name The internal name of the action (e.g. "file-open").
      * @param receiver The QObject to connect the triggered(bool) signal to.
-     * @param member The slot or lambda to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
      * @return new action of the given type ActionType.
      *
      * @see add(const QString &, const QObject *, const char *)
@@ -476,7 +476,7 @@ public:
      *
      * @param name The internal name of the action (e.g. "file-open").
      * @param receiver The QObject to connect the triggered(bool) signal to.
-     * @param member The slot or lambda to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
      * @return new action of the given type ActionType.
      *
      * @see addAction(const QString &, const QObject *, const char *)
