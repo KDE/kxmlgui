@@ -95,7 +95,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
         titleWidget->setPixmap(QPixmap::fromImage(aboutData.programLogo().value<QImage>()), KTitleWidget::ImageLeft);
     }
 
-    titleWidget->setText(i18n("<html><font size=\"5\">%1</font></html>", aboutData.displayName()));
+    titleWidget->setText(i18n("<html><font size=\"5\">%1</font><br />Version %2</html>", aboutData.displayName(), aboutData.version()));
 
     //Then the tab bar...
     QTabWidget *tabWidget = new QTabWidget;
@@ -150,12 +150,9 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     // Version
     QWidget *versionWidget = new QWidget(q);
     QVBoxLayout *versionLayout = new QVBoxLayout;
-    QLabel *versionLabel = new QLabel(i18n("<b>Version %1</b>", aboutData.version()));
-    versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
-    versionLayout->addWidget(versionLabel);
     if (!(opt & HideKdeVersion)) {
         QLabel *versionLabel = new QLabel(
-            i18n("Using:<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
+            i18n("<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
                  QStringLiteral(KXMLGUI_VERSION_STRING),
                  QString::fromLocal8Bit(qVersion()),
                  QStringLiteral(QT_VERSION_STR),
@@ -165,7 +162,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     }
     versionLayout->addStretch();
     versionWidget->setLayout(versionLayout);
-    tabWidget->addTab(versionWidget, i18n("&Version"));
+    tabWidget->addTab(versionWidget, i18n("&Libraries"));
 
     //Palette needed at least for translators...
     QPalette transparentBackgroundPalette;
