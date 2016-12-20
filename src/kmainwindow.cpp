@@ -805,7 +805,7 @@ bool KMainWindow::event(QEvent *ev)
 {
     K_D(KMainWindow);
     switch (ev->type()) {
-#ifdef Q_OS_WIN
+#if defined(Q_OS_WIN) || defined(Q_OS_OSX)
     case QEvent::Move:
 #endif
     case QEvent::Resize:
