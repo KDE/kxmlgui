@@ -332,6 +332,13 @@ protected:
      */
     bool event(QEvent *event) Q_DECL_OVERRIDE;
 
+    /**
+     * Checks if there are actions using the same shortcut. This is called
+     * automatically from createGUI.
+     * @since 5.30
+     */
+    void checkAmbiguousShortcuts();
+
 protected Q_SLOTS:
     /**
      * Rebuilds the GUI after KEditToolbar changed the toolbar layout.

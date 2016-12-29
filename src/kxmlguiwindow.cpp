@@ -26,6 +26,7 @@
 #include "kxmlguiwindow.h"
 
 #include "kmainwindow_p.h"
+#include "kmessagebox.h"
 #include "kactioncollection.h"
 #include "kmainwindowiface_p.h"
 #include "ktoolbarhandler_p.h"
@@ -296,6 +297,8 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
     guiFactory()->reset();
     guiFactory()->addClient(this);
 
+    checkAmbiguousShortcuts();
+
     //  setUpdatesEnabled( true );
 }
 
@@ -387,6 +390,47 @@ void KXmlGuiWindow::applyMainWindowSettings(const KConfigGroup &config)
 void KXmlGuiWindow::finalizeGUI(KXMLGUIClient *client)
 {
     KXMLGUIBuilder::finalizeGUI(client);
+}
+
+void KXmlGuiWindow::checkAmbiguousShortcuts()
+{
+    QMap<QString, QAction*> shortcuts;
+    QAction *editCutAction = actionCollection()->action(QStringLiteral("edit_cut"));
+    QAction *deleteFileAction = actionCollection()->action(QStringLiteral("deletefile"));
+    foreach (QAction *action, actionCollection()->actions()) {
+        if (action->isEnabled()) {
+            foreach (const QKeySequence &shortcut, action->shortcuts()) {
+                const QString portableShortcutText = shortcut.toString();
+                const QAction *existingShortcutAction = shortcuts.value(portableShortcutText);
+                if (existingShortcutAction) {
+                    // If the shortcut is already in use we give a warning, so that hopefully the developer will find it
+                    // There is one exception, if the conflicting shortcut is a non primary shortcut of "edit_cut"
+                    // and "deleteFileAction" is the other action since Shift+Delete is used for both in our default code
+                    bool showWarning = true;
+                    if ((action == editCutAction && existingShortcutAction == deleteFileAction) ||
+                        (action == deleteFileAction && existingShortcutAction == editCutAction)) {
+                        QList<QKeySequence> editCutActionShortcuts = editCutAction->shortcuts();
+                        if (editCutActionShortcuts.indexOf(shortcut) > 0) // alternate shortcut
+                        {
+                            editCutActionShortcuts.removeAll(shortcut);
+                            editCutAction->setShortcuts(editCutActionShortcuts);
+
+                            showWarning = false;
+                        }
+                    }
+
+                    if (showWarning) {
+                        const QString actionName = KLocalizedString::removeAcceleratorMarker(action->text());
+                        const QString existingShortcutActionName = KLocalizedString::removeAcceleratorMarker(existingShortcutAction->text());
+                        const QString dontShowAgainString = existingShortcutActionName + actionName + shortcut.toString();
+                        KMessageBox::information(this, i18n("There are two actions (%1, %2) that want to use the same shortcut (%3). This is most probably a bug. Please report it in <a href='https://bugs.kde.org'>bugs.kde.org</a>", existingShortcutActionName, actionName, shortcut.toString(QKeySequence::NativeText)), i18n("Ambiguous Shortcuts"), dontShowAgainString, KMessageBox::Notify | KMessageBox::AllowLink);
+                    }
+                } else {
+                    shortcuts.insert(portableShortcutText, action);
+                }
+            }
+        }
+    }
 }
 
 #include "moc_kxmlguiwindow.cpp"
