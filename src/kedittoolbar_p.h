@@ -55,22 +55,22 @@ Q_SIGNALS:
     void dropped(ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList);
 
 protected:
-    virtual Qt::DropActions supportedDropActions() const
+    Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE
     {
         return Qt::MoveAction;
     }
-    virtual QStringList mimeTypes() const
+    QStringList mimeTypes() const Q_DECL_OVERRIDE
     {
         return QStringList() << QStringLiteral("application/x-kde-action-list");
     }
 
-    virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const;
+    QMimeData *mimeData(const QList<QListWidgetItem *> items) const Q_DECL_OVERRIDE;
 
-    virtual bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action);
+    bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action) Q_DECL_OVERRIDE;
 
     // Skip internal dnd handling in QListWidget ---- how is one supposed to figure this out
     // without reading the QListWidget code !?
-    virtual void dropEvent(QDropEvent *ev)
+    void dropEvent(QDropEvent *ev) Q_DECL_OVERRIDE
     {
         QAbstractItemView::dropEvent(ev);
     }
@@ -209,7 +209,7 @@ public:
     /**
      * @internal Reimplemented for internal purposes.
      */
-    virtual KActionCollection *actionCollection() const;
+    KActionCollection *actionCollection() const Q_DECL_OVERRIDE;
 
     /**
      * Save any changes the user made.  The file will be in the user's
