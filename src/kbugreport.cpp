@@ -400,7 +400,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
     }
     m_process = new QProcess;
     QObject::connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
-    m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcm_useraccount"));
+    m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("user_manager"));
     if (!m_process->waitForStarted()) {
         //qDebug() << "Couldn't start kcmshell5..";
         delete m_process;
