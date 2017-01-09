@@ -31,8 +31,8 @@ class KBugReportPrivate;
  * All the information needed by the dialog box
  * (program name, version, bug-report address, etc.)
  * comes from the KAboutData class.
- * Make sure you create an instance of KAboutData and pass it
- * to KCmdLineArgs.
+ * Make sure you create an instance of KAboutData and call
+ * KAboutData::setApplicationData(<aboutData>).
  *
  * \image html kbugreport.png "KDE Bug Report Dialog"
  *
