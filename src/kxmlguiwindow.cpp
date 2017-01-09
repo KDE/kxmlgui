@@ -400,6 +400,9 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
     foreach (QAction *action, actionCollection()->actions()) {
         if (action->isEnabled()) {
             foreach (const QKeySequence &shortcut, action->shortcuts()) {
+                if (shortcut.isEmpty()) {
+                    continue;
+                }
                 const QString portableShortcutText = shortcut.toString();
                 const QAction *existingShortcutAction = shortcuts.value(portableShortcutText);
                 if (existingShortcutAction) {
