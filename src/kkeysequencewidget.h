@@ -49,8 +49,6 @@ class KXMLGUI_EXPORT KKeySequenceWidget: public QWidget
 {
     Q_OBJECT
 
-    Q_FLAGS(ShortcutTypes)
-
     Q_PROPERTY(
         bool multiKeyShortcutsAllowed
         READ multiKeyShortcutsAllowed
@@ -100,6 +98,7 @@ public:
         GlobalShortcuts = 0x04      //!< Check against global shortcuts. @see KGlobalAccel
     };
     Q_DECLARE_FLAGS(ShortcutTypes, ShortcutType)
+    Q_FLAG(ShortcutTypes)
 
     /**
      * Configure if the widget should check for conflicts with existing

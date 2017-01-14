@@ -65,7 +65,6 @@ class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, 
     Q_PROPERTY(bool autoSaveSettings READ autoSaveSettings)
     Q_PROPERTY(QString autoSaveGroup READ autoSaveGroup)
     Q_PROPERTY(bool standardToolBarMenuEnabled READ isStandardToolBarMenuEnabled WRITE setStandardToolBarMenuEnabled)
-    Q_FLAGS(StandardWindowOption)
 
 public:
     /**
@@ -234,6 +233,7 @@ public:
          */
         Default = ToolBar | Keys | StatusBar | Save | Create
     };
+    Q_FLAG(StandardWindowOption)
     Q_DECLARE_FLAGS(StandardWindowOptions, StandardWindowOption)
 
     /**

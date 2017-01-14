@@ -50,7 +50,6 @@ class KAboutData;
 class KXMLGUI_EXPORT KAboutApplicationDialog : public QDialog
 {
     Q_OBJECT
-    Q_FLAGS(Options)
 public:
 
     /**
@@ -64,6 +63,7 @@ public:
         HideKdeVersion  = 0x2  ///< Don't show the KDE version next to the application name and version
     };
     Q_DECLARE_FLAGS(Options, Option)
+    Q_FLAG(Options)
 
     /**
      * Constructor. Creates a fully featured "About Application" dialog box.
