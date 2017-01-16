@@ -56,6 +56,13 @@ class KBugReportPrivate
 public:
     KBugReportPrivate(KBugReport *q): q(q), m_aboutData(KAboutData::applicationData()) {}
 
+    enum BugDestination
+    {
+        BugsKdeOrg,
+        CustomEmail,
+        CustomUrl
+    };
+
     void _k_slotConfigureEmail();
     void _k_slotSetFrom();
     void _k_appChanged(int);
@@ -88,7 +95,7 @@ public:
             }
         return -1;
     }
-    bool submitBugWeb;
+    BugDestination bugDestination;
 };
 
 KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
@@ -103,11 +110,18 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
     d->m_aboutData = aboutData;
     d->m_process = nullptr;
-    d->submitBugWeb = false;
+    d->bugDestination = KBugReportPrivate::CustomEmail;
 
-    if (d->m_aboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
+    const QString bugAddress = d->m_aboutData.bugAddress();
+    if (bugAddress == QStringLiteral("submit@bugs.kde.org")) {
         // This is a core KDE application -> redirect to the web form
-        d->submitBugWeb = true;
+        d->bugDestination = KBugReportPrivate::BugsKdeOrg;
+    } else if (!QUrl(bugAddress).scheme().isEmpty()) {
+        // The bug reporting address is a URL -> redirect to that
+        d->bugDestination = KBugReportPrivate::CustomUrl;
+    }
+
+    if (d->bugDestination != KBugReportPrivate::CustomEmail) {
         KGuiItem::assign(buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::close());
     }
 
@@ -125,7 +139,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
     int row = 0;
 
-    if (!d->submitBugWeb) {
+    if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         // From
         QString qwtstr = i18n("Your email address. If incorrect, use the Configure Email button to change it");
         tmpLabel = new QLabel(i18nc("Email sender address", "From:"), this);
@@ -200,7 +214,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     }
     d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING);
     d->kde_version += QStringLiteral(", ") + QLatin1String(XMLGUI_DISTRIBUTION_TEXT);
-    if (!d->submitBugWeb) {
+    if (d->bugDestination != KBugReportPrivate::BugsKdeOrg) {
         d->m_strVersion += QLatin1Char(' ') + d->kde_version;
     }
     d->m_version = new QLabel(d->m_strVersion, this);
@@ -223,7 +237,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     tmpLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
     glay->addWidget(tmpLabel, row, 1, 1, 2);
 
-    if (!d->submitBugWeb) {
+    if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         // Severity
         d->m_bgSeverity = new QGroupBox(i18n("Se&verity"), this);
         static const char *const sevNames[5] = { "critical", "grave", "normal", "wishlist", "i18n" };
@@ -275,10 +289,19 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     } else {
         // Point to the web form
 
+        QString text;
+        if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
+            text = i18n("<qt>To submit a bug report, click on the button below. This will open a web browser "
+                        "window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> where you will find "
+                        "a form to fill in. The information displayed above will be transferred to that server.</qt>");
+            d->_k_updateUrl();
+        } else {
+            text = i18n("<qt>To submit a bug report, click on the button below. This will open a web browser "
+                        "window on <a href=\"%1\">%2</a>.</qt>", bugAddress, bugAddress);
+            d->url = QUrl(bugAddress);
+        }
+
         lay->addSpacing(10);
-        QString text = i18n("<qt>To submit a bug report, click on the button below. This will open a web browser "
-                            "window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> where you will find "
-                            "a form to fill in. The information displayed above will be transferred to that server.</qt>");
         QLabel *label = new QLabel(text, this);
         label->setOpenExternalLinks(true);
         label->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard);
@@ -288,10 +311,12 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         d->appcombo->setFocus();
 
-        d->_k_updateUrl();
-
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-        okButton->setText(i18n("&Launch Bug Report Wizard"));
+        if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
+            okButton->setText(i18n("&Launch Bug Report Wizard"));
+        } else {
+            okButton->setText(i18n("&Submit Bug Report"));
+        }
         okButton->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
     }
 
@@ -306,7 +331,7 @@ KBugReport::~KBugReport()
 
 QString KBugReport::messageBody() const
 {
-    if (!d->submitBugWeb) {
+    if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         return d->m_lineedit->toPlainText();
     } else {
         return QString();
@@ -315,7 +340,7 @@ QString KBugReport::messageBody() const
 
 void KBugReport::setMessageBody(const QString &messageBody)
 {
-    if (!d->submitBugWeb) {
+    if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         d->m_lineedit->setPlainText(messageBody);
     }
 }
@@ -357,13 +382,13 @@ void KBugReportPrivate::_k_appChanged(int i)
         strDisplayVersion = i18nc("unknown program name", "unknown");
     }
 
-    if (!submitBugWeb) {
+    if (bugDestination != KBugReportPrivate::BugsKdeOrg) {
         m_strVersion += QLatin1Char(' ') + kde_version;
         strDisplayVersion += QLatin1Char(' ') + kde_version;
     }
 
     m_version->setText(strDisplayVersion);
-    if (submitBugWeb) {
+    if (bugDestination == KBugReportPrivate::BugsKdeOrg) {
         _k_updateUrl();
     }
 }
@@ -406,7 +431,7 @@ void KBugReportPrivate::_k_slotSetFrom()
 
 void KBugReport::accept()
 {
-    if (d->submitBugWeb) {
+    if (d->bugDestination != KBugReportPrivate::CustomEmail) {
         QDesktopServices::openUrl(d->url);
         return;
     }
@@ -462,7 +487,8 @@ void KBugReport::accept()
 
 void KBugReport::closeEvent(QCloseEvent *e)
 {
-    if (!d->submitBugWeb && ((d->m_lineedit->toPlainText().length() > 0) || d->m_subject->isModified())) {
+    if (d->bugDestination == KBugReportPrivate::CustomEmail &&
+        ((d->m_lineedit->toPlainText().length() > 0) || d->m_subject->isModified())) {
         int rc = KMessageBox::warningYesNo(this,
                                            i18n("Close and discard\nedited message?"),
                                            i18n("Close Message"), KStandardGuiItem::discard(), KStandardGuiItem::cont());

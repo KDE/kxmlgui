@@ -181,18 +181,16 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
             bugsLabel->setContentsMargins(4, 2, 0, 4);
             bugsLabel->setOpenExternalLinks(true);
             if (!aboutData.customAuthorTextEnabled()) {
-                if (aboutData.bugAddress().isEmpty() || aboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
+                const QString bugAddress = aboutData.bugAddress();
+                if (bugAddress.isEmpty() || bugAddress == QLatin1String("submit@bugs.kde.org")) {
                     bugsLabel->setText(i18n("Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report bugs.\n"));
                 } else {
-                    if ((aboutData.authors().count() == 1) &&
-                            (aboutData.authors().at(0).emailAddress() == aboutData.bugAddress())) {
-                        bugsLabel->setText(i18n("Please report bugs to <a href=\"mailto:%1\">%2</a>.\n",
-                                                aboutData.authors().at(0).emailAddress(),
-                                                aboutData.authors().at(0).emailAddress()));
-                    } else {
-                        bugsLabel->setText(i18n("Please report bugs to <a href=\"mailto:%1\">%2</a>.\n",
-                                                aboutData.bugAddress(), aboutData.bugAddress()));
+                    QUrl bugUrl(bugAddress);
+                    if (bugUrl.scheme().isEmpty()) {
+                        bugUrl.setScheme(QLatin1String("mailto"));
                     }
+                    bugsLabel->setText(i18n("Please report bugs to <a href=\"%1\">%2</a>.\n",
+                                            bugUrl.toString(), bugAddress));
                 }
             } else {
                 bugsLabel->setText(aboutData.customAuthorRichText());
