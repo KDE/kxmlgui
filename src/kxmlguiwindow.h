@@ -81,7 +81,7 @@ public:
      * automatically destroyed when its window is closed. Pass 0 if
      * you do not want this behavior.
      *
-     * @see http://doc.trolltech.com/qt.html#WindowType-enum
+     * @see https://doc.qt.io/qt-5/qt.html#WindowType-enum
      *
      * KMainWindows must be created on the heap with 'new', like:
      * \code
