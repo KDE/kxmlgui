@@ -58,7 +58,7 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
     : TabConnectedWidget(viewport),
       m_defaultKeySequence(defaultSeq),
       m_isUpdating(false),
-      m_action(Q_NULLPTR)
+      m_action(nullptr)
 {
     QGridLayout *layout = new QGridLayout(this);
 
