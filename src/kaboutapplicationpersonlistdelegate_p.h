@@ -31,7 +31,7 @@ class KAboutApplicationPersonListDelegate : public KWidgetItemDelegate
     Q_OBJECT
 public:
     KAboutApplicationPersonListDelegate(QAbstractItemView *itemView,
-                                        QObject *parent = 0);
+                                        QObject *parent = nullptr);
 
     ~KAboutApplicationPersonListDelegate() {}
 

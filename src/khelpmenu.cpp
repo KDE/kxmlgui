@@ -56,21 +56,21 @@ class KHelpMenuPrivate
 {
 public:
     KHelpMenuPrivate()
-        : mSwitchApplicationLanguage(0),
+        : mSwitchApplicationLanguage(nullptr),
           mActionsCreated(false),
-          mSwitchApplicationLanguageAction(0),
+          mSwitchApplicationLanguageAction(nullptr),
           mAboutData(KAboutData::applicationData())
     {
-        mMenu = 0;
-        mAboutApp = 0;
-        mAboutKDE = 0;
-        mBugReport = 0;
-        mDonateAction = 0;
-        mHandBookAction = 0;
-        mWhatsThisAction = 0;
-        mReportBugAction = 0;
-        mAboutAppAction = 0;
-        mAboutKDEAction = 0;
+        mMenu = nullptr;
+        mAboutApp = nullptr;
+        mAboutKDE = nullptr;
+        mBugReport = nullptr;
+        mDonateAction = nullptr;
+        mHandBookAction = nullptr;
+        mWhatsThisAction = nullptr;
+        mReportBugAction = nullptr;
+        mAboutAppAction = nullptr;
+        mAboutKDEAction = nullptr;
     }
     ~KHelpMenuPrivate()
     {
@@ -260,7 +260,7 @@ QAction *KHelpMenu::action(MenuId id) const
         break;
     }
 
-    return 0;
+    return nullptr;
 }
 
 void KHelpMenu::appHelpActivated()
@@ -363,25 +363,25 @@ void KHelpMenu::dialogFinished()
 void KHelpMenu::timerExpired()
 {
     if (d->mAboutKDE && !d->mAboutKDE->isVisible()) {
-        delete d->mAboutKDE; d->mAboutKDE = 0;
+        delete d->mAboutKDE; d->mAboutKDE = nullptr;
     }
 
     if (d->mBugReport && !d->mBugReport->isVisible()) {
-        delete d->mBugReport; d->mBugReport = 0;
+        delete d->mBugReport; d->mBugReport = nullptr;
     }
 
     if (d->mSwitchApplicationLanguage && !d->mSwitchApplicationLanguage->isVisible()) {
-        delete d->mSwitchApplicationLanguage; d->mSwitchApplicationLanguage = 0;
+        delete d->mSwitchApplicationLanguage; d->mSwitchApplicationLanguage = nullptr;
     }
 
     if (d->mAboutApp && !d->mAboutApp->isVisible()) {
-        delete d->mAboutApp; d->mAboutApp = 0;
+        delete d->mAboutApp; d->mAboutApp = nullptr;
     }
 }
 
 void KHelpMenu::menuDestroyed()
 {
-    d->mMenu = 0;
+    d->mMenu = nullptr;
 }
 
 void KHelpMenu::contextHelpActivated()

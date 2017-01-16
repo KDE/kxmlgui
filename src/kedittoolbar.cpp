@@ -306,7 +306,7 @@ ToolBarListWidget::ToolBarListWidget(QWidget *parent)
 QMimeData *ToolBarListWidget::mimeData(const QList<QListWidgetItem *> items) const
 {
     if (items.isEmpty()) {
-        return 0;
+        return nullptr;
     }
     QMimeData *mimedata = new QMimeData();
 
@@ -420,12 +420,12 @@ public:
                               const QString &cName, KActionCollection *collection)
         : m_collection(collection),
           m_widget(widget),
-          m_factory(NULL),
+          m_factory(nullptr),
           m_loadedOnce(false)
     {
         m_componentName = cName;
         m_isPart   = false;
-        m_helpArea = 0L;
+        m_helpArea = nullptr;
         // We want items with an icon to align with items without icon
         // So we use an empty QPixmap for that
         const int iconSize = widget->style()->pixelMetric(QStyle::PM_SmallIconSize);
@@ -563,7 +563,7 @@ class KEditToolBarPrivate
 public:
     KEditToolBarPrivate(KEditToolBar *q): q(q),
         m_accept(false), m_global(false),
-        m_collection(0), m_factory(0), m_widget(0) {}
+        m_collection(nullptr), m_factory(nullptr), m_widget(nullptr) {}
 
     void init();
 
@@ -612,7 +612,7 @@ KEditToolBar::KEditToolBar(KXMLGUIFactory *factory,
 void KEditToolBarPrivate::init()
 {
     m_accept = false;
-    m_factory = 0;
+    m_factory = nullptr;
 
     q->setDefaultToolBar(QString());
 
@@ -684,7 +684,7 @@ void KEditToolBarPrivate::defaultClicked()
     }
 
     KEditToolBarWidget *oldWidget = m_widget;
-    m_widget = 0;
+    m_widget = nullptr;
     m_accept = false;
 
     if (m_factory) {
@@ -1064,7 +1064,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     // "change icon text" button
     m_changeIconText = new QPushButton(i18n("Change Te&xt..."), m_widget);
     m_changeIconText->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
-    m_changeIconText->setEnabled(m_activeList->currentItem() != 0);
+    m_changeIconText->setEnabled(m_activeList->currentItem() != nullptr);
 
     QObject::connect(m_changeIconText, SIGNAL(clicked()),
                      m_widget, SLOT(slotChangeIconText()));
@@ -1282,7 +1282,7 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
     m_inactiveList->sortItems(Qt::AscendingOrder);
 
     // finally, add default separators to the inactive list
-    ToolBarItem *act = new ToolBarItem(0L, tagSeparator, sep_name.arg(sep_num++), QString());
+    ToolBarItem *act = new ToolBarItem(nullptr, tagSeparator, sep_name.arg(sep_num++), QString());
     act->setSeparator(true);
     act->setText(SEPARATORSTRING);
     m_inactiveList->insertItem(0, act);
@@ -1354,7 +1354,7 @@ void KEditToolBarWidgetPrivate::slotInactiveSelectionChanged()
 
 void KEditToolBarWidgetPrivate::slotActiveSelectionChanged()
 {
-    ToolBarItem *toolitem = 0;
+    ToolBarItem *toolitem = nullptr;
     if (!m_activeList->selectedItems().isEmpty()) {
         toolitem = static_cast<ToolBarItem *>(m_activeList->selectedItems().first());
     }
@@ -1677,7 +1677,7 @@ void KEditToolBarWidgetPrivate::slotDropped(ToolBarListWidget *list, int index, 
     //qDebug() << "slotDropped list=" << (list==m_activeList?"activeList":"inactiveList")
     //         << "index=" << index << "sourceIsActiveList=" << sourceIsActiveList;
     if (list == m_activeList) {
-        ToolBarItem *after = index > 0 ? static_cast<ToolBarItem *>(list->item(index - 1)) : 0;
+        ToolBarItem *after = index > 0 ? static_cast<ToolBarItem *>(list->item(index - 1)) : nullptr;
         //qDebug() << "after" << after->text() << after->internalTag();
         if (sourceIsActiveList) {
             // has been dragged within the active list (moved).

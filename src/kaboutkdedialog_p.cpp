@@ -38,7 +38,7 @@ namespace KDEPrivate
 
 KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     : QDialog(parent),
-      d(0)
+      d(nullptr)
 {
     setWindowTitle(i18n("About KDE"));
 

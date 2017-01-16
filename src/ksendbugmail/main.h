@@ -28,7 +28,7 @@ class BugMailer : public QObject
 {
     Q_OBJECT
 public:
-    BugMailer(SMTP *s) : QObject(0), sm(s)
+    BugMailer(SMTP *s) : QObject(nullptr), sm(s)
     {
         setObjectName(QStringLiteral("mailer"));
     }

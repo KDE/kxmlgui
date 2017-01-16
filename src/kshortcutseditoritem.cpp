@@ -42,8 +42,8 @@ KShortcutsEditorItem::KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *act
     : QTreeWidgetItem(parent, ActionItem)
     , m_action(action)
     , m_isNameBold(false)
-    , m_oldLocalShortcut(0)
-    , m_oldGlobalShortcut(0)
+    , m_oldLocalShortcut(nullptr)
+    , m_oldGlobalShortcut(nullptr)
 #if 0
     , m_oldShapeGesture(0)
     , m_oldRockerGesture(0)
@@ -321,12 +321,12 @@ void KShortcutsEditorItem::updateModified()
 {
     if (m_oldLocalShortcut && *m_oldLocalShortcut == m_action->shortcuts()) {
         delete m_oldLocalShortcut;
-        m_oldLocalShortcut = 0;
+        m_oldLocalShortcut = nullptr;
     }
 #if HAVE_GLOBALACCEL
     if (m_oldGlobalShortcut && *m_oldGlobalShortcut == KGlobalAccel::self()->shortcut(m_action)) {
         delete m_oldGlobalShortcut;
-        m_oldGlobalShortcut = 0;
+        m_oldGlobalShortcut = nullptr;
     }
 #endif
 #if 0
@@ -425,9 +425,9 @@ void KShortcutsEditorItem::commit()
 #endif
 
     delete m_oldLocalShortcut;
-    m_oldLocalShortcut = 0;
+    m_oldLocalShortcut = nullptr;
     delete m_oldGlobalShortcut;
-    m_oldGlobalShortcut = 0;
+    m_oldGlobalShortcut = nullptr;
 #if 0
     delete m_oldShapeGesture;
     m_oldShapeGesture = 0;

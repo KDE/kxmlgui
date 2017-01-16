@@ -70,9 +70,9 @@ public:
 
     KShortcutsDialogPrivate(KShortcutsDialog *q)
         : q(q),
-          m_keyChooser(0),
-          m_schemeEditor(0),
-          m_detailsButton(0),
+          m_keyChooser(nullptr),
+          m_schemeEditor(nullptr),
+          m_detailsButton(nullptr),
           m_saveSettings(false)
     {
     }

@@ -214,7 +214,7 @@ void KAboutApplicationPersonListDelegate::paint(QPainter *painter,
     int margin = option.fontMetrics.height() / 2;
 
     QStyle *style = QApplication::style();
-    style->drawPrimitive(QStyle::PE_Widget, &option, painter, 0);
+    style->drawPrimitive(QStyle::PE_Widget, &option, painter, nullptr);
 
     const KAboutApplicationPersonModel *model = qobject_cast< const KAboutApplicationPersonModel * >(index.model());
 

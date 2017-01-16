@@ -95,9 +95,9 @@ namespace KDEPrivate
 struct LanguageRowData {
     LanguageRowData()
     {
-        label = 0;
-        languageButton = 0;
-        removeButton = 0;
+        label = nullptr;
+        languageButton = nullptr;
+        removeButton = nullptr;
     }
     QLabel *label;
     KLanguageButton *languageButton;
@@ -414,7 +414,7 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
     );
 
     LanguageRowData languageRowData;
-    QPushButton *removeButton = 0;
+    QPushButton *removeButton = nullptr;
 
     if (!primaryLanguage) {
         removeButton = new QPushButton(i18n("Remove"), p);

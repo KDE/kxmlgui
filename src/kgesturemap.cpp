@@ -244,7 +244,7 @@ void KGestureMap::matchShapeGesture()
     //TODO: tune and tweak until satisfied with result :)
     m_shapeGesture.setShape(m_points);
     float dist, minDist = 20.0;
-    QAction *bestMatch = 0;
+    QAction *bestMatch = nullptr;
 
     for (QHash<KShapeGesture, QAction *>::const_iterator it = m_shapeGestures.constBegin();
             it != m_shapeGestures.constEnd(); ++it) {

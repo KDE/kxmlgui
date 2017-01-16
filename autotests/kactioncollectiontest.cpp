@@ -8,13 +8,13 @@
 
 void tst_KActionCollection::init()
 {
-    collection = new KActionCollection(static_cast<QObject *>(0));
+    collection = new KActionCollection(static_cast<QObject *>(nullptr));
 }
 
 void tst_KActionCollection::cleanup()
 {
     delete collection;
-    collection = 0;
+    collection = nullptr;
 }
 
 void tst_KActionCollection::clear()
@@ -47,7 +47,7 @@ void tst_KActionCollection::deleted()
     QVERIFY(collection->isEmpty());
 
     // Delete action's parent -> automatically removed from collection
-    QWidget *myWidget = new QWidget(0);
+    QWidget *myWidget = new QWidget(nullptr);
     QPointer<QAction> action = new QAction(/*i18n()*/ QStringLiteral("Foo"), myWidget);
     collection->addAction(QStringLiteral("foo"), action);
     delete myWidget;
@@ -56,7 +56,7 @@ void tst_KActionCollection::deleted()
 
     // Delete action's parent, but the action was added to another widget with setAssociatedWidget
     // and that widget gets deleted first.
-    myWidget = new QWidget(0);
+    myWidget = new QWidget(nullptr);
     QWidget *myAssociatedWidget = new QWidget(myWidget); // child widget
     action = new QAction(/*i18n()*/ QStringLiteral("Foo"), myWidget);  // child action
     collection->addAction(QStringLiteral("foo"), action);
@@ -157,8 +157,8 @@ void tst_KActionCollection::readSettings()
 
 void tst_KActionCollection::insertReplaces1()
 {
-    QAction *a = new QAction(0);
-    QAction *b = new QAction(0);
+    QAction *a = new QAction(nullptr);
+    QAction *b = new QAction(nullptr);
 
     collection->addAction(QStringLiteral("a"), a);
     QVERIFY(collection->actions().contains(a));
@@ -179,7 +179,7 @@ void tst_KActionCollection::insertReplaces1()
  */
 void tst_KActionCollection::insertReplaces2()
 {
-    QAction *a = new QAction(0);
+    QAction *a = new QAction(nullptr);
 
     collection->addAction(QStringLiteral("a"), a);
     QVERIFY(collection->actions().contains(a));
@@ -227,7 +227,7 @@ void tst_KActionCollection::testSetShortcuts()
 
 void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
 {
-    KActionCollection collection(static_cast<QObject *>(0));
+    KActionCollection collection(static_cast<QObject *>(nullptr));
     QAction *a = KStandardAction::create(KStandardAction::Undo, qApp, SLOT(quit()), &collection);
     QVERIFY(a);
 
@@ -237,7 +237,7 @@ void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
 
 void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
 {
-    KActionCollection collection(static_cast<QObject *>(0));
+    KActionCollection collection(static_cast<QObject *>(nullptr));
     QAction *cut = KStandardAction::cut(&collection);
     QAction *a = collection.action(KStandardAction::name(KStandardAction::Cut));
     QVERIFY(a);

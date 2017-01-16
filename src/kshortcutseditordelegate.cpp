@@ -35,7 +35,7 @@
 KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool allowLetterShortcuts)
     : KExtendableItemDelegate(parent),
       m_allowLetterShortcuts(allowLetterShortcuts),
-      m_editor(0)
+      m_editor(nullptr)
 {
     Q_ASSERT(qobject_cast<QAbstractItemView *>(parent));
 
@@ -206,7 +206,7 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
         contractItem(index);
         view->selectionModel()->select(index, QItemSelectionModel::Clear);
         m_editingIndex = QModelIndex();
-        m_editor = 0;
+        m_editor = nullptr;
     }
 }
 

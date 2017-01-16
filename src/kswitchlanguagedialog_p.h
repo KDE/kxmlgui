@@ -57,7 +57,7 @@ public:
         *        made visible using QWidget::show(). Otherwise it will be
         *        modal and must be made visible using QWidget::exec()
         */
-    KSwitchLanguageDialog(QWidget *parent = 0);
+    KSwitchLanguageDialog(QWidget *parent = nullptr);
 
     virtual ~KSwitchLanguageDialog();
 

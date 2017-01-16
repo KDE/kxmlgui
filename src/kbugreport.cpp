@@ -102,7 +102,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
 
     d->m_aboutData = aboutData;
-    d->m_process = 0;
+    d->m_process = nullptr;
     d->submitBugWeb = false;
 
     if (d->m_aboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
@@ -157,8 +157,8 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
                                   i18n("Send this bug report to %1.", d->m_aboutData.bugAddress())));
         row++;
     } else {
-        d->m_configureEmail = 0;
-        d->m_from = 0;
+        d->m_configureEmail = nullptr;
+        d->m_from = nullptr;
     }
 
     // Program name
@@ -379,7 +379,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
     if (!m_process->waitForStarted()) {
         //qDebug() << "Couldn't start kcmshell5..";
         delete m_process;
-        m_process = 0;
+        m_process = nullptr;
         return;
     }
     m_configureEmail->setEnabled(false);
@@ -388,7 +388,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
 void KBugReportPrivate::_k_slotSetFrom()
 {
     delete m_process;
-    m_process = 0;
+    m_process = nullptr;
     m_configureEmail->setEnabled(true);
 
     KEMailSettings emailSettings;

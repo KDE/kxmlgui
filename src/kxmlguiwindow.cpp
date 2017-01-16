@@ -84,9 +84,9 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
 {
     K_D(KXmlGuiWindow);
     d->showHelpMenu = true;
-    d->toolBarHandler = 0;
-    d->showStatusBarAction = 0;
-    d->factory = 0;
+    d->toolBarHandler = nullptr;
+    d->showStatusBarAction = nullptr;
+    d->factory = nullptr;
     new KMainWindowInterface(this);
 }
 
@@ -94,7 +94,7 @@ QAction *KXmlGuiWindow::toolBarMenuAction()
 {
     K_D(KXmlGuiWindow);
     if (!d->toolBarHandler) {
-        return 0;
+        return nullptr;
     }
 
     return d->toolBarHandler->toolBarMenuAction();
@@ -337,7 +337,7 @@ void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool enable)
         }
 
         delete d->toolBarHandler;
-        d->toolBarHandler = 0;
+        d->toolBarHandler = nullptr;
     }
 }
 
@@ -357,7 +357,7 @@ void KXmlGuiWindow::createStandardStatusBarAction()
         d->showStatusBarAction->setChecked(sb->isHidden());
     } else {
         // If the language has changed, we'll need to grab the new text and whatsThis
-        QAction *tmpStatusBar = KStandardAction::showStatusbar(NULL, NULL, NULL);
+        QAction *tmpStatusBar = KStandardAction::showStatusbar(nullptr, nullptr, nullptr);
         d->showStatusBarAction->setText(tmpStatusBar->text());
         d->showStatusBarAction->setWhatsThis(tmpStatusBar->whatsThis());
         delete tmpStatusBar;

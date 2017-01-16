@@ -41,7 +41,7 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
     connected = false;
     finished = false;
 
-    sock = 0L;
+    sock = nullptr;
     state = Init;
     serverState = None;
 
@@ -63,7 +63,7 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
 SMTP::~SMTP()
 {
     delete sock;
-    sock = 0L;
+    sock = nullptr;
     connectTimer.stop();
     timeOutTimer.stop();
 }
@@ -170,7 +170,7 @@ void SMTP::connectTimerTick(void)
     // qDebug() << "connectTimerTick called...";
 
     delete sock;
-    sock = 0L;
+    sock = nullptr;
 
     // qDebug() << "connecting to " << serverHost << ":" << hostPort << " ..... ";
     sock = new QSslSocket(this);
@@ -253,7 +253,7 @@ void SMTP::socketClosed()
     if (sock) {
         sock->deleteLater();
     }
-    sock = 0;
+    sock = nullptr;
     emit connectionClosed();
 }
 

@@ -43,7 +43,7 @@ using namespace KDEPrivate;
 class KXMLGUIBuilderPrivate
 {
 public:
-    KXMLGUIBuilderPrivate() : m_client(0L)  {}
+    KXMLGUIBuilderPrivate() : m_client(nullptr)  {}
     ~KXMLGUIBuilderPrivate() { }
 
     QWidget *m_widget;
@@ -122,10 +122,10 @@ QStringList KXMLGUIBuilder::containerTags() const
 
 QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomElement &element, QAction *&containerAction)
 {
-    containerAction = 0;
+    containerAction = nullptr;
 
     if (element.attribute(QStringLiteral("deleted")).toLower() == QLatin1String("true")) {
-        return 0;
+        return nullptr;
     }
 
     const QString tagName = element.tagName().toLower();
@@ -136,7 +136,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
 
     if (tagName == d->tagMenuBar) {
         KMainWindow *mainWin = qobject_cast<KMainWindow *>(d->m_widget);
-        QMenuBar *bar = 0;
+        QMenuBar *bar = nullptr;
         if (mainWin) {
             bar = mainWin->menuBar();
         }
@@ -165,7 +165,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         QString name = element.attribute(d->attrName);
 
         if (!KAuthorized::authorizeAction(name)) {
-            return 0;
+            return nullptr;
         }
 
         QMenu *popup = new QMenu(p);
@@ -256,7 +256,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         return bar;
     }
 
-    return 0L;
+    return nullptr;
 }
 
 void KXMLGUIBuilder::removeContainer(QWidget *container, QWidget *parent, QDomElement &element, QAction *containerAction)
@@ -301,7 +301,7 @@ QStringList KXMLGUIBuilder::customTags() const
 
 QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const QDomElement &element)
 {
-    QAction *before = 0L;
+    QAction *before = nullptr;
     if (index > 0 && index < parent->actions().count()) {
         before = parent->actions().at(index);
     }

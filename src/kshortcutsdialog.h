@@ -79,7 +79,7 @@ public:
      */
     explicit KShortcutsDialog(KShortcutsEditor::ActionTypes types = KShortcutsEditor::AllActions,
                               KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
-                              QWidget *parent = 0);
+                              QWidget *parent = nullptr);
 
     /**
      * Destructor. Deletes all resources used by a KShortcutsDialog object.
@@ -123,7 +123,7 @@ public:
      * @return Accept if the dialog was closed with OK, Reject otherwise.
      */
     static int configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts =
-                             KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent = 0, bool bSaveSettings = true);
+                             KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent = nullptr, bool bSaveSettings = true);
 
     /**
      * Imports a shortcuts set up from @p path

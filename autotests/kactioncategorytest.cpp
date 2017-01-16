@@ -8,7 +8,7 @@
 
 void tst_KActionCategory::tstCreation()
 {
-    KActionCollection collection((QObject *)NULL);
+    KActionCollection collection((QObject *)nullptr);
     KActionCategory category1(QStringLiteral("category1"), &collection);
     KActionCategory category2(QStringLiteral("category2"), &collection);
 
@@ -33,7 +33,7 @@ void tst_KActionCategory::tstCreation()
 
 void tst_KActionCategory::tstSynchronization()
 {
-    KActionCollection collection((QObject *)NULL);
+    KActionCollection collection((QObject *)nullptr);
     KActionCategory category1(QStringLiteral("category1"), &collection);
     KActionCategory category2(QStringLiteral("category2"), &collection);
 
@@ -97,17 +97,17 @@ void tst_KActionCategory::tstSynchronization()
 
 void tst_KActionCategory::tstActionCreation()
 {
-    KActionCollection collection((QObject *)NULL);
+    KActionCollection collection((QObject *)nullptr);
     KActionCategory category(QStringLiteral("category"), &collection);
 
     // QAction * addAction(const QString &name, QAction *action);
-    QAction *action1 = new QAction(NULL);
+    QAction *action1 = new QAction(nullptr);
     category.addAction(QStringLiteral("action1"), action1);
     QCOMPARE(category.actions().count(action1), 1);
     QCOMPARE(collection.actions().count(action1), 1);
 
     // QAction * addAction(const QString &name, QAction *action);
-    QAction *action2 = new QAction(NULL);
+    QAction *action2 = new QAction(nullptr);
     category.addAction(QStringLiteral("action2"), action2);
     QCOMPARE(category.actions().count(action2), 1);
     QCOMPARE(collection.actions().count(action2), 1);

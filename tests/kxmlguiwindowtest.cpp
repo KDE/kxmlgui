@@ -46,7 +46,7 @@ class MainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = 0);
+    MainWindow(QWidget *parent = nullptr);
 
 public Q_SLOTS:
     void slotTest();
@@ -58,7 +58,7 @@ private:
 
 void MainWindow::slotTest()
 {
-    KMessageBox::information(0, QStringLiteral("Test"), QStringLiteral("Test"));
+    KMessageBox::information(nullptr, QStringLiteral("Test"), QStringLiteral("Test"));
 }
 
 void MainWindow::slotCreate()

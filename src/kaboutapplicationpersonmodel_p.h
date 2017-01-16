@@ -51,7 +51,7 @@ class KAboutApplicationPersonModel : public QAbstractListModel
 public:
     KAboutApplicationPersonModel(const QList< KAboutPerson > &personList,
                                  const QString &providerUrl = QString(),
-                                 QObject *parent = 0);
+                                 QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE

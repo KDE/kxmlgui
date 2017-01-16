@@ -45,9 +45,9 @@ class KXMLGUIClientPrivate
 public:
     KXMLGUIClientPrivate()
         : m_componentName(QCoreApplication::applicationName()),
-          m_actionCollection(0),
-          m_parent(0L),
-          m_builder(0L)
+          m_actionCollection(nullptr),
+          m_parent(nullptr),
+          m_builder(nullptr)
     {
         m_textTagNames.append(QStringLiteral("text"));
         m_textTagNames.append(QStringLiteral("Text"));
@@ -110,7 +110,7 @@ KXMLGUIClient::~KXMLGUIClient()
             d->m_factory->forgetClient(client);
         }
         assert(client->d->m_parent == this);
-        client->d->m_parent = 0;
+        client->d->m_parent = nullptr;
     }
 
     delete d->m_actionCollection;
@@ -678,7 +678,7 @@ void KXMLGUIClient::removeChildClient(KXMLGUIClient *child)
 {
     assert(d->m_children.contains(child));
     d->m_children.removeAll(child);
-    child->d->m_parent = 0;
+    child->d->m_parent = nullptr;
 }
 
 /*bool KXMLGUIClient::addSuperClient( KXMLGUIClient *super )

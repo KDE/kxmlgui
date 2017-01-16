@@ -176,7 +176,7 @@ public:
      *               applications config object
      *
      */
-    void writeConfiguration(KConfigGroup *config = 0) const;
+    void writeConfiguration(KConfigGroup *config = nullptr) const;
 
     /**
      * Export the current setting to configuration @p config.

@@ -54,7 +54,7 @@ public:
      * @param parent The parent of the dialog box. You should use the
      *        toplevel window so that the dialog becomes centered.
      */
-    explicit KAboutKdeDialog(QWidget *parent = 0);
+    explicit KAboutKdeDialog(QWidget *parent = nullptr);
 
 private:
     class Private;

@@ -58,7 +58,7 @@ public:
 
     KXMLGUIFactoryPrivate()
     {
-        m_rootNode = new ContainerNode(0L, QString(), QString());
+        m_rootNode = new ContainerNode(nullptr, QString(), QString());
         attrName = QStringLiteral("name");
     }
     ~KXMLGUIFactoryPrivate()
@@ -187,7 +187,7 @@ KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
     : QObject(parent), d(new KXMLGUIFactoryPrivate)
 {
     d->builder = builder;
-    d->guiClient = 0;
+    d->guiClient = nullptr;
     if (d->builder) {
         d->builderContainerTags = d->builder->containerTags();
         d->builderCustomTags = d->builder->customTags();
@@ -197,7 +197,7 @@ KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
 KXMLGUIFactory::~KXMLGUIFactory()
 {
     Q_FOREACH (KXMLGUIClient *client, d->m_clients) {
-        client->setFactory(0L);
+        client->setFactory(nullptr);
     }
     delete d;
 }
@@ -316,7 +316,7 @@ void KXMLGUIFactory::refreshActionProperties()
         }
         d->refreshActionProperties(client, client->actionCollection()->actions(), doc);
     }
-    d->guiClient = 0;
+    d->guiClient = nullptr;
 }
 
 static QString currentShortcutScheme()
@@ -444,7 +444,7 @@ void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
     d->clientName = client->domDocument().documentElement().attribute(d->attrName);
     d->clientBuilder = client->clientBuilder();
 
-    client->setFactory(0L);
+    client->setFactory(nullptr);
 
     // if we don't have a build document for that client, yet, then create one by
     // cloning the original document, so that saving container information in the
@@ -486,7 +486,7 @@ QWidget *KXMLGUIFactory::container(const QString &containerName, KXMLGUIClient *
 
     QWidget *result = d->findRecursive(d->m_rootNode, useTagName);
 
-    d->guiClient = 0L;
+    d->guiClient = nullptr;
     d->m_containerName.clear();
 
     d->popState();
@@ -533,7 +533,7 @@ QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool
         }
     }
 
-    return 0L;
+    return nullptr;
 }
 
 // Case insensitive equality without calling toLower which allocates a new string

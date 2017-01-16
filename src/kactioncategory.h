@@ -102,7 +102,7 @@ public:
     /**
      * Default constructor
      */
-    explicit KActionCategory(const QString &text, KActionCollection *parent = NULL);
+    explicit KActionCategory(const QString &text, KActionCollection *parent = nullptr);
 
     /**
      * Destructor
@@ -122,25 +122,25 @@ public:
 
     QAction *addAction(
         KStandardAction::StandardAction actionType,
-        const QObject *receiver = NULL,
-        const char *member = NULL);
+        const QObject *receiver = nullptr,
+        const char *member = nullptr);
 
     QAction *addAction(
         KStandardAction::StandardAction actionType,
         const QString &name,
-        const QObject *receiver = NULL,
-        const char *member = NULL);
+        const QObject *receiver = nullptr,
+        const char *member = nullptr);
 
     QAction *addAction(
         const QString &name,
-        const QObject *receiver = NULL,
-        const char *member = NULL);
+        const QObject *receiver = nullptr,
+        const char *member = nullptr);
 
     template<class ActionType>
     ActionType *add(
         const QString &name,
-        const QObject *receiver = NULL,
-        const char *member = NULL)
+        const QObject *receiver = nullptr,
+        const char *member = nullptr)
     {
         ActionType *action = collection()->add<ActionType>(name, receiver, member);
         addAction(action);

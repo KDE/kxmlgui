@@ -101,7 +101,7 @@ static void createXmlFile(QFile &file, int version, int flags, const QByteArray 
 static void clickApply(KEditToolBar *dialog)
 {
     QDialogButtonBox *box = dialog->findChild<QDialogButtonBox *>();
-    Q_ASSERT(box != 0);
+    Q_ASSERT(box != nullptr);
     box->button(QDialogButtonBox::Apply)->setEnabled(true);
     box->button(QDialogButtonBox::Apply)->click();
 }

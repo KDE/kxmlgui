@@ -34,7 +34,7 @@
 class KActionConflictDetector : public QObject
 {
 public:
-    explicit KActionConflictDetector(QObject *parent = 0)
+    explicit KActionConflictDetector(QObject *parent = nullptr)
         : QObject(parent)
     {
     }

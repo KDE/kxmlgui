@@ -42,7 +42,7 @@ class KToggleToolBarAction::Private
 {
 public:
     Private(KToggleToolBarAction *q)
-        : toolBarName(0), toolBar(0), beingToggled(false)
+        : toolBarName(nullptr), toolBar(nullptr), beingToggled(false)
     {
         const bool authorized = KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar"));
         q->setEnabled(authorized);

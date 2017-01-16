@@ -49,7 +49,7 @@ public:
      * since KHelpMenu takes care of the menu item
      * for "Report Bug..." and of creating a KBugReport dialog.
      */
-    explicit KBugReport(const KAboutData &aboutData, QWidget *parent = 0L);
+    explicit KBugReport(const KAboutData &aboutData, QWidget *parent = nullptr);
 
     /**
      * Destructor

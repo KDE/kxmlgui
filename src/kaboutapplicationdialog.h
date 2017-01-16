@@ -77,7 +77,7 @@ public:
      *
      * @since 4.4
      */
-    explicit KAboutApplicationDialog(const KAboutData &aboutData, Options opts, QWidget *parent = 0);
+    explicit KAboutApplicationDialog(const KAboutData &aboutData, Options opts, QWidget *parent = nullptr);
 
     /**
      * Constructor. Creates a fully featured "About Application" dialog box.
@@ -87,7 +87,7 @@ public:
      * @param parent The parent of the dialog box. You should use the
      *        toplevel window so that the dialog becomes centered.
      */
-    explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = 0);
+    explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = nullptr);
 
     virtual ~KAboutApplicationDialog();
 

@@ -148,7 +148,7 @@ public:
       * application's configuration file KSharedConfig::openConfig(),
       * in the group set by setConfigGroup().
       */
-    void readSettings(KConfigGroup *config = 0);
+    void readSettings(KConfigGroup *config = nullptr);
 
     /**
       * Import from @p config all configurable global key associations.
@@ -184,7 +184,7 @@ public:
       * \param oneAction pass an action here if you just want to save the values for one action, eg.
       *                  if you know that action is the only one which has changed.
       */
-    void writeSettings(KConfigGroup *config = 0, bool writeDefaults = false, QAction *oneAction = 0) const;
+    void writeSettings(KConfigGroup *config = nullptr, bool writeDefaults = false, QAction *oneAction = nullptr) const;
 
     /**
      * Returns the number of actions in the collection.
@@ -372,7 +372,7 @@ public:
      *               connection is desired.
      * @return new action of the given type ActionType.
      */
-    QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = 0, const char *member = 0);
+    QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
 
     /**
      * Creates a new standard action, adds to the collection under the given name
@@ -393,7 +393,7 @@ public:
      * @return new action of the given type ActionType.
      */
     QAction *addAction(KStandardAction::StandardAction actionType, const QString &name,
-                       const QObject *receiver = 0, const char *member = 0);
+                       const QObject *receiver = nullptr, const char *member = nullptr);
 
     /**
      * Creates a new action under the given name to the collection and connects
@@ -417,7 +417,7 @@ public:
      *               connection is desired.
      * @return new action of the given type ActionType.
      */
-    QAction *addAction(const QString &name, const QObject *receiver = 0, const char *member = 0);
+    QAction *addAction(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
     /**
      * Creates a new action under the given name, adds it to the collection and connects the action's triggered(bool)
@@ -438,7 +438,7 @@ public:
      * @see addAction()
      */
     template<class ActionType>
-    ActionType *add(const QString &name, const QObject *receiver = 0, const char *member = 0)
+    ActionType *add(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr)
     {
         ActionType *a = new ActionType(this);
         if (receiver && member) {

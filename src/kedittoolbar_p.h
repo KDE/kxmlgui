@@ -37,7 +37,7 @@ class ToolBarListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    ToolBarListWidget(QWidget *parent = 0);
+    ToolBarListWidget(QWidget *parent = nullptr);
 
     void makeVisible(QListWidgetItem *item)
     {
@@ -83,7 +83,7 @@ class IconTextEditDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit IconTextEditDialog(QWidget *parent = 0);
+    explicit IconTextEditDialog(QWidget *parent = nullptr);
 
 public:
     void setIconText(const QString &text);
@@ -137,7 +137,7 @@ public:
      * @param parent This widget's parent
      */
     explicit KEditToolBarWidget(KActionCollection *collection,
-                                QWidget *parent = 0L);
+                                QWidget *parent = nullptr);
 
     /**
      * Main constructor.
@@ -152,7 +152,7 @@ public:
      * @param factory Your application's factory object
      * @param parent This widget's parent
      */
-    explicit KEditToolBarWidget(QWidget *parent = 0L);
+    explicit KEditToolBarWidget(QWidget *parent = nullptr);
 
     /**
      * Destructor.  Note that any changes done in this widget will

@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     QApplication::setApplicationName(QStringLiteral("kactiontest"));
     QApplication app(argc, argv);
 
-    KActionCollection coll(static_cast<QObject *>(0));
+    KActionCollection coll(static_cast<QObject *>(nullptr));
 
     QAction *action1 = coll.addAction(QStringLiteral("test1"));
     action1->setText(QStringLiteral("test1"));

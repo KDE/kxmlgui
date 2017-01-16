@@ -82,7 +82,7 @@ public:
      * @param parent The parent of the dialog.
      */
     explicit KEditToolBar(KActionCollection *collection,
-                          QWidget *parent = 0);
+                          QWidget *parent = nullptr);
 
     /**
      * Main constructor.
@@ -103,7 +103,7 @@ public:
      * @param parent The usual parent for the dialog.
      */
     explicit KEditToolBar(KXMLGUIFactory *factory,
-                          QWidget *parent = 0);
+                          QWidget *parent = nullptr);
 
     /// destructor
     ~KEditToolBar();

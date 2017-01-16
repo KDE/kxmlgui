@@ -36,7 +36,7 @@ class KXMLGUI_EXPORT KShortcutWidget : public QWidget
     Q_OBJECT
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 public:
-    KShortcutWidget(QWidget *parent = 0);
+    KShortcutWidget(QWidget *parent = nullptr);
     ~KShortcutWidget();
 
     void setModifierlessAllowed(bool allow);

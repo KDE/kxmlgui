@@ -77,7 +77,7 @@ public:
     /**
     * Constructor.
     */
-    explicit KKeySequenceWidget(QWidget *parent = 0);
+    explicit KKeySequenceWidget(QWidget *parent = nullptr);
 
     /**
     * Destructs the widget.

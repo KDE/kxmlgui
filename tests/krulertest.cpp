@@ -56,7 +56,7 @@ MouseWidget::resizeEvent(QResizeEvent *r)
 }
 
 KRulerTest::KRulerTest()
-    : QWidget(0)
+    : QWidget(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     mainframe = new QFrame(this);

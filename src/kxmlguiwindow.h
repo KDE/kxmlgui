@@ -101,7 +101,7 @@ public:
      * for the composer windows "composer#".
      *
      */
-    explicit KXmlGuiWindow(QWidget *parent = 0, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS);
+    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS);
 
     /**
      * \brief Destructor.

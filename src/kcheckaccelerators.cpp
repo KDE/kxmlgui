@@ -95,7 +95,7 @@ KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck
     , block(false)
     , autoCheck(autoCheck_)
     , copyWidgetText(copyWidgetText_)
-    , drklash(0)
+    , drklash(nullptr)
 {
     setObjectName(QStringLiteral("kapp_accel_filter"));
 
@@ -232,7 +232,7 @@ void KCheckAccelerators::createDialog(QWidget *actWin, bool automatic)
     QVBoxLayout *layout = new QVBoxLayout(drklash);
     drklash_view = new QTextBrowser(drklash);
     layout->addWidget(drklash_view);
-    QCheckBox *disableAutoCheck = NULL;
+    QCheckBox *disableAutoCheck = nullptr;
     if (automatic)  {
         disableAutoCheck = new QCheckBox(i18nc("@option:check", "Disable automatic checking"), drklash);
         connect(disableAutoCheck, SIGNAL(toggled(bool)), SLOT(slotDisableCheck(bool)));

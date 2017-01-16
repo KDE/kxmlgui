@@ -199,9 +199,9 @@ public:
 
 KKeySequenceWidgetPrivate::KKeySequenceWidgetPrivate(KKeySequenceWidget *q)
     : q(q)
-    , layout(NULL)
-    , keyButton(NULL)
-    , clearButton(NULL)
+    , layout(nullptr)
+    , keyButton(nullptr)
+    , clearButton(nullptr)
     , allowModifierless(false)
     , nKey(0)
     , modifierKeys(0)
@@ -403,7 +403,7 @@ void KKeySequenceWidget::applyStealShortcut()
 
         // The following code will find the action we are about to
         // steal from and save it's actioncollection.
-        KActionCollection *parentCollection = 0;
+        KActionCollection *parentCollection = nullptr;
         foreach (KActionCollection *collection, d->checkActionCollections) {
             if (collection->actions().contains(stealAction)) {
                 parentCollection = collection;

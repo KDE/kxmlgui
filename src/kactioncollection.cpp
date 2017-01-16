@@ -54,12 +54,12 @@ class KActionCollectionPrivate
 {
 public:
     KActionCollectionPrivate()
-        : m_parentGUIClient(0L),
+        : m_parentGUIClient(nullptr),
           configGroup(QStringLiteral("Shortcuts")),
           configIsGlobal(false),
           connectTriggered(false),
           connectHovered(false),
-          q(0)
+          q(nullptr)
 
     {
     }
@@ -120,7 +120,7 @@ KActionCollection::KActionCollection(QObject *parent, const QString &cName)
 }
 
 KActionCollection::KActionCollection(const KXMLGUIClient *parent)
-    : QObject(0)
+    : QObject(nullptr)
     , d(new KActionCollectionPrivate)
 {
     d->q = this;
@@ -146,7 +146,7 @@ void KActionCollection::clear()
 
 QAction *KActionCollection::action(const QString &name) const
 {
-    QAction *action = 0L;
+    QAction *action = nullptr;
 
     if (!name.isEmpty()) {
         action = d->actionByName.value(name);
@@ -290,7 +290,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     Q_ASSERT(!action->objectName().isEmpty());
 
     // look if we already have THIS action under THIS name ;)
-    if (d->actionByName.value(indexName, 0) == action) {
+    if (d->actionByName.value(indexName, nullptr) == action) {
         // This is not a multi map!
         Q_ASSERT(d->actionByName.count(indexName) == 1);
         return action;
@@ -356,7 +356,7 @@ void KActionCollection::removeAction(QAction *action)
 QAction *KActionCollection::takeAction(QAction *action)
 {
     if (!d->unlistAction(action)) {
-        return NULL;
+        return nullptr;
     }
 
     // Remove the action from all widgets
@@ -382,7 +382,7 @@ QAction *KActionCollection::addAction(KStandardAction::StandardAction actionType
     // pass 0 as parent, because if the parent is a KActionCollection KStandardAction::create automatically
     // adds the action to it under the default name. We would trigger the
     // warning about renaming the action then.
-    QAction *action = KStandardAction::create(actionType, receiver, member, 0);
+    QAction *action = KStandardAction::create(actionType, receiver, member, nullptr);
     // Give it a parent for gc.
     action->setParent(this);
     // Remove the name to get rid of the "rename action" warning above
@@ -651,7 +651,7 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
 {
     // If the caller didn't provide a config group we try to save the KXMLGUI
     // Configuration file. If that succeeds we are finished.
-    if (config == 0 && d->writeKXMLGUIConfigFile()) {
+    if (config == nullptr && d->writeKXMLGUIConfigFile()) {
         return;
     }
 
@@ -828,7 +828,7 @@ QAction *KActionCollectionPrivate::unlistAction(QAction *action)
 
     // Action not found.
     if (index == -1) {
-        return NULL;
+        return nullptr;
     }
 
     // An action collection can't have the same action twice.

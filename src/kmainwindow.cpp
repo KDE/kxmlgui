@@ -219,11 +219,11 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
     QGuiApplication::setFallbackSessionManagementEnabled(false);
 #endif
-    q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, 0, q));
+    q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, nullptr, q));
 
     q->setAttribute(Qt::WA_DeleteOnClose);
 
-    helpMenu = 0;
+    helpMenu = nullptr;
 
     //actionCollection()->setWidget( this );
 #if 0
@@ -253,8 +253,8 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     autoSaveSettings = false;
     autoSaveWindowSize = true; // for compatibility
     //d->kaccel = actionCollection()->kaccel();
-    settingsTimer = 0;
-    sizeTimer = 0;
+    settingsTimer = nullptr;
+    sizeTimer = nullptr;
 
     dockResizeListener = new DockResizeListener(_q);
     letDirtySettings = true;
@@ -411,7 +411,7 @@ QMenu *KMainWindow::helpMenu(const QString &aboutAppText, bool showWhatsThis)
         }
 
         if (!d->helpMenu) {
-            return 0;
+            return nullptr;
         }
     }
 
@@ -882,7 +882,7 @@ void KMainWindowPrivate::_k_slotSettingsChanged(int category)
     // At this level (KMainWindow) the only thing we need to restore is the
     // animations setting (whether the user wants builtin animations or not).
 
-    q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, 0, q));
+    q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, nullptr, q));
 }
 
 void KMainWindowPrivate::_k_slotSaveAutoSaveSize()

@@ -45,7 +45,7 @@ namespace KDEPrivate
 {
 
 KMenuMenuHandler::KMenuMenuHandler(KXMLGUIBuilder *builder)
-    : QObject(), m_builder(builder), m_popupMenu(0), m_popupAction(0), m_contextMenu(0)
+    : QObject(), m_builder(builder), m_popupMenu(nullptr), m_popupAction(nullptr), m_contextMenu(nullptr)
 {
     m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
     connect(m_toolbarAction, SIGNAL(triggered(int)), this, SLOT(slotAddToToolBar(int)));
@@ -113,7 +113,7 @@ static KActionCollection *findParentCollection(KXMLGUIFactory *factory, QAction 
             return collection;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void KMenuMenuHandler::slotSetShortcut()
@@ -135,7 +135,7 @@ void KMenuMenuHandler::slotSetShortcut()
     connect(&box, SIGNAL(rejected()), &dialog, SLOT(reject()));
     dialog.layout()->addWidget(&box);
 
-    KActionCollection *parentCollection = 0;
+    KActionCollection *parentCollection = nullptr;
     if (dynamic_cast<KXMLGUIClient *>(m_builder)) {
         QList<KActionCollection *> checkCollections;
         KXMLGUIFactory *factory = dynamic_cast<KXMLGUIClient *>(m_builder)->factory();
@@ -168,7 +168,7 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
 
     KXMLGUIFactory *factory = dynamic_cast<KXMLGUIClient *>(m_builder)->factory();
     QString actionName = m_popupAction->objectName(); // set by KActionCollection::addAction
-    KActionCollection *collection = 0;
+    KActionCollection *collection = nullptr;
     if (factory) {
         collection = findParentCollection(factory, m_popupAction);
     }
@@ -234,10 +234,10 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
 
     m_contextMenu->exec(menu->mapToGlobal(pos));
     delete m_contextMenu;
-    m_contextMenu = 0;
+    m_contextMenu = nullptr;
 
-    m_popupAction = 0;
-    m_popupMenu = 0;
+    m_popupAction = nullptr;
+    m_popupMenu = nullptr;
 }
 
 } //END namespace KDEPrivate

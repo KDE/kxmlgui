@@ -106,8 +106,8 @@ typedef QVector<MergingIndex> MergingIndexList;
  */
 struct ContainerNode {
     ContainerNode(QWidget *_container, const QString &_tagName, const QString &_name,
-                  ContainerNode *_parent = 0L, KXMLGUIClient *_client = 0L,
-                  KXMLGUIBuilder *_builder = 0L, QAction *containerAction = 0,
+                  ContainerNode *_parent = nullptr, KXMLGUIClient *_client = nullptr,
+                  KXMLGUIBuilder *_builder = nullptr, QAction *containerAction = nullptr,
                   const QString &_mergingName = QString(),
                   const QString &groupName = QString(),
                   const QStringList &customTags = QStringList(),
@@ -223,7 +223,7 @@ private:
 };
 
 struct BuildState {
-    BuildState() : guiClient(0), builder(0), clientBuilder(0) {}
+    BuildState() : guiClient(nullptr), builder(nullptr), clientBuilder(nullptr) {}
 
     void reset();
 

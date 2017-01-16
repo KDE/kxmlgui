@@ -124,7 +124,7 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     QTreeWidgetItem *hier[3];
     hier[KShortcutsEditorPrivate::Root] = d->ui.list->invisibleRootItem();
     hier[KShortcutsEditorPrivate::Program] = d->findOrMakeItem(hier[KShortcutsEditorPrivate::Root], displayTitle);
-    hier[KShortcutsEditorPrivate::Action] = NULL;
+    hier[KShortcutsEditorPrivate::Action] = nullptr;
 
     // Set to remember which actions we have seen.
     QSet<QAction *> actionsSeen;
@@ -282,7 +282,7 @@ void KShortcutsEditor::setActionTypes(ActionTypes actionTypes)
 
 KShortcutsEditorPrivate::KShortcutsEditorPrivate(KShortcutsEditor *q)
     :   q(q),
-        delegate(0)
+        delegate(nullptr)
 {}
 
 void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts)
@@ -429,7 +429,7 @@ KShortcutsEditorItem *KShortcutsEditorPrivate::itemFromIndex(QTreeWidget *const 
     if (item && item->type() == ActionItem) {
         return static_cast<KShortcutsEditorItem *>(item);
     }
-    return 0;
+    return nullptr;
 }
 
 QTreeWidgetItem *KShortcutsEditorPrivate::findOrMakeItem(QTreeWidgetItem *parent, const QString &name)
@@ -750,7 +750,7 @@ void KShortcutsEditorPrivate::printShortcuts() const
             QVariant data = editoritem->data(Name, Qt::DisplayRole);
             table->cellAt(currow, 0).firstCursorPosition().insertText(data.toString());
 
-            QTextTable *shortcutTable = 0;
+            QTextTable *shortcutTable = nullptr;
             for (int k = 0; k < shortcutTitleToColumn.count(); k++) {
                 data = editoritem->data(shortcutTitleToColumn.at(k).second, Qt::DisplayRole);
                 QString key = data.value<QKeySequence>().toString();

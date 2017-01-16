@@ -72,7 +72,7 @@ public:
      * Note that the ownership of the given KXMLGUIBuilder object won't be transferred to this
      * KXMLGUIFactory, so you have to take care of deleting it properly.
      */
-    explicit KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent = 0);
+    explicit KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent = nullptr);
 
     /**
      * Destructor

@@ -20,7 +20,7 @@ class MouseWidget : public QFrame
 {
     Q_OBJECT
 public:
-    MouseWidget(QWidget *parent = 0);
+    MouseWidget(QWidget *parent = nullptr);
 
 Q_SIGNALS:
     void newXPos(int);

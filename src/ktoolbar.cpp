@@ -97,24 +97,24 @@ public:
           enableContext(true),
 #endif
           unlockedMovable(true),
-          contextOrient(0),
-          contextMode(0),
-          contextSize(0),
-          contextButtonTitle(0),
-          contextShowText(0),
-          contextButtonAction(0),
-          contextTop(0),
-          contextLeft(0),
-          contextRight(0),
-          contextBottom(0),
-          contextIcons(0),
-          contextTextRight(0),
-          contextText(0),
-          contextTextUnder(0),
-          contextLockAction(0),
-          dropIndicatorAction(0),
-          context(0),
-          dragAction(0)
+          contextOrient(nullptr),
+          contextMode(nullptr),
+          contextSize(nullptr),
+          contextButtonTitle(nullptr),
+          contextShowText(nullptr),
+          contextButtonAction(nullptr),
+          contextTop(nullptr),
+          contextLeft(nullptr),
+          contextRight(nullptr),
+          contextBottom(nullptr),
+          contextIcons(nullptr),
+          contextTextRight(nullptr),
+          contextText(nullptr),
+          contextTextUnder(nullptr),
+          contextLockAction(nullptr),
+          dropIndicatorAction(nullptr),
+          context(nullptr),
+          dragAction(nullptr)
     {
     }
 
@@ -141,7 +141,7 @@ public:
     void loadKDESettings();
     void applyCurrentSettings();
 
-    QAction *findAction(const QString &actionName, KXMLGUIClient **client = 0) const;
+    QAction *findAction(const QString &actionName, KXMLGUIClient **client = nullptr) const;
 
     static Qt::ToolButtonStyle toolButtonStyleFromString(const QString &style);
     static QString toolButtonStyleToString(Qt::ToolButtonStyle);
@@ -579,7 +579,7 @@ QAction *KToolBar::Private::findAction(const QString &actionName, KXMLGUIClient 
             return action;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void KToolBar::Private::slotContextAboutToShow()
@@ -595,7 +595,7 @@ void KToolBar::Private::slotContextAboutToShow()
     KXmlGuiWindow *kmw = qobject_cast<KXmlGuiWindow *>(q->mainWindow());
 
     // try to find "configure toolbars" action
-    QAction *configureAction = 0;
+    QAction *configureAction = nullptr;
     const char *actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
     configureAction = findAction(QLatin1String(actionName));
 
@@ -684,7 +684,7 @@ void KToolBar::Private::slotContextAboutToHide()
     }
 
     // Unplug the configure toolbars action too, since it's afterwards anyway
-    QAction *configureAction = 0;
+    QAction *configureAction = nullptr;
     const char *actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
     configureAction = findAction(QLatin1String(actionName));
 
@@ -1159,7 +1159,7 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
         Q_FOREVER {
         if (d->dropIndicatorAction)
             {
-                QAction *overAction = 0L;
+                QAction *overAction = nullptr;
                 Q_FOREACH (QAction *action, actions()) {
                     // want to make it feel that half way across an action you're dropping on the other side of it
                     QWidget *widget = widgetForAction(action);
@@ -1196,7 +1196,7 @@ void KToolBar::dragLeaveEvent(QDragLeaveEvent *event)
 {
     // Want to clear this even if toolBarsEditable was changed mid-drag (unlikey)
     delete d->dropIndicatorAction;
-    d->dropIndicatorAction = 0L;
+    d->dropIndicatorAction = nullptr;
     d->actionsBeingDragged.clear();
 
     if (toolBarsEditable()) {
@@ -1220,7 +1220,7 @@ void KToolBar::dropEvent(QDropEvent *event)
 
     // Want to clear this even if toolBarsEditable was changed mid-drag (unlikey)
     delete d->dropIndicatorAction;
-    d->dropIndicatorAction = 0L;
+    d->dropIndicatorAction = nullptr;
     d->actionsBeingDragged.clear();
 
     if (toolBarsEditable()) {
@@ -1282,7 +1282,7 @@ void KToolBar::mouseMoveEvent(QMouseEvent *event)
             removeAction(d->dragAction);
         }
 
-    d->dragAction = 0L;
+    d->dragAction = nullptr;
     event->accept();
 }
 
@@ -1290,7 +1290,7 @@ void KToolBar::mouseReleaseEvent(QMouseEvent *event)
 {
     // Want to clear this even if toolBarsEditable was changed mid-drag (unlikey)
     if (d->dragAction) {
-        d->dragAction = 0L;
+        d->dragAction = nullptr;
         event->accept();
         return;
     }

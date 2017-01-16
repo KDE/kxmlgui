@@ -1910,4 +1910,4 @@ const char * const packages[] = {
     "www.kde.org/sprints.kde.org",
     "yakuake",
     "zanshin",
-0 };
+nullptr };

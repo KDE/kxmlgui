@@ -24,7 +24,7 @@ TestWindow::TestWindow(QWidget *parent)
     exitB = true;   // exit button is shown
     lineL = true;   // LineEdit is enabled
     greenF = false;  // Frame not inserted
-    timer = 0;
+    timer = nullptr;
 
     setCaption(QStringLiteral("test window"));
 
@@ -172,7 +172,7 @@ TestWindow::TestWindow(QWidget *parent)
     completions->addAction(QStringLiteral("/vmlinuz :-)"));
 
     connect(completions, SIGNAL(triggered(QAction*)), this, SLOT(slotCompletionsMenu(QAction*)));
-    pr = 0;
+    pr = nullptr;
 
     // KXMLGUIClient looks in the "data" resource for the .rc files
     // This line is for test programs only!
@@ -205,7 +205,7 @@ void TestWindow::slotNew()
 }
 void TestWindow::slotOpen()
 {
-    if (pr == 0) {
+    if (pr == nullptr) {
         pr = new QProgressBar(statusBar);
         pr->show();
     }
@@ -224,7 +224,7 @@ void TestWindow::slotGoGoGoo()
         timer->stop();
         statusBar->clearMessage();
         delete pr;
-        pr = 0;
+        pr = nullptr;
     }
 }
 

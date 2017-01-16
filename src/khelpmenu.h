@@ -134,7 +134,7 @@ public:
      *        added to the dialog.
      *
      */
-    explicit KHelpMenu(QWidget *parent = 0, const QString &aboutAppText = QString(),
+    explicit KHelpMenu(QWidget *parent = nullptr, const QString &aboutAppText = QString(),
                        bool showWhatsThis = true);
 
     /**

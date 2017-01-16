@@ -111,7 +111,7 @@ ContainerNode *ContainerNode::findContainer(const QString &_name, bool tag)
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 /*
@@ -494,7 +494,7 @@ int BuildHelper::calcMergingIndex(const QDomElement &element, MergingIndexList::
 }
 
 BuildHelper::BuildHelper(BuildState &state, ContainerNode *node)
-    : containerClient(0), ignoreDefaultMergingIndex(false), m_state(state),
+    : containerClient(nullptr), ignoreDefaultMergingIndex(false), m_state(state),
       parentNode(node)
 {
     // create a list of supported container and custom tags
@@ -824,8 +824,8 @@ void BuildState::reset()
     clientName.clear();
     actionListName.clear();
     actionList.clear();
-    guiClient = 0;
-    clientBuilder = 0;
+    guiClient = nullptr;
+    clientBuilder = nullptr;
 
     currentDefaultMergingIt = currentClientMergingIt = MergingIndexList::iterator();
 }
