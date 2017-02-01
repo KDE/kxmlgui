@@ -16,6 +16,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 include(ECMMarkNonGuiExecutable)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
+include(ECMAddQch)
 
 include(GenerateExportHeader)
 include(KDEInstallDirs)
@@ -30,6 +31,8 @@ ecm_setup_version(PROJECT
                   SOVERSION 5)
 
 option(FORCE_DISABLE_KGLOBALACCEL "Force building KXmlGui without KGlobalAccel. Doing this will break global shortcut support. [default=OFF]" OFF)
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
+add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.6.0)
@@ -69,6 +72,16 @@ add_subdirectory(autotests)
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5XmlGui")
+
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KF5XmlGui_QCH
+        FILE KF5XmlGuiQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5XmlGuiQchTargets.cmake\")")
+endif()
 
 include(CMakePackageConfigHelpers)
 

@@ -137,6 +137,33 @@ install(FILES
 # install this file to be compatible, it is bundled in the resource file, too
 install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
 
+if (BUILD_QCH)
+    ecm_add_qch(
+        KF5XmlGui_QCH
+        NAME KXmlGui
+        BASE_NAME KF5XmlGui
+        VERSION ${KF5_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+            ${KXmlGui_HEADERS}
+        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
+        LINK_QCHS
+            Qt5Xml_QCH
+            Qt5DBus_QCH
+            Qt5Widgets_QCH
+            KF5Config_QCH
+            KF5ConfigWidgets_QCH
+        BLANK_MACROS
+            KXMLGUI_EXPORT
+            KXMLGUI_DEPRECATED_EXPORT
+            KXMLGUI_DEPRECATED
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
+
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
