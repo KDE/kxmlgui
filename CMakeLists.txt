@@ -32,7 +32,7 @@ ecm_setup_version(PROJECT
 option(FORCE_DISABLE_KGLOBALACCEL "Force building KXmlGui without KGlobalAccel. Doing this will break global shortcut support. [default=OFF]" OFF)
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.5.0)
+set(REQUIRED_QT_VERSION 5.6.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
 
 find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
