@@ -425,7 +425,8 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
                     if (showWarning) {
                         const QString actionName = KLocalizedString::removeAcceleratorMarker(action->text());
                         const QString existingShortcutActionName = KLocalizedString::removeAcceleratorMarker(existingShortcutAction->text());
-                        const QString dontShowAgainString = existingShortcutActionName + actionName + shortcut.toString();
+                        QString dontShowAgainString = existingShortcutActionName + actionName + shortcut.toString();
+                        dontShowAgainString.remove(QLatin1Char('\\'));
                         KMessageBox::information(this, i18n("There are two actions (%1, %2) that want to use the same shortcut (%3). This is most probably a bug. Please report it in <a href='https://bugs.kde.org'>bugs.kde.org</a>", existingShortcutActionName, actionName, shortcut.toString(QKeySequence::NativeText)), i18n("Ambiguous Shortcuts"), dontShowAgainString, KMessageBox::Notify | KMessageBox::AllowLink);
                     }
                 } else {
