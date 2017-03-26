@@ -185,7 +185,7 @@ public:
 
     /**
      * Returns the QAction * associated with the given parameter
-     * Will return NULL pointers if menu() has not been called
+     * Will return a nullptr if menu() has not been called
      *
      * @param id The id of the action of which you want to get QAction *
      */

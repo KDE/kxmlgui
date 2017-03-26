@@ -215,7 +215,7 @@ public:
      * Save any changes the user made.  The file will be in the user's
      * local directory (usually $HOME/.kde/share/apps/\<appname\>).  The
      * filename will be the one specified in the constructor.. or the
-     * made up one if the filename was NULL.
+     * made up one if the filename was an empty string.
      *
      */
     void save();

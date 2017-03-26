@@ -87,7 +87,7 @@ public:
     QString m_componentName;
     QString m_componentDisplayName;
 
-    //! Remove a action from our internal bookkeeping. Returns NULL if the
+    //! Remove a action from our internal bookkeeping. Returns a nullptr if the
     //! action doesn't belong to us.
     QAction *unlistAction(QAction *);
 
