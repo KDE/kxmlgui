@@ -128,7 +128,7 @@ void KShortcutSchemesEditor::newScheme()
     }
 
     QDomDocument doc;
-    QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
+    QDomElement docElem = doc.createElement(QStringLiteral("gui"));
     doc.appendChild(docElem);
     QDomElement elem = doc.createElement(QStringLiteral("ActionProperties"));
     docElem.appendChild(elem);

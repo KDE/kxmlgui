@@ -122,7 +122,7 @@ void tst_KToolBar::initTestCase()
 
     m_xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         "</MenuBar>\n"
@@ -541,7 +541,7 @@ void tst_KToolBar::testXmlGuiSwitching()
 {
     const QByteArray windowXml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         "</MenuBar>\n"

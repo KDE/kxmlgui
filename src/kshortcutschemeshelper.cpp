@@ -61,7 +61,7 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
 
         qCDebug(DEBUG_KXMLGUI) << "Considering component" << componentName;
         QDomDocument doc;
-        QDomElement docElem = doc.createElement(QStringLiteral("kpartgui"));
+        QDomElement docElem = doc.createElement(QStringLiteral("gui"));
         docElem.setAttribute(QStringLiteral("version"), QStringLiteral("1"));
         docElem.setAttribute(QStringLiteral("name"), componentName);
         doc.appendChild(docElem);
