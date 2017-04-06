@@ -366,9 +366,9 @@ public:
      * KStandardAction::stdName.
      *
      * @param actionType The standard action type of the action to create.
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
      *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
      *               connection is desired.
      * @return new action of the given type ActionType.
      */
@@ -386,9 +386,9 @@ public:
      *
      * @param actionType The standard action type of the action to create.
      * @param name The name by which the action be retrieved again from the collection.
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
      *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
      *               connection is desired.
      * @return new action of the given type ActionType.
      */
@@ -411,9 +411,9 @@ public:
      * the other action in the collection.
      *
      * @param name The name by which the action be retrieved again from the collection.
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
      *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
      *               connection is desired.
      * @return new action of the given type ActionType.
      */
@@ -429,9 +429,9 @@ public:
      * signal.
      *
      * @param name The internal name of the action (e.g. "file-open").
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
      *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave 0 if no
+     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
      *               connection is desired.
      * @return new action of the given type ActionType.
      *
@@ -449,8 +449,8 @@ public:
     }
 
     /**
-     * This is the same as add(const QString &name, const QObject *receiver = 0, const char *member = 0) using
-     * new style connect syntax
+     * This is the same as add(const QString &name, const QObject *receiver, const char *member) using
+     * new style connect syntax.
      *
      * @param name The internal name of the action (e.g. "file-open").
      * @param receiver The QObject to connect the triggered(bool) signal to.
@@ -471,8 +471,8 @@ public:
     }
 
     /**
-     * This is the same as addAction(const QString &name, const QObject *receiver = 0, const char *member = 0) using
-     * new style connect syntax
+     * This is the same as addAction(const QString &name, const QObject *receiver, const char *member) using
+     * new style connect syntax.
      *
      * @param name The internal name of the action (e.g. "file-open").
      * @param receiver The QObject to connect the triggered(bool) signal to.
