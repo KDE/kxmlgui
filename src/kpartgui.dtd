@@ -8,6 +8,10 @@
   SYSTEM "kpartgui.dtd"
 
   This DTD should be included at the head of an xmlguibuilder XML file like this:
+  <!DOCTYPE gui SYSTEM "kpartgui.dtd">
+
+  When using the old deprecated root element <kpartgui>,
+  the respective doctype name must be used, like this:
   <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
 -->
 

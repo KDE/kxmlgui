@@ -53,7 +53,7 @@ static void createXmlFile(QFile &file, int version, int flags, const QByteArray 
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE " + toplevelTag + " SYSTEM \"kpartgui.dtd\">\n"
         "<" + toplevelTag + " version=\"" + QByteArray::number(version) + "\" name=\"foo\" >\n"
         "<MenuBar>\n";
     file.write(xml);
@@ -125,7 +125,7 @@ void KXmlGui_UnitTest::testFindVersionNumber_data()
 
     QTest::newRow("simple test") <<
                                  "<?xml version = '1.0'?>\n"
-                                 "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+                                 "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
                                  "<gui version=\"3\" name=\"foo\"/>\n" << "3";
     QTest::newRow("two digits") <<
                                 "<?xml version = '1.0'?>\n"
@@ -137,7 +137,7 @@ void KXmlGui_UnitTest::testFindVersionNumber_data()
                                 "<?xml version = '1.0'?>\n"
                                 "<gui version = \"0.2\" name=\"foo\"/>\n" << QString() /*error*/;
     QTest::newRow("with a comment") << // as found in kmail.rc
-                                    "<!DOCTYPE kpartgui>\n"
+                                    "<!DOCTYPE gui>\n"
                                     "<!-- This file should be synchronized with kmail_part.rc to provide\n"
                                     "the same menu entries at the same place in KMail and Kontact  -->\n"
                                     "<gui version=\"452\" name=\"kmmainwin\">\n" << "452";
@@ -318,7 +318,7 @@ void KXmlGui_UnitTest::testPartMerging()
 {
     const QByteArray hostXml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"go\"><text>&amp;Go</text>\n"
@@ -377,7 +377,7 @@ void KXmlGui_UnitTest::testPartMerging()
     qDebug() << "Now merging the part";
 
     const QByteArray partXml =
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"part\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"go\"><text>&amp;Go</text>\n"
@@ -457,7 +457,7 @@ void KXmlGui_UnitTest::testPartMergingSettings() // #252911
 {
     const QByteArray hostXml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
 // The solution was to remove the duplicated definition
@@ -483,7 +483,7 @@ void KXmlGui_UnitTest::testPartMergingSettings() // #252911
 
     const QByteArray partXml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"settings\"><text>&amp;Settings</text>\n"
@@ -510,7 +510,7 @@ void KXmlGui_UnitTest::testUiStandardsMerging_data()
     QTest::addColumn<QStringList>("expectedMenus");
 
     const QByteArray xmlBegin =
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n";
     const QByteArray xmlEnd =
@@ -626,7 +626,7 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"groups\"><text>Add to Group</text>\n"
@@ -707,7 +707,7 @@ void KXmlGui_UnitTest::testHiddenToolBar()
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         "</MenuBar>\n"
@@ -751,7 +751,7 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         "</MenuBar>\n"
@@ -828,7 +828,7 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         "  <Menu deleted=\"true\" name=\"game\"/>\n"
@@ -875,7 +875,7 @@ void KXmlGui_UnitTest::testTopLevelSeparator()
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"before_separator\"><text>Before Separator</text></Menu>\n"
@@ -900,7 +900,7 @@ void KXmlGui_UnitTest::testMenuNames()
 {
     const QByteArray xml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"filemenu\"><text>File Menu</text></Menu>\n"
@@ -987,7 +987,7 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
 {
     const QByteArray hostXml =
         "<?xml version = '1.0'?>\n"
-        "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
         "<gui version=\"1\" name=\"foo\" >\n"
         "<MenuBar>\n"
         " <Menu name=\"file\"><text>&amp;File</text>\n"
@@ -996,7 +996,7 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
         "</MenuBar>\n"
         "</gui>";
     const QByteArray xml = "<?xml version = '1.0'?>\n"
-                           "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+                           "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
                            "<gui version=\"1\" name=\"foo\" >\n"
                            "<MenuBar>\n"
                            " <Menu name=\"file\"><text>&amp;File</text>\n"
@@ -1027,7 +1027,7 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
 void KXmlGui_UnitTest::testShortcuts()
 {
     const QByteArray xml = "<?xml version = '1.0'?>\n"
-                           "<!DOCTYPE kpartgui SYSTEM \"kpartgui.dtd\">\n"
+                           "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
                            "<gui version=\"1\" name=\"foo\" >\n"
                            "<MenuBar>\n"
                            " <Menu name=\"file\"><text>&amp;File</text>\n"
