@@ -154,10 +154,10 @@
 >
 
 <!-- Not explicitly defined or in widely used yet. -->
-<!ELEMENT MainWindow (ANY)>
+<!ELEMENT MainWindow ANY>
 
 <!-- Not explicitly defined or in widely used yet. -->
-<!ELEMENT StatusBar (ANY)>
+<!ELEMENT StatusBar ANY>
 
 <!-- Specifies the entry index for merging in a gui client -->
 <!ELEMENT Merge EMPTY>
