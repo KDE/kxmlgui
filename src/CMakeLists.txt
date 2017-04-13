@@ -56,6 +56,8 @@ set(kxmlgui_SRCS
   kxmlguiwindow.cpp
   kundoactions.cpp
   kcheckaccelerators.cpp
+  kactionrunner.cpp
+  kactionrunnermodel.cpp
 )
 
 # add the resource file
@@ -90,6 +92,7 @@ PUBLIC
     Qt5::Widgets        #QWidget is used everywhere
     KF5::ConfigCore         #Reading config for ToolbarIcons, Shortcut Schemes...
     KF5::ConfigWidgets      #KStandardAction, KToggleAction...
+    KF5::Completion     # KComboBox for the action drop-down.
 PRIVATE
     Qt5::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt5::PrintSupport   #QPrinter in kshortcutseditor
@@ -129,7 +132,7 @@ ecm_generate_headers(KXmlGui_HEADERS
   KXMLGUIFactory
   KXmlGuiWindow
   KUndoActions
-
+  KActionRunner
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
 
