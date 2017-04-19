@@ -35,6 +35,7 @@
 #include "kedittoolbar.h"
 #include "khelpmenu.h"
 #include "ktoolbar.h"
+#include "kactionrunner.h"
 
 #include <QCloseEvent>
 #include <QDBusConnection>
@@ -46,6 +47,7 @@
 #include <QStyle>
 #include <QWidget>
 #include <QList>
+#include <QShortcut>
 
 #include <ktoggleaction.h>
 #include <kstandardaction.h>
@@ -77,7 +79,10 @@ public:
     KToggleAction *showStatusBarAction;
     QPointer<KEditToolBar> toolBarEditor;
     KXMLGUIFactory *factory;
+    KActionRunner *runner;
 };
+
+#include <QDebug>
 
 KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
     : KMainWindow(*new KXmlGuiWindowPrivate, parent, f), KXMLGUIBuilder(this)
@@ -87,6 +92,33 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
     d->toolBarHandler = nullptr;
     d->showStatusBarAction = nullptr;
     d->factory = nullptr;
+    d->runner = new KActionRunner(actionCollection(), nullptr);
+    d->runner->setWindowFlags(Qt::FramelessWindowHint);
+
+    auto action = new QAction(QStringLiteral("Show list of actions"), this);
+    action->setShortcutContext(Qt::ApplicationShortcut);
+    actionCollection()->addAction(QStringLiteral("Display list of actions"), action);
+    actionCollection()->setDefaultShortcut(action, Qt::CTRL + Qt::ALT + Qt::Key_Space);
+    connect(action, &QAction::triggered,[this, d]{
+        int xPos = geometry().width() / 2;
+        int hPos = 0;
+
+        int width = 200;
+        int height = menuBar()->geometry().height();
+        if (height == 0) {
+            height = 50; // what's a sane default here?
+        }
+        QPoint globalPos = mapToGlobal(QPoint(xPos, hPos));
+
+        d->runner->setGeometry(globalPos.x() - width/2, globalPos.y(), width, height);
+        d->runner->setFocus();
+        d->runner->show();
+    });
+
+    connect(d->runner, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [d]{
+        d->runner->hide();
+    });
+
     new KMainWindowInterface(this);
 }
 

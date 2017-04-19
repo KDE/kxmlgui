@@ -53,5 +53,7 @@ KActionRunner::~KActionRunner()
 
 void KActionRunner::activate(int index)
 {
+    if (!isVisible())
+        return;
     d_ptr->model.activate(index);
 }

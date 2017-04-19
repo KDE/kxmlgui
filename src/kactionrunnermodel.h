@@ -28,6 +28,7 @@ class KActionRunnerModel : public QAbstractListModel {
     Q_OBJECT
 public:
     KActionRunnerModel(KActionCollection *ac);
+    virtual ~KActionRunnerModel();
     int rowCount(const QModelIndex& parent = QModelIndex()) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex& index, int role) const Q_DECL_OVERRIDE;
     void activate(int index);
