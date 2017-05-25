@@ -43,6 +43,8 @@ class KXmlGuiWindowPrivate;
 #define KDE_DEFAULT_WINDOWFLAGS 0
 
 /**
+ * @class KXmlGuiWindow kxmlguiwindow.h KXmlGuiWindow
+ *
  * @short %KDE top level main window with predefined action layout
  *
  * Instead of creating a KMainWindow manually and assigning menus, menu entries,

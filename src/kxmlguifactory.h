@@ -44,6 +44,8 @@ class BuildHelper;
 }
 
 /**
+ * @class KXMLGUIFactory kxmlguifactory.h KXMLGUIFactory
+ *
  * KXMLGUIFactory, together with KXMLGUIClient objects, can be used to create
  * a GUI of container widgets (like menus, toolbars, etc.) and container items
  * (menu items, toolbar buttons, etc.) from an XML document and action objects.

@@ -45,6 +45,8 @@ class KShortcutsEditorPrivate;
 // won't like the resulting behavior.
 
 /**
+ * @class KShortcutsEditor kshortcutseditor.h KShortcutsEditor
+ *
  * @short Widget for configuration of KAccel and KGlobalAccel.
  *
  * Configure dictionaries of key/action associations for KActions,

@@ -31,6 +31,8 @@ class QStringList;
 class QWidget;
 
 /**
+ * @class KXMLGUIBuilder kxmlguibuilder.h KXMLGUIBuilder
+ *
  * Implements the creation of the GUI (menubar, menus and toolbars)
  * as requested by the GUI factory.
  *

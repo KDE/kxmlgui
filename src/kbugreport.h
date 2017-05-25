@@ -26,6 +26,8 @@ class KAboutData;
 class KBugReportPrivate;
 
 /**
+ * @class KBugReport kbugreport.h KBugReport
+ *
  * @short A dialog box for sending bug reports.
  *
  * All the information needed by the dialog box

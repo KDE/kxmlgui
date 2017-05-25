@@ -36,6 +36,8 @@ struct KActionCategoryPrivate;
 class QAction;
 
 /**
+ * @class KActionCategory kactioncategory.h KActionCategory
+ *
  * Categorize actions for KShortcutsEditor.
  *
  * KActionCategory provides a second level to organize the actions in

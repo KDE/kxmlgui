@@ -32,6 +32,8 @@
 #include "kshortcutseditor.h"
 
 /**
+ * @class KShortcutsDialog kshortcutsdialog.h KShortcutsDialog
+ *
  * @short Dialog for configuration of KActionCollection and KGlobalAccel.
  *
  * The KShortcutsDialog class is used for configuring dictionaries of key/action

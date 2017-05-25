@@ -29,6 +29,8 @@ class KActionCollection;
 class KShortcutWidgetPrivate;
 
 /**
+ * @class KShortcutWidget kshortcutwidget.h KShortcutWidget
+ *
  * \image html kshortcutwidget.png "KDE Shortcut Widget"
  */
 class KXMLGUI_EXPORT KShortcutWidget : public QWidget

@@ -37,6 +37,8 @@ class KMainWindow;
 class KXMLGUIClient;
 
 /**
+ * @class KToolBar ktoolbar.h KToolBar
+ *
  * @short Floatable toolbar with auto resize.
  *
  * A KDE-style toolbar.

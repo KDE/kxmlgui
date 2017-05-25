@@ -40,6 +40,7 @@ class KEditToolBarWidget;
 }
 
 /**
+ * @class KXMLGUIClient kxmlguiclient.h KXMLGUIClient
  *
  * A KXMLGUIClient can be used with KXMLGUIFactory to create a
  * GUI from actions and an XML document, and can be dynamically merged

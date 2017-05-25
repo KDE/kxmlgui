@@ -28,6 +28,8 @@ class KActionCollection;
 class KEditToolBarPrivate;
 class KXMLGUIFactory;
 /**
+ * @class KEditToolBar kedittoolbar.h KEditToolBar
+ *
  * @short A dialog used to customize or configure toolbars.
  *
  * This dialog only works if your application uses the XML UI

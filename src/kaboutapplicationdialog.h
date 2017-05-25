@@ -31,6 +31,8 @@
 class KAboutData;
 
 /**
+ * @class KAboutApplicationDialog kaboutapplicationdialog.h KAboutApplicationDialog
+ *
  * @short Standard "About Application" dialog box.
  *
  * This class provides the standard "About Application" dialog box

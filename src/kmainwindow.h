@@ -51,6 +51,8 @@ class KToolBar;
 #define KDE_DEFAULT_WINDOWFLAGS 0
 
 /**
+ * @class KMainWindow kmainwindow.h KMainWindow
+ *
  * @short %KDE top level main window
  *
  * Top level widget that provides toolbars, a status line and a frame.

@@ -33,6 +33,8 @@
 class KToolBar;
 
 /**
+ * @class KToggleToolBarAction ktoggletoolbaraction.h KToggleToolBarAction
+ *
  * An action that takes care of everything associated with
  * showing or hiding a toolbar by a menu action. It will
  * show or hide the toolbar with the given name when

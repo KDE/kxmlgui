@@ -39,6 +39,8 @@ class QActionGroup;
 class QString;
 
 /**
+ * @class KActionCollection kactioncollection.h KActionCollection
+ *
  * \short A container for a set of QAction objects.
  *
  * KActionCollection manages a set of QAction objects.  It

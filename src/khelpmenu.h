@@ -35,6 +35,8 @@ class KAboutData;
 class KHelpMenuPrivate;
 
 /**
+ * @class KHelpMenu khelpmenu.h KHelpMenu
+ *
  * @short Standard %KDE help menu with dialog boxes.
  *
  * This class provides the standard %KDE help menu with the default "about"
