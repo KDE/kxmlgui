@@ -1059,3 +1059,20 @@ void KXmlGui_UnitTest::testShortcuts()
 
     factory.removeClient(&client);
 }
+
+void KXmlGui_UnitTest::testPopupMenuParent()
+{
+    const QByteArray xml =
+        "<?xml version = '1.0'?>\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+        "<gui version=\"1\" name=\"foo\" >\n"
+        "<Menu name=\"foo\"><text>Foo</text></Menu>\n"
+        "</gui>";
+
+    TestXmlGuiWindow mainWindow(xml);
+    mainWindow.createGUI();
+
+    auto popupMenu = mainWindow.menuByName(QStringLiteral("foo"));
+    QVERIFY(popupMenu);
+    QCOMPARE(popupMenu->parent(), &mainWindow);
+}
