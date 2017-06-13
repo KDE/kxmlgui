@@ -26,7 +26,6 @@
 #include <QWidget>
 #include <QDebug>
 #include <QMenu>
-#include <QWindow>
 
 #include "debug.h"
 #include <assert.h>
@@ -594,18 +593,8 @@ bool BuildHelper::processActionElement(const QDomElement &e, int idx)
 
     parentNode->container->insertAction(before, action);
 
-    //for wayland:
-    //ensure we have a menu, not parented yet, the container exists,
-    //both the menu and the container's toplevel widget QWindows exist,
-    //then set the transient parent of the qmenu's qwindow to the
-    //container's toplevel widget's qwindow. this fixes positioning in
-    //wayland as the protocol requires every popup menu having a transient parent
-    if (action->menu() && !action->menu()->parentWidget() &&
-        parentNode->container && parentNode->container->window() &&
-        action->menu()->winId() &&
-        parentNode->container->window()->winId()) {
-        action->menu()->windowHandle()->setTransientParent(parentNode->container->window()->windowHandle());
-
+    if (action->menu() && !action->menu()->parentWidget()) {
+        action->menu()->setParent(parentNode->container, action->menu()->windowFlags());
     }
     // save a reference to the plugged action, in order to properly unplug it afterwards.
     containerClient->actions.append(action);
