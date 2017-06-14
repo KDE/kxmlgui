@@ -25,7 +25,6 @@
 
 #include <QWidget>
 #include <QDebug>
-#include <QMenu>
 
 #include "debug.h"
 #include <assert.h>
@@ -593,9 +592,6 @@ bool BuildHelper::processActionElement(const QDomElement &e, int idx)
 
     parentNode->container->insertAction(before, action);
 
-    if (action->menu() && !action->menu()->parentWidget()) {
-        action->menu()->setParent(parentNode->container, action->menu()->windowFlags());
-    }
     // save a reference to the plugged action, in order to properly unplug it afterwards.
     containerClient->actions.append(action);
 
