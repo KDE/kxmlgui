@@ -322,6 +322,9 @@ public:
      * If KAuthorized::authorizeAction() reports that the action is not
      * authorized, it will be disabled and hidden.
      *
+     * The ownership of the action object is not transferred.
+     * If the action is destroyed it will be removed automatically from the KActionCollection.
+     *
      * @param name The name by which the action be retrieved again from the collection.
      * @param action The action to add.
      * @return the same as the action given as parameter. This is just for convenience
@@ -334,6 +337,9 @@ public:
      * Adds a list of actions to the collection.
      *
      * The objectName of the actions is used as their internal name in the collection.
+     *
+     * The ownership of the action objects is not transferred.
+     * If the action is destroyed it will be removed automatically from the KActionCollection.
      *
      * Uses addAction(QString, QAction*).
      *
@@ -352,6 +358,9 @@ public:
 
     /**
      * Removes an action from the collection.
+     *
+     * The ownership of the action object is not changed.
+     *
      * @param action the action to remove.
      */
     QAction *takeAction(QAction *action);
@@ -366,6 +375,8 @@ public:
      *
      * The action can be retrieved later from the collection by its standard name as per
      * KStandardAction::stdName.
+     *
+     * The KActionCollection takes ownership of the action object.
      *
      * @param actionType The standard action type of the action to create.
      * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
@@ -385,6 +396,8 @@ public:
      * triggered(bool) to be used, see KStandardAction for more information.
      *
      * The action can be retrieved later from the collection by the specified name.
+     *
+     * The KActionCollection takes ownership of the action object.
      *
      * @param actionType The standard action type of the action to create.
      * @param name The name by which the action be retrieved again from the collection.
@@ -412,6 +425,8 @@ public:
      * Inserting an action under a name that is already used for another action will replace
      * the other action in the collection.
      *
+     * The KActionCollection takes ownership of the action object.
+     *
      * @param name The name by which the action be retrieved again from the collection.
      * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
      *                 connection is desired.
@@ -429,6 +444,8 @@ public:
      *
      * NOTE: KDE prior to 4.2 connected the triggered() signal instead of the triggered(bool)
      * signal.
+     *
+     * The KActionCollection takes ownership of the action object.
      *
      * @param name The internal name of the action (e.g. "file-open").
      * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
