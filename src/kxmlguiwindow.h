@@ -76,14 +76,14 @@ public:
      * group leader. In that case, the KXmlGuiWindow becomes sort of a
      * secondary window.
      *
-     * @param f Specify the widget flags. The default is
-     * Qt::Window and Qt::WA_DeleteOnClose.  Qt::Window indicates that a
-     * main window is a toplevel window, regardless of whether it has a
-     * parent or not. Qt::WA_DeleteOnClose indicates that a main window is
-     * automatically destroyed when its window is closed. Pass 0 if
-     * you do not want this behavior.
+     * @param f Specify the window flags. The default is none.
      *
-     * @see https://doc.qt.io/qt-5/qt.html#WindowType-enum
+     * Note that a KXmlGuiWindow per-default is created with the
+     * Qt::WA_DeleteOnClose attribute set, i.e. it is automatically destroyed
+     * when the window is closed. If you do not want this behavior, call
+     * \code
+     * window->setAttribute(Qt::WA_DeleteOnClose, false);
+     * \endcode
      *
      * KMainWindows must be created on the heap with 'new', like:
      * \code
