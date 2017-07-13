@@ -73,7 +73,7 @@ public:
      * Construct a main window.
      *
      * @param parent The widget parent. This is usually 0 but it may also be the window
-     * group leader. In that case, the KMainWindow becomes sort of a
+     * group leader. In that case, the KXmlGuiWindow becomes sort of a
      * secondary window.
      *
      * @param f Specify the widget flags. The default is
@@ -87,13 +87,13 @@ public:
      *
      * KMainWindows must be created on the heap with 'new', like:
      * \code
-     * KMainWindow *kmw = new KMainWindow(...);
+     * KXmlGuiWindow *kmw = new KXmlGuiWindow(...);
      * kmw->setObjectName(...);
      * \endcode
      *
      * IMPORTANT: For session management and window management to work
      * properly, all main windows in the application should have a
-     * different name. If you don't do it, KMainWindow will create
+     * different name. If you don't do it, the base class KMainWindow will create
      * a unique name, but it's recommended to explicitly pass a window name that will
      * also describe the type of the window. If there can be several windows of the same
      * type, append '#' (hash) to the name, and KMainWindow will replace it with numbers to make
