@@ -85,7 +85,7 @@ public:
      * window->setAttribute(Qt::WA_DeleteOnClose, false);
      * \endcode
      *
-     * KMainWindows must be created on the heap with 'new', like:
+     * KXmlGuiWindows must be created on the heap with 'new', like:
      * \code
      * KXmlGuiWindow *kmw = new KXmlGuiWindow(...);
      * kmw->setObjectName(...);
