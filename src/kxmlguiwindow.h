@@ -40,6 +40,7 @@ class KConfigGroup;
 class KToolBar;
 class KXmlGuiWindowPrivate;
 
+// TODO KF6: remove
 #define KDE_DEFAULT_WINDOWFLAGS 0
 
 /**
@@ -103,7 +104,7 @@ public:
      * for the composer windows "composer#".
      *
      */
-    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS);
+    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
      * \brief Destructor.
