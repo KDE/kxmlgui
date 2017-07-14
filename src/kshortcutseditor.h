@@ -170,7 +170,7 @@ public:
      * This does not initialize the \p config object. It adds the
      * configuration.
      *
-     * @note this will not save the global configuration! globalaccel holds
+     * @note This will not save the global configuration! globalaccel holds
      * that part of the configuration.
      * @see writeGlobalConfig()
      *

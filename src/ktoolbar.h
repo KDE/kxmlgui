@@ -79,7 +79,7 @@ public:
      * if @p parent is a QMainWindow.
      *
      * Normally KDE applications do not call this directly, they either
-     * call KMainWindow::toolBar(name), or they use XML-GUI and specify
+     * call KMainWindow::toolBar(), or they use XML-GUI and specify
      * toolbars using XML.
      *
      * @param parent      The standard toolbar parent (usually a KMainWindow)
@@ -97,7 +97,7 @@ public:
      * if @p parent is a QMainWindow.
      *
      * Normally KDE applications do not call this directly, they either
-     * call KMainWindow::toolBar(name), or they use XML-GUI and specify
+     * call KMainWindow::toolBar(), or they use XML-GUI and specify
      * toolbars using XML.
      *
      * @param objectName  The QObject name of this toolbar, required so that QMainWindow can save and load the toolbar position,
@@ -148,7 +148,7 @@ public:
      * This allows you to enable or disable the context menu.
      *
      * @param enable If false, then the context menu will be disabled
-     * @deprecated use setContextMenuPolicy
+     * @deprecated use setContextMenuPolicy()
      */
 #ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void setContextMenuEnabled(bool enable = true);
@@ -157,26 +157,26 @@ public:
     /**
      * Returns the context menu enabled flag
      * @return true if the context menu is disabled
-     * @deprecated use contextMenuPolicy
+     * @deprecated use contextMenuPolicy()
      */
 #ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED bool contextMenuEnabled() const;
 #endif
 
     /**
-     * Save the toolbar settings to group @p configGroup in @p config.
+     * Save the toolbar settings to group @p cg.
      */
     void saveSettings(KConfigGroup &cg);
 
     /**
-     * Read the toolbar settings from group @p configGroup in @p config
+     * Read the toolbar settings from group @p cg
      * and apply them.
      */
     void applySettings(const KConfigGroup &cg);
 
     /**
      * Sets the XML gui client.
-     * @deprecated use addXMLGUIClient.
+     * @deprecated use addXMLGUIClient()
      */
 #ifndef KXMLGUI_NO_DEPRECATED
     KXMLGUI_DEPRECATED void setXMLGUIClient(KXMLGUIClient *client);
@@ -216,8 +216,8 @@ public:
 
     /**
      * Enable or disable toolbar editing via drag & drop of actions.  This is
-     * called by KEditToolbar and should generally be set to disabled whenever
-     * KEditToolbar is not active.
+     * called by KEditToolBar and should generally be set to disabled whenever
+     * KEditToolBar is not active.
      */
     static void setToolBarsEditable(bool editable);
 

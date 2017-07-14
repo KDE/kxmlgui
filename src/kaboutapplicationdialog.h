@@ -44,7 +44,7 @@ class KAboutData;
  * thereby this dialog box is available through the
  * KMainWindow::helpMenu() function.
  *
- * \image html kaboutapplicationdialog.png "KDE About Application Dialog"
+ * \image html kaboutapplicationdialog.png "KAboutApplicationDialog"
  *
  * @author Urs Wolfer uwolfer @ kde.org
  */

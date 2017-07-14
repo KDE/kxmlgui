@@ -53,7 +53,7 @@ class KToolBar;
 /**
  * @class KMainWindow kmainwindow.h KMainWindow
  *
- * @short %KDE top level main window
+ * @short Top level main window
  *
  * Top level widget that provides toolbars, a status line and a frame.
  *
@@ -98,7 +98,6 @@ class KToolBar;
  * the last mainwindow will quit the application unless there is still something
  * that holds a ref in KGlobal - like a KIO job, or a systray icon.
  *
- * @see KApplication
  * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej (radej@kde.org). Maintained by David Faure (faure@kde.org)
  */
 
@@ -123,9 +122,11 @@ public:
      * @param f Specify the window flags. The default is none.
      *
      * Note that a KMainWindow per-default is created with the
-     * WA_DeleteOnClose attribute, i.e. it is automatically destroyed when the
-     * window is closed. If you do not want this behavior, call
-     * setAttribute(Qt::WA_DeleteOnClose, false);
+     * Qt::WA_DeleteOnClose attribute set, i.e. it is automatically destroyed
+     * when the window is closed. If you do not want this behavior, call
+     * \code
+     * window->setAttribute(Qt::WA_DeleteOnClose, false);
+     * \endcode
      *
      * KMainWindows must be created on the heap with 'new', like:
      * \code
@@ -208,7 +209,7 @@ public:
      * menuBar()->addMenu( customHelpMenu() );
      * \endcode
      *
-     * @param showWhatsThis Set this to @p false if you do not want to include
+     * @param showWhatsThis Set this to @c false if you do not want to include
      *        the "What's This" menu entry.
      *
      * @return A standard help menu.
@@ -219,8 +220,8 @@ public:
 #endif
 
     /**
-     * If the session did contain so high a number, @p true is returned,
-     * else @p false.
+     * If the session did contain so high a number, @c true is returned,
+     * else @c false.
      * @see restore()
      **/
     static bool canBeRestored(int number);
@@ -240,7 +241,7 @@ public:
      * You should call canBeRestored() first.
      *
      * If the session did not contain so high a number, the configuration
-     * is not changed and @p false returned.
+     * is not changed and @c false returned.
      *
      * That means clients could simply do the following:
      * \code
@@ -254,7 +255,7 @@ public:
      *   // create default application as usual
      * }
      * \endcode
-     * Note that if @p show is true (default), QWidget::show() is called
+     * Note that if @p show is @c true (default), QWidget::show() is called
      * implicitly in restore.
      *
      * With this you can easily restore all toplevel windows of your
@@ -265,8 +266,8 @@ public:
      * to determine the exact type before calling the childMW
      * constructor in the example from above.
      *
-     * <i>Note that you don't need to deal with this function. Use the
-     * kRestoreMainWindows() convenience template function instead!</i>
+     * @note You don't need to deal with this function. Use the
+     * kRestoreMainWindows() convenience template function instead!
      * @see kRestoreMainWindows()
      * @see readProperties()
      * @see canBeRestored()
@@ -324,7 +325,7 @@ public:
      *   determine the default window size.  Hard coded window sizes will
      *   be wrong for users that have big fonts, use different styles,
      *   long/small translations, large toolbars, and other factors.
-     * - Put the setAutoSaveSettings ( or setupGUI() ) call after all widgets
+     * - Put the setAutoSaveSettings() ( or setupGUI() ) call after all widgets
      *   have been created and placed inside the main window (i.e. for 99% of
      *   apps setCentralWidget())
      * - Widgets that inherit from QWidget (like game boards) should overload
@@ -356,19 +357,19 @@ public:
 
     /**
      * @return the group used for setting-autosaving.
-     * Only meaningful if setAutoSaveSettings(QString) was called.
+     * Only meaningful if setAutoSaveSettings(const QString&, bool) was called.
      * This can be useful for forcing a save or an apply, e.g. before and after
-     * using KEditToolbar.
+     * using KEditToolBar.
      *
-     * NOTE: you should rather use saveAutoSaveSettings() for saving or autoSaveConfigGroup() for loading.
-     * This method doesn't make sense if setAutoSaveSettings(KConfigGroup) was called.
+     * @note You should rather use saveAutoSaveSettings() for saving or autoSaveConfigGroup() for loading.
+     * This method doesn't make sense if setAutoSaveSettings(const KConfigGroup&, bool) was called.
      */
     QString autoSaveGroup() const;
 
     /**
      * @return the group used for setting-autosaving.
      * Only meaningful if setAutoSaveSettings() was called.
-     * This can be useful for forcing an apply, e.g. after using KEditToolbar.
+     * This can be useful for forcing an apply, e.g. after using KEditToolBar.
      * @since 4.1
      */
     KConfigGroup autoSaveConfigGroup() const;
@@ -378,6 +379,7 @@ public:
      * groups in the config file and apply them.
      *
      * @param config Config group to read the settings from.
+     *
      * KF5 porting note: the unused bool argument was removed, make sure to remove it from your
      * reimplementations too! And add a Q_DECL_OVERRIDE for good measure.
      */
@@ -487,7 +489,7 @@ protected:
        The purpose of this function is to prepare the window in a way that it is
        safe to close it, i.e. without the user losing some data.
 
-       Default implementation returns true. Returning @p false will cancel
+       Default implementation returns true. Returning @c false will cancel
        the closing, and, if KApplication::sessionSaving() is true, it will also
        cancel KDE logout.
 

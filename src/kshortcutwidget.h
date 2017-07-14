@@ -31,7 +31,7 @@ class KShortcutWidgetPrivate;
 /**
  * @class KShortcutWidget kshortcutwidget.h KShortcutWidget
  *
- * \image html kshortcutwidget.png "KDE Shortcut Widget"
+ * \image html kshortcutwidget.png "KShortcutWidget"
  */
 class KXMLGUI_EXPORT KShortcutWidget : public QWidget
 {

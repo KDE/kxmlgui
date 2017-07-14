@@ -63,25 +63,25 @@ public:
     void startRecording();
 
     /**
-     * Conflicts the key sequence @a seq with a current standard
+     * Conflicts the key sequence @p seq with a current standard
      * shortcut?
      */
     bool conflictWithStandardShortcuts(const QKeySequence &seq);
 
     /**
-     * Conflicts the key sequence @a seq with a current local
+     * Conflicts the key sequence @p seq with a current local
      * shortcut?
      */
     bool conflictWithLocalShortcuts(const QKeySequence &seq);
 
     /**
-     * Conflicts the key sequence @a seq with a current global
+     * Conflicts the key sequence @p seq with a current global
      * shortcut?
      */
     bool conflictWithGlobalShortcuts(const QKeySequence &seq);
 
     /**
-     * Get permission to steal the shortcut @seq from the standard shortcut @a std.
+     * Get permission to steal the shortcut @seq from the standard shortcut @p std.
      */
     bool stealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq);
 

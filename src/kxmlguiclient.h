@@ -145,14 +145,14 @@ public:
     void setFactory(KXMLGUIFactory *factory);
     /**
      * Retrieves a pointer to the KXMLGUIFactory this client is
-     * associated with (will return 0 if the client's GUI has not been built
+     * associated with (will return nullptr if the client's GUI has not been built
      * by a KXMLGUIFactory.
      */
     KXMLGUIFactory *factory() const;
 
     /**
      * KXMLGUIClients can form a simple child/parent object tree. This
-     * method returns a pointer to the parent client or 0 if it has no
+     * method returns a pointer to the parent client or nullptr if it has no
      * parent client assigned.
      */
     KXMLGUIClient *parentClient() const;
@@ -186,7 +186,7 @@ public:
     void setClientBuilder(KXMLGUIBuilder *builder);
 
     /**
-     * Retrieves the client's GUI builder or 0 if no client specific
+     * Retrieves the client's GUI builder or nullptr if no client specific
      * builder has been assigned via setClientBuilder()
      */
     KXMLGUIBuilder *clientBuilder() const;
@@ -237,7 +237,7 @@ public:
      * \endcode
      * every time a file is selected, unselected or ...
      *
-     * \note You should not call createGUI() after calling this
+     * \note You should not call KXmlGuiWindow::createGUI() after calling this
      *       function.  In fact, that would remove the newly added
      *       actionlists again...
      * \note Forgetting to call unplugActionList() before
@@ -285,7 +285,7 @@ public:
      * @param localxmlfile The local xml file to set. This should be the full path
      *                    to a writeable file, usually using QStandardPaths::writableLocation.
      *                    You can set this to QString(), but no user changes to shortcuts / toolbars
-     *                    will be possible in this case. @see setLocalXMLFile()
+     *                    will be possible in this case.
      * @param merge Whether to merge with the global document
      *
      * @note If in any doubt whether you need this or not, use setXMLFile()
@@ -294,6 +294,7 @@ public:
      *       the client is added to a KXMLGUIFactory in order to have an
      *       effect.
      *
+     * @see setLocalXMLFile()
      * @since 4.4
     */
     void replaceXMLFile(const QString &xmlfile, const QString &localxmlfile, bool merge = false);
@@ -313,7 +314,7 @@ protected:
      * Sets the name of the rc file containing the XML for the part.
      *
      * Call this in the inherited class constructor, for parts and plugins.
-     * NOTE: for mainwindows, don't call this, pass the name of the xml file
+     * @note For mainwindows, don't call this, pass the name of the xml file
      * to KXmlGuiWindow::setupGUI() or KXmlGuiWindow::createGUI().
      *
      * @param file Either an absolute path for the file, or simply the
@@ -373,15 +374,15 @@ protected:
      * Sets the Document for the part, describing the layout of the GUI.
      *
      * Call this in the Part-inherited class constructor if you don't call
-     * setXMLFile or setXML.
+     * setXMLFile() or setXML().
      *
-     * WARNING: using this method is not recommended. Many code paths
+     * @warning Using this method is not recommended. Many code paths
      * lead to reloading from the XML file on disk. And editing toolbars requires
      * that the result is written to disk anyway, and loaded from there the next time.
      *
      * For application-specific changes to a client's XML, it is a better idea to
      * save the modified dom document to an app/default-client.xml and define a local-xml-file
-     * to something specific like app/local-client.xml, using replaceXMLFile.
+     * to something specific like app/local-client.xml, using replaceXMLFile().
      * See kdepimlibs/kontactinterface/plugin.cpp for an example.
      */
     virtual void setDOMDocument(const QDomDocument &document, bool merge = false);

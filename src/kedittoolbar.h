@@ -40,8 +40,8 @@ class KXMLGUIFactory;
  * Typically you do not need to use it directly as KXmlGuiWindow::setupGUI
  * takes care of it.
  *
- * If you use plugListAction you need to overload saveNewToolbarConfig()
- * to plug actions again:
+ * If you use KXMLGUIClient::plugActionList() you need to overload
+ * KXmlGuiWindow::saveNewToolbarConfig() to plug actions again:
  *
  * \code
  * void MyClass::saveNewToolbarConfig()
@@ -63,7 +63,7 @@ class KXMLGUIFactory;
  * and connecting to its newToolBarConfig slot, but if you really really want to do it
  * yourself, see the KXmlGuiWindow::configureToolbars() and KXmlGuiWindow::saveNewToolbarConfig() code.
  *
- * \image html kedittoolbar.png "KDE Toolbar Editor (KWrite)"
+ * \image html kedittoolbar.png "KEditToolBar (example: usage in KWrite)"
  *
  * @author Kurt Granroth <granroth@kde.org>
  * @maintainer David Faure <faure@kde.org>
@@ -125,15 +125,15 @@ public:
      * overridden by calling this method.
      *
      * The global parameter controls whether or not the
-     * global resource file is used.  If this is @p true, then you may
+     * global resource file is used.  If this is @c true, then you may
      * edit all of the actions in your toolbars -- global ones and
-     * local one.  If it is @p false, then you may edit only your
+     * local one.  If it is @c false, then you may edit only your
      * application's entries.  The only time you should set this to
      * false is if your application does not use the global resource
      * file at all (very rare).
      *
-     * @param xmlfile The application's local resource file.
-     * @param global If @p true, then the global resource file will also
+     * @param file The application's local resource file.
+     * @param global If @c true, then the global resource file will also
      *               be parsed.
      */
     void setResourceFile(const QString &file, bool global = true);
@@ -142,7 +142,8 @@ public:
      * Sets the default toolbar which will be auto-selected for all
      * KEditToolBar instances. Can be overridden on a per-dialog basis
      * by calling setDefaultToolBar( const QString& ) on the dialog.
-     *   @param  toolbarName  the name of the tool bar
+     *
+     * @param  toolBarName  the name of the tool bar
      */
     static void setGlobalDefaultToolBar(const char *toolBarName); // TODO should be const QString&
 

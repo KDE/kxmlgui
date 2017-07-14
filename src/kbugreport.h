@@ -36,7 +36,7 @@ class KBugReportPrivate;
  * Make sure you create an instance of KAboutData and call
  * KAboutData::setApplicationData(<aboutData>).
  *
- * \image html kbugreport.png "KDE Bug Report Dialog"
+ * \image html kbugreport.png "KBugReport"
  *
  * @author David Faure <faure@kde.org>
  */

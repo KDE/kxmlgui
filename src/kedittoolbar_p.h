@@ -156,7 +156,7 @@ public:
 
     /**
      * Destructor.  Note that any changes done in this widget will
-     * @p NOT be saved in the destructor.  You @p must call save()
+     * @em NOT be saved in the destructor.  You @em must call save()
      * to do that.
      */
     virtual ~KEditToolBarWidget();

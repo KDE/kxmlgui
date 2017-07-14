@@ -47,14 +47,13 @@
  * KShortcutsDialog::configure( actionCollection() );
  * \endcode
  *
- * @since 4.3
- * By default this dialog is modal. If you don't want that, setModal(false) and then the non-static
+ * By default this dialog is modal (since 4.3). If you don't want that, setModal(false) and then the non-static
  * configure() will show the dialog. If you want to do anything extra when the dialog is done,
  * connect to okClicked() and/or cancelClicked(). However, if your extra stuff depends on the
  * changed settings already being saved, connect to saved() instead to be safe; if you connect to
  * okClicked() your function might be called before the save happens.
  *
- * example:
+ * Example:
  * \code
  * KShortcutsDialog dlg;
  * dlg.addCollection(myActions);
@@ -63,7 +62,7 @@
  * dlg.configure();
  * \endcode
  *
- * \image html kshortcutsdialog.png "KDE Shortcuts Dialog"
+ * \image html kshortcutsdialog.png "KShortcutsDialog"
  *
  * @author Nicolas Hadacek <hadacek@via.ecp.fr>
  * @author Hamish Rodda <rodda@kde.org> (KDE 4 porting)
@@ -104,7 +103,7 @@ public:
 
     /**
      * Run the dialog and call writeSettings() on the action collections
-     * that were added if @p bSaveSettings is true.
+     * that were added if @p saveSettings is true.
      */
     bool configure(bool saveSettings = true);
 

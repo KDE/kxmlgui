@@ -410,10 +410,10 @@ public:
     enum hierarchyLevel {Root = 0, Program, Action};
 
     /**
-     * Add @a action at @a level. Checks for QActions and unnamed actions
+     * Add @p action at @p level. Checks for QActions and unnamed actions
      * before adding.
      *
-     * @return true if the actions was really added, false if not
+     * @return @c true if the action was really added, @c false if not
      */
     bool addAction(QAction *action, QTreeWidgetItem *hier[], hierarchyLevel level);
 

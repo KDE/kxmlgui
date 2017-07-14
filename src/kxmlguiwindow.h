@@ -46,7 +46,7 @@ class KXmlGuiWindowPrivate;
 /**
  * @class KXmlGuiWindow kxmlguiwindow.h KXmlGuiWindow
  *
- * @short %KDE top level main window with predefined action layout
+ * @short Top level main window with predefined action layout
  *
  * Instead of creating a KMainWindow manually and assigning menus, menu entries,
  * toolbar buttons and actions to it by hand, this class can be used to load an
@@ -115,7 +115,7 @@ public:
     virtual ~KXmlGuiWindow();
 
     /**
-     * Enables the build of a standard help menu when calling createGUI/setupGUI().
+     * Enables the build of a standard help menu when calling createGUI() or setupGUI().
      *
      * The default behavior is to build one, you must call this function
      * to disable it
@@ -123,7 +123,7 @@ public:
     void setHelpMenuEnabled(bool showHelpMenu = true);
 
     /**
-     * Return @p true when the help menu is enabled
+     * Return @c true when the help menu is enabled
      */
     bool isHelpMenuEnabled() const;
 
@@ -158,27 +158,28 @@ public:
      * &lt;Merge name="StandardToolBarMenuHandler" /&gt;
      * line to the settings menu section of your resource file ( usually appname.rc ).
      *
-     * Note that you should enable this feature before calling createGUI() ( or similar ) .
+     * @note You should enable this feature before calling createGUI() ( or similar ).
      */
     void setStandardToolBarMenuEnabled(bool enable);
     bool isStandardToolBarMenuEnabled() const;
 
     /**
      * Sets whether KMainWindow should provide a menu that allows showing/hiding
-     * of the statusbar ( using KToggleStatusBarAction ).
+     * of the statusbar ( using KStandardAction::showStatusbar()).
      *
      * The menu / menu item is implemented using xmlgui. It will be inserted
      * in your menu structure in the 'Settings' menu.
      *
-     * Note that you should enable this feature before calling createGUI()
-     * ( or similar ).
+     * @note You should enable this feature before calling createGUI() ( or similar ).
      *
      * If an application maintains the action on its own (i.e. never calls
      * this function) a connection needs to be made to let KMainWindow
      * know when that status (hidden/shown) of the statusbar has changed.
      * For example:
+     * @code
      * connect(action, SIGNAL(activated()),
      *         kmainwindow, SLOT(setSettingsDirty()));
+     * @endcode
      * Otherwise the status (hidden/show) of the statusbar might not be saved
      * by KMainWindow.
      */
@@ -202,31 +203,33 @@ public:
 
         /**
          * adds action to show/hide the statusbar if the
-         * statusbar exists.  @see createStandardStatusBarAction
+         * statusbar exists.
+         * @see createStandardStatusBarAction
          */
         StatusBar = 4,
 
         /**
          * auto-saves (and loads) the toolbar/menubar/statusbar settings and
-         * window size using the default name.  @see setAutoSaveSettings
+         * window size using the default name.
          *
          * Typically you want to let the default window size be determined by
          * the widgets size hints. Make sure that setupGUI() is called after
          * all the widgets are created ( including setCentralWidget ) so the
-         * default size's will be correct. @see setAutoSaveSettings for
-         * more information on this topic.
+         * default size's will be correct.
+         * @see setAutoSaveSettings
          */
         Save = 8,
 
         /**
          * calls createGUI() once ToolBar, Keys and Statusbar have been
-         * taken care of.  @see createGUI
+         * taken care of.
          *
-         * NOTE: when using KParts::MainWindow, remove this flag from the
+         * @note When using KParts::MainWindow, remove this flag from the
          * setupGUI call, since you'll be using createGUI(part) instead.
          * @code
          *     setupGUI(ToolBar | Keys | StatusBar | Save);
          * @endcode
+         * @see createGUI
          */
         Create = 16,
 
@@ -249,9 +252,9 @@ public:
      * @see StandardWindowOptions
      * @note Since this method will restore the state of the application (toolbar, dockwindows
      *       positions...), you need to have added all your actions to your toolbars etc before
-     *       calling to this method. (This note is only applicable if you are using the Default or
-     *       Save flag).
-     * @warning If you are calling createGUI yourself, remember to remove the Create flag from
+     *       calling to this method. (This note is only applicable if you are using the @c Default or
+     *       @c Save flag).
+     * @warning If you are calling createGUI yourself, remember to remove the @c Create flag from
      *          the @p options parameter.
      *
      */
@@ -262,16 +265,16 @@ public:
      * fashion.  The options are all enabled by default but can be turned
      * off if desired through the params or if the prereqs don't exists.
      *
-     * @p defaultSize The default size of the window
+     * @param defaultSize The default size of the window
      *
      * Typically this function replaces createGUI().
      *
      * @see StandardWindowOptions
      * @note Since this method will restore the state of the application (toolbar, dockwindows
      *       positions...), you need to have added all your actions to your toolbars etc before
-     *       calling to this method. (This note is only applicable if you are using the Default or
-     *       Save flag).
-     * @warning If you are calling createGUI yourself, remember to remove the Create flag from
+     *       calling to this method. (This note is only applicable if you are using the @c Default or
+     *       @c Save flag).
+     * @warning If you are calling createGUI yourself, remember to remove the @c Create flag from
      *          the @p options parameter. Also, call setupGUI always after you call createGUI.
      */
     void setupGUI(const QSize &defaultSize, StandardWindowOptions options = Default, const QString &xmlfile = QString());
@@ -344,7 +347,7 @@ protected:
 
 protected Q_SLOTS:
     /**
-     * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
+     * Rebuilds the GUI after KEditToolBar changed the toolbar layout.
      * @see configureToolbars()
      */
     virtual void saveNewToolbarConfig();

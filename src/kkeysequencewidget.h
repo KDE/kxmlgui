@@ -40,7 +40,7 @@ class KActionCollection;
  * The widgets provides support for conflict handling. See
  * setCheckForConflictsAgainst() for more information.
  *
- * \image html kkeysequencewidget.png "KDE Key Sequence Widget"
+ * \image html kkeysequencewidget.png "KKeySequenceWidget"
  *
  * @author Mark Donohoe <donohoe@kde.org>
  * @internal
@@ -121,7 +121,7 @@ public:
      * manually. It's your responsibility to save that change later when
      * you think it is appropriate.
      *
-     * 2. Call applyStealShortcut and KKeySequenceWidget will steal the
+     * 2. Call applyStealShortcut() and KKeySequenceWidget will steal the
      * shortcut. This will save the actionCollections the shortcut is part
      * of so make sure it doesn't inadvertly save some unwanted changes
      * too. Read its documentation for some limitation when handling
@@ -193,7 +193,7 @@ public:
     //@}
 
     /**
-     * Checks whether the key sequence @a seq is available to grab.
+     * Checks whether the key sequence @p seq is available to grab.
      *
      * The sequence is checked under the same rules as if it has been typed by
      * the user. This method is useful if you get key sequences from another

@@ -87,8 +87,8 @@ public:
     void clear();
 
     /**
-     * Associate all actions in this collection to the given \a widget.
-     * Unlike addAssociatedWidget, this method only adds all current actions
+     * Associate all actions in this collection to the given @p widget.
+     * Unlike addAssociatedWidget(), this method only adds all current actions
      * in the collection to the given widget. Any action added after this call
      * will not be added to the given widget automatically.
      * So this is just a shortcut for a foreach loop and a widget->addAction call.
@@ -96,7 +96,7 @@ public:
     void associateWidget(QWidget *widget) const;
 
     /**
-     * Associate all actions in this collection to the given \a widget, including any actions
+     * Associate all actions in this collection to the given @p widget, including any actions
      * added after this association is made.
      *
      * This does not change the action's shortcut context, so if you need to have the actions only
@@ -106,7 +106,7 @@ public:
     void addAssociatedWidget(QWidget *widget);
 
     /**
-     * Remove an association between all actions in this collection and the given \a widget, i.e.
+     * Remove an association between all actions in this collection and the given @p widget, i.e.
      * remove those actions from the widget, and stop associating newly added actions as well.
      */
     void removeAssociatedWidget(QWidget *widget);
@@ -127,19 +127,19 @@ public:
     QString configGroup() const;
 
     /**
-     * Returns whether this action collection's configuration should be global to KDE ( \e true ),
-     * or specific to the application ( \e false ).
+     * Returns whether this action collection's configuration should be global to KDE ( @c true ),
+     * or specific to the application ( @c false ).
      */
     bool configIsGlobal() const;
 
     /**
-     * Sets \a group as the KConfig group with which settings will be loaded and saved.
+     * Sets @p group as the KConfig group with which settings will be loaded and saved.
      */
     void setConfigGroup(const QString &group);
 
     /**
-     * Set whether this action collection's configuration should be global to KDE ( \e true ),
-     * or specific to the application ( \e false ).
+     * Set whether this action collection's configuration should be global to KDE ( @c true ),
+     * or specific to the application ( @c false ).
      */
     void setConfigGlobal(bool global);
 
@@ -172,13 +172,13 @@ public:
     void exportGlobalShortcuts(KConfigGroup *config, bool writeDefaults = false) const;
 
     /**
-      * Write the current configurable key associations to @a config. What the
-      * function does if @a config is zero depends. If this action collection
-      * belongs to a KXMLGuiClient the setting are saved to the kxmlgui
+      * Write the current configurable key associations to @p config. What the
+      * function does if @p config is zero depends. If this action collection
+      * belongs to a KXMLGUIClient the setting are saved to the kxmlgui
       * definition file. If not the settings are written to the applications
       * config file.
       *
-      * \note oneAction() and writeDefaults() have no meaning for the kxmlgui
+      * \note @p oneAction and @p writeDefaults have no meaning for the kxmlgui
       * configuration file.
       *
       * \param config Config object to save to, or null (see above)
@@ -201,14 +201,14 @@ public:
     bool isEmpty() const;
 
     /**
-     * Return the QAction* at position "index" in the action collection.
+     * Return the QAction* at position @p index in the action collection.
      *
      * This is equivalent to actions().value(index);
      */
     QAction *action(int index) const;
 
     /**
-     * Get the action with the given \a name from the action collection.
+     * Get the action with the given \p name from the action collection.
      *
      * @param name Name of the QAction
      * @return A pointer to the QAction in the collection which matches the parameters or
@@ -235,14 +235,14 @@ public:
     const QList<QActionGroup *> actionGroups() const;
 
     /**
-     * Set the \a componentName associated with this action collection.
+     * Set the @p componentName associated with this action collection.
      *
      * \warning Don't call this method on a KActionCollection that contains
      * actions. This is not supported.
      *
      * \param componentData the name which is to be associated with this action collection,
      * or QString() to indicate the app name. This is used to load/save settings into XML files.
-     * KXmlGuiClient::setComponentName takes care of calling this.
+     * KXMLGUIClient::setComponentName takes care of calling this.
      */
     void setComponentName(const QString &componentName);
 
@@ -252,7 +252,7 @@ public:
     /**
      * Set the component display name associated with this action collection.
      * (e.g. for the toolbar editor)
-     * KXmlGuiClient::setComponentName takes care of calling this.
+     * KXMLGUIClient::setComponentName takes care of calling this.
      */
     void setComponentDisplayName(const QString &displayName);
 
@@ -266,29 +266,29 @@ public:
 
 Q_SIGNALS:
     /**
-     * Indicates that \a action was inserted into this action collection.
+     * Indicates that @p action was inserted into this action collection.
      */
     void inserted(QAction *action);
 
     /**
-     * Indicates that \a action was removed from this action collection.
+     * Indicates that @p action was removed from this action collection.
      * @deprecated
      */
     QT_MOC_COMPAT void removed(QAction *action);
 
     /**
-     * Indicates that \a action was highlighted (hovered over).
+     * Indicates that @p action was highlighted (hovered over).
      * @deprecated Replaced by actionHovered(QAction* action);
      */
     QT_MOC_COMPAT void actionHighlighted(QAction *action);
 
     /**
-     * Indicates that \a action was hovered.
+     * Indicates that @p action was hovered.
      */
     void actionHovered(QAction *action);
 
     /**
-     * Indicates that \a action was triggered
+     * Indicates that @p action was triggered
      */
     void actionTriggered(QAction *action);
 
@@ -341,7 +341,7 @@ public:
      * The ownership of the action objects is not transferred.
      * If the action is destroyed it will be removed automatically from the KActionCollection.
      *
-     * Uses addAction(QString, QAction*).
+     * Uses addAction(const QString&, QAction*).
      *
      * @param actions the list of the actions to add.
      *
@@ -370,7 +370,7 @@ public:
      * action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
      *
-     * Note: Using KStandardAction::OpenRecent will cause a different signal than
+     * @note Using KStandardAction::OpenRecent will cause a different signal than
      * triggered(bool) to be used, see KStandardAction for more information.
      *
      * The action can be retrieved later from the collection by its standard name as per
@@ -392,7 +392,7 @@ public:
      * and connects the action's triggered(bool) signal to the specified
      * receiver/member. The newly created action is also returned.
      *
-     * Note: Using KStandardAction::OpenRecent will cause a different signal than
+     * @note Using KStandardAction::OpenRecent will cause a different signal than
      * triggered(bool) to be used, see KStandardAction for more information.
      *
      * The action can be retrieved later from the collection by the specified name.
@@ -479,9 +479,14 @@ public:
      * @see add(const QString &, const QObject *, const char *)
      * @since 5.28
      */
+    #ifdef DOXYGEN_SHOULD_SKIP_THIS
+    template<class ActionType>
+    inline ActionType *add(const QString &name, const Receiver *receiver, Func slot)
+    #else
     template<class ActionType, class Receiver, class Func>
     inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, ActionType>::type *add(
         const QString &name, const Receiver *receiver, Func slot)
+    #endif
     {
         ActionType *a = new ActionType(this);
         connect(a, &QAction::triggered, receiver, slot);
@@ -501,9 +506,13 @@ public:
      * @see addAction(const QString &, const QObject *, const char *)
      * @since 5.28
      */
+    #ifdef DOXYGEN_SHOULD_SKIP_THIS
+    inline QAction *addAction(const QString &name, const Receiver *receiver, Func slot)
+    #else
     template<class Receiver, class Func>
     inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, QAction>::type *addAction(
         const QString &name, const Receiver *receiver, Func slot)
+    #endif
     {
         return add<QAction>(name, receiver, slot);
     }

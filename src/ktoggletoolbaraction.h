@@ -52,22 +52,20 @@ class KXMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
 
 public:
     /**
-     * Create a KToggleToolbarAction that manages the toolbar
-     * named toolBarName. This can be either the name of a
+     * Create a KToggleToolBarAction that manages the toolbar
+     * named @p toolBarName. This can be either the name of a
      * toolbar in an xml ui file, or a toolbar programmatically
      * created with that name.
      *
-     * @param The action's parent object.
+     * @param parent the action's parent object.
      */
     KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent);
 
     /**
-     * Create a KToggleToolbarAction that manages the @param toolBar.
-     * This can be either the name of a toolbar in an xml ui file,
-     * or a toolbar programmatically created with that name.
+     * Create a KToggleToolBarAction that manages the @p toolBar.
      *
      * @param toolBar the toolbar to be managed
-     * @param parent The action's parent object.
+     * @param parent the action's parent object.
      */
     KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent);
 
@@ -82,7 +80,7 @@ public:
     KToolBar *toolBar();
 
     /**
-     * Reimplemented from @see QObject.
+     * Reimplemented from QObject.
      */
     bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
