@@ -66,9 +66,11 @@ KActionRunner::KActionRunner(KActionCollection* ac, QWidget* parent) :
 
 void KActionRunner::showEvent(QShowEvent* event)
 {
-    setFocus();
     KComboBox::showEvent(event);
+    grabKeyboard();
+    setFocus();
 }
+
 
 KActionRunner::~KActionRunner()
 {
