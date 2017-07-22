@@ -92,8 +92,8 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
     d->toolBarHandler = nullptr;
     d->showStatusBarAction = nullptr;
     d->factory = nullptr;
-    d->runner = new KActionRunner(actionCollection(), nullptr);
-    d->runner->setWindowFlags(Qt::FramelessWindowHint);
+    d->runner = new KActionRunner(actionCollection(), this);
+    d->runner->setWindowFlags(Qt::FramelessWindowHint | Qt::Tool);
 
     auto action = new QAction(QStringLiteral("Show list of actions"), this);
     action->setShortcutContext(Qt::ApplicationShortcut);
@@ -111,12 +111,7 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
         QPoint globalPos = mapToGlobal(QPoint(xPos, hPos));
 
         d->runner->setGeometry(globalPos.x() - width/2, globalPos.y(), width, height);
-        d->runner->setFocus();
         d->runner->show();
-    });
-
-    connect(d->runner, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [d]{
-        d->runner->hide();
     });
 
     new KMainWindowInterface(this);

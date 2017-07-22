@@ -35,6 +35,9 @@ public:
     virtual ~KActionRunner();
 public Q_SLOTS:
     void activate(int index);
+protected:
+    void keyPressEvent(QKeyEvent * event) override;
+    void showEvent(QShowEvent * event) override;
 private:
     KActionRunnerPrivate *d_ptr;
 };

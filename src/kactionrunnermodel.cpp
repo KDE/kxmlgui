@@ -22,6 +22,7 @@
 #include "kactionrunnermodel.h"
 #include <KActionCollection>
 #include <QDebug>
+#include <QApplication>
 
 KActionRunnerModel::KActionRunnerModel(KActionCollection* ac) : m_actionCollection(ac), m_size(0)
 {
@@ -52,7 +53,6 @@ KActionRunnerModel::~KActionRunnerModel()
 {
 }
 
-
 QVariant KActionRunnerModel::data(const QModelIndex& index, int role) const
 {
     if (!index.isValid())
@@ -68,6 +68,11 @@ QVariant KActionRunnerModel::data(const QModelIndex& index, int role) const
         case Qt::DecorationRole : return action->icon();
         case Qt::AccessibleTextRole : return action->text().remove(QLatin1Char('&'));
         case Qt::AccessibleDescriptionRole : return action->toolTip();
+        case Qt::BackgroundColorRole : {
+            auto p = qApp->palette();
+            p.setCurrentColorGroup(QPalette::Disabled);
+            return !action->isEnabled() ? p.color(QPalette::Base) : QVariant();
+        }
         default:
             return QVariant();
     }
@@ -83,6 +88,9 @@ void KActionRunnerModel::activate(int index)
 {
     if (index >= m_actionCollection->actions().size())
         return;
-    m_actionCollection->actions()[index]->trigger();
+    auto action = m_actionCollection->actions().at(index);
+    if (action->isEnabled()) {
+        action->trigger();
+    }
 }
 

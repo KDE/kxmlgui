@@ -23,28 +23,52 @@
 #include "kactionrunnermodel.h"
 #include <KActionCollection>
 #include <QDebug>
+#include <QSortFilterProxyModel>
+#include <QKeyEvent>
+#include <QShowEvent>
+#include <QLineEdit>
 
 class KActionRunnerPrivate {
 public:
     KActionRunnerPrivate(KActionRunner* q, KActionCollection *ac)
-        : q_ptr(q), model(ac), actionCollection(ac), completion(q_ptr->completionObject())
+        : q_ptr(q), model(new KActionRunnerModel(ac)), actionCollection(ac), completion(q_ptr->completionObject())
     {
         q_ptr->setEditable(true);
     }
 
     KActionRunner *q_ptr;
-    KActionRunnerModel model;
+    KActionRunnerModel* model;
     KActionCollection *actionCollection;
     KCompletion *completion;
+    QSortFilterProxyModel *filterModel;
 };
 
 KActionRunner::KActionRunner(KActionCollection* ac, QWidget* parent) :
-    KComboBox(parent),
+    KComboBox(true, parent),
     d_ptr(new KActionRunnerPrivate(this, ac))
 {
-    setModel(&d_ptr->model);
-    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &KActionRunner::activate);
+
+    setModel(d_ptr->model);
+    setCompletionMode(KCompletion::CompletionPopupAuto);
+    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), [this](int index){
+        activate(index);
+        hide();
+    });
  }
+
+ void KActionRunner::keyPressEvent(QKeyEvent* event)
+{
+    if (event->key() == Qt::Key_Escape) {
+        hide();
+    }
+    KComboBox::keyPressEvent(event);
+}
+
+void KActionRunner::showEvent(QShowEvent* event)
+{
+    setFocus();
+    KComboBox::showEvent(event);
+}
 
 KActionRunner::~KActionRunner()
 {
@@ -55,5 +79,5 @@ void KActionRunner::activate(int index)
 {
     if (!isVisible())
         return;
-    d_ptr->model.activate(index);
+    d_ptr->model->activate(index);
 }
