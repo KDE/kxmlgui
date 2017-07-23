@@ -28,25 +28,10 @@ KActionRunnerModel::KActionRunnerModel(KActionCollection* ac) : m_actionCollecti
 {
     m_size = ac->actions().size();
     connect(ac, &KActionCollection::inserted, [this](QAction *action){
-        qDebug() << "Action inserted: " << action->text();
-        qDebug() << "Current row count: " << rowCount();
-
         beginInsertRows(QModelIndex(), rowCount(), rowCount());
-        qDebug() << "inserted in position: " << rowCount();
         m_size += 1;
         endInsertRows();
     });
-
-    /*
-    connect(ac, &KActionCollection::removed, [this]{
-        if (m_size <= 0)
-            return;
-
-        beginRemoveRows(QModelIndex(), rowCount(), rowCount());
-        m_size -= 1;
-        endInsertRows();
-    });
-    */
 }
 
 KActionRunnerModel::~KActionRunnerModel()
