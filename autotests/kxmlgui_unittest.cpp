@@ -944,7 +944,7 @@ void KXmlGui_UnitTest::testXMLFileReplacement()
 
     // finally, our local xml file has <ActionProperties/>
     QFile fileLocal(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + "testui.rc");
-    QVERIFY(fileLocal.open(QIODevice::WriteOnly));
+    QVERIFY2(fileLocal.open(QIODevice::WriteOnly), qPrintable(fileLocal.fileName()));
     createXmlFile(fileLocal, 1, AddActionProperties);
     const QString filenameLocal = fileLocal.fileName();
     fileLocal.close();
