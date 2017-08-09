@@ -1327,25 +1327,6 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
     if ((tb = qobject_cast<QToolButton *>(watched))) {
         const QList<QAction *> tbActions = tb->actions();
         if (!tbActions.isEmpty()) {
-            // Handle MMB on toolbar buttons
-            if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::MouseButtonRelease) {
-                QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                if (me->button() == Qt::MidButton /*&&
-                                                 act->receivers(SIGNAL(triggered(Qt::MouseButtons,Qt::KeyboardModifiers)))*/) {
-                    QAction *act = tbActions.first();
-                    if (me->type() == QEvent::MouseButtonPress) {
-                        tb->setDown(act->isEnabled());
-                    } else {
-                        tb->setDown(false);
-                        if (act->isEnabled()) {
-                            QMetaObject::invokeMethod(act, "triggered", Qt::DirectConnection,
-                                                      Q_ARG(Qt::MouseButtons, me->button()),
-                                                      Q_ARG(Qt::KeyboardModifiers, QApplication::keyboardModifiers()));
-                        }
-                    }
-                }
-            }
-
             // CJK languages use more verbose accelerator marker: they add a Latin
             // letter in parenthesis, and put accelerator on that. Hence, the default
             // removal of ampersand only may not be enough there, instead the whole
