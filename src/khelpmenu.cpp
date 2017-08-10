@@ -152,9 +152,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("switch_application_language"))) {
-        if (KLocalizedString::availableApplicationTranslations().count() > 1) {
-            mSwitchApplicationLanguageAction = KStandardAction::create(KStandardAction::SwitchApplicationLanguage, q, SLOT(switchApplicationLanguage()), q);
-        }
+        mSwitchApplicationLanguageAction = KStandardAction::create(KStandardAction::SwitchApplicationLanguage, q, SLOT(switchApplicationLanguage()), q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_app"))) {
