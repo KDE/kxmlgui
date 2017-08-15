@@ -43,7 +43,7 @@
 #include <QTextBrowser>
 #include <QFontDatabase>
 
-class KAboutApplicationDialog::Private
+class Q_DECL_HIDDEN KAboutApplicationDialog::Private
 {
 public:
     Private(KAboutApplicationDialog *parent)

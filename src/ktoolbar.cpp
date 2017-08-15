@@ -87,7 +87,7 @@ enum SettingLevel { Level_KDEDefault, Level_AppXML, Level_UserSettings,
                   };
 enum { Unset = -1 };
 
-class KToolBar::Private
+class Q_DECL_HIDDEN KToolBar::Private
 {
 public:
     Private(KToolBar *qq)

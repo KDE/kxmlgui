@@ -140,7 +140,7 @@ private:
 
 using namespace KDEPrivate;
 
-class ToolBarHandler::Private
+class Q_DECL_HIDDEN ToolBarHandler::Private
 {
 public:
     Private(ToolBarHandler *_parent)

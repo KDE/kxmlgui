@@ -64,7 +64,7 @@ QKeySequence alternateSequence(const QList<QKeySequence> &sequences)
     return sequences.size() <= 1 ? QKeySequence() : sequences.at(1);
 }
 
-class KShortcutsDialog::KShortcutsDialogPrivate
+class Q_DECL_HIDDEN KShortcutsDialog::KShortcutsDialogPrivate
 {
 public:
 

@@ -38,7 +38,7 @@
 #include "kmainwindow.h"
 #include "ktoolbar.h"
 
-class KToggleToolBarAction::Private
+class Q_DECL_HIDDEN KToggleToolBarAction::Private
 {
 public:
     Private(KToggleToolBarAction *q)
