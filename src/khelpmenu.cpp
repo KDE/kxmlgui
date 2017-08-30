@@ -170,7 +170,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
 QMenu *KHelpMenu::menu()
 {
     if (!d->mMenu) {
-        d->mMenu = new QMenu();
+        d->mMenu = new QMenu(d->mParent);
         connect(d->mMenu, SIGNAL(destroyed()), this, SLOT(menuDestroyed()));
 
         d->mMenu->setTitle(i18n("&Help"));
