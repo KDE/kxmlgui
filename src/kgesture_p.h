@@ -44,7 +44,7 @@ public:
 
     /**
      * Creates a new gesture consisting of given shape.
-     * If the gesture belongs to a KAction, and the user draws approximately the same shape
+     * If the gesture belongs to a QAction, and the user draws approximately the same shape
      * on the screen while holding down the right mouse button, the action will trigger.
      * @p shape must be a "reasonable" polygon. It must contain at least two points
      * and it should contain at most 50 for performance reasons. No two consecutive points

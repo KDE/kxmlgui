@@ -51,8 +51,8 @@ public:
     /**
      * Set a list of action collections to check against for conflictuous shortcut.
      *
-     * If there is a conflictuous shortcut with a KAction, and that his shortcut can be configured
-     * (KAction::isShortcutConfigurable() returns true) the user will be prompted for eventually steal
+     * If there is a conflictuous shortcut with a QAction, and that his shortcut can be configured
+     * (KActionCollection::isShortcutConfigurable() returns true) the user will be prompted for eventually steal
      * the shortcut from this action
      *
      * Global shortcuts are automatically checked for conflicts

@@ -49,7 +49,7 @@ class KShortcutsEditorPrivate;
  *
  * @short Widget for configuration of KAccel and KGlobalAccel.
  *
- * Configure dictionaries of key/action associations for KActions,
+ * Configure dictionaries of key/action associations for QActions,
  * including global shortcuts.
  *
  * The class takes care of all aspects of configuration, including

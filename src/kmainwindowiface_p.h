@@ -43,7 +43,7 @@ public:
     /**
     Construct a new interface object.
     @param mainWindow - The parent KMainWindow object
-    that will provide us with the KAction objects.
+    that will provide us with the QAction objects.
     */
     KMainWindowInterface(KXmlGuiWindow *mainWindow);
     /**

@@ -213,8 +213,8 @@ public:
      *
      * @see setCheckForConflictsAgainst()
      *
-     * If a KAction with a conflicting shortcut is found inside this list and
-     * its shortcut can be configured (KAction::isShortcutConfigurable()
+     * If a QAction with a conflicting shortcut is found inside this list and
+     * its shortcut can be configured (KActionCollection::isShortcutConfigurable()
      * returns true) the user will be prompted whether to steal the shortcut
      * from this action.
      *
