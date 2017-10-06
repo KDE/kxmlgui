@@ -1331,14 +1331,20 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
             // letter in parenthesis, and put accelerator on that. Hence, the default
             // removal of ampersand only may not be enough there, instead the whole
             // parenthesis construct should be removed. Use KLocalizedString's method to do this.
-            if (event->type() == QEvent::Show || event->type() == QEvent::Paint || event->type() == QEvent::EnabledChange) {
+            if (event->type() == QEvent::Paint || event->type() == QEvent::EnabledChange) {
                 QAction *act = tb->defaultAction();
                 if (act) {
                     const QString text = KLocalizedString::removeAcceleratorMarker(act->iconText().isEmpty() ? act->text() : act->iconText());
-                    const QString toolTip = KLocalizedString::removeAcceleratorMarker(act->toolTip());
                     // Filtering messages requested by translators (scripting).
-                    tb->setText(i18nc("@action:intoolbar Text label of toolbar button", "%1", text));
-                    tb->setToolTip(i18nc("@info:tooltip Tooltip of toolbar button", "%1", toolTip));
+                    const QString modText = i18nc("@action:intoolbar Text label of toolbar button", "%1", text);
+                    if (modText != text) {
+                        tb->setText(modText);
+                    }
+                    const QString toolTip = KLocalizedString::removeAcceleratorMarker(act->toolTip());
+                    const QString modToolTip = i18nc("@info:tooltip Tooltip of toolbar button", "%1", toolTip);
+                    if (modToolTip != toolTip) {
+                        tb->setToolTip(modToolTip);
+                    }
                 }
             }
         }
