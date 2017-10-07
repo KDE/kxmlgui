@@ -19,3 +19,5 @@ ecm_add_tests(
    GUI
    LINK_LIBRARIES Qt5::Test KF5::IconThemes KF5::XmlGui
 )
+
+set_tests_properties(ktoolbar_unittest PROPERTIES RUN_SERIAL TRUE) # it wipes out ~/.qttest/share
