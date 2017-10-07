@@ -722,7 +722,7 @@ void KXmlGui_UnitTest::testHiddenToolBar()
         "</ToolBar>\n"
         "</gui>\n";
     KConfigGroup cg(KSharedConfig::openConfig(), "testHiddenToolBar");
-    TestXmlGuiWindow mainWindow(xml);
+    TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.setAutoSaveSettings(cg);
     mainWindow.createActions(QStringList() << QStringLiteral("go_up"));
     mainWindow.createGUI();
@@ -765,7 +765,7 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
     {
         // do not interfere with the "toolbarVisibility" unit test
         KConfigGroup cg(KSharedConfig::openConfig(), "testAutoSaveSettings");
-        TestXmlGuiWindow mw(xml);
+        TestXmlGuiWindow mw(xml, "kxmlgui_unittest.rc");
         mw.show();
         mw.setAutoSaveSettings(cg);
 
@@ -800,7 +800,7 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
 
     {
         KConfigGroup cg(KSharedConfig::openConfig(), "testAutoSaveSettings");
-        TestXmlGuiWindow mw2(xml);
+        TestXmlGuiWindow mw2(xml, "kxmlgui_unittest.rc");
         mw2.show();
         mw2.setAutoSaveSettings(cg);
         QTest::qWait(200);
@@ -844,7 +844,7 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
         "</ToolBar>\n"
         "</gui>\n";
     KConfigGroup cg(KSharedConfig::openConfig(), "testDeletedToolBar");
-    TestXmlGuiWindow mainWindow(xml);
+    TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.setAutoSaveSettings(cg);
     mainWindow.createActions(QStringList() << QStringLiteral("go_up") << QStringLiteral("file_new") << QStringLiteral("game_new"));
     mainWindow.createGUI();
@@ -884,7 +884,7 @@ void KXmlGui_UnitTest::testTopLevelSeparator()
         "</MenuBar>\n"
         "</gui>";
 
-    TestXmlGuiWindow mainWindow(xml);
+    TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.createGUI();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
@@ -907,7 +907,7 @@ void KXmlGui_UnitTest::testMenuNames()
         "</MenuBar>\n"
         "</gui>";
 
-    TestXmlGuiWindow mainWindow(xml);
+    TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.createGUI();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
@@ -920,7 +920,7 @@ void KXmlGui_UnitTest::testMenuNames()
 // We want a warning to be printed, but we don't want to see all menus from ui_standards.rc
 void KXmlGui_UnitTest::testMenusNoXmlFile()
 {
-    TestXmlGuiWindow mainWindow;
+    TestXmlGuiWindow mainWindow(QByteArray(), "nolocalfile_either.rc");
     mainWindow.createGUIBad();
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
@@ -1006,7 +1006,7 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
                            "</MenuBar>\n"
                            "</gui>";
 
-    TestXmlGuiWindow mainWindow(hostXml);
+    TestXmlGuiWindow mainWindow(hostXml, "kxmlgui_unittest.rc");
     TestGuiClient *client = new TestGuiClient(xml);
     client->createActions(QStringList() << QStringLiteral("file_open") << QStringLiteral("file_quit"));
     mainWindow.insertChildClient(client);
@@ -1069,7 +1069,7 @@ void KXmlGui_UnitTest::testPopupMenuParent()
         "<Menu name=\"foo\"><text>Foo</text></Menu>\n"
         "</gui>";
 
-    TestXmlGuiWindow mainWindow(xml);
+    TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.createGUI();
 
     auto popupMenu = mainWindow.menuByName(QStringLiteral("foo"));

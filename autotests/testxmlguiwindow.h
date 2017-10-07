@@ -37,20 +37,20 @@
 class TestXmlGuiWindow : public KXmlGuiWindow
 {
 public:
-    TestXmlGuiWindow(const QByteArray &xml = QByteArray()) : KXmlGuiWindow()
+    TestXmlGuiWindow(const QByteArray &xml, const char *localXmlFileName) : KXmlGuiWindow()
     {
         QVERIFY(m_userFile.open());
         m_userFile.write(xml);
         m_fileName = m_userFile.fileName(); // remember filename
         Q_ASSERT(!m_fileName.isEmpty());
         m_userFile.close(); // write to disk
+        // just so that we can use kedittoolbar (because m_fileName is absolute)
+        setLocalXMLFile(QString::fromLatin1(localXmlFileName));
     }
     void createGUI()
     {
         // This merges in ui_standards.rc, too.
         KXmlGuiWindow::createGUI(m_fileName);
-        // just so that we can use kedittoolbar (because m_fileName is absolute)
-        setLocalXMLFile(QStringLiteral("kxmlgui_unittest.rc"));
     }
     void createGUIBad()
     {

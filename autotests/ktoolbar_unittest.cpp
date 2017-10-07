@@ -295,7 +295,7 @@ void tst_KToolBar::testIconSizeXmlGui()
     KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
-        TestXmlGuiWindow kmw(m_xml);
+        TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
         kmw.createActions(QStringList() << QStringLiteral("go_up"));
         kmw.createGUI();
         KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
@@ -472,7 +472,7 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
     KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
-        TestXmlGuiWindow kmw(m_xml);
+        TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
         kmw.createActions(QStringList() << QStringLiteral("go_up"));
         kmw.createGUI();
         KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
@@ -528,7 +528,7 @@ void tst_KToolBar::deleteGlobalToolButtonStyleSetting()
 
 void tst_KToolBar::testToolBarPosition()
 {
-    TestXmlGuiWindow kmw(m_xml);
+    TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
     kmw.createActions(QStringList() << QStringLiteral("go_up"));
     kmw.createGUI();
     KToolBar *mainToolBar = kmw.toolBarByName(QStringLiteral("mainToolBar"));
@@ -546,7 +546,7 @@ void tst_KToolBar::testXmlGuiSwitching()
         "<MenuBar>\n"
         "</MenuBar>\n"
         "</gui>\n";
-    TestXmlGuiWindow kmw(windowXml);
+    TestXmlGuiWindow kmw(windowXml, "tst_ktoolbar.rc");
     kmw.createActions(QStringList() << QStringLiteral("go_up"));
     kmw.createGUI();
     TestGuiClient firstClient(m_xml);
@@ -615,7 +615,7 @@ void tst_KToolBar::testXmlGuiSwitching()
 
     // Recreate window and apply config; is hidden toolbar shown as expected?
     {
-        TestXmlGuiWindow kmw2(windowXml);
+        TestXmlGuiWindow kmw2(windowXml, "tst_ktoolbar.rc");
         kmw2.createActions(QStringList() << QStringLiteral("go_up"));
         kmw2.createGUI();
         TestGuiClient firstClient(m_xml);
@@ -650,7 +650,7 @@ void tst_KToolBar::testXmlGuiSwitching()
 
 void tst_KToolBar::testKAuthorizedDisableToggleAction()
 {
-    TestXmlGuiWindow kmw(m_xml);
+    TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
     kmw.createGUI();
 
     foreach (KToolBar *toolbar, kmw.toolBars()) {
