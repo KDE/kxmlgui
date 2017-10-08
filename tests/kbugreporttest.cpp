@@ -48,7 +48,7 @@ int main(int argc, char **argv)
                       i18n("kbugreporttest"), QStringLiteral("version"),
                       i18n("description"), KAboutLicense::Unknown,
                       i18n("copyright"), i18n("bug report tool"),
-                      QString(), QStringLiteral("http://bugs.kde.org"));
+                      QString(), QStringLiteral("https://bugs.kde.org"));
     KBugReport rep2(about2);
     rep2.exec();
 

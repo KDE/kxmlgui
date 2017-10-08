@@ -21,7 +21,7 @@ pkg = open("src/kdepackages.h","w")
 pkg.write("// DO NOT EDIT - EDIT products in bugs.kde.org and run ./make_kdepackages_updated.py in kxmlgui to update\n")
 pkg.write("const char * const packages[] = {\n")
 
-data = urllib.urlopen('http://bugs.kde.org/describecomponents.cgi').read()
+data = urllib.urlopen('https://bugs.kde.org/describecomponents.cgi').read()
 
 for line in string.split(data,'\n'):
   print "====parsing:"
@@ -31,7 +31,7 @@ for line in string.split(data,'\n'):
     product = match.group(2)
     link = match.group(1)
 
-    link = 'http://bugs.kde.org/' + link
+    link = 'https://bugs.kde.org/' + link
     data2 = urllib.urlopen(link).read()
 
     productname = unescape(product)

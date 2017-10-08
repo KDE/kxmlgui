@@ -183,7 +183,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
             if (!aboutData.customAuthorTextEnabled()) {
                 const QString bugAddress = aboutData.bugAddress();
                 if (bugAddress.isEmpty() || bugAddress == QLatin1String("submit@bugs.kde.org")) {
-                    bugsLabel->setText(i18n("Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to report bugs.\n"));
+                    bugsLabel->setText(i18n("Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to report bugs.\n"));
                 } else {
                     QUrl bugUrl(bugAddress);
                     if (bugUrl.scheme().isEmpty()) {

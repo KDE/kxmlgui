@@ -63,7 +63,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
                         "Visit <a href=\"%2\">%2</a> for "
                         "more information about the KDE community and the software we produce.</html>",
                         QStringLiteral("http://www.gnu.org/philosophy/free-sw.html"),
-                        QStringLiteral("http://www.kde.org/")));
+                        QStringLiteral("https://www.kde.org/")));
 
     QLabel *report = new QLabel;
     report->setMargin(10);
@@ -102,8 +102,8 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
                        "If you need more information or documentation, then a visit to "
                        "<a href=\"%2\">%2</a> "
                        "will provide you with what you need.</html>",
-                       QStringLiteral("http://www.kde.org/community/getinvolved/"),
-                       QStringLiteral("http://techbase.kde.org/")));
+                       QStringLiteral("https://www.kde.org/community/getinvolved/"),
+                       QStringLiteral("https://techbase.kde.org/")));
 
     QLabel *support = new QLabel;
     support->setMargin(10);
@@ -125,8 +125,8 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
                           "financial donation, using one of the ways described at "
                           "<a href=\"%2\">%2</a>."
                           "<br /><br />Thank you very much in advance for your support.</html>",
-                          QStringLiteral("http://ev.kde.org/"),
-                          QStringLiteral("http://www.kde.org/community/donations/")));
+                          QStringLiteral("https://ev.kde.org/"),
+                          QStringLiteral("https://www.kde.org/community/donations/")));
     support->setMinimumSize(support->sizeHint());
 
     QTabWidget *tabWidget = new QTabWidget;

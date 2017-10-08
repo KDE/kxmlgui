@@ -292,7 +292,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         QString text;
         if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
             text = i18n("<qt>To submit a bug report, click on the button below. This will open a web browser "
-                        "window on <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> where you will find "
+                        "window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> where you will find "
                         "a form to fill in. The information displayed above will be transferred to that server.</qt>");
             d->_k_updateUrl();
         } else {
@@ -475,7 +475,7 @@ void KBugReport::accept()
     if (!sendBugReport()) {
         QString msg = i18n("Unable to send the bug report.\n"
                            "Please submit a bug report manually....\n"
-                           "See http://bugs.kde.org/ for instructions.");
+                           "See https://bugs.kde.org/ for instructions.");
         KMessageBox::error(this, msg + QStringLiteral("\n\n") + d->lastError);
         return;
     }
