@@ -191,7 +191,7 @@ public:
     //@}
 
     //! @see KKeySequenceWidget::setComponentName
-    void setComponentName(const QString componentName);
+    void setComponentName(const QString &componentName);
 
     void setAction(QObject *action);
 

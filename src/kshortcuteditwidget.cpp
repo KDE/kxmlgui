@@ -144,7 +144,7 @@ void ShortcutEditWidget::setCheckForConflictsAgainst(KKeySequenceWidget::Shortcu
     m_customEditor->setCheckForConflictsAgainst(types);
 }
 
-void ShortcutEditWidget::setComponentName(const QString componentName)
+void ShortcutEditWidget::setComponentName(const QString &componentName)
 {
     m_customEditor->setComponentName(componentName);
 }
