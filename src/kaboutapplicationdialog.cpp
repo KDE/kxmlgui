@@ -215,7 +215,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
         authorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         authorLayout->addWidget(authorView);
 
-        QString authorPageTitle = QString((authorCount == 1) ? i18n("A&uthor") : i18n("A&uthors"));
+        const QString authorPageTitle = (authorCount == 1) ? i18n("A&uthor") : i18n("A&uthors");
         tabWidget->addTab(authorWidget, authorPageTitle);
     }
 
