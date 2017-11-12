@@ -51,6 +51,7 @@
 #include "kxmlguifactory.h"
 #include "ktoolbar.h"
 
+#include "ktoolbarhelper_p.h"
 #include "../kxmlgui_version.h"
 
 static const char separatorstring[] = I18N_NOOP("--- separator ---");
@@ -164,31 +165,13 @@ private:
 
 QString XmlData::toolBarText(const QDomElement &it) const
 {
-    const QLatin1String attrName("name");
-
-    QString name;
-    QByteArray txt(it.namedItem(QStringLiteral("text")).toElement().text().toUtf8());
-    if (txt.isEmpty()) {
-        txt = it.namedItem(QStringLiteral("text")).toElement().text().toUtf8();
-    }
-    if (txt.isEmpty()) {
-        name = it.attribute(attrName);
-    } else {
-        QByteArray domain = it.namedItem(QStringLiteral("text")).toElement().attribute(QStringLiteral("translationDomain")).toUtf8();
-        if (domain.isEmpty()) {
-            domain = it.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
-            if (domain.isEmpty()) {
-                domain = KLocalizedString::applicationDomain();
-            }
-        }
-        name = i18nd(domain.constData(), txt.constData());
-    }
+    QString name = KToolbarHelper::i18nToolBarName(it);
 
     // the name of the toolbar might depend on whether or not
     // it is in kparts
     if ((m_type == XmlData::Shell) ||
             (m_type == XmlData::Part)) {
-        QString doc_name(m_document.documentElement().attribute(attrName));
+        QString doc_name(m_document.documentElement().attribute(QStringLiteral("name")));
         name += QStringLiteral(" <") + doc_name + QLatin1Char('>');
     }
     return name;

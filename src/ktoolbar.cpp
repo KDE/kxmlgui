@@ -56,6 +56,8 @@
 #include "kxmlguifactory.h"
 #include "kxmlguiwindow.h"
 
+#include "ktoolbarhelper_p.h"
+
 /*
  Toolbar settings (e.g. icon size or toolButtonStyle)
  =====================================================
@@ -923,38 +925,7 @@ void KToolBar::loadState(const QDomElement &element)
     }
 
     {
-        QDomNode textNode = element.namedItem(QStringLiteral("text"));
-        QByteArray domain;
-        QByteArray text;
-        QByteArray context;
-        if (textNode.isElement()) {
-            QDomElement textElement = textNode.toElement();
-            domain = textElement.attribute(QStringLiteral("translationDomain")).toUtf8();
-            text = textElement.text().toUtf8();
-            context = textElement.attribute(QStringLiteral("context")).toUtf8();
-        } else {
-            textNode = element.namedItem(QStringLiteral("Text"));
-            if (textNode.isElement()) {
-                QDomElement textElement = textNode.toElement();
-                domain = textElement.attribute(QStringLiteral("translationDomain")).toUtf8();
-                text = textElement.text().toUtf8();
-                context = textElement.attribute(QStringLiteral("context")).toUtf8();
-            }
-        }
-
-        if (domain.isEmpty()) {
-            domain = element.ownerDocument().documentElement().attribute(QStringLiteral("translationDomain")).toUtf8();
-            if (domain.isEmpty()) {
-                domain = KLocalizedString::applicationDomain();
-            }
-        }
-        QString i18nText;
-        if (!text.isEmpty() && !context.isEmpty()) {
-            i18nText = i18ndc(domain.constData(), context.constData(), text.constData());
-        } else if (!text.isEmpty()) {
-            i18nText = i18nd(domain.constData(), text.constData());
-        }
-
+        const QString& i18nText = KToolbarHelper::i18nToolBarName(element);
         if (!i18nText.isEmpty()) {
             setWindowTitle(i18nText);
         }

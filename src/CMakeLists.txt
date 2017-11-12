@@ -47,6 +47,7 @@ set(kxmlgui_SRCS
   ktoggletoolbaraction.cpp
   ktoolbar.cpp
   ktoolbarhandler.cpp
+  ktoolbarhelper.cpp
   kxmlguibuilder.cpp
   kxmlguiclient.cpp
   kxmlguifactory.cpp
