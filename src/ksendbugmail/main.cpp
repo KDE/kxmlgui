@@ -57,7 +57,7 @@ void BugMailer::slotError(int errornum)
         lstr = sm->getLastLine().trimmed();
         lstr = i18n("Server said: \"%1\"", lstr);
     }
-    // qDebug() << lstr;
+    // qCDebug(DEBUG_KXMLGUI) << lstr;
 
     fputs(lstr.toUtf8().data(), stdout);
     fflush(stdout);
@@ -67,7 +67,7 @@ void BugMailer::slotError(int errornum)
 
 void BugMailer::slotSend()
 {
-    // qDebug();
+    // qCDebug(DEBUG_KXMLGUI);
     qApp->exit(0);
 }
 
@@ -101,7 +101,7 @@ int main(int argc, char **argv)
             recipient = recipient.mid(1).left(recipient.length() - 2);
         }
     }
-    // qDebug() << "recp" << recipient;
+    // qCDebug(DEBUG_KXMLGUI) << "recp" << recipient;
 
     if (subject.isEmpty()) {
         subject = QStringLiteral("(no subject)");
@@ -117,7 +117,7 @@ int main(int argc, char **argv)
         line = input.readLine();
         text += line + "\r\n";
     }
-    // qDebug() << text;
+    // qCDebug(DEBUG_KXMLGUI) << text;
 
     KEMailSettings emailConfig;
     emailConfig.setProfile(emailConfig.defaultProfileName());
@@ -132,7 +132,7 @@ int main(int argc, char **argv)
         fromaddr += '@';
         fromaddr += QHostInfo::localHostName();
     }
-    // qDebug() << "fromaddr \"" << fromaddr << "\"";
+    // qCDebug(DEBUG_KXMLGUI) << "fromaddr \"" << fromaddr << "\"";
 
     QString  server = emailConfig.getSetting(KEMailSettings::OutServer);
     if (server.isEmpty()) {
@@ -154,7 +154,7 @@ int main(int argc, char **argv)
     sm->sendMessage();
 
     int r = a.exec();
-    // qDebug() << "execing " << r;
+    // qCDebug(DEBUG_KXMLGUI) << "execing " << r;
     delete sm;
     return r;
 }

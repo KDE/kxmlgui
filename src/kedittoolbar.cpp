@@ -19,6 +19,7 @@
 */
 #include "kedittoolbar.h"
 #include "kedittoolbar_p.h"
+#include "debug.h"
 
 #include <QShowEvent>
 #include <QAction>
@@ -38,7 +39,6 @@
 #include <QStandardPaths>
 #include <QComboBox>
 #include <QLineEdit>
-#include <QDebug>
 
 #include <kicondialog.h>
 #include <klistwidgetsearchline.h>
@@ -456,7 +456,7 @@ public:
     {
         QString raw_xml;
         QString xml_file = xmlFile(_xml_file);
-        //qDebug() << "loadXMLFile xml_file=" << xml_file;
+        //qCDebug(DEBUG_KXMLGUI) << "loadXMLFile xml_file=" << xml_file;
 
         if (!QDir::isRelativePath(xml_file)) {
             raw_xml = KXMLGUIFactory::readConfigFile(xml_file);
@@ -680,7 +680,7 @@ void KEditToolBarPrivate::defaultClicked()
             // << "for client" << client << typeid(*client).name();
             if (QFile::exists(file))
                 if (!QFile::remove(file)) {
-                    qWarning() << "Could not delete" << file;
+                    qCWarning(DEBUG_KXMLGUI) << "Could not delete" << file;
                 }
         }
 
@@ -699,7 +699,7 @@ void KEditToolBarPrivate::defaultClicked()
 
         if (QFile::exists(xml_file))
             if (!QFile::remove(xml_file)) {
-                qWarning() << "Could not delete " << xml_file;
+                qCWarning(DEBUG_KXMLGUI) << "Could not delete " << xml_file;
             }
 
         m_widget = new KEditToolBarWidget(m_collection, q);
@@ -915,7 +915,7 @@ void KEditToolBarWidget::save()
             menuElement.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
         }
 
-        //qDebug() << (*it).domDocument().toString();
+        //qCDebug(DEBUG_KXMLGUI) << (*it).domDocument().toString();
 
         //qDebug(240) << "Saving " << (*it).xmlFile();
         // if we got this far, we might as well just save it
@@ -1303,7 +1303,7 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
                 m_currentXmlData = & (*xit);
                 m_currentToolBarElem = *it;
 
-                //qDebug() << "found toolbar" << m_currentXmlData->toolBarText(*it) << "m_currentXmlData set to";
+                //qCDebug(DEBUG_KXMLGUI) << "found toolbar" << m_currentXmlData->toolBarText(*it) << "m_currentXmlData set to";
                 m_currentXmlData->dump();
 
                 // If this is a Merged xmldata, clicking the "change icon" button would assert...
@@ -1589,7 +1589,7 @@ void KEditToolBarWidgetPrivate::slotChangeIcon()
     }
 
     ToolBarItem *item = m_activeList->currentItem();
-    //qDebug() << item;
+    //qCDebug(DEBUG_KXMLGUI) << item;
     if (item) {
         item->setIcon(QIcon::fromTheme(icon));
 
@@ -1657,11 +1657,11 @@ void KEditToolBarWidgetPrivate::slotChangeIconText()
 
 void KEditToolBarWidgetPrivate::slotDropped(ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList)
 {
-    //qDebug() << "slotDropped list=" << (list==m_activeList?"activeList":"inactiveList")
+    //qCDebug(DEBUG_KXMLGUI) << "slotDropped list=" << (list==m_activeList?"activeList":"inactiveList")
     //         << "index=" << index << "sourceIsActiveList=" << sourceIsActiveList;
     if (list == m_activeList) {
         ToolBarItem *after = index > 0 ? static_cast<ToolBarItem *>(list->item(index - 1)) : nullptr;
-        //qDebug() << "after" << after->text() << after->internalTag();
+        //qCDebug(DEBUG_KXMLGUI) << "after" << after->text() << after->internalTag();
         if (sourceIsActiveList) {
             // has been dragged within the active list (moved).
             moveActive(item, after);

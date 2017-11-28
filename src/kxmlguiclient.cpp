@@ -23,6 +23,7 @@
 #include "kxmlguifactory.h"
 #include "kxmlguibuilder.h"
 #include "kactioncollection.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QDir>
@@ -33,7 +34,6 @@
 #include <QPointer>
 #include <QCoreApplication>
 #include <QStandardPaths>
-#include <QDebug>
 
 #include <kauthorized.h>
 #include <klocalizedstring.h>
@@ -101,7 +101,7 @@ KXMLGUIClient::~KXMLGUIClient()
     }
 
     if (d->m_factory) {
-        qWarning() << this << "deleted without having been removed from the factory first. This will leak standalone popupmenus and could lead to crashes.";
+        qCWarning(DEBUG_KXMLGUI) << this << "deleted without having been removed from the factory first. This will leak standalone popupmenus and could lead to crashes.";
         d->m_factory->forgetClient(this);
     }
 
@@ -248,14 +248,14 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
                    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, _file); // kdelibs4, KF 5.0, caller passes component name
 
         if (allFiles.isEmpty() && !compatFiles.isEmpty()) {
-            qWarning() << "KXMLGUI file found at deprecated location" << compatFiles << "-- please use ${KXMLGUI_INSTALL_DIR} to install this file instead.";
+            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << compatFiles << "-- please use ${KXMLGUI_INSTALL_DIR} to install this file instead.";
         }
         allFiles += compatFiles;
     }
     if (allFiles.isEmpty() && !_file.isEmpty()) {
         // if a non-empty file gets passed and we can't find it,
         // inform the developer using some debug output
-        qWarning() << "cannot find .rc file" << _file << "for component" << componentName();
+        qCWarning(DEBUG_KXMLGUI) << "cannot find .rc file" << _file << "for component" << componentName();
     }
 
     // make sure to merge the settings from any file specified by setLocalXMLFile()
@@ -283,7 +283,7 @@ void KXMLGUIClient::setLocalXMLFile(const QString &file)
 void KXMLGUIClient::replaceXMLFile(const QString &xmlfile, const QString &localxmlfile, bool merge)
 {
     if (!QDir::isAbsolutePath(xmlfile)) {
-        qWarning() << "xml file" << xmlfile << "is not an absolute path";
+        qCWarning(DEBUG_KXMLGUI) << "xml file" << xmlfile << "is not an absolute path";
     }
 
     setLocalXMLFile(localxmlfile);

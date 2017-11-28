@@ -557,10 +557,10 @@ void KToolBar::Private::loadKDESettings()
 // Call this after changing something in d->iconSizeSettings or d->toolButtonStyleSettings
 void KToolBar::Private::applyCurrentSettings()
 {
-    //qDebug() << q->objectName() << "iconSizeSettings:" << iconSizeSettings.toString() << "->" << iconSizeSettings.currentValue();
+    //qCDebug(DEBUG_KXMLGUI) << q->objectName() << "iconSizeSettings:" << iconSizeSettings.toString() << "->" << iconSizeSettings.currentValue();
     const int currentIconSize = iconSizeSettings.currentValue();
     q->setIconSize(QSize(currentIconSize, currentIconSize));
-    //qDebug() << q->objectName() << "toolButtonStyleSettings:" << toolButtonStyleSettings.toString() << "->" << toolButtonStyleSettings.currentValue();
+    //qCDebug(DEBUG_KXMLGUI) << q->objectName() << "toolButtonStyleSettings:" << toolButtonStyleSettings.toString() << "->" << toolButtonStyleSettings.currentValue();
     q->setToolButtonStyle(static_cast<Qt::ToolButtonStyle>(toolButtonStyleSettings.currentValue()));
 
     // And remember to save the new look later
@@ -861,7 +861,7 @@ void KToolBar::saveSettings(KConfigGroup &cg)
     Q_ASSERT(!cg.name().isEmpty());
 
     const int currentIconSize = iconSize().width();
-    //qDebug() << objectName() << currentIconSize << d->iconSizeSettings.toString() << "defaultValue=" << d->iconSizeSettings.defaultValue();
+    //qCDebug(DEBUG_KXMLGUI) << objectName() << currentIconSize << d->iconSizeSettings.toString() << "defaultValue=" << d->iconSizeSettings.defaultValue();
     if (!cg.hasDefault("IconSize") && currentIconSize == d->iconSizeSettings.defaultValue()) {
         cg.revertToDefault("IconSize");
         d->iconSizeSettings[Level_UserSettings] = Unset;

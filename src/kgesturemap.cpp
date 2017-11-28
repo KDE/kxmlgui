@@ -18,11 +18,11 @@
 */
 
 #include "kgesturemap_p.h"
+#include "debug.h"
 
 #include <qapplication.h>
 #include <QAction>
 #include <QActionEvent>
-#include <QDebug>
 
 /*
  This is a class for internal use by the KDE libraries only. This class
@@ -64,9 +64,9 @@ void KGestureMap::setShapeGesture(QAction *act, const KShapeGesture &gesture)
     if (!gesture.isValid() || !act) {
         return;
     }
-    qDebug() << "KGestureMap::addGesture(KShapeGesture ...)";
+    qCDebug(DEBUG_KXMLGUI) << "KGestureMap::addGesture(KShapeGesture ...)";
     if (m_shapeGestures.contains(gesture)) {
-        qWarning() << "Replacing an action for a gesture already taken";
+        qCWarning(DEBUG_KXMLGUI) << "Replacing an action for a gesture already taken";
     }
     m_shapeGestures.insert(gesture, act);
 }
@@ -76,9 +76,9 @@ void KGestureMap::setRockerGesture(QAction *act, const KRockerGesture &gesture)
     if (!gesture.isValid() || !act) {
         return;
     }
-    qDebug() << "KGestureMap::addGesture(KRockerGesture ...)";
+    qCDebug(DEBUG_KXMLGUI) << "KGestureMap::addGesture(KRockerGesture ...)";
     if (m_rockerGestures.contains(gesture)) {
-        qWarning() << "Replacing an action for a gesture already taken";
+        qCWarning(DEBUG_KXMLGUI) << "Replacing an action for a gesture already taken";
     }
     m_rockerGestures.insert(gesture, act);
 }
@@ -88,9 +88,9 @@ void KGestureMap::setDefaultShapeGesture(QAction *act, const KShapeGesture &gest
     if (!gesture.isValid() || !act) {
         return;
     }
-    qDebug() << "KGestureMap::addGesture(KShapeGesture ...)";
+    qCDebug(DEBUG_KXMLGUI) << "KGestureMap::addGesture(KShapeGesture ...)";
     if (m_defaultShapeGestures.contains(gesture)) {
-        qWarning() << "Replacing an action for a gesture already taken";
+        qCWarning(DEBUG_KXMLGUI) << "Replacing an action for a gesture already taken";
     }
     m_defaultShapeGestures.insert(gesture, act);
 }
@@ -100,9 +100,9 @@ void KGestureMap::setDefaultRockerGesture(QAction *act, const KRockerGesture &ge
     if (!gesture.isValid() || !act) {
         return;
     }
-    qDebug() << "KGestureMap::addGesture(KRockerGesture ...)";
+    qCDebug(DEBUG_KXMLGUI) << "KGestureMap::addGesture(KRockerGesture ...)";
     if (m_defaultRockerGestures.contains(gesture)) {
-        qWarning() << "Replacing an action for a gesture already taken";
+        qCWarning(DEBUG_KXMLGUI) << "Replacing an action for a gesture already taken";
     }
     m_defaultRockerGestures.insert(gesture, act);
 }
@@ -233,7 +233,7 @@ void KGestureMap::handleAction(QAction *kact)
     if (!kact) {
         return;
     }
-    qDebug() << "handleAction";
+    qCDebug(DEBUG_KXMLGUI) << "handleAction";
     //TODO: only activate in the action's context, just like keyboard shortcuts
     kact->trigger();
     return;
@@ -302,14 +302,14 @@ bool KGestureMap::eventFilter(QObject *obj, QEvent *e)
     QMouseEvent *me = static_cast<QMouseEvent *>(e);
     if (type == QEvent::MouseButtonPress) {
         int nButtonsDown = bitCount(me->buttons());
-        qDebug() << "number of buttons down:" << nButtonsDown;
+        qCDebug(DEBUG_KXMLGUI) << "number of buttons down:" << nButtonsDown;
 
         //right button down starts gesture acquisition
         if (nButtonsDown == 1 && me->button() == Qt::RightButton) {
             //"startAcquisition()"
             m_acquiring = true;
             m_gestureTimeout.start(4000);
-            qDebug() << "========================";
+            qCDebug(DEBUG_KXMLGUI) << "========================";
             m_points.clear();
             m_points.append(me->pos());
             return true;

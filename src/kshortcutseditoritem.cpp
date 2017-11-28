@@ -25,10 +25,10 @@
 #include "config-xmlgui.h"
 
 #include "kshortcutsdialog_p.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QTreeWidgetItem>
-#include <QDebug>
 
 #if 0
 #include <kgesturemap.h>
@@ -53,7 +53,7 @@ KShortcutsEditorItem::KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *act
     m_id = m_action->objectName();
     m_actionNameInTable = i18nc("@item:intable Action name in shortcuts configuration", "%1", KLocalizedString::removeAcceleratorMarker(m_action->text()));
     if (m_actionNameInTable.isEmpty()) {
-        qWarning() << "Action without text!" << m_action->objectName();
+        qCWarning(DEBUG_KXMLGUI) << "Action without text!" << m_action->objectName();
         m_actionNameInTable = m_id;
     }
 
@@ -384,7 +384,7 @@ void KShortcutsEditorItem::undo()
 #ifndef NDEBUG
 #if 0
     if (m_oldLocalShortcut || m_oldGlobalShortcut || m_oldShapeGesture || m_oldRockerGesture) {
-        //qDebug() << "Undoing changes for " << data(Name, Qt::DisplayRole).toString();
+        //qCDebug(DEBUG_KXMLGUI) << "Undoing changes for " << data(Name, Qt::DisplayRole).toString();
     }
 #endif
 #endif
@@ -419,7 +419,7 @@ void KShortcutsEditorItem::commit()
 #ifndef NDEBUG
 #if 0
     if (m_oldLocalShortcut || m_oldGlobalShortcut || m_oldShapeGesture || m_oldRockerGesture) {
-        //qDebug() << "Committing changes for " << data(Name, Qt::DisplayRole).toString();
+        //qCDebug(DEBUG_KXMLGUI) << "Committing changes for " << data(Name, Qt::DisplayRole).toString();
     }
 #endif
 #endif

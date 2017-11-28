@@ -16,7 +16,7 @@
 */
 
 #include "kaboutapplicationpersonmodel_p.h"
-
+#include "debug.h"
 #if HAVE_ATTICA
 #include <attica/person.h>
 #endif //HAVE_ATTICA
@@ -26,7 +26,7 @@
 
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkRequest>
-#include <QDebug>
+
 
 namespace KDEPrivate
 {
@@ -82,15 +82,15 @@ int KAboutApplicationPersonModel::rowCount(const QModelIndex &parent) const
 QVariant KAboutApplicationPersonModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        qWarning() << "ERROR: invalid index";
+        qCWarning(DEBUG_KXMLGUI) << "ERROR: invalid index";
         return QVariant();
     }
     if (index.row() >= rowCount()) {
-        qWarning() << "ERROR: index out of bounds";
+        qCWarning(DEBUG_KXMLGUI) << "ERROR: index out of bounds";
         return QVariant();
     }
     if (role == Qt::DisplayRole) {
-//        qDebug() << "Spitting data for name " << m_profileList.at( index.row() ).name();
+//        qCDebug(DEBUG_KXMLGUI) << "Spitting data for name " << m_profileList.at( index.row() ).name();
         QVariant var;
         var.setValue(m_profileList.at(index.row()));
         return var;
@@ -113,7 +113,7 @@ void KAboutApplicationPersonModel::onProvidersLoaded()   //SLOT
     if (!m_providerManager.providers().isEmpty()) {
         m_provider = m_providerManager.providerByUrl(QUrl(m_providerUrl));
         if (!m_provider.isValid()) {
-//            qDebug() << "OCS Provider error: could not find opendesktop.org provider.";
+//            qCDebug(DEBUG_KXMLGUI) << "OCS Provider error: could not find opendesktop.org provider.";
             return;
         }
 
@@ -227,7 +227,7 @@ void KAboutApplicationPersonModel::onPersonJobFinished(Attica::BaseJob *job)    
             manager->setProperty("personProfile", personProfileListIndex);
         }
     }
-    //else qDebug() << "Could not fetch OCS person info.";
+    //else qCDebug(DEBUG_KXMLGUI) << "Could not fetch OCS person info.";
 #endif //HAVE_ATTICA
 }
 
@@ -241,7 +241,7 @@ void KAboutApplicationPersonModel::onAvatarJobFinished(QNetworkReply *reply)    
     int personProfileListIndex = manager->property("personProfile").toInt();
 
     if (reply->error() != QNetworkReply::NoError) {
-        //qDebug() << "Could not fetch OCS person avatar.";
+        //qCDebug(DEBUG_KXMLGUI) << "Could not fetch OCS person avatar.";
         emit dataChanged(index(personProfileListIndex), index(personProfileListIndex));
         return;
     }
@@ -387,7 +387,7 @@ void KAboutApplicationPersonIconsJob::onJobFinished(QNetworkReply *reply)   //SL
     KAboutApplicationPersonProfileOcsLink::Type type = m_ocsLinks.at(i).type();
 
     if (reply->error() != QNetworkReply::NoError) {
-        //qDebug() << "Could not fetch OCS link icon.";
+        //qCDebug(DEBUG_KXMLGUI) << "Could not fetch OCS link icon.";
         reply->deleteLater();
         getIcons(i + 1);
         return;

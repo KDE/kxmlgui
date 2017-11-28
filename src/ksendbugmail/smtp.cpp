@@ -50,7 +50,7 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
         domainName = QStringLiteral("somemachine.example.net");
     }
 
-    // qDebug() << "SMTP object created";
+    // qCDebug(DEBUG_KXMLGUI) << "SMTP object created";
 
     connect(&connectTimer, SIGNAL(timeout()), this, SLOT(connectTimerTick()));
     connect(&timeOutTimer, SIGNAL(timeout()), this, SLOT(connectTimedOut()));
@@ -133,7 +133,7 @@ void SMTP::setMessageHeader(const QString &header)
 
 void SMTP::openConnection(void)
 {
-    // qDebug() << "started connect timer";
+    // qCDebug(DEBUG_KXMLGUI) << "started connect timer";
     connectTimer.setSingleShot(true);
     connectTimer.start(100);
 }
@@ -149,14 +149,14 @@ void SMTP::sendMessage(void)
         connectTimerTick();
     }
     if (state == Finished && connected) {
-        // qDebug() << "state was == Finished\n";
+        // qCDebug(DEBUG_KXMLGUI) << "state was == Finished\n";
         finished = false;
         state = In;
         writeString = QStringLiteral("helo %1\r\n").arg(domainName);
         sock->write(writeString.toLatin1().constData(), writeString.length());
     }
     if (connected) {
-        // qDebug() << "enabling read on sock...\n";
+        // qCDebug(DEBUG_KXMLGUI) << "enabling read on sock...\n";
         interactTimer.setSingleShot(true);
         interactTimer.start(timeOut);
     }
@@ -167,12 +167,12 @@ void SMTP::connectTimerTick(void)
     connectTimer.stop();
 //    timeOutTimer.start(timeOut, true);
 
-    // qDebug() << "connectTimerTick called...";
+    // qCDebug(DEBUG_KXMLGUI) << "connectTimerTick called...";
 
     delete sock;
     sock = nullptr;
 
-    // qDebug() << "connecting to " << serverHost << ":" << hostPort << " ..... ";
+    // qCDebug(DEBUG_KXMLGUI) << "connecting to " << serverHost << ":" << hostPort << " ..... ";
     sock = new QSslSocket(this);
     sock->connectToHost(serverHost, hostPort);
 
@@ -186,14 +186,14 @@ void SMTP::connectTimerTick(void)
             SLOT(socketError(QAbstractSocket::SocketError)));
     connect(sock, SIGNAL(disconnected()), this, SLOT(socketClosed()));
     timeOutTimer.stop();
-    // qDebug() << "connected";
+    // qCDebug(DEBUG_KXMLGUI) << "connected";
 }
 
 void SMTP::connectTimedOut(void)
 {
     timeOutTimer.stop();
 
-    // qDebug() << "socket connection timed out";
+    // qCDebug(DEBUG_KXMLGUI) << "socket connection timed out";
     socketClosed();
     emit error(ConnectTimeout);
 }
@@ -202,7 +202,7 @@ void SMTP::interactTimedOut(void)
 {
     interactTimer.stop();
 
-    // qDebug() << "time out waiting for server interaction";
+    // qCDebug(DEBUG_KXMLGUI) << "time out waiting for server interaction";
     socketClosed();
     emit error(InteractTimeout);
 }
@@ -211,7 +211,7 @@ void SMTP::socketReadyToRead()
 {
     int n, nl;
 
-    // qDebug() << "socketRead() called...";
+    // qCDebug(DEBUG_KXMLGUI) << "socketRead() called...";
     interactTimer.stop();
 
     if (!sock) {
@@ -239,7 +239,7 @@ void SMTP::socketReadyToRead()
 
 void SMTP::socketError(QAbstractSocket::SocketError socketError)
 {
-    // qDebug() << socketError << sock->errorString();
+    // qCDebug(DEBUG_KXMLGUI) << socketError << sock->errorString();
     Q_UNUSED(socketError);
     emit error(ConnectError);
     socketClosed();
@@ -248,7 +248,7 @@ void SMTP::socketError(QAbstractSocket::SocketError socketError)
 void SMTP::socketClosed()
 {
     timeOutTimer.stop();
-    // qDebug() << "connection terminated";
+    // qCDebug(DEBUG_KXMLGUI) << "connection terminated";
     connected = false;
     if (sock) {
         sock->deleteLater();
@@ -265,19 +265,19 @@ void SMTP::processLine(QString *line)
     i = line->indexOf(' ');
     tmpstr = line->left(i);
     if (i > 3) {
-        // qDebug() << "warning: SMTP status code longer than 3 digits: " << tmpstr;
+        // qCDebug(DEBUG_KXMLGUI) << "warning: SMTP status code longer than 3 digits: " << tmpstr;
     }
     stat = tmpstr.toInt();
     serverState = static_cast<SMTPServerStatus>(stat);
     lastState = state;
 
-    // qDebug() << "smtp state: [" << stat << "][" << *line << "]";
+    // qCDebug(DEBUG_KXMLGUI) << "smtp state: [" << stat << "][" << *line << "]";
 
     switch (stat) {
     case Greet:     //220
         state = In;
         writeString = QStringLiteral("helo %1\r\n").arg(domainName);
-        // qDebug() << "out: " << writeString;
+        // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
         sock->write(writeString.toLatin1().constData(), writeString.length());
         break;
     case Goodbye:   //221
@@ -288,19 +288,19 @@ void SMTP::processLine(QString *line)
         case In:
             state = Ready;
             writeString = QStringLiteral("mail from: %1\r\n").arg(senderAddress);
-            // qDebug() << "out: " << writeString;
+            // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case Ready:
             state = SentFrom;
             writeString = QStringLiteral("rcpt to: %1\r\n").arg(recipientAddress);
-            // qDebug() << "out: " << writeString;
+            // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case SentFrom:
             state = SentTo;
             writeString = QStringLiteral("data\r\n");
-            // qDebug() << "out: " << writeString;
+            // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
             sock->write(writeString.toLatin1().constData(), writeString.length());
             break;
         case Data:
@@ -310,7 +310,7 @@ void SMTP::processLine(QString *line)
             break;
         default:
             state = CError;
-            // qDebug() << "smtp error (state error): [" << lastState << "]:[" << stat << "][" << *line << "]";
+            // qCDebug(DEBUG_KXMLGUI) << "smtp error (state error): [" << lastState << "]:[" << stat << "][" << *line << "]";
             socketClosed();
             emit error(Command);
             break;
@@ -323,24 +323,24 @@ void SMTP::processLine(QString *line)
         writeString += QLatin1String("\r\n");
         writeString += messageBody;
         writeString += QLatin1String(".\r\n");
-        // qDebug() << "out: " << writeString;
+        // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
         sock->write(writeString.toLatin1().constData(), writeString.length());
         break;
     case Error:     //501
         state = CError;
-        // qDebug() << "smtp error (command error): [" << lastState << "]:[" << stat << "][" << *line << "]\n";
+        // qCDebug(DEBUG_KXMLGUI) << "smtp error (command error): [" << lastState << "]:[" << stat << "][" << *line << "]\n";
         socketClosed();
         emit error(Command);
         break;
     case Unknown:   //550
         state = CError;
-        // qDebug() << "smtp error (unknown user): [" << lastState << "]:[" << stat << "][" << *line << "]";
+        // qCDebug(DEBUG_KXMLGUI) << "smtp error (unknown user): [" << lastState << "]:[" << stat << "][" << *line << "]";
         socketClosed();
         emit error(UnknownUser);
         break;
     default:
         state = CError;
-        // qDebug() << "unknown response: [" << lastState << "]:[" << stat << "][" << *line << "]";
+        // qCDebug(DEBUG_KXMLGUI) << "unknown response: [" << lastState << "]:[" << stat << "][" << *line << "]";
         socketClosed();
         emit error(UnknownResponse);
     }

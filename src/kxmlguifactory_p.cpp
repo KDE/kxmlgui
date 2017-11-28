@@ -36,7 +36,7 @@ void ActionList::plug(QWidget *container, int index) const
     QAction *before = nullptr; // Insert after end of widget's current actions (default).
 
     if ((index < 0) || (index > container->actions().count())) {
-        qWarning() << "Index " << index << " is not within range (0 - " << container->actions().count();
+        qCWarning(DEBUG_KXMLGUI) << "Index " << index << " is not within range (0 - " << container->actions().count();
     } else if (index != container->actions().count()) {
         before = container->actions().at(index);    // Insert before indexed action.
     }
@@ -460,7 +460,7 @@ int ContainerNode::calcMergingIndex(const QString &mergingName,
 void ContainerNode::dump(int offset)
 {
     QString indent; indent.fill(QLatin1Char(' '), offset);
-    qDebug() << qPrintable(indent) << name << tagName << groupName << mergingName << mergingIndices;
+    qCDebug(DEBUG_KXMLGUI) << qPrintable(indent) << name << tagName << groupName << mergingName << mergingIndices;
     Q_FOREACH (ContainerNode *child, children) {
         child->dump(offset + 2);
     }
@@ -776,7 +776,7 @@ void BuildHelper::processContainerElement(const QDomElement &e, const QString &t
                     bar->addXMLGUIClient(m_state.guiClient);
                 }
             } else {
-                qWarning() << "toolbar container is not a KToolBar";
+                qCWarning(DEBUG_KXMLGUI) << "toolbar container is not a KToolBar";
             }
         }
     }

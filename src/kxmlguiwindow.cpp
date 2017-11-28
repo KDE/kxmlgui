@@ -24,6 +24,7 @@
 */
 
 #include "kxmlguiwindow.h"
+#include "debug.h"
 
 #include "kmainwindow_p.h"
 #include "kmessagebox.h"
@@ -39,7 +40,6 @@
 #include <QDBusConnection>
 #include <QtXml/QDomDocument>
 #include <QLayout>
-#include <QDebug>
 #include <QMenuBar>
 #include <QObject>
 #include <QStatusBar>
@@ -279,7 +279,7 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
 
     // Help beginners who call setXMLFile and then setupGUI...
     if (!xmlFile().isEmpty() && xmlFile() != windowXmlFile) {
-        qWarning() << "You called setXMLFile(" << xmlFile() << ") and then createGUI or setupGUI,"
+        qCWarning(DEBUG_KXMLGUI) << "You called setXMLFile(" << xmlFile() << ") and then createGUI or setupGUI,"
                    << "which also calls setXMLFile and will overwrite the file you have previously set.\n"
                    << "You should call createGUI(" << xmlFile() << ") or setupGUI(<options>," << xmlFile() << ") instead.";
     }

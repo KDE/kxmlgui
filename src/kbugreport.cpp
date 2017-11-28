@@ -371,7 +371,7 @@ void KBugReportPrivate::_k_appChanged(int i)
     if (index > 0) {
         appName = appName.left(index);
     }
-    //qDebug() << "appName " << appName;
+    //qCDebug(DEBUG_KXMLGUI) << "appName " << appName;
 
     QString strDisplayVersion; //Version string to show in the UI
     if (appname == appName && !m_aboutData.version().isEmpty()) {
@@ -402,7 +402,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
     QObject::connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
     m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("user_manager"));
     if (!m_process->waitForStarted()) {
-        //qDebug() << "Couldn't start kcmshell5..";
+        //qCDebug(DEBUG_KXMLGUI) << "Couldn't start kcmshell5..";
         delete m_process;
         m_process = nullptr;
         return;
@@ -502,7 +502,7 @@ void KBugReport::closeEvent(QCloseEvent *e)
 
 QString KBugReport::text() const
 {
-    //qDebug() << d->severityButtons[d->currentSeverity()]->objectName();
+    //qCDebug(DEBUG_KXMLGUI) << d->severityButtons[d->currentSeverity()]->objectName();
     // Prepend the pseudo-headers to the contents of the mail
     QString severity = d->severityButtons[d->currentSeverity()]->objectName();
     QString appname = d->appcombo->currentText();
@@ -557,7 +557,7 @@ bool KBugReport::sendBugReport()
     QStringList args;
     args << QStringLiteral("--subject") << d->m_subject->text() << QStringLiteral("--recipient") << recipient;
     proc.start(command, args);
-    //qDebug() << command << args;
+    //qCDebug(DEBUG_KXMLGUI) << command << args;
     if (!proc.waitForStarted()) {
         qCritical() << "Unable to open a pipe to " << command << endl;
         return false;
@@ -566,7 +566,7 @@ bool KBugReport::sendBugReport()
     proc.closeWriteChannel();
 
     proc.waitForFinished();
-    //qDebug() << "kbugreport: sendbugmail exit, status " << proc.exitStatus() << " code " << proc.exitCode();
+    //qCDebug(DEBUG_KXMLGUI) << "kbugreport: sendbugmail exit, status " << proc.exitStatus() << " code " << proc.exitCode();
 
     QByteArray line;
     if (proc.exitStatus() == QProcess::NormalExit && proc.exitCode() != 0) {

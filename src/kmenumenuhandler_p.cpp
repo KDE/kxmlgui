@@ -26,6 +26,7 @@
 #include "kmainwindow.h"
 #include "ktoolbar.h"
 #include "kshortcutwidget.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QContextMenuEvent>
@@ -36,7 +37,6 @@
 #include <QDomNode>
 #include <QMenu>
 #include <QVBoxLayout>
-#include <QDebug>
 
 #include <kselectaction.h>
 #include <klocalizedstring.h>
@@ -173,7 +173,7 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
         collection = findParentCollection(factory, m_popupAction);
     }
     if (!collection) {
-        qWarning() << "Cannot find the action collection for action " << actionName;
+        qCWarning(DEBUG_KXMLGUI) << "Cannot find the action collection for action " << actionName;
         return;
     }
 
@@ -196,7 +196,7 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
         QDomElement elem = n.toElement();
         if (!elem.isNull() && elem.tagName() == tagToolBar && elem.attribute(attrName) == toolbar->objectName()) {
             if (elem.attribute(attrNoEdit) == QStringLiteral("true")) {
-                qWarning() << "The toolbar is not editable";
+                qCWarning(DEBUG_KXMLGUI) << "The toolbar is not editable";
                 return;
             }
             toolbarElem = elem;

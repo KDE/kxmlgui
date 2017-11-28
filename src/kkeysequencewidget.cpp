@@ -23,6 +23,7 @@
 
 #include "kkeysequencewidget.h"
 #include "kkeysequencewidget_p.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QKeyEvent>
@@ -31,7 +32,6 @@
 #include <QHBoxLayout>
 #include <QToolButton>
 #include <QApplication>
-#include <QDebug>
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
@@ -427,7 +427,7 @@ void KKeySequenceWidgetPrivate::startRecording()
     keyButton->grabKeyboard();
 
     if (!QWidget::keyboardGrabber()) {
-        qWarning() << "Failed to grab the keyboard! Most likely qt's nograb option is active";
+        qCWarning(DEBUG_KXMLGUI) << "Failed to grab the keyboard! Most likely qt's nograb option is active";
     }
 
     keyButton->setDown(true);
