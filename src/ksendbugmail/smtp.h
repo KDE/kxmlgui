@@ -65,15 +65,15 @@ public:
     void setPort(unsigned short int port);
     void setTimeOut(int timeout);
 
-    bool isConnected()
+    bool isConnected() const
     {
         return connected;
     }
-    bool isFinished()
+    bool isFinished() const
     {
         return finished;
     }
-    QString getLastLine()
+    QByteArray getLastLine() const
     {
         return lastLine;
     }
@@ -119,7 +119,7 @@ public:
     } SMTPError;
 
 protected:
-    void processLine(QString *line);
+    void processLine(QByteArray *line);
 
 public Q_SLOTS:
     void openConnection();
@@ -164,8 +164,8 @@ private:
     QTimer interactTimer;
 
     char readBuffer[SMTP_READ_BUFFER_SIZE];
-    QString lineBuffer;
-    QString lastLine;
+    QByteArray lineBuffer;
+    QByteArray lastLine;
     QString writeString;
 };
 #endif

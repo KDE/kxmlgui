@@ -232,14 +232,14 @@ void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
     QVERIFY(a);
 
     QVERIFY(a->parent() == &collection);
-    QVERIFY(collection.action(KStandardAction::name(KStandardAction::Undo)) == a);
+    QVERIFY(collection.action(QString::fromLatin1(KStandardAction::name(KStandardAction::Undo))) == a);
 }
 
 void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
 {
     KActionCollection collection(static_cast<QObject *>(nullptr));
     QAction *cut = KStandardAction::cut(&collection);
-    QAction *a = collection.action(KStandardAction::name(KStandardAction::Cut));
+    QAction *a = collection.action(QString::fromLatin1(KStandardAction::name(KStandardAction::Cut)));
     QVERIFY(a);
     QVERIFY(a == cut);
 }

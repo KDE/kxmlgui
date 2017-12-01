@@ -28,7 +28,7 @@
 
 SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
 {
-    serverHost = serverhost;
+    serverHost = QString::fromUtf8(serverhost);
     hostPort = port;
     timeOut = timeout * 1000;
 
@@ -86,27 +86,27 @@ void SMTP::setTimeOut(int timeout)
 void SMTP::setSenderAddress(const QString &sender)
 {
     senderAddress = sender;
-    int index = senderAddress.indexOf('<');
+    int index = senderAddress.indexOf(QLatin1Char('<'));
     if (index == -1) {
         return;
     }
     senderAddress = senderAddress.mid(index + 1);
-    index =  senderAddress.indexOf('>');
+    index =  senderAddress.indexOf(QLatin1Char('>'));
     if (index != -1) {
         senderAddress = senderAddress.left(index);
     }
     senderAddress = senderAddress.simplified();
     while (1) {
-        index =  senderAddress.indexOf(' ');
+        index =  senderAddress.indexOf(QLatin1Char(' '));
         if (index != -1) {
             senderAddress = senderAddress.mid(index + 1);    // take one side
         } else {
             break;
         }
     }
-    index = senderAddress.indexOf('@');
+    index = senderAddress.indexOf(QLatin1Char('@'));
     if (index == -1) {
-        senderAddress.append("@localhost");    // won't go through without a local mail system
+        senderAddress.append(QStringLiteral("@localhost"));    // won't go through without a local mail system
     }
 
 }
@@ -223,7 +223,7 @@ void SMTP::socketReadyToRead()
         return;
     }
     readBuffer[n] = 0;
-    lineBuffer += readBuffer;
+    lineBuffer += QByteArray(readBuffer);
     nl = lineBuffer.indexOf('\n');
     if (nl == -1) {
         return;
@@ -257,10 +257,10 @@ void SMTP::socketClosed()
     emit connectionClosed();
 }
 
-void SMTP::processLine(QString *line)
+void SMTP::processLine(QByteArray *line)
 {
     int i, stat;
-    QString tmpstr;
+    QByteArray tmpstr;
 
     i = line->indexOf(' ');
     tmpstr = line->left(i);

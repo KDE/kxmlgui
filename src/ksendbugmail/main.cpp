@@ -54,7 +54,7 @@ void BugMailer::slotError(int errornum)
         lstr = i18n("Time out waiting for server interaction.");
         break;
     default:
-        lstr = sm->getLastLine().trimmed();
+        lstr = QString::fromLatin1(sm->getLastLine().trimmed());
         lstr = i18n("Server said: \"%1\"", lstr);
     }
     // qCDebug(DEBUG_KXMLGUI) << lstr;
@@ -97,7 +97,7 @@ int main(int argc, char **argv)
     if (recipient.isEmpty()) {
         recipient = QStringLiteral("submit@bugs.kde.org");
     } else {
-        if (recipient.at(0) == '\'') {
+        if (recipient.at(0) == QLatin1Char('\'')) {
             recipient = recipient.mid(1).left(recipient.length() - 2);
         }
     }
@@ -106,7 +106,7 @@ int main(int argc, char **argv)
     if (subject.isEmpty()) {
         subject = QStringLiteral("(no subject)");
     } else {
-        if (subject.at(0) == '\'') {
+        if (subject.at(0) == QLatin1Char('\'')) {
             subject = subject.mid(1).left(subject.length() - 2);
         }
     }
@@ -115,7 +115,7 @@ int main(int argc, char **argv)
     QString text, line;
     while (!input.atEnd()) {
         line = input.readLine();
-        text += line + "\r\n";
+        text += line + QStringLiteral("\r\n");
     }
     // qCDebug(DEBUG_KXMLGUI) << text;
 
@@ -129,7 +129,7 @@ int main(int argc, char **argv)
         }
     } else {
         fromaddr = SystemInformation::userName();
-        fromaddr += '@';
+        fromaddr += QLatin1Char('@');
         fromaddr += QHostInfo::localHostName();
     }
     // qCDebug(DEBUG_KXMLGUI) << "fromaddr \"" << fromaddr << "\"";

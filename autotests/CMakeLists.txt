@@ -1,10 +1,6 @@
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Xml Test)
 
-remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
-remove_definitions(-DQT_NO_CAST_FROM_ASCII)
-remove_definitions(-DQT_NO_CAST_TO_ASCII)
-
 include(ECMAddTests)
 
 ecm_add_tests(

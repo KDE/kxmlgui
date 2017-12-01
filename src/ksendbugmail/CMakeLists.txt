@@ -1,5 +1,3 @@
-remove_definitions(-DQT_NO_CAST_FROM_ASCII)
-
 set(ksendbugmail_SRCS
   main.cpp
   smtp.cpp
