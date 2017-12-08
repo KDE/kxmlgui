@@ -90,7 +90,7 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
             this, SIGNAL(stealShortcut(QKeySequence,QAction*)));
 #if HAVE_GLOBALACCEL
     connect(KGlobalAccel::self(), &KGlobalAccel::globalShortcutChanged,
-        [this](QAction *action, const QKeySequence &seq) {
+            this, [this](QAction *action, const QKeySequence &seq) {
             if (action != m_action) {
                 return;
             }
