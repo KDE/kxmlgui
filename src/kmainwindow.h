@@ -646,14 +646,20 @@ private:
     Q_PRIVATE_SLOT(k_func(), void _k_slotSaveAutoSaveSize())
 };
 
+
+/**
+ * @defgroup KXMLGUI_Session KXMLGUI Session Macros and Functions
+ *
+ * @{
+ */
+
+#ifndef KXMLGUI_NO_DEPRECATED
 /**
  * @def RESTORE
- * @ingroup XMLGUIMacros
  * Restores the last session.
  *
  * @deprecated since 5.0, use kRestoreMainWindows() instead
  **/
-#ifndef KXMLGUI_NO_DEPRECATED
 #define RESTORE(type) { int n = 1;\
         while (KMainWindow::canBeRestored(n)){\
             (new type)->restore(n);\
@@ -662,7 +668,6 @@ private:
 
 /**
  * @def KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS
- * @ingroup XMLGUIMacros
  * Returns the maximal number of arguments that are actually
  * supported by kRestoreMainWindows().
  **/
@@ -674,14 +679,19 @@ private:
  * These functions work also if you have more than one kind of toplevel
  * widget (each derived from KMainWindow, of course).
  *
- * Imagine you have three kinds of toplevel widgets: the classes childMW1,
- * childMW2 and childMW3. Than you can just do:
+ * Imagine you have three kinds of toplevel widgets: the classes @c childMW1,
+ * @c childMW2 and @c childMW3. Then you can just do:
  *
  * \code
- * if (qApp->isSessionRestored())
- *   kRestoreMainWindows< childMW1, childMW2, childMW3 >();
- * else {
- *   // create default application as usual
+ * int main(int argc, char *argv[])
+ * {
+ *     // [...]
+ *     if (qApp->isSessionRestored())
+ *         kRestoreMainWindows<childMW1, childMW2, childMW3>();
+ *     else {
+ *       // create default application as usual
+ *     }
+ *     // [...]
  * }
  * \endcode
  *
@@ -694,6 +704,8 @@ private:
  * template arguments. If you need more, tell us. To help you in
  * deciding whether or not you can use kRestoreMainWindows, a
  * define #KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS is provided.
+ *
+ * @tparam T toplevel widget class
  *
  * @see KMainWindow::restore()
  * @see KMainWindow::classNameOfToplevel()
@@ -709,6 +721,13 @@ inline void kRestoreMainWindows()
     }
 }
 
+/**
+ * Restores the last session.
+ * Overloaded method for usage with two different toplevel widget classes.
+ *
+ * @tparam T0 one toplevel widget class
+ * @tparam T1 other toplevel widget class
+ */
 template <typename T0, typename T1>
 inline void kRestoreMainWindows()
 {
@@ -725,6 +744,14 @@ inline void kRestoreMainWindows()
     }
 }
 
+/**
+ * Restores the last session.
+ * Overloaded method for usage with three different toplevel widget classes.
+ *
+ * @tparam T0 one toplevel widget class
+ * @tparam T1 other toplevel widget class
+ * @tparam T2 yet another toplevel widget class
+ */
 template <typename T0, typename T1, typename T2>
 inline void kRestoreMainWindows()
 {
@@ -743,5 +770,6 @@ inline void kRestoreMainWindows()
         }
     }
 }
+/** @}  */
 
 #endif
