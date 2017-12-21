@@ -32,12 +32,12 @@ QTEST_MAIN(KMainWindow_UnitTest)
 void KMainWindow_UnitTest::initTestCase()
 {
     QStandardPaths::enableTestMode(true);
-    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + KSharedConfig::openConfig()->name());
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + KSharedConfig::openConfig()->name());
 }
 
 void KMainWindow_UnitTest::cleanupTestCase()
 {
-    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + KSharedConfig::openConfig()->name());
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + KSharedConfig::openConfig()->name());
 }
 
 void KMainWindow_UnitTest::testDefaultName()
