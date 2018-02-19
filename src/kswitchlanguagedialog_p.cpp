@@ -330,33 +330,24 @@ static bool stripCountryCode(QString *languageCode)
 
 void KSwitchLanguageDialogPrivate::fillApplicationLanguages(KLanguageButton *button)
 {
-    QLocale defaultLocale;
-    QLocale cLocale(QLocale::C);
-    QLocale::setDefault(cLocale);
+    const QLocale cLocale(QLocale::C);
     QSet<QString> insertedLanguges;
 
     const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     foreach(const QLocale &l, allLocales) {
-        QString languageCode = l.name();
         if (l != cLocale) {
-            const QString nativeName = l.nativeLanguageName();
-            // For some languages the native name might be empty.
-            // In this case use the non native language name as fallback.
-            // See: QTBUG-51323
-            const QString languageName = nativeName.isEmpty() ? QLocale::languageToString(l.language()) : nativeName;
+            QString languageCode = l.name();
             if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
-                button->insertLanguage(languageCode, languageName);
+                button->insertLanguage(languageCode);
                 insertedLanguges << languageCode;
             } else if (stripCountryCode(&languageCode)) {
                 if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
-                    button->insertLanguage(languageCode, languageName);
+                    button->insertLanguage(languageCode);
                     insertedLanguges << languageCode;
                 }
             }
         }
     }
-
-    QLocale::setDefault(defaultLocale);
 }
 
 QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
