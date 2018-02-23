@@ -48,6 +48,7 @@ private Q_SLOTS:
     void testMenusNoXmlFile();
     void testShortcuts();
     void testPopupMenuParent();
+    void testSpecificApplicationLanguageQLocale();
 };
 
 #endif

@@ -22,10 +22,15 @@
 #ifndef _KSWITCHLANGUAGEDIALOG_H_
 #define _KSWITCHLANGUAGEDIALOG_H_
 
+#include <kxmlgui_export.h>
+
 #include <QDialog>
 
 namespace KDEPrivate
 {
+
+KXMLGUI_EXPORT void setApplicationSpecificLanguage(const QByteArray &languageCode);
+KXMLGUI_EXPORT void initializeLanguages();
 
 class KSwitchLanguageDialogPrivate;
 

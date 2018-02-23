@@ -86,6 +86,7 @@ PUBLIC
 PRIVATE
     Qt5::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt5::PrintSupport   #QPrinter in kshortcutseditor
+    Qt5::CorePrivate    #QSystemLocale in initializeLanguages
     KF5::CoreAddons     #KAboutData
     KF5::WidgetsAddons
     KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate

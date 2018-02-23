@@ -31,6 +31,7 @@
 #include <QSharedPointer>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QtCore/private/qlocale_p.h>
 
 #include "kswitchlanguagedialog_p.h"
 
@@ -61,7 +62,12 @@ static QByteArray getApplicationSpecificLanguage(const QByteArray &defaultCode =
     return settings->value(qAppName(), defaultCode).toByteArray();
 }
 
-static void setApplicationSpecificLanguage(const QByteArray &languageCode)
+namespace KDEPrivate
+{
+
+Q_COREAPP_STARTUP_FUNCTION(initializeLanguages)
+
+void setApplicationSpecificLanguage(const QByteArray &languageCode)
 {
     QSettingsPtr settings = localeOverridesSettings();
     settings->beginGroup(QStringLiteral("Language"));
@@ -73,7 +79,7 @@ static void setApplicationSpecificLanguage(const QByteArray &languageCode)
     }
 }
 
-static void initializeLanguages()
+void initializeLanguages()
 {
     const QByteArray languageCode = getApplicationSpecificLanguage();
 
@@ -84,13 +90,16 @@ static void initializeLanguages()
         } else {
             qputenv("LANGUAGE", languageCode + ":" + languages);
         }
+
+        // Ideally setting the LANGUAGE would change the default QLocale too
+        // but unfortunately this is too late since the QCoreApplication constructor
+        // already created a QLocale at this stage so we need to set the reset it
+        // by triggering the creation and destruction of a QSystemLocale
+        // this is highly dependant on Qt internals, so may break, but oh well
+        QSystemLocale *dummy = new QSystemLocale();
+        delete dummy;
     }
 }
-
-Q_COREAPP_STARTUP_FUNCTION(initializeLanguages)
-
-namespace KDEPrivate
-{
 
 struct LanguageRowData {
     LanguageRowData()

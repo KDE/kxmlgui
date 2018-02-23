@@ -32,6 +32,7 @@
 
 #include <kedittoolbar.h>
 #include <ksharedconfig.h>
+#include <kswitchlanguagedialog_p.h>
 #include <kconfiggroup.h>
 #include <kxmlguibuilder.h>
 #include <kxmlguiclient.h>
@@ -1075,4 +1076,24 @@ void KXmlGui_UnitTest::testPopupMenuParent()
     auto popupMenu = mainWindow.menuByName(QStringLiteral("foo"));
     QVERIFY(popupMenu);
     QCOMPARE(popupMenu->parent(), &mainWindow);
+}
+
+void KXmlGui_UnitTest::testSpecificApplicationLanguageQLocale()
+{
+    const QLocale originalSystemLocale = QLocale::system();
+
+    KDEPrivate::setApplicationSpecificLanguage("uk");
+    KDEPrivate::initializeLanguages();
+
+    QCOMPARE(QLocale::system().language(), QLocale::Ukrainian);
+
+    KDEPrivate::setApplicationSpecificLanguage("wa");
+    KDEPrivate::initializeLanguages();
+
+    QCOMPARE(QLocale::system().language(), QLocale::Walloon);
+
+    KDEPrivate::setApplicationSpecificLanguage(QByteArray());
+    KDEPrivate::initializeLanguages();
+
+    QCOMPARE(QLocale::system(), originalSystemLocale);
 }
