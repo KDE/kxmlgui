@@ -76,6 +76,13 @@ add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
 target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui>")
 
+if(Qt5Core_VERSION VERSION_LESS "5.9.0")
+    set(QT5COREPRIVATE "") # No QtCorePrivate in < 5.9
+else()
+    set(QT5COREPRIVATE Qt5::CorePrivate)
+endif()
+
+
 target_link_libraries(KF5XmlGui
 PUBLIC
     Qt5::DBus           #QDBus connect to signal in KToolBar
@@ -86,7 +93,7 @@ PUBLIC
 PRIVATE
     Qt5::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt5::PrintSupport   #QPrinter in kshortcutseditor
-    Qt5::CorePrivate    #QSystemLocale in initializeLanguages
+    ${QT5COREPRIVATE}   #QSystemLocale in initializeLanguages
     KF5::CoreAddons     #KAboutData
     KF5::WidgetsAddons
     KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate

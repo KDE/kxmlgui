@@ -1080,6 +1080,7 @@ void KXmlGui_UnitTest::testPopupMenuParent()
 
 void KXmlGui_UnitTest::testSpecificApplicationLanguageQLocale()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
     const QLocale originalSystemLocale = QLocale::system();
 
     KDEPrivate::setApplicationSpecificLanguage("uk");
@@ -1096,4 +1097,5 @@ void KXmlGui_UnitTest::testSpecificApplicationLanguageQLocale()
     KDEPrivate::initializeLanguages();
 
     QCOMPARE(QLocale::system(), originalSystemLocale);
+#endif
 }
