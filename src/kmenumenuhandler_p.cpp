@@ -220,13 +220,13 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
     Q_ASSERT(!m_popupAction);
     Q_ASSERT(!m_contextMenu);
 
-    m_popupAction = menu->actionAt(pos);
-
-    if (!m_popupAction) {
+    auto *action = menu->actionAt(pos);
+    if (!action || action->isSeparator()) {
         return;
     }
 
     m_popupMenu = menu;
+    m_popupAction = action;
 
     m_contextMenu = new QMenu;
     m_contextMenu->addAction(i18n("Configure Shortcut..."), this, SLOT(slotSetShortcut()));
