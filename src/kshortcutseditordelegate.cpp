@@ -25,6 +25,7 @@
 */
 #include "kshortcutsdialog_p.h"
 
+#include <QAction>
 #include <QApplication>
 #include <QHeaderView>
 #include <QKeyEvent>

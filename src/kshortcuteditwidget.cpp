@@ -25,6 +25,7 @@
 #include "config-xmlgui.h"
 #include "kshortcutsdialog_p.h"
 
+#include <QAction>
 #include <QPainter>
 #include <QPen>
 #include <QGridLayout>
