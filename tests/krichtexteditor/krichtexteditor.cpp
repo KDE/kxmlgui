@@ -28,7 +28,7 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QLabel>
-#include <QtCore/QTextStream>
+#include <QTextStream>
 #include <QTest>
 #include <QSaveFile>
 #include <QStatusBar>

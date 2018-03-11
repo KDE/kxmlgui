@@ -22,8 +22,8 @@
 
 #include <kxmlgui_export.h>
 
-#include <QtCore/QString>
-#include <QtCore/QHash>
+#include <QString>
+#include <QHash>
 #include <QPolygon>
 
 /*

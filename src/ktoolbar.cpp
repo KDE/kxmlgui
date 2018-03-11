@@ -37,7 +37,7 @@
 #include <QDrag>
 #include <QMouseEvent>
 #include <QToolButton>
-#include <QtXml/QDomElement>
+#include <QDomElement>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDebug>

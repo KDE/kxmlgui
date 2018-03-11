@@ -22,7 +22,7 @@
 
 #include <kxmlgui_export.h>
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class QAction;
 class KXMLGUIFactoryPrivate;

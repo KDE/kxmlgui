@@ -25,14 +25,14 @@
 #include <QLayout>
 #include <QLabel>
 #include <QPushButton>
-#include <QtCore/QEvent>
-#include <QtCore/QMap>
+#include <QEvent>
+#include <QMap>
 #include <QSettings>
 #include <QSharedPointer>
 #include <QStandardPaths>
 #include <QDebug>
 #if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
-#include <QtCore/private/qlocale_p.h>
+#include <private/qlocale_p.h>
 #endif
 
 #include "kswitchlanguagedialog_p.h"

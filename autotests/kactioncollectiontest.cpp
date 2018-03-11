@@ -1,7 +1,7 @@
 #include <QtTestWidgets>
 #include "kactioncollectiontest.h"
 #include <QAction>
-#include <QtCore/QPointer>
+#include <QPointer>
 
 #include <ksharedconfig.h>
 #include <kstandardaction.h>

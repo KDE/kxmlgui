@@ -24,10 +24,10 @@
 #include <QShowEvent>
 #include <QAction>
 #include <QDialogButtonBox>
-#include <QtXml/QDomDocument>
+#include <QDomDocument>
 #include <QLayout>
-#include <QtCore/QDir>
-#include <QtCore/QFile>
+#include <QDir>
+#include <QFile>
 #include <QHeaderView>
 #include <QToolButton>
 #include <QLabel>

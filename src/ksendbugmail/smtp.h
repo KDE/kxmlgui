@@ -19,9 +19,9 @@
 #ifndef SMTP_H
 #define SMTP_H
 
-#include <QtCore/QObject>
-#include <QtCore/QTimer>
-#include <QtNetwork/QTcpSocket>
+#include <QObject>
+#include <QTimer>
+#include <QTcpSocket>
 
 /*int SMTPServerStatus[] = {
     220,  // greeting from server

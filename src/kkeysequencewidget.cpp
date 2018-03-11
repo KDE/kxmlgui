@@ -28,7 +28,7 @@
 #include <QAction>
 #include <QKeyEvent>
 #include <QTimer>
-#include <QtCore/QHash>
+#include <QHash>
 #include <QHBoxLayout>
 #include <QToolButton>
 #include <QApplication>

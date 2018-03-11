@@ -26,7 +26,7 @@
 #include <QResizeEvent>
 #include <QApplication>
 #include <QTemporaryFile>
-#include <QtTest/QTest>
+#include <QTest>
 #include <QDebug>
 
 #include <ktoolbar.h>

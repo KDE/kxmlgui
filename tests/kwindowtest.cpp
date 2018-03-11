@@ -1,6 +1,6 @@
 #include <QMessageBox>
 #include <QTextEdit>
-#include <QtCore/QDir>
+#include <QDir>
 #include <QTest>
 
 #include <stdlib.h>

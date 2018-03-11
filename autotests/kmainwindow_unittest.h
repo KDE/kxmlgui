@@ -20,7 +20,7 @@
 #ifndef KMAINWINDOW_UNITTEST_H
 #define KMAINWINDOW_UNITTEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class KMainWindow_UnitTest : public QObject
 {

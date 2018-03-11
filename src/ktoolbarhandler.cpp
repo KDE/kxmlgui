@@ -18,7 +18,7 @@
 
 #include "ktoolbarhandler_p.h"
 
-#include <QtXml/QDomDocument>
+#include <QDomDocument>
 #include <QAction>
 #include <QMenu>
 

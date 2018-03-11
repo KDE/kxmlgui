@@ -24,8 +24,8 @@
 #include <kaboutdata.h>
 #include <klocalizedstring.h>
 
-#include <QtNetwork/QNetworkAccessManager>
-#include <QtNetwork/QNetworkRequest>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
 
 
 namespace KDEPrivate

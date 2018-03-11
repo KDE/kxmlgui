@@ -19,7 +19,7 @@
 */
 
 #include <QApplication>
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QLabel>
 #include <QStatusBar>
 #include <QMenuBar>

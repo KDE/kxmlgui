@@ -20,7 +20,7 @@
 #ifndef KXMLGUI_UNITTEST_H
 #define KXMLGUI_UNITTEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class KXmlGui_UnitTest : public QObject
 {

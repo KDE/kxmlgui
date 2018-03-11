@@ -20,7 +20,7 @@
 #include "main.h"
 #include <qplatformdefs.h>
 
-#include <QtCore/QTextStream>
+#include <QTextStream>
 #include <QApplication>
 #include <QHostInfo>
 

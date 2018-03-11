@@ -28,9 +28,9 @@
 #include <kaboutdata.h>
 
 #include <QIcon>
-#include <QtCore/QAbstractListModel>
+#include <QAbstractListModel>
 #include <QPixmap>
-#include <QtNetwork/QNetworkReply>
+#include <QNetworkReply>
 #include <QUrl>
 
 // Forward declarations to make Attica-related members work

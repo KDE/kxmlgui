@@ -20,7 +20,7 @@
 #ifndef KSENDBUGMAIL_MAIN_H
 #define KSENDBUGMAIL_MAIN_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class SMTP;
 

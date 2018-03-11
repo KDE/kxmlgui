@@ -19,7 +19,7 @@
 #ifndef KTOOLBARHELPER_P_H
 #define KTOOLBARHELPER_P_H
 
-#include <QtXml/QDomDocument>
+#include <QDomDocument>
 
 namespace KToolbarHelper
 {

@@ -1,7 +1,7 @@
 #ifndef testwindow_h
 #define testwindow_h
 
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QProgressBar>
 #include <QStatusBar>
 #include <QMenuBar>

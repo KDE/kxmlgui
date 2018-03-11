@@ -23,7 +23,7 @@
 
 #include <kxmlgui_export.h>
 
-#include <QtCore/QList>
+#include <QList>
 #include <QPushButton>
 
 class KKeySequenceWidgetPrivate;

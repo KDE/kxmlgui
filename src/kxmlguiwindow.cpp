@@ -38,7 +38,7 @@
 
 #include <QCloseEvent>
 #include <QDBusConnection>
-#include <QtXml/QDomDocument>
+#include <QDomDocument>
 #include <QLayout>
 #include <QMenuBar>
 #include <QObject>

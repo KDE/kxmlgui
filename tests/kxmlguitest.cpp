@@ -22,7 +22,7 @@
 #include <QAction>
 #include <QApplication>
 #include <QLineEdit>
-#include <QtCore/QDir>
+#include <QDir>
 #include <QTest>
 
 #include <kmainwindow.h>

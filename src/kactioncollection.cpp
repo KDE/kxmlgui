@@ -40,11 +40,11 @@
 #endif
 #include <ksharedconfig.h>
 
-#include <QtXml/QDomDocument>
-#include <QtCore/QSet>
+#include <QDomDocument>
+#include <QSet>
 #include <QGuiApplication>
-#include <QtCore/QMap>
-#include <QtCore/QList>
+#include <QMap>
+#include <QList>
 #include <QAction>
 #include <QMetaMethod>
 

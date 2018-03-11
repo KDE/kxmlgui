@@ -23,9 +23,9 @@
 
 #include <kxmlgui_export.h>
 
-#include <QtCore/QObject>
-#include <QtCore/QString>
-#include <QtCore/QList>
+#include <QObject>
+#include <QString>
+#include <QList>
 
 #include <kstandardaction.h>
 

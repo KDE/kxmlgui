@@ -36,8 +36,8 @@
 #include <QMetaType>
 #include <QModelIndex>
 #include <QTreeWidget>
-#include <QtCore/QList>
-#include <QtCore/QCollator>
+#include <QList>
+#include <QCollator>
 #include <QGroupBox>
 
 class QLabel;

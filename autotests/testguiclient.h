@@ -21,7 +21,7 @@
 #ifndef TESTGUICLIENT_H
 #define TESTGUICLIENT_H
 
-#include <QtTest/QTest>
+#include <QTest>
 
 #include <ktoolbar.h>
 #include <kxmlguiclient.h>
