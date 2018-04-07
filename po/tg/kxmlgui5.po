@@ -1,0 +1,1618 @@
+# translation of kdelibs4.po to Tajik Language
+# 2004, 2005, 2006, 2007 infoDev, a World Bank organization.
+# 2004, 2005, 2006, 2007 Khujand Computer Technologies, Inc.
+# 2004, 2005, 2006, 2007 Youth Opportunities, NGO, 2005.
+# Roger Kovacs <rkovacs@khujand.org>, 2003.
+# Thomas Diehl <thd@kde.org>, 2003.
+# Akmal Vatanshoev <akmalvatanshoev@yahoo.com>, 2004.
+# Victor Ibragimov <youth_opportunities@tajikngo.org>, 2003, 2004, 2005, 2006, 2007, 2008.
+# Copyright (C) 2004, 2002, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-03-01 03:27+0100\n"
+"PO-Revision-Date: 2013-06-04 17:36+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik Language\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:288
+#, kde-format
+msgid "About %1"
+msgstr "Дар бораи %1"
+
+#: kaboutapplicationdialog.cpp:98
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br /><b>Версия %2</b><br />&nbsp;</html>"
+
+#: kaboutapplicationdialog.cpp:136
+#, kde-format
+msgid "License: %1"
+msgstr "Шартнома: %1"
+
+#: kaboutapplicationdialog.cpp:148
+#, kde-format
+msgid "&About"
+msgstr "&Дар бораи"
+
+#: kaboutapplicationdialog.cpp:155
+#, kde-format
+msgid ""
+"<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>"
+"%4</em> windowing system</li></ul>"
+msgstr ""
+
+#: kaboutapplicationdialog.cpp:165
+#, fuzzy, kde-format
+#| msgid "Libraries"
+msgid "&Libraries"
+msgstr "Китобхонаҳо"
+
+#: kaboutapplicationdialog.cpp:186
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to "
+#| "report bugs.\n"
+msgid ""
+"Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "
+"report bugs.\n"
+msgstr ""
+"Барои ирсоли гузоришҳо оиди хотоҳои система ин суроғаро истифода баред: <a "
+"href=\"http://bugs.kde.org\">http://bugs.kde.org</a>.\n"
+
+#: kaboutapplicationdialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgid "Please report bugs to <a href=\"%1\">%2</a>.\n"
+msgstr ""
+"Барои ирсоли гузоришҳо оиди хотоҳои система ин суроғаро истифода баред: <a "
+"href=\"mailto:%1\">%2</a>.\n"
+
+#: kaboutapplicationdialog.cpp:218
+#, kde-format
+msgid "A&uthor"
+msgstr "&Муаллиф"
+
+#: kaboutapplicationdialog.cpp:218
+#, kde-format
+msgid "A&uthors"
+msgstr "&Муаллифон"
+
+#: kaboutapplicationdialog.cpp:245
+#, kde-format
+msgid "&Thanks To"
+msgstr "&Таъриф"
+
+#: kaboutapplicationdialog.cpp:284
+#, kde-format
+msgid "T&ranslation"
+msgstr "&Тарҷумаи тоҷикӣ"
+
+#: kaboutapplicationdialog.cpp:316
+#, kde-format
+msgid "License Agreement"
+msgstr "Созишномаи литсензия"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:61
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Кӯмаккунандагони дигар:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:66
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgid "Visit contributor's homepage"
+msgstr "Посетить домашнюю страницу..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:127
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr "Кӯмаккунандагони дигар:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:133
+#: kaboutapplicationpersonlistdelegate_p.cpp:169
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr "Посетить домашнюю страницу..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:140
+#: kaboutapplicationpersonlistdelegate_p.cpp:172
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:163
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr "Посетить домашнюю страницу..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:166
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr "Посетить домашнюю страницу..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:264
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+#| "available'"
+#| msgid "%1, %2."
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1 и %2."
+
+#: kaboutapplicationpersonmodel_p.cpp:312
+#, kde-format
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "Дигар"
+
+#: kaboutapplicationpersonmodel_p.cpp:314
+#, kde-format
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "Блог"
+
+#: kaboutapplicationpersonmodel_p.cpp:322
+#, kde-format
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "Саҳифаи аслӣ"
+
+#: kaboutkdedialog_p.cpp:43
+#, kde-format
+msgid "About KDE"
+msgstr "Дар бораи KDE"
+
+#: kaboutkdedialog_p.cpp:46
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+"<html><font size=\"5\">KDE — будьте свободными!</font><br /><b>Версия "
+"платформы — %1</b></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"http://www.gnu.org/philosophy/free-sw.html\">Free Software</a> "
+#| "development. This community has created hundreds of Free Software "
+#| "applications as part of the KDE Development Platform and KDE Software "
+#| "Distribution.<br /><br />KDE is a cooperative enterprise in which no "
+#| "single entity controls the efforts or products of KDE to the exclusion of "
+#| "others. Everyone is welcome to join and contribute to KDE, including you."
+#| "<br /><br />Visit <a href=\"http://www.kde.org/\">http://www.kde.org</a> "
+#| "for more information about the KDE community and the software we produce."
+#| "</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+"writers, translators and facilitators who are committed to <a href="
+"\"%1\">Free Software</a> development. This community has created hundreds of "
+"Free Software applications as part of the KDE frameworks, workspaces and "
+"applications.<br /><br />KDE is a cooperative enterprise in which no single "
+"entity controls the efforts or products of KDE to the exclusion of others. "
+"Everyone is welcome to join and contribute to KDE, including you.<br /><br /"
+">Visit <a href=\"%2\">%2</a> for more information about the KDE community "
+"and the software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> — международное сообщество программистов, оформителей, "
+"переводчиков и других людей, так или иначе, посвящающих себя разработке <a "
+"href=\"http://www.gnu.org/philosophy/free-sw.ru.html\">свободного "
+"программного обеспечения</a>. Это сообщество поддерживает Платформу KDE (KDE "
+"Development Platform) и Набор прикладного ПО KDE (KDE Software Distribution)."
+"<br /><br />Не существует группы или организации, держащей под "
+"исключительным контролем действия или продукты KDE. Мы будем рады каждому, "
+"кто захочет внести свой вклад в развитие KDE.<br /><br />Для того чтобы "
+"больше узнать о проекте, зайдите на сайт <a href=\"http://www.kde.org/"
+"\">http://www.kde.org</a>.</html>"
+
+#: kaboutkdedialog_p.cpp:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html>Software can always be improved, and the KDE team is ready to do "
+#| "so. However, you - the user - must tell us when something does not work "
+#| "as expected or could be done better.<br /><br />KDE has a bug tracking "
+#| "system. Visit <a href=\"http://bugs.kde.org/\">http://bugs.kde.org</a> or "
+#| "use the \"Report Bug...\" dialog from the \"Help\" menu to report bugs."
+#| "<br /><br />If you have a suggestion for improvement then you are welcome "
+#| "to use the bug tracking system to register your wish. Make sure you use "
+#| "the severity called \"Wishlist\".</html>"
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>Программное обеспечение всегда можно улучшить, и команда KDE готова "
+"этим заниматься. Однако для этого надо, чтобы вы, обычный пользователь, "
+"сообщили нам о том, что не соответствует вашим ожиданиям и что можно было бы "
+"улучшить.<br /><br />В рамках проекта KDE создана система учёта ошибок и "
+"пожеланий. Для того чтобы сообщить об ошибке, зайдите на сайт <a href="
+"\"http://bugs.kde.org/\">http://bugs.kde.org</a> или отправьте сообщение по "
+"электронной почте, используя пункт «Сообщить об ошибке...» из меню «Справка» "
+"содержащего ошибку приложения. Сообщение должно быть на английском языке."
+"<br /><br />Ваши пожелания можно зарегистрировать тем же способом. При "
+"регистрации пожеланий не забудьте установить уровень важности "
+"«Wishlist» (пожелание).<br /><br />Для связи с командой перевода KDE на "
+"русский язык используйте почтовую рассылку <a href=\"https://lists.kde.ru/"
+"mailman/listinfo/kde-russian\">kde-russian@lists.kde.ru</a>.</html>"
+
+#: kaboutkdedialog_p.cpp:92
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html>You do not have to be a software developer to be a member of the "
+#| "KDE team. You can join the national teams that translate program "
+#| "interfaces. You can provide graphics, themes, sounds, and improved "
+#| "documentation. You decide!<br /><br />Visit <a href=\"http://www.kde.org/"
+#| "jobs/\">http://www.kde.org/jobs/</a> for information on some projects in "
+#| "which you can participate.<br /><br />If you need more information or "
+#| "documentation, then a visit to <a href=\"http://techbase.kde.org/"
+#| "\">http://techbase.kde.org</a> will provide you with what you need.</html>"
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>Барои ба кор даровардан ва тайёр кардани KDE, лозим нест "
+"кипрограммасоз бошед. Шумо метавонед тарҷумаи KDE-ро ба забони модарии "
+"худдароред, сохтани графика, услуб, садоҳо, беҳтар созии ҳуҷҷатномаҳо ёрдам "
+"диҳед - ин кори шумост!<br><br>Рӯйхати тарҳҳо ки шумо метавонед дар он "
+"иштирок кунеддар сайти <A HREF=\"http://www.kde.org/jobs/\">http://www.kde."
+"org/jobs/</A> мебошад. Мумкин аст ки ягонтаи онҳо диққати шуморо ҷалб "
+"мекунад.<br><br>Ахбороти муфассалро ва ҳуҷҷатномаро метавонед дар сайти <A "
+"HREF=\"http://developer.kde.org/\">http://developer.kde.org/</A> ёбед.</html>"
+
+#: kaboutkdedialog_p.cpp:114
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html>KDE is available free of charge, but costs are incurred and assets "
+#| "formed in its creation.<br /><br />Thus, the KDE community formed KDE e."
+#| "V., a non-profit organization legally founded in Tuebingen, Germany. KDE "
+#| "e.V. represents the KDE community in legal and financial matters. See <a "
+#| "href=\"http://www.kde-ev.org/\">http://www.kde-ev.org</a> for information "
+#| "on KDE e.V.<br /><br />KDE benefits from financial support. Most of the "
+#| "funds raised are used to reimburse members and others for expenses they "
+#| "incur when contributing to KDE. You are encouraged to support KDE through "
+#| "a financial donation, using one of the ways described at <a href=\"http://"
+#| "www.kde.org/support/\">http://www.kde.org/support/</a>.<br /><br />Thank "
+#| "you very much in advance for your support.</html>"
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>Среда KDE распространяется бесплатно, но её создание требует затрат."
+"<br /><br />Поэтому команда KDE основала Ассоциацию KDE, некоммерческую "
+"организацию, которая зарегистрирована в Тюбингене, Германия. Ассоциация KDE "
+"представляет проект KDE в правовом и финансовом аспектах. Посетите <a href="
+"\"http://www.kde-ev.org/\">http://www.kde-ev.org</a> для получения более "
+"подробной информации об Ассоциации KDE.<br /><br />Финансовая поддержка идёт "
+"на благо KDE. Большая часть средств используется для возмещения расходов "
+"участников проекта, которые они несут при разработке KDE. Вы можете "
+"поддержать KDE финансовым пожертвованием, которое может быть внесено одним "
+"из способов, описанных на странице <a href=\"http://www.kde.org/support/"
+"\">http://www.kde.org/support/</a>. <br /><br />Заранее благодарим за "
+"поддержку!</html>"
+
+#: kaboutkdedialog_p.cpp:134
+#, kde-format
+msgctxt "About KDE"
+msgid "&About"
+msgstr "&Дар бораи"
+
+#: kaboutkdedialog_p.cpp:135
+#, kde-format
+msgid "&Report Bugs or Wishes"
+msgstr "&Сообщить об ошибках или пожеланиях"
+
+#: kaboutkdedialog_p.cpp:136
+#, kde-format
+msgid "&Join KDE"
+msgstr "&Присоединиться к сообществу KDE"
+
+#: kaboutkdedialog_p.cpp:137
+#, kde-format
+msgid "&Support KDE"
+msgstr "&Пуштибонии KDE"
+
+#: kactionconflictdetector.cpp:49
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"Конфликт действий на комбинации клавиш «%1». Используйте пункт \n"
+"«Комбинации клавиш» меню «Настройка» чтобы исправить конфликт.\n"
+"Не выполнено ни одно из конфликтующих действий."
+
+#: kactionconflictdetector.cpp:53
+#, kde-format
+msgid "Ambiguous shortcut detected"
+msgstr "Обнаружена циклическая ссылка"
+
+#: kbugreport.cpp:104 kbugreport.cpp:133
+#, kde-format
+msgid "Submit Bug Report"
+msgstr "Ирсоли гузориш оиди хатоҳои система"
+
+#: kbugreport.cpp:144
+#, kde-format
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Суроғаи почтаи электронии шумо. Агар нодуруст бошад, шумо метавонед онро бо "
+"зеркунии тугмаи \"Танзими почтаи электронӣ\"-ро тағир диҳед"
+
+#: kbugreport.cpp:145
+#, kde-format
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Аз:"
+
+#: kbugreport.cpp:153
+#, kde-format
+msgid "Configure Email..."
+msgstr "Танзими почтаи электронӣ..."
+
+#: kbugreport.cpp:160
+#, kde-format
+msgid "The email address this bug report is sent to."
+msgstr "Почтаи электронӣ барои ирсол кардани гузоришҳо оиди хатоҳои система."
+
+#: kbugreport.cpp:161
+#, kde-format
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Ба:"
+
+#: kbugreport.cpp:170
+#, kde-format
+msgid "&Send"
+msgstr "&Ирсол кунед"
+
+#: kbugreport.cpp:170
+#, kde-format
+msgid "Send bug report."
+msgstr "Ирсоли гузориш оиди хатои система."
+
+#: kbugreport.cpp:171
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "Ин гузоришро ба %1 ирсол кунед."
+
+#: kbugreport.cpp:179
+#, kde-format
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"Ин барномаест, ки шумо мехоҳед гузориши хатоҳои онро ирсол кунед. Агар "
+"барномаи дигар нишон дода истодааст, шумо метавонед барномаи лозимиро аз "
+"менюи \"Ирсоли гузориш оиди хатои система\" интихоб кунед"
+
+#: kbugreport.cpp:180
+#, kde-format
+msgid "Application: "
+msgstr "Барнома: "
+
+#: kbugreport.cpp:207
+#, kde-format
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"Версияи барномаи ҷорӣ. Пеш аз ирсоли гузориши хатоҳои система, лутфан тафтиш "
+"кунед, ки версияи навтарини ин барнома аллакай сохта карда шуд"
+
+#: kbugreport.cpp:208
+#, kde-format
+msgid "Version:"
+msgstr "Версия:"
+
+#: kbugreport.cpp:213
+#, kde-format
+msgid "no version set (programmer error)"
+msgstr "нет данных о версии (ошибка программиста!)"
+
+#: kbugreport.cpp:226
+#, kde-format
+msgid "OS:"
+msgstr "Системаи оператсионӣ (СО):"
+
+#: kbugreport.cpp:234
+#, kde-format
+msgid "Compiler:"
+msgstr "Барномаи мутарҷим:"
+
+#: kbugreport.cpp:242
+#, kde-format
+msgid "Se&verity"
+msgstr "&Муҳим"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Critical"
+msgstr "Хатарнок"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Grave"
+msgstr "Огоҳӣ"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "Оддӣ"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Wishlist"
+msgstr "Дархост"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Translation"
+msgstr "Тарҷумаи хатоӣ"
+
+#: kbugreport.cpp:262
+#, kde-format
+msgid "S&ubject: "
+msgstr "&Мавзӯъ: "
+
+#: kbugreport.cpp:270
+#, kde-format
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Барои ирсоли гузориш, тасвири хатои барномаро дар забони англисӣ ворид "
+"кунед.\n"
+"Баъд аз зеркунии тугмаи \"Ирсол\", гузориши шумо ба барномасози ин барнома "
+"ирсол карда мешавад.\n"
+
+#: kbugreport.cpp:294
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>To submit a bug report, click on the button below. This will open a "
+#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
+#| "org</a> where you will find a form to fill in. The information displayed "
+#| "above will be transferred to that server.</qt>"
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>Барои ирсоли гузориш оиди хатои барнома, тугмаи поёнро зер кунед. "
+"Намоишгари интернет бо суроғаи <a href=\"http://bugs.kde.org\">http://bugs."
+"kde.org</a> кушода шавадю Дар он ҷо шумо метавонед гузоришро ирсол кунед. "
+"Иттлооти гузоришро ба сервери иттилоотӣ интиқол карда мешавад.</qt>"
+
+#: kbugreport.cpp:299
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>To submit a bug report, click on the button below. This will open a "
+#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
+#| "org</a> where you will find a form to fill in. The information displayed "
+#| "above will be transferred to that server.</qt>"
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"%1\">%2</a>.</qt>"
+msgstr ""
+"<qt>Барои ирсоли гузориш оиди хатои барнома, тугмаи поёнро зер кунед. "
+"Намоишгари интернет бо суроғаи <a href=\"http://bugs.kde.org\">http://bugs."
+"kde.org</a> кушода шавадю Дар он ҷо шумо метавонед гузоришро ирсол кунед. "
+"Иттлооти гузоришро ба сервери иттилоотӣ интиқол карда мешавад.</qt>"
+
+#: kbugreport.cpp:316
+#, kde-format
+msgid "&Launch Bug Report Wizard"
+msgstr "&Оғози барномаи навиштани гузоришҳо оиди хатоҳои система"
+
+#: kbugreport.cpp:318
+#, fuzzy, kde-format
+#| msgid "Submit Bug Report"
+msgid "&Submit Bug Report"
+msgstr "Ирсоли гузориш оиди хатоҳои система"
+
+#: kbugreport.cpp:382
+#, kde-format
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "номуайян"
+
+#: kbugreport.cpp:441
+#, kde-format
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Пеш аз ирсоли гузориш, шумо бояд номи мавзӯъро ва тафсири хатои барномаро "
+"ворид кунед."
+
+#: kbugreport.cpp:450
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Выбран уровень ошибки <b>Критическая</b>. Этот уровень подразумевает, что "
+"ошибка</p><ul><li>может вызвать сбой в работе других программ или системы в "
+"целом</li><li>привести к порче и утрате данных</li><li>нарушить безопасность "
+"системы, если установлен данный пакет</li></ul>\n"
+"<p>Является ли ошибка, о которой вы хотите сообщить, настолько серьёзной? "
+"Если нет, выберите другой, менее высокий уровень ошибки.</p>"
+
+#: kbugreport.cpp:462
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Вы выбрали уровень ошибки <b>Опасная</b>. Этот уровень подразумевает, что "
+"ошибка</p><ul><li>может вызвать неисправимый сбой в работе данного пакета</"
+"li><li>привести к утрате данных</li><li>нарушить безопасность системы и "
+"открыть доступ к файлам пользователей, установивших данный пакет</li></ul>\n"
+"<p>Является ли ошибка, о которой вы хотите сообщить, настолько серьёзной? "
+"Если нет, выберите другой, менее высокий уровень ошибки.</p>"
+
+#: kbugreport.cpp:476
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to send the bug report.\n"
+#| "Please submit a bug report manually....\n"
+#| "See http://bugs.kde.org/ for instructions."
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See https://bugs.kde.org/ for instructions."
+msgstr ""
+"Не удалось отправить сообщение об ошибке.\n"
+"Попробуйте отправить его вручную на сайте http://bugs.kde.org/"
+
+#: kbugreport.cpp:484
+#, kde-format
+msgid "Bug report sent, thank you for your input."
+msgstr "Гузориш оиди хатоҳои система ирсол карда шуд. Ҳазор раҳмат!"
+
+#: kbugreport.cpp:493
+#, kde-format
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"Паёми воридшударо\n"
+"хуруҷ ва рад мекунед?"
+
+#: kbugreport.cpp:494
+#, kde-format
+msgid "Close Message"
+msgstr "Пӯшидани паём"
+
+#: kcheckaccelerators.cpp:230
+#, kde-format
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Dr. Klash' Accelerator Diagnosis"
+
+#: kcheckaccelerators.cpp:237
+#, kde-format
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Хомӯшсозии санҷиши худкор"
+
+#: kcheckaccelerators.cpp:281
+#, kde-format
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Акселераторы изменены</h2>"
+
+#: kcheckaccelerators.cpp:283 kcheckaccelerators.cpp:294
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "Ҷустуҷӯи матн"
+
+#: kcheckaccelerators.cpp:285 kcheckaccelerators.cpp:303
+#, fuzzy, kde-format
+#| msgid "Show help"
+msgid "New Text"
+msgstr "Намоиши роҳнамо"
+
+#: kcheckaccelerators.cpp:292
+#, kde-format
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Акселераторы удалены</h2> "
+
+#: kcheckaccelerators.cpp:301
+#, kde-format
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>Акселераторы добавлены</h2> "
+
+#: kedittoolbar.cpp:57
+#, kde-format
+msgid "--- separator ---"
+msgstr "--- тақсимкунанда ---"
+
+#: kedittoolbar.cpp:333
+#, kde-format
+msgid "Change Text"
+msgstr "Изменить текст"
+
+#: kedittoolbar.cpp:344
+#, fuzzy, kde-format
+#| msgid "Icon Te&xt:"
+msgid "Icon te&xt:"
+msgstr "_Газетный текст..."
+
+#: kedittoolbar.cpp:349
+#, kde-format
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+
+#: kedittoolbar.cpp:602
+#, kde-format
+msgid "Configure Toolbars"
+msgstr "Танзими панели асбобҳо"
+
+#: kedittoolbar.cpp:665
+#, kde-format
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"Оё шумо мехоҳед ҳамаи панелҳоро бо стандартӣ бозсозӣ кунед? Ивазҳоро фавран "
+"қабул мешаванд."
+
+#: kedittoolbar.cpp:665
+#, kde-format
+msgid "Reset Toolbars"
+msgstr "Бозсозии панели асбобҳо"
+
+#: kedittoolbar.cpp:665
+#, kde-format
+msgid "Reset"
+msgstr "Бозсозӣ"
+
+#: kedittoolbar.cpp:988
+#, kde-format
+msgid "&Toolbar:"
+msgstr "&Панели асбобҳо:"
+
+#. i18n("&New"), this);
+#. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+#. new_toolbar->setEnabled(false); // disabled until implemented
+#. QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+#. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+#. del_toolbar->setEnabled(false); // disabled until implemented
+#. our list of inactive actions
+#: kedittoolbar.cpp:1003
+#, kde-format
+msgid "A&vailable actions:"
+msgstr "&Амалҳои дастрас:"
+
+#: kedittoolbar.cpp:1018 kedittoolbar.cpp:1037
+#, kde-format
+msgid "Filter"
+msgstr "Филтр"
+
+#: kedittoolbar.cpp:1021
+#, kde-format
+msgid "Curr&ent actions:"
+msgstr "&Амалҳои ҷорӣ:"
+
+#: kedittoolbar.cpp:1040
+#, kde-format
+msgid "Change &Icon..."
+msgstr "Ивази &нишона..."
+
+#: kedittoolbar.cpp:1048
+#, kde-format
+msgid "Change Te&xt..."
+msgstr "Изменить текст..."
+
+#: kedittoolbar.cpp:1200
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1220
+#, kde-format
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"Элементи додашуда бо ҳамаи элементҳои компоненти дарунсохт иваз карда "
+"мешавад."
+
+#: kedittoolbar.cpp:1222
+#, kde-format
+msgid "<Merge>"
+msgstr "<Нуқтаи воридот>"
+
+#: kedittoolbar.cpp:1224
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<Нуқтаи воридоти %1>"
+
+#: kedittoolbar.cpp:1230
+#, kde-format
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Ин рӯйхати амалҳо мебошад. Шумо метавонед инро таҳвил кунед, вале баъд аз "
+"несткунӣ, бозсозии он имконнопазир аст."
+
+#: kedittoolbar.cpp:1231
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Рӯйхати амалҳо: %1"
+
+#: kedittoolbar.cpp:1331 kedittoolbar.cpp:1358
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1585
+#, kde-format
+msgid "Change Icon"
+msgstr "Ивази нишона"
+
+#: kgesture.cpp:505
+#, kde-format
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "тугмаи чап"
+
+#: kgesture.cpp:508
+#, kde-format
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "тугмаи миёна"
+
+#: kgesture.cpp:511
+#, kde-format
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "тугмаи рост"
+
+#: kgesture.cpp:514
+#, kde-format
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "тугмаи нодуруст"
+
+#: kgesture.cpp:528
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "Тугмаи %1-ро дошта истед, ва тугмаи %2-ро зер кунед"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:174 ui_standards.rc:177
+#, kde-format
+msgid "&Help"
+msgstr "&Роҳнамо"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "Миёнбури '%1' дар барномаи %2 барои %3\n"
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "Миёнбури '%2' бо пайвасти тугмаҳои зерин ихтилоф мекунад:\n"
+msgstr[1] "Миёнбури '%2' бо пайвасти тугмаҳои зерин ихтилоф мекунад:\n"
+
+#: kkeysequencewidget.cpp:144
+#, kde-format
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Конфликт с глобальными комбинациями клавиш"
+msgstr[1] "Конфликт с зарегистрированной глобально комбинацией клавиш"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:234
+#: kkeysequencewidget.cpp:625 kshortcutseditor.cpp:635 kshortcutseditor.cpp:653
+#, kde-format
+msgid "Reassign"
+msgstr "Якҷояи нав"
+
+#: kkeysequencewidget.cpp:215
+#, kde-format
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Конфликт комбинаций клавиш"
+msgstr[1] "Наложение комбинаций клавиш"
+
+#: kkeysequencewidget.cpp:219
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Комбинация клавиш «%1» для действия «%2»\n"
+
+#: kkeysequencewidget.cpp:224
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid "Shortcut conflict"
+msgstr "Наложение комбинаций клавиш"
+
+#: kkeysequencewidget.cpp:244
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>Комбинация клавиш %1 уже связана с действием <b>%2</b>.<br>Выберите "
+"уникальную комбинацию клавиш.</qt>"
+
+#: kkeysequencewidget.cpp:274
+#, fuzzy, kde-format
+#| msgid ""
+#| "Click on the button, then enter the shortcut like you would in the "
+#| "program.\n"
+#| "Example for Ctrl+a: hold the Ctrl key and press a."
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Нажмите на кнопке и введите комбинацию клавиш.\n"
+"Например, для комбинации клавиш Ctrl+A зажмите клавишу Ctrl и нажмите A."
+
+#: kkeysequencewidget.cpp:466
+#, kde-format
+msgid "Reserved Shortcut"
+msgstr "Зарезервированная комбинация клавиш"
+
+#: kkeysequencewidget.cpp:467
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"В Windows клавиша F12 зарезервирована, поэтому её нельзя использовать в "
+"глобальных комбинациях клавиш.\n"
+"Выберите другую комбинацию клавиш."
+
+#: kkeysequencewidget.cpp:619
+#, kde-format
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Мухолифат бо тугмаи якҷояшудаи стандартӣ"
+
+#: kkeysequencewidget.cpp:620
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Тугмаи '%1' аллакай бо амали стандартии \"%2\" якҷоя карда шуд. Ин "
+"якҷояшавии тугмаҳо бо бисёр барномаҳо истифода мешавад.\n"
+"Ин тавр шумо наметавонед ин тугмаҳоро бо амали ҷорӣ якҷоя кунед."
+
+#: kkeysequencewidget.cpp:668
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Вуруд"
+
+#: kkeysequencewidget.cpp:675 kshortcuteditwidget.cpp:67
+#: kshortcuteditwidget.cpp:70
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Холӣ"
+
+#: kkeysequencewidget.cpp:721
+#, kde-format
+msgid "The key you just pressed is not supported by Qt."
+msgstr "Нажатая клавиша не поддерживается в Qt."
+
+#: kkeysequencewidget.cpp:722
+#, kde-format
+msgid "Unsupported Key"
+msgstr "Неподдерживаемый ключ"
+
+#: kmainwindow.cpp:244
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Victor Ibragimov"
+
+#: kmainwindow.cpp:245
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "victor.ibragimov@gmail.com"
+
+#: kmenumenuhandler_p.cpp:50
+#, kde-format
+msgid "Add to Toolbar"
+msgstr "Илова ба панели асбобҳо"
+
+#: kmenumenuhandler_p.cpp:232
+#, kde-format
+msgid "Configure Shortcut..."
+msgstr "&Танзими тугмаҳои якҷояшуда..."
+
+#: ksendbugmail/main.cpp:45
+#, fuzzy, kde-format
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "Эҷодкунии мазмун дар хидматгоҳ"
+
+#: ksendbugmail/main.cpp:48
+#, fuzzy, kde-format
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "Ёфт нашуд"
+
+#: ksendbugmail/main.cpp:51
+#, fuzzy, kde-format
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "Вақти пайвастшавӣ ба анҷом расид"
+
+#: ksendbugmail/main.cpp:54
+#, kde-format
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "Хидматгоҳ: %1"
+
+#: ksendbugmail/main.cpp:89
+#, fuzzy, kde-format
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "Ирсоли гузориш оиди хатои система."
+
+#: ksendbugmail/main.cpp:91
+#, fuzzy, kde-format
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "Андозаи диалог"
+
+#: ksendbugmail/main.cpp:92
+#, fuzzy, kde-format
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "Почтаи электронӣ барои ирсол кардани гузоришҳо оиди хатоҳои система."
+
+#: kshortcuteditwidget.cpp:66
+#, kde-format
+msgid "Default:"
+msgstr "Стандартӣ:"
+
+#: kshortcuteditwidget.cpp:74
+#, kde-format
+msgid "Custom:"
+msgstr "Дигар:"
+
+#: kshortcutschemeseditor.cpp:44
+#, kde-format
+msgid "Shortcut Schemes"
+msgstr "Нақшаи тугмаҳои якҷояшуда"
+
+#: kshortcutschemeseditor.cpp:65
+#, kde-format
+msgid "Current scheme:"
+msgstr "Нақшаи ҷорӣ:"
+
+#: kshortcutschemeseditor.cpp:81
+#, kde-format
+msgid "New..."
+msgstr "Нав..."
+
+#: kshortcutschemeseditor.cpp:84
+#, kde-format
+msgid "Delete"
+msgstr "Нест кардан"
+
+#: kshortcutschemeseditor.cpp:87
+#, kde-format
+msgid "More Actions"
+msgstr "Амалҳои иловагӣ"
+
+#: kshortcutschemeseditor.cpp:91
+#, fuzzy, kde-format
+#| msgid "Shortcut Schemes"
+msgid "Save shortcuts to scheme"
+msgstr "Нақшаи тугмаҳои якҷояшуда"
+
+#: kshortcutschemeseditor.cpp:93
+#, kde-format
+msgid "Export Scheme..."
+msgstr "Содироти нақша..."
+
+#: kshortcutschemeseditor.cpp:95
+#, fuzzy, kde-format
+#| msgid "Export Scheme..."
+msgid "Import Scheme..."
+msgstr "Содироти нақша..."
+
+#: kshortcutschemeseditor.cpp:111
+#, kde-format
+msgid "Name for New Scheme"
+msgstr "Ном барои нақшаи нав"
+
+#: kshortcutschemeseditor.cpp:112
+#, kde-format
+msgid "Name for new scheme:"
+msgstr "Ном барои нақшаи нав:"
+
+#: kshortcutschemeseditor.cpp:112
+#, kde-format
+msgid "New Scheme"
+msgstr "Нақшаи нав"
+
+#: kshortcutschemeseditor.cpp:118
+#, kde-format
+msgid "A scheme with this name already exists."
+msgstr "Схема с таким названием уже существует"
+
+#: kshortcutschemeseditor.cpp:148
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"Оё шумо мехоҳед нақшаи %1 тоза кунед?\n"
+"Мушоҳида кунед, ки ин амалиёт ягон системаи нақшаҳои миёнбурҳои умумӣ тоза "
+"намекунад."
+
+#: kshortcutschemeseditor.cpp:178
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Export Shortcuts"
+msgstr "Тугмаҳои якҷояшуда"
+
+#: kshortcutschemeseditor.cpp:178 kshortcutschemeseditor.cpp:189
+#, fuzzy, kde-format
+#| msgid "Shortcut Conflict(s)"
+msgid "Shortcuts (*.shortcuts)"
+msgstr "Наложение комбинаций клавиш"
+
+#: kshortcutschemeseditor.cpp:189
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Import Shortcuts"
+msgstr "Тугмаҳои якҷояшуда"
+
+#: kshortcutschemeseditor.cpp:200
+#, fuzzy, kde-format
+#| msgid "The removal request was successfully registered."
+msgid "Shortcut scheme successfully saved."
+msgstr "Дархости несткунӣ бо муваффақият ба қайд гирифта шуд."
+
+#: kshortcutschemeseditor.cpp:203
+#, kde-format
+msgid "Error saving the shortcut scheme."
+msgstr ""
+
+#: kshortcutsdialog.cpp:85
+#, kde-format
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+"Нақшаи миёнбури ҷорӣ тағйир дода шуд. Пеш аз гузаштан ба нақшаи нав захира "
+"мекунед?"
+
+#: kshortcutsdialog.cpp:135
+#, fuzzy, kde-format
+#| msgid "New Scheme"
+msgid "Manage &Schemes"
+msgstr "Нақшаи нав"
+
+#: kshortcutsdialog.cpp:154
+#, kde-format
+msgid "Configure Shortcuts"
+msgstr "Танзими тугмачаҳои якҷояшуда"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Ҷустуҷӯи интерактивӣ барои номҳои тугмаҳои тез (монанди Нусха) ё тугмаҳои "
+"якҷояшуда (монанди Ctrl+C) бо муайянкунии онҳо дар ин ҷо."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Дар ин ҷо шумо метавонед рӯйхати тугмаҳои якҷояшударо нигоҳ доред. Номҳои "
+"тугмаҳои якҷояшуда (мисоли Нусха) дар сутуни чап ва худи тугмаҳои якҷояшуда "
+"(мисоли Ctrl+V) дар сутуни рост нишон дода истодаанд."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Амал"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Тугмаҳои якҷояшуда"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Иловагӣ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Умумӣ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Иловагии умумӣ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Хаткашии тугмаи муш"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Шакли хаткашии муш"
+
+#: kshortcutseditor.cpp:630 kshortcutseditor.cpp:648
+#, kde-format
+msgid "Key Conflict"
+msgstr "Мухолифати тугмаҳо"
+
+#: kshortcutseditor.cpp:631
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Шакли каҷхаткашии %1 аллакай бо амали «%2» якҷоя карда шуд.\n"
+"Оё шумо мехоҳед ин шаклро бо амали ҷорӣ якҷоя кунед?"
+
+#: kshortcutseditor.cpp:649
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Шакли зеркаҷхаткашии %1 аллакай бо амали «%2» якҷоя карда шуд.\n"
+"Оё шумо мехоҳед ин шаклро бо амали ҷорӣ якҷоя кунед?"
+
+#: kshortcutseditor.cpp:696
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Тугмаҳои якҷояшуда барои %1"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:714 kshortcutwidget.ui:22
+#, kde-format
+msgid "Main:"
+msgstr "Асосӣ:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:715 kshortcutwidget.ui:52
+#, kde-format
+msgid "Alternate:"
+msgstr "Иловагӣ:"
+
+#: kshortcutseditor.cpp:716
+#, kde-format
+msgid "Global:"
+msgstr "Умумӣ:"
+
+#: kshortcutseditor.cpp:717
+#, fuzzy, kde-format
+#| msgid "Global Alternate"
+msgid "Global alternate:"
+msgstr "Иловагии умумӣ"
+
+#: kshortcutseditor.cpp:732
+#, kde-format
+msgid "Action Name"
+msgstr "Номи амал"
+
+#: kshortcutseditor.cpp:736
+#, kde-format
+msgid "Shortcuts"
+msgstr "Тугмаҳои якҷояшуда"
+
+#: kshortcutseditor.cpp:740
+#, kde-format
+msgid "Description"
+msgstr "Тафсилот"
+
+#: kshortcutseditoritem.cpp:54
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:165
+#, kde-format
+msgid "Switch Application Language"
+msgstr "Интихоби забони барнома"
+
+#: kswitchlanguagedialog_p.cpp:170
+#, kde-format
+msgid "Please choose the language which should be used for this application:"
+msgstr ""
+"Выберите язык интерфейса, который должен использоваться в этом приложении:"
+
+#: kswitchlanguagedialog_p.cpp:197
+#, kde-format
+msgid "Add Fallback Language"
+msgstr "Интихоби забони иловагӣ"
+
+#: kswitchlanguagedialog_p.cpp:198
+#, kde-format
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"Установить один или несколько языков, которые будут использоваться, если нет "
+"перевода на основной язык."
+
+#: kswitchlanguagedialog_p.cpp:294 kswitchlanguagedialog_p.cpp:316
+#, kde-format
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"Язык интерфейса приложения изменён. Это изменение вступит в силу при "
+"следующем запуске приложения."
+
+#: kswitchlanguagedialog_p.cpp:295 kswitchlanguagedialog_p.cpp:317
+#, kde-format
+msgid "Application Language Changed"
+msgstr "Изменён язык приложения"
+
+#: kswitchlanguagedialog_p.cpp:405
+#, kde-format
+msgid "Primary language:"
+msgstr "Забони асосӣ:"
+
+#: kswitchlanguagedialog_p.cpp:405
+#, kde-format
+msgid "Fallback language:"
+msgstr "Забони иловагӣ:"
+
+#: kswitchlanguagedialog_p.cpp:424
+#, kde-format
+msgid "Remove"
+msgstr "Нобуд кардан"
+
+#: kswitchlanguagedialog_p.cpp:435
+#, kde-format
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+"Это основной язык интерфейса приложения, который будет использоваться "
+"первым, перед всеми остальными языками."
+
+#: kswitchlanguagedialog_p.cpp:436
+#, kde-format
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"Это язык, который будет использоваться, если перевод на основной язык "
+"отсутствует."
+
+#: ktoolbar.cpp:307
+#, fuzzy, kde-format
+#| msgid "Show help"
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Намоиши роҳнамо"
+
+#: ktoolbar.cpp:310
+#, fuzzy, kde-format
+#| msgid "Toolbar Settings"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Меню панели инструментов"
+
+#: ktoolbar.cpp:312
+#, fuzzy, kde-format
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Ориентация"
+
+#: ktoolbar.cpp:314
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Боло"
+
+#: ktoolbar.cpp:316
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Чап"
+
+#: ktoolbar.cpp:317
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Рост"
+
+#: ktoolbar.cpp:318
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "Поён"
+
+#: ktoolbar.cpp:326
+#, kde-format
+msgid "Text Position"
+msgstr "Мавқеи матн"
+
+#: ktoolbar.cpp:328
+#, kde-format
+msgid "Icons Only"
+msgstr "Танҳо нишонаҳо"
+
+#: ktoolbar.cpp:329
+#, kde-format
+msgid "Text Only"
+msgstr "Танҳо матн"
+
+#: ktoolbar.cpp:330
+#, kde-format
+msgid "Text Alongside Icons"
+msgstr "Матн ҳамроҳи нишонаҳо"
+
+#: ktoolbar.cpp:331
+#, kde-format
+msgid "Text Under Icons"
+msgstr "Матн зери нишонаҳо"
+
+#: ktoolbar.cpp:339
+#, kde-format
+msgid "Icon Size"
+msgstr "Андозаи нишона"
+
+#: ktoolbar.cpp:341
+#, kde-format
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Стандартӣ"
+
+#: ktoolbar.cpp:358 ktoolbar.cpp:379
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Хурд (%1x%2)"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Миёна (%1x%2)"
+
+#: ktoolbar.cpp:362 ktoolbar.cpp:383
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Калон (%1x%2)"
+
+#: ktoolbar.cpp:364 ktoolbar.cpp:385
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Бузург (%1x%2)"
+
+#: ktoolbar.cpp:407
+#, kde-format
+msgid "Lock Toolbar Positions"
+msgstr "Заблокировать панели инструментов"
+
+#: ktoolbarhandler.cpp:101
+#, kde-format
+msgid "Toolbars Shown"
+msgstr "Видимые панели инструментов"
+
+#: kundoactions.cpp:43
+#, kde-format
+msgid "Redo"
+msgstr "Баргаштан"
+
+#: kundoactions.cpp:62
+#, kde-format
+msgid "Undo"
+msgstr "Баргашти амал"
+
+#: kxmlguibuilder.cpp:190 kxmlguibuilder.cpp:354
+#, kde-format
+msgid "No text"
+msgstr "Холӣ"
+
+#: kxmlguiwindow.cpp:430
+#, kde-format
+msgid ""
+"There are two actions (%1, %2) that want to use the same shortcut (%3). This "
+"is most probably a bug. Please report it in <a href='https://bugs.kde."
+"org'>bugs.kde.org</a>"
+msgstr ""
+
+#: kxmlguiwindow.cpp:430
+#, fuzzy, kde-format
+#| msgid "Ambiguous shortcut detected"
+msgid "Ambiguous Shortcuts"
+msgstr "Обнаружена циклическая ссылка"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Файл"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Бозӣ"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Таҳрир"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Таҳвил"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+#, kde-format
+msgid "&View"
+msgstr "&Намоиш"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+#, kde-format
+msgid "&Go"
+msgstr "&Гузаштан"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Хатчӯбмониҳо"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+#, kde-format
+msgid "&Tools"
+msgstr "&Хидматҳо"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Settings"
+msgstr "&Танзимотҳо"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:196
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Панели асбобҳои асосӣ"
