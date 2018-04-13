@@ -405,9 +405,9 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
         // Merge attributes
         {
             const QDomNamedNodeMap attribs = additive.attributes();
-            const uint attribcount = attribs.count();
+            const int attribcount = attribs.count();
 
-            for (uint i = 0; i < attribcount; ++i) {
+            for (int i = 0; i < attribcount; ++i) {
                 const QDomNode node = attribs.item(i);
                 base.setAttribute(node.nodeName(), node.nodeValue());
             }

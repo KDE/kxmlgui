@@ -190,9 +190,9 @@ void ToolBarHandler::Private::connectToActionContainers()
 
 void ToolBarHandler::Private::connectToActionContainer(QAction *action)
 {
-    uint containerCount = action->associatedWidgets().count();
+    int containerCount = action->associatedWidgets().count();
 
-    for (uint i = 0; i < containerCount; ++i) {
+    for (int i = 0; i < containerCount; ++i) {
         connectToActionContainer(action->associatedWidgets().value(i));
     }
 }

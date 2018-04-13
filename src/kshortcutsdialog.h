@@ -85,7 +85,7 @@ public:
     /**
      * Destructor. Deletes all resources used by a KShortcutsDialog object.
      */
-    virtual ~KShortcutsDialog();
+    ~KShortcutsDialog() Q_DECL_OVERRIDE;
 
     /**
      * Add all actions of the collection to the ones displayed and configured

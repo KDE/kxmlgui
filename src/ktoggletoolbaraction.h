@@ -72,7 +72,7 @@ public:
     /**
      * Destroys toggle toolbar action.
      */
-    virtual ~KToggleToolBarAction();
+    ~KToggleToolBarAction() Q_DECL_OVERRIDE;
 
     /**
      * Returns a pointer to the tool bar it manages.

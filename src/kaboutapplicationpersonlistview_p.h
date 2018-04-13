@@ -26,7 +26,7 @@ namespace KDEPrivate
 class KAboutApplicationPersonListView : public QListView
 {
 public:
-    KAboutApplicationPersonListView(QWidget *parent = nullptr);
+    explicit KAboutApplicationPersonListView(QWidget *parent = nullptr);
 
 protected:
     void wheelEvent(QWheelEvent *e) Q_DECL_OVERRIDE;

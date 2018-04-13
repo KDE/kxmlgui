@@ -33,7 +33,7 @@ public:
     KAboutApplicationPersonListDelegate(QAbstractItemView *itemView,
                                         QObject *parent = nullptr);
 
-    ~KAboutApplicationPersonListDelegate() {}
+    ~KAboutApplicationPersonListDelegate() Q_DECL_OVERRIDE {}
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 

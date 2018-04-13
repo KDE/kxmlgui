@@ -231,31 +231,24 @@ QAction *KHelpMenu::action(MenuId id) const
     switch (id) {
     case menuHelpContents:
         return d->mHandBookAction;
-        break;
 
     case menuWhatsThis:
         return d->mWhatsThisAction;
-        break;
 
     case menuReportBug:
         return d->mReportBugAction;
-        break;
 
     case menuSwitchLanguage:
         return d->mSwitchApplicationLanguageAction;
-        break;
 
     case menuAboutApp:
         return d->mAboutAppAction;
-        break;
 
     case menuAboutKDE:
         return d->mAboutKDEAction;
-        break;
 
     case menuDonate:
         return d->mDonateAction;
-        break;
     }
 
     return nullptr;

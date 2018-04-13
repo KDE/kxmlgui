@@ -112,7 +112,7 @@ public:
      * Will also destroy the toolbars, and menubar if
      * needed.
      */
-    virtual ~KXmlGuiWindow();
+    ~KXmlGuiWindow() Q_DECL_OVERRIDE;
 
     /**
      * Enables the build of a standard help menu when calling createGUI() or setupGUI().

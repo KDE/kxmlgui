@@ -106,9 +106,9 @@ static ActionPropertiesMap extractActionProperties(const QDomDocument &doc)
         }
 
         const QDomNamedNodeMap attributes = e.attributes();
-        const uint attributeslength = attributes.length();
+        const int attributeslength = attributes.length();
 
-        for (uint i = 0; i < attributeslength; ++i) {
+        for (int i = 0; i < attributeslength; ++i) {
             const QDomAttr attr = attributes.item(i).toAttr();
 
             if (attr.isNull()) {

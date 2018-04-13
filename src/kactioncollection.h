@@ -74,7 +74,7 @@ public:
     /**
      * Destructor.
      */
-    virtual ~KActionCollection();
+    ~KActionCollection() Q_DECL_OVERRIDE;
 
     /**
      * Access the list of all action collections in existence for this app

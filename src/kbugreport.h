@@ -56,7 +56,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~KBugReport();
+    ~KBugReport() Q_DECL_OVERRIDE;
 
     /**
      * The message body of the bug report

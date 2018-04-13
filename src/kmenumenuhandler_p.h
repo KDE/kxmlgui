@@ -42,7 +42,7 @@ class KMenuMenuHandler : public QObject
     Q_OBJECT
 public:
     KMenuMenuHandler(KXMLGUIBuilder *b);
-    ~KMenuMenuHandler() {}
+    ~KMenuMenuHandler() Q_DECL_OVERRIDE {}
     void insertMenu(QMenu *menu);
     bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 

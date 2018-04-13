@@ -160,7 +160,7 @@ public:
      * Will also destroy the toolbars, and menubar if
      * needed.
      */
-    virtual ~KMainWindow();
+    ~KMainWindow() Q_DECL_OVERRIDE;
 
     /**
      * Retrieve the standard help menu.

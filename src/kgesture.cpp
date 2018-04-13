@@ -503,16 +503,12 @@ QString KRockerGesture::mouseButtonName(Qt::MouseButton button)
     switch (button) {
     case Qt::LeftButton:
         return i18nc("left mouse button", "left button");
-        break;
     case Qt::MidButton:
         return i18nc("middle mouse button", "middle button");
-        break;
     case Qt::RightButton:
         return i18nc("right mouse button", "right button");
-        break;
     default:
         return i18nc("a nonexistent value of mouse button", "invalid button");
-        break;
     }
 }
 
