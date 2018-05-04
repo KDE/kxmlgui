@@ -74,7 +74,7 @@ public:
     /**
      * Destructor.
      */
-    ~KActionCollection() Q_DECL_OVERRIDE;
+    ~KActionCollection() override;
 
     /**
      * Access the list of all action collections in existence for this app
@@ -294,7 +294,7 @@ Q_SIGNALS:
 
 protected:
     /// Overridden to perform connections when someone wants to know whether an action was highlighted or triggered
-    void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE;
+    void connectNotify(const QMetaMethod &signal) override;
 
 protected Q_SLOTS:
     virtual void slotActionTriggered();

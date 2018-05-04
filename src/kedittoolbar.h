@@ -108,7 +108,7 @@ public:
                           QWidget *parent = nullptr);
 
     /// destructor
-    ~KEditToolBar() Q_DECL_OVERRIDE;
+    ~KEditToolBar() override;
 
     /**
      * Sets the default toolbar that will be selected when the dialog is shown.
@@ -158,8 +158,8 @@ Q_SIGNALS:
     QT_MOC_COMPAT void newToolbarConfig();
 
 protected:
-    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
-    void hideEvent(QHideEvent *event) Q_DECL_OVERRIDE;
+    void showEvent(QShowEvent *event) override;
+    void hideEvent(QHideEvent *event) override;
 
 private:
     friend class KEditToolBarPrivate;

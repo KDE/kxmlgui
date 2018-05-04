@@ -56,7 +56,7 @@ public:
     /**
      * Destructor
      */
-    ~KBugReport() Q_DECL_OVERRIDE;
+    ~KBugReport() override;
 
     /**
      * The message body of the bug report
@@ -72,7 +72,7 @@ public:
     /**
       * OK has been clicked
      */
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 private:
     /**
@@ -109,7 +109,7 @@ protected:
      */
     bool sendBugReport();
 
-    void closeEvent(QCloseEvent *e) Q_DECL_OVERRIDE;
+    void closeEvent(QCloseEvent *e) override;
 
 private:
     friend class KBugReportPrivate;

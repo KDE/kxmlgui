@@ -72,7 +72,7 @@ public:
     /**
      * Destroys toggle toolbar action.
      */
-    ~KToggleToolBarAction() Q_DECL_OVERRIDE;
+    ~KToggleToolBarAction() override;
 
     /**
      * Returns a pointer to the tool bar it manages.
@@ -82,10 +82,10 @@ public:
     /**
      * Reimplemented from QObject.
      */
-    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
 private Q_SLOTS:
-    void slotToggled(bool checked) Q_DECL_OVERRIDE;
+    void slotToggled(bool checked) override;
 
 private:
     class Private;

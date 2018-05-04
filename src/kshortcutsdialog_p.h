@@ -100,7 +100,7 @@ class KShortcutsEditorDelegate : public KExtendableItemDelegate
 public:
     KShortcutsEditorDelegate(QTreeWidget *parent, bool allowLetterShortcuts);
     //reimplemented to have some extra height
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
     /**
      * Set a list of action collections to check against for conflicting
@@ -115,7 +115,7 @@ Q_SIGNALS:
 public Q_SLOTS:
     void hiddenBySearchLine(QTreeWidgetItem *, bool);
 protected:
-    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *) override;
 private:
     mutable QPersistentModelIndex m_editingIndex;
     bool m_allowLetterShortcuts;
@@ -160,7 +160,7 @@ public:
     TabConnectedWidget(QWidget *parent)
         : QWidget(parent) {}
 protected:
-    void paintEvent(QPaintEvent *pe) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *pe) override;
 };
 
 /**
@@ -292,8 +292,8 @@ public:
     //! Commit the changes.
     void commit();
 
-    QVariant data(int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-    bool operator<(const QTreeWidgetItem &other) const Q_DECL_OVERRIDE;
+    QVariant data(int column, int role = Qt::DisplayRole) const override;
+    bool operator<(const QTreeWidgetItem &other) const override;
 
     QKeySequence keySequence(uint column) const;
     void setKeySequence(uint column, const QKeySequence &seq);

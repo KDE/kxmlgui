@@ -107,7 +107,7 @@ public:
         m_queryClosedCalled(false)
     {
     }
-    bool queryClose() Q_DECL_OVERRIDE
+    bool queryClose() override
     {
         m_queryClosedCalled = true;
         return true;

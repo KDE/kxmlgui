@@ -85,7 +85,7 @@ public:
     /**
      * Destructor. Deletes all resources used by a KShortcutsDialog object.
      */
-    ~KShortcutsDialog() Q_DECL_OVERRIDE;
+    ~KShortcutsDialog() override;
 
     /**
      * Add all actions of the collection to the ones displayed and configured
@@ -108,7 +108,7 @@ public:
     bool configure(bool saveSettings = true);
 
     /** @see QWidget::sizeHint() */
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
     /**
      * Pops up a modal dialog for configuring key settings. The new
@@ -144,7 +144,7 @@ public Q_SLOTS:
     /**
      * @reimp
      */
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 Q_SIGNALS:
     /**
