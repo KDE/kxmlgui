@@ -36,7 +36,7 @@ void ActionList::plug(QWidget *container, int index) const
     QAction *before = nullptr; // Insert after end of widget's current actions (default).
 
     if ((index < 0) || (index > container->actions().count())) {
-        qCWarning(DEBUG_KXMLGUI) << "Index " << index << " is not within range (0 - " << container->actions().count();
+        qCWarning(DEBUG_KXMLGUI) << "Index " << index << " is not within range (0 - " << container->actions().count() << ")";
     } else if (index != container->actions().count()) {
         before = container->actions().at(index);    // Insert before indexed action.
     }
