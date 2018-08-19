@@ -1083,10 +1083,10 @@ void KXmlGui_UnitTest::testSpecificApplicationLanguageQLocale()
 #if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
     const QLocale originalSystemLocale = QLocale::system();
 
-    KDEPrivate::setApplicationSpecificLanguage("uk");
+    KDEPrivate::setApplicationSpecificLanguage("ru_RU");
     KDEPrivate::initializeLanguages();
 
-    QCOMPARE(QLocale::system().language(), QLocale::Ukrainian);
+    QCOMPARE(QLocale::system().language(), QLocale::Russian);
 
     KDEPrivate::setApplicationSpecificLanguage("wa");
     KDEPrivate::initializeLanguages();
