@@ -25,6 +25,7 @@
 #include "kmainwindow.h"
 #include "kxmlguiwindow.h"
 #include "kmenumenuhandler_p.h"
+#include "debug.h"
 
 #include <kauthorized.h>
 #include <klocalizedstring.h>
@@ -36,7 +37,6 @@
 #include <QMenu>
 #include <QMenuBar>
 #include <QStatusBar>
-#include <QDebug>
 
 using namespace KDEPrivate;
 
@@ -290,7 +290,7 @@ void KXMLGUIBuilder::removeContainer(QWidget *container, QWidget *parent, QDomEl
             delete static_cast<QStatusBar *>(container);
         }
     } else {
-        qWarning() << "Unhandled container to remove : " << container->metaObject()->className();
+        qCWarning(DEBUG_KXMLGUI) << "Unhandled container to remove : " << container->metaObject()->className();
     }
 }
 
