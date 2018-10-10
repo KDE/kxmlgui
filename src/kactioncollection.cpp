@@ -526,8 +526,6 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
         return;
     }
 
-    QList<QAction *> writeActions = actions();
-
     for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin();
             it != d->actionByName.constEnd(); ++it) {
 
