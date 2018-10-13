@@ -84,7 +84,7 @@ public:
     /**
      * Constructor. Creates a fully featured "About Application" dialog box.
      *
-     * @param aboutData A pointer to a KAboutData object which data
+     * @param aboutData A KAboutData object which data
      *        will be used for filling the dialog.
      * @param parent The parent of the dialog box. You should use the
      *        toplevel window so that the dialog becomes centered.
