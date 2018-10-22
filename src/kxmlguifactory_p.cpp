@@ -210,7 +210,7 @@ void ContainerNode::plugActionList(BuildState &state)
 
 void ContainerNode::plugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt)
 {
-    static const QString &tagActionList = QLatin1String("actionlist");
+    const QString tagActionList = QStringLiteral("actionlist");
 
     const MergingIndex &mergingIdx = *mergingIdxIt;
     if (mergingIdx.clientName != state.clientName) {

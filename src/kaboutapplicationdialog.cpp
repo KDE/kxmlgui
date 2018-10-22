@@ -187,7 +187,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
                 } else {
                     QUrl bugUrl(bugAddress);
                     if (bugUrl.scheme().isEmpty()) {
-                        bugUrl.setScheme(QLatin1String("mailto"));
+                        bugUrl.setScheme(QStringLiteral("mailto"));
                     }
                     bugsLabel->setText(i18n("Please report bugs to <a href=\"%1\">%2</a>.\n",
                                             bugUrl.toString(), bugAddress));
