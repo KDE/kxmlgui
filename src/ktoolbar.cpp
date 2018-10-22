@@ -1219,7 +1219,8 @@ void KToolBar::mousePressEvent(QMouseEvent *event)
 void KToolBar::mouseMoveEvent(QMouseEvent *event)
 {
     if (!toolBarsEditable() || !d->dragAction) {
-        return QToolBar::mouseMoveEvent(event);
+        QToolBar::mouseMoveEvent(event);
+        return;
     }
 
     if ((event->pos() - d->dragStartPosition).manhattanLength() < QApplication::startDragDistance()) {

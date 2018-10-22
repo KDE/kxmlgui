@@ -720,7 +720,8 @@ void KKeySequenceButton::keyPressEvent(QKeyEvent *e)
         KMessageBox::sorry(this,
                            i18n("The key you just pressed is not supported by Qt."),
                            i18n("Unsupported Key"));
-        return d->cancelRecording();
+        d->cancelRecording();
+        return;
     }
 
     uint newModifiers = e->modifiers() & (Qt::ShiftModifier | Qt::ControlModifier | Qt::AltModifier | Qt::MetaModifier | Qt::KeypadModifier);
@@ -736,7 +737,8 @@ void KKeySequenceButton::keyPressEvent(QKeyEvent *e)
 
     // We get events even if recording isn't active.
     if (!d->isRecording) {
-        return QPushButton::keyPressEvent(e);
+        QPushButton::keyPressEvent(e);
+        return;
     }
 
     e->accept();
@@ -802,7 +804,8 @@ void KKeySequenceButton::keyReleaseEvent(QKeyEvent *e)
     }
 
     if (!d->isRecording) {
-        return QPushButton::keyReleaseEvent(e);
+        QPushButton::keyReleaseEvent(e);
+        return;
     }
 
     e->accept();
