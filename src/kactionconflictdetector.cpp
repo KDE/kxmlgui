@@ -33,6 +33,7 @@
 
 class KActionConflictDetector : public QObject
 {
+    Q_OBJECT
 public:
     explicit KActionConflictDetector(QObject *parent = nullptr)
         : QObject(parent)
@@ -66,3 +67,5 @@ void _k_installConflictDetector()
 }
 
 Q_COREAPP_STARTUP_FUNCTION(_k_installConflictDetector)
+
+#include "kactionconflictdetector.moc"

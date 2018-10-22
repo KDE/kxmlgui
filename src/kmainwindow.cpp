@@ -82,6 +82,7 @@ static QStatusBar *internalStatusBar(KMainWindow *mw)
  */
 class DockResizeListener : public QObject
 {
+    Q_OBJECT
 public:
     DockResizeListener(KMainWindow *win);
     ~DockResizeListener() override;
@@ -933,4 +934,4 @@ QString KMainWindow::dbusName() const
 }
 
 #include "moc_kmainwindow.cpp"
-
+#include "kmainwindow.moc"

@@ -25,6 +25,7 @@ namespace KDEPrivate
 
 class KAboutApplicationPersonListView : public QListView
 {
+    Q_OBJECT
 public:
     explicit KAboutApplicationPersonListView(QWidget *parent = nullptr);
 
