@@ -45,7 +45,7 @@ public:
     @param mainWindow - The parent KMainWindow object
     that will provide us with the QAction objects.
     */
-    KMainWindowInterface(KXmlGuiWindow *mainWindow);
+    explicit KMainWindowInterface(KXmlGuiWindow *mainWindow);
     /**
     Destructor
     Cleans up the dcop action proxy object.

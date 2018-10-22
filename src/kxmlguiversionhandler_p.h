@@ -38,7 +38,7 @@
 class KXmlGuiVersionHandler
 {
 public:
-    KXmlGuiVersionHandler(const QStringList &files);
+    explicit KXmlGuiVersionHandler(const QStringList &files);
 
     QString finalFile() const
     {

@@ -51,13 +51,13 @@ public:
      * are allowed to be at the same position.
      * @param shape shape to draw to trigger this gesture
      */
-    KShapeGesture(const QPolygon &shape);
+    explicit KShapeGesture(const QPolygon &shape);
 
     /**
      * Creates a new gesture from a string description.
      * @param description create gesture according to this
      */
-    KShapeGesture(const QString &description);
+    explicit KShapeGesture(const QString &description);
 
     /**
      * Copies the given gesture.
@@ -166,7 +166,7 @@ public:
      * Creates a new gesture from a string description.
      * @param description create gesture according to this
      */
-    KRockerGesture(const QString &description);
+    explicit KRockerGesture(const QString &description);
 
     /**
      * Copies the given gesture.

@@ -41,7 +41,7 @@ class KMenuMenuHandler : public QObject
 {
     Q_OBJECT
 public:
-    KMenuMenuHandler(KXMLGUIBuilder *b);
+    explicit KMenuMenuHandler(KXMLGUIBuilder *b);
     ~KMenuMenuHandler() override {}
     void insertMenu(QMenu *menu);
     bool eventFilter(QObject *watched, QEvent *event) override;

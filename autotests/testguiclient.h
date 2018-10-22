@@ -30,7 +30,7 @@
 class TestGuiClient : public KXMLGUIClient
 {
 public:
-    TestGuiClient(const QByteArray &xml = QByteArray())
+    explicit TestGuiClient(const QByteArray &xml = QByteArray())
         : KXMLGUIClient()
     {
         if (!xml.isNull()) {

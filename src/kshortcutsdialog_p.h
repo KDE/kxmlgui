@@ -157,7 +157,7 @@ class TabConnectedWidget : public QWidget
 {
     Q_OBJECT
 public:
-    TabConnectedWidget(QWidget *parent)
+    explicit TabConnectedWidget(QWidget *parent)
         : QWidget(parent) {}
 protected:
     void paintEvent(QPaintEvent *pe) override;
@@ -232,7 +232,7 @@ class KShortcutSchemesEditor: public QGroupBox
 {
     Q_OBJECT
 public:
-    KShortcutSchemesEditor(KShortcutsDialog *parent);
+    explicit KShortcutSchemesEditor(KShortcutsDialog *parent);
 
     /** @return the currently selected scheme in the editor (may differ from current app's scheme.*/
     QString currentScheme();
@@ -370,8 +370,7 @@ public:
 class KShortcutsEditorPrivate
 {
 public:
-
-    KShortcutsEditorPrivate(KShortcutsEditor *q);
+    explicit KShortcutsEditorPrivate(KShortcutsEditor *q);
 
     void initGUI(KShortcutsEditor::ActionTypes actionTypes, KShortcutsEditor::LetterShortcuts allowLetterShortcuts);
     void appendToView(uint nList, const QString &title = QString());

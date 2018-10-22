@@ -37,7 +37,7 @@ class ToolBarListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    ToolBarListWidget(QWidget *parent = nullptr);
+    explicit ToolBarListWidget(QWidget *parent = nullptr);
 
     void makeVisible(QListWidgetItem *item)
     {

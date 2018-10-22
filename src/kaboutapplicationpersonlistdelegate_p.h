@@ -30,8 +30,8 @@ class KAboutApplicationPersonListDelegate : public KWidgetItemDelegate
 {
     Q_OBJECT
 public:
-    KAboutApplicationPersonListDelegate(QAbstractItemView *itemView,
-                                        QObject *parent = nullptr);
+    explicit KAboutApplicationPersonListDelegate(QAbstractItemView *itemView,
+                                                 QObject *parent = nullptr);
 
     ~KAboutApplicationPersonListDelegate() override {}
 
