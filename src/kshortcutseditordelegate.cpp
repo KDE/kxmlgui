@@ -110,10 +110,11 @@ QSize KShortcutsEditorDelegate::sizeHint(const QStyleOptionViewItem &option,
 }
 
 //slot
-void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
+void KShortcutsEditorDelegate::itemActivated(const QModelIndex &_index)
 {
     //As per our constructor our parent *is* a QTreeWidget
     QTreeWidget *view = static_cast<QTreeWidget *>(parent());
+    QModelIndex index(_index);
 
     KShortcutsEditorItem *item = KShortcutsEditorPrivate::itemFromIndex(view, index);
     if (!item) {
@@ -212,7 +213,7 @@ void KShortcutsEditorDelegate::itemActivated(QModelIndex index)
 }
 
 //slot
-void KShortcutsEditorDelegate::itemCollapsed(QModelIndex index)
+void KShortcutsEditorDelegate::itemCollapsed(const QModelIndex &index)
 {
     if (!m_editingIndex.isValid()) {
         return;
@@ -309,7 +310,7 @@ void KShortcutsEditorDelegate::keySequenceChanged(const QKeySequence &seq)
 }
 
 void KShortcutsEditorDelegate::setCheckActionCollections(
-    const QList<KActionCollection *> checkActionCollections)
+    const QList<KActionCollection *> &checkActionCollections)
 {
     m_checkActionCollections = checkActionCollections;
 }

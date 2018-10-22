@@ -134,7 +134,7 @@ void ShortcutEditWidget::defaultToggled(bool checked)
 }
 
 void ShortcutEditWidget::setCheckActionCollections(
-    const QList<KActionCollection *> checkActionCollections)
+    const QList<KActionCollection *> &checkActionCollections)
 {
     // We just forward them to out KKeySequenceWidget.
     m_customEditor->setCheckActionCollections(checkActionCollections);

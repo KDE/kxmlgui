@@ -108,10 +108,10 @@ public:
      *
      * @see KKeySequenceWidget::setCheckActionCollections
      */
-    void setCheckActionCollections(const QList<KActionCollection *> checkActionCollections);
+    void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
 
 Q_SIGNALS:
-    void shortcutChanged(QVariant, const QModelIndex &);
+    void shortcutChanged(const QVariant &, const QModelIndex &);
 public Q_SLOTS:
     void hiddenBySearchLine(QTreeWidgetItem *, bool);
 protected:
@@ -125,13 +125,13 @@ private:
     QList<KActionCollection *> m_checkActionCollections;
 
 private Q_SLOTS:
-    void itemActivated(QModelIndex index);
+    void itemActivated(const QModelIndex &index);
 
     /**
      * When the user collapses a hole subtree of shortcuts then remove eventually
      * extended items. Else we get that artefact bug. See above.
      */
-    void itemCollapsed(QModelIndex index);
+    void itemCollapsed(const QModelIndex &index);
 
     /**
      * If the user allowed stealing a shortcut we want to be able to undo
@@ -176,7 +176,7 @@ public:
                        bool allowLetterShortcuts);
 
     //! @see KKeySequenceWidget::setCheckActionCollections()
-    void setCheckActionCollections(const QList<KActionCollection *> checkActionCollections);
+    void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
 
     //@{
     //! @see KKeySequenceWidget::checkAgainstStandardShortcuts()

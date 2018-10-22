@@ -297,7 +297,7 @@ void KXMLGUIClient::replaceXMLFile(const QString &xmlfile, const QString &localx
 // In order to preserve this semantics through document mergings,
 // the top or application domain must be propagated to all text elements
 // lacking their own domain attribute.
-static void propagateTranslationDomain(QDomDocument &doc, const QStringList tagNames)
+static void propagateTranslationDomain(QDomDocument &doc, const QStringList &tagNames)
 {
     const QLatin1String attrDomain("translationDomain");
     QDomElement base = doc.documentElement();
