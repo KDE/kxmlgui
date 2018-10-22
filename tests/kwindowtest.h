@@ -1,5 +1,5 @@
-#ifndef testwindow_h
-#define testwindow_h
+#ifndef KWINDOWTEST_H
+#define KWINDOWTEST_H
 
 #include <QTimer>
 #include <QProgressBar>
