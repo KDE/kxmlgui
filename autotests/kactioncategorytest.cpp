@@ -1,5 +1,6 @@
-#include <QtTestWidgets>
 #include "kactioncategorytest.h"
+
+#include <QtTestWidgets>
 
 #include "kactioncollection.h"
 #include "kactioncategory.h"

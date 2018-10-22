@@ -18,13 +18,13 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "kmainwindowtest.h"
+
 #include <QApplication>
 #include <QTimer>
 #include <QLabel>
 #include <QStatusBar>
 #include <QMenuBar>
-
-#include "kmainwindowtest.h"
 
 MainWindow::MainWindow()
 {

@@ -17,8 +17,9 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <QTest>
 #include "kmainwindow_unittest.h"
+
+#include <QTest>
 #include <QEventLoopLocker>
 #include <kmainwindow.h>
 #include <QStatusBar>

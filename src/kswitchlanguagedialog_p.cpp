@@ -19,6 +19,8 @@
  *
  */
 
+#include "kswitchlanguagedialog_p.h"
+
 #include <QApplication>
 #include <QDialogButtonBox>
 #include <QDir>
@@ -35,7 +37,6 @@
 #include <private/qlocale_p.h>
 #endif
 
-#include "kswitchlanguagedialog_p.h"
 
 #include <klanguagebutton.h>
 #include <klocalizedstring.h>

@@ -1,3 +1,5 @@
+#include "kwindowtest.h"
+
 #include <QMessageBox>
 #include <QTextEdit>
 #include <QDir>
@@ -10,7 +12,6 @@
 #include <QStatusBar>
 #include <QComboBox>
 #include <khelpmenu.h>
-#include "kwindowtest.h"
 #include <QLineEdit>
 #include <kxmlguifactory.h>
 #include <kactionmenu.h>

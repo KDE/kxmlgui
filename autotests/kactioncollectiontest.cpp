@@ -1,5 +1,6 @@
-#include <QtTestWidgets>
 #include "kactioncollectiontest.h"
+
+#include <QtTestWidgets>
 #include <QAction>
 #include <QPointer>
 
