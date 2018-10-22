@@ -374,7 +374,7 @@ static inline bool equalstr(const QString &a, const QString &b)
 {
     return a.compare(b, Qt::CaseInsensitive) == 0;
 }
-static inline bool equalstr(const QString &a, const QLatin1String &b)
+static inline bool equalstr(const QString &a, QLatin1String b)
 {
     return a.compare(b, Qt::CaseInsensitive) == 0;
 }
