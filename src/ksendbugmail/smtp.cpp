@@ -131,19 +131,19 @@ void SMTP::setMessageHeader(const QString &header)
     messageHeader = header;
 }
 
-void SMTP::openConnection(void)
+void SMTP::openConnection()
 {
     // qCDebug(DEBUG_KXMLGUI) << "started connect timer";
     connectTimer.setSingleShot(true);
     connectTimer.start(100);
 }
 
-void SMTP::closeConnection(void)
+void SMTP::closeConnection()
 {
     socketClosed();
 }
 
-void SMTP::sendMessage(void)
+void SMTP::sendMessage()
 {
     if (!connected) {
         connectTimerTick();
@@ -162,7 +162,7 @@ void SMTP::sendMessage(void)
     }
 }
 
-void SMTP::connectTimerTick(void)
+void SMTP::connectTimerTick()
 {
     connectTimer.stop();
 //    timeOutTimer.start(timeOut, true);
@@ -189,7 +189,7 @@ void SMTP::connectTimerTick(void)
     // qCDebug(DEBUG_KXMLGUI) << "connected";
 }
 
-void SMTP::connectTimedOut(void)
+void SMTP::connectTimedOut()
 {
     timeOutTimer.stop();
 
@@ -198,7 +198,7 @@ void SMTP::connectTimedOut(void)
     emit error(ConnectTimeout);
 }
 
-void SMTP::interactTimedOut(void)
+void SMTP::interactTimedOut()
 {
     interactTimer.stop();
 

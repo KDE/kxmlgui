@@ -454,7 +454,7 @@ public Q_SLOTS:
      * \endcode
      *
      */
-    void appHelpActivated(void);
+    void appHelpActivated();
 
     /**
      * Tell the main window that it should save its settings when being closed.

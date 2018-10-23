@@ -498,7 +498,7 @@ void KMainWindow::setPlainCaption(const QString &caption)
     setWindowTitle(caption);
 }
 
-void KMainWindow::appHelpActivated(void)
+void KMainWindow::appHelpActivated()
 {
     K_D(KMainWindow);
     if (!d->helpMenu) {
