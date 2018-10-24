@@ -79,7 +79,6 @@ KRulerTest::KRulerTest()
     hruler->setOffset(0);
 
     vruler = new KRuler(Qt::Vertical, mainframe);
-    vruler->setFrameStyle(QFrame::WinPanel | QFrame::Sunken);
     vruler->setOffset(0);
     vruler->setRange(0, 1000);
 
