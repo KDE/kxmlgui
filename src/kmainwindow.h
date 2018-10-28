@@ -719,56 +719,21 @@ inline void kRestoreMainWindows()
             (new T)->restore(n);
         }
     }
-}
+} 
 
 /**
  * Restores the last session.
- * Overloaded method for usage with two different toplevel widget classes.
+ * Overloaded method for usage with multiple different toplevel widget classes.
  *
  * @tparam T0 one toplevel widget class
- * @tparam T1 other toplevel widget class
+ * @tparam T1 explicit other toplevel widget class for disambiguation from base template
+ * @tparam Tn Parameter pack to take 0..n further KMainWindows
  */
-template <typename T0, typename T1>
+template <typename T0, typename T1, typename ...Tn>
 inline void kRestoreMainWindows()
 {
-    const char *classNames[2];
-    classNames[0] = T0::staticMetaObject.className();
-    classNames[1] = T1::staticMetaObject.className();
-    for (int n = 1; KMainWindow::canBeRestored(n); ++n) {
-        const QString className = KMainWindow::classNameOfToplevel(n);
-        if (className == QLatin1String(classNames[0])) {
-            (new T0)->restore(n);
-        } else if (className == QLatin1String(classNames[1])) {
-            (new T1)->restore(n);
-        }
-    }
-}
-
-/**
- * Restores the last session.
- * Overloaded method for usage with three different toplevel widget classes.
- *
- * @tparam T0 one toplevel widget class
- * @tparam T1 other toplevel widget class
- * @tparam T2 yet another toplevel widget class
- */
-template <typename T0, typename T1, typename T2>
-inline void kRestoreMainWindows()
-{
-    const char *classNames[3];
-    classNames[0] = T0::staticMetaObject.className();
-    classNames[1] = T1::staticMetaObject.className();
-    classNames[2] = T2::staticMetaObject.className();
-    for (int n = 1; KMainWindow::canBeRestored(n); ++n) {
-        const QString className = KMainWindow::classNameOfToplevel(n);
-        if (className == QLatin1String(classNames[0])) {
-            (new T0)->restore(n);
-        } else if (className == QLatin1String(classNames[1])) {
-            (new T1)->restore(n);
-        } else if (className == QLatin1String(classNames[2])) {
-            (new T2)->restore(n);
-        }
-    }
+    kRestoreMainWindows<T0>();
+    kRestoreMainWindows<T1, Tn...>();
 }
 /** @}  */
 
