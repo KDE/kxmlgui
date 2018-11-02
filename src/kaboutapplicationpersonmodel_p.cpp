@@ -265,9 +265,6 @@ void KAboutApplicationPersonModel::onAvatarJobFinished(QNetworkReply *reply)    
 
 void KAboutApplicationPersonModel::fetchOcsLinkIcons(int personProfileListIndex)
 {
-    KAboutApplicationPersonProfile profile = m_profileList.value(personProfileListIndex);
-    QList< KAboutApplicationPersonProfileOcsLink > ocsLinks = profile.ocsLinks();
-
     KAboutApplicationPersonIconsJob *job =
         new KAboutApplicationPersonIconsJob(this, personProfileListIndex);
     connect(job, SIGNAL(finished(KAboutApplicationPersonIconsJob*)),
