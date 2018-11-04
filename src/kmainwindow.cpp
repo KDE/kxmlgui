@@ -120,10 +120,10 @@ bool DockResizeListener::eventFilter(QObject *watched, QEvent *event)
 
 KMWSessionManager::KMWSessionManager()
 {
-    connect(qApp, SIGNAL(saveStateRequest(QSessionManager&)),
-            this, SLOT(saveState(QSessionManager&)));
-    connect(qApp, SIGNAL(commitDataRequest(QSessionManager&)),
-            this, SLOT(commitData(QSessionManager&)));
+    connect(qApp, &QGuiApplication::saveStateRequest,
+            this, &KMWSessionManager::saveState);
+    connect(qApp, &QGuiApplication::commitDataRequest,
+            this, &KMWSessionManager::commitData);
 }
 
 KMWSessionManager::~KMWSessionManager()
@@ -369,7 +369,8 @@ void KMainWindowPrivate::setSettingsDirty(CallCompression callCompression)
                 settingsTimer = new QTimer(q);
                 settingsTimer->setInterval(500);
                 settingsTimer->setSingleShot(true);
-                QObject::connect(settingsTimer, SIGNAL(timeout()), q, SLOT(saveAutoSaveSettings()));
+                QObject::connect(settingsTimer, &QTimer::timeout,
+                                 q, &KMainWindow::saveAutoSaveSettings);
             }
             settingsTimer->start();
         } else {
@@ -422,8 +423,8 @@ QMenu *KMainWindow::customHelpMenu(bool showWhatsThis)
     K_D(KMainWindow);
     if (!d->helpMenu) {
         d->helpMenu = new KHelpMenu(this, QString(), showWhatsThis);
-        connect(d->helpMenu, SIGNAL(showAboutApplication()),
-                this, SLOT(showAboutApplication()));
+        connect(d->helpMenu, &KHelpMenu::showAboutApplication,
+                this, &KMainWindow::showAboutApplication);
     }
 
     return d->helpMenu->menu();
@@ -823,12 +824,12 @@ bool KMainWindow::event(QEvent *ev)
         KToolBar *toolbar = qobject_cast<KToolBar *>(event->child());
         QMenuBar *menubar = qobject_cast<QMenuBar *>(event->child());
         if (dock) {
-            connect(dock, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),
-                    this, SLOT(setSettingsDirty()));
-            connect(dock, SIGNAL(visibilityChanged(bool)),
-                    this, SLOT(setSettingsDirty()), Qt::QueuedConnection);
-            connect(dock, SIGNAL(topLevelChanged(bool)),
-                    this, SLOT(setSettingsDirty()));
+            connect(dock, &QDockWidget::dockLocationChanged,
+                    this, &KMainWindow::setSettingsDirty);
+            connect(dock, &QDockWidget::visibilityChanged,
+                    this, &KMainWindow::setSettingsDirty, Qt::QueuedConnection);
+            connect(dock, &QDockWidget::topLevelChanged,
+                    this, &KMainWindow::setSettingsDirty);
 
             // there is no signal emitted if the size of the dock changes,
             // hence install an event filter instead
@@ -850,12 +851,12 @@ bool KMainWindow::event(QEvent *ev)
         KToolBar *toolbar = qobject_cast<KToolBar *>(event->child());
         QMenuBar *menubar = qobject_cast<QMenuBar *>(event->child());
         if (dock) {
-            disconnect(dock, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),
-                       this, SLOT(setSettingsDirty()));
-            disconnect(dock, SIGNAL(visibilityChanged(bool)),
-                       this, SLOT(setSettingsDirty()));
-            disconnect(dock, SIGNAL(topLevelChanged(bool)),
-                       this, SLOT(setSettingsDirty()));
+            disconnect(dock, &QDockWidget::dockLocationChanged,
+                       this, &KMainWindow::setSettingsDirty);
+            disconnect(dock, &QDockWidget::visibilityChanged,
+                       this, &KMainWindow::setSettingsDirty);
+            disconnect(dock, &QDockWidget::topLevelChanged,
+                       this, &KMainWindow::setSettingsDirty);
             dock->removeEventFilter(k_ptr->dockResizeListener);
         } else if (toolbar) {
             toolbar->removeEventFilter(k_ptr->dockResizeListener);

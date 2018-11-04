@@ -159,7 +159,8 @@ void KXmlGuiWindow::configureToolbars()
     if (!d->toolBarEditor) {
         d->toolBarEditor = new KEditToolBar(guiFactory(), this);
         d->toolBarEditor->setAttribute(Qt::WA_DeleteOnClose);
-        connect(d->toolBarEditor, SIGNAL(newToolBarConfig()), SLOT(saveNewToolbarConfig()));
+        connect(d->toolBarEditor, &KEditToolBar::newToolBarConfig,
+                this, &KXmlGuiWindow::saveNewToolbarConfig);
     }
     d->toolBarEditor->show();
 }
@@ -351,9 +352,10 @@ void KXmlGuiWindow::createStandardStatusBarAction()
 {
     K_D(KXmlGuiWindow);
     if (!d->showStatusBarAction) {
-        d->showStatusBarAction = KStandardAction::showStatusbar(this, SLOT(setSettingsDirty()), actionCollection());
+        d->showStatusBarAction = KStandardAction::showStatusbar(this, &KMainWindow::setSettingsDirty, actionCollection());
         QStatusBar *sb = statusBar(); // Creates statusbar if it doesn't exist already.
-        connect(d->showStatusBarAction, SIGNAL(toggled(bool)), sb, SLOT(setVisible(bool)));
+        connect(d->showStatusBarAction, &QAction::toggled,
+                sb, &QWidget::setVisible);
         d->showStatusBarAction->setChecked(sb->isHidden());
     } else {
         // If the language has changed, we'll need to grab the new text and whatsThis

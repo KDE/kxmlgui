@@ -142,8 +142,8 @@ int main(int argc, char **argv)
     SMTP *sm = new SMTP;
     BugMailer bm(sm);
 
-    QObject::connect(sm, SIGNAL(messageSent()), &bm, SLOT(slotSend()));
-    QObject::connect(sm, SIGNAL(error(int)), &bm, SLOT(slotError(int)));
+    QObject::connect(sm, &SMTP::messageSent, &bm, &BugMailer::slotSend);
+    QObject::connect(sm, &SMTP::error, &bm, &BugMailer::slotError);
     sm->setServerHost(server);
     sm->setPort(25);
     sm->setSenderAddress(fromaddr);

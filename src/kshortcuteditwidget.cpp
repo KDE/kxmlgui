@@ -83,12 +83,12 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
 
     setKeySequence(activeSeq);
 
-    connect(m_defaultRadio, SIGNAL(toggled(bool)),
-            this, SLOT(defaultToggled(bool)));
-    connect(m_customEditor, SIGNAL(keySequenceChanged(QKeySequence)),
-            this, SLOT(setCustom(QKeySequence)));
-    connect(m_customEditor, SIGNAL(stealShortcut(QKeySequence,QAction*)),
-            this, SIGNAL(stealShortcut(QKeySequence,QAction*)));
+    connect(m_defaultRadio, &QRadioButton::toggled,
+            this, &ShortcutEditWidget::defaultToggled);
+    connect(m_customEditor, &KKeySequenceWidget::keySequenceChanged,
+            this, &ShortcutEditWidget::setCustom);
+    connect(m_customEditor, &KKeySequenceWidget::stealShortcut,
+            this, &ShortcutEditWidget::stealShortcut);
 #if HAVE_GLOBALACCEL
     connect(KGlobalAccel::self(), &KGlobalAccel::globalShortcutChanged,
             this, [this](QAction *action, const QKeySequence &seq) {

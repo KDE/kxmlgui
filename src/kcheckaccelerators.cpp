@@ -104,7 +104,7 @@ KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck
     copyWidgetTextCommand = cg.readEntry("CopyWidgetTextCommand", QString());
 
     parent->installEventFilter(this);
-    connect(&autoCheckTimer, SIGNAL(timeout()), SLOT(autoCheckSlot()));
+    connect(&autoCheckTimer, &QTimer::timeout, this, &KCheckAccelerators::autoCheckSlot);
 }
 
 bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
@@ -188,7 +188,8 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
             } else {
                 QProcess *script = new QProcess(this);
                 script->start(copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain())));
-                connect(script, SIGNAL(finished(int,QProcess::ExitStatus)), script, SLOT(deleteLater()));
+                connect(script, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+                        script, &QObject::deleteLater);
             }
             e->accept();
             return true;
@@ -236,12 +237,12 @@ void KCheckAccelerators::createDialog(QWidget *actWin, bool automatic)
     QCheckBox *disableAutoCheck = nullptr;
     if (automatic)  {
         disableAutoCheck = new QCheckBox(i18nc("@option:check", "Disable automatic checking"), drklash);
-        connect(disableAutoCheck, SIGNAL(toggled(bool)), SLOT(slotDisableCheck(bool)));
+        connect(disableAutoCheck, &QCheckBox::toggled, this, &KCheckAccelerators::slotDisableCheck);
         layout->addWidget(disableAutoCheck);
     }
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, drklash);
     layout->addWidget(buttonBox);
-    connect(buttonBox, SIGNAL(rejected()), drklash, SLOT(close()));
+    connect(buttonBox, &QDialogButtonBox::rejected, drklash, &QDialog::close);
     if (disableAutoCheck) {
         disableAutoCheck->setFocus();
     } else {

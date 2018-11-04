@@ -50,7 +50,8 @@ KGestureMap *KGestureMap::self()
 KGestureMap::KGestureMap()
 {
     m_gestureTimeout.setSingleShot(true);
-    connect(&m_gestureTimeout, SIGNAL(timeout()), this, SLOT(stopAcquisition()));
+    connect(&m_gestureTimeout, &QTimer::timeout,
+            this, &KGestureMap::stopAcquisition);
     //It would be nice to install the filter on demand. Unfortunately,
     //undesired behavior might result due to changing invocation
     //orders of different event filters.

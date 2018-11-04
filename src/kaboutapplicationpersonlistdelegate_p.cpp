@@ -82,10 +82,10 @@ QList< QWidget *> KAboutApplicationPersonListDelegate::createItemWidgets(const Q
 
     list.append(socialLinks);
 
-    connect(mainLinks, SIGNAL(actionTriggered(QAction*)),
-            this, SLOT(launchUrl(QAction*)));
-    connect(socialLinks, SIGNAL(actionTriggered(QAction*)),
-            this, SLOT(launchUrl(QAction*)));
+    connect(mainLinks, &QToolBar::actionTriggered,
+            this, &KAboutApplicationPersonListDelegate::launchUrl);
+    connect(socialLinks, &QToolBar::actionTriggered,
+            this, &KAboutApplicationPersonListDelegate::launchUrl);
 
     return list;
 }

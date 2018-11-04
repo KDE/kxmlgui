@@ -181,14 +181,15 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
     layout->addWidget(buttonBox);
 
-    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), SIGNAL(clicked()),
-            d->m_keyChooser, SLOT(allDefault()));
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QAbstractButton::clicked,
+            d->m_keyChooser, &KShortcutsEditor::allDefault);
     connect(d->m_detailsButton, SIGNAL(clicked()), this, SLOT(toggleDetails()));
-    connect(printButton, SIGNAL(clicked()), d->m_keyChooser, SLOT(printShortcuts()));
+    connect(printButton, &QPushButton::clicked,
+            d->m_keyChooser, &KShortcutsEditor::printShortcuts);
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(undoChanges()));
 
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     KConfigGroup group(KSharedConfig::openConfig(), "KShortcutsDialog Settings");
     resize(group.readEntry("Dialog Size", sizeHint()));
@@ -260,4 +261,3 @@ void KShortcutsDialog::exportConfiguration(const QString &path) const
 }
 
 #include "moc_kshortcutsdialog.cpp"
-#include "moc_kshortcutsdialog_p.cpp"

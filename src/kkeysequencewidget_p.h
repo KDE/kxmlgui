@@ -22,6 +22,8 @@
 
 #include <QPushButton>
 
+class KKeySequenceWidgetPrivate;
+
 class KKeySequenceButton: public QPushButton
 {
     Q_OBJECT

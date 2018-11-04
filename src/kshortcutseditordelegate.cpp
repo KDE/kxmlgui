@@ -61,10 +61,10 @@ KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool all
 
     // Listen to activation signals
     // connect(parent, SIGNAL(activated(QModelIndex)), this, SLOT(itemActivated(QModelIndex)));
-    connect(parent, SIGNAL(clicked(QModelIndex)), this, SLOT(itemActivated(QModelIndex)));
+    connect(parent, &QAbstractItemView::clicked, this, &KShortcutsEditorDelegate::itemActivated);
 
     // Listen to collapse signals
-    connect(parent, SIGNAL(collapsed(QModelIndex)), this, SLOT(itemCollapsed(QModelIndex)));
+    connect(parent, &QTreeView::collapsed, this, &KShortcutsEditorDelegate::itemCollapsed);
 }
 
 void KShortcutsEditorDelegate::stealShortcut(
@@ -183,10 +183,10 @@ void KShortcutsEditorDelegate::itemActivated(const QModelIndex &_index)
 
             editor->setCheckActionCollections(m_checkActionCollections);
 
-            connect(m_editor, SIGNAL(keySequenceChanged(QKeySequence)),
-                    this, SLOT(keySequenceChanged(QKeySequence)));
-            connect(m_editor, SIGNAL(stealShortcut(QKeySequence,QAction*)),
-                    this, SLOT(stealShortcut(QKeySequence,QAction*)));
+            connect(editor, &ShortcutEditWidget::keySequenceChanged,
+                    this, &KShortcutsEditorDelegate::keySequenceChanged);
+            connect(editor, &ShortcutEditWidget::stealShortcut,
+                    this, &KShortcutsEditorDelegate::stealShortcut);
 
         } else if (column == RockerGesture) {
             m_editor = new QLabel(QStringLiteral("A lame placeholder"), viewport);

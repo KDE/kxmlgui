@@ -169,7 +169,8 @@ QMenu *KHelpMenu::menu()
 {
     if (!d->mMenu) {
         d->mMenu = new QMenu(d->mParent);
-        connect(d->mMenu, SIGNAL(destroyed()), this, SLOT(menuDestroyed()));
+        connect(d->mMenu, &QObject::destroyed,
+                this, &KHelpMenu::menuDestroyed);
 
         d->mMenu->setTitle(i18n("&Help"));
 
@@ -266,7 +267,8 @@ void KHelpMenu::aboutApplication()
     } else { // if (d->mAboutData)
         if (!d->mAboutApp) {
             d->mAboutApp = new KAboutApplicationDialog(d->mAboutData, d->mParent);
-            connect(d->mAboutApp, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
+            connect(d->mAboutApp, &QDialog::finished,
+                    this, &KHelpMenu::dialogFinished);
         }
         d->mAboutApp->show();
     }
@@ -318,7 +320,8 @@ void KHelpMenu::aboutKDE()
 {
     if (!d->mAboutKDE) {
         d->mAboutKDE = new KAboutKdeDialog(d->mParent);
-        connect(d->mAboutKDE, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
+        connect(d->mAboutKDE, &QDialog::finished,
+                this, &KHelpMenu::dialogFinished);
     }
     d->mAboutKDE->show();
 }
@@ -327,7 +330,8 @@ void KHelpMenu::reportBug()
 {
     if (!d->mBugReport) {
         d->mBugReport = new KBugReport(d->mAboutData, d->mParent);
-        connect(d->mBugReport, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
+        connect(d->mBugReport, &QDialog::finished,
+                this, &KHelpMenu::dialogFinished);
     }
     d->mBugReport->show();
 }
@@ -336,7 +340,8 @@ void KHelpMenu::switchApplicationLanguage()
 {
     if (!d->mSwitchApplicationLanguage) {
         d->mSwitchApplicationLanguage = new KSwitchLanguageDialog(d->mParent);
-        connect(d->mSwitchApplicationLanguage, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
+        connect(d->mSwitchApplicationLanguage, &QDialog::finished,
+                this, &KHelpMenu::dialogFinished);
     }
     d->mSwitchApplicationLanguage->show();
 }
@@ -348,7 +353,7 @@ void KHelpMenu::donate()
 
 void KHelpMenu::dialogFinished()
 {
-    QTimer::singleShot(0, this, SLOT(timerExpired()));
+    QTimer::singleShot(0, this, &KHelpMenu::timerExpired);
 }
 
 void KHelpMenu::timerExpired()

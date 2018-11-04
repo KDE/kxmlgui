@@ -330,11 +330,13 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     d->setComponentForAction(action);
 
     if (d->connectHovered) {
-        connect(action, SIGNAL(hovered()), SLOT(slotActionHovered()));
+        connect(action, &QAction::hovered,
+                this, &KActionCollection::slotActionHovered);
     }
 
     if (d->connectTriggered) {
-        connect(action, SIGNAL(triggered(bool)), SLOT(slotActionTriggered()));
+        connect(action, &QAction::triggered,
+                this, &KActionCollection::slotActionTriggered);
     }
 
     emit inserted(action);
@@ -764,7 +766,8 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
         if (!d->connectHovered) {
             d->connectHovered = true;
             Q_FOREACH (QAction *action, actions()) {
-                connect(action, SIGNAL(hovered()), SLOT(slotActionHovered()));
+                connect(action, &QAction::hovered,
+                        this, &KActionCollection::slotActionHovered);
             }
         }
 
@@ -772,7 +775,8 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
         if (!d->connectTriggered) {
             d->connectTriggered = true;
             Q_FOREACH (QAction *action, actions()) {
-                connect(action, SIGNAL(triggered(bool)), SLOT(slotActionTriggered()));
+                connect(action, &QAction::triggered,
+                        this, &KActionCollection::slotActionTriggered);
             }
         }
     }

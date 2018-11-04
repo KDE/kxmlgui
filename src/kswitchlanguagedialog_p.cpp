@@ -196,7 +196,8 @@ KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
 
     QPushButton *addLangButton = new QPushButton(i18n("Add Fallback Language"), this);
     addLangButton->setToolTip(i18n("Adds one more language which will be used if other translations do not contain a proper translation."));
-    connect(addLangButton, SIGNAL(clicked()), this, SLOT(slotAddLanguageButton()));
+    connect(addLangButton, &QPushButton::clicked,
+            this, &KSwitchLanguageDialog::slotAddLanguageButton);
     addButtonHorizontalLayout->addWidget(addLangButton);
     addButtonHorizontalLayout->addStretch();
 
@@ -212,11 +213,11 @@ KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
 
     topLayout->addWidget(buttonBox);
 
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(slotOk()));
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
-    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), SIGNAL(clicked()),
-            this, SLOT(slotDefault()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &KSwitchLanguageDialog::slotOk);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked,
+            this, &KSwitchLanguageDialog::slotDefault);
 }
 
 KSwitchLanguageDialog::~KSwitchLanguageDialog()
@@ -410,12 +411,8 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
 
     languageButton->setCurrentItem(languageCode);
 
-    QObject::connect(
-        languageButton,
-        SIGNAL(activated(QString)),
-        p,
-        SLOT(languageOnButtonChanged(QString))
-    );
+    QObject::connect(languageButton, &KLanguageButton::activated,
+                     p, &KSwitchLanguageDialog::languageOnButtonChanged);
 
     LanguageRowData languageRowData;
     QPushButton *removeButton = nullptr;
@@ -423,12 +420,8 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
     if (!primaryLanguage) {
         removeButton = new QPushButton(i18n("Remove"), p);
 
-        QObject::connect(
-            removeButton,
-            SIGNAL(clicked()),
-            p,
-            SLOT(removeButtonClicked())
-        );
+        QObject::connect(removeButton, &QPushButton::clicked,
+                         p, &KSwitchLanguageDialog::removeButtonClicked);
     }
 
     languageButton->setToolTip(primaryLanguage

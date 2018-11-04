@@ -48,7 +48,8 @@ KMenuMenuHandler::KMenuMenuHandler(KXMLGUIBuilder *builder)
     : QObject(), m_builder(builder), m_popupMenu(nullptr), m_popupAction(nullptr), m_contextMenu(nullptr)
 {
     m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
-    connect(m_toolbarAction, SIGNAL(triggered(int)), this, SLOT(slotAddToToolBar(int)));
+    connect(m_toolbarAction, &QAction::triggered,
+            this, &KMenuMenuHandler::slotAddToToolBar);
 }
 
 void KMenuMenuHandler::insertMenu(QMenu *popup)
@@ -131,8 +132,8 @@ void KMenuMenuHandler::slotSetShortcut()
 
     QDialogButtonBox box(&dialog);
     box.setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    connect(&box, SIGNAL(accepted()), &dialog, SLOT(accept()));
-    connect(&box, SIGNAL(rejected()), &dialog, SLOT(reject()));
+    connect(&box, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(&box, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
     dialog.layout()->addWidget(&box);
 
     KActionCollection *parentCollection = nullptr;
@@ -229,7 +230,7 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
     m_popupAction = action;
 
     m_contextMenu = new QMenu;
-    m_contextMenu->addAction(i18n("Configure Shortcut..."), this, SLOT(slotSetShortcut()));
+    m_contextMenu->addAction(i18n("Configure Shortcut..."), this, &KMenuMenuHandler::slotSetShortcut);
 
     KMainWindow *window = qobject_cast<KMainWindow *>(m_builder->widget());
     if (window) {

@@ -89,19 +89,19 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 
     QMenu *moreActionsMenu = new QMenu(this);
     moreActionsMenu->addAction(i18n("Save shortcuts to scheme"),
-                               this, SLOT(saveAsDefaultsForScheme()));
+                               this, &KShortcutSchemesEditor::saveAsDefaultsForScheme);
     moreActionsMenu->addAction(i18n("Export Scheme..."),
-                               this, SLOT(exportShortcutsScheme()));
+                               this, &KShortcutSchemesEditor::exportShortcutsScheme);
     moreActionsMenu->addAction(i18n("Import Scheme..."),
-                               this, SLOT(importShortcutsScheme()));
+                               this, &KShortcutSchemesEditor::importShortcutsScheme);
     moreActions->setMenu(moreActionsMenu);
 
     l->addStretch(1);
 
-    connect(m_schemesList, SIGNAL(activated(QString)),
-            this, SIGNAL(shortcutsSchemeChanged(QString)));
-    connect(m_newScheme, SIGNAL(clicked()), this, SLOT(newScheme()));
-    connect(m_deleteScheme, SIGNAL(clicked()), this, SLOT(deleteScheme()));
+    connect(m_schemesList, QOverload<const QString &>::of(&QComboBox::activated),
+            this, &KShortcutSchemesEditor::shortcutsSchemeChanged);
+    connect(m_newScheme, &QPushButton::clicked, this, &KShortcutSchemesEditor::newScheme);
+    connect(m_deleteScheme, &QPushButton::clicked, this, &KShortcutSchemesEditor::deleteScheme);
     updateDeleteButton();
 }
 

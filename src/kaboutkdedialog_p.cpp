@@ -146,8 +146,8 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox;
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(titleWidget);

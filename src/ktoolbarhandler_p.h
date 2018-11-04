@@ -60,11 +60,13 @@ public:
 public Q_SLOTS:
     void setupActions();
 
+private Q_SLOTS:
+    void clientAdded(KXMLGUIClient *client);
+
 private:
     class Private;
     Private *const d;
 
-    Q_PRIVATE_SLOT(d, void clientAdded(KXMLGUIClient *))
 };
 
 } // namespace KDEPrivate

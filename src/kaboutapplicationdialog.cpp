@@ -287,8 +287,8 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox;
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, SIGNAL(accepted()), q, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, q, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
 
     //And we jam everything together in a layout...
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -327,8 +327,8 @@ void KAboutApplicationDialog::Private::_k_showLicense(const QString &number)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, SIGNAL(accepted()), dialog, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), dialog, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     layout->addWidget(buttonBox);
 
     // try to set up the dialog such that the full width of the

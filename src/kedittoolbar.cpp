@@ -353,11 +353,12 @@ IconTextEditDialog::IconTextEditDialog(QWidget *parent)
 
     m_buttonBox = new QDialogButtonBox(this);
     m_buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    connect(m_buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(m_buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(m_buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     layout->addWidget(m_buttonBox);
 
-    connect(m_lineEdit, SIGNAL(textChanged(QString)), SLOT(slotTextChanged(QString)));
+    connect(m_lineEdit, &QLineEdit::textChanged,
+            this, &IconTextEditDialog::slotTextChanged);
 
     m_lineEdit->setFocus();
     setFixedHeight(sizeHint().height());
@@ -617,7 +618,7 @@ void KEditToolBarPrivate::init()
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
     q->connect(m_buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(_k_slotButtonClicked(QAbstractButton*)));
-    q->connect(m_buttonBox, SIGNAL(rejected()), SLOT(reject()));
+    QObject::connect(m_buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
     m_layout->addWidget(m_buttonBox);
 
     q->connect(m_widget, SIGNAL(enableOk(bool)), SLOT(_k_acceptOK(bool)));

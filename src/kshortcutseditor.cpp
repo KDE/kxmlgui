@@ -96,7 +96,7 @@ void KShortcutsEditor::clearCollections()
     d->delegate->contractAll();
     d->ui.list->clear();
     d->actionCollections.clear();
-    QTimer::singleShot(0, this, SLOT(resizeColumns()));
+    QTimer::singleShot(0, this, &KShortcutsEditor::resizeColumns);
 }
 
 void KShortcutsEditor::addCollection(KActionCollection *collection, const QString &title)
@@ -156,7 +156,7 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     // reenable updating
     setUpdatesEnabled(true);
 
-    QTimer::singleShot(0, this, SLOT(resizeColumns()));
+    QTimer::singleShot(0, this, &KShortcutsEditor::resizeColumns);
 }
 
 void KShortcutsEditor::clearConfiguration()
@@ -326,8 +326,8 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     QObject::connect(delegate, SIGNAL(shortcutChanged(QVariant,QModelIndex)),
                      q, SLOT(capturedShortcut(QVariant,QModelIndex)));
     //hide the editor widget chen its item becomes hidden
-    QObject::connect(ui.searchFilter->searchLine(), SIGNAL(hiddenChanged(QTreeWidgetItem*,bool)),
-                     delegate, SLOT(hiddenBySearchLine(QTreeWidgetItem*,bool)));
+    QObject::connect(ui.searchFilter->searchLine(), &KTreeWidgetSearchLine::hiddenChanged,
+                     delegate, &KShortcutsEditorDelegate::hiddenBySearchLine);
 
     ui.searchFilter->setFocus();
 }

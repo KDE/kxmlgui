@@ -177,8 +177,8 @@ public:
      * know when that status (hidden/shown) of the statusbar has changed.
      * For example:
      * @code
-     * connect(action, SIGNAL(activated()),
-     *         kmainwindow, SLOT(setSettingsDirty()));
+     * connect(action, &QAction::triggered,
+     *         kmainwindow, &KMainWindow::setSettingsDirty);
      * @endcode
      * Otherwise the status (hidden/show) of the statusbar might not be saved
      * by KMainWindow.

@@ -52,12 +52,12 @@ SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
 
     // qCDebug(DEBUG_KXMLGUI) << "SMTP object created";
 
-    connect(&connectTimer, SIGNAL(timeout()), this, SLOT(connectTimerTick()));
-    connect(&timeOutTimer, SIGNAL(timeout()), this, SLOT(connectTimedOut()));
-    connect(&interactTimer, SIGNAL(timeout()), this, SLOT(interactTimedOut()));
+    connect(&connectTimer, &QTimer::timeout, this, &SMTP::connectTimerTick);
+    connect(&timeOutTimer, &QTimer::timeout, this, &SMTP::connectTimedOut);
+    connect(&interactTimer, &QTimer::timeout, this, &SMTP::interactTimedOut);
 
     // some sendmail will give 'duplicate helo' error, quick fix for now
-    connect(this, SIGNAL(messageSent()), SLOT(closeConnection()));
+    connect(this, &SMTP::messageSent, this, &SMTP::closeConnection);
 }
 
 SMTP::~SMTP()
@@ -181,10 +181,12 @@ void SMTP::connectTimerTick()
     state = Init;
     serverState = None;
 
-    connect(sock, SIGNAL(readyRead()), this, SLOT(socketReadyToRead()));
-    connect(sock, SIGNAL(error(QAbstractSocket::SocketError)), this,
-            SLOT(socketError(QAbstractSocket::SocketError)));
-    connect(sock, SIGNAL(disconnected()), this, SLOT(socketClosed()));
+    connect(sock, &QIODevice::readyRead,
+            this, &SMTP::socketReadyToRead);
+    connect(sock, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),
+            this, &SMTP::socketError);
+    connect(sock, &QAbstractSocket::disconnected,
+            this, &SMTP::socketClosed);
     timeOutTimer.stop();
     // qCDebug(DEBUG_KXMLGUI) << "connected";
 }

@@ -253,8 +253,8 @@ KKeySequenceWidget::KKeySequenceWidget(QWidget *parent)
 {
     d->init();
     setFocusProxy(d->keyButton);
-    connect(d->keyButton, SIGNAL(clicked()), this, SLOT(captureKeySequence()));
-    connect(d->clearButton, SIGNAL(clicked()), this, SLOT(clearKeySequence()));
+    connect(d->keyButton, &KKeySequenceButton::clicked, this, &KKeySequenceWidget::captureKeySequence);
+    connect(d->clearButton, &QToolButton::clicked, this, &KKeySequenceWidget::clearKeySequence);
     connect(&d->modifierlessTimeout, SIGNAL(timeout()), this, SLOT(doneRecording()));
     //TODO: how to adopt style changes at runtime?
     /*QFont modFont = d->clearButton->font();
@@ -859,4 +859,3 @@ bool KKeySequenceWidgetPrivate::isOkWhenModifierless(int keyQt)
 }
 
 #include "moc_kkeysequencewidget.cpp"
-#include "moc_kkeysequencewidget_p.cpp"

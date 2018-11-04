@@ -252,16 +252,16 @@ void KToolBar::Private::init(bool readConfig, bool _isMainToolBar)
 
     if (q->mainWindow()) {
         // Get notified when settings change
-        connect(q, SIGNAL(allowedAreasChanged(Qt::ToolBarAreas)),
-                q->mainWindow(), SLOT(setSettingsDirty()));
-        connect(q, SIGNAL(iconSizeChanged(QSize)),
-                q->mainWindow(), SLOT(setSettingsDirty()));
-        connect(q, SIGNAL(toolButtonStyleChanged(Qt::ToolButtonStyle)),
-                q->mainWindow(), SLOT(setSettingsDirty()));
-        connect(q, SIGNAL(movableChanged(bool)),
-                q->mainWindow(), SLOT(setSettingsDirty()));
-        connect(q, SIGNAL(orientationChanged(Qt::Orientation)),
-                q->mainWindow(), SLOT(setSettingsDirty()));
+        connect(q, &QToolBar::allowedAreasChanged,
+                q->mainWindow(), &KMainWindow::setSettingsDirty);
+        connect(q, &QToolBar::iconSizeChanged,
+                q->mainWindow(), &KMainWindow::setSettingsDirty);
+        connect(q, &QToolBar::toolButtonStyleChanged,
+                q->mainWindow(), &KMainWindow::setSettingsDirty);
+        connect(q, &QToolBar::movableChanged,
+                q->mainWindow(), &KMainWindow::setSettingsDirty);
+        connect(q, &QToolBar::orientationChanged,
+                q->mainWindow(), &KMainWindow::setSettingsDirty);
     }
 
     if (!KAuthorized::authorize(QStringLiteral("movable_toolbars"))) {
@@ -272,8 +272,8 @@ void KToolBar::Private::init(bool readConfig, bool _isMainToolBar)
 
     q->toggleViewAction()->setEnabled(KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar")));
 
-    connect(q, SIGNAL(movableChanged(bool)),
-            q, SLOT(slotMovableChanged(bool)));
+    connect(q, &QToolBar::movableChanged,
+            q, &KToolBar::slotMovableChanged);
 
     q->setAcceptDrops(true);
 
