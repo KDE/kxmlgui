@@ -509,7 +509,7 @@ public:
 
     //QValueList<QAction*> m_actionList;
     KActionCollection *m_collection;
-    KEditToolBarWidget *m_widget;
+    KEditToolBarWidget * const m_widget;
     KXMLGUIFactory *m_factory;
     QString m_componentName;
 
