@@ -53,16 +53,17 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     about->setOpenExternalLinks(true);
     about->setTextInteractionFlags(Qt::TextBrowserInteraction);
     about->setText(i18n("<html>"
-                        "<b>KDE</b> is a world-wide network of software engineers, artists, writers, translators and facilitators "
-                        "who are committed to <a href=\"%1\">Free Software</a> development. "
-                        "This community has created hundreds of Free Software applications as part of the KDE "
-                        "frameworks, workspaces and applications.<br /><br />"
-                        "KDE is a cooperative enterprise in which no single entity controls the "
-                        "efforts or products of KDE to the exclusion of others. Everyone is welcome to join and "
-                        "contribute to KDE, including you.<br /><br />"
-                        "Visit <a href=\"%2\">%2</a> for "
+                        "<b>KDE</b> is a world-wide community of software engineers, artists, writers, "
+                        "translators and creators who are committed to <a href=\"%1\">Free Software</a> "
+                        "development. KDE produces the Plasma desktop environment, hundreds of applications, "
+                        "and the many software libraries that support them.<br /><br />"
+                        "KDE is a cooperative enterprise: no single entity controls its direction or products. "
+                        "Instead, we work together to achieve the common goal of building the world's finest "
+                        "Free Software. Everyone is welcome to <a href=\"%2\">join and contribute</a> to KDE, including you.<br /><br />"
+                        "Visit <a href=\"%3\">%3</a> for "
                         "more information about the KDE community and the software we produce.</html>",
-                        QStringLiteral("http://www.gnu.org/philosophy/free-sw.html"),
+                        QStringLiteral("https://www.gnu.org/philosophy/free-sw.html"),
+                        QStringLiteral("https://community.kde.org/Get_Involved"),
                         QStringLiteral("https://www.kde.org/")));
 
     QLabel *report = new QLabel;
