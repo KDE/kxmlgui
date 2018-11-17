@@ -33,9 +33,7 @@
 #include <QSharedPointer>
 #include <QStandardPaths>
 #include <QDebug>
-#if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
 #include <private/qlocale_p.h>
-#endif
 
 
 #include <klanguagebutton.h>
@@ -93,7 +91,6 @@ void initializeLanguages()
         } else {
             qputenv("LANGUAGE", languageCode + ':' + languages);
         }
-#if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
         // Ideally setting the LANGUAGE would change the default QLocale too
         // but unfortunately this is too late since the QCoreApplication constructor
         // already created a QLocale at this stage so we need to set the reset it
@@ -101,7 +98,6 @@ void initializeLanguages()
         // this is highly dependant on Qt internals, so may break, but oh well
         QSystemLocale *dummy = new QSystemLocale();
         delete dummy;
-#endif
     }
 }
 
