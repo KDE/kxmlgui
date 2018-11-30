@@ -615,7 +615,7 @@ void KToolBar::Private::slotContextAboutToShow()
         kmw->setupToolbarMenuActions();
         // Only allow hiding a toolbar if the action is also plugged somewhere else (e.g. menubar)
         QAction *tbAction = kmw->toolBarMenuAction();
-        if (!q->toolBarsLocked() && tbAction && tbAction->associatedWidgets().count() > 0) {
+        if (!q->toolBarsLocked() && tbAction && !tbAction->associatedWidgets().isEmpty()) {
             context->addAction(tbAction);
         }
     }

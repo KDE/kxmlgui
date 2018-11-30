@@ -42,7 +42,7 @@ QStringList KMainWindowInterface::actions()
     QStringList tmp_actions;
     QList<QAction *> lst = m_MainWindow->actionCollection()->actions();
     foreach (QAction *it, lst) {
-        if (it->associatedWidgets().count() > 0) {
+        if (!it->associatedWidgets().isEmpty()) {
             tmp_actions.append(it->objectName());
         }
     }
