@@ -80,10 +80,44 @@ public Q_SLOTS:
 
 static void startupFunc()
 {
+    // Static because in some cases this is called multiple times
+    // but if an application had any of the bad cases we always want
+    // to skip the check
+    static bool doCheckAccelerators = true;
+
+    if (!doCheckAccelerators) {
+        return;
+    }
+
+    QCoreApplication *app = QCoreApplication::instance();
+    if (!app) {
+        // We're being loaded by something that doesn't have a QCoreApplication
+        // this would probably crash at some later point since we do use qApp->
+        // quite a lot, so skip the magic
+        doCheckAccelerators = false;
+        return;
+    }
+
+    if (!QCoreApplication::startingUp()) {
+        // If the app has already started, this means we're not being run as part of
+        // qt_call_pre_routines, which most probably means that we're being run as part
+        // of KXmlGui being loaded as part of some plugin of the app, so don't
+        // do any magic
+        doCheckAccelerators = false;
+        return;
+    }
+
+    if (!QCoreApplication::eventDispatcher()) {
+        // We are called with event dispatcher being null when KXmlGui is being loaded
+        // through plasma-integration instead of being linked to the app (i.e. QtCreator vs Okular)
+        // For apps that don't link directly to KXmlGui do not do the accelerator magic
+        doCheckAccelerators = false;
+        return;
+    }
+
+    KCheckAcceleratorsInitializer *initializer = new KCheckAcceleratorsInitializer(app);
     // Call initiateIfNeeded once we're in the event loop
     // This is to prevent using KSharedConfig before main() can set the app name
-    QCoreApplication *app = QCoreApplication::instance();
-    KCheckAcceleratorsInitializer *initializer = new KCheckAcceleratorsInitializer(app);
     QMetaObject::invokeMethod(initializer, "initiateIfNeeded", Qt::QueuedConnection);
 }
 
