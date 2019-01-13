@@ -114,6 +114,9 @@ struct ContainerNode {
                   const QStringList &containerTags = QStringList());
     ~ContainerNode();
 
+    ContainerNode(const ContainerNode &) = delete;
+    ContainerNode& operator=(const ContainerNode &) = delete;
+
     ContainerNode *parent;
     KXMLGUIClient *client;
     KXMLGUIBuilder *builder;
