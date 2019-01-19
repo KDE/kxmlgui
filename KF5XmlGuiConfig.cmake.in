@@ -3,7 +3,9 @@
 set(XMLGUI_DBUS_INTERFACES_DIR "@PACKAGE_KDE_INSTALL_DBUSINTERFACEDIR@")
 
 include(CMakeFindDependencyMacro)
-find_dependency(Qt5DBus @REQUIRED_QT_VERSION@)
+if (@HAVE_DBUS@)
+  find_dependency(Qt5DBus @REQUIRED_QT_VERSION@)
+endif()
 find_dependency(Qt5Widgets @REQUIRED_QT_VERSION@)
 find_dependency(Qt5Xml @REQUIRED_QT_VERSION@)
 

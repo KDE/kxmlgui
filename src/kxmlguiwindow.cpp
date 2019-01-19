@@ -29,7 +29,9 @@
 #include "kmainwindow_p.h"
 #include "kmessagebox.h"
 #include "kactioncollection.h"
+#ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
+#endif
 #include "ktoolbarhandler_p.h"
 #include "kxmlguifactory.h"
 #include "kedittoolbar.h"
@@ -37,7 +39,9 @@
 #include "ktoolbar.h"
 
 #include <QCloseEvent>
+#ifdef QT_DBUS_LIB
 #include <QDBusConnection>
+#endif
 #include <QDomDocument>
 #include <QLayout>
 #include <QMenuBar>
@@ -87,7 +91,9 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
     d->toolBarHandler = nullptr;
     d->showStatusBarAction = nullptr;
     d->factory = nullptr;
+#ifdef QT_DBUS_LIB
     new KMainWindowInterface(this);
+#endif
 }
 
 QAction *KXmlGuiWindow::toolBarMenuAction()
@@ -118,12 +124,14 @@ bool KXmlGuiWindow::event(QEvent *ev)
 {
     bool ret = KMainWindow::event(ev);
     if (ev->type() == QEvent::Polish) {
+#ifdef QT_DBUS_LIB
         QDBusConnection::sessionBus().registerObject(dbusName() + QStringLiteral("/actions"), actionCollection(),
                 QDBusConnection::ExportScriptableSlots |
                 QDBusConnection::ExportScriptableProperties |
                 QDBusConnection::ExportNonScriptableSlots |
                 QDBusConnection::ExportNonScriptableProperties |
                 QDBusConnection::ExportChildObjects);
+#endif
     }
     return ret;
 }

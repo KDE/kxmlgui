@@ -38,8 +38,10 @@
 #include <QMouseEvent>
 #include <QToolButton>
 #include <QDomElement>
+#ifdef QT_DBUS_LIB
 #include <QDBusConnection>
 #include <QDBusMessage>
+#endif
 #include <QDebug>
 
 #include <kauthorized.h>
@@ -277,8 +279,10 @@ void KToolBar::Private::init(bool readConfig, bool _isMainToolBar)
 
     q->setAcceptDrops(true);
 
+#ifdef QT_DBUS_LIB
     QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"),
                                           QStringLiteral("styleChanged"), q, SLOT(slotAppearanceChanged()));
+#endif
     connect(KIconLoader::global(), SIGNAL(iconLoaderSettingsChanged()),
             q, SLOT(slotAppearanceChanged()));
 }
@@ -1399,8 +1403,10 @@ bool KToolBar::toolBarsLocked()
 
 void KToolBar::emitToolbarStyleChanged()
 {
+#ifdef QT_DBUS_LIB
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"), QStringLiteral("styleChanged"));
     QDBusConnection::sessionBus().send(message);
+#endif
 }
 
 #include "moc_ktoolbar.cpp"

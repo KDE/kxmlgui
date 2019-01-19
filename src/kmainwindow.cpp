@@ -27,7 +27,9 @@
 #include "kmainwindow.h"
 
 #include "kmainwindow_p.h"
+#ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
+#endif
 #include "ktoolbarhandler_p.h"
 #include "khelpmenu.h"
 #include "ktoolbar.h"
@@ -46,7 +48,9 @@
 #include <QStyle>
 #include <QWidget>
 #include <QWindow>
+#ifdef QT_DBUS_LIB
 #include <QDBusConnection>
+#endif
 
 #include <ktoggleaction.h>
 #include <kaboutdata.h>
@@ -349,11 +353,13 @@ void KMainWindowPrivate::polish(KMainWindow *q)
         }
     }
 
+#ifdef QT_DBUS_LIB
     QDBusConnection::sessionBus().registerObject(dbusName, q, QDBusConnection::ExportScriptableSlots |
             QDBusConnection::ExportScriptableProperties |
             QDBusConnection::ExportNonScriptableSlots |
             QDBusConnection::ExportNonScriptableProperties |
             QDBusConnection::ExportAdaptors);
+#endif
 }
 
 void KMainWindowPrivate::setSettingsDirty(CallCompression callCompression)

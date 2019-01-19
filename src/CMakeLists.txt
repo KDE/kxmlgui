@@ -33,7 +33,6 @@ set(kxmlgui_SRCS
   khelpmenu.cpp
   kkeysequencewidget.cpp
   kmainwindow.cpp
-  kmainwindowiface.cpp
   kmenumenuhandler_p.cpp
   kshortcuteditwidget.cpp
   kshortcutschemeseditor.cpp
@@ -57,6 +56,9 @@ set(kxmlgui_SRCS
   kundoactions.cpp
   kcheckaccelerators.cpp
 )
+if (TARGET Qt5::DBus)
+  list(APPEND kxmlgui_SRCS kmainwindowiface.cpp)
+endif()
 
 # add the resource file
 qt5_add_resources(kxmlgui_SRCS kxmlgui.qrc)
@@ -85,7 +87,6 @@ endif()
 
 target_link_libraries(KF5XmlGui
 PUBLIC
-    Qt5::DBus           #QDBus connect to signal in KToolBar
     Qt5::Xml            #To parse the configuration (QDomDocument etc)
     Qt5::Widgets        #QWidget is used everywhere
     KF5::ConfigCore         #Reading config for ToolbarIcons, Shortcut Schemes...
@@ -103,6 +104,9 @@ PRIVATE
     KF5::WindowSystem       #KKeyServer in kkeysequencewidget
     ${XMLGUI_EXTRA_LIBS}
 )
+if (TARGET Qt5::DBus)
+  target_link_libraries(KF5XmlGui PUBLIC Qt5::DBus) #QDBus connect to signal in KToolBar
+endif()
 
 set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION_STRING}
                                            SOVERSION ${KXMLGUI_SOVERSION}

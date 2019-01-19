@@ -36,7 +36,10 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.10.0)
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus Xml Network PrintSupport)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
+if (NOT ANDROID)
+  find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
+endif()
 
 find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5ItemViews ${KF5_DEP_VERSION} REQUIRED)
@@ -87,6 +90,10 @@ endif()
 
 include(CMakePackageConfigHelpers)
 
+set(HAVE_DBUS FALSE)
+if (TARGET Qt5::DBus)
+  set(HAVE_DBUS TRUE)
+endif()
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5XmlGuiConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfig.cmake"
