@@ -174,7 +174,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     if (authorCount) {
         QWidget *authorWidget = new QWidget(q);
         QVBoxLayout *authorLayout = new QVBoxLayout(authorWidget);
-        authorLayout->setMargin(0);
+        authorLayout->setContentsMargins(0, 0, 0, 0);
 
         if (!aboutData.customAuthorTextEnabled() || !aboutData.customAuthorRichText().isEmpty()) {
             QLabel *bugsLabel = new QLabel(authorWidget);
@@ -224,7 +224,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     if (creditsCount) {
         QWidget *creditWidget = new QWidget(q);
         QVBoxLayout *creditLayout = new QVBoxLayout(creditWidget);
-        creditLayout->setMargin(0);
+        creditLayout->setContentsMargins(0, 0, 0, 0);
 
         KDEPrivate::KAboutApplicationPersonModel *creditModel =
             new KDEPrivate::KAboutApplicationPersonModel(aboutData.credits(),
@@ -251,7 +251,7 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
         if (translatorsCount) {
             QWidget *translatorWidget = new QWidget(q);
             QVBoxLayout *translatorLayout = new QVBoxLayout(translatorWidget);
-            translatorLayout->setMargin(0);
+            translatorLayout->setContentsMargins(0, 0, 0, 0);
 
             KDEPrivate::KAboutApplicationPersonModel *translatorModel =
                 new KDEPrivate::KAboutApplicationPersonModel(aboutData.translators(),
