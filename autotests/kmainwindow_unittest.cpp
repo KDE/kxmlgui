@@ -32,7 +32,7 @@ QTEST_MAIN(KMainWindow_UnitTest)
 
 void KMainWindow_UnitTest::initTestCase()
 {
-    QStandardPaths::enableTestMode(true);
+    QStandardPaths::setTestModeEnabled(true);
     QFile::remove(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + KSharedConfig::openConfig()->name());
 }
 

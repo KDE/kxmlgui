@@ -352,7 +352,7 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
             avSizes = theme->querySizes(isMainToolBar ? KIconLoader::MainToolbar : KIconLoader::Toolbar);
         }
 
-        qSort(avSizes);
+        std::sort(avSizes.begin(), avSizes.end());
 
         if (avSizes.count() < 10) {
             // Fixed or threshold type icons

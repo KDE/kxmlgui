@@ -43,7 +43,7 @@ Q_DECLARE_METATYPE(Qt::MouseButtons)
 Q_DECLARE_METATYPE(Qt::KeyboardModifiers)
 
 // Ensure everything uses test paths, including stuff run before main, such as the KdePlatformThemePlugin
-void enableTestMode() { QStandardPaths::enableTestMode(true); }
+void enableTestMode() { QStandardPaths::setTestModeEnabled(true); }
 Q_CONSTRUCTOR_FUNCTION(enableTestMode)
 
 class tst_KToolBar : public QObject

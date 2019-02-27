@@ -109,7 +109,7 @@ static void clickApply(KEditToolBar *dialog)
 
 void KXmlGui_UnitTest::initTestCase()
 {
-    QStandardPaths::enableTestMode(true);
+    QStandardPaths::setTestModeEnabled(true);
     // Leftover configuration breaks testAutoSaveSettings
     const QString configFile = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, KSharedConfig::openConfig()->name());
     if (!configFile.isEmpty()) {
