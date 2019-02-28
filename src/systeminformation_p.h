@@ -46,7 +46,7 @@ inline QString SystemInformation::operatingSystemVersion()
         QStringLiteral("release ") + QString::fromUtf8(unameBuf.release);
 }
 #else
-#include <QSysInfo>
+#include <QOperatingSystemVersion>
 #include <qt_windows.h>
 #define SECURITY_WIN32
 #include <security.h>
@@ -63,13 +63,11 @@ inline QString SystemInformation::userName()
 }
 
 static inline QString windowsVersionString() {
-    switch (QSysInfo::windowsVersion()) {
-    case QSysInfo::WV_XP: return QStringLiteral("Windows XP");
-    case QSysInfo::WV_2003: return QStringLiteral("Windows 2003");
-    case QSysInfo::WV_VISTA: return QStringLiteral("Windows Vista");
-    case QSysInfo::WV_WINDOWS7: return QStringLiteral("Windows 7");
-    case QSysInfo::WV_WINDOWS8: return QStringLiteral("Windows 8");
-    case QSysInfo::WV_WINDOWS8_1: return QStringLiteral("Windows 8.1");
+    switch (QOperatingSystemVersion::current()) {
+    case QOperatingSystemVersion::Windows7: return QStringLiteral("Windows 7");
+    case QOperatingSystemVersion::Windows8: return QStringLiteral("Windows 8");
+    case QOperatingSystemVersion::Windows8_1: return QStringLiteral("Windows 8.1");
+    case QOperatingSystemVersion::Windows10: return QStringLiteral("Windows 10");
     default: return QStringLiteral("Unknown Windows");
     }
 }
