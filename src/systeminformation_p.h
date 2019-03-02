@@ -64,15 +64,16 @@ inline QString SystemInformation::userName()
 
 static inline QString windowsVersionString() {
     const auto version = QOperatingSystemVersion::current();
-    // we're comparing with class instances, can't use a switch
-    if (version == QOperatingSystemVersion::Windows7)
-        return QStringLiteral("Windows 7");
-    if (version == QOperatingSystemVersion::Windows8)
-        return QStringLiteral("Windows 8");
-    if (version == QOperatingSystemVersion::Windows8_1)
-        return QStringLiteral("Windows 8.1");
-    if (version == QOperatingSystemVersion::Windows10)
+    // We're comparing with class instances, can't use a switch
+    // There's not even an operator== anyway.
+    if (version >= QOperatingSystemVersion::Windows10)
         return QStringLiteral("Windows 10");
+    if (version >= QOperatingSystemVersion::Windows8_1)
+        return QStringLiteral("Windows 8.1");
+    if (version >= QOperatingSystemVersion::Windows8)
+        return QStringLiteral("Windows 8");
+    if (version >= QOperatingSystemVersion::Windows7)
+        return QStringLiteral("Windows 7");
     return QStringLiteral("Unknown Windows");
 }
 
