@@ -63,13 +63,17 @@ inline QString SystemInformation::userName()
 }
 
 static inline QString windowsVersionString() {
-    switch (QOperatingSystemVersion::currentType()) {
-    case QOperatingSystemVersion::Windows7: return QStringLiteral("Windows 7");
-    case QOperatingSystemVersion::Windows8: return QStringLiteral("Windows 8");
-    case QOperatingSystemVersion::Windows8_1: return QStringLiteral("Windows 8.1");
-    case QOperatingSystemVersion::Windows10: return QStringLiteral("Windows 10");
-    default: return QStringLiteral("Unknown Windows");
-    }
+    const auto version = QOperatingSystemVersion::current();
+    // we're comparing with class instances, can't use a switch
+    if (version == QOperatingSystemVersion::Windows7)
+        return QStringLiteral("Windows 7");
+    if (version == QOperatingSystemVersion::Windows8)
+        return QStringLiteral("Windows 8");
+    if (version == QOperatingSystemVersion::Windows8_1)
+        return QStringLiteral("Windows 8.1");
+    if (version == QOperatingSystemVersion::Windows10)
+        return QStringLiteral("Windows 10");
+    return QStringLiteral("Unknown Windows");
 }
 
 inline QString SystemInformation::operatingSystemVersion()
