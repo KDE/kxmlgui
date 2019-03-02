@@ -63,7 +63,7 @@ inline QString SystemInformation::userName()
 }
 
 static inline QString windowsVersionString() {
-    switch (QOperatingSystemVersion::current()) {
+    switch (QOperatingSystemVersion::currentType()) {
     case QOperatingSystemVersion::Windows7: return QStringLiteral("Windows 7");
     case QOperatingSystemVersion::Windows8: return QStringLiteral("Windows 8");
     case QOperatingSystemVersion::Windows8_1: return QStringLiteral("Windows 8.1");
