@@ -49,6 +49,7 @@ private Q_SLOTS:
     void testShortcuts();
     void testPopupMenuParent();
     void testSpecificApplicationLanguageQLocale();
+    void testSingleModifierQKeySequenceEndsWithPlus();
 };
 
 #endif

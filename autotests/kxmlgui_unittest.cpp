@@ -1097,3 +1097,14 @@ void KXmlGui_UnitTest::testSpecificApplicationLanguageQLocale()
 
     QCOMPARE(QLocale::system(), originalSystemLocale);
 }
+
+void KXmlGui_UnitTest::testSingleModifierQKeySequenceEndsWithPlus()
+{
+    // Check that native texts of the Meta, Alt, Control, Shift, Keypad modifiers end in "+"
+    // we depend on that in KKeySequenceWidgetPrivate::updateShortcutDisplay()
+    QVERIFY(QKeySequence(Qt::MetaModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
+    QVERIFY(QKeySequence(Qt::AltModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
+    QVERIFY(QKeySequence(Qt::ControlModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
+    QVERIFY(QKeySequence(Qt::ShiftModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
+    QVERIFY(QKeySequence(Qt::KeypadModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
+}
