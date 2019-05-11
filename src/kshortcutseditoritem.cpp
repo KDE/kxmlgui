@@ -204,7 +204,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
         }
     }
     case ObjectRole:
-        return qVariantFromValue(static_cast<QObject *>(m_action));
+        return QVariant::fromValue(static_cast<QObject *>(m_action));
 
     default:
         break;
