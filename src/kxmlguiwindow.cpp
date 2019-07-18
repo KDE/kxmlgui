@@ -38,18 +38,15 @@
 #include "khelpmenu.h"
 #include "ktoolbar.h"
 
-#include <QCloseEvent>
 #ifdef QT_DBUS_LIB
 #include <QDBusConnection>
 #endif
 #include <QDomDocument>
-#include <QLayout>
 #include <QMenuBar>
-#include <QObject>
 #include <QStatusBar>
-#include <QStyle>
 #include <QWidget>
 #include <QList>
+#include <QEvent>
 
 #include <ktoggleaction.h>
 #include <kstandardaction.h>

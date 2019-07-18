@@ -21,6 +21,8 @@
 #include <QDomDocument>
 #include <QAction>
 #include <QMenu>
+#include <QLinkedList>
+#include <QPointer>
 
 #include <kactionmenu.h>
 #include <kauthorized.h>

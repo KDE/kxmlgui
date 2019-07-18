@@ -27,7 +27,6 @@
 #include <kemailsettings.h>
 #include <klocalizedstring.h>
 
-#include <QDebug>
 #include <kconfig.h>
 #include <qcommandlineparser.h>
 #include <qcommandlineoption.h>

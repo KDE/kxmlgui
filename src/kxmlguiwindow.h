@@ -31,7 +31,6 @@
 #include "kxmlguiclient.h"
 #include "kxmlguibuilder.h"
 #include "kmainwindow.h"
-#include <QMetaClassInfo>
 
 class KMenu;
 class KXMLGUIFactory;

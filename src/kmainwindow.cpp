@@ -39,9 +39,7 @@
 #include <QObject>
 #include <QTimer>
 #include <QCloseEvent>
-#include <QDesktopWidget>
 #include <QDockWidget>
-#include <QLayout>
 #include <QMenuBar>
 #include <QSessionManager>
 #include <QStatusBar>

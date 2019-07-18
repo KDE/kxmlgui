@@ -32,10 +32,7 @@
 #include <QStyle>
 #include <QWidget>
 #include <QWhatsThis>
-#include <QFile>
-#include <QDir>
 #include <QUrl>
-#include <QBoxLayout>
 #include <QDesktopServices>
 #include <QStandardPaths>
 

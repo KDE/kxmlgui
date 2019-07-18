@@ -22,7 +22,6 @@
 
 #include <stdio.h>
 
-#include <QDebug>
 #include <QSslSocket>
 #include <QHostInfo>
 

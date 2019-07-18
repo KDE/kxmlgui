@@ -22,11 +22,11 @@
 #include "kaboutkdedialog_p.h"
 
 #include <QDialogButtonBox>
-#include <QFrame>
 #include <QLabel>
-#include <QLayout>
 #include <QTabWidget>
 #include <QStandardPaths>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 #include <klocalizedstring.h>
 #include <ktitlewidget.h>

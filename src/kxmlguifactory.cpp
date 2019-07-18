@@ -36,7 +36,6 @@
 #include <QCoreApplication>
 #include <QTextStream>
 #include <QWidget>
-#include <QDate>
 #include <QVariant>
 #include <QTextCodec>
 #include <QStandardPaths>

@@ -26,8 +26,6 @@
 #include <QDialog>
 #include <QShortcutEvent>
 #include <QMouseEvent>
-#include <QLayout>
-#include <QMenuBar>
 #include <QPushButton>
 #include <QTabBar>
 #include <QTextBrowser>
@@ -38,6 +36,9 @@
 #include <QClipboard>
 #include <QProcess>
 #include <QDialogButtonBox>
+#include <QAction>
+#include <QMenu>
+#include <QVBoxLayout>
 
 #include <kconfig.h>
 #include <kconfiggroup.h>

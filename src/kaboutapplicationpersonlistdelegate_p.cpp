@@ -28,6 +28,7 @@
 #include <QDesktopServices>
 #include <QPainter>
 #include <QStandardPaths>
+#include <QLabel>
 
 namespace KDEPrivate
 {

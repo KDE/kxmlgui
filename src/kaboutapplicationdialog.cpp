@@ -35,13 +35,13 @@
 #include <QApplication>
 #include <QDialogButtonBox>
 #include <QLabel>
-#include <QLayout>
 #include <QPushButton>
 #include <QScrollBar>
 #include <QStyle>
 #include <QTabWidget>
 #include <QTextBrowser>
 #include <QFontDatabase>
+#include <QVBoxLayout>
 
 class Q_DECL_HIDDEN KAboutApplicationDialog::Private
 {

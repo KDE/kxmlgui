@@ -20,8 +20,6 @@
 #include "kundoactions.h"
 
 #include <QAction>
-#include <QKeySequence>
-#include <QList>
 #include <QUndoStack>
 
 #include <kactioncollection.h>

@@ -19,9 +19,7 @@
 #ifndef KTOOLBARHANDLER_H
 #define KTOOLBARHANDLER_H
 
-#include <QLinkedList>
 #include <QObject>
-#include <QPointer>
 
 #include <kxmlguiclient.h>
 

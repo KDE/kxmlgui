@@ -32,7 +32,6 @@
 #include <kxmlgui_export.h>
 
 #include <QMainWindow>
-#include <QMetaClassInfo>
 
 class QMenu;
 class KConfig;

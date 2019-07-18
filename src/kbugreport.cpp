@@ -20,10 +20,8 @@
 #include "kbugreport.h"
 
 #include <QProcess>
-#include <QCoreApplication>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QLayout>
 #include <QRadioButton>
 #include <QGroupBox>
 #include <QLocale>
@@ -36,6 +34,8 @@
 #include <QLineEdit>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QHBoxLayout>
+#include <QGridLayout>
 
 #include <kaboutdata.h>
 #include <kconfig.h>

@@ -28,7 +28,6 @@
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
-#include <QToolButton>
 
 #include <ktoolbar.h>
 #include <kmainwindow.h>

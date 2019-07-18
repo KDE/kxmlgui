@@ -24,17 +24,15 @@
 #include <QApplication>
 #include <QDialogButtonBox>
 #include <QDir>
-#include <QLayout>
 #include <QLabel>
 #include <QPushButton>
-#include <QEvent>
 #include <QMap>
 #include <QSettings>
 #include <QSharedPointer>
 #include <QStandardPaths>
 #include <QDebug>
 #include <private/qlocale_p.h>
-
+#include <QGridLayout>
 
 #include <klanguagebutton.h>
 #include <klocalizedstring.h>

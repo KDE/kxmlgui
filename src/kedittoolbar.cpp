@@ -25,10 +25,8 @@
 #include <QAction>
 #include <QDialogButtonBox>
 #include <QDomDocument>
-#include <QLayout>
 #include <QDir>
 #include <QFile>
-#include <QHeaderView>
 #include <QToolButton>
 #include <QLabel>
 #include <QApplication>

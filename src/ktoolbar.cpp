@@ -36,13 +36,11 @@
 #include <QMimeData>
 #include <QDrag>
 #include <QMouseEvent>
-#include <QToolButton>
 #include <QDomElement>
 #ifdef QT_DBUS_LIB
 #include <QDBusConnection>
 #include <QDBusMessage>
 #endif
-#include <QDebug>
 
 #include <kauthorized.h>
 #include <kconfig.h>

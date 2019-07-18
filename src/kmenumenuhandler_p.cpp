@@ -32,7 +32,6 @@
 #include <QContextMenuEvent>
 #include <QDialog>
 #include <QDialogButtonBox>
-#include <QWidget>
 #include <QDomDocument>
 #include <QDomNode>
 #include <QMenu>

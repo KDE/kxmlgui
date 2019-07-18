@@ -26,7 +26,6 @@
 
 #include <kxmlgui_export.h>
 
-#include <QFlags>
 
 class KAboutData;
 

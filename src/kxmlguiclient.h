@@ -21,7 +21,6 @@
 
 #include <kxmlgui_export.h>
 
-#include <QMap>
 #include <QStringList>
 
 class QDomDocument;
