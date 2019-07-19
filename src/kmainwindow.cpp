@@ -830,8 +830,6 @@ bool KMainWindow::event(QEvent *ev)
         if (dock) {
             connect(dock, &QDockWidget::dockLocationChanged,
                     this, &KMainWindow::setSettingsDirty);
-            connect(dock, &QDockWidget::visibilityChanged,
-                    this, &KMainWindow::setSettingsDirty, Qt::QueuedConnection);
             connect(dock, &QDockWidget::topLevelChanged,
                     this, &KMainWindow::setSettingsDirty);
 
@@ -856,8 +854,6 @@ bool KMainWindow::event(QEvent *ev)
         QMenuBar *menubar = qobject_cast<QMenuBar *>(event->child());
         if (dock) {
             disconnect(dock, &QDockWidget::dockLocationChanged,
-                       this, &KMainWindow::setSettingsDirty);
-            disconnect(dock, &QDockWidget::visibilityChanged,
                        this, &KMainWindow::setSettingsDirty);
             disconnect(dock, &QDockWidget::topLevelChanged,
                        this, &KMainWindow::setSettingsDirty);
