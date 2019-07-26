@@ -60,9 +60,9 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList< KAboutPe
         m_profileList.append(profile);
     }
 
-    m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Other, QIcon::fromTheme(QStringLiteral("applications-internet")).pixmap(16));
-    m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Blog, QIcon::fromTheme(QStringLiteral("applications-internet")).pixmap(16));
-    m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Homepage, QIcon::fromTheme(QStringLiteral("applications-internet")).pixmap(16));
+    m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Other, QIcon::fromTheme(QStringLiteral("internet-services")).pixmap(16));
+    m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Blog, QIcon::fromTheme(QStringLiteral("internet-services")).pixmap(16));
+    m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Homepage, QIcon::fromTheme(QStringLiteral("internet-servicesinternet-services")).pixmap(16));
 
 #if HAVE_ATTICA
     connect(&m_providerManager, SIGNAL(defaultProvidersLoaded()),

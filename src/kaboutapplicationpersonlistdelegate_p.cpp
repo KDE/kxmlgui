@@ -58,12 +58,12 @@ QList< QWidget *> KAboutApplicationPersonListDelegate::createItemWidgets(const Q
 
     KToolBar *mainLinks = new KToolBar(itemView(), false, false);
 
-    QAction *emailAction = new QAction(QIcon::fromTheme(QStringLiteral("internet-mail")),
+    QAction *emailAction = new QAction(QIcon::fromTheme(QStringLiteral("mail-send")),
                                        i18nc("Action to send an email to a contributor", "Email contributor"),
                                        mainLinks);
     emailAction->setVisible(false);
     mainLinks->addAction(emailAction);
-    QAction *homepageAction = new QAction(QIcon::fromTheme(QStringLiteral("applications-internet")),
+    QAction *homepageAction = new QAction(QIcon::fromTheme(QStringLiteral("internet-services")),
                                           i18n("Visit contributor's homepage"),
                                           mainLinks);
     homepageAction->setVisible(false);
