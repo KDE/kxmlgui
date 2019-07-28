@@ -150,6 +150,10 @@ install(FILES
 # install this file to be compatible, it is bundled in the resource file, too
 install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
 
+if(BUILD_DESIGNERPLUGIN)
+    add_subdirectory(designer)
+endif()
+
 if (BUILD_QCH)
     ecm_add_qch(
         KF5XmlGui_QCH
