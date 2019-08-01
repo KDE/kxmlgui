@@ -53,8 +53,10 @@
 #include "../kxmlgui_version.h"
 
 static const char separatorstring[] = I18N_NOOP("--- separator ---");
+static const char spacerstring[] = I18N_NOOP("--- expanding spacer ---");
 
 #define SEPARATORSTRING i18n(separatorstring)
+#define SPACERSTRING i18n(spacerstring)
 
 //static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
 
@@ -186,6 +188,7 @@ public:
           m_internalName(name),
           m_statusText(statusText),
           m_isSeparator(false),
+          m_isSpacer(false),
           m_isTextAlongsideIconHidden(false)
     {
         // Drop between items, not onto items
@@ -208,6 +211,10 @@ public:
     {
         m_isSeparator = sep;
     }
+    void setSpacer(bool spacer)
+    {
+        m_isSpacer = spacer;
+    }
     void setTextAlongsideIconHidden(bool hidden)
     {
         m_isTextAlongsideIconHidden = hidden;
@@ -228,6 +235,10 @@ public:
     {
         return m_isSeparator;
     }
+    bool isSpacer() const
+    {
+        return m_isSpacer;
+    }
     bool isTextAlongsideIconHidden() const
     {
         return m_isTextAlongsideIconHidden;
@@ -243,6 +254,7 @@ private:
     QString m_internalName;
     QString m_statusText;
     bool m_isSeparator;
+    bool m_isSpacer;
     bool m_isTextAlongsideIconHidden;
 };
 
@@ -252,6 +264,7 @@ static QDataStream &operator<< (QDataStream &s, const ToolBarItem &item)
     s << item.internalName();
     s << item.statusText();
     s << item.isSeparator();
+    s << item.isSpacer();
     s << item.isTextAlongsideIconHidden();
     return s;
 }
@@ -269,6 +282,9 @@ static QDataStream &operator>> (QDataStream &s, ToolBarItem &item)
     bool sep;
     s >> sep;
     item.setSeparator(sep);
+    bool spacer;
+    s >> spacer;
+    item.setSpacer(spacer);
     bool hidden;
     s >> hidden;
     item.setTextAlongsideIconHidden(hidden);
@@ -1173,6 +1189,7 @@ void KEditToolBarWidgetPrivate::loadToolBarCombo(const QString &defaultToolBar)
 void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
 {
     const QLatin1String tagSeparator("Separator");
+    const QLatin1String tagSpacer("Spacer");
     const QLatin1String tagMerge("Merge");
     const QLatin1String tagActionList("ActionList");
     const QLatin1String tagAction("Action");
@@ -1180,6 +1197,8 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
 
     int     sep_num = 0;
     QString sep_name(QStringLiteral("separator_%1"));
+    int     spacer_num = 0;
+    QString spacer_name(QStringLiteral("spacer_%1"));
 
     // clear our lists
     m_inactiveList->clear();
@@ -1209,6 +1228,13 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
             ToolBarItem *act = new ToolBarItem(m_activeList, tagSeparator, sep_name.arg(sep_num++), QString());
             act->setSeparator(true);
             act->setText(SEPARATORSTRING);
+            it.setAttribute(attrName, act->internalName());
+            continue;
+        }
+        if (it.tagName() == tagSpacer) {
+            ToolBarItem *act = new ToolBarItem(m_activeList, tagSpacer, spacer_name.arg(spacer_num++), QString());
+            act->setSpacer(true);
+            act->setText(SPACERSTRING);
             it.setAttribute(attrName, act->internalName());
             continue;
         }
@@ -1263,11 +1289,16 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
 
     m_inactiveList->sortItems(Qt::AscendingOrder);
 
-    // finally, add default separators to the inactive list
-    ToolBarItem *act = new ToolBarItem(nullptr, tagSeparator, sep_name.arg(sep_num++), QString());
-    act->setSeparator(true);
-    act->setText(SEPARATORSTRING);
-    m_inactiveList->insertItem(0, act);
+    // finally, add default separators and spacers to the inactive list
+    ToolBarItem *sep = new ToolBarItem(nullptr, tagSeparator, sep_name.arg(sep_num++), QString());
+    sep->setSeparator(true);
+    sep->setText(SEPARATORSTRING);
+    m_inactiveList->insertItem(0, sep);
+    
+    ToolBarItem *spacer = new ToolBarItem(nullptr, tagSpacer, spacer_name.arg(spacer_num++), QString());
+    spacer->setSpacer(true);
+    spacer->setText(SPACERSTRING);
+    m_inactiveList->insertItem(1, spacer);
 }
 
 KActionCollection *KEditToolBarWidget::actionCollection() const
@@ -1400,9 +1431,11 @@ void KEditToolBarWidgetPrivate::insertActive(ToolBarItem *item, ToolBarItem *bef
     }
 
     QDomElement new_item;
-    // let's handle the separator specially
+    // let's handle the separator and spacer specially
     if (item->isSeparator()) {
         new_item = m_widget->domDocument().createElement(QStringLiteral("Separator"));
+    } else if (item->isSpacer()) {
+        new_item = m_widget->domDocument().createElement(QStringLiteral("Spacer"));
     } else {
         new_item = m_widget->domDocument().createElement(QStringLiteral("Action"));
     }

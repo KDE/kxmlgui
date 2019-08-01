@@ -55,6 +55,7 @@ public:
     QString tagStatusBar;
 
     QString tagSeparator;
+    QString tagSpacer;
     QString tagTearOffHandle;
     QString tagMenuTitle;
 
@@ -85,6 +86,7 @@ KXMLGUIBuilder::KXMLGUIBuilder(QWidget *widget)
     d->tagStatusBar = QStringLiteral("statusbar");
 
     d->tagSeparator = QStringLiteral("separator");
+    d->tagSpacer = QStringLiteral("spacer");
     d->tagTearOffHandle = QStringLiteral("tearoffhandle");
     d->tagMenuTitle = QStringLiteral("title");
 
@@ -297,7 +299,7 @@ void KXMLGUIBuilder::removeContainer(QWidget *container, QWidget *parent, QDomEl
 QStringList KXMLGUIBuilder::customTags() const
 {
     QStringList res;
-    res << d->tagSeparator << d->tagTearOffHandle << d->tagMenuTitle;
+    res << d->tagSeparator << d->tagSpacer << d->tagTearOffHandle << d->tagMenuTitle;
     return res;
 }
 
@@ -342,6 +344,13 @@ QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const Q
             else*/
 
             return bar->insertSeparator(before);
+        }
+    } else if (tagName == d->tagSpacer) {
+        if (QToolBar *bar = qobject_cast<QToolBar *>(parent)) {
+            // Create the simple spacer widget
+            QWidget *spacer = new QWidget(parent);
+            spacer->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+            return bar->insertWidget(before, spacer);
         }
     } else if (tagName == d->tagTearOffHandle) {
         static_cast<QMenu *>(parent)->setTearOffEnabled(true);

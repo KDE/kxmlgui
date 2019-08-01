@@ -80,6 +80,20 @@
         </xsd:complexType>
     </xsd:element>
 
+    <xsd:element name="Spacer">
+        <xsd:annotation>
+            <xsd:documentation>
+
+                Inserts a spacer item into a toolbar.
+
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:attribute name="append" type="identifier"/>
+            <xsd:attribute name="group" type="identifier"/>
+        </xsd:complexType>
+    </xsd:element>
+
     <xsd:element name="Merge">
         <xsd:complexType>
             <xsd:attribute name="name" type="identifier" use="optional" />
@@ -335,6 +349,7 @@
                             <xsd:element ref="Action" minOccurs="0" maxOccurs="unbounded" />
                             <!-- Should 0 ActionS really be allowed? konqueror.rc does it.. -->
                             <xsd:element ref="Separator" minOccurs="0" maxOccurs="unbounded" />
+                            <xsd:element ref="Spacer" minOccurs="0" maxOccurs="unbounded" />
                             <xsd:element ref="ActionList" minOccurs="0" maxOccurs="unbounded" />
                             <xsd:element ref="Merge" minOccurs="0" />
                             <xsd:element ref="MergeLocal" minOccurs="0" />
