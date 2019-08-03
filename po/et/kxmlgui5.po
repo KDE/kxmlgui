@@ -1,0 +1,1551 @@
+# translation of kdelibs4.po to Estonian
+# Copyright (C) 1999-2004, 2005, 2006, 2009 Free Software Foundation, Inc.
+#
+# Hasso Tepper <hasso@kde.org>, 1999-2004, 2005, 2006.
+# Marek Laane <bald@smail.ee>, 2003-2009.
+# Peeter Russak <pezz@tkwcy.ee>, 2005.
+# Marek Laane <bald@smail.ee>, 2009, 2010, 2011, 2012, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-02 02:42+0200\n"
+"PO-Revision-Date: 2016-09-10 00:05+0300\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-i18n-doc@kde.org>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kaboutapplicationdialog.cpp:81 khelpmenu.cpp:280
+#, kde-format
+msgid "About %1"
+msgstr "%1 teave"
+
+#: kaboutapplicationdialog.cpp:98
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+msgstr ""
+"<html><font size=\"5\">%1</font><br /><b>Versioon %2</b><br />&nbsp;</html>"
+
+#: kaboutapplicationdialog.cpp:136
+#, kde-format
+msgid "License: %1"
+msgstr "Litsents: %1"
+
+#: kaboutapplicationdialog.cpp:148
+#, kde-format
+msgid "&About"
+msgstr "&Teave"
+
+#: kaboutapplicationdialog.cpp:155
+#, fuzzy, kde-format
+#| msgid ""
+#| "Using:<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</"
+#| "li><li>The <em>%4</em> windowing system</li></ul>"
+msgid ""
+"<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>"
+"%4</em> windowing system</li></ul>"
+msgstr ""
+"Kasutatakse:<ul><li>KDE Frameworks %1</li><li>Qt %2 (ehitatud %3 vastu)</"
+"li><li>Aknasüsteem <em>%4</em></li></ul>"
+
+#: kaboutapplicationdialog.cpp:165
+#, fuzzy, kde-format
+#| msgid "Libraries"
+msgid "&Libraries"
+msgstr "Teegid"
+
+#: kaboutapplicationdialog.cpp:186
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please use <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> to "
+#| "report bugs.\n"
+msgid ""
+"Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "
+"report bugs.\n"
+msgstr ""
+"Vigadest teatamiseks kasuta veebilehte <a href=\"http://bugs.kde.org"
+"\">http://bugs.kde.org</a>.\n"
+
+#: kaboutapplicationdialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Please report bugs to <a href=\"mailto:%1\">%2</a>.\n"
+msgid "Please report bugs to <a href=\"%1\">%2</a>.\n"
+msgstr ""
+"Palun kasuta vigadest teatamiseks aadressi <a href=\"mailto:%1\">%2</a>.\n"
+
+#: kaboutapplicationdialog.cpp:218
+#, kde-format
+msgid "A&uthor"
+msgstr "A&utor"
+
+#: kaboutapplicationdialog.cpp:218
+#, kde-format
+msgid "A&uthors"
+msgstr "A&utorid"
+
+#: kaboutapplicationdialog.cpp:245
+#, kde-format
+msgid "&Thanks To"
+msgstr "&Tänu"
+
+#: kaboutapplicationdialog.cpp:284
+#, kde-format
+msgid "T&ranslation"
+msgstr "Tõl&ge"
+
+#: kaboutapplicationdialog.cpp:316
+#, kde-format
+msgid "License Agreement"
+msgstr "&Litsentsileping"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:62
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Saada autorile e-kiri"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:67
+#, kde-format
+msgid "Visit contributor's homepage"
+msgstr "Külasta autori kodulehekülge"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:128
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"Saada autorile e-kiri\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:134
+#: kaboutapplicationpersonlistdelegate_p.cpp:170
+#, kde-format
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"Külasta autori kodulehekülge\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:141
+#: kaboutapplicationpersonlistdelegate_p.cpp:173
+#, kde-format
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"Külasta autori %1 profiili\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:164
+#, kde-format
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"Külasta autori lehekülge\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:167
+#, kde-format
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"Külasta autori ajaveebi\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:265
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:206
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: kaboutapplicationpersonmodel_p.cpp:309
+#, kde-format
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "Muu"
+
+#: kaboutapplicationpersonmodel_p.cpp:311
+#, kde-format
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "Ajaveeb"
+
+#: kaboutapplicationpersonmodel_p.cpp:319
+#, kde-format
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "Kodulehekülg"
+
+#: kaboutkdedialog_p.cpp:43
+#, kde-format
+msgid "About KDE"
+msgstr "KDE teave"
+
+#: kaboutkdedialog_p.cpp:46
+#, kde-format
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr "<html><font size=\"5\">KDE - tunneta vabadust!</font></html>"
+
+#: kaboutkdedialog_p.cpp:55
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"%1\">Free Software</a> development. This community has created hundreds "
+#| "of Free Software applications as part of the KDE frameworks, workspaces "
+#| "and applications.<br /><br />KDE is a cooperative enterprise in which no "
+#| "single entity controls the efforts or products of KDE to the exclusion of "
+#| "others. Everyone is welcome to join and contribute to KDE, including you."
+#| "<br /><br />Visit <a href=\"%2\">%2</a> for more information about the "
+#| "KDE community and the software we produce.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide community of software engineers, artists, "
+"writers, translators and creators who are committed to <a href=\"%1\">Free "
+"Software</a> development. KDE produces the Plasma desktop environment, "
+"hundreds of applications, and the many software libraries that support them."
+"<br /><br />KDE is a cooperative enterprise: no single entity controls its "
+"direction or products. Instead, we work together to achieve the common goal "
+"of building the world's finest Free Software. Everyone is welcome to <a href="
+"\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit <a "
+"href=\"%3\">%3</a> for more information about the KDE community and the "
+"software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> on ülemaailmne <a href=\"%1\">vaba tarkvara</a> "
+"arendamisele pühendunud tarkvara arendajate, kunstnike, tõlkijate ja muude "
+"abiliste ühendus. See ühendus on loonud KDE raamistiku, töötsoonide ja "
+"rakenduste raames sadu vaba tarkvara rakendusi.<br /><br />Mitte ühelgi "
+"konkreetsel grupil, ettevõttel ega organisatsioonil ei ole kontrolli KDE "
+"lähtekoodi üle. Kõik on teretulnud kaasa aitama KDE arengule, kaasa arvatud "
+"sina.<br /><br />Täpsema teabe saamiseks KDE kogukonna ja meie loodava "
+"tarkvara kohta külasta lehekülge <a href=\"%2\">%2</a>.</html>"
+
+#: kaboutkdedialog_p.cpp:75
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>Alati on võimalik tarkvara paremaks teha ja KDE meeskond on valmis "
+"seda tegema. Aga sina - kasutaja - pead meile teatama, kui midagi ei tööta "
+"nii, nagu vaja või kui midagi saaks paremaks teha.<br /><br />KDE-l on oma "
+"avastatud vigade haldamise süsteem. Külasta KDE töökeskkonna rakendustes "
+"leitud vigadest teatamiseks lehekülge <a href=\"%1\">%1</a> või kasuta "
+"veateate dialoogi, mille leiad alati menüüst \"Abi\".<br /><br />Kui sul on "
+"KDE meeskonnale KDE täiustamise kohta soovitusi, siis registreeri need "
+"raskusastmega \"Wishlist\".</html>"
+
+#: kaboutkdedialog_p.cpp:93
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>KDE meeskonda kuulumiseks ei pea kindlasti olema programmeerija. Sa "
+"võid ühineda näiteks rahvuslike meeskondadega, kes tegelevad kasutajaliidese "
+"tõlkimisega. Samuti võid kaasa aidata graafika, töölaua teemade, helide ja "
+"dokumentatsiooni loomisel. See on sinu otsustada!<br /><br />Kui soovid "
+"teavet projektide kohta, mis vajaksid kaasalööjaid, siis külasta aadressi <a "
+"href=\"%1\">%1</a>.<br /><br />Kui vajad rohkem teavet või dokumentatsiooni, "
+"siis külasta aadressi <a href=\"%2\">%2</a>.</html>"
+
+#: kaboutkdedialog_p.cpp:115
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>KDE tarkvara on kasutajale alati tasuta, kuid selle loomine nõuab "
+"ometi vaeva.<br /><br />Seepärast on KDE kogukond loonud mittetulundusühingu "
+"KDE e.V., mis on registreeritud Saksamaal. KDE e.V. esindab KDE kogukonda "
+"juriidilistes ja finantsküsimustes. KDE e.V. kohta leiab rohkem teavet "
+"aadressil <a href=\"%1\">%1</a>.<br /><br />KDE kogukond elatub "
+"mitmesugustest toetustest, sealhulgas rahalisest. Suurem osa rahast kulub "
+"liikmete ja teiste arendamisele kaasaaidanute vaeva ja kulude hüvitamiseks, "
+"samuti juriidilisteks küsimusteks ning konverentside ja kohtumiste "
+"korraldamiseks.<br /><br /> Ka sina võid toetada KDE-d rahaliselt, kasutades "
+"mõnda viisi, mida on kirjeldatud aadressil <a href=\"%2\">%2</a>.<br /><br /"
+">Me täname sind toetuse eest juba ette.</html>"
+
+#: kaboutkdedialog_p.cpp:135
+#, kde-format
+msgctxt "About KDE"
+msgid "&About"
+msgstr "&Teave"
+
+#: kaboutkdedialog_p.cpp:136
+#, kde-format
+msgid "&Report Bugs or Wishes"
+msgstr "&Vea- või sooviteated"
+
+#: kaboutkdedialog_p.cpp:137
+#, kde-format
+msgid "&Join KDE"
+msgstr "&KDE-ga ühinemine"
+
+#: kaboutkdedialog_p.cpp:138
+#, kde-format
+msgid "&Support KDE"
+msgstr "KDE &toetamine"
+
+#: kactionconflictdetector.cpp:50
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"Klahvikombinatsioon '%1' on mitmetähenduslik. Lahenda probleem, valides "
+"menüüst 'Seadistused' käsu 'Kiirklahvide seadistamine'.\n"
+"Ühtegi toimingut ei käivitata"
+
+#: kactionconflictdetector.cpp:54
+#, kde-format
+msgid "Ambiguous shortcut detected"
+msgstr "Tuvastati mitmetimõistetav kiirklahv"
+
+#: kbugreport.cpp:104 kbugreport.cpp:133
+#, kde-format
+msgid "Submit Bug Report"
+msgstr "Veateate saatmine"
+
+#: kbugreport.cpp:144
+#, kde-format
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Sinu e-posti aadress. Kasuta nuppu 'Seadista e-posti', kui see pole "
+"korrektne."
+
+#: kbugreport.cpp:145
+#, kde-format
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Saatja:"
+
+#: kbugreport.cpp:153
+#, kde-format
+msgid "Configure Email..."
+msgstr "Seadista e-posti..."
+
+#: kbugreport.cpp:160
+#, kde-format
+msgid "The email address this bug report is sent to."
+msgstr "E-posti aadress, kuhu saata vearaport."
+
+#: kbugreport.cpp:161
+#, kde-format
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Saaja:"
+
+#: kbugreport.cpp:170
+#, kde-format
+msgid "&Send"
+msgstr "&Saada"
+
+#: kbugreport.cpp:170
+#, kde-format
+msgid "Send bug report."
+msgstr "Veateate saatmine."
+
+#: kbugreport.cpp:171
+#, kde-format
+msgid "Send this bug report to %1."
+msgstr "Veateate saatmine aadressile %1."
+
+#: kbugreport.cpp:179
+#, kde-format
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"Rakendus, mille kohta sa soovid veateadet saata - kui see ei ole õige, siis "
+"kasuta veateate saatmiseks õige rakenduse menüüd."
+
+#: kbugreport.cpp:180
+#, kde-format
+msgid "Application: "
+msgstr "Rakendus: "
+
+#: kbugreport.cpp:207
+#, kde-format
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"Rakenduse versioon - enne veateate saatmist veendu, et vahepeal pole ilmunud "
+"uuemat versiooni."
+
+#: kbugreport.cpp:208
+#, kde-format
+msgid "Version:"
+msgstr "Versioon:"
+
+#: kbugreport.cpp:213
+#, kde-format
+msgid "no version set (programmer error)"
+msgstr "versioon puudub (programmeerija viga)"
+
+#: kbugreport.cpp:226
+#, kde-format
+msgid "OS:"
+msgstr "OS:"
+
+#: kbugreport.cpp:234
+#, kde-format
+msgid "Compiler:"
+msgstr "Kompilaator:"
+
+#: kbugreport.cpp:242
+#, kde-format
+msgid "Se&verity"
+msgstr "&Raskusaste"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Critical"
+msgstr "Kriitiline"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Grave"
+msgstr "Tõsine"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgctxt "normal severity"
+msgid "Normal"
+msgstr "Tavaline"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Wishlist"
+msgstr "Soov"
+
+#: kbugreport.cpp:244
+#, kde-format
+msgid "Translation"
+msgstr "Tõlge"
+
+#: kbugreport.cpp:262
+#, kde-format
+msgid "S&ubject: "
+msgstr "T&eema: "
+
+#: kbugreport.cpp:270
+#, kde-format
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Sisesta veateatega saadetav tekst (kui võimalik, siis inglise keeles).\n"
+"Klõpsuga nupule \"Saada\" saadetakse e-kiri selle rakenduse hooldajale\n"
+"ning ka KDE vigade nimekirja.\n"
+
+#: kbugreport.cpp:294
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>To submit a bug report, click on the button below. This will open a "
+#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
+#| "org</a> where you will find a form to fill in. The information displayed "
+#| "above will be transferred to that server.</qt>"
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>Veateate saatmiseks klõpsa allolevale nupule, mille peale avatakse \n"
+"uues brauseri aknas aadress <a href=\"http://bugs.kde.org\">http://bugs.kde."
+"org</a>, \n"
+"kus leiad täidetava vormi. Ülaltoodud info saadetakse sellesse serverisse.</"
+"qt>"
+
+#: kbugreport.cpp:299
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>To submit a bug report, click on the button below. This will open a "
+#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
+#| "org</a> where you will find a form to fill in. The information displayed "
+#| "above will be transferred to that server.</qt>"
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"%1\">%2</a>.</qt>"
+msgstr ""
+"<qt>Veateate saatmiseks klõpsa allolevale nupule, mille peale avatakse \n"
+"uues brauseri aknas aadress <a href=\"http://bugs.kde.org\">http://bugs.kde."
+"org</a>, \n"
+"kus leiad täidetava vormi. Ülaltoodud info saadetakse sellesse serverisse.</"
+"qt>"
+
+#: kbugreport.cpp:316
+#, kde-format
+msgid "&Launch Bug Report Wizard"
+msgstr "&Käivita veateate nõustaja"
+
+#: kbugreport.cpp:318
+#, fuzzy, kde-format
+#| msgid "Submit Bug Report"
+msgid "&Submit Bug Report"
+msgstr "Veateate saatmine"
+
+#: kbugreport.cpp:382
+#, kde-format
+msgctxt "unknown program name"
+msgid "unknown"
+msgstr "tundmatu"
+
+#: kbugreport.cpp:441
+#, kde-format
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Enne veateate saatmist pead sa sisestama nii teema kui ka vea kirjelduse."
+
+#: kbugreport.cpp:450
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Sa väidad, et viga on <b>Kriitiline</b>. Palun arvesta, et see raskusaste "
+"on mõeldud selliste vigade tarbeks, mis</p><ul><li>põhjustavad asjasse "
+"mittepuutuvale tarkvarale (või kogu süsteemile) suuri probleeme</li> "
+"<li>põhjustavad andmekadu</li> <li>avavad turvaaugu süsteemis, kuhu rakendus "
+"on paigaldatud</li></ul>\n"
+"<p>Kas raporteeritav viga põhjustab sellist kahju? Kui ei, siis vali palun "
+"madalam raskusaste. Täname.</p>"
+
+#: kbugreport.cpp:462
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Sa väidad, et viga on <b>Tõsine</b>. Palun arvesta, et see raskusaste on "
+"mõeldud selliste vigade tarbeks, mis</p> <ul><li>teevad antud rakenduse "
+"(suuremalt jaolt) kasutamiskõlbmatuks</li> <li>põhjustavad andmekadu</li> "
+"<li>põhjustavad ohtu tarkvara kasutava kasutaja turvalisusele</li></ul>\n"
+"<p>Kas raporteeritav viga põhjustab sellist kahju? Kui ei, siis siis vali "
+"palun madalam raskusaste. Täname.</p>"
+
+#: kbugreport.cpp:476
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to send the bug report.\n"
+#| "Please submit a bug report manually....\n"
+#| "See http://bugs.kde.org/ for instructions."
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See https://bugs.kde.org/ for instructions."
+msgstr ""
+"Veateate saatmine nurjus.\n"
+"Pead veast käsitsi.teada andma ...\n"
+"Juhiste saamiseks vt. http://bugs.kde.org/."
+
+#: kbugreport.cpp:484
+#, kde-format
+msgid "Bug report sent, thank you for your input."
+msgstr "Veateade on saadetud, suur tänu abi eest."
+
+#: kbugreport.cpp:493
+#, kde-format
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"Kas sulgeda ja unustada\n"
+"muudetud teade?"
+
+#: kbugreport.cpp:494
+#, kde-format
+msgid "Close Message"
+msgstr "Sulge teade"
+
+#: kcheckaccelerators.cpp:267
+#, kde-format
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Dr. Klashi kiirklahvide diagnoos"
+
+#: kcheckaccelerators.cpp:274
+#, kde-format
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Automaatse kontrolli keelamine"
+
+#: kcheckaccelerators.cpp:318
+#, kde-format
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Kiirklahvid muudetud</h2>"
+
+#: kcheckaccelerators.cpp:320 kcheckaccelerators.cpp:331
+#, kde-format
+msgid "Old Text"
+msgstr "Vana tekst"
+
+#: kcheckaccelerators.cpp:322 kcheckaccelerators.cpp:340
+#, kde-format
+msgid "New Text"
+msgstr "Uus tekst"
+
+#: kcheckaccelerators.cpp:329
+#, kde-format
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Kiirklahvid eemaldatud</h2>"
+
+#: kcheckaccelerators.cpp:338
+#, kde-format
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>Kiirklahvid lisatud (lihtsalt teadmiseks)</h2>"
+
+#: kedittoolbar.cpp:55
+#, kde-format
+msgid "--- separator ---"
+msgstr "--- eraldaja ---"
+
+#: kedittoolbar.cpp:56
+#, fuzzy, kde-format
+#| msgid "--- line separator ---"
+msgid "--- expanding spacer ---"
+msgstr "--- ridade eraldaja ---"
+
+#: kedittoolbar.cpp:347
+#, kde-format
+msgid "Change Text"
+msgstr "Teksti muutmine"
+
+#: kedittoolbar.cpp:358
+#, kde-format
+msgid "Icon te&xt:"
+msgstr "I&kooni tekst:"
+
+#: kedittoolbar.cpp:363
+#, kde-format
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr "Teksti &peitmine, kui tööriistaribal näidatakse ikoonide kõrval teksti"
+
+#: kedittoolbar.cpp:617
+#, kde-format
+msgid "Configure Toolbars"
+msgstr "Tööriistaribade seadistamine"
+
+#: kedittoolbar.cpp:680
+#, kde-format
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"Kas tõesti lähtestada rakenduse kõik tööriistaribad vaikeväärtustele? See "
+"muudatus rakendatakse otsekohe."
+
+#: kedittoolbar.cpp:680
+#, kde-format
+msgid "Reset Toolbars"
+msgstr "Tööriistaribade lähtestamine"
+
+#: kedittoolbar.cpp:680
+#, kde-format
+msgid "Reset"
+msgstr "Lähtesta"
+
+#: kedittoolbar.cpp:1003
+#, kde-format
+msgid "&Toolbar:"
+msgstr "&Tööriistariba:"
+
+#. i18n("&New"), this);
+#. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+#. new_toolbar->setEnabled(false); // disabled until implemented
+#. QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+#. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+#. del_toolbar->setEnabled(false); // disabled until implemented
+#. our list of inactive actions
+#: kedittoolbar.cpp:1018
+#, kde-format
+msgid "A&vailable actions:"
+msgstr "&Võimalikud toimingud:"
+
+#: kedittoolbar.cpp:1033 kedittoolbar.cpp:1052
+#, kde-format
+msgid "Filter"
+msgstr "Filter"
+
+#: kedittoolbar.cpp:1036
+#, kde-format
+msgid "Curr&ent actions:"
+msgstr "Valitud to&imingud:"
+
+#: kedittoolbar.cpp:1055
+#, kde-format
+msgid "Change &Icon..."
+msgstr "Muuda &ikooni..."
+
+#: kedittoolbar.cpp:1063
+#, kde-format
+msgid "Change Te&xt..."
+msgstr "Muu&da teksti..."
+
+#: kedittoolbar.cpp:1218
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1245
+#, kde-format
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr "See element asendatakse põimitud komponendi kõigi elementidega."
+
+#: kedittoolbar.cpp:1247
+#, kde-format
+msgid "<Merge>"
+msgstr "<Liitmine>"
+
+#: kedittoolbar.cpp:1249
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<%1 liitmine>"
+
+#: kedittoolbar.cpp:1255
+#, kde-format
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"See on dünaamiline toimingute nimekiri. Sa võid seda liigutada, kuid pärast "
+"eemaldamist pole seda võimalik uuesti lisada."
+
+#: kedittoolbar.cpp:1256
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Toimingute nimekiri: %1"
+
+#: kedittoolbar.cpp:1360 kedittoolbar.cpp:1387
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1616
+#, kde-format
+msgid "Change Icon"
+msgstr "Ikooni muutmine"
+
+#: kgesture.cpp:505
+#, kde-format
+msgctxt "left mouse button"
+msgid "left button"
+msgstr "vasak nupp"
+
+#: kgesture.cpp:507
+#, kde-format
+msgctxt "middle mouse button"
+msgid "middle button"
+msgstr "keskmine nupp"
+
+#: kgesture.cpp:509
+#, kde-format
+msgctxt "right mouse button"
+msgid "right button"
+msgstr "parem nupp"
+
+#: kgesture.cpp:511
+#, kde-format
+msgctxt "a nonexistent value of mouse button"
+msgid "invalid button"
+msgstr "vigane nupp"
+
+#: kgesture.cpp:524
+#, kde-format
+msgctxt ""
+"a kind of mouse gesture: hold down one mouse button, then press another "
+"button"
+msgid "Hold %1, then push %2"
+msgstr "Hoia all %1, seejärel vajuta alla %2"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:172 ui_standards.rc:177
+#, kde-format
+msgid "&Help"
+msgstr "&Abi"
+
+#: kkeysequencewidget.cpp:128
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "Kiirklahv '%1' rakenduses %2 toimingule %3\n"
+
+#: kkeysequencewidget.cpp:138
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "Kiirklahv '%2' on konfliktis järgmise klahvikombinatsiooniga:\n"
+msgstr[1] "Kiirklahv '%2' on konfliktis järgmiste klahvikombinatsioonidega:\n"
+
+#: kkeysequencewidget.cpp:144
+#, kde-format
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Konflikt registreeritud globaalse kiirklahviga"
+msgstr[1] "Konflikt registreeritud globaalsete kiirklahvidega"
+
+#: kkeysequencewidget.cpp:146 kkeysequencewidget.cpp:234
+#: kkeysequencewidget.cpp:625 kshortcutseditor.cpp:635 kshortcutseditor.cpp:653
+#, kde-format
+msgid "Reassign"
+msgstr "Asenda"
+
+#: kkeysequencewidget.cpp:215
+#, kde-format
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Kiirklahvi konflikt"
+msgstr[1] "Kiirklahvide konflikt"
+
+#: kkeysequencewidget.cpp:219
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Kiirklahv '%1' toiminguks '%2'\n"
+
+#: kkeysequencewidget.cpp:224
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"Kiirklahv \"%2\" on mitmetähenduslik järgmise kiirklahvi suhtes.\n"
+"Kas omistada sellele toimingule tühi kiirklahv?\n"
+"%3"
+msgstr[1] ""
+"Kiirklahv \"%2\" on mitmetähenduslik järgmiste kiirklahvide suhtes.\n"
+"Kas omistada neile toimingutele tühi kiirklahv?\n"
+"%3"
+
+#: kkeysequencewidget.cpp:243
+#, kde-format
+msgid "Shortcut conflict"
+msgstr "Kiirklahvi konflikt"
+
+#: kkeysequencewidget.cpp:244
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>Klahvikombinatsioon '%1' on juba kasutusel toiminguks <b>%2</b>."
+"<br>Palun vali mõni muu.</qt>"
+
+#: kkeysequencewidget.cpp:274
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Klõpsa nupule ja sisesta meelepärane kiirklahv.\n"
+"Näide Ctrl+A kohta: hoia all Ctrl-klahvi ja vajuta klahvi A."
+
+#: kkeysequencewidget.cpp:466
+#, kde-format
+msgid "Reserved Shortcut"
+msgstr "Reserveeritud kiirklahv"
+
+#: kkeysequencewidget.cpp:467
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"Klahv F12 on reserveeritud Windowsile ja seda ei saa kasutada globaalse "
+"kiirklahvina.\n"
+"Palun vali mõni muu klahv."
+
+#: kkeysequencewidget.cpp:619
+#, kde-format
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Konflikt rakenduse standardse kiirklahviga"
+
+#: kkeysequencewidget.cpp:620
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Klahvikombinatsioon '%1' on juba kasutusel standardseks toiminguks \"%2\", "
+"mida kasutavad mitmed rakendused.\n"
+"Kas soovid seda kasutada ka globaalse kiirklahvina?"
+
+#: kkeysequencewidget.cpp:668
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Sisend"
+
+#: kkeysequencewidget.cpp:675 kshortcuteditwidget.cpp:67
+#: kshortcuteditwidget.cpp:70
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Puudub"
+
+#: kkeysequencewidget.cpp:721
+#, kde-format
+msgid "The key you just pressed is not supported by Qt."
+msgstr "Qt ei toeta klahvi, mida sa praegu vajutasid."
+
+#: kkeysequencewidget.cpp:722
+#, kde-format
+msgid "Unsupported Key"
+msgstr "Toetamata klahv"
+
+#: kmainwindow.cpp:247
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+#: kmainwindow.cpp:248
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bald@smail.ee"
+
+#: kmenumenuhandler_p.cpp:49
+#, kde-format
+msgid "Add to Toolbar"
+msgstr "Lisa tööriistaribale"
+
+#: kmenumenuhandler_p.cpp:232
+#, kde-format
+msgid "Configure Shortcut..."
+msgstr "Seadista kiirklahvi..."
+
+#: ksendbugmail/main.cpp:44
+#, kde-format
+msgid "Error connecting to server."
+msgstr "Tõrge serverisse ühenduse loomisel."
+
+#: ksendbugmail/main.cpp:47
+#, kde-format
+msgid "Not connected."
+msgstr "Pole ühendatud."
+
+#: ksendbugmail/main.cpp:50
+#, kde-format
+msgid "Connection timed out."
+msgstr "Ühendus aegus."
+
+#: ksendbugmail/main.cpp:53
+#, kde-format
+msgid "Time out waiting for server interaction."
+msgstr "Aegumine serverilt vastust oodates."
+
+#: ksendbugmail/main.cpp:57
+#, kde-format
+msgid "Server said: \"%1\""
+msgstr "Server ütles: \"%1\""
+
+#: ksendbugmail/main.cpp:88
+#, kde-format
+msgid "Sends a bug report by email."
+msgstr "Veateate saatmine e-kirjaga."
+
+#: ksendbugmail/main.cpp:90
+#, kde-format
+msgid "The subject line of the email."
+msgstr "E-kirja teemarida."
+
+#: ksendbugmail/main.cpp:91
+#, kde-format
+msgid "The email address to send the bug report to."
+msgstr "E-posti aadress, kuhu saata veateade."
+
+#: kshortcuteditwidget.cpp:66
+#, kde-format
+msgid "Default:"
+msgstr "Vaikeväärtus:"
+
+#: kshortcuteditwidget.cpp:74
+#, kde-format
+msgid "Custom:"
+msgstr "Kohandatud:"
+
+#: kshortcutschemeseditor.cpp:44
+#, kde-format
+msgid "Shortcut Schemes"
+msgstr "Kiirklahviskeemid"
+
+#: kshortcutschemeseditor.cpp:65
+#, kde-format
+msgid "Current scheme:"
+msgstr "Aktiivne skeem:"
+
+#: kshortcutschemeseditor.cpp:81
+#, kde-format
+msgid "New..."
+msgstr "Uus..."
+
+#: kshortcutschemeseditor.cpp:84
+#, kde-format
+msgid "Delete"
+msgstr "Kustuta"
+
+#: kshortcutschemeseditor.cpp:87
+#, kde-format
+msgid "More Actions"
+msgstr "Rohkem toiminguid"
+
+#: kshortcutschemeseditor.cpp:91
+#, kde-format
+msgid "Save shortcuts to scheme"
+msgstr "Salvesta kiirklahvid skeemi"
+
+#: kshortcutschemeseditor.cpp:93
+#, kde-format
+msgid "Export Scheme..."
+msgstr "Ekspordi skeem..."
+
+#: kshortcutschemeseditor.cpp:95
+#, kde-format
+msgid "Import Scheme..."
+msgstr "Impordi skeem..."
+
+#: kshortcutschemeseditor.cpp:111
+#, kde-format
+msgid "Name for New Scheme"
+msgstr "Uue skeemi nimi"
+
+#: kshortcutschemeseditor.cpp:112
+#, kde-format
+msgid "Name for new scheme:"
+msgstr "Uue skeemi nimi:"
+
+#: kshortcutschemeseditor.cpp:112
+#, kde-format
+msgid "New Scheme"
+msgstr "Uus skeem"
+
+#: kshortcutschemeseditor.cpp:118
+#, kde-format
+msgid "A scheme with this name already exists."
+msgstr "Sellise nimega skeem on juba olemas."
+
+#: kshortcutschemeseditor.cpp:148
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"Kas tõesti kustutada skeem %1?\n"
+"Arvesta, et eemaldada ei saa ühtegi süsteemset kiirklahviskeemi."
+
+#: kshortcutschemeseditor.cpp:178
+#, kde-format
+msgid "Export Shortcuts"
+msgstr "Kiirklahvide eksport"
+
+#: kshortcutschemeseditor.cpp:178 kshortcutschemeseditor.cpp:189
+#, kde-format
+msgid "Shortcuts (*.shortcuts)"
+msgstr "Kiirklahvid (*.shortcuts)"
+
+#: kshortcutschemeseditor.cpp:189
+#, kde-format
+msgid "Import Shortcuts"
+msgstr "Kiirklahvide import"
+
+#: kshortcutschemeseditor.cpp:200
+#, kde-format
+msgid "Shortcut scheme successfully saved."
+msgstr "Kiirklahvide skeem salvestati edukalt."
+
+#: kshortcutschemeseditor.cpp:203
+#, kde-format
+msgid "Error saving the shortcut scheme."
+msgstr "Tõrge kiirklahvide skeemi salvestamisel."
+
+#: kshortcutsdialog.cpp:85
+#, kde-format
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+"Aktiivset kiirklahviskeemi on muudetud. Kas salvestada enne uuele lülitumist?"
+
+#: kshortcutsdialog.cpp:135
+#, kde-format
+msgid "Manage &Schemes"
+msgstr "&Halda skeeme"
+
+#: kshortcutsdialog.cpp:154
+#, kde-format
+msgid "Configure Shortcuts"
+msgstr "Kiirklahvide seadistamine"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Siia kirjutades saab interaktiivselt otsida kiirklahvi nime (nt. Kopeeri) "
+"või klahvikombinatsiooni (nt. Ctrl+C) järgi."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Siin näed kiirklahvide nimekirja, s.t seoseid vasakul olevate tegevuste (nt. "
+"Kopeeri) ja paremal olevate klahvikombinatsioonide (nt. CTRL+V) vahel."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Tegevus"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Kiirklahv"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternatiiv"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globaalne"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Globaalne alternatiiv"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Hiirenupu žest"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Hiire liigutamise žest"
+
+#: kshortcutseditor.cpp:630 kshortcutseditor.cpp:648
+#, kde-format
+msgid "Key Conflict"
+msgstr "Klahvikonflikt"
+
+#: kshortcutseditor.cpp:631
+#, kde-format
+msgid ""
+"The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Žest '%1' on juba kasutusel toiminguks \"%2\".\n"
+"Kas soovid selle tõesti asendada praegu valitud toiminguga?"
+
+#: kshortcutseditor.cpp:649
+#, kde-format
+msgid ""
+"The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
+"Do you want to reassign it from that action to the current one?"
+msgstr ""
+"Hiirenupužest '%1' on juba kasutusel tegevuseks \"%2\".\n"
+"Kas soovid selle tõesti asendada praegu valitud tegevusega?"
+
+#: kshortcutseditor.cpp:696
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Rakenduse %1 kiirklahvid"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:714 kshortcutwidget.ui:22
+#, kde-format
+msgid "Main:"
+msgstr "Peamine:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:715 kshortcutwidget.ui:52
+#, kde-format
+msgid "Alternate:"
+msgstr "Alternatiiv:"
+
+#: kshortcutseditor.cpp:716
+#, kde-format
+msgid "Global:"
+msgstr "Globaalne:"
+
+#: kshortcutseditor.cpp:717
+#, kde-format
+msgid "Global alternate:"
+msgstr "Globaalne alternatiiv:"
+
+#: kshortcutseditor.cpp:732
+#, kde-format
+msgid "Action Name"
+msgstr "Toimingu nimi"
+
+#: kshortcutseditor.cpp:736
+#, kde-format
+msgid "Shortcuts"
+msgstr "Kiirklahvid"
+
+#: kshortcutseditor.cpp:740
+#, kde-format
+msgid "Description"
+msgstr "Kirjeldus"
+
+#: kshortcutseditoritem.cpp:54
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:159
+#, kde-format
+msgid "Switch Application Language"
+msgstr "Rakenduse keele vahetamine"
+
+#: kswitchlanguagedialog_p.cpp:164
+#, kde-format
+msgid "Please choose the language which should be used for this application:"
+msgstr "Keel, mida selle rakenduse puhul kasutada:"
+
+#: kswitchlanguagedialog_p.cpp:191
+#, kde-format
+msgid "Add Fallback Language"
+msgstr "Lisa tagavarakeel"
+
+#: kswitchlanguagedialog_p.cpp:192
+#, kde-format
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"Võimaldab lisada ühe või enama keele, mida kasutatakse siis, kui määratud "
+"keel ei sisalda vajalikku tõlget."
+
+#: kswitchlanguagedialog_p.cpp:289 kswitchlanguagedialog_p.cpp:311
+#, kde-format
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"Rakenduse keel on muudetud. Muudatus jõustub rakenduse järgmisel "
+"käivitamisel."
+
+#: kswitchlanguagedialog_p.cpp:290 kswitchlanguagedialog_p.cpp:312
+#, kde-format
+msgid "Application Language Changed"
+msgstr "Rakenduste keel on muudetud"
+
+#: kswitchlanguagedialog_p.cpp:400
+#, kde-format
+msgid "Primary language:"
+msgstr "Esmane keel:"
+
+#: kswitchlanguagedialog_p.cpp:400
+#, kde-format
+msgid "Fallback language:"
+msgstr "Tagavarakeel:"
+
+#: kswitchlanguagedialog_p.cpp:415
+#, kde-format
+msgid "Remove"
+msgstr "Eemalda"
+
+#: kswitchlanguagedialog_p.cpp:422
+#, kde-format
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr "See on rakenduse põhikeel, mida kasutatakse enne kõiki teisi keeli."
+
+#: kswitchlanguagedialog_p.cpp:423
+#, kde-format
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"See on keel, mida kasutatakse juhul, kui ükski eelnev keel ei sisalda "
+"vajalikku tõlget."
+
+#: ktoolbar.cpp:309
+#, kde-format
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Teksti näitamine"
+
+#: ktoolbar.cpp:312
+#, kde-format
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Tööriistariba seadistused"
+
+#: ktoolbar.cpp:314
+#, kde-format
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Paigutus"
+
+#: ktoolbar.cpp:316
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Üleval"
+
+#: ktoolbar.cpp:318
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Vasakul"
+
+#: ktoolbar.cpp:319
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Paremal"
+
+#: ktoolbar.cpp:320
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "All"
+
+#: ktoolbar.cpp:328
+#, kde-format
+msgid "Text Position"
+msgstr "Teksti asend"
+
+#: ktoolbar.cpp:330
+#, kde-format
+msgid "Icons Only"
+msgstr "Ainult ikoonid"
+
+#: ktoolbar.cpp:331
+#, kde-format
+msgid "Text Only"
+msgstr "Ainult tekst"
+
+#: ktoolbar.cpp:332
+#, kde-format
+msgid "Text Alongside Icons"
+msgstr "Tekst ikoonide kõrval"
+
+#: ktoolbar.cpp:333
+#, kde-format
+msgid "Text Under Icons"
+msgstr "Tekst ikoonide all"
+
+#: ktoolbar.cpp:341
+#, kde-format
+msgid "Icon Size"
+msgstr "Ikooni suurus"
+
+#: ktoolbar.cpp:343
+#, kde-format
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: ktoolbar.cpp:360 ktoolbar.cpp:381
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Väike (%1x%2)"
+
+#: ktoolbar.cpp:362 ktoolbar.cpp:383
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Keskmine (%1x%2)"
+
+#: ktoolbar.cpp:364 ktoolbar.cpp:385
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Suur (%1x%2)"
+
+#: ktoolbar.cpp:366 ktoolbar.cpp:387
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Hiiglaslik (%1x%2)"
+
+#: ktoolbar.cpp:409
+#, kde-format
+msgid "Lock Toolbar Positions"
+msgstr "Tööriistariba asukoha lukustamine"
+
+#: ktoolbarhandler.cpp:103
+#, kde-format
+msgid "Toolbars Shown"
+msgstr "Näidatavad tööriistaribad"
+
+#: kundoactions.cpp:41
+#, kde-format
+msgid "Redo"
+msgstr "Tee uuesti"
+
+#: kundoactions.cpp:60
+#, kde-format
+msgid "Undo"
+msgstr "Võta tagasi"
+
+#: kxmlguibuilder.cpp:192 kxmlguibuilder.cpp:363
+#, kde-format
+msgid "No text"
+msgstr "Tekst puudub"
+
+#: kxmlguiwindow.cpp:437
+#, kde-format
+msgid ""
+"There are two actions (%1, %2) that want to use the same shortcut (%3). This "
+"is most probably a bug. Please report it in <a href='https://bugs.kde."
+"org'>bugs.kde.org</a>"
+msgstr ""
+
+#: kxmlguiwindow.cpp:437
+#, fuzzy, kde-format
+#| msgid "Ambiguous shortcut detected"
+msgid "Ambiguous Shortcuts"
+msgstr "Tuvastati mitmetimõistetav kiirklahv"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fail"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Mäng"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Redigeerimine"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Liikumine"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+#, kde-format
+msgid "&View"
+msgstr "&Vaade"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:117
+#, kde-format
+msgid "&Go"
+msgstr "&Liikumine"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:138
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Järjehoidjad"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:144
+#, kde-format
+msgid "&Tools"
+msgstr "&Tööriistad"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Settings"
+msgstr "&Seadistused"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:196
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Peamine tööriistariba"
