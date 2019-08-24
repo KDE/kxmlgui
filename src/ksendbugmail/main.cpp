@@ -127,9 +127,7 @@ int main(int argc, char **argv)
             fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1String(">");
         }
     } else {
-        fromaddr = SystemInformation::userName();
-        fromaddr += QLatin1Char('@');
-        fromaddr += QHostInfo::localHostName();
+        fromaddr = SystemInformation::userName() + QLatin1Char('@') + QHostInfo::localHostName();
     }
     // qCDebug(DEBUG_KXMLGUI) << "fromaddr \"" << fromaddr << "\"";
 

@@ -260,20 +260,20 @@ int KAboutApplicationPersonListDelegate::heightForString(const QString &string,
 
 QString KAboutApplicationPersonListDelegate::buildTextForProfile(const KAboutApplicationPersonProfile &profile) const
 {
-    QString text;
-    text += QLatin1String("<b>");
-    text += i18nc("@item Contributor name in about dialog.", "%1", profile.name());
-    text += QLatin1String("</b>");
+    QString text =
+        QLatin1String("<b>") +
+        i18nc("@item Contributor name in about dialog.", "%1", profile.name()) +
+        QLatin1String("</b>");
 
     if (!profile.task().isEmpty()) {
-        text += QLatin1String("\n<br><i>");
-        text += profile.task();
-        text += QLatin1String("</i>");
+        text += QLatin1String("\n<br><i>") +
+                profile.task() +
+                QLatin1String("</i>");
     }
 
     if (!profile.location().isEmpty()) {
-        text += QLatin1String("\n<br>");
-        text += profile.location();
+        text += QLatin1String("\n<br>") +
+                profile.location();
     }
     return text;
 }

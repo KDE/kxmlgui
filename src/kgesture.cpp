@@ -164,10 +164,8 @@ QString KShapeGesture::toString() const
 
     int i;
     for (i = 0; i < d->m_shape.size(); i++) {
-        ret.append(QLatin1Char(','));
-        ret.append(QString::number(d->m_shape[i].x()));
-        ret.append(QLatin1Char(','));
-        ret.append(QString::number(d->m_shape[i].y()));
+        ret += QLatin1Char(',') + QString::number(d->m_shape[i].x()) +
+               QLatin1Char(',') + QString::number(d->m_shape[i].y());
     }
 
     return ret;

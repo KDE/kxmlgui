@@ -675,8 +675,7 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
         s = i18nc("No shortcut defined", "None");
     }
 
-    s.prepend(QLatin1Char(' '));
-    s.append(QLatin1Char(' '));
+    s = QLatin1Char(' ') + s + QLatin1Char(' ');
     keyButton->setText(s);
 }
 
