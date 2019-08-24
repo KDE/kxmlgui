@@ -328,7 +328,7 @@ KSwitchLanguageDialogPrivate::KSwitchLanguageDialogPrivate(
 
 static bool stripCountryCode(QString *languageCode)
 {
-    const int idx = languageCode->indexOf(QLatin1String("_"));
+    const int idx = languageCode->indexOf(QLatin1Char('_'));
     if (idx != -1) {
         *languageCode = languageCode->left(idx);
         return true;
@@ -372,7 +372,7 @@ QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
 
         // We get en-US here but we use en_US
         for (int i = 0; i < languagesList.count(); ++i) {
-            languagesList[i].replace(QLatin1String("-"), QLatin1String("_"));
+            languagesList[i].replace(QLatin1Char('-'), QLatin1Char('_'));
         }
     }
 

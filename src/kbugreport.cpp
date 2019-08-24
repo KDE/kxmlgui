@@ -422,7 +422,7 @@ void KBugReportPrivate::_k_slotSetFrom()
     } else {
         QString name = emailSettings.getSetting(KEMailSettings::RealName);
         if (!name.isEmpty()) {
-            fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1String(">");
+            fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1Char('>');
         }
     }
     m_from->setText(fromaddr);

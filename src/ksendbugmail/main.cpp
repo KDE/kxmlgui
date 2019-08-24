@@ -124,7 +124,7 @@ int main(int argc, char **argv)
     if (!fromaddr.isEmpty()) {
         QString name = emailConfig.getSetting(KEMailSettings::RealName);
         if (!name.isEmpty()) {
-            fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1String(">");
+            fromaddr = name + QLatin1String(" <") + fromaddr + QLatin1Char('>');
         }
     } else {
         fromaddr = SystemInformation::userName() + QLatin1Char('@') + QHostInfo::localHostName();
