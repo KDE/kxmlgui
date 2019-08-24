@@ -184,7 +184,7 @@ QString KXmlGuiVersionHandler::findVersionNumber(const QString &xml)
             break;
         case ST_AFTER_OPEN: {
             //Jump to gui..
-            const int guipos = xml.indexOf(QStringLiteral("gui"), pos, Qt::CaseInsensitive);
+            const int guipos = xml.indexOf(QLatin1String("gui"), pos, Qt::CaseInsensitive);
             if (guipos == -1) {
                 return QString();    //Reject
             }
@@ -197,7 +197,7 @@ QString KXmlGuiVersionHandler::findVersionNumber(const QString &xml)
             state = ST_EXPECT_VERSION;
             break;
         case ST_EXPECT_VERSION: {
-            const int verpos = xml.indexOf(QStringLiteral("version"), pos, Qt::CaseInsensitive);
+            const int verpos = xml.indexOf(QLatin1String("version"), pos, Qt::CaseInsensitive);
             if (verpos == -1) {
                 return QString();    //Reject
             }

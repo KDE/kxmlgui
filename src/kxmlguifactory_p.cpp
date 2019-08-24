@@ -210,7 +210,7 @@ void ContainerNode::plugActionList(BuildState &state)
 
 void ContainerNode::plugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt)
 {
-    const QString tagActionList = QStringLiteral("actionlist");
+    const QLatin1String tagActionList("actionlist");
 
     const MergingIndex &mergingIdx = *mergingIdxIt;
     if (mergingIdx.clientName != state.clientName) {
@@ -219,7 +219,7 @@ void ContainerNode::plugActionList(BuildState &state, const MergingIndexList::it
     if (!mergingIdx.mergingName.startsWith(tagActionList)) {
         return;
     }
-    const QString k = mergingIdx.mergingName.mid(tagActionList.length());
+    const QString k = mergingIdx.mergingName.mid(tagActionList.size());
     if (k != state.actionListName) {
         return;
     }
@@ -250,7 +250,7 @@ void ContainerNode::unplugActionList(BuildState &state)
 
 void ContainerNode::unplugActionList(BuildState &state, const MergingIndexList::iterator &mergingIdxIt)
 {
-    static const QString &tagActionList = QStringLiteral("actionlist");
+    const QLatin1String tagActionList("actionlist");
 
     MergingIndex mergingIdx = *mergingIdxIt;
 
@@ -260,7 +260,7 @@ void ContainerNode::unplugActionList(BuildState &state, const MergingIndexList::
         return;
     }
 
-    k.remove(0, tagActionList.length());
+    k.remove(0, tagActionList.size());
 
     if (mergingIdx.clientName != state.clientName) {
         return;
