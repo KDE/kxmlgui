@@ -362,7 +362,7 @@ bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *hier[]
     // If the action name starts with unnamed- spit out a warning and ignore
     // it. That name will change at will and will break loading and writing
     QString actionName = action->objectName();
-    if (actionName.isEmpty() || actionName.startsWith(QStringLiteral("unnamed-"))) {
+    if (actionName.isEmpty() || actionName.startsWith(QLatin1String("unnamed-"))) {
         qCritical() << "Skipping action without name " << action->text() << "," << actionName << "!";
         return false;
     }
