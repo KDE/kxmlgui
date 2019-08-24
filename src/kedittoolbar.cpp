@@ -78,7 +78,7 @@ static ToolBarList findToolBars(const QDomElement &start)
                 list.append(elem);
             }
         } else {
-            if (elem.tagName() != QStringLiteral("MenuBar")) { // there are no toolbars inside the menubar :)
+            if (elem.tagName() != QLatin1String("MenuBar")) { // there are no toolbars inside the menubar :)
                 list += findToolBars(elem.firstChildElement());    // recursive
             }
         }

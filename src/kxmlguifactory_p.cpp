@@ -627,7 +627,7 @@ void BuildHelper::processStateElement(const QDomElement &element)
 
         QString tagName = e.tagName().toLower();
 
-        if (tagName != QStringLiteral("enable") && tagName != QLatin1String("disable")) {
+        if (tagName != QLatin1String("enable") && tagName != QLatin1String("disable")) {
             continue;
         }
 
@@ -636,7 +636,7 @@ void BuildHelper::processStateElement(const QDomElement &element)
         // process action names
         for (QDomNode n2 = n.firstChild(); !n2.isNull(); n2 = n2.nextSibling()) {
             QDomElement actionEl = n2.toElement();
-            if (actionEl.tagName().toLower() != QStringLiteral("action")) {
+            if (actionEl.tagName().compare(QLatin1String("action"), Qt::CaseInsensitive) != 0) {
                 continue;
             }
 
