@@ -97,7 +97,7 @@ int main(int argc, char **argv)
         recipient = QStringLiteral("submit@bugs.kde.org");
     } else {
         if (recipient.at(0) == QLatin1Char('\'')) {
-            recipient = recipient.mid(1).left(recipient.length() - 2);
+            recipient = recipient.mid(1, recipient.length() - 2);
         }
     }
     // qCDebug(DEBUG_KXMLGUI) << "recp" << recipient;
@@ -106,7 +106,7 @@ int main(int argc, char **argv)
         subject = QStringLiteral("(no subject)");
     } else {
         if (subject.at(0) == QLatin1Char('\'')) {
-            subject = subject.mid(1).left(subject.length() - 2);
+            subject = subject.mid(1, subject.length() - 2);
         }
     }
     QTextStream input(stdin, QIODevice::ReadOnly);
