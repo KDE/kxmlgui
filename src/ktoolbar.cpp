@@ -474,11 +474,11 @@ void KToolBar::Private::adjustSeparatorVisibility()
 Qt::ToolButtonStyle KToolBar::Private::toolButtonStyleFromString(const QString &_style)
 {
     QString style = _style.toLower();
-    if (style == QStringLiteral("textbesideicon") || style == QLatin1String("icontextright")) {
+    if (style == QLatin1String("textbesideicon") || style == QLatin1String("icontextright")) {
         return Qt::ToolButtonTextBesideIcon;
-    } else if (style == QStringLiteral("textundericon") || style == QLatin1String("icontextbottom")) {
+    } else if (style == QLatin1String("textundericon") || style == QLatin1String("icontextbottom")) {
         return Qt::ToolButtonTextUnderIcon;
-    } else if (style == QStringLiteral("textonly")) {
+    } else if (style == QLatin1String("textonly")) {
         return Qt::ToolButtonTextOnly;
     } else {
         return Qt::ToolButtonIconOnly;
@@ -503,11 +503,11 @@ QString KToolBar::Private::toolButtonStyleToString(Qt::ToolButtonStyle style)
 Qt::ToolBarArea KToolBar::Private::positionFromString(const QString &position)
 {
     Qt::ToolBarArea newposition = Qt::TopToolBarArea;
-    if (position == QStringLiteral("left")) {
+    if (position == QLatin1String("left")) {
         newposition = Qt::LeftToolBarArea;
-    } else if (position == QStringLiteral("bottom")) {
+    } else if (position == QLatin1String("bottom")) {
         newposition = Qt::BottomToolBarArea;
-    } else if (position == QStringLiteral("right")) {
+    } else if (position == QLatin1String("right")) {
         newposition = Qt::RightToolBarArea;
     }
     return newposition;
@@ -811,7 +811,7 @@ KToolBar::KToolBar(const QString &objectName, QWidget *parent, bool readConfig)
     setObjectName(objectName);
     // mainToolBar -> isMainToolBar = true  -> buttonStyle is configurable
     // others      -> isMainToolBar = false -> ### hardcoded default for buttonStyle !!! should be configurable? -> hidden key added
-    d->init(readConfig, objectName == QStringLiteral("mainToolBar"));
+    d->init(readConfig, (objectName == QLatin1String("mainToolBar")));
 
     // KToolBar is auto-added to the top area of the main window if parent is a QMainWindow
     if (QMainWindow *mw = qobject_cast<QMainWindow *>(parent)) {
@@ -962,7 +962,7 @@ void KToolBar::loadState(const QDomElement &element)
         bool newLine = false;
         QString attrNewLine = element.attribute(QStringLiteral("newline")).toLower();
         if (!attrNewLine.isEmpty()) {
-            newLine = attrNewLine == QStringLiteral("true");
+            newLine = (attrNewLine == QLatin1String("true"));
         }
         if (newLine && mw) {
             mw->insertToolBarBreak(this);
@@ -990,7 +990,7 @@ void KToolBar::loadState(const QDomElement &element)
     {
         QString attrHidden = element.attribute(QStringLiteral("hidden")).toLower();
         if (!attrHidden.isEmpty()) {
-            hidden = attrHidden  == QStringLiteral("true");
+            hidden = (attrHidden == QStringLiteral("true"));
         }
     }
 

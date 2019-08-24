@@ -117,7 +117,7 @@ static ActionPropertiesMap extractActionProperties(const QDomDocument &doc)
 
             const QString name = attr.name();
 
-            if (name == QStringLiteral("name") || name.isEmpty()) {
+            if (name == QLatin1String("name") || name.isEmpty()) {
                 continue;
             }
 

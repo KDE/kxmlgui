@@ -144,7 +144,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_donate"))
-        && mAboutData.bugAddress() == QStringLiteral("submit@bugs.kde.org")) {
+        && mAboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
         mDonateAction = KStandardAction::donate(q, &KHelpMenu::donate, q);
     }
 

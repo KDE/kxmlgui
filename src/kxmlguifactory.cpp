@@ -654,7 +654,7 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
         propertyValue = QVariant(attribute.value().toUInt());
     } else if (isShortcut) {
         // Setting the shortcut by property also sets the default shortcut (which is incorrect), so we have to do it directly
-        if (attrName == QStringLiteral("globalShortcut")) {
+        if (attrName == QLatin1String("globalShortcut")) {
 #if HAVE_GLOBALACCEL
             KGlobalAccel::self()->setShortcut(action, QKeySequence::listFromString(attribute.value()));
 #endif

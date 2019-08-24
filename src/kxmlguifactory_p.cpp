@@ -532,16 +532,16 @@ void BuildHelper::processElement(const QDomElement &e)
     QString tag(e.tagName().toLower());
     QString currName(e.attribute(QStringLiteral("name")));
 
-    bool isActionTag = (tag == QStringLiteral("action"));
+    const bool isActionTag = (tag == QLatin1String("action"));
 
     if (isActionTag || customTags.indexOf(tag) != -1) {
         processActionOrCustomElement(e, isActionTag);
     } else if (containerTags.indexOf(tag) != -1) {
         processContainerElement(e, tag, currName);
-    } else if (tag == QStringLiteral("merge") || tag == QLatin1String("definegroup")
-               || tag == QStringLiteral("actionlist")) {
+    } else if (tag == QLatin1String("merge") || tag == QLatin1String("definegroup")
+               || tag == QLatin1String("actionlist")) {
         processMergeElement(tag, currName, e);
-    } else if (tag == QStringLiteral("state")) {
+    } else if (tag == QLatin1String("state")) {
         processStateElement(e);
     }
 }
@@ -631,7 +631,7 @@ void BuildHelper::processStateElement(const QDomElement &element)
             continue;
         }
 
-        bool processingActionsToEnable = (tagName == QStringLiteral("enable"));
+        const bool processingActionsToEnable = (tagName == QLatin1String("enable"));
 
         // process action names
         for (QDomNode n2 = n.firstChild(); !n2.isNull(); n2 = n2.nextSibling()) {
@@ -769,7 +769,7 @@ void BuildHelper::processContainerElement(const QDomElement &e, const QString &t
                                           m_state.guiClient, builder, containerAction,
                                           mergingName, group, cusTags, conTags);
     } else {
-        if (tag == QStringLiteral("toolbar")) {
+        if (tag == QLatin1String("toolbar")) {
             KToolBar *bar = qobject_cast<KToolBar *>(containerNode->container);
             if (bar) {
                 if (m_state.guiClient && !m_state.guiClient->xmlFile().isEmpty()) {

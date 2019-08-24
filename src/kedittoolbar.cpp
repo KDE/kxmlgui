@@ -73,7 +73,7 @@ static ToolBarList findToolBars(const QDomElement &start)
     ToolBarList list;
 
     for (QDomElement elem = start; !elem.isNull(); elem = elem.nextSiblingElement()) {
-        if (elem.tagName() == QStringLiteral("ToolBar")) {
+        if (elem.tagName() == QLatin1String("ToolBar")) {
             if (elem.attribute(QStringLiteral("noEdit")) != QLatin1String("true")) {
                 list.append(elem);
             }
@@ -1374,10 +1374,10 @@ void KEditToolBarWidgetPrivate::slotActiveSelectionChanged()
     m_removeAction->setEnabled(toolitem);
 
     m_changeIcon->setEnabled(toolitem &&
-                             toolitem->internalTag() == QStringLiteral("Action"));
+                             toolitem->internalTag() == QLatin1String("Action"));
 
     m_changeIconText->setEnabled(toolitem &&
-                                 toolitem->internalTag() == QStringLiteral("Action"));
+                                 toolitem->internalTag() == QLatin1String("Action"));
 
     if (toolitem) {
         m_upAction->setEnabled(toolitem->index() != 0);

@@ -195,7 +195,7 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
     for (; !n.isNull(); n = n.nextSibling()) {
         QDomElement elem = n.toElement();
         if (!elem.isNull() && elem.tagName() == tagToolBar && elem.attribute(attrName) == toolbar->objectName()) {
-            if (elem.attribute(attrNoEdit) == QStringLiteral("true")) {
+            if (elem.attribute(attrNoEdit) == QLatin1String("true")) {
                 qCWarning(DEBUG_KXMLGUI) << "The toolbar is not editable";
                 return;
             }

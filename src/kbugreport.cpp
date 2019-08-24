@@ -113,7 +113,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     d->bugDestination = KBugReportPrivate::CustomEmail;
 
     const QString bugAddress = d->m_aboutData.bugAddress();
-    if (bugAddress == QStringLiteral("submit@bugs.kde.org")) {
+    if (bugAddress == QLatin1String("submit@bugs.kde.org")) {
         // This is a core KDE application -> redirect to the web form
         d->bugDestination = KBugReportPrivate::BugsKdeOrg;
     } else if (!QUrl(bugAddress).scheme().isEmpty()) {
@@ -522,7 +522,7 @@ QString KBugReport::text() const
         if (bodyText[bodyText.length() - 1] != QLatin1Char('\n')) {
             bodyText += QLatin1Char('\n');
         }
-    if (severity == QStringLiteral("i18n") && QLocale().language() != QLocale::system().language()) {
+    if (severity == QLatin1String("i18n") && QLocale().language() != QLocale::system().language()) {
         // Case 1 : i18n bug
         QString package = QLatin1String("i18n_") + QLocale::languageToString(QLocale().language());
         package = package.replace(QLatin1Char('_'), QLatin1Char('-'));
