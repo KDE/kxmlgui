@@ -632,7 +632,7 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
 {
     //empty string if no non-modifier was pressed
     QString s = keySequence.toString(QKeySequence::NativeText);
-    s.replace(QLatin1Char('&'), QStringLiteral("&&"));
+    s.replace(QLatin1Char('&'), QLatin1String("&&"));
 
     if (isRecording) {
         if (modifierKeys) {
