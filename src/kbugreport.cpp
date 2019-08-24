@@ -368,7 +368,7 @@ void KBugReportPrivate::_k_appChanged(int i)
     QString appName = appcombo->itemText(i);
     int index = appName.indexOf(QLatin1Char('/'));
     if (index > 0) {
-        appName = appName.left(index);
+        appName.truncate(index);
     }
     //qCDebug(DEBUG_KXMLGUI) << "appName " << appName;
 

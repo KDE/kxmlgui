@@ -92,7 +92,7 @@ void SMTP::setSenderAddress(const QString &sender)
     senderAddress = senderAddress.mid(index + 1);
     index =  senderAddress.indexOf(QLatin1Char('>'));
     if (index != -1) {
-        senderAddress = senderAddress.left(index);
+        senderAddress.truncate(index);
     }
     senderAddress = senderAddress.simplified();
     while (1) {
