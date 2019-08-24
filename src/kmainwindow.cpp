@@ -491,8 +491,8 @@ void KMainWindow::setCaption(const QString &caption)
 void KMainWindow::setCaption(const QString &caption, bool modified)
 {
     QString title = caption;
-    if (!title.contains(QStringLiteral("[*]")) && !title.isEmpty()) { // append the placeholder so that the modified mechanism works
-        title.append(QStringLiteral(" [*]"));
+    if (!title.contains(QLatin1String("[*]")) && !title.isEmpty()) { // append the placeholder so that the modified mechanism works
+        title.append(QLatin1String(" [*]"));
     }
     setPlainCaption(title);
     setWindowModified(modified);

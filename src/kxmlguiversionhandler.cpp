@@ -336,7 +336,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
                 } else {
                     // Move away the outdated local file, to speed things up next time
                     const QString f = (*local).file;
-                    const QString backup = f + QStringLiteral(".backup");
+                    const QString backup = f + QLatin1String(".backup");
                     QFile::rename(f, backup);
                 }
             }

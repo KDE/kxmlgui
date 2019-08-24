@@ -730,7 +730,7 @@ void KToolBar::Private::slotContextShowText()
     }
     if (filename.isEmpty()) {
         componentName = QCoreApplication::applicationName();
-        filename = componentName + QStringLiteral("ui.rc");
+        filename = componentName + QLatin1String("ui.rc");
     }
 
     // Save the priority state of the action

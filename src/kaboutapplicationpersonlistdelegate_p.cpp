@@ -126,7 +126,7 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
         action = mainLinks->actions().at(EmailAction);
         action->setToolTip(i18nc("Action to send an email to a contributor",
                                  "Email contributor\n%1", profile.email()));
-        action->setData(QStringLiteral("mailto:%1").arg(profile.email()));
+        action->setData(QString(QLatin1String("mailto:") + profile.email()));
         action->setVisible(true);
     }
     if (!profile.homepage().isEmpty()) {
@@ -261,18 +261,18 @@ int KAboutApplicationPersonListDelegate::heightForString(const QString &string,
 QString KAboutApplicationPersonListDelegate::buildTextForProfile(const KAboutApplicationPersonProfile &profile) const
 {
     QString text;
-    text += QStringLiteral("<b>");
+    text += QLatin1String("<b>");
     text += i18nc("@item Contributor name in about dialog.", "%1", profile.name());
-    text += QStringLiteral("</b>");
+    text += QLatin1String("</b>");
 
     if (!profile.task().isEmpty()) {
-        text += QStringLiteral("\n<br><i>");
+        text += QLatin1String("\n<br><i>");
         text += profile.task();
-        text += QStringLiteral("</i>");
+        text += QLatin1String("</i>");
     }
 
     if (!profile.location().isEmpty()) {
-        text += QStringLiteral("\n<br>");
+        text += QLatin1String("\n<br>");
         text += profile.location();
     }
     return text;

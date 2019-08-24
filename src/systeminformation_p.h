@@ -42,8 +42,8 @@ inline QString SystemInformation::operatingSystemVersion()
     struct utsname unameBuf;
     uname(&unameBuf);
     return QString::fromUtf8(unameBuf.sysname) +
-        QStringLiteral(" (") + QString::fromUtf8(unameBuf.machine) + QLatin1String(") ") +
-        QStringLiteral("release ") + QString::fromUtf8(unameBuf.release);
+        QLatin1String(" (") + QString::fromUtf8(unameBuf.machine) + QLatin1String(") ") +
+        QLatin1String("release ") + QString::fromUtf8(unameBuf.release);
 }
 #else
 #include <QOperatingSystemVersion>

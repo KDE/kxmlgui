@@ -212,8 +212,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     if (d->m_strVersion.isEmpty()) {
         d->m_strVersion = i18n("no version set (programmer error)");
     }
-    d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING);
-    d->kde_version += QStringLiteral(", ") + QLatin1String(XMLGUI_DISTRIBUTION_TEXT);
+    d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING) + QLatin1String(", ") + QStringLiteral(XMLGUI_DISTRIBUTION_TEXT);
     if (d->bugDestination != KBugReportPrivate::BugsKdeOrg) {
         d->m_strVersion += QLatin1Char(' ') + d->kde_version;
     }
@@ -476,7 +475,7 @@ void KBugReport::accept()
         QString msg = i18n("Unable to send the bug report.\n"
                            "Please submit a bug report manually....\n"
                            "See https://bugs.kde.org/ for instructions.");
-        KMessageBox::error(this, msg + QStringLiteral("\n\n") + d->lastError);
+        KMessageBox::error(this, msg + QLatin1String("\n\n") + d->lastError);
         return;
     }
 
@@ -525,19 +524,23 @@ QString KBugReport::text() const
         }
     if (severity == QStringLiteral("i18n") && QLocale().language() != QLocale::system().language()) {
         // Case 1 : i18n bug
-        QString package = QStringLiteral("i18n_%1").arg(QLocale::languageToString(QLocale().language()));
+        QString package = QLatin1String("i18n_") + QLocale::languageToString(QLocale().language());
         package = package.replace(QLatin1Char('_'), QLatin1Char('-'));
-        return QStringLiteral("Package: %1").arg(package) +
-               QStringLiteral("\nApplication: %1\nVersion: %2\n").arg(appname, d->m_strVersion) +
+        return QLatin1String("Package: ") + package +
+               QLatin1String("\nApplication: ") + appname +
+               QLatin1String("\nVersion: ") + d->m_strVersion +
                                    // not really i18n's version, so better here IMHO
-                                   os + QLatin1String("\n") + bodyText;
+               QLatin1Char('\n') + os +
+               QLatin1Char('\n') + bodyText;
     } else {
         appname = appname.replace(QLatin1Char('_'), QLatin1Char('-'));
         // Case 2 : normal bug
-        return QStringLiteral("Package: %1\nVersion: %2\nSeverity: %3\n")
-               .arg(appname, d->m_strVersion, severity) +
-               QStringLiteral("Compiler: %1\n").arg(QStringLiteral(XMLGUI_COMPILER_VERSION)) +
-               os + QLatin1String("\n") + bodyText;
+        return QLatin1String("Package: ") + appname +
+               QLatin1String("\nVersion: ") + d->m_strVersion +
+               QLatin1String("\nSeverity: ") + severity +
+               QLatin1String("\nCompiler: ") + QStringLiteral(XMLGUI_COMPILER_VERSION) +
+               QLatin1Char('\n') + os +
+               QLatin1Char('\n') + bodyText;
     }
 }
 

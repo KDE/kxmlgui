@@ -51,7 +51,7 @@ static QSettingsPtr localeOverridesSettings()
         configDir.mkpath(QStringLiteral("."));
     }
 
-    return QSettingsPtr(new QSettings(configPath + QStringLiteral("/klanguageoverridesrc"), QSettings::IniFormat));
+    return QSettingsPtr(new QSettings(configPath + QLatin1String("/klanguageoverridesrc"), QSettings::IniFormat));
 }
 
 static QByteArray getApplicationSpecificLanguage(const QByteArray &defaultCode = QByteArray())

@@ -668,7 +668,7 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
             s = i18nc("What the user inputs now will be taken as the new shortcut", "Input");
         }
         //make it clear that input is still going on
-        s.append(QStringLiteral(" ..."));
+        s.append(QLatin1String(" ..."));
     }
 
     if (s.isEmpty()) {

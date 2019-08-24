@@ -105,7 +105,7 @@ void SMTP::setSenderAddress(const QString &sender)
     }
     index = senderAddress.indexOf(QLatin1Char('@'));
     if (index == -1) {
-        senderAddress.append(QStringLiteral("@localhost"));    // won't go through without a local mail system
+        senderAddress.append(QLatin1String("@localhost"));    // won't go through without a local mail system
     }
 
 }

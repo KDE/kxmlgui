@@ -122,7 +122,7 @@ bool KXmlGuiWindow::event(QEvent *ev)
     bool ret = KMainWindow::event(ev);
     if (ev->type() == QEvent::Polish) {
 #ifdef QT_DBUS_LIB
-        QDBusConnection::sessionBus().registerObject(dbusName() + QStringLiteral("/actions"), actionCollection(),
+        QDBusConnection::sessionBus().registerObject(dbusName() + QLatin1String("/actions"), actionCollection(),
                 QDBusConnection::ExportScriptableSlots |
                 QDBusConnection::ExportScriptableProperties |
                 QDBusConnection::ExportNonScriptableSlots |
@@ -281,7 +281,7 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
         }
     }
 
-    const QString windowXmlFile = xmlfile.isNull() ? componentName() + QStringLiteral("ui.rc") : xmlfile;
+    const QString windowXmlFile = xmlfile.isNull() ? componentName() + QLatin1String("ui.rc") : xmlfile;
 
     // Help beginners who call setXMLFile and then setupGUI...
     if (!xmlFile().isEmpty() && xmlFile() != windowXmlFile) {

@@ -172,7 +172,7 @@ QString KXMLGUIClient::localXMLFile() const
         return QString();
     }
 
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kxmlgui5/") +
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/") +
            componentName() + QLatin1Char('/') + d->m_xmlFile;
 }
 
@@ -232,10 +232,10 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
         const QString filter = componentName() + QLatin1Char('/') + _file;
 
         // files on filesystem
-        allFiles << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + filter); // KF >= 5.1
+        allFiles << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("kxmlgui5/") + filter); // KF >= 5.1
 
         // KF >= 5.4 (resource file)
-        const QString qrcFile(QStringLiteral(":/kxmlgui5/") + filter);
+        const QString qrcFile(QLatin1String(":/kxmlgui5/") + filter);
         if (QFile::exists(qrcFile)) {
             allFiles << qrcFile;
         }

@@ -167,7 +167,7 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     layout->addWidget(d->m_schemeEditor);
 
     d->m_detailsButton = new QPushButton;
-    d->m_detailsButton->setText(KShortcutsDialogPrivate::detailsButtonText() + QStringLiteral(" >>"));
+    d->m_detailsButton->setText(KShortcutsDialogPrivate::detailsButtonText() + QLatin1String(" >>"));
 
     QPushButton *printButton = new QPushButton;
     KGuiItem::assign(printButton, KStandardGuiItem::print());

@@ -172,7 +172,7 @@ QString XmlData::toolBarText(const QDomElement &it) const
     if ((m_type == XmlData::Shell) ||
             (m_type == XmlData::Part)) {
         QString doc_name(m_document.documentElement().attribute(QStringLiteral("name")));
-        name += QStringLiteral(" <") + doc_name + QLatin1Char('>');
+        name += QLatin1String(" <") + doc_name + QLatin1Char('>');
     }
     return name;
 }
@@ -461,7 +461,7 @@ public:
 
     QString xmlFile(const QString &xml_file) const
     {
-        return xml_file.isEmpty() ? m_componentName + QStringLiteral("ui.rc") : xml_file;
+        return xml_file.isEmpty() ? m_componentName + QLatin1String("ui.rc") : xml_file;
     }
 
     /**
@@ -710,7 +710,7 @@ void KEditToolBarPrivate::defaultClicked()
             m_file = m_file.mid(slash);
         }
         const QString xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-            QStringLiteral("/kxmlgui5/") + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
+            QLatin1String("/kxmlgui5/") + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
 
         if (QFile::exists(xml_file))
             if (!QFile::remove(xml_file)) {

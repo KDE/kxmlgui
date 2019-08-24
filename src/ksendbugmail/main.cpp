@@ -114,7 +114,7 @@ int main(int argc, char **argv)
     QString text, line;
     while (!input.atEnd()) {
         line = input.readLine();
-        text += line + QStringLiteral("\r\n");
+        text += line + QLatin1String("\r\n");
     }
     // qCDebug(DEBUG_KXMLGUI) << text;
 

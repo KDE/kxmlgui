@@ -119,10 +119,10 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
         xml_file = filename;
     } else {
         // KF >= 5.1 (KXMLGUI_INSTALL_DIR)
-        xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
+        xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
         if (!QFile::exists(xml_file)) {
             // KF >= 5.4 (resource file)
-            xml_file = QStringLiteral(":/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
+            xml_file = QLatin1String(":/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
         }
 
         bool warn = false;
@@ -163,7 +163,7 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
 
     if (QDir::isRelativePath(xml_file))
         xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-            QStringLiteral("/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
+            QLatin1String("/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
 
     QFileInfo fileInfo(xml_file);
     QDir().mkpath(fileInfo.absolutePath());
