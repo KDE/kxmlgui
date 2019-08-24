@@ -260,7 +260,7 @@ void ContainerNode::unplugActionList(BuildState &state, const MergingIndexList::
         return;
     }
 
-    k = k.mid(tagActionList.length());
+    k.remove(0, tagActionList.length());
 
     if (mergingIdx.clientName != state.clientName) {
         return;
