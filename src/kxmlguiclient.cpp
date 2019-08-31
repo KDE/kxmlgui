@@ -45,11 +45,9 @@ public:
         : m_componentName(QCoreApplication::applicationName()),
           m_actionCollection(nullptr),
           m_parent(nullptr),
-          m_builder(nullptr)
+          m_builder(nullptr),
+          m_textTagNames({ QStringLiteral("text"), QStringLiteral("Text"), QStringLiteral("title") })
     {
-        m_textTagNames.append(QStringLiteral("text"));
-        m_textTagNames.append(QStringLiteral("Text"));
-        m_textTagNames.append(QStringLiteral("title"));
     }
     ~KXMLGUIClientPrivate()
     {
@@ -75,7 +73,7 @@ public:
     KXMLGUIBuilder *m_builder;
     QString m_xmlFile;
     QString m_localXMLFile;
-    QStringList m_textTagNames;
+    const QStringList m_textTagNames;
 
     // Actions to enable/disable on a state change
     QMap<QString, KXMLGUIClient::StateChange> m_actionsStateMap;
