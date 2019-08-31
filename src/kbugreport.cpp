@@ -51,6 +51,8 @@
 #include "systeminformation_p.h"
 #include "config-xmlgui.h"
 
+#include <array>
+
 class KBugReportPrivate
 {
 public:
@@ -239,19 +241,25 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         // Severity
         d->m_bgSeverity = new QGroupBox(i18n("Se&verity"), this);
-        static const char *const sevNames[5] = { "critical", "grave", "normal", "wishlist", "i18n" };
-        const QString sevTexts[5] = { i18n("Critical"), i18n("Grave"), i18nc("normal severity", "Normal"), i18n("Wishlist"), i18n("Translation") };
+
+        struct SeverityData { QString name; QString text; };
+        const std::array<SeverityData, 5> severityData = { {
+            { QStringLiteral("critical"), i18n("Critical") },
+            { QStringLiteral("grave"),    i18n("Grave") },
+            { QStringLiteral("normal"),   i18nc("normal severity", "Normal") },
+            { QStringLiteral("wishlist"), i18n("Wishlist") },
+            { QStringLiteral("i18n"),     i18n("Translation") },
+        } };
+
         QHBoxLayout *severityLayout = new QHBoxLayout(d->m_bgSeverity);
-        for (int i = 0; i < 5; i++) {
+        for (auto& severityDatum : severityData) {
             // Store the severity string as the name
-            QRadioButton *rb = new QRadioButton(sevTexts[i], d->m_bgSeverity);
-            rb->setObjectName(QLatin1String(sevNames[i]));
+            QRadioButton *rb = new QRadioButton(severityDatum.text, d->m_bgSeverity);
+            rb->setObjectName(severityDatum.name);
             d->severityButtons.append(rb);
             severityLayout->addWidget(rb);
-            if (i == 2) {
-                rb->setChecked(true);    // default : "normal"
-            }
         }
+        d->severityButtons[2]->setChecked(true); // default : "normal"
 
         lay->addWidget(d->m_bgSeverity);
 
