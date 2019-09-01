@@ -370,7 +370,9 @@ QAction *KActionCollection::takeAction(QAction *action)
 
     action->disconnect(this);
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     emit removed(action);   //deprecated
+#endif
     return action;
 }
 
@@ -729,16 +731,20 @@ void KActionCollection::slotActionTriggered()
     }
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
 void KActionCollection::slotActionHighlighted()
 {
     slotActionHovered();
 }
+#endif
 
 void KActionCollection::slotActionHovered()
 {
     QAction *action = qobject_cast<QAction *>(sender());
     if (action) {
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
         emit actionHighlighted(action);
+#endif
         emit actionHovered(action);
     }
 }
@@ -754,7 +760,9 @@ void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
     }
 
     //HACK the object we emit is partly destroyed
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     emit q->removed(action); //deprecated. remove in KDE5
+#endif
 }
 
 void KActionCollection::connectNotify(const QMetaMethod &signal)
@@ -763,7 +771,10 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
         return;
     }
 
-    if (signal.methodSignature() == "actionHighlighted(QAction*)" ||
+    if (
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
+        signal.methodSignature() == "actionHighlighted(QAction*)" ||
+#endif
             signal.methodSignature() == "actionHovered(QAction*)") {
         if (!d->connectHovered) {
             d->connectHovered = true;

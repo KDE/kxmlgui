@@ -340,7 +340,7 @@ void KKeySequenceWidget::setClearButtonShown(bool show)
     d->clearButton->setVisible(show);
 }
 
-#ifndef KXMLGUI_NO_DEPRECATED
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 1)
 void KKeySequenceWidget::setCheckActionList(const QList<QAction *> &checkList) // deprecated
 {
     d->checkList = checkList;

@@ -73,7 +73,15 @@ set(kxmlgui_UI
 ki18n_wrap_ui(kxmlgui_SRCS ${kxmlgui_UI} )
 
 add_library(KF5XmlGui ${kxmlgui_SRCS})
-generate_export_header(KF5XmlGui BASE_NAME KXmlGui)
+ecm_generate_export_header(KF5XmlGui
+    BASE_NAME KXmlGui
+    # GROUP_BASE_NAME KF <- enable once all of KF modules use ecm_generate_export_header
+    VERSION ${KF5_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 4.1 5.0
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
+
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
 target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui>")

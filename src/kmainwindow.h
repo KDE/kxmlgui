@@ -161,6 +161,7 @@ public:
      */
     ~KMainWindow() override;
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Retrieve the standard help menu.
      *
@@ -184,13 +185,14 @@ public:
      *        the "What's This" menu entry.
      *
      * @return A standard help menu.
-     * @deprecated use KHelpMenu directly
+     * @deprecated Since 5.0, use KHelpMenu directly
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED QMenu *helpMenu(const QString &aboutAppText = QString(),
-                                      bool showWhatsThis = true);
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KHelpMenu directly")
+    QMenu *helpMenu(const QString &aboutAppText = QString(),
+                    bool showWhatsThis = true);
 #endif
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Returns the help menu. Creates a standard help menu if none exists yet.
      *
@@ -212,10 +214,10 @@ public:
      *        the "What's This" menu entry.
      *
      * @return A standard help menu.
-     * @deprecated use XMLGUI instead, or KHelpMenu directly
+     * @deprecated Since 5.0, use XMLGUI instead, or KHelpMenu directly
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED QMenu *customHelpMenu(bool showWhatsThis = true);
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use XMLGUI or KHelpMenu")
+    QMenu *customHelpMenu(bool showWhatsThis = true);
 #endif
 
     /**
@@ -398,12 +400,13 @@ public:
      */
     QString dbusName() const;
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * @returns Always @c false
      * @deprecated since 5.0, the functionality got removed
      **/
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED bool initialGeometrySet() const { return false; }
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Remove usage, is a no-op now")
+    bool initialGeometrySet() const { return false; }
 #endif
 
 public Q_SLOTS:
@@ -567,23 +570,26 @@ protected:
      * For inherited classes
      */
     bool settingsDirty() const;
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * For inherited classes
-     * @deprecated use KWindowConfig::saveWindowSize
+     * @deprecated Since 5.0, use KWindowConfig::saveWindowSize
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED void saveWindowSize(KConfigGroup &config) const;
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KWindowConfig::saveWindowSize(...)")
+    void saveWindowSize(KConfigGroup &config) const;
 #endif
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * For inherited classes
-     * @deprecated use KWindowConfig::restoreWindowSize
+     * @deprecated Since 5.0, use KWindowConfig::restoreWindowSize
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED void restoreWindowSize(const KConfigGroup &config);
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KWindowConfig::restoreWindowSize(...)")
+    void restoreWindowSize(const KConfigGroup &config);
 #endif
 
 protected Q_SLOTS:
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     /**
     * This slot does nothing.
     *
@@ -607,10 +613,10 @@ protected Q_SLOTS:
     *   <activate your custom dialog>
     * }
     * \endcode
-    * @deprecated use KHelpMenu
+    * @deprecated Since 5.0, use KHelpMenu
     */
-#ifndef KXMLGUI_NO_DEPRECATED
-    virtual KXMLGUI_DEPRECATED void showAboutApplication() {}
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KHelpMenu")
+    virtual void showAboutApplication() {}
 #endif
 
     /**
@@ -652,7 +658,7 @@ private:
  * @{
  */
 
-#ifndef KXMLGUI_NO_DEPRECATED
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
 /**
  * @def RESTORE
  * Restores the last session.

@@ -82,9 +82,13 @@ public:
 
     virtual QAction *createCustomElement(QWidget *parent, int index, const QDomElement &element);
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     // KF6 TODO: REMOVE
-    /// @internal, @deprecated, do not use
-    virtual KXMLGUI_DEPRECATED void removeCustomElement(QWidget *parent, QAction *action);
+    /// @internal
+    /// @deprecated Since 5.0, do not use
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Do not use")
+    virtual void removeCustomElement(QWidget *parent, QAction *action);
+#endif
 
     virtual void finalizeGUI(KXMLGUIClient *client);
 

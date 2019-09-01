@@ -393,10 +393,12 @@ QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const Q
     return blank;
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
 void KXMLGUIBuilder::removeCustomElement(QWidget *parent, QAction *action)
 {
     parent->removeAction(action);
 }
+#endif
 
 KXMLGUIClient *KXMLGUIBuilder::builderClient() const
 {

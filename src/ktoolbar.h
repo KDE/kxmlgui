@@ -144,23 +144,25 @@ public:
      */
     int iconSizeDefault() const; // KDE5: hide from public API. Doesn't make sense to export this, and it isn't used.
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * This allows you to enable or disable the context menu.
      *
      * @param enable If false, then the context menu will be disabled
-     * @deprecated use setContextMenuPolicy()
+     * @deprecated Since 5.0, use setContextMenuPolicy()
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED void setContextMenuEnabled(bool enable = true);
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use QWidget::setContextMenuPolicy(Qt::ContextMenuPolicy)")
+    void setContextMenuEnabled(bool enable = true);
 #endif
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Returns the context menu enabled flag
      * @return true if the context menu is disabled
-     * @deprecated use contextMenuPolicy()
+     * @deprecated Since 5.0, use contextMenuPolicy()
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED bool contextMenuEnabled() const;
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use QWidget::contextMenuPolicy()")
+    bool contextMenuEnabled() const;
 #endif
 
     /**
@@ -174,12 +176,13 @@ public:
      */
     void applySettings(const KConfigGroup &cg);
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Sets the XML gui client.
-     * @deprecated use addXMLGUIClient()
+     * @deprecated Since 5.0, use addXMLGUIClient()
      */
-#ifndef KXMLGUI_NO_DEPRECATED
-    KXMLGUI_DEPRECATED void setXMLGUIClient(KXMLGUIClient *client);
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KToolBar::addXMLGUIClient(KXMLGUIClient *)")
+    void setXMLGUIClient(KXMLGUIClient *client);
 #endif
 
     /**
