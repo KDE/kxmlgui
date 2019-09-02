@@ -970,7 +970,7 @@ void KEditToolBarWidget::rebuildKXMLGUIClients()
 
     // now, rebuild the gui from the first to the last
     //qDebug(240) << "rebuilding the gui";
-    foreach (KXMLGUIClient *client, clients) {
+    for (KXMLGUIClient *client : clients) {
         //qDebug(240) << "updating client " << client << " " << client->componentName() << "  xmlFile=" << client->xmlFile();
         QString file(client->xmlFile());   // before setting ui_standards!
         if (!file.isEmpty()) {
@@ -992,7 +992,7 @@ void KEditToolBarWidget::rebuildKXMLGUIClients()
     // Now we can add the clients to the factory
     // We don't do it in the loop above because adding a part automatically
     // adds its plugins, so we must make sure the plugins were updated first.
-    foreach (KXMLGUIClient *client, clients) {
+    for (KXMLGUIClient *client : clients) {
         d->m_factory->addClient(client);
     }
 }

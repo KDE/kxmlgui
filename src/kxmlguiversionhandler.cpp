@@ -50,7 +50,7 @@ static void removeAllToolBars(QDomDocument &doc)
 {
     QDomElement parent = doc.documentElement();
     const QList<QDomElement> toolBars = extractToolBars(doc);
-    Q_FOREACH (const QDomElement &e, toolBars) {
+    for (const QDomElement &e : toolBars) {
         parent.removeChild(e);
     }
 }

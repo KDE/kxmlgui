@@ -354,7 +354,7 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
 
         if (avSizes.count() < 10) {
             // Fixed or threshold type icons
-            Q_FOREACH (int it, avSizes) {
+            for (int it : qAsConst(avSizes)) {
                 QString text;
                 if (it < 19) {
                     text = i18n("Small (%1x%2)", it, it);
@@ -374,7 +374,7 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
             const int progression[] = { 16, 22, 32, 48, 64, 96, 128, 192, 256 };
 
             for (uint i = 0; i < 9; i++) {
-                Q_FOREACH (int it, avSizes) {
+                for (int it : qAsConst(avSizes)) {
                     if (it >= progression[ i ]) {
                         QString text;
                         if (it < 19) {
@@ -1096,7 +1096,7 @@ void KToolBar::dragEnterEvent(QDragEnterEvent *event)
 
         stream >> actionNames;
 
-        Q_FOREACH (const QString &actionName, actionNames) {
+        for (const QString &actionName : qAsConst(actionNames)) {
             Q_FOREACH (KActionCollection *ac, KActionCollection::allCollections()) {
                 QAction *newAction = ac->action(actionName);
                 if (newAction) {

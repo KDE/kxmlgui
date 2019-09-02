@@ -429,7 +429,7 @@ void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
     // remove child clients first (create a copy of the list just in case the
     // original list is modified directly or indirectly in removeClient())
     const QList<KXMLGUIClient *> childClients(client->childClients());
-    Q_FOREACH (KXMLGUIClient *child, childClients) {
+    for (KXMLGUIClient *child : childClients) {
         removeClient(child);
     }
 

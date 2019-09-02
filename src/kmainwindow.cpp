@@ -320,7 +320,7 @@ void KMainWindowPrivate::polish(KMainWindow *q)
     for (;;) {
         const QList<QWidget *> list = qApp->topLevelWidgets();
         bool found = false;
-        foreach (QWidget *w, list) {
+        for (QWidget *w : list) {
             if (w != q && w->objectName() == s) {
                 found = true;
                 break;

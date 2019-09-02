@@ -285,9 +285,9 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
 
 static QStringList collectMenuNames(KXMLGUIFactory &factory)
 {
-    QList<QWidget *> containers = factory.containers(QStringLiteral("Menu"));
+    const QList<QWidget *> containers = factory.containers(QStringLiteral("Menu"));
     QStringList containerNames;
-    Q_FOREACH (QWidget *w, containers) {
+    for (QWidget *w : containers) {
         containerNames << w->objectName();
     }
     return containerNames;

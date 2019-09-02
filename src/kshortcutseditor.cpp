@@ -130,8 +130,8 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     QSet<QAction *> actionsSeen;
 
     // Add all categories in their own subtree below the collections root node
-    QList<KActionCategory *> categories = collection->findChildren<KActionCategory *>();
-    foreach (KActionCategory *category, categories) {
+    const QList<KActionCategory *> categories = collection->findChildren<KActionCategory *>();
+    for (KActionCategory *category : categories) {
         hier[KShortcutsEditorPrivate::Action] = d->findOrMakeItem(hier[KShortcutsEditorPrivate::Program], category->text());
         foreach (QAction *action, category->actions()) {
             // Set a marker that we have seen this action

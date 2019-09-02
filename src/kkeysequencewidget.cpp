@@ -410,7 +410,7 @@ void KKeySequenceWidget::applyStealShortcut()
         }
     }
 
-    Q_FOREACH (KActionCollection *col, changedCollections) {
+    for (KActionCollection *col : qAsConst(changedCollections)) {
         col->writeSettings();
     }
 
@@ -568,7 +568,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     QList<QAction *> conflictingActions;
 
     //find conflicting shortcuts with existing actions
-    foreach (QAction *qaction, allActions) {
+    for (QAction *qaction : qAsConst(allActions)) {
         if (shortcutsConflictWith(qaction->shortcuts(), keySequence)) {
             // A conflict with a KAction. If that action is configurable
             // ask the user what to do. If not reject this keySequence.

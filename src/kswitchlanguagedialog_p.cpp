@@ -342,7 +342,7 @@ void KSwitchLanguageDialogPrivate::fillApplicationLanguages(KLanguageButton *but
     QSet<QString> insertedLanguges;
 
     const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
-    foreach(const QLocale &l, allLocales) {
+    for (const QLocale &l : allLocales) {
         if (l != cLocale) {
             QString languageCode = l.name();
             if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
