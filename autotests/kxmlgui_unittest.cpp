@@ -174,12 +174,12 @@ void KXmlGui_UnitTest::testVersionHandlerSameVersion()
     KXmlGuiVersionHandler versionHandler(files);
     QCOMPARE(versionHandler.finalFile(), firstFile);
     QString finalDoc = versionHandler.finalDocument();
-    QVERIFY(finalDoc.startsWith(QStringLiteral("<?xml")));
+    QVERIFY(finalDoc.startsWith(QLatin1String("<?xml")));
     // Check that the shortcuts defined by the user were kept
-    QVERIFY(finalDoc.contains(QStringLiteral("<ActionProperties>")));
-    QVERIFY(finalDoc.contains(QStringLiteral("sidebartng")));
+    QVERIFY(finalDoc.contains(QLatin1String("<ActionProperties>")));
+    QVERIFY(finalDoc.contains(QLatin1String("sidebartng")));
     // Check that the toolbars modified by the user were kept
-    QVERIFY(finalDoc.contains(QStringLiteral("<Action name=\"home\"")));
+    QVERIFY(finalDoc.contains(QLatin1String("<Action name=\"home\"")));
 
     QVERIFY(userFile.open());
     const QString userFileContents = QString::fromUtf8(userFile.readAll());
@@ -224,8 +224,8 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionNothingKept()
     KXmlGuiVersionHandler versionHandler(files);
     QCOMPARE(fileToVersionMap.value(versionHandler.finalFile()), 5);
     QString finalDoc = versionHandler.finalDocument();
-    QVERIFY(finalDoc.startsWith(QStringLiteral("<?xml")));
-    QVERIFY(finalDoc.contains(QStringLiteral("version=\"5\"")));
+    QVERIFY(finalDoc.startsWith(QLatin1String("<?xml")));
+    QVERIFY(finalDoc.contains(QLatin1String("version=\"5\"")));
 
     QVERIFY(fileV5.open());
     const QString fileV5Contents = QString::fromUtf8(fileV5.readAll());
@@ -272,15 +272,15 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     QCOMPARE(fileToVersionMap.value(versionHandler.finalFile()), 2);
     const QString finalDoc = versionHandler.finalDocument();
     //qDebug() << finalDoc;
-    QVERIFY(finalDoc.startsWith(QStringLiteral("<?xml")));
-    QVERIFY(finalDoc.contains(QStringLiteral("version=\"5\"")));
+    QVERIFY(finalDoc.startsWith(QLatin1String("<?xml")));
+    QVERIFY(finalDoc.contains(QLatin1String("version=\"5\"")));
     // Check that the shortcuts defined by the user were kept
-    QVERIFY(finalDoc.contains(QStringLiteral("<ActionProperties>")));
-    QVERIFY(finalDoc.contains(QStringLiteral("sidebartng")));
+    QVERIFY(finalDoc.contains(QLatin1String("<ActionProperties>")));
+    QVERIFY(finalDoc.contains(QLatin1String("sidebartng")));
     // Check that the menus modified by the app are still there
-    QVERIFY(finalDoc.contains(QStringLiteral("<Action name=\"file_open\"")));
+    QVERIFY(finalDoc.contains(QLatin1String("<Action name=\"file_open\"")));
     // Check that the toolbars modified by the user were kept
-    QVERIFY(finalDoc.contains(QStringLiteral("<Action name=\"home\"")));
+    QVERIFY(finalDoc.contains(QLatin1String("<Action name=\"home\"")));
 }
 
 static QStringList collectMenuNames(KXMLGUIFactory &factory)
@@ -955,23 +955,23 @@ void KXmlGui_UnitTest::testXMLFileReplacement()
     client.setXMLFilePublic(filenameOrig);
     QString xml = client.domDocument().toString();
     //qDebug() << xml;
-    QVERIFY(xml.contains(QStringLiteral("<Action name=\"print\"")));
-    QVERIFY(!xml.contains(QStringLiteral("<Action name=\"home\"")));
-    QVERIFY(!xml.contains(QStringLiteral("<ActionProperties>")));
+    QVERIFY(xml.contains(QLatin1String("<Action name=\"print\"")));
+    QVERIFY(!xml.contains(QLatin1String("<Action name=\"home\"")));
+    QVERIFY(!xml.contains(QLatin1String("<ActionProperties>")));
 
     // now test the replacement (+ local file)
     client.replaceXMLFile(filenameReplace, filenameLocal);
     xml = client.domDocument().toString();
-    QVERIFY(!xml.contains(QStringLiteral("<Action name=\"print\"")));
-    QVERIFY(xml.contains(QStringLiteral("<Action name=\"home\"")));
-    QVERIFY(xml.contains(QStringLiteral("<ActionProperties>")));
+    QVERIFY(!xml.contains(QLatin1String("<Action name=\"print\"")));
+    QVERIFY(xml.contains(QLatin1String("<Action name=\"home\"")));
+    QVERIFY(xml.contains(QLatin1String("<ActionProperties>")));
 
     // re-check after a reload
     client.reloadXML();
     QString reloadedXml = client.domDocument().toString();
-    QVERIFY(!reloadedXml.contains(QStringLiteral("<Action name=\"print\"")));
-    QVERIFY(reloadedXml.contains(QStringLiteral("<Action name=\"home\"")));
-    QVERIFY(reloadedXml.contains(QStringLiteral("<ActionProperties>")));
+    QVERIFY(!reloadedXml.contains(QLatin1String("<Action name=\"print\"")));
+    QVERIFY(reloadedXml.contains(QLatin1String("<Action name=\"home\"")));
+    QVERIFY(reloadedXml.contains(QLatin1String("<ActionProperties>")));
 
     // Check what happens when the local file doesn't exist
     TestGuiClient client2;
@@ -979,9 +979,9 @@ void KXmlGui_UnitTest::testXMLFileReplacement()
     client2.replaceXMLFile(filenameReplace, filenameLocal);
     xml = client2.domDocument().toString();
     //qDebug() << xml;
-    QVERIFY(!xml.contains(QStringLiteral("<Action name=\"print\"")));
-    QVERIFY(xml.contains(QStringLiteral("<Action name=\"home\""))); // modified toolbars
-    QVERIFY(!xml.contains(QStringLiteral("<ActionProperties>"))); // but no local xml file
+    QVERIFY(!xml.contains(QLatin1String("<Action name=\"print\"")));
+    QVERIFY(xml.contains(QLatin1String("<Action name=\"home\""))); // modified toolbars
+    QVERIFY(!xml.contains(QLatin1String("<ActionProperties>"))); // but no local xml file
 }
 
 void KXmlGui_UnitTest::testClientDestruction()   // #170806

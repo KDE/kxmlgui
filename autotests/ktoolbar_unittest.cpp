@@ -107,7 +107,7 @@ void tst_KToolBar::initTestCase()
 {
     // start with a clean place to put data
     QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
-    QVERIFY(testDataDir.absolutePath().contains(QStringLiteral("qttest")));
+    QVERIFY(testDataDir.absolutePath().contains(QLatin1String("qttest")));
     testDataDir.removeRecursively();
     testDataDir.mkpath(QStringLiteral("."));
 
@@ -158,7 +158,7 @@ void tst_KToolBar::cleanupTestCase()
 {
     QDir testDataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
     QDir testIconsDir = QDir(testDataDir.absoluteFilePath(QStringLiteral("icons")));
-    QVERIFY(testIconsDir.absolutePath().contains(QStringLiteral("qttest")));
+    QVERIFY(testIconsDir.absolutePath().contains(QLatin1String("qttest")));
     testIconsDir.removeRecursively();
 }
 
@@ -323,7 +323,7 @@ void tst_KToolBar::testIconSizeXmlGui()
         // was it the default size? (for the main toolbar, we only check that one)
         const bool usingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
         if (usingDefaultSize) {
-            QVERIFY(!group.groupList().contains(QStringLiteral("Toolbar mainToolBar")));
+            QVERIFY(!group.groupList().contains(QLatin1String("Toolbar mainToolBar")));
             QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
         } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));

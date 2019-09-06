@@ -990,7 +990,7 @@ void KToolBar::loadState(const QDomElement &element)
     {
         QString attrHidden = element.attribute(QStringLiteral("hidden")).toLower();
         if (!attrHidden.isEmpty()) {
-            hidden = (attrHidden == QStringLiteral("true"));
+            hidden = (attrHidden == QLatin1String("true"));
         }
     }
 
