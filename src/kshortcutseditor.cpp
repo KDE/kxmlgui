@@ -133,7 +133,8 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     const QList<KActionCategory *> categories = collection->findChildren<KActionCategory *>();
     for (KActionCategory *category : categories) {
         hier[KShortcutsEditorPrivate::Action] = d->findOrMakeItem(hier[KShortcutsEditorPrivate::Program], category->text());
-        foreach (QAction *action, category->actions()) {
+        const auto categoryActions = category->actions();
+        for (QAction *action : categoryActions) {
             // Set a marker that we have seen this action
             actionsSeen.insert(action);
             d->addAction(action, hier, KShortcutsEditorPrivate::Action);
@@ -142,7 +143,8 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
 
     // The rest of the shortcuts is added as a direct shild of the action
     // collections root node
-    foreach (QAction *action, collection->actions()) {
+    const auto collectionActions = collection->actions();
+    for (QAction *action : collectionActions) {
         if (actionsSeen.contains(action)) {
             continue;
         }

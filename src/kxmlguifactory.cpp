@@ -283,7 +283,8 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
     emit clientAdded(client);
 
     // build child clients
-    Q_FOREACH (KXMLGUIClient *child, client->childClients()) {
+    const auto children = client->childClients();
+    for (KXMLGUIClient *child : children) {
         addClient(child);
     }
 

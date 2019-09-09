@@ -92,7 +92,8 @@ static void copy_dir(const QString &from, const QDir &to)
     QDir src = QDir(from);
     QDir dest = QDir(to.filePath(src.dirName()));
     to.mkpath(src.dirName());
-    foreach (const QFileInfo &fileInfo, src.entryInfoList(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot)) {
+    const auto fileInfos = src.entryInfoList(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot);
+    for (const QFileInfo &fileInfo : fileInfos) {
         if (fileInfo.isDir()) {
             copy_dir(fileInfo.filePath(), dest);
         } else {
@@ -652,7 +653,8 @@ void tst_KToolBar::testKAuthorizedDisableToggleAction()
     TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
     kmw.createGUI();
 
-    foreach (KToolBar *toolbar, kmw.toolBars()) {
+    const auto toolbars = kmw.toolBars();
+    for (KToolBar *toolbar: toolbars) {
         QVERIFY(!toolbar->toggleViewAction()->isEnabled());
     }
 }

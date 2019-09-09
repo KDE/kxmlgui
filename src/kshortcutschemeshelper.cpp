@@ -57,7 +57,8 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
             collectionsByClientName.insertMulti(key, coll);
         }
     }
-    foreach (const QString &componentName, collectionsByClientName.uniqueKeys()) {
+    const auto componentNames = collectionsByClientName.uniqueKeys();
+    for (const QString &componentName : componentNames) {
 
         qCDebug(DEBUG_KXMLGUI) << "Considering component" << componentName;
         QDomDocument doc;
@@ -68,10 +69,12 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
         QDomElement elem = doc.createElement(QStringLiteral("ActionProperties"));
         docElem.appendChild(elem);
 
-        foreach (KActionCollection *collection, collectionsByClientName.values(componentName)) {
+        const auto componentCollections = collectionsByClientName.values(componentName);
+        for (KActionCollection *collection : componentCollections) {
             qCDebug(DEBUG_KXMLGUI) << "Saving shortcut scheme for action collection with" << collection->actions().count() << "actions";
 
-            foreach (QAction *action, collection->actions()) {
+            const auto collectionActions = collection->actions();
+            for (QAction *action : collectionActions) {
                 if (!action) {
                     continue;
                 }

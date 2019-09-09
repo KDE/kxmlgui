@@ -320,7 +320,8 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
         contextBottom = contextOrient->addAction(i18nc("toolbar position string", "Bottom"), q, SLOT(slotContextBottom()));
 
         QActionGroup *positionGroup = new QActionGroup(contextOrient);
-        Q_FOREACH (QAction *action, contextOrient->actions()) {
+        const auto orientActions = contextOrient->actions();
+        for (QAction *action : orientActions) {
             action->setActionGroup(positionGroup);
             action->setCheckable(true);
         }
@@ -333,7 +334,8 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
         contextTextUnder = contextMode->addAction(i18n("Text Under Icons"), q, SLOT(slotContextTextUnder()));
 
         QActionGroup *textGroup = new QActionGroup(contextMode);
-        Q_FOREACH (QAction *action, contextMode->actions()) {
+        const auto modeActions = contextMode->actions();
+        for (QAction *action : modeActions) {
             action->setActionGroup(textGroup);
             action->setCheckable(true);
         }
@@ -396,7 +398,8 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
         }
 
         QActionGroup *sizeGroup = new QActionGroup(contextSize);
-        Q_FOREACH (QAction *action, contextSize->actions()) {
+        const auto sizeActions = contextSize->actions();
+        for (QAction *action : sizeActions) {
             action->setActionGroup(sizeGroup);
             action->setCheckable(true);
         }
@@ -1096,8 +1099,9 @@ void KToolBar::dragEnterEvent(QDragEnterEvent *event)
 
         stream >> actionNames;
 
+        const auto allCollections = KActionCollection::allCollections();
         for (const QString &actionName : qAsConst(actionNames)) {
-            Q_FOREACH (KActionCollection *ac, KActionCollection::allCollections()) {
+            for (KActionCollection *ac : allCollections) {
                 QAction *newAction = ac->action(actionName);
                 if (newAction) {
                     d->actionsBeingDragged.append(newAction);
@@ -1133,7 +1137,8 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
         if (d->dropIndicatorAction)
             {
                 QAction *overAction = nullptr;
-                Q_FOREACH (QAction *action, actions()) {
+                const auto actions = this->actions();
+                for (QAction *action : actions) {
                     // want to make it feel that half way across an action you're dropping on the other side of it
                     QWidget *widget = widgetForAction(action);
                     if (event->pos().x() < widget->pos().x() + (widget->width() / 2)) {
@@ -1144,9 +1149,9 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
 
                 if (overAction != d->dropIndicatorAction) {
                     // Check to see if the indicator is already in the right spot
-                    int dropIndicatorIndex = actions().indexOf(d->dropIndicatorAction);
-                    if (dropIndicatorIndex + 1 < actions().count()) {
-                        if (actions().at(dropIndicatorIndex + 1) == overAction) {
+                    int dropIndicatorIndex = actions.indexOf(d->dropIndicatorAction);
+                    if (dropIndicatorIndex + 1 < actions.count()) {
+                        if (actions.at(dropIndicatorIndex + 1) == overAction) {
                             break;
                         }
                     } else if (!overAction) {
@@ -1290,7 +1295,8 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
             if (!this->isAncestorOf(ww)) {
                 // New parent is not a subwidget - remove event filter
                 ww->removeEventFilter(this);
-                Q_FOREACH (QWidget *child, ww->findChildren<QWidget *>()) {
+                const auto children = ww->findChildren<QWidget *>();
+                for (QWidget *child : children) {
                     child->removeEventFilter(this);
                 }
             }
@@ -1338,7 +1344,8 @@ void KToolBar::actionEvent(QActionEvent *event)
         if (widget) {
             widget->removeEventFilter(this);
 
-            Q_FOREACH (QWidget *child, widget->findChildren<QWidget *>()) {
+            const auto children = widget->findChildren<QWidget *>();
+            for (QWidget *child : children)  {
                 child->removeEventFilter(this);
             }
         }
@@ -1351,7 +1358,8 @@ void KToolBar::actionEvent(QActionEvent *event)
         if (widget) {
             widget->installEventFilter(this);
 
-            Q_FOREACH (QWidget *child, widget->findChildren<QWidget *>()) {
+            const auto children = widget->findChildren<QWidget *>();
+            for (QWidget *child : children) {
                 child->installEventFilter(this);
             }
             // Center widgets that do not have any use for more space. See bug 165274
@@ -1386,8 +1394,10 @@ void KToolBar::setToolBarsLocked(bool locked)
     if (KToolBar::Private::s_locked != locked) {
         KToolBar::Private::s_locked = locked;
 
-        Q_FOREACH (KMainWindow *mw, KMainWindow::memberList()) {
-            Q_FOREACH (KToolBar *toolbar, mw->findChildren<KToolBar *>()) {
+        const auto windows = KMainWindow::memberList();
+        for (KMainWindow *mw : windows) {
+            const auto toolbars = mw->findChildren<KToolBar *>();
+            for (KToolBar *toolbar : toolbars) {
                 toolbar->d->setLocked(locked);
             }
         }

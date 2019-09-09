@@ -686,7 +686,8 @@ void KEditToolBarPrivate::defaultClicked()
     m_accept = false;
 
     if (m_factory) {
-        foreach (KXMLGUIClient *client, m_factory->clients()) {
+        const auto clients = m_factory->clients();
+        for (KXMLGUIClient *client : clients) {
             const QString file = client->localXMLFile();
             if (file.isEmpty()) {
                 continue;
@@ -869,7 +870,8 @@ void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory,
 
     // add all of the client data
     bool first = true;
-    foreach (KXMLGUIClient *client, factory->clients()) {
+    const auto clients = factory->clients();
+    for (KXMLGUIClient *client : clients) {
         if (client->xmlFile().isEmpty()) {
             continue;
         }
@@ -899,7 +901,8 @@ void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory,
     m_widget->setMinimumSize(m_widget->sizeHint());
 
     m_widget->actionCollection()->addAssociatedWidget(m_widget);
-    foreach (QAction *action, m_widget->actionCollection()->actions()) {
+    const auto widgetActions = m_widget->actionCollection()->actions();
+    for (QAction *action : widgetActions) {
         action->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     }
 }
@@ -1260,7 +1263,8 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
         // iterate through this client's actions
         // This used to iterate through _all_ actions, but we don't support
         // putting any action into any client...
-        foreach (QAction *action, actionCollection->actions()) {
+        const auto actions = actionCollection->actions();
+        for (QAction *action : actions) {
             // do we have a match?
             if (it.attribute(attrName) == action->objectName()) {
                 // we have a match!
@@ -1276,7 +1280,8 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
     }
 
     // go through the rest of the collection
-    foreach (QAction *action, actionCollection->actions()) {
+    const auto actions = actionCollection->actions();
+    for (QAction *action : actions) {
         // skip our active ones
         if (active_list.contains(action->objectName())) {
             continue;

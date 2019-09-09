@@ -137,14 +137,15 @@ void KMWSessionManager::saveState(QSessionManager &sm)
     KConfigGui::setSessionConfig(sm.sessionId(), sm.sessionKey());
 
     KConfig *config = KConfigGui::sessionConfig();
-    if (!KMainWindow::memberList().isEmpty()) {
+    const auto windows = KMainWindow::memberList();
+    if (!windows.isEmpty()) {
         // According to Jochen Wilhelmy <digisnap@cs.tu-berlin.de>, this
         // hook is useful for better document orientation
-        KMainWindow::memberList().at(0)->saveGlobalProperties(config);
+        windows.at(0)->saveGlobalProperties(config);
     }
 
     int n = 0;
-    foreach (KMainWindow *mw, KMainWindow::memberList()) {
+    for (KMainWindow *mw : windows) {
         n++;
         mw->savePropertiesInternal(config, n);
     }
@@ -188,7 +189,8 @@ void KMWSessionManager::commitData(QSessionManager &sm)
          Worst of all, that is a real problem with ksmserver - it will not save
          applications that quit on their own in state save-yourself-done.
      */
-    foreach (KMainWindow *window, KMainWindow::memberList()) {
+    const auto windows = KMainWindow::memberList();
+    for (KMainWindow *window : windows) {
         if (window->testAttribute(Qt::WA_WState_Hidden)) {
             continue;
         }
@@ -617,7 +619,8 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     }
 
     int n = 1; // Toolbar counter. toolbars are counted from 1,
-    foreach (KToolBar *toolbar, toolBars()) {
+    const auto toolBars = this->toolBars();
+    for (KToolBar *toolbar : toolBars) {
         QByteArray groupName("Toolbar");
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
@@ -698,7 +701,8 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     }
 
     int n = 1; // Toolbar counter. toolbars are counted from 1,
-    foreach (KToolBar *toolbar, toolBars()) {
+    const auto toolBars = this->toolBars();
+    for (KToolBar *toolbar : toolBars) {
         QByteArray groupName("Toolbar");
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars

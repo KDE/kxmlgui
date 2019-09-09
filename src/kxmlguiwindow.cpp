@@ -404,9 +404,11 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
     QMap<QString, QAction*> shortcuts;
     QAction *editCutAction = actionCollection()->action(QStringLiteral("edit_cut"));
     QAction *deleteFileAction = actionCollection()->action(QStringLiteral("deletefile"));
-    foreach (QAction *action, actionCollection()->actions()) {
+    const auto actions = actionCollection()->actions();
+    for (QAction *action : actions) {
         if (action->isEnabled()) {
-            foreach (const QKeySequence &shortcut, action->shortcuts()) {
+            const auto actionShortcuts = action->shortcuts();
+            for (const QKeySequence &shortcut : actionShortcuts) {
                 if (shortcut.isEmpty()) {
                     continue;
                 }

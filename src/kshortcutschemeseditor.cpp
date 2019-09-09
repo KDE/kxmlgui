@@ -51,7 +51,8 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     const QStringList shortcutsDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QCoreApplication::applicationName() + QLatin1String("/shortcuts"), QStandardPaths::LocateDirectory);
     qCDebug(DEBUG_KXMLGUI) << "shortcut scheme dirs:" << shortcutsDirs;
     for (const QString &dir : shortcutsDirs) {
-        Q_FOREACH (const QString &file, QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot)) {
+        const auto files = QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot);
+        for (const QString &file : files) {
             qCDebug(DEBUG_KXMLGUI) << "shortcut scheme file:" << file;
             schemes << file;
         }
@@ -154,7 +155,8 @@ Note that this will not remove any system wide shortcut schemes.", currentScheme
     QFile::remove(KShortcutSchemesHelper::writableApplicationShortcutSchemeFileName(currentScheme()));
 
     //delete all scheme files we can find for xmlguiclients in the user directories
-    foreach (KActionCollection *collection, m_dialog->actionCollections()) {
+    const auto dialogCollections = m_dialog->actionCollections();
+    for (KActionCollection *collection : dialogCollections) {
         const KXMLGUIClient *client = collection->parentGUIClient();
         if (!client) {
             continue;
