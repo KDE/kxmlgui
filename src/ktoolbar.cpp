@@ -577,7 +577,7 @@ void KToolBar::Private::applyCurrentSettings()
 
 QAction *KToolBar::Private::findAction(const QString &actionName, KXMLGUIClient **clientOut) const
 {
-    Q_FOREACH (KXMLGUIClient *client, xmlguiClients) {
+    for (KXMLGUIClient *client : xmlguiClients) {
         QAction *action = client->actionCollection()->action(actionName);
         if (action) {
             if (clientOut) {

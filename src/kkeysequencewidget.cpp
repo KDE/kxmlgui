@@ -389,7 +389,7 @@ void KKeySequenceWidget::applyStealShortcut()
 {
     QSet<KActionCollection *> changedCollections;
 
-    Q_FOREACH (QAction *stealAction, d->stealActions) {
+    for (QAction *stealAction : qAsConst(d->stealActions)) {
 
         // Stealing a shortcut means setting it to an empty one.
         stealAction->setShortcuts(QList<QKeySequence>());
@@ -397,7 +397,7 @@ void KKeySequenceWidget::applyStealShortcut()
         // The following code will find the action we are about to
         // steal from and save it's actioncollection.
         KActionCollection *parentCollection = nullptr;
-        foreach (KActionCollection *collection, d->checkActionCollections) {
+        for (KActionCollection *collection : qAsConst(d->checkActionCollections)) {
             if (collection->actions().contains(stealAction)) {
                 parentCollection = collection;
                 break;
@@ -544,7 +544,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     // removed from the collection again.
     QList<QAction *> allActions;
     allActions += checkList;
-    foreach (KActionCollection *collection, checkActionCollections) {
+    for (KActionCollection *collection : qAsConst(checkActionCollections)) {
         allActions += collection->actions();
     }
 

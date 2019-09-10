@@ -377,7 +377,7 @@ uint KShapeGesture::hashable() const
 {
     uint hash = 0;
 
-    foreach (const QPoint &point, d->m_shape) {
+    for (const QPoint point : qAsConst(d->m_shape)) {
         hash += qHash(point.x()) + qHash(point.y());
     }
 

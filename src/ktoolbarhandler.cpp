@@ -103,7 +103,7 @@ public:
         KActionMenu *menuAction = new KActionMenu(i18n("Toolbars Shown"), m_actionCollection);
         m_actionCollection->addAction(QStringLiteral("toolbars_submenu_action"), menuAction);
 
-        Q_FOREACH (QAction *action, m_toolBarActions) {
+        for (QAction *action : qAsConst(m_toolBarActions)) {
             menuAction->menu()->addAction(action);
         }
 
@@ -185,7 +185,7 @@ void ToolBarHandler::Private::init(KXmlGuiWindow *mw)
 
 void ToolBarHandler::Private::connectToActionContainers()
 {
-    Q_FOREACH (QAction *action, actions) {
+    for (QAction *action : qAsConst(actions)) {
         connectToActionContainer(action);
     }
 }

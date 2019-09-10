@@ -224,20 +224,22 @@ QList<QAction *> KActionCollection::actions() const
 const QList< QAction * > KActionCollection::actionsWithoutGroup() const
 {
     QList<QAction *> ret;
-    Q_FOREACH (QAction *action, d->actions)
+    for (QAction *action : qAsConst(d->actions)) {
         if (!action->actionGroup()) {
             ret.append(action);
         }
+    }
     return ret;
 }
 
 const QList< QActionGroup * > KActionCollection::actionGroups() const
 {
     QSet<QActionGroup *> set;
-    Q_FOREACH (QAction *action, d->actions)
+    for (QAction *action : qAsConst(d->actions)) {
         if (action->actionGroup()) {
             set.insert(action->actionGroup());
         }
+    }
     return set.toList();
 }
 
@@ -321,7 +323,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     d->actionByName.insert(indexName, action);
     d->actions.append(action);
 
-    Q_FOREACH (QWidget *widget, d->associatedWidgets) {
+    for (QWidget *widget : qAsConst(d->associatedWidgets)) {
         widget->addAction(action);
     }
 
@@ -362,7 +364,7 @@ QAction *KActionCollection::takeAction(QAction *action)
     }
 
     // Remove the action from all widgets
-    Q_FOREACH (QWidget *widget, d->associatedWidgets) {
+    for (QWidget *widget : qAsConst(d->associatedWidgets)) {
         widget->removeAction(action);
     }
 
@@ -859,10 +861,12 @@ QList< QWidget * > KActionCollection::associatedWidgets() const
 
 void KActionCollection::clearAssociatedWidgets()
 {
-    Q_FOREACH (QWidget *widget, d->associatedWidgets)
-        Q_FOREACH (QAction *action, actions()) {
+    for (QWidget *widget : qAsConst(d->associatedWidgets)) {
+        const auto actions = this->actions();
+        for (QAction *action : actions) {
             widget->removeAction(action);
         }
+    }
 
     d->associatedWidgets.clear();
 }

@@ -195,7 +195,7 @@ KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
 
 KXMLGUIFactory::~KXMLGUIFactory()
 {
-    Q_FOREACH (KXMLGUIClient *client, d->m_clients) {
+    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
         client->setFactory(nullptr);
     }
     delete d;
@@ -526,7 +526,7 @@ QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool
         return node->container;
     }
 
-    Q_FOREACH (ContainerNode *child, node->children) {
+    for (ContainerNode *child : qAsConst(node->children)) {
         QWidget *cont = findRecursive(child, tag);
         if (cont) {
             return cont;
@@ -555,7 +555,7 @@ QList<QWidget *> KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *no
         res.append(node->container);
     }
 
-    Q_FOREACH (KXMLGUI::ContainerNode *child, node->children) {
+    for (KXMLGUI::ContainerNode *child : qAsConst(node->children)) {
         res << findRecursive(child, tagName);
     }
 
@@ -726,7 +726,7 @@ int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
     KShortcutsDialog dlg(KShortcutsEditor::AllActions,
                          letterCutsOk ? KShortcutsEditor::LetterShortcutsAllowed : KShortcutsEditor::LetterShortcutsDisallowed,
                          qobject_cast<QWidget *>(parent()));
-    Q_FOREACH (KXMLGUIClient *client, d->m_clients) {
+    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
         if (client) {
             qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
             dlg.addCollection(client->actionCollection());

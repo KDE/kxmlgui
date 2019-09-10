@@ -195,14 +195,14 @@ void KShortcutsEditor::exportConfiguration(KConfigBase *config) const
     if (d->actionTypes & KShortcutsEditor::GlobalAction) {
         QString groupName(QStringLiteral("Global Shortcuts"));
         KConfigGroup group(config, groupName);
-        foreach (KActionCollection *collection, d->actionCollections) {
+        for (KActionCollection *collection : qAsConst(d->actionCollections)) {
             collection->exportGlobalShortcuts(&group, true);
         }
     }
     if (d->actionTypes & ~KShortcutsEditor::GlobalAction) {
         QString groupName(QStringLiteral("Shortcuts"));
         KConfigGroup group(config, groupName);
-        foreach (KActionCollection *collection, d->actionCollections) {
+        for (KActionCollection *collection : qAsConst(d->actionCollections)) {
             collection->writeSettings(&group, true);
         }
     }
@@ -210,7 +210,7 @@ void KShortcutsEditor::exportConfiguration(KConfigBase *config) const
 
 void KShortcutsEditor::writeConfiguration(KConfigGroup *config) const
 {
-    foreach (KActionCollection *collection, d->actionCollections) {
+    for (KActionCollection *collection : qAsConst(d->actionCollections)) {
         collection->writeSettings(config);
     }
 }

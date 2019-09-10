@@ -41,7 +41,7 @@ void ActionList::plug(QWidget *container, int index) const
         before = container->actions().at(index);    // Insert before indexed action.
     }
 
-    Q_FOREACH (QAction *action, *this) {
+    for (QAction *action : *this) {
         container->insertAction(before, action);
         // before = action; // BUG FIX: do not insert actions in reverse order.
     }
@@ -104,7 +104,7 @@ ContainerNode *ContainerNode::findContainer(const QString &_name, bool tag)
         return this;
     }
 
-    Q_FOREACH (ContainerNode *child, children) {
+    for (ContainerNode *child : qAsConst(children)) {
         ContainerNode *res = child->findContainer(_name, tag);
         if (res) {
             return res;
@@ -170,7 +170,7 @@ ContainerClient *ContainerNode::findChildContainerClient(KXMLGUIClient *currentG
         const MergingIndexList::iterator &mergingIdx)
 {
     if (!clients.isEmpty()) {
-        Q_FOREACH (ContainerClient *client, clients)
+        for (ContainerClient *client : qAsConst(clients)) {
             if (client->client == currentGUIClient) {
                 if (groupName.isEmpty()) {
                     return client;
@@ -180,6 +180,7 @@ ContainerClient *ContainerNode::findChildContainerClient(KXMLGUIClient *currentG
                     return client;
                 }
             }
+        }
     }
 
     ContainerClient *client = new ContainerClient;
@@ -426,7 +427,7 @@ void ContainerNode::unplugClient(ContainerClient *client)
 
 void ContainerNode::reset()
 {
-    Q_FOREACH (ContainerNode *child, children) {
+    for (ContainerNode *child : qAsConst(children)) {
         child->reset();
     }
 
@@ -461,7 +462,7 @@ void ContainerNode::dump(int offset)
 {
     QString indent; indent.fill(QLatin1Char(' '), offset);
     qCDebug(DEBUG_KXMLGUI) << qPrintable(indent) << name << tagName << groupName << mergingName << mergingIndices;
-    Q_FOREACH (ContainerNode *child, children) {
+    for (ContainerNode *child : qAsConst(children)) {
         child->dump(offset + 2);
     }
 }
