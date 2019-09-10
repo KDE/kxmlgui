@@ -304,7 +304,7 @@ static void propagateTranslationDomain(QDomDocument &doc, const QStringList &tag
             return;
         }
     }
-    foreach (const QString &tagName, tagNames) {
+    for (const QString &tagName : tagNames) {
         QDomNodeList textNodes = base.elementsByTagName(tagName);
         for (int i = 0; i < textNodes.length(); ++i) {
             QDomElement e = textNodes.item(i).toElement();

@@ -350,7 +350,7 @@ void KXMLGUIFactoryPrivate::refreshActionProperties(KXMLGUIClient *client, const
         applyShortcutScheme(schemeName, client, actions);
     } else {
         // apply saved default shortcuts
-        Q_FOREACH (QAction *action, actions) {
+        for (QAction *action : actions) {
             QVariant savedDefaultShortcut = action->property("_k_DefaultShortcut");
             if (savedDefaultShortcut.isValid()) {
                 QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence> >();
@@ -375,7 +375,7 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
     // This method is called every time the user activated a new
     // kxmlguiclient. We only want to execute the following code only once in
     // the lifetime of an action.
-    Q_FOREACH (QAction *action, actions) {
+    for (QAction *action : actions) {
         // Skip nullptr actions or those we have seen already.
         if (!action || action->property("_k_DefaultShortcut").isValid()) {
             continue;
@@ -676,7 +676,7 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
 void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLGUIClient *client, const QList<QAction *> &actions)
 {
     //First clear all existing shortcuts
-    Q_FOREACH (QAction *action, actions) {
+    for (QAction *action : actions) {
         action->setShortcuts(QList<QKeySequence>());
         // We clear the default shortcut as well because the shortcut scheme will set its own defaults
         action->setProperty("defaultShortcuts", QVariant::fromValue(QList<QKeySequence>()));

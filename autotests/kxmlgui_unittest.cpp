@@ -295,7 +295,7 @@ static QStringList collectMenuNames(KXMLGUIFactory &factory)
 
 void debugActions(const QList<QAction *> &actions)
 {
-    Q_FOREACH (QAction *action, actions) {
+    for (QAction *action : actions) {
         qDebug() << (action->isSeparator() ? QString::fromLatin1("separator") : action->objectName());
     }
 }

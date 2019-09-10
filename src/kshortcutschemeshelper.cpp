@@ -50,7 +50,7 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
     const bool saveToApplicationFile = false;
 
     QMap<QString, KActionCollection *> collectionsByClientName;
-    foreach (KActionCollection *coll, collections) {
+    for (KActionCollection *coll : collections) {
         const KXMLGUIClient *client = coll->parentGUIClient();
         if (client) {
             const QString key = saveToApplicationFile ? QCoreApplication::applicationName() : client->componentName();

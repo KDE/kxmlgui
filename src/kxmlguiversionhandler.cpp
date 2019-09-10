@@ -63,7 +63,7 @@ static void insertToolBars(QDomDocument &doc, const QList<QDomElement> &toolBars
     if (menuBar.isNull()) {
         insertAfter = parent.firstChildElement();    // if null, insertAfter will do an append
     }
-    Q_FOREACH (const QDomElement &e, toolBars) {
+    for (const QDomElement &e : toolBars) {
         QDomNode result = parent.insertAfter(e, insertAfter);
         Q_ASSERT(!result.isNull());
     }
@@ -256,7 +256,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
 
     QList<DocStruct> allDocuments;
 
-    Q_FOREACH (const QString &file, files) {
+    for (const QString &file : files) {
         DocStruct d;
         d.file = file;
         d.data = KXMLGUIFactory::readConfigFile(file);

@@ -123,10 +123,11 @@ public:
         }
 
         QString clashingKeys;
-        Q_FOREACH (const QKeySequence &seq, shortcuts.keys()) {
-            Q_FOREACH (const KGlobalShortcutInfo &info, shortcuts[seq]) {
+        for (auto it = shortcuts.begin(), end = shortcuts.end(); it != end; ++it) {
+            const auto seqAsString = it.key().toString();
+            for (const KGlobalShortcutInfo &info : it.value()) {
                 clashingKeys += i18n("Shortcut '%1' in Application %2 for action %3\n",
-                                     seq.toString(),
+                                     seqAsString,
                                      info.componentFriendlyName(),
                                      info.friendlyName());
             }
@@ -215,7 +216,7 @@ bool KKeySequenceWidgetPrivate::stealShortcuts(
     QString title = i18ncp("%1 is the number of conflicts", "Shortcut Conflict", "Shortcut Conflicts", listSize);
 
     QString conflictingShortcuts;
-    Q_FOREACH (const QAction *action, actions) {
+    for (const QAction *action : actions) {
         conflictingShortcuts += i18n("Shortcut '%1' for action '%2'\n",
                                      action->shortcut().toString(QKeySequence::NativeText),
                                      KLocalizedString::removeAcceleratorMarker(action->text()));
@@ -515,7 +516,7 @@ static bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QK
         return false;
     }
 
-    foreach (const QKeySequence &sequence, shortcuts) {
+    for (const QKeySequence &sequence : shortcuts) {
         if (sequence.isEmpty()) {
             continue;
         }

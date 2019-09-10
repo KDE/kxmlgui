@@ -51,7 +51,7 @@ public:
     void createActions(const QStringList &actionNames)
     {
         KActionCollection *coll = actionCollection();
-        Q_FOREACH (const QString &actionName, actionNames) {
+        for (const QString &actionName : actionNames) {
             coll->addAction(actionName)->setText(QStringLiteral("Action"));
         }
     }
