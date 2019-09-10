@@ -281,7 +281,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     // No name provided and the action had no name. Make one up. This will not
     // work when trying to save shortcuts. Both local and global shortcuts.
     if (indexName.isEmpty()) {
-        indexName = indexName.sprintf("unnamed-%p", (void *)action);
+        indexName = QString::asprintf("unnamed-%p", (void *)action);
         action->setObjectName(indexName);
     }
 
