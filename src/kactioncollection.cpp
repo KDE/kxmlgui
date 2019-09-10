@@ -846,8 +846,8 @@ QAction *KActionCollectionPrivate::unlistAction(QAction *action)
     actions.removeAt(index);
 
     // Remove the action from the categories. Should be only one
-    QList<KActionCategory *> categories = q->findChildren<KActionCategory *>();
-    Q_FOREACH (KActionCategory *category, categories) {
+    const QList<KActionCategory *> categories = q->findChildren<KActionCategory *>();
+    for (KActionCategory *category : categories) {
         category->unlistAction(action);
     }
 
