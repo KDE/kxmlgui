@@ -347,7 +347,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
 
 void KActionCollection::addActions(const QList<QAction *> &actions)
 {
-    Q_FOREACH (QAction *action, actions) {
+    for (QAction *action : actions) {
         addAction(action->objectName(), action);
     }
 }
