@@ -767,7 +767,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
             signal.methodSignature() == "actionHovered(QAction*)") {
         if (!d->connectHovered) {
             d->connectHovered = true;
-            Q_FOREACH (QAction *action, actions()) {
+            for (QAction *action : qAsConst(d->actions)) {
                 connect(action, &QAction::hovered,
                         this, &KActionCollection::slotActionHovered);
             }
@@ -776,7 +776,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
     } else if (signal.methodSignature() == "actionTriggered(QAction*)") {
         if (!d->connectTriggered) {
             d->connectTriggered = true;
-            Q_FOREACH (QAction *action, actions()) {
+            for (QAction *action: qAsConst(d->actions)) {
                 connect(action, &QAction::triggered,
                         this, &KActionCollection::slotActionTriggered);
             }
@@ -793,7 +793,7 @@ const QList< KActionCollection * > &KActionCollection::allCollections()
 
 void KActionCollection::associateWidget(QWidget *widget) const
 {
-    Q_FOREACH (QAction *action, actions()) {
+    for (QAction *action : qAsConst(d->actions)) {
         if (!widget->actions().contains(action)) {
             widget->addAction(action);
         }
@@ -812,7 +812,7 @@ void KActionCollection::addAssociatedWidget(QWidget *widget)
 
 void KActionCollection::removeAssociatedWidget(QWidget *widget)
 {
-    Q_FOREACH (QAction *action, actions()) {
+    for (QAction *action : qAsConst(d->actions)) {
         widget->removeAction(action);
     }
 
@@ -862,8 +862,7 @@ QList< QWidget * > KActionCollection::associatedWidgets() const
 void KActionCollection::clearAssociatedWidgets()
 {
     for (QWidget *widget : qAsConst(d->associatedWidgets)) {
-        const auto actions = this->actions();
-        for (QAction *action : actions) {
+        for (QAction *action : qAsConst(d->actions)) {
             widget->removeAction(action);
         }
     }
