@@ -164,6 +164,8 @@ if (BUILD_QCH)
             Qt5Widgets_QCH
             KF5Config_QCH
             KF5ConfigWidgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
             KXMLGUI_EXPORT
             KXMLGUI_DEPRECATED_EXPORT
