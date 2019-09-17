@@ -65,7 +65,7 @@ if (NOT FORCE_DISABLE_KGLOBALACCEL)
     find_package(KF5GlobalAccel ${KF5_DEP_VERSION} REQUIRED)
 endif()
 set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050c00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
 # Subdirectories
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
