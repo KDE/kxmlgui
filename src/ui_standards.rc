@@ -1,5 +1,5 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui name="standard_containers" version="18" translationDomain="kxmlgui5">
+<gui name="standard_containers" version="19" translationDomain="kxmlgui5">
 <MenuBar>
   <MergeLocal name="first_menu"/>
   <Menu name="file"><text>&amp;File</text>
@@ -112,6 +112,9 @@
     <Action name="view_redisplay"/>
     <Separator/>
     <MergeLocal/>
+    <Separator/>
+    <Action name="fullscreen"/>
+    <MergeLocal name="fullscreen_merge"/>
   </Menu>
   <MergeLocal name="before_go"/>
   <Menu name="go"><text>&amp;Go</text>
@@ -155,9 +158,6 @@
     <MergeLocal name="show_toolbar_merge"/>
     <Action name="options_show_statusbar"/>
     <MergeLocal name="show_merge"/>
-    <Separator/>
-    <Action name="fullscreen"/>
-    <MergeLocal name="fullscreen_merge"/>
     <Separator/>
     <Action name="options_save_options"/>
     <Action name="options_choose_game_type"/>
