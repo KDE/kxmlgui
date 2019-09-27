@@ -346,10 +346,9 @@ void KMainWindowPrivate::polish(KMainWindow *q)
     dbusName = QLatin1Char('/') + QCoreApplication::applicationName() + QLatin1Char('/');
     dbusName += q->objectName().replace(QLatin1Char('/'), QLatin1Char('_'));
     // Clean up for dbus usage: any non-alphanumeric char should be turned into '_'
-    const int len = dbusName.length();
-    for (int i = 0; i < len; ++i) {
-        if (!isValidDBusObjectPathCharacter(dbusName[i])) {
-            dbusName[i] = QLatin1Char('_');
+    for (QChar &c : dbusName) {
+        if (!isValidDBusObjectPathCharacter(c)) {
+            c = QLatin1Char('_');
         }
     }
 

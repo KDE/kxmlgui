@@ -274,8 +274,7 @@ void KSwitchLanguageDialog::slotOk()
 {
     QStringList languages;
 
-    for (int i = 0, count = d->languageButtons.count(); i < count; ++i) {
-        KLanguageButton *languageButton = d->languageButtons[i];
+    for (auto *languageButton : qAsConst(d->languageButtons)) {
         languages << languageButton->current();
     }
 
@@ -371,8 +370,8 @@ QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
         languagesList = l.uiLanguages();
 
         // We get en-US here but we use en_US
-        for (int i = 0; i < languagesList.count(); ++i) {
-            languagesList[i].replace(QLatin1Char('-'), QLatin1Char('_'));
+        for (auto &language : languagesList) {
+            language.replace(QLatin1Char('-'), QLatin1Char('_'));
         }
     }
 

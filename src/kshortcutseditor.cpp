@@ -712,11 +712,12 @@ void KShortcutsEditorPrivate::printShortcuts() const
     tableformat.setBorderStyle(QTextFrameFormat::BorderStyle_Solid);
     tableformat.setBorder(0.5);
 
-    QList<QPair<QString, ColumnDesignation> > shortcutTitleToColumn;
-    shortcutTitleToColumn << qMakePair(i18n("Main:"), LocalPrimary);
-    shortcutTitleToColumn << qMakePair(i18n("Alternate:"), LocalAlternate);
-    shortcutTitleToColumn << qMakePair(i18n("Global:"), GlobalPrimary);
-    shortcutTitleToColumn << qMakePair(i18n("Global alternate:"), GlobalAlternate);
+    const QPair<QString, ColumnDesignation> shortcutTitleToColumnMap[] = {
+        qMakePair(i18n("Main:"), LocalPrimary),
+        qMakePair(i18n("Alternate:"), LocalAlternate),
+        qMakePair(i18n("Global:"), GlobalPrimary),
+        qMakePair(i18n("Global alternate:"), GlobalAlternate),
+    };
 
     for (int i = 0; i < root->childCount(); i++) {
         QTreeWidgetItem *item = root->child(i);
@@ -753,8 +754,8 @@ void KShortcutsEditorPrivate::printShortcuts() const
             table->cellAt(currow, 0).firstCursorPosition().insertText(data.toString());
 
             QTextTable *shortcutTable = nullptr;
-            for (int k = 0; k < shortcutTitleToColumn.count(); k++) {
-                data = editoritem->data(shortcutTitleToColumn.at(k).second, Qt::DisplayRole);
+            for (const auto &shortcutTitleToColumn : shortcutTitleToColumnMap) {
+                data = editoritem->data(shortcutTitleToColumn.second, Qt::DisplayRole);
                 QString key = data.value<QKeySequence>().toString();
 
                 if (!key.isEmpty()) {
@@ -768,7 +769,7 @@ void KShortcutsEditorPrivate::printShortcuts() const
                     } else {
                         shortcutTable->insertRows(shortcutTable->rows(), 1);
                     }
-                    shortcutTable->cellAt(shortcutTable->rows() - 1, 0).firstCursorPosition().insertText(shortcutTitleToColumn.at(k).first);
+                    shortcutTable->cellAt(shortcutTable->rows() - 1, 0).firstCursorPosition().insertText(shortcutTitleToColumn.first);
                     shortcutTable->cellAt(shortcutTable->rows() - 1, 1).firstCursorPosition().insertText(key);
                 }
             }

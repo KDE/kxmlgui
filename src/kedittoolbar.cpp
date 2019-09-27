@@ -507,9 +507,8 @@ public:
 #ifndef NDEBUG
     void dump() const
     {
-        XmlDataList::const_iterator xit = m_xmlFiles.begin();
-        for (; xit != m_xmlFiles.end(); ++xit) {
-            (*xit).dump();
+        for (const auto &xmlFile : m_xmlFiles) {
+            xmlFile.dump();
         }
     }
 #endif
@@ -910,20 +909,19 @@ void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory,
 void KEditToolBarWidget::save()
 {
     //qDebug(240) << "KEditToolBarWidget::save";
-    XmlDataList::Iterator it = d->m_xmlFiles.begin();
-    for (; it != d->m_xmlFiles.end(); ++it) {
+    for (const auto &xmlFile : qAsConst(d->m_xmlFiles)) {
         // let's not save non-modified files
-        if (!((*it).m_isModified)) {
+        if (!xmlFile.m_isModified) {
             continue;
         }
 
         // let's also skip (non-existent) merged files
-        if ((*it).type() == XmlData::Merged) {
+        if (xmlFile.type() == XmlData::Merged) {
             continue;
         }
 
         // Add noMerge="1" to all the menus since we are saving the merged data
-        QDomNodeList menuNodes = (*it).domDocument().elementsByTagName(QStringLiteral("Menu"));
+        QDomNodeList menuNodes = xmlFile.domDocument().elementsByTagName(QStringLiteral("Menu"));
         for (int i = 0; i < menuNodes.length(); ++i) {
             QDomNode menuNode = menuNodes.item(i);
             QDomElement menuElement = menuNode.toElement();
@@ -937,7 +935,7 @@ void KEditToolBarWidget::save()
 
         //qDebug(240) << "Saving " << (*it).xmlFile();
         // if we got this far, we might as well just save it
-        KXMLGUIFactory::saveConfigFile((*it).domDocument(), (*it).xmlFile());
+        KXMLGUIFactory::saveConfigFile(xmlFile.domDocument(), xmlFile.xmlFile());
     }
 
     if (!d->m_factory) {
@@ -1156,21 +1154,19 @@ void KEditToolBarWidgetPrivate::loadToolBarCombo(const QString &defaultToolBar)
     int defaultToolBarId = -1;
     int count = 0;
     // load in all of the toolbar names into this combo box
-    XmlDataList::const_iterator xit = m_xmlFiles.constBegin();
-    for (; xit != m_xmlFiles.constEnd(); ++xit) {
+    for (const auto &xmlFile : qAsConst(m_xmlFiles)) {
         // skip the merged one in favor of the local one,
         // so that we can change icons
         // This also makes the app-defined named for "mainToolBar" appear rather than the ui_standards-defined name.
-        if ((*xit).type() == XmlData::Merged) {
+        if (xmlFile.type() == XmlData::Merged) {
             continue;
         }
 
         // each xml file may have any number of toolbars
-        ToolBarList::const_iterator it = (*xit).barList().begin();
-        for (; it != (*xit).barList().constEnd(); ++it) {
-            const QString text = (*xit).toolBarText(*it);
+        for (const auto &bar : qAsConst(xmlFile.barList())) {
+            const QString text = xmlFile.toolBarText(bar);
             m_toolbarCombo->addItem(text);
-            const QString name = (*it).attribute(attrName);
+            const QString name = bar.attribute(attrName);
             if (defaultToolBarId == -1 && name == defaultToolBar) {
                 defaultToolBarId = count;
             }
@@ -1317,25 +1313,21 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
     // To do that, we do the same iteration as the one which filled in the combobox.
 
     int toolbarNumber = 0;
-    XmlDataList::iterator xit = m_xmlFiles.begin();
-    for (; xit != m_xmlFiles.end(); ++xit) {
-
+    for (auto &xmlFile : m_xmlFiles) {
         // skip the merged one in favor of the local one,
         // so that we can change icons
-        if ((*xit).type() == XmlData::Merged) {
+        if (xmlFile.type() == XmlData::Merged) {
             continue;
         }
 
         // each xml file may have any number of toolbars
-        ToolBarList::Iterator it = (*xit).barList().begin();
-        for (; it != (*xit).barList().end(); ++it) {
-
+        for (const auto &bar : xmlFile.barList()) {
             // is this our toolbar?
             if (toolbarNumber == index) {
 
                 // save our current settings
-                m_currentXmlData = & (*xit);
-                m_currentToolBarElem = *it;
+                m_currentXmlData = &xmlFile;
+                m_currentToolBarElem = bar;
 
                 //qCDebug(DEBUG_KXMLGUI) << "found toolbar" << m_currentXmlData->toolBarText(*it) << "m_currentXmlData set to";
                 m_currentXmlData->dump();
@@ -1346,8 +1338,8 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
                 // load in our values
                 loadActions(m_currentToolBarElem);
 
-                if ((*xit).type() == XmlData::Part || (*xit).type() == XmlData::Shell) {
-                    m_widget->setDOMDocument((*xit).domDocument());
+                if (xmlFile.type() == XmlData::Part || xmlFile.type() == XmlData::Shell) {
+                    m_widget->setDOMDocument(xmlFile.domDocument());
                 }
                 return;
             }
@@ -1571,39 +1563,37 @@ void KEditToolBarWidgetPrivate::slotDownButton()
 
 void KEditToolBarWidgetPrivate::updateLocal(QDomElement &elem)
 {
-    XmlDataList::Iterator xit = m_xmlFiles.begin();
-    for (; xit != m_xmlFiles.end(); ++xit) {
-        if ((*xit).type() == XmlData::Merged) {
+    for (auto &xmlFile : m_xmlFiles) {
+        if (xmlFile.type() == XmlData::Merged) {
             continue;
         }
 
-        if ((*xit).type() == XmlData::Shell ||
-                (*xit).type() == XmlData::Part) {
-            if (m_currentXmlData->xmlFile() == (*xit).xmlFile()) {
-                (*xit).m_isModified = true;
+        if (xmlFile.type() == XmlData::Shell ||
+                xmlFile.type() == XmlData::Part) {
+            if (m_currentXmlData->xmlFile() == xmlFile.xmlFile()) {
+                xmlFile.m_isModified = true;
                 return;
             }
 
             continue;
         }
 
-        (*xit).m_isModified = true;
+        xmlFile.m_isModified = true;
         const QLatin1String attrName("name");
-        ToolBarList::Iterator it = (*xit).barList().begin();
-        for (; it != (*xit).barList().end(); ++it) {
-            QString name((*it).attribute(attrName));
-            QString tag((*it).tagName());
+        for (const auto &bar : qAsConst(xmlFile.barList())) {
+            const QString name(bar.attribute(attrName));
+            const QString tag(bar.tagName());
             if ((tag != elem.tagName()) || (name != elem.attribute(attrName))) {
                 continue;
             }
 
-            QDomElement toolbar = (*xit).domDocument().documentElement().toElement();
-            toolbar.replaceChild(elem, (*it));
+            QDomElement toolbar = xmlFile.domDocument().documentElement().toElement();
+            toolbar.replaceChild(elem, bar);
             return;
         }
 
         // just append it
-        QDomElement toolbar = (*xit).domDocument().documentElement().toElement();
+        QDomElement toolbar = xmlFile.domDocument().documentElement().toElement();
         Q_ASSERT(!toolbar.isNull());
         toolbar.appendChild(elem);
     }

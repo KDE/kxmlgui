@@ -44,9 +44,7 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList< KAboutPe
     }
 
     bool hasOcsUsernames = false;
-    for (QList< KAboutPerson >::const_iterator it = personList.constBegin(); it != personList.constEnd(); ++it) {
-        KAboutPerson person = *it;
-
+    for (const auto &person : qAsConst(m_personList)) {
         if (!person.ocsUsername().isEmpty()) {
             hasOcsUsernames = true;
         }
@@ -120,9 +118,7 @@ void KAboutApplicationPersonModel::onProvidersLoaded()   //SLOT
         m_providerName = m_provider.name();
 
         int i = 0;
-        for (QList< KAboutApplicationPersonProfile >::const_iterator it = m_profileList.constBegin();
-                it != m_profileList.constEnd(); ++it) {
-            KAboutApplicationPersonProfile profile = *it;
+        for (const auto &profile : qAsConst(m_profileList)) {
             if (!profile.ocsUsername().isEmpty()) {
                 Attica::ItemJob< Attica::Person > *job = m_provider.requestPerson(profile.ocsUsername());
                 connect(job, SIGNAL(finished(Attica::BaseJob*)),
@@ -363,13 +359,12 @@ void KAboutApplicationPersonIconsJob::start()
 
 void KAboutApplicationPersonIconsJob::getIcons(int i)
 {
-    for (QList< KAboutApplicationPersonProfileOcsLink >::iterator it = m_ocsLinks.begin() + i;
-            it != m_ocsLinks.end(); ++it) {
-        if (m_model->m_ocsLinkIcons.contains(it->type())) {
-            it->setIcon(m_model->m_ocsLinkIcons.value(it->type()));
-        } else if (m_model->m_ocsLinkIconUrls.contains(it->type())) {
+    for (auto &ocsLink : m_ocsLinks) {
+        if (m_model->m_ocsLinkIcons.contains(ocsLink.type())) {
+            ocsLink.setIcon(m_model->m_ocsLinkIcons.value(ocsLink.type()));
+        } else if (m_model->m_ocsLinkIconUrls.contains(ocsLink.type())) {
             QNetworkReply *reply =
-                m_manager->get(QNetworkRequest(QUrl(m_model->m_ocsLinkIconUrls.value(it->type()))));
+                m_manager->get(QNetworkRequest(QUrl(m_model->m_ocsLinkIconUrls.value(ocsLink.type()))));
             reply->setProperty("linkIndex", i);
             return;
         }

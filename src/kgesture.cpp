@@ -114,9 +114,9 @@ void KShapeGesture::setShape(const QPolygon &shape)
     float xScale = bounding.width() ? 100.0 / bounding.width() : 1.0;
     float yScale = bounding.height() ? 100.0 / bounding.height() : 1.0;
     d->m_shape.translate(-bounding.left(), -bounding.top());
-    for (int i = 0; i < d->m_shape.size(); i++) {
-        d->m_shape[i].setX((int)(xScale * (float)d->m_shape[i].x()));
-        d->m_shape[i].setY((int)(yScale * (float)d->m_shape[i].y()));
+    for (QPoint &shape : d->m_shape) {
+        shape.setX((int)(xScale * (float)shape.x()));
+        shape.setY((int)(yScale * (float)shape.y()));
     }
 
     //calculate accumulated lengths of lines making up the polygon
@@ -162,10 +162,9 @@ QString KShapeGesture::toString() const
     //TODO: what if the name contains a "," or ";"? Limit the name to letters?
     QString ret = d->m_friendlyName;
 
-    int i;
-    for (i = 0; i < d->m_shape.size(); i++) {
-        ret += QLatin1Char(',') + QString::number(d->m_shape[i].x()) +
-               QLatin1Char(',') + QString::number(d->m_shape[i].y());
+    for (const QPoint shape : qAsConst(d->m_shape)) {
+        ret += QLatin1Char(',') + QString::number(shape.x()) +
+               QLatin1Char(',') + QString::number(shape.y());
     }
 
     return ret;

@@ -184,16 +184,16 @@ public:
     public:
         IntSetting()
         {
-            for (int level = 0; level < NSettingLevels; ++level) {
-                values[level] = Unset;
+            for (int &value : values) {
+                value = Unset;
             }
         }
         int currentValue() const
         {
             int val = Unset;
-            for (int level = 0; level < NSettingLevels; ++level) {
-                if (values[level] != Unset) {
-                    val = values[level];
+            for (int value : values) {
+                if (value != Unset) {
+                    val = value;
                 }
             }
             return val;
@@ -213,8 +213,8 @@ public:
         QString toString() const
         {
             QString str;
-            for (int level = 0; level < NSettingLevels; ++level) {
-                str += QString::number(values[level]) + QLatin1Char(' ');
+            for (int value : values) {
+                str += QString::number(value) + QLatin1Char(' ');
             }
             return str;
         }
@@ -375,9 +375,9 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
             // Scalable icons.
             const int progression[] = { 16, 22, 32, 48, 64, 96, 128, 192, 256 };
 
-            for (uint i = 0; i < 9; i++) {
+            for (int p : progression) {
                 for (int it : qAsConst(avSizes)) {
-                    if (it >= progression[ i ]) {
+                    if (it >= p) {
                         QString text;
                         if (it < 19) {
                             text = i18n("Small (%1x%2)", it, it);

@@ -418,10 +418,8 @@ void ContainerNode::unplugClient(ContainerClient *client)
 
     // unplug all actionslists
 
-    ActionListMap::ConstIterator alIt = client->actionLists.constBegin();
-    ActionListMap::ConstIterator alEnd = client->actionLists.constEnd();
-    for (; alIt != alEnd; ++alIt) {
-        removeActions(alIt.value());
+    for (const auto &actionList : qAsConst(client->actionLists)) {
+        removeActions(actionList);
     }
 }
 

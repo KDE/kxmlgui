@@ -192,10 +192,10 @@ void ToolBarHandler::Private::connectToActionContainers()
 
 void ToolBarHandler::Private::connectToActionContainer(QAction *action)
 {
-    int containerCount = action->associatedWidgets().count();
+    const auto associatedWidgets = action->associatedWidgets();
 
-    for (int i = 0; i < containerCount; ++i) {
-        connectToActionContainer(action->associatedWidgets().value(i));
+    for (auto *widget : associatedWidgets) {
+        connectToActionContainer(widget);
     }
 }
 
