@@ -75,7 +75,7 @@ ki18n_wrap_ui(kxmlgui_SRCS ${kxmlgui_UI} )
 add_library(KF5XmlGui ${kxmlgui_SRCS})
 ecm_generate_export_header(KF5XmlGui
     BASE_NAME KXmlGui
-    # GROUP_BASE_NAME KF <- enable once all of KF modules use ecm_generate_export_header
+    GROUP_BASE_NAME KF
     VERSION ${KF5_VERSION}
     DEPRECATED_BASE_VERSION 0
     DEPRECATION_VERSIONS 4.1 5.0
