@@ -221,6 +221,7 @@ private:
     KKeySequenceWidget *m_customEditor;
     bool m_isUpdating;
     QObject *m_action;
+    const QString m_noneText; // Translated "None" text for labels
 };
 
 #if 0

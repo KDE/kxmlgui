@@ -59,17 +59,17 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
     : TabConnectedWidget(viewport),
       m_defaultKeySequence(defaultSeq),
       m_isUpdating(false),
-      m_action(nullptr)
+      m_action(nullptr),
+      m_noneText(i18nc("No shortcut defined", "None"))
 {
     QGridLayout *layout = new QGridLayout(this);
 
     m_defaultRadio = new QRadioButton(i18n("Default:"), this);
-    m_defaultLabel = new QLabel(i18nc("No shortcut defined", "None"), this);
-    QString defaultText = defaultSeq.toString(QKeySequence::NativeText);
-    if (defaultText.isEmpty()) {
-        defaultText = i18nc("No shortcut defined", "None");
+    m_defaultLabel = new QLabel(m_noneText, this);
+    const QString defaultText = defaultSeq.toString(QKeySequence::NativeText);
+    if (!defaultText.isEmpty()) {
+        m_defaultLabel->setText(defaultText);
     }
-    m_defaultLabel->setText(defaultText);
 
     m_customRadio = new QRadioButton(i18n("Custom:"), this);
     m_customEditor = new KKeySequenceWidget(this);
@@ -190,7 +190,9 @@ void ShortcutEditWidget::setCustom(const QKeySequence &seq)
 
 void ShortcutEditWidget::setKeySequence(const QKeySequence &activeSeq)
 {
-    if (activeSeq.toString(QKeySequence::NativeText) == m_defaultLabel->text()) {
+    const QString seqString = activeSeq.isEmpty() ? m_noneText
+                                                  : activeSeq.toString(QKeySequence::NativeText);
+    if (seqString == m_defaultLabel->text()) {
         m_defaultRadio->setChecked(true);
         m_customEditor->clearKeySequence();
     } else {
