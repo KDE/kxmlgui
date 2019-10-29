@@ -23,129 +23,83 @@
 
 #include "kaboutapplicationdialog.h"
 
-#include "kaboutapplicationpersonmodel_p.h"
-#include "kaboutapplicationpersonlistview_p.h"
-#include "kaboutapplicationpersonlistdelegate_p.h"
+#include "kabstractaboutdialog_p.h"
 #include "../kxmlgui_version.h"
-
-#include <kaboutdata.h>
-#include <klocalizedstring.h>
-#include <ktitlewidget.h>
-
+// KF
+#include <KAboutData>
+#include <KLocalizedString>
+#include <KWidgetItemDelegate>
+// Qt
 #include <QApplication>
-#include <QDialogButtonBox>
 #include <QLabel>
-#include <QPushButton>
-#include <QScrollBar>
-#include <QStyle>
 #include <QTabWidget>
-#include <QTextBrowser>
-#include <QFontDatabase>
 #include <QVBoxLayout>
 
-class Q_DECL_HIDDEN KAboutApplicationDialog::Private
+
+class Q_DECL_HIDDEN KAboutApplicationDialog::Private : public KAbstractAboutDialogPrivate
 {
 public:
-    Private(KAboutApplicationDialog *parent)
-        : q(parent),
-          aboutData(KAboutData::applicationData())
+    Private(const KAboutData &aboutData, KAboutApplicationDialog *parent)
+        : q(parent)
+        , aboutData(aboutData)
     {}
 
-    void init(const KAboutData &aboutData, Options opt);
+    void init(Options opt);
 
-    void _k_showLicense(const QString &number);
+private:
+    KAboutApplicationDialog * const q;
 
-    KAboutApplicationDialog *q;
-
-    KAboutData aboutData;
+    const KAboutData aboutData;
 };
 
+
 KAboutApplicationDialog::KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent)
-    : QDialog(parent),
-      d(new Private(this))
+    : KAboutApplicationDialog(aboutData, NoOptions, parent)
 {
-    d->init(aboutData, NoOptions);
 }
 
 KAboutApplicationDialog::KAboutApplicationDialog(const KAboutData &aboutData, Options opt, QWidget *parent)
-    : QDialog(parent),
-      d(new Private(this))
+    : QDialog(parent)
+    , d(new Private(aboutData, this))
 {
-    d->init(aboutData, opt);
+    d->init(opt);
 }
 
-void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
+void KAboutApplicationDialog::Private::init(Options opt)
 {
-    aboutData = ad;
-
     q->setWindowTitle(i18n("About %1", aboutData.displayName()));
-    q->setModal(false);
 
     //Set up the title widget...
-    KTitleWidget *titleWidget = new KTitleWidget(q);
-
-    QIcon windowIcon = qApp->windowIcon();
-    if (windowIcon.isNull() && !aboutData.programIconName().isEmpty()) {
-        windowIcon = QIcon::fromTheme(aboutData.programIconName());
-    }
-    titleWidget->setPixmap(windowIcon.pixmap(48, 48), KTitleWidget::ImageLeft);
+    QPixmap titlePixmap;
     if (aboutData.programLogo().canConvert<QPixmap>()) {
-        titleWidget->setPixmap(aboutData.programLogo().value<QPixmap>(), KTitleWidget::ImageLeft);
+        titlePixmap = aboutData.programLogo().value<QPixmap>();
     } else if (aboutData.programLogo().canConvert<QImage>()) {
-        titleWidget->setPixmap(QPixmap::fromImage(aboutData.programLogo().value<QImage>()), KTitleWidget::ImageLeft);
+        titlePixmap = QPixmap::fromImage(aboutData.programLogo().value<QImage>());
+    } else {
+        QIcon windowIcon = qApp->windowIcon();
+        // Legacy support for deprecated KAboutData::programIconName()
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+        if (windowIcon.isNull() && !aboutData.programIconName().isEmpty()) {
+            windowIcon = QIcon::fromTheme(aboutData.programIconName());
+        }
+QT_WARNING_POP
+        titlePixmap = windowIcon.pixmap(48, 48);
     }
 
-    titleWidget->setText(i18n("<html><font size=\"5\">%1</font><br />Version %2</html>", aboutData.displayName(), aboutData.version()));
+    QWidget *titleWidget = createTitleWidget(titlePixmap, aboutData.displayName(), aboutData.version(), q);
 
     //Then the tab bar...
     QTabWidget *tabWidget = new QTabWidget;
     tabWidget->setUsesScrollButtons(false);
 
     //Set up the first page...
-    QString aboutPageText = aboutData.shortDescription() + QLatin1Char('\n');
+    QWidget *aboutWidget = createAboutWidget(aboutData.shortDescription(), aboutData.otherText(),
+                                             aboutData.copyrightStatement(), aboutData.homepage(),
+                                             aboutData.licenses(), q);
 
-    if (!aboutData.otherText().isEmpty()) {
-        aboutPageText += QLatin1Char('\n') + aboutData.otherText() + QLatin1Char('\n');
-    }
-
-    if (!aboutData.copyrightStatement().isEmpty()) {
-        aboutPageText += QLatin1Char('\n') + aboutData.copyrightStatement() + QLatin1Char('\n');
-    }
-
-    if (!aboutData.homepage().isEmpty()) {
-        aboutPageText += QLatin1Char('\n') + QStringLiteral("<a href=\"%1\">%1</a>").arg(aboutData.homepage()) + QLatin1Char('\n');
-    }
-    aboutPageText = aboutPageText.trimmed();
-
-    QLabel *aboutLabel = new QLabel;
-    aboutLabel->setWordWrap(true);
-    aboutLabel->setOpenExternalLinks(true);
-    aboutLabel->setText(aboutPageText.replace(QLatin1Char('\n'), QStringLiteral("<br />")));
-    aboutLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
-
-    QVBoxLayout *aboutLayout = new QVBoxLayout;
-    aboutLayout->addStretch();
-    aboutLayout->addWidget(aboutLabel);
-
-    const int licenseCount = aboutData.licenses().count();
-    for (int i = 0; i < licenseCount; ++i) {
-        const KAboutLicense &license = aboutData.licenses().at(i);
-
-        QLabel *showLicenseLabel = new QLabel;
-        showLicenseLabel->setText(QStringLiteral("<a href=\"%1\">%2</a>").arg(QString::number(i),
-                                  i18n("License: %1", license.name(KAboutLicense::FullName))));
-        showLicenseLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
-        connect(showLicenseLabel, SIGNAL(linkActivated(QString)), q, SLOT(_k_showLicense(QString)));
-
-        aboutLayout->addWidget(showLicenseLabel);
-    }
-
-    aboutLayout->addStretch();
-
-    QWidget *aboutWidget = new QWidget(q);
-    aboutWidget->setLayout(aboutLayout);
-
-    tabWidget->addTab(aboutWidget, i18n("&About"));
+    tabWidget->addTab(aboutWidget, i18n("About"));
 
     // Version
     QWidget *versionWidget = new QWidget(q);
@@ -162,140 +116,34 @@ void KAboutApplicationDialog::Private::init(const KAboutData &ad, Options opt)
     }
     versionLayout->addStretch();
     versionWidget->setLayout(versionLayout);
-    tabWidget->addTab(versionWidget, i18n("&Libraries"));
-
-    //Palette needed at least for translators...
-    QPalette transparentBackgroundPalette;
-    transparentBackgroundPalette.setColor(QPalette::Base, Qt::transparent);
-    transparentBackgroundPalette.setColor(QPalette::Text, transparentBackgroundPalette.color(QPalette::WindowText));
+    tabWidget->addTab(versionWidget, i18n("Libraries"));
 
     //And here we go, authors page...
     const int authorCount = aboutData.authors().count();
     if (authorCount) {
-        QWidget *authorWidget = new QWidget(q);
-        QVBoxLayout *authorLayout = new QVBoxLayout(authorWidget);
-        authorLayout->setContentsMargins(0, 0, 0, 0);
+        QWidget *authorWidget = createAuthorsWidget(aboutData.authors(), aboutData.ocsProviderUrl(),
+                                                    aboutData.customAuthorTextEnabled(),
+                                                    aboutData.customAuthorRichText(),
+                                                    aboutData.bugAddress(), q);
 
-        if (!aboutData.customAuthorTextEnabled() || !aboutData.customAuthorRichText().isEmpty()) {
-            QLabel *bugsLabel = new QLabel(authorWidget);
-            bugsLabel->setContentsMargins(4, 2, 0, 4);
-            bugsLabel->setOpenExternalLinks(true);
-            if (!aboutData.customAuthorTextEnabled()) {
-                const QString bugAddress = aboutData.bugAddress();
-                if (bugAddress.isEmpty() || bugAddress == QLatin1String("submit@bugs.kde.org")) {
-                    bugsLabel->setText(i18n("Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to report bugs.\n"));
-                } else {
-                    QUrl bugUrl(bugAddress);
-                    if (bugUrl.scheme().isEmpty()) {
-                        bugUrl.setScheme(QStringLiteral("mailto"));
-                    }
-                    bugsLabel->setText(i18n("Please report bugs to <a href=\"%1\">%2</a>.\n",
-                                            bugUrl.toString(), bugAddress));
-                }
-            } else {
-                bugsLabel->setText(aboutData.customAuthorRichText());
-            }
-            bugsLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
-            authorLayout->addWidget(bugsLabel);
-        }
-
-        KDEPrivate::KAboutApplicationPersonModel *authorModel =
-            new KDEPrivate::KAboutApplicationPersonModel(aboutData.authors(),
-                    aboutData.ocsProviderUrl(),
-                    authorWidget);
-
-        KDEPrivate::KAboutApplicationPersonListView *authorView =
-            new KDEPrivate::KAboutApplicationPersonListView(authorWidget);
-
-        KDEPrivate::KAboutApplicationPersonListDelegate *authorDelegate =
-            new KDEPrivate::KAboutApplicationPersonListDelegate(authorView, authorView);
-
-        authorView->setModel(authorModel);
-        authorView->setItemDelegate(authorDelegate);
-        authorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        authorLayout->addWidget(authorView);
-
-        const QString authorPageTitle = (authorCount == 1) ? i18n("A&uthor") : i18n("A&uthors");
+        const QString authorPageTitle = i18np("Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);
     }
 
     //And credits page...
-    const int creditsCount = aboutData.credits().count();
-    if (creditsCount) {
-        QWidget *creditWidget = new QWidget(q);
-        QVBoxLayout *creditLayout = new QVBoxLayout(creditWidget);
-        creditLayout->setContentsMargins(0, 0, 0, 0);
-
-        KDEPrivate::KAboutApplicationPersonModel *creditModel =
-            new KDEPrivate::KAboutApplicationPersonModel(aboutData.credits(),
-                    aboutData.ocsProviderUrl(),
-                    creditWidget);
-
-        KDEPrivate::KAboutApplicationPersonListView *creditView =
-            new KDEPrivate::KAboutApplicationPersonListView(creditWidget);
-
-        KDEPrivate::KAboutApplicationPersonListDelegate *creditDelegate =
-            new KDEPrivate::KAboutApplicationPersonListDelegate(creditView, creditView);
-
-        creditView->setModel(creditModel);
-        creditView->setItemDelegate(creditDelegate);
-        creditView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        creditLayout->addWidget(creditView);
-
-        tabWidget->addTab(creditWidget, i18n("&Thanks To"));
+    if (!aboutData.credits().isEmpty()) {
+        QWidget *creditWidget = createCreditWidget(aboutData.credits(), aboutData.ocsProviderUrl(), q);
+        tabWidget->addTab(creditWidget, i18n("Thanks To"));
     }
 
     //Finally, the optional translators page...
-    if (!(opt & HideTranslators)) {
-        const int translatorsCount = aboutData.translators().count();
-        if (translatorsCount) {
-            QWidget *translatorWidget = new QWidget(q);
-            QVBoxLayout *translatorLayout = new QVBoxLayout(translatorWidget);
-            translatorLayout->setContentsMargins(0, 0, 0, 0);
+    if (!(opt & HideTranslators) && !aboutData.translators().isEmpty()) {
+        QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), aboutData.ocsProviderUrl(), q);
 
-            KDEPrivate::KAboutApplicationPersonModel *translatorModel =
-                new KDEPrivate::KAboutApplicationPersonModel(aboutData.translators(),
-                        aboutData.ocsProviderUrl(),
-                        translatorWidget);
-
-            KDEPrivate::KAboutApplicationPersonListView *translatorView =
-                new KDEPrivate::KAboutApplicationPersonListView(translatorWidget);
-
-            KDEPrivate::KAboutApplicationPersonListDelegate *translatorDelegate =
-                new KDEPrivate::KAboutApplicationPersonListDelegate(translatorView, translatorView);
-
-            translatorView->setModel(translatorModel);
-            translatorView->setItemDelegate(translatorDelegate);
-            translatorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-            translatorLayout->addWidget(translatorView);
-
-            QString aboutTranslationTeam = KAboutData::aboutTranslationTeam();
-            if (!aboutTranslationTeam.isEmpty()) {
-                QLabel *translationTeamLabel = new QLabel(translatorWidget);
-                translationTeamLabel->setContentsMargins(4, 2, 4, 4);
-                translationTeamLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
-                translationTeamLabel->setWordWrap(true);
-                translationTeamLabel->setText(aboutTranslationTeam);
-                translationTeamLabel->setOpenExternalLinks(true);
-                translatorLayout->addWidget(translationTeamLabel);
-                //TODO: this could be displayed as a view item to save space
-            }
-
-            tabWidget->addTab(translatorWidget, i18n("T&ranslation"));
-        }
+        tabWidget->addTab(translatorWidget, i18n("Translation"));
     }
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox;
-    buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, &QDialogButtonBox::accepted, q, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
-
-    //And we jam everything together in a layout...
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    mainLayout->addWidget(titleWidget);
-    mainLayout->addWidget(tabWidget);
-    mainLayout->addWidget(buttonBox);
-    q->setLayout(mainLayout);
+    createForm(titleWidget, tabWidget, q);
 }
 
 KAboutApplicationDialog::~KAboutApplicationDialog()
@@ -305,44 +153,3 @@ KAboutApplicationDialog::~KAboutApplicationDialog()
     // complains bitterly about it
     qDeleteAll(findChildren<KWidgetItemDelegate *>());
 }
-
-void KAboutApplicationDialog::Private::_k_showLicense(const QString &number)
-{
-    QDialog *dialog = new QDialog(q);
-    dialog->setAttribute(Qt::WA_DeleteOnClose);
-    QVBoxLayout *layout = new QVBoxLayout;
-    dialog->setLayout(layout);
-
-    dialog->setWindowTitle(i18n("License Agreement"));
-
-    const QFont font = QFontDatabase::systemFont(QFontDatabase::FixedFont);
-    QFontMetrics metrics(font);
-
-    const QString licenseText = aboutData.licenses().at(number.toInt()).text();
-    QTextBrowser *licenseBrowser = new QTextBrowser(dialog);
-    licenseBrowser->setFont(font);
-    licenseBrowser->setLineWrapMode(QTextEdit::NoWrap);
-    licenseBrowser->setText(licenseText);
-    layout->addWidget(licenseBrowser);
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-    layout->addWidget(buttonBox);
-
-    // try to set up the dialog such that the full width of the
-    // document is visible without horizontal scroll-bars being required
-    const int marginHint = dialog->style()->pixelMetric(QStyle::PM_DefaultChildMargin);
-    const qreal idealWidth = licenseBrowser->document()->idealWidth() + (2 * marginHint)
-                             + licenseBrowser->verticalScrollBar()->width() * 2;
-
-    // try to allow enough height for a reasonable number of lines to be shown
-    const int idealHeight = metrics.height() * 30;
-
-    dialog->resize(dialog->sizeHint().expandedTo(QSize(qRound(idealWidth), idealHeight)));
-    dialog->adjustSize();
-    dialog->show();
-}
-
-#include "moc_kaboutapplicationdialog.cpp"

@@ -23,6 +23,8 @@ set(kxmlgui_SRCS
   kaboutapplicationpersonlistview_p.cpp
   kaboutapplicationpersonmodel_p.cpp
   kaboutkdedialog_p.cpp
+  kaboutplugindialog.cpp
+  kabstractaboutdialog_p.cpp
   kactioncategory.cpp
   kactioncollection.cpp
   kactionconflictdetector.cpp
@@ -32,6 +34,7 @@ set(kxmlgui_SRCS
   kgesturemap.cpp
   khelpmenu.cpp
   kkeysequencewidget.cpp
+  klicensedialog_p.cpp
   kmainwindow.cpp
   kmenumenuhandler_p.cpp
   kshortcuteditwidget.cpp
@@ -117,6 +120,7 @@ set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION_STRING}
 ecm_generate_headers(KXmlGui_HEADERS
   HEADER_NAMES
   KAboutApplicationDialog
+  KAboutPluginDialog
   KActionCategory
   KActionCollection
   KBugReport
