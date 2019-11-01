@@ -438,9 +438,6 @@ QMenu *KMainWindow::customHelpMenu(bool showWhatsThis)
 
 bool KMainWindow::canBeRestored(int number)
 {
-    if (!qApp->isSessionRestored()) {
-        return false;
-    }
     KConfig *config = KConfigGui::sessionConfig();
     if (!config) {
         return false;
@@ -453,9 +450,6 @@ bool KMainWindow::canBeRestored(int number)
 
 const QString KMainWindow::classNameOfToplevel(int number)
 {
-    if (!qApp->isSessionRestored()) {
-        return QString();
-    }
     KConfig *config = KConfigGui::sessionConfig();
     if (!config) {
         return QString();
