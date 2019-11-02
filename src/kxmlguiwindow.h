@@ -39,9 +39,6 @@ class KConfigGroup;
 class KToolBar;
 class KXmlGuiWindowPrivate;
 
-// TODO KF6: remove
-#define KDE_DEFAULT_WINDOWFLAGS 0
-
 /**
  * @class KXmlGuiWindow kxmlguiwindow.h KXmlGuiWindow
  *
