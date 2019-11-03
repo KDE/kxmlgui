@@ -46,10 +46,10 @@ class KToolBar;
     inline const classname ## Private *k_func() const { return reinterpret_cast<classname ## Private *>(k_ptr); } \
     friend class classname ## Private;
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 7)
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 65)
 /**
  * @relates KMainWindow
- * @deprecated Since 5.7, use Qt::WindowFlags()
+ * @deprecated Since 5.65, use Qt::WindowFlags()
  */
 #define KDE_DEFAULT_WINDOWFLAGS 0
 #else
