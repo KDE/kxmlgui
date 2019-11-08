@@ -50,6 +50,12 @@ class KXMLGUI_EXPORT KKeySequenceWidget: public QWidget
     Q_OBJECT
 
     Q_PROPERTY(
+        QKeySequence keySequence
+        READ keySequence
+        WRITE setKeySequence
+        NOTIFY keySequenceChanged)
+
+    Q_PROPERTY(
         bool multiKeyShortcutsAllowed
         READ multiKeyShortcutsAllowed
         WRITE setMultiKeyShortcutsAllowed)
