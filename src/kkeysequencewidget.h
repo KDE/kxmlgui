@@ -31,6 +31,8 @@ class QAction;
 class KActionCollection;
 
 /**
+ * @class KKeySequenceWidget kkeysequencewidget.h KKeySequenceWidget
+ *
  * @short A widget to input a QKeySequence.
  *
  * This widget lets the user choose a QKeySequence, which is usually used as a
@@ -43,12 +45,12 @@ class KActionCollection;
  * \image html kkeysequencewidget.png "KKeySequenceWidget"
  *
  * @author Mark Donohoe <donohoe@kde.org>
- * @internal
  */
 class KXMLGUI_EXPORT KKeySequenceWidget: public QWidget
 {
     Q_OBJECT
 
+    /// @since 5.65
     Q_PROPERTY(
         QKeySequence keySequence
         READ keySequence
@@ -177,7 +179,7 @@ public:
     bool multiKeyShortcutsAllowed() const;
 
     /**
-     * This only applies to user input, not to setShortcut().
+     * This only applies to user input, not to setKeySequence().
      * Set whether to accept "plain" keys without modifiers (like Ctrl, Alt, Meta).
      * Plain keys by our definition include letter and symbol keys and
      * text editing keys (Return, Space, Tab, Backspace, Delete).
