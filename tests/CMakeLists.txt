@@ -22,4 +22,8 @@ xmlgui_executable_tests(
   kwindowtest
 )
 
-add_subdirectory(krichtexteditor)
+# KTextWidgets dependency is only needed for this test
+find_package(KF5TextWidgets QUIET)
+if(TARGET KF5::TextWidgets)
+    add_subdirectory(krichtexteditor)
+endif()

@@ -33,6 +33,7 @@
 #include <QComboBox>
 #include <QLineEdit>
 #include <QStandardPaths>
+#include <QTextEdit>
 #include <QDebug>
 #include <QHBoxLayout>
 #include <QGridLayout>
@@ -43,7 +44,6 @@
 #include <kemailsettings.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <ktextedit.h>
 #include <ktitlewidget.h>
 
 #include "kdepackages.h"
@@ -74,7 +74,7 @@ public:
     QProcess *m_process;
     KAboutData m_aboutData;
 
-    KTextEdit *m_lineedit;
+    QTextEdit *m_lineedit;
     QLineEdit *m_subject;
     QLabel *m_from;
     QLabel *m_version;
@@ -284,12 +284,10 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         lay->addWidget(label);
 
         // The multiline-edit
-        d->m_lineedit = new KTextEdit(this);
+        d->m_lineedit = new QTextEdit(this);
         d->m_lineedit->setMinimumHeight(180);   // make it big
         d->m_lineedit->setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
         d->m_lineedit->setLineWrapMode(QTextEdit::WidgetWidth);
-        d->m_lineedit->setCheckSpellingEnabled(true);
-        d->m_lineedit->setSpellCheckingLanguage(QStringLiteral("en"));
         lay->addWidget(d->m_lineedit, 10 /*stretch*/);
 
         d->_k_slotSetFrom();
