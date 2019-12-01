@@ -68,13 +68,13 @@ endif()
 set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x053f00)
-# Subdirectories
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
 add_definitions(-DQT_NO_FOREACH)
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ki18n_install(po)
 endif()
 
+# Subdirectories
 add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(tests)
