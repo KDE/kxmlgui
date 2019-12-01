@@ -154,7 +154,8 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
     socialLinks->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
     int currentSocialLinkAction = 0;
-    Q_FOREACH (KAboutApplicationPersonProfileOcsLink link, profile.ocsLinks()) {
+    const auto links = profile.ocsLinks();
+    for (const KAboutApplicationPersonProfileOcsLink &link : links) {
         if (!profile.homepage().isEmpty() && profile.homepage() == link.url()) {
             continue;    //We skip it if it's the same as the homepage from KAboutData
         }

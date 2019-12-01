@@ -307,7 +307,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
 
 void KXMLGUIFactory::refreshActionProperties()
 {
-    Q_FOREACH (KXMLGUIClient *client, d->m_clients) {
+    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
         d->guiClient = client;
         QDomDocument doc = client->xmlguiBuildDocument();
         if (doc.documentElement().isNull()) {

@@ -591,7 +591,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
         stealActions = conflictingActions;
         // Announce that the user
         // agreed
-        Q_FOREACH (QAction *stealAction, stealActions) {
+        for (QAction *stealAction : qAsConst(stealActions)) {
             emit q->stealShortcut(
                 keySequence,
                 stealAction);

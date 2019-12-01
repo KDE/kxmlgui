@@ -204,7 +204,7 @@ void ContainerNode::plugActionList(BuildState &state)
         plugActionList(state, mIt);
     }
 
-    Q_FOREACH (ContainerNode *child, children) {
+    for (ContainerNode *child : qAsConst(children)) {
         child->plugActionList(state);
     }
 }
@@ -244,7 +244,7 @@ void ContainerNode::unplugActionList(BuildState &state)
         unplugActionList(state, mIt);
     }
 
-    Q_FOREACH (ContainerNode *child, children) {
+    for (ContainerNode *child : qAsConst(children)) {
         child->unplugActionList(state);
     }
 }

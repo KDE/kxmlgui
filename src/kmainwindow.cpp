@@ -913,7 +913,8 @@ QList<KToolBar *> KMainWindow::toolBars() const
 {
     QList<KToolBar *> ret;
 
-    foreach (QObject *child, children())
+    const auto theChildren = children();
+    for (QObject *child : theChildren)
         if (KToolBar *toolBar = qobject_cast<KToolBar *>(child)) {
             ret.append(toolBar);
         }

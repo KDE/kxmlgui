@@ -86,7 +86,7 @@ public:
             return actions;
         }
 
-        Q_FOREACH (KToolBar *bar, m_toolBars) {
+        for (KToolBar *bar : qAsConst(m_toolBars)) {
             handleToolBar(bar);
         }
 

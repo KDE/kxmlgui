@@ -1188,7 +1188,7 @@ void KToolBar::dragLeaveEvent(QDragLeaveEvent *event)
 void KToolBar::dropEvent(QDropEvent *event)
 {
     if (toolBarsEditable()) {
-        Q_FOREACH (QAction *action, d->actionsBeingDragged) {
+        for (QAction *action : qAsConst(d->actionsBeingDragged)) {
             if (actions().contains(action)) {
                 removeAction(action);
             }
