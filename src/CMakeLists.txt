@@ -141,6 +141,11 @@ ecm_generate_headers(KXmlGui_HEADERS
 
 install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
+  ${KXmlGui_HEADERS}
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui COMPONENT Devel
+)
 
 # install this file to be compatible, it is bundled in the resource file, too
 install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
