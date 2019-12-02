@@ -406,20 +406,6 @@ void KShortcutsEditorPrivate::allDefault()
             changeKeyShortcut(item, GlobalAlternate, alternateSequence(defaultShortcut));
         }
 #endif
-
-#if 0
-        KShapeGesture actShapeGesture = KGestureMap::self()->shapeGesture(act);
-        KShapeGesture actDefaultShapeGesture = KGestureMap::self()->defaultShapeGesture(act);
-        if (actShapeGesture != actDefaultShapeGesture) {
-            changeShapeGesture(item, actDefaultShapeGesture);
-        }
-
-        KRockerGesture actRockerGesture = KGestureMap::self()->rockerGesture(act);
-        KRockerGesture actDefaultRockerGesture = KGestureMap::self()->defaultRockerGesture(act);
-        if (actRockerGesture != actDefaultRockerGesture) {
-            changeRockerGesture(item, actDefaultRockerGesture);
-        }
-#endif
     }
 }
 
@@ -463,13 +449,6 @@ void KShortcutsEditorPrivate::capturedShortcut(const QVariant &newShortcut, cons
     if (column >= LocalPrimary && column <= GlobalAlternate) {
         changeKeyShortcut(item, column, newShortcut.value<QKeySequence>());
     }
-#if 0
-    else if (column == ShapeGesture) {
-        changeShapeGesture(item, newShortcut.value<KShapeGesture>());
-    } else if (column == RockerGesture) {
-        changeRockerGesture(item, newShortcut.value<KRockerGesture>());
-    }
-#endif
 }
 
 void KShortcutsEditorPrivate::changeKeyShortcut(KShortcutsEditorItem *item, uint column, const QKeySequence &capture)
@@ -485,80 +464,6 @@ void KShortcutsEditorPrivate::changeKeyShortcut(KShortcutsEditorItem *item, uint
     item->setText(column, capture.toString(QKeySequence::NativeText));
 }
 
-#if 0
-void KShortcutsEditorPrivate::changeShapeGesture(KShortcutsEditorItem *item, const KShapeGesture &capture)
-{
-    if (capture == KGestureMap::self()->shapeGesture(item->m_action)) {
-        return;
-    }
-
-    if (capture.isValid()) {
-        bool conflict = false;
-        KShortcutsEditorItem *otherItem;
-
-        //search for conflicts
-        for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
-            if (!(*it)->parent() || (*it == item)) {
-                continue;
-            }
-
-            otherItem = static_cast<KShortcutsEditorItem *>(*it);
-
-            //comparisons are possibly expensive
-            KShapeGesture otherGesture = KGestureMap::self()->shapeGesture(otherItem->m_action);
-            if (!otherGesture.isValid()) {
-                continue;
-            }
-
-            if (capture == otherGesture) {
-                conflict = true;
-                break;
-            }
-        }
-
-        if (conflict && !stealShapeGesture(otherItem, capture)) {
-            return;
-        }
-    }
-
-    item->setShapeGesture(capture);
-}
-#endif
-
-#if 0
-void KShortcutsEditorPrivate::changeRockerGesture(KShortcutsEditorItem *item, const KRockerGesture &capture)
-{
-    if (capture == KGestureMap::self()->rockerGesture(item->m_action)) {
-        return;
-    }
-
-    if (capture.isValid()) {
-        bool conflict = false;
-        KShortcutsEditorItem *otherItem;
-
-        for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
-            if (!(*it)->parent() || (*it == item)) {
-                continue;
-            }
-
-            otherItem = static_cast<KShortcutsEditorItem *>(*it);
-
-            KRockerGesture otherGesture = KGestureMap::self()->rockerGesture(otherItem->m_action);
-            if (capture == otherGesture) {
-                conflict = true;
-                break;
-            }
-        }
-
-        if (conflict && !stealRockerGesture(otherItem, capture)) {
-            return;
-        }
-    }
-
-    item->setRockerGesture(capture);
-}
-#endif
-
 void KShortcutsEditorPrivate::clearConfiguration()
 {
     for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
@@ -573,10 +478,6 @@ void KShortcutsEditorPrivate::clearConfiguration()
 
         changeKeyShortcut(item, GlobalPrimary,   QKeySequence());
         changeKeyShortcut(item, GlobalAlternate, QKeySequence());
-
-#if 0
-        changeShapeGesture(item, KShapeGesture());
-#endif
     }
 }
 
@@ -625,43 +526,6 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
         }
     }
 }
-
-#if 0
-bool KShortcutsEditorPrivate::stealShapeGesture(KShortcutsEditorItem *item, const KShapeGesture &gst)
-{
-    QString title = i18n("Key Conflict");
-    QString message = i18n("The '%1' shape gesture has already been allocated to the \"%2\" action.\n"
-                           "Do you want to reassign it from that action to the current one?",
-                           gst.shapeName(), item->m_action->text());
-
-    if (KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18n("Reassign")))
-            != KMessageBox::Continue) {
-        return false;
-    }
-    item->setShapeGesture(KShapeGesture());
-
-    return true;
-}
-#endif
-
-#if 0
-bool KShortcutsEditorPrivate::stealRockerGesture(KShortcutsEditorItem *item, const KRockerGesture &gst)
-{
-    QString title = i18n("Key Conflict");
-    QString message = i18n("The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
-                           "Do you want to reassign it from that action to the current one?",
-                           gst.rockerName(), item->m_action->text());
-
-    if (KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18n("Reassign")))
-            != KMessageBox::Continue) {
-        return false;
-    }
-
-    item->setRockerGesture(KRockerGesture());
-
-    return true;
-}
-#endif
 
 /*TODO for the printShortcuts function
 Nice to have features (which I'm not sure I can do before may due to

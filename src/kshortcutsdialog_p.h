@@ -25,10 +25,6 @@
 #include "kshortcutseditor.h"
 #include "kkeysequencewidget.h"
 
-#if 0
-#include <kgesture.h>
-#endif
-
 #include <kextendableitemdelegate.h>
 #include <klocalizedstring.h>
 

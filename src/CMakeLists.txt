@@ -30,8 +30,6 @@ set(kxmlgui_SRCS
   kactionconflictdetector.cpp
   kbugreport.cpp
   kedittoolbar.cpp
-  kgesture.cpp
-  kgesturemap.cpp
   khelpmenu.cpp
   kkeysequencewidget.cpp
   klicensedialog_p.cpp
@@ -143,13 +141,6 @@ ecm_generate_headers(KXmlGui_HEADERS
 
 install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(FILES
-  kgesture_p.h
-  kgesturemap_p.h
-  ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
-  ${KXmlGui_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui COMPONENT Devel
-)
 
 # install this file to be compatible, it is bundled in the resource file, too
 install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )

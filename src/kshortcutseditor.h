@@ -29,10 +29,6 @@
 
 #include <QWidget>
 
-#if 0
-#include <kgesture.h>
-#endif
-
 class KActionCollection;
 class KConfig;
 class KConfigBase;
