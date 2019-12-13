@@ -24,6 +24,7 @@ private Q_SLOTS:
     void testSetShortcuts();
     void implicitStandardActionInsertionUsingCreate();
     void implicitStandardActionInsertionUsingCut();
+    void shouldEmitSignals();
 
 private:
     KConfigGroup clearConfig();

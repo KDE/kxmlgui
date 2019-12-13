@@ -273,11 +273,17 @@ Q_SIGNALS:
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Indicates that @p action was removed from this action collection.
-     * @deprecated Since 5.0
+     * @deprecated Since 5.0, use changed() (added in 5.66) instead.
      */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Do not rely on")
+    KXMLGUI_DEPRECATED_VERSION(5, 0, "removed() is sometimes emitted with partially destroyed objects; use changed() instead (added in 5.66)")
     QT_MOC_COMPAT void removed(QAction *action);
 #endif
+
+    /**
+     * Emitted when an action has been inserted into, or removed from, this action collection.
+     * @since 5.66
+     */
+    void changed();
 
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**

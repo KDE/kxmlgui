@@ -3,6 +3,7 @@
 #include <QtTestWidgets>
 #include <QAction>
 #include <QPointer>
+#include <QSignalSpy>
 
 #include <ksharedconfig.h>
 #include <kstandardaction.h>
@@ -243,6 +244,52 @@ void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
     QAction *a = collection.action(QString::fromLatin1(KStandardAction::name(KStandardAction::Cut)));
     QVERIFY(a);
     QVERIFY(a == cut);
+}
+
+void tst_KActionCollection::shouldEmitSignals()
+{
+    QAction *a = new QAction(nullptr);
+    QAction *b = new QAction(nullptr);
+
+    QSignalSpy insertedSpy(collection, &KActionCollection::inserted);
+    QSignalSpy changedSpy(collection, &KActionCollection::changed);
+
+    // Insert "first"
+    collection->addAction(QStringLiteral("first"), a);
+    QVERIFY(collection->actions().contains(a));
+    QCOMPARE(insertedSpy.count(), 1);
+    QCOMPARE(insertedSpy.at(0).at(0).value<QAction *>(), a);
+    QCOMPARE(changedSpy.count(), 1);
+    insertedSpy.clear();
+    changedSpy.clear();
+
+    // Replace "first"
+    collection->addAction(QStringLiteral("first"), b);
+    QVERIFY(!collection->actions().contains(a));
+    QVERIFY(collection->actions().contains(b));
+    QCOMPARE(insertedSpy.count(), 1);
+    QCOMPARE(insertedSpy.at(0).at(0).value<QAction *>(), b);
+    QCOMPARE(changedSpy.count(), 2); // once for removing a, once for inserting b
+    insertedSpy.clear();
+    changedSpy.clear();
+
+    // Insert "second"
+    collection->addAction(QStringLiteral("second"), a);
+    QCOMPARE(insertedSpy.count(), 1);
+    QCOMPARE(insertedSpy.at(0).at(0).value<QAction *>(), a);
+    QCOMPARE(changedSpy.count(), 1);
+    insertedSpy.clear();
+    changedSpy.clear();
+
+    // Remove and delete "second" (which is a)
+    collection->removeAction(a);
+    QCOMPARE(changedSpy.count(), 1);
+    changedSpy.clear();
+
+    // Delete b directly, should automatically remove it from the collection and emit changed
+    delete b;
+    QCOMPARE(changedSpy.count(), 1);
+    changedSpy.clear();
 }
 
 QTEST_MAIN(tst_KActionCollection)

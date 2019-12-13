@@ -342,6 +342,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     }
 
     emit inserted(action);
+    emit changed();
     return action;
 }
 
@@ -373,6 +374,7 @@ QAction *KActionCollection::takeAction(QAction *action)
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     emit removed(action);   //deprecated
 #endif
+    emit changed();
     return action;
 }
 
@@ -763,6 +765,7 @@ void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     emit q->removed(action); //deprecated. remove in KDE5
 #endif
+    emit q->changed();
 }
 
 void KActionCollection::connectNotify(const QMetaMethod &signal)
