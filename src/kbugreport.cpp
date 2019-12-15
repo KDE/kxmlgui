@@ -232,12 +232,6 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     tmpLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
     glay->addWidget(tmpLabel, row, 1, 1, 2);
 
-    tmpLabel = new QLabel(i18n("Compiler:"), this);
-    glay->addWidget(tmpLabel, ++row, 0);
-    tmpLabel = new QLabel(QLatin1String(XMLGUI_COMPILER_VERSION), this);
-    tmpLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
-    glay->addWidget(tmpLabel, row, 1, 1, 2);
-
     if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         // Severity
         d->m_bgSeverity = new QGroupBox(i18nc("@title:group", "Se&verity"), this);
@@ -545,7 +539,6 @@ QString KBugReport::text() const
         return QLatin1String("Package: ") + appname +
                QLatin1String("\nVersion: ") + d->m_strVersion +
                QLatin1String("\nSeverity: ") + severity +
-               QLatin1String("\nCompiler: ") + QStringLiteral(XMLGUI_COMPILER_VERSION) +
                QLatin1Char('\n') + os +
                QLatin1Char('\n') + bodyText;
     }
