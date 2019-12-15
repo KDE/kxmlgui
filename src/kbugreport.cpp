@@ -46,7 +46,6 @@
 #include <kmessagebox.h>
 #include <ktitlewidget.h>
 
-#include "kdepackages.h"
 #include "../kxmlgui_version.h"
 #include "systeminformation_p.h"
 #include "config-xmlgui.h"
@@ -67,7 +66,6 @@ public:
 
     void _k_slotConfigureEmail();
     void _k_slotSetFrom();
-    void _k_appChanged(int);
     void _k_updateUrl();
 
     KBugReport *q;
@@ -82,7 +80,6 @@ public:
     QGroupBox *m_bgSeverity;
     QPushButton *m_configureEmail;
 
-    QComboBox *appcombo;
     QString lastError;
     QString kde_version;
     QString appname;
@@ -182,27 +179,10 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     tmpLabel = new QLabel(i18n("Application: "), this);
     glay->addWidget(tmpLabel, row, 0);
     tmpLabel->setWhatsThis(qwtstr);
-    d->appcombo = new QComboBox(this);
-    d->appcombo->setWhatsThis(qwtstr);
-    QStringList packageList;
-    for (int c = 0; packages[c]; ++c) {
-        packageList << QString::fromLatin1(packages[c]);
-    }
-    d->appcombo->addItems(packageList);
-    connect(d->appcombo, SIGNAL(activated(int)), SLOT(_k_appChanged(int)));
+    QLabel *appLabel = new QLabel(this);
     d->appname = d->m_aboutData.productName();
-    glay->addWidget(d->appcombo, row, 1);
-    int index = 0;
-    for (; index < d->appcombo->count(); index++) {
-        if (d->appcombo->itemText(index) == d->appname) {
-            break;
-        }
-    }
-    if (index == d->appcombo->count()) { // not present
-        d->appcombo->addItem(d->appname);
-    }
-    d->appcombo->setCurrentIndex(index);
-
+    appLabel->setText(d->appname);
+    glay->addWidget(appLabel, row, 1);
     tmpLabel->setWhatsThis(qwtstr);
 
     // Version
@@ -308,7 +288,6 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         lay->addWidget(label);
         lay->addSpacing(10);
 
-        d->appcombo->setFocus();
 
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
@@ -351,7 +330,7 @@ void KBugReportPrivate::_k_updateUrl()
     query.addQueryItem(QStringLiteral("format"), QStringLiteral("guided"));    // use the guided form
 
     // the string format is product/component, where component is optional
-    QStringList list = appcombo->currentText().split(QLatin1Char('/'));
+    QStringList list = appname.split(QLatin1Char('/'));
     query.addQueryItem(QStringLiteral("product"), list[0]);
     if (list.size() == 2) {
         query.addQueryItem(QStringLiteral("component"), list[1]);
@@ -361,35 +340,6 @@ void KBugReportPrivate::_k_updateUrl()
     url.setQuery(query);
 
     // TODO: guess and fill OS(sys_os) and Platform(rep_platform) fields
-}
-
-void KBugReportPrivate::_k_appChanged(int i)
-{
-    QString appName = appcombo->itemText(i);
-    int index = appName.indexOf(QLatin1Char('/'));
-    if (index > 0) {
-        appName.truncate(index);
-    }
-    //qCDebug(DEBUG_KXMLGUI) << "appName " << appName;
-
-    QString strDisplayVersion; //Version string to show in the UI
-    if (appname == appName && !m_aboutData.version().isEmpty()) {
-        m_strVersion = m_aboutData.version();
-        strDisplayVersion = m_strVersion;
-    } else {
-        m_strVersion = QStringLiteral("unknown"); //English string to put in the bug report
-        strDisplayVersion = i18nc("unknown program name", "unknown");
-    }
-
-    if (bugDestination != KBugReportPrivate::BugsKdeOrg) {
-        m_strVersion += QLatin1Char(' ') + kde_version;
-        strDisplayVersion += QLatin1Char(' ') + kde_version;
-    }
-
-    m_version->setText(strDisplayVersion);
-    if (bugDestination == KBugReportPrivate::BugsKdeOrg) {
-        _k_updateUrl();
-    }
 }
 
 void KBugReportPrivate::_k_slotConfigureEmail()
@@ -505,7 +455,7 @@ QString KBugReport::text() const
     //qCDebug(DEBUG_KXMLGUI) << d->severityButtons[d->currentSeverity()]->objectName();
     // Prepend the pseudo-headers to the contents of the mail
     QString severity = d->severityButtons[d->currentSeverity()]->objectName();
-    QString appname = d->appcombo->currentText();
+    QString appname = d->appname;
     QString os = QStringLiteral("OS: %1 (%2)\n").
                  arg(QStringLiteral(XMLGUI_COMPILING_OS),
                      QStringLiteral(XMLGUI_DISTRIBUTION_TEXT));

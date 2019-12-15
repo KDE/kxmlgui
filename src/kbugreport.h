@@ -87,11 +87,6 @@ private:
     Q_PRIVATE_SLOT(d, void _k_slotSetFrom())
 
     /**
-     * Application combo selection changed (and was activated)
-     */
-    Q_PRIVATE_SLOT(d, void _k_appChanged(int))
-
-    /**
      * Update the url to match the current os, selected app, etc
      */
     Q_PRIVATE_SLOT(d, void _k_updateUrl())
