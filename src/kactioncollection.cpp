@@ -240,7 +240,7 @@ const QList< QActionGroup * > KActionCollection::actionGroups() const
             set.insert(action->actionGroup());
         }
     }
-    return set.toList();
+    return set.values();
 }
 
 QAction *KActionCollection::addAction(const QString &name, QAction *action)
