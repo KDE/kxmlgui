@@ -40,7 +40,7 @@ option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.11.0)
+set(REQUIRED_QT_VERSION 5.12.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
 if (NOT ANDROID)
   find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
