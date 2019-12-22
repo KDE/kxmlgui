@@ -140,7 +140,7 @@ QT_WARNING_POP
     if (!(opt & HideTranslators) && !aboutData.translators().isEmpty()) {
         QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), aboutData.ocsProviderUrl(), q);
 
-        tabWidget->addTab(translatorWidget, i18n("Translation"));
+        tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));
     }
 
     createForm(titleWidget, tabWidget, q);

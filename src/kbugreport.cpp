@@ -244,11 +244,11 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         struct SeverityData { QString name; QString text; };
         const std::array<SeverityData, 5> severityData = { {
-            { QStringLiteral("critical"), i18n("Critical") },
-            { QStringLiteral("grave"),    i18n("Grave") },
-            { QStringLiteral("normal"),   i18nc("normal severity", "Normal") },
-            { QStringLiteral("wishlist"), i18n("Wishlist") },
-            { QStringLiteral("i18n"),     i18n("Translation") },
+            { QStringLiteral("critical"), i18nc("bug severity", "Critical") },
+            { QStringLiteral("grave"),    i18nc("bug severity", "Grave") },
+            { QStringLiteral("normal"),   i18nc("bug severity", "Normal") },
+            { QStringLiteral("wishlist"), i18nc("bug severity", "Wishlist") },
+            { QStringLiteral("i18n"),     i18nc("bug severity", "Translation") },
         } };
 
         QHBoxLayout *severityLayout = new QHBoxLayout(d->m_bgSeverity);

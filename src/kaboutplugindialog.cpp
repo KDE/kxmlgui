@@ -113,7 +113,7 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
     //Finally, the optional translators page...
     if (!(opt & KAboutPluginDialog::HideTranslators) && !pluginMetaData.translators().isEmpty()) {
         QWidget *translatorWidget = createTranslatorsWidget(pluginMetaData.translators(), QString(), q);
-        tabWidget->addTab(translatorWidget, i18n("Translation"));
+        tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));
     }
 
     createForm(titleWidget, tabWidget, q);
