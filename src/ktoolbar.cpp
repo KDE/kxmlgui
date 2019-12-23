@@ -328,10 +328,10 @@ QMenu *KToolBar::Private::contextMenu(const QPoint &globalPos)
 
         contextMode = new QMenu(i18n("Text Position"), context);
 
-        contextIcons = contextMode->addAction(i18n("Icons Only"), q, SLOT(slotContextIcons()));
-        contextText = contextMode->addAction(i18n("Text Only"), q, SLOT(slotContextText()));
-        contextTextRight = contextMode->addAction(i18n("Text Alongside Icons"), q, SLOT(slotContextTextRight()));
-        contextTextUnder = contextMode->addAction(i18n("Text Under Icons"), q, SLOT(slotContextTextUnder()));
+        contextIcons = contextMode->addAction(i18nc("@item:inmenu", "Icons Only"), q, SLOT(slotContextIcons()));
+        contextText = contextMode->addAction(i18nc("@item:inmenu", "Text Only"), q, SLOT(slotContextText()));
+        contextTextRight = contextMode->addAction(i18nc("@item:inmenu", "Text Alongside Icons"), q, SLOT(slotContextTextRight()));
+        contextTextUnder = contextMode->addAction(i18nc("@item:inmenu", "Text Under Icons"), q, SLOT(slotContextTextUnder()));
 
         QActionGroup *textGroup = new QActionGroup(contextMode);
         const auto modeActions = contextMode->actions();

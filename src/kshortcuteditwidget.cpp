@@ -64,14 +64,14 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
 {
     QGridLayout *layout = new QGridLayout(this);
 
-    m_defaultRadio = new QRadioButton(i18n("Default:"), this);
+    m_defaultRadio = new QRadioButton(i18nc("@option:radio", "Default:"), this);
     m_defaultLabel = new QLabel(m_noneText, this);
     const QString defaultText = defaultSeq.toString(QKeySequence::NativeText);
     if (!defaultText.isEmpty()) {
         m_defaultLabel->setText(defaultText);
     }
 
-    m_customRadio = new QRadioButton(i18n("Custom:"), this);
+    m_customRadio = new QRadioButton(i18nc("@option:radio", "Custom:"), this);
     m_customEditor = new KKeySequenceWidget(this);
     m_customEditor->setModifierlessAllowed(allowLetterShortcuts);
 

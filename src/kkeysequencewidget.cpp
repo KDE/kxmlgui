@@ -144,7 +144,7 @@ public:
         QString title = i18ncp("%1 is the number of shortcuts with which there is a conflict",
                                "Conflict with Registered Global Shortcut", "Conflict with Registered Global Shortcuts", hashSize);
 
-        return KMessageBox::warningContinueCancel(parent, message, title, KGuiItem(i18n("Reassign")))
+        return KMessageBox::warningContinueCancel(parent, message, title, KGuiItem(i18nc("@action:button", "Reassign")))
                == KMessageBox::Continue;
     }
 #endif
@@ -232,7 +232,7 @@ bool KKeySequenceWidgetPrivate::stealShortcuts(
                              seq.toString(QKeySequence::NativeText),
                              conflictingShortcuts);
 
-    if (KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18n("Reassign"))) != KMessageBox::Continue) {
+    if (KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) != KMessageBox::Continue) {
         return false;
     }
 
@@ -241,7 +241,7 @@ bool KKeySequenceWidgetPrivate::stealShortcuts(
 
 void KKeySequenceWidgetPrivate::wontStealShortcut(QAction *item, const QKeySequence &seq)
 {
-    QString title(i18n("Shortcut conflict"));
+    QString title(i18nc("@title:window", "Shortcut conflict"));
     QString msg(i18n("<qt>The '%1' key combination is already used by the <b>%2</b> action.<br>"
                      "Please select a different one.</qt>", seq.toString(QKeySequence::NativeText),
                      KLocalizedString::removeAcceleratorMarker(item->text())));
@@ -272,7 +272,7 @@ void KKeySequenceWidgetPrivate::init()
     keyButton = new KKeySequenceButton(this, q);
     keyButton->setFocusPolicy(Qt::StrongFocus);
     keyButton->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
-    keyButton->setToolTip(i18n("Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A."));
+    keyButton->setToolTip(i18nc("@info:tooltip", "Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A."));
     layout->addWidget(keyButton);
 
     clearButton = new QToolButton(q);
@@ -617,13 +617,13 @@ bool KKeySequenceWidgetPrivate::conflictWithStandardShortcuts(const QKeySequence
 
 bool KKeySequenceWidgetPrivate::stealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq)
 {
-    QString title = i18n("Conflict with Standard Application Shortcut");
+    QString title = i18nc("@title:window", "Conflict with Standard Application Shortcut");
     QString message = i18n("The '%1' key combination is also used for the standard action "
                            "\"%2\" that some applications use.\n"
                            "Do you really want to use it as a global shortcut as well?",
                            seq.toString(QKeySequence::NativeText), KStandardShortcut::label(std));
 
-    if (KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18n("Reassign"))) != KMessageBox::Continue) {
+    if (KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) != KMessageBox::Continue) {
         return false;
     }
     return true;
@@ -719,7 +719,7 @@ void KKeySequenceButton::keyPressEvent(QKeyEvent *e)
         // and QKeySequence.toString() will also yield a garbage string.
         KMessageBox::sorry(this,
                            i18n("The key you just pressed is not supported by Qt."),
-                           i18n("Unsupported Key"));
+                           i18nc("@title:window", "Unsupported Key"));
         d->cancelRecording();
         return;
     }

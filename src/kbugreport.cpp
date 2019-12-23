@@ -103,7 +103,7 @@ public:
 KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     : QDialog(_parent), d(new KBugReportPrivate(this))
 {
-    setWindowTitle(i18n("Submit Bug Report"));
+    setWindowTitle(i18nc("@title:window", "Submit Bug Report"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -152,8 +152,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         d->m_from->setWhatsThis(qwtstr);
 
         // Configure email button
-        d->m_configureEmail = new QPushButton(i18n("Configure Email..."),
-                                              this);
+        d->m_configureEmail = new QPushButton(i18nc("@action:button", "Configure Email..."), this);
         connect(d->m_configureEmail, SIGNAL(clicked()), this,
                 SLOT(_k_slotConfigureEmail()));
         glay->addWidget(d->m_configureEmail, 0, 2, 3, 1, Qt::AlignTop | Qt::AlignRight);
@@ -169,8 +168,9 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         tmpLabel->setWhatsThis(qwtstr);
 
         KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok),
-                         KGuiItem(i18n("&Send"), QStringLiteral("mail-send"), i18n("Send bug report."),
-                                  i18n("Send this bug report to %1.", d->m_aboutData.bugAddress())));
+                         KGuiItem(i18nc("@action:button", "&Send"), QStringLiteral("mail-send"),
+                                  i18nc("@info:tooltip", "Send bug report."),
+                                  i18nc("@info:whatsthis", "Send this bug report to %1.", d->m_aboutData.bugAddress())));
         row++;
     } else {
         d->m_configureEmail = nullptr;
@@ -240,7 +240,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
     if (d->bugDestination == KBugReportPrivate::CustomEmail) {
         // Severity
-        d->m_bgSeverity = new QGroupBox(i18n("Se&verity"), this);
+        d->m_bgSeverity = new QGroupBox(i18nc("@title:group", "Se&verity"), this);
 
         struct SeverityData { QString name; QString text; };
         const std::array<SeverityData, 5> severityData = { {
@@ -318,9 +318,9 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
-            okButton->setText(i18n("&Launch Bug Report Wizard"));
+            okButton->setText(i18nc("@action:button", "&Launch Bug Report Wizard"));
         } else {
-            okButton->setText(i18n("&Submit Bug Report"));
+            okButton->setText(i18nc("@action:button", "&Submit Bug Report"));
         }
         okButton->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
     }
@@ -496,7 +496,8 @@ void KBugReport::closeEvent(QCloseEvent *e)
         ((d->m_lineedit->toPlainText().length() > 0) || d->m_subject->isModified())) {
         int rc = KMessageBox::warningYesNo(this,
                                            i18n("Close and discard\nedited message?"),
-                                           i18n("Close Message"), KStandardGuiItem::discard(), KStandardGuiItem::cont());
+                                           i18nc("@title:window", "Close Message"),
+                                           KStandardGuiItem::discard(), KStandardGuiItem::cont());
         if (rc == KMessageBox::No) {
             e->ignore();
             return;

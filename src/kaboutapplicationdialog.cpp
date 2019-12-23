@@ -67,7 +67,7 @@ KAboutApplicationDialog::KAboutApplicationDialog(const KAboutData &aboutData, Op
 
 void KAboutApplicationDialog::Private::init(Options opt)
 {
-    q->setWindowTitle(i18n("About %1", aboutData.displayName()));
+    q->setWindowTitle(i18nc("@title:window", "About %1", aboutData.displayName()));
 
     //Set up the title widget...
     QPixmap titlePixmap;
@@ -99,7 +99,7 @@ QT_WARNING_POP
                                              aboutData.copyrightStatement(), aboutData.homepage(),
                                              aboutData.licenses(), q);
 
-    tabWidget->addTab(aboutWidget, i18n("About"));
+    tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
     // Version
     QWidget *versionWidget = new QWidget(q);
@@ -116,7 +116,7 @@ QT_WARNING_POP
     }
     versionLayout->addStretch();
     versionWidget->setLayout(versionLayout);
-    tabWidget->addTab(versionWidget, i18n("Libraries"));
+    tabWidget->addTab(versionWidget, i18nc("@title:tab", "Libraries"));
 
     //And here we go, authors page...
     const int authorCount = aboutData.authors().count();
@@ -126,14 +126,14 @@ QT_WARNING_POP
                                                     aboutData.customAuthorRichText(),
                                                     aboutData.bugAddress(), q);
 
-        const QString authorPageTitle = i18np("Author", "Authors", authorCount);
+        const QString authorPageTitle = i18ncp("@title:tab", "Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);
     }
 
     //And credits page...
     if (!aboutData.credits().isEmpty()) {
         QWidget *creditWidget = createCreditWidget(aboutData.credits(), aboutData.ocsProviderUrl(), q);
-        tabWidget->addTab(creditWidget, i18n("Thanks To"));
+        tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
     //Finally, the optional translators page...

@@ -72,7 +72,7 @@ KAboutPluginDialog::~KAboutPluginDialog()
 
 void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
 {
-    q->setWindowTitle(i18n("About %1", pluginMetaData.name()));
+    q->setWindowTitle(i18nc("@title:window", "About %1", pluginMetaData.name()));
 
     //Set up the title widget...
     const QIcon pluginIcon = !pluginMetaData.iconName().isEmpty() ? QIcon::fromTheme(pluginMetaData.iconName()) :
@@ -89,7 +89,7 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
                                              pluginMetaData.copyrightText(), pluginMetaData.website(),
                                              {pluginLicense}, q);
 
-    tabWidget->addTab(aboutWidget, i18n("About"));
+    tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
     //And here we go, authors page...
     const int authorCount = pluginMetaData.authors().count();
@@ -100,14 +100,14 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
                                                     QString(),
                                                     QString(), q);
 
-        const QString authorPageTitle = i18np("Author", "Authors", authorCount);
+        const QString authorPageTitle = i18ncp("@title:tab", "Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);
     }
 
     //And credits page...
     if (!pluginMetaData.otherContributors().isEmpty()) {
         QWidget *creditWidget = createCreditWidget(pluginMetaData.otherContributors(), QString(), q);
-        tabWidget->addTab(creditWidget, i18n("Thanks To"));
+        tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
     //Finally, the optional translators page...

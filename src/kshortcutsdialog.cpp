@@ -151,7 +151,7 @@ public:
 KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
     : QDialog(parent), d(new KShortcutsDialogPrivate(this))
 {
-    setWindowTitle(i18n("Configure Keyboard Shortcuts"));
+    setWindowTitle(i18nc("@title:window", "Configure Keyboard Shortcuts"));
     setModal(true);
 
     QVBoxLayout *layout = new QVBoxLayout;

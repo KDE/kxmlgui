@@ -232,7 +232,7 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
     m_popupAction = action;
 
     m_contextMenu = new QMenu;
-    m_contextMenu->addAction(i18n("Configure Shortcut..."), this, &KMenuMenuHandler::slotSetShortcut);
+    m_contextMenu->addAction(i18nc("@action:inmenu", "Configure Shortcut..."), this, &KMenuMenuHandler::slotSetShortcut);
 
     KMainWindow *window = qobject_cast<KMainWindow *>(m_builder->widget());
     if (window) {

@@ -344,7 +344,7 @@ ToolBarItem *ToolBarListWidget::currentItem() const
 IconTextEditDialog::IconTextEditDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Change Text"));
+    setWindowTitle(i18nc("@title:window", "Change Text"));
     setModal(true);
 
     QVBoxLayout *layout = new QVBoxLayout;
@@ -360,7 +360,7 @@ IconTextEditDialog::IconTextEditDialog(QWidget *parent)
     grid->addWidget(label, 0, 0);
     grid->addWidget(m_lineEdit, 0, 1);
 
-    m_cbHidden = new QCheckBox(i18n("&Hide text when toolbar shows text alongside icons"), this);
+    m_cbHidden = new QCheckBox(i18nc("@option:check", "&Hide text when toolbar shows text alongside icons"), this);
     grid->addWidget(m_cbHidden, 1, 1);
 
     layout->addLayout(grid);
@@ -613,7 +613,7 @@ void KEditToolBarPrivate::init()
 
     q->setDefaultToolBar(QString());
 
-    q->setWindowTitle(i18n("Configure Toolbars"));
+    q->setWindowTitle(i18nc("@title:window", "Configure Toolbars"));
     q->setModal(false);
 
     m_layout = new QVBoxLayout;
@@ -1059,7 +1059,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     activeListSearchLine->setPlaceholderText(i18n("Filter"));
 
     // "change icon" button
-    m_changeIcon = new QPushButton(i18n("Change &Icon..."), m_widget);
+    m_changeIcon = new QPushButton(i18nc("@action:button", "Change &Icon..."), m_widget);
     m_changeIcon->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-icons")));
     m_changeIcon->setEnabled(m_activeList->currentItem());
 
@@ -1067,7 +1067,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
                      m_widget, SLOT(slotChangeIcon()));
 
     // "change icon text" button
-    m_changeIconText = new QPushButton(i18n("Change Te&xt..."), m_widget);
+    m_changeIconText = new QPushButton(i18nc("@action:button", "Change Te&xt..."), m_widget);
     m_changeIconText->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
     m_changeIconText->setEnabled(m_activeList->currentItem() != nullptr);
 

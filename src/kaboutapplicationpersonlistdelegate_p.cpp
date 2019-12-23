@@ -124,23 +124,23 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
     QAction *action;
     if (!profile.email().isEmpty()) {
         action = mainLinks->actions().at(EmailAction);
-        action->setToolTip(i18nc("Action to send an email to a contributor",
+        action->setToolTip(i18nc("@info:tooltip Action to send an email to a contributor",
                                  "Email contributor\n%1", profile.email()));
         action->setData(QString(QLatin1String("mailto:") + profile.email()));
         action->setVisible(true);
     }
     if (!profile.homepage().isEmpty()) {
         action = mainLinks->actions().at(HomepageAction);
-        action->setToolTip(i18n("Visit contributor's homepage\n%1", profile.homepage().toString()));
+        action->setToolTip(i18nc("@info:tooltip", "Visit contributor's homepage\n%1", profile.homepage().toString()));
         action->setData(profile.homepage().toString());
         action->setVisible(true);
     }
     if (!profile.ocsProfileUrl().isEmpty()) {
         action = mainLinks->actions().at(VisitProfileAction);
         KAboutApplicationPersonModel *model = qobject_cast< KAboutApplicationPersonModel * >(itemView()->model());
-        action->setToolTip(i18n("Visit contributor's profile on %1\n%2",
-                                model->providerName(),
-                                profile.ocsProfileUrl()));
+        action->setToolTip(i18nc("@info:tooltip", "Visit contributor's profile on %1\n%2",
+                                 model->providerName(),
+                                 profile.ocsProfileUrl()));
         action->setData(profile.ocsProfileUrl());
         action->setVisible(true);
     }
@@ -162,18 +162,18 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
 
         action = socialLinks->actions().at(currentSocialLinkAction);
         if (link.type() == KAboutApplicationPersonProfileOcsLink::Other) {
-            action->setToolTip(i18n("Visit contributor's page\n%1",
-                                    link.url().toString()));
+            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's page\n%1",
+                                     link.url().toString()));
         } else if (link.type() == KAboutApplicationPersonProfileOcsLink::Blog) {
-            action->setToolTip(i18n("Visit contributor's blog\n%1",
-                                    link.url().toString()));
+            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's blog\n%1",
+                                     link.url().toString()));
         } else if (link.type() == KAboutApplicationPersonProfileOcsLink::Homepage) {
-            action->setToolTip(i18n("Visit contributor's homepage\n%1",
-                                    link.url().toString()));
+            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's homepage\n%1",
+                                     link.url().toString()));
         } else {
-            action->setToolTip(i18n("Visit contributor's profile on %1\n%2",
-                                    link.prettyType(),
-                                    link.url().toString()));
+            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's profile on %1\n%2",
+                                     link.prettyType(),
+                                     link.url().toString()));
         }
         action->setIcon(link.icon());
         action->setData(link.url().toString());

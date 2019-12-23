@@ -41,7 +41,7 @@ KLicenseDialog::KLicenseDialog(const KAboutLicense &license, QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout;
     setLayout(layout);
 
-    setWindowTitle(i18n("License Agreement"));
+    setWindowTitle(i18nc("@title:window", "License Agreement"));
 
     const QFont font = QFontDatabase::systemFont(QFontDatabase::FixedFont);
 

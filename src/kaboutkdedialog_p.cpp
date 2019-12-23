@@ -40,7 +40,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     : QDialog(parent),
       d(nullptr)
 {
-    setWindowTitle(i18n("About KDE"));
+    setWindowTitle(i18nc("@title:window", "About KDE"));
 
     KTitleWidget *titleWidget = new KTitleWidget(this);
     titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font></html>"));
@@ -132,10 +132,10 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
 
     QTabWidget *tabWidget = new QTabWidget;
     tabWidget->setUsesScrollButtons(false);
-    tabWidget->addTab(about, i18nc("About KDE", "&About"));
-    tabWidget->addTab(report, i18n("&Report Bugs or Wishes"));
-    tabWidget->addTab(join, i18n("&Join KDE"));
-    tabWidget->addTab(support, i18n("&Support KDE"));
+    tabWidget->addTab(about, i18nc("@title:tab About KDE", "&About"));
+    tabWidget->addTab(report, i18nc("@title:tab", "&Report Bugs or Wishes"));
+    tabWidget->addTab(join, i18nc("@title:tab", "&Join KDE"));
+    tabWidget->addTab(support, i18nc("@title:tab", "&Support KDE"));
 
     QLabel *image = new QLabel;
     QIcon icon(QStringLiteral(":/kxmlgui5/aboutkde.svg"));

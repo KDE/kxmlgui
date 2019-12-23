@@ -41,7 +41,7 @@
 #include <debug.h>
 
 KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
-    : QGroupBox(i18n("Shortcut Schemes"), parent), m_dialog(parent)
+    : QGroupBox(i18nc("@title:group", "Shortcut Schemes"), parent), m_dialog(parent)
 {
     KConfigGroup group(KSharedConfig::openConfig(), "Shortcut Schemes");
 
@@ -79,21 +79,21 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     schemesLabel->setBuddy(m_schemesList);
     l->addWidget(m_schemesList);
 
-    m_newScheme = new QPushButton(i18n("New..."));
+    m_newScheme = new QPushButton(i18nc("@action:button", "New..."));
     l->addWidget(m_newScheme);
 
-    m_deleteScheme = new QPushButton(i18n("Delete"));
+    m_deleteScheme = new QPushButton(i18nc("@action:button", "Delete"));
     l->addWidget(m_deleteScheme);
 
-    QPushButton *moreActions = new QPushButton(i18n("More Actions"));
+    QPushButton *moreActions = new QPushButton(i18nc("@action:button", "More Actions"));
     l->addWidget(moreActions);
 
     QMenu *moreActionsMenu = new QMenu(this);
-    moreActionsMenu->addAction(i18n("Save shortcuts to scheme"),
+    moreActionsMenu->addAction(i18nc("@action:inmenu", "Save shortcuts to scheme"),
                                this, &KShortcutSchemesEditor::saveAsDefaultsForScheme);
-    moreActionsMenu->addAction(i18n("Export Scheme..."),
+    moreActionsMenu->addAction(i18nc("@action:inmenu", "Export Scheme..."),
                                this, &KShortcutSchemesEditor::exportShortcutsScheme);
-    moreActionsMenu->addAction(i18n("Import Scheme..."),
+    moreActionsMenu->addAction(i18nc("@action:inmenu", "Import Scheme..."),
                                this, &KShortcutSchemesEditor::importShortcutsScheme);
     moreActions->setMenu(moreActionsMenu);
 
@@ -114,7 +114,7 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 void KShortcutSchemesEditor::newScheme()
 {
     bool ok;
-    const QString newName = QInputDialog::getText(this, i18n("Name for New Scheme"),
+    const QString newName = QInputDialog::getText(this, i18nc("@title:window", "Name for New Scheme"),
                             i18n("Name for new scheme:"), QLineEdit::Normal, i18n("New Scheme"), &ok);
     if (!ok) {
         return;
@@ -182,7 +182,8 @@ QString KShortcutSchemesEditor::currentScheme()
 void KShortcutSchemesEditor::exportShortcutsScheme()
 {
     //ask user about dir
-    QString path = QFileDialog::getSaveFileName(this, i18n("Export Shortcuts"), QDir::currentPath(), i18n("Shortcuts (*.shortcuts)"));
+    QString path = QFileDialog::getSaveFileName(this, i18nc("@title:window", "Export Shortcuts"),
+                                                QDir::currentPath(), i18n("Shortcuts (*.shortcuts)"));
     if (path.isEmpty()) {
         return;
     }
@@ -193,7 +194,8 @@ void KShortcutSchemesEditor::exportShortcutsScheme()
 void KShortcutSchemesEditor::importShortcutsScheme()
 {
     //ask user about dir
-    QString path = QFileDialog::getOpenFileName(this, i18n("Import Shortcuts"), QDir::currentPath(), i18n("Shortcuts (*.shortcuts)"));
+    QString path = QFileDialog::getOpenFileName(this, i18nc("@title:window", "Import Shortcuts"),
+                                                QDir::currentPath(), i18n("Shortcuts (*.shortcuts)"));
     if (path.isEmpty()) {
         return;
     }
