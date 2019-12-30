@@ -568,7 +568,7 @@ bool KBugReport::sendBugReport()
     proc.start(command, args);
     //qCDebug(DEBUG_KXMLGUI) << command << args;
     if (!proc.waitForStarted()) {
-        qCritical() << "Unable to open a pipe to " << command << endl;
+        qCritical() << "Unable to open a pipe to " << command;
         return false;
     }
     proc.write(text().toUtf8());
