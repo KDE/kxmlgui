@@ -55,7 +55,6 @@
 #include <kconfig.h>
 #include <ksharedconfig.h>
 #include <klocalizedstring.h>
-#include <kwindowsystem.h>
 #include <kconfiggroup.h>
 #include <kwindowconfig.h>
 #include <kconfiggui.h>
