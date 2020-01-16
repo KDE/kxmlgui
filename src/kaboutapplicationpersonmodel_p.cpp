@@ -236,7 +236,11 @@ void KAboutApplicationPersonModel::onAvatarJobFinished(QNetworkReply *reply)    
     QNetworkAccessManager *manager = reply->manager();
     int personProfileListIndex = manager->property("personProfile").toInt();
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     if (reply->error() != QNetworkReply::NoError) {
+#else
+    if (reply->networkError() != QNetworkReply::NoError) {
+#endif
         //qCDebug(DEBUG_KXMLGUI) << "Could not fetch OCS person avatar.";
         emit dataChanged(index(personProfileListIndex), index(personProfileListIndex));
         return;
@@ -378,7 +382,12 @@ void KAboutApplicationPersonIconsJob::onJobFinished(QNetworkReply *reply)   //SL
     int i = reply->property("linkIndex").toInt();
     KAboutApplicationPersonProfileOcsLink::Type type = m_ocsLinks.at(i).type();
 
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     if (reply->error() != QNetworkReply::NoError) {
+#else
+    if (reply->networkError() != QNetworkReply::NoError) {
+#endif
         //qCDebug(DEBUG_KXMLGUI) << "Could not fetch OCS link icon.";
         reply->deleteLater();
         getIcons(i + 1);
