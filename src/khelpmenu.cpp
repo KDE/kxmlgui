@@ -149,7 +149,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("switch_application_language"))) {
-        mSwitchApplicationLanguageAction = KStandardAction::create(KStandardAction::SwitchApplicationLanguage, q, SLOT(switchApplicationLanguage()), q);
+        mSwitchApplicationLanguageAction = KStandardAction::switchApplicationLanguage(q, SLOT(switchApplicationLanguage()), q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_app"))) {
