@@ -494,7 +494,7 @@ public:
      * @see add(const QString &, const QObject *, const char *)
      * @since 5.28
      */
-    #ifdef DOXYGEN_SHOULD_SKIP_THIS
+    #ifdef K_DOXYGEN
     template<class ActionType>
     inline ActionType *add(const QString &name, const Receiver *receiver, Func slot)
     #else
@@ -521,7 +521,7 @@ public:
      * @see addAction(const QString &, const QObject *, const char *)
      * @since 5.28
      */
-    #ifdef DOXYGEN_SHOULD_SKIP_THIS
+    #ifdef K_DOXYGEN
     inline QAction *addAction(const QString &name, const Receiver *receiver, Func slot)
     #else
     template<class Receiver, class Func>
