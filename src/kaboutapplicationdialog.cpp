@@ -75,6 +75,8 @@ void KAboutApplicationDialog::Private::init(Options opt)
         titlePixmap = aboutData.programLogo().value<QPixmap>();
     } else if (aboutData.programLogo().canConvert<QImage>()) {
         titlePixmap = QPixmap::fromImage(aboutData.programLogo().value<QImage>());
+    } else if (aboutData.programLogo().canConvert<QIcon>()) {
+        titlePixmap = aboutData.programLogo().value<QIcon>().pixmap(48, 48);
     } else {
         QIcon windowIcon = qApp->windowIcon();
         // Legacy support for deprecated KAboutData::programIconName()
