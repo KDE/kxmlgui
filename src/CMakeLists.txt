@@ -64,7 +64,13 @@ endif()
 # add the resource file
 qt5_add_resources(kxmlgui_SRCS kxmlgui.qrc)
 
-ecm_qt_declare_logging_category(kxmlgui_SRCS HEADER debug.h IDENTIFIER DEBUG_KXMLGUI CATEGORY_NAME kf5.kxmlgui)
+ecm_qt_declare_logging_category(kxmlgui_SRCS
+    HEADER debug.h
+    IDENTIFIER DEBUG_KXMLGUI
+    CATEGORY_NAME kf5.kxmlgui
+    DESCRIPTION "KXmlGui"
+    EXPORT KXMLGUI
+)
 
 set(kxmlgui_UI
    kshortcutsdialog.ui
@@ -153,6 +159,12 @@ install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
 if(BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
 endif()
+
+ecm_qt_install_logging_categories(
+    EXPORT KXMLGUI
+    FILE kxmlgui.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
 
 if (BUILD_QCH)
     ecm_add_qch(
