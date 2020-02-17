@@ -222,7 +222,7 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
                 clipboard->setText(text);
             } else {
                 QProcess *script = new QProcess(this);
-                script->start(copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain())));
+                script->start(copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain())), QStringList());
                 connect(script, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                         script, &QObject::deleteLater);
             }
