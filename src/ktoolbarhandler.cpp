@@ -51,7 +51,7 @@ class BarActionBuilder
 {
 public:
     BarActionBuilder(KActionCollection *actionCollection, KXmlGuiWindow *mainWindow,
-                     QLinkedList<KToolBar *> &oldToolBarList)
+                     QVector<KToolBar *> &oldToolBarList)
         : m_actionCollection(actionCollection), m_mainWindow(mainWindow), m_needsRebuild(false)
     {
         const QList<KToolBar *> toolBars = m_mainWindow->findChildren<KToolBar *>();
@@ -112,7 +112,7 @@ public:
         return actions;
     }
 
-    const QLinkedList<KToolBar *> &toolBars() const
+    const QVector<KToolBar *> &toolBars() const
     {
         return m_toolBars;
     }
@@ -133,7 +133,7 @@ private:
     KActionCollection *m_actionCollection;
     KXmlGuiWindow *m_mainWindow;
 
-    QLinkedList<KToolBar *> m_toolBars;
+    QVector<KToolBar *> m_toolBars;
     QList<QAction *> m_toolBarActions;
 
     bool m_needsRebuild : 1;
@@ -164,7 +164,7 @@ public:
     ToolBarHandler *parent;
     QPointer<KXmlGuiWindow> mainWindow;
     QList<QAction *> actions;
-    QLinkedList<KToolBar *> toolBars;
+    QVector<KToolBar *> toolBars;
 };
 
 void ToolBarHandler::Private::init(KXmlGuiWindow *mw)
