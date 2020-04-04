@@ -42,7 +42,7 @@ public:
 
     bool eventFilter(QObject *watched, QEvent *event) override
     {
-        if (qobject_cast<QAction *>(watched) && (event->type() == QEvent::Shortcut)) {
+        if (event->type() == QEvent::Shortcut && qobject_cast<QAction *>(watched)) {
             QShortcutEvent *se = static_cast<QShortcutEvent *>(event);
             if (se->isAmbiguous()) {
                 KMessageBox::information(
