@@ -726,6 +726,12 @@ void KKeySequenceButton::keyPressEvent(QKeyEvent *e)
 
     uint newModifiers = e->modifiers() & (Qt::ShiftModifier | Qt::ControlModifier | Qt::AltModifier | Qt::MetaModifier | Qt::KeypadModifier);
 
+
+    // Qt doesn't properly recognize Super_L/Super_R as MetaModifier
+    if (e->key() == Qt::Key_Super_L || e->key() == Qt::Key_Super_R) {
+        newModifiers |= Qt::MetaModifier;
+    }
+
     //don't have the return or space key appear as first key of the sequence when they
     //were pressed to start editing - catch and them and imitate their effect
     if (!d->isRecording && ((keyQt == Qt::Key_Return || keyQt == Qt::Key_Space))) {
@@ -811,6 +817,11 @@ void KKeySequenceButton::keyReleaseEvent(QKeyEvent *e)
     e->accept();
 
     uint newModifiers = e->modifiers() & (Qt::ShiftModifier | Qt::ControlModifier | Qt::AltModifier | Qt::MetaModifier | Qt::KeypadModifier);
+
+    // Qt doesn't properly recognize Super_L/Super_R as MetaModifier
+    if (e->key() == Qt::Key_Super_L || e->key() == Qt::Key_Super_R) {
+        newModifiers &= ~Qt::MetaModifier;
+    }
 
     //if a modifier that belongs to the shortcut was released...
     if ((newModifiers & d->modifierKeys) < d->modifierKeys) {
