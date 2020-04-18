@@ -1,5 +1,5 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui name="krichtexteditor" version="13">
+<gui name="krichtexteditor" version="14">
 
 <MenuBar>
   <Menu noMerge="1" name="format"><text>F&amp;ormat</text>
@@ -11,6 +11,8 @@
     <Action name="format_text_background_color"/>
     <Action name="format_text_superscript"/>
     <Action name="format_text_subscript"/>
+    <Separator/>
+    <Action name="format_heading_level"/>
     <Separator/>
     <Menu name="alignment"><text>&amp;Alignment</text>
        <Action name="format_align_left"/>
@@ -44,6 +46,8 @@
   <Action name="format_text_subscript"/>
 </ToolBar>
 <ToolBar name="formatToolBar" iconText="icononly"><text>Format Toolbar</text>
+  <Action name="format_heading_level"/>
+  <Separator lineSeparator="true"/>
   <Action name="format_align_left"/>
   <Action name="format_align_center"/>
   <Action name="format_align_right"/>
