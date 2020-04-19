@@ -43,11 +43,15 @@ class KXMLGUI_EXPORT KAboutPluginDialog : public QDialog
 public:
     /**
      * Defines some options which can be applied to the about dialog
+     * @see Options
      */
     enum Option {
         NoOptions       = 0x0, ///< No options, show the standard about dialog
         HideTranslators = 0x1, ///< Don't show the translators tab
     };
+    /**
+     * Stores a combination of #Option values.
+     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 

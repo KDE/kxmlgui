@@ -64,6 +64,9 @@ class KXMLGUI_EXPORT KShortcutsEditor : public QWidget
     Q_PROPERTY(ActionTypes actionTypes READ actionTypes WRITE setActionTypes)
 
 public:
+    /**
+     * @see ActionTypes
+     */
     enum ActionType {
         /// Actions which are triggered by any keypress in a widget which has the action added to it
         WidgetAction      = Qt::WidgetShortcut      /*0*/,
@@ -76,6 +79,9 @@ public:
         /// All actions
         AllActions        = 0xffffffff
     };
+    /**
+     * Stores a combination of #ActionType values.
+     */
     Q_DECLARE_FLAGS(ActionTypes, ActionType)
 
     enum LetterShortcuts {

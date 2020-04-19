@@ -183,6 +183,7 @@ public:
 
     /**
      * @see setupGUI()
+     * @see StandardWindowOptions
      */
     enum StandardWindowOption {
         /**
@@ -236,6 +237,9 @@ public:
         Default = ToolBar | Keys | StatusBar | Save | Create
     };
     Q_FLAG(StandardWindowOption)
+    /**
+     * Stores a combination of #StandardWindowOption values.
+     */
     Q_DECLARE_FLAGS(StandardWindowOptions, StandardWindowOption)
 
     /**

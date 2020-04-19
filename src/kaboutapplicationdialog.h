@@ -56,6 +56,7 @@ public:
     /**
      * Defines some options which can be applied to the about dialog
      *
+     * @see Options
      * @since 4.4
      */
     enum Option {
@@ -63,6 +64,9 @@ public:
         HideTranslators = 0x1, ///< Don't show the translators tab
         HideKdeVersion  = 0x2  ///< Don't show the KDE version next to the application name and version
     };
+    /**
+     * Stores a combination of #Option values.
+     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 

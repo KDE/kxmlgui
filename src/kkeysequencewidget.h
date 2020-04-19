@@ -96,6 +96,7 @@ public:
      * \name Configuration
      *
      * Configuration options for the widget.
+     * @see ShortcutTypes
      */
     //@{
 
@@ -105,6 +106,9 @@ public:
         StandardShortcuts = 0x02,   //!< Check against standard shortcuts. @see KStandardShortcut
         GlobalShortcuts = 0x04      //!< Check against global shortcuts. @see KGlobalAccel
     };
+    /**
+     * Stores a combination of #ShortcutType values.
+     */
     Q_DECLARE_FLAGS(ShortcutTypes, ShortcutType)
     Q_FLAG(ShortcutTypes)
 
