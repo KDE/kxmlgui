@@ -180,7 +180,7 @@ void KActionCollection::setComponentName(const QString &cName)
         // As of now this only matters for global shortcuts. We could
         // thus relax the requirement and only refuse to change the component data
         // if we have actions with global shortcuts in this collection.
-        qCWarning(DEBUG_KXMLGUI) << "this does not work on a KActionCollection containing actions!";
+        qCWarning(DEBUG_KXMLGUI) << "KActionCollection::setComponentName does not work on a KActionCollection containing actions!" << cName;
     }
 
     if (!cName.isEmpty()) {
