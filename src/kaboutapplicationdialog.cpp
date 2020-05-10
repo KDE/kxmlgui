@@ -79,6 +79,7 @@ void KAboutApplicationDialog::Private::init(Options opt)
         titlePixmap = aboutData.programLogo().value<QIcon>().pixmap(48, 48);
     } else {
         QIcon windowIcon = qApp->windowIcon();
+#if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 2)
         // Legacy support for deprecated KAboutData::programIconName()
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
@@ -87,6 +88,7 @@ QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
             windowIcon = QIcon::fromTheme(aboutData.programIconName());
         }
 QT_WARNING_POP
+#endif
         titlePixmap = windowIcon.pixmap(48, 48);
     }
 
