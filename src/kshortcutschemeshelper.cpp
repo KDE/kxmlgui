@@ -49,12 +49,12 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
     // Maybe we need a checkbox for this? Or an env var for contributors to set, rather? End users don't care.
     const bool saveToApplicationFile = false;
 
-    QMap<QString, KActionCollection *> collectionsByClientName;
+    QMultiMap<QString, KActionCollection *> collectionsByClientName;
     for (KActionCollection *coll : collections) {
         const KXMLGUIClient *client = coll->parentGUIClient();
         if (client) {
             const QString key = saveToApplicationFile ? QCoreApplication::applicationName() : client->componentName();
-            collectionsByClientName.insertMulti(key, coll);
+            collectionsByClientName.insert(key, coll);
         }
     }
     const auto componentNames = collectionsByClientName.uniqueKeys();
