@@ -182,7 +182,11 @@ void SMTP::connectTimerTick()
 
     connect(sock, &QIODevice::readyRead,
             this, &SMTP::socketReadyToRead);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+    connect(sock, &QAbstractSocket::errorOccurred,
+#else
     connect(sock, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),
+#endif
             this, &SMTP::socketError);
     connect(sock, &QAbstractSocket::disconnected,
             this, &SMTP::socketClosed);
