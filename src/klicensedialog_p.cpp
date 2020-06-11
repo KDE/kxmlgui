@@ -61,8 +61,10 @@ KLicenseDialog::KLicenseDialog(const KAboutLicense &license, QWidget *parent)
 
     // try to set up the dialog such that the full width of the
     // document is visible without horizontal scroll-bars being required
-    const int marginHint = style()->pixelMetric(QStyle::PM_DefaultChildMargin);
-    const qreal idealWidth = licenseBrowser->document()->idealWidth() + (2 * marginHint)
+    auto *style = this->style();
+    const int leftMarginHint = style->pixelMetric(QStyle::PM_LayoutLeftMargin);
+    const int rightMarginHint = style->pixelMetric(QStyle::PM_LayoutRightMargin);
+    const qreal idealWidth = licenseBrowser->document()->idealWidth() + leftMarginHint + rightMarginHint
                              + licenseBrowser->verticalScrollBar()->width() * 2;
 
     // try to allow enough height for a reasonable number of lines to be shown
