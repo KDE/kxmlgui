@@ -156,7 +156,7 @@ KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
     : QDialog(parent),
       d(new KSwitchLanguageDialogPrivate(this))
 {
-    setWindowTitle(i18nc("@title:window", "Switch Application Language"));
+    setWindowTitle(i18nc("@title:window", "Configure Language"));
 
     QVBoxLayout *topLayout = new QVBoxLayout;
     setLayout(topLayout);

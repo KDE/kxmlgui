@@ -1,5 +1,5 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui name="standard_containers" version="19" translationDomain="kxmlgui5">
+<gui name="standard_containers" version="20" translationDomain="kxmlgui5">
 <MenuBar>
   <MergeLocal name="first_menu"/>
   <Menu name="file"><text>&amp;File</text>
@@ -164,6 +164,7 @@
     <Action name="options_game_difficulty"/>
     <MergeLocal name="save_merge"/>
     <Separator/>
+    <Action name="switch_application_language"/>
     <Action name="options_configure_keybinding"/>
     <Action name="options_configure_toolbars"/>
     <Action name="options_configure_notifications"/>
@@ -185,8 +186,6 @@
     <Action name="help_report_bug"/>
     <Separator/>
     <Action name="help_donate"/>
-    <Separator/>
-    <Action name="switch_application_language"/>
     <Separator/>
     <MergeLocal name="about_merge"/>
     <Action name="help_about_app"/>
