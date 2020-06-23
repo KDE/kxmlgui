@@ -63,6 +63,9 @@ static void createXmlFile(QFile &file, int version, int flags, const QByteArray 
             "<ToolBar name=\"bookmarkToolBar\">\n"
             "  <text>Bookmark Toolbar</text>\n"
             "</ToolBar>\n"
+            "<ToolBar name=\"newToolBar\">\n"
+            "  <text>New Toolbar</text>\n"
+            "</ToolBar>\n"
         );
     }
     if (flags & AddModifiedToolBars) {
@@ -167,6 +170,8 @@ void KXmlGui_UnitTest::testVersionHandlerSameVersion()
     QVERIFY(finalDoc.contains(QLatin1String("sidebartng")));
     // Check that the toolbars modified by the user were kept
     QVERIFY(finalDoc.contains(QLatin1String("<Action name=\"home\"")));
+    // and that the toolbar that isn't in the local file, isn't there in the GUI
+    QVERIFY(!finalDoc.contains(QLatin1String("<ToolBar name=\"newToolBar\"")));
 
     QVERIFY(userFile.open());
     const QString userFileContents = QString::fromUtf8(userFile.readAll());
@@ -234,7 +239,7 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     createXmlFile(fileV2, 2, AddActionProperties | AddModifiedToolBars);
     fileToVersionMap.insert(fileV2.fileName(), 2);
 
-    // more-global file
+    // more-global (application) file
     QTemporaryFile fileV5;
     QVERIFY(fileV5.open());
     createXmlFile(fileV5, 5, AddToolBars | AddModifiedMenus, "kpartgui");
@@ -270,6 +275,8 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     QVERIFY(finalDoc.contains(QLatin1String("<Action name=\"file_open\"")));
     // Check that the toolbars modified by the user were kept
     QVERIFY(finalDoc.contains(QLatin1String("<Action name=\"home\"")));
+    // Check that the toolbars added by the application were kept (https://invent.kde.org/graphics/okular/-/merge_requests/197)
+    QVERIFY(finalDoc.contains(QLatin1String("<ToolBar name=\"newToolBar\"")));
 }
 
 static QStringList collectMenuNames(KXMLGUIFactory &factory)
