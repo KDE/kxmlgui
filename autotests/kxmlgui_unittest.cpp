@@ -892,6 +892,7 @@ void KXmlGui_UnitTest::testTopLevelSeparator()
                  << QStringLiteral("before_separator")
                  << QStringLiteral("separator")
                  << QStringLiteral("after_separator")
+                 << QStringLiteral("settings")
                  << QStringLiteral("separator")
                  << QStringLiteral("help"));
 }
@@ -913,6 +914,7 @@ void KXmlGui_UnitTest::testMenuNames()
 
     checkActions(mainWindow.menuBar()->actions(), QStringList()
                  << QStringLiteral("filemenu")
+                 << QStringLiteral("settings")
                  << QStringLiteral("separator")
                  << QStringLiteral("help"));
 }
@@ -924,8 +926,7 @@ void KXmlGui_UnitTest::testMenusNoXmlFile()
     TestXmlGuiWindow mainWindow(QByteArray(), "nolocalfile_either.rc");
     mainWindow.createGUIBad();
 
-    checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << QStringLiteral("help"));
+    checkActions(mainWindow.menuBar()->actions(), QStringList{QStringLiteral("settings"), QStringLiteral("separator"), QStringLiteral("help")});
 }
 
 void KXmlGui_UnitTest::testXMLFileReplacement()
@@ -1013,16 +1014,15 @@ void KXmlGui_UnitTest::testClientDestruction()   // #170806
     mainWindow.insertChildClient(client);
     mainWindow.createGUI();
 
-    checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << QStringLiteral("file") << QStringLiteral("separator") << QStringLiteral("help"));
+    const QStringList menus = { QStringLiteral("file"), QStringLiteral("settings"), QStringLiteral("separator"), QStringLiteral("help") };
+    checkActions(mainWindow.menuBar()->actions(), menus);
 
     QVERIFY(mainWindow.factory()->clients().contains(client));
     delete client;
     QVERIFY(!mainWindow.factory()->clients().contains(client));
 
     // No change, because deletion is fast, it doesn't do manual unplugging.
-    checkActions(mainWindow.menuBar()->actions(), QStringList()
-                 << QStringLiteral("file") << QStringLiteral("separator") << QStringLiteral("help"));
+    checkActions(mainWindow.menuBar()->actions(), menus);
 }
 
 void KXmlGui_UnitTest::testShortcuts()
