@@ -77,7 +77,7 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
     //Set up the title widget...
     const QIcon pluginIcon = !pluginMetaData.iconName().isEmpty() ? QIcon::fromTheme(pluginMetaData.iconName()) :
     qApp->windowIcon();
-    QWidget *titleWidget = createTitleWidget(pluginIcon.pixmap(48, 48),
+    QWidget *titleWidget = createTitleWidget(pluginIcon,
                                              pluginMetaData.name(), pluginMetaData.version(), q);
 
     //Then the tab bar...

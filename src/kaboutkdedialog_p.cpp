@@ -44,7 +44,8 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
 
     KTitleWidget *titleWidget = new KTitleWidget(this);
     titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font></html>"));
-    titleWidget->setPixmap(QIcon::fromTheme(QStringLiteral("kde")).pixmap(48), KTitleWidget::ImageLeft);
+    titleWidget->setIconSize(QSize(48, 48));
+    titleWidget->setIcon(QIcon::fromTheme(QStringLiteral("kde")), KTitleWidget::ImageLeft);
 
     QLabel *about = new QLabel;
     about->setMargin(10);

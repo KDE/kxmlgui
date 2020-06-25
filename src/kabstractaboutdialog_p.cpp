@@ -31,19 +31,20 @@
 #include <KTitleWidget>
 #include <KLocalizedString>
 // Qt
-#include <QPixmap>
+#include <QIcon>
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 
-QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QPixmap &pixmap,
+QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QIcon &icon,
                                                         const QString &displayName,
                                                         const QString &version,
                                                         QWidget *parent)
 {
     KTitleWidget *titleWidget = new KTitleWidget(parent);
 
-    titleWidget->setPixmap(pixmap, KTitleWidget::ImageLeft);
+    titleWidget->setIconSize(QSize(48, 48));
+    titleWidget->setIcon(icon, KTitleWidget::ImageLeft);
     titleWidget->setText(i18n("<html><font size=\"5\">%1</font><br />Version %2</html>", displayName, version));
 
     return titleWidget;

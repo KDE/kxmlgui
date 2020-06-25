@@ -70,29 +70,28 @@ void KAboutApplicationDialog::Private::init(Options opt)
     q->setWindowTitle(i18nc("@title:window", "About %1", aboutData.displayName()));
 
     //Set up the title widget...
-    QPixmap titlePixmap;
+    QIcon titleIcon;
     if (aboutData.programLogo().canConvert<QPixmap>()) {
-        titlePixmap = aboutData.programLogo().value<QPixmap>();
+        titleIcon = QIcon(aboutData.programLogo().value<QPixmap>());
     } else if (aboutData.programLogo().canConvert<QImage>()) {
-        titlePixmap = QPixmap::fromImage(aboutData.programLogo().value<QImage>());
+        titleIcon = QIcon(QPixmap::fromImage(aboutData.programLogo().value<QImage>()));
     } else if (aboutData.programLogo().canConvert<QIcon>()) {
-        titlePixmap = aboutData.programLogo().value<QIcon>().pixmap(48, 48);
+        titleIcon = aboutData.programLogo().value<QIcon>();
     } else {
-        QIcon windowIcon = qApp->windowIcon();
+        titleIcon = qApp->windowIcon();
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 2)
         // Legacy support for deprecated KAboutData::programIconName()
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
 QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-        if (windowIcon.isNull() && !aboutData.programIconName().isEmpty()) {
-            windowIcon = QIcon::fromTheme(aboutData.programIconName());
+        if (titleIcon.isNull() && !aboutData.programIconName().isEmpty()) {
+            titleIcon = QIcon::fromTheme(aboutData.programIconName());
         }
 QT_WARNING_POP
 #endif
-        titlePixmap = windowIcon.pixmap(48, 48);
     }
 
-    QWidget *titleWidget = createTitleWidget(titlePixmap, aboutData.displayName(), aboutData.version(), q);
+    QWidget *titleWidget = createTitleWidget(titleIcon, aboutData.displayName(), aboutData.version(), q);
 
     //Then the tab bar...
     QTabWidget *tabWidget = new QTabWidget;

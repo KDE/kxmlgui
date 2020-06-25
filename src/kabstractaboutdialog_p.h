@@ -23,7 +23,7 @@
 
 class QDialog;
 class QWidget;
-class QPixmap;
+class QIcon;
 
 /**
  * @internal
@@ -37,7 +37,7 @@ public:
     ~KAbstractAboutDialogPrivate() = default;
 
 public:
-    QWidget *createTitleWidget(const QPixmap &pixmap,
+    QWidget *createTitleWidget(const QIcon &icon,
                                const QString &displayName,
                                const QString &version,
                                QWidget *parent);
