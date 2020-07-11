@@ -148,7 +148,7 @@ void KXmlGui_UnitTest::testFindVersionNumber()
 {
     QFETCH(QString, xml);
     QFETCH(QString, version);
-    QCOMPARE(KXmlGuiVersionHandler::findVersionNumber(xml), version);
+    QCOMPARE(KXMLGUIClient::findVersionNumber(xml), version);
 }
 
 void KXmlGui_UnitTest::testVersionHandlerSameVersion()

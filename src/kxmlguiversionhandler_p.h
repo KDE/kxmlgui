@@ -49,8 +49,6 @@ public:
         return m_doc;
     }
 
-    static QString findVersionNumber(const QString &xml);   // used by the unit test
-
 private:
     QString m_file;
     QString m_doc;

@@ -298,6 +298,13 @@ public:
     */
     void replaceXMLFile(const QString &xmlfile, const QString &localxmlfile, bool merge = false);
 
+    /**
+     * Returns the version number of the given xml data (belonging to an xml rc file)
+     *
+     * @since 5.73
+     */
+    static QString findVersionNumber(const QString &xml);
+
 protected:
     /**
      * Sets the component name for this part.
