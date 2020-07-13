@@ -67,7 +67,8 @@ qt5_add_resources(kxmlgui_SRCS kxmlgui.qrc)
 ecm_qt_declare_logging_category(kxmlgui_SRCS
     HEADER debug.h
     IDENTIFIER DEBUG_KXMLGUI
-    CATEGORY_NAME kf5.kxmlgui
+    CATEGORY_NAME kf.xmlgui
+    OLD_CATEGORY_NAMES kf5.kxmlgui
     DESCRIPTION "KXmlGui"
     EXPORT KXMLGUI
 )
