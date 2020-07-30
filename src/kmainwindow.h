@@ -642,6 +642,7 @@ protected:
 private:
     Q_PRIVATE_SLOT(k_func(), void _k_slotSettingsChanged(int))
     Q_PRIVATE_SLOT(k_func(), void _k_slotSaveAutoSaveSize())
+    Q_PRIVATE_SLOT(k_func(), void _k_slotSaveAutoSavePosition())
 };
 
 

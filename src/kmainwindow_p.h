@@ -36,6 +36,7 @@ public:
     KConfigGroup autoSaveGroup;
     QTimer *settingsTimer;
     QTimer *sizeTimer;
+    QTimer *positionTimer;
     QRect defaultWindowSize;
     KHelpMenu *helpMenu;
     KMainWindow *q;
@@ -48,6 +49,7 @@ public:
     // to be set on the already running applications.
     void _k_slotSettingsChanged(int category);
     void _k_slotSaveAutoSaveSize();
+    void _k_slotSaveAutoSavePosition();
 
     void init(KMainWindow *_q);
     void polish(KMainWindow *q);
@@ -57,6 +59,7 @@ public:
     };
     void setSettingsDirty(CallCompression callCompression = NoCompressCalls);
     void setSizeDirty();
+    void setPositionDirty();
 };
 
 class KMWSessionManager : public QObject

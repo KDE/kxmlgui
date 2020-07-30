@@ -263,6 +263,7 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     //d->kaccel = actionCollection()->kaccel();
     settingsTimer = nullptr;
     sizeTimer = nullptr;
+    positionTimer = nullptr;
 
     dockResizeListener = new DockResizeListener(_q);
     letDirtySettings = true;
@@ -402,6 +403,19 @@ void KMainWindowPrivate::setSizeDirty()
     }
 }
 
+void KMainWindowPrivate::setPositionDirty()
+{
+    if (autoSaveWindowSize) {
+        if (!positionTimer) {
+            positionTimer = new QTimer(q);
+            positionTimer->setInterval(500);
+            positionTimer->setSingleShot(true);
+            QObject::connect(positionTimer, SIGNAL(timeout()), q, SLOT(_k_slotSaveAutoSavePosition()));
+        }
+        positionTimer->start();
+    }
+}
+
 KMainWindow::~KMainWindow()
 {
     sMemberList()->removeAll(this);
@@ -528,6 +542,10 @@ void KMainWindow::closeEvent(QCloseEvent *e)
         d->sizeTimer->stop();
         d->_k_slotSaveAutoSaveSize();
     }
+    if (d->positionTimer && d->positionTimer->isActive()) {
+        d->positionTimer->stop();
+        d->_k_slotSaveAutoSavePosition();
+    }
 
     if (queryClose()) {
         // widgets will start destroying themselves at this point and we don't
@@ -582,6 +600,7 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     // Called by session management - or if we want to save the window size anyway
     if (d->autoSaveWindowSize) {
         KWindowConfig::saveWindowSize(windowHandle(), cg);
+        KWindowConfig::saveWindowPosition(windowHandle(), cg);
     }
 
     // One day will need to save the version number, but for now, assume 0
@@ -678,6 +697,11 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
         // window was created -> QTBUG-40584. We therefore copy the size here.
         // TODO: remove once this was resolved in QWidget QPA
         resize(windowHandle()->size());
+        // TODO: how should we handle the case when a new instance is opened and
+        // There's stored window position data? Cascade the new window? Don't
+        // restore position and let the window manager handle it? Can we even
+        // know this from here?
+        KWindowConfig::restoreWindowPosition(windowHandle(), cg);
         d->sizeApplied = true;
     }
 
@@ -761,12 +785,19 @@ void KMainWindow::setAutoSaveSettings(const QString &groupName, bool saveWindowS
 void KMainWindow::setAutoSaveSettings(const KConfigGroup &group,
                                       bool saveWindowSize)
 {
+    // We re making a little assumption that if you want to save the window
+    // size, you probably also want to save the window position too
+    // This avoids having to re-implement a new version of
+    // KMainWindow::setAutoSaveSettings that handles these cases independently
     K_D(KMainWindow);
     d->autoSaveSettings = true;
     d->autoSaveGroup = group;
     d->autoSaveWindowSize = saveWindowSize;
 
     if (!saveWindowSize && d->sizeTimer) {
+        d->sizeTimer->stop();
+    }
+    if (!saveWindowSize && d->positionTimer) {
         d->sizeTimer->stop();
     }
 
@@ -815,9 +846,8 @@ bool KMainWindow::event(QEvent *ev)
 {
     K_D(KMainWindow);
     switch (ev->type()) {
-#if defined(Q_OS_WIN) || defined(Q_OS_OSX)
     case QEvent::Move:
-#endif
+        d->setPositionDirty();
     case QEvent::Resize:
         d->setSizeDirty();
         break;
@@ -895,6 +925,13 @@ void KMainWindowPrivate::_k_slotSaveAutoSaveSize()
 {
     if (autoSaveGroup.isValid()) {
         KWindowConfig::saveWindowSize(q->windowHandle(), autoSaveGroup);
+    }
+}
+
+void KMainWindowPrivate::_k_slotSaveAutoSavePosition()
+{
+    if (autoSaveGroup.isValid()) {
+        KWindowConfig::saveWindowPosition(q->windowHandle(), autoSaveGroup);
     }
 }
 
