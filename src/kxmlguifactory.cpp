@@ -147,7 +147,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
 
     QFile file(xml_file);
     if (xml_file.isEmpty() || !file.open(QIODevice::ReadOnly)) {
-        qCritical() << "No such XML file" << filename;
+        qCCritical(DEBUG_KXMLGUI) << "No such XML file" << filename;
         return QString();
     }
 
@@ -169,7 +169,7 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
     QDir().mkpath(fileInfo.absolutePath());
     QFile file(xml_file);
     if (xml_file.isEmpty() || !file.open(QIODevice::WriteOnly)) {
-        qCritical() << "Could not write to" << filename;
+        qCCritical(DEBUG_KXMLGUI) << "Could not write to" << filename;
         return false;
     }
 
@@ -389,7 +389,7 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
         // Check if we have an empty default shortcut and an non empty
         // custom shortcut. Print out a warning and correct the mistake.
         if ((!activeShortcut.isEmpty()) && defaultShortcut.isEmpty()) {
-            qCritical() << "Shortcut for action " << action->objectName() << action->text() << "set with QAction::setShortcut()! Use KActionCollection::setDefaultShortcut(s) instead.";
+            qCCritical(DEBUG_KXMLGUI) << "Shortcut for action " << action->objectName() << action->text() << "set with QAction::setShortcut()! Use KActionCollection::setDefaultShortcut(s) instead.";
             action->setProperty("_k_DefaultShortcut", QVariant::fromValue(activeShortcut));
         } else {
             action->setProperty("_k_DefaultShortcut", QVariant::fromValue(defaultShortcut));

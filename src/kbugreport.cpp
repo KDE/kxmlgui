@@ -34,7 +34,6 @@
 #include <QLineEdit>
 #include <QStandardPaths>
 #include <QTextEdit>
-#include <QDebug>
 #include <QHBoxLayout>
 #include <QGridLayout>
 
@@ -46,6 +45,7 @@
 #include <kmessagebox.h>
 #include <ktitlewidget.h>
 
+#include "debug.h"
 #include "../kxmlgui_version.h"
 #include "systeminformation_p.h"
 #include "config-xmlgui.h"
@@ -513,7 +513,7 @@ bool KBugReport::sendBugReport()
     proc.start(command, args);
     //qCDebug(DEBUG_KXMLGUI) << command << args;
     if (!proc.waitForStarted()) {
-        qCritical() << "Unable to open a pipe to " << command;
+        qCCritical(DEBUG_KXMLGUI) << "Unable to open a pipe to " << command;
         return false;
     }
     proc.write(text().toUtf8());

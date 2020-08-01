@@ -28,6 +28,7 @@
 
 // The following is needed for KShortcutsEditorPrivate and QTreeWidgetHack
 #include "kshortcutsdialog_p.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QHeaderView>
@@ -40,7 +41,6 @@
 #include <QTextTableFormat>
 #include <QPrinter>
 #include <QPrintDialog>
-#include <QDebug>
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -365,7 +365,7 @@ bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *hier[]
     // it. That name will change at will and will break loading and writing
     QString actionName = action->objectName();
     if (actionName.isEmpty() || actionName.startsWith(QLatin1String("unnamed-"))) {
-        qCritical() << "Skipping action without name " << action->text() << "," << actionName << "!";
+        qCCritical(DEBUG_KXMLGUI) << "Skipping action without name " << action->text() << "," << actionName << "!";
         return false;
     }
 

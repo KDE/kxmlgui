@@ -270,7 +270,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
                 // In debug mode assert
                 Q_ASSERT(!KGlobalAccel::self()->hasShortcut(action));
                 // In release mode keep the old name
-                qCritical() << "Changing action name from " << objectName << " to " << indexName << "\nignored because of active global shortcut.";
+                qCCritical(DEBUG_KXMLGUI) << "Changing action name from " << objectName << " to " << indexName << "\nignored because of active global shortcut.";
                 indexName = objectName;
             }
 #endif
@@ -546,7 +546,7 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
         // If the action name starts with unnamed- spit out a warning. That name
         // will change at will and will break loading writing
         if (actionName.startsWith(QLatin1String("unnamed-"))) {
-            qCritical() << "Skipped exporting Shortcut for action without name " << action->text() << "!";
+            qCCritical(DEBUG_KXMLGUI) << "Skipped exporting Shortcut for action without name " << action->text() << "!";
             continue;
         }
 
@@ -618,7 +618,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
         if (actionName.startsWith(QLatin1String("unnamed-"))) {
-            qCritical() << "Skipped writing shortcut for action " << actionName << "(" << action->text() << ")!";
+            qCCritical(DEBUG_KXMLGUI) << "Skipped writing shortcut for action " << actionName << "(" << action->text() << ")!";
             continue;
         }
 
@@ -686,7 +686,7 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
         if (actionName.startsWith(QLatin1String("unnamed-"))) {
-            qCritical() << "Skipped saving Shortcut for action without name " << action->text() << "!";
+            qCCritical(DEBUG_KXMLGUI) << "Skipped saving Shortcut for action without name " << action->text() << "!";
             continue;
         }
 

@@ -24,7 +24,6 @@
 #include "ktoolbar.h"
 
 #include <QWidget>
-#include <QDebug>
 
 #include "debug.h"
 #include <assert.h>
@@ -664,11 +663,11 @@ void BuildHelper::processMergeElement(const QString &tag, const QString &name, c
     QString mergingName(name);
     if (mergingName.isEmpty()) {
         if (tag == tagDefineGroup) {
-            qCritical() << "cannot define group without name!";
+            qCCritical(DEBUG_KXMLGUI) << "cannot define group without name!";
             return;
         }
         if (tag == tagActionList) {
-            qCritical() << "cannot define actionlist without name!";
+            qCCritical(DEBUG_KXMLGUI) << "cannot define actionlist without name!";
             return;
         }
         mergingName = defaultMergingName;
