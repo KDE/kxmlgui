@@ -280,6 +280,7 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     letDirtySettings = true;
 
     sizeApplied = false;
+    suppressCloseEvent = false;
 }
 
 static bool endsWithHashNumber(const QString &s)
@@ -530,6 +531,10 @@ void KMainWindow::appHelpActivated()
 void KMainWindow::closeEvent(QCloseEvent *e)
 {
     K_D(KMainWindow);
+    if (suppressCloseEvent) {
+        e->accept();
+        return;
+    }
 
     // Save settings if auto-save is enabled, and settings have changed
     if (d->settingsTimer && d->settingsTimer->isActive()) {
@@ -550,6 +555,9 @@ void KMainWindow::closeEvent(QCloseEvent *e)
     } else {
         e->ignore();    //if the window should not be closed, don't close it
     }
+    // If saving session, we are processing a fake close event, and might get the real one later.
+    if (e->isAccepted() && qApp->isSavingSession())
+        suppressCloseEvent = true;
 }
 
 bool KMainWindow::queryClose()
