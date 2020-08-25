@@ -697,12 +697,20 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
         // window was created -> QTBUG-40584. We therefore copy the size here.
         // TODO: remove once this was resolved in QWidget QPA
         resize(windowHandle()->size());
-        // TODO: how should we handle the case when a new instance is opened and
-        // There's stored window position data? Cascade the new window? Don't
-        // restore position and let the window manager handle it? Can we even
-        // know this from here?
-        KWindowConfig::restoreWindowPosition(windowHandle(), cg);
-        d->sizeApplied = true;
+
+        // Let the user opt out of KDE apps remembering window sizes if they
+        // find it annoying or it doesn't work for them due to other bugs.
+        // When called with no args, this looks at kdeglobals
+        KSharedConfigPtr config = KSharedConfig::openConfig();
+        KConfigGroup group(config, "General");
+        if (group.readEntry("AllowKDEAppsToRememberWindowPositions", true)) {
+            // TODO: how should we handle the case when a new instance is opened
+            // and there's stored window position data? Cascade the new window?
+            // Don't restore position and let the window manager handle it? Can
+            // we even know this from here?
+            KWindowConfig::restoreWindowPosition(windowHandle(), cg);
+            d->sizeApplied = true;
+        }
     }
 
     QStatusBar *sb = internalStatusBar(this);
