@@ -752,7 +752,7 @@ void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
 
     //HACK the object we emit is partly destroyed
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    emit q->removed(action); //deprecated. remove in KDE5
+    emit q->removed(action);
 #endif
     emit q->changed();
 }
