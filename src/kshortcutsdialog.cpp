@@ -74,7 +74,7 @@ public:
                 i18n("The current shortcut scheme is modified. Save before switching to the new one?")) == KMessageBox::Yes) {
             m_keyChooser->save();
         } else {
-            m_keyChooser->undoChanges();
+            m_keyChooser->undo();
         }
 
         QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
@@ -106,9 +106,9 @@ public:
         QApplication::restoreOverrideCursor();
     }
 
-    void undoChanges()
+    void undo()
     {
-        m_keyChooser->undoChanges();
+        m_keyChooser->undo();
     }
 
     void toggleDetails()
@@ -175,7 +175,7 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     connect(d->m_detailsButton, SIGNAL(clicked()), this, SLOT(toggleDetails()));
     connect(printButton, &QPushButton::clicked,
             d->m_keyChooser, &KShortcutsEditor::printShortcuts);
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(undoChanges()));
+    connect(buttonBox, &QDialogButtonBox::rejected, this, [this]() { d->undo(); });
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);

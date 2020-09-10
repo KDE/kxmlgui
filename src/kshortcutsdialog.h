@@ -142,7 +142,6 @@ Q_SIGNALS:
 
 private:
     Q_PRIVATE_SLOT(d, void changeShortcutScheme(const QString &))
-    Q_PRIVATE_SLOT(d, void undoChanges())
     Q_PRIVATE_SLOT(d, void toggleDetails())
 
     class KShortcutsDialogPrivate;

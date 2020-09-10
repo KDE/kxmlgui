@@ -232,8 +232,14 @@ void KShortcutsEditor::save()
     commit();
 }
 
-// KDE5 : rename to undo()
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 75)
 void KShortcutsEditor::undoChanges()
+{
+    undo();
+}
+#endif
+
+void KShortcutsEditor::undo()
 {
     //This function used to crash sometimes when invoked by clicking on "cancel"
     //with Qt 4.2.something. Apparently items were deleted too early by Qt.
@@ -245,7 +251,7 @@ void KShortcutsEditor::undoChanges()
     }
 }
 
-//We ask the user here if there are any conflicts, as opposed to undoChanges().
+//We ask the user here if there are any conflicts, as opposed to undo().
 //They don't do the same thing anyway, this just not to confuse any readers.
 //slot
 void KShortcutsEditor::allDefault()

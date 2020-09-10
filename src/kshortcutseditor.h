@@ -127,8 +127,19 @@ public:
 
     /**
      * Undo all change made since the last commit().
+     *
+     * @since 5.75
      */
+    void undo();
+
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 75)
+    /**
+     * Undo all change made since the last commit().
+     * @deprecated Since 5.75, use undo()
+     */
+    KXMLGUI_DEPRECATED_VERSION(5, 75, "Use KShortcutsEditor::undo()")
     void undoChanges();
+#endif
 
     /**
      * Save the changes.
