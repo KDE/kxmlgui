@@ -275,7 +275,7 @@ public:
      */
     void setupToolbarMenuActions();
 
-    // KDE5 TODO: change it to "using KXMLGUIBuilder::finalizeGUI;"
+    // TODO KF6 change it to "using KXMLGUIBuilder::finalizeGUI;"
     void finalizeGUI(KXMLGUIClient *client) override;
 
     /**

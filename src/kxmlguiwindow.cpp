@@ -379,7 +379,7 @@ void KXmlGuiWindow::applyMainWindowSettings(const KConfigGroup &config)
     }
 }
 
-// KDE5 TODO: change it to "using KXMLGUIBuilder::finalizeGUI;" in the header
+// TODO KF6: change it to "using KXMLGUIBuilder::finalizeGUI;" in the header
 // and remove the reimplementation
 void KXmlGuiWindow::finalizeGUI(KXMLGUIClient *client)
 {
