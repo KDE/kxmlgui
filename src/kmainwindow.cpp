@@ -856,6 +856,7 @@ bool KMainWindow::event(QEvent *ev)
     switch (ev->type()) {
     case QEvent::Move:
         d->setPositionDirty();
+        Q_FALLTHROUGH();
     case QEvent::Resize:
         d->setSizeDirty();
         break;
