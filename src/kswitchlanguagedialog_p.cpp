@@ -386,6 +386,7 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
     QString labelText = primaryLanguage ? i18n("Primary language:") : i18n("Fallback language:");
 
     KLanguageButton *languageButton = new KLanguageButton(p);
+    languageButton->showLanguageCodes(true);
 
     fillApplicationLanguages(languageButton);
 
