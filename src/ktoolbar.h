@@ -126,12 +126,16 @@ public:
      */
     void setIconDimensions(int size);
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 75)
     /**
      * Returns the default size for this type of toolbar.
      *
-     * @return the default size for this type of toolbar.
+     * @return the default size for this type of toolbar
+     * @deprecated Since 5.75, no known users.
      */
-    int iconSizeDefault() const; // KDE5: hide from public API. Doesn't make sense to export this, and it isn't used.
+    KXMLGUI_DEPRECATED_VERSION(5, 75, "No known use case")
+    int iconSizeDefault() const;
+#endif
 
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**

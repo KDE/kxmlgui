@@ -124,6 +124,7 @@ public:
     void slotLockToolBars(bool lock);
 
     void init(bool readConfig = true, bool isMainToolBar = false);
+    int iconSizeDefault() const;
     QString getPositionAsString() const;
     QMenu *contextMenu(const QPoint &globalPos);
     void setLocked(bool locked);
@@ -271,6 +272,11 @@ void KToolBar::Private::init(bool readConfig, bool _isMainToolBar)
 #endif
     connect(KIconLoader::global(), SIGNAL(iconLoaderSettingsChanged()),
             q, SLOT(slotAppearanceChanged()));
+}
+
+int KToolBar::Private::iconSizeDefault() const
+{
+    return KIconLoader::global()->currentSize(isMainToolBar ? KIconLoader::MainToolbar : KIconLoader::Toolbar);
 }
 
 QString KToolBar::Private::getPositionAsString() const
@@ -520,7 +526,7 @@ Qt::ToolButtonStyle KToolBar::Private::toolButtonStyleSetting()
 
 void KToolBar::Private::loadKDESettings()
 {
-    iconSizeSettings[Level_KDEDefault] = q->iconSizeDefault();
+    iconSizeSettings[Level_KDEDefault] = iconSizeDefault();
 
     if (isMainToolBar) {
         toolButtonStyleSettings[Level_KDEDefault] = toolButtonStyleSetting();
@@ -1063,10 +1069,12 @@ void KToolBar::setIconDimensions(int size)
     d->iconSizeSettings[Level_UserSettings] = size;
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 75)
 int KToolBar::iconSizeDefault() const
 {
-    return KIconLoader::global()->currentSize(d->isMainToolBar ? KIconLoader::MainToolbar : KIconLoader::Toolbar);
+    return d->iconSizeDefault();
 }
+#endif
 
 void KToolBar::slotMovableChanged(bool movable)
 {
