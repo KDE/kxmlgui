@@ -164,21 +164,22 @@ bool KShortcutsEditorItem::operator<(const QTreeWidgetItem &other) const
 
 QKeySequence KShortcutsEditorItem::keySequence(uint column) const
 {
-    QList<QKeySequence> shortcuts = m_action->shortcuts();
+    auto shortcuts = [this]() { return m_action->shortcuts(); };
+
 #if HAVE_GLOBALACCEL
-    QList<QKeySequence> globalShortcuts = KGlobalAccel::self()->shortcut(m_action);
+    auto globalShortcuts = [this]() { return KGlobalAccel::self()->shortcut(m_action); };
 #endif
 
     switch (column) {
     case LocalPrimary:
-        return primarySequence(shortcuts);
+        return primarySequence(shortcuts());
     case LocalAlternate:
-        return alternateSequence(shortcuts);
+        return alternateSequence(shortcuts());
 #if HAVE_GLOBALACCEL
     case GlobalPrimary:
-        return primarySequence(globalShortcuts);
+        return primarySequence(globalShortcuts());
     case GlobalAlternate:
-        return alternateSequence(globalShortcuts);
+        return alternateSequence(globalShortcuts());
 #endif
     default:
         return QKeySequence();
