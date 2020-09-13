@@ -365,9 +365,6 @@ bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *hier[]
         return false;
     }
 
-    // This code doesn't allow editing of QAction. It can not distinguish
-    // between default and active shortcuts. This breaks many assumptions the
-    // editor makes.
     const QVariant value = action->property("isShortcutConfigurable");
     if (!value.isValid() || value.toBool()) {
         new KShortcutsEditorItem((hier[level]), action);
