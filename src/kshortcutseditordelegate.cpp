@@ -23,8 +23,7 @@
 
 KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool allowLetterShortcuts)
     : KExtendableItemDelegate(parent),
-      m_allowLetterShortcuts(allowLetterShortcuts),
-      m_editor(nullptr)
+      m_allowLetterShortcuts(allowLetterShortcuts)
 {
     Q_ASSERT(qobject_cast<QAbstractItemView *>(parent));
 

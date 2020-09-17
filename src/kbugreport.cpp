@@ -56,17 +56,17 @@ public:
     void _k_slotSetFrom();
     void _k_updateUrl();
 
-    KBugReport *q;
-    QProcess *m_process;
+    KBugReport *const q;
+    QProcess *m_process = nullptr;
     KAboutData m_aboutData;
 
-    QTextEdit *m_lineedit;
-    QLineEdit *m_subject;
-    QLabel *m_from;
-    QLabel *m_version;
+    QTextEdit *m_lineedit = nullptr;
+    QLineEdit *m_subject = nullptr;
+    QLabel *m_from = nullptr;
+    QLabel *m_version = nullptr;
     QString m_strVersion;
-    QGroupBox *m_bgSeverity;
-    QPushButton *m_configureEmail;
+    QGroupBox *m_bgSeverity = nullptr;
+    QPushButton *m_configureEmail = nullptr;
 
     QString lastError;
     QString kde_version;
@@ -74,7 +74,7 @@ public:
     QString os;
     QUrl url;
     QList<QRadioButton *> severityButtons;
-    int currentSeverity()
+    int currentSeverity() const
     {
         for (int i = 0; i < severityButtons.count(); i++)
             if (severityButtons[i]->isChecked()) {

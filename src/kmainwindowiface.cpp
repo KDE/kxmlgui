@@ -17,8 +17,8 @@
 
 KMainWindowInterface::KMainWindowInterface(KXmlGuiWindow *mainWindow)
     : QDBusAbstractAdaptor(mainWindow)
+    , m_MainWindow(mainWindow)
 {
-    m_MainWindow = mainWindow;
 }
 
 KMainWindowInterface::~KMainWindowInterface()

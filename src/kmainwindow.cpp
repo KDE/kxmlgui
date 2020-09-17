@@ -78,7 +78,7 @@ public:
     bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
-    KMainWindow *m_win;
+    KMainWindow *const m_win;
 };
 
 DockResizeListener::DockResizeListener(KMainWindow *win) :

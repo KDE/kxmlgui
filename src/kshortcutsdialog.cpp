@@ -58,11 +58,7 @@ class Q_DECL_HIDDEN KShortcutsDialog::KShortcutsDialogPrivate
 public:
 
     KShortcutsDialogPrivate(KShortcutsDialog *q)
-        : q(q),
-          m_keyChooser(nullptr),
-          m_schemeEditor(nullptr),
-          m_detailsButton(nullptr),
-          m_saveSettings(false)
+        : q(q)
     {
     }
 
@@ -130,11 +126,11 @@ public:
         emit q->saved();
     }
 
-    KShortcutsDialog *q;
-    KShortcutsEditor *m_keyChooser; // ### move
-    KShortcutSchemesEditor *m_schemeEditor;
-    QPushButton *m_detailsButton;
-    bool m_saveSettings;
+    KShortcutsDialog *const q;
+    KShortcutsEditor *m_keyChooser = nullptr; // ### move
+    KShortcutSchemesEditor *m_schemeEditor = nullptr;
+    QPushButton *m_detailsButton = nullptr;
+    bool m_saveSettings = false;
 };
 
 KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)

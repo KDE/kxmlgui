@@ -135,7 +135,7 @@ public:
      */
     QString toolBarText(const QDomElement &it) const;
 
-    bool         m_isModified;
+    bool         m_isModified = false;
     ToolBarList &barList()
     {
         return m_barList;
@@ -548,9 +548,7 @@ using namespace KDEPrivate;
 class KEditToolBarPrivate
 {
 public:
-    KEditToolBarPrivate(KEditToolBar *q): q(q),
-        m_accept(false), m_global(false),
-        m_collection(nullptr), m_factory(nullptr), m_widget(nullptr) {}
+    KEditToolBarPrivate(KEditToolBar *q): q(q) {}
 
     void init();
 
@@ -561,17 +559,17 @@ public:
     void applyClicked();
     void defaultClicked();
 
-    KEditToolBar *q;
-    bool m_accept;
+    KEditToolBar *const q;
+    bool m_accept = false;
     // Save parameters for recreating widget after resetting toolbar
-    bool m_global;
-    KActionCollection *m_collection;
+    bool m_global = false;
+    KActionCollection *m_collection = nullptr;
     QString m_file;
     QString m_defaultToolBar;
-    KXMLGUIFactory *m_factory;
-    KEditToolBarWidget *m_widget;
-    QVBoxLayout *m_layout;
-    QDialogButtonBox *m_buttonBox;
+    KXMLGUIFactory *m_factory = nullptr;
+    KEditToolBarWidget *m_widget = nullptr;
+    QVBoxLayout *m_layout = nullptr;
+    QDialogButtonBox *m_buttonBox = nullptr;
 };
 
 Q_GLOBAL_STATIC(QString, s_defaultToolBarName)

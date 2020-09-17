@@ -39,21 +39,8 @@ class KHelpMenuPrivate
 {
 public:
     KHelpMenuPrivate()
-        : mSwitchApplicationLanguage(nullptr),
-          mActionsCreated(false),
-          mSwitchApplicationLanguageAction(nullptr),
-          mAboutData(KAboutData::applicationData())
+        : mAboutData(KAboutData::applicationData())
     {
-        mMenu = nullptr;
-        mAboutApp = nullptr;
-        mAboutKDE = nullptr;
-        mBugReport = nullptr;
-        mDonateAction = nullptr;
-        mHandBookAction = nullptr;
-        mWhatsThisAction = nullptr;
-        mReportBugAction = nullptr;
-        mAboutAppAction = nullptr;
-        mAboutKDEAction = nullptr;
     }
     ~KHelpMenuPrivate()
     {
@@ -66,22 +53,26 @@ public:
 
     void createActions(KHelpMenu *q);
 
-    QMenu *mMenu;
-    QDialog *mAboutApp;
-    KAboutKdeDialog *mAboutKDE;
-    KBugReport *mBugReport;
-    QAction *mDonateAction;
-    KSwitchLanguageDialog *mSwitchApplicationLanguage;
+    QMenu *mMenu = nullptr;
+    QDialog *mAboutApp = nullptr;
+    KAboutKdeDialog *mAboutKDE = nullptr;
+    KBugReport *mBugReport = nullptr;
+    QAction *mDonateAction = nullptr;
+    KSwitchLanguageDialog *mSwitchApplicationLanguage = nullptr;
 
 // TODO evaluate if we use static_cast<QWidget*>(parent()) instead of mParent to win that bit of memory
-    QWidget *mParent;
+    QWidget *mParent = nullptr;
     QString mAboutAppText;
 
-    bool mShowWhatsThis;
-    bool mActionsCreated;
+    bool mShowWhatsThis = false;
+    bool mActionsCreated = false;
 
-    QAction *mHandBookAction, *mWhatsThisAction;
-    QAction *mReportBugAction, *mSwitchApplicationLanguageAction, *mAboutAppAction, *mAboutKDEAction;
+    QAction *mHandBookAction = nullptr;
+    QAction *mWhatsThisAction = nullptr;
+    QAction *mReportBugAction = nullptr;
+    QAction *mSwitchApplicationLanguageAction = nullptr;
+    QAction *mAboutAppAction = nullptr;
+    QAction *mAboutKDEAction = nullptr;
 
     KAboutData mAboutData;
 };

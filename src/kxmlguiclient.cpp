@@ -32,9 +32,6 @@ class KXMLGUIClientPrivate
 public:
     KXMLGUIClientPrivate()
         : m_componentName(QCoreApplication::applicationName()),
-          m_actionCollection(nullptr),
-          m_parent(nullptr),
-          m_builder(nullptr),
           m_textTagNames({ QStringLiteral("text"), QStringLiteral("Text"), QStringLiteral("title") })
     {
     }
@@ -53,13 +50,13 @@ public:
     QString m_componentName;
 
     QDomDocument m_doc;
-    KActionCollection *m_actionCollection;
+    KActionCollection *m_actionCollection = nullptr;
     QDomDocument m_buildDocument;
     QPointer<KXMLGUIFactory> m_factory;
-    KXMLGUIClient *m_parent;
+    KXMLGUIClient *m_parent = nullptr;
     //QPtrList<KXMLGUIClient> m_supers;
     QList<KXMLGUIClient *> m_children;
-    KXMLGUIBuilder *m_builder;
+    KXMLGUIBuilder *m_builder = nullptr;
     QString m_xmlFile;
     QString m_localXMLFile;
     const QStringList m_textTagNames;

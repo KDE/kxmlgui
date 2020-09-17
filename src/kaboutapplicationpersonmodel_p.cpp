@@ -26,7 +26,6 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList< KAboutPe
         QObject *parent)
     : QAbstractListModel(parent)
     , m_personList(personList)
-    , m_hasAvatarPixmaps(false)
     , m_providerUrl(providerUrl)
 {
     if (m_providerUrl.isEmpty()) {

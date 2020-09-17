@@ -138,7 +138,7 @@ public:
     static Qt::ToolBarArea positionFromString(const QString &position);
     static Qt::ToolButtonStyle toolButtonStyleSetting();
 
-    KToolBar *q;
+    KToolBar *const q;
     bool isMainToolBar : 1;
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     bool enableContext : 1;

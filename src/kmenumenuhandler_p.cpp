@@ -32,7 +32,7 @@ namespace KDEPrivate
 {
 
 KMenuMenuHandler::KMenuMenuHandler(KXMLGUIBuilder *builder)
-    : QObject(), m_builder(builder), m_popupMenu(nullptr), m_popupAction(nullptr), m_contextMenu(nullptr)
+    : QObject(), m_builder(builder)
 {
     m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
     connect(m_toolbarAction, &QAction::triggered,

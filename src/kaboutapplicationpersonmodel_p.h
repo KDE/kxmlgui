@@ -71,13 +71,13 @@ private Q_SLOTS:
 private:
     void fetchOcsLinkIcons(int personProfileListIndex);
 
-    QList< KAboutPerson > m_personList;
+    const QList< KAboutPerson > m_personList;
     QList< KAboutApplicationPersonProfile > m_profileList;
 
     QMap< int, QString > m_ocsLinkIconUrls;
     QMap< int, QPixmap > m_ocsLinkIcons;
 
-    bool m_hasAvatarPixmaps;
+    bool m_hasAvatarPixmaps = false;
 
 #if HAVE_ATTICA
     Attica::ProviderManager m_providerManager;

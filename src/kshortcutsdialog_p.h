@@ -102,8 +102,8 @@ protected:
     bool eventFilter(QObject *, QEvent *) override;
 private:
     mutable QPersistentModelIndex m_editingIndex;
-    bool m_allowLetterShortcuts;
-    QWidget *m_editor;
+    const bool m_allowLetterShortcuts;
+    QWidget *m_editor = nullptr;
 
     //! List of actionCollections to check for conflicts.
     QList<KActionCollection *> m_checkActionCollections;
@@ -309,8 +309,8 @@ private:
 
     //@{
     //! The original shortcuts before user changes. 0 means no change.
-    QList<QKeySequence> *m_oldLocalShortcut;
-    QList<QKeySequence> *m_oldGlobalShortcut;
+    QList<QKeySequence> *m_oldLocalShortcut = nullptr;
+    QList<QKeySequence> *m_oldGlobalShortcut = nullptr;
 #if 0
     KShapeGesture *m_oldShapeGesture;
     KRockerGesture *m_oldRockerGesture;

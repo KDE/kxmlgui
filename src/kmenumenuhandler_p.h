@@ -42,11 +42,11 @@ private Q_SLOTS:
 private:
     void showContextMenu(QMenu *menu, const QPoint &pos);
 
-    KXMLGUIBuilder *m_builder;
-    KSelectAction *m_toolbarAction;
-    QMenu *m_popupMenu;
-    QAction *m_popupAction;
-    QMenu *m_contextMenu;
+    KXMLGUIBuilder *m_builder = nullptr;
+    KSelectAction *m_toolbarAction = nullptr;
+    QMenu *m_popupMenu = nullptr;
+    QAction *m_popupAction = nullptr;
+    QMenu *m_contextMenu = nullptr;
 
 };
 
