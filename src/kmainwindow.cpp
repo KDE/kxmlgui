@@ -347,8 +347,10 @@ void KMainWindowPrivate::polish(KMainWindow *q)
         s = objname + s;
     }
     q->setObjectName(s);
-    q->winId(); // workaround for setWindowRole() crashing, and set also window role, just in case TT
-    q->setWindowRole(s);   // will keep insisting that object name suddenly should not be used for window role
+    if (!q->window()) {
+         q->winId(); // workaround for setWindowRole() crashing, and set also window role, just in case TT
+         q->setWindowRole(s);   // will keep insisting that object name suddenly should not be used for window role
+    }
 
     dbusName = QLatin1Char('/') + QCoreApplication::applicationName() + QLatin1Char('/');
     dbusName += q->objectName().replace(QLatin1Char('/'), QLatin1Char('_'));
@@ -698,7 +700,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
 
-    if (!d->sizeApplied) {
+    if (!d->sizeApplied && !window()) {
         winId(); // ensure there's a window created
         KWindowConfig::restoreWindowSize(windowHandle(), cg);
         // NOTICE: QWindow::setGeometry() does NOT impact the backing QWidget geometry even if the platform
