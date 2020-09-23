@@ -466,7 +466,7 @@ bool KMainWindow::canBeRestored(int number)
     }
 
     KConfigGroup group(config, "Number");
-    const int n = group.readEntry("NumberOfWindows", 1);
+    const int n = group.readEntry("NumberOfWindows", 0);
     return number >= 1 && number <= n;
 }
 
