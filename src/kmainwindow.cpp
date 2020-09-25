@@ -533,7 +533,7 @@ void KMainWindow::appHelpActivated()
 void KMainWindow::closeEvent(QCloseEvent *e)
 {
     K_D(KMainWindow);
-    if (suppressCloseEvent) {
+    if (d->suppressCloseEvent) {
         e->accept();
         return;
     }
@@ -563,7 +563,7 @@ void KMainWindow::closeEvent(QCloseEvent *e)
     }
     // If saving session, we are processing a fake close event, and might get the real one later.
     if (e->isAccepted() && qApp->isSavingSession())
-        suppressCloseEvent = true;
+        d->suppressCloseEvent = true;
 }
 
 bool KMainWindow::queryClose()
