@@ -33,6 +33,7 @@ public:
     bool settingsDirty: 1;
     bool autoSaveWindowSize: 1;
     bool sizeApplied: 1;
+    bool suppressCloseEvent: 1
     KConfigGroup autoSaveGroup;
     QTimer *settingsTimer;
     QTimer *sizeTimer;
