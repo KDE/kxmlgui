@@ -94,10 +94,10 @@ QT_WARNING_POP
 
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
-    // Version
-    QWidget *versionWidget = new QWidget(q);
-    QVBoxLayout *versionLayout = new QVBoxLayout;
+    // Library versions
     if (!(opt & HideKdeVersion)) {
+        QWidget *versionWidget = new QWidget(q);
+        QVBoxLayout *versionLayout = new QVBoxLayout;
         QLabel *versionLabel = new QLabel(
             i18n("<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
                  QStringLiteral(KXMLGUI_VERSION_STRING),
@@ -106,10 +106,10 @@ QT_WARNING_POP
                  QGuiApplication::platformName()));
         versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
         versionLayout->addWidget(versionLabel);
+        versionLayout->addStretch();
+        versionWidget->setLayout(versionLayout);
+        tabWidget->addTab(versionWidget, i18nc("@title:tab", "Libraries"));
     }
-    versionLayout->addStretch();
-    versionWidget->setLayout(versionLayout);
-    tabWidget->addTab(versionWidget, i18nc("@title:tab", "Libraries"));
 
     //And here we go, authors page...
     const int authorCount = aboutData.authors().count();
