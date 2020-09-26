@@ -52,7 +52,18 @@ public:
     enum Option {
         NoOptions       = 0x0, ///< No options, show the standard about dialog
         HideTranslators = 0x1, ///< Don't show the translators tab
-        HideKdeVersion  = 0x2  ///< Don't show the KDE version next to the application name and version
+        HideLibraries   = 0x2, ///< Don't show the libraries tab @since 5.77
+        HideKdeVersion  = HideLibraries  /**<
+                                          * Before 5.13: Don't show the KDE Frameworks version next to the application name and version
+                                          *
+                                          * Since 5.13: Don't show the Qt and KDE Frameworks libraries in the versions tab
+                                          *
+                                          * Since 5.30 Don't show the Qt and KDE Frameworks libraries in the libraries tab
+                                          *
+                                          * Since 5.75 Don't show the libraries tab
+                                          *
+                                          * @deprecated Since 5.77, use @c HideLibraries instead.
+                                          */
     };
     /**
      * Stores a combination of #Option values.

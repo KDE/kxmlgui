@@ -95,7 +95,7 @@ QT_WARNING_POP
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
     // Library versions
-    if (!(opt & HideKdeVersion)) {
+    if (!(opt & HideLibraries)) {
         QWidget *versionWidget = new QWidget(q);
         QVBoxLayout *versionLayout = new QVBoxLayout;
         QLabel *versionLabel = new QLabel(
