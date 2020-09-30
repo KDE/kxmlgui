@@ -347,7 +347,7 @@ void KMainWindowPrivate::polish(KMainWindow *q)
         s = objname + s;
     }
     q->setObjectName(s);
-    if (!q->window()) {
+    if (!q->window() || q->window() == q) {
          q->winId(); // workaround for setWindowRole() crashing, and set also window role, just in case TT
          q->setWindowRole(s);   // will keep insisting that object name suddenly should not be used for window role
     }
@@ -700,7 +700,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
 
-    if (!d->sizeApplied && !window()) {
+    if (!d->sizeApplied && (!window() || window() == this)) {
         winId(); // ensure there's a window created
         KWindowConfig::restoreWindowSize(windowHandle(), cg);
         // NOTICE: QWindow::setGeometry() does NOT impact the backing QWidget geometry even if the platform
