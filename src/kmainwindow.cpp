@@ -263,7 +263,6 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     //d->kaccel = actionCollection()->kaccel();
     settingsTimer = nullptr;
     sizeTimer = nullptr;
-    positionTimer = nullptr;
 
     dockResizeListener = new DockResizeListener(_q);
     letDirtySettings = true;
@@ -406,19 +405,6 @@ void KMainWindowPrivate::setSizeDirty()
     }
 }
 
-void KMainWindowPrivate::setPositionDirty()
-{
-    if (autoSaveWindowSize) {
-        if (!positionTimer) {
-            positionTimer = new QTimer(q);
-            positionTimer->setInterval(500);
-            positionTimer->setSingleShot(true);
-            QObject::connect(positionTimer, SIGNAL(timeout()), q, SLOT(_k_slotSaveAutoSavePosition()));
-        }
-        positionTimer->start();
-    }
-}
-
 KMainWindow::~KMainWindow()
 {
     sMemberList()->removeAll(this);
@@ -549,10 +535,10 @@ void KMainWindow::closeEvent(QCloseEvent *e)
         d->sizeTimer->stop();
         d->_k_slotSaveAutoSaveSize();
     }
-    if (d->positionTimer && d->positionTimer->isActive()) {
-        d->positionTimer->stop();
-        d->_k_slotSaveAutoSavePosition();
-    }
+    // Delete the marker that says we don't want to restore the position of the
+    // next-opened instance; now that a window is closing, we do want to do this
+    d->autoSaveGroup.deleteEntry("RestorePositionForNextInstance");
+    d->_k_slotSaveAutoSavePosition();
 
     if (queryClose()) {
         // widgets will start destroying themselves at this point and we don't
@@ -707,19 +693,21 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
         // window was created -> QTBUG-40584. We therefore copy the size here.
         // TODO: remove once this was resolved in QWidget QPA
         resize(windowHandle()->size());
+        d->sizeApplied = true;
 
         // Let the user opt out of KDE apps remembering window sizes if they
         // find it annoying or it doesn't work for them due to other bugs.
-        // When called with no args, this looks at kdeglobals
         KSharedConfigPtr config = KSharedConfig::openConfig();
         KConfigGroup group(config, "General");
         if (group.readEntry("AllowKDEAppsToRememberWindowPositions", true)) {
-            // TODO: how should we handle the case when a new instance is opened
-            // and there's stored window position data? Cascade the new window?
-            // Don't restore position and let the window manager handle it? Can
-            // we even know this from here?
-            KWindowConfig::restoreWindowPosition(windowHandle(), cg);
-            d->sizeApplied = true;
+            if (cg.readEntry("RestorePositionForNextInstance", true)) {
+                KWindowConfig::restoreWindowPosition(windowHandle(), cg);
+                // Save the fact that we now don't want to restore position
+                // anymore; if we did, the next instance would completely cover
+                // the existing one
+                KConfigGroup cgWritable = cg; // because cg is const
+                cgWritable.writeEntry("RestorePositionForNextInstance", false);
+            }
         }
     }
 
@@ -815,9 +803,6 @@ void KMainWindow::setAutoSaveSettings(const KConfigGroup &group,
     if (!saveWindowSize && d->sizeTimer) {
         d->sizeTimer->stop();
     }
-    if (!saveWindowSize && d->positionTimer) {
-        d->positionTimer->stop();
-    }
 
     // Now read the previously saved settings
     applyMainWindowSettings(d->autoSaveGroup);
@@ -864,9 +849,9 @@ bool KMainWindow::event(QEvent *ev)
 {
     K_D(KMainWindow);
     switch (ev->type()) {
+#if defined(Q_OS_WIN) || defined(Q_OS_OSX)
     case QEvent::Move:
-        d->setPositionDirty();
-        Q_FALLTHROUGH();
+#endif
     case QEvent::Resize:
         d->setSizeDirty();
         break;

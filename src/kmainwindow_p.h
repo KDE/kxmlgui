@@ -37,7 +37,6 @@ public:
     KConfigGroup autoSaveGroup;
     QTimer *settingsTimer;
     QTimer *sizeTimer;
-    QTimer *positionTimer;
     QRect defaultWindowSize;
     KHelpMenu *helpMenu;
     KMainWindow *q;
@@ -60,7 +59,6 @@ public:
     };
     void setSettingsDirty(CallCompression callCompression = NoCompressCalls);
     void setSizeDirty();
-    void setPositionDirty();
 };
 
 class KMWSessionManager : public QObject
