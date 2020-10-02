@@ -537,7 +537,9 @@ void KMainWindow::closeEvent(QCloseEvent *e)
     }
     // Delete the marker that says we don't want to restore the position of the
     // next-opened instance; now that a window is closing, we do want to do this
-    d->autoSaveGroup.deleteEntry("RestorePositionForNextInstance");
+    if (d->autoSaveGroup.isValid()) {
+        d->autoSaveGroup.deleteEntry("RestorePositionForNextInstance");
+    }
     d->_k_slotSaveAutoSavePosition();
 
     if (queryClose()) {
