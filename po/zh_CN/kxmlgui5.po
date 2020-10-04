@@ -1,0 +1,1481 @@
+# translation of kdelibs4.po to Chinese Simplified
+# Copyright (C) 2007 Free Software Foundation, Inc.
+#
+# Lie Ex <lilith.ex@gmail.com> 2007-2011.
+# Wang Jian <lark@linux.ustc.edu.cn>, 1998.
+# Sarah Smith <sarahs@redhat.com>, 2002.
+# Xiong Jiang <jxiong@offtopic.org>, 2002,2003,2004.
+# Funda Wang <fundawang@linux.net.cn>, 2002,2003,2004.
+# Liang Qi <cavendish.qi@gmail.com>, 2007.
+# Feng Chao <chaofeng111@gmail.com>, 2010, 2012, 2014.
+# Ni Hui <shuizhuyuanluo@126.com>, 2010, 2011, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# Guo Yunhe <guoyunhebrave@gmail.com>, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-09-27 02:08+0200\n"
+"PO-Revision-Date: 2020-09-23 12:19\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/kxmlgui/kxmlgui5.pot\n"
+"X-Crowdin-File-ID: 5551\n"
+
+#: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "关于 %1"
+
+#: kaboutapplicationdialog.cpp:95 kaboutplugindialog.cpp:82
+#, kde-format
+msgctxt "@title:tab"
+msgid "About"
+msgstr "关于"
+
+#: kaboutapplicationdialog.cpp:102
+#, kde-format
+msgid ""
+"<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>"
+"%4</em> windowing system</li></ul>"
+msgstr ""
+"<ul><li>KDE 框架 %1</li><li>Qt %2 (使用 %3 构建)</li><li><em>%4</em> 窗口系统"
+"</li></ul>"
+
+#: kaboutapplicationdialog.cpp:111
+#, kde-format
+msgctxt "@title:tab"
+msgid "Libraries"
+msgstr "库"
+
+#: kaboutapplicationdialog.cpp:122 kaboutplugindialog.cpp:93
+#, kde-format
+msgctxt "@title:tab"
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] "作者"
+
+#: kaboutapplicationdialog.cpp:129 kaboutplugindialog.cpp:100
+#, kde-format
+msgctxt "@title:tab"
+msgid "Thanks To"
+msgstr "感谢"
+
+#: kaboutapplicationdialog.cpp:136 kaboutplugindialog.cpp:106
+#, kde-format
+msgctxt "@title:tab"
+msgid "Translation"
+msgstr "翻译"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:52
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "给贡献者写信"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:57
+#, kde-format
+msgid "Visit contributor's homepage"
+msgstr "访问贡献者的主页"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:118
+#, kde-format
+msgctxt "@info:tooltip Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"给贡献者发邮件\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:124
+#: kaboutapplicationpersonlistdelegate_p.cpp:161
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"访问贡献者的主页\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:131
+#: kaboutapplicationpersonlistdelegate_p.cpp:164
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"访问贡献者在 %1 上的个人资料\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:155
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's page\n"
+"%1"
+msgstr ""
+"访问贡献者的页面\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:158
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's blog\n"
+"%1"
+msgstr ""
+"访问贡献者的博客\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:256
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationpersonmodel_p.cpp:191
+#, kde-format
+msgctxt "City, Country"
+msgid "%1, %2"
+msgstr "%1，%2"
+
+#: kaboutapplicationpersonmodel_p.cpp:294
+#, kde-format
+msgctxt "A generic social network or homepage link of an unlisted type."
+msgid "Other"
+msgstr "其它"
+
+#: kaboutapplicationpersonmodel_p.cpp:296
+#, kde-format
+msgctxt "A type of link."
+msgid "Blog"
+msgstr "博客"
+
+#: kaboutapplicationpersonmodel_p.cpp:304
+#, kde-format
+msgctxt "A type of link."
+msgid "Homepage"
+msgstr "主页"
+
+#: kaboutkdedialog_p.cpp:32
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "关于 KDE"
+
+#: kaboutkdedialog_p.cpp:35
+#, kde-format
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr "<html><font size=\"5\">KDE 桌面环境 - 一切自由</font></html>"
+
+#: kaboutkdedialog_p.cpp:45
+#, kde-format
+msgid ""
+"<html><b>KDE</b> is a world-wide community of software engineers, artists, "
+"writers, translators and creators who are committed to <a href=\"%1\">Free "
+"Software</a> development. KDE produces the Plasma desktop environment, "
+"hundreds of applications, and the many software libraries that support them."
+"<br /><br />KDE is a cooperative enterprise: no single entity controls its "
+"direction or products. Instead, we work together to achieve the common goal "
+"of building the world's finest Free Software. Everyone is welcome to <a href="
+"\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit <a "
+"href=\"%3\">%3</a> for more information about the KDE community and the "
+"software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> 是一个由众多软件工程师、艺术家、作家、翻译家和其他有志于<a "
+"href=\"%1\">自由软件</a>事业的人们组成的世界性社区。KDE 推出了 Plasma 桌面环"
+"境，数以百计的自由软件应用，以及许多支持它们的程序库。<br /><br />KDE 是一个"
+"合作事业：它的方向或产品不受任何单独的团体、公司或机构控制。欢迎每个人<a "
+"href=\"%2\">参与和贡献</a>，包括您。<br /><br />您可以访问 <a href=\"%3\">"
+"%3</a> 来了解有关 KDE 社区和我们开发的软件的更多信息。</html>"
+
+#: kaboutkdedialog_p.cpp:65
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>软件总是可以改进的，KDE 团队乐意这样做。然而，最好您能在软件并不如期运"
+"行之时告诉我们软件的缺陷，如果您有让软件运行得更好的想法也欢迎您来告诉我们。"
+"<br /><br />KDE 桌面环境有一个错误跟踪系统，请访问 <a href=\"%1\">%1</a> 或使"
+"用“帮助”菜单的“报告错误”对话框来报告错误。<br /><br />如果您有改进的建议，欢"
+"迎使用错误跟踪系统来登记您的需求，并确认您使用“需求列表”(Wishlist)的需求程"
+"度。</html>"
+
+#: kaboutkdedialog_p.cpp:83
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>您不必是软件开发者就可以成为 KDE 团队的一员。您可以参加翻译程序界面的小"
+"组。您可以提供图片、主题、音效或改进文档。您可以自己决定！<br /><br />请访问 "
+"<a href=\"%1\">%1</a> 了解可参与项目的信息。<br /><br />如果您需要更多的信息"
+"或文档，请访问 <a href=\"%2\">%2</a>。</html>"
+
+#: kaboutkdedialog_p.cpp:105
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>KDE 是免费的，但是开发的过程却开销不菲。<br /><br />为此，KDE 团队成立"
+"了 KDE 协会，一个在德国合法建立的非营利组织。KDE 协会在法律和财政方面代表了 "
+"KDE 社区。请参看 <a href=\"%1\">%1</a> 中关于 KDE 协会的信息。<br /><br /"
+">KDE 团队的确需要资金支持。其中大部分的资金用于偿还成员和其他人在为 KDE 作出"
+"贡献的时候所付出的开支。其他资金会用于法律支持和组织会议和聚会。<br /> <br />"
+"我们鼓励您通过资金捐助来支持 KDE。详细的捐助方法在 <a href=\"%2\">%2</a> 上有"
+"描述。<br /><br />非常感谢您的支持。</html>"
+
+#: kaboutkdedialog_p.cpp:125
+#, kde-format
+msgctxt "@title:tab About KDE"
+msgid "&About"
+msgstr "关于(&A)"
+
+#: kaboutkdedialog_p.cpp:126
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Report Bugs or Wishes"
+msgstr "报告错误或需求(&R)"
+
+#: kaboutkdedialog_p.cpp:127
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Join KDE"
+msgstr "加入 KDE 团队(&J)"
+
+#: kaboutkdedialog_p.cpp:128
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Support KDE"
+msgstr "支持 KDE(&S)"
+
+#: kabstractaboutdialog_p.cpp:38
+#, kde-format
+msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+msgstr "<html><font size=\"5\">%1</font><br />版本 %2</html>"
+
+#: kabstractaboutdialog_p.cpp:83
+#, kde-format
+msgid "License: %1"
+msgstr "许可协议：%1"
+
+#: kabstractaboutdialog_p.cpp:115
+#, kde-format
+msgid ""
+"Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "
+"report bugs.\n"
+msgstr ""
+"请使用 <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> 报告错误。\n"
+
+#: kabstractaboutdialog_p.cpp:121
+#, kde-format
+msgid "Please report bugs to <a href=\"%1\">%2</a>.\n"
+msgstr "请将错误报告给 <a href=\"%1\">%2</a>。\n"
+
+#: kactionconflictdetector.cpp:39
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"键位序列“%1”含义不明。请使用“设置”菜单下的“配置快捷键”选项解决此问题。\n"
+"现在不会触发任何动作。"
+
+#: kactionconflictdetector.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Ambiguous shortcut detected"
+msgstr "检测到含义不明的快捷键"
+
+#: kbugreport.cpp:91
+#, kde-format
+msgctxt "@title:window"
+msgid "Submit Bug Report"
+msgstr "提交错误报告"
+
+#: kbugreport.cpp:120
+#, kde-format
+msgid "Submit Bug Report"
+msgstr "提交错误报告"
+
+#: kbugreport.cpp:132
+#, kde-format
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr "您的电子邮件地址。如果不正确，请使用“配置电子邮件”按钮来修改它"
+
+#: kbugreport.cpp:133
+#, kde-format
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "发件人："
+
+#: kbugreport.cpp:141
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Email..."
+msgstr "配置电子邮件..."
+
+#: kbugreport.cpp:147
+#, kde-format
+msgid "The email address this bug report is sent to."
+msgstr "错误报告要发送的电子邮件地址。"
+
+#: kbugreport.cpp:148
+#, kde-format
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "收件人："
+
+#: kbugreport.cpp:157
+#, kde-format
+msgctxt "@action:button"
+msgid "&Send"
+msgstr "发送(&S)"
+
+#: kbugreport.cpp:158
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send bug report."
+msgstr "发送错误报告。"
+
+#: kbugreport.cpp:159
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Send this bug report to %1."
+msgstr "把该错误报告发送到 %1。"
+
+#: kbugreport.cpp:167
+#, kde-format
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr "您要提交错误报告的程序 - 如果不正确，请使用正确程序的“报告错误”菜单"
+
+#: kbugreport.cpp:168
+#, kde-format
+msgid "Application: "
+msgstr "应用程序："
+
+#: kbugreport.cpp:178
+#, kde-format
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr "这个程序的版本 - 请在发送错误报告前确定没有新的版本"
+
+#: kbugreport.cpp:179
+#, kde-format
+msgid "Version:"
+msgstr "版本："
+
+#: kbugreport.cpp:184
+#, kde-format
+msgid "no version set (programmer error)"
+msgstr "没有设置版本(程序错误)"
+
+#: kbugreport.cpp:196
+#, kde-format
+msgid "OS:"
+msgstr "操作系统："
+
+#: kbugreport.cpp:206
+#, kde-format
+msgctxt "@title:group"
+msgid "Se&verity"
+msgstr "严重程度(&V)"
+
+#: kbugreport.cpp:210
+#, kde-format
+msgctxt "bug severity"
+msgid "Critical"
+msgstr "紧急"
+
+#: kbugreport.cpp:211
+#, kde-format
+msgctxt "bug severity"
+msgid "Grave"
+msgstr "严重"
+
+#: kbugreport.cpp:212
+#, kde-format
+msgctxt "bug severity"
+msgid "Normal"
+msgstr "普通"
+
+#: kbugreport.cpp:213
+#, kde-format
+msgctxt "bug severity"
+msgid "Wishlist"
+msgstr "愿望"
+
+#: kbugreport.cpp:214
+#, kde-format
+msgctxt "bug severity"
+msgid "Translation"
+msgstr "翻译"
+
+#: kbugreport.cpp:232
+#, kde-format
+msgid "S&ubject: "
+msgstr "主题(&U)："
+
+#: kbugreport.cpp:240
+#, kde-format
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"请输入您要提交的错误报告的文本，尽量用英文。\n"
+"如果您按下“发送”按钮，邮件将被发送给该程序的维护者。\n"
+
+#: kbugreport.cpp:262
+#, kde-format
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>要提交错误报告，请单击下面的按钮。\n"
+"这样会打开一个显示 <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"网页的浏览器窗口，在那里您将找到一个可以填写的表格。上面显示的信息将被传送到"
+"服务器上。</qt>"
+
+#: kbugreport.cpp:267
+#, kde-format
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"%1\">%2</a>.</qt>"
+msgstr ""
+"<qt>要提交错误报告，请单击下面的按钮。\n"
+"这样会打开一个显示 <a href=\"%1\">%2</a> 网页的浏览器窗口。</qt>"
+
+#: kbugreport.cpp:283
+#, kde-format
+msgctxt "@action:button"
+msgid "&Launch Bug Report Wizard"
+msgstr "启动错误报告向导(&L)"
+
+#: kbugreport.cpp:285
+#, kde-format
+msgctxt "@action:button"
+msgid "&Submit Bug Report"
+msgstr "提交错误报告(&S)"
+
+#: kbugreport.cpp:379
+#, kde-format
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr "您必须指定主题和描述才能发出错误报告。"
+
+#: kbugreport.cpp:388
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>您选择了严重程度<b>紧急</b>。请注意这个严重程度只用于如下错误：</"
+"p><ul><li>使系统中不相关的软件(或整个系统)出问题</li><li>导致严重的数据丢失</"
+"li><li>在安装受影响的软件包的系统上引入安全漏洞</li></ul>\n"
+"<p>您报告的错误引起上面的危害了吗？如果没有，请选择较低的严重程度。谢谢！</p>"
+
+#: kbugreport.cpp:400
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>您选择了严重程度<b>严重</b>。请注意这个严重程度只用于如下错误：</"
+"p><ul><li>使相关的软件包无法使用或几乎无法使用</li><li>导致数据丢失</li><li>"
+"导致安全漏洞，允许对使用受影响的软件包的用户的账户进行非授权访问</li></ul>\n"
+"<p>您报告的错误引起上面的危害了吗？如果没有，请选择较低的严重程度。谢谢！</p>"
+
+#: kbugreport.cpp:414
+#, kde-format
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See https://bugs.kde.org/ for instructions."
+msgstr ""
+"无法发送错误报告。\n"
+"请手工发出错误报告，非常抱歉...\n"
+"请参考 https://bugs.kde.org/ 上的说明。"
+
+#: kbugreport.cpp:422
+#, kde-format
+msgid "Bug report sent, thank you for your input."
+msgstr "已发出错误报告，感谢您的帮助。"
+
+#: kbugreport.cpp:431
+#, kde-format
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"关闭并放弃\n"
+"已编辑的消息？"
+
+#: kbugreport.cpp:432
+#, kde-format
+msgctxt "@title:window"
+msgid "Close Message"
+msgstr "关闭消息"
+
+#: kcheckaccelerators.cpp:255
+#, kde-format
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Klash 博士的的加速键分析"
+
+#: kcheckaccelerators.cpp:262
+#, kde-format
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "禁用自动检查"
+
+#: kcheckaccelerators.cpp:306
+#, kde-format
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>快捷键已更改</h2>"
+
+#: kcheckaccelerators.cpp:308 kcheckaccelerators.cpp:319
+#, kde-format
+msgid "Old Text"
+msgstr "老文本"
+
+#: kcheckaccelerators.cpp:310 kcheckaccelerators.cpp:328
+#, kde-format
+msgid "New Text"
+msgstr "新文本"
+
+#: kcheckaccelerators.cpp:317
+#, kde-format
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>快捷键已删除</h2>"
+
+#: kcheckaccelerators.cpp:326
+#, kde-format
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>快捷键已添加(只是一个提示)</h2>"
+
+#: kedittoolbar.cpp:45
+#, kde-format
+msgid "--- separator ---"
+msgstr "--- 分隔符 ---"
+
+#: kedittoolbar.cpp:46
+#, kde-format
+msgid "--- expanding spacer ---"
+msgstr "--- 扩张空白占位符 ---"
+
+#: kedittoolbar.cpp:337
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Text"
+msgstr "更改文字"
+
+#: kedittoolbar.cpp:348
+#, kde-format
+msgid "Icon te&xt:"
+msgstr "图标文字(&X)："
+
+#: kedittoolbar.cpp:353
+#, kde-format
+msgctxt "@option:check"
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr "当工具栏项目同时具有文字和图标时隐藏文字(&H)"
+
+#: kedittoolbar.cpp:604
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Toolbars"
+msgstr "配置工具栏"
+
+#: kedittoolbar.cpp:667
+#, kde-format
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr "您真的想要将此应用程序的全部工具栏重置为其默认值吗？更改将会立即生效。"
+
+#: kedittoolbar.cpp:667
+#, kde-format
+msgid "Reset Toolbars"
+msgstr "重置工具栏"
+
+#: kedittoolbar.cpp:667
+#, kde-format
+msgid "Reset"
+msgstr "重置"
+
+#: kedittoolbar.cpp:998
+#, kde-format
+msgid "&Toolbar:"
+msgstr "工具栏(&T)："
+
+#. i18n("&New"), this);
+#. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+#. new_toolbar->setEnabled(false); // disabled until implemented
+#. QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+#. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+#. del_toolbar->setEnabled(false); // disabled until implemented
+#. our list of inactive actions
+#: kedittoolbar.cpp:1013
+#, kde-format
+msgid "A&vailable actions:"
+msgstr "可用的动作(&V)："
+
+#: kedittoolbar.cpp:1028 kedittoolbar.cpp:1047
+#, kde-format
+msgid "Filter"
+msgstr "过滤器"
+
+#: kedittoolbar.cpp:1031
+#, kde-format
+msgid "Curr&ent actions:"
+msgstr "当前动作(&E)："
+
+#: kedittoolbar.cpp:1050
+#, kde-format
+msgctxt "@action:button"
+msgid "Change &Icon..."
+msgstr "更改图标(&I)..."
+
+#: kedittoolbar.cpp:1058
+#, kde-format
+msgctxt "@action:button"
+msgid "Change Te&xt..."
+msgstr "更改文字(&X)..."
+
+#: kedittoolbar.cpp:1211
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1238
+#, kde-format
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr "这个组件将被一个嵌入部件的全部组件代替。"
+
+#: kedittoolbar.cpp:1240
+#, kde-format
+msgid "<Merge>"
+msgstr "<合并>"
+
+#: kedittoolbar.cpp:1242
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<合并 %1>"
+
+#: kedittoolbar.cpp:1248
+#, kde-format
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr "这是动作的动态列表。您可以移动它，但如果您删除它，您将无法重新添加它。"
+
+#: kedittoolbar.cpp:1249
+#, kde-format
+msgid "ActionList: %1"
+msgstr "动作列表：%1"
+
+#: kedittoolbar.cpp:1351 kedittoolbar.cpp:1378
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1605
+#, kde-format
+msgid "Change Icon"
+msgstr "更改图标"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:149 ui_standards.rc:178
+#, kde-format
+msgid "&Help"
+msgstr "帮助(&H)"
+
+#: khelpmenu.cpp:257
+#, kde-format
+msgid "About %1"
+msgstr "关于 %1"
+
+#: kkeysequencewidget.cpp:117
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "程序 %2 中的快捷键“%1”，注册到动作 %3\n"
+
+#: kkeysequencewidget.cpp:127
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] "快捷键“%2”和下面的组合键存在冲突：\n"
+
+#: kkeysequencewidget.cpp:133
+#, kde-format
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "和已注册的全局快捷键冲突"
+
+#: kkeysequencewidget.cpp:135 kkeysequencewidget.cpp:223
+#: kkeysequencewidget.cpp:614
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr "重新分配"
+
+#: kkeysequencewidget.cpp:204
+#, kde-format
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "快捷键冲突"
+
+#: kkeysequencewidget.cpp:208
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "动作 %2 的快捷键“%1”\n"
+
+#: kkeysequencewidget.cpp:213
+#, kde-format
+msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"快捷键“%2”目前的含义不明。\n"
+"您是否想要为其分配一个空快捷键？\n"
+"%3"
+
+#: kkeysequencewidget.cpp:232
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut conflict"
+msgstr "快捷键冲突"
+
+#: kkeysequencewidget.cpp:233
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>“%1”按键组合已经被 <b>%2</b> 动作使用。<br>请另外选择一个按键组合。</qt>"
+
+#: kkeysequencewidget.cpp:263
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"单击此按钮，然后输入您要为此程序设定的快捷方式。\n"
+"比如 Ctrl+A 就是按住 Ctrl 键再按下 A。"
+
+#: kkeysequencewidget.cpp:455
+#, kde-format
+msgid "Reserved Shortcut"
+msgstr "保留快捷方式"
+
+#: kkeysequencewidget.cpp:456
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"F12 在 Windows 系统中是一个保留键，无法被用于全局快捷键。\n"
+"请另选一个。"
+
+#: kkeysequencewidget.cpp:608
+#, kde-format
+msgctxt "@title:window"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "和标准程序快捷键冲突"
+
+#: kkeysequencewidget.cpp:609
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"组合键“%1”已被其它一些程序使用的标准动作“%2”占用。\n"
+"您真的想要将它也作为全局快捷键使用吗？"
+
+#: kkeysequencewidget.cpp:657
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "输入"
+
+#: kkeysequencewidget.cpp:664 kshortcuteditwidget.cpp:52
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "无"
+
+#: kkeysequencewidget.cpp:709
+#, kde-format
+msgid "The key you just pressed is not supported by Qt."
+msgstr "Qt 尚不支持您刚才按下的键。"
+
+#: kkeysequencewidget.cpp:710
+#, kde-format
+msgctxt "@title:window"
+msgid "Unsupported Key"
+msgstr "不支持的键"
+
+#: klicensedialog_p.cpp:34
+#, kde-format
+msgctxt "@title:window"
+msgid "License Agreement"
+msgstr "许可协议"
+
+#: kmainwindow.cpp:254
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国, Feng Chao"
+
+#: kmainwindow.cpp:255
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org, chaofeng111@gmail.com"
+
+#: kmenumenuhandler_p.cpp:37
+#, kde-format
+msgid "Add to Toolbar"
+msgstr "添加到工具栏"
+
+#: kmenumenuhandler_p.cpp:223
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Configure Shortcut..."
+msgstr "配置快捷键..."
+
+#: ksendbugmail/main.cpp:32
+#, kde-format
+msgid "Error connecting to server."
+msgstr "连接到服务器时发生错误。"
+
+#: ksendbugmail/main.cpp:35
+#, kde-format
+msgid "Not connected."
+msgstr "没有连接。"
+
+#: ksendbugmail/main.cpp:38
+#, kde-format
+msgid "Connection timed out."
+msgstr "连接超时。"
+
+#: ksendbugmail/main.cpp:41
+#, kde-format
+msgid "Time out waiting for server interaction."
+msgstr "在等待服务器响应时超时。"
+
+#: ksendbugmail/main.cpp:45
+#, kde-format
+msgid "Server said: \"%1\""
+msgstr "服务器消息：“%1”"
+
+#: ksendbugmail/main.cpp:76
+#, kde-format
+msgid "Sends a bug report by email."
+msgstr "通过邮件发送错误报告。"
+
+#: ksendbugmail/main.cpp:78
+#, kde-format
+msgid "The subject line of the email."
+msgstr "电子邮件的主题。"
+
+#: ksendbugmail/main.cpp:79
+#, kde-format
+msgid "The email address to send the bug report to."
+msgstr "错误报告要发送到的电子邮件地址。"
+
+#: kshortcuteditwidget.cpp:56
+#, kde-format
+msgctxt "@option:radio"
+msgid "Default:"
+msgstr "默认："
+
+#: kshortcuteditwidget.cpp:63
+#, kde-format
+msgctxt "@option:radio"
+msgid "Custom:"
+msgstr "自定义："
+
+#: kshortcutschemeseditor.cpp:32
+#, kde-format
+msgctxt "@title:group"
+msgid "Shortcut Schemes"
+msgstr "快捷键方案"
+
+#: kshortcutschemeseditor.cpp:54
+#, kde-format
+msgid "Current scheme:"
+msgstr "当前方案："
+
+#: kshortcutschemeseditor.cpp:70
+#, kde-format
+msgctxt "@action:button"
+msgid "New..."
+msgstr "新建…"
+
+#: kshortcutschemeseditor.cpp:73
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "删除"
+
+#: kshortcutschemeseditor.cpp:76
+#, kde-format
+msgctxt "@action:button"
+msgid "More Actions"
+msgstr "更多动作"
+
+#: kshortcutschemeseditor.cpp:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save shortcuts to scheme"
+msgstr "保存快捷键到方案"
+
+#: kshortcutschemeseditor.cpp:82
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Export Scheme..."
+msgstr "导出方案…"
+
+#: kshortcutschemeseditor.cpp:84
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Import Scheme..."
+msgstr "导入方案..."
+
+#: kshortcutschemeseditor.cpp:105
+#, kde-format
+msgctxt "@title:window"
+msgid "Name for New Scheme"
+msgstr "新方案名称"
+
+#: kshortcutschemeseditor.cpp:106
+#, kde-format
+msgid "Name for new scheme:"
+msgstr "新建方案名称："
+
+#: kshortcutschemeseditor.cpp:106
+#, kde-format
+msgid "New Scheme"
+msgstr "新建方案"
+
+#: kshortcutschemeseditor.cpp:112
+#, kde-format
+msgid "A scheme with this name already exists."
+msgstr "已经有同名方案存在。"
+
+#: kshortcutschemeseditor.cpp:142
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"您真的要删除快捷键方案 %1 吗？\n"
+"请注意此操作不会删除任何系统全局的快捷键方案。"
+
+#: kshortcutschemeseditor.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Export Shortcuts"
+msgstr "导出快捷键"
+
+#: kshortcutschemeseditor.cpp:174 kshortcutschemeseditor.cpp:186
+#, kde-format
+msgid "Shortcuts (*.shortcuts)"
+msgstr "快捷键 (*.shortcuts)"
+
+#: kshortcutschemeseditor.cpp:185
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Shortcuts"
+msgstr "导入快捷键"
+
+#: kshortcutschemeseditor.cpp:197
+#, kde-format
+msgid "Shortcut scheme successfully saved."
+msgstr "快捷键方案成功保存。"
+
+#: kshortcutschemeseditor.cpp:200
+#, kde-format
+msgid "Error saving the shortcut scheme."
+msgstr "保存快捷键方案失败。"
+
+#: kshortcutsdialog.cpp:70
+#, kde-format
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr "当前快捷键方案已经修改，要在切换到新方案前先保存它吗？"
+
+#: kshortcutsdialog.cpp:120
+#, kde-format
+msgid "Manage &Schemes"
+msgstr "管理方案(&S)"
+
+#: kshortcutsdialog.cpp:139
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard Shortcuts"
+msgstr "配置键盘快捷键"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr "交互式搜索快捷键名称(如复制)或者按键组合(如 Ctrl+C)，只需在此输入。"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"在此您可以看到键关联的列表，也就是左边显示的动作(例如“复制”)和右边显示的键或"
+"组合键(例如 Ctrl+V)之间的关联。"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "动作"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "快捷键"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "备选"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "全局"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "全局备选"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "鼠标按键手势"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "鼠标形状手势"
+
+#: kshortcutseditor.cpp:555
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "%1 的快捷键"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:573 kshortcutwidget.ui:22
+#, kde-format
+msgid "Main:"
+msgstr "主选："
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:574 kshortcutwidget.ui:52
+#, kde-format
+msgid "Alternate:"
+msgstr "备选："
+
+#: kshortcutseditor.cpp:575
+#, kde-format
+msgid "Global:"
+msgstr "全局："
+
+#: kshortcutseditor.cpp:576
+#, kde-format
+msgid "Global alternate:"
+msgstr "全局备选："
+
+#: kshortcutseditor.cpp:592
+#, kde-format
+msgid "Action Name"
+msgstr "动作名称"
+
+#: kshortcutseditor.cpp:596
+#, kde-format
+msgid "Shortcuts"
+msgstr "快捷键"
+
+#: kshortcutseditor.cpp:600
+#, kde-format
+msgid "Description"
+msgstr "描述"
+
+#: kshortcutseditoritem.cpp:35
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:146
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Language"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:151
+#, kde-format
+msgid "Please choose the language which should be used for this application:"
+msgstr "请选择这个应用程序所要使用的语言："
+
+#: kswitchlanguagedialog_p.cpp:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Fallback Language"
+msgstr "添加备用语言"
+
+#: kswitchlanguagedialog_p.cpp:179
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"请添加其它语言，如果当前的软件翻译中缺少合适的词条，将使用指定的其它语言显"
+"示。"
+
+#: kswitchlanguagedialog_p.cpp:275 kswitchlanguagedialog_p.cpp:297
+#, kde-format
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr "这个应用程序的语言已经被改变。当应用程序再次启动时这个改变才会生效。"
+
+#: kswitchlanguagedialog_p.cpp:276
+#, kde-format
+msgctxt "@title:window"
+msgid "Application Language Changed"
+msgstr "应用程序语言已更改"
+
+#: kswitchlanguagedialog_p.cpp:298
+#, kde-format
+msgid "Application Language Changed"
+msgstr "应用程序语言改变了"
+
+#: kswitchlanguagedialog_p.cpp:386
+#, kde-format
+msgid "Primary language:"
+msgstr "主要语言："
+
+#: kswitchlanguagedialog_p.cpp:386
+#, kde-format
+msgid "Fallback language:"
+msgstr "备用语言："
+
+#: kswitchlanguagedialog_p.cpp:402
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "移除"
+
+#: kswitchlanguagedialog_p.cpp:409
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr "这是应用程序的首选语言，它将会在其他任何语言之前被使用。"
+
+#: kswitchlanguagedialog_p.cpp:410
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr "如果之前的语言中没有包含合适的翻译，这个语言将会被使用。"
+
+#: ktoolbar.cpp:297
+#, kde-format
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "显示文本"
+
+#: ktoolbar.cpp:300
+#, kde-format
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "工具栏设置"
+
+#: ktoolbar.cpp:302
+#, kde-format
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "方向"
+
+#: ktoolbar.cpp:304
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "上方"
+
+#: ktoolbar.cpp:306
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "左方"
+
+#: ktoolbar.cpp:307
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "右方"
+
+#: ktoolbar.cpp:308
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "下方"
+
+#: ktoolbar.cpp:317
+#, kde-format
+msgid "Text Position"
+msgstr "文本位置"
+
+#: ktoolbar.cpp:319
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Icons Only"
+msgstr "仅图标"
+
+#: ktoolbar.cpp:320
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Text Only"
+msgstr "仅文本"
+
+#: ktoolbar.cpp:321
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Text Alongside Icons"
+msgstr "文本在图标旁"
+
+#: ktoolbar.cpp:322
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Text Under Icons"
+msgstr "文本在图标下"
+
+#: ktoolbar.cpp:331
+#, kde-format
+msgid "Icon Size"
+msgstr "图标大小"
+
+#: ktoolbar.cpp:333
+#, kde-format
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "默认"
+
+#: ktoolbar.cpp:350 ktoolbar.cpp:371
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "小 (%1x%2)"
+
+#: ktoolbar.cpp:352 ktoolbar.cpp:373
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "中 (%1x%2)"
+
+#: ktoolbar.cpp:354 ktoolbar.cpp:375
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "大 (%1x%2)"
+
+#: ktoolbar.cpp:356 ktoolbar.cpp:377
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "巨大 (%1x%2)"
+
+#: ktoolbar.cpp:400
+#, kde-format
+msgid "Lock Toolbar Positions"
+msgstr "锁定工具栏位置"
+
+#: ktoolbarhandler.cpp:92
+#, kde-format
+msgid "Toolbars Shown"
+msgstr "显示工具栏"
+
+#: kundoactions.cpp:29
+#, kde-format
+msgid "Redo"
+msgstr "重做"
+
+#: kundoactions.cpp:48
+#, kde-format
+msgid "Undo"
+msgstr "撤销"
+
+#: kxmlguibuilder.cpp:180 kxmlguibuilder.cpp:351
+#, kde-format
+msgid "No text"
+msgstr "没有文本"
+
+#: kxmlguiwindow.cpp:426
+#, kde-format
+msgid ""
+"There are two actions (%1, %2) that want to use the same shortcut (%3). This "
+"is most probably a bug. Please report it in <a href='https://bugs.kde."
+"org'>bugs.kde.org</a>"
+msgstr ""
+"有两个动作 (%1，%2) 想要使用相同的快捷键 (%3)。这可能是一个错误。请在 <a "
+"href='https://bugs.kde.org'>bugs.kde.org</a> 报告错误。"
+
+#: kxmlguiwindow.cpp:426
+#, kde-format
+msgid "Ambiguous Shortcuts"
+msgstr "含义不明的快捷键"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "文件(&F)"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "游戏(&G)"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "编辑(&E)"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "移动(&M)"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+#, kde-format
+msgid "&View"
+msgstr "视图(&V)"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:120
+#, kde-format
+msgid "&Go"
+msgstr "转到(&G)"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:141
+#, kde-format
+msgid "&Bookmarks"
+msgstr "书签(&B)"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:147
+#, kde-format
+msgid "&Tools"
+msgstr "工具(&T)"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:151
+#, kde-format
+msgid "&Settings"
+msgstr "设置(&S)"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:195
+#, kde-format
+msgid "Main Toolbar"
+msgstr "主工具栏"
