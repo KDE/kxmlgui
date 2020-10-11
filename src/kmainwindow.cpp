@@ -452,6 +452,8 @@ bool KMainWindow::canBeRestored(int number)
     }
 
     KConfigGroup group(config, "Number");
+    // TODO KF6: we should use 0 as the default value, not 1
+    // See also https://bugs.kde.org/show_bug.cgi?id=427552
     const int n = group.readEntry("NumberOfWindows", 1);
     return number >= 1 && number <= n;
 }
