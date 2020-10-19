@@ -24,11 +24,15 @@
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kkeyserver.h>
+#include <KWindowSystem>
 #if HAVE_GLOBALACCEL
 # include <kglobalaccel.h>
 #endif
 
 #include "kactioncollection.h"
+#include "waylandshortcutinhibitor.h"
+
+#include <memory>
 
 class KKeySequenceWidgetPrivate
 {
@@ -155,6 +159,7 @@ public:
     bool isRecording;
     bool multiKeyShortcutsAllowed;
     QString componentName;
+    std::unique_ptr<WaylandShortcutInhibitor> shortcutInhibitor;
 
     //! Check the key sequence against KStandardShortcut::find()
     KKeySequenceWidget::ShortcutTypes checkAgainstShortcutTypes;
@@ -192,7 +197,9 @@ KKeySequenceWidgetPrivate::KKeySequenceWidgetPrivate(KKeySequenceWidget *q)
     , componentName()
     , checkAgainstShortcutTypes(KKeySequenceWidget::LocalShortcuts | KKeySequenceWidget::GlobalShortcuts)
     , stealActions()
-{}
+    , shortcutInhibitor(nullptr)
+{
+}
 
 bool KKeySequenceWidgetPrivate::stealShortcuts(
     const QList<QAction *> &actions,
@@ -270,6 +277,10 @@ void KKeySequenceWidgetPrivate::init()
         clearButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-locationbar-rtl")));
     } else {
         clearButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-locationbar-ltr")));
+    }
+
+    if (KWindowSystem::isPlatformWayland()) {
+        shortcutInhibitor.reset(new WaylandShortcutInhibitor(q->window()->windowHandle()));
     }
 }
 
@@ -414,6 +425,9 @@ void KKeySequenceWidgetPrivate::startRecording()
     keySequence = QKeySequence();
     isRecording = true;
     keyButton->grabKeyboard();
+    if (shortcutInhibitor) {
+        shortcutInhibitor->enableInhibition();
+    }
 
     if (!QWidget::keyboardGrabber()) {
         qCWarning(DEBUG_KXMLGUI) << "Failed to grab the keyboard! Most likely qt's nograb option is active";
@@ -430,6 +444,9 @@ void KKeySequenceWidgetPrivate::doneRecording(bool validate)
     keyButton->releaseKeyboard();
     keyButton->setDown(false);
     stealActions.clear();
+    if (shortcutInhibitor) {
+        shortcutInhibitor->disableInhibition();
+    }
 
     if (keySequence == oldKeySequence) {
         // The sequence hasn't changed

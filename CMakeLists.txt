@@ -41,7 +41,9 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.12.0)
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport WaylandClient)
+find_package(QtWaylandScanner REQUIRED)
+find_package(Wayland 1.9 REQUIRED Client)
 if (NOT ANDROID)
   find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
 endif()

@@ -56,6 +56,7 @@ set(kxmlgui_SRCS
   kxmlguiwindow.cpp
   kundoactions.cpp
   kcheckaccelerators.cpp
+  waylandshortcutinhibitor.cpp
 )
 if (TARGET Qt5::DBus)
   list(APPEND kxmlgui_SRCS kmainwindowiface.cpp)
@@ -80,6 +81,11 @@ set(kxmlgui_UI
 
 ki18n_wrap_ui(kxmlgui_SRCS ${kxmlgui_UI} )
 
+ecm_add_qtwayland_client_protocol(kxmlgui_SRCS
+    PROTOCOL keyboard-shortcuts-inhibit-unstable-v1.xml
+    BASENAME keyboard-shortcuts-inhibit-unstable-v1
+)
+
 add_library(KF5XmlGui ${kxmlgui_SRCS})
 ecm_generate_export_header(KF5XmlGui
     BASE_NAME KXmlGui
@@ -94,6 +100,8 @@ add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
 target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui>")
 
+target_include_directories(KF5XmlGui PRIVATE ${Qt5Gui_PRIVATE_INCLUDE_DIRS}) # for native interface to get wl_seat and surface
+
 target_link_libraries(KF5XmlGui
 PUBLIC
     Qt5::Xml            #To parse the configuration (QDomDocument etc)
@@ -104,12 +112,14 @@ PRIVATE
     Qt5::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt5::PrintSupport   #QPrinter in kshortcutseditor
     Qt5::CorePrivate    #QSystemLocale in initializeLanguages
+    Qt5::WaylandClient
     KF5::CoreAddons     #KAboutData
     KF5::WidgetsAddons
     KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF5::I18n                #i18n and i18nc in many places
     KF5::IconThemes         #KIconLoader and KIconThemes in KToolBar
     KF5::WindowSystem       #KKeyServer in kkeysequencewidget
+    Wayland::Client
     ${XMLGUI_EXTRA_LIBS}
 )
 if (TARGET Qt5::DBus)
