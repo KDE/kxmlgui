@@ -105,6 +105,7 @@ PRIVATE
     Qt5::PrintSupport   #QPrinter in kshortcutseditor
     Qt5::CorePrivate    #QSystemLocale in initializeLanguages
     KF5::CoreAddons     #KAboutData
+    KF5::GuiAddons
     KF5::WidgetsAddons
     KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF5::I18n                #i18n and i18nc in many places
