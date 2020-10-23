@@ -14,7 +14,6 @@
 
 #include <kmainwindow.h>
 #include <kxmlguifactory.h>
-#include <kxmlguiclient.h>
 #include <kxmlguibuilder.h>
 #include <kactioncollection.h>
 

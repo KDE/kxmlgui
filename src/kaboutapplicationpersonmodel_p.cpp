@@ -11,7 +11,6 @@
 #include <attica/person.h>
 #endif //HAVE_ATTICA
 
-#include <kaboutdata.h>
 #include <klocalizedstring.h>
 
 #include <QNetworkAccessManager>

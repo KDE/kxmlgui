@@ -6,7 +6,6 @@
 */
 
 #include "krichtexteditor.h"
-#include <krichtextwidget.h>
 
 #include <kactioncollection.h>
 #include <kstandardaction.h>

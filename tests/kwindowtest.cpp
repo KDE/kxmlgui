@@ -9,7 +9,6 @@
 
 #include <QAction>
 #include <QApplication>
-#include <QStatusBar>
 #include <QComboBox>
 #include <khelpmenu.h>
 #include <QLineEdit>

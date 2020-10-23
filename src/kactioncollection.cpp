@@ -34,7 +34,6 @@
 #include <QGuiApplication>
 #include <QMap>
 #include <QList>
-#include <QAction>
 #include <QMetaMethod>
 
 #include <stdio.h>
