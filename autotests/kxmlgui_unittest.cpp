@@ -182,8 +182,8 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionNothingKept()
 
     QMap<QString, int> fileToVersionMap; // makes QCOMPARE failures more readable than just temp filenames
 
-    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
-    QFile fileV2(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + QStringLiteral("testui.rc"));
+    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+    QFile fileV2(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("testui.rc"));
     QVERIFY2(fileV2.open(QIODevice::WriteOnly), qPrintable(fileV2.fileName()));
     createXmlFile(fileV2, 2, NoFlags);
     fileToVersionMap.insert(fileV2.fileName(), 2);
@@ -227,7 +227,7 @@ void KXmlGui_UnitTest::testVersionHandlerNewVersionUserChanges()
     QMap<QString, int> fileToVersionMap; // makes QCOMPARE failures more readable than just temp filenames
 
     // local file
-    QFile fileV2(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + QStringLiteral("testui.rc"));
+    QFile fileV2(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("testui.rc"));
     QVERIFY(fileV2.open(QIODevice::WriteOnly));
     createXmlFile(fileV2, 2, AddActionProperties | AddModifiedToolBars);
     fileToVersionMap.insert(fileV2.fileName(), 2);
@@ -932,7 +932,7 @@ void KXmlGui_UnitTest::testXMLFileReplacement()
     fileReplace.close();
 
     // finally, our local xml file has <ActionProperties/>
-    QFile fileLocal(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + QStringLiteral("testui.rc"));
+    QFile fileLocal(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("testui.rc"));
     QVERIFY2(fileLocal.open(QIODevice::WriteOnly), qPrintable(fileLocal.fileName()));
     createXmlFile(fileLocal, 1, AddActionProperties);
     const QString filenameLocal = fileLocal.fileName();
