@@ -70,7 +70,9 @@ public:
 
     bool promptStealLocalShortcut(const QList<QAction *> &actions, const QKeySequence &seq);
     bool promptstealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq);
+#if HAVE_GLOBALACCEL
     bool promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo> > &shortcuts, const QKeySequence &sequence);
+#endif
     void wontStealShortcut(QAction *item, const QKeySequence &seq);
 
     bool checkAgainstStandardShortcuts() const
@@ -263,9 +265,9 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     return true;
 }
 
+#if HAVE_GLOBALACCEL
 bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo> > &clashing, const QKeySequence &sequence)
 {
-#ifdef HAVE_GLOBALACCEL
     QString clashingKeys;
     for (auto it = clashing.begin(); it != clashing.end(); ++it) {
         const auto seqAsString = it.key().toString();
@@ -286,10 +288,8 @@ bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const QHash<QKeySequen
                             "Conflict with Registered Global Shortcut", "Conflict with Registered Global Shortcuts", hashSize);
 
     return KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) == KMessageBox::Continue;
-#else
-    return true;
-#endif
 }
+#endif
 
 
 bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &keySequence)
