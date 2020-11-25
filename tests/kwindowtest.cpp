@@ -46,7 +46,6 @@ TestWindow::TestWindow(QWidget *parent)
     KActionMenu *fileFloppyAction = new KActionMenu(QIcon::fromTheme(QStringLiteral("filefloppy")),
             QStringLiteral("Save (beep or delayed popup)"), this);
     actionCollection()->addAction(QStringLiteral("filefloppy"), fileFloppyAction);
-    fileFloppyAction->setDelayed(true);
     connect(fileFloppyAction, SIGNAL(triggered(bool)), SLOT(slotSave()));
 
     QAction *filePrintAction = new QAction(QIcon::fromTheme(QStringLiteral("document-print")),
