@@ -53,6 +53,7 @@ public:
         NoOptions       = 0x0, ///< No options, show the standard about dialog
         HideTranslators = 0x1, ///< Don't show the translators tab
         HideLibraries   = 0x2, ///< Don't show the libraries tab @since 5.77
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 77)
         HideKdeVersion  = HideLibraries  /**<
                                           * Before 5.13: Don't show the KDE Frameworks version next to the application name and version
                                           *
@@ -64,6 +65,7 @@ public:
                                           *
                                           * @deprecated Since 5.77, use @c HideLibraries instead.
                                           */
+#endif
     };
     /**
      * Stores a combination of #Option values.
