@@ -238,11 +238,9 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     // internal status of QIconLoader (see QTBUG-74252).
     // See also discussion at https://phabricator.kde.org/D22488
     // TODO: remove this once we depend on Qt 5.15.1, where this is fixed
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     if (QIcon::fallbackThemeName().isEmpty()) {
         QIcon::setFallbackThemeName(QStringLiteral("breeze"));
     }
-#endif
 
     // If application is translated, load translator information for use in
     // KAboutApplicationDialog or other getters. The context and messages below
