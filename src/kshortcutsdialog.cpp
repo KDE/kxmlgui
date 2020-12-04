@@ -139,8 +139,7 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     setWindowTitle(i18nc("@title:window", "Configure Keyboard Shortcuts"));
     setModal(true);
 
-    QVBoxLayout *layout = new QVBoxLayout;
-    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
     d->m_keyChooser = new KShortcutsEditor(this, types, allowLetterShortcuts);
     layout->addWidget(d->m_keyChooser);

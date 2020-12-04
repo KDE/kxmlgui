@@ -97,7 +97,7 @@ QT_WARNING_POP
     // Library versions
     if (!(opt & HideLibraries)) {
         QWidget *versionWidget = new QWidget(q);
-        QVBoxLayout *versionLayout = new QVBoxLayout;
+        QVBoxLayout *versionLayout = new QVBoxLayout(versionWidget);
         QLabel *versionLabel = new QLabel(
             i18n("<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
                  QStringLiteral(KXMLGUI_VERSION_STRING),
@@ -107,7 +107,6 @@ QT_WARNING_POP
         versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
         versionLayout->addWidget(versionLabel);
         versionLayout->addStretch();
-        versionWidget->setLayout(versionLayout);
         tabWidget->addTab(versionWidget, i18nc("@title:tab", "Libraries"));
     }
 

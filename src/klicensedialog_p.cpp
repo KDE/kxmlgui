@@ -28,8 +28,7 @@ KLicenseDialog::KLicenseDialog(const KAboutLicense &license, QWidget *parent)
     : QDialog(parent)
 {
     setAttribute(Qt::WA_DeleteOnClose);
-    QVBoxLayout *layout = new QVBoxLayout;
-    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
     setWindowTitle(i18nc("@title:window", "License Agreement"));
 

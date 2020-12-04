@@ -113,17 +113,17 @@ void KMenuMenuHandler::slotSetShortcut()
     }
 
     QDialog dialog(m_builder->widget());
-    dialog.setLayout(new QVBoxLayout);
+    auto *layout = new QVBoxLayout(&dialog);
 
     KShortcutWidget swidget(&dialog);
     swidget.setShortcut(m_popupAction->shortcuts());
-    dialog.layout()->addWidget(&swidget);
+    layout->addWidget(&swidget);
 
     QDialogButtonBox box(&dialog);
     box.setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     connect(&box, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
     connect(&box, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
-    dialog.layout()->addWidget(&box);
+    layout->addWidget(&box);
 
     KActionCollection *parentCollection = nullptr;
     if (dynamic_cast<KXMLGUIClient *>(m_builder)) {
