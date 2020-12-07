@@ -638,6 +638,9 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
 
     // Write back to XML file
     KXMLGUIFactory::saveConfigFile(doc, kxmlguiClient->localXMLFile(), q->componentName());
+    // and since we just changed the xml file clear the dom we have in memory
+    // it'll be rebuilt if needed
+    const_cast<KXMLGUIClient*>(kxmlguiClient)->setXMLGUIBuildDocument({});
     return true;
 }
 

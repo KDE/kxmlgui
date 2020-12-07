@@ -27,6 +27,10 @@ public:
     {
         setXMLFile(file, merge, setXMLDoc);
     }
+    void setLocalXMLFilePublic(const QString &file)
+    {
+        setLocalXMLFile(file);
+    }
     void createGUI(const QByteArray &xml, bool withUiStandards = false)
     {
         if (withUiStandards) {

@@ -1101,3 +1101,41 @@ void KXmlGui_UnitTest::testSingleModifierQKeySequenceEndsWithPlus()
     QVERIFY(QKeySequence(Qt::ShiftModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
     QVERIFY(QKeySequence(Qt::KeypadModifier).toString(QKeySequence::NativeText).endsWith(QLatin1Char('+')));
 }
+
+void KXmlGui_UnitTest::testSaveShortcutsAndRefresh()
+{
+    QTemporaryFile xmlFile;
+    QVERIFY(xmlFile.open());
+    createXmlFile(xmlFile, 2, AddModifiedMenus);
+    const QString filename = xmlFile.fileName();
+    xmlFile.close();
+
+    QTemporaryFile localXmlFile;
+    QVERIFY(localXmlFile.open());
+    const QString localFilename = localXmlFile.fileName();
+    localXmlFile.close();
+
+    TestGuiClient client;
+    client.createActions( { QStringLiteral("file_open") } );
+    client.setLocalXMLFilePublic(localFilename);
+    client.setXMLFilePublic(filename);
+
+    QWidget w;
+    KXMLGUIBuilder builder(&w);
+    KXMLGUIFactory factory(&builder);
+    factory.addClient(&client);
+    factory.removeClient(&client);
+    factory.addClient(&client);
+
+    QAction *a = client.actionCollection()->action(QStringLiteral("file_open"));
+    QCOMPARE(a->shortcut(), QKeySequence());
+    a->setShortcut(Qt::Key_F22);
+    QCOMPARE(a->shortcut(), QKeySequence(Qt::Key_F22));
+
+    client.actionCollection()->writeSettings();
+
+    factory.refreshActionProperties();
+
+    a = client.actionCollection()->action(QStringLiteral("file_open"));
+    QCOMPARE(a->shortcut(), QKeySequence(Qt::Key_F22));
+}
