@@ -110,7 +110,6 @@ PRIVATE
     KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF5::I18n                #i18n and i18nc in many places
     KF5::IconThemes         #KIconLoader and KIconThemes in KToolBar
-    KF5::WindowSystem       #KKeyServer in kkeysequencewidget
     ${XMLGUI_EXTRA_LIBS}
 )
 if (TARGET Qt5::DBus)
