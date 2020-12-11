@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     part->actionCollection()->addAction(QStringLiteral("decFontSizes"), a);
     a = new QAction(QIcon::fromTheme(QStringLiteral("security-low")), QStringLiteral("sec"), part);
     part->actionCollection()->addAction(QStringLiteral("security"), a);
-    part->actionCollection()->setDefaultShortcuts(a, QList<QKeySequence>() << Qt::ALT + Qt::Key_1);
+    part->actionCollection()->setDefaultShortcuts(a, QList<QKeySequence>() << QKeySequence{Qt::ALT | Qt::Key_1});
     a->connect(a, SIGNAL(triggered(bool)), part, SLOT(slotSec()));
 
     part->setXMLFile(QFINDTESTDATA("kxmlguitest_part.rc"));

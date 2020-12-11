@@ -215,15 +215,15 @@ void tst_KActionCollection::testSetShortcuts()
 {
     QAction *action = new QAction(/*i18n*/(QStringLiteral("Next Unread &Folder")), this);
     collection->addAction(QStringLiteral("go_next_unread_folder"), action);
-    collection->setDefaultShortcut(action, QKeySequence(Qt::ALT + Qt::Key_Plus));
+    collection->setDefaultShortcut(action, QKeySequence(Qt::ALT | Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
-    shortcut << QKeySequence(Qt::CTRL + Qt::Key_Plus);
+    shortcut << QKeySequence(Qt::CTRL | Qt::Key_Plus);
     action->setShortcuts(shortcut);
     QCOMPARE(QKeySequence::listToString(action->shortcuts()), QStringLiteral("Alt++; Ctrl++"));
 
     // Simpler way:
     QList<QKeySequence> shortcut2;
-    shortcut2 << QKeySequence(Qt::ALT + Qt::Key_Plus) << QKeySequence(Qt::CTRL + Qt::Key_Plus);
+    shortcut2 << QKeySequence(Qt::ALT | Qt::Key_Plus) << QKeySequence(Qt::CTRL | Qt::Key_Plus);
     QCOMPARE(QKeySequence::listToString(shortcut2), QStringLiteral("Alt++; Ctrl++"));
 }
 
