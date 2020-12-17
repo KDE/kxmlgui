@@ -493,6 +493,7 @@ void KKeySequenceWidget::setCheckActionCollections(const QList<KActionCollection
 //slot
 void KKeySequenceWidget::captureKeySequence()
 {
+    d->recorder->setWindow(window()->windowHandle());
     d->recorder->startRecording();
 }
 
