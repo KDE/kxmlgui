@@ -87,13 +87,8 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 
     l->addStretch(1);
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-    connect(m_schemesList, QOverload<const QString &>::of(&QComboBox::activated),
-            this, &KShortcutSchemesEditor::shortcutsSchemeChanged);
-#else
     connect(m_schemesList, &QComboBox::textActivated,
             this, &KShortcutSchemesEditor::shortcutsSchemeChanged);
-#endif
     connect(m_newScheme, &QPushButton::clicked, this, &KShortcutSchemesEditor::newScheme);
     connect(m_deleteScheme, &QPushButton::clicked, this, &KShortcutSchemesEditor::deleteScheme);
     updateDeleteButton();
