@@ -312,7 +312,6 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
     // Global shortcuts are on key+modifier shortcuts. They can clash with
     // each of the keys of a multi key shortcut.
     QHash<QKeySequence, QList<KGlobalShortcutInfo>> clashing;
-    QString clashingKeys;
     for (int i = 0; i < keySequence.count(); ++i) {
         QKeySequence keys(keySequence[i]);
         if (!KGlobalAccel::isGlobalShortcutAvailable(keySequence, componentName)) {
