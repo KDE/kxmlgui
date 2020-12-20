@@ -182,6 +182,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
     }
 
     QList<DocStruct> allDocuments;
+    allDocuments.reserve(files.size());
 
     for (const QString &file : files) {
         DocStruct d;

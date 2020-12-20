@@ -259,7 +259,7 @@ void KSwitchLanguageDialog::languageOnButtonChanged(const QString &languageCode)
 void KSwitchLanguageDialog::slotOk()
 {
     QStringList languages;
-
+    languages.reserve(d->languageButtons.size());
     for (auto *languageButton : qAsConst(d->languageButtons)) {
         languages << languageButton->current();
     }

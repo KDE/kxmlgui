@@ -87,6 +87,7 @@ void KMenuMenuHandler::buildToolbarAction()
     }
     QStringList toolbarlist;
     const auto toolbars = window->toolBars();
+    toolbarlist.reserve(toolbars.size());
     for (KToolBar *b : toolbars) {
         toolbarlist << (b->windowTitle().isEmpty() ? b->objectName() : b->windowTitle());
     }
@@ -131,6 +132,7 @@ void KMenuMenuHandler::slotSetShortcut()
         KXMLGUIFactory *factory = dynamic_cast<KXMLGUIClient *>(m_builder)->factory();
         parentCollection = findParentCollection(factory, m_popupAction);
         const auto clients = factory->clients();
+        checkCollections.reserve(clients.size());
         for (KXMLGUIClient *client : clients) {
             checkCollections += client->actionCollection();
         }

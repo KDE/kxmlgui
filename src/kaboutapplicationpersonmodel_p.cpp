@@ -31,6 +31,7 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList< KAboutPe
         m_providerUrl = QStringLiteral("https://api.kde-look.org/ocs/v1/");
     }
 
+    m_profileList.reserve(m_personList.size());
     bool hasOcsUsernames = false;
     for (const auto &person : qAsConst(m_personList)) {
         if (!person.ocsUsername().isEmpty()) {
