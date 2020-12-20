@@ -463,7 +463,7 @@ void KActionCollection::importGlobalShortcuts(KConfigGroup *config)
             continue;
         }
 
-        QString actionName = it.key();
+        const QString &actionName = it.key();
 
         if (isShortcutsConfigurable(action)) {
             QString entry = config->readEntry(actionName, QString());
@@ -499,7 +499,7 @@ void KActionCollection::readSettings(KConfigGroup *config)
         }
 
         if (isShortcutsConfigurable(action)) {
-            QString actionName = it.key();
+            const QString &actionName = it.key();
             QString entry = config->readEntry(actionName, QString());
             if (!entry.isEmpty()) {
                 action->setShortcuts(QKeySequence::listFromString(entry));
@@ -527,7 +527,7 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
         if (!action) {
             continue;
         }
-        QString actionName = it.key();
+        const QString &actionName = it.key();
 
         // If the action name starts with unnamed- spit out a warning. That name
         // will change at will and will break loading writing
@@ -599,7 +599,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
             continue;
         }
 
-        QString actionName = it.key();
+        const QString &actionName = it.key();
 
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
@@ -670,7 +670,7 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
             continue;
         }
 
-        QString actionName = it.key();
+        const QString &actionName = it.key();
 
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing

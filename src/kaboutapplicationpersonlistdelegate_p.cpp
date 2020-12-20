@@ -144,7 +144,7 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
     socialLinks->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
     int currentSocialLinkAction = 0;
-    const auto links = profile.ocsLinks();
+    const auto &links = profile.ocsLinks();
     for (const KAboutApplicationPersonProfileOcsLink &link : links) {
         if (!profile.homepage().isEmpty() && profile.homepage() == link.url()) {
             continue;    //We skip it if it's the same as the homepage from KAboutData
@@ -218,7 +218,7 @@ void KAboutApplicationPersonListDelegate::paint(QPainter *painter,
         KAboutApplicationPersonProfile profile = index.data().value< KAboutApplicationPersonProfile >();
 
         if (!profile.avatar().isNull()) {
-            QPixmap pixmap = profile.avatar();
+            const QPixmap& pixmap = profile.avatar();
 
             point.setX((AVATAR_WIDTH - pixmap.width()) / 2 + 5);
             point.setY(option.rect.top() + ((height - pixmap.height()) / 2));
