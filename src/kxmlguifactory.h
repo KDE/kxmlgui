@@ -205,6 +205,15 @@ Q_SIGNALS:
      */
     void makingChanges(bool);
 
+    /**
+     * Emitted when the shortcuts have been saved (i.e. configureShortcuts with bSaveSettings=true was called and the user accepted the dialog)
+     * If you're using multiple instances of the same KXMLGUIClient, you probably want to connect to this signal and reloadXML
+     * on all your KXMLGUIClients so that the other instances update their shortcuts
+     *
+     * @since 5.79
+     */
+    void shortcutsSaved();
+
 private:
     /// Internal, called by KXMLGUIClient destructor
     void forgetClient(KXMLGUIClient *client);

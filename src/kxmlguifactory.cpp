@@ -720,6 +720,7 @@ int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
             dlg.addCollection(client->actionCollection());
         }
     }
+    connect(&dlg, &KShortcutsDialog::saved, this, &KXMLGUIFactory::shortcutsSaved);
     return dlg.configure(bSaveSettings);
 }
 
