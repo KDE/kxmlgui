@@ -93,7 +93,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
                        "If you need more information or documentation, then a visit to "
                        "<a href=\"%2\">%2</a> "
                        "will provide you with what you need.</html>",
-                       QStringLiteral("https://www.kde.org/community/getinvolved/"),
+                       QStringLiteral("https://community.kde.org/Get_Involved"),
                        QStringLiteral("https://techbase.kde.org/")));
 
     QLabel *support = new QLabel;
