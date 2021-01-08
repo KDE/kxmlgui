@@ -197,13 +197,17 @@ Q_GLOBAL_STATIC(QList<KMainWindow *>, sMemberList)
 KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags f)
     : QMainWindow(parent, f), k_ptr(new KMainWindowPrivate)
 {
-    k_ptr->init(this);
+    Q_D(KMainWindow);
+
+    d->init(this);
 }
 
 KMainWindow::KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlags f)
     : QMainWindow(parent, f), k_ptr(&dd)
 {
-    k_ptr->init(this);
+    Q_D(KMainWindow);
+
+    d->init(this);
 }
 
 void KMainWindowPrivate::init(KMainWindow *_q)
@@ -407,13 +411,12 @@ KMainWindow::~KMainWindow()
 {
     sMemberList()->removeAll(this);
     delete static_cast<QObject *>(k_ptr->dockResizeListener);  //so we don't get anymore events after k_ptr is destroyed
-    delete k_ptr;
 }
 
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
 QMenu *KMainWindow::helpMenu(const QString &aboutAppText, bool showWhatsThis)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     if (!d->helpMenu) {
         if (aboutAppText.isEmpty()) {
             d->helpMenu = new KHelpMenu(this, KAboutData::applicationData(), showWhatsThis);
@@ -431,7 +434,7 @@ QMenu *KMainWindow::helpMenu(const QString &aboutAppText, bool showWhatsThis)
 
 QMenu *KMainWindow::customHelpMenu(bool showWhatsThis)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     if (!d->helpMenu) {
         d->helpMenu = new KHelpMenu(this, QString(), showWhatsThis);
         connect(d->helpMenu, &KHelpMenu::showAboutApplication,
@@ -508,7 +511,7 @@ void KMainWindow::setPlainCaption(const QString &caption)
 
 void KMainWindow::appHelpActivated()
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     if (!d->helpMenu) {
         d->helpMenu = new KHelpMenu(this);
         if (!d->helpMenu) {
@@ -520,7 +523,7 @@ void KMainWindow::appHelpActivated()
 
 void KMainWindow::closeEvent(QCloseEvent *e)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     if (d->suppressCloseEvent) {
         e->accept();
         return;
@@ -571,7 +574,7 @@ void KMainWindow::readGlobalProperties(KConfig *)
 
 void KMainWindow::savePropertiesInternal(KConfig *config, int number)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     const bool oldASWS = d->autoSaveWindowSize;
     d->autoSaveWindowSize = true; // make saveMainWindowSettings save the window size
 
@@ -592,7 +595,7 @@ void KMainWindow::savePropertiesInternal(KConfig *config, int number)
 
 void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     //qDebug(200) << "KMainWindow::saveMainWindowSettings " << cg.name();
 
     // Called by session management - or if we want to save the window size anyway
@@ -649,7 +652,7 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
 
 bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
 
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
@@ -680,7 +683,7 @@ bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
 
 void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     //qDebug(200) << "KMainWindow::applyMainWindowSettings " << cg.name();
 
     QWidget *focusedWidget = QApplication::focusWidget();
@@ -775,13 +778,13 @@ void KMainWindow::saveWindowSize(KConfigGroup &cg) const
 
 void KMainWindow::setSettingsDirty()
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     d->setSettingsDirty();
 }
 
 bool KMainWindow::settingsDirty() const
 {
-    K_D(const KMainWindow);
+    Q_D(const KMainWindow);
     return d->settingsDirty;
 }
 
@@ -797,7 +800,7 @@ void KMainWindow::setAutoSaveSettings(const KConfigGroup &group,
     // size, you probably also want to save the window position too
     // This avoids having to re-implement a new version of
     // KMainWindow::setAutoSaveSettings that handles these cases independently
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     d->autoSaveSettings = true;
     d->autoSaveGroup = group;
     d->autoSaveWindowSize = saveWindowSize;
@@ -812,7 +815,7 @@ void KMainWindow::setAutoSaveSettings(const KConfigGroup &group,
 
 void KMainWindow::resetAutoSaveSettings()
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     d->autoSaveSettings = false;
     if (d->settingsTimer) {
         d->settingsTimer->stop();
@@ -821,25 +824,25 @@ void KMainWindow::resetAutoSaveSettings()
 
 bool KMainWindow::autoSaveSettings() const
 {
-    K_D(const KMainWindow);
+    Q_D(const KMainWindow);
     return d->autoSaveSettings;
 }
 
 QString KMainWindow::autoSaveGroup() const
 {
-    K_D(const KMainWindow);
+    Q_D(const KMainWindow);
     return d->autoSaveSettings ? d->autoSaveGroup.name() : QString();
 }
 
 KConfigGroup KMainWindow::autoSaveConfigGroup() const
 {
-    K_D(const KMainWindow);
+    Q_D(const KMainWindow);
     return d->autoSaveSettings ? d->autoSaveGroup : KConfigGroup();
 }
 
 void KMainWindow::saveAutoSaveSettings()
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     Q_ASSERT(d->autoSaveSettings);
     //qDebug(200) << "KMainWindow::saveAutoSaveSettings -> saving settings";
     saveMainWindowSettings(d->autoSaveGroup);
@@ -849,7 +852,7 @@ void KMainWindow::saveAutoSaveSettings()
 
 bool KMainWindow::event(QEvent *ev)
 {
-    K_D(KMainWindow);
+    Q_D(KMainWindow);
     switch (ev->type()) {
 #if defined(Q_OS_WIN) || defined(Q_OS_OSX)
     case QEvent::Move:
@@ -873,15 +876,15 @@ bool KMainWindow::event(QEvent *ev)
 
             // there is no signal emitted if the size of the dock changes,
             // hence install an event filter instead
-            dock->installEventFilter(k_ptr->dockResizeListener);
+            dock->installEventFilter(d->dockResizeListener);
         } else if (toolbar) {
             // there is no signal emitted if the size of the toolbar changes,
             // hence install an event filter instead
-            toolbar->installEventFilter(k_ptr->dockResizeListener);
+            toolbar->installEventFilter(d->dockResizeListener);
         } else if (menubar) {
             // there is no signal emitted if the size of the menubar changes,
             // hence install an event filter instead
-            menubar->installEventFilter(k_ptr->dockResizeListener);
+            menubar->installEventFilter(d->dockResizeListener);
         }
     }
     break;
@@ -895,11 +898,11 @@ bool KMainWindow::event(QEvent *ev)
                        this, &KMainWindow::setSettingsDirty);
             disconnect(dock, &QDockWidget::topLevelChanged,
                        this, &KMainWindow::setSettingsDirty);
-            dock->removeEventFilter(k_ptr->dockResizeListener);
+            dock->removeEventFilter(d->dockResizeListener);
         } else if (toolbar) {
-            toolbar->removeEventFilter(k_ptr->dockResizeListener);
+            toolbar->removeEventFilter(d->dockResizeListener);
         } else if (menubar) {
-            menubar->removeEventFilter(k_ptr->dockResizeListener);
+            menubar->removeEventFilter(d->dockResizeListener);
         }
     }
     break;
@@ -977,7 +980,9 @@ QList<KMainWindow *> KMainWindow::memberList()
 
 QString KMainWindow::dbusName() const
 {
-    return k_func()->dbusName;
+    Q_D(const KMainWindow);
+
+    return d->dbusName;
 }
 
 #include "moc_kmainwindow.cpp"

@@ -70,7 +70,7 @@ public:
 KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
     : KMainWindow(*new KXmlGuiWindowPrivate, parent, f), KXMLGUIBuilder(this)
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     d->showHelpMenu = true;
     d->toolBarHandler = nullptr;
     d->showStatusBarAction = nullptr;
@@ -82,7 +82,7 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
 
 QAction *KXmlGuiWindow::toolBarMenuAction()
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     if (!d->toolBarHandler) {
         return nullptr;
     }
@@ -92,7 +92,7 @@ QAction *KXmlGuiWindow::toolBarMenuAction()
 
 void KXmlGuiWindow::setupToolbarMenuActions()
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     if (d->toolBarHandler) {
         d->toolBarHandler->setupActions();
     }
@@ -100,7 +100,7 @@ void KXmlGuiWindow::setupToolbarMenuActions()
 
 KXmlGuiWindow::~KXmlGuiWindow()
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     delete d->factory;
 }
 
@@ -122,19 +122,19 @@ bool KXmlGuiWindow::event(QEvent *ev)
 
 void KXmlGuiWindow::setHelpMenuEnabled(bool showHelpMenu)
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     d->showHelpMenu = showHelpMenu;
 }
 
 bool KXmlGuiWindow::isHelpMenuEnabled() const
 {
-    K_D(const KXmlGuiWindow);
+    Q_D(const KXmlGuiWindow);
     return d->showHelpMenu;
 }
 
 KXMLGUIFactory *KXmlGuiWindow::guiFactory()
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     if (!d->factory) {
         d->factory = new KXMLGUIFactory(this, this);
         connect(d->factory, SIGNAL(makingChanges(bool)),
@@ -145,7 +145,7 @@ KXMLGUIFactory *KXmlGuiWindow::guiFactory()
 
 void KXmlGuiWindow::configureToolbars()
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     KConfigGroup cg(KSharedConfig::openConfig(), "");
     saveMainWindowSettings(cg);
     if (!d->toolBarEditor) {
@@ -175,7 +175,7 @@ void KXmlGuiWindow::setupGUI(StandardWindowOptions options, const QString &xmlfi
 
 void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions options, const QString &xmlfile)
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
 
     if (options & Keys) {
         KStandardAction::keyBindings(guiFactory(),
@@ -215,7 +215,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
 }
 void KXmlGuiWindow::createGUI(const QString &xmlfile)
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     // disabling the updates prevents unnecessary redraws
     //setUpdatesEnabled( false );
 
@@ -309,7 +309,7 @@ void KXmlGuiWindow::slotStateChanged(const QString &newstate,
 
 void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool enable)
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     if (enable) {
         if (d->toolBarHandler) {
             return;
@@ -336,13 +336,13 @@ void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool enable)
 
 bool KXmlGuiWindow::isStandardToolBarMenuEnabled() const
 {
-    K_D(const KXmlGuiWindow);
+    Q_D(const KXmlGuiWindow);
     return (d->toolBarHandler);
 }
 
 void KXmlGuiWindow::createStandardStatusBarAction()
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     if (!d->showStatusBarAction) {
         d->showStatusBarAction = KStandardAction::showStatusbar(this, &KMainWindow::setSettingsDirty, actionCollection());
         QStatusBar *sb = statusBar(); // Creates statusbar if it doesn't exist already.
@@ -371,7 +371,7 @@ void KXmlGuiWindow::finalizeGUI(bool /*force*/)
 
 void KXmlGuiWindow::applyMainWindowSettings(const KConfigGroup &config)
 {
-    K_D(KXmlGuiWindow);
+    Q_D(KXmlGuiWindow);
     KMainWindow::applyMainWindowSettings(config);
     QStatusBar *sb = findChild<QStatusBar *>();
     if (sb && d->showStatusBarAction) {

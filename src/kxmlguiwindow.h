@@ -44,7 +44,6 @@ class KXmlGuiWindowPrivate;
 
 class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
 {
-    XMLGUI_DECLARE_PRIVATE(KXmlGuiWindow)
     Q_OBJECT
     Q_PROPERTY(bool hasMenuBar READ hasMenuBar)
     Q_PROPERTY(bool autoSaveSettings READ autoSaveSettings)
@@ -339,7 +338,9 @@ protected Q_SLOTS:
     virtual void saveNewToolbarConfig();
 
 private:
-    Q_PRIVATE_SLOT(k_func(), void _k_slotFactoryMakingChanges(bool))
+    Q_DECLARE_PRIVATE_D(k_ptr, KXmlGuiWindow)
+
+    Q_PRIVATE_SLOT(d_func(), void _k_slotFactoryMakingChanges(bool))
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KXmlGuiWindow::StandardWindowOptions)

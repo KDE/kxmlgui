@@ -18,6 +18,7 @@
 #include <kxmlgui_export.h>
 
 #include <QMainWindow>
+#include <memory>
 
 class QMenu;
 class KConfig;
@@ -25,12 +26,6 @@ class KConfigGroup;
 class KMWSessionManager;
 class KMainWindowPrivate;
 class KToolBar;
-
-// internal, not public API, may change any time
-#define XMLGUI_DECLARE_PRIVATE(classname) \
-    inline classname ## Private *k_func() { return reinterpret_cast<classname ## Private *>(k_ptr); } \
-    inline const classname ## Private *k_func() const { return reinterpret_cast<classname ## Private *>(k_ptr); } \
-    friend class classname ## Private;
 
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 65)
 /**
@@ -97,7 +92,6 @@ class KXMLGUI_EXPORT KMainWindow : public QMainWindow
 {
     friend class KMWSessionManager;
     friend class DockResizeListener;
-    XMLGUI_DECLARE_PRIVATE(KMainWindow)
     Q_OBJECT
     Q_PROPERTY(bool hasMenuBar READ hasMenuBar)
     Q_PROPERTY(bool autoSaveSettings READ autoSaveSettings)
@@ -638,11 +632,15 @@ protected Q_SLOTS:
 protected:
     KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlags f);
 
-    KMainWindowPrivate *const k_ptr;
+    std::unique_ptr<KMainWindowPrivate> const k_ptr;
+    // KF6 TODO: change k_ptr to d_ptr, use normal Q_DECLARE_PRIVATE
+
 private:
-    Q_PRIVATE_SLOT(k_func(), void _k_slotSettingsChanged(int))
-    Q_PRIVATE_SLOT(k_func(), void _k_slotSaveAutoSaveSize())
-    Q_PRIVATE_SLOT(k_func(), void _k_slotSaveAutoSavePosition())
+    Q_DECLARE_PRIVATE_D(k_ptr, KMainWindow)
+
+    Q_PRIVATE_SLOT(d_func(), void _k_slotSettingsChanged(int))
+    Q_PRIVATE_SLOT(d_func(), void _k_slotSaveAutoSaveSize())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotSaveAutoSavePosition())
 };
 
 
