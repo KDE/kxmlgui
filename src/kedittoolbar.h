@@ -10,6 +10,7 @@
 #define KEDITTOOLBAR_H
 
 #include <QDialog>
+#include <memory>
 
 #include <kxmlgui_export.h>
 
@@ -159,7 +160,7 @@ protected:
 
 private:
     friend class KEditToolBarPrivate;
-    KEditToolBarPrivate *const d;
+    std::unique_ptr<KEditToolBarPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_slotButtonClicked(QAbstractButton *))
     Q_PRIVATE_SLOT(d, void _k_acceptOK(bool))

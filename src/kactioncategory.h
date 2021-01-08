@@ -13,6 +13,7 @@
 #include <QObject>
 #include <QString>
 #include <QList>
+#include <memory>
 
 #include <kstandardaction.h>
 
@@ -170,11 +171,12 @@ private:
      */
     void addAction(QAction *action);
 
+private:
     //! KActionCollection needs access to some of our helper methods
     friend class KActionCollectionPrivate;
 
     //! Implementation details
-    KActionCategoryPrivate *const d;
+    std::unique_ptr<KActionCategoryPrivate> const d;
 };
 
 #endif /* #ifndef KACTIONCATEGORY_H */

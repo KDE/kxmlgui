@@ -36,10 +36,7 @@ KShortcutWidget::KShortcutWidget(QWidget *parent)
             this, SLOT(altKeySequenceChanged(QKeySequence)));
 }
 
-KShortcutWidget::~KShortcutWidget()
-{
-    delete d;
-}
+KShortcutWidget::~KShortcutWidget() = default;
 
 void KShortcutWidget::setModifierlessAllowed(bool allow)
 {

@@ -290,10 +290,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     setMinimumHeight(sizeHint().height() + 20);   // WORKAROUND: prevent "cropped" qcombobox
 }
 
-KBugReport::~KBugReport()
-{
-    delete d;
-}
+KBugReport::~KBugReport() = default;
 
 QString KBugReport::messageBody() const
 {

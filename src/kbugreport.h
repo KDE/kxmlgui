@@ -9,6 +9,7 @@
 #define KBUGREPORT_H
 
 #include <QDialog>
+#include <memory>
 #include <kxmlgui_export.h>
 
 class KAboutData;
@@ -97,7 +98,7 @@ protected:
 
 private:
     friend class KBugReportPrivate;
-    KBugReportPrivate *const d;
+    std::unique_ptr<KBugReportPrivate> const d;
 
     Q_DISABLE_COPY(KBugReport)
 };

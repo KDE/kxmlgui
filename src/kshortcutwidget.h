@@ -12,6 +12,7 @@
 #include <QKeySequence>
 #include <QList>
 #include <QWidget>
+#include <memory>
 
 class KActionCollection;
 class KShortcutWidgetPrivate;
@@ -84,7 +85,7 @@ private:
 
 private:
     friend class KShortcutWidgetPrivate;
-    KShortcutWidgetPrivate *const d;
+    std::unique_ptr<KShortcutWidgetPrivate> const d;
 };
 
 #endif //KSHORTCUTWIDGET_H

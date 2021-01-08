@@ -12,6 +12,7 @@
 #include <kxmlgui_export.h>
 
 #include <QStringList>
+#include <memory>
 
 class QDomDocument;
 class QDomElement;
@@ -402,7 +403,7 @@ protected:
     virtual void virtual_hook(int id, void *data);
 
 private:
-    KXMLGUIClientPrivate *const d;
+    std::unique_ptr<KXMLGUIClientPrivate> const d;
 };
 
 #endif

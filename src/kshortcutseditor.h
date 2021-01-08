@@ -251,7 +251,7 @@ private:
 private:
     friend class KShortcutsDialog;
     friend class KShortcutsEditorPrivate;
-    KShortcutsEditorPrivate *const d;
+    std::unique_ptr<KShortcutsEditorPrivate> const d;
     Q_DISABLE_COPY(KShortcutsEditor)
 };
 

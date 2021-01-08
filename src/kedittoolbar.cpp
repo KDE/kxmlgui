@@ -635,7 +635,6 @@ void KEditToolBar::setResourceFile(const QString &file, bool global)
 
 KEditToolBar::~KEditToolBar()
 {
-    delete d;
     s_defaultToolBarName()->clear();
 }
 

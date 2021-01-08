@@ -10,6 +10,7 @@
 #define kxmlguibuilder_h
 
 #include <kxmlgui_export.h>
+#include <memory>
 
 class KXMLGUIBuilderPrivate;
 class KXMLGUIClient;
@@ -83,8 +84,9 @@ public:
 
 protected:
     virtual void virtual_hook(int id, void *data);
+
 private:
-    KXMLGUIBuilderPrivate *const d;
+    std::unique_ptr<KXMLGUIBuilderPrivate> const d;
 };
 
 #endif

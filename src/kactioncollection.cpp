@@ -121,8 +121,6 @@ KActionCollection::KActionCollection(const KXMLGUIClient *parent)
 KActionCollection::~KActionCollection()
 {
     KActionCollectionPrivate::s_allCollections.removeAll(this);
-
-    delete d;
 }
 
 void KActionCollection::clear()

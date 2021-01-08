@@ -11,6 +11,7 @@
 #include <kxmlgui_export.h>
 // Qt
 #include <QDialog>
+#include <memory>
 
 class KPluginMetaData;
 class KAboutPluginDialogPrivate;
@@ -66,7 +67,7 @@ public:
     ~KAboutPluginDialog() override;
 
 private:
-    const QScopedPointer<KAboutPluginDialogPrivate> d;
+    std::unique_ptr<KAboutPluginDialogPrivate> const d;
 
     Q_DISABLE_COPY(KAboutPluginDialog)
 };

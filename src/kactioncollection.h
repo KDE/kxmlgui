@@ -20,6 +20,7 @@
 
 #include <QObject>
 #include <QAction>
+#include <memory>
 
 class QAction;
 class KXMLGUIClient;
@@ -586,7 +587,7 @@ private:
     KActionCollection(const KXMLGUIClient *parent);   // used by KXMLGUIClient
 
     friend class KActionCollectionPrivate;
-    class KActionCollectionPrivate *const d;
+    std::unique_ptr<class KActionCollectionPrivate> const d;
 };
 
 #endif
