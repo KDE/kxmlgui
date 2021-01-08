@@ -218,7 +218,7 @@ void KAboutApplicationPersonListDelegate::paint(QPainter *painter,
         KAboutApplicationPersonProfile profile = index.data().value< KAboutApplicationPersonProfile >();
 
         if (!profile.avatar().isNull()) {
-            const QPixmap& pixmap = profile.avatar();
+            const QPixmap &pixmap = profile.avatar();
 
             point.setX((AVATAR_WIDTH - pixmap.width()) / 2 + 5);
             point.setY(option.rect.top() + ((height - pixmap.height()) / 2));

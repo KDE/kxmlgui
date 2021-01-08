@@ -1311,7 +1311,7 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
         }
 
         // each xml file may have any number of toolbars
-        const auto barList = xmlFile.barList();
+        const auto &barList = xmlFile.barList();
         for (const auto &bar : barList) {
             // is this our toolbar?
             if (toolbarNumber == index) {
