@@ -16,6 +16,7 @@
 #include <kxmlgui_export.h>
 
 #include <QDialog>
+#include <memory>
 
 #include "kshortcutseditor.h"
 
@@ -144,9 +145,8 @@ private:
     Q_PRIVATE_SLOT(d, void changeShortcutScheme(const QString &))
     Q_PRIVATE_SLOT(d, void toggleDetails())
 
-    class KShortcutsDialogPrivate;
     friend class KShortcutsDialogPrivate;
-    class KShortcutsDialogPrivate *const d;
+    std::unique_ptr<class KShortcutsDialogPrivate> const d;
 
     Q_DISABLE_COPY(KShortcutsDialog)
 };

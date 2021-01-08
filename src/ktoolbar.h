@@ -17,6 +17,7 @@
 #include <kxmlgui_export.h>
 
 #include <QToolBar>
+#include <memory>
 
 class QDomElement;
 
@@ -247,8 +248,8 @@ protected:
     void mouseReleaseEvent(QMouseEvent *) override;
 
 private:
-    class Private;
-    Private *const d;
+    friend class KToolBarPrivate;
+    std::unique_ptr<class KToolBarPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotAppearanceChanged())
     Q_PRIVATE_SLOT(d, void slotContextAboutToShow())

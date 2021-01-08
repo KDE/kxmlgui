@@ -18,6 +18,7 @@
 
 #include <ktoggleaction.h>
 #include <kxmlgui_export.h>
+#include <memory>
 
 class KToolBar;
 
@@ -77,8 +78,7 @@ private Q_SLOTS:
     void slotToggled(bool checked) override;
 
 private:
-    class Private;
-    Private *const d;
+    std::unique_ptr<class KToggleToolBarActionPrivate> const d;
 };
 
 #endif

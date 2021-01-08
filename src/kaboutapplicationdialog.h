@@ -13,6 +13,7 @@
 #define KABOUT_APPLICATION_DIALOG_H
 
 #include <QDialog>
+#include <memory>
 
 #include <kxmlgui_export.h>
 
@@ -100,8 +101,7 @@ public:
     virtual ~KAboutApplicationDialog();
 
 private:
-    class Private;
-    Private *const d;
+    std::unique_ptr<class KAboutApplicationDialogPrivate> const d;
 
     Q_DISABLE_COPY(KAboutApplicationDialog)
 };

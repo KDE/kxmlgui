@@ -27,10 +27,10 @@
 #include "kmainwindow.h"
 #include "ktoolbar.h"
 
-class Q_DECL_HIDDEN KToggleToolBarAction::Private
+class KToggleToolBarActionPrivate
 {
 public:
-    Private(KToggleToolBarAction *q)
+    KToggleToolBarActionPrivate(KToggleToolBarAction *q)
         : toolBarName(nullptr), toolBar(nullptr), beingToggled(false)
     {
         const bool authorized = KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar"));
@@ -45,14 +45,14 @@ public:
 
 KToggleToolBarAction::KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent)
     : KToggleAction(text, parent),
-      d(new Private(this))
+      d(new KToggleToolBarActionPrivate(this))
 {
     d->toolBarName = toolBarName;
 }
 
 KToggleToolBarAction::KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent)
     : KToggleAction(text, parent),
-      d(new Private(this))
+      d(new KToggleToolBarActionPrivate(this))
 {
     d->toolBar = toolBar;
     d->toolBar->installEventFilter(this);
@@ -62,10 +62,7 @@ KToggleToolBarAction::KToggleToolBarAction(KToolBar *toolBar, const QString &tex
     d->beingToggled = false;
 }
 
-KToggleToolBarAction::~KToggleToolBarAction()
-{
-    delete d;
-}
+KToggleToolBarAction::~KToggleToolBarAction() = default;
 
 bool KToggleToolBarAction::eventFilter(QObject *watched, QEvent *event)
 {

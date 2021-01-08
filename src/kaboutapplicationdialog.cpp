@@ -26,15 +26,15 @@
 #include <QVBoxLayout>
 
 
-class Q_DECL_HIDDEN KAboutApplicationDialog::Private : public KAbstractAboutDialogPrivate
+class KAboutApplicationDialogPrivate : public KAbstractAboutDialogPrivate
 {
 public:
-    Private(const KAboutData &aboutData, KAboutApplicationDialog *parent)
+    KAboutApplicationDialogPrivate(const KAboutData &aboutData, KAboutApplicationDialog *parent)
         : q(parent)
         , aboutData(aboutData)
     {}
 
-    void init(Options opt);
+    void init(KAboutApplicationDialog::Options opt);
 
 private:
     KAboutApplicationDialog * const q;
@@ -50,12 +50,12 @@ KAboutApplicationDialog::KAboutApplicationDialog(const KAboutData &aboutData, QW
 
 KAboutApplicationDialog::KAboutApplicationDialog(const KAboutData &aboutData, Options opt, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(aboutData, this))
+    , d(new KAboutApplicationDialogPrivate(aboutData, this))
 {
     d->init(opt);
 }
 
-void KAboutApplicationDialog::Private::init(Options opt)
+void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
 {
     q->setWindowTitle(i18nc("@title:window", "About %1", aboutData.displayName()));
 
@@ -95,7 +95,7 @@ QT_WARNING_POP
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
     // Library versions
-    if (!(opt & HideLibraries)) {
+    if (!(opt & KAboutApplicationDialog::HideLibraries)) {
         QWidget *versionWidget = new QWidget(q);
         QVBoxLayout *versionLayout = new QVBoxLayout(versionWidget);
         QLabel *versionLabel = new QLabel(
@@ -129,7 +129,7 @@ QT_WARNING_POP
     }
 
     //Finally, the optional translators page...
-    if (!(opt & HideTranslators) && !aboutData.translators().isEmpty()) {
+    if (!(opt & KAboutApplicationDialog::HideTranslators) && !aboutData.translators().isEmpty()) {
         QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), aboutData.ocsProviderUrl(), q);
 
         tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));
@@ -140,7 +140,6 @@ QT_WARNING_POP
 
 KAboutApplicationDialog::~KAboutApplicationDialog()
 {
-    delete d;
     // The delegate wants to be deleted before the items it created, otherwise
     // complains bitterly about it
     qDeleteAll(findChildren<KWidgetItemDelegate *>());

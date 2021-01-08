@@ -53,7 +53,7 @@ QKeySequence alternateSequence(const QList<QKeySequence> &sequences)
     return sequences.size() <= 1 ? QKeySequence() : sequences.at(1);
 }
 
-class Q_DECL_HIDDEN KShortcutsDialog::KShortcutsDialogPrivate
+class KShortcutsDialogPrivate
 {
 public:
 
@@ -183,7 +183,6 @@ KShortcutsDialog::~KShortcutsDialog()
 {
     KConfigGroup group(KSharedConfig::openConfig(), "KShortcutsDialog Settings");
     group.writeEntry("Dialog Size", size(), KConfigGroup::Persistent | KConfigGroup::Global);
-    delete d;
 }
 
 void KShortcutsDialog::addCollection(KActionCollection *collection, const QString &title)
