@@ -188,7 +188,7 @@ void SMTP::connectTimedOut()
 
     // qCDebug(DEBUG_KXMLGUI) << "socket connection timed out";
     socketClosed();
-    emit error(ConnectTimeout);
+    Q_EMIT error(ConnectTimeout);
 }
 
 void SMTP::interactTimedOut()
@@ -197,7 +197,7 @@ void SMTP::interactTimedOut()
 
     // qCDebug(DEBUG_KXMLGUI) << "time out waiting for server interaction";
     socketClosed();
-    emit error(InteractTimeout);
+    Q_EMIT error(InteractTimeout);
 }
 
 void SMTP::socketReadyToRead()
@@ -234,7 +234,7 @@ void SMTP::socketError(QAbstractSocket::SocketError socketError)
 {
     // qCDebug(DEBUG_KXMLGUI) << socketError << sock->errorString();
     Q_UNUSED(socketError);
-    emit error(ConnectError);
+    Q_EMIT error(ConnectError);
     socketClosed();
 }
 
@@ -247,7 +247,7 @@ void SMTP::socketClosed()
         sock->deleteLater();
     }
     sock = nullptr;
-    emit connectionClosed();
+    Q_EMIT connectionClosed();
 }
 
 void SMTP::processLine(QByteArray *line)
@@ -299,13 +299,13 @@ void SMTP::processLine(QByteArray *line)
         case Data:
             state = Finished;
             finished = true;
-            emit messageSent();
+            Q_EMIT messageSent();
             break;
         default:
             state = CError;
             // qCDebug(DEBUG_KXMLGUI) << "smtp error (state error): [" << lastState << "]:[" << stat << "][" << *line << "]";
             socketClosed();
-            emit error(Command);
+            Q_EMIT error(Command);
             break;
         }
         break;
@@ -323,19 +323,19 @@ void SMTP::processLine(QByteArray *line)
         state = CError;
         // qCDebug(DEBUG_KXMLGUI) << "smtp error (command error): [" << lastState << "]:[" << stat << "][" << *line << "]\n";
         socketClosed();
-        emit error(Command);
+        Q_EMIT error(Command);
         break;
     case Unknown:   //550
         state = CError;
         // qCDebug(DEBUG_KXMLGUI) << "smtp error (unknown user): [" << lastState << "]:[" << stat << "][" << *line << "]";
         socketClosed();
-        emit error(UnknownUser);
+        Q_EMIT error(UnknownUser);
         break;
     default:
         state = CError;
         // qCDebug(DEBUG_KXMLGUI) << "unknown response: [" << lastState << "]:[" << stat << "][" << *line << "]";
         socketClosed();
-        emit error(UnknownResponse);
+        Q_EMIT error(UnknownResponse);
     }
 }
 

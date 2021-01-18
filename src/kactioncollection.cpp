@@ -327,8 +327,8 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
                 this, &KActionCollection::slotActionTriggered);
     }
 
-    emit inserted(action);
-    emit changed();
+    Q_EMIT inserted(action);
+    Q_EMIT changed();
     return action;
 }
 
@@ -358,9 +358,9 @@ QAction *KActionCollection::takeAction(QAction *action)
     action->disconnect(this);
 
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    emit removed(action);   //deprecated
+    Q_EMIT removed(action);   //deprecated
 #endif
-    emit changed();
+    Q_EMIT changed();
     return action;
 }
 
@@ -718,7 +718,7 @@ void KActionCollection::slotActionTriggered()
 {
     QAction *action = qobject_cast<QAction *>(sender());
     if (action) {
-        emit actionTriggered(action);
+        Q_EMIT actionTriggered(action);
     }
 }
 
@@ -734,9 +734,9 @@ void KActionCollection::slotActionHovered()
     QAction *action = qobject_cast<QAction *>(sender());
     if (action) {
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-        emit actionHighlighted(action);
+        Q_EMIT actionHighlighted(action);
 #endif
-        emit actionHovered(action);
+        Q_EMIT actionHovered(action);
     }
 }
 
@@ -752,9 +752,9 @@ void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
 
     //HACK the object we emit is partly destroyed
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    emit q->removed(action);
+    Q_EMIT q->removed(action);
 #endif
-    emit q->changed();
+    Q_EMIT q->changed();
 }
 
 void KActionCollection::connectNotify(const QMetaMethod &signal)

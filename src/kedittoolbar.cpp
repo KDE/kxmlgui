@@ -322,7 +322,7 @@ bool ToolBarListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::D
     const bool sourceIsActiveList = mimeData->data(QStringLiteral("application/x-kde-source-treewidget")) == "active";
     ToolBarItem *item = new ToolBarItem(this); // needs parent, use this temporarily
     stream >> *item;
-    emit dropped(this, index, item, sourceIsActiveList);
+    Q_EMIT dropped(this, index, item, sourceIsActiveList);
     return true;
 }
 
@@ -715,9 +715,9 @@ void KEditToolBarPrivate::defaultClicked()
 
     _k_enableApply(false);
 
-    emit q->newToolBarConfig();
+    Q_EMIT q->newToolBarConfig();
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
-    emit q->newToolbarConfig(); // compat
+    Q_EMIT q->newToolbarConfig(); // compat
 #endif
 }
 
@@ -751,9 +751,9 @@ void KEditToolBarPrivate::okClicked()
     // button was already pressed and no further changes were made.
     if (m_buttonBox->button(QDialogButtonBox::Apply)->isEnabled()) {
         m_widget->save();
-        emit q->newToolBarConfig();
+        Q_EMIT q->newToolBarConfig();
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
-        emit q->newToolbarConfig(); // compat
+        Q_EMIT q->newToolbarConfig(); // compat
 #endif
     }
     q->accept();
@@ -763,9 +763,9 @@ void KEditToolBarPrivate::applyClicked()
 {
     (void)m_widget->save();
     _k_enableApply(false);
-    emit q->newToolBarConfig();
+    Q_EMIT q->newToolBarConfig();
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
-    emit q->newToolbarConfig(); // compat
+    Q_EMIT q->newToolbarConfig(); // compat
 #endif
 }
 
@@ -1386,7 +1386,7 @@ void KEditToolBarWidgetPrivate::slotInsertButton()
 
     insertActive(m_inactiveList->currentItem(), m_activeList->currentItem(), false);
     // we're modified, so let this change
-    emit m_widget->enableOk(true);
+    Q_EMIT m_widget->enableOk(true);
 
     slotToolBarSelected(m_toolbarCombo->currentIndex());
 
@@ -1461,7 +1461,7 @@ void KEditToolBarWidgetPrivate::removeActive(ToolBarItem *item)
     }
 
     // we're modified, so let this change
-    emit m_widget->enableOk(true);
+    Q_EMIT m_widget->enableOk(true);
 
     // now iterate through to find the child to nuke
     QDomElement elem = findElementForToolBarItem(item);
@@ -1494,7 +1494,7 @@ void KEditToolBarWidgetPrivate::slotUpButton()
     }
 
     // we're modified, so let this change
-    emit m_widget->enableOk(true);
+    Q_EMIT m_widget->enableOk(true);
 
     moveActive(item, static_cast<ToolBarItem *>(item->listWidget()->item(row - 1)));
 }
@@ -1547,7 +1547,7 @@ void KEditToolBarWidgetPrivate::slotDownButton()
     }
 
     // we're modified, so let this change
-    emit m_widget->enableOk(true);
+    Q_EMIT m_widget->enableOk(true);
 
     moveActive(item, static_cast<ToolBarItem *>(item->listWidget()->item(newRow)));
 }
@@ -1620,7 +1620,7 @@ void KEditToolBarWidgetPrivate::slotChangeIcon()
         act_elem.setAttribute(QStringLiteral("icon"), icon);
 
         // we're modified, so let this change
-        emit m_widget->enableOk(true);
+        Q_EMIT m_widget->enableOk(true);
     }
 }
 
@@ -1668,7 +1668,7 @@ void KEditToolBarWidgetPrivate::slotChangeIconText()
         }
 
         // we're modified, so let this change
-        emit m_widget->enableOk(true);
+        Q_EMIT m_widget->enableOk(true);
     }
 }
 
@@ -1694,7 +1694,7 @@ void KEditToolBarWidgetPrivate::slotDropped(ToolBarListWidget *list, int index, 
     delete item; // not needed anymore. must be deleted before slotToolBarSelected clears the lists
 
     // we're modified, so let this change
-    emit m_widget->enableOk(true);
+    Q_EMIT m_widget->enableOk(true);
 
     slotToolBarSelected(m_toolbarCombo->currentIndex());
 }

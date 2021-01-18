@@ -449,7 +449,7 @@ void KShortcutsEditorPrivate::changeKeyShortcut(KShortcutsEditorItem *item, uint
     }
 
     item->setKeySequence(column, capture);
-    emit q->keyChange();
+    Q_EMIT q->keyChange();
     //force view update
     item->setText(column, capture.toString(QKeySequence::NativeText));
 }

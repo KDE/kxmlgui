@@ -123,7 +123,7 @@ public:
     void save()
     {
         m_keyChooser->save();
-        emit q->saved();
+        Q_EMIT q->saved();
     }
 
     KShortcutsDialog *const q;
