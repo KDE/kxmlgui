@@ -199,6 +199,10 @@ public:
     /**
      * Get the action with the given \p name from the action collection.
      *
+     * This won't return a menu's action; to acces a menu action, use e. g.
+     * qobject_cast<QMenu *>(guiFactory()->container("menuId", this));
+     * after having called setupGUI().
+     *
      * @param name Name of the QAction
      * @return A pointer to the QAction in the collection which matches the parameters or
      * null if nothing matches.
