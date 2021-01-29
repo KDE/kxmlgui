@@ -84,7 +84,7 @@ add_library(KF5XmlGui ${kxmlgui_SRCS})
 ecm_generate_export_header(KF5XmlGui
     BASE_NAME KXmlGui
     GROUP_BASE_NAME KF
-    VERSION ${KF5_VERSION}
+    VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
     DEPRECATION_VERSIONS 4.0 4.1 5.0 5.75
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
@@ -172,7 +172,7 @@ if (BUILD_QCH)
         KF5XmlGui_QCH
         NAME KXmlGui
         BASE_NAME KF5XmlGui
-        VERSION ${KF5_VERSION}
+        VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
             ${KXmlGui_HEADERS}
