@@ -232,7 +232,7 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
                    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, _file); // kdelibs4, KF 5.0, caller passes component name
 
         if (allFiles.isEmpty() && !compatFiles.isEmpty()) {
-            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << compatFiles << "-- please use ${KXMLGUI_INSTALL_DIR} to install this file instead.";
+            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << compatFiles << "-- please use ${KDE_INSTALL_KXMLGUI5DIR} to install this file instead.";
         }
         allFiles += compatFiles;
     }

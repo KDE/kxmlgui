@@ -107,7 +107,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
     if (!QDir::isRelativePath(filename)) {
         xml_file = filename;
     } else {
-        // KF >= 5.1 (KXMLGUI_INSTALL_DIR)
+        // KF >= 5.1 (KDE_INSTALL_KXMLGUI5DIR)
         xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
         if (!QFile::exists(xml_file)) {
             // KF >= 5.4 (resource file)
@@ -130,7 +130,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
         }
 
         if (warn && !xml_file.isEmpty()) {
-            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file << "-- please use ${KXMLGUI_INSTALL_DIR} to install these files instead.";
+            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file << "-- please use ${KDE_INSTALL_KXMLGUI5DIR} to install these files instead.";
         }
     }
 
