@@ -47,7 +47,7 @@
 #include <KWindowConfig>
 #include <KConfigGui>
 
-//#include <ctype.h>
+//#include <cctype>
 
 static const char WINDOW_PROPERTIES[]="WindowProperties";
 

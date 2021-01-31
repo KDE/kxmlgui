@@ -44,8 +44,8 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
-#include <stdlib.h>
-#include <ctype.h>
+#include <cstdlib>
+#include <cctype>
 
 class KXmlGuiWindowPrivate : public KMainWindowPrivate
 {

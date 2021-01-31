@@ -8,7 +8,7 @@
 #include "smtp.h"
 #include "../systeminformation_p.h"
 
-#include <stdio.h>
+#include <cstdio>
 
 #include <QSslSocket>
 #include <QHostInfo>

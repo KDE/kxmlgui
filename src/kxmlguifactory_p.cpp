@@ -14,7 +14,7 @@
 #include <QWidget>
 
 #include "debug.h"
-#include <assert.h>
+#include <cassert>
 
 using namespace KXMLGUI;
 

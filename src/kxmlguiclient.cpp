@@ -25,7 +25,7 @@
 #include <KAuthorized>
 #include <KLocalizedString>
 
-#include <assert.h>
+#include <cassert>
 
 class KXMLGUIClientPrivate
 {

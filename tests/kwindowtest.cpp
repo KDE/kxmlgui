@@ -5,7 +5,7 @@
 #include <QDir>
 #include <QTest>
 
-#include <stdlib.h>
+#include <cstdlib>
 
 #include <QAction>
 #include <QApplication>

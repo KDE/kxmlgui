@@ -36,7 +36,7 @@
 #include <QList>
 #include <QMetaMethod>
 
-#include <stdio.h>
+#include <cstdio>
 
 class KActionCollectionPrivate
 {
