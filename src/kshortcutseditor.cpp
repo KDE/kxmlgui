@@ -32,15 +32,15 @@
 #include <QPrinter>
 #include <QPrintDialog>
 
-#include <kconfig.h>
-#include <kconfiggroup.h>
+#include <KConfig>
+#include <KConfigGroup>
 #if HAVE_GLOBALACCEL
-# include <kglobalaccel.h>
+# include <KGlobalAccel>
 #endif
-#include <kmessagebox.h>
+#include <KMessageBox>
+#include <KTreeWidgetSearchLine>
 #include "kactioncollection.h"
 #include "kactioncategory.h"
-#include <ktreewidgetsearchline.h>
 
 //---------------------------------------------------------------------
 // KShortcutsEditor

@@ -17,8 +17,8 @@
 #include <QCoreApplication>
 #include <QShortcutEvent>
 
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 class KActionConflictDetector : public QObject
 {

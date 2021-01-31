@@ -8,10 +8,10 @@
 #include "kaboutapplicationpersonmodel_p.h"
 #include "debug.h"
 #if HAVE_ATTICA
-#include <attica/person.h>
+#include <Attica/Person>
 #endif //HAVE_ATTICA
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -15,8 +15,8 @@
 #include <QStandardPaths>
 
 #include <QDir>
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include "kactioncollection.h"
 #include "kxmlguiclient.h"

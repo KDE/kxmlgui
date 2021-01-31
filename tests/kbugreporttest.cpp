@@ -6,8 +6,8 @@
 */
 
 #include <QApplication>
-#include <klocalizedstring.h>
-#include <kaboutdata.h>
+#include <KLocalizedString>
+#include <KAboutData>
 #include <kbugreport.h>
 
 int main(int argc, char **argv)

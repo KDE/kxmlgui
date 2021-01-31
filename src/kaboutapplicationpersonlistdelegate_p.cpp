@@ -11,7 +11,7 @@
 #include "kaboutapplicationpersonlistview_p.h"
 #include "ktoolbar.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QAction>
 #include <QApplication>

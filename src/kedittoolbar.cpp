@@ -28,12 +28,12 @@
 #include <QComboBox>
 #include <QLineEdit>
 
-#include <kicondialog.h>
-#include <klistwidgetsearchline.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
-#include <kseparator.h>
-#include <kconfig.h>
+#include <KIconDialog>
+#include <KListWidgetSearchLine>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KSeparator>
+#include <KConfig>
 
 #include "kactioncollection.h"
 #include "kxmlguifactory.h"

@@ -17,8 +17,8 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
-#include <klocalizedstring.h>
-#include <ktitlewidget.h>
+#include <KLocalizedString>
+#include <KTitleWidget>
 
 #include "../kxmlgui_version.h"
 

@@ -36,13 +36,13 @@
 #include <QList>
 #include <QEvent>
 
-#include <ktoggleaction.h>
-#include <kstandardaction.h>
-#include <kconfig.h>
-#include <klocalizedstring.h>
-#include <kaboutdata.h>
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
+#include <KToggleAction>
+#include <KStandardAction>
+#include <KConfig>
+#include <KLocalizedString>
+#include <KAboutData>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 #include <stdlib.h>
 #include <ctype.h>

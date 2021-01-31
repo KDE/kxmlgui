@@ -22,12 +22,12 @@
 #include "kxmlguifactory.h"
 #include "debug.h"
 
-#include <kauthorized.h>
-#include <kconfiggroup.h>
+#include <KAuthorized>
+#include <KConfigGroup>
 #if HAVE_GLOBALACCEL
-# include <kglobalaccel.h>
+# include <KGlobalAccel>
 #endif
-#include <ksharedconfig.h>
+#include <KSharedConfig>
 
 #include <QDomDocument>
 #include <QSet>

@@ -18,10 +18,10 @@
 
 #include <ktoolbar.h>
 #include <kmainwindow.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
-#include <kiconloader.h>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KIconLoader>
 
 // We use the data types below in a QVariant, so Q_DECLARE_METATYPE is needed for them.
 Q_DECLARE_METATYPE(Qt::MouseButton)

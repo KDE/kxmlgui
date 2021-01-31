@@ -28,11 +28,11 @@
 #include <QMenu>
 #include <QVBoxLayout>
 
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
-#include <klocalizedstring.h>
-#include <kacceleratormanager.h>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KLocalizedString>
+#include <KAcceleratorManager>
 
 class KCheckAcceleratorsInitializer : public QObject
 {

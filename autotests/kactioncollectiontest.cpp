@@ -5,8 +5,8 @@
 #include <QPointer>
 #include <QSignalSpy>
 
-#include <ksharedconfig.h>
-#include <kstandardaction.h>
+#include <KSharedConfig>
+#include <KStandardAction>
 
 void tst_KActionCollection::init()
 {

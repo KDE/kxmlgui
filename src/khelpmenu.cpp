@@ -27,11 +27,11 @@
 #include "kbugreport.h"
 #include "kswitchlanguagedialog_p.h"
 
-#include <kaboutdata.h>
-#include <kauthorized.h>
-#include <kiconloader.h>
-#include <klocalizedstring.h>
-#include <kstandardaction.h>
+#include <KAboutData>
+#include <KAuthorized>
+#include <KIconLoader>
+#include <KLocalizedString>
+#include <KStandardAction>
 
 using namespace KDEPrivate;
 

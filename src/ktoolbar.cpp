@@ -30,14 +30,14 @@
 #include <QDBusMessage>
 #endif
 
-#include <kauthorized.h>
-#include <kconfig.h>
-#include <ksharedconfig.h>
-#include <kicontheme.h>
-#include <klocalizedstring.h>
-#include <kstandardaction.h>
-#include <ktoggleaction.h>
-#include <kconfiggroup.h>
+#include <KAuthorized>
+#include <KConfig>
+#include <KSharedConfig>
+#include <KIconTheme>
+#include <KLocalizedString>
+#include <KStandardAction>
+#include <KToggleAction>
+#include <KConfigGroup>
 
 #include "kactioncollection.h"
 #include "kedittoolbar.h"

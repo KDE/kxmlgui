@@ -15,7 +15,7 @@
 #include <QList>
 #include <memory>
 
-#include <kstandardaction.h>
+#include <KStandardAction>
 
 #include "kactioncollection.h"
 

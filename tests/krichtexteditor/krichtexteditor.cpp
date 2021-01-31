@@ -8,7 +8,7 @@
 #include "krichtexteditor.h"
 
 #include <kactioncollection.h>
-#include <kstandardaction.h>
+#include <KStandardAction>
 
 #include <QApplication>
 #include <QFileDialog>

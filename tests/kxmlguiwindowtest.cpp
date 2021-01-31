@@ -14,8 +14,8 @@
 
 #include <kxmlguiwindow.h>
 #include <kactioncollection.h>
-#include <kmessagebox.h>
-#include <kconfiggroup.h>
+#include <KMessageBox>
+#include <KConfigGroup>
 
 // BUG: if this symbol is defined the problem consists on:
 //      - main window is created.

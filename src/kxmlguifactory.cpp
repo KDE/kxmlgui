@@ -29,10 +29,10 @@
 #include <QTextCodec>
 #include <QStandardPaths>
 
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
+#include <KSharedConfig>
+#include <KConfigGroup>
 #if HAVE_GLOBALACCEL
-# include <kglobalaccel.h>
+# include <KGlobalAccel>
 #endif
 
 Q_DECLARE_METATYPE(QList<QKeySequence>)

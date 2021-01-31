@@ -12,10 +12,10 @@
 #include <QApplication>
 #include <QHostInfo>
 
-#include <kemailsettings.h>
-#include <klocalizedstring.h>
+#include <KEMailSettings>
+#include <KLocalizedString>
 
-#include <kconfig.h>
+#include <KConfig>
 #include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
 

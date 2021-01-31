@@ -16,7 +16,7 @@
 #define KACTIONCOLLECTION_H
 
 #include <kxmlgui_export.h>
-#include <kstandardaction.h>
+#include <KStandardAction>
 
 #include <QObject>
 #include <QAction>

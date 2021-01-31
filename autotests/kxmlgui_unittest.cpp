@@ -16,15 +16,16 @@
 #include <QMenuBar>
 #include <QPushButton>
 #include <QDebug>
+#include <QDir>
+
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 #include <kedittoolbar.h>
-#include <ksharedconfig.h>
 #include <kswitchlanguagedialog_p.h>
-#include <kconfiggroup.h>
 #include <kxmlguibuilder.h>
 #include <kxmlguiclient.h>
 #include <kxmlguiversionhandler.cpp> // it's not exported, so we need to include the code here
-#include <QDir>
 
 QTEST_MAIN(KXmlGui_UnitTest)
 

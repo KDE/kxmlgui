@@ -16,7 +16,7 @@
 #ifndef KTOGGLETOOLBARACTION_H
 #define KTOGGLETOOLBARACTION_H
 
-#include <ktoggleaction.h>
+#include <KToggleAction>
 #include <kxmlgui_export.h>
 #include <memory>
 

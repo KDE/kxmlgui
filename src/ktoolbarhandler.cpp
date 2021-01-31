@@ -13,9 +13,9 @@
 #include <QLinkedList>
 #include <QPointer>
 
-#include <kactionmenu.h>
-#include <kauthorized.h>
-#include <klocalizedstring.h>
+#include <KActionMenu>
+#include <KAuthorized>
+#include <KLocalizedString>
 
 #include "kxmlguiwindow.h"
 #include "ktoggletoolbaraction.h"

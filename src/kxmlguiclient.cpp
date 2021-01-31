@@ -22,8 +22,8 @@
 #include <QCoreApplication>
 #include <QStandardPaths>
 
-#include <kauthorized.h>
-#include <klocalizedstring.h>
+#include <KAuthorized>
+#include <KLocalizedString>
 
 #include <assert.h>
 

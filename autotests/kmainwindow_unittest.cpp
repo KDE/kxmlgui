@@ -13,8 +13,8 @@
 #include <QStatusBar>
 #include <QResizeEvent>
 #include <ktoolbar.h>
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 QTEST_MAIN(KMainWindow_UnitTest)
 

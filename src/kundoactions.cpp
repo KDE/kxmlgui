@@ -10,10 +10,11 @@
 #include <QAction>
 #include <QUndoStack>
 
+#include <KStandardAction>
+#include <KStandardShortcut>
+#include <KLocalizedString>
+
 #include <kactioncollection.h>
-#include <kstandardaction.h>
-#include <kstandardshortcut.h>
-#include <klocalizedstring.h>
 
 QAction *KUndoActions::createRedoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName)
 {

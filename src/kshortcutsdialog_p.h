@@ -13,8 +13,8 @@
 #include "kshortcutseditor.h"
 #include "kkeysequencewidget.h"
 
-#include <kextendableitemdelegate.h>
-#include <klocalizedstring.h>
+#include <KExtendableItemDelegate>
+#include <KLocalizedString>
 
 #include <QKeySequence>
 #include <QMetaType>

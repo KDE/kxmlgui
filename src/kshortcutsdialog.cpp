@@ -22,10 +22,10 @@
 #include <QDialogButtonBox>
 #include <QDomDocument>
 
-#include <klocalizedstring.h>
-#include <kconfiggroup.h>
-#include <kmessagebox.h>
-#include <ksharedconfig.h>
+#include <KLocalizedString>
+#include <KConfigGroup>
+#include <KMessageBox>
+#include <KSharedConfig>
 
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"

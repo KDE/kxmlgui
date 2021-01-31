@@ -18,9 +18,9 @@
 #include <QInputDialog>
 #include <QComboBox>
 
-#include <kconfiggroup.h>
-#include <kmessagebox.h>
-#include <ksharedconfig.h>
+#include <KConfigGroup>
+#include <KMessageBox>
+#include <KSharedConfig>
 
 #include "kshortcutsdialog.h"
 #include "kshortcutschemeshelper_p.h"

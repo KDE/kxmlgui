@@ -25,8 +25,8 @@
 #include <QMenu>
 #include <QVBoxLayout>
 
-#include <kselectaction.h>
-#include <klocalizedstring.h>
+#include <KSelectAction>
+#include <KLocalizedString>
 
 namespace KDEPrivate
 {

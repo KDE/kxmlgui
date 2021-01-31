@@ -25,13 +25,13 @@
 #include <QHBoxLayout>
 #include <QGridLayout>
 
-#include <kaboutdata.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kemailsettings.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
-#include <ktitlewidget.h>
+#include <KAboutData>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KEMailSettings>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KTitleWidget>
 
 #include "debug.h"
 #include "../kxmlgui_version.h"

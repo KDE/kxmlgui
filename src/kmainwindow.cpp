@@ -38,14 +38,14 @@
 #include <QDBusConnection>
 #endif
 
-#include <ktoggleaction.h>
-#include <kaboutdata.h>
-#include <kconfig.h>
-#include <ksharedconfig.h>
-#include <klocalizedstring.h>
-#include <kconfiggroup.h>
-#include <kwindowconfig.h>
-#include <kconfiggui.h>
+#include <KToggleAction>
+#include <KAboutData>
+#include <KConfig>
+#include <KSharedConfig>
+#include <KLocalizedString>
+#include <KConfigGroup>
+#include <KWindowConfig>
+#include <KConfigGui>
 
 //#include <ctype.h>
 

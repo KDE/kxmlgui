@@ -8,7 +8,7 @@
 #ifndef KABOUT_APPLICATION_PERSON_LIST_DELEGATE_H
 #define KABOUT_APPLICATION_PERSON_LIST_DELEGATE_H
 
-#include <kwidgetitemdelegate.h>
+#include <KWidgetItemDelegate>
 
 
 namespace KDEPrivate

@@ -8,7 +8,7 @@
 
 #include <QVector>
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 namespace KToolbarHelper {
 

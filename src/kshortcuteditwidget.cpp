@@ -21,9 +21,9 @@
 #include <QRadioButton>
 #include <QLabel>
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #if HAVE_GLOBALACCEL
-# include <kglobalaccel.h>
+# include <KGlobalAccel>
 #endif
 
 #include "kkeysequencewidget.h"

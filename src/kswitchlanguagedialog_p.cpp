@@ -21,9 +21,9 @@
 #include <private/qlocale_p.h>
 #include <QGridLayout>
 
-#include <klanguagebutton.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLanguageButton>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 // Believe it or not we can't use KConfig from here
 // (we need KConfig during QCoreApplication ctor which is too early for it)

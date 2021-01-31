@@ -14,7 +14,7 @@
 #ifndef KMAINWINDOW_P_H
 #define KMAINWINDOW_P_H
 
-#include <kconfiggroup.h>
+#include <KConfigGroup>
 #include <QPointer>
 #include <QEventLoopLocker>
 

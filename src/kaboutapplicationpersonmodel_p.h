@@ -11,11 +11,11 @@
 #include "kaboutapplicationconfigattica_p.h"
 
 #if HAVE_ATTICA
-#include <attica/providermanager.h>
-#include <attica/provider.h>
+#include <Attica/ProviderManager>
+#include <Attica/Provider>
 #endif //HAVE_ATTICA
 
-#include <kaboutdata.h>
+#include <KAboutData>
 
 #include <QIcon>
 #include <QAbstractListModel>

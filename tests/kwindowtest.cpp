@@ -13,9 +13,9 @@
 #include <khelpmenu.h>
 #include <QLineEdit>
 #include <kxmlguifactory.h>
-#include <kactionmenu.h>
 #include <kactioncollection.h>
-#include <ktoggleaction.h>
+#include <KActionMenu>
+#include <KToggleAction>
 
 TestWindow::TestWindow(QWidget *parent)
     : KXmlGuiWindow(parent)

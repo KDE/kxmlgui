@@ -20,7 +20,7 @@
 #include <QTreeWidgetItem>
 
 #if HAVE_GLOBALACCEL
-# include <kglobalaccel.h>
+# include <KGlobalAccel>
 #endif
 
 KShortcutsEditorItem::KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *action)

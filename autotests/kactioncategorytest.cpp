@@ -4,8 +4,8 @@
 
 #include "kactioncollection.h"
 #include "kactioncategory.h"
-#include "kselectaction.h"
-#include "kstandardaction.h"
+#include <KSelectAction>
+#include <KStandardAction>
 
 void tst_KActionCategory::tstCreation()
 {

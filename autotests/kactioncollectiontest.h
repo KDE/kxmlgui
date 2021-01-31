@@ -2,8 +2,7 @@
 #define KACTIONCOLLECTIONTEST_H
 
 #include "kactioncollection.h"
-#include <kconfig.h>
-#include <kconfiggroup.h>
+#include <KConfigGroup>
 
 class tst_KActionCollection : public QObject
 {

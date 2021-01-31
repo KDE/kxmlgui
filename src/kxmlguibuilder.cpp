@@ -15,8 +15,8 @@
 #include "kmenumenuhandler_p.h"
 #include "debug.h"
 
-#include <kauthorized.h>
-#include <klocalizedstring.h>
+#include <KAuthorized>
+#include <KLocalizedString>
 
 #include <QDomElement>
 #include <QObject>
