@@ -1,0 +1,15 @@
+#ifndef KXMLGUIFACTORY_COMPAT_CAMELCASE_H
+#define KXMLGUIFACTORY_COMPAT_CAMELCASE_H
+
+#include "kxmlgui_export.h"
+
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 80)
+#   if KXMLGUI_DEPRECATED_WARNINGS_SINCE >= 0x055000 // 5.80.0
+#       pragma message("<KXMLGUIFactory> is deprecated. Since 5.80, use <KXmlGuiFactory> and the class alias KXmlGuiFactory instead.")
+#   endif
+#   include "kxmlguifactory.h"
+#else
+#   error "<KXMLGUIFactory> is deprecated. Since 5.80, use <KXmlGuiFactory> and the class alias KXmlGuiFactory instead."
+#endif
+
+#endif

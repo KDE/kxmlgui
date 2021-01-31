@@ -28,6 +28,8 @@ class QWidget;
  *
  * The virtual methods are mostly for historical reasons, there isn't really
  * a need to derive from KXMLGUIBuilder anymore.
+ *
+ * @note For future-compatibility, since KF 5.80 consider using the alias name KXmlGuiBuilder.
  */
 class KXMLGUI_EXPORT KXMLGUIBuilder
 {
@@ -88,6 +90,19 @@ protected:
 private:
     std::unique_ptr<KXMLGUIBuilderPrivate> const d;
 };
+
+/**
+ * @class KXmlGuiBuilder kxmlguibuilder.h KXmlGuiBuilder
+ *
+ * Future-compatible alias name for KXMLGUIBuilder (defined with C++'s "using")
+ *
+ * Use in newer code for compatibility with KF6.
+ * @warning For arguments of signals and slots use the old name KXMLGUIBuilder still,
+ * because string-based connections do not understand the alias.
+ *
+ * @since 5.80
+ */
+using KXmlGuiBuilder = KXMLGUIBuilder;
 
 #endif
 

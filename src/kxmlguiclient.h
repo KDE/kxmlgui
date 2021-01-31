@@ -35,6 +35,8 @@ class KEditToolBarWidget;
  * A KXMLGUIClient can be used with KXMLGUIFactory to create a
  * GUI from actions and an XML document, and can be dynamically merged
  * with other KXMLGUIClients.
+ *
+ * @note For future-compatibility, since KF 5.80 consider using the alias name KXmlGuiClient.
  */
 class KXMLGUI_EXPORT KXMLGUIClient
 {
@@ -405,5 +407,18 @@ protected:
 private:
     std::unique_ptr<KXMLGUIClientPrivate> const d;
 };
+
+/**
+ * @class KXmlGuiClient kxmlguiclient.h KXmlGuiClient
+ *
+ * Future-compatible alias name for KXMLGUIClient (defined with C++'s "using")
+ *
+ * Use in newer code for compatibility with KF6.
+ * @warning For arguments of signals and slots use the old name KXMLGUIClient still,
+ * because string-based connections do not understand the alias.
+ *
+ * @since 5.80
+ */
+using KXmlGuiClient = KXMLGUIClient;
 
 #endif

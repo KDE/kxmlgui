@@ -137,14 +137,24 @@ ecm_generate_headers(KXmlGui_HEADERS
   KShortcutWidget
   KToggleToolBarAction
   KToolBar
-  KXMLGUIBuilder
-  KXMLGUIClient
-  KXMLGUIFactory
+  KXmlGuiBuilder
+  KXmlGuiClient
+  KXmlGuiFactory
   KXmlGuiWindow
   KUndoActions
 
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
+
+if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND
+   EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.80.0)
+    # TODO: only use with case-sensitive filesystem installations
+    list(APPEND KXmlGui_HEADERS
+        compatforwardheaders/KXMLGUIBuilder
+        compatforwardheaders/KXMLGUIClient
+        compatforwardheaders/KXMLGUIFactory
+    )
+endif()
 
 install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 

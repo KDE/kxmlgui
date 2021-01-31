@@ -51,6 +51,8 @@ class BuildHelper;
  * KXMLGUIFactory processes the DOM tree provided by a client and plugs in the client's actions,
  * according to the XML and the merging rules of previously inserted clients. Container widgets
  * are built via a KXMLGUIBuilder , which has to be provided with the KXMLGUIFactory constructor.
+ *
+ * @note For future-compatibility, since KF 5.80 consider using the alias name KXmlGuiFactory.
  */
 class KXMLGUI_EXPORT KXMLGUIFactory : public QObject
 {
@@ -223,5 +225,17 @@ private:
     std::unique_ptr<KXMLGUIFactoryPrivate> const d;
 };
 
-#endif
+/**
+ * @class KXmlGuiFactory kxmlguifactory.h KXmlGuiFactory
+ *
+ * Future-compatible alias name for KXMLGUIFactory (defined with C++'s "using")
+ *
+ * Use in newer code for compatibility with KF6.
+ * @warning For arguments of signals and slots use the old name KXMLGUIFactory still,
+ * because string-based connections do not understand the alias.
+ *
+ * @since 5.80
+ */
+using KXmlGuiFactory = KXMLGUIFactory;
 
+#endif

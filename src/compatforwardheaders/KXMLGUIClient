@@ -1,0 +1,15 @@
+#ifndef KXMLGUICLIENT_COMPAT_CAMELCASE_H
+#define KXMLGUICLIENT_COMPAT_CAMELCASE_H
+
+#include "kxmlgui_export.h"
+
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 80)
+#   if KXMLGUI_DEPRECATED_WARNINGS_SINCE >= 0x055000 // 5.80.0
+#       pragma message("<KXMLGUIClient> is deprecated. Since 5.80, use <KXmlGuiClient> and the class alias KXmlGuiClient instead.")
+#   endif
+#   include "kxmlguiclient.h"
+#else
+#   error "<KXMLGUIClient> is deprecated. Since 5.80, use <KXmlGuiClient> and the class alias KXmlGuiClient instead."
+#endif
+
+#endif

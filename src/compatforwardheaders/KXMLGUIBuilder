@@ -1,0 +1,15 @@
+#ifndef KXMLGUIBUILDER_COMPAT_CAMELCASE_H
+#define KXMLGUIBUILDER_COMPAT_CAMELCASE_H
+
+#include "kxmlgui_export.h"
+
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 80)
+#   if KXMLGUI_DEPRECATED_WARNINGS_SINCE >= 0x055000 // 5.80.0
+#       pragma message("<KXMLGUIBuilder> is deprecated. Since 5.80, use <KXmlGuiBuilder> and the class alias KXmlGuiBuilder instead.")
+#   endif
+#   include "kxmlguibuilder.h"
+#else
+#   error "<KXMLGUIBuilder> is deprecated. Since 5.80, use <KXmlGuiBuilder> and the class alias KXmlGuiBuilder instead."
+#endif
+
+#endif
