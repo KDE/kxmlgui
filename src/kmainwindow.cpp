@@ -23,6 +23,7 @@
 #include "ktoolbar.h"
 
 #include <QApplication>
+#include <QFile>
 #include <QList>
 #include <QObject>
 #include <QTimer>

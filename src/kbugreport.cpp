@@ -24,6 +24,7 @@
 #include <QTextEdit>
 #include <QHBoxLayout>
 #include <QGridLayout>
+#include <QFile>
 
 #include <KAboutData>
 #include <KConfig>

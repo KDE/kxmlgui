@@ -12,6 +12,7 @@
 #include "ktoolbar.h"
 
 #include <QWidget>
+#include <QVector>
 
 #include "debug.h"
 #include <cassert>

@@ -12,12 +12,13 @@
 #include <kxmlgui_export.h>
 #include <memory>
 
+#include <QStringList>
+
 class KXMLGUIBuilderPrivate;
 class KXMLGUIClient;
 
 class QAction;
 class QDomElement;
-class QStringList;
 class QWidget;
 
 /**

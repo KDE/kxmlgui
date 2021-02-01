@@ -8,6 +8,7 @@
 #include <cstdlib>
 
 #include <QAction>
+#include <QActionGroup>
 #include <QApplication>
 #include <QComboBox>
 #include <khelpmenu.h>

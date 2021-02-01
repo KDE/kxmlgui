@@ -20,7 +20,6 @@
 
 #include <QDomElement>
 #include <QObject>
-#include <QMutableStringListIterator>
 #include <QAction>
 #include <QMenu>
 #include <QMenuBar>

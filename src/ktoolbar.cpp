@@ -16,8 +16,8 @@
 
 #include <QPointer>
 #include <QAction>
+#include <QActionGroup>
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QFrame>
 #include <QLayout>
 #include <QMenu>

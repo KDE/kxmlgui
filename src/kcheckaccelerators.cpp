@@ -27,6 +27,7 @@
 #include <QAction>
 #include <QMenu>
 #include <QVBoxLayout>
+#include <QFile>
 
 #include <KConfig>
 #include <KConfigGroup>
