@@ -96,6 +96,8 @@ KXMLGUIClient::~KXMLGUIClient()
     }
 
     delete d->m_actionCollection;
+
+    delete d;
 }
 
 QAction *KXMLGUIClient::action(const char *name) const
