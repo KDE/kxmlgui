@@ -36,7 +36,7 @@ public:
             if (se->isAmbiguous()) {
                 KMessageBox::information(
                     nullptr,  // No widget to be seen around here
-                    i18n("The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
+                    i18n("The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
                          "from the 'Settings' menu to solve the ambiguity.\n"
                          "No action will be triggered.",
                          se->key().toString(QKeySequence::NativeText)),
