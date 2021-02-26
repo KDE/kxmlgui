@@ -416,6 +416,33 @@ public:
                        const QObject *receiver = nullptr, const char *member = nullptr);
 
     /**
+     * This is the same as addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member) using
+     * new style connect syntax.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @param name The name by which the action be retrieved again from the collection.
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
+     * @return new action of the given type ActionType.
+     *
+     * @see addAction(KStandardAction::StandardAction, const QString &, const QObject *, const char *)
+     * @since 5.80
+     */
+    #ifdef K_DOXYGEN
+    inline QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+    #else
+    template<class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, QAction>::type *addAction(
+        KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+    #endif
+    {
+        QAction *action = KStandardAction::create(actionType, receiver, slot, nullptr);
+        action->setParent(this);
+        action->setObjectName(name);
+        return addAction(name, action);
+    }
+
+    /**
      * Creates a new action under the given name to the collection and connects
      * the action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is returned.
