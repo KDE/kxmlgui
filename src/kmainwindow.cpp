@@ -18,6 +18,7 @@
 #ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
 #endif
+#include "ktooltiphelper.h"
 #include "khelpmenu.h"
 #include "ktoolbar.h"
 #include "ktoolbarhandler_p.h"
@@ -271,6 +272,13 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 
     sizeApplied = false;
     suppressCloseEvent = false;
+
+    // The next code line completely decides wether KToolTipHelper is an opt-in or opt-out feature.
+    // For applications to opt out they would need to bump their minimum version to whenever
+    // KToolTipHelper was first introduced. There is probably a standard procedure to handle
+    // situations like these. I really think the expanded tooltip feature should be enabled by
+    // default at some point in time.
+    qApp->installEventFilter(KToolTipHelper::instance());
 }
 
 static bool endsWithHashNumber(const QString &s)

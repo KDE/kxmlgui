@@ -43,6 +43,7 @@ target_sources(KF5XmlGui PRIVATE
   ktoolbar.cpp
   ktoolbarhandler.cpp
   ktoolbarhelper.cpp
+  ktooltiphelper.cpp
   kxmlguibuilder.cpp
   kxmlguiclient.cpp
   kxmlguifactory.cpp
@@ -130,6 +131,7 @@ ecm_generate_headers(KXmlGui_HEADERS
   KShortcutWidget
   KToggleToolBarAction
   KToolBar
+  KToolTipHelper
   KXMLGUIBuilder
   KXMLGUIClient
   KXMLGUIFactory
