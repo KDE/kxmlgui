@@ -24,6 +24,7 @@ private Q_SLOTS:
     void implicitStandardActionInsertionUsingCreate();
     void implicitStandardActionInsertionUsingCut();
     void shouldEmitSignals();
+    void addStandardActionFunctorSignal();
 
 private:
     KConfigGroup clearConfig();

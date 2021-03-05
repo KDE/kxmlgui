@@ -41,6 +41,16 @@ void tst_KActionCollection::clear()
     QVERIFY(action7.isNull());
 }
 
+void tst_KActionCollection::addStandardActionFunctorSignal()
+{
+    bool received = false;
+    QAction *a = collection->addAction(KStandardAction::New, QStringLiteral("test"), this, [&]() { received = true; });
+    a->trigger();
+    QVERIFY(received);
+    delete a;
+    QVERIFY(collection->isEmpty());
+}
+
 void tst_KActionCollection::deleted()
 {
     // Delete action -> automatically removed from collection
