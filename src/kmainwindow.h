@@ -85,7 +85,8 @@ class KToolBar;
  * the last mainwindow will quit the application unless there is still something
  * that holds a ref in KGlobal - like a KIO job, or a systray icon.
  *
- * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej (radej@kde.org). Maintained by David Faure (faure@kde.org)
+ * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej
+ * (radej@kde.org). Maintained by David Faure (faure@kde.org)
  */
 
 class KXMLGUI_EXPORT KMainWindow : public QMainWindow
@@ -175,8 +176,7 @@ public:
      * @deprecated Since 5.0, use KHelpMenu directly
      */
     KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KHelpMenu directly")
-    QMenu *helpMenu(const QString &aboutAppText = QString(),
-                    bool showWhatsThis = true);
+    QMenu *helpMenu(const QString &aboutAppText = QString(), bool showWhatsThis = true);
 #endif
 
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
@@ -320,16 +320,14 @@ public:
      *   "virtual QSize sizeHint() const;" to specify a default size rather
      *   than letting QWidget::adjust use the default size of 0x0.
      */
-    void setAutoSaveSettings(const QString &groupName = QStringLiteral("MainWindow"),
-                             bool saveWindowSize = true);
+    void setAutoSaveSettings(const QString &groupName = QStringLiteral("MainWindow"), bool saveWindowSize = true);
 
     /**
      * Overload that lets you specify a KConfigGroup.
      * This allows the settings to be saved into another file than KSharedConfig::openConfig().
      * @since 4.1
      */
-    void setAutoSaveSettings(const KConfigGroup &group,
-                             bool saveWindowSize = true);
+    void setAutoSaveSettings(const KConfigGroup &group, bool saveWindowSize = true);
 
     /**
      * Disable the auto-save-settings feature.
@@ -393,7 +391,10 @@ public:
      * @deprecated since 5.0, the functionality got removed
      **/
     KXMLGUI_DEPRECATED_VERSION(5, 0, "Remove usage, is a no-op now")
-    bool initialGeometrySet() const { return false; }
+    bool initialGeometrySet() const
+    {
+        return false;
+    }
 #endif
 
 public Q_SLOTS:
@@ -517,14 +518,18 @@ protected:
      * in this function!
      *
      */
-    virtual void saveProperties(KConfigGroup &) {}
+    virtual void saveProperties(KConfigGroup &)
+    {
+    }
 
     /**
      * Read your instance-specific properties.
      *
      * Is called indirectly by restore().
      */
-    virtual void readProperties(const KConfigGroup &) {}
+    virtual void readProperties(const KConfigGroup &)
+    {
+    }
 
     /**
       * Save your application-wide properties. The function is
@@ -578,32 +583,34 @@ protected:
 protected Q_SLOTS:
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     /**
-    * This slot does nothing.
-    *
-    * It must be reimplemented if you want
-    * to use a custom About Application dialog box. This slot is
-    * connected to the About Application entry in the menu returned
-    * by customHelpMenu.
-    *
-    * Example:
-    * \code
-    *
-    * void MyMainLevel::setupInterface()
-    * {
-    *   ..
-    *   menuBar()->addMenu( customHelpMenu() );
-    *   ..
-    * }
-    *
-    * void MyMainLevel::showAboutApplication()
-    * {
-    *   <activate your custom dialog>
-    * }
-    * \endcode
-    * @deprecated Since 5.0, use KHelpMenu
-    */
+     * This slot does nothing.
+     *
+     * It must be reimplemented if you want
+     * to use a custom About Application dialog box. This slot is
+     * connected to the About Application entry in the menu returned
+     * by customHelpMenu.
+     *
+     * Example:
+     * \code
+     *
+     * void MyMainLevel::setupInterface()
+     * {
+     *   ..
+     *   menuBar()->addMenu( customHelpMenu() );
+     *   ..
+     * }
+     *
+     * void MyMainLevel::showAboutApplication()
+     * {
+     *   <activate your custom dialog>
+     * }
+     * \endcode
+     * @deprecated Since 5.0, use KHelpMenu
+     */
     KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KHelpMenu")
-    virtual void showAboutApplication() {}
+    virtual void showAboutApplication()
+    {
+    }
 #endif
 
     /**
@@ -643,7 +650,6 @@ private:
     Q_PRIVATE_SLOT(d_func(), void _k_slotSaveAutoSavePosition())
 };
 
-
 /**
  * @defgroup KXMLGUI_Session KXMLGUI Session Macros and Functions
  *
@@ -657,10 +663,14 @@ private:
  *
  * @deprecated since 5.0, use kRestoreMainWindows() instead
  **/
-#define RESTORE(type) { int n = 1;\
-        while (KMainWindow::canBeRestored(n)){\
-            (new type)->restore(n);\
-            n++;}}
+#define RESTORE(type)                                                                                                                                          \
+    {                                                                                                                                                          \
+        int n = 1;                                                                                                                                             \
+        while (KMainWindow::canBeRestored(n)) {                                                                                                                \
+            (new type)->restore(n);                                                                                                                            \
+            n++;                                                                                                                                               \
+        }                                                                                                                                                      \
+    }
 #endif
 
 /**
@@ -707,7 +717,7 @@ private:
  * @see KMainWindow::restore()
  * @see KMainWindow::classNameOfToplevel()
  **/
-template <typename T>
+template<typename T>
 inline void kRestoreMainWindows()
 {
     for (int n = 1; KMainWindow::canBeRestored(n); ++n) {
@@ -716,7 +726,7 @@ inline void kRestoreMainWindows()
             (new T)->restore(n);
         }
     }
-} 
+}
 
 /**
  * Restores the last session.
@@ -726,7 +736,7 @@ inline void kRestoreMainWindows()
  * @tparam T1 explicit other toplevel widget class for disambiguation from base template
  * @tparam Tn Parameter pack to take 0..n further KMainWindows
  */
-template <typename T0, typename T1, typename ...Tn>
+template<typename T0, typename T1, typename... Tn>
 inline void kRestoreMainWindows()
 {
     kRestoreMainWindows<T0>();

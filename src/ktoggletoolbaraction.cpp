@@ -31,7 +31,9 @@ class KToggleToolBarActionPrivate
 {
 public:
     KToggleToolBarActionPrivate(KToggleToolBarAction *q)
-        : toolBarName(nullptr), toolBar(nullptr), beingToggled(false)
+        : toolBarName(nullptr)
+        , toolBar(nullptr)
+        , beingToggled(false)
     {
         const bool authorized = KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar"));
         q->setEnabled(authorized);
@@ -44,15 +46,15 @@ public:
 };
 
 KToggleToolBarAction::KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent)
-    : KToggleAction(text, parent),
-      d(new KToggleToolBarActionPrivate(this))
+    : KToggleAction(text, parent)
+    , d(new KToggleToolBarActionPrivate(this))
 {
     d->toolBarName = toolBarName;
 }
 
 KToggleToolBarAction::KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent)
-    : KToggleAction(text, parent),
-      d(new KToggleToolBarActionPrivate(this))
+    : KToggleAction(text, parent)
+    , d(new KToggleToolBarActionPrivate(this))
 {
     d->toolBar = toolBar;
     d->toolBar->installEventFilter(this);
@@ -116,4 +118,3 @@ void KToggleToolBarAction::slotToggled(bool checked)
 
     KToggleAction::slotToggled(checked);
 }
-

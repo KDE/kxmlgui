@@ -9,15 +9,16 @@
 
 #include <QString>
 
-namespace SystemInformation {
-    QString userName();
-    QString operatingSystemVersion();
+namespace SystemInformation
+{
+QString userName();
+QString operatingSystemVersion();
 }
 
 #if !defined(Q_OS_WIN)
 #include <pwd.h>
-#include <unistd.h>
 #include <sys/utsname.h>
+#include <unistd.h>
 inline QString SystemInformation::userName()
 {
     struct passwd *p = getpwuid(getuid());
@@ -28,9 +29,8 @@ inline QString SystemInformation::operatingSystemVersion()
 {
     struct utsname unameBuf;
     uname(&unameBuf);
-    return QString::fromUtf8(unameBuf.sysname) +
-        QLatin1String(" (") + QString::fromUtf8(unameBuf.machine) + QLatin1String(") ") +
-        QLatin1String("release ") + QString::fromUtf8(unameBuf.release);
+    return QString::fromUtf8(unameBuf.sysname) + QLatin1String(" (") + QString::fromUtf8(unameBuf.machine) + QLatin1String(") ") + QLatin1String("release ")
+        + QString::fromUtf8(unameBuf.release);
 }
 #else
 #include <QOperatingSystemVersion>
@@ -44,12 +44,13 @@ inline QString SystemInformation::userName()
     WCHAR nameBuffer[256];
     DWORD bufsize = 256;
     if (!GetUserNameExW(NameDisplay, nameBuffer, &bufsize)) {
-        return QStringLiteral("Unknown User"); //should never happen (translate?)
+        return QStringLiteral("Unknown User"); // should never happen (translate?)
     }
     return QString::fromWCharArray(nameBuffer);
 }
 
-static inline QString windowsVersionString() {
+static inline QString windowsVersionString()
+{
     const auto version = QOperatingSystemVersion::current();
     // We're comparing with class instances, can't use a switch
     // There's not even an operator== anyway.
@@ -84,7 +85,7 @@ inline QString SystemInformation::operatingSystemVersion()
         arch = QStringLiteral(" (unknown architecture)");
     }
     QString winVer;
-    //TODO: handle Service packs?
+    // TODO: handle Service packs?
     return windowsVersionString() + arch;
 }
 

@@ -16,7 +16,6 @@ class KXmlGuiWindow;
 
 namespace KDEPrivate
 {
-
 class ToolBarHandler : public QObject, public KXMLGUIClient
 {
     Q_OBJECT
@@ -53,7 +52,6 @@ private Q_SLOTS:
 private:
     class Private;
     Private *const d;
-
 };
 
 } // namespace KDEPrivate

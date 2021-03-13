@@ -14,9 +14,9 @@
 #ifndef KXMLGUIWINDOW_H
 #define KXMLGUIWINDOW_H
 
-#include "kxmlguiclient.h"
-#include "kxmlguibuilder.h"
 #include "kmainwindow.h"
+#include "kxmlguibuilder.h"
+#include "kxmlguiclient.h"
 
 class KMenu;
 class KXMLGUIFactory;
@@ -38,7 +38,8 @@ class KXmlGuiWindowPrivate;
  * for essential information on the XML file format and usage of this class.
  *
  * @see KMainWindow
- * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej (radej@kde.org). Maintained by Sven Radej (radej@kde.org)
+ * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej
+ (radej@kde.org). Maintained by Sven Radej (radej@kde.org)
 
  */
 
@@ -312,8 +313,7 @@ public Q_SLOTS:
      * can "reverse" the state (disable the actions which should be
      * enabled, and vice-versa) if specified.
      */
-    void slotStateChanged(const QString &newstate,
-                          bool reverse);
+    void slotStateChanged(const QString &newstate, bool reverse);
 
 protected:
     /**

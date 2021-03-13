@@ -15,11 +15,11 @@
 #ifndef KACTIONCOLLECTION_H
 #define KACTIONCOLLECTION_H
 
-#include <kxmlgui_export.h>
 #include <KStandardAction>
+#include <kxmlgui_export.h>
 
-#include <QObject>
 #include <QAction>
+#include <QObject>
 #include <memory>
 
 class QAction;
@@ -134,48 +134,48 @@ public:
     void setConfigGlobal(bool global);
 
     /**
-      * Read all key associations from @p config.
-      *
-      * If @p config is zero, read all key associations from the
-      * application's configuration file KSharedConfig::openConfig(),
-      * in the group set by setConfigGroup().
-      */
+     * Read all key associations from @p config.
+     *
+     * If @p config is zero, read all key associations from the
+     * application's configuration file KSharedConfig::openConfig(),
+     * in the group set by setConfigGroup().
+     */
     void readSettings(KConfigGroup *config = nullptr);
 
     /**
-      * Import from @p config all configurable global key associations.
-      *
-      * \since 4.1
-      *
-      * \param config Config object to read from
-      */
+     * Import from @p config all configurable global key associations.
+     *
+     * \since 4.1
+     *
+     * \param config Config object to read from
+     */
     void importGlobalShortcuts(KConfigGroup *config);
 
     /**
-      * Export the current configurable global key associations to @p config.
-      *
-      * \since 4.1
-      *
-      * \param config Config object to save to
-      * \param writeDefaults set to true to write settings which are already at defaults.
-      */
+     * Export the current configurable global key associations to @p config.
+     *
+     * \since 4.1
+     *
+     * \param config Config object to save to
+     * \param writeDefaults set to true to write settings which are already at defaults.
+     */
     void exportGlobalShortcuts(KConfigGroup *config, bool writeDefaults = false) const;
 
     /**
-      * Write the current configurable key associations to @p config. What the
-      * function does if @p config is zero depends. If this action collection
-      * belongs to a KXMLGUIClient the setting are saved to the kxmlgui
-      * definition file. If not the settings are written to the applications
-      * config file.
-      *
-      * \note @p oneAction and @p writeDefaults have no meaning for the kxmlgui
-      * configuration file.
-      *
-      * \param config Config object to save to, or null (see above)
-      * \param writeDefaults set to true to write settings which are already at defaults.
-      * \param oneAction pass an action here if you just want to save the values for one action, eg.
-      *                  if you know that action is the only one which has changed.
-      */
+     * Write the current configurable key associations to @p config. What the
+     * function does if @p config is zero depends. If this action collection
+     * belongs to a KXMLGUIClient the setting are saved to the kxmlgui
+     * definition file. If not the settings are written to the applications
+     * config file.
+     *
+     * \note @p oneAction and @p writeDefaults have no meaning for the kxmlgui
+     * configuration file.
+     *
+     * \param config Config object to save to, or null (see above)
+     * \param writeDefaults set to true to write settings which are already at defaults.
+     * \param oneAction pass an action here if you just want to save the values for one action, eg.
+     *                  if you know that action is the only one which has changed.
+     */
     void writeSettings(KConfigGroup *config = nullptr, bool writeDefaults = false, QAction *oneAction = nullptr) const;
 
     /**
@@ -412,29 +412,28 @@ public:
      *               connection is desired.
      * @return new action of the given type ActionType.
      */
-    QAction *addAction(KStandardAction::StandardAction actionType, const QString &name,
-                       const QObject *receiver = nullptr, const char *member = nullptr);
+    QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
-    /**
-     * This is the same as addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member) using
-     * new style connect syntax.
-     *
-     * @param actionType The standard action type of the action to create.
-     * @param name The name by which the action be retrieved again from the collection.
-     * @param receiver The QObject to connect the triggered(bool) signal to.
-     * @param slot The slot or lambda to connect the triggered(bool) signal to.
-     * @return new action of the given type ActionType.
-     *
-     * @see addAction(KStandardAction::StandardAction, const QString &, const QObject *, const char *)
-     * @since 5.80
-     */
-    #ifdef K_DOXYGEN
+/**
+ * This is the same as addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member) using
+ * new style connect syntax.
+ *
+ * @param actionType The standard action type of the action to create.
+ * @param name The name by which the action be retrieved again from the collection.
+ * @param receiver The QObject to connect the triggered(bool) signal to.
+ * @param slot The slot or lambda to connect the triggered(bool) signal to.
+ * @return new action of the given type ActionType.
+ *
+ * @see addAction(KStandardAction::StandardAction, const QString &, const QObject *, const char *)
+ * @since 5.80
+ */
+#ifdef K_DOXYGEN
     inline QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
-    #else
+#else
     template<class Receiver, class Func>
-    inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, QAction>::type *addAction(
-        KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
-    #endif
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
+    addAction(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+#endif
     {
         QAction *action = KStandardAction::create(actionType, receiver, slot, nullptr);
         action->setParent(this);
@@ -499,26 +498,26 @@ public:
         return a;
     }
 
-    /**
-     * This is the same as add(const QString &name, const QObject *receiver, const char *member) using
-     * new style connect syntax.
-     *
-     * @param name The internal name of the action (e.g. "file-open").
-     * @param receiver The QObject to connect the triggered(bool) signal to.
-     * @param slot The slot or lambda to connect the triggered(bool) signal to.
-     * @return new action of the given type ActionType.
-     *
-     * @see add(const QString &, const QObject *, const char *)
-     * @since 5.28
-     */
-    #ifdef K_DOXYGEN
+/**
+ * This is the same as add(const QString &name, const QObject *receiver, const char *member) using
+ * new style connect syntax.
+ *
+ * @param name The internal name of the action (e.g. "file-open").
+ * @param receiver The QObject to connect the triggered(bool) signal to.
+ * @param slot The slot or lambda to connect the triggered(bool) signal to.
+ * @return new action of the given type ActionType.
+ *
+ * @see add(const QString &, const QObject *, const char *)
+ * @since 5.28
+ */
+#ifdef K_DOXYGEN
     template<class ActionType>
     inline ActionType *add(const QString &name, const Receiver *receiver, Func slot)
-    #else
+#else
     template<class ActionType, class Receiver, class Func>
-    inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, ActionType>::type *add(
-        const QString &name, const Receiver *receiver, Func slot)
-    #endif
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, ActionType>::type *
+    add(const QString &name, const Receiver *receiver, Func slot)
+#endif
     {
         ActionType *a = new ActionType(this);
         connect(a, &QAction::triggered, receiver, slot);
@@ -526,25 +525,25 @@ public:
         return a;
     }
 
-    /**
-     * This is the same as addAction(const QString &name, const QObject *receiver, const char *member) using
-     * new style connect syntax.
-     *
-     * @param name The internal name of the action (e.g. "file-open").
-     * @param receiver The QObject to connect the triggered(bool) signal to.
-     * @param slot The slot or lambda to connect the triggered(bool) signal to.
-     * @return new action of the given type ActionType.
-     *
-     * @see addAction(const QString &, const QObject *, const char *)
-     * @since 5.28
-     */
-    #ifdef K_DOXYGEN
+/**
+ * This is the same as addAction(const QString &name, const QObject *receiver, const char *member) using
+ * new style connect syntax.
+ *
+ * @param name The internal name of the action (e.g. "file-open").
+ * @param receiver The QObject to connect the triggered(bool) signal to.
+ * @param slot The slot or lambda to connect the triggered(bool) signal to.
+ * @return new action of the given type ActionType.
+ *
+ * @see addAction(const QString &, const QObject *, const char *)
+ * @since 5.28
+ */
+#ifdef K_DOXYGEN
     inline QAction *addAction(const QString &name, const Receiver *receiver, Func slot)
-    #else
+#else
     template<class Receiver, class Func>
-    inline typename std::enable_if<!std::is_convertible<Func, const char*>::value, QAction>::type *addAction(
-        const QString &name, const Receiver *receiver, Func slot)
-    #endif
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
+    addAction(const QString &name, const Receiver *receiver, Func slot)
+#endif
     {
         return add<QAction>(name, receiver, slot);
     }
@@ -567,7 +566,7 @@ public:
      */
     QList<QKeySequence> defaultShortcuts(QAction *action) const;
 
-    //TODO KF6: Make setDefaultShortcut static
+    // TODO KF6: Make setDefaultShortcut static
     /**
      * Set the default shortcut for the given action.
      * Since 5.2, this also calls action->setShortcut(shortcut), i.e. the default shortcut is
@@ -611,7 +610,7 @@ private:
     Q_PRIVATE_SLOT(d, void _k_actionDestroyed(QObject *))
     Q_PRIVATE_SLOT(d, void _k_associatedWidgetDestroyed(QObject *))
 
-    KActionCollection(const KXMLGUIClient *parent);   // used by KXMLGUIClient
+    KActionCollection(const KXMLGUIClient *parent); // used by KXMLGUIClient
 
     friend class KActionCollectionPrivate;
     std::unique_ptr<class KActionCollectionPrivate> const d;

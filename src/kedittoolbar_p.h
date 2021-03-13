@@ -19,7 +19,6 @@ class QCheckBox;
 
 namespace KDEPrivate
 {
-
 class ToolBarItem;
 class KEditToolBarWidgetPrivate;
 
@@ -126,8 +125,7 @@ public:
      * @param collection The collection of actions to work on
      * @param parent This widget's parent
      */
-    explicit KEditToolBarWidget(KActionCollection *collection,
-                                QWidget *parent = nullptr);
+    explicit KEditToolBarWidget(KActionCollection *collection, QWidget *parent = nullptr);
 
     /**
      * Main constructor.
@@ -176,9 +174,7 @@ public:
      *
      * @see KEditToolBar
      */
-    void load(const QString &resourceFile,
-              bool global = true,
-              const QString &defaultToolBar = QString());
+    void load(const QString &resourceFile, bool global = true, const QString &defaultToolBar = QString());
 
     /**
      * Loads the toolbar configuration into the widget. Should be called before being shown.
@@ -193,8 +189,7 @@ public:
      *
      * @see KEditToolBar
      */
-    void load(KXMLGUIFactory *factory,
-              const QString &defaultToolBar = QString());
+    void load(KXMLGUIFactory *factory, const QString &defaultToolBar = QString());
 
     /**
      * @internal Reimplemented for internal purposes.

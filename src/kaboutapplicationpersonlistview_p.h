@@ -12,7 +12,6 @@
 
 namespace KDEPrivate
 {
-
 class KAboutApplicationPersonListView : public QListView
 {
     Q_OBJECT
@@ -21,9 +20,8 @@ public:
 
 protected:
     void wheelEvent(QWheelEvent *e) override;
-
 };
 
-} //namespace KDEPrivate
+} // namespace KDEPrivate
 
 #endif // KABOUT_APPLICATION_PERSON_LIST_VIEW_H

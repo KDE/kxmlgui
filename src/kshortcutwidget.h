@@ -88,4 +88,4 @@ private:
     std::unique_ptr<KShortcutWidgetPrivate> const d;
 };
 
-#endif //KSHORTCUTWIDGET_H
+#endif // KSHORTCUTWIDGET_H

@@ -13,14 +13,14 @@
 */
 #include "config-xmlgui.h"
 
-#include "kshortcutsdialog_p.h"
 #include "debug.h"
+#include "kshortcutsdialog_p.h"
 
 #include <QAction>
 #include <QTreeWidgetItem>
 
 #if HAVE_GLOBALACCEL
-# include <KGlobalAccel>
+#include <KGlobalAccel>
 #endif
 
 KShortcutsEditorItem::KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *action)
@@ -96,8 +96,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
             return false;
         case LocalPrimary:
         case LocalAlternate:
-            return !m_action->property("isShortcutConfigurable").isValid()
-                   || m_action->property("isShortcutConfigurable").toBool();
+            return !m_action->property("isShortcutConfigurable").isValid() || m_action->property("isShortcutConfigurable").toBool();
 #if HAVE_GLOBALACCEL
         case GlobalPrimary:
         case GlobalAlternate:
@@ -109,7 +108,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
         default:
             return false;
         }
-    //the following are custom roles, defined in this source file only
+    // the following are custom roles, defined in this source file only
     case ShortcutRole:
         switch (column) {
         case LocalPrimary:
@@ -124,7 +123,7 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
         }
 
     case DefaultShortcutRole: {
-        QList<QKeySequence> defaultShortcuts = m_action->property("defaultShortcuts").value<QList<QKeySequence> >();
+        QList<QKeySequence> defaultShortcuts = m_action->property("defaultShortcuts").value<QList<QKeySequence>>();
 #if HAVE_GLOBALACCEL
         QList<QKeySequence> defaultGlobalShortcuts = KGlobalAccel::self()->defaultShortcut(m_action);
 #endif
@@ -164,10 +163,14 @@ bool KShortcutsEditorItem::operator<(const QTreeWidgetItem &other) const
 
 QKeySequence KShortcutsEditorItem::keySequence(uint column) const
 {
-    auto shortcuts = [this]() { return m_action->shortcuts(); };
+    auto shortcuts = [this]() {
+        return m_action->shortcuts();
+    };
 
 #if HAVE_GLOBALACCEL
-    auto globalShortcuts = [this]() { return KGlobalAccel::self()->shortcut(m_action); };
+    auto globalShortcuts = [this]() {
+        return KGlobalAccel::self()->shortcut(m_action);
+    };
 #endif
 
     switch (column) {
@@ -222,7 +225,7 @@ void KShortcutsEditorItem::setKeySequence(uint column, const QKeySequence &seq)
         }
     }
 
-    //avoid also setting the default shortcut - what we are setting here is custom by definition
+    // avoid also setting the default shortcut - what we are setting here is custom by definition
 #if HAVE_GLOBALACCEL
     if (column == GlobalPrimary || column == GlobalAlternate) {
         KGlobalAccel::self()->setShortcut(m_action, ks, KGlobalAccel::NoAutoloading);
@@ -236,7 +239,7 @@ void KShortcutsEditorItem::setKeySequence(uint column, const QKeySequence &seq)
     updateModified();
 }
 
-//our definition of modified is "modified since the chooser was shown".
+// our definition of modified is "modified since the chooser was shown".
 void KShortcutsEditorItem::updateModified()
 {
     if (m_oldLocalShortcut && *m_oldLocalShortcut == m_action->shortcuts()) {

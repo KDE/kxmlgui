@@ -36,7 +36,7 @@ public:
      * @see Options
      */
     enum Option {
-        NoOptions       = 0x0, ///< No options, show the standard about dialog
+        NoOptions = 0x0, ///< No options, show the standard about dialog
         HideTranslators = 0x1, ///< Don't show the translators tab
     };
     /**

@@ -15,17 +15,16 @@
 
 int main(int argc, char *argv[])
 {
-
     QApplication::setApplicationName(QStringLiteral("kmainwindowrestoretest"));
     QApplication app(argc, argv);
 
     if (qApp->isSessionRestored()) {
-        kRestoreMainWindows< MainWin1, MainWin2, MainWin3 >();
-        kRestoreMainWindows< MainWin4, MainWin5 >();
+        kRestoreMainWindows<MainWin1, MainWin2, MainWin3>();
+        kRestoreMainWindows<MainWin4, MainWin5>();
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
         RESTORE(MainWin6);
 #else
-        kRestoreMainWindows< MainWin6 >(); // should be equivalent to RESTORE()
+        kRestoreMainWindows<MainWin6>(); // should be equivalent to RESTORE()
 #endif
     } else {
         MAKE_WINDOW(1, QStringLiteral("First 1"));
@@ -43,4 +42,3 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
-

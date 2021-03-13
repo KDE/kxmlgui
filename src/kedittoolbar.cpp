@@ -8,39 +8,39 @@
 */
 
 #include "kedittoolbar.h"
-#include "kedittoolbar_p.h"
 #include "debug.h"
+#include "kedittoolbar_p.h"
 
-#include <QShowEvent>
 #include <QAction>
-#include <QDialogButtonBox>
-#include <QDomDocument>
-#include <QDir>
-#include <QFile>
-#include <QToolButton>
-#include <QLabel>
 #include <QApplication>
-#include <QGridLayout>
 #include <QCheckBox>
+#include <QComboBox>
+#include <QDialogButtonBox>
+#include <QDir>
+#include <QDomDocument>
+#include <QFile>
+#include <QGridLayout>
+#include <QLabel>
+#include <QLineEdit>
 #include <QMimeData>
 #include <QPushButton>
+#include <QShowEvent>
 #include <QStandardPaths>
-#include <QComboBox>
-#include <QLineEdit>
+#include <QToolButton>
 
+#include <KConfig>
 #include <KIconDialog>
 #include <KListWidgetSearchLine>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSeparator>
-#include <KConfig>
 
 #include "kactioncollection.h"
-#include "kxmlguifactory.h"
 #include "ktoolbar.h"
+#include "kxmlguifactory.h"
 
-#include "ktoolbarhelper_p.h"
 #include "../kxmlgui_version.h"
+#include "ktoolbarhelper_p.h"
 
 static const char separatorstring[] = I18N_NOOP("--- separator ---");
 static const char spacerstring[] = I18N_NOOP("--- expanding spacer ---");
@@ -48,13 +48,12 @@ static const char spacerstring[] = I18N_NOOP("--- expanding spacer ---");
 #define SEPARATORSTRING i18n(separatorstring)
 #define SPACERSTRING i18n(spacerstring)
 
-//static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
+// static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
 
 typedef QList<QDomElement> ToolBarList;
 
 namespace KDEPrivate
 {
-
 /**
  * Return a list of toolbar elements given a toplevel element
  */
@@ -69,7 +68,7 @@ static ToolBarList findToolBars(const QDomElement &start)
             }
         } else {
             if (elem.tagName() != QLatin1String("MenuBar")) { // there are no toolbars inside the menubar :)
-                list += findToolBars(elem.firstChildElement());    // recursive
+                list += findToolBars(elem.firstChildElement()); // recursive
             }
         }
     }
@@ -83,10 +82,10 @@ public:
     enum XmlType { Shell = 0, Part, Local, Merged };
 
     explicit XmlData(XmlType xmlType, const QString &xmlFile, KActionCollection *collection)
-        : m_isModified(false),
-          m_xmlFile(xmlFile),
-          m_type(xmlType),
-          m_actionCollection(collection)
+        : m_isModified(false)
+        , m_xmlFile(xmlFile)
+        , m_type(xmlType)
+        , m_actionCollection(collection)
     {
     }
     void dump() const
@@ -135,7 +134,7 @@ public:
      */
     QString toolBarText(const QDomElement &it) const;
 
-    bool         m_isModified = false;
+    bool m_isModified = false;
     ToolBarList &barList()
     {
         return m_barList;
@@ -146,10 +145,10 @@ public:
     }
 
 private:
-    ToolBarList  m_barList;
-    QString      m_xmlFile;
+    ToolBarList m_barList;
+    QString m_xmlFile;
     QDomDocument m_document;
-    XmlType      m_type;
+    XmlType m_type;
     KActionCollection *m_actionCollection;
 };
 
@@ -159,8 +158,7 @@ QString XmlData::toolBarText(const QDomElement &it) const
 
     // the name of the toolbar might depend on whether or not
     // it is in kparts
-    if ((m_type == XmlData::Shell) ||
-            (m_type == XmlData::Part)) {
+    if ((m_type == XmlData::Shell) || (m_type == XmlData::Part)) {
         QString doc_name(m_document.documentElement().attribute(QStringLiteral("name")));
         name += QLatin1String(" <") + doc_name + QLatin1Char('>');
     }
@@ -173,13 +171,13 @@ class ToolBarItem : public QListWidgetItem
 {
 public:
     ToolBarItem(QListWidget *parent, const QString &tag = QString(), const QString &name = QString(), const QString &statusText = QString())
-        : QListWidgetItem(parent),
-          m_internalTag(tag),
-          m_internalName(name),
-          m_statusText(statusText),
-          m_isSeparator(false),
-          m_isSpacer(false),
-          m_isTextAlongsideIconHidden(false)
+        : QListWidgetItem(parent)
+        , m_internalTag(tag)
+        , m_internalName(name)
+        , m_statusText(statusText)
+        , m_isSeparator(false)
+        , m_isSpacer(false)
+        , m_isTextAlongsideIconHidden(false)
     {
         // Drop between items, not onto items
         setFlags((flags() | Qt::ItemIsDragEnabled) & ~Qt::ItemIsDropEnabled);
@@ -248,7 +246,7 @@ private:
     bool m_isTextAlongsideIconHidden;
 };
 
-static QDataStream &operator<< (QDataStream &s, const ToolBarItem &item)
+static QDataStream &operator<<(QDataStream &s, const ToolBarItem &item)
 {
     s << item.internalTag();
     s << item.internalName();
@@ -258,7 +256,7 @@ static QDataStream &operator<< (QDataStream &s, const ToolBarItem &item)
     s << item.isTextAlongsideIconHidden();
     return s;
 }
-static QDataStream &operator>> (QDataStream &s, ToolBarItem &item)
+static QDataStream &operator>>(QDataStream &s, ToolBarItem &item)
 {
     QString internalTag;
     s >> internalTag;
@@ -284,8 +282,8 @@ static QDataStream &operator>> (QDataStream &s, ToolBarItem &item)
 ////
 
 ToolBarListWidget::ToolBarListWidget(QWidget *parent)
-    : QListWidget(parent),
-      m_activeList(true)
+    : QListWidget(parent)
+    , m_activeList(true)
 {
     setDragDropMode(QAbstractItemView::DragDrop); // no internal moves
 }
@@ -360,8 +358,7 @@ IconTextEditDialog::IconTextEditDialog(QWidget *parent)
     connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     layout->addWidget(m_buttonBox);
 
-    connect(m_lineEdit, &QLineEdit::textChanged,
-            this, &IconTextEditDialog::slotTextChanged);
+    connect(m_lineEdit, &QLineEdit::textChanged, this, &IconTextEditDialog::slotTextChanged);
 
     m_lineEdit->setFocus();
     setFixedHeight(sizeHint().height());
@@ -403,15 +400,14 @@ public:
      * In the xmlguifactory-based constructor, we let KXMLGUIClient create a dummy one,
      * but it probably isn't used.
      */
-    KEditToolBarWidgetPrivate(KEditToolBarWidget *widget,
-                              const QString &cName, KActionCollection *collection)
-        : m_collection(collection),
-          m_widget(widget),
-          m_factory(nullptr),
-          m_loadedOnce(false)
+    KEditToolBarWidgetPrivate(KEditToolBarWidget *widget, const QString &cName, KActionCollection *collection)
+        : m_collection(collection)
+        , m_widget(widget)
+        , m_factory(nullptr)
+        , m_loadedOnce(false)
     {
         m_componentName = cName;
-        m_isPart   = false;
+        m_isPart = false;
         m_helpArea = nullptr;
         // We want items with an icon to align with items without icon
         // So we use an empty QPixmap for that
@@ -460,7 +456,7 @@ public:
     {
         QString raw_xml;
         QString xml_file = xmlFile(_xml_file);
-        //qCDebug(DEBUG_KXMLGUI) << "loadXMLFile xml_file=" << xml_file;
+        // qCDebug(DEBUG_KXMLGUI) << "loadXMLFile xml_file=" << xml_file;
 
         if (!QDir::isRelativePath(xml_file)) {
             raw_xml = KXMLGUIFactory::readConfigFile(xml_file);
@@ -476,15 +472,14 @@ public:
      */
     QDomElement findElementForToolBarItem(const ToolBarItem *item) const
     {
-        //qDebug(240) << "looking for name=" << item->internalName() << "and tag=" << item->internalTag();
+        // qDebug(240) << "looking for name=" << item->internalName() << "and tag=" << item->internalTag();
         for (QDomNode n = m_currentToolBarElem.firstChild(); !n.isNull(); n = n.nextSibling()) {
             QDomElement elem = n.toElement();
-            if ((elem.attribute(QStringLiteral("name")) == item->internalName()) &&
-                    (elem.tagName() == item->internalTag())) {
+            if ((elem.attribute(QStringLiteral("name")) == item->internalName()) && (elem.tagName() == item->internalTag())) {
                 return elem;
             }
         }
-        //qDebug(240) << "no item found in the DOM with name=" << item->internalName() << "and tag=" << item->internalTag();
+        // qDebug(240) << "no item found in the DOM with name=" << item->internalName() << "and tag=" << item->internalTag();
         return QDomElement();
     }
 
@@ -509,29 +504,29 @@ public:
     QToolButton *m_insertAction;
     QToolButton *m_downAction;
 
-    //QValueList<QAction*> m_actionList;
+    // QValueList<QAction*> m_actionList;
     KActionCollection *m_collection;
-    KEditToolBarWidget * const m_widget;
+    KEditToolBarWidget *const m_widget;
     KXMLGUIFactory *m_factory;
     QString m_componentName;
 
     QPixmap m_emptyIcon;
 
-    XmlData     *m_currentXmlData;
+    XmlData *m_currentXmlData;
     QDomElement m_currentToolBarElem;
 
-    QString            m_xmlFile;
-    QString            m_globalFile;
-    QString            m_rcFile;
-    QDomDocument       m_localDoc;
+    QString m_xmlFile;
+    QString m_globalFile;
+    QString m_rcFile;
+    QDomDocument m_localDoc;
 
-    ToolBarList        m_barList;
+    ToolBarList m_barList;
     ToolBarListWidget *m_inactiveList;
     ToolBarListWidget *m_activeList;
 
     XmlDataList m_xmlFiles;
 
-    QLabel     *m_comboLabel;
+    QLabel *m_comboLabel;
     KSeparator *m_comboSeparator;
     QLabel *m_helpArea;
     QPushButton *m_changeIcon;
@@ -547,7 +542,10 @@ using namespace KDEPrivate;
 class KEditToolBarPrivate
 {
 public:
-    KEditToolBarPrivate(KEditToolBar *q): q(q) {}
+    KEditToolBarPrivate(KEditToolBar *q)
+        : q(q)
+    {
+    }
 
     void init();
 
@@ -573,20 +571,18 @@ public:
 
 Q_GLOBAL_STATIC(QString, s_defaultToolBarName)
 
-KEditToolBar::KEditToolBar(KActionCollection *collection,
-                           QWidget *parent)
-    : QDialog(parent),
-      d(new KEditToolBarPrivate(this))
+KEditToolBar::KEditToolBar(KActionCollection *collection, QWidget *parent)
+    : QDialog(parent)
+    , d(new KEditToolBarPrivate(this))
 {
     d->m_widget = new KEditToolBarWidget(collection, this);
     d->init();
     d->m_collection = collection;
 }
 
-KEditToolBar::KEditToolBar(KXMLGUIFactory *factory,
-                           QWidget *parent)
-    : QDialog(parent),
-      d(new KEditToolBarPrivate(this))
+KEditToolBar::KEditToolBar(KXMLGUIFactory *factory, QWidget *parent)
+    : QDialog(parent)
+    , d(new KEditToolBarPrivate(this))
 {
     d->m_widget = new KEditToolBarWidget(this);
     d->init();
@@ -607,15 +603,12 @@ void KEditToolBarPrivate::init()
     m_layout->addWidget(m_widget);
 
     m_buttonBox = new QDialogButtonBox(q);
-    m_buttonBox->setStandardButtons(QDialogButtonBox::RestoreDefaults
-                                    | QDialogButtonBox::Ok
-                                    | QDialogButtonBox::Apply
-                                    | QDialogButtonBox::Cancel);
+    m_buttonBox->setStandardButtons(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel);
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Ok), KStandardGuiItem::ok());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Apply), KStandardGuiItem::apply());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
-    q->connect(m_buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(_k_slotButtonClicked(QAbstractButton*)));
+    q->connect(m_buttonBox, SIGNAL(clicked(QAbstractButton *)), SLOT(_k_slotButtonClicked(QAbstractButton *)));
     QObject::connect(m_buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
     m_layout->addWidget(m_buttonBox);
 
@@ -660,7 +653,12 @@ void KEditToolBarPrivate::_k_enableApply(bool b)
 
 void KEditToolBarPrivate::defaultClicked()
 {
-    if (KMessageBox::warningContinueCancel(q, i18n("Do you really want to reset all toolbars of this application to their default? The changes will be applied immediately."), i18n("Reset Toolbars"), KGuiItem(i18n("Reset"))) != KMessageBox::Continue) {
+    if (KMessageBox::warningContinueCancel(
+            q,
+            i18n("Do you really want to reset all toolbars of this application to their default? The changes will be applied immediately."),
+            i18n("Reset Toolbars"),
+            KGuiItem(i18n("Reset")))
+        != KMessageBox::Continue) {
         return;
     }
 
@@ -675,7 +673,7 @@ void KEditToolBarPrivate::defaultClicked()
             if (file.isEmpty()) {
                 continue;
             }
-            //qDebug(240) << "Deleting local xml file" << file;
+            // qDebug(240) << "Deleting local xml file" << file;
             // << "for client" << client << typeid(*client).name();
             if (QFile::exists(file))
                 if (!QFile::remove(file)) {
@@ -693,8 +691,8 @@ void KEditToolBarPrivate::defaultClicked()
         if (slash) {
             m_file.remove(0, slash);
         }
-        const QString xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-            QLatin1String("/kxmlgui5/") + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
+        const QString xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/")
+            + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
 
         if (QFile::exists(xml_file))
             if (!QFile::remove(xml_file)) {
@@ -774,17 +772,16 @@ void KEditToolBar::setGlobalDefaultToolBar(const char *toolbarName)
     *s_defaultToolBarName() = QString::fromLatin1(toolbarName);
 }
 
-KEditToolBarWidget::KEditToolBarWidget(KActionCollection *collection,
-                                       QWidget *parent)
-    : QWidget(parent),
-      d(new KEditToolBarWidgetPrivate(this, componentName(), collection))
+KEditToolBarWidget::KEditToolBarWidget(KActionCollection *collection, QWidget *parent)
+    : QWidget(parent)
+    , d(new KEditToolBarWidgetPrivate(this, componentName(), collection))
 {
     d->setupLayout();
 }
 
 KEditToolBarWidget::KEditToolBarWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new KEditToolBarWidgetPrivate(this, componentName(), KXMLGUIClient::actionCollection() /*create new one*/))
+    : QWidget(parent)
+    , d(new KEditToolBarWidgetPrivate(this, componentName(), KXMLGUIClient::actionCollection() /*create new one*/))
 {
     d->setupLayout();
 }
@@ -804,21 +801,19 @@ void KEditToolBarWidget::load(KXMLGUIFactory *factory, const QString &defaultToo
     d->initFromFactory(factory, defaultToolBar);
 }
 
-void KEditToolBarWidgetPrivate::initOldStyle(const QString &resourceFile,
-        bool global,
-        const QString &defaultToolBar)
+void KEditToolBarWidgetPrivate::initOldStyle(const QString &resourceFile, bool global, const QString &defaultToolBar)
 {
-    //TODO: make sure we can call this multiple times?
+    // TODO: make sure we can call this multiple times?
     if (m_loadedOnce) {
         return;
     }
 
     m_loadedOnce = true;
-    //d->m_actionList = collection->actions();
+    // d->m_actionList = collection->actions();
 
     // handle the merging
     if (global) {
-        m_widget->loadStandardsXmlFile();    // ui_standards.rc
+        m_widget->loadStandardsXmlFile(); // ui_standards.rc
     }
     const QString localXML = loadXMLFile(resourceFile);
     m_widget->setXML(localXML, global ? true /*merge*/ : false);
@@ -845,10 +840,9 @@ void KEditToolBarWidgetPrivate::initOldStyle(const QString &resourceFile,
     m_widget->setMinimumSize(m_widget->sizeHint());
 }
 
-void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory,
-        const QString &defaultToolBar)
+void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory, const QString &defaultToolBar)
 {
-    //TODO: make sure we can call this multiple times?
+    // TODO: make sure we can call this multiple times?
     if (m_loadedOnce) {
         return;
     }
@@ -877,11 +871,11 @@ void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory,
         data.setDomDocument(domDoc);
         m_xmlFiles.append(data);
 
-        //d->m_actionList += client->actionCollection()->actions();
+        // d->m_actionList += client->actionCollection()->actions();
     }
 
 #ifndef NDEBUG
-    //d->dump();
+    // d->dump();
 #endif
 
     // now load in our toolbar combo box
@@ -898,7 +892,7 @@ void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory,
 
 void KEditToolBarWidget::save()
 {
-    //qDebug(240) << "KEditToolBarWidget::save";
+    // qDebug(240) << "KEditToolBarWidget::save";
     for (const auto &xmlFile : qAsConst(d->m_xmlFiles)) {
         // let's not save non-modified files
         if (!xmlFile.m_isModified) {
@@ -921,9 +915,9 @@ void KEditToolBarWidget::save()
             menuElement.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
         }
 
-        //qCDebug(DEBUG_KXMLGUI) << (*it).domDocument().toString();
+        // qCDebug(DEBUG_KXMLGUI) << (*it).domDocument().toString();
 
-        //qDebug(240) << "Saving " << (*it).xmlFile();
+        // qDebug(240) << "Saving " << (*it).xmlFile();
         // if we got this far, we might as well just save it
         KXMLGUIFactory::saveConfigFile(xmlFile.domDocument(), xmlFile.xmlFile());
     }
@@ -942,7 +936,7 @@ void KEditToolBarWidget::rebuildKXMLGUIClients()
     }
 
     const QList<KXMLGUIClient *> clients = d->m_factory->clients();
-    //qDebug(240) << "factory: " << clients.count() << " clients";
+    // qDebug(240) << "factory: " << clients.count() << " clients";
 
     // remove the elements starting from the last going to the first
     if (clients.isEmpty()) {
@@ -953,17 +947,17 @@ void KEditToolBarWidget::rebuildKXMLGUIClients()
     clientIterator.toBack();
     while (clientIterator.hasPrevious()) {
         KXMLGUIClient *client = clientIterator.previous();
-        //qDebug(240) << "factory->removeClient " << client;
+        // qDebug(240) << "factory->removeClient " << client;
         d->m_factory->removeClient(client);
     }
 
     KXMLGUIClient *firstClient = clients.first();
 
     // now, rebuild the gui from the first to the last
-    //qDebug(240) << "rebuilding the gui";
+    // qDebug(240) << "rebuilding the gui";
     for (KXMLGUIClient *client : clients) {
-        //qDebug(240) << "updating client " << client << " " << client->componentName() << "  xmlFile=" << client->xmlFile();
-        QString file(client->xmlFile());   // before setting ui_standards!
+        // qDebug(240) << "updating client " << client << " " << client->componentName() << "  xmlFile=" << client->xmlFile();
+        QString file(client->xmlFile()); // before setting ui_standards!
         if (!file.isEmpty()) {
             // passing an empty stream forces the clients to reread the XML
             client->setXMLGUIBuildDocument(QDomDocument());
@@ -995,15 +989,14 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_toolbarCombo = new QComboBox(m_widget);
     m_comboLabel->setBuddy(m_toolbarCombo);
     m_comboSeparator = new KSeparator(m_widget);
-    QObject::connect(m_toolbarCombo, SIGNAL(activated(int)),
-                     m_widget,       SLOT(slotToolBarSelected(int)));
+    QObject::connect(m_toolbarCombo, SIGNAL(activated(int)), m_widget, SLOT(slotToolBarSelected(int)));
 
-//  QPushButton *new_toolbar = new QPushButton(i18n("&New"), this);
-//  new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
-//  new_toolbar->setEnabled(false); // disabled until implemented
-//  QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
-//  del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
-//  del_toolbar->setEnabled(false); // disabled until implemented
+    //  QPushButton *new_toolbar = new QPushButton(i18n("&New"), this);
+    //  new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+    //  new_toolbar->setEnabled(false); // disabled until implemented
+    //  QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+    //  del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+    //  del_toolbar->setEnabled(false); // disabled until implemented
 
     // our list of inactive actions
     QLabel *inactive_label = new QLabel(i18n("A&vailable actions:"), m_widget);
@@ -1013,12 +1006,12 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_inactiveList->setMinimumSize(180, 250);
     m_inactiveList->setDropIndicatorShown(false); // #165663
     inactive_label->setBuddy(m_inactiveList);
-    QObject::connect(m_inactiveList, SIGNAL(itemSelectionChanged()),
-                     m_widget,       SLOT(slotInactiveSelectionChanged()));
-    QObject::connect(m_inactiveList, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-                     m_widget,       SLOT(slotInsertButton()));
-    QObject::connect(m_inactiveList, SIGNAL(dropped(ToolBarListWidget*,int,ToolBarItem*,bool)),
-                     m_widget,       SLOT(slotDropped(ToolBarListWidget*,int,ToolBarItem*,bool)));
+    QObject::connect(m_inactiveList, SIGNAL(itemSelectionChanged()), m_widget, SLOT(slotInactiveSelectionChanged()));
+    QObject::connect(m_inactiveList, SIGNAL(itemDoubleClicked(QListWidgetItem *)), m_widget, SLOT(slotInsertButton()));
+    QObject::connect(m_inactiveList,
+                     SIGNAL(dropped(ToolBarListWidget *, int, ToolBarItem *, bool)),
+                     m_widget,
+                     SLOT(slotDropped(ToolBarListWidget *, int, ToolBarItem *, bool)));
 
     KListWidgetSearchLine *inactiveListSearchLine = new KListWidgetSearchLine(m_widget, m_inactiveList);
     inactiveListSearchLine->setPlaceholderText(i18n("Filter"));
@@ -1032,12 +1025,12 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_activeList->setMinimumSize(m_inactiveList->minimumWidth(), 100);
     active_label->setBuddy(m_activeList);
 
-    QObject::connect(m_activeList, SIGNAL(itemSelectionChanged()),
-                     m_widget,     SLOT(slotActiveSelectionChanged()));
-    QObject::connect(m_activeList, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-                     m_widget,     SLOT(slotRemoveButton()));
-    QObject::connect(m_activeList, SIGNAL(dropped(ToolBarListWidget*,int,ToolBarItem*,bool)),
-                     m_widget,     SLOT(slotDropped(ToolBarListWidget*,int,ToolBarItem*,bool)));
+    QObject::connect(m_activeList, SIGNAL(itemSelectionChanged()), m_widget, SLOT(slotActiveSelectionChanged()));
+    QObject::connect(m_activeList, SIGNAL(itemDoubleClicked(QListWidgetItem *)), m_widget, SLOT(slotRemoveButton()));
+    QObject::connect(m_activeList,
+                     SIGNAL(dropped(ToolBarListWidget *, int, ToolBarItem *, bool)),
+                     m_widget,
+                     SLOT(slotDropped(ToolBarListWidget *, int, ToolBarItem *, bool)));
 
     KListWidgetSearchLine *activeListSearchLine = new KListWidgetSearchLine(m_widget, m_activeList);
     activeListSearchLine->setPlaceholderText(i18n("Filter"));
@@ -1047,20 +1040,18 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_changeIcon->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-icons")));
     m_changeIcon->setEnabled(m_activeList->currentItem());
 
-    QObject::connect(m_changeIcon, SIGNAL(clicked()),
-                     m_widget, SLOT(slotChangeIcon()));
+    QObject::connect(m_changeIcon, SIGNAL(clicked()), m_widget, SLOT(slotChangeIcon()));
 
     // "change icon text" button
     m_changeIconText = new QPushButton(i18nc("@action:button", "Change Te&xt..."), m_widget);
     m_changeIconText->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
     m_changeIconText->setEnabled(m_activeList->currentItem() != nullptr);
 
-    QObject::connect(m_changeIconText, SIGNAL(clicked()),
-                     m_widget, SLOT(slotChangeIconText()));
+    QObject::connect(m_changeIconText, SIGNAL(clicked()), m_widget, SLOT(slotChangeIconText()));
 
     // The buttons in the middle
 
-    m_upAction     = new QToolButton(m_widget);
+    m_upAction = new QToolButton(m_widget);
     m_upAction->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     m_upAction->setEnabled(false);
     m_upAction->setAutoRepeat(true);
@@ -1076,7 +1067,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_removeAction->setEnabled(false);
     QObject::connect(m_removeAction, SIGNAL(clicked()), m_widget, SLOT(slotRemoveButton()));
 
-    m_downAction   = new QToolButton(m_widget);
+    m_downAction = new QToolButton(m_widget);
     m_downAction->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     m_downAction->setEnabled(false);
     m_downAction->setAutoRepeat(true);
@@ -1100,8 +1091,8 @@ void KEditToolBarWidgetPrivate::setupLayout()
 
     name_layout->addWidget(m_comboLabel);
     name_layout->addWidget(m_toolbarCombo);
-//  name_layout->addWidget(new_toolbar);
-//  name_layout->addWidget(del_toolbar);
+    //  name_layout->addWidget(new_toolbar);
+    //  name_layout->addWidget(del_toolbar);
 
     button_layout->setSpacing(0);
     button_layout->setRowStretch(0, 10);
@@ -1184,9 +1175,9 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
     const QLatin1String tagAction("Action");
     const QLatin1String attrName("name");
 
-    int     sep_num = 0;
+    int sep_num = 0;
     QString sep_name(QStringLiteral("separator_%1"));
-    int     spacer_num = 0;
+    int spacer_num = 0;
     QString spacer_name(QStringLiteral("spacer_%1"));
 
     // clear our lists
@@ -1231,7 +1222,8 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
         if (it.tagName() == tagMerge) {
             // Merge can be named or not - use the name if there is one
             QString name = it.attribute(attrName);
-            ToolBarItem *act = new ToolBarItem(m_activeList, tagMerge, name, i18n("This element will be replaced with all the elements of an embedded component."));
+            ToolBarItem *act =
+                new ToolBarItem(m_activeList, tagMerge, name, i18n("This element will be replaced with all the elements of an embedded component."));
             if (name.isEmpty()) {
                 act->setText(i18n("<Merge>"));
             } else {
@@ -1241,7 +1233,11 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
         }
 
         if (it.tagName() == tagActionList) {
-            ToolBarItem *act = new ToolBarItem(m_activeList, tagActionList, it.attribute(attrName), i18n("This is a dynamic list of actions. You can move it, but if you remove it you will not be able to re-add it."));
+            ToolBarItem *act =
+                new ToolBarItem(m_activeList,
+                                tagActionList,
+                                it.attribute(attrName),
+                                i18n("This is a dynamic list of actions. You can move it, but if you remove it you will not be able to re-add it."));
             act->setText(i18n("ActionList: %1", it.attribute(attrName)));
             continue;
         }
@@ -1285,7 +1281,7 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
     sep->setSeparator(true);
     sep->setText(SEPARATORSTRING);
     m_inactiveList->insertItem(0, sep);
-    
+
     ToolBarItem *spacer = new ToolBarItem(nullptr, tagSpacer, spacer_name.arg(spacer_num++), QString());
     spacer->setSpacer(true);
     spacer->setText(SPACERSTRING);
@@ -1315,12 +1311,11 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
         for (const auto &bar : barList) {
             // is this our toolbar?
             if (toolbarNumber == index) {
-
                 // save our current settings
                 m_currentXmlData = &xmlFile;
                 m_currentToolBarElem = bar;
 
-                //qCDebug(DEBUG_KXMLGUI) << "found toolbar" << m_currentXmlData->toolBarText(*it) << "m_currentXmlData set to";
+                // qCDebug(DEBUG_KXMLGUI) << "found toolbar" << m_currentXmlData->toolBarText(*it) << "m_currentXmlData set to";
                 m_currentXmlData->dump();
 
                 // If this is a Merged xmldata, clicking the "change icon" button would assert...
@@ -1335,7 +1330,6 @@ void KEditToolBarWidgetPrivate::slotToolBarSelected(int index)
                 return;
             }
             ++toolbarNumber;
-
         }
     }
 }
@@ -1361,11 +1355,9 @@ void KEditToolBarWidgetPrivate::slotActiveSelectionChanged()
 
     m_removeAction->setEnabled(toolitem);
 
-    m_changeIcon->setEnabled(toolitem &&
-                             toolitem->internalTag() == QLatin1String("Action"));
+    m_changeIcon->setEnabled(toolitem && toolitem->internalTag() == QLatin1String("Action"));
 
-    m_changeIconText->setEnabled(toolitem &&
-                                 toolitem->internalTag() == QLatin1String("Action"));
+    m_changeIconText->setEnabled(toolitem && toolitem->internalTag() == QLatin1String("Action"));
 
     if (toolitem) {
         m_upAction->setEnabled(toolitem->index() != 0);
@@ -1559,8 +1551,7 @@ void KEditToolBarWidgetPrivate::updateLocal(QDomElement &elem)
             continue;
         }
 
-        if (xmlFile.type() == XmlData::Shell ||
-                xmlFile.type() == XmlData::Part) {
+        if (xmlFile.type() == XmlData::Shell || xmlFile.type() == XmlData::Part) {
             if (m_currentXmlData->xmlFile() == xmlFile.xmlFile()) {
                 xmlFile.m_isModified = true;
                 return;
@@ -1596,17 +1587,19 @@ void KEditToolBarWidgetPrivate::slotChangeIcon()
     Q_ASSERT(m_currentXmlData->type() != XmlData::Merged);
 
     QString icon = KIconDialog::getIcon(KIconLoader::Toolbar,
-            KIconLoader::Action,
-            false, 0, false, // all defaults
-            m_widget,
-            i18n("Change Icon"));
+                                        KIconLoader::Action,
+                                        false,
+                                        0,
+                                        false, // all defaults
+                                        m_widget,
+                                        i18n("Change Icon"));
 
     if (icon.isEmpty()) {
         return;
     }
 
     ToolBarItem *item = m_activeList->currentItem();
-    //qCDebug(DEBUG_KXMLGUI) << item;
+    // qCDebug(DEBUG_KXMLGUI) << item;
     if (item) {
         item->setIcon(QIcon::fromTheme(icon));
 
@@ -1674,11 +1667,11 @@ void KEditToolBarWidgetPrivate::slotChangeIconText()
 
 void KEditToolBarWidgetPrivate::slotDropped(ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList)
 {
-    //qCDebug(DEBUG_KXMLGUI) << "slotDropped list=" << (list==m_activeList?"activeList":"inactiveList")
+    // qCDebug(DEBUG_KXMLGUI) << "slotDropped list=" << (list==m_activeList?"activeList":"inactiveList")
     //         << "index=" << index << "sourceIsActiveList=" << sourceIsActiveList;
     if (list == m_activeList) {
         ToolBarItem *after = index > 0 ? static_cast<ToolBarItem *>(list->item(index - 1)) : nullptr;
-        //qCDebug(DEBUG_KXMLGUI) << "after" << after->text() << after->internalTag();
+        // qCDebug(DEBUG_KXMLGUI) << "after" << after->text() << after->internalTag();
         if (sourceIsActiveList) {
             // has been dragged within the active list (moved).
             moveActive(item, after);

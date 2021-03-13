@@ -1,7 +1,7 @@
 /*
     This file is part of the KDE libraries
     SPDX-FileCopyrightText: 1997 Matthias Kalle Dalheimer <kalle@kde.org>
-    SPDX-FileCopyrightText: 1998, 1999, 2000 KDE Team 
+    SPDX-FileCopyrightText: 1998, 1999, 2000 KDE Team
     SPDX-FileCopyrightText: 2008 Nick Shaforostoff <shaforostoff@kde.ru>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
@@ -9,31 +9,31 @@
 
 #include "kcheckaccelerators.h"
 
+#include <QAction>
 #include <QApplication>
+#include <QChar>
 #include <QCheckBox>
+#include <QClipboard>
+#include <QComboBox>
 #include <QDialog>
-#include <QShortcutEvent>
+#include <QDialogButtonBox>
+#include <QFile>
+#include <QGroupBox>
+#include <QLabel>
+#include <QMenu>
 #include <QMouseEvent>
+#include <QProcess>
 #include <QPushButton>
+#include <QShortcutEvent>
 #include <QTabBar>
 #include <QTextBrowser>
-#include <QChar>
-#include <QLabel>
-#include <QComboBox>
-#include <QGroupBox>
-#include <QClipboard>
-#include <QProcess>
-#include <QDialogButtonBox>
-#include <QAction>
-#include <QMenu>
 #include <QVBoxLayout>
-#include <QFile>
 
+#include <KAcceleratorManager>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KLocalizedString>
-#include <KAcceleratorManager>
+#include <KSharedConfig>
 
 class KCheckAcceleratorsInitializer : public QObject
 {
@@ -137,7 +137,7 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
         return false;
     }
 
-    switch (e->type()) {   // just simplify debuggin
+    switch (e->type()) { // just simplify debuggin
     case QEvent::ShortcutOverride:
         if (key && (static_cast<QKeyEvent *>(e)->key() == key)) {
             block = true;
@@ -161,13 +161,13 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
     case QEvent::WindowDeactivate:
         if (autoCheck) {
             autoCheckTimer.setSingleShot(true);
-            autoCheckTimer.start(20);   // 20 ms
+            autoCheckTimer.start(20); // 20 ms
         }
         break;
-    //case QEvent::MouseButtonDblClick:
+    // case QEvent::MouseButtonDblClick:
     case QEvent::MouseButtonPress:
         if (copyWidgetText && static_cast<QMouseEvent *>(e)->button() == Qt::MiddleButton) {
-            //kWarning()<<"obj"<<obj;
+            // kWarning()<<"obj"<<obj;
             QWidget *w = static_cast<QWidget *>(obj)->childAt(static_cast<QMouseEvent *>(e)->pos());
             if (!w) {
                 w = static_cast<QWidget *>(obj);
@@ -175,7 +175,7 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
             if (!w) {
                 return false;
             }
-            //kWarning()<<"MouseButtonDblClick"<<w;
+            // kWarning()<<"MouseButtonDblClick"<<w;
             QString text;
             if (qobject_cast<QLabel *>(w)) {
                 text = static_cast<QLabel *>(w)->text();
@@ -205,20 +205,19 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
                 text.remove(QChar::fromLatin1('&'));
             }
 
-            //kWarning()<<KGlobal::activeComponent().catalogName()<<text;
+            // kWarning()<<KGlobal::activeComponent().catalogName()<<text;
             if (copyWidgetTextCommand.isEmpty()) {
                 QClipboard *clipboard = QApplication::clipboard();
                 clipboard->setText(text);
             } else {
                 QProcess *script = new QProcess(this);
                 script->start(copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain())), QStringList());
-                connect(script, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-                        script, &QObject::deleteLater);
+                connect(script, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), script, &QObject::deleteLater);
             }
             e->accept();
             return true;
 
-            //kWarning()<<"MouseButtonDblClick"<<static_cast<QWidget*>(obj)->childAt(static_cast<QMouseEvent*>(e)->globalPos());
+            // kWarning()<<"MouseButtonDblClick"<<static_cast<QWidget*>(obj)->childAt(static_cast<QMouseEvent*>(e)->globalPos());
         }
         return false;
     case QEvent::Timer:
@@ -259,7 +258,7 @@ void KCheckAccelerators::createDialog(QWidget *actWin, bool automatic)
     drklash_view = new QTextBrowser(drklash);
     layout->addWidget(drklash_view);
     QCheckBox *disableAutoCheck = nullptr;
-    if (automatic)  {
+    if (automatic) {
         disableAutoCheck = new QCheckBox(i18nc("@option:check", "Disable automatic checking"), drklash);
         connect(disableAutoCheck, &QCheckBox::toggled, this, &KCheckAccelerators::slotDisableCheck);
         layout->addWidget(disableAutoCheck);
@@ -291,7 +290,7 @@ void KCheckAccelerators::checkAccelerators(bool automatic)
 
     KAcceleratorManager::manage(actWin);
     QString a, c, r;
-    KAcceleratorManager::last_manage(a, c,  r);
+    KAcceleratorManager::last_manage(a, c, r);
 
     if (automatic) { // for now we only show dialogs on F12 checks
         return;
@@ -303,33 +302,19 @@ void KCheckAccelerators::checkAccelerators(bool automatic)
 
     QString s;
 
-    if (! c.isEmpty())  {
-        s += i18n("<h2>Accelerators changed</h2>") +
-             QLatin1String("<table border><tr><th><b>") +
-             i18n("Old Text") +
-             QLatin1String("</b></th><th><b>") +
-             i18n("New Text") +
-             QLatin1String("</b></th></tr>") +
-             c +
-             QLatin1String("</table>");
+    if (!c.isEmpty()) {
+        s += i18n("<h2>Accelerators changed</h2>") + QLatin1String("<table border><tr><th><b>") + i18n("Old Text") + QLatin1String("</b></th><th><b>")
+            + i18n("New Text") + QLatin1String("</b></th></tr>") + c + QLatin1String("</table>");
     }
 
-    if (! r.isEmpty())  {
-        s += i18n("<h2>Accelerators removed</h2>") +
-             QLatin1String("<table border><tr><th><b>") +
-             i18n("Old Text") +
-             QLatin1String("</b></th></tr>") +
-             r +
-             QLatin1String("</table>");
+    if (!r.isEmpty()) {
+        s += i18n("<h2>Accelerators removed</h2>") + QLatin1String("<table border><tr><th><b>") + i18n("Old Text") + QLatin1String("</b></th></tr>") + r
+            + QLatin1String("</table>");
     }
 
-    if (! a.isEmpty())  {
-        s += i18n("<h2>Accelerators added (just for your info)</h2>") +
-             QLatin1String("<table border><tr><th><b>") +
-             i18n("New Text") +
-             QLatin1String("</b></th></tr>") +
-             a +
-             QLatin1String("</table>");
+    if (!a.isEmpty()) {
+        s += i18n("<h2>Accelerators added (just for your info)</h2>") + QLatin1String("<table border><tr><th><b>") + i18n("New Text")
+            + QLatin1String("</b></th></tr>") + a + QLatin1String("</table>");
     }
 
     createDialog(actWin, automatic);

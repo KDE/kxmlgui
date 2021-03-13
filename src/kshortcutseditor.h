@@ -57,15 +57,15 @@ public:
      */
     enum ActionType {
         /// Actions which are triggered by any keypress in a widget which has the action added to it
-        WidgetAction      = Qt::WidgetShortcut      /*0*/,
+        WidgetAction = Qt::WidgetShortcut /*0*/,
         /// Actions which are triggered by any keypress in a window which has the action added to it or its child widget(s)
-        WindowAction      = Qt::WindowShortcut      /*1*/,
+        WindowAction = Qt::WindowShortcut /*1*/,
         /// Actions which are triggered by any keypress in the application
         ApplicationAction = Qt::ApplicationShortcut /*2*/,
         /// Actions which are triggered by any keypress in the windowing system
-        GlobalAction      = 4,
+        GlobalAction = 4,
         /// All actions
-        AllActions        = 0xffffffff,
+        AllActions = 0xffffffff,
     };
     /**
      * Stores a combination of #ActionType values.
@@ -91,7 +91,10 @@ public:
      * @param allowLetterShortcuts set to LetterShortcutsDisallowed if unmodified alphanumeric
      *  keys ('A', '1', etc.) are not permissible shortcuts.
      */
-    KShortcutsEditor(KActionCollection *collection, QWidget *parent, ActionTypes actionTypes = AllActions, LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
+    KShortcutsEditor(KActionCollection *collection,
+                     QWidget *parent,
+                     ActionTypes actionTypes = AllActions,
+                     LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
 
     /**
      * \overload

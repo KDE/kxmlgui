@@ -34,50 +34,37 @@ class KActionCollection;
  *
  * @author Mark Donohoe <donohoe@kde.org>
  */
-class KXMLGUI_EXPORT KKeySequenceWidget: public QWidget
+class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
 {
     Q_OBJECT
 
     /// @since 5.65
-    Q_PROPERTY(
-        QKeySequence keySequence
-        READ keySequence
-        WRITE setKeySequence
-        NOTIFY keySequenceChanged)
+    Q_PROPERTY(QKeySequence keySequence READ keySequence WRITE setKeySequence NOTIFY keySequenceChanged)
 
-    Q_PROPERTY(
-        bool multiKeyShortcutsAllowed
-        READ multiKeyShortcutsAllowed
-        WRITE setMultiKeyShortcutsAllowed)
+    Q_PROPERTY(bool multiKeyShortcutsAllowed READ multiKeyShortcutsAllowed WRITE setMultiKeyShortcutsAllowed)
 
-    Q_PROPERTY(
-        ShortcutTypes checkForConflictsAgainst
-        READ checkForConflictsAgainst
-        WRITE setCheckForConflictsAgainst)
+    Q_PROPERTY(ShortcutTypes checkForConflictsAgainst READ checkForConflictsAgainst WRITE setCheckForConflictsAgainst)
 
-    Q_PROPERTY(
-        bool modifierlessAllowed
-        READ isModifierlessAllowed
-        WRITE setModifierlessAllowed)
+    Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 
 public:
-    ///An enum about validation when setting a key sequence.
+    /// An enum about validation when setting a key sequence.
     ///@see setKeySequence()
     enum Validation {
-        ///Validate key sequence
+        /// Validate key sequence
         Validate = 0,
-        ///Use key sequence without validation
+        /// Use key sequence without validation
         NoValidate = 1,
     };
 
     /**
-    * Constructor.
-    */
+     * Constructor.
+     */
     explicit KKeySequenceWidget(QWidget *parent = nullptr);
 
     /**
-    * Destructs the widget.
-    */
+     * Destructs the widget.
+     */
     virtual ~KKeySequenceWidget();
 
     /**
@@ -89,10 +76,10 @@ public:
     //@{
 
     enum ShortcutType {
-        None           = 0x00,      //!< No checking for conflicts
-        LocalShortcuts = 0x01,      //!< Check with local shortcuts. @see setCheckActionCollections()
-        StandardShortcuts = 0x02,   //!< Check against standard shortcuts. @see KStandardShortcut
-        GlobalShortcuts = 0x04,     //!< Check against global shortcuts. @see KGlobalAccel
+        None = 0x00, //!< No checking for conflicts
+        LocalShortcuts = 0x01, //!< Check with local shortcuts. @see setCheckActionCollections()
+        StandardShortcuts = 0x02, //!< Check against standard shortcuts. @see KStandardShortcut
+        GlobalShortcuts = 0x04, //!< Check against global shortcuts. @see KGlobalAccel
     };
     /**
      * Stores a combination of #ShortcutType values.
@@ -126,7 +113,7 @@ public:
      * of so make sure it doesn't inadvertly save some unwanted changes
      * too. Read its documentation for some limitation when handling
      * global shortcuts.
-    *
+     *
      * If you want to do the conflict checking yourself here are some code
      * snippets for global ...
      *
@@ -308,4 +295,4 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KKeySequenceWidget::ShortcutTypes)
 
-#endif //KKEYSEQUENCEWIDGET_H
+#endif // KKEYSEQUENCEWIDGET_H

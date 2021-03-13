@@ -9,22 +9,23 @@
 #define TESTXMLGUIWINDOW_H
 
 #include <QAction>
+#include <QApplication>
+#include <QDebug>
 #include <QMenu>
 #include <QResizeEvent>
-#include <QApplication>
 #include <QTemporaryFile>
 #include <QTest>
-#include <QDebug>
 
+#include <kactioncollection.h>
 #include <ktoolbar.h>
 #include <kxmlguifactory.h>
 #include <kxmlguiwindow.h>
-#include <kactioncollection.h>
 
 class TestXmlGuiWindow : public KXmlGuiWindow
 {
 public:
-    TestXmlGuiWindow(const QByteArray &xml, const char *localXmlFileName) : KXmlGuiWindow()
+    TestXmlGuiWindow(const QByteArray &xml, const char *localXmlFileName)
+        : KXmlGuiWindow()
     {
         QVERIFY(m_userFile.open());
         m_userFile.write(xml);
@@ -59,7 +60,7 @@ public:
     KToolBar *toolBarByName(const QString &name)
     {
         KXMLGUIFactory *factory = guiFactory();
-        //qDebug() << "containers:" << factory->containers("ToolBar");
+        // qDebug() << "containers:" << factory->containers("ToolBar");
         QWidget *toolBarW = factory->container(name, this);
         if (!toolBarW) {
             qWarning() << "No toolbar found with name" << name;
@@ -93,4 +94,3 @@ private:
 };
 
 #endif /* TESTXMLGUIWINDOW_H */
-

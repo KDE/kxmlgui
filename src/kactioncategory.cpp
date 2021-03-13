@@ -9,7 +9,6 @@
 #include <QAction>
 
 struct KActionCategoryPrivate {
-
     KActionCategoryPrivate(KActionCategory *host);
 
     //! Our host
@@ -24,7 +23,7 @@ struct KActionCategoryPrivate {
 }; // class KActionCategoryPrivate
 
 KActionCategory::KActionCategory(const QString &text, KActionCollection *parent)
-    :   QObject(parent)
+    : QObject(parent)
     , d(new KActionCategoryPrivate(this))
 {
     d->text = text;
@@ -44,31 +43,21 @@ QAction *KActionCategory::addAction(const QString &name, QAction *action)
     return action;
 }
 
-QAction *KActionCategory::addAction(
-    KStandardAction::StandardAction actionType,
-    const QObject *receiver,
-    const char *member)
+QAction *KActionCategory::addAction(KStandardAction::StandardAction actionType, const QObject *receiver, const char *member)
 {
     QAction *action = collection()->addAction(actionType, receiver, member);
     addAction(action);
     return action;
 }
 
-QAction *KActionCategory::addAction(
-    KStandardAction::StandardAction actionType,
-    const QString &name,
-    const QObject *receiver,
-    const char *member)
+QAction *KActionCategory::addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member)
 {
     QAction *action = collection()->addAction(actionType, name, receiver, member);
     addAction(action);
     return action;
 }
 
-QAction *KActionCategory::addAction(
-    const QString &name,
-    const QObject *receiver,
-    const char *member)
+QAction *KActionCategory::addAction(const QString &name, const QObject *receiver, const char *member)
 {
     QAction *action = collection()->addAction(name, receiver, member);
     addAction(action);
@@ -119,5 +108,5 @@ void KActionCategory::unlistAction(QAction *action)
 
 KActionCategoryPrivate::KActionCategoryPrivate(KActionCategory *host)
     : q(host)
-{}
-
+{
+}

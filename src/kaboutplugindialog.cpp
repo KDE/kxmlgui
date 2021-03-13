@@ -15,13 +15,13 @@
 
 #include "kabstractaboutdialog_p.h"
 // KF
-#include <KWidgetItemDelegate>
+#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginMetaData>
-#include <KAboutData>
+#include <KWidgetItemDelegate>
 // Qt
-#include <QTabWidget>
 #include <QGuiApplication>
+#include <QTabWidget>
 
 class KAboutPluginDialogPrivate : public KAbstractAboutDialogPrivate
 {
@@ -30,17 +30,17 @@ public:
         : q(parent)
         , pluginMetaData(pluginMetaData)
         , pluginLicense(KAboutLicense::byKeyword(pluginMetaData.license()))
-    {}
+    {
+    }
 
     void init(KAboutPluginDialog::Options opt);
 
 public:
-    KAboutPluginDialog * const q;
+    KAboutPluginDialog *const q;
 
     const KPluginMetaData pluginMetaData;
     const KAboutLicense pluginLicense;
 };
-
 
 KAboutPluginDialog::KAboutPluginDialog(const KPluginMetaData &pluginMetaData, QWidget *parent)
     : KAboutPluginDialog(pluginMetaData, NoOptions, parent)
@@ -49,7 +49,7 @@ KAboutPluginDialog::KAboutPluginDialog(const KPluginMetaData &pluginMetaData, QW
 
 KAboutPluginDialog::KAboutPluginDialog(const KPluginMetaData &pluginMetaData, Options opt, QWidget *parent)
     : QDialog(parent)
-    , d(new KAboutPluginDialogPrivate(pluginMetaData,this))
+    , d(new KAboutPluginDialogPrivate(pluginMetaData, this))
 {
     d->init(opt);
 }
@@ -64,43 +64,41 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
 {
     q->setWindowTitle(i18nc("@title:window", "About %1", pluginMetaData.name()));
 
-    //Set up the title widget...
-    const QIcon pluginIcon = !pluginMetaData.iconName().isEmpty() ? QIcon::fromTheme(pluginMetaData.iconName()) :
-    qApp->windowIcon();
-    QWidget *titleWidget = createTitleWidget(pluginIcon,
-                                             pluginMetaData.name(), pluginMetaData.version(), q);
+    // Set up the title widget...
+    const QIcon pluginIcon = !pluginMetaData.iconName().isEmpty() ? QIcon::fromTheme(pluginMetaData.iconName()) : qApp->windowIcon();
+    QWidget *titleWidget = createTitleWidget(pluginIcon, pluginMetaData.name(), pluginMetaData.version(), q);
 
-    //Then the tab bar...
+    // Then the tab bar...
     QTabWidget *tabWidget = new QTabWidget;
     tabWidget->setUsesScrollButtons(false);
 
-    //Set up the first page...
-    QWidget *aboutWidget = createAboutWidget(pluginMetaData.description(), pluginMetaData.extraInformation(),
-                                             pluginMetaData.copyrightText(), pluginMetaData.website(),
-                                             {pluginLicense}, q);
+    // Set up the first page...
+    QWidget *aboutWidget = createAboutWidget(pluginMetaData.description(),
+                                             pluginMetaData.extraInformation(),
+                                             pluginMetaData.copyrightText(),
+                                             pluginMetaData.website(),
+                                             {pluginLicense},
+                                             q);
 
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
-    //And here we go, authors page...
+    // And here we go, authors page...
     const int authorCount = pluginMetaData.authors().count();
     if (authorCount) {
         // TODO: add bug report address to plugin metadata
-        QWidget *authorWidget = createAuthorsWidget(pluginMetaData.authors(), QString(),
-                                                    false,
-                                                    QString(),
-                                                    QString(), q);
+        QWidget *authorWidget = createAuthorsWidget(pluginMetaData.authors(), QString(), false, QString(), QString(), q);
 
         const QString authorPageTitle = i18ncp("@title:tab", "Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);
     }
 
-    //And credits page...
+    // And credits page...
     if (!pluginMetaData.otherContributors().isEmpty()) {
         QWidget *creditWidget = createCreditWidget(pluginMetaData.otherContributors(), QString(), q);
         tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
-    //Finally, the optional translators page...
+    // Finally, the optional translators page...
     if (!(opt & KAboutPluginDialog::HideTranslators) && !pluginMetaData.translators().isEmpty()) {
         QWidget *translatorWidget = createTranslatorsWidget(pluginMetaData.translators(), QString(), q);
         tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));

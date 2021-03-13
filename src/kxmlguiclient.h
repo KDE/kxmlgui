@@ -286,7 +286,7 @@ public:
      *
      * @see setLocalXMLFile()
      * @since 4.4
-    */
+     */
     void replaceXMLFile(const QString &xmlfile, const QString &localxmlfile, bool merge = false);
 
     /**
@@ -405,7 +405,7 @@ protected:
 private:
     // TODO  Post KF 5.79 make std::unique_ptr, when there is a Konsole released with bug:432421 fixed
     // std::unique_ptr<KXMLGUIClientPrivate> const d;
-    KXMLGUIClientPrivate * const d;
+    KXMLGUIClientPrivate *const d;
 };
 
 #endif

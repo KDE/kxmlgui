@@ -8,20 +8,19 @@
 #include "main.h"
 #include <qplatformdefs.h>
 
-#include <QTextStream>
 #include <QApplication>
 #include <QHostInfo>
+#include <QTextStream>
 
 #include <KEMailSettings>
 #include <KLocalizedString>
 
 #include <KConfig>
-#include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
+#include <qcommandlineparser.h>
 
-#include "smtp.h"
 #include "../systeminformation_p.h"
-
+#include "smtp.h"
 
 void BugMailer::slotError(int errornum)
 {
@@ -60,14 +59,13 @@ void BugMailer::slotSend()
 
 int main(int argc, char **argv)
 {
-
     QCoreApplication a(argc, argv);
     a.setApplicationName(QStringLiteral("ksendbugmail"));
     a.setApplicationVersion(QStringLiteral("1.0"));
 
     KLocalizedString::setApplicationDomain("kxmlgui5");
 
-    //d.addAuthor(ki18n("Stephan Kulow"), ki18n("Author"), "coolo@kde.org");
+    // d.addAuthor(ki18n("Stephan Kulow"), ki18n("Author"), "coolo@kde.org");
 
     QString subject, recipient;
     {
@@ -76,7 +74,10 @@ int main(int argc, char **argv)
         parser.setApplicationDescription(i18n("Sends a bug report by email."));
         parser.addHelpOption();
         parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("subject"), i18n("The subject line of the email."), QStringLiteral("argument")));
-        parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("recipient"), i18n("The email address to send the bug report to."), QStringLiteral("argument"), QStringLiteral("submit@bugs.kde.org")));
+        parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("recipient"),
+                                            i18n("The email address to send the bug report to."),
+                                            QStringLiteral("argument"),
+                                            QStringLiteral("submit@bugs.kde.org")));
         parser.process(a);
         recipient = parser.value(QStringLiteral("recipient"));
         subject = parser.value(QStringLiteral("subject"));
@@ -119,7 +120,7 @@ int main(int argc, char **argv)
     }
     // qCDebug(DEBUG_KXMLGUI) << "fromaddr \"" << fromaddr << "\"";
 
-    QString  server = emailConfig.getSetting(KEMailSettings::OutServer);
+    QString server = emailConfig.getSetting(KEMailSettings::OutServer);
     if (server.isEmpty()) {
         server = QStringLiteral("bugs.kde.org");
     }
@@ -143,4 +144,3 @@ int main(int argc, char **argv)
     delete sm;
     return r;
 }
-

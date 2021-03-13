@@ -12,14 +12,14 @@
 #include <QApplication>
 #include <QDialogButtonBox>
 #include <QDir>
+#include <QGridLayout>
 #include <QLabel>
-#include <QPushButton>
 #include <QMap>
+#include <QPushButton>
 #include <QSettings>
 #include <QSharedPointer>
 #include <QStandardPaths>
 #include <private/qlocale_p.h>
-#include <QGridLayout>
 
 #include <KLanguageButton>
 #include <KLocalizedString>
@@ -50,7 +50,6 @@ static QByteArray getApplicationSpecificLanguage(const QByteArray &defaultCode =
 
 namespace KDEPrivate
 {
-
 Q_COREAPP_STARTUP_FUNCTION(initializeLanguages)
 
 void setApplicationSpecificLanguage(const QByteArray &languageCode)
@@ -97,17 +96,12 @@ struct LanguageRowData {
     KLanguageButton *languageButton;
     QPushButton *removeButton;
 
-    void setRowWidgets(
-        QLabel *label,
-        KLanguageButton *languageButton,
-        QPushButton *removeButton
-    )
+    void setRowWidgets(QLabel *label, KLanguageButton *languageButton, QPushButton *removeButton)
     {
         this->label = label;
         this->languageButton = languageButton;
         this->removeButton = removeButton;
     }
-
 };
 
 class KSwitchLanguageDialogPrivate
@@ -115,7 +109,7 @@ class KSwitchLanguageDialogPrivate
 public:
     KSwitchLanguageDialogPrivate(KSwitchLanguageDialog *parent);
 
-    KSwitchLanguageDialog *p; //parent class
+    KSwitchLanguageDialog *p; // parent class
 
     /**
         Fills language button with names of languages for which given application has translation.
@@ -140,8 +134,8 @@ public:
 /*************************** KSwitchLanguageDialog **************************/
 
 KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
-    : QDialog(parent),
-      d(new KSwitchLanguageDialogPrivate(this))
+    : QDialog(parent)
+    , d(new KSwitchLanguageDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Language"));
 
@@ -176,17 +170,14 @@ KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
 
     QPushButton *addLangButton = new QPushButton(i18nc("@action:button", "Add Fallback Language"), this);
     addLangButton->setToolTip(i18nc("@info:tooltip", "Adds one more language which will be used if other translations do not contain a proper translation."));
-    connect(addLangButton, &QPushButton::clicked,
-            this, &KSwitchLanguageDialog::slotAddLanguageButton);
+    connect(addLangButton, &QPushButton::clicked, this, &KSwitchLanguageDialog::slotAddLanguageButton);
     addButtonHorizontalLayout->addWidget(addLangButton);
     addButtonHorizontalLayout->addStretch();
 
     topLayout->addStretch(10);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
-    buttonBox->setStandardButtons(QDialogButtonBox::Ok
-                                  | QDialogButtonBox::Cancel
-                                  | QDialogButtonBox::RestoreDefaults);
+    buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), KStandardGuiItem::ok());
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
@@ -196,8 +187,7 @@ KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KSwitchLanguageDialog::slotOk);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked,
-            this, &KSwitchLanguageDialog::slotDefault);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &KSwitchLanguageDialog::slotDefault);
 }
 
 KSwitchLanguageDialog::~KSwitchLanguageDialog()
@@ -207,7 +197,7 @@ KSwitchLanguageDialog::~KSwitchLanguageDialog()
 
 void KSwitchLanguageDialog::slotAddLanguageButton()
 {
-    //adding new button with en_US as it should always be present
+    // adding new button with en_US as it should always be present
     d->addLanguageButton(QStringLiteral("en_US"), d->languageButtons.isEmpty());
 }
 
@@ -266,14 +256,14 @@ void KSwitchLanguageDialog::slotOk()
 
     if (d->applicationLanguageList() != languages) {
         QString languageString = languages.join(QLatin1Char(':'));
-        //list is different from defaults or saved languages list
+        // list is different from defaults or saved languages list
         setApplicationSpecificLanguage(languageString.toLatin1());
 
         KMessageBox::information(
             this,
-            i18n("The language for this application has been changed. The change will take effect the next time the application is started."), //text
-            i18nc("@title:window", "Application Language Changed"), //caption
-            QStringLiteral("ApplicationLanguageChangedWarning") //dontShowAgainName
+            i18n("The language for this application has been changed. The change will take effect the next time the application is started."), // text
+            i18nc("@title:window", "Application Language Changed"), // caption
+            QStringLiteral("ApplicationLanguageChangedWarning") // dontShowAgainName
         );
     }
 
@@ -290,12 +280,11 @@ void KSwitchLanguageDialog::slotDefault()
     QString language = QString::fromLatin1(getApplicationSpecificLanguage("en_US"));
 
     if (defaultLanguages != (QStringList() << language)) {
-
         KMessageBox::information(
             this,
-            i18n("The language for this application has been changed. The change will take effect the next time the application is started."), //text
-            i18n("Application Language Changed"), //caption
-            QStringLiteral("ApplicationLanguageChangedWarning") //dontShowAgainName
+            i18n("The language for this application has been changed. The change will take effect the next time the application is started."), // text
+            i18n("Application Language Changed"), // caption
+            QStringLiteral("ApplicationLanguageChangedWarning") // dontShowAgainName
         );
     }
 
@@ -304,11 +293,10 @@ void KSwitchLanguageDialog::slotDefault()
 
 /************************ KSwitchLanguageDialogPrivate ***********************/
 
-KSwitchLanguageDialogPrivate::KSwitchLanguageDialogPrivate(
-    KSwitchLanguageDialog *parent)
+KSwitchLanguageDialogPrivate::KSwitchLanguageDialogPrivate(KSwitchLanguageDialog *parent)
     : p(parent)
 {
-    //NOTE: do NOT use "p" in constructor, it is not fully constructed
+    // NOTE: do NOT use "p" in constructor, it is not fully constructed
 }
 
 static bool stripCountryCode(QString *languageCode)
@@ -391,8 +379,7 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
 
     languageButton->setCurrentItem(languageCode);
 
-    QObject::connect(languageButton, &KLanguageButton::activated,
-                     p, &KSwitchLanguageDialog::languageOnButtonChanged);
+    QObject::connect(languageButton, &KLanguageButton::activated, p, &KSwitchLanguageDialog::languageOnButtonChanged);
 
     LanguageRowData languageRowData;
     QPushButton *removeButton = nullptr;
@@ -400,13 +387,12 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
     if (!primaryLanguage) {
         removeButton = new QPushButton(i18nc("@action:button", "Remove"), p);
 
-        QObject::connect(removeButton, &QPushButton::clicked,
-                         p, &KSwitchLanguageDialog::removeButtonClicked);
+        QObject::connect(removeButton, &QPushButton::clicked, p, &KSwitchLanguageDialog::removeButtonClicked);
     }
 
-    languageButton->setToolTip(primaryLanguage
-                               ? i18nc("@info:tooltip", "This is the main application language which will be used first, before any other languages.")
-                               : i18nc("@info:tooltip", "This is the language which will be used if any previous languages do not contain a proper translation."));
+    languageButton->setToolTip(
+        primaryLanguage ? i18nc("@info:tooltip", "This is the main application language which will be used first, before any other languages.")
+                        : i18nc("@info:tooltip", "This is the language which will be used if any previous languages do not contain a proper translation."));
 
     int numRows = languagesLayout->rowCount();
 

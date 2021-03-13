@@ -7,8 +7,8 @@
 
 #include "ktoolbarhandler_p.h"
 
-#include <QDomDocument>
 #include <QAction>
+#include <QDomDocument>
 #include <QMenu>
 #include <QPointer>
 
@@ -16,31 +16,33 @@
 #include <KAuthorized>
 #include <KLocalizedString>
 
-#include "kxmlguiwindow.h"
+#include "kactioncollection.h"
 #include "ktoggletoolbaraction.h"
 #include "ktoolbar.h"
 #include "kxmlguifactory.h"
-#include "kactioncollection.h"
+#include "kxmlguiwindow.h"
 
 namespace
 {
 const char actionListName[] = "show_menu_and_toolbar_actionlist";
 
-const char guiDescription[] = ""
-                             "<!DOCTYPE gui><gui name=\"StandardToolBarMenuHandler\">"
-                             "<MenuBar>"
-                             "    <Menu name=\"settings\">"
-                             "        <ActionList name=\"%1\" />"
-                             "    </Menu>"
-                             "</MenuBar>"
-                             "</gui>";
+const char guiDescription[] =
+    ""
+    "<!DOCTYPE gui><gui name=\"StandardToolBarMenuHandler\">"
+    "<MenuBar>"
+    "    <Menu name=\"settings\">"
+    "        <ActionList name=\"%1\" />"
+    "    </Menu>"
+    "</MenuBar>"
+    "</gui>";
 
 class BarActionBuilder
 {
 public:
-    BarActionBuilder(KActionCollection *actionCollection, KXmlGuiWindow *mainWindow,
-                     QVector<KToolBar *> &oldToolBarList)
-        : m_actionCollection(actionCollection), m_mainWindow(mainWindow), m_needsRebuild(false)
+    BarActionBuilder(KActionCollection *actionCollection, KXmlGuiWindow *mainWindow, QVector<KToolBar *> &oldToolBarList)
+        : m_actionCollection(actionCollection)
+        , m_mainWindow(mainWindow)
+        , m_needsRebuild(false)
     {
         const QList<KToolBar *> toolBars = m_mainWindow->findChildren<KToolBar *>();
 
@@ -108,10 +110,7 @@ public:
 private:
     void handleToolBar(KToolBar *toolBar)
     {
-        KToggleToolBarAction *action = new KToggleToolBarAction(
-            toolBar,
-            toolBar->windowTitle(),
-            m_actionCollection);
+        KToggleToolBarAction *action = new KToggleToolBarAction(toolBar, toolBar->windowTitle(), m_actionCollection);
         m_actionCollection->addAction(toolBar->objectName(), action);
 
         // ## tooltips, whatsthis?
@@ -159,13 +158,10 @@ void ToolBarHandler::Private::init(KXmlGuiWindow *mw)
 {
     mainWindow = mw;
 
-    QObject::connect(mainWindow->guiFactory(), &KXMLGUIFactory::clientAdded,
-                     parent, &ToolBarHandler::clientAdded);
+    QObject::connect(mainWindow->guiFactory(), &KXMLGUIFactory::clientAdded, parent, &ToolBarHandler::clientAdded);
 
     if (parent->domDocument().documentElement().isNull()) {
-
-        QString completeDescription = QString::fromLatin1(guiDescription)
-                                      .arg(QLatin1String(actionListName));
+        QString completeDescription = QString::fromLatin1(guiDescription).arg(QLatin1String(actionListName));
 
         parent->setXML(completeDescription, false /*merge*/);
     }
@@ -194,20 +190,21 @@ void ToolBarHandler::Private::connectToActionContainer(QWidget *container)
         return;
     }
 
-    connect(popupMenu, &QMenu::aboutToShow,
-            parent, &ToolBarHandler::setupActions);
+    connect(popupMenu, &QMenu::aboutToShow, parent, &ToolBarHandler::setupActions);
 }
 
 ToolBarHandler::ToolBarHandler(KXmlGuiWindow *mainWindow)
-    : QObject(mainWindow), KXMLGUIClient(mainWindow),
-      d(new Private(this))
+    : QObject(mainWindow)
+    , KXMLGUIClient(mainWindow)
+    , d(new Private(this))
 {
     d->init(mainWindow);
 }
 
 ToolBarHandler::ToolBarHandler(KXmlGuiWindow *mainWindow, QObject *parent)
-    : QObject(parent), KXMLGUIClient(mainWindow),
-      d(new Private(this))
+    : QObject(parent)
+    , KXMLGUIClient(mainWindow)
+    , d(new Private(this))
 {
     d->init(mainWindow);
 }
@@ -257,7 +254,7 @@ void ToolBarHandler::setupActions()
     d->connectToActionContainers();
 }
 
-void ToolBarHandler::clientAdded(KXMLGUIClient* client)
+void ToolBarHandler::clientAdded(KXMLGUIClient *client)
 {
     d->clientAdded(client);
 }

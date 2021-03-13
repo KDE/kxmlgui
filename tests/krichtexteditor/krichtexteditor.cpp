@@ -7,18 +7,19 @@
 
 #include "krichtexteditor.h"
 
-#include <kactioncollection.h>
 #include <KStandardAction>
+#include <kactioncollection.h>
 
 #include <QApplication>
 #include <QFileDialog>
 #include <QLabel>
-#include <QTextStream>
-#include <QTest>
 #include <QSaveFile>
 #include <QStatusBar>
+#include <QTest>
+#include <QTextStream>
 
-KRichTextEditor::KRichTextEditor() : KXmlGuiWindow()
+KRichTextEditor::KRichTextEditor()
+    : KXmlGuiWindow()
 {
     setupActions();
 
@@ -32,8 +33,7 @@ KRichTextEditor::KRichTextEditor() : KXmlGuiWindow()
     itemLabel = new QLabel;
     statusBar()->addWidget(itemLabel);
 
-    connect(textArea, SIGNAL(cursorPositionChanged()),
-            SLOT(cursorPositionChanged()));
+    connect(textArea, SIGNAL(cursorPositionChanged()), SLOT(cursorPositionChanged()));
 }
 
 KRichTextEditor::~KRichTextEditor()
@@ -42,25 +42,20 @@ KRichTextEditor::~KRichTextEditor()
 
 void KRichTextEditor::setupActions()
 {
-    KStandardAction::quit(qApp, SLOT(quit()),
-                          actionCollection());
+    KStandardAction::quit(qApp, SLOT(quit()), actionCollection());
 
-    KStandardAction::open(this, SLOT(openFile()),
-                          actionCollection());
+    KStandardAction::open(this, SLOT(openFile()), actionCollection());
 
-    KStandardAction::save(this, SLOT(saveFile()),
-                          actionCollection());
+    KStandardAction::save(this, SLOT(saveFile()), actionCollection());
 
-    KStandardAction::saveAs(this, SLOT(saveFileAs()),
-                            actionCollection());
+    KStandardAction::saveAs(this, SLOT(saveFileAs()), actionCollection());
 
-    KStandardAction::openNew(this, SLOT(newFile()),
-                             actionCollection());
+    KStandardAction::openNew(this, SLOT(newFile()), actionCollection());
 }
 
 void KRichTextEditor::cursorPositionChanged()
 {
-// Show link target in status bar
+    // Show link target in status bar
     if (textArea->textCursor().charFormat().isAnchor()) {
         QString text = textArea->currentLinkText();
         QString url = textArea->currentLinkUrl();
@@ -72,7 +67,7 @@ void KRichTextEditor::cursorPositionChanged()
 
 void KRichTextEditor::newFile()
 {
-//maybeSave
+    // maybeSave
     fileName.clear();
     textArea->clear();
 }

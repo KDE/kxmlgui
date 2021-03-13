@@ -4,8 +4,8 @@
 #define krulertest_h
 
 #include <QCheckBox>
-#include <QRadioButton>
 #include <QFrame>
+#include <QRadioButton>
 
 class KRuler;
 class QWidget;
@@ -33,9 +33,9 @@ protected:
     void mouseReleaseEvent(QMouseEvent *) override;
     void mouseMoveEvent(QMouseEvent *) override;
     void resizeEvent(QResizeEvent *) override;
+
 private:
     bool mouseButtonDown;
-
 };
 
 class KRulerTest : public QWidget
@@ -67,7 +67,6 @@ private Q_SLOTS:
     void slotSetYTrans(double);
 
 private:
-
     KRuler *hruler, *vruler;
     QGridLayout *layout;
     QFrame *miniwidget, *bigwidget, *mainframe;
@@ -79,7 +78,5 @@ private:
     QDoubleSpinBox *transX, *transY, *rotV;
     QGroupBox *metricstyle;
     QRadioButton *pixelmetric, *inchmetric, *mmmetric, *cmmetric, *mmetric;
-
 };
 #endif
-

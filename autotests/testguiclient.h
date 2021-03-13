@@ -8,9 +8,12 @@
 #ifndef TESTGUICLIENT_H
 #define TESTGUICLIENT_H
 
-
+#include <kactioncollection.h>
 #include <ktoolbar.h>
 #include <kxmlguiclient.h>
+#include <kxmlguifactory.h>
+
+#include <QDebug>
 
 // because setDOMDocument and setXML are protected
 class TestGuiClient : public KXMLGUIClient
@@ -50,7 +53,7 @@ public:
     // Find a toolbar (created by this guiclient)
     KToolBar *toolBarByName(const QString &name)
     {
-        //qDebug() << "containers:" << factory()->containers("ToolBar");
+        // qDebug() << "containers:" << factory()->containers("ToolBar");
         QWidget *toolBarW = factory()->container(name, this);
         if (!toolBarW) {
             qWarning() << "No toolbar found with name" << name;
@@ -63,4 +66,3 @@ public:
 };
 
 #endif /* TESTGUICLIENT_H */
-

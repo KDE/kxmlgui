@@ -15,8 +15,8 @@
 #define KMAINWINDOW_P_H
 
 #include <KConfigGroup>
-#include <QPointer>
 #include <QEventLoopLocker>
+#include <QPointer>
 
 class QObject;
 class QSessionManager;
@@ -27,11 +27,11 @@ class KMainWindow;
 class KMainWindowPrivate
 {
 public:
-    bool autoSaveSettings: 1;
-    bool settingsDirty: 1;
-    bool autoSaveWindowSize: 1;
-    bool sizeApplied: 1;
-    bool suppressCloseEvent: 1;
+    bool autoSaveSettings : 1;
+    bool settingsDirty : 1;
+    bool autoSaveWindowSize : 1;
+    bool sizeApplied : 1;
+    bool suppressCloseEvent : 1;
     KConfigGroup autoSaveGroup;
     QTimer *settingsTimer;
     QTimer *sizeTimer;
@@ -72,4 +72,3 @@ private Q_SLOTS:
 };
 
 #endif
-

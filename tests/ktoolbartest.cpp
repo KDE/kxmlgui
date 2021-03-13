@@ -1,9 +1,9 @@
-#include <QApplication>
 #include <QAction>
+#include <QApplication>
 #include <QMainWindow>
 
-#include <ktoolbar.h>
 #include <kactioncollection.h>
+#include <ktoolbar.h>
 
 // This is a test for "Automatically hide extra toolbar separators"
 // If several separators are next to each other, only one should show up.
@@ -56,4 +56,3 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
-

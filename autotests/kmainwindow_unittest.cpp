@@ -7,14 +7,14 @@
 
 #include "kmainwindow_unittest.h"
 
-#include <QTest>
-#include <QEventLoopLocker>
-#include <kmainwindow.h>
-#include <QStatusBar>
-#include <QResizeEvent>
-#include <ktoolbar.h>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
+#include <QEventLoopLocker>
+#include <QResizeEvent>
+#include <QStatusBar>
+#include <QTest>
+#include <kmainwindow.h>
+#include <ktoolbar.h>
 
 QTEST_MAIN(KMainWindow_UnitTest)
 
@@ -92,8 +92,9 @@ static bool s_mainWindowDeleted;
 class MyMainWindow : public KMainWindow
 {
 public:
-    MyMainWindow() : KMainWindow(),
-        m_queryClosedCalled(false)
+    MyMainWindow()
+        : KMainWindow()
+        , m_queryClosedCalled(false)
     {
     }
     bool queryClose() override

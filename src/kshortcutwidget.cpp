@@ -11,13 +11,16 @@
 class KShortcutWidgetPrivate
 {
 public:
-    KShortcutWidgetPrivate(KShortcutWidget *q) : q(q) {}
+    KShortcutWidgetPrivate(KShortcutWidget *q)
+        : q(q)
+    {
+    }
 
-//private slots
+    // private slots
     void priKeySequenceChanged(const QKeySequence &);
     void altKeySequenceChanged(const QKeySequence &);
 
-//members
+    // members
     KShortcutWidget *const q;
     Ui::KShortcutWidget ui;
     QList<QKeySequence> cut;
@@ -25,15 +28,13 @@ public:
 };
 
 KShortcutWidget::KShortcutWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new KShortcutWidgetPrivate(this))
+    : QWidget(parent)
+    , d(new KShortcutWidgetPrivate(this))
 {
     d->holdChangedSignal = false;
     d->ui.setupUi(this);
-    connect(d->ui.priEditor, SIGNAL(keySequenceChanged(QKeySequence)),
-            this, SLOT(priKeySequenceChanged(QKeySequence)));
-    connect(d->ui.altEditor, SIGNAL(keySequenceChanged(QKeySequence)),
-            this, SLOT(altKeySequenceChanged(QKeySequence)));
+    connect(d->ui.priEditor, SIGNAL(keySequenceChanged(QKeySequence)), this, SLOT(priKeySequenceChanged(QKeySequence)));
+    connect(d->ui.altEditor, SIGNAL(keySequenceChanged(QKeySequence)), this, SLOT(altKeySequenceChanged(QKeySequence)));
 }
 
 KShortcutWidget::~KShortcutWidget() = default;
@@ -58,8 +59,7 @@ void KShortcutWidget::setClearButtonsShown(bool show)
 QList<QKeySequence> KShortcutWidget::shortcut() const
 {
     QList<QKeySequence> ret;
-    ret << d->ui.priEditor->keySequence()
-        << d->ui.altEditor->keySequence();
+    ret << d->ui.priEditor->keySequence() << d->ui.altEditor->keySequence();
     return ret;
 }
 
@@ -77,14 +77,14 @@ void KShortcutWidget::setCheckActionCollections(const QList<KActionCollection *>
     d->ui.altEditor->setCheckActionCollections(actionCollections);
 }
 
-//slot
+// slot
 void KShortcutWidget::applyStealShortcut()
 {
     d->ui.priEditor->applyStealShortcut();
     d->ui.altEditor->applyStealShortcut();
 }
 
-//slot
+// slot
 void KShortcutWidget::setShortcut(const QList<QKeySequence> &newSc)
 {
     if (newSc == d->cut) {
@@ -106,13 +106,13 @@ void KShortcutWidget::setShortcut(const QList<QKeySequence> &newSc)
     Q_EMIT shortcutChanged(d->cut);
 }
 
-//slot
+// slot
 void KShortcutWidget::clearShortcut()
 {
     setShortcut(QList<QKeySequence>());
 }
 
-//private slot
+// private slot
 void KShortcutWidgetPrivate::priKeySequenceChanged(const QKeySequence &seq)
 {
     if (cut.isEmpty()) {
@@ -126,7 +126,7 @@ void KShortcutWidgetPrivate::priKeySequenceChanged(const QKeySequence &seq)
     }
 }
 
-//private slot
+// private slot
 void KShortcutWidgetPrivate::altKeySequenceChanged(const QKeySequence &seq)
 {
     if (cut.size() <= 1) {

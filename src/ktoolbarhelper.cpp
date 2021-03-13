@@ -10,8 +10,8 @@
 
 #include <KLocalizedString>
 
-namespace KToolbarHelper {
-
+namespace KToolbarHelper
+{
 QString i18nToolBarName(const QDomElement &element)
 {
     QDomElement textElement;

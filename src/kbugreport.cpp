@@ -7,24 +7,24 @@
 
 #include "kbugreport.h"
 
-#include <QProcess>
+#include <QCloseEvent>
+#include <QComboBox>
+#include <QDesktopServices>
 #include <QDialogButtonBox>
+#include <QFile>
+#include <QGridLayout>
+#include <QGroupBox>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QLocale>
+#include <QProcess>
 #include <QPushButton>
 #include <QRadioButton>
-#include <QGroupBox>
-#include <QLocale>
-#include <QCloseEvent>
-#include <QLabel>
-#include <QUrl>
-#include <QUrlQuery>
-#include <QDesktopServices>
-#include <QComboBox>
-#include <QLineEdit>
 #include <QStandardPaths>
 #include <QTextEdit>
-#include <QHBoxLayout>
-#include <QGridLayout>
-#include <QFile>
+#include <QUrl>
+#include <QUrlQuery>
 
 #include <KAboutData>
 #include <KConfig>
@@ -34,20 +34,23 @@
 #include <KMessageBox>
 #include <KTitleWidget>
 
-#include "debug.h"
 #include "../kxmlgui_version.h"
-#include "systeminformation_p.h"
 #include "config-xmlgui.h"
+#include "debug.h"
+#include "systeminformation_p.h"
 
 #include <array>
 
 class KBugReportPrivate
 {
 public:
-    KBugReportPrivate(KBugReport *q): q(q), m_aboutData(KAboutData::applicationData()) {}
-
-    enum BugDestination
+    KBugReportPrivate(KBugReport *q)
+        : q(q)
+        , m_aboutData(KAboutData::applicationData())
     {
+    }
+
+    enum BugDestination {
         BugsKdeOrg,
         CustomEmail,
         CustomUrl,
@@ -87,7 +90,8 @@ public:
 };
 
 KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
-    : QDialog(_parent), d(new KBugReportPrivate(this))
+    : QDialog(_parent)
+    , d(new KBugReportPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Submit Bug Report"));
 
@@ -139,8 +143,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         // Configure email button
         d->m_configureEmail = new QPushButton(i18nc("@action:button", "Configure Email..."), this);
-        connect(d->m_configureEmail, SIGNAL(clicked()), this,
-                SLOT(_k_slotConfigureEmail()));
+        connect(d->m_configureEmail, SIGNAL(clicked()), this, SLOT(_k_slotConfigureEmail()));
         glay->addWidget(d->m_configureEmail, 0, 2, 3, 1, Qt::AlignTop | Qt::AlignRight);
 
         // To
@@ -154,7 +157,8 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         tmpLabel->setWhatsThis(qwtstr);
 
         KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok),
-                         KGuiItem(i18nc("@action:button", "&Send"), QStringLiteral("mail-send"),
+                         KGuiItem(i18nc("@action:button", "&Send"),
+                                  QStringLiteral("mail-send"),
                                   i18nc("@info:tooltip", "Send bug report."),
                                   i18nc("@info:whatsthis", "Send this bug report to %1.", d->m_aboutData.bugAddress())));
         row++;
@@ -164,7 +168,8 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     }
 
     // Program name
-    QString qwtstr = i18n("The application for which you wish to submit a bug report - if incorrect, please use the Report Bug menu item of the correct application");
+    QString qwtstr =
+        i18n("The application for which you wish to submit a bug report - if incorrect, please use the Report Bug menu item of the correct application");
     tmpLabel = new QLabel(i18n("Application: "), this);
     glay->addWidget(tmpLabel, row, 0);
     tmpLabel->setWhatsThis(qwtstr);
@@ -189,7 +194,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     }
     d->m_version = new QLabel(d->m_strVersion, this);
     d->m_version->setTextInteractionFlags(Qt::TextBrowserInteraction);
-    //glay->addWidget( d->m_version, row, 1 );
+    // glay->addWidget( d->m_version, row, 1 );
     glay->addWidget(d->m_version, row, 1, 1, 2);
     d->m_version->setWhatsThis(qwtstr);
 
@@ -205,17 +210,20 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         // Severity
         d->m_bgSeverity = new QGroupBox(i18nc("@title:group", "Se&verity"), this);
 
-        struct SeverityData { QString name; QString text; };
-        const std::array<SeverityData, 5> severityData = { {
-            { QStringLiteral("critical"), i18nc("bug severity", "Critical") },
-            { QStringLiteral("grave"),    i18nc("bug severity", "Grave") },
-            { QStringLiteral("normal"),   i18nc("bug severity", "Normal") },
-            { QStringLiteral("wishlist"), i18nc("bug severity", "Wishlist") },
-            { QStringLiteral("i18n"),     i18nc("bug severity", "Translation") },
-        } };
+        struct SeverityData {
+            QString name;
+            QString text;
+        };
+        const std::array<SeverityData, 5> severityData = {{
+            {QStringLiteral("critical"), i18nc("bug severity", "Critical")},
+            {QStringLiteral("grave"), i18nc("bug severity", "Grave")},
+            {QStringLiteral("normal"), i18nc("bug severity", "Normal")},
+            {QStringLiteral("wishlist"), i18nc("bug severity", "Wishlist")},
+            {QStringLiteral("i18n"), i18nc("bug severity", "Translation")},
+        }};
 
         QHBoxLayout *severityLayout = new QHBoxLayout(d->m_bgSeverity);
-        for (auto& severityDatum : severityData) {
+        for (auto &severityDatum : severityData) {
             // Store the severity string as the name
             QRadioButton *rb = new QRadioButton(severityDatum.text, d->m_bgSeverity);
             rb->setObjectName(severityDatum.name);
@@ -237,10 +245,11 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         tmpLabel->setBuddy(d->m_subject);
         hlay->addWidget(d->m_subject);
 
-        QString text = i18n("Enter the text (in English if possible) that you wish to submit for the "
-                            "bug report.\n"
-                            "If you press \"Send\", a mail message will be sent to the maintainer of "
-                            "this program.\n");
+        QString text = i18n(
+            "Enter the text (in English if possible) that you wish to submit for the "
+            "bug report.\n"
+            "If you press \"Send\", a mail message will be sent to the maintainer of "
+            "this program.\n");
         QLabel *label = new QLabel(this);
 
         label->setText(text);
@@ -248,7 +257,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         // The multiline-edit
         d->m_lineedit = new QTextEdit(this);
-        d->m_lineedit->setMinimumHeight(180);   // make it big
+        d->m_lineedit->setMinimumHeight(180); // make it big
         d->m_lineedit->setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
         d->m_lineedit->setLineWrapMode(QTextEdit::WidgetWidth);
         lay->addWidget(d->m_lineedit, 10 /*stretch*/);
@@ -259,13 +268,17 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         QString text;
         if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
-            text = i18n("<qt>To submit a bug report, click on the button below. This will open a web browser "
-                        "window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> where you will find "
-                        "a form to fill in. The information displayed above will be transferred to that server.</qt>");
+            text = i18n(
+                "<qt>To submit a bug report, click on the button below. This will open a web browser "
+                "window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> where you will find "
+                "a form to fill in. The information displayed above will be transferred to that server.</qt>");
             d->_k_updateUrl();
         } else {
-            text = i18n("<qt>To submit a bug report, click on the button below. This will open a web browser "
-                        "window on <a href=\"%1\">%2</a>.</qt>", bugAddress, bugAddress);
+            text = i18n(
+                "<qt>To submit a bug report, click on the button below. This will open a web browser "
+                "window on <a href=\"%1\">%2</a>.</qt>",
+                bugAddress,
+                bugAddress);
             d->url = QUrl(bugAddress);
         }
 
@@ -277,7 +290,6 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         lay->addWidget(label);
         lay->addSpacing(10);
 
-
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         if (d->bugDestination == KBugReportPrivate::BugsKdeOrg) {
             okButton->setText(i18nc("@action:button", "&Launch Bug Report Wizard"));
@@ -288,7 +300,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     }
 
     lay->addWidget(buttonBox);
-    setMinimumHeight(sizeHint().height() + 20);   // WORKAROUND: prevent "cropped" qcombobox
+    setMinimumHeight(sizeHint().height() + 20); // WORKAROUND: prevent "cropped" qcombobox
 }
 
 KBugReport::~KBugReport() = default;
@@ -313,7 +325,7 @@ void KBugReportPrivate::_k_updateUrl()
 {
     url = QUrl(QStringLiteral("https://bugs.kde.org/enter_bug.cgi"));
     QUrlQuery query;
-    query.addQueryItem(QStringLiteral("format"), QStringLiteral("guided"));    // use the guided form
+    query.addQueryItem(QStringLiteral("format"), QStringLiteral("guided")); // use the guided form
 
     // the string format is product/component, where component is optional
     QStringList list = appname.split(QLatin1Char('/'));
@@ -334,10 +346,10 @@ void KBugReportPrivate::_k_slotConfigureEmail()
         return;
     }
     m_process = new QProcess;
-    QObject::connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
+    QObject::connect(m_process, SIGNAL(finished(int, QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
     m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcm_users"));
     if (!m_process->waitForStarted()) {
-        //qCDebug(DEBUG_KXMLGUI) << "Couldn't start kcmshell5..";
+        // qCDebug(DEBUG_KXMLGUI) << "Couldn't start kcmshell5..";
         delete m_process;
         m_process = nullptr;
         return;
@@ -371,36 +383,44 @@ void KBugReport::accept()
         return;
     }
 
-    if (d->m_lineedit->toPlainText().isEmpty() ||
-            d->m_subject->text().isEmpty()) {
-        QString msg = i18n("You must specify both a subject and a description "
-                           "before the report can be sent.");
+    if (d->m_lineedit->toPlainText().isEmpty() || d->m_subject->text().isEmpty()) {
+        QString msg = i18n(
+            "You must specify both a subject and a description "
+            "before the report can be sent.");
         KMessageBox::error(this, msg);
         return;
     }
 
     switch (d->currentSeverity()) {
     case 0: // critical
-        if (KMessageBox::questionYesNo(this, i18n(
-                                           "<p>You chose the severity <b>Critical</b>. "
-                                           "Please note that this severity is intended only for bugs that:</p>"
-                                           "<ul><li>break unrelated software on the system (or the whole system)</li>"
-                                           "<li>cause serious data loss</li>"
-                                           "<li>introduce a security hole on the system where the affected package is installed</li></ul>\n"
-                                           "<p>Does the bug you are reporting cause any of the above damage? "
-                                           "If it does not, please select a lower severity. Thank you.</p>"), QString(), KStandardGuiItem::cont(), KStandardGuiItem::cancel()) == KMessageBox::No) {
+        if (KMessageBox::questionYesNo(this,
+                                       i18n("<p>You chose the severity <b>Critical</b>. "
+                                            "Please note that this severity is intended only for bugs that:</p>"
+                                            "<ul><li>break unrelated software on the system (or the whole system)</li>"
+                                            "<li>cause serious data loss</li>"
+                                            "<li>introduce a security hole on the system where the affected package is installed</li></ul>\n"
+                                            "<p>Does the bug you are reporting cause any of the above damage? "
+                                            "If it does not, please select a lower severity. Thank you.</p>"),
+                                       QString(),
+                                       KStandardGuiItem::cont(),
+                                       KStandardGuiItem::cancel())
+            == KMessageBox::No) {
             return;
         }
         break;
     case 1: // grave
-        if (KMessageBox::questionYesNo(this, i18n(
-                                           "<p>You chose the severity <b>Grave</b>. "
-                                           "Please note that this severity is intended only for bugs that:</p>"
-                                           "<ul><li>make the package in question unusable or mostly so</li>"
-                                           "<li>cause data loss</li>"
-                                           "<li>introduce a security hole allowing access to the accounts of users who use the affected package</li></ul>\n"
-                                           "<p>Does the bug you are reporting cause any of the above damage? "
-                                           "If it does not, please select a lower severity. Thank you.</p>"), QString(), KStandardGuiItem::cont(), KStandardGuiItem::cancel()) == KMessageBox::No) {
+        if (KMessageBox::questionYesNo(this,
+                                       i18n("<p>You chose the severity <b>Grave</b>. "
+                                            "Please note that this severity is intended only for bugs that:</p>"
+                                            "<ul><li>make the package in question unusable or mostly so</li>"
+                                            "<li>cause data loss</li>"
+                                            "<li>introduce a security hole allowing access to the accounts of users who use the affected package</li></ul>\n"
+                                            "<p>Does the bug you are reporting cause any of the above damage? "
+                                            "If it does not, please select a lower severity. Thank you.</p>"),
+                                       QString(),
+                                       KStandardGuiItem::cont(),
+                                       KStandardGuiItem::cancel())
+            == KMessageBox::No) {
             return;
         }
         break;
@@ -408,26 +428,26 @@ void KBugReport::accept()
         break;
     }
     if (!sendBugReport()) {
-        QString msg = i18n("Unable to send the bug report.\n"
-                           "Please submit a bug report manually....\n"
-                           "See https://bugs.kde.org/ for instructions.");
+        QString msg = i18n(
+            "Unable to send the bug report.\n"
+            "Please submit a bug report manually....\n"
+            "See https://bugs.kde.org/ for instructions.");
         KMessageBox::error(this, msg + QLatin1String("\n\n") + d->lastError);
         return;
     }
 
-    KMessageBox::information(this,
-                             i18n("Bug report sent, thank you for your input."));
+    KMessageBox::information(this, i18n("Bug report sent, thank you for your input."));
     QDialog::accept();
 }
 
 void KBugReport::closeEvent(QCloseEvent *e)
 {
-    if (d->bugDestination == KBugReportPrivate::CustomEmail &&
-        ((d->m_lineedit->toPlainText().length() > 0) || d->m_subject->isModified())) {
+    if (d->bugDestination == KBugReportPrivate::CustomEmail && ((d->m_lineedit->toPlainText().length() > 0) || d->m_subject->isModified())) {
         int rc = KMessageBox::warningYesNo(this,
                                            i18n("Close and discard\nedited message?"),
                                            i18nc("@title:window", "Close Message"),
-                                           KStandardGuiItem::discard(), KStandardGuiItem::cont());
+                                           KStandardGuiItem::discard(),
+                                           KStandardGuiItem::cont());
         if (rc == KMessageBox::No) {
             e->ignore();
             return;
@@ -438,13 +458,11 @@ void KBugReport::closeEvent(QCloseEvent *e)
 
 QString KBugReport::text() const
 {
-    //qCDebug(DEBUG_KXMLGUI) << d->severityButtons[d->currentSeverity()]->objectName();
+    // qCDebug(DEBUG_KXMLGUI) << d->severityButtons[d->currentSeverity()]->objectName();
     // Prepend the pseudo-headers to the contents of the mail
     QString severity = d->severityButtons[d->currentSeverity()]->objectName();
     QString appname = d->appname;
-    QString os = QStringLiteral("OS: %1 (%2)\n").
-                 arg(QStringLiteral(XMLGUI_COMPILING_OS),
-                     QStringLiteral(XMLGUI_DISTRIBUTION_TEXT));
+    QString os = QStringLiteral("OS: %1 (%2)\n").arg(QStringLiteral(XMLGUI_COMPILING_OS), QStringLiteral(XMLGUI_DISTRIBUTION_TEXT));
     QString bodyText;
     /*  for(int i = 0; i < m_lineedit->numLines(); i++)
       {
@@ -463,20 +481,14 @@ QString KBugReport::text() const
         // Case 1 : i18n bug
         QString package = QLatin1String("i18n_") + QLocale::languageToString(QLocale().language());
         package.replace(QLatin1Char('_'), QLatin1Char('-'));
-        return QLatin1String("Package: ") + package +
-               QLatin1String("\nApplication: ") + appname +
-               QLatin1String("\nVersion: ") + d->m_strVersion +
-                                   // not really i18n's version, so better here IMHO
-               QLatin1Char('\n') + os +
-               QLatin1Char('\n') + bodyText;
+        return QLatin1String("Package: ") + package + QLatin1String("\nApplication: ") + appname + QLatin1String("\nVersion: ") + d->m_strVersion +
+            // not really i18n's version, so better here IMHO
+            QLatin1Char('\n') + os + QLatin1Char('\n') + bodyText;
     } else {
         appname.replace(QLatin1Char('_'), QLatin1Char('-'));
         // Case 2 : normal bug
-        return QLatin1String("Package: ") + appname +
-               QLatin1String("\nVersion: ") + d->m_strVersion +
-               QLatin1String("\nSeverity: ") + severity +
-               QLatin1Char('\n') + os +
-               QLatin1Char('\n') + bodyText;
+        return QLatin1String("Package: ") + appname + QLatin1String("\nVersion: ") + d->m_strVersion + QLatin1String("\nSeverity: ") + severity
+            + QLatin1Char('\n') + os + QLatin1Char('\n') + bodyText;
     }
 }
 
@@ -496,7 +508,7 @@ bool KBugReport::sendBugReport()
     QStringList args;
     args << QStringLiteral("--subject") << d->m_subject->text() << QStringLiteral("--recipient") << recipient;
     proc.start(command, args);
-    //qCDebug(DEBUG_KXMLGUI) << command << args;
+    // qCDebug(DEBUG_KXMLGUI) << command << args;
     if (!proc.waitForStarted()) {
         qCCritical(DEBUG_KXMLGUI) << "Unable to open a pipe to " << command;
         return false;
@@ -505,7 +517,7 @@ bool KBugReport::sendBugReport()
     proc.closeWriteChannel();
 
     proc.waitForFinished();
-    //qCDebug(DEBUG_KXMLGUI) << "kbugreport: sendbugmail exit, status " << proc.exitStatus() << " code " << proc.exitCode();
+    // qCDebug(DEBUG_KXMLGUI) << "kbugreport: sendbugmail exit, status " << proc.exitStatus() << " code " << proc.exitCode();
 
     QByteArray line;
     if (proc.exitStatus() == QProcess::NormalExit && proc.exitCode() != 0) {

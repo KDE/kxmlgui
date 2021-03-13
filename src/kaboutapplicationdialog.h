@@ -17,7 +17,6 @@
 
 #include <kxmlgui_export.h>
 
-
 class KAboutData;
 
 /**
@@ -43,7 +42,6 @@ class KXMLGUI_EXPORT KAboutApplicationDialog : public QDialog
 {
     Q_OBJECT
 public:
-
     /**
      * Defines some options which can be applied to the about dialog
      *
@@ -51,21 +49,21 @@ public:
      * @since 4.4
      */
     enum Option {
-        NoOptions       = 0x0, ///< No options, show the standard about dialog
+        NoOptions = 0x0, ///< No options, show the standard about dialog
         HideTranslators = 0x1, ///< Don't show the translators tab
-        HideLibraries   = 0x2, ///< Don't show the libraries tab @since 5.77
+        HideLibraries = 0x2, ///< Don't show the libraries tab @since 5.77
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 77)
-        HideKdeVersion  = HideLibraries  /**<
-                                          * Before 5.13: Don't show the KDE Frameworks version next to the application name and version
-                                          *
-                                          * Since 5.13: Don't show the Qt and KDE Frameworks libraries in the versions tab
-                                          *
-                                          * Since 5.30 Don't show the Qt and KDE Frameworks libraries in the libraries tab
-                                          *
-                                          * Since 5.75 Don't show the libraries tab
-                                          *
-                                          * @deprecated Since 5.77, use @c HideLibraries instead.
-                                          */
+        HideKdeVersion = HideLibraries /**<
+                                        * Before 5.13: Don't show the KDE Frameworks version next to the application name and version
+                                        *
+                                        * Since 5.13: Don't show the Qt and KDE Frameworks libraries in the versions tab
+                                        *
+                                        * Since 5.30 Don't show the Qt and KDE Frameworks libraries in the libraries tab
+                                        *
+                                        * Since 5.75 Don't show the libraries tab
+                                        *
+                                        * @deprecated Since 5.77, use @c HideLibraries instead.
+                                        */
 #endif
     };
     /**

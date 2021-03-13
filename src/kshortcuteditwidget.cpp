@@ -15,15 +15,15 @@
 #include "kshortcutsdialog_p.h"
 
 #include <QAction>
+#include <QGridLayout>
+#include <QLabel>
 #include <QPainter>
 #include <QPen>
-#include <QGridLayout>
 #include <QRadioButton>
-#include <QLabel>
 
 #include <KLocalizedString>
 #if HAVE_GLOBALACCEL
-# include <KGlobalAccel>
+#include <KGlobalAccel>
 #endif
 
 #include "kkeysequencewidget.h"
@@ -43,13 +43,12 @@ void TabConnectedWidget::paintEvent(QPaintEvent *e)
     }
 }
 
-ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq,
-                                       const QKeySequence &activeSeq, bool allowLetterShortcuts)
-    : TabConnectedWidget(viewport),
-      m_defaultKeySequence(defaultSeq),
-      m_isUpdating(false),
-      m_action(nullptr),
-      m_noneText(i18nc("No shortcut defined", "None"))
+ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq, const QKeySequence &activeSeq, bool allowLetterShortcuts)
+    : TabConnectedWidget(viewport)
+    , m_defaultKeySequence(defaultSeq)
+    , m_isUpdating(false)
+    , m_action(nullptr)
+    , m_noneText(i18nc("No shortcut defined", "None"))
 {
     QGridLayout *layout = new QGridLayout(this);
 
@@ -72,21 +71,16 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
 
     setKeySequence(activeSeq);
 
-    connect(m_defaultRadio, &QRadioButton::toggled,
-            this, &ShortcutEditWidget::defaultToggled);
-    connect(m_customEditor, &KKeySequenceWidget::keySequenceChanged,
-            this, &ShortcutEditWidget::setCustom);
-    connect(m_customEditor, &KKeySequenceWidget::stealShortcut,
-            this, &ShortcutEditWidget::stealShortcut);
+    connect(m_defaultRadio, &QRadioButton::toggled, this, &ShortcutEditWidget::defaultToggled);
+    connect(m_customEditor, &KKeySequenceWidget::keySequenceChanged, this, &ShortcutEditWidget::setCustom);
+    connect(m_customEditor, &KKeySequenceWidget::stealShortcut, this, &ShortcutEditWidget::stealShortcut);
 #if HAVE_GLOBALACCEL
-    connect(KGlobalAccel::self(), &KGlobalAccel::globalShortcutChanged,
-            this, [this](QAction *action, const QKeySequence &seq) {
-            if (action != m_action) {
-                return;
-            }
-            setKeySequence(seq);
+    connect(KGlobalAccel::self(), &KGlobalAccel::globalShortcutChanged, this, [this](QAction *action, const QKeySequence &seq) {
+        if (action != m_action) {
+            return;
         }
-    );
+        setKeySequence(seq);
+    });
 #endif
 }
 
@@ -95,7 +89,7 @@ KKeySequenceWidget::ShortcutTypes ShortcutEditWidget::checkForConflictsAgainst()
     return m_customEditor->checkForConflictsAgainst();
 }
 
-//slot
+// slot
 void ShortcutEditWidget::defaultToggled(bool checked)
 {
     if (m_isUpdating) {
@@ -122,8 +116,7 @@ void ShortcutEditWidget::defaultToggled(bool checked)
     m_isUpdating = false;
 }
 
-void ShortcutEditWidget::setCheckActionCollections(
-    const QList<KActionCollection *> &checkActionCollections)
+void ShortcutEditWidget::setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections)
 {
     // We just forward them to out KKeySequenceWidget.
     m_customEditor->setCheckActionCollections(checkActionCollections);
@@ -155,7 +148,7 @@ void ShortcutEditWidget::setAction(QObject *action)
     m_action = action;
 }
 
-//slot
+// slot
 void ShortcutEditWidget::setCustom(const QKeySequence &seq)
 {
     if (m_isUpdating) {
@@ -179,8 +172,7 @@ void ShortcutEditWidget::setCustom(const QKeySequence &seq)
 
 void ShortcutEditWidget::setKeySequence(const QKeySequence &activeSeq)
 {
-    const QString seqString = activeSeq.isEmpty() ? m_noneText
-                                                  : activeSeq.toString(QKeySequence::NativeText);
+    const QString seqString = activeSeq.isEmpty() ? m_noneText : activeSeq.toString(QKeySequence::NativeText);
     if (seqString == m_defaultLabel->text()) {
         m_defaultRadio->setChecked(true);
         m_customEditor->clearKeySequence();
@@ -193,4 +185,3 @@ void ShortcutEditWidget::setKeySequence(const QKeySequence &activeSeq)
         }
     }
 }
-

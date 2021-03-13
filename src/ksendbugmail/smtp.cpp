@@ -10,8 +10,8 @@
 
 #include <cstdio>
 
-#include <QSslSocket>
 #include <QHostInfo>
+#include <QSslSocket>
 
 SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
 {
@@ -78,24 +78,23 @@ void SMTP::setSenderAddress(const QString &sender)
         return;
     }
     senderAddress.remove(0, index + 1);
-    index =  senderAddress.indexOf(QLatin1Char('>'));
+    index = senderAddress.indexOf(QLatin1Char('>'));
     if (index != -1) {
         senderAddress.truncate(index);
     }
     senderAddress = senderAddress.simplified();
     while (1) {
-        index =  senderAddress.indexOf(QLatin1Char(' '));
+        index = senderAddress.indexOf(QLatin1Char(' '));
         if (index != -1) {
-            senderAddress.remove(0, index + 1);    // take one side
+            senderAddress.remove(0, index + 1); // take one side
         } else {
             break;
         }
     }
     index = senderAddress.indexOf(QLatin1Char('@'));
     if (index == -1) {
-        senderAddress.append(QLatin1String("@localhost"));    // won't go through without a local mail system
+        senderAddress.append(QLatin1String("@localhost")); // won't go through without a local mail system
     }
-
 }
 
 void SMTP::setRecipientAddress(const QString &recipient)
@@ -152,7 +151,7 @@ void SMTP::sendMessage()
 void SMTP::connectTimerTick()
 {
     connectTimer.stop();
-//    timeOutTimer.start(timeOut, true);
+    //    timeOutTimer.start(timeOut, true);
 
     // qCDebug(DEBUG_KXMLGUI) << "connectTimerTick called...";
 
@@ -168,16 +167,17 @@ void SMTP::connectTimerTick()
     state = Init;
     serverState = None;
 
-    connect(sock, &QIODevice::readyRead,
-            this, &SMTP::socketReadyToRead);
+    connect(sock, &QIODevice::readyRead, this, &SMTP::socketReadyToRead);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
-    connect(sock, &QAbstractSocket::errorOccurred,
+    connect(sock,
+            &QAbstractSocket::errorOccurred,
 #else
-    connect(sock, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),
+    connect(sock,
+            QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),
 #endif
-            this, &SMTP::socketError);
-    connect(sock, &QAbstractSocket::disconnected,
-            this, &SMTP::socketClosed);
+            this,
+            &SMTP::socketError);
+    connect(sock, &QAbstractSocket::disconnected, this, &SMTP::socketClosed);
     timeOutTimer.stop();
     // qCDebug(DEBUG_KXMLGUI) << "connected";
 }
@@ -267,16 +267,16 @@ void SMTP::processLine(QByteArray *line)
     // qCDebug(DEBUG_KXMLGUI) << "smtp state: [" << stat << "][" << *line << "]";
 
     switch (stat) {
-    case Greet:     //220
+    case Greet: // 220
         state = In;
         writeString = QStringLiteral("helo %1\r\n").arg(domainName);
         // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
         sock->write(writeString.toLatin1().constData(), writeString.length());
         break;
-    case Goodbye:   //221
+    case Goodbye: // 221
         state = Quit;
         break;
-    case Successful://250
+    case Successful: // 250
         switch (state) {
         case In:
             state = Ready;
@@ -309,7 +309,7 @@ void SMTP::processLine(QByteArray *line)
             break;
         }
         break;
-    case ReadyData: //354
+    case ReadyData: // 354
         state = Data;
         writeString = QStringLiteral("Subject: %1\r\n").arg(messageSubject);
         writeString += messageHeader;
@@ -319,13 +319,13 @@ void SMTP::processLine(QByteArray *line)
         // qCDebug(DEBUG_KXMLGUI) << "out: " << writeString;
         sock->write(writeString.toLatin1().constData(), writeString.length());
         break;
-    case Error:     //501
+    case Error: // 501
         state = CError;
         // qCDebug(DEBUG_KXMLGUI) << "smtp error (command error): [" << lastState << "]:[" << stat << "][" << *line << "]\n";
         socketClosed();
         Q_EMIT error(Command);
         break;
-    case Unknown:   //550
+    case Unknown: // 550
         state = CError;
         // qCDebug(DEBUG_KXMLGUI) << "smtp error (unknown user): [" << lastState << "]:[" << stat << "][" << *line << "]";
         socketClosed();
@@ -338,4 +338,3 @@ void SMTP::processLine(QByteArray *line)
         Q_EMIT error(UnknownResponse);
     }
 }
-

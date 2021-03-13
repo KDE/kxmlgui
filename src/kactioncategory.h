@@ -10,9 +10,9 @@
 
 #include <kxmlgui_export.h>
 
+#include <QList>
 #include <QObject>
 #include <QString>
-#include <QList>
 #include <memory>
 
 #include <KStandardAction>
@@ -88,7 +88,6 @@ class KXMLGUI_EXPORT KActionCategory : public QObject
     Q_PROPERTY(QString text READ text WRITE setText)
 
 public:
-
     /**
      * Default constructor
      */
@@ -110,27 +109,14 @@ public:
     //@{
     QAction *addAction(const QString &name, QAction *action);
 
-    QAction *addAction(
-        KStandardAction::StandardAction actionType,
-        const QObject *receiver = nullptr,
-        const char *member = nullptr);
+    QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
 
-    QAction *addAction(
-        KStandardAction::StandardAction actionType,
-        const QString &name,
-        const QObject *receiver = nullptr,
-        const char *member = nullptr);
+    QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
-    QAction *addAction(
-        const QString &name,
-        const QObject *receiver = nullptr,
-        const char *member = nullptr);
+    QAction *addAction(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
     template<class ActionType>
-    ActionType *add(
-        const QString &name,
-        const QObject *receiver = nullptr,
-        const char *member = nullptr)
+    ActionType *add(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr)
     {
         ActionType *action = collection()->add<ActionType>(name, receiver, member);
         addAction(action);
@@ -141,7 +127,7 @@ public:
 
     /**
      * Returns the actions belonging to this category
-      */
+     */
     const QList<QAction *> actions() const;
 
     /**
@@ -160,7 +146,6 @@ public:
     void setText(const QString &text);
 
 private:
-
     /**
      * Remove \action from this category if found.
      */

@@ -10,29 +10,29 @@
 
 #include "kxmlguifactory.h"
 
-#include "kxmlguifactory_p.h"
-#include "kshortcutschemeshelper_p.h"
-#include "kxmlguiclient.h"
-#include "kxmlguibuilder.h"
-#include "kshortcutsdialog.h"
-#include "kactioncollection.h"
 #include "debug.h"
+#include "kactioncollection.h"
+#include "kshortcutschemeshelper_p.h"
+#include "kshortcutsdialog.h"
+#include "kxmlguibuilder.h"
+#include "kxmlguiclient.h"
+#include "kxmlguifactory_p.h"
 
 #include <QAction>
+#include <QCoreApplication>
 #include <QDir>
 #include <QDomDocument>
 #include <QFile>
-#include <QCoreApplication>
-#include <QTextStream>
-#include <QWidget>
-#include <QVariant>
-#include <QTextCodec>
 #include <QStandardPaths>
+#include <QTextCodec>
+#include <QTextStream>
+#include <QVariant>
+#include <QWidget>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 #if HAVE_GLOBALACCEL
-# include <KGlobalAccel>
+#include <KGlobalAccel>
 #endif
 
 Q_DECLARE_METATYPE(QList<QKeySequence>)
@@ -42,7 +42,7 @@ using namespace KXMLGUI;
 class KXMLGUIFactoryPrivate : public BuildState
 {
 public:
-    enum ShortcutOption { SetActiveShortcut = 1, SetDefaultShortcut = 2};
+    enum ShortcutOption { SetActiveShortcut = 1, SetDefaultShortcut = 2 };
 
     KXMLGUIFactoryPrivate()
     {
@@ -71,12 +71,9 @@ public:
 
     QWidget *findRecursive(KXMLGUI::ContainerNode *node, bool tag);
     QList<QWidget *> findRecursive(KXMLGUI::ContainerNode *node, const QString &tagName);
-    void applyActionProperties(const QDomElement &element,
-                               ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
-    void configureAction(QAction *action, const QDomNamedNodeMap &attributes,
-                         ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
-    void configureAction(QAction *action, const QDomAttr &attribute,
-                         ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
+    void applyActionProperties(const QDomElement &element, ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
+    void configureAction(QAction *action, const QDomNamedNodeMap &attributes, ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
+    void configureAction(QAction *action, const QDomAttr &attribute, ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
 
     void applyShortcutScheme(const QString &schemeName, KXMLGUIClient *client, const QList<QAction *> &actions);
     void refreshActionProperties(KXMLGUIClient *client, const QList<QAction *> &actions, const QDomDocument &doc);
@@ -130,7 +127,8 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
         }
 
         if (warn && !xml_file.isEmpty()) {
-            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file << "-- please use ${KDE_INSTALL_KXMLGUI5DIR} to install these files instead.";
+            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file
+                                     << "-- please use ${KDE_INSTALL_KXMLGUI5DIR} to install these files instead.";
         }
     }
 
@@ -144,15 +142,14 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
     return QString::fromUtf8(buffer.constData(), buffer.size());
 }
 
-bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
-                                    const QString &filename, const QString &_componentName)
+bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc, const QString &filename, const QString &_componentName)
 {
     QString componentName = _componentName.isEmpty() ? QCoreApplication::applicationName() : _componentName;
     QString xml_file(filename);
 
     if (QDir::isRelativePath(xml_file))
-        xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-            QLatin1String("/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
+        xml_file =
+            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
 
     QFileInfo fileInfo(xml_file);
     QDir().mkpath(fileInfo.absolutePath());
@@ -172,7 +169,8 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc,
 }
 
 KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
-    : QObject(parent), d(new KXMLGUIFactoryPrivate)
+    : QObject(parent)
+    , d(new KXMLGUIFactoryPrivate)
 {
     d->builder = builder;
     d->guiClient = nullptr;
@@ -191,12 +189,12 @@ KXMLGUIFactory::~KXMLGUIFactory()
 
 void KXMLGUIFactory::addClient(KXMLGUIClient *client)
 {
-    //qCDebug(DEBUG_KXMLGUI) << client;
+    // qCDebug(DEBUG_KXMLGUI) << client;
     if (client->factory()) {
         if (client->factory() == this) {
             return;
         } else {
-            client->factory()->removeClient(client);    //just in case someone does stupid things ;-)
+            client->factory()->removeClient(client); // just in case someone does stupid things ;-)
         }
     }
 
@@ -205,7 +203,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
     }
     d->pushState();
 
-//    QTime dt; dt.start();
+    //    QTime dt; dt.start();
 
     d->guiClient = client;
 
@@ -213,8 +211,8 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
     if (!d->m_clients.contains(client)) {
         d->m_clients.append(client);
     }
-    //else
-    //qCDebug(DEBUG_KXMLGUI) << "XMLGUI client already added " << client;
+    // else
+    // qCDebug(DEBUG_KXMLGUI) << "XMLGUI client already added " << client;
 
     // Tell the client that plugging in is process and
     //  let it know what builder widget its mainwindow shortcuts
@@ -290,7 +288,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
           qCWarning(DEBUG_KXMLGUI) << "The following actions are not plugged into the gui (shortcuts will not work): " << unaddedActions;
     */
 
-//    qCDebug(DEBUG_KXMLGUI) << "addClient took " << dt.elapsed();
+    //    qCDebug(DEBUG_KXMLGUI) << "addClient took " << dt.elapsed();
 }
 
 void KXMLGUIFactory::refreshActionProperties()
@@ -321,7 +319,7 @@ static QDomElement findActionPropertiesElement(const QDomDocument &doc)
     QDomElement e = doc.documentElement().firstChildElement();
     for (; !e.isNull(); e = e.nextSiblingElement()) {
         if (QString::compare(e.tagName(), tagActionProp, Qt::CaseInsensitive) == 0
-                && (e.attribute(QStringLiteral("scheme"), QStringLiteral("Default")) == schemeName)) {
+            && (e.attribute(QStringLiteral("scheme"), QStringLiteral("Default")) == schemeName)) {
             return e;
         }
     }
@@ -332,7 +330,7 @@ void KXMLGUIFactoryPrivate::refreshActionProperties(KXMLGUIClient *client, const
 {
     // try to find and apply shortcuts schemes
     const QString schemeName = KShortcutSchemesHelper::currentShortcutSchemeName();
-    //qCDebug(DEBUG_KXMLGUI) << client->componentName() << ": applying shortcut scheme" << schemeName;
+    // qCDebug(DEBUG_KXMLGUI) << client->componentName() << ": applying shortcut scheme" << schemeName;
 
     if (schemeName != QLatin1String("Default")) {
         applyShortcutScheme(schemeName, client, actions);
@@ -341,10 +339,10 @@ void KXMLGUIFactoryPrivate::refreshActionProperties(KXMLGUIClient *client, const
         for (QAction *action : actions) {
             QVariant savedDefaultShortcut = action->property("_k_DefaultShortcut");
             if (savedDefaultShortcut.isValid()) {
-                QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence> >();
+                QList<QKeySequence> shortcut = savedDefaultShortcut.value<QList<QKeySequence>>();
                 action->setShortcuts(shortcut);
                 action->setProperty("defaultShortcuts", QVariant::fromValue(shortcut));
-                //qCDebug(DEBUG_KXMLGUI) << "scheme said" << action->shortcut().toString() << "for action" << action->objectName();
+                // qCDebug(DEBUG_KXMLGUI) << "scheme said" << action->shortcut().toString() << "for action" << action->objectName();
             } else {
                 action->setShortcuts(QList<QKeySequence>());
             }
@@ -370,14 +368,15 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
         }
 
         // Check if the default shortcut is set
-        QList<QKeySequence> defaultShortcut = action->property("defaultShortcuts").value<QList<QKeySequence> >();
+        QList<QKeySequence> defaultShortcut = action->property("defaultShortcuts").value<QList<QKeySequence>>();
         QList<QKeySequence> activeShortcut = action->shortcuts();
-        //qCDebug(DEBUG_KXMLGUI) << action->objectName() << "default=" << defaultShortcut.toString() << "active=" << activeShortcut.toString();
+        // qCDebug(DEBUG_KXMLGUI) << action->objectName() << "default=" << defaultShortcut.toString() << "active=" << activeShortcut.toString();
 
         // Check if we have an empty default shortcut and an non empty
         // custom shortcut. Print out a warning and correct the mistake.
         if ((!activeShortcut.isEmpty()) && defaultShortcut.isEmpty()) {
-            qCCritical(DEBUG_KXMLGUI) << "Shortcut for action " << action->objectName() << action->text() << "set with QAction::setShortcut()! Use KActionCollection::setDefaultShortcut(s) instead.";
+            qCCritical(DEBUG_KXMLGUI) << "Shortcut for action " << action->objectName() << action->text()
+                                      << "set with QAction::setShortcut()! Use KActionCollection::setDefaultShortcut(s) instead.";
             action->setProperty("_k_DefaultShortcut", QVariant::fromValue(activeShortcut));
         } else {
             action->setProperty("_k_DefaultShortcut", QVariant::fromValue(defaultShortcut));
@@ -401,7 +400,7 @@ void KXMLGUIFactory::forgetClient(KXMLGUIClient *client)
 
 void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
 {
-    //qCDebug(DEBUG_KXMLGUI) << client;
+    // qCDebug(DEBUG_KXMLGUI) << client;
 
     // don't try to remove the client's GUI if we didn't build it
     if (!client || client->factory() != this) {
@@ -422,7 +421,7 @@ void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
         removeClient(child);
     }
 
-    //qCDebug(DEBUG_KXMLGUI) << "calling removeRecursive";
+    // qCDebug(DEBUG_KXMLGUI) << "calling removeRecursive";
 
     d->pushState();
 
@@ -465,8 +464,7 @@ QList<KXMLGUIClient *> KXMLGUIFactory::clients() const
     return d->m_clients;
 }
 
-QWidget *KXMLGUIFactory::container(const QString &containerName, KXMLGUIClient *client,
-                                   bool useTagName)
+QWidget *KXMLGUIFactory::container(const QString &containerName, KXMLGUIClient *client, bool useTagName)
 {
     d->pushState();
     d->m_containerName = containerName;
@@ -508,9 +506,7 @@ void KXMLGUIFactory::resetContainer(const QString &containerName, bool useTagNam
 
 QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool tag)
 {
-    if (((!tag && node->name == m_containerName) ||
-            (tag && node->tagName == m_containerName)) &&
-            (!guiClient || node->client == guiClient)) {
+    if (((!tag && node->name == m_containerName) || (tag && node->tagName == m_containerName)) && (!guiClient || node->client == guiClient)) {
         return node->container;
     }
 
@@ -534,8 +530,7 @@ static inline bool equals(const QString &str1, const QString &str2)
     return str1.compare(str2, Qt::CaseInsensitive) == 0;
 }
 
-QList<QWidget *> KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node,
-        const QString &tagName)
+QList<QWidget *> KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, const QString &tagName)
 {
     QList<QWidget *> res;
 
@@ -550,8 +545,7 @@ QList<QWidget *> KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *no
     return res;
 }
 
-void KXMLGUIFactory::plugActionList(KXMLGUIClient *client, const QString &name,
-                                    const QList<QAction *> &actionList)
+void KXMLGUIFactory::plugActionList(KXMLGUIClient *client, const QString &name, const QList<QAction *> &actionList)
 {
     d->pushState();
     d->guiClient = client;
@@ -582,11 +576,9 @@ void KXMLGUIFactory::unplugActionList(KXMLGUIClient *client, const QString &name
     d->popState();
 }
 
-void KXMLGUIFactoryPrivate::applyActionProperties(const QDomElement &actionPropElement,
-        ShortcutOption shortcutOption)
+void KXMLGUIFactoryPrivate::applyActionProperties(const QDomElement &actionPropElement, ShortcutOption shortcutOption)
 {
-    for (QDomElement e = actionPropElement.firstChildElement();
-            !e.isNull(); e = e.nextSiblingElement()) {
+    for (QDomElement e = actionPropElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         if (!equals(e.tagName(), "action")) {
             continue;
         }
@@ -600,8 +592,7 @@ void KXMLGUIFactoryPrivate::applyActionProperties(const QDomElement &actionPropE
     }
 }
 
-void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomNamedNodeMap &attributes,
-        ShortcutOption shortcutOption)
+void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomNamedNodeMap &attributes, ShortcutOption shortcutOption)
 {
     for (int i = 0; i < attributes.length(); i++) {
         QDomAttr attr = attributes.item(i).toAttr();
@@ -613,8 +604,7 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomNamedNode
     }
 }
 
-void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &attribute,
-        ShortcutOption shortcutOption)
+void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &attribute, ShortcutOption shortcutOption)
 {
     QString attrName = attribute.name();
     // If the attribute is a deprecated "accel", change to "shortcut".
@@ -663,7 +653,7 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
 
 void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLGUIClient *client, const QList<QAction *> &actions)
 {
-    //First clear all existing shortcuts
+    // First clear all existing shortcuts
     for (QAction *action : actions) {
         action->setShortcuts(QList<QKeySequence>());
         // We clear the default shortcut as well because the shortcut scheme will set its own defaults
@@ -680,7 +670,8 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLG
         schemeFileName = KShortcutSchemesHelper::applicationShortcutSchemeFileName(schemeName);
     }
     if (schemeFileName.isEmpty()) {
-        qCWarning(DEBUG_KXMLGUI) << client->componentName() << ": shortcut scheme file not found:" << schemeName << "after trying" << QCoreApplication::applicationName() << "and" << client->componentName();
+        qCWarning(DEBUG_KXMLGUI) << client->componentName() << ": shortcut scheme file not found:" << schemeName << "after trying"
+                                 << QCoreApplication::applicationName() << "and" << client->componentName();
         return;
     }
 
@@ -698,14 +689,14 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLG
     QDomElement docElement = scheme.documentElement();
     QDomElement actionPropElement = docElement.namedItem(QStringLiteral("ActionProperties")).toElement();
 
-    //Check if we really have the shortcut configuration here
+    // Check if we really have the shortcut configuration here
     if (!actionPropElement.isNull()) {
-        //qCDebug(DEBUG_KXMLGUI) << "Applying shortcut scheme for XMLGUI client" << client->componentName();
+        // qCDebug(DEBUG_KXMLGUI) << "Applying shortcut scheme for XMLGUI client" << client->componentName();
 
-        //Apply all shortcuts we have
+        // Apply all shortcuts we have
         applyActionProperties(actionPropElement, KXMLGUIFactoryPrivate::SetDefaultShortcut);
         //} else {
-        //qCDebug(DEBUG_KXMLGUI) << "Invalid shortcut scheme file";
+        // qCDebug(DEBUG_KXMLGUI) << "Invalid shortcut scheme file";
     }
 }
 
@@ -757,4 +748,3 @@ QDomElement KXMLGUIFactory::findActionByName(QDomElement &elem, const QString &s
     }
     return QDomElement();
 }
-

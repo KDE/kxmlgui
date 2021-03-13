@@ -73,11 +73,9 @@ public:
 
     // XXX move to somewhere else? (Simon)
     /// @internal
-    static QString readConfigFile(const QString &filename,
-                                  const QString &componentName = QString());
+    static QString readConfigFile(const QString &filename, const QString &componentName = QString());
     /// @internal
-    static bool saveConfigFile(const QDomDocument &doc, const QString &filename,
-                               const QString &componentName = QString());
+    static bool saveConfigFile(const QDomDocument &doc, const QString &filename, const QString &componentName = QString());
 
     /**
      * @internal
@@ -224,4 +222,3 @@ private:
 };
 
 #endif
-

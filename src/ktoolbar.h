@@ -109,8 +109,12 @@ public:
      * @param isMainToolBar  True for the "main toolbar", false for other toolbars. Different settings apply.
      * @param readConfig  whether to apply the configuration (global and application-specific)
      */
-    KToolBar(const QString &objectName, QMainWindow *parentWindow, Qt::ToolBarArea area, bool newLine = false,
-             bool isMainToolBar = false, bool readConfig = true); // KDE5: remove, I don't think anyone is using this.
+    KToolBar(const QString &objectName,
+             QMainWindow *parentWindow,
+             Qt::ToolBarArea area,
+             bool newLine = false,
+             bool isMainToolBar = false,
+             bool readConfig = true); // KDE5: remove, I don't think anyone is using this.
 
     /**
      * Destroys the toolbar.

@@ -14,7 +14,6 @@
 
 namespace KDEPrivate
 {
-
 KXMLGUI_EXPORT void setApplicationSpecificLanguage(const QByteArray &languageCode);
 KXMLGUI_EXPORT void initializeLanguages();
 
@@ -36,26 +35,26 @@ class KSwitchLanguageDialog : public QDialog
 
 public:
     /**
-        * Constructor. Creates a fully featured "Switch application language" dialog box.
-        * Note that this dialog is made modeless in the KHelpMenu class so
-        * the users may expect a modeless dialog.
-        *
-        * @param parent The parent of the dialog box. You should use the
-        *        toplevel window so that the dialog becomes centered.
-        * @param name Internal name of the widget. This name in not used in the
-        *        caption.
-        * @param modal If false, this widget will be modeless and must be
-        *        made visible using QWidget::show(). Otherwise it will be
-        *        modal and must be made visible using QWidget::exec()
-        */
+     * Constructor. Creates a fully featured "Switch application language" dialog box.
+     * Note that this dialog is made modeless in the KHelpMenu class so
+     * the users may expect a modeless dialog.
+     *
+     * @param parent The parent of the dialog box. You should use the
+     *        toplevel window so that the dialog becomes centered.
+     * @param name Internal name of the widget. This name in not used in the
+     *        caption.
+     * @param modal If false, this widget will be modeless and must be
+     *        made visible using QWidget::show(). Otherwise it will be
+     *        modal and must be made visible using QWidget::exec()
+     */
     explicit KSwitchLanguageDialog(QWidget *parent = nullptr);
 
     virtual ~KSwitchLanguageDialog();
 
 protected Q_SLOTS:
     /**
-    * Activated when the Ok button has been clicked.
-    */
+     * Activated when the Ok button has been clicked.
+     */
     virtual void slotOk();
     void slotDefault();
 

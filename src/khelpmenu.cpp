@@ -9,18 +9,18 @@
 
 #include "khelpmenu.h"
 
-#include <QTimer>
 #include <QAction>
 #include <QApplication>
+#include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QMenu>
-#include <QStyle>
-#include <QWidget>
-#include <QWhatsThis>
-#include <QUrl>
-#include <QDesktopServices>
 #include <QStandardPaths>
+#include <QStyle>
+#include <QTimer>
+#include <QUrl>
+#include <QWhatsThis>
+#include <QWidget>
 
 #include "kaboutapplicationdialog.h"
 #include "kaboutkdedialog_p.h"
@@ -60,7 +60,7 @@ public:
     QAction *mDonateAction = nullptr;
     KSwitchLanguageDialog *mSwitchApplicationLanguage = nullptr;
 
-// TODO evaluate if we use static_cast<QWidget*>(parent()) instead of mParent to win that bit of memory
+    // TODO evaluate if we use static_cast<QWidget*>(parent()) instead of mParent to win that bit of memory
     QWidget *mParent = nullptr;
     QString mAboutAppText;
 
@@ -77,9 +77,9 @@ public:
     KAboutData mAboutData;
 };
 
-KHelpMenu::KHelpMenu(QWidget *parent, const QString &aboutAppText,
-                     bool showWhatsThis)
-    : QObject(parent), d(new KHelpMenuPrivate)
+KHelpMenu::KHelpMenu(QWidget *parent, const QString &aboutAppText, bool showWhatsThis)
+    : QObject(parent)
+    , d(new KHelpMenuPrivate)
 {
     d->mAboutAppText = aboutAppText;
     d->mShowWhatsThis = showWhatsThis;
@@ -87,9 +87,9 @@ KHelpMenu::KHelpMenu(QWidget *parent, const QString &aboutAppText,
     d->createActions(this);
 }
 
-KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData,
-                     bool showWhatsThis)
-    : QObject(parent), d(new KHelpMenuPrivate)
+KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis)
+    : QObject(parent)
+    , d(new KHelpMenuPrivate)
 {
     d->mShowWhatsThis = showWhatsThis;
     d->mParent = parent;
@@ -120,8 +120,7 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
         mReportBugAction = KStandardAction::reportBug(q, SLOT(reportBug()), q);
     }
 
-    if (KAuthorized::authorizeAction(QStringLiteral("help_donate"))
-        && mAboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
+    if (KAuthorized::authorizeAction(QStringLiteral("help_donate")) && mAboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
         mDonateAction = KStandardAction::donate(q, &KHelpMenu::donate, q);
     }
 
@@ -143,8 +142,7 @@ QMenu *KHelpMenu::menu()
 {
     if (!d->mMenu) {
         d->mMenu = new QMenu(d->mParent);
-        connect(d->mMenu, &QObject::destroyed,
-                this, &KHelpMenu::menuDestroyed);
+        connect(d->mMenu, &QObject::destroyed, this, &KHelpMenu::menuDestroyed);
 
         d->mMenu->setTitle(i18n("&Help"));
 
@@ -241,8 +239,7 @@ void KHelpMenu::aboutApplication()
     } else { // if (d->mAboutData)
         if (!d->mAboutApp) {
             d->mAboutApp = new KAboutApplicationDialog(d->mAboutData, d->mParent);
-            connect(d->mAboutApp, &QDialog::finished,
-                    this, &KHelpMenu::dialogFinished);
+            connect(d->mAboutApp, &QDialog::finished, this, &KHelpMenu::dialogFinished);
         }
         d->mAboutApp->show();
     }
@@ -294,8 +291,7 @@ void KHelpMenu::aboutKDE()
 {
     if (!d->mAboutKDE) {
         d->mAboutKDE = new KAboutKdeDialog(d->mParent);
-        connect(d->mAboutKDE, &QDialog::finished,
-                this, &KHelpMenu::dialogFinished);
+        connect(d->mAboutKDE, &QDialog::finished, this, &KHelpMenu::dialogFinished);
     }
     d->mAboutKDE->show();
 }
@@ -304,8 +300,7 @@ void KHelpMenu::reportBug()
 {
     if (!d->mBugReport) {
         d->mBugReport = new KBugReport(d->mAboutData, d->mParent);
-        connect(d->mBugReport, &QDialog::finished,
-                this, &KHelpMenu::dialogFinished);
+        connect(d->mBugReport, &QDialog::finished, this, &KHelpMenu::dialogFinished);
     }
     d->mBugReport->show();
 }
@@ -314,8 +309,7 @@ void KHelpMenu::switchApplicationLanguage()
 {
     if (!d->mSwitchApplicationLanguage) {
         d->mSwitchApplicationLanguage = new KSwitchLanguageDialog(d->mParent);
-        connect(d->mSwitchApplicationLanguage, &QDialog::finished,
-                this, &KHelpMenu::dialogFinished);
+        connect(d->mSwitchApplicationLanguage, &QDialog::finished, this, &KHelpMenu::dialogFinished);
     }
     d->mSwitchApplicationLanguage->show();
 }
@@ -333,19 +327,23 @@ void KHelpMenu::dialogFinished()
 void KHelpMenu::timerExpired()
 {
     if (d->mAboutKDE && !d->mAboutKDE->isVisible()) {
-        delete d->mAboutKDE; d->mAboutKDE = nullptr;
+        delete d->mAboutKDE;
+        d->mAboutKDE = nullptr;
     }
 
     if (d->mBugReport && !d->mBugReport->isVisible()) {
-        delete d->mBugReport; d->mBugReport = nullptr;
+        delete d->mBugReport;
+        d->mBugReport = nullptr;
     }
 
     if (d->mSwitchApplicationLanguage && !d->mSwitchApplicationLanguage->isVisible()) {
-        delete d->mSwitchApplicationLanguage; d->mSwitchApplicationLanguage = nullptr;
+        delete d->mSwitchApplicationLanguage;
+        d->mSwitchApplicationLanguage = nullptr;
     }
 
     if (d->mAboutApp && !d->mAboutApp->isVisible()) {
-        delete d->mAboutApp; d->mAboutApp = nullptr;
+        delete d->mAboutApp;
+        d->mAboutApp = nullptr;
     }
 }
 
@@ -358,4 +356,3 @@ void KHelpMenu::contextHelpActivated()
 {
     QWhatsThis::enterWhatsThisMode();
 }
-

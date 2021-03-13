@@ -9,8 +9,8 @@
 #define SMTP_H
 
 #include <QObject>
-#include <QTimer>
 #include <QTcpSocket>
+#include <QTimer>
 
 /*int SMTPServerStatus[] = {
     220,  // greeting from server
@@ -42,12 +42,11 @@ int SMTPClientStatus[] = {
 
 #define SMTP_READ_BUFFER_SIZE 256
 
-class SMTP: public QObject
+class SMTP : public QObject
 {
     Q_OBJECT
 public:
-    explicit SMTP(char *serverhost = nullptr, unsigned short int port = 0,
-                  int timeout = DEFAULT_SMTP_TIMEOUT);
+    explicit SMTP(char *serverhost = nullptr, unsigned short int port = 0, int timeout = DEFAULT_SMTP_TIMEOUT);
     ~SMTP();
 
     void setServerHost(const QString &serverhost);
@@ -74,26 +73,26 @@ public:
     void setMessageHeader(const QString &header);
 
     typedef enum {
-        None = 0,             // null
-        Greet = 220,          // greeting from server
-        Goodbye = 221,        // server acknolages quit
-        Successful = 250,     // command successful
-        ReadyData = 354,      // server ready to receive data
-        Error = 501,          // error
-        Unknown = 550,       // user unknown
+        None = 0, // null
+        Greet = 220, // greeting from server
+        Goodbye = 221, // server acknolages quit
+        Successful = 250, // command successful
+        ReadyData = 354, // server ready to receive data
+        Error = 501, // error
+        Unknown = 550, // user unknown
     } SMTPServerStatus;
 
     typedef enum {
-        Init = 50,            // not logged in yet
-        In = 100,             // logged in, got 220
-        Ready = 150,          // sent HELO, got 250
-        SentFrom = 200,       // sent MAIL FROM:, got 250
-        SentTo = 250,         // sent RCTP TO:, got 250
-        Data = 300,           // Data sent, got 354
-        Finished = 350,       // finished sending data, got 250
-        Quit = 400,           // sent Quit, got 221
-        Out = 450,            // finished, logged out
-        CError = 500,          // didn't finish, had error or connection drop
+        Init = 50, // not logged in yet
+        In = 100, // logged in, got 220
+        Ready = 150, // sent HELO, got 250
+        SentFrom = 200, // sent MAIL FROM:, got 250
+        SentTo = 250, // sent RCTP TO:, got 250
+        Data = 300, // Data sent, got 354
+        Finished = 350, // finished sending data, got 250
+        Quit = 400, // sent Quit, got 221
+        Out = 450, // finished, logged out
+        CError = 500, // didn't finish, had error or connection drop
     } SMTPClientStatus;
 
     typedef enum {

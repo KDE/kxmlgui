@@ -15,21 +15,21 @@
 */
 
 #include "kshortcutsdialog.h"
-#include "kshortcutsdialog_p.h"
 #include "kshortcutschemeshelper_p.h"
+#include "kshortcutsdialog_p.h"
 
 #include <QApplication>
 #include <QDialogButtonBox>
 #include <QDomDocument>
 
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
 
+#include "kactioncollection.h"
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"
-#include "kactioncollection.h"
 
 /************************************************************************/
 /* KShortcutsDialog                                                     */
@@ -56,7 +56,6 @@ QKeySequence alternateSequence(const QList<QKeySequence> &sequences)
 class KShortcutsDialogPrivate
 {
 public:
-
     KShortcutsDialogPrivate(KShortcutsDialog *q)
         : q(q)
     {
@@ -66,8 +65,8 @@ public:
 
     void changeShortcutScheme(const QString &scheme)
     {
-        if (m_keyChooser->isModified() && KMessageBox::questionYesNo(q,
-                i18n("The current shortcut scheme is modified. Save before switching to the new one?")) == KMessageBox::Yes) {
+        if (m_keyChooser->isModified()
+            && KMessageBox::questionYesNo(q, i18n("The current shortcut scheme is modified. Save before switching to the new one?")) == KMessageBox::Yes) {
             m_keyChooser->save();
         } else {
             m_keyChooser->undo();
@@ -84,7 +83,7 @@ public:
             }
         }
 
-        //get xmlguifactory
+        // get xmlguifactory
         if (!m_collections.isEmpty()) {
             const KXMLGUIClient *client = m_collections.first()->parentGUIClient();
             if (client) {
@@ -134,7 +133,8 @@ public:
 };
 
 KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
-    : QDialog(parent), d(new KShortcutsDialogPrivate(this))
+    : QDialog(parent)
+    , d(new KShortcutsDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Keyboard Shortcuts"));
     setModal(true);
@@ -145,8 +145,7 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     layout->addWidget(d->m_keyChooser);
 
     d->m_schemeEditor = new KShortcutSchemesEditor(this);
-    connect(d->m_schemeEditor, SIGNAL(shortcutsSchemeChanged(QString)),
-            this, SLOT(changeShortcutScheme(QString)));
+    connect(d->m_schemeEditor, SIGNAL(shortcutsSchemeChanged(QString)), this, SLOT(changeShortcutScheme(QString)));
     d->m_schemeEditor->hide();
     layout->addWidget(d->m_schemeEditor);
 
@@ -165,12 +164,12 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
     layout->addWidget(buttonBox);
 
-    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QAbstractButton::clicked,
-            d->m_keyChooser, &KShortcutsEditor::allDefault);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QAbstractButton::clicked, d->m_keyChooser, &KShortcutsEditor::allDefault);
     connect(d->m_detailsButton, SIGNAL(clicked()), this, SLOT(toggleDetails()));
-    connect(printButton, &QPushButton::clicked,
-            d->m_keyChooser, &KShortcutsEditor::printShortcuts);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, [this]() { d->undo(); });
+    connect(printButton, &QPushButton::clicked, d->m_keyChooser, &KShortcutsEditor::printShortcuts);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, [this]() {
+        d->undo();
+    });
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
@@ -196,7 +195,7 @@ QList<KActionCollection *> KShortcutsDialog::actionCollections() const
     return d->m_collections;
 }
 
-//FIXME should there be a setSaveSettings method?
+// FIXME should there be a setSaveSettings method?
 bool KShortcutsDialog::configure(bool saveSettings)
 {
     d->m_saveSettings = saveSettings;
@@ -222,10 +221,9 @@ QSize KShortcutsDialog::sizeHint() const
     return QSize(600, 480);
 }
 
-int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts,
-                                QWidget *parent, bool saveSettings)
+int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent, bool saveSettings)
 {
-    //qDebug(125) << "KShortcutsDialog::configureKeys( KActionCollection*, " << saveSettings << " )";
+    // qDebug(125) << "KShortcutsDialog::configureKeys( KActionCollection*, " << saveSettings << " )";
     KShortcutsDialog dlg(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
     dlg.d->m_keyChooser->addCollection(collection);
     return dlg.configure(saveSettings);

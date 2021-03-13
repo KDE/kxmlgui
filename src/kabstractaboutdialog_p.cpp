@@ -13,23 +13,20 @@
 
 #include "kabstractaboutdialog_p.h"
 
-#include "kaboutapplicationpersonmodel_p.h"
-#include "kaboutapplicationpersonlistview_p.h"
 #include "kaboutapplicationpersonlistdelegate_p.h"
+#include "kaboutapplicationpersonlistview_p.h"
+#include "kaboutapplicationpersonmodel_p.h"
 #include "klicensedialog_p.h"
 // KF
-#include <KTitleWidget>
 #include <KLocalizedString>
+#include <KTitleWidget>
 // Qt
+#include <QDialogButtonBox>
 #include <QIcon>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <QDialogButtonBox>
 
-QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QIcon &icon,
-                                                        const QString &displayName,
-                                                        const QString &version,
-                                                        QWidget *parent)
+QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QIcon &icon, const QString &displayName, const QString &version, QWidget *parent)
 {
     KTitleWidget *titleWidget = new KTitleWidget(parent);
 
@@ -79,8 +76,7 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
         const KAboutLicense &license = licenses.at(i);
 
         QLabel *showLicenseLabel = new QLabel;
-        showLicenseLabel->setText(QStringLiteral("<a href=\"%1\">%2</a>").arg(QString::number(i),
-                                  i18n("License: %1", license.name(KAboutLicense::FullName))));
+        showLicenseLabel->setText(QStringLiteral("<a href=\"%1\">%2</a>").arg(QString::number(i), i18n("License: %1", license.name(KAboutLicense::FullName))));
         showLicenseLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
         QObject::connect(showLicenseLabel, &QLabel::linkActivated, parent, [license, parent]() {
             auto *dialog = new KLicenseDialog(license, parent);
@@ -118,8 +114,7 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
                 if (bugUrl.scheme().isEmpty()) {
                     bugUrl.setScheme(QStringLiteral("mailto"));
                 }
-                bugsLabel->setText(i18n("Please report bugs to <a href=\"%1\">%2</a>.\n",
-                                        bugUrl.toString(), bugAddress));
+                bugsLabel->setText(i18n("Please report bugs to <a href=\"%1\">%2</a>.\n", bugUrl.toString(), bugAddress));
             }
         } else {
             bugsLabel->setText(customAuthorRichText);
@@ -128,14 +123,11 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
         authorLayout->addWidget(bugsLabel);
     }
 
-    KDEPrivate::KAboutApplicationPersonModel *authorModel =
-        new KDEPrivate::KAboutApplicationPersonModel(authors, ocsProviderUrl, authorWidget);
+    KDEPrivate::KAboutApplicationPersonModel *authorModel = new KDEPrivate::KAboutApplicationPersonModel(authors, ocsProviderUrl, authorWidget);
 
-    KDEPrivate::KAboutApplicationPersonListView *authorView =
-        new KDEPrivate::KAboutApplicationPersonListView(authorWidget);
+    KDEPrivate::KAboutApplicationPersonListView *authorView = new KDEPrivate::KAboutApplicationPersonListView(authorWidget);
 
-    KDEPrivate::KAboutApplicationPersonListDelegate *authorDelegate =
-        new KDEPrivate::KAboutApplicationPersonListDelegate(authorView, authorView);
+    KDEPrivate::KAboutApplicationPersonListDelegate *authorDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(authorView, authorView);
 
     authorView->setModel(authorModel);
     authorView->setItemDelegate(authorDelegate);
@@ -145,22 +137,17 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
     return authorWidget;
 }
 
-QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerson> &credits,
-                                                         const QString &ocsProviderUrl,
-                                                         QWidget *parent)
+QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerson> &credits, const QString &ocsProviderUrl, QWidget *parent)
 {
     QWidget *creditWidget = new QWidget(parent);
     QVBoxLayout *creditLayout = new QVBoxLayout(creditWidget);
     creditLayout->setContentsMargins(0, 0, 0, 0);
 
-    KDEPrivate::KAboutApplicationPersonModel *creditModel =
-        new KDEPrivate::KAboutApplicationPersonModel(credits, ocsProviderUrl, creditWidget);
+    KDEPrivate::KAboutApplicationPersonModel *creditModel = new KDEPrivate::KAboutApplicationPersonModel(credits, ocsProviderUrl, creditWidget);
 
-    KDEPrivate::KAboutApplicationPersonListView *creditView =
-        new KDEPrivate::KAboutApplicationPersonListView(creditWidget);
+    KDEPrivate::KAboutApplicationPersonListView *creditView = new KDEPrivate::KAboutApplicationPersonListView(creditWidget);
 
-    KDEPrivate::KAboutApplicationPersonListDelegate *creditDelegate =
-        new KDEPrivate::KAboutApplicationPersonListDelegate(creditView, creditView);
+    KDEPrivate::KAboutApplicationPersonListDelegate *creditDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(creditView, creditView);
 
     creditView->setModel(creditModel);
     creditView->setItemDelegate(creditDelegate);
@@ -170,22 +157,17 @@ QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerso
     return creditWidget;
 }
 
-QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAboutPerson> &translators,
-                                                              const QString &ocsProviderUrl,
-                                                              QWidget *parent)
+QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAboutPerson> &translators, const QString &ocsProviderUrl, QWidget *parent)
 {
     QWidget *translatorWidget = new QWidget(parent);
     QVBoxLayout *translatorLayout = new QVBoxLayout(translatorWidget);
     translatorLayout->setContentsMargins(0, 0, 0, 0);
 
-    KDEPrivate::KAboutApplicationPersonModel *translatorModel =
-        new KDEPrivate::KAboutApplicationPersonModel(translators, ocsProviderUrl, translatorWidget);
+    KDEPrivate::KAboutApplicationPersonModel *translatorModel = new KDEPrivate::KAboutApplicationPersonModel(translators, ocsProviderUrl, translatorWidget);
 
-    KDEPrivate::KAboutApplicationPersonListView *translatorView =
-        new KDEPrivate::KAboutApplicationPersonListView(translatorWidget);
+    KDEPrivate::KAboutApplicationPersonListView *translatorView = new KDEPrivate::KAboutApplicationPersonListView(translatorWidget);
 
-    KDEPrivate::KAboutApplicationPersonListDelegate *translatorDelegate =
-        new KDEPrivate::KAboutApplicationPersonListDelegate(translatorView, translatorView);
+    KDEPrivate::KAboutApplicationPersonListDelegate *translatorDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(translatorView, translatorView);
 
     translatorView->setModel(translatorModel);
     translatorView->setItemDelegate(translatorDelegate);
@@ -201,21 +183,20 @@ QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAbout
         translationTeamLabel->setText(aboutTranslationTeam);
         translationTeamLabel->setOpenExternalLinks(true);
         translatorLayout->addWidget(translationTeamLabel);
-        //TODO: this could be displayed as a view item to save space
+        // TODO: this could be displayed as a view item to save space
     }
 
     return translatorWidget;
 }
 
-void KAbstractAboutDialogPrivate::createForm(QWidget *titleWidget, QWidget *tabWidget,
-                                             QDialog *dialog)
+void KAbstractAboutDialogPrivate::createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog)
 {
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
     QObject::connect(buttonBox, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
     QObject::connect(buttonBox, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
-    //And we jam everything together in a layout...
+    // And we jam everything together in a layout...
     QVBoxLayout *mainLayout = new QVBoxLayout(dialog);
     mainLayout->addWidget(titleWidget);
     mainLayout->addWidget(tabWidget);

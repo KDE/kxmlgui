@@ -15,7 +15,6 @@
 
 namespace KDEPrivate
 {
-
 /**
  * @short Standard "About KDE" dialog box
  *

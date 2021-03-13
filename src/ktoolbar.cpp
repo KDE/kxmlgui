@@ -14,17 +14,17 @@
 
 #include "ktoolbar.h"
 
-#include <QPointer>
 #include <QAction>
 #include <QActionGroup>
 #include <QApplication>
+#include <QDomElement>
+#include <QDrag>
 #include <QFrame>
 #include <QLayout>
 #include <QMenu>
 #include <QMimeData>
-#include <QDrag>
 #include <QMouseEvent>
-#include <QDomElement>
+#include <QPointer>
 #ifdef QT_DBUS_LIB
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -32,12 +32,12 @@
 
 #include <KAuthorized>
 #include <KConfig>
-#include <KSharedConfig>
+#include <KConfigGroup>
 #include <KIconTheme>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <KStandardAction>
 #include <KToggleAction>
-#include <KConfigGroup>
 
 #include "kactioncollection.h"
 #include "kedittoolbar.h"
@@ -72,39 +72,39 @@
  on a given toolbar depends on whether there are settings at Level_AppXML or Level_UserSettings.
  Only if there are no settings at those levels, should the change of KDEDefault make a difference.
 */
-enum SettingLevel { Level_KDEDefault, Level_AppXML, Level_UserSettings,
-                    NSettingLevels
-                  };
+enum SettingLevel { Level_KDEDefault, Level_AppXML, Level_UserSettings, NSettingLevels };
 enum { Unset = -1 };
 
 class KToolBarPrivate
 {
 public:
     KToolBarPrivate(KToolBar *qq)
-        : q(qq),
-          isMainToolBar(false),
+        : q(qq)
+        , isMainToolBar(false)
+        ,
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-          enableContext(true),
+        enableContext(true)
+        ,
 #endif
-          unlockedMovable(true),
-          contextOrient(nullptr),
-          contextMode(nullptr),
-          contextSize(nullptr),
-          contextButtonTitle(nullptr),
-          contextShowText(nullptr),
-          contextButtonAction(nullptr),
-          contextTop(nullptr),
-          contextLeft(nullptr),
-          contextRight(nullptr),
-          contextBottom(nullptr),
-          contextIcons(nullptr),
-          contextTextRight(nullptr),
-          contextText(nullptr),
-          contextTextUnder(nullptr),
-          contextLockAction(nullptr),
-          dropIndicatorAction(nullptr),
-          context(nullptr),
-          dragAction(nullptr)
+        unlockedMovable(true)
+        , contextOrient(nullptr)
+        , contextMode(nullptr)
+        , contextSize(nullptr)
+        , contextButtonTitle(nullptr)
+        , contextShowText(nullptr)
+        , contextButtonAction(nullptr)
+        , contextTop(nullptr)
+        , contextLeft(nullptr)
+        , contextRight(nullptr)
+        , contextBottom(nullptr)
+        , contextIcons(nullptr)
+        , contextTextRight(nullptr)
+        , contextText(nullptr)
+        , contextTextUnder(nullptr)
+        , contextLockAction(nullptr)
+        , dropIndicatorAction(nullptr)
+        , context(nullptr)
+        , dragAction(nullptr)
     {
     }
 
@@ -210,6 +210,7 @@ public:
         {
             return values[index];
         }
+
     private:
         int values[NSettingLevels];
     };
@@ -240,16 +241,11 @@ void KToolBarPrivate::init(bool readConfig, bool _isMainToolBar)
 
     if (q->mainWindow()) {
         // Get notified when settings change
-        QObject::connect(q, &QToolBar::allowedAreasChanged,
-                         q->mainWindow(), &KMainWindow::setSettingsDirty);
-        QObject::connect(q, &QToolBar::iconSizeChanged,
-                         q->mainWindow(), &KMainWindow::setSettingsDirty);
-        QObject::connect(q, &QToolBar::toolButtonStyleChanged,
-                         q->mainWindow(), &KMainWindow::setSettingsDirty);
-        QObject::connect(q, &QToolBar::movableChanged,
-                         q->mainWindow(), &KMainWindow::setSettingsDirty);
-        QObject::connect(q, &QToolBar::orientationChanged,
-                         q->mainWindow(), &KMainWindow::setSettingsDirty);
+        QObject::connect(q, &QToolBar::allowedAreasChanged, q->mainWindow(), &KMainWindow::setSettingsDirty);
+        QObject::connect(q, &QToolBar::iconSizeChanged, q->mainWindow(), &KMainWindow::setSettingsDirty);
+        QObject::connect(q, &QToolBar::toolButtonStyleChanged, q->mainWindow(), &KMainWindow::setSettingsDirty);
+        QObject::connect(q, &QToolBar::movableChanged, q->mainWindow(), &KMainWindow::setSettingsDirty);
+        QObject::connect(q, &QToolBar::orientationChanged, q->mainWindow(), &KMainWindow::setSettingsDirty);
     }
 
     if (!KAuthorized::authorize(QStringLiteral("movable_toolbars"))) {
@@ -260,17 +256,15 @@ void KToolBarPrivate::init(bool readConfig, bool _isMainToolBar)
 
     q->toggleViewAction()->setEnabled(KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar")));
 
-    QObject::connect(q, &QToolBar::movableChanged,
-                     q, &KToolBar::slotMovableChanged);
+    QObject::connect(q, &QToolBar::movableChanged, q, &KToolBar::slotMovableChanged);
 
     q->setAcceptDrops(true);
 
 #ifdef QT_DBUS_LIB
-    QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"),
-                                          QStringLiteral("styleChanged"), q, SLOT(slotAppearanceChanged()));
+    QDBusConnection::sessionBus()
+        .connect(QString(), QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"), QStringLiteral("styleChanged"), q, SLOT(slotAppearanceChanged()));
 #endif
-    QObject::connect(KIconLoader::global(), SIGNAL(iconLoaderSettingsChanged()),
-                     q, SLOT(slotAppearanceChanged()));
+    QObject::connect(KIconLoader::global(), SIGNAL(iconLoaderSettingsChanged()), q, SLOT(slotAppearanceChanged()));
 }
 
 QString KToolBarPrivate::getPositionAsString() const
@@ -361,7 +355,7 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
             }
         } else {
             // Scalable icons.
-            const int progression[] = { 16, 22, 32, 48, 64, 96, 128, 192, 256 };
+            const int progression[] = {16, 22, 32, 48, 64, 96, 128, 192, 256};
 
             for (int p : progression) {
                 for (int it : qAsConst(avSizes)) {
@@ -420,7 +414,7 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
     contextOrient->menuAction()->setVisible(!q->toolBarsLocked());
     // Unplugging a submenu from abouttohide leads to the popupmenu floating around
     // So better simply call that code from after exec() returns (DF)
-    //connect(context, SIGNAL(aboutToHide()), this, SLOT(slotContextAboutToHide()));
+    // connect(context, SIGNAL(aboutToHide()), this, SLOT(slotContextAboutToHide()));
 
     return context;
 }
@@ -550,10 +544,11 @@ void KToolBarPrivate::loadKDESettings()
 // Call this after changing something in d->iconSizeSettings or d->toolButtonStyleSettings
 void KToolBarPrivate::applyCurrentSettings()
 {
-    //qCDebug(DEBUG_KXMLGUI) << q->objectName() << "iconSizeSettings:" << iconSizeSettings.toString() << "->" << iconSizeSettings.currentValue();
+    // qCDebug(DEBUG_KXMLGUI) << q->objectName() << "iconSizeSettings:" << iconSizeSettings.toString() << "->" << iconSizeSettings.currentValue();
     const int currentIconSize = iconSizeSettings.currentValue();
     q->setIconSize(QSize(currentIconSize, currentIconSize));
-    //qCDebug(DEBUG_KXMLGUI) << q->objectName() << "toolButtonStyleSettings:" << toolButtonStyleSettings.toString() << "->" << toolButtonStyleSettings.currentValue();
+    // qCDebug(DEBUG_KXMLGUI) << q->objectName() << "toolButtonStyleSettings:" << toolButtonStyleSettings.toString() << "->" <<
+    // toolButtonStyleSettings.currentValue();
     q->setToolButtonStyle(static_cast<Qt::ToolButtonStyle>(toolButtonStyleSettings.currentValue()));
 
     // And remember to save the new look later
@@ -632,7 +627,7 @@ void KToolBarPrivate::slotContextAboutToShow()
         break;
     }
 
-    QMapIterator< QAction *, int > it = contextIconSizes;
+    QMapIterator<QAction *, int> it = contextIconSizes;
     while (it.hasNext()) {
         it.next();
         if (it.value() == q->iconSize().width()) {
@@ -707,8 +702,7 @@ void KToolBarPrivate::slotContextRight()
 void KToolBarPrivate::slotContextShowText()
 {
     Q_ASSERT(contextButtonAction);
-    const QAction::Priority priority = contextShowText->isChecked()
-                                       ? QAction::NormalPriority : QAction::LowPriority;
+    const QAction::Priority priority = contextShowText->isChecked() ? QAction::NormalPriority : QAction::LowPriority;
     contextButtonAction->setPriority(priority);
 
     // Find to which xml file and componentData the action belongs to
@@ -784,8 +778,8 @@ void KToolBarPrivate::slotLockToolBars(bool lock)
 }
 
 KToolBar::KToolBar(QWidget *parent, bool isMainToolBar, bool readConfig)
-    : QToolBar(parent),
-      d(new KToolBarPrivate(this))
+    : QToolBar(parent)
+    , d(new KToolBarPrivate(this))
 {
     d->init(readConfig, isMainToolBar);
 
@@ -796,8 +790,8 @@ KToolBar::KToolBar(QWidget *parent, bool isMainToolBar, bool readConfig)
 }
 
 KToolBar::KToolBar(const QString &objectName, QWidget *parent, bool readConfig)
-    : QToolBar(parent),
-      d(new KToolBarPrivate(this))
+    : QToolBar(parent)
+    , d(new KToolBarPrivate(this))
 {
     setObjectName(objectName);
     // mainToolBar -> isMainToolBar = true  -> buttonStyle is configurable
@@ -810,10 +804,9 @@ KToolBar::KToolBar(const QString &objectName, QWidget *parent, bool readConfig)
     }
 }
 
-KToolBar::KToolBar(const QString &objectName, QMainWindow *parent, Qt::ToolBarArea area,
-                   bool newLine, bool isMainToolBar, bool readConfig)
-    : QToolBar(parent),
-      d(new KToolBarPrivate(this))
+KToolBar::KToolBar(const QString &objectName, QMainWindow *parent, Qt::ToolBarArea area, bool newLine, bool isMainToolBar, bool readConfig)
+    : QToolBar(parent)
+    , d(new KToolBarPrivate(this))
 {
     setObjectName(objectName);
     d->init(readConfig, isMainToolBar);
@@ -853,7 +846,7 @@ void KToolBar::saveSettings(KConfigGroup &cg)
     Q_ASSERT(!cg.name().isEmpty());
 
     const int currentIconSize = iconSize().width();
-    //qCDebug(DEBUG_KXMLGUI) << objectName() << currentIconSize << d->iconSizeSettings.toString() << "defaultValue=" << d->iconSizeSettings.defaultValue();
+    // qCDebug(DEBUG_KXMLGUI) << objectName() << currentIconSize << d->iconSizeSettings.toString() << "defaultValue=" << d->iconSizeSettings.defaultValue();
     if (!cg.hasDefault("IconSize") && currentIconSize == d->iconSizeSettings.defaultValue()) {
         cg.revertToDefault("IconSize");
         d->iconSizeSettings[Level_UserSettings] = Unset;
@@ -917,7 +910,7 @@ void KToolBar::loadState(const QDomElement &element)
     }
 
     {
-        const QString& i18nText = KToolbarHelper::i18nToolBarName(element);
+        const QString &i18nText = KToolbarHelper::i18nToolBarName(element);
         if (!i18nText.isEmpty()) {
             setWindowTitle(i18nText);
         }
@@ -1076,8 +1069,8 @@ void KToolBar::slotMovableChanged(bool movable)
 
 void KToolBar::dragEnterEvent(QDragEnterEvent *event)
 {
-    if (toolBarsEditable() && event->proposedAction() & (Qt::CopyAction | Qt::MoveAction) &&
-            event->mimeData()->hasFormat(QStringLiteral("application/x-kde-action-list"))) {
+    if (toolBarsEditable() && event->proposedAction() & (Qt::CopyAction | Qt::MoveAction)
+        && event->mimeData()->hasFormat(QStringLiteral("application/x-kde-action-list"))) {
         QByteArray data = event->mimeData()->data(QStringLiteral("application/x-kde-action-list"));
 
         QDataStream stream(data);
@@ -1121,8 +1114,7 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
 {
     if (toolBarsEditable())
         Q_FOREVER {
-        if (d->dropIndicatorAction)
-            {
+            if (d->dropIndicatorAction) {
                 QAction *overAction = nullptr;
                 const auto actions = this->actions();
                 for (QAction *action : actions) {
@@ -1296,22 +1288,19 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
             switch (event->type()) {
             case QEvent::MouseButtonPress: {
                 QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(),
-                                     me->button(), me->buttons(), me->modifiers());
+                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(), me->button(), me->buttons(), me->modifiers());
                 mousePressEvent(&newEvent);
                 return true;
             }
             case QEvent::MouseMove: {
                 QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(),
-                                     me->button(), me->buttons(), me->modifiers());
+                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(), me->button(), me->buttons(), me->modifiers());
                 mouseMoveEvent(&newEvent);
                 return true;
             }
             case QEvent::MouseButtonRelease: {
                 QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(),
-                                     me->button(), me->buttons(), me->modifiers());
+                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(), me->button(), me->buttons(), me->modifiers());
                 mouseReleaseEvent(&newEvent);
                 return true;
             }
@@ -1332,7 +1321,7 @@ void KToolBar::actionEvent(QActionEvent *event)
             widget->removeEventFilter(this);
 
             const auto children = widget->findChildren<QWidget *>();
-            for (QWidget *child : children)  {
+            for (QWidget *child : children) {
                 child->removeEventFilter(this);
             }
         }
@@ -1351,8 +1340,8 @@ void KToolBar::actionEvent(QActionEvent *event)
             }
             // Center widgets that do not have any use for more space. See bug 165274
             if (!(widget->sizePolicy().horizontalPolicy() & QSizePolicy::GrowFlag)
-                    // ... but do not center when using text besides icon in vertical toolbar. See bug 243196
-                    && !(orientation() == Qt::Vertical && toolButtonStyle() == Qt::ToolButtonTextBesideIcon)) {
+                // ... but do not center when using text besides icon in vertical toolbar. See bug 243196
+                && !(orientation() == Qt::Vertical && toolButtonStyle() == Qt::ToolButtonTextBesideIcon)) {
                 const int index = layout()->indexOf(widget);
                 if (index != -1) {
                     layout()->itemAt(index)->setAlignment(Qt::AlignJustify);

@@ -98,9 +98,9 @@ public Q_SLOTS:
     the clipboard.
     **/
     void grabWindowToClipBoard();
+
 private:
     KXmlGuiWindow *m_MainWindow;
 };
 
 #endif // KMAINWINDOWIFACE_P_H
-

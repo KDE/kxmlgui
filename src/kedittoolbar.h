@@ -74,8 +74,7 @@ public:
      * @param collection The collection of actions to work on.
      * @param parent The parent of the dialog.
      */
-    explicit KEditToolBar(KActionCollection *collection,
-                          QWidget *parent = nullptr);
+    explicit KEditToolBar(KActionCollection *collection, QWidget *parent = nullptr);
 
     /**
      * Main constructor.
@@ -95,8 +94,7 @@ public:
      * @param factory Your application's factory object
      * @param parent The usual parent for the dialog.
      */
-    explicit KEditToolBar(KXMLGUIFactory *factory,
-                          QWidget *parent = nullptr);
+    explicit KEditToolBar(KXMLGUIFactory *factory, QWidget *parent = nullptr);
 
     /// destructor
     ~KEditToolBar() override;

@@ -7,14 +7,14 @@
 
 #include "kmenumenuhandler_p.h"
 
+#include "debug.h"
+#include "kactioncollection.h"
+#include "kmainwindow.h"
+#include "kshortcutwidget.h"
+#include "ktoolbar.h"
 #include "kxmlguibuilder.h"
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"
-#include "kactioncollection.h"
-#include "kmainwindow.h"
-#include "ktoolbar.h"
-#include "kshortcutwidget.h"
-#include "debug.h"
 
 #include <QAction>
 #include <QContextMenuEvent>
@@ -25,18 +25,17 @@
 #include <QMenu>
 #include <QVBoxLayout>
 
-#include <KSelectAction>
 #include <KLocalizedString>
+#include <KSelectAction>
 
 namespace KDEPrivate
 {
-
 KMenuMenuHandler::KMenuMenuHandler(KXMLGUIBuilder *builder)
-    : QObject(), m_builder(builder)
+    : QObject()
+    , m_builder(builder)
 {
     m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
-    connect(m_toolbarAction, &QAction::triggered,
-            this, &KMenuMenuHandler::slotAddToToolBar);
+    connect(m_toolbarAction, &QAction::triggered, this, &KMenuMenuHandler::slotAddToToolBar);
 }
 
 void KMenuMenuHandler::insertMenu(QMenu *popup)
@@ -69,8 +68,8 @@ bool KMenuMenuHandler::eventFilter(QObject *watched, QEvent *event)
             showContextMenu(menu, menu->actionGeometry(menu->activeAction()).center());
         }
     }
-    event->accept();
-    return true;
+        event->accept();
+        return true;
 
     default:
         break;
@@ -204,7 +203,6 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
 
     KXMLGUIFactory::findActionByName(toolbarElem, actionName, true);
     KXMLGUIFactory::saveConfigFile(document, xmlFile);
-
 }
 
 void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
@@ -238,5 +236,4 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
     m_popupMenu = nullptr;
 }
 
-} //END namespace KDEPrivate
-
+} // END namespace KDEPrivate

@@ -9,8 +9,8 @@
 #define KBUGREPORT_H
 
 #include <QDialog>
-#include <memory>
 #include <kxmlgui_export.h>
+#include <memory>
 
 class KAboutData;
 class KBugReportPrivate;
@@ -60,7 +60,7 @@ public:
     void setMessageBody(const QString &messageBody);
 
     /**
-      * OK has been clicked
+     * OK has been clicked
      */
     void accept() override;
 
@@ -104,4 +104,3 @@ private:
 };
 
 #endif
-

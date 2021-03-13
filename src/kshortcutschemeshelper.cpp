@@ -9,21 +9,20 @@
 
 #include <QAction>
 #include <QCoreApplication>
-#include <QFile>
-#include <QTextStream>
 #include <QDomDocument>
+#include <QFile>
 #include <QStandardPaths>
+#include <QTextStream>
 
-#include <QDir>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QDir>
 
+#include "debug.h"
 #include "kactioncollection.h"
 #include "kxmlguiclient.h"
-#include "debug.h"
 
-bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *> &collections,
-        const QString &schemeName)
+bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *> &collections, const QString &schemeName)
 {
     // Every action collection is associated with a KXMLGUIClient
     // (at least if it was added by KXMLGUIFactory::configureShortcuts)
@@ -48,7 +47,6 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
     }
     const auto componentNames = collectionsByClientName.uniqueKeys();
     for (const QString &componentName : componentNames) {
-
         qCDebug(DEBUG_KXMLGUI) << "Considering component" << componentName;
         QDomDocument doc;
         QDomElement docElem = doc.createElement(QStringLiteral("gui"));
@@ -70,7 +68,7 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
 
                 const QString actionName = action->objectName();
                 const QString shortcut = QKeySequence::listToString(action->shortcuts());
-                //qCDebug(DEBUG_KXMLGUI) << "action" << actionName << "has shortcut" << shortcut;
+                // qCDebug(DEBUG_KXMLGUI) << "action" << actionName << "has shortcut" << shortcut;
                 if (!shortcut.isEmpty()) {
                     QDomElement act_elem = doc.createElement(QStringLiteral("Action"));
                     act_elem.setAttribute(QStringLiteral("name"), actionName);
@@ -79,7 +77,6 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
                 }
             }
         }
-
 
         const QString schemeFileName = writableShortcutSchemeFileName(componentName, schemeName);
         if (elem.childNodes().isEmpty()) {
@@ -107,28 +104,21 @@ QString KShortcutSchemesHelper::currentShortcutSchemeName()
 
 QString KShortcutSchemesHelper::writableShortcutSchemeFileName(const QString &componentName, const QString &schemeName)
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
-           componentName + QLatin1String("/shortcuts/") +
-           schemeName;
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + componentName + QLatin1String("/shortcuts/") + schemeName;
 }
 
 QString KShortcutSchemesHelper::writableApplicationShortcutSchemeFileName(const QString &schemeName)
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
-           QCoreApplication::applicationName() + QLatin1String("/shortcuts/") +
-           schemeName;
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QCoreApplication::applicationName()
+        + QLatin1String("/shortcuts/") + schemeName;
 }
 
 QString KShortcutSchemesHelper::shortcutSchemeFileName(const QString &componentName, const QString &schemeName)
 {
-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                  componentName + QLatin1String("/shortcuts/") +
-                                  schemeName);
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, componentName + QLatin1String("/shortcuts/") + schemeName);
 }
 
 QString KShortcutSchemesHelper::applicationShortcutSchemeFileName(const QString &schemeName)
 {
-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                  QCoreApplication::applicationName() + QLatin1String("/shortcuts/") +
-                                  schemeName);
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::applicationName() + QLatin1String("/shortcuts/") + schemeName);
 }

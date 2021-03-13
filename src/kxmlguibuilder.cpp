@@ -8,21 +8,21 @@
 
 #include "kxmlguibuilder.h"
 
-#include "kxmlguiclient.h"
-#include "ktoolbar.h"
-#include "kmainwindow.h"
-#include "kxmlguiwindow.h"
-#include "kmenumenuhandler_p.h"
 #include "debug.h"
+#include "kmainwindow.h"
+#include "kmenumenuhandler_p.h"
+#include "ktoolbar.h"
+#include "kxmlguiclient.h"
+#include "kxmlguiwindow.h"
 
 #include <KAuthorized>
 #include <KLocalizedString>
 
-#include <QDomElement>
-#include <QObject>
 #include <QAction>
+#include <QDomElement>
 #include <QMenu>
 #include <QMenuBar>
+#include <QObject>
 #include <QStatusBar>
 
 using namespace KDEPrivate;
@@ -30,8 +30,12 @@ using namespace KDEPrivate;
 class KXMLGUIBuilderPrivate
 {
 public:
-    KXMLGUIBuilderPrivate() {}
-    ~KXMLGUIBuilderPrivate() { }
+    KXMLGUIBuilderPrivate()
+    {
+    }
+    ~KXMLGUIBuilderPrivate()
+    {
+    }
 
     QWidget *m_widget = nullptr;
 
@@ -118,7 +122,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
 
     const QString tagName = element.tagName().toLower();
     if (tagName == d->tagMainWindow) {
-        KMainWindow *mainwindow = qobject_cast<KMainWindow *>(d->m_widget);  // could be 0
+        KMainWindow *mainwindow = qobject_cast<KMainWindow *>(d->m_widget); // could be 0
         return mainwindow;
     }
 
@@ -171,8 +175,8 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         const QString text = textElem.text();
         const QString context = textElem.attribute(d->attrContext);
 
-        //qCDebug(DEBUG_KXMLGUI) << "DOMAIN" << KLocalizedString::applicationDomain();
-        //qCDebug(DEBUG_KXMLGUI) << "ELEMENT TEXT:" << text;
+        // qCDebug(DEBUG_KXMLGUI) << "DOMAIN" << KLocalizedString::applicationDomain();
+        // qCDebug(DEBUG_KXMLGUI) << "ELEMENT TEXT:" << text;
 
         if (text.isEmpty()) { // still no luck
             i18nText = i18n("No text");
@@ -191,7 +195,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
             }
         }
 
-        //qCDebug(DEBUG_KXMLGUI) << "ELEMENT i18n TEXT:" << i18nText;
+        // qCDebug(DEBUG_KXMLGUI) << "ELEMENT i18n TEXT:" << i18nText;
 
         const QString icon = element.attribute(d->attrIcon);
         QIcon pix;
@@ -408,4 +412,3 @@ void KXMLGUIBuilder::virtual_hook(int, void *)
 {
     /*BASE::virtual_hook( id, data );*/
 }
-

@@ -26,10 +26,7 @@ public:
     ~KAbstractAboutDialogPrivate() = default;
 
 public:
-    QWidget *createTitleWidget(const QIcon &icon,
-                               const QString &displayName,
-                               const QString &version,
-                               QWidget *parent);
+    QWidget *createTitleWidget(const QIcon &icon, const QString &displayName, const QString &version, QWidget *parent);
     QWidget *createAboutWidget(const QString &shortDescription,
                                const QString &otherText,
                                const QString &copyrightStatement,
@@ -42,14 +39,9 @@ public:
                                  const QString &customAuthorRichText,
                                  const QString &bugAddress,
                                  QWidget *parent);
-    QWidget *createCreditWidget(const QList<KAboutPerson> &credits,
-                                const QString &ocsProviderUrl,
-                                QWidget *parent);
-    QWidget *createTranslatorsWidget(const QList<KAboutPerson> &translators,
-                                     const QString &ocsProviderUrl,
-                                     QWidget *parent);
-    void createForm(QWidget *titleWidget, QWidget *tabWidget,
-                    QDialog *dialog);
+    QWidget *createCreditWidget(const QList<KAboutPerson> &credits, const QString &ocsProviderUrl, QWidget *parent);
+    QWidget *createTranslatorsWidget(const QList<KAboutPerson> &translators, const QString &ocsProviderUrl, QWidget *parent);
+    void createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog);
 };
 
 #endif

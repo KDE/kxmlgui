@@ -5,8 +5,8 @@
     SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-#include "testxmlguiwindow.h"
 #include "testguiclient.h"
+#include "testxmlguiwindow.h"
 
 #include <QDBusConnection>
 #include <QDir>
@@ -16,12 +16,12 @@
 #include <QStandardPaths>
 #include <QTest>
 
-#include <ktoolbar.h>
-#include <kmainwindow.h>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KIconLoader>
+#include <KSharedConfig>
+#include <kmainwindow.h>
+#include <ktoolbar.h>
 
 // We use the data types below in a QVariant, so Q_DECLARE_METATYPE is needed for them.
 Q_DECLARE_METATYPE(Qt::MouseButton)
@@ -29,7 +29,10 @@ Q_DECLARE_METATYPE(Qt::MouseButtons)
 Q_DECLARE_METATYPE(Qt::KeyboardModifiers)
 
 // Ensure everything uses test paths, including stuff run before main, such as the KdePlatformThemePlugin
-void enableTestMode() { QStandardPaths::setTestModeEnabled(true); }
+void enableTestMode()
+{
+    QStandardPaths::setTestModeEnabled(true);
+}
 Q_CONSTRUCTOR_FUNCTION(enableTestMode)
 
 class tst_KToolBar : public QObject
@@ -158,8 +161,7 @@ void tst_KToolBar::init()
 // This will be called after every test function.
 void tst_KToolBar::cleanup()
 {
-    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') +
-                  QStringLiteral("tst_KToolBar"));
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + QStringLiteral("tst_KToolBar"));
     deleteGlobalIconSizeSetting();
     deleteGlobalToolButtonStyleSetting();
 }
@@ -266,10 +268,10 @@ void tst_KToolBar::testIconSizeXmlGui_data()
     // So, only in case the toolbar was at iconSize already, and there was no setting in xml, we end up with kdeGlobal being used:
     const int kdeGlobalMain = 25;
     const int kdeGlobalOther = 16;
-    QTest::newRow("16") << 16 << 16            << 16             << kdeGlobalOther << 16;
+    QTest::newRow("16") << 16 << 16 << 16 << kdeGlobalOther << 16;
     QTest::newRow("22") << 22 << kdeGlobalMain << kdeGlobalOther << kdeGlobalOther << 22;
-    QTest::newRow("32") << 32 << 32            << 32             << kdeGlobalOther << 32;
-    QTest::newRow("64") << 64 << 64            << 64             << kdeGlobalOther << 64;
+    QTest::newRow("32") << 32 << 32 << 32 << kdeGlobalOther << 32;
+    QTest::newRow("64") << 64 << 64 << 64 << kdeGlobalOther << 64;
 }
 
 void tst_KToolBar::testIconSizeXmlGui()
@@ -337,7 +339,7 @@ void tst_KToolBar::changeGlobalIconSizeSetting(int mainToolbarIconSize, int icon
     KConfigGroup mglobals(KSharedConfig::openConfig(), "MainToolbarIcons");
     mglobals.writeEntry("Size", mainToolbarIconSize);
     KConfigGroup globals(KSharedConfig::openConfig(), "ToolbarIcons");
-    //globals.writeEntry("Size", iconSize, KConfig::Normal|KConfig::Global);
+    // globals.writeEntry("Size", iconSize, KConfig::Normal|KConfig::Global);
     globals.writeEntry("Size", iconSize);
     KSharedConfig::openConfig()->sync();
 
@@ -439,14 +441,13 @@ void tst_KToolBar::testToolButtonStyleXmlGui_data()
     QTest::addColumn<Qt::ToolButtonStyle>("expectedStyleOtherToolbar"); // xml says text-under-icons, user-selected should always win
     QTest::addColumn<Qt::ToolButtonStyle>("expectedStyleCleanToolbar"); // should always follow kde-global -> always textonly.
 
-    QTest::newRow("Qt::ToolButtonTextUnderIcon") << Qt::ToolButtonTextUnderIcon <<
-            Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextOnly;
-    QTest::newRow("Qt::ToolButtonTextBesideIcon") << Qt::ToolButtonTextBesideIcon <<
-            Qt::ToolButtonIconOnly /* was default -> using kde global */ << Qt::ToolButtonTextBesideIcon << Qt::ToolButtonTextOnly;
-    QTest::newRow("Qt::ToolButtonIconOnly") << Qt::ToolButtonIconOnly <<
-                                            Qt::ToolButtonIconOnly << Qt::ToolButtonIconOnly << Qt::ToolButtonTextOnly;
-    QTest::newRow("Qt::ToolButtonTextOnly") << Qt::ToolButtonTextOnly <<
-                                            Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly;
+    QTest::newRow("Qt::ToolButtonTextUnderIcon") << Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextUnderIcon << Qt::ToolButtonTextUnderIcon
+                                                 << Qt::ToolButtonTextOnly;
+    QTest::newRow("Qt::ToolButtonTextBesideIcon") << Qt::ToolButtonTextBesideIcon
+                                                  << Qt::ToolButtonIconOnly /* was default -> using kde global */ << Qt::ToolButtonTextBesideIcon
+                                                  << Qt::ToolButtonTextOnly;
+    QTest::newRow("Qt::ToolButtonIconOnly") << Qt::ToolButtonIconOnly << Qt::ToolButtonIconOnly << Qt::ToolButtonIconOnly << Qt::ToolButtonTextOnly;
+    QTest::newRow("Qt::ToolButtonTextOnly") << Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly << Qt::ToolButtonTextOnly;
 }
 
 void tst_KToolBar::testToolButtonStyleXmlGui()
@@ -483,7 +484,6 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)expectedStyleMainToolbar);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)expectedStyleOtherToolbar);
         QCOMPARE((int)cleanToolBar->toolButtonStyle(), (int)expectedStyleCleanToolbar);
-
     }
 }
 
@@ -495,10 +495,12 @@ void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar
     group.sync();
 
     // Same dbus connect as the one in KToolBar. We want our spy to be notified of receiving it.
-    QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KToolBar"),
+    QDBusConnection::sessionBus().connect(QString(),
+                                          QStringLiteral("/KToolBar"),
                                           QStringLiteral("org.kde.KToolBar"),
                                           QStringLiteral("styleChanged"),
-                                          this, SIGNAL(signalAppearanceChanged()));
+                                          this,
+                                          SIGNAL(signalAppearanceChanged()));
     QSignalSpy spy(this, SIGNAL(signalAppearanceChanged()));
 
     KToolBar::emitToolbarStyleChanged();
@@ -540,7 +542,7 @@ void tst_KToolBar::testXmlGuiSwitching()
     kmw.guiFactory()->addClient(&firstClient);
 
     {
-        //qDebug() << "Added gui client";
+        // qDebug() << "Added gui client";
         KToolBar *mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
         KToolBar *otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
         KToolBar *bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
@@ -557,7 +559,7 @@ void tst_KToolBar::testXmlGuiSwitching()
         hiddenToolBar->show();
     }
     kmw.guiFactory()->removeClient(&firstClient);
-    //qDebug() << "Removed gui client";
+    // qDebug() << "Removed gui client";
     QVERIFY(!kmw.guiFactory()->container(QStringLiteral("mainToolBar"), &kmw));
     QVERIFY(!kmw.guiFactory()->container(QStringLiteral("otherToolBar"), &kmw));
     QVERIFY(!kmw.guiFactory()->container(QStringLiteral("bigToolBar"), &kmw));
@@ -566,7 +568,7 @@ void tst_KToolBar::testXmlGuiSwitching()
     QVERIFY(!kmw.guiFactory()->container(QStringLiteral("bigToolBar"), &firstClient));
 
     kmw.guiFactory()->addClient(&firstClient);
-    //qDebug() << "Re-added gui client";
+    // qDebug() << "Re-added gui client";
     KToolBar *mainToolBar = firstClient.toolBarByName(QStringLiteral("mainToolBar"));
     KToolBar *otherToolBar = firstClient.toolBarByName(QStringLiteral("otherToolBar"));
     KToolBar *bigToolBar = firstClient.toolBarByName(QStringLiteral("bigToolBar"));
@@ -596,9 +598,9 @@ void tst_KToolBar::testXmlGuiSwitching()
     QCOMPARE(group.group("Toolbar bigToolBar").readEntry("IconSize", 0), 35);
     QCOMPARE(group.group("Toolbar otherToolBar").readEntry("IconSize", 0), 35);
     QVERIFY(!group.group("Toolbar cleanToolBar").hasKey("IconSize"));
-    //QCOMPARE(group.group("Toolbar bigToolBar").readEntry("Hidden", false), true);
-    //QVERIFY(!group.group("Toolbar cleanToolBar").hasKey("Hidden"));
-    //QVERIFY(!group.group("Toolbar hiddenToolBar").hasKey("Hidden"));
+    // QCOMPARE(group.group("Toolbar bigToolBar").readEntry("Hidden", false), true);
+    // QVERIFY(!group.group("Toolbar cleanToolBar").hasKey("Hidden"));
+    // QVERIFY(!group.group("Toolbar hiddenToolBar").hasKey("Hidden"));
 
     // Recreate window and apply config; is hidden toolbar shown as expected?
     {
@@ -641,7 +643,7 @@ void tst_KToolBar::testKAuthorizedDisableToggleAction()
     kmw.createGUI();
 
     const auto toolbars = kmw.toolBars();
-    for (KToolBar *toolbar: toolbars) {
+    for (KToolBar *toolbar : toolbars) {
         QVERIFY(!toolbar->toggleViewAction()->isEnabled());
     }
 }

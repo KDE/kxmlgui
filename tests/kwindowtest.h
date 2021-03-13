@@ -1,10 +1,10 @@
 #ifndef KWINDOWTEST_H
 #define KWINDOWTEST_H
 
-#include <QTimer>
+#include <QMenuBar>
 #include <QProgressBar>
 #include <QStatusBar>
-#include <QMenuBar>
+#include <QTimer>
 #include <ktoolbar.h>
 #include <kxmlguiwindow.h>
 
@@ -12,7 +12,7 @@ class QTextEdit;
 class QComboBox;
 class QLineEdit;
 
-class TestWindow  : public KXmlGuiWindow
+class TestWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 
@@ -65,4 +65,3 @@ protected:
     QProgressBar *pr;
 };
 #endif
-

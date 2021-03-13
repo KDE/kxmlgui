@@ -11,16 +11,16 @@
 #include "kaboutapplicationconfigattica_p.h"
 
 #if HAVE_ATTICA
-#include <Attica/ProviderManager>
 #include <Attica/Provider>
-#endif //HAVE_ATTICA
+#include <Attica/ProviderManager>
+#endif // HAVE_ATTICA
 
 #include <KAboutData>
 
-#include <QIcon>
 #include <QAbstractListModel>
-#include <QPixmap>
+#include <QIcon>
 #include <QNetworkReply>
+#include <QPixmap>
 #include <QUrl>
 
 // Forward declarations to make Attica-related members work
@@ -31,7 +31,6 @@ class BaseJob;
 
 namespace KDEPrivate
 {
-
 class KAboutApplicationPersonProfile;
 class KAboutApplicationPersonIconsJob;
 
@@ -39,14 +38,13 @@ class KAboutApplicationPersonModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    explicit KAboutApplicationPersonModel(const QList< KAboutPerson > &personList,
-                                          const QString &providerUrl = QString(),
-                                          QObject *parent = nullptr);
+    explicit KAboutApplicationPersonModel(const QList<KAboutPerson> &personList, const QString &providerUrl = QString(), QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
-        Q_UNUSED(parent) return 1;
+        Q_UNUSED(parent)
+        return 1;
     }
     QVariant data(const QModelIndex &index, int role) const override;
 
@@ -71,43 +69,41 @@ private Q_SLOTS:
 private:
     void fetchOcsLinkIcons(int personProfileListIndex);
 
-    const QList< KAboutPerson > m_personList;
-    QList< KAboutApplicationPersonProfile > m_profileList;
+    const QList<KAboutPerson> m_personList;
+    QList<KAboutApplicationPersonProfile> m_profileList;
 
-    QMap< int, QString > m_ocsLinkIconUrls;
-    QMap< int, QPixmap > m_ocsLinkIcons;
+    QMap<int, QString> m_ocsLinkIconUrls;
+    QMap<int, QPixmap> m_ocsLinkIcons;
 
     bool m_hasAvatarPixmaps = false;
 
 #if HAVE_ATTICA
     Attica::ProviderManager m_providerManager;
     Attica::Provider m_provider;
-#endif //HAVE_ATTICA
+#endif // HAVE_ATTICA
     QString m_providerUrl;
     QString m_providerName;
 
     friend class KAboutApplicationPersonIconsJob;
 };
 
-//This list must be in sync with the one in KAboutApplicationPersonProfileOcsLink::prettyType()
-static const char s_personOcsLinkAtticaTypes[][16] = {
-    { "other" },
-    { "Blog" },
-    { "delicious" },
-    { "Digg" },
-    { "Facebook" },
-    { "Homepage" },
-    { "identi.ca" },
-    { "libre.fm" },
-    { "LinkedIn" },
-    { "MySpace" },
-    { "Reddit" },
-    { "StackOverflow" },
-    { "Twitter" },
-    { "Wikipedia" },
-    { "Xing" },
-    { "YouTube" }
-};
+// This list must be in sync with the one in KAboutApplicationPersonProfileOcsLink::prettyType()
+static const char s_personOcsLinkAtticaTypes[][16] = {{"other"},
+                                                      {"Blog"},
+                                                      {"delicious"},
+                                                      {"Digg"},
+                                                      {"Facebook"},
+                                                      {"Homepage"},
+                                                      {"identi.ca"},
+                                                      {"libre.fm"},
+                                                      {"LinkedIn"},
+                                                      {"MySpace"},
+                                                      {"Reddit"},
+                                                      {"StackOverflow"},
+                                                      {"Twitter"},
+                                                      {"Wikipedia"},
+                                                      {"Xing"},
+                                                      {"YouTube"}};
 
 class KAboutApplicationPersonProfileOcsLink
 {
@@ -137,7 +133,8 @@ public:
     KAboutApplicationPersonProfileOcsLink(Type type, const QUrl &url)
         : m_type(type)
         , m_url(url)
-    {}
+    {
+    }
 
     Type type() const
     {
@@ -170,17 +167,17 @@ public:
         : m_name()
         , m_task()
         , m_email()
-        , m_ocsUsername() {} //needed for QVariant
+        , m_ocsUsername()
+    {
+    } // needed for QVariant
 
-    KAboutApplicationPersonProfile(const QString &name,
-                                   const QString &task,
-                                   const QString &email,
-                                   const QString &ocsUsername = QString())
+    KAboutApplicationPersonProfile(const QString &name, const QString &task, const QString &email, const QString &ocsUsername = QString())
         : m_name(name)
         , m_task(task)
         , m_email(email)
         , m_ocsUsername(ocsUsername)
-    {}
+    {
+    }
 
     void setHomepage(const QUrl &url)
     {
@@ -202,7 +199,7 @@ public:
     {
         m_additionalStrings << string;
     }
-    void setOcsLinks(const QList< KAboutApplicationPersonProfileOcsLink > &ocsLinks)
+    void setOcsLinks(const QList<KAboutApplicationPersonProfileOcsLink> &ocsLinks)
     {
         m_ocsLinks = ocsLinks;
     }
@@ -243,7 +240,7 @@ public:
     {
         return m_additionalStrings;
     }
-    const QList< KAboutApplicationPersonProfileOcsLink > &ocsLinks() const
+    const QList<KAboutApplicationPersonProfileOcsLink> &ocsLinks() const
     {
         return m_ocsLinks;
     }
@@ -258,15 +255,14 @@ private:
     QPixmap m_avatar;
     QString m_location;
     QStringList m_additionalStrings;
-    QList< KAboutApplicationPersonProfileOcsLink > m_ocsLinks;
+    QList<KAboutApplicationPersonProfileOcsLink> m_ocsLinks;
 };
 
 class KAboutApplicationPersonIconsJob : public QObject
 {
     Q_OBJECT
 public:
-    KAboutApplicationPersonIconsJob(KAboutApplicationPersonModel *model,
-                                    int personProfileListIndex);
+    KAboutApplicationPersonIconsJob(KAboutApplicationPersonModel *model, int personProfileListIndex);
 
     void start();
 
@@ -275,7 +271,7 @@ public:
         return m_personProfileListIndex;
     }
 
-    const QList< KAboutApplicationPersonProfileOcsLink > &ocsLinks() const
+    const QList<KAboutApplicationPersonProfileOcsLink> &ocsLinks() const
     {
         return m_ocsLinks;
     }
@@ -291,12 +287,12 @@ private:
 
     int m_personProfileListIndex;
     KAboutApplicationPersonModel *m_model;
-    QList< KAboutApplicationPersonProfileOcsLink > m_ocsLinks;
+    QList<KAboutApplicationPersonProfileOcsLink> m_ocsLinks;
 
     QNetworkAccessManager *m_manager;
 };
 
-} //namespace KDEPrivate
+} // namespace KDEPrivate
 
 Q_DECLARE_METATYPE(KDEPrivate::KAboutApplicationPersonProfile)
 #endif // KABOUT_APPLICATION_PERSON_MODEL_H

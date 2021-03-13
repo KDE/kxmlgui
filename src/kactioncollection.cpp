@@ -17,24 +17,24 @@
 
 #include "kactioncollection.h"
 
+#include "debug.h"
 #include "kactioncategory.h"
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"
-#include "debug.h"
 
 #include <KAuthorized>
 #include <KConfigGroup>
 #if HAVE_GLOBALACCEL
-# include <KGlobalAccel>
+#include <KGlobalAccel>
 #endif
 #include <KSharedConfig>
 
 #include <QDomDocument>
-#include <QSet>
 #include <QGuiApplication>
-#include <QMap>
 #include <QList>
+#include <QMap>
 #include <QMetaMethod>
+#include <QSet>
 
 #include <cstdio>
 
@@ -42,12 +42,12 @@ class KActionCollectionPrivate
 {
 public:
     KActionCollectionPrivate()
-        : m_parentGUIClient(nullptr),
-          configGroup(QStringLiteral("Shortcuts")),
-          configIsGlobal(false),
-          connectTriggered(false),
-          connectHovered(false),
-          q(nullptr)
+        : m_parentGUIClient(nullptr)
+        , configGroup(QStringLiteral("Shortcuts"))
+        , configIsGlobal(false)
+        , connectTriggered(false)
+        , connectHovered(false)
+        , q(nullptr)
 
     {
     }
@@ -207,7 +207,7 @@ QList<QAction *> KActionCollection::actions() const
     return d->actions;
 }
 
-const QList< QAction * > KActionCollection::actionsWithoutGroup() const
+const QList<QAction *> KActionCollection::actionsWithoutGroup() const
 {
     QList<QAction *> ret;
     for (QAction *action : qAsConst(d->actions)) {
@@ -218,7 +218,7 @@ const QList< QAction * > KActionCollection::actionsWithoutGroup() const
     return ret;
 }
 
-const QList< QActionGroup * > KActionCollection::actionGroups() const
+const QList<QActionGroup *> KActionCollection::actionGroups() const
 {
     QSet<QActionGroup *> set;
     for (QAction *action : qAsConst(d->actions)) {
@@ -243,7 +243,6 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
         indexName = objectName;
 
     } else {
-
         // A name was provided. Check against objectName.
         if ((!objectName.isEmpty()) && (objectName != indexName)) {
             // The user specified a new name and the action already has a
@@ -256,7 +255,8 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
                 // In debug mode assert
                 Q_ASSERT(!KGlobalAccel::self()->hasShortcut(action));
                 // In release mode keep the old name
-                qCCritical(DEBUG_KXMLGUI) << "Changing action name from " << objectName << " to " << indexName << "\nignored because of active global shortcut.";
+                qCCritical(DEBUG_KXMLGUI) << "Changing action name from " << objectName << " to " << indexName
+                                          << "\nignored because of active global shortcut.";
                 indexName = objectName;
             }
 #endif
@@ -313,18 +313,16 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
         widget->addAction(action);
     }
 
-    connect(action, SIGNAL(destroyed(QObject*)), SLOT(_k_actionDestroyed(QObject*)));
+    connect(action, SIGNAL(destroyed(QObject *)), SLOT(_k_actionDestroyed(QObject *)));
 
     d->setComponentForAction(action);
 
     if (d->connectHovered) {
-        connect(action, &QAction::hovered,
-                this, &KActionCollection::slotActionHovered);
+        connect(action, &QAction::hovered, this, &KActionCollection::slotActionHovered);
     }
 
     if (d->connectTriggered) {
-        connect(action, &QAction::triggered,
-                this, &KActionCollection::slotActionTriggered);
+        connect(action, &QAction::triggered, this, &KActionCollection::slotActionTriggered);
     }
 
     Q_EMIT inserted(action);
@@ -358,7 +356,7 @@ QAction *KActionCollection::takeAction(QAction *action)
     action->disconnect(this);
 
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    Q_EMIT removed(action);   //deprecated
+    Q_EMIT removed(action); // deprecated
 #endif
     Q_EMIT changed();
     return action;
@@ -370,8 +368,7 @@ QAction *KActionCollection::addAction(KStandardAction::StandardAction actionType
     return action;
 }
 
-QAction *KActionCollection::addAction(KStandardAction::StandardAction actionType, const QString &name,
-                                      const QObject *receiver, const char *member)
+QAction *KActionCollection::addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member)
 {
     // pass 0 as parent, because if the parent is a KActionCollection KStandardAction::create automatically
     // adds the action to it under the default name. We would trigger the
@@ -402,7 +399,7 @@ QKeySequence KActionCollection::defaultShortcut(QAction *action) const
 
 QList<QKeySequence> KActionCollection::defaultShortcuts(QAction *action) const
 {
-    return action->property("defaultShortcuts").value<QList<QKeySequence> >();
+    return action->property("defaultShortcuts").value<QList<QKeySequence>>();
 }
 
 void KActionCollection::setDefaultShortcut(QAction *action, const QKeySequence &shortcut)
@@ -456,8 +453,7 @@ void KActionCollection::importGlobalShortcuts(KConfigGroup *config)
         return;
     }
 
-    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin();
-            it != d->actionByName.constEnd(); ++it) {
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
         QAction *action = it.value();
         if (!action) {
             continue;
@@ -491,8 +487,7 @@ void KActionCollection::readSettings(KConfigGroup *config)
         return;
     }
 
-    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin();
-            it != d->actionByName.constEnd(); ++it) {
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
         QAction *action = it.value();
         if (!action) {
             continue;
@@ -509,7 +504,7 @@ void KActionCollection::readSettings(KConfigGroup *config)
         }
     }
 
-    //qCDebug(DEBUG_KXMLGUI) << " done";
+    // qCDebug(DEBUG_KXMLGUI) << " done";
 }
 
 void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAll) const
@@ -520,9 +515,7 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
         return;
     }
 
-    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin();
-            it != d->actionByName.constEnd(); ++it) {
-
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
         QAction *action = it.value();
         if (!action) {
             continue;
@@ -592,8 +585,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
     QDomElement elem = KXMLGUIFactory::actionPropertiesElement(doc);
 
     // now, iterate through our actions
-    for (QMap<QString, QAction *>::ConstIterator it = actionByName.constBegin();
-            it != actionByName.constEnd(); ++it) {
+    for (QMap<QString, QAction *>::ConstIterator it = actionByName.constBegin(); it != actionByName.constEnd(); ++it) {
         QAction *action = it.value();
         if (!action) {
             continue;
@@ -609,12 +601,11 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
         }
 
         bool bSameAsDefault = (action->shortcuts() == q->defaultShortcuts(action));
-        qCDebug(DEBUG_KXMLGUI) << "name = " << actionName
-                 << " shortcut = " << QKeySequence::listToString(action->shortcuts())
+        qCDebug(DEBUG_KXMLGUI) << "name = " << actionName << " shortcut = " << QKeySequence::listToString(action->shortcuts())
 #if HAVE_GLOBALACCEL
-                 << " globalshortcut = " << QKeySequence::listToString(KGlobalAccel::self()->shortcut(action))
+                               << " globalshortcut = " << QKeySequence::listToString(KGlobalAccel::self()->shortcut(action))
 #endif
-                 << " def = " << QKeySequence::listToString(q->defaultShortcuts(action));
+                               << " def = " << QKeySequence::listToString(q->defaultShortcuts(action));
 
         // now see if this element already exists
         // and create it if necessary (unless bSameAsDefault)
@@ -625,7 +616,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
 
         if (bSameAsDefault) {
             act_elem.removeAttribute(attrShortcut);
-            //qCDebug(DEBUG_KXMLGUI) << "act_elem.attributes().count() = " << act_elem.attributes().count();
+            // qCDebug(DEBUG_KXMLGUI) << "act_elem.attributes().count() = " << act_elem.attributes().count();
             if (act_elem.attributes().count() == 1) {
                 elem.removeChild(act_elem);
             }
@@ -638,7 +629,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
     KXMLGUIFactory::saveConfigFile(doc, kxmlguiClient->localXMLFile(), q->componentName());
     // and since we just changed the xml file clear the dom we have in memory
     // it'll be rebuilt if needed
-    const_cast<KXMLGUIClient*>(kxmlguiClient)->setXMLGUIBuildDocument({});
+    const_cast<KXMLGUIClient *>(kxmlguiClient)->setXMLGUIBuildDocument({});
     return true;
 }
 
@@ -662,9 +653,7 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
         writeActions = actions();
     }
 
-    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin();
-            it != d->actionByName.constEnd(); ++it) {
-
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
         QAction *action = it.value();
         if (!action) {
             continue;
@@ -750,7 +739,7 @@ void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
         return;
     }
 
-    //HACK the object we emit is partly destroyed
+    // HACK the object we emit is partly destroyed
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
     Q_EMIT q->removed(action);
 #endif
@@ -767,21 +756,19 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
         signal.methodSignature() == "actionHighlighted(QAction*)" ||
 #endif
-            signal.methodSignature() == "actionHovered(QAction*)") {
+        signal.methodSignature() == "actionHovered(QAction*)") {
         if (!d->connectHovered) {
             d->connectHovered = true;
             for (QAction *action : qAsConst(d->actions)) {
-                connect(action, &QAction::hovered,
-                        this, &KActionCollection::slotActionHovered);
+                connect(action, &QAction::hovered, this, &KActionCollection::slotActionHovered);
             }
         }
 
     } else if (signal.methodSignature() == "actionTriggered(QAction*)") {
         if (!d->connectTriggered) {
             d->connectTriggered = true;
-            for (QAction *action: qAsConst(d->actions)) {
-                connect(action, &QAction::triggered,
-                        this, &KActionCollection::slotActionTriggered);
+            for (QAction *action : qAsConst(d->actions)) {
+                connect(action, &QAction::triggered, this, &KActionCollection::slotActionTriggered);
             }
         }
     }
@@ -789,7 +776,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
     QObject::connectNotify(signal);
 }
 
-const QList< KActionCollection * > &KActionCollection::allCollections()
+const QList<KActionCollection *> &KActionCollection::allCollections()
 {
     return KActionCollectionPrivate::s_allCollections;
 }
@@ -809,7 +796,7 @@ void KActionCollection::addAssociatedWidget(QWidget *widget)
         widget->addActions(actions());
 
         d->associatedWidgets.append(widget);
-        connect(widget, SIGNAL(destroyed(QObject*)), this, SLOT(_k_associatedWidgetDestroyed(QObject*)));
+        connect(widget, SIGNAL(destroyed(QObject *)), this, SLOT(_k_associatedWidgetDestroyed(QObject *)));
     }
 }
 
@@ -820,7 +807,7 @@ void KActionCollection::removeAssociatedWidget(QWidget *widget)
     }
 
     d->associatedWidgets.removeAll(widget);
-    disconnect(widget, SIGNAL(destroyed(QObject*)), this, SLOT(_k_associatedWidgetDestroyed(QObject*)));
+    disconnect(widget, SIGNAL(destroyed(QObject *)), this, SLOT(_k_associatedWidgetDestroyed(QObject *)));
 }
 
 QAction *KActionCollectionPrivate::unlistAction(QAction *action)
@@ -857,7 +844,7 @@ QAction *KActionCollectionPrivate::unlistAction(QAction *action)
     return action;
 }
 
-QList< QWidget * > KActionCollection::associatedWidgets() const
+QList<QWidget *> KActionCollection::associatedWidgets() const
 {
     return d->associatedWidgets;
 }

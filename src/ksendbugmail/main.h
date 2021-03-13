@@ -16,7 +16,9 @@ class BugMailer : public QObject
 {
     Q_OBJECT
 public:
-    BugMailer(SMTP *s) : QObject(nullptr), sm(s)
+    BugMailer(SMTP *s)
+        : QObject(nullptr)
+        , sm(s)
     {
         setObjectName(QStringLiteral("mailer"));
     }
@@ -24,6 +26,7 @@ public:
 public Q_SLOTS:
     void slotError(int);
     void slotSend();
+
 private:
     SMTP *sm;
 };

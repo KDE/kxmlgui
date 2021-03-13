@@ -10,7 +10,6 @@
 
 #include <KWidgetItemDelegate>
 
-
 namespace KDEPrivate
 {
 class KAboutApplicationPersonProfile;
@@ -19,20 +18,19 @@ class KAboutApplicationPersonListDelegate : public KWidgetItemDelegate
 {
     Q_OBJECT
 public:
-    explicit KAboutApplicationPersonListDelegate(QAbstractItemView *itemView,
-                                                 QObject *parent = nullptr);
+    explicit KAboutApplicationPersonListDelegate(QAbstractItemView *itemView, QObject *parent = nullptr);
 
-    ~KAboutApplicationPersonListDelegate() override {}
+    ~KAboutApplicationPersonListDelegate() override
+    {
+    }
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
-    QList< QWidget *> createItemWidgets(const QModelIndex &index) const override;
+    QList<QWidget *> createItemWidgets(const QModelIndex &index) const override;
 
-    void updateItemWidgets(const QList<QWidget *> widgets,
-                           const QStyleOptionViewItem &option,
-                           const QPersistentModelIndex &index) const override;
+    void updateItemWidgets(const QList<QWidget *> widgets, const QStyleOptionViewItem &option, const QPersistentModelIndex &index) const override;
 
 private Q_SLOTS:
     void launchUrl(QAction *action) const;
@@ -55,6 +53,6 @@ private:
     };
 };
 
-} //namespace KDEPrivate
+} // namespace KDEPrivate
 
 #endif // KABOUT_APPLICATION_PERSON_LIST_DELEGATE_H

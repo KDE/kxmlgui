@@ -1,30 +1,30 @@
 #include "kwindowtest.h"
 
-#include <QMessageBox>
-#include <QTextEdit>
 #include <QDir>
+#include <QMessageBox>
 #include <QTest>
+#include <QTextEdit>
 
 #include <cstdlib>
 
+#include <KActionMenu>
+#include <KToggleAction>
 #include <QAction>
 #include <QActionGroup>
 #include <QApplication>
 #include <QComboBox>
-#include <khelpmenu.h>
 #include <QLineEdit>
-#include <kxmlguifactory.h>
 #include <kactioncollection.h>
-#include <KActionMenu>
-#include <KToggleAction>
+#include <khelpmenu.h>
+#include <kxmlguifactory.h>
 
 TestWindow::TestWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 {
     ena = false;
-    exitB = true;   // exit button is shown
-    lineL = true;   // LineEdit is enabled
-    greenF = false;  // Frame not inserted
+    exitB = true; // exit button is shown
+    lineL = true; // LineEdit is enabled
+    greenF = false; // Frame not inserted
     timer = nullptr;
 
     setCaption(QStringLiteral("test window"));
@@ -33,24 +33,20 @@ TestWindow::TestWindow(QWidget *parent)
     // We only need to create actions with the right name here.
 
     // First four  buttons
-    fileNewAction = new QAction(QIcon::fromTheme(QStringLiteral("document-new")),
-                                QStringLiteral("Create.. (toggles upper button)"), this);
+    fileNewAction = new QAction(QIcon::fromTheme(QStringLiteral("document-new")), QStringLiteral("Create.. (toggles upper button)"), this);
     actionCollection()->addAction(QStringLiteral("filenew"), fileNewAction);
     fileNewAction->setCheckable(true);
     connect(fileNewAction, SIGNAL(triggered(bool)), SLOT(slotNew()));
 
-    QAction *fileOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")),
-                                          QStringLiteral("Open"), this);
+    QAction *fileOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), QStringLiteral("Open"), this);
     actionCollection()->addAction(QStringLiteral("fileopen"), fileOpenAction);
     connect(fileOpenAction, SIGNAL(triggered(bool)), SLOT(slotOpen()));
 
-    KActionMenu *fileFloppyAction = new KActionMenu(QIcon::fromTheme(QStringLiteral("filefloppy")),
-            QStringLiteral("Save (beep or delayed popup)"), this);
+    KActionMenu *fileFloppyAction = new KActionMenu(QIcon::fromTheme(QStringLiteral("filefloppy")), QStringLiteral("Save (beep or delayed popup)"), this);
     actionCollection()->addAction(QStringLiteral("filefloppy"), fileFloppyAction);
     connect(fileFloppyAction, SIGNAL(triggered(bool)), SLOT(slotSave()));
 
-    QAction *filePrintAction = new QAction(QIcon::fromTheme(QStringLiteral("document-print")),
-                                           QStringLiteral("Print (enables/disables open)"), this);
+    QAction *filePrintAction = new QAction(QIcon::fromTheme(QStringLiteral("document-print")), QStringLiteral("Print (enables/disables open)"), this);
     actionCollection()->addAction(QStringLiteral("fileprint"), filePrintAction);
     filePrintAction->setToolTip(QStringLiteral("This tooltip does not work for menu items"));
     filePrintAction->setWhatsThis(QStringLiteral("This is the longer explanation of the action"));
@@ -61,40 +57,36 @@ TestWindow::TestWindow(QWidget *parent)
     // arguments: text (or strList), ID, writable, signal, object, slot, enabled,
     //            tooltiptext, size
     testComboBox = new QComboBox(toolBar());
-    //K3WidgetAction* comboAction = new K3WidgetAction(testComboBox, QString(), 0, 0, 0, actionCollection(), "combobox");
-    //connect(testComboBox, SIGNAL(activated(QString)), this, SLOT(slotList(QString)));
+    // K3WidgetAction* comboAction = new K3WidgetAction(testComboBox, QString(), 0, 0, 0, actionCollection(), "combobox");
+    // connect(testComboBox, SIGNAL(activated(QString)), this, SLOT(slotList(QString)));
 
     // Then one line editor
     // arguments: text, id, signal, object (this), slot, enabled, tooltiptext, size
     testLineEdit = new QLineEdit(toolBar());
     testLineEdit->setText(QStringLiteral("ftp://ftp.kde.org/pub/kde"));
-//    K3WidgetAction* lineEditAction = new K3WidgetAction(testLineEdit, QString(), 0, 0, 0, actionCollection(), "location");
-//    connect(testLineEdit, SIGNAL(returnPressed()), this, SLOT(slotReturn()));
+    //    K3WidgetAction* lineEditAction = new K3WidgetAction(testLineEdit, QString(), 0, 0, 0, actionCollection(), "location");
+    //    connect(testLineEdit, SIGNAL(returnPressed()), this, SLOT(slotReturn()));
 
     // Now add another button and align it right
-    exitAction = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")),
-                             QStringLiteral("Exit"), this);
+    exitAction = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), QStringLiteral("Exit"), this);
     actionCollection()->addAction(QStringLiteral("exit"), exitAction);
     connect(exitAction, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
 
     // Another toolbar
 
-    QAction *fileNewAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-new")),
-                                          QStringLiteral("Create new file2 (Toggle)"), this);
+    QAction *fileNewAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-new")), QStringLiteral("Create new file2 (Toggle)"), this);
     actionCollection()->addAction(QStringLiteral("filenew2"), fileNewAction2);
     connect(fileNewAction2, SIGNAL(toggled(bool)), this, SLOT(slotToggle(bool)));
     fileNewAction2->setToolTip(QStringLiteral("Tooltip"));
     fileNewAction2->setStatusTip(QStringLiteral("Statustip"));
     fileNewAction2->setWhatsThis(QStringLiteral("WhatsThis"));
 
-    QAction *fileOpenAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-open")),
-                                           QStringLiteral("Open (starts progress in sb)"), this);
+    QAction *fileOpenAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), QStringLiteral("Open (starts progress in sb)"), this);
     actionCollection()->addAction(QStringLiteral("fileopen2"), fileOpenAction2);
     connect(fileOpenAction2, SIGNAL(triggered(bool)), SLOT(slotOpen()));
     fileOpenAction2->setToolTip(QStringLiteral("This action starts a progressbar inside the statusbar"));
 
-    QAction *fileFloppyAction2 = new QAction(QIcon::fromTheme(QStringLiteral("filefloppy")),
-            QStringLiteral("Save file2 (autorepeat)"), this);
+    QAction *fileFloppyAction2 = new QAction(QIcon::fromTheme(QStringLiteral("filefloppy")), QStringLiteral("Save file2 (autorepeat)"), this);
     actionCollection()->addAction(QStringLiteral("filefloppy2"), fileFloppyAction2);
     connect(fileFloppyAction2, SIGNAL(triggered(bool)), this, SLOT(slotSave()));
 
@@ -107,8 +99,7 @@ TestWindow::TestWindow(QWidget *parent)
     itemsMenu->addAction(QStringLiteral("Combo: make item 3 current"), this, SLOT(slotMakeItem3Current()));
     itemsMenu->addAction(QStringLiteral("Important msg in statusbar"), this, SLOT(slotImportant()));
 
-    QAction *filePrintAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-print")),
-                                            QStringLiteral("Print (pops menu)"), this);
+    QAction *filePrintAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-print")), QStringLiteral("Print (pops menu)"), this);
     actionCollection()->addAction(QStringLiteral("fileprint2"), filePrintAction2);
     filePrintAction2->setMenu(itemsMenu);
 
@@ -116,39 +107,35 @@ TestWindow::TestWindow(QWidget *parent)
     QActionGroup *radioGroup = new QActionGroup(this);
     radioGroup->setExclusive(true);
 
-    KToggleAction *radioButton1 = new KToggleAction(QIcon::fromTheme(QStringLiteral("document-new")),
-            QStringLiteral("Radiobutton1"), this);
+    KToggleAction *radioButton1 = new KToggleAction(QIcon::fromTheme(QStringLiteral("document-new")), QStringLiteral("Radiobutton1"), this);
     actionCollection()->addAction(QStringLiteral("radioButton1"), radioButton1);
     radioButton1->setActionGroup(radioGroup);
 
-    KToggleAction *radioButton2 = new KToggleAction(QIcon::fromTheme(QStringLiteral("document-open")),
-            QStringLiteral("Radiobutton2"), this);
+    KToggleAction *radioButton2 = new KToggleAction(QIcon::fromTheme(QStringLiteral("document-open")), QStringLiteral("Radiobutton2"), this);
     actionCollection()->addAction(QStringLiteral("radioButton2"), radioButton2);
     radioButton2->setActionGroup(radioGroup);
 
-    KToggleAction *radioButton3 = new KToggleAction(QIcon::fromTheme(QStringLiteral("filefloppy")),
-            QStringLiteral("Radiobutton3"), this);
+    KToggleAction *radioButton3 = new KToggleAction(QIcon::fromTheme(QStringLiteral("filefloppy")), QStringLiteral("Radiobutton3"), this);
     actionCollection()->addAction(QStringLiteral("radioButton3"), radioButton3);
     radioButton3->setActionGroup(radioGroup);
 
-    KToggleAction *radioButton4 = new KToggleAction(QIcon::fromTheme(QStringLiteral("document-print")),
-            QStringLiteral("Radiobutton4"), this);
+    KToggleAction *radioButton4 = new KToggleAction(QIcon::fromTheme(QStringLiteral("document-print")), QStringLiteral("Radiobutton4"), this);
     actionCollection()->addAction(QStringLiteral("radioButton4"), radioButton4);
     radioButton4->setActionGroup(radioGroup);
 
-    connect(radioGroup, SIGNAL(triggered(QAction*)), this, SLOT(slotToggled(QAction*)));
+    connect(radioGroup, SIGNAL(triggered(QAction *)), this, SLOT(slotToggled(QAction *)));
 
     /**************************************************/
     /*Now, we setup statusbar; order is not important. */
     /**************************************************/
     statusBar = new QStatusBar(this);
-    //statusBar->insertItem("Hi there!                         ", 0);
-    //statusBar->insertItem("Look for tooltips to see functions", 1);
+    // statusBar->insertItem("Hi there!                         ", 0);
+    // statusBar->insertItem("Look for tooltips to see functions", 1);
     setStatusBar(statusBar);
 
-    //DigitalClock *clk = new DigitalClock (statusBar);
-    //clk->setFrameStyle(QFrame::NoFrame);
-    //statusBar->insertWidget(clk, 70, 2);
+    // DigitalClock *clk = new DigitalClock (statusBar);
+    // clk->setFrameStyle(QFrame::NoFrame);
+    // statusBar->insertWidget(clk, 70, 2);
 
     // Set main widget. In this example it is Qt's multiline text editor.
     widget = new QTextEdit(this);
@@ -171,7 +158,7 @@ TestWindow::TestWindow(QWidget *parent)
     completions->addAction(QStringLiteral("/home/"));
     completions->addAction(QStringLiteral("/vmlinuz :-)"));
 
-    connect(completions, SIGNAL(triggered(QAction*)), this, SLOT(slotCompletionsMenu(QAction*)));
+    connect(completions, SIGNAL(triggered(QAction *)), this, SLOT(slotCompletionsMenu(QAction *)));
     pr = nullptr;
 
     // KXMLGUIClient looks in the "data" resource for the .rc files
@@ -181,7 +168,6 @@ TestWindow::TestWindow(QWidget *parent)
 
     tb = toolBar();
     tb1 = toolBar(QStringLiteral("AnotherToolBar"));
-
 }
 /***********************************/
 /*  Now slots for toolbar actions  */
@@ -193,15 +179,15 @@ void TestWindow::slotToggled(QAction *)
 
 void TestWindow::slotInsertClock()
 {
-    //DigitalClock *clock = new DigitalClock(tb1);
-    //clock->setFrameStyle(QFrame::NoFrame);
-    //tb1->insertWidget(8, 70, clock);
+    // DigitalClock *clock = new DigitalClock(tb1);
+    // clock->setFrameStyle(QFrame::NoFrame);
+    // tb1->insertWidget(8, 70, clock);
 }
 
 void TestWindow::slotNew()
 {
-    //tb1->actions()[0]->toggle();
-    //toolBar()->removeAction( fileNewAction );
+    // tb1->actions()[0]->toggle();
+    // toolBar()->removeAction( fileNewAction );
 }
 void TestWindow::slotOpen()
 {
@@ -209,7 +195,7 @@ void TestWindow::slotOpen()
         pr = new QProgressBar(statusBar);
         pr->show();
     }
-//  statusBar->message(pr);
+    //  statusBar->message(pr);
     if (!timer) {
         timer = new QTimer(this);
         connect(timer, SIGNAL(timeout()), this, SLOT(slotGoGoGoo()));
@@ -245,7 +231,6 @@ void TestWindow::slotReturn()
     QString s = QStringLiteral("You entered ");
     s = s + testLineEdit->text();
     statusBar->showMessage(s);
-
 }
 void TestWindow::slotList(const QString &str)
 {
@@ -270,7 +255,6 @@ void TestWindow::slotCompletion()
      when ctrl-d or ctrl-s is pressed. KToolBar will also put cursor at end of text in LineEdit
      after inserting text with setLinedText (...).
     */
-
 }
 
 void TestWindow::slotListCompletion()
@@ -279,17 +263,16 @@ void TestWindow::slotListCompletion()
      Combo is not behaving good and it is ugly. I will see how it behaves in Qt-1.3,
      and then decide should I make a new combobox.
      */
-    QString s(testComboBox->currentText());  // get text in combo
+    QString s(testComboBox->currentText()); // get text in combo
     s += QStringLiteral("(completing)");
-    //tb->getCombo(4)->changeItem(s.data());   // setTextIncombo
-
+    // tb->getCombo(4)->changeItem(s.data());   // setTextIncombo
 }
 
 void TestWindow::slotCompletionsMenu(QAction *action)
 {
     // Now set text in lined
     QString s = action->text();
-    testLineEdit->setText(s);  // Cursor is automatically at the end of string after this
+    testLineEdit->setText(s); // Cursor is automatically at the end of string after this
 }
 
 TestWindow::~TestWindow()
@@ -417,7 +400,7 @@ int main(int argc, char *argv[])
     QApplication myApp(argc, argv);
     TestWindow *test = new TestWindow;
 
-    myApp.setQuitOnLastWindowClosed(false);   // don't quit after the messagebox!
+    myApp.setQuitOnLastWindowClosed(false); // don't quit after the messagebox!
 
 #if 0
     int i = QMessageBox::information(0, "Select", "Select type of mainwidget",
@@ -433,7 +416,6 @@ int main(int argc, char *argv[])
     myApp.setQuitOnLastWindowClosed(true);
     int ret = myApp.exec();
 
-    //delete test;
+    // delete test;
     return ret;
 }
-

@@ -112,8 +112,10 @@ public:
      *
      * @return Accept if the dialog was closed with OK, Reject otherwise.
      */
-    static int configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts =
-                             KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent = nullptr, bool bSaveSettings = true);
+    static int configure(KActionCollection *collection,
+                         KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
+                         QWidget *parent = nullptr,
+                         bool bSaveSettings = true);
 
     /**
      * Imports a shortcuts set up from @p path
@@ -152,4 +154,3 @@ private:
 };
 
 #endif // KSHORTCUTSDIALOG_H
-

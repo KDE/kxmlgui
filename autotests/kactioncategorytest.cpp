@@ -2,8 +2,8 @@
 
 #include <QtTestWidgets>
 
-#include "kactioncollection.h"
 #include "kactioncategory.h"
+#include "kactioncollection.h"
 #include <KSelectAction>
 #include <KStandardAction>
 
@@ -154,4 +154,3 @@ void tst_KActionCategory::tstActionCreation()
 }
 
 QTEST_MAIN(tst_KActionCategory)
-

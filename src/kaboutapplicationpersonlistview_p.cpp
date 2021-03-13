@@ -11,7 +11,6 @@
 
 namespace KDEPrivate
 {
-
 KAboutApplicationPersonListView::KAboutApplicationPersonListView(QWidget *parent)
     : QListView(parent)
 {
@@ -30,10 +29,10 @@ KAboutApplicationPersonListView::KAboutApplicationPersonListView(QWidget *parent
 
 void KAboutApplicationPersonListView::wheelEvent(QWheelEvent *e)
 {
-    //HACK: Workaround for Qt bug 7232: Smooth scrolling (scroll per pixel) in ItemViews
+    // HACK: Workaround for Qt bug 7232: Smooth scrolling (scroll per pixel) in ItemViews
     //      does not work as expected.
     verticalScrollBar()->setSingleStep(3);
     QListView::wheelEvent(e);
 }
 
-} //namespace KDEPrivate
+} // namespace KDEPrivate

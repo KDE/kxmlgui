@@ -11,8 +11,8 @@
 #include "kactioncollection.h"
 #include "kxmlguiwindow.h"
 
-#include <QApplication>
 #include <QAction>
+#include <QApplication>
 #include <QClipboard>
 
 KMainWindowInterface::KMainWindowInterface(KXmlGuiWindow *mainWindow)

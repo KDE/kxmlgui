@@ -14,15 +14,15 @@
 #include "klicensedialog_p.h"
 
 // KF
-#include <KLocalizedString>
 #include <KAboutData>
+#include <KLocalizedString>
 // Qt
-#include <QVBoxLayout>
-#include <QFontDatabase>
-#include <QTextBrowser>
-#include <QScrollBar>
 #include <QDialogButtonBox>
+#include <QFontDatabase>
+#include <QScrollBar>
 #include <QStyle>
+#include <QTextBrowser>
+#include <QVBoxLayout>
 
 KLicenseDialog::KLicenseDialog(const KAboutLicense &license, QWidget *parent)
     : QDialog(parent)
@@ -53,8 +53,7 @@ KLicenseDialog::KLicenseDialog(const KAboutLicense &license, QWidget *parent)
     auto *style = this->style();
     const int leftMarginHint = style->pixelMetric(QStyle::PM_LayoutLeftMargin);
     const int rightMarginHint = style->pixelMetric(QStyle::PM_LayoutRightMargin);
-    const qreal idealWidth = licenseBrowser->document()->idealWidth() + leftMarginHint + rightMarginHint
-                             + licenseBrowser->verticalScrollBar()->width() * 2;
+    const qreal idealWidth = licenseBrowser->document()->idealWidth() + leftMarginHint + rightMarginHint + licenseBrowser->verticalScrollBar()->width() * 2;
 
     // try to allow enough height for a reasonable number of lines to be shown
     QFontMetrics metrics(font);

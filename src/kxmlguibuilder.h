@@ -33,7 +33,6 @@ class QWidget;
 class KXMLGUI_EXPORT KXMLGUIBuilder
 {
 public:
-
     explicit KXMLGUIBuilder(QWidget *widget);
     virtual ~KXMLGUIBuilder();
 
@@ -58,16 +57,14 @@ public:
      *                attributes or child elements)
      * @param action The action created for this container; used for e.g. passing to removeContainer.
      */
-    virtual QWidget *createContainer(QWidget *parent, int index,
-                                     const QDomElement &element, QAction *&containerAction);
+    virtual QWidget *createContainer(QWidget *parent, int index, const QDomElement &element, QAction *&containerAction);
 
     /**
      * Removes the given (and previously via createContainer )
      * created container.
      *
      */
-    virtual void removeContainer(QWidget *container, QWidget *parent,
-                                 QDomElement &element, QAction *containerAction);
+    virtual void removeContainer(QWidget *container, QWidget *parent, QDomElement &element, QAction *containerAction);
 
     virtual QStringList customTags() const;
 
@@ -91,4 +88,3 @@ private:
 };
 
 #endif
-

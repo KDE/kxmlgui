@@ -17,37 +17,36 @@
 #include "kshortcutseditor.h"
 
 // The following is needed for KShortcutsEditorPrivate and QTreeWidgetHack
-#include "kshortcutsdialog_p.h"
 #include "debug.h"
+#include "kshortcutsdialog_p.h"
 
 #include <QAction>
 #include <QHeaderView>
 #include <QList>
 #include <QObject>
-#include <QTimer>
+#include <QPrintDialog>
+#include <QPrinter>
+#include <QTextCursor>
 #include <QTextDocument>
 #include <QTextTable>
-#include <QTextCursor>
 #include <QTextTableFormat>
-#include <QPrinter>
-#include <QPrintDialog>
+#include <QTimer>
 
 #include <KConfig>
 #include <KConfigGroup>
 #if HAVE_GLOBALACCEL
-# include <KGlobalAccel>
+#include <KGlobalAccel>
 #endif
+#include "kactioncategory.h"
+#include "kactioncollection.h"
 #include <KMessageBox>
 #include <KTreeWidgetSearchLine>
-#include "kactioncollection.h"
-#include "kactioncategory.h"
 
 //---------------------------------------------------------------------
 // KShortcutsEditor
 //---------------------------------------------------------------------
 
-KShortcutsEditor::KShortcutsEditor(KActionCollection *collection, QWidget *parent, ActionTypes actionType,
-                                   LetterShortcuts allowLetterShortcuts)
+KShortcutsEditor::KShortcutsEditor(KActionCollection *collection, QWidget *parent, ActionTypes actionType, LetterShortcuts allowLetterShortcuts)
     : QWidget(parent)
     , d(new KShortcutsEditorPrivate(this))
 {
@@ -202,7 +201,7 @@ void KShortcutsEditor::writeConfiguration(KConfigGroup *config) const
     }
 }
 
-//slot
+// slot
 void KShortcutsEditor::resizeColumns()
 {
     for (int i = 0; i < d->ui.list->columnCount(); i++) {
@@ -238,9 +237,9 @@ void KShortcutsEditor::undoChanges()
 
 void KShortcutsEditor::undo()
 {
-    //This function used to crash sometimes when invoked by clicking on "cancel"
-    //with Qt 4.2.something. Apparently items were deleted too early by Qt.
-    //It seems to work with 4.3-ish Qt versions. Keep an eye on this.
+    // This function used to crash sometimes when invoked by clicking on "cancel"
+    // with Qt 4.2.something. Apparently items were deleted too early by Qt.
+    // It seems to work with 4.3-ish Qt versions. Keep an eye on this.
     for (QTreeWidgetItemIterator it(d->ui.list); (*it); ++it) {
         if (KShortcutsEditorItem *item = dynamic_cast<KShortcutsEditorItem *>(*it)) {
             item->undo();
@@ -248,9 +247,9 @@ void KShortcutsEditor::undo()
     }
 }
 
-//We ask the user here if there are any conflicts, as opposed to undo().
-//They don't do the same thing anyway, this just not to confuse any readers.
-//slot
+// We ask the user here if there are any conflicts, as opposed to undo().
+// They don't do the same thing anyway, this just not to confuse any readers.
+// slot
 void KShortcutsEditor::allDefault()
 {
     d->allDefault();
@@ -276,9 +275,10 @@ void KShortcutsEditor::setActionTypes(ActionTypes actionTypes)
 //---------------------------------------------------------------------
 
 KShortcutsEditorPrivate::KShortcutsEditorPrivate(KShortcutsEditor *q)
-    :   q(q),
-        delegate(nullptr)
-{}
+    : q(q)
+    , delegate(nullptr)
+{
+}
 
 void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts)
 {
@@ -288,7 +288,7 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     q->layout()->setContentsMargins(0, 0, 0, 0);
     ui.searchFilter->searchLine()->setTreeWidget(ui.list); // Plug into search line
     ui.list->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui.list->header()->hideSection(ShapeGesture);  //mouse gestures didn't make it in time...
+    ui.list->header()->hideSection(ShapeGesture); // mouse gestures didn't make it in time...
     ui.list->header()->hideSection(RockerGesture);
 #if HAVE_GLOBALACCEL
     bool hideGlobals = !(actionTypes & KShortcutsEditor::GlobalAction);
@@ -306,23 +306,19 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
 
     // Create the Delegate. It is responsible for the KKeySeqeunceWidgets that
     // really change the shortcuts.
-    delegate = new KShortcutsEditorDelegate(
-        ui.list,
-        allowLetterShortcuts == KShortcutsEditor::LetterShortcutsAllowed);
+    delegate = new KShortcutsEditorDelegate(ui.list, allowLetterShortcuts == KShortcutsEditor::LetterShortcutsAllowed);
 
     ui.list->setItemDelegate(delegate);
     ui.list->setSelectionBehavior(QAbstractItemView::SelectItems);
     ui.list->setSelectionMode(QAbstractItemView::SingleSelection);
-    //we have our own editing mechanism
+    // we have our own editing mechanism
     ui.list->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui.list->setAlternatingRowColors(true);
 
-    //TODO listen to changes to global shortcuts
-    QObject::connect(delegate, SIGNAL(shortcutChanged(QVariant,QModelIndex)),
-                     q, SLOT(capturedShortcut(QVariant,QModelIndex)));
-    //hide the editor widget chen its item becomes hidden
-    QObject::connect(ui.searchFilter->searchLine(), &KTreeWidgetSearchLine::hiddenChanged,
-                     delegate, &KShortcutsEditorDelegate::hiddenBySearchLine);
+    // TODO listen to changes to global shortcuts
+    QObject::connect(delegate, SIGNAL(shortcutChanged(QVariant, QModelIndex)), q, SLOT(capturedShortcut(QVariant, QModelIndex)));
+    // hide the editor widget chen its item becomes hidden
+    QObject::connect(ui.searchFilter->searchLine(), &KTreeWidgetSearchLine::hiddenChanged, delegate, &KShortcutsEditorDelegate::hiddenBySearchLine);
 
     ui.searchFilter->setFocus();
 }
@@ -381,7 +377,7 @@ void KShortcutsEditorPrivate::allDefault()
         KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
         QAction *act = item->m_action;
 
-        QList<QKeySequence> defaultShortcuts = act->property("defaultShortcuts").value<QList<QKeySequence> >();
+        QList<QKeySequence> defaultShortcuts = act->property("defaultShortcuts").value<QList<QKeySequence>>();
         if (act->shortcuts() != defaultShortcuts) {
             QKeySequence primary = defaultShortcuts.isEmpty() ? QKeySequence() : defaultShortcuts.at(0);
             QKeySequence alternate = defaultShortcuts.size() <= 1 ? QKeySequence() : defaultShortcuts.at(1);
@@ -399,9 +395,8 @@ void KShortcutsEditorPrivate::allDefault()
     }
 }
 
-//static
-KShortcutsEditorItem *KShortcutsEditorPrivate::itemFromIndex(QTreeWidget *const w,
-        const QModelIndex &index)
+// static
+KShortcutsEditorItem *KShortcutsEditorPrivate::itemFromIndex(QTreeWidget *const w, const QModelIndex &index)
 {
     QTreeWidgetItem *item = static_cast<QTreeWidgetHack *>(w)->itemFromIndex(index);
     if (item && item->type() == ActionItem) {
@@ -425,10 +420,10 @@ QTreeWidgetItem *KShortcutsEditorPrivate::findOrMakeItem(QTreeWidgetItem *parent
     return ret;
 }
 
-//private slot
+// private slot
 void KShortcutsEditorPrivate::capturedShortcut(const QVariant &newShortcut, const QModelIndex &index)
 {
-    //dispatch to the right handler
+    // dispatch to the right handler
     if (!index.isValid()) {
         return;
     }
@@ -450,7 +445,7 @@ void KShortcutsEditorPrivate::changeKeyShortcut(KShortcutsEditorItem *item, uint
 
     item->setKeySequence(column, capture);
     Q_EMIT q->keyChange();
-    //force view update
+    // force view update
     item->setText(column, capture.toString(QKeySequence::NativeText));
 }
 
@@ -463,10 +458,10 @@ void KShortcutsEditorPrivate::clearConfiguration()
 
         KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
 
-        changeKeyShortcut(item, LocalPrimary,   QKeySequence());
+        changeKeyShortcut(item, LocalPrimary, QKeySequence());
         changeKeyShortcut(item, LocalAlternate, QKeySequence());
 
-        changeKeyShortcut(item, GlobalPrimary,   QKeySequence());
+        changeKeyShortcut(item, GlobalPrimary, QKeySequence());
         changeKeyShortcut(item, GlobalAlternate, QKeySequence());
     }
 }
@@ -480,9 +475,7 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
 
     KConfigGroup globalShortcutsGroup(config, QStringLiteral("Global Shortcuts"));
     if ((actionTypes & KShortcutsEditor::GlobalAction) && globalShortcutsGroup.exists()) {
-
         for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
-
             if (!(*it)->parent()) {
                 continue;
             }
@@ -501,7 +494,6 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
     if (actionTypes & ~KShortcutsEditor::GlobalAction) {
         const KConfigGroup localShortcutsGroup(config, QStringLiteral("Shortcuts"));
         for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
-
             if (!(*it)->parent()) {
                 continue;
             }
@@ -549,9 +541,7 @@ void KShortcutsEditorPrivate::printShortcuts() const
     QTextCharFormat headerFormat;
     headerFormat.setProperty(QTextFormat::FontSizeAdjustment, 3);
     headerFormat.setFontWeight(QFont::Bold);
-    cursor.insertText(i18nc("header for an applications shortcut list", "Shortcuts for %1",
-                            QGuiApplication::applicationDisplayName()),
-                      headerFormat);
+    cursor.insertText(i18nc("header for an applications shortcut list", "Shortcuts for %1", QGuiApplication::applicationDisplayName()), headerFormat);
     QTextCharFormat componentFormat;
     componentFormat.setProperty(QTextFormat::FontSizeAdjustment, 2);
     componentFormat.setFontWeight(QFont::Bold);

@@ -10,9 +10,9 @@
 #include <QAction>
 #include <QUndoStack>
 
+#include <KLocalizedString>
 #include <KStandardAction>
 #include <KStandardShortcut>
-#include <KLocalizedString>
 
 #include <kactioncollection.h>
 

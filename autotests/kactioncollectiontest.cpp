@@ -1,9 +1,9 @@
 #include "kactioncollectiontest.h"
 
-#include <QtTestWidgets>
 #include <QAction>
 #include <QPointer>
 #include <QSignalSpy>
+#include <QtTestWidgets>
 
 #include <KSharedConfig>
 #include <KStandardAction>
@@ -44,7 +44,9 @@ void tst_KActionCollection::clear()
 void tst_KActionCollection::addStandardActionFunctorSignal()
 {
     bool received = false;
-    QAction *a = collection->addAction(KStandardAction::New, QStringLiteral("test"), this, [&]() { received = true; });
+    QAction *a = collection->addAction(KStandardAction::New, QStringLiteral("test"), this, [&]() {
+        received = true;
+    });
     a->trigger();
     QVERIFY(received);
     delete a;
@@ -70,7 +72,7 @@ void tst_KActionCollection::deleted()
     // and that widget gets deleted first.
     myWidget = new QWidget(nullptr);
     QWidget *myAssociatedWidget = new QWidget(myWidget); // child widget
-    action = new QAction(/*i18n()*/ QStringLiteral("Foo"), myWidget);  // child action
+    action = new QAction(/*i18n()*/ QStringLiteral("Foo"), myWidget); // child action
     collection->addAction(QStringLiteral("foo"), action);
     collection->addAssociatedWidget(myAssociatedWidget);
     QVERIFY(myAssociatedWidget->actions().contains(action));
@@ -223,7 +225,7 @@ KConfigGroup tst_KActionCollection::clearConfig()
 
 void tst_KActionCollection::testSetShortcuts()
 {
-    QAction *action = new QAction(/*i18n*/(QStringLiteral("Next Unread &Folder")), this);
+    QAction *action = new QAction(/*i18n*/ (QStringLiteral("Next Unread &Folder")), this);
     collection->addAction(QStringLiteral("go_next_unread_folder"), action);
     collection->setDefaultShortcut(action, QKeySequence(Qt::ALT | Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
@@ -303,4 +305,3 @@ void tst_KActionCollection::shouldEmitSignals()
 }
 
 QTEST_MAIN(tst_KActionCollection)
-

@@ -12,11 +12,11 @@
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"
 
-#include <QFile>
 #include <QDomDocument>
 #include <QDomElement>
-#include <QStandardPaths>
+#include <QFile>
 #include <QMap>
+#include <QStandardPaths>
 
 struct DocStruct {
     QString file;
@@ -62,7 +62,7 @@ static void insertToolBars(QDomDocument &doc, const QList<QDomElement> &toolBars
     QDomElement menuBar = parent.namedItem(QStringLiteral("MenuBar")).toElement();
     QDomElement insertAfter = menuBar;
     if (menuBar.isNull()) {
-        insertAfter = parent.firstChildElement();    // if null, insertAfter will do an append
+        insertAfter = parent.firstChildElement(); // if null, insertAfter will do an append
     }
     for (const QDomElement &e : toolBars) {
         QDomNode result = parent.insertAfter(e, insertAfter);
@@ -72,7 +72,7 @@ static void insertToolBars(QDomDocument &doc, const QList<QDomElement> &toolBars
 
 //
 
-typedef QMap<QString, QMap<QString, QString> > ActionPropertiesMap;
+typedef QMap<QString, QMap<QString, QString>> ActionPropertiesMap;
 
 static ActionPropertiesMap extractActionProperties(const QDomDocument &doc)
 {
@@ -101,7 +101,7 @@ static ActionPropertiesMap extractActionProperties(const QDomDocument &doc)
             continue;
         }
 
-        QMap<QString, QMap<QString, QString> >::Iterator propIt = properties.find(actionName);
+        QMap<QString, QMap<QString, QString>>::Iterator propIt = properties.find(actionName);
         if (propIt == properties.end()) {
             propIt = properties.insert(actionName, QMap<QString, QString>());
         }
@@ -122,16 +122,14 @@ static ActionPropertiesMap extractActionProperties(const QDomDocument &doc)
                 continue;
             }
 
-            (*propIt)[ name ] = attr.value();
+            (*propIt)[name] = attr.value();
         }
-
     }
 
     return properties;
 }
 
-static void storeActionProperties(QDomDocument &doc,
-                                  const ActionPropertiesMap &properties)
+static void storeActionProperties(QDomDocument &doc, const ActionPropertiesMap &properties)
 {
     QDomElement actionPropElement = doc.documentElement().namedItem(QStringLiteral("ActionProperties")).toElement();
 
@@ -140,9 +138,9 @@ static void storeActionProperties(QDomDocument &doc,
         doc.documentElement().appendChild(actionPropElement);
     }
 
-//Remove only those ActionProperties entries from the document, that are present
-//in the properties argument. In real life this means that local ActionProperties
-//takes precedence over global ones, if they exists (think local override of shortcuts).
+    // Remove only those ActionProperties entries from the document, that are present
+    // in the properties argument. In real life this means that local ActionProperties
+    // takes precedence over global ones, if they exists (think local override of shortcuts).
     QDomNode actionNode = actionPropElement.firstChild();
     while (!actionNode.isNull()) {
         if (properties.contains(actionNode.toElement().attribute(QStringLiteral("name")))) {
@@ -199,7 +197,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
     for (; docIt != docEnd; ++docIt) {
         const QString versionStr = KXMLGUIClient::findVersionNumber((*docIt).data);
         if (versionStr.isEmpty()) {
-            //qCDebug(DEBUG_KXMLGUI) << "found no version in" << (*docIt).file;
+            // qCDebug(DEBUG_KXMLGUI) << "found no version in" << (*docIt).file;
             continue;
         }
 
@@ -208,11 +206,11 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
         if (!ok) {
             continue;
         }
-        //qCDebug(DEBUG_KXMLGUI) << "found version" << version << "for" << (*docIt).file;
+        // qCDebug(DEBUG_KXMLGUI) << "found version" << version << "for" << (*docIt).file;
 
         if (version > bestVersion) {
             best = docIt;
-            //qCDebug(DEBUG_KXMLGUI) << "best version is now " << version;
+            // qCDebug(DEBUG_KXMLGUI) << "best version is now " << version;
             bestVersion = version;
         }
     }
@@ -273,7 +271,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
         m_doc = (*best).data;
         m_file = (*best).file;
     } else {
-        //qCDebug(DEBUG_KXMLGUI) << "returning first one...";
+        // qCDebug(DEBUG_KXMLGUI) << "returning first one...";
         m_doc = allDocuments.first().data;
         m_file = allDocuments.first().file;
     }

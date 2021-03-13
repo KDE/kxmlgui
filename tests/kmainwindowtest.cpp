@@ -8,10 +8,10 @@
 #include "kmainwindowtest.h"
 
 #include <QApplication>
-#include <QTimer>
 #include <QLabel>
-#include <QStatusBar>
 #include <QMenuBar>
+#include <QStatusBar>
+#include <QTimer>
 
 MainWindow::MainWindow()
 {
@@ -38,4 +38,3 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
-

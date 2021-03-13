@@ -18,7 +18,6 @@ class KSelectAction;
 
 namespace KDEPrivate
 {
-
 /**
  * @internal
  * This class handle the context menu of QMenu.
@@ -30,7 +29,9 @@ class KMenuMenuHandler : public QObject
     Q_OBJECT
 public:
     explicit KMenuMenuHandler(KXMLGUIBuilder *b);
-    ~KMenuMenuHandler() override {}
+    ~KMenuMenuHandler() override
+    {
+    }
     void insertMenu(QMenu *menu);
     bool eventFilter(QObject *watched, QEvent *event) override;
 
@@ -47,9 +48,8 @@ private:
     QMenu *m_popupMenu = nullptr;
     QAction *m_popupAction = nullptr;
     QMenu *m_contextMenu = nullptr;
-
 };
 
-} //END namespace KDEPrivate
+} // END namespace KDEPrivate
 
 #endif

@@ -8,14 +8,14 @@
 
 #include <QAction>
 #include <QApplication>
-#include <QLineEdit>
 #include <QDir>
+#include <QLineEdit>
 #include <QTest>
 
-#include <kmainwindow.h>
-#include <kxmlguifactory.h>
-#include <kxmlguibuilder.h>
 #include <kactioncollection.h>
+#include <kmainwindow.h>
+#include <kxmlguibuilder.h>
+#include <kxmlguifactory.h>
 
 void Client::slotSec()
 {

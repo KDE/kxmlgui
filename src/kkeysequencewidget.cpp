@@ -16,16 +16,16 @@
 #include "kactioncollection.h"
 
 #include <QAction>
+#include <QApplication>
+#include <QHBoxLayout>
+#include <QHash>
 #include <QKeyEvent>
 #include <QTimer>
-#include <QHash>
-#include <QHBoxLayout>
 #include <QToolButton>
-#include <QApplication>
 
-#include <KeySequenceRecorder>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KeySequenceRecorder>
 #if HAVE_GLOBALACCEL
 #include <KGlobalAccel>
 #endif
@@ -41,15 +41,13 @@ static bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QK
             continue;
         }
 
-        if (sequence.matches(needle) != QKeySequence::NoMatch
-                || needle.matches(sequence) != QKeySequence::NoMatch) {
+        if (sequence.matches(needle) != QKeySequence::NoMatch || needle.matches(sequence) != QKeySequence::NoMatch) {
             return true;
         }
     }
 
     return false;
 }
-
 
 class KKeySequenceWidgetPrivate
 {
@@ -61,7 +59,7 @@ public:
     void updateShortcutDisplay();
     void startRecording();
 
-    //Conflicts the key sequence @p seq with a current standard shortcut?
+    // Conflicts the key sequence @p seq with a current standard shortcut?
     bool conflictWithStandardShortcuts(const QKeySequence &seq);
     // Conflicts the key sequence @p seq with a current local shortcut?
     bool conflictWithLocalShortcuts(const QKeySequence &seq);
@@ -71,7 +69,7 @@ public:
     bool promptStealLocalShortcut(const QList<QAction *> &actions, const QKeySequence &seq);
     bool promptstealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq);
 #if HAVE_GLOBALACCEL
-    bool promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo> > &shortcuts, const QKeySequence &sequence);
+    bool promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo>> &shortcuts, const QKeySequence &sequence);
 #endif
     void wontStealShortcut(QAction *item, const QKeySequence &seq);
 
@@ -90,10 +88,10 @@ public:
         return checkAgainstShortcutTypes & KKeySequenceWidget::LocalShortcuts;
     }
 
-//private slot
+    // private slot
     void doneRecording();
 
-//members
+    // members
     KKeySequenceWidget *const q;
     KeySequenceRecorder *recorder;
     QHBoxLayout *layout;
@@ -131,7 +129,8 @@ KKeySequenceWidgetPrivate::KKeySequenceWidgetPrivate(KKeySequenceWidget *q)
     , componentName()
     , checkAgainstShortcutTypes(KKeySequenceWidget::LocalShortcuts | KKeySequenceWidget::GlobalShortcuts)
     , stealActions()
-{}
+{
+}
 
 void KKeySequenceWidgetPrivate::init()
 {
@@ -141,7 +140,9 @@ void KKeySequenceWidgetPrivate::init()
     keyButton = new QPushButton(q);
     keyButton->setFocusPolicy(Qt::StrongFocus);
     keyButton->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
-    keyButton->setToolTip(i18nc("@info:tooltip", "Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A."));
+    keyButton->setToolTip(
+        i18nc("@info:tooltip",
+              "Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A."));
     layout->addWidget(keyButton);
 
     clearButton = new QToolButton(q);
@@ -162,7 +163,6 @@ void KKeySequenceWidgetPrivate::init()
 
 bool KKeySequenceWidgetPrivate::promptStealLocalShortcut(const QList<QAction *> &actions, const QKeySequence &seq)
 {
-
     const int listSize = actions.size();
 
     QString title = i18ncp("%1 is the number of conflicts", "Shortcut Conflict", "Shortcut Conflicts", listSize);
@@ -184,15 +184,17 @@ bool KKeySequenceWidgetPrivate::promptStealLocalShortcut(const QList<QAction *> 
                              seq.toString(QKeySequence::NativeText),
                              conflictingShortcuts);
 
-   return KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) == KMessageBox::Continue;
+    return KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) == KMessageBox::Continue;
 }
 
 void KKeySequenceWidgetPrivate::wontStealShortcut(QAction *item, const QKeySequence &seq)
 {
     QString title(i18nc("@title:window", "Shortcut conflict"));
-    QString msg(i18n("<qt>The '%1' key combination is already used by the <b>%2</b> action.<br>"
-                     "Please select a different one.</qt>", seq.toString(QKeySequence::NativeText),
-                     KLocalizedString::removeAcceleratorMarker(item->text())));
+    QString msg(
+        i18n("<qt>The '%1' key combination is already used by the <b>%2</b> action.<br>"
+             "Please select a different one.</qt>",
+             seq.toString(QKeySequence::NativeText),
+             KLocalizedString::removeAcceleratorMarker(item->text())));
     KMessageBox::sorry(q, msg, title);
 }
 
@@ -234,7 +236,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     // 1/2/3 key shortcuts. I think you can imagine.
     QList<QAction *> conflictingActions;
 
-    //find conflicting shortcuts with existing actions
+    // find conflicting shortcuts with existing actions
     for (QAction *qaction : qAsConst(allActions)) {
         if (shortcutsConflictWith(qaction->shortcuts(), keySequence)) {
             // A conflict with a KAction. If that action is configurable
@@ -253,7 +255,6 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
         return false;
     }
 
-
     if (promptStealLocalShortcut(conflictingActions, keySequence)) {
         stealActions = conflictingActions;
         // Announce that the user agreed
@@ -266,47 +267,49 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
 }
 
 #if HAVE_GLOBALACCEL
-bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo> > &clashing, const QKeySequence &sequence)
+bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo>> &clashing, const QKeySequence &sequence)
 {
     QString clashingKeys;
     for (auto it = clashing.begin(); it != clashing.end(); ++it) {
         const auto seqAsString = it.key().toString();
         for (const KGlobalShortcutInfo &info : it.value()) {
-            clashingKeys += i18n("Shortcut '%1' in Application %2 for action %3\n",
-                                    seqAsString, info.componentFriendlyName(), info.friendlyName());
+            clashingKeys += i18n("Shortcut '%1' in Application %2 for action %3\n", seqAsString, info.componentFriendlyName(), info.friendlyName());
         }
     }
     const int hashSize = clashing.size();
 
     QString message = i18ncp("%1 is the number of conflicts (hidden), %2 is the key sequence of the shortcut that is problematic",
-                                "The shortcut '%2' conflicts with the following key combination:\n",
-                                "The shortcut '%2' conflicts with the following key combinations:\n",
-                                hashSize, sequence.toString());
+                             "The shortcut '%2' conflicts with the following key combination:\n",
+                             "The shortcut '%2' conflicts with the following key combinations:\n",
+                             hashSize,
+                             sequence.toString());
     message += clashingKeys;
 
     QString title = i18ncp("%1 is the number of shortcuts with which there is a conflict",
-                            "Conflict with Registered Global Shortcut", "Conflict with Registered Global Shortcuts", hashSize);
+                           "Conflict with Registered Global Shortcut",
+                           "Conflict with Registered Global Shortcuts",
+                           hashSize);
 
     return KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) == KMessageBox::Continue;
 }
 #endif
 
-
 bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &keySequence)
 {
 #ifdef Q_OS_WIN
-    //on windows F12 is reserved by the debugger at all times, so we can't use it for a global shortcut
+    // on windows F12 is reserved by the debugger at all times, so we can't use it for a global shortcut
     if (KKeySequenceWidget::GlobalShortcuts && keySequence.toString().contains(QLatin1String("F12"))) {
         QString title = i18n("Reserved Shortcut");
-        QString message = i18n("The F12 key is reserved on Windows, so cannot be used for a global shortcut.\n"
-                               "Please choose another one.");
+        QString message = i18n(
+            "The F12 key is reserved on Windows, so cannot be used for a global shortcut.\n"
+            "Please choose another one.");
 
         KMessageBox::sorry(q, message, title);
         return false;
     }
 #endif
 #if HAVE_GLOBALACCEL
-     if (!(checkAgainstShortcutTypes & KKeySequenceWidget::GlobalShortcuts)) {
+    if (!(checkAgainstShortcutTypes & KKeySequenceWidget::GlobalShortcuts)) {
         return false;
     }
     // Global shortcuts are on key+modifier shortcuts. They can clash with
@@ -319,7 +322,7 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
         }
     }
     if (clashing.isEmpty()) {
-        return  false;
+        return false;
     }
 
     if (!promptStealGlobalShortcut(clashing, keySequence)) {
@@ -344,14 +347,15 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
 bool KKeySequenceWidgetPrivate::promptstealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq)
 {
     QString title = i18nc("@title:window", "Conflict with Standard Application Shortcut");
-    QString message = i18n("The '%1' key combination is also used for the standard action "
-                           "\"%2\" that some applications use.\n"
-                           "Do you really want to use it as a global shortcut as well?",
-                           seq.toString(QKeySequence::NativeText), KStandardShortcut::label(std));
+    QString message = i18n(
+        "The '%1' key combination is also used for the standard action "
+        "\"%2\" that some applications use.\n"
+        "Do you really want to use it as a global shortcut as well?",
+        seq.toString(QKeySequence::NativeText),
+        KStandardShortcut::label(std));
 
     return KMessageBox::warningContinueCancel(q, message, title, KGuiItem(i18nc("@action:button", "Reassign"))) == KMessageBox::Continue;
 }
-
 
 bool KKeySequenceWidgetPrivate::conflictWithStandardShortcuts(const QKeySequence &seq)
 {
@@ -359,7 +363,7 @@ bool KKeySequenceWidgetPrivate::conflictWithStandardShortcuts(const QKeySequence
         return false;
     }
     KStandardShortcut::StandardShortcut ssc = KStandardShortcut::find(seq);
-    if (ssc != KStandardShortcut::AccelNone && !promptstealStandardShortcut(ssc, seq))  {
+    if (ssc != KStandardShortcut::AccelNone && !promptstealStandardShortcut(ssc, seq)) {
         return true;
     }
     return false;
@@ -394,7 +398,7 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
     }
 
     if (recorder->isRecording()) {
-        //make it clear that input is still going on
+        // make it clear that input is still going on
         s.append(QLatin1String(" ..."));
     }
 
@@ -403,8 +407,8 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
 }
 
 KKeySequenceWidget::KKeySequenceWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new KKeySequenceWidgetPrivate(this))
+    : QWidget(parent)
+    , d(new KKeySequenceWidgetPrivate(this))
 {
     d->init();
     setFocusProxy(d->keyButton);
@@ -461,9 +465,7 @@ bool KKeySequenceWidget::isKeySequenceAvailable(const QKeySequence &keySequence)
     if (keySequence.isEmpty()) {
         return true;
     }
-    return !(d->conflictWithLocalShortcuts(keySequence)
-             || d->conflictWithGlobalShortcuts(keySequence)
-             || d->conflictWithStandardShortcuts(keySequence));
+    return !(d->conflictWithLocalShortcuts(keySequence) || d->conflictWithGlobalShortcuts(keySequence) || d->conflictWithStandardShortcuts(keySequence));
 }
 
 bool KKeySequenceWidget::isModifierlessAllowed()
@@ -489,7 +491,7 @@ void KKeySequenceWidget::setCheckActionCollections(const QList<KActionCollection
     d->checkActionCollections = actionCollections;
 }
 
-//slot
+// slot
 void KKeySequenceWidget::captureKeySequence()
 {
     d->recorder->setWindow(window()->windowHandle());
@@ -501,7 +503,7 @@ QKeySequence KKeySequenceWidget::keySequence() const
     return d->keySequence;
 }
 
-//slot
+// slot
 void KKeySequenceWidget::setKeySequence(const QKeySequence &seq, Validation validate)
 {
     if (d->keySequence == seq) {
@@ -515,19 +517,18 @@ void KKeySequenceWidget::setKeySequence(const QKeySequence &seq, Validation vali
     Q_EMIT keySequenceChanged(seq);
 }
 
-//slot
+// slot
 void KKeySequenceWidget::clearKeySequence()
 {
     setKeySequence(QKeySequence());
 }
 
-//slot
+// slot
 void KKeySequenceWidget::applyStealShortcut()
 {
     QSet<KActionCollection *> changedCollections;
 
     for (QAction *stealAction : qAsConst(d->stealActions)) {
-
         // Stealing a shortcut means setting it to an empty one.
         stealAction->setShortcuts(QList<QKeySequence>());
 
@@ -553,6 +554,5 @@ void KKeySequenceWidget::applyStealShortcut()
 
     d->stealActions.clear();
 }
-
 
 #include "moc_kkeysequencewidget.cpp"

@@ -14,38 +14,38 @@
 #include "kxmlguiwindow.h"
 #include "debug.h"
 
+#include "kactioncollection.h"
 #include "kmainwindow_p.h"
 #include "kmessagebox.h"
-#include "kactioncollection.h"
 #ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
 #endif
-#include "ktoolbarhandler_p.h"
-#include "kxmlguifactory.h"
 #include "kedittoolbar.h"
 #include "khelpmenu.h"
 #include "ktoolbar.h"
+#include "ktoolbarhandler_p.h"
+#include "kxmlguifactory.h"
 
 #ifdef QT_DBUS_LIB
 #include <QDBusConnection>
 #endif
 #include <QDomDocument>
+#include <QEvent>
+#include <QList>
 #include <QMenuBar>
 #include <QStatusBar>
 #include <QWidget>
-#include <QList>
-#include <QEvent>
 
-#include <KToggleAction>
-#include <KStandardAction>
-#include <KConfig>
-#include <KLocalizedString>
 #include <KAboutData>
-#include <KSharedConfig>
+#include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
+#include <KSharedConfig>
+#include <KStandardAction>
+#include <KToggleAction>
 
-#include <cstdlib>
 #include <cctype>
+#include <cstdlib>
 
 class KXmlGuiWindowPrivate : public KMainWindowPrivate
 {
@@ -58,7 +58,7 @@ public:
         letDirtySettings = !b;
     }
 
-    bool showHelpMenu: 1;
+    bool showHelpMenu : 1;
     QSize defaultSize;
 
     KDEPrivate::ToolBarHandler *toolBarHandler;
@@ -68,7 +68,8 @@ public:
 };
 
 KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
-    : KMainWindow(*new KXmlGuiWindowPrivate, parent, f), KXMLGUIBuilder(this)
+    : KMainWindow(*new KXmlGuiWindowPrivate, parent, f)
+    , KXMLGUIBuilder(this)
 {
     Q_D(KXmlGuiWindow);
     d->showHelpMenu = true;
@@ -109,12 +110,11 @@ bool KXmlGuiWindow::event(QEvent *ev)
     bool ret = KMainWindow::event(ev);
     if (ev->type() == QEvent::Polish) {
 #ifdef QT_DBUS_LIB
-        QDBusConnection::sessionBus().registerObject(dbusName() + QLatin1String("/actions"), actionCollection(),
-                QDBusConnection::ExportScriptableSlots |
-                QDBusConnection::ExportScriptableProperties |
-                QDBusConnection::ExportNonScriptableSlots |
-                QDBusConnection::ExportNonScriptableProperties |
-                QDBusConnection::ExportChildObjects);
+        QDBusConnection::sessionBus().registerObject(dbusName() + QLatin1String("/actions"),
+                                                     actionCollection(),
+                                                     QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableProperties
+                                                         | QDBusConnection::ExportNonScriptableSlots | QDBusConnection::ExportNonScriptableProperties
+                                                         | QDBusConnection::ExportChildObjects);
 #endif
     }
     return ret;
@@ -137,8 +137,7 @@ KXMLGUIFactory *KXmlGuiWindow::guiFactory()
     Q_D(KXmlGuiWindow);
     if (!d->factory) {
         d->factory = new KXMLGUIFactory(this, this);
-        connect(d->factory, SIGNAL(makingChanges(bool)),
-                this, SLOT(_k_slotFactoryMakingChanges(bool)));
+        connect(d->factory, SIGNAL(makingChanges(bool)), this, SLOT(_k_slotFactoryMakingChanges(bool)));
     }
     return d->factory;
 }
@@ -151,8 +150,7 @@ void KXmlGuiWindow::configureToolbars()
     if (!d->toolBarEditor) {
         d->toolBarEditor = new KEditToolBar(guiFactory(), this);
         d->toolBarEditor->setAttribute(Qt::WA_DeleteOnClose);
-        connect(d->toolBarEditor, &KEditToolBar::newToolBarConfig,
-                this, &KXmlGuiWindow::saveNewToolbarConfig);
+        connect(d->toolBarEditor, &KEditToolBar::newToolBarConfig, this, &KXmlGuiWindow::saveNewToolbarConfig);
     }
     d->toolBarEditor->show();
 }
@@ -178,8 +176,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
     Q_D(KXmlGuiWindow);
 
     if (options & Keys) {
-        KStandardAction::keyBindings(guiFactory(),
-                                     SLOT(configureShortcuts()), actionCollection());
+        KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
     }
 
     if ((options & StatusBar) && statusBar()) {
@@ -188,8 +185,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
 
     if (options & ToolBar) {
         setStandardToolBarMenuEnabled(true);
-        KStandardAction::configureToolbars(this,
-                                           SLOT(configureToolbars()), actionCollection());
+        KStandardAction::configureToolbars(this, SLOT(configureToolbars()), actionCollection());
     }
 
     d->defaultSize = defaultSize;
@@ -217,7 +213,7 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
 {
     Q_D(KXmlGuiWindow);
     // disabling the updates prevents unnecessary redraws
-    //setUpdatesEnabled( false );
+    // setUpdatesEnabled( false );
 
     // just in case we are rebuilding, let's remove our old client
     guiFactory()->removeClient(this);
@@ -228,7 +224,7 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
         mb->clear();
     }
 
-    qDeleteAll(toolBars());   // delete all toolbars
+    qDeleteAll(toolBars()); // delete all toolbars
 
     // don't build a help menu unless the user ask for it
     if (d->showHelpMenu) {
@@ -273,8 +269,8 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
     // Help beginners who call setXMLFile and then setupGUI...
     if (!xmlFile().isEmpty() && xmlFile() != windowXmlFile) {
         qCWarning(DEBUG_KXMLGUI) << "You called setXMLFile(" << xmlFile() << ") and then createGUI or setupGUI,"
-                   << "which also calls setXMLFile and will overwrite the file you have previously set.\n"
-                   << "You should call createGUI(" << xmlFile() << ") or setupGUI(<options>," << xmlFile() << ") instead.";
+                                 << "which also calls setXMLFile and will overwrite the file you have previously set.\n"
+                                 << "You should call createGUI(" << xmlFile() << ") or setupGUI(<options>," << xmlFile() << ") instead.";
     }
 
     // we always want to load in our global standards file
@@ -300,11 +296,9 @@ void KXmlGuiWindow::slotStateChanged(const QString &newstate)
     stateChanged(newstate, KXMLGUIClient::StateNoReverse);
 }
 
-void KXmlGuiWindow::slotStateChanged(const QString &newstate,
-                                     bool reverse)
+void KXmlGuiWindow::slotStateChanged(const QString &newstate, bool reverse)
 {
-    stateChanged(newstate,
-                 reverse ? KXMLGUIClient::StateReverse : KXMLGUIClient::StateNoReverse);
+    stateChanged(newstate, reverse ? KXMLGUIClient::StateReverse : KXMLGUIClient::StateNoReverse);
 }
 
 void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool enable)
@@ -346,8 +340,7 @@ void KXmlGuiWindow::createStandardStatusBarAction()
     if (!d->showStatusBarAction) {
         d->showStatusBarAction = KStandardAction::showStatusbar(this, &KMainWindow::setSettingsDirty, actionCollection());
         QStatusBar *sb = statusBar(); // Creates statusbar if it doesn't exist already.
-        connect(d->showStatusBarAction, &QAction::toggled,
-                sb, &QWidget::setVisible);
+        connect(d->showStatusBarAction, &QAction::toggled, sb, &QWidget::setVisible);
         d->showStatusBarAction->setChecked(sb->isHidden());
     } else {
         // If the language has changed, we'll need to grab the new text and whatsThis
@@ -388,7 +381,7 @@ void KXmlGuiWindow::finalizeGUI(KXMLGUIClient *client)
 
 void KXmlGuiWindow::checkAmbiguousShortcuts()
 {
-    QMap<QString, QAction*> shortcuts;
+    QMap<QString, QAction *> shortcuts;
     QAction *editCutAction = actionCollection()->action(QStringLiteral("edit_cut"));
     QAction *deleteFileAction = actionCollection()->action(QStringLiteral("deletefile"));
     const auto actions = actionCollection()->actions();
@@ -406,8 +399,8 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
                     // There is one exception, if the conflicting shortcut is a non primary shortcut of "edit_cut"
                     // and "deleteFileAction" is the other action since Shift+Delete is used for both in our default code
                     bool showWarning = true;
-                    if ((action == editCutAction && existingShortcutAction == deleteFileAction) ||
-                        (action == deleteFileAction && existingShortcutAction == editCutAction)) {
+                    if ((action == editCutAction && existingShortcutAction == deleteFileAction)
+                        || (action == deleteFileAction && existingShortcutAction == editCutAction)) {
                         QList<QKeySequence> editCutActionShortcuts = editCutAction->shortcuts();
                         if (editCutActionShortcuts.indexOf(shortcut) > 0) // alternate shortcut
                         {
@@ -423,7 +416,15 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
                         const QString existingShortcutActionName = KLocalizedString::removeAcceleratorMarker(existingShortcutAction->text());
                         QString dontShowAgainString = existingShortcutActionName + actionName + shortcut.toString();
                         dontShowAgainString.remove(QLatin1Char('\\'));
-                        KMessageBox::information(this, i18n("There are two actions (%1, %2) that want to use the same shortcut (%3). This is most probably a bug. Please report it in <a href='https://bugs.kde.org'>bugs.kde.org</a>", existingShortcutActionName, actionName, shortcut.toString(QKeySequence::NativeText)), i18n("Ambiguous Shortcuts"), dontShowAgainString, KMessageBox::Notify | KMessageBox::AllowLink);
+                        KMessageBox::information(this,
+                                                 i18n("There are two actions (%1, %2) that want to use the same shortcut (%3). This is most probably a bug. "
+                                                      "Please report it in <a href='https://bugs.kde.org'>bugs.kde.org</a>",
+                                                      existingShortcutActionName,
+                                                      actionName,
+                                                      shortcut.toString(QKeySequence::NativeText)),
+                                                 i18n("Ambiguous Shortcuts"),
+                                                 dontShowAgainString,
+                                                 KMessageBox::Notify | KMessageBox::AllowLink);
                     }
                 } else {
                     shortcuts.insert(portableShortcutText, action);
@@ -434,4 +435,3 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
 }
 
 #include "moc_kxmlguiwindow.cpp"
-

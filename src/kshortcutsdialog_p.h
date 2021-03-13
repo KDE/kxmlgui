@@ -10,19 +10,19 @@
 #ifndef KSHORTCUTSDIALOG_P_H
 #define KSHORTCUTSDIALOG_P_H
 
-#include "kshortcutseditor.h"
 #include "kkeysequencewidget.h"
+#include "kshortcutseditor.h"
 
 #include <KExtendableItemDelegate>
 #include <KLocalizedString>
 
+#include <QCollator>
+#include <QGroupBox>
 #include <QKeySequence>
+#include <QList>
 #include <QMetaType>
 #include <QModelIndex>
 #include <QTreeWidget>
-#include <QList>
-#include <QCollator>
-#include <QGroupBox>
 
 class QLabel;
 class QTreeWidget;
@@ -83,7 +83,7 @@ class KShortcutsEditorDelegate : public KExtendableItemDelegate
     Q_OBJECT
 public:
     KShortcutsEditorDelegate(QTreeWidget *parent, bool allowLetterShortcuts);
-    //reimplemented to have some extra height
+    // reimplemented to have some extra height
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
     /**
@@ -98,8 +98,10 @@ Q_SIGNALS:
     void shortcutChanged(const QVariant &, const QModelIndex &);
 public Q_SLOTS:
     void hiddenBySearchLine(QTreeWidgetItem *, bool);
+
 protected:
     bool eventFilter(QObject *, QEvent *) override;
+
 private:
     mutable QPersistentModelIndex m_editingIndex;
     const bool m_allowLetterShortcuts;
@@ -129,7 +131,6 @@ private Q_SLOTS:
     void shapeGestureChanged(const KShapeGesture &);
     void rockerGestureChanged(const KRockerGesture &);
 #endif
-
 };
 
 /**
@@ -142,7 +143,10 @@ class TabConnectedWidget : public QWidget
     Q_OBJECT
 public:
     explicit TabConnectedWidget(QWidget *parent)
-        : QWidget(parent) {}
+        : QWidget(parent)
+    {
+    }
+
 protected:
     void paintEvent(QPaintEvent *pe) override;
 };
@@ -156,8 +160,7 @@ class ShortcutEditWidget : public TabConnectedWidget
 {
     Q_OBJECT
 public:
-    ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq, const QKeySequence &activeSeq,
-                       bool allowLetterShortcuts);
+    ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq, const QKeySequence &activeSeq, bool allowLetterShortcuts);
 
     //! @see KKeySequenceWidget::setCheckActionCollections()
     void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
@@ -213,7 +216,7 @@ Q_DECLARE_METATYPE(KShapeGesture)
 Q_DECLARE_METATYPE(KRockerGesture)
 #endif
 
-class KShortcutSchemesEditor: public QGroupBox
+class KShortcutSchemesEditor : public QGroupBox
 {
     Q_OBJECT
 public:
@@ -261,7 +264,6 @@ class KRockerGesture;
 class KShortcutsEditorItem : public QTreeWidgetItem
 {
 public:
-
     KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *action);
 
     /**
@@ -325,7 +327,6 @@ private:
 
     //! The collator, for sorting
     QCollator m_collator;
-
 };
 
 // NEEDED FOR KShortcutsEditorPrivate
@@ -359,7 +360,7 @@ public:
 
     void initGUI(KShortcutsEditor::ActionTypes actionTypes, KShortcutsEditor::LetterShortcuts allowLetterShortcuts);
     void appendToView(uint nList, const QString &title = QString());
-    //used in appendToView
+    // used in appendToView
     QTreeWidgetItem *findOrMakeItem(QTreeWidgetItem *parent, const QString &name);
 
     static KShortcutsEditorItem *itemFromIndex(QTreeWidget *const w, const QModelIndex &index);
@@ -379,19 +380,19 @@ public:
     bool stealRockerGesture(KShortcutsEditorItem *item, const KRockerGesture &gest);
 #endif
 
-    //conflict resolution functions
+    // conflict resolution functions
     void changeKeyShortcut(KShortcutsEditorItem *item, uint column, const QKeySequence &capture);
 #if 0
     void changeShapeGesture(KShortcutsEditorItem *item, const KShapeGesture &capture);
     void changeRockerGesture(KShortcutsEditorItem *item, const KRockerGesture &capture);
 #endif
 
-// private slots
-    //this invokes the appropriate conflict resolution function
+    // private slots
+    // this invokes the appropriate conflict resolution function
     void capturedShortcut(const QVariant &, const QModelIndex &);
 
     //! Represents the three hierarchies the dialog handles.
-    enum hierarchyLevel {Root = 0, Program, Action};
+    enum hierarchyLevel { Root = 0, Program, Action };
 
     /**
      * Add @p action at @p level. Checks for QActions and unnamed actions
@@ -405,7 +406,7 @@ public:
 
     void setActionTypes(KShortcutsEditor::ActionTypes actionTypes);
 
-// members
+    // members
     QList<KActionCollection *> actionCollections;
     KShortcutsEditor *q;
 
@@ -413,10 +414,8 @@ public:
 
     KShortcutsEditor::ActionTypes actionTypes;
     KShortcutsEditorDelegate *delegate;
-
 };
 
 Q_DECLARE_METATYPE(KShortcutsEditorItem *)
 
 #endif /* KSHORTCUTSDIALOG_P_H */
-

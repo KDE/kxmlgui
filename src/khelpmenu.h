@@ -122,8 +122,7 @@ public:
      *        added to the dialog.
      *
      */
-    explicit KHelpMenu(QWidget *parent = nullptr, const QString &aboutAppText = QString(),
-                       bool showWhatsThis = true);
+    explicit KHelpMenu(QWidget *parent = nullptr, const QString &aboutAppText = QString(), bool showWhatsThis = true);
 
     /**
      * Constructor.
@@ -138,8 +137,7 @@ public:
      * @param showWhatsThis Decides whether a "Whats this" entry will be
      *        added to the dialog.
      */
-    KHelpMenu(QWidget *parent, const KAboutData &aboutData,
-              bool showWhatsThis = true);
+    KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis = true);
 
     /**
      * Destructor

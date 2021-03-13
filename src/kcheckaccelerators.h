@@ -1,7 +1,7 @@
 /*
     This file is part of the KDE libraries
     SPDX-FileCopyrightText: 1997 Matthias Kalle Dalheimer <kalle@kde.org>
-    SPDX-FileCopyrightText: 1998, 1999, 2000 KDE Team 
+    SPDX-FileCopyrightText: 1998, 1999, 2000 KDE Team
     SPDX-FileCopyrightText: 2008 Nick Shaforostoff <shaforostoff@kde.ru>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
@@ -65,7 +65,7 @@ class QTextBrowser;
 
 */
 
-class KCheckAccelerators: public QObject
+class KCheckAccelerators : public QObject
 {
     Q_OBJECT
 public:

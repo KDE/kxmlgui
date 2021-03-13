@@ -6,16 +6,16 @@
 */
 
 #include <QAction>
-#include <QTextEdit>
-#include <QTimer>
 #include <QApplication>
 #include <QStandardPaths>
 #include <QTest>
+#include <QTextEdit>
+#include <QTimer>
 
-#include <kxmlguiwindow.h>
-#include <kactioncollection.h>
-#include <KMessageBox>
 #include <KConfigGroup>
+#include <KMessageBox>
+#include <kactioncollection.h>
+#include <kxmlguiwindow.h>
 
 // BUG: if this symbol is defined the problem consists on:
 //      - main window is created.
@@ -29,8 +29,7 @@
 //          - Reopen the test. The toolbar you moved is not keeping the place you specified.
 #define REPRODUCE_TOOLBAR_BUG
 
-class MainWindow
-    : public KXmlGuiWindow
+class MainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 
@@ -52,7 +51,7 @@ void MainWindow::slotTest()
 
 void MainWindow::slotCreate()
 {
-    setupGUI(ToolBar|Keys);
+    setupGUI(ToolBar | Keys);
     createGUI(xmlFile());
 
     if (autoSaveConfigGroup().isValid()) {
@@ -89,8 +88,8 @@ MainWindow::MainWindow(QWidget *parent)
     setXMLFile(QFINDTESTDATA("kxmlguiwindowtestui.rc"), true);
     // Because we use a full path in setXMLFile, we need to call setLocalXMLFile too.
     // In your apps, just pass a relative filename to setXMLFile instead.
-    setLocalXMLFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') +
-                    QStringLiteral("kxmlguiwindowtest/kxmlguiwindowtestui.rc"));
+    setLocalXMLFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/')
+                    + QStringLiteral("kxmlguiwindowtest/kxmlguiwindowtestui.rc"));
 
     setCentralWidget(new QTextEdit(this));
     setupActions();

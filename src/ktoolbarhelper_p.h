@@ -11,7 +11,6 @@
 
 namespace KToolbarHelper
 {
-
 QString i18nToolBarName(const QDomElement &element);
 
 }

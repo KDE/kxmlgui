@@ -13,8 +13,8 @@
 
 #include "kaboutapplicationdialog.h"
 
-#include "kabstractaboutdialog_p.h"
 #include "../kxmlgui_version.h"
+#include "kabstractaboutdialog_p.h"
 // KF
 #include <KAboutData>
 #include <KLocalizedString>
@@ -25,23 +25,22 @@
 #include <QTabWidget>
 #include <QVBoxLayout>
 
-
 class KAboutApplicationDialogPrivate : public KAbstractAboutDialogPrivate
 {
 public:
     KAboutApplicationDialogPrivate(const KAboutData &aboutData, KAboutApplicationDialog *parent)
         : q(parent)
         , aboutData(aboutData)
-    {}
+    {
+    }
 
     void init(KAboutApplicationDialog::Options opt);
 
 private:
-    KAboutApplicationDialog * const q;
+    KAboutApplicationDialog *const q;
 
     const KAboutData aboutData;
 };
-
 
 KAboutApplicationDialog::KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent)
     : KAboutApplicationDialog(aboutData, NoOptions, parent)
@@ -59,7 +58,7 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
 {
     q->setWindowTitle(i18nc("@title:window", "About %1", aboutData.displayName()));
 
-    //Set up the title widget...
+    // Set up the title widget...
     QIcon titleIcon;
     if (aboutData.programLogo().canConvert<QPixmap>()) {
         titleIcon = QIcon(aboutData.programLogo().value<QPixmap>());
@@ -71,23 +70,23 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
         titleIcon = qApp->windowIcon();
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 2)
         // Legacy support for deprecated KAboutData::programIconName()
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+        QT_WARNING_PUSH
+        QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+        QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
         if (titleIcon.isNull() && !aboutData.programIconName().isEmpty()) {
             titleIcon = QIcon::fromTheme(aboutData.programIconName());
         }
-QT_WARNING_POP
+        QT_WARNING_POP
 #endif
     }
 
     QWidget *titleWidget = createTitleWidget(titleIcon, aboutData.displayName(), aboutData.version(), q);
 
-    //Then the tab bar...
+    // Then the tab bar...
     QTabWidget *tabWidget = new QTabWidget;
     tabWidget->setUsesScrollButtons(false);
 
-    //Set up the first page...
+    // Set up the first page...
     QWidget *aboutWidget = createAboutWidget(aboutData.shortDescription(), //
                                              aboutData.otherText(),
                                              aboutData.copyrightStatement(),
@@ -101,37 +100,38 @@ QT_WARNING_POP
     if (!(opt & KAboutApplicationDialog::HideLibraries)) {
         QWidget *versionWidget = new QWidget(q);
         QVBoxLayout *versionLayout = new QVBoxLayout(versionWidget);
-        QLabel *versionLabel = new QLabel(
-            i18n("<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
-                 QStringLiteral(KXMLGUI_VERSION_STRING),
-                 QString::fromLocal8Bit(qVersion()),
-                 QStringLiteral(QT_VERSION_STR),
-                 QGuiApplication::platformName()));
+        QLabel *versionLabel = new QLabel(i18n("<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
+                                               QStringLiteral(KXMLGUI_VERSION_STRING),
+                                               QString::fromLocal8Bit(qVersion()),
+                                               QStringLiteral(QT_VERSION_STR),
+                                               QGuiApplication::platformName()));
         versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
         versionLayout->addWidget(versionLabel);
         versionLayout->addStretch();
         tabWidget->addTab(versionWidget, i18nc("@title:tab", "Libraries"));
     }
 
-    //And here we go, authors page...
+    // And here we go, authors page...
     const int authorCount = aboutData.authors().count();
     if (authorCount) {
-        QWidget *authorWidget = createAuthorsWidget(aboutData.authors(), aboutData.ocsProviderUrl(),
+        QWidget *authorWidget = createAuthorsWidget(aboutData.authors(),
+                                                    aboutData.ocsProviderUrl(),
                                                     aboutData.customAuthorTextEnabled(),
                                                     aboutData.customAuthorRichText(),
-                                                    aboutData.bugAddress(), q);
+                                                    aboutData.bugAddress(),
+                                                    q);
 
         const QString authorPageTitle = i18ncp("@title:tab", "Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);
     }
 
-    //And credits page...
+    // And credits page...
     if (!aboutData.credits().isEmpty()) {
         QWidget *creditWidget = createCreditWidget(aboutData.credits(), aboutData.ocsProviderUrl(), q);
         tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
-    //Finally, the optional translators page...
+    // Finally, the optional translators page...
     if (!(opt & KAboutApplicationDialog::HideTranslators) && !aboutData.translators().isEmpty()) {
         QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), aboutData.ocsProviderUrl(), q);
 
