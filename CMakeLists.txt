@@ -22,6 +22,7 @@ include(ECMGenerateExportHeader)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
+include(KDEGitCommitHooks)
 include(ECMQtDeclareLoggingCategory)
 
 ecm_setup_version(PROJECT
@@ -122,3 +123,5 @@ install(FILES
 )
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
