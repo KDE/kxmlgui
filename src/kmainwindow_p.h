@@ -53,7 +53,7 @@ public:
     void polish(KMainWindow *q);
     enum CallCompression {
         NoCompressCalls = 0,
-        CompressCalls
+        CompressCalls,
     };
     void setSettingsDirty(CallCompression callCompression = NoCompressCalls);
     void setSizeDirty();

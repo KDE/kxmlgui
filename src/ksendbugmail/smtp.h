@@ -80,7 +80,7 @@ public:
         Successful = 250,     // command successful
         ReadyData = 354,      // server ready to receive data
         Error = 501,          // error
-        Unknown = 550        // user unknown
+        Unknown = 550,       // user unknown
     } SMTPServerStatus;
 
     typedef enum {
@@ -93,7 +93,7 @@ public:
         Finished = 350,       // finished sending data, got 250
         Quit = 400,           // sent Quit, got 221
         Out = 450,            // finished, logged out
-        CError = 500           // didn't finish, had error or connection drop
+        CError = 500,          // didn't finish, had error or connection drop
     } SMTPClientStatus;
 
     typedef enum {
@@ -104,7 +104,7 @@ public:
         InteractTimeout = 16,
         UnknownResponse = 20,
         UnknownUser = 30,
-        Command = 40
+        Command = 40,
     } SMTPError;
 
 protected:

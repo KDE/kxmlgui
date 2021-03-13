@@ -219,7 +219,7 @@ public:
          * All the above option
          * (this is the default)
          */
-        Default = ToolBar | Keys | StatusBar | Save | Create
+        Default = ToolBar | Keys | StatusBar | Save | Create,
     };
     Q_FLAG(StandardWindowOption)
     /**

@@ -50,7 +50,7 @@ public:
     {
         BugsKdeOrg,
         CustomEmail,
-        CustomUrl
+        CustomUrl,
     };
 
     void _k_slotConfigureEmail();

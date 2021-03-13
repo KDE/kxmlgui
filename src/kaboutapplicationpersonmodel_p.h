@@ -129,7 +129,7 @@ public:
         Wikipedia,
         Xing,
         YouTube,
-        NUM_ATTICA_LINK_TYPES
+        NUM_ATTICA_LINK_TYPES,
     };
 
     static Type typeFromAttica(const QString &atticaType);

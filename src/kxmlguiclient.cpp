@@ -797,7 +797,7 @@ void KXMLGUIClient::virtual_hook(int, void *)
 QString KXMLGUIClient::findVersionNumber(const QString &xml)
 {
     enum { ST_START, ST_AFTER_OPEN, ST_AFTER_GUI,
-           ST_EXPECT_VERSION, ST_VERSION_NUM
+           ST_EXPECT_VERSION, ST_VERSION_NUM,
          } state = ST_START;
     const int length = xml.length();
     for (int pos = 0; pos < length; pos++) {

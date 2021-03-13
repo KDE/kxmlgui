@@ -168,7 +168,7 @@ public:
         menuAboutKDE = 3,
         menuReportBug = 4,
         menuSwitchLanguage = 5,
-        menuDonate = 6 ///< @since 5.24
+        menuDonate = 6, ///< @since 5.24
     };
 
     /**

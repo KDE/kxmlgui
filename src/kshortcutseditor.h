@@ -65,7 +65,7 @@ public:
         /// Actions which are triggered by any keypress in the windowing system
         GlobalAction      = 4,
         /// All actions
-        AllActions        = 0xffffffff
+        AllActions        = 0xffffffff,
     };
     /**
      * Stores a combination of #ActionType values.
@@ -79,7 +79,7 @@ public:
         /// 'F1', 'Insert' etc. could still be used.
         LetterShortcutsDisallowed = 0,
         /// Letter shortcuts are allowed
-        LetterShortcutsAllowed
+        LetterShortcutsAllowed,
     };
 
     /**

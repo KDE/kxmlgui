@@ -28,7 +28,7 @@ enum {
     AVATAR_WIDTH = 50,
     MAIN_LINKS_HEIGHT = 32,
     SOCIAL_LINKS_HEIGHT = 26,
-    MAX_SOCIAL_LINKS = 9
+    MAX_SOCIAL_LINKS = 9,
 };
 
 KAboutApplicationPersonListDelegate::KAboutApplicationPersonListDelegate(

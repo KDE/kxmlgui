@@ -42,13 +42,13 @@ enum ColumnDesignation {
     GlobalAlternate,
     RockerGesture,
     ShapeGesture,
-    Id
+    Id,
 };
 
 enum MyRoles {
     ShortcutRole = Qt::UserRole,
     DefaultShortcutRole,
-    ObjectRole
+    ObjectRole,
 };
 
 /**
@@ -58,7 +58,7 @@ enum MyRoles {
  */
 enum ItemTypes {
     NonActionItem = 0,
-    ActionItem = 1
+    ActionItem = 1,
 };
 
 QKeySequence primarySequence(const QList<QKeySequence> &sequences);

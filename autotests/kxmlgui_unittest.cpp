@@ -34,7 +34,7 @@ enum Flags {
     AddToolBars = 1,
     AddModifiedToolBars = 2,
     AddActionProperties = 4,
-    AddModifiedMenus = 8
+    AddModifiedMenus = 8,
                        // next item is 16
 };
 
