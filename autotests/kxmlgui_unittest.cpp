@@ -354,7 +354,8 @@ void KXmlGui_UnitTest::testPartMerging()
     QVERIFY(goMenu);
     QMenu *fileMenu = qobject_cast<QMenu *>(factory.container(QStringLiteral("file"), &hostClient));
 
-    //debugActions(goMenu->actions());
+    // debugActions(goMenu->actions());
+    // clang-format off
     checkActions(goMenu->actions(), QStringList()
                  << QStringLiteral("go_up")
                  << QStringLiteral("go_back")
@@ -371,6 +372,7 @@ void KXmlGui_UnitTest::testPartMerging()
                  << QStringLiteral("file_open")
                  << QStringLiteral("separator")
                  << QStringLiteral("file_quit"));
+    // clang-format on
 
     qDebug() << "Now merging the part";
 
@@ -410,6 +412,7 @@ void KXmlGui_UnitTest::testPartMerging()
         factory.addClient(&partClient);
         partClient.plugActionList(QStringLiteral("action_list"), actionList);
 
+        // clang-format off
         //debugActions(goMenu->actions());
         checkActions(goMenu->actions(), QStringList()
                 << QStringLiteral("go_up")
@@ -447,6 +450,7 @@ void KXmlGui_UnitTest::testPartMerging()
                 << QStringLiteral("other_file_action"));
         factory.removeClient(&partClient);
         QCOMPARE(hostClient.domDocument().toString(), hostDomDoc);
+        // clang-format on
     }
     factory.removeClient(&hostClient);
 }

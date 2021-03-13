@@ -4,12 +4,14 @@
 #include <QApplication>
 #include <QLabel>
 
+// clang-format off
 #define MAKE_WINDOW( kind, title ) do { \
         MainWin##kind * m = new MainWin##kind; \
         m->setCaption( title ); \
         m->setCentralWidget( new QLabel( title, m ) ); \
         m->show(); \
     } while ( false )
+// clang-format on
 
 int main(int argc, char *argv[])
 {

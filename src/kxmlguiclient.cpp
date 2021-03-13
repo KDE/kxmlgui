@@ -610,14 +610,14 @@ QDomElement KXMLGUIClientPrivate::findMatchingElement(const QDomElement &base, c
 
         const QString tag = e.tagName();
         // skip all action and merge tags as we will never use them
-        if (equalstr(tag, QLatin1String("Action"))
-                || equalstr(tag, QLatin1String("MergeLocal"))) {
+        if (equalstr(tag, QLatin1String("Action")) //
+            || equalstr(tag, QLatin1String("MergeLocal"))) {
             continue;
         }
 
         // now see if our tags are equivalent
-        if (equalstr(tag, base.tagName()) &&
-                e.attribute(QStringLiteral("name")) == base.attribute(QStringLiteral("name"))) {
+        if (equalstr(tag, base.tagName()) //
+            && e.attribute(QStringLiteral("name")) == base.attribute(QStringLiteral("name"))) {
             return e;
         }
     }

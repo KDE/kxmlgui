@@ -347,8 +347,8 @@ QDomElement ContainerNode::findElementForChild(const QDomElement &baseElement,
     for (QDomNode n = baseElement.firstChild(); !n.isNull();
             n = n.nextSibling()) {
         QDomElement e = n.toElement();
-        if (e.tagName().toLower() == childNode->tagName &&
-                e.attribute(QStringLiteral("name")) == childNode->name) {
+        if (e.tagName().toLower() == childNode->tagName //
+            && e.attribute(QStringLiteral("name")) == childNode->name) {
             return e;
         }
     }

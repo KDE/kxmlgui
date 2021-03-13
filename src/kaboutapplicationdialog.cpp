@@ -88,9 +88,12 @@ QT_WARNING_POP
     tabWidget->setUsesScrollButtons(false);
 
     //Set up the first page...
-    QWidget *aboutWidget = createAboutWidget(aboutData.shortDescription(), aboutData.otherText(),
-                                             aboutData.copyrightStatement(), aboutData.homepage(),
-                                             aboutData.licenses(), q);
+    QWidget *aboutWidget = createAboutWidget(aboutData.shortDescription(), //
+                                             aboutData.otherText(),
+                                             aboutData.copyrightStatement(),
+                                             aboutData.homepage(),
+                                             aboutData.licenses(),
+                                             q);
 
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 

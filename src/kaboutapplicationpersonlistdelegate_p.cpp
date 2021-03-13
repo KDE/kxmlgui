@@ -212,7 +212,7 @@ void KAboutApplicationPersonListDelegate::paint(QPainter *painter,
 
     if (model->hasAvatarPixmaps()) {
         int height = qMax(widgetsRect(option, index).height(), AVATAR_HEIGHT + 2 * margin);
-        QPoint point(option.rect.left() + 2 * margin,
+        QPoint point(option.rect.left() + 2 * margin, //
                      option.rect.top() + ((height - AVATAR_HEIGHT) / 2));
 
         KAboutApplicationPersonProfile profile = index.data().value< KAboutApplicationPersonProfile >();
@@ -277,14 +277,14 @@ QRect KAboutApplicationPersonListDelegate::widgetsRect(const QStyleOptionViewIte
 
     QRect widgetsRect;
     if (qobject_cast< const KAboutApplicationPersonModel * >(index.model())->hasAvatarPixmaps()) {
-        widgetsRect = QRect(option.rect.left() + AVATAR_WIDTH + 3 * margin,
-                            margin / 2,
-                            option.rect.width() - AVATAR_WIDTH - 4 * margin,
+        widgetsRect = QRect(option.rect.left() + AVATAR_WIDTH + 3 * margin, //
+                            margin / 2, //
+                            option.rect.width() - AVATAR_WIDTH - 4 * margin, //
                             0);
     } else {
-        widgetsRect = QRect(option.rect.left() + margin,
-                            margin / 2,
-                            option.rect.width() - 2 * margin,
+        widgetsRect = QRect(option.rect.left() + margin, //
+                            margin / 2, //
+                            option.rect.width() - 2 * margin, //
                             0);
     }
 
