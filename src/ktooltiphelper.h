@@ -80,23 +80,25 @@ public:
     static KToolTipHelper *instance();
 
     /**
-     * @todo write docs
+     * Filters QEvent::ToolTip if an enhanced tooltip is available for the widget.
+     * Filters the QEvent::KeyPress that is used to expand an expandable tooltip.
+     * Filters QEvent::WhatsThisClicked so hyperlinks in whatsThis() texts work.
      *
-     * @param watched TODO
-     * @param event TODO
-     * @return TODO
+     * @see QObject::eventFilter()
+     * @see QHelpEvent
      */
     virtual bool eventFilter(QObject* watched, QEvent* event) override;
 
     /**
      * Use this to have a widget show "Press Shift for help." as its tooltip.
      * \code
-     * widget->setToolTip(KToolTipHelper::instance()->whatsThisHintOnly());
+     * widget->setToolTip(KToolTipHelper::whatsThisHintOnly());
      * \endcode
+     * KToolTipHelper won't show that tooltip if the widget's whatsThis() is empty.
      *
      * @return a QString that is interpreted by this class to show the expected tooltip.
      */
-    const QString whatsThisHintOnly() const;
+    static const QString whatsThisHintOnly();
 
 private:
     explicit KToolTipHelper(QObject *parent);
