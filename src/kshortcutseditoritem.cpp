@@ -96,7 +96,8 @@ QVariant KShortcutsEditorItem::data(int column, int role) const
             return false;
         case LocalPrimary:
         case LocalAlternate:
-            return !m_action->property("isShortcutConfigurable").isValid() || m_action->property("isShortcutConfigurable").toBool();
+            return !m_action->property("isShortcutConfigurable").isValid() //
+                || m_action->property("isShortcutConfigurable").toBool();
 #if HAVE_GLOBALACCEL
         case GlobalPrimary:
         case GlobalAlternate:

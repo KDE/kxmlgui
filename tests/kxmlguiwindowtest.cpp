@@ -88,8 +88,7 @@ MainWindow::MainWindow(QWidget *parent)
     setXMLFile(QFINDTESTDATA("kxmlguiwindowtestui.rc"), true);
     // Because we use a full path in setXMLFile, we need to call setLocalXMLFile too.
     // In your apps, just pass a relative filename to setXMLFile instead.
-    setLocalXMLFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/')
-                    + QStringLiteral("kxmlguiwindowtest/kxmlguiwindowtestui.rc"));
+    setLocalXMLFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlguiwindowtest/kxmlguiwindowtestui.rc"));
 
     setCentralWidget(new QTextEdit(this));
     setupActions();

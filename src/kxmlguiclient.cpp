@@ -155,8 +155,7 @@ QString KXMLGUIClient::localXMLFile() const
         return QString();
     }
 
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/") + componentName() + QLatin1Char('/')
-        + d->m_xmlFile;
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/%1/%2").arg(componentName(), d->m_xmlFile);
 }
 
 void KXMLGUIClient::reloadXML()
@@ -428,7 +427,8 @@ bool KXMLGUIClientPrivate::mergeXML(QDomElement &base, QDomElement &additive, KA
                 // this is the first item in a container, then we nuke the
                 // current one
                 QDomElement prev = e.previousSibling().toElement();
-                if (prev.isNull() || (equalstr(prev.tagName(), tagSeparator) && !prev.attribute(attrWeakSeparator).isNull())
+                if (prev.isNull() //
+                    || (equalstr(prev.tagName(), tagSeparator) && !prev.attribute(attrWeakSeparator).isNull()) //
                     || (equalstr(prev.tagName(), tagText))) {
                     // the previous element was a weak separator or didn't exist
                     base.removeChild(e);

@@ -148,8 +148,7 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc, const QString &file
     QString xml_file(filename);
 
     if (QDir::isRelativePath(xml_file))
-        xml_file =
-            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
+        xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/%1/%2").arg(componentName, filename);
 
     QFileInfo fileInfo(xml_file);
     QDir().mkpath(fileInfo.absolutePath());
@@ -506,7 +505,8 @@ void KXMLGUIFactory::resetContainer(const QString &containerName, bool useTagNam
 
 QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool tag)
 {
-    if (((!tag && node->name == m_containerName) || (tag && node->tagName == m_containerName)) && (!guiClient || node->client == guiClient)) {
+    if (((!tag && node->name == m_containerName) || (tag && node->tagName == m_containerName)) //
+        && (!guiClient || node->client == guiClient)) {
         return node->container;
     }
 

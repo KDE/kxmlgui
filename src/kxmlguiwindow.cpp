@@ -110,11 +110,14 @@ bool KXmlGuiWindow::event(QEvent *ev)
     bool ret = KMainWindow::event(ev);
     if (ev->type() == QEvent::Polish) {
 #ifdef QT_DBUS_LIB
-        QDBusConnection::sessionBus().registerObject(dbusName() + QLatin1String("/actions"),
-                                                     actionCollection(),
-                                                     QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableProperties
-                                                         | QDBusConnection::ExportNonScriptableSlots | QDBusConnection::ExportNonScriptableProperties
-                                                         | QDBusConnection::ExportChildObjects);
+        /* clang-format off */
+        constexpr auto opts = QDBusConnection::ExportScriptableSlots
+                              | QDBusConnection::ExportScriptableProperties
+                              | QDBusConnection::ExportNonScriptableSlots
+                              | QDBusConnection::ExportNonScriptableProperties
+                              | QDBusConnection::ExportChildObjects;
+        /* clang-format on */
+        QDBusConnection::sessionBus().registerObject(dbusName() + QLatin1String("/actions"), actionCollection(), opts);
 #endif
     }
     return ret;

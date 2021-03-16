@@ -70,11 +70,13 @@ void KShortcutsEditorDelegate::stealShortcut(const QKeySequence &seq, QAction *a
             const QKeySequence primary = cut.isEmpty() ? QKeySequence() : cut.at(0);
             const QKeySequence alternate = cut.size() <= 1 ? QKeySequence() : cut.at(1);
 
-            if (primary.matches(seq) != QKeySequence::NoMatch || seq.matches(primary) != QKeySequence::NoMatch) {
+            if (primary.matches(seq) != QKeySequence::NoMatch //
+                || seq.matches(primary) != QKeySequence::NoMatch) {
                 item->setKeySequence(LocalPrimary, QKeySequence());
             }
 
-            if (alternate.matches(seq) != QKeySequence::NoMatch || seq.matches(alternate) != QKeySequence::NoMatch) {
+            if (alternate.matches(seq) != QKeySequence::NoMatch //
+                || seq.matches(alternate) != QKeySequence::NoMatch) {
                 item->setKeySequence(LocalAlternate, QKeySequence());
             }
             break;

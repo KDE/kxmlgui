@@ -81,12 +81,10 @@ public:
     KToolBarPrivate(KToolBar *qq)
         : q(qq)
         , isMainToolBar(false)
-        ,
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-        enableContext(true)
-        ,
+        , enableContext(true)
 #endif
-        unlockedMovable(true)
+        , unlockedMovable(true)
         , contextOrient(nullptr)
         , contextMode(nullptr)
         , contextSize(nullptr)

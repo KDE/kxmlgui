@@ -104,21 +104,21 @@ QString KShortcutSchemesHelper::currentShortcutSchemeName()
 
 QString KShortcutSchemesHelper::writableShortcutSchemeFileName(const QString &componentName, const QString &schemeName)
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + componentName + QLatin1String("/shortcuts/") + schemeName;
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/%1/shortcuts/%2").arg(componentName, schemeName);
 }
 
 QString KShortcutSchemesHelper::writableApplicationShortcutSchemeFileName(const QString &schemeName)
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QCoreApplication::applicationName()
-        + QLatin1String("/shortcuts/") + schemeName;
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+        + QLatin1String("/%1/shortcuts/%2").arg(QCoreApplication::applicationName(), schemeName);
 }
 
 QString KShortcutSchemesHelper::shortcutSchemeFileName(const QString &componentName, const QString &schemeName)
 {
-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, componentName + QLatin1String("/shortcuts/") + schemeName);
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("%1/shortcuts/%2").arg(componentName, schemeName));
 }
 
 QString KShortcutSchemesHelper::applicationShortcutSchemeFileName(const QString &schemeName)
 {
-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::applicationName() + QLatin1String("/shortcuts/") + schemeName);
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("%1/shortcuts/%2").arg(QCoreApplication::applicationName(), schemeName));
 }

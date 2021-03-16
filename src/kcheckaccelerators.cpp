@@ -303,18 +303,17 @@ void KCheckAccelerators::checkAccelerators(bool automatic)
     QString s;
 
     if (!c.isEmpty()) {
-        s += i18n("<h2>Accelerators changed</h2>") + QLatin1String("<table border><tr><th><b>") + i18n("Old Text") + QLatin1String("</b></th><th><b>")
-            + i18n("New Text") + QLatin1String("</b></th></tr>") + c + QLatin1String("</table>");
+        s += i18n("<h2>Accelerators changed</h2>")
+            + QLatin1String("<table border><tr><th><b>%1</b></th><th><b>%2</b></th></tr>%3</table>").arg(i18n("Old Text"), i18n("New Text"), c);
     }
 
     if (!r.isEmpty()) {
-        s += i18n("<h2>Accelerators removed</h2>") + QLatin1String("<table border><tr><th><b>") + i18n("Old Text") + QLatin1String("</b></th></tr>") + r
-            + QLatin1String("</table>");
+        s += i18n("<h2>Accelerators removed</h2>") + QLatin1String("<table border><tr><th><b>%1</b></th></tr>%2</table>").arg(i18n("Old Text"), r);
     }
 
     if (!a.isEmpty()) {
-        s += i18n("<h2>Accelerators added (just for your info)</h2>") + QLatin1String("<table border><tr><th><b>") + i18n("New Text")
-            + QLatin1String("</b></th></tr>") + a + QLatin1String("</table>");
+        s += i18n("<h2>Accelerators added (just for your info)</h2>")
+            + QLatin1String("<table border><tr><th><b>%1</b></th></tr>%2</table>").arg(i18n("New Text"), a);
     }
 
     createDialog(actWin, automatic);

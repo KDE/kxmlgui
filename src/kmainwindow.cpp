@@ -253,7 +253,8 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     // application's own message catalog instead of kxmlgui's.
     KAboutData aboutData(KAboutData::applicationData());
     if (aboutData.translators().isEmpty()) {
-        aboutData.setTranslator(i18ndc(nullptr, "NAME OF TRANSLATORS", "Your names"), i18ndc(nullptr, "EMAIL OF TRANSLATORS", "Your emails"));
+        aboutData.setTranslator(i18ndc(nullptr, "NAME OF TRANSLATORS", "Your names"), //
+                                i18ndc(nullptr, "EMAIL OF TRANSLATORS", "Your emails"));
 
         KAboutData::setApplicationData(aboutData);
     }
@@ -288,8 +289,12 @@ static bool endsWithHashNumber(const QString &s)
 static inline bool isValidDBusObjectPathCharacter(const QChar &c)
 {
     ushort u = c.unicode();
-    return (u >= QLatin1Char('a') && u <= QLatin1Char('z')) || (u >= QLatin1Char('A') && u <= QLatin1Char('Z'))
-        || (u >= QLatin1Char('0') && u <= QLatin1Char('9')) || (u == QLatin1Char('_')) || (u == QLatin1Char('/'));
+    /* clang-format off */
+    return (u >= QLatin1Char('a') && u <= QLatin1Char('z'))
+        || (u >= QLatin1Char('A') && u <= QLatin1Char('Z'))
+        || (u >= QLatin1Char('0') && u <= QLatin1Char('9'))
+        || (u == QLatin1Char('_')) || (u == QLatin1Char('/'));
+    /* clang-format off */
 }
 
 void KMainWindowPrivate::polish(KMainWindow *q)
@@ -358,11 +363,14 @@ void KMainWindowPrivate::polish(KMainWindow *q)
     }
 
 #ifdef QT_DBUS_LIB
-    QDBusConnection::sessionBus().registerObject(dbusName,
-                                                 q,
-                                                 QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableProperties
-                                                     | QDBusConnection::ExportNonScriptableSlots | QDBusConnection::ExportNonScriptableProperties
-                                                     | QDBusConnection::ExportAdaptors);
+    /* clang-format off */
+    constexpr auto opts = QDBusConnection::ExportScriptableSlots
+                          | QDBusConnection::ExportScriptableProperties
+                          | QDBusConnection::ExportNonScriptableSlots
+                          | QDBusConnection::ExportNonScriptableProperties
+                          | QDBusConnection::ExportAdaptors;
+    /* clang-format on */
+    QDBusConnection::sessionBus().registerObject(dbusName, q, opts);
 #endif
 }
 
@@ -876,7 +884,8 @@ bool KMainWindow::event(QEvent *ev)
             // hence install an event filter instead
             menubar->installEventFilter(d->dockResizeListener);
         }
-    } break;
+        break;
+    }
     case QEvent::ChildRemoved: {
         QChildEvent *event = static_cast<QChildEvent *>(ev);
         QDockWidget *dock = qobject_cast<QDockWidget *>(event->child());
@@ -891,7 +900,8 @@ bool KMainWindow::event(QEvent *ev)
         } else if (menubar) {
             menubar->removeEventFilter(d->dockResizeListener);
         }
-    } break;
+        break;
+    }
     default:
         break;
     }

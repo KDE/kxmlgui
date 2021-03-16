@@ -41,7 +41,8 @@ static bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QK
             continue;
         }
 
-        if (sequence.matches(needle) != QKeySequence::NoMatch || needle.matches(sequence) != QKeySequence::NoMatch) {
+        if (sequence.matches(needle) != QKeySequence::NoMatch //
+            || needle.matches(sequence) != QKeySequence::NoMatch) {
             return true;
         }
     }
@@ -273,7 +274,10 @@ bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const QHash<QKeySequen
     for (auto it = clashing.begin(); it != clashing.end(); ++it) {
         const auto seqAsString = it.key().toString();
         for (const KGlobalShortcutInfo &info : it.value()) {
-            clashingKeys += i18n("Shortcut '%1' in Application %2 for action %3\n", seqAsString, info.componentFriendlyName(), info.friendlyName());
+            clashingKeys += i18n("Shortcut '%1' in Application %2 for action %3\n", //
+                                 seqAsString,
+                                 info.componentFriendlyName(),
+                                 info.friendlyName());
         }
     }
     const int hashSize = clashing.size();
@@ -465,7 +469,9 @@ bool KKeySequenceWidget::isKeySequenceAvailable(const QKeySequence &keySequence)
     if (keySequence.isEmpty()) {
         return true;
     }
-    return !(d->conflictWithLocalShortcuts(keySequence) || d->conflictWithGlobalShortcuts(keySequence) || d->conflictWithStandardShortcuts(keySequence));
+    return !(d->conflictWithLocalShortcuts(keySequence) //
+             || d->conflictWithGlobalShortcuts(keySequence) //
+             || d->conflictWithStandardShortcuts(keySequence));
 }
 
 bool KKeySequenceWidget::isModifierlessAllowed()

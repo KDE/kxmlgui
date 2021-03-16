@@ -481,14 +481,23 @@ QString KBugReport::text() const
         // Case 1 : i18n bug
         QString package = QLatin1String("i18n_") + QLocale::languageToString(QLocale().language());
         package.replace(QLatin1Char('_'), QLatin1Char('-'));
-        return QLatin1String("Package: ") + package + QLatin1String("\nApplication: ") + appname + QLatin1String("\nVersion: ") + d->m_strVersion +
-            // not really i18n's version, so better here IMHO
-            QLatin1Char('\n') + os + QLatin1Char('\n') + bodyText;
+        /* clang-format off */
+        return QLatin1String("Package: ") + package
+            + QLatin1String("\nApplication: ") + appname
+            + QLatin1String("\nVersion: ") + d->m_strVersion // not really i18n's version, so better here IMHO
+            + QLatin1Char('\n') + os
+            + QLatin1Char('\n') + bodyText;
+        /* clang-format on */
     } else {
         appname.replace(QLatin1Char('_'), QLatin1Char('-'));
         // Case 2 : normal bug
-        return QLatin1String("Package: ") + appname + QLatin1String("\nVersion: ") + d->m_strVersion + QLatin1String("\nSeverity: ") + severity
-            + QLatin1Char('\n') + os + QLatin1Char('\n') + bodyText;
+        /* clang-format off */
+        return QLatin1String("Package: ") + appname
+            + QLatin1String("\nVersion: ") + d->m_strVersion
+            + QLatin1String("\nSeverity: ") + severity
+            + QLatin1Char('\n') + os
+            + QLatin1Char('\n') + bodyText;
+        /* clang-format on */
     }
 }
 

@@ -45,11 +45,14 @@ QList<QWidget *> KAboutApplicationPersonListDelegate::createItemWidgets(const QM
 
     KToolBar *mainLinks = new KToolBar(itemView(), false, false);
 
-    QAction *emailAction =
-        new QAction(QIcon::fromTheme(QStringLiteral("mail-send")), i18nc("Action to send an email to a contributor", "Email contributor"), mainLinks);
+    QAction *emailAction = new QAction(QIcon::fromTheme(QStringLiteral("mail-send")), //
+                                       i18nc("Action to send an email to a contributor", "Email contributor"),
+                                       mainLinks);
     emailAction->setVisible(false);
     mainLinks->addAction(emailAction);
-    QAction *homepageAction = new QAction(QIcon::fromTheme(QStringLiteral("internet-services")), i18n("Visit contributor's homepage"), mainLinks);
+    QAction *homepageAction = new QAction(QIcon::fromTheme(QStringLiteral("internet-services")), //
+                                          i18n("Visit contributor's homepage"),
+                                          mainLinks);
     homepageAction->setVisible(false);
     mainLinks->addAction(homepageAction);
     QAction *visitProfileAction = new QAction(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), QString(), mainLinks);
@@ -160,7 +163,8 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
     }
 
     socialLinks->resize(QSize(socialLinks->sizeHint().width(), SOCIAL_LINKS_HEIGHT));
-    socialLinks->move(wRect.left() + mainLinks->width(), wRect.top() + label->height() + (MAIN_LINKS_HEIGHT - SOCIAL_LINKS_HEIGHT) / 2);
+    socialLinks->move(wRect.left() + mainLinks->width(), //
+                      wRect.top() + label->height() + (MAIN_LINKS_HEIGHT - SOCIAL_LINKS_HEIGHT) / 2);
 
     itemView()->reset();
 }
@@ -219,7 +223,8 @@ void KAboutApplicationPersonListDelegate::launchUrl(QAction *action) const
 int KAboutApplicationPersonListDelegate::heightForString(const QString &string, int lineWidth, const QStyleOptionViewItem &option) const
 {
     QFontMetrics fm = option.fontMetrics;
-    QRect boundingRect = fm.boundingRect(0, 0, lineWidth, 9999, Qt::AlignLeft | Qt::AlignBottom | Qt::TextWordWrap, string);
+    constexpr auto opts = Qt::AlignLeft | Qt::AlignBottom | Qt::TextWordWrap;
+    QRect boundingRect = fm.boundingRect(0, 0, lineWidth, 9999, opts, string);
     return boundingRect.height();
 }
 
@@ -228,7 +233,7 @@ QString KAboutApplicationPersonListDelegate::buildTextForProfile(const KAboutApp
     QString text = QLatin1String("<b>") + i18nc("@item Contributor name in about dialog.", "%1", profile.name()) + QLatin1String("</b>");
 
     if (!profile.task().isEmpty()) {
-        text += QLatin1String("\n<br><i>") + profile.task() + QLatin1String("</i>");
+        text += QLatin1String("\n<br><i>%1</i>").arg(profile.task());
     }
 
     if (!profile.location().isEmpty()) {
