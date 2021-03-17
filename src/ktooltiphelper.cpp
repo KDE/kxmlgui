@@ -37,19 +37,13 @@ KToolTipHelper *KToolTipHelperPrivate::instance()
 
 KToolTipHelper::KToolTipHelper(QObject* parent)
     : QObject{parent},
-      d_ptr{new KToolTipHelperPrivate(this)}
+      d{new KToolTipHelperPrivate(this)}
 {
 }
 
 KToolTipHelperPrivate::KToolTipHelperPrivate(KToolTipHelper *q)
-    : q_ptr{q}
+    : q{q}
 {
-    KuitSetup *ks = &Kuit::setupForDomain(TRANSLATION_DOMAIN);
-    QStringList attribute(QStringLiteral("color"));
-
-    ks->setTagPattern(QStringLiteral("whatsthishint"), attribute, Kuit::RichText,
-                      ki18nc("tag-format-pattern <whatsthishint color= > rich",
-                             "<small><font color='%2'>%1</font></small>"));
 }
 
 KToolTipHelper::~KToolTipHelper() = default;
@@ -58,7 +52,6 @@ KToolTipHelperPrivate::~KToolTipHelperPrivate() = default;
 
 bool KToolTipHelper::eventFilter(QObject *watched, QEvent *event)
 {
-    Q_D(KToolTipHelper);
     return d->eventFilter(watched, event);
 }
 
@@ -159,10 +152,10 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEven
     if (QToolButton *toolButton = qobject_cast<QToolButton *>(m_widget)) {
         if (auto action = toolButton->defaultAction()) {
             if (!action->shortcut().isEmpty() && action->toolTip() != whatsThisHintOnly()) {
-                toolButton->setToolTip(action->toolTip()
-                                       + QStringLiteral(" (")
-                                       + action->shortcut().toString(QKeySequence::NativeText)
-                                       + QStringLiteral(")"));
+                toolButton->setToolTip(i18nc(
+                        "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
+                        "%1 (%2)",
+                        action->toolTip(), action->shortcut().toString(QKeySequence::NativeText)));
             }
         }
     } else if (QMenu *menu = qobject_cast<QMenu *>(m_widget)) {
@@ -199,15 +192,16 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
     KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
     const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
+    QString whatsThisHint = i18nc(
+            "@info:tooltip hint added as a standalone line to tooltips of widgets with whatsthis",
+            "<small><font color=\"%1\">Press <b>Shift</b> "
+            "for help.</font></small>", hintTextColor.name());
     if (toolTip.isEmpty() || toolTip == whatsThisHintOnly()) {
-        QToolTip::showText(m_lastExpandableToolTipGlobalPos, xi18nc("@info:tooltip",
-                "<whatsthishint color=\"%1\">Press <shortcut>Shift</shortcut> "
-                "for help.</whatsthishint>", hintTextColor.name()), m_widget, rect);
+        QToolTip::showText(m_lastExpandableToolTipGlobalPos, whatsThisHint, m_widget, rect);
     } else {
-        QToolTip::showText(m_lastExpandableToolTipGlobalPos, toolTip +
-                xi18nc("@info:tooltip hint added as an extra line to tooltips of widgets with whatsthis",
-                "<nl/><whatsthishint color=\"%1\">Press <shortcut>Shift</shortcut> "
-                "for help.</whatsthishint>", hintTextColor.name()), m_widget, rect);
+        QToolTip::showText(m_lastExpandableToolTipGlobalPos, i18nc(
+                "@info:tooltip %1 = any tooltip, <br/> = linebreak, %2 is 'Press Shift for help'",
+                "<qt>%1<br/>%2</qt>", toolTip, whatsThisHint), m_widget, rect);
     }
 }
 

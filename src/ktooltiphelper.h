@@ -73,7 +73,6 @@ class KToolTipHelperPrivate;
 class KXMLGUI_EXPORT KToolTipHelper : public QObject
 {
     Q_OBJECT
-    Q_DECLARE_PRIVATE(KToolTipHelper)
     Q_DISABLE_COPY(KToolTipHelper)
 
 public:
@@ -106,7 +105,7 @@ private:
     virtual ~KToolTipHelper();
 
 private:
-    std::unique_ptr<KToolTipHelperPrivate> const d_ptr;
+    std::unique_ptr<KToolTipHelperPrivate> const d;
 
     friend class KToolTipHelperPrivate;
 };

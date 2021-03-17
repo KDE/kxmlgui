@@ -27,11 +27,10 @@ class QMenu;
 class KToolTipHelperPrivate : public QObject
 {
     Q_OBJECT
-    Q_DECLARE_PUBLIC(KToolTipHelper)
 
 public:
     /**
-     * Singleton implementation of KToolTipHelper but
+     * Singleton implementation for KToolTipHelper and
      * NOT of this class (KToolTipHelperPrivate).
      */
     static KToolTipHelper *instance();
@@ -83,7 +82,7 @@ public:
     void showExpandableToolTip(const QPoint &globalPos, const QString &toolTip = QStringLiteral(), const QRect &rect = QRect());
 
 public:
-    KToolTipHelper *const q_ptr;
+    KToolTipHelper *const q;
 
 private:
     /** An action in a menu a tooltip was requested for. */
