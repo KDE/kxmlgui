@@ -150,7 +150,7 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEven
     m_widget = watchedWidget;
 
     if (QToolButton *toolButton = qobject_cast<QToolButton *>(m_widget)) {
-        if (auto action = toolButton->defaultAction()) {
+        if (const QAction *action = toolButton->defaultAction()) {
             if (!action->shortcut().isEmpty() && action->toolTip() != whatsThisHintOnly()) {
                 toolButton->setToolTip(i18nc(
                         "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
@@ -181,27 +181,31 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEven
 bool KToolTipHelperPrivate::handleWhatsThisClickedEvent(QEvent *event)
 {
     event->accept();
-    const QWhatsThisClickedEvent *whatsThisClickedEvent = static_cast<QWhatsThisClickedEvent *>(event);
+    const auto whatsThisClickedEvent = static_cast<QWhatsThisClickedEvent *>(event);
     QDesktopServices::openUrl(QUrl(whatsThisClickedEvent->href()));
     return true;
 }
 
-void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const QString &toolTip, const QRect &rect)
+void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos,
+                                                  const QString &toolTip,
+                                                  const QRect &rect)
 {
     m_lastExpandableToolTipGlobalPos = QPoint(globalPos);
     KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
     const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
-    QString whatsThisHint = i18nc(
+    const QString whatsThisHint = i18nc(
             "@info:tooltip hint added as a standalone line to tooltips of widgets with whatsthis",
             "<small><font color=\"%1\">Press <b>Shift</b> "
             "for help.</font></small>", hintTextColor.name());
     if (toolTip.isEmpty() || toolTip == whatsThisHintOnly()) {
         QToolTip::showText(m_lastExpandableToolTipGlobalPos, whatsThisHint, m_widget, rect);
     } else {
-        QToolTip::showText(m_lastExpandableToolTipGlobalPos, i18nc(
+        QToolTip::showText(m_lastExpandableToolTipGlobalPos,
+                QStringLiteral("<qt>") + i18nc(
                 "@info:tooltip %1 = any tooltip, <br/> = linebreak, %2 is 'Press Shift for help'",
-                "<qt>%1<br/>%2</qt>", toolTip, whatsThisHint), m_widget, rect);
+                "%1<br/>%2", toolTip, whatsThisHint) + QStringLiteral("</qt>"),
+                m_widget, rect);
     }
 }
 

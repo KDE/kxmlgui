@@ -11,6 +11,7 @@ ecm_add_tests(
 ecm_add_tests(
    kmainwindow_unittest.cpp
    ktoolbar_unittest.cpp
+   ktooltiphelper_unittest.cpp
    kxmlgui_unittest.cpp
    GUI
    LINK_LIBRARIES Qt5::Test KF5::IconThemes KF5::XmlGui
