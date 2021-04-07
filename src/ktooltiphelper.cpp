@@ -35,7 +35,7 @@ KToolTipHelper *KToolTipHelperPrivate::instance()
     return s_instance;
 }
 
-KToolTipHelper::KToolTipHelper(QObject* parent)
+KToolTipHelper::KToolTipHelper(QObject *parent)
     : QObject{parent},
       d{new KToolTipHelperPrivate(this)}
 {
@@ -110,13 +110,13 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
         QToolTip::hideText();
         return false;
     }
+
     // All actions have their text as a tooltip by default.
     // We only want to display the tooltip text if it isn't identical
     // to the already visible text in the menu.
     const bool explicitToolTip = hasExplicitToolTip(m_action);
     // We only want to show the whatsThisHint in a tooltip if the whatsThis isn't empty.
     const bool emptyWhatsThis = m_action->whatsThis().isEmpty();
-
     if (!explicitToolTip && emptyWhatsThis) {
         QToolTip::hideText();
         return false;
@@ -156,6 +156,8 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEven
                         "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
                         "%1 (%2)",
                         action->toolTip(), action->shortcut().toString(QKeySequence::NativeText)));
+                // We don't show the tooltip here because aside from adding the keyboard shortcut
+                // the QToolButton can now be handled like the tooltip event for any other widget.
             }
         }
     } else if (QMenu *menu = qobject_cast<QMenu *>(m_widget)) {
@@ -191,7 +193,7 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos,
                                                   const QRect &rect)
 {
     m_lastExpandableToolTipGlobalPos = QPoint(globalPos);
-    KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
+    const KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
     const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
     const QString whatsThisHint = i18nc(

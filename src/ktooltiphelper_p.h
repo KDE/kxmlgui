@@ -16,7 +16,6 @@
 class KToolTipHelper;
 
 class QAction;
-class QApplication;
 class QHelpEvent;
 class QMenu;
 
@@ -49,6 +48,7 @@ public:
      * @return true if the key press is used to expand a tooltip. false otherwise.
      */
     bool handleKeyPressEvent(QEvent *event);
+
     /**
      * Is called from handleToolTipEvent() to handle a QEvent::ToolTip in a menu.
      * This method will show the tooltip of the action that is hovered at a nice
@@ -57,12 +57,14 @@ public:
      * @param helpEvent The QEvent::ToolTip that was cast to a QHelpEvent
      */
     bool handleMenuToolTipEvent(QMenu *menu, QHelpEvent *helpEvent);
+
     /**
      * @param watchedWidget The widget that is receiving the QHelpEvent
      * @param helpEvent     The QEvent::ToolTip that was cast to a QHelpEvent
      * @return false if no special handling of the tooltip event seems necessary. true otherwise.
      */
     bool handleToolTipEvent(QWidget *watchedWidget, QHelpEvent *helpEvent);
+
     /**
      * Handles links being clicked in whatsThis.
      * @return true.
@@ -79,7 +81,9 @@ public:
      *
      * @see QToolTip::showText()
      */
-    void showExpandableToolTip(const QPoint &globalPos, const QString &toolTip = QStringLiteral(), const QRect &rect = QRect());
+    void showExpandableToolTip(const QPoint &globalPos,
+                               const QString &toolTip = QStringLiteral(),
+                               const QRect &rect = QRect());
 
 public:
     KToolTipHelper *const q;
