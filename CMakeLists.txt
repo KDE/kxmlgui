@@ -63,7 +63,7 @@ set_package_properties(KF5Attica PROPERTIES DESCRIPTION "A Qt library that imple
                       )
 set (HAVE_ATTICA ${KF5Attica_FOUND})
 
-if (NOT FORCE_DISABLE_KGLOBALACCEL)
+if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
     find_package(KF5GlobalAccel ${KF_DEP_VERSION} REQUIRED)
 endif()
 set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
