@@ -156,6 +156,9 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEven
                         "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
                         "%1 (%2)",
                         action->toolTip(), action->shortcut().toString(QKeySequence::NativeText)));
+                // Do not replace the brackets in the above i18n-call with <shortcut> tags from
+                // KUIT because mixing KUIT with HTML is not allowed and %1 could be anything.
+
                 // We don't show the tooltip here because aside from adding the keyboard shortcut
                 // the QToolButton can now be handled like the tooltip event for any other widget.
             }
@@ -196,18 +199,32 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos,
     const KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
     const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
-    const QString whatsThisHint = i18nc(
-            "@info:tooltip hint added as a standalone line to tooltips of widgets with whatsthis",
-            "<small><font color=\"%1\">Press <b>Shift</b> "
-            "for help.</font></small>", hintTextColor.name());
     if (toolTip.isEmpty() || toolTip == whatsThisHintOnly()) {
+        // i18n: @info:tooltip Pressing Shift will show a longer message with contextual info
+        // about the thing the tooltip was invoked for. If there is no good way to translate
+        // the message, translating "Press Shift to learn more." would also mostly fit what
+        // is supposed to be expressed here.
+        const QString whatsThisHint = i18n(
+                "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>",
+                hintTextColor.name());
         QToolTip::showText(m_lastExpandableToolTipGlobalPos, whatsThisHint, m_widget, rect);
     } else {
-        QToolTip::showText(m_lastExpandableToolTipGlobalPos,
-                QStringLiteral("<qt>") + i18nc(
-                "@info:tooltip %1 = any tooltip, <br/> = linebreak, %2 is 'Press Shift for help'",
-                "%1<br/>%2", toolTip, whatsThisHint) + QStringLiteral("</qt>"),
-                m_widget, rect);
+        // i18n: @info:tooltip The 'Press Shift for more' message is added to tooltips that have an
+        // available whatsthis help message. Pressing Shift will show this more exhaustive message.
+        // It is particularly important to keep this translation short because:
+        // 1. A longer translation will increase the size of *every* tooltip that gets this hint
+        //      added e.g. a two word tooltip followed by a four word hint.
+        // 2. The purpose of this hint is so we can keep the tooltip shorter than it would have to
+        //      be if we couldn't refer to the message that appears when pressing Shift.
+        //
+        // %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
+        // styling information. The word "more" refers to "information".
+        const QString toolTipWithHint = QStringLiteral("<qt>") + i18n(
+                "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>",
+                toolTip, hintTextColor.name()) + QStringLiteral("</qt>");
+        // Do not replace above HTML tags with KUIT because mixing HTML and KUIT is not allowed and
+        // we can not know what kind of markup the tooltip in %1 contains.
+        QToolTip::showText(m_lastExpandableToolTipGlobalPos, toolTipWithHint, m_widget, rect);
     }
 }
 
