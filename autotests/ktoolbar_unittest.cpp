@@ -8,7 +8,9 @@
 #include "testguiclient.h"
 #include "testxmlguiwindow.h"
 
+#ifdef QT_DBUS_LIB
 #include <QDBusConnection>
+#endif
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
@@ -495,6 +497,7 @@ void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar
     group.sync();
 
     // Same dbus connect as the one in KToolBar. We want our spy to be notified of receiving it.
+#ifdef QT_DBUS_LIB
     QDBusConnection::sessionBus().connect(QString(),
                                           QStringLiteral("/KToolBar"),
                                           QStringLiteral("org.kde.KToolBar"),
@@ -505,6 +508,7 @@ void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar
 
     KToolBar::emitToolbarStyleChanged();
     spy.wait(2000);
+#endif
 }
 
 void tst_KToolBar::deleteGlobalToolButtonStyleSetting()
