@@ -43,8 +43,13 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 # Dependencies
 set(REQUIRED_QT_VERSION 5.15.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
-if (NOT ANDROID)
-  find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
+# On non-Apple UNIX DBus is required, on Apple Unix & Windows optional and it does not exist on Android
+if(UNIX AND NOT APPLE)
+    if(NOT ANDROID)
+        find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
+    endif()
+else()
+    find_package(Qt5 ${REQUIRED_QT_VERSION} OPTIONAL_COMPONENTS DBus)
 endif()
 
 find_package(KF5CoreAddons ${KF_DEP_VERSION} REQUIRED)
