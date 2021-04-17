@@ -92,10 +92,6 @@ endif()
 
 include(CMakePackageConfigHelpers)
 
-set(HAVE_DBUS FALSE)
-if (TARGET Qt5::DBus)
-  set(HAVE_DBUS TRUE)
-endif()
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5XmlGuiConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfig.cmake"
