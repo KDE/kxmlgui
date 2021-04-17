@@ -1076,6 +1076,7 @@ void KXmlGui_UnitTest::testPopupMenuParent()
 
 void KXmlGui_UnitTest::testSpecificApplicationLanguageQLocale()
 {
+    qunsetenv("LC_ALL"); // In case the user sets the LC_ALL ENV variable this test could fail
     const QLocale originalSystemLocale = QLocale::system();
 
     KDEPrivate::setApplicationSpecificLanguage("ru_RU");
