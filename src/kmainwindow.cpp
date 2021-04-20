@@ -694,6 +694,12 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
 
     if (!d->sizeApplied && (!window() || window() == this)) {
         winId(); // ensure there's a window created
+        // Set the window's size from the existing widget geometry to respect the
+        // implicit size when there is no saved geometry in the config file for
+        // KWindowConfig::restoreWindowSize() to restore
+        // TODO: remove once QTBUG-40584 is fixed; see below
+        windowHandle()->setWidth(width());
+        windowHandle()->setHeight(height());
         KWindowConfig::restoreWindowSize(windowHandle(), cg);
         // NOTICE: QWindow::setGeometry() does NOT impact the backing QWidget geometry even if the platform
         // window was created -> QTBUG-40584. We therefore copy the size here.
