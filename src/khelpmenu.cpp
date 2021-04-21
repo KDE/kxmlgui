@@ -29,7 +29,6 @@
 
 #include <KAboutData>
 #include <KAuthorized>
-#include <KIconLoader>
 #include <KLocalizedString>
 #include <KStandardAction>
 
