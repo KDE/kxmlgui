@@ -10,7 +10,6 @@
 class KRuler;
 class QWidget;
 class QGridLayout;
-class QCheckBox;
 class QGroupBox;
 class QLabel;
 class QSpinBox;

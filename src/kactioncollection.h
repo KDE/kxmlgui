@@ -22,7 +22,6 @@
 #include <QObject>
 #include <memory>
 
-class QAction;
 class KXMLGUIClient;
 class KConfigGroup;
 class QActionGroup;

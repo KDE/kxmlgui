@@ -25,7 +25,6 @@
 #include <QTreeWidget>
 
 class QLabel;
-class QTreeWidget;
 class QTreeWidgetItem;
 class QRadioButton;
 class QAction;
