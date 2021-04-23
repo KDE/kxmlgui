@@ -151,6 +151,8 @@ void tst_KActionCategory::tstActionCreation()
     // There should be 6 actions inside the collection and category
     QCOMPARE(category.actions().count(), 6);
     QCOMPARE(collection.actions().count(), 6);
+    delete action1;
+    delete action2;
 }
 
 QTEST_MAIN(tst_KActionCategory)
