@@ -15,7 +15,7 @@
 
 MainWindow::MainWindow()
 {
-    QTimer::singleShot(2 * 1000, this, SLOT(showMessage()));
+    QTimer::singleShot(2 * 1000, this, &MainWindow::showMessage);
 
     setCentralWidget(new QLabel(QStringLiteral("foo"), this));
 

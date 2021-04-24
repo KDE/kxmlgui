@@ -160,10 +160,6 @@ private:
     friend class KEditToolBarPrivate;
     std::unique_ptr<KEditToolBarPrivate> const d;
 
-    Q_PRIVATE_SLOT(d, void _k_slotButtonClicked(QAbstractButton *))
-    Q_PRIVATE_SLOT(d, void _k_acceptOK(bool))
-    Q_PRIVATE_SLOT(d, void _k_enableApply(bool))
-
     Q_DISABLE_COPY(KEditToolBar)
 };
 

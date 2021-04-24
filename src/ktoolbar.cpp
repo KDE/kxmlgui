@@ -289,17 +289,27 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
         context = new QMenu(q);
 
         contextButtonTitle = context->addSection(i18nc("@title:menu", "Show Text"));
-        contextShowText = context->addAction(QString(), q, SLOT(slotContextShowText()));
+        contextShowText = context->addAction(QString(), q, [this]() {
+            slotContextShowText();
+        });
 
         context->addSection(i18nc("@title:menu", "Toolbar Settings"));
 
         contextOrient = new QMenu(i18nc("Toolbar orientation", "Orientation"), context);
 
-        contextTop = contextOrient->addAction(i18nc("toolbar position string", "Top"), q, SLOT(slotContextTop()));
+        contextTop = contextOrient->addAction(i18nc("toolbar position string", "Top"), q, [this]() {
+            slotContextTop();
+        });
         contextTop->setChecked(true);
-        contextLeft = contextOrient->addAction(i18nc("toolbar position string", "Left"), q, SLOT(slotContextLeft()));
-        contextRight = contextOrient->addAction(i18nc("toolbar position string", "Right"), q, SLOT(slotContextRight()));
-        contextBottom = contextOrient->addAction(i18nc("toolbar position string", "Bottom"), q, SLOT(slotContextBottom()));
+        contextLeft = contextOrient->addAction(i18nc("toolbar position string", "Left"), q, [this]() {
+            slotContextLeft();
+        });
+        contextRight = contextOrient->addAction(i18nc("toolbar position string", "Right"), q, [this]() {
+            slotContextRight();
+        });
+        contextBottom = contextOrient->addAction(i18nc("toolbar position string", "Bottom"), q, [this]() {
+            slotContextBottom();
+        });
 
         QActionGroup *positionGroup = new QActionGroup(contextOrient);
         const auto orientActions = contextOrient->actions();
@@ -310,10 +320,18 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
 
         contextMode = new QMenu(i18n("Text Position"), context);
 
-        contextIcons = contextMode->addAction(i18nc("@item:inmenu", "Icons Only"), q, SLOT(slotContextIcons()));
-        contextText = contextMode->addAction(i18nc("@item:inmenu", "Text Only"), q, SLOT(slotContextText()));
-        contextTextRight = contextMode->addAction(i18nc("@item:inmenu", "Text Alongside Icons"), q, SLOT(slotContextTextRight()));
-        contextTextUnder = contextMode->addAction(i18nc("@item:inmenu", "Text Under Icons"), q, SLOT(slotContextTextUnder()));
+        contextIcons = contextMode->addAction(i18nc("@item:inmenu", "Icons Only"), q, [this]() {
+            slotContextIcons();
+        });
+        contextText = contextMode->addAction(i18nc("@item:inmenu", "Text Only"), q, [this]() {
+            slotContextText();
+        });
+        contextTextRight = contextMode->addAction(i18nc("@item:inmenu", "Text Alongside Icons"), q, [this]() {
+            slotContextTextRight();
+        });
+        contextTextUnder = contextMode->addAction(i18nc("@item:inmenu", "Text Under Icons"), q, [this]() {
+            slotContextTextUnder();
+        });
 
         QActionGroup *textGroup = new QActionGroup(contextMode);
         const auto modeActions = contextMode->actions();
@@ -324,8 +342,12 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
 
         contextSize = new QMenu(i18n("Icon Size"), context);
 
-        contextIconSizes.insert(contextSize->addAction(i18nc("@item:inmenu Icon size", "Default"), q, SLOT(slotContextIconSize())),
-                                iconSizeSettings.defaultValue());
+        auto contextIconSizeFunc = [this]() {
+            slotContextIconSize();
+        };
+
+        auto *act = contextSize->addAction(i18nc("@item:inmenu Icon size", "Default"), q, contextIconSizeFunc);
+        contextIconSizes.insert(act, iconSizeSettings.defaultValue());
 
         // Query the current theme for available sizes
         KIconTheme *theme = KIconLoader::global()->theme();
@@ -351,7 +373,7 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
                 }
 
                 // save the size in the contextIconSizes map
-                contextIconSizes.insert(contextSize->addAction(text, q, SLOT(slotContextIconSize())), it);
+                contextIconSizes.insert(contextSize->addAction(text, q, contextIconSizeFunc), it);
             }
         } else {
             // Scalable icons.
@@ -372,7 +394,7 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
                         }
 
                         // save the size in the contextIconSizes map
-                        contextIconSizes.insert(contextSize->addAction(text, q, SLOT(slotContextIconSize())), it);
+                        contextIconSizes.insert(contextSize->addAction(text, q, contextIconSizeFunc), it);
                         break;
                     }
                 }

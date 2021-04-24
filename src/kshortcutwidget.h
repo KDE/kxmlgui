@@ -80,10 +80,6 @@ public Q_SLOTS:
     void applyStealShortcut();
 
 private:
-    Q_PRIVATE_SLOT(d, void priKeySequenceChanged(const QKeySequence &))
-    Q_PRIVATE_SLOT(d, void altKeySequenceChanged(const QKeySequence &))
-
-private:
     friend class KShortcutWidgetPrivate;
     std::unique_ptr<KShortcutWidgetPrivate> const d;
 };

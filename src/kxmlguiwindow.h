@@ -339,8 +339,6 @@ protected Q_SLOTS:
 
 private:
     Q_DECLARE_PRIVATE_D(k_ptr, KXmlGuiWindow)
-
-    Q_PRIVATE_SLOT(d_func(), void _k_slotFactoryMakingChanges(bool))
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KXmlGuiWindow::StandardWindowOptions)

@@ -549,9 +549,9 @@ public:
 
     void init();
 
-    void _k_slotButtonClicked(QAbstractButton *button);
-    void _k_acceptOK(bool);
-    void _k_enableApply(bool);
+    void slotButtonClicked(QAbstractButton *button);
+    void acceptOK(bool);
+    void enableApply(bool);
     void okClicked();
     void applyClicked();
     void defaultClicked();
@@ -609,16 +609,16 @@ void KEditToolBarPrivate::init()
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
     q->connect(m_buttonBox, &QDialogButtonBox::clicked, q, [this](QAbstractButton *button) {
-        _k_slotButtonClicked(button);
+        slotButtonClicked(button);
     });
     QObject::connect(m_buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
     m_layout->addWidget(m_buttonBox);
 
     q->connect(m_widget, &KEditToolBarWidget::enableOk, q, [this](bool state) {
-        _k_acceptOK(state);
-        _k_enableApply(state);
+        acceptOK(state);
+        enableApply(state);
     });
-    _k_enableApply(false);
+    enableApply(false);
 
     q->setMinimumSize(q->sizeHint());
 }
@@ -644,13 +644,13 @@ void KEditToolBar::setDefaultToolBar(const QString &toolBarName)
     }
 }
 
-void KEditToolBarPrivate::_k_acceptOK(bool b)
+void KEditToolBarPrivate::acceptOK(bool b)
 {
     m_buttonBox->button(QDialogButtonBox::Ok)->setEnabled(b);
     m_accept = b;
 }
 
-void KEditToolBarPrivate::_k_enableApply(bool b)
+void KEditToolBarPrivate::enableApply(bool b)
 {
     m_buttonBox->button(QDialogButtonBox::Apply)->setEnabled(b);
 }
@@ -713,10 +713,10 @@ void KEditToolBarPrivate::defaultClicked()
     m_layout->insertWidget(0, m_widget);
 
     q->connect(m_widget, &KEditToolBarWidget::enableOk, q, [this](bool state) {
-        _k_acceptOK(state);
-        _k_enableApply(state);
+        acceptOK(state);
+        enableApply(state);
     });
-    _k_enableApply(false);
+    enableApply(false);
 
     Q_EMIT q->newToolBarConfig();
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
@@ -724,7 +724,7 @@ void KEditToolBarPrivate::defaultClicked()
 #endif
 }
 
-void KEditToolBarPrivate::_k_slotButtonClicked(QAbstractButton *button)
+void KEditToolBarPrivate::slotButtonClicked(QAbstractButton *button)
 {
     QDialogButtonBox::StandardButton type = m_buttonBox->standardButton(button);
 
@@ -765,7 +765,7 @@ void KEditToolBarPrivate::okClicked()
 void KEditToolBarPrivate::applyClicked()
 {
     (void)m_widget->save();
-    _k_enableApply(false);
+    enableApply(false);
     Q_EMIT q->newToolBarConfig();
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
     Q_EMIT q->newToolbarConfig(); // compat

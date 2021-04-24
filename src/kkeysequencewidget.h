@@ -284,9 +284,6 @@ public Q_SLOTS:
     void applyStealShortcut();
 
 private:
-    Q_PRIVATE_SLOT(d, void doneRecording())
-
-private:
     friend class KKeySequenceWidgetPrivate;
     KKeySequenceWidgetPrivate *const d;
 

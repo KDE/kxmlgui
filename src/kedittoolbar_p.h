@@ -217,22 +217,6 @@ Q_SIGNALS:
     void enableOk(bool);
 
 private:
-    Q_PRIVATE_SLOT(d, void slotToolBarSelected(int index))
-
-    Q_PRIVATE_SLOT(d, void slotInactiveSelectionChanged())
-    Q_PRIVATE_SLOT(d, void slotActiveSelectionChanged())
-
-    Q_PRIVATE_SLOT(d, void slotInsertButton())
-    Q_PRIVATE_SLOT(d, void slotRemoveButton())
-    Q_PRIVATE_SLOT(d, void slotUpButton())
-    Q_PRIVATE_SLOT(d, void slotDownButton())
-
-    Q_PRIVATE_SLOT(d, void slotChangeIcon())
-    Q_PRIVATE_SLOT(d, void slotChangeIconText())
-
-    Q_PRIVATE_SLOT(d, void slotDropped(ToolBarListWidget *, int, ToolBarItem *, bool))
-
-private:
     friend class KEditToolBarWidgetPrivate;
     KEditToolBarWidgetPrivate *const d;
 

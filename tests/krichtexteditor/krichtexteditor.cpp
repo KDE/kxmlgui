@@ -42,15 +42,15 @@ KRichTextEditor::~KRichTextEditor()
 
 void KRichTextEditor::setupActions()
 {
-    KStandardAction::quit(qApp, SLOT(quit()), actionCollection());
+    KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
 
-    KStandardAction::open(this, SLOT(openFile()), actionCollection());
+    KStandardAction::open(this, &KRichTextEditor::openFile, actionCollection());
 
-    KStandardAction::save(this, SLOT(saveFile()), actionCollection());
+    KStandardAction::save(this, &KRichTextEditor::saveFile, actionCollection());
 
-    KStandardAction::saveAs(this, SLOT(saveFileAs()), actionCollection());
+    KStandardAction::saveAs(this, QOverload<>::of(&KRichTextEditor::saveFileAs), actionCollection());
 
-    KStandardAction::openNew(this, SLOT(newFile()), actionCollection());
+    KStandardAction::openNew(this, &KRichTextEditor::newFile, actionCollection());
 }
 
 void KRichTextEditor::cursorPositionChanged()

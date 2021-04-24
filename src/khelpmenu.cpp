@@ -109,14 +109,14 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     mActionsCreated = true;
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_contents"))) {
-        mHandBookAction = KStandardAction::helpContents(q, SLOT(appHelpActivated()), q);
+        mHandBookAction = KStandardAction::helpContents(q, &KHelpMenu::appHelpActivated, q);
     }
     if (mShowWhatsThis && KAuthorized::authorizeAction(QStringLiteral("help_whats_this"))) {
-        mWhatsThisAction = KStandardAction::whatsThis(q, SLOT(contextHelpActivated()), q);
+        mWhatsThisAction = KStandardAction::whatsThis(q, &KHelpMenu::contextHelpActivated, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_report_bug")) && !mAboutData.bugAddress().isEmpty()) {
-        mReportBugAction = KStandardAction::reportBug(q, SLOT(reportBug()), q);
+        mReportBugAction = KStandardAction::reportBug(q, &KHelpMenu::reportBug, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_donate")) && mAboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
@@ -124,15 +124,15 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("switch_application_language"))) {
-        mSwitchApplicationLanguageAction = KStandardAction::switchApplicationLanguage(q, SLOT(switchApplicationLanguage()), q);
+        mSwitchApplicationLanguageAction = KStandardAction::switchApplicationLanguage(q, &KHelpMenu::switchApplicationLanguage, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_app"))) {
-        mAboutAppAction = KStandardAction::aboutApp(q, SLOT(aboutApplication()), q);
+        mAboutAppAction = KStandardAction::aboutApp(q, &KHelpMenu::aboutApplication, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_kde"))) {
-        mAboutKDEAction = KStandardAction::aboutKDE(q, SLOT(aboutKDE()), q);
+        mAboutKDEAction = KStandardAction::aboutKDE(q, &KHelpMenu::aboutKDE, q);
     }
 }
 

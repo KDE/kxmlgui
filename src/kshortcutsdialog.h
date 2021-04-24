@@ -144,9 +144,6 @@ Q_SIGNALS:
     void saved();
 
 private:
-    Q_PRIVATE_SLOT(d, void changeShortcutScheme(const QString &))
-    Q_PRIVATE_SLOT(d, void toggleDetails())
-
     friend class KShortcutsDialogPrivate;
     std::unique_ptr<class KShortcutsDialogPrivate> const d;
 

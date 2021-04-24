@@ -56,9 +56,15 @@ public:
         CustomUrl,
     };
 
-    void _k_slotConfigureEmail();
-    void _k_slotSetFrom();
-    void _k_updateUrl();
+    // Calls kcmshell5 System/email
+    void slotConfigureEmail();
+
+    // Sets the "From" field from the e-mail configuration.
+    // Called at creation time, but also after "Configure email" is closed.
+    void slotSetFrom();
+
+    // Update the url to match the current OS, selected app, etc
+    void updateUrl();
 
     KBugReport *const q;
     QProcess *m_process = nullptr;
@@ -144,7 +150,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         // Configure email button
         d->m_configureEmail = new QPushButton(i18nc("@action:button", "Configure Email..."), this);
         connect(d->m_configureEmail, &QPushButton::clicked, this, [this]() {
-            d->_k_slotConfigureEmail();
+            d->slotConfigureEmail();
         });
         glay->addWidget(d->m_configureEmail, 0, 2, 3, 1, Qt::AlignTop | Qt::AlignRight);
 
@@ -264,7 +270,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
         d->m_lineedit->setLineWrapMode(QTextEdit::WidgetWidth);
         lay->addWidget(d->m_lineedit, 10 /*stretch*/);
 
-        d->_k_slotSetFrom();
+        d->slotSetFrom();
     } else {
         // Point to the web form
 
@@ -274,7 +280,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
                 "<qt>To submit a bug report, click on the button below. This will open a web browser "
                 "window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> where you will find "
                 "a form to fill in. The information displayed above will be transferred to that server.</qt>");
-            d->_k_updateUrl();
+            d->updateUrl();
         } else {
             text = i18n(
                 "<qt>To submit a bug report, click on the button below. This will open a web browser "
@@ -323,7 +329,7 @@ void KBugReport::setMessageBody(const QString &messageBody)
     }
 }
 
-void KBugReportPrivate::_k_updateUrl()
+void KBugReportPrivate::updateUrl()
 {
     url = QUrl(QStringLiteral("https://bugs.kde.org/enter_bug.cgi"));
     QUrlQuery query;
@@ -342,14 +348,14 @@ void KBugReportPrivate::_k_updateUrl()
     // TODO: guess and fill OS(sys_os) and Platform(rep_platform) fields
 }
 
-void KBugReportPrivate::_k_slotConfigureEmail()
+void KBugReportPrivate::slotConfigureEmail()
 {
     if (m_process) {
         return;
     }
     m_process = new QProcess;
     QObject::connect(m_process, &QProcess::finished, q, [this]() {
-        _k_slotSetFrom();
+        slotSetFrom();
     });
     m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcm_users"));
     if (!m_process->waitForStarted()) {
@@ -361,7 +367,7 @@ void KBugReportPrivate::_k_slotConfigureEmail()
     m_configureEmail->setEnabled(false);
 }
 
-void KBugReportPrivate::_k_slotSetFrom()
+void KBugReportPrivate::slotSetFrom()
 {
     delete m_process;
     m_process = nullptr;

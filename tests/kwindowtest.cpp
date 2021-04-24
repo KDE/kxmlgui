@@ -91,13 +91,13 @@ TestWindow::TestWindow(QWidget *parent)
     connect(fileFloppyAction2, &QAction::triggered, this, &TestWindow::slotSave);
 
     itemsMenu = new QMenu;
-    itemsMenu->addAction(QStringLiteral("delete/insert exit button"), this, SLOT(slotExit()));
-    itemsMenu->addAction(QStringLiteral("enable/disable lineedit"), this, SLOT(slotLined()));
-    itemsMenu->addAction(QStringLiteral("Toggle fileNew"), this, SLOT(slotNew()));
-    itemsMenu->addAction(QStringLiteral("Combo: clear"), this, SLOT(slotClearCombo()));
-    itemsMenu->addAction(QStringLiteral("Combo: insert list"), this, SLOT(slotInsertListInCombo()));
-    itemsMenu->addAction(QStringLiteral("Combo: make item 3 current"), this, SLOT(slotMakeItem3Current()));
-    itemsMenu->addAction(QStringLiteral("Important msg in statusbar"), this, SLOT(slotImportant()));
+    itemsMenu->addAction(QStringLiteral("delete/insert exit button"), this, &TestWindow::slotExit);
+    itemsMenu->addAction(QStringLiteral("enable/disable lineedit"), this, &TestWindow::slotLined);
+    itemsMenu->addAction(QStringLiteral("Toggle fileNew"), this, &TestWindow::slotNew);
+    itemsMenu->addAction(QStringLiteral("Combo: clear"), this, &TestWindow::slotClearCombo);
+    itemsMenu->addAction(QStringLiteral("Combo: insert list"), this, &TestWindow::slotInsertListInCombo);
+    itemsMenu->addAction(QStringLiteral("Combo: make item 3 current"), this, &TestWindow::slotMakeItem3Current);
+    itemsMenu->addAction(QStringLiteral("Important msg in statusbar"), this, &TestWindow::slotImportant);
 
     QAction *filePrintAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-print")), QStringLiteral("Print (pops menu)"), this);
     actionCollection()->addAction(QStringLiteral("fileprint2"), filePrintAction2);

@@ -64,23 +64,6 @@ public:
      */
     void accept() override;
 
-private:
-    /**
-     * "Configure email" has been clicked - this calls kcmshell5 System/email
-     */
-    Q_PRIVATE_SLOT(d, void _k_slotConfigureEmail())
-
-    /**
-     * Sets the "From" field from the e-mail configuration
-     * Called at creation time, but also after "Configure email" is closed.
-     */
-    Q_PRIVATE_SLOT(d, void _k_slotSetFrom())
-
-    /**
-     * Update the url to match the current os, selected app, etc
-     */
-    Q_PRIVATE_SLOT(d, void _k_updateUrl())
-
 protected:
     /**
      * A complete copy of the bug report

@@ -256,19 +256,8 @@ private:
     std::unique_ptr<class KToolBarPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotAppearanceChanged())
-    Q_PRIVATE_SLOT(d, void slotContextAboutToShow())
-    Q_PRIVATE_SLOT(d, void slotContextAboutToHide())
-    Q_PRIVATE_SLOT(d, void slotContextLeft())
     Q_PRIVATE_SLOT(d, void slotContextRight())
-    Q_PRIVATE_SLOT(d, void slotContextShowText())
-    Q_PRIVATE_SLOT(d, void slotContextTop())
-    Q_PRIVATE_SLOT(d, void slotContextBottom())
-    Q_PRIVATE_SLOT(d, void slotContextIcons())
-    Q_PRIVATE_SLOT(d, void slotContextText())
     Q_PRIVATE_SLOT(d, void slotContextTextRight())
-    Q_PRIVATE_SLOT(d, void slotContextTextUnder())
-    Q_PRIVATE_SLOT(d, void slotContextIconSize())
-    Q_PRIVATE_SLOT(d, void slotLockToolBars(bool))
 };
 
 #endif

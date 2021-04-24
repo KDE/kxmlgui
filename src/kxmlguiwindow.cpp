@@ -50,7 +50,7 @@
 class KXmlGuiWindowPrivate : public KMainWindowPrivate
 {
 public:
-    void _k_slotFactoryMakingChanges(bool b)
+    void slotFactoryMakingChanges(bool b)
     {
         // While the GUI factory is adding/removing clients,
         // don't let KMainWindow think those are changes made by the user
@@ -141,7 +141,7 @@ KXMLGUIFactory *KXmlGuiWindow::guiFactory()
     if (!d->factory) {
         d->factory = new KXMLGUIFactory(this, this);
         connect(d->factory, &KXMLGUIFactory::makingChanges, this, [d](bool state) {
-            d->_k_slotFactoryMakingChanges(state);
+            d->slotFactoryMakingChanges(state);
         });
     }
     return d->factory;
@@ -181,7 +181,13 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
     Q_D(KXmlGuiWindow);
 
     if (options & Keys) {
-        KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
+        // KXMLGUIFactory::configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true)
+        // can't be connected directly to the QAction::triggered(bool) signal
+        auto configureShortcutsSlot = [this]() {
+            guiFactory()->configureShortcuts();
+        };
+
+        KStandardAction::keyBindings(guiFactory(), configureShortcutsSlot, actionCollection());
     }
 
     if ((options & StatusBar) && statusBar()) {
@@ -190,7 +196,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
 
     if (options & ToolBar) {
         setStandardToolBarMenuEnabled(true);
-        KStandardAction::configureToolbars(this, SLOT(configureToolbars()), actionCollection());
+        KStandardAction::configureToolbars(this, &KXmlGuiWindow::configureToolbars, actionCollection());
     }
 
     d->defaultSize = defaultSize;

@@ -249,9 +249,6 @@ public Q_SLOTS:
     void printShortcuts() const;
 
 private:
-    Q_PRIVATE_SLOT(d, void capturedShortcut(QVariant, const QModelIndex &))
-
-private:
     friend class KShortcutsDialog;
     friend class KShortcutsEditorPrivate;
     std::unique_ptr<KShortcutsEditorPrivate> const d;
