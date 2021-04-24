@@ -316,7 +316,9 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     ui.list->setAlternatingRowColors(true);
 
     // TODO listen to changes to global shortcuts
-    QObject::connect(delegate, SIGNAL(shortcutChanged(QVariant, QModelIndex)), q, SLOT(capturedShortcut(QVariant, QModelIndex)));
+    QObject::connect(delegate, &KShortcutsEditorDelegate::shortcutChanged, q, [this](const QVariant &newShortcut, const QModelIndex &index) {
+        capturedShortcut(newShortcut, index);
+    });
     // hide the editor widget chen its item becomes hidden
     QObject::connect(ui.searchFilter->searchLine(), &KTreeWidgetSearchLine::hiddenChanged, delegate, &KShortcutsEditorDelegate::hiddenBySearchLine);
 

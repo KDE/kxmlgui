@@ -36,22 +36,22 @@ TestWindow::TestWindow(QWidget *parent)
     fileNewAction = new QAction(QIcon::fromTheme(QStringLiteral("document-new")), QStringLiteral("Create.. (toggles upper button)"), this);
     actionCollection()->addAction(QStringLiteral("filenew"), fileNewAction);
     fileNewAction->setCheckable(true);
-    connect(fileNewAction, SIGNAL(triggered(bool)), SLOT(slotNew()));
+    connect(fileNewAction, &QAction::triggered, this, &TestWindow::slotNew);
 
     QAction *fileOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), QStringLiteral("Open"), this);
     actionCollection()->addAction(QStringLiteral("fileopen"), fileOpenAction);
-    connect(fileOpenAction, SIGNAL(triggered(bool)), SLOT(slotOpen()));
+    connect(fileOpenAction, &QAction::triggered, this, &TestWindow::slotOpen);
 
     KActionMenu *fileFloppyAction = new KActionMenu(QIcon::fromTheme(QStringLiteral("filefloppy")), QStringLiteral("Save (beep or delayed popup)"), this);
     actionCollection()->addAction(QStringLiteral("filefloppy"), fileFloppyAction);
-    connect(fileFloppyAction, SIGNAL(triggered(bool)), SLOT(slotSave()));
+    connect(fileFloppyAction, &QAction::triggered, this, &TestWindow::slotSave);
 
     QAction *filePrintAction = new QAction(QIcon::fromTheme(QStringLiteral("document-print")), QStringLiteral("Print (enables/disables open)"), this);
     actionCollection()->addAction(QStringLiteral("fileprint"), filePrintAction);
     filePrintAction->setToolTip(QStringLiteral("This tooltip does not work for menu items"));
     filePrintAction->setWhatsThis(QStringLiteral("This is the longer explanation of the action"));
     filePrintAction->setStatusTip(QStringLiteral("This action is supposed to print, but in fact enables/disables open"));
-    connect(filePrintAction, SIGNAL(triggered(bool)), SLOT(slotPrint()));
+    connect(filePrintAction, &QAction::triggered, this, &TestWindow::slotPrint);
 
     // And a combobox
     // arguments: text (or strList), ID, writable, signal, object, slot, enabled,
@@ -70,25 +70,25 @@ TestWindow::TestWindow(QWidget *parent)
     // Now add another button and align it right
     exitAction = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), QStringLiteral("Exit"), this);
     actionCollection()->addAction(QStringLiteral("exit"), exitAction);
-    connect(exitAction, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
+    connect(exitAction, &QAction::triggered, qApp, &QCoreApplication::quit);
 
     // Another toolbar
 
     QAction *fileNewAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-new")), QStringLiteral("Create new file2 (Toggle)"), this);
     actionCollection()->addAction(QStringLiteral("filenew2"), fileNewAction2);
-    connect(fileNewAction2, SIGNAL(toggled(bool)), this, SLOT(slotToggle(bool)));
+    connect(fileNewAction2, &QAction::toggled, this, &TestWindow::slotToggle);
     fileNewAction2->setToolTip(QStringLiteral("Tooltip"));
     fileNewAction2->setStatusTip(QStringLiteral("Statustip"));
     fileNewAction2->setWhatsThis(QStringLiteral("WhatsThis"));
 
     QAction *fileOpenAction2 = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), QStringLiteral("Open (starts progress in sb)"), this);
     actionCollection()->addAction(QStringLiteral("fileopen2"), fileOpenAction2);
-    connect(fileOpenAction2, SIGNAL(triggered(bool)), SLOT(slotOpen()));
+    connect(fileOpenAction2, &QAction::triggered, this, &TestWindow::slotOpen);
     fileOpenAction2->setToolTip(QStringLiteral("This action starts a progressbar inside the statusbar"));
 
     QAction *fileFloppyAction2 = new QAction(QIcon::fromTheme(QStringLiteral("filefloppy")), QStringLiteral("Save file2 (autorepeat)"), this);
     actionCollection()->addAction(QStringLiteral("filefloppy2"), fileFloppyAction2);
-    connect(fileFloppyAction2, SIGNAL(triggered(bool)), this, SLOT(slotSave()));
+    connect(fileFloppyAction2, &QAction::triggered, this, &TestWindow::slotSave);
 
     itemsMenu = new QMenu;
     itemsMenu->addAction(QStringLiteral("delete/insert exit button"), this, SLOT(slotExit()));
@@ -123,7 +123,7 @@ TestWindow::TestWindow(QWidget *parent)
     actionCollection()->addAction(QStringLiteral("radioButton4"), radioButton4);
     radioButton4->setActionGroup(radioGroup);
 
-    connect(radioGroup, SIGNAL(triggered(QAction *)), this, SLOT(slotToggled(QAction *)));
+    connect(radioGroup, &QActionGroup::triggered, this, &TestWindow::slotToggled);
 
     /**************************************************/
     /*Now, we setup statusbar; order is not important. */
@@ -158,7 +158,7 @@ TestWindow::TestWindow(QWidget *parent)
     completions->addAction(QStringLiteral("/home/"));
     completions->addAction(QStringLiteral("/vmlinuz :-)"));
 
-    connect(completions, SIGNAL(triggered(QAction *)), this, SLOT(slotCompletionsMenu(QAction *)));
+    connect(completions, &QMenu::triggered, this, &TestWindow::slotCompletionsMenu);
     pr = nullptr;
 
     // KXMLGUIClient looks in the "data" resource for the .rc files
@@ -198,7 +198,7 @@ void TestWindow::slotOpen()
     //  statusBar->message(pr);
     if (!timer) {
         timer = new QTimer(this);
-        connect(timer, SIGNAL(timeout()), this, SLOT(slotGoGoGoo()));
+        connect(timer, &QTimer::timeout, this, &TestWindow::slotGoGoGoo);
     }
     timer->start(100);
 }

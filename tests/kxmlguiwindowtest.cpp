@@ -65,7 +65,7 @@ void MainWindow::setupActions()
     testAction->setText(QStringLiteral("Test"));
     testAction->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
     actionCollection()->addAction(QStringLiteral("test"), testAction);
-    connect(testAction, SIGNAL(triggered(bool)), this, SLOT(slotTest()));
+    connect(testAction, &QAction::triggered, this, &MainWindow::slotTest);
 
     KStandardAction::quit(qApp, SLOT(quit()), actionCollection());
 

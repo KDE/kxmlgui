@@ -44,7 +44,7 @@ class KHelpMenuPrivate;
  *
  * \code
  * mHelpMenu = new KHelpMenu( this, <someText> );
- * connect( this, SIGNAL(someSignal()), mHelpMenu,SLOT(aboutKDE()));
+ * connect(this, &ClassFoo::someSignal, mHelpMenu, &KHelpMenu::aboutKDE);
  * \endcode
  *
  * IMPORTANT:
@@ -77,8 +77,7 @@ class KHelpMenuPrivate;
  * {
  *   ..
  *   KHelpMenu *helpMenu = new KHelpMenu( this );
- *   connect( helpMenu, SIGNAL(showAboutApplication()),
- *          this, SLOT(myDialogSlot()));
+ *   connect(helpMenu, &KHelpMenu::showAboutApplication, this, &ClassFoo:myDialogSlot);
  *   ..
  * }
  *

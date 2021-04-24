@@ -606,9 +606,6 @@ public:
     void setShortcutsConfigurable(QAction *action, bool configurable);
 
 private:
-    Q_PRIVATE_SLOT(d, void _k_actionDestroyed(QObject *))
-    Q_PRIVATE_SLOT(d, void _k_associatedWidgetDestroyed(QObject *))
-
     KActionCollection(const KXMLGUIClient *parent); // used by KXMLGUIClient
 
     friend class KActionCollectionPrivate;

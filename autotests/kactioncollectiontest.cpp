@@ -242,7 +242,7 @@ void tst_KActionCollection::testSetShortcuts()
 void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
 {
     KActionCollection collection(static_cast<QObject *>(nullptr));
-    QAction *a = KStandardAction::create(KStandardAction::Undo, qApp, SLOT(quit()), &collection);
+    QAction *a = KStandardAction::create(KStandardAction::Undo, qApp, &QCoreApplication::quit, &collection);
     QVERIFY(a);
 
     QVERIFY(a->parent() == &collection);

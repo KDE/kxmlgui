@@ -44,7 +44,7 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList<KAboutPer
     m_ocsLinkIcons.insert(KAboutApplicationPersonProfileOcsLink::Homepage, QIcon::fromTheme(QStringLiteral("internet-servicesinternet-services")).pixmap(16));
 
 #if HAVE_ATTICA
-    connect(&m_providerManager, SIGNAL(defaultProvidersLoaded()), SLOT(onProvidersLoaded()));
+    connect(&m_providerManager, &Attica::ProviderManager::defaultProvidersLoaded, this, &KAboutApplicationPersonModel::onProvidersLoaded);
     if (hasOcsUsernames) {
         m_providerManager.loadDefaultProviders();
     }
@@ -101,7 +101,7 @@ void KAboutApplicationPersonModel::onProvidersLoaded() // SLOT
         for (const auto &profile : qAsConst(m_profileList)) {
             if (!profile.ocsUsername().isEmpty()) {
                 Attica::ItemJob<Attica::Person> *job = m_provider.requestPerson(profile.ocsUsername());
-                connect(job, SIGNAL(finished(Attica::BaseJob *)), this, SLOT(onPersonJobFinished(Attica::BaseJob *)));
+                connect(job, &Attica::BaseJob::finished, this, &KAboutApplicationPersonModel::onPersonJobFinished);
                 job->setProperty("personProfile", i);
                 job->start();
             }
@@ -191,7 +191,7 @@ void KAboutApplicationPersonModel::onPersonJobFinished(Attica::BaseJob *job) // 
             // TODO: Create a PixmapFromUrlJob in Attica which would use KIO::get if available
             //      and QNAM otherwise. - Teo 30/10/2010
             QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-            connect(manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(onAvatarJobFinished(QNetworkReply *)));
+            connect(manager, &QNetworkAccessManager::finished, this, &KAboutApplicationPersonModel::onAvatarJobFinished);
 
             manager->get(QNetworkRequest(p.avatarUrl()));
             manager->setProperty("personProfile", personProfileListIndex);
@@ -236,7 +236,7 @@ void KAboutApplicationPersonModel::onAvatarJobFinished(QNetworkReply *reply) // 
 void KAboutApplicationPersonModel::fetchOcsLinkIcons(int personProfileListIndex)
 {
     KAboutApplicationPersonIconsJob *job = new KAboutApplicationPersonIconsJob(this, personProfileListIndex);
-    connect(job, SIGNAL(finished(KAboutApplicationPersonIconsJob *)), this, SLOT(onOcsLinksJobFinished(KAboutApplicationPersonIconsJob *)));
+    connect(job, &KAboutApplicationPersonIconsJob::finished, this, &KAboutApplicationPersonModel::onOcsLinksJobFinished);
     job->start();
 }
 
@@ -317,7 +317,7 @@ KAboutApplicationPersonIconsJob::KAboutApplicationPersonIconsJob(KAboutApplicati
     , m_model(model)
 {
     m_manager = new QNetworkAccessManager(this);
-    connect(m_manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(onJobFinished(QNetworkReply *)));
+    connect(m_manager, &QNetworkAccessManager::finished, this, &KAboutApplicationPersonIconsJob::onJobFinished);
 
     m_ocsLinks = model->m_profileList.value(personProfileListIndex).ocsLinks();
 }

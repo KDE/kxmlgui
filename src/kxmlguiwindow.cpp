@@ -140,7 +140,9 @@ KXMLGUIFactory *KXmlGuiWindow::guiFactory()
     Q_D(KXmlGuiWindow);
     if (!d->factory) {
         d->factory = new KXMLGUIFactory(this, this);
-        connect(d->factory, SIGNAL(makingChanges(bool)), this, SLOT(_k_slotFactoryMakingChanges(bool)));
+        connect(d->factory, &KXMLGUIFactory::makingChanges, this, [d](bool state) {
+            d->_k_slotFactoryMakingChanges(state);
+        });
     }
     return d->factory;
 }

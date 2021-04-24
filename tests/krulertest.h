@@ -68,7 +68,9 @@ private Q_SLOTS:
 private:
     KRuler *hruler, *vruler;
     QGridLayout *layout;
-    QFrame *miniwidget, *bigwidget, *mainframe;
+    QFrame *mainframe = nullptr;
+    MouseWidget *bigwidget = nullptr;
+    QFrame *miniwidget = nullptr;
 
     QLabel *mouse_message;
     QGroupBox *showMarks, *lineEdit, *vertrot;

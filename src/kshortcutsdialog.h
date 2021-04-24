@@ -47,7 +47,7 @@
  * KShortcutsDialog dlg;
  * dlg.addCollection(myActions);
  * dlg.setModal(false);
- * connect(&dlg, SIGNAL(saved()), this, SLOT(doExtraStuff()));
+ * connect(&dlg, &KShortcutsDialog::saved, this, &ClassFoo::doExtraStuff);
  * dlg.configure();
  * \endcode
  *

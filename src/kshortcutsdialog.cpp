@@ -145,7 +145,9 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     layout->addWidget(d->m_keyChooser);
 
     d->m_schemeEditor = new KShortcutSchemesEditor(this);
-    connect(d->m_schemeEditor, SIGNAL(shortcutsSchemeChanged(QString)), this, SLOT(changeShortcutScheme(QString)));
+    connect(d->m_schemeEditor, &KShortcutSchemesEditor::shortcutsSchemeChanged, this, [this](const QString &scheme) {
+        d->changeShortcutScheme(scheme);
+    });
     d->m_schemeEditor->hide();
     layout->addWidget(d->m_schemeEditor);
 
@@ -165,7 +167,9 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     layout->addWidget(buttonBox);
 
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QAbstractButton::clicked, d->m_keyChooser, &KShortcutsEditor::allDefault);
-    connect(d->m_detailsButton, SIGNAL(clicked()), this, SLOT(toggleDetails()));
+    connect(d->m_detailsButton, &QPushButton::clicked, this, [this]() {
+        d->toggleDetails();
+    });
     connect(printButton, &QPushButton::clicked, d->m_keyChooser, &KShortcutsEditor::printShortcuts);
     connect(buttonBox, &QDialogButtonBox::rejected, this, [this]() {
         d->undo();

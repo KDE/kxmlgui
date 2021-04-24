@@ -262,7 +262,9 @@ void KToolBarPrivate::init(bool readConfig, bool _isMainToolBar)
     QDBusConnection::sessionBus()
         .connect(QString(), QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"), QStringLiteral("styleChanged"), q, SLOT(slotAppearanceChanged()));
 #endif
-    QObject::connect(KIconLoader::global(), SIGNAL(iconLoaderSettingsChanged()), q, SLOT(slotAppearanceChanged()));
+    QObject::connect(KIconLoader::global(), &KIconLoader::iconLoaderSettingsChanged, q, [this]() {
+        slotAppearanceChanged();
+    });
 }
 
 QString KToolBarPrivate::getPositionAsString() const
@@ -391,7 +393,9 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
         delete contextLockAction;
         contextLockAction = new KToggleAction(QIcon::fromTheme(QStringLiteral("system-lock-screen")), i18n("Lock Toolbar Positions"), q);
         contextLockAction->setChecked(q->toolBarsLocked());
-        QObject::connect(contextLockAction, SIGNAL(toggled(bool)), q, SLOT(slotLockToolBars(bool)));
+        QObject::connect(contextLockAction, &KToggleAction::toggled, q, [this](bool checked) {
+            slotLockToolBars(checked);
+        });
 
         // Now add the actions to the menu
         context->addMenu(contextMode);
@@ -399,7 +403,9 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
         context->addMenu(contextOrient);
         context->addSeparator();
 
-        QObject::connect(context, SIGNAL(aboutToShow()), q, SLOT(slotContextAboutToShow()));
+        QObject::connect(context, &QMenu::aboutToShow, q, [this]() {
+            slotContextAboutToShow();
+        });
     }
 
     contextButtonAction = q->actionAt(q->mapFromGlobal(globalPos));

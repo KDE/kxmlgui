@@ -78,10 +78,10 @@ KRulerTest::KRulerTest()
     vruler->setOffset(0);
     vruler->setRange(0, 1000);
 
-    connect(bigwidget, SIGNAL(newXPos(int)), hruler, SLOT(slotNewValue(int)));
-    connect(bigwidget, SIGNAL(newYPos(int)), vruler, SLOT(slotNewValue(int)));
-    connect(bigwidget, SIGNAL(newWidth(int)), SLOT(slotNewWidth(int)));
-    connect(bigwidget, SIGNAL(newHeight(int)), SLOT(slotNewHeight(int)));
+    connect(bigwidget, &MouseWidget::newXPos, hruler, &KRuler::slotNewValue);
+    connect(bigwidget, &MouseWidget::newYPos, vruler, &KRuler::slotNewValue);
+    connect(bigwidget, &MouseWidget::newWidth, this, &KRulerTest::slotNewWidth);
+    connect(bigwidget, &MouseWidget::newHeight, this, &KRulerTest::slotNewHeight);
 
     layout->addWidget(miniwidget, 0, 0);
     layout->addWidget(hruler, 0, 1);
@@ -99,38 +99,38 @@ KRulerTest::KRulerTest()
     showTM->adjustSize();
     showTM->move(5, 15);
     showTM->setChecked(true);
-    connect(showTM, SIGNAL(toggled(bool)), SLOT(slotSetTinyMarks(bool)));
+    connect(showTM, &QCheckBox::toggled, this, &KRulerTest::slotSetTinyMarks);
     showLM = new QCheckBox(QStringLiteral("show little marks"), showMarks);
     showLM->adjustSize();
     showLM->move(5, 35);
     showLM->setChecked(true);
-    connect(showLM, SIGNAL(toggled(bool)), SLOT(slotSetLittleMarks(bool)));
+    connect(showLM, &QCheckBox::toggled, this, &KRulerTest::slotSetLittleMarks);
     showMM = new QCheckBox(QStringLiteral("show medium marks"), showMarks);
     showMM->adjustSize();
     showMM->move(5, 55);
     showMM->setChecked(true);
-    connect(showMM, SIGNAL(toggled(bool)), SLOT(slotSetMediumMarks(bool)));
+    connect(showMM, &QCheckBox::toggled, this, &KRulerTest::slotSetMediumMarks);
     showBM = new QCheckBox(QStringLiteral("show big marks"), showMarks);
     showBM->adjustSize();
     showBM->move(5, 75);
     showBM->setChecked(true);
-    connect(showBM, SIGNAL(toggled(bool)), SLOT(slotSetBigMarks(bool)));
+    connect(showBM, &QCheckBox::toggled, this, &KRulerTest::slotSetBigMarks);
     showEM = new QCheckBox(QStringLiteral("show end marks"), showMarks);
     showEM->adjustSize();
     showEM->move(5, 95);
     showEM->setChecked(true);
-    connect(showEM, SIGNAL(toggled(bool)), SLOT(slotSetEndMarks(bool)));
+    connect(showEM, &QCheckBox::toggled, this, &KRulerTest::slotSetEndMarks);
     showPT = new QCheckBox(QStringLiteral("show ruler pointer"), showMarks);
     showPT->adjustSize();
     showPT->move(5, 115);
     showPT->setChecked(true);
-    connect(showPT, SIGNAL(toggled(bool)), SLOT(slotSetRulerPointer(bool)));
+    connect(showPT, &QCheckBox::toggled, this, &KRulerTest::slotSetRulerPointer);
     fixLen = new QCheckBox(QStringLiteral("fix ruler length"), showMarks);
     fixLen->adjustSize();
     fixLen->move(5, 135);
     fixLen->setChecked(true);
-    connect(fixLen, SIGNAL(toggled(bool)), SLOT(slotFixRulerLength(bool)));
-    connect(fixLen, SIGNAL(toggled(bool)), SLOT(slotCheckLength(bool)));
+    connect(fixLen, &QCheckBox::toggled, this, &KRulerTest::slotFixRulerLength);
+    connect(fixLen, &QCheckBox::toggled, this, &KRulerTest::slotCheckLength);
 
     lineEdit = new QGroupBox(QStringLiteral("Value of begin/end"), bigwidget);
     lineEdit->setFixedSize(140, 80);
@@ -140,22 +140,22 @@ KRulerTest::KRulerTest()
     beginMark->setRange(-1000, 1000);
     beginMark->move(5, 15);
     beginMark->setFixedSize(beginMark->sizeHint());
-    connect(beginMark, SIGNAL(valueChanged(int)), hruler, SLOT(slotNewOffset(int)));
-    connect(beginMark, SIGNAL(valueChanged(int)), vruler, SLOT(slotNewOffset(int)));
+    connect(beginMark, QOverload<int>::of(&QSpinBox::valueChanged), hruler, &KRuler::slotNewOffset);
+    connect(beginMark, QOverload<int>::of(&QSpinBox::valueChanged), vruler, &KRuler::slotNewOffset);
     endMark = new QSpinBox(lineEdit);
     endMark->setValue(0);
     endMark->setRange(-1000, 1000);
     endMark->move(5, 35);
     endMark->setFixedSize(endMark->sizeHint());
-    connect(endMark, SIGNAL(valueChanged(int)), hruler, SLOT(slotEndOffset(int)));
-    connect(endMark, SIGNAL(valueChanged(int)), vruler, SLOT(slotEndOffset(int)));
+    connect(endMark, QOverload<int>::of(&QSpinBox::valueChanged), hruler, &KRuler::slotEndOffset);
+    connect(endMark, QOverload<int>::of(&QSpinBox::valueChanged), vruler, &KRuler::slotEndOffset);
     lengthInput = new QSpinBox(lineEdit);
     lengthInput->setValue(0);
     lengthInput->setRange(-1000, 1000);
     lengthInput->move(5, 55);
     lengthInput->setFixedSize(lengthInput->sizeHint());
-    connect(lengthInput, SIGNAL(valueChanged(int)), hruler, SLOT(slotEndOffset(int)));
-    connect(lengthInput, SIGNAL(valueChanged(int)), vruler, SLOT(slotEndOffset(int)));
+    connect(lengthInput, QOverload<int>::of(&QSpinBox::valueChanged), hruler, &KRuler::slotEndOffset);
+    connect(lengthInput, QOverload<int>::of(&QSpinBox::valueChanged), vruler, &KRuler::slotEndOffset);
 
     vertrot = new QGroupBox(QStringLiteral("Value of rotate translate for Vert."), bigwidget);
     vertrot->setFixedSize(140, 80);
@@ -167,7 +167,7 @@ KRulerTest::KRulerTest()
     transX->move(5, 15);
     transX->setFixedSize(transX->sizeHint());
     // transX->setLabel("transx", AlignLeft);
-    connect(transX, SIGNAL(valueChanged(double)), SLOT(slotSetXTrans(double)));
+    connect(transX, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetXTrans);
     transY = new QDoubleSpinBox(vertrot);
     transY->setValue(-12.0);
     transY->setRange(-1000, 1000);
@@ -175,7 +175,7 @@ KRulerTest::KRulerTest()
     transY->move(5, 35);
     transY->setFixedSize(transY->sizeHint());
     // transY->setLabel("transy", AlignLeft);
-    connect(transY, SIGNAL(valueChanged(double)), SLOT(slotSetYTrans(double)));
+    connect(transY, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetYTrans);
     rotV = new QDoubleSpinBox(vertrot);
     rotV->setValue(90.0);
     rotV->setRange(-1000, 1000);
@@ -183,7 +183,7 @@ KRulerTest::KRulerTest()
     rotV->move(5, 55);
     rotV->setFixedSize(rotV->sizeHint());
     // rotV->setLabel("rot", AlignLeft);
-    connect(rotV, SIGNAL(valueChanged(double)), SLOT(slotSetRotate(double)));
+    connect(rotV, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetRotate);
 
     metricstyle = new QGroupBox(QStringLiteral("metric styles"), bigwidget);
 
@@ -211,7 +211,9 @@ KRulerTest::KRulerTest()
     mmetric->adjustSize();
     mmetric->move(5, 95);
     metricstyleButtons->addButton(mmetric, (int)KRuler::Metres);
-    connect(metricstyleButtons, SIGNAL(buttonClicked(int)), SLOT(slotSetMStyle(int)));
+    connect(metricstyleButtons, &QButtonGroup::buttonClicked, this, [this, metricstyleButtons](QAbstractButton *button) {
+        slotSetMStyle(metricstyleButtons->id(button));
+    });
 
     slotUpdateShowMarks();
 }

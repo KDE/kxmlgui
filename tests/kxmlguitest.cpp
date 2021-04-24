@@ -56,7 +56,7 @@ int main(int argc, char **argv)
     a = new QAction(QIcon::fromTheme(QStringLiteral("security-low")), QStringLiteral("sec"), part);
     part->actionCollection()->addAction(QStringLiteral("security"), a);
     part->actionCollection()->setDefaultShortcuts(a, QList<QKeySequence>() << QKeySequence{Qt::ALT | Qt::Key_1});
-    a->connect(a, SIGNAL(triggered(bool)), part, SLOT(slotSec()));
+    a->connect(a, &QAction::triggered, part, &Client::slotSec);
 
     part->setXMLFile(QFINDTESTDATA("kxmlguitest_part.rc"));
 

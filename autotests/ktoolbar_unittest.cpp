@@ -345,7 +345,7 @@ void tst_KToolBar::changeGlobalIconSizeSetting(int mainToolbarIconSize, int icon
     globals.writeEntry("Size", iconSize);
     KSharedConfig::openConfig()->sync();
 
-    QSignalSpy spy(KIconLoader::global(), SIGNAL(iconChanged(int)));
+    QSignalSpy spy(KIconLoader::global(), &KIconLoader::iconChanged);
     KIconLoader::global()->emitChange(KIconLoader::Desktop);
     spy.wait(200);
 }
@@ -358,7 +358,7 @@ void tst_KToolBar::deleteGlobalIconSizeSetting()
     globals.deleteEntry("Size");
     KSharedConfig::openConfig()->sync();
 
-    QSignalSpy spy(KIconLoader::global(), SIGNAL(iconChanged(int)));
+    QSignalSpy spy(KIconLoader::global(), &KIconLoader::iconChanged);
     KIconLoader::global()->emitChange(KIconLoader::Desktop);
     spy.wait(200);
 }
@@ -504,7 +504,7 @@ void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar
                                           QStringLiteral("styleChanged"),
                                           this,
                                           SIGNAL(signalAppearanceChanged()));
-    QSignalSpy spy(this, SIGNAL(signalAppearanceChanged()));
+    QSignalSpy spy(this, &tst_KToolBar::signalAppearanceChanged);
 
     KToolBar::emitToolbarStyleChanged();
     spy.wait(2000);

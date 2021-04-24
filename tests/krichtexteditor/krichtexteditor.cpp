@@ -33,7 +33,7 @@ KRichTextEditor::KRichTextEditor()
     itemLabel = new QLabel;
     statusBar()->addWidget(itemLabel);
 
-    connect(textArea, SIGNAL(cursorPositionChanged()), SLOT(cursorPositionChanged()));
+    connect(textArea, &KRichTextWidget::cursorPositionChanged, this, &KRichTextEditor::cursorPositionChanged);
 }
 
 KRichTextEditor::~KRichTextEditor()

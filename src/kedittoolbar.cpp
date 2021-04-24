@@ -608,12 +608,16 @@ void KEditToolBarPrivate::init()
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Apply), KStandardGuiItem::apply());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::Cancel), KStandardGuiItem::cancel());
     KGuiItem::assign(m_buttonBox->button(QDialogButtonBox::RestoreDefaults), KStandardGuiItem::defaults());
-    q->connect(m_buttonBox, SIGNAL(clicked(QAbstractButton *)), SLOT(_k_slotButtonClicked(QAbstractButton *)));
+    q->connect(m_buttonBox, &QDialogButtonBox::clicked, q, [this](QAbstractButton *button) {
+        _k_slotButtonClicked(button);
+    });
     QObject::connect(m_buttonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
     m_layout->addWidget(m_buttonBox);
 
-    q->connect(m_widget, SIGNAL(enableOk(bool)), SLOT(_k_acceptOK(bool)));
-    q->connect(m_widget, SIGNAL(enableOk(bool)), SLOT(_k_enableApply(bool)));
+    q->connect(m_widget, &KEditToolBarWidget::enableOk, q, [this](bool state) {
+        _k_acceptOK(state);
+        _k_enableApply(state);
+    });
     _k_enableApply(false);
 
     q->setMinimumSize(q->sizeHint());
@@ -708,9 +712,10 @@ void KEditToolBarPrivate::defaultClicked()
     delete oldWidget;
     m_layout->insertWidget(0, m_widget);
 
-    q->connect(m_widget, SIGNAL(enableOk(bool)), SLOT(_k_acceptOK(bool)));
-    q->connect(m_widget, SIGNAL(enableOk(bool)), SLOT(_k_enableApply(bool)));
-
+    q->connect(m_widget, &KEditToolBarWidget::enableOk, q, [this](bool state) {
+        _k_acceptOK(state);
+        _k_enableApply(state);
+    });
     _k_enableApply(false);
 
     Q_EMIT q->newToolBarConfig();
@@ -989,7 +994,9 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_toolbarCombo = new QComboBox(m_widget);
     m_comboLabel->setBuddy(m_toolbarCombo);
     m_comboSeparator = new KSeparator(m_widget);
-    QObject::connect(m_toolbarCombo, SIGNAL(activated(int)), m_widget, SLOT(slotToolBarSelected(int)));
+    QObject::connect(m_toolbarCombo, QOverload<int>::of(&QComboBox::activated), m_widget, [this](int index) {
+        slotToolBarSelected(index);
+    });
 
     //  QPushButton *new_toolbar = new QPushButton(i18n("&New"), this);
     //  new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
@@ -1006,12 +1013,18 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_inactiveList->setMinimumSize(180, 250);
     m_inactiveList->setDropIndicatorShown(false); // #165663
     inactive_label->setBuddy(m_inactiveList);
-    QObject::connect(m_inactiveList, SIGNAL(itemSelectionChanged()), m_widget, SLOT(slotInactiveSelectionChanged()));
-    QObject::connect(m_inactiveList, SIGNAL(itemDoubleClicked(QListWidgetItem *)), m_widget, SLOT(slotInsertButton()));
+    QObject::connect(m_inactiveList, &QListWidget::itemSelectionChanged, m_widget, [this]() {
+        slotInactiveSelectionChanged();
+    });
+    QObject::connect(m_inactiveList, &QListWidget::itemDoubleClicked, m_widget, [this]() {
+        slotInsertButton();
+    });
     QObject::connect(m_inactiveList,
-                     SIGNAL(dropped(ToolBarListWidget *, int, ToolBarItem *, bool)),
+                     &ToolBarListWidget::dropped,
                      m_widget,
-                     SLOT(slotDropped(ToolBarListWidget *, int, ToolBarItem *, bool)));
+                     [this](ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList) {
+                         slotDropped(list, index, item, sourceIsActiveList);
+                     });
 
     KListWidgetSearchLine *inactiveListSearchLine = new KListWidgetSearchLine(m_widget, m_inactiveList);
     inactiveListSearchLine->setPlaceholderText(i18n("Filter"));
@@ -1025,12 +1038,18 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_activeList->setMinimumSize(m_inactiveList->minimumWidth(), 100);
     active_label->setBuddy(m_activeList);
 
-    QObject::connect(m_activeList, SIGNAL(itemSelectionChanged()), m_widget, SLOT(slotActiveSelectionChanged()));
-    QObject::connect(m_activeList, SIGNAL(itemDoubleClicked(QListWidgetItem *)), m_widget, SLOT(slotRemoveButton()));
+    QObject::connect(m_activeList, &QListWidget::itemSelectionChanged, m_widget, [this]() {
+        slotActiveSelectionChanged();
+    });
+    QObject::connect(m_activeList, &QListWidget::itemDoubleClicked, m_widget, [this]() {
+        slotRemoveButton();
+    });
     QObject::connect(m_activeList,
-                     SIGNAL(dropped(ToolBarListWidget *, int, ToolBarItem *, bool)),
+                     &ToolBarListWidget::dropped,
                      m_widget,
-                     SLOT(slotDropped(ToolBarListWidget *, int, ToolBarItem *, bool)));
+                     [this](ToolBarListWidget *list, int index, ToolBarItem *item, bool sourceIsActiveList) {
+                         slotDropped(list, index, item, sourceIsActiveList);
+                     });
 
     KListWidgetSearchLine *activeListSearchLine = new KListWidgetSearchLine(m_widget, m_activeList);
     activeListSearchLine->setPlaceholderText(i18n("Filter"));
@@ -1040,14 +1059,18 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_changeIcon->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-icons")));
     m_changeIcon->setEnabled(m_activeList->currentItem());
 
-    QObject::connect(m_changeIcon, SIGNAL(clicked()), m_widget, SLOT(slotChangeIcon()));
+    QObject::connect(m_changeIcon, &QPushButton::clicked, m_widget, [this]() {
+        slotChangeIcon();
+    });
 
     // "change icon text" button
     m_changeIconText = new QPushButton(i18nc("@action:button", "Change Te&xt..."), m_widget);
     m_changeIconText->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
     m_changeIconText->setEnabled(m_activeList->currentItem() != nullptr);
 
-    QObject::connect(m_changeIconText, SIGNAL(clicked()), m_widget, SLOT(slotChangeIconText()));
+    QObject::connect(m_changeIconText, &QPushButton::clicked, m_widget, [this]() {
+        slotChangeIconText();
+    });
 
     // The buttons in the middle
 
@@ -1055,23 +1078,31 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_upAction->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     m_upAction->setEnabled(false);
     m_upAction->setAutoRepeat(true);
-    QObject::connect(m_upAction, SIGNAL(clicked()), m_widget, SLOT(slotUpButton()));
+    QObject::connect(m_upAction, &QToolButton::clicked, m_widget, [this]() {
+        slotUpButton();
+    });
 
     m_insertAction = new QToolButton(m_widget);
     m_insertAction->setIcon(QIcon::fromTheme(QApplication::isRightToLeft() ? QStringLiteral("go-previous") : QStringLiteral("go-next")));
     m_insertAction->setEnabled(false);
-    QObject::connect(m_insertAction, SIGNAL(clicked()), m_widget, SLOT(slotInsertButton()));
+    QObject::connect(m_insertAction, &QToolButton::clicked, m_widget, [this]() {
+        slotInsertButton();
+    });
 
     m_removeAction = new QToolButton(m_widget);
     m_removeAction->setIcon(QIcon::fromTheme(QApplication::isRightToLeft() ? QStringLiteral("go-next") : QStringLiteral("go-previous")));
     m_removeAction->setEnabled(false);
-    QObject::connect(m_removeAction, SIGNAL(clicked()), m_widget, SLOT(slotRemoveButton()));
+    QObject::connect(m_removeAction, &QToolButton::clicked, m_widget, [this]() {
+        slotRemoveButton();
+    });
 
     m_downAction = new QToolButton(m_widget);
     m_downAction->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     m_downAction->setEnabled(false);
     m_downAction->setAutoRepeat(true);
-    QObject::connect(m_downAction, SIGNAL(clicked()), m_widget, SLOT(slotDownButton()));
+    QObject::connect(m_downAction, &QToolButton::clicked, m_widget, [this]() {
+        slotDownButton();
+    });
 
     m_helpArea = new QLabel(m_widget);
     m_helpArea->setWordWrap(true);

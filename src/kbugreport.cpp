@@ -143,7 +143,9 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
         // Configure email button
         d->m_configureEmail = new QPushButton(i18nc("@action:button", "Configure Email..."), this);
-        connect(d->m_configureEmail, SIGNAL(clicked()), this, SLOT(_k_slotConfigureEmail()));
+        connect(d->m_configureEmail, &QPushButton::clicked, this, [this]() {
+            d->_k_slotConfigureEmail();
+        });
         glay->addWidget(d->m_configureEmail, 0, 2, 3, 1, Qt::AlignTop | Qt::AlignRight);
 
         // To
@@ -346,7 +348,9 @@ void KBugReportPrivate::_k_slotConfigureEmail()
         return;
     }
     m_process = new QProcess;
-    QObject::connect(m_process, SIGNAL(finished(int, QProcess::ExitStatus)), q, SLOT(_k_slotSetFrom()));
+    QObject::connect(m_process, &QProcess::finished, q, [this]() {
+        _k_slotSetFrom();
+    });
     m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcm_users"));
     if (!m_process->waitForStarted()) {
         // qCDebug(DEBUG_KXMLGUI) << "Couldn't start kcmshell5..";

@@ -313,7 +313,9 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
         widget->addAction(action);
     }
 
-    connect(action, SIGNAL(destroyed(QObject *)), SLOT(_k_actionDestroyed(QObject *)));
+    connect(action, &QObject::destroyed, this, [this](QObject *obj) {
+        d->_k_actionDestroyed(obj);
+    });
 
     d->setComponentForAction(action);
 
@@ -796,7 +798,9 @@ void KActionCollection::addAssociatedWidget(QWidget *widget)
         widget->addActions(actions());
 
         d->associatedWidgets.append(widget);
-        connect(widget, SIGNAL(destroyed(QObject *)), this, SLOT(_k_associatedWidgetDestroyed(QObject *)));
+        connect(widget, &QObject::destroyed, this, [this](QObject *obj) {
+            d->_k_associatedWidgetDestroyed(obj);
+        });
     }
 }
 
@@ -807,7 +811,7 @@ void KActionCollection::removeAssociatedWidget(QWidget *widget)
     }
 
     d->associatedWidgets.removeAll(widget);
-    disconnect(widget, SIGNAL(destroyed(QObject *)), this, SLOT(_k_associatedWidgetDestroyed(QObject *)));
+    disconnect(widget, &QObject::destroyed, this, nullptr);
 }
 
 QAction *KActionCollectionPrivate::unlistAction(QAction *action)
