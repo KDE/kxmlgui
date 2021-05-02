@@ -116,7 +116,7 @@ if (TARGET Qt5::DBus)
   target_link_libraries(KF5XmlGui PUBLIC Qt5::DBus) #QDBus connect to signal in KToolBar
 endif()
 
-set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION_STRING}
+set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION}
                                            SOVERSION ${KXMLGUI_SOVERSION}
                                            EXPORT_NAME XmlGui
 )
