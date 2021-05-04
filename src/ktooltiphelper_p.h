@@ -12,6 +12,7 @@
 
 #include <QPointer>
 #include <QRect>
+#include <QTimer>
 
 class KToolTipHelper;
 
@@ -45,6 +46,14 @@ public:
     static const QString whatsThisHintOnly();
 
     /**
+     * Makes sure submenus that show up do not mess with tooltips appearing in menus.
+     * This is somewhat of a workaround for Qt not posting QEvent::ToolTips when the
+     * cursor wasn't moved *after* a submenu hides.
+     * @return false.
+     */
+    bool handleHideEvent(QObject *watched, QEvent *event);
+
+    /**
      * @return true if the key press is used to expand a tooltip. false otherwise.
      */
     bool handleKeyPressEvent(QEvent *event);
@@ -71,6 +80,10 @@ public:
      */
     bool handleWhatsThisClickedEvent(QEvent *event);
 
+    /** @see handleHideEvent()
+     * The name is slightly misleading because it will only post events for QMenus. */
+    void postToolTipEventIfCursorDidntMove() const;
+
     /**
      * Shows a tooltip that contains a whatsThisHint at the location \p globalPos.
      * If \p tooltip is empty, only a whatsThisHint is shown.
@@ -95,6 +108,12 @@ private:
     QPoint m_lastExpandableToolTipGlobalPos;
     /** The last widget a QEvent::tooltip was sent for. */
     QPointer<QWidget> m_widget;
+
+    /** The global position of where the cursor was when the last QEvent::HideEvent for a
+     * menu occured. @see handleHideEvent() */
+    QPoint m_cursorGlobalPosWhenLastMenuHid;
+    /** Calls postToolTipEventIfCursorDidntMove().  @see handleHideEvent() */
+    QTimer m_toolTipTimeout;
 
     static KToolTipHelper *s_instance;
 };

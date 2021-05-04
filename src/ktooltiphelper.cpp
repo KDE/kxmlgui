@@ -13,9 +13,11 @@
 
 #include <QAction>
 #include <QApplication>
+#include <QCursor>
 #include <QDesktopServices>
 #include <QHelpEvent>
 #include <QMenu>
+#include <QStyle>
 #include <QtGlobal>
 #include <QToolButton>
 #include <QToolTip>
@@ -44,6 +46,8 @@ KToolTipHelper::KToolTipHelper(QObject *parent)
 KToolTipHelperPrivate::KToolTipHelperPrivate(KToolTipHelper *q)
     : q{q}
 {
+    connect(&m_toolTipTimeout, &QTimer::timeout,
+            this, &KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove);
 }
 
 KToolTipHelper::~KToolTipHelper() = default;
@@ -58,6 +62,8 @@ bool KToolTipHelper::eventFilter(QObject *watched, QEvent *event)
 bool KToolTipHelperPrivate::eventFilter(QObject *watched, QEvent *event)
 {
     switch (event->type()) {
+    case QEvent::Hide:
+        return handleHideEvent(watched, event);
     case QEvent::KeyPress:
         return handleKeyPressEvent(event);
     case QEvent::ToolTip:
@@ -78,6 +84,21 @@ const QString KToolTipHelper::whatsThisHintOnly()
 const QString KToolTipHelperPrivate::whatsThisHintOnly()
 {
     return QStringLiteral("tooltip bug"); // if a user ever sees this, there is a bug somewhere.
+}
+
+bool KToolTipHelperPrivate::handleHideEvent(QObject *watched, QEvent *event)
+{
+    if (event->spontaneous()) {
+        return false;
+    }
+    auto menu = qobject_cast<QMenu *>(watched);
+    if (!menu) {
+        return false;
+    }
+
+    m_cursorGlobalPosWhenLastMenuHid = QCursor::pos();
+    m_toolTipTimeout.start(menu->style()->styleHint(QStyle::SH_ToolTip_WakeUpDelay, nullptr, menu));
+    return false;
 }
 
 bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
@@ -190,6 +211,23 @@ bool KToolTipHelperPrivate::handleWhatsThisClickedEvent(QEvent *event)
     const auto whatsThisClickedEvent = static_cast<QWhatsThisClickedEvent *>(event);
     QDesktopServices::openUrl(QUrl(whatsThisClickedEvent->href()));
     return true;
+}
+
+void KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove() const
+{
+    QPoint globalCursorPos = QCursor::pos();
+    if (globalCursorPos != m_cursorGlobalPosWhenLastMenuHid) {
+        return;
+    }
+
+    auto widgetUnderCursor = qApp->widgetAt(globalCursorPos);
+    // We only want a behaviour change for QMenus.
+    if (qobject_cast<QMenu *>(widgetUnderCursor)) {
+        qGuiApp->postEvent(widgetUnderCursor,
+                           new QHelpEvent(QEvent::ToolTip,
+                                       widgetUnderCursor->mapFromGlobal(globalCursorPos),
+                                       globalCursorPos));
+    }
 }
 
 void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos,
