@@ -106,7 +106,8 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
     Q_CHECK_PTR(menu);
 
     m_action = menu->actionAt(helpEvent->pos());
-    if (!m_action) {
+    if (!m_action || (m_action->menu() && !m_action->menu()->isEmpty())) {
+        // Do not show a tooltip when there is a menu since they will compete space-wise.
         QToolTip::hideText();
         return false;
     }
