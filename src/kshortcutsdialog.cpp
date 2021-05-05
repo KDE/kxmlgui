@@ -137,6 +137,7 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     , d(new KShortcutsDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Keyboard Shortcuts"));
+    // TODO KF6 make this non-modal by default
     setModal(true);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -199,7 +200,8 @@ QList<KActionCollection *> KShortcutsDialog::actionCollections() const
     return d->m_collections;
 }
 
-// FIXME should there be a setSaveSettings method?
+// TODO KF6: remove this method, always save settings, and open the
+// dialog with show() not exec()
 bool KShortcutsDialog::configure(bool saveSettings)
 {
     d->m_saveSettings = saveSettings;
@@ -225,12 +227,29 @@ QSize KShortcutsDialog::sizeHint() const
     return QSize(600, 480);
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 83)
+// static
 int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent, bool saveSettings)
 {
     // qDebug(125) << "KShortcutsDialog::configureKeys( KActionCollection*, " << saveSettings << " )";
-    KShortcutsDialog dlg(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
-    dlg.d->m_keyChooser->addCollection(collection);
-    return dlg.configure(saveSettings);
+    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
+    dlg->setAttribute(Qt::WA_DeleteOnClose);
+    dlg->addCollection(collection);
+    return dlg->configure(saveSettings);
+}
+#endif
+
+// static
+void KShortcutsDialog::showDialog(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, bool isModal, QWidget *parent)
+{
+    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
+    dlg->setAttribute(Qt::WA_DeleteOnClose);
+    dlg->setModal(isModal);
+
+    dlg->d->m_saveSettings = true; // Always save settings if the dialog is accepted
+
+    dlg->addCollection(collection);
+    dlg->show();
 }
 
 void KShortcutsDialog::importConfiguration(const QString &path)

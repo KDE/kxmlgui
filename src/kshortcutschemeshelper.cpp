@@ -25,11 +25,12 @@
 bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *> &collections, const QString &schemeName)
 {
     // Every action collection is associated with a KXMLGUIClient
-    // (at least if it was added by KXMLGUIFactory::configureShortcuts)
+    // (at least if it was added by KXMLGUIFactory::configureShortcuts()
+    // or KXMLGUIFactory::showConfigureShortcutsDialog())
 
     // Some GUI clients have the same name (e.g. the child client for a mainwindow
     // holding the actions for hiding/showing toolbars), so we need to save them
-    // together, otherwise they will overwrite each other's file on disk.
+    // together, otherwise they will overwrite each other's files on disk.
 
     // For cases like kdevelop (many guiclients not reused in other apps) it's simpler
     // to even save all shortcuts to a single shortcuts file -> set the boolean below to true

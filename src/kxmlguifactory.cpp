@@ -700,19 +700,38 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLG
     }
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 83)
 int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
 {
-    KShortcutsDialog dlg(KShortcutsEditor::AllActions,
-                         letterCutsOk ? KShortcutsEditor::LetterShortcutsAllowed : KShortcutsEditor::LetterShortcutsDisallowed,
-                         qobject_cast<QWidget *>(parent()));
+    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions,
+                                     letterCutsOk ? KShortcutsEditor::LetterShortcutsAllowed : KShortcutsEditor::LetterShortcutsDisallowed,
+                                     qobject_cast<QWidget *>(parent()));
     for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
         if (client) {
             qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
-            dlg.addCollection(client->actionCollection());
+            dlg->addCollection(client->actionCollection(), client->componentName());
         }
     }
-    connect(&dlg, &KShortcutsDialog::saved, this, &KXMLGUIFactory::shortcutsSaved);
-    return dlg.configure(bSaveSettings);
+    connect(dlg, &KShortcutsDialog::saved, this, &KXMLGUIFactory::shortcutsSaved);
+    return dlg->configure(bSaveSettings);
+}
+#endif
+
+void KXMLGUIFactory::showConfigureShortcutsDialog()
+{
+    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions, KShortcutsEditor::LetterShortcutsAllowed, qobject_cast<QWidget *>(parent()));
+    dlg->setAttribute(Qt::WA_DeleteOnClose);
+
+    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
+        if (client) {
+            qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
+
+            dlg->addCollection(client->actionCollection(), client->componentName());
+        }
+    }
+
+    connect(dlg, &KShortcutsDialog::saved, this, &KXMLGUIFactory::shortcutsSaved);
+    dlg->show();
 }
 
 // Find or create

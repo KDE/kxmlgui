@@ -264,13 +264,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
     Q_D(KXmlGuiWindow);
 
     if (options & Keys) {
-        // KXMLGUIFactory::configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true)
-        // can't be connected directly to the QAction::triggered(bool) signal
-        auto configureShortcutsSlot = [this]() {
-            guiFactory()->configureShortcuts();
-        };
-
-        KStandardAction::keyBindings(guiFactory(), configureShortcutsSlot, actionCollection());
+        KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
     }
 
     if ((options & StatusBar) && statusBar()) {

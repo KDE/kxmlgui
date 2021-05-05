@@ -169,21 +169,61 @@ public:
     void refreshActionProperties();
 
 public Q_SLOTS:
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 83)
     /**
-     * Show a standard configure shortcut for every action in this factory.
+     * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
+     * and which can be used to change the shortcuts associated with each action.
      *
-     * This slot can be connected directly to the action to configure shortcuts. This is very simple to
-     * do that by adding a single line
-     * \code
-     * KStandardAction::keyBindings( guiFactory(), SLOT( configureShortcuts() ), actionCollection() );
-     * \endcode
+     * This slot can be connected directly to the action to configure shortcuts.
+     * This is very simple to do, for example:
+     * @code
+     * KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
+     * @endcode
+     * Or if you want to use the pointer-to-member-function singal/slot syntax
+     * (which is generally preferred as it has compile-time type checking) you
+     * can use:
+     * @code
+     * auto shortcutsSlot = [this]() {
+     *     guiFactory()->configureShortcuts();
+     * };
+     * KStandardAction::keyBindings(guiFactory(), shortcutsSlot, actionCollection());
      *
-     * @param bAllowLetterShortcuts Set to false if unmodified alphanumeric
-     *      keys ('A', '1', etc.) are not permissible shortcuts.
-     * @param bSaveSettings if true, the settings will also be saved back to
-     *      the *uirc file which they were intially read from.
+     * // Alternatively, since 5.83, you can use:
+     * KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
+     * @endcode
+     *
+     * @param bAllowLetterShortcuts Set to @c false if unmodified alphanumeric keys
+     * ('A', '1', etc.) are not permissible shortcuts; defaults to @c true
+     * @param bSaveSettings if @c true, the settings will also be saved back to
+     * the @c *ui.rc file which they were intially read from; defaults to @c true
+     *
+     * @deprecated since 5.83, use @c KXMLGUIFactory::showConfigureShortcutsDialog() instead.
      */
+    KXMLGUI_DEPRECATED_VERSION(5, 83, "Use KXMLGUIFactory::showConfigureShortcutsDialog() instead.")
     int configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true);
+#endif
+
+    /**
+     * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
+     * and which can be used to change the shortcuts associated with each action.
+     *
+     * This slot can be connected directly to the action to configure shortcuts,
+     * for example:
+     * @code
+     * KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
+     * @endcode
+     *
+     * This method constructs a KShortcutsDialog with the default arguments
+     * (KShortcutsEditor::AllActions and KShortcutsEditor::LetterShortcutsAllowed).
+     *
+     * @see KShortcutsDialog, KShortcutsEditor::ActionTypes, KShortcutsEditor::LetterShortcuts
+     *
+     * By default the changes will be saved back to the @c *ui.rc file
+     * which they were intially read from.
+     *
+     * @since 5.83
+     */
+    void showConfigureShortcutsDialog();
 
     void changeShortcutScheme(const QString &scheme);
 
@@ -204,9 +244,11 @@ Q_SIGNALS:
     void makingChanges(bool);
 
     /**
-     * Emitted when the shortcuts have been saved (i.e. configureShortcuts with bSaveSettings=true was called and the user accepted the dialog)
-     * If you're using multiple instances of the same KXMLGUIClient, you probably want to connect to this signal and reloadXML
-     * on all your KXMLGUIClients so that the other instances update their shortcuts
+     * Emitted when the shortcuts have been saved (i.e. the user accepted the dialog).
+     *
+     * If you're using multiple instances of the same KXMLGUIClient, you probably want to
+     * connect to this signal and call @c KXMLGUIClient::reloadXML() for each of your
+     * KXMLGUIClients, so that the other instances update their shortcuts settings.
      *
      * @since 5.79
      */
