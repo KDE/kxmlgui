@@ -32,8 +32,8 @@ QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QIcon &icon, const
 
     titleWidget->setIconSize(QSize(48, 48));
     titleWidget->setIcon(icon, KTitleWidget::ImageLeft);
-    titleWidget->setText(i18n("<html><font size=\"5\">%1</font><br />Version %2</html>", displayName, version));
-
+    titleWidget->setText(
+        QLatin1String("<html><font size=\"5\">%1</font><br />%2</html>").arg(displayName, i18nc("Version version-number", "Version %1", version)));
     return titleWidget;
 }
 
@@ -108,13 +108,17 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
         bugsLabel->setOpenExternalLinks(true);
         if (!customAuthorTextEnabled) {
             if (bugAddress.isEmpty() || bugAddress == QLatin1String("submit@bugs.kde.org")) {
-                bugsLabel->setText(i18n("Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to report bugs.\n"));
+                bugsLabel->setText(i18nc("Reference to website",
+                                         "Please use %1 to report bugs.\n",
+                                         QLatin1String("<a href=\"https://bugs.kde.org\">https://bugs.kde.org</a>")));
             } else {
                 QUrl bugUrl(bugAddress);
                 if (bugUrl.scheme().isEmpty()) {
                     bugUrl.setScheme(QStringLiteral("mailto"));
                 }
-                bugsLabel->setText(i18n("Please report bugs to <a href=\"%1\">%2</a>.\n", bugUrl.toString(), bugAddress));
+                bugsLabel->setText(i18nc("Reference to email address",
+                                         "Please report bugs to %1.\n",
+                                         QLatin1String("<a href=\"%1\">%2</a>").arg(bugUrl.toString(), bugAddress)));
             }
         } else {
             bugsLabel->setText(customAuthorRichText);
