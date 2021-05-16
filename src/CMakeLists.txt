@@ -62,7 +62,7 @@ if (TARGET Qt5::DBus)
 endif()
 
 # add the resource file
-qt5_add_resources(kxmlgui_SRCS kxmlgui.qrc)
+qt_add_resources(kxmlgui_SRCS kxmlgui.qrc)
 
 ecm_qt_declare_logging_category(kxmlgui_SRCS
     HEADER debug.h
