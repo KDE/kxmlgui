@@ -46,6 +46,7 @@ KToolTipHelper::KToolTipHelper(QObject *parent)
 KToolTipHelperPrivate::KToolTipHelperPrivate(KToolTipHelper *q)
     : q{q}
 {
+    m_toolTipTimeout.setSingleShot(true);
     connect(&m_toolTipTimeout, &QTimer::timeout,
             this, &KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove);
 }
@@ -91,7 +92,7 @@ bool KToolTipHelperPrivate::handleHideEvent(QObject *watched, QEvent *event)
     if (event->spontaneous()) {
         return false;
     }
-    auto menu = qobject_cast<QMenu *>(watched);
+    const QMenu *menu = qobject_cast<QMenu *>(watched);
     if (!menu) {
         return false;
     }
@@ -111,9 +112,18 @@ bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
     }
     QToolTip::hideText();
 
-    if (qobject_cast<QMenu *>(m_widget)) {
+    if (QMenu *menu = qobject_cast<QMenu *>(m_widget)) {
         if (m_action) {
-            QWhatsThis::showText(m_lastExpandableToolTipGlobalPos, m_action->whatsThis(), m_widget);
+            // The widget displaying the whatsThis() text trys to avoid covering the QWidget
+            // given as the third parameter of QWhatsThis::showText(). Normally we would have
+            // menu as the third parameter but because QMenus are quite big the text panel
+            // oftentimes fails to find a nice position around it and will instead cover
+            // the hovered action itself! To avoid this we give a smaller positioningHelper-widget
+            // as the third parameter which only has the size of the hovered menu action entry.
+            QWidget positioningHelper{menu};
+            positioningHelper.setGeometry(menu->actionGeometry(m_action));
+            QWhatsThis::showText(m_lastExpandableToolTipGlobalPos,
+                                 m_action->whatsThis(), &positioningHelper);
         }
         return true;
     }
@@ -215,18 +225,18 @@ bool KToolTipHelperPrivate::handleWhatsThisClickedEvent(QEvent *event)
 
 void KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove() const
 {
-    QPoint globalCursorPos = QCursor::pos();
+    const QPoint globalCursorPos = QCursor::pos();
     if (globalCursorPos != m_cursorGlobalPosWhenLastMenuHid) {
         return;
     }
 
-    auto widgetUnderCursor = qApp->widgetAt(globalCursorPos);
+    const auto widgetUnderCursor = qApp->widgetAt(globalCursorPos);
     // We only want a behaviour change for QMenus.
     if (qobject_cast<QMenu *>(widgetUnderCursor)) {
         qGuiApp->postEvent(widgetUnderCursor,
                            new QHelpEvent(QEvent::ToolTip,
-                                       widgetUnderCursor->mapFromGlobal(globalCursorPos),
-                                       globalCursorPos));
+                                          widgetUnderCursor->mapFromGlobal(globalCursorPos),
+                                          globalCursorPos));
     }
 }
 
