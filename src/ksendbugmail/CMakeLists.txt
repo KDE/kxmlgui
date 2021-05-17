@@ -1,9 +1,10 @@
-set(ksendbugmail_SRCS
-  main.cpp
-  smtp.cpp
+add_executable(ksendbugmail)
+
+target_sources(ksendbugmail PRIVATE
+    main.cpp
+    smtp.cpp
 )
 
-add_executable(ksendbugmail ${ksendbugmail_SRCS})
 ecm_mark_nongui_executable(ksendbugmail)
 
 target_link_libraries(ksendbugmail

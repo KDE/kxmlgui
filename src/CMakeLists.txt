@@ -1,13 +1,16 @@
 add_subdirectory(ksendbugmail)
 
+add_library(KF5XmlGui SHARED)
+add_library(KF5::XmlGui ALIAS KF5XmlGui)
+
 if (HAVE_ATTICA)
-   set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::Attica)
+    target_link_libraries(KF5XmlGui PRIVATE KF5::Attica)
 endif ()
 if (HAVE_GLOBALACCEL)
-   set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} KF5::GlobalAccel)
+    target_link_libraries(KF5XmlGui PRIVATE KF5::GlobalAccel)
 endif ()
 if(WIN32)
-    set (XMLGUI_EXTRA_LIBS ${XMLGUI_EXTRA_LIBS} secur32) # GetUserNameEx()
+    target_link_libraries(KF5XmlGui PRIVATE secur32) # GetUserNameEx()
 endif()
 
 configure_file(config-xmlgui.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xmlgui.h )
@@ -17,7 +20,7 @@ configure_file(
     ${CMAKE_CURRENT_BINARY_DIR}/kaboutapplicationconfigattica_p.h
 )
 
-set(kxmlgui_SRCS
+target_sources(KF5XmlGui PRIVATE
   kaboutapplicationdialog.cpp
   kaboutapplicationpersonlistdelegate_p.cpp
   kaboutapplicationpersonlistview_p.cpp
@@ -58,13 +61,17 @@ set(kxmlgui_SRCS
   kcheckaccelerators.cpp
 )
 if (TARGET Qt5::DBus)
-  list(APPEND kxmlgui_SRCS kmainwindowiface.cpp)
+    target_sources(KF5XmlGui PRIVATE
+        kmainwindowiface.cpp
+    )
 endif()
 
 # add the resource file
-qt_add_resources(kxmlgui_SRCS kxmlgui.qrc)
+target_sources(KF5XmlGui PRIVATE
+    kxmlgui.qrc
+)
 
-ecm_qt_declare_logging_category(kxmlgui_SRCS
+ecm_qt_declare_logging_category(KF5XmlGui
     HEADER debug.h
     IDENTIFIER DEBUG_KXMLGUI
     CATEGORY_NAME kf.xmlgui
@@ -73,14 +80,11 @@ ecm_qt_declare_logging_category(kxmlgui_SRCS
     EXPORT KXMLGUI
 )
 
-set(kxmlgui_UI
-   kshortcutsdialog.ui
-   kshortcutwidget.ui
+ki18n_wrap_ui(KF5XmlGui
+    kshortcutsdialog.ui
+    kshortcutwidget.ui
 )
 
-ki18n_wrap_ui(kxmlgui_SRCS ${kxmlgui_UI} )
-
-add_library(KF5XmlGui ${kxmlgui_SRCS})
 ecm_generate_export_header(KF5XmlGui
     BASE_NAME KXmlGui
     GROUP_BASE_NAME KF
@@ -89,8 +93,6 @@ ecm_generate_export_header(KF5XmlGui
     DEPRECATION_VERSIONS 4.0 4.1 5.0 5.75 5.83
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
-
-add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
 target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui>")
 
@@ -110,7 +112,6 @@ PRIVATE
     KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF5::I18n                #i18n and i18nc in many places
     KF5::IconThemes         #KIconLoader and KIconThemes in KToolBar
-    ${XMLGUI_EXTRA_LIBS}
 )
 if (TARGET Qt5::DBus)
   target_link_libraries(KF5XmlGui PUBLIC Qt5::DBus) #QDBus connect to signal in KToolBar
