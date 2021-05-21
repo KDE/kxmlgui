@@ -22,13 +22,17 @@
 
 namespace KDEPrivate
 {
-enum {
-    AVATAR_HEIGHT = 50,
-    AVATAR_WIDTH = 50,
-    MAIN_LINKS_HEIGHT = 32,
-    SOCIAL_LINKS_HEIGHT = 26,
-    MAX_SOCIAL_LINKS = 9,
-};
+Q_GLOBAL_STATIC(QPixmap, s_avatarFallback)
+static QPixmap avatarFallback()
+{
+    if (s_avatarFallback->isNull()) {
+        const QIcon icon = QIcon::fromTheme(QStringLiteral("user"));
+        *s_avatarFallback = icon.pixmap(icon.actualSize(QSize(AVATAR_WIDTH / qGuiApp->devicePixelRatio(), AVATAR_HEIGHT / qGuiApp->devicePixelRatio())),
+                                        QIcon::Normal,
+                                        QIcon::On);
+    }
+    return *s_avatarFallback;
+}
 
 KAboutApplicationPersonListDelegate::KAboutApplicationPersonListDelegate(QAbstractItemView *itemView, QObject *parent)
     : KWidgetItemDelegate(itemView, parent)
@@ -61,17 +65,7 @@ QList<QWidget *> KAboutApplicationPersonListDelegate::createItemWidgets(const QM
 
     list.append(mainLinks);
 
-    KToolBar *socialLinks = new KToolBar(itemView(), false, false);
-    for (int i = 0; i < MAX_SOCIAL_LINKS; ++i) {
-        QAction *action = new QAction(QIcon::fromTheme(QStringLiteral("applications-internet")), QString(), socialLinks);
-        action->setVisible(false);
-        socialLinks->addAction(action);
-    }
-
-    list.append(socialLinks);
-
     connect(mainLinks, &QToolBar::actionTriggered, this, &KAboutApplicationPersonListDelegate::launchUrl);
-    connect(socialLinks, &QToolBar::actionTriggered, this, &KAboutApplicationPersonListDelegate::launchUrl);
 
     return list;
 }
@@ -128,55 +122,14 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
     }
     mainLinks->resize(QSize(mainLinks->sizeHint().width(), MAIN_LINKS_HEIGHT));
     mainLinks->move(wRect.left(), wRect.top() + label->height());
-
-    // Finally, the social links...
-    KToolBar *socialLinks = qobject_cast<KToolBar *>(widgets.at(SocialLinks));
-    socialLinks->setIconSize(QSize(16, 16));
-    socialLinks->setContentsMargins(0, 0, 0, 0);
-    socialLinks->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-
-    int currentSocialLinkAction = 0;
-    const auto &links = profile.ocsLinks();
-    for (const KAboutApplicationPersonProfileOcsLink &link : links) {
-        if (!profile.homepage().isEmpty() && profile.homepage() == link.url()) {
-            continue; // We skip it if it's the same as the homepage from KAboutData
-        }
-
-        action = socialLinks->actions().at(currentSocialLinkAction);
-        if (link.type() == KAboutApplicationPersonProfileOcsLink::Other) {
-            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's page\n%1", link.url().toString()));
-        } else if (link.type() == KAboutApplicationPersonProfileOcsLink::Blog) {
-            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's blog\n%1", link.url().toString()));
-        } else if (link.type() == KAboutApplicationPersonProfileOcsLink::Homepage) {
-            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's homepage\n%1", link.url().toString()));
-        } else {
-            action->setToolTip(i18nc("@info:tooltip", "Visit contributor's profile on %1\n%2", link.prettyType(), link.url().toString()));
-        }
-        action->setIcon(link.icon());
-        action->setData(link.url().toString());
-        action->setVisible(true);
-
-        ++currentSocialLinkAction;
-        if (currentSocialLinkAction > MAX_SOCIAL_LINKS - 1) {
-            break;
-        }
-    }
-
-    socialLinks->resize(QSize(socialLinks->sizeHint().width(), SOCIAL_LINKS_HEIGHT));
-    socialLinks->move(wRect.left() + mainLinks->width(), //
-                      wRect.top() + label->height() + (MAIN_LINKS_HEIGHT - SOCIAL_LINKS_HEIGHT) / 2);
-
     itemView()->reset();
 }
 
 QSize KAboutApplicationPersonListDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    KAboutApplicationPersonProfile profile = index.data().value<KAboutApplicationPersonProfile>();
-    bool hasAvatar = !profile.avatar().isNull();
-
     int margin = option.fontMetrics.height() / 2;
 
-    int height = hasAvatar ? qMax(widgetsRect(option, index).height(), AVATAR_HEIGHT + 2 * margin) : widgetsRect(option, index).height();
+    int height = qMax(widgetsRect(option, index).height(), AVATAR_HEIGHT + 2 * margin);
 
     QSize metrics(option.fontMetrics.height() * 7, height);
     return metrics;
@@ -191,24 +144,26 @@ void KAboutApplicationPersonListDelegate::paint(QPainter *painter, const QStyleO
 
     const KAboutApplicationPersonModel *model = qobject_cast<const KAboutApplicationPersonModel *>(index.model());
 
-    if (model->hasAvatarPixmaps()) {
+    if (model->showRemoteAvatars() && model->hasAvatarPixmaps()) {
         int height = qMax(widgetsRect(option, index).height(), AVATAR_HEIGHT + 2 * margin);
         QPoint point(option.rect.left() + 2 * margin, //
                      option.rect.top() + ((height - AVATAR_HEIGHT) / 2));
 
         KAboutApplicationPersonProfile profile = index.data().value<KAboutApplicationPersonProfile>();
 
-        if (!profile.avatar().isNull()) {
-            const QPixmap &pixmap = profile.avatar();
-
-            point.setX((AVATAR_WIDTH - pixmap.width()) / 2 + 5);
-            point.setY(option.rect.top() + ((height - pixmap.height()) / 2));
-            painter->drawPixmap(point, pixmap);
-
-            QPoint framePoint(point.x() - 5, point.y() - 5);
-            QPixmap framePixmap(QStringLiteral(":/kxmlgui5/thumb_frame.png"));
-            painter->drawPixmap(framePoint, framePixmap.scaled(pixmap.width() + 10, pixmap.height() + 10));
+        QPixmap fallback;
+        if (profile.avatar().isNull()) {
+            fallback = avatarFallback();
+            fallback.setDevicePixelRatio(itemView()->devicePixelRatio());
         }
+        const QPixmap &pixmap = profile.avatar().isNull() ? fallback : profile.avatar();
+        point.setX((AVATAR_WIDTH - pixmap.width()) / 2 + 5);
+        point.setY(option.rect.top() + ((height - pixmap.height()) / 2));
+        painter->drawPixmap(point, pixmap);
+
+        QPoint framePoint(point.x() - 5, point.y() - 5);
+        QPixmap framePixmap(QStringLiteral(":/kxmlgui5/thumb_frame.png"));
+        painter->drawPixmap(framePoint, framePixmap.scaled(pixmap.width() + 10, pixmap.height() + 10));
     }
 }
 
@@ -248,7 +203,7 @@ QRect KAboutApplicationPersonListDelegate::widgetsRect(const QStyleOptionViewIte
     int margin = option.fontMetrics.height() / 2;
 
     QRect widgetsRect;
-    if (qobject_cast<const KAboutApplicationPersonModel *>(index.model())->hasAvatarPixmaps()) {
+    if (qobject_cast<const KAboutApplicationPersonModel *>(index.model())->showRemoteAvatars()) {
         widgetsRect = QRect(option.rect.left() + AVATAR_WIDTH + 3 * margin, //
                             margin / 2, //
                             option.rect.width() - AVATAR_WIDTH - 4 * margin, //

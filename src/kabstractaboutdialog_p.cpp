@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <KTitleWidget>
 // Qt
+#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QLabel>
@@ -91,8 +92,35 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
     return aboutWidget;
 }
 
+static QWidget *createAvatarCheck(QWidget *parent, KDEPrivate::KAboutApplicationPersonModel *model)
+{
+    // Add in a checkbox to allow people to switch the avatar fetch
+    // (off-by-default to avoid unwarned online activity)
+    QCheckBox *avatarsCheck = new QCheckBox(parent);
+    avatarsCheck->setText(i18n("Show author photos"));
+    avatarsCheck->setToolTip(i18n("Enabling this will fetch images from an online location"));
+    avatarsCheck->setVisible(model->hasAnyAvatars());
+    QObject::connect(model, &KDEPrivate::KAboutApplicationPersonModel::hasAnyAvatarsChanged, parent, [avatarsCheck, model]() {
+        avatarsCheck->setVisible(model->hasAnyAvatars());
+    });
+    QObject::connect(avatarsCheck, &QCheckBox::stateChanged, parent, [model](int state) {
+        switch (state) {
+        case Qt::Checked:
+        case Qt::PartiallyChecked:
+            // tell model to use avatars
+            model->setShowRemoteAvatars(true);
+            break;
+        case Qt::Unchecked:
+        default:
+            // tell model not to use avatars
+            model->setShowRemoteAvatars(false);
+            break;
+        }
+    });
+    return avatarsCheck;
+}
+
 QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPerson> &authors,
-                                                          const QString &ocsProviderUrl,
                                                           bool customAuthorTextEnabled,
                                                           const QString &customAuthorRichText,
                                                           const QString &bugAddress,
@@ -127,7 +155,7 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
         authorLayout->addWidget(bugsLabel);
     }
 
-    KDEPrivate::KAboutApplicationPersonModel *authorModel = new KDEPrivate::KAboutApplicationPersonModel(authors, ocsProviderUrl, authorWidget);
+    KDEPrivate::KAboutApplicationPersonModel *authorModel = new KDEPrivate::KAboutApplicationPersonModel(authors, authorWidget);
 
     KDEPrivate::KAboutApplicationPersonListView *authorView = new KDEPrivate::KAboutApplicationPersonListView(authorWidget);
 
@@ -136,18 +164,19 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
     authorView->setModel(authorModel);
     authorView->setItemDelegate(authorDelegate);
     authorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    authorLayout->addWidget(createAvatarCheck(parent, authorModel));
     authorLayout->addWidget(authorView);
 
     return authorWidget;
 }
 
-QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerson> &credits, const QString &ocsProviderUrl, QWidget *parent)
+QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerson> &credits, QWidget *parent)
 {
     QWidget *creditWidget = new QWidget(parent);
     QVBoxLayout *creditLayout = new QVBoxLayout(creditWidget);
     creditLayout->setContentsMargins(0, 0, 0, 0);
 
-    KDEPrivate::KAboutApplicationPersonModel *creditModel = new KDEPrivate::KAboutApplicationPersonModel(credits, ocsProviderUrl, creditWidget);
+    KDEPrivate::KAboutApplicationPersonModel *creditModel = new KDEPrivate::KAboutApplicationPersonModel(credits, creditWidget);
 
     KDEPrivate::KAboutApplicationPersonListView *creditView = new KDEPrivate::KAboutApplicationPersonListView(creditWidget);
 
@@ -156,18 +185,19 @@ QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerso
     creditView->setModel(creditModel);
     creditView->setItemDelegate(creditDelegate);
     creditView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    creditLayout->addWidget(createAvatarCheck(parent, creditModel));
     creditLayout->addWidget(creditView);
 
     return creditWidget;
 }
 
-QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAboutPerson> &translators, const QString &ocsProviderUrl, QWidget *parent)
+QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAboutPerson> &translators, QWidget *parent)
 {
     QWidget *translatorWidget = new QWidget(parent);
     QVBoxLayout *translatorLayout = new QVBoxLayout(translatorWidget);
     translatorLayout->setContentsMargins(0, 0, 0, 0);
 
-    KDEPrivate::KAboutApplicationPersonModel *translatorModel = new KDEPrivate::KAboutApplicationPersonModel(translators, ocsProviderUrl, translatorWidget);
+    KDEPrivate::KAboutApplicationPersonModel *translatorModel = new KDEPrivate::KAboutApplicationPersonModel(translators, translatorWidget);
 
     KDEPrivate::KAboutApplicationPersonListView *translatorView = new KDEPrivate::KAboutApplicationPersonListView(translatorWidget);
 
@@ -176,6 +206,7 @@ QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAbout
     translatorView->setModel(translatorModel);
     translatorView->setItemDelegate(translatorDelegate);
     translatorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    translatorLayout->addWidget(createAvatarCheck(parent, translatorModel));
     translatorLayout->addWidget(translatorView);
 
     QString aboutTranslationTeam = KAboutData::aboutTranslationTeam();

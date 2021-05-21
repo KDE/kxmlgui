@@ -34,13 +34,12 @@ public:
                                const QList<KAboutLicense> &licenses,
                                QWidget *parent);
     QWidget *createAuthorsWidget(const QList<KAboutPerson> &authors,
-                                 const QString &ocsProviderUrl,
                                  bool customAuthorTextEnabled,
                                  const QString &customAuthorRichText,
                                  const QString &bugAddress,
                                  QWidget *parent);
-    QWidget *createCreditWidget(const QList<KAboutPerson> &credits, const QString &ocsProviderUrl, QWidget *parent);
-    QWidget *createTranslatorsWidget(const QList<KAboutPerson> &translators, const QString &ocsProviderUrl, QWidget *parent);
+    QWidget *createCreditWidget(const QList<KAboutPerson> &credits, QWidget *parent);
+    QWidget *createTranslatorsWidget(const QList<KAboutPerson> &translators, QWidget *parent);
     void createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog);
 };
 

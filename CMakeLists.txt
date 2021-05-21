@@ -55,13 +55,6 @@ find_package(KF5GuiAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5Attica ${KF_DEP_VERSION})
-set_package_properties(KF5Attica PROPERTIES DESCRIPTION "A Qt library that implements the Open Collaboration Services API"
-                       PURPOSE "Support for Get Hot New Stuff in KXMLGUI"
-                       URL "https://commits.kde.org/attica"
-                       TYPE OPTIONAL
-                      )
-set (HAVE_ATTICA ${KF5Attica_FOUND})
 
 if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
     find_package(KF5GlobalAccel ${KF_DEP_VERSION} REQUIRED)

@@ -86,7 +86,7 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
     const int authorCount = pluginMetaData.authors().count();
     if (authorCount) {
         // TODO: add bug report address to plugin metadata
-        QWidget *authorWidget = createAuthorsWidget(pluginMetaData.authors(), QString(), false, QString(), QString(), q);
+        QWidget *authorWidget = createAuthorsWidget(pluginMetaData.authors(), false, QString(), QString(), q);
 
         const QString authorPageTitle = i18ncp("@title:tab", "Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);
@@ -94,13 +94,13 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
 
     // And credits page...
     if (!pluginMetaData.otherContributors().isEmpty()) {
-        QWidget *creditWidget = createCreditWidget(pluginMetaData.otherContributors(), QString(), q);
+        QWidget *creditWidget = createCreditWidget(pluginMetaData.otherContributors(), q);
         tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
     // Finally, the optional translators page...
     if (!(opt & KAboutPluginDialog::HideTranslators) && !pluginMetaData.translators().isEmpty()) {
-        QWidget *translatorWidget = createTranslatorsWidget(pluginMetaData.translators(), QString(), q);
+        QWidget *translatorWidget = createTranslatorsWidget(pluginMetaData.translators(), q);
         tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));
     }
 

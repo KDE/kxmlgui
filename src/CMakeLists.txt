@@ -3,9 +3,6 @@ add_subdirectory(ksendbugmail)
 add_library(KF5XmlGui SHARED)
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
-if (HAVE_ATTICA)
-    target_link_libraries(KF5XmlGui PRIVATE KF5::Attica)
-endif ()
 if (HAVE_GLOBALACCEL)
     target_link_libraries(KF5XmlGui PRIVATE KF5::GlobalAccel)
 endif ()
@@ -14,11 +11,6 @@ if(WIN32)
 endif()
 
 configure_file(config-xmlgui.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xmlgui.h )
-
-configure_file(
-    ${CMAKE_CURRENT_SOURCE_DIR}/kaboutapplicationconfigattica_p.h.cmake
-    ${CMAKE_CURRENT_BINARY_DIR}/kaboutapplicationconfigattica_p.h
-)
 
 target_sources(KF5XmlGui PRIVATE
   kaboutapplicationdialog.cpp

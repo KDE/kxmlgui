@@ -8,13 +8,6 @@
 #ifndef KABOUT_APPLICATION_PERSON_MODEL_H
 #define KABOUT_APPLICATION_PERSON_MODEL_H
 
-#include "kaboutapplicationconfigattica_p.h"
-
-#if HAVE_ATTICA
-#include <Attica/Provider>
-#include <Attica/ProviderManager>
-#endif // HAVE_ATTICA
-
 #include <KAboutData>
 
 #include <QAbstractListModel>
@@ -23,22 +16,24 @@
 #include <QPixmap>
 #include <QUrl>
 
-// Forward declarations to make Attica-related members work
-namespace Attica
-{
-class BaseJob;
-}
-
 namespace KDEPrivate
 {
+enum {
+    AVATAR_HEIGHT = 50,
+    AVATAR_WIDTH = 50,
+    MAIN_LINKS_HEIGHT = 32,
+    SOCIAL_LINKS_HEIGHT = 26,
+    MAX_SOCIAL_LINKS = 9,
+};
 class KAboutApplicationPersonProfile;
-class KAboutApplicationPersonIconsJob;
 
 class KAboutApplicationPersonModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(bool hasAnyAvatars READ hasAnyAvatars NOTIFY hasAnyAvatarsChanged)
+    Q_PROPERTY(bool showRemoteAvatars READ showRemoteAvatars WRITE setShowRemoteAvatars NOTIFY showRemoteAvatarsChanged)
 public:
-    explicit KAboutApplicationPersonModel(const QList<KAboutPerson> &personList, const QString &providerUrl = QString(), QObject *parent = nullptr);
+    explicit KAboutApplicationPersonModel(const QList<KAboutPerson> &personList, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override
@@ -54,110 +49,43 @@ public:
     {
         return m_hasAvatarPixmaps;
     }
+    bool hasAnyAvatars() const
+    {
+        return m_hasAnyAvatars;
+    }
+    Q_SIGNAL void hasAnyAvatarsChanged();
 
     const QString &providerName() const
     {
         return m_providerName;
     }
 
+    bool showRemoteAvatars() const
+    {
+        return m_showRemoteAvatars;
+    }
+    void setShowRemoteAvatars(bool value)
+    {
+        if (m_showRemoteAvatars != value) {
+            m_showRemoteAvatars = value;
+            Q_EMIT showRemoteAvatarsChanged();
+        }
+    }
+    Q_SIGNAL void showRemoteAvatarsChanged();
 private Q_SLOTS:
-    void onProvidersLoaded();
-    void onPersonJobFinished(Attica::BaseJob *job);
-    void onAvatarJobFinished(QNetworkReply *reply);
-    void onOcsLinksJobFinished(KAboutApplicationPersonIconsJob *job);
+    void onAvatarJobFinished();
 
 private:
-    void fetchOcsLinkIcons(int personProfileListIndex);
-
     const QList<KAboutPerson> m_personList;
     QList<KAboutApplicationPersonProfile> m_profileList;
 
-    QMap<int, QString> m_ocsLinkIconUrls;
-    QMap<int, QPixmap> m_ocsLinkIcons;
-
+    bool m_hasAnyAvatars = false;
     bool m_hasAvatarPixmaps = false;
+    bool m_showRemoteAvatars = false;
 
-#if HAVE_ATTICA
-    Attica::ProviderManager m_providerManager;
-    Attica::Provider m_provider;
-#endif // HAVE_ATTICA
-    QString m_providerUrl;
     QString m_providerName;
 
-    friend class KAboutApplicationPersonIconsJob;
-};
-
-// This list must be in sync with the one in KAboutApplicationPersonProfileOcsLink::prettyType()
-static const char s_personOcsLinkAtticaTypes[][16] = {{"other"},
-                                                      {"Blog"},
-                                                      {"delicious"},
-                                                      {"Digg"},
-                                                      {"Facebook"},
-                                                      {"Homepage"},
-                                                      {"identi.ca"},
-                                                      {"libre.fm"},
-                                                      {"LinkedIn"},
-                                                      {"MySpace"},
-                                                      {"Reddit"},
-                                                      {"StackOverflow"},
-                                                      {"Twitter"},
-                                                      {"Wikipedia"},
-                                                      {"Xing"},
-                                                      {"YouTube"}};
-
-class KAboutApplicationPersonProfileOcsLink
-{
-public:
-    enum Type {
-        Other = 0,
-        Blog,
-        Delicious,
-        Digg,
-        Facebook,
-        Homepage,
-        Identica,
-        LibreFm,
-        LinkedIn,
-        MySpace,
-        Reddit,
-        StackOverflow,
-        Twitter,
-        Wikipedia,
-        Xing,
-        YouTube,
-        NUM_ATTICA_LINK_TYPES,
-    };
-
-    static Type typeFromAttica(const QString &atticaType);
-
-    KAboutApplicationPersonProfileOcsLink(Type type, const QUrl &url)
-        : m_type(type)
-        , m_url(url)
-    {
-    }
-
-    Type type() const
-    {
-        return m_type;
-    }
-    QString prettyType() const;
-    void setIcon(const QIcon &icon)
-    {
-        m_icon = icon;
-    }
-    const QIcon &icon() const
-    {
-        return m_icon;
-    }
-    const QUrl &url() const
-    {
-        return m_url;
-    }
-
-private:
-    Type m_type;
-    QUrl m_url;
-    QIcon m_icon;
+    QList<QNetworkReply *> m_ongoingAvatarFetches;
 };
 
 class KAboutApplicationPersonProfile
@@ -195,14 +123,6 @@ public:
     {
         m_ocsProfileUrl = url;
     }
-    void addAdditionalString(const QString &string)
-    {
-        m_additionalStrings << string;
-    }
-    void setOcsLinks(const QList<KAboutApplicationPersonProfileOcsLink> &ocsLinks)
-    {
-        m_ocsLinks = ocsLinks;
-    }
 
     const QString &name() const
     {
@@ -236,14 +156,6 @@ public:
     {
         return m_location;
     }
-    const QStringList &additionalStrings() const
-    {
-        return m_additionalStrings;
-    }
-    const QList<KAboutApplicationPersonProfileOcsLink> &ocsLinks() const
-    {
-        return m_ocsLinks;
-    }
 
 private:
     QString m_name;
@@ -254,42 +166,6 @@ private:
     QUrl m_homepage;
     QPixmap m_avatar;
     QString m_location;
-    QStringList m_additionalStrings;
-    QList<KAboutApplicationPersonProfileOcsLink> m_ocsLinks;
-};
-
-class KAboutApplicationPersonIconsJob : public QObject
-{
-    Q_OBJECT
-public:
-    KAboutApplicationPersonIconsJob(KAboutApplicationPersonModel *model, int personProfileListIndex);
-
-    void start();
-
-    int personProfileListIndex() const
-    {
-        return m_personProfileListIndex;
-    }
-
-    const QList<KAboutApplicationPersonProfileOcsLink> &ocsLinks() const
-    {
-        return m_ocsLinks;
-    }
-
-Q_SIGNALS:
-    void finished(KAboutApplicationPersonIconsJob *job);
-
-private Q_SLOTS:
-    void onJobFinished(QNetworkReply *reply);
-
-private:
-    void getIcons(int i);
-
-    int m_personProfileListIndex;
-    KAboutApplicationPersonModel *m_model;
-    QList<KAboutApplicationPersonProfileOcsLink> m_ocsLinks;
-
-    QNetworkAccessManager *m_manager;
 };
 
 } // namespace KDEPrivate

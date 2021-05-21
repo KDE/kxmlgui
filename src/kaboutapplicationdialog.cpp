@@ -115,7 +115,6 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
     const int authorCount = aboutData.authors().count();
     if (authorCount) {
         QWidget *authorWidget = createAuthorsWidget(aboutData.authors(),
-                                                    aboutData.ocsProviderUrl(),
                                                     aboutData.customAuthorTextEnabled(),
                                                     aboutData.customAuthorRichText(),
                                                     aboutData.bugAddress(),
@@ -127,13 +126,13 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
 
     // And credits page...
     if (!aboutData.credits().isEmpty()) {
-        QWidget *creditWidget = createCreditWidget(aboutData.credits(), aboutData.ocsProviderUrl(), q);
+        QWidget *creditWidget = createCreditWidget(aboutData.credits(), q);
         tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
     // Finally, the optional translators page...
     if (!(opt & KAboutApplicationDialog::HideTranslators) && !aboutData.translators().isEmpty()) {
-        QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), aboutData.ocsProviderUrl(), q);
+        QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), q);
 
         tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));
     }
