@@ -286,6 +286,20 @@ public:
     // reimplemented for internal reasons
     void applyMainWindowSettings(const KConfigGroup &config) override;
 
+    /**
+     * Enable a hud style menu which allows listing and executing actions
+     *
+     * The menu is launchable with the shortcut Alt+Ctrl+I
+     *
+     * @since 5.83
+     */
+    void setCommandBarEnabled(bool enable);
+
+    /**
+     * @since 5.83
+     */
+    bool isCommandBarEnabled() const;
+
 public Q_SLOTS:
     /**
      * Show a standard configure toolbar dialog.

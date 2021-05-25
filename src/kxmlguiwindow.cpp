@@ -37,6 +37,7 @@
 #include <QWidget>
 
 #include <KAboutData>
+#include <KCommandBar>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -46,6 +47,61 @@
 
 #include <cctype>
 #include <cstdlib>
+
+/**
+ * A helper function that takes a list of KActionCollection* and converts it
+ * to KCommandBar::ActionGroup
+ */
+static QVector<KCommandBar::ActionGroup> actionCollectionToActionGroup(const QList<KActionCollection *> &actionCollections)
+{
+    using ActionGroup = KCommandBar::ActionGroup;
+
+    QVector<ActionGroup> actionList;
+    actionList.reserve(actionCollections.size());
+
+    for (const auto collection : actionCollections) {
+        const QList<QAction *> collectionActions = collection->actions();
+        const QString componentName = collection->componentDisplayName();
+
+        ActionGroup ag;
+        ag.name = componentName;
+        ag.actions.reserve(collection->count());
+        for (const auto action : collectionActions) {
+            /**
+             * If this action is a menu, fetch all its child actions
+             * and skip the menu action itself
+             */
+            if (QMenu *menu = action->menu()) {
+                const QList<QAction *> menuActions = menu->actions();
+
+                ActionGroup menuActionGroup;
+                menuActionGroup.name = KLocalizedString::removeAcceleratorMarker(action->text());
+                menuActionGroup.actions.reserve(menuActions.size());
+                for (const auto mAct : menuActions) {
+                    if (mAct) {
+                        menuActionGroup.actions.append(mAct);
+                    }
+                }
+
+                /**
+                 * If there were no actions in the menu, we
+                 * add the menu to the list instead because it could
+                 * be that the actions are created on demand i.e., aboutToShow()
+                 */
+                if (!menuActions.isEmpty()) {
+                    actionList.append(menuActionGroup);
+                    continue;
+                }
+            }
+
+            if (action && !action->text().isEmpty()) {
+                ag.actions.append(action);
+            }
+        }
+        actionList.append(ag);
+    }
+    return actionList;
+}
 
 class KXmlGuiWindowPrivate : public KMainWindowPrivate
 {
@@ -57,6 +113,10 @@ public:
         // #105525
         letDirtySettings = !b;
     }
+
+    bool commandBarEnabled = true;
+    // Last executed actions in command bar
+    QVector<QString> lastExecutedActions;
 
     bool showHelpMenu : 1;
     QSize defaultSize;
@@ -79,6 +139,29 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
 #ifdef QT_DBUS_LIB
     new KMainWindowInterface(this);
 #endif
+
+    /**
+     * Set up KCommandBar launcher action
+     */
+    auto a = actionCollection()->addAction(QStringLiteral("open_kcommand_bar"), this, [this] {
+        /**
+         * Do nothing when command bar is disabled
+         */
+        if (!isCommandBarEnabled()) {
+            return;
+        }
+
+        auto ac = actionCollection();
+        if (!ac) {
+            return;
+        }
+
+        KCommandBar kc(this);
+        kc.setActions(actionCollectionToActionGroup(ac->allCollections()));
+        kc.exec();
+    });
+    a->setText(i18n("Open Command Bar"));
+    actionCollection()->setDefaultShortcut(a, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_I));
 }
 
 QAction *KXmlGuiWindow::toolBarMenuAction()
@@ -443,6 +526,28 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
             }
         }
     }
+}
+
+void KXmlGuiWindow::setCommandBarEnabled(bool enable)
+{
+    /**
+     * Unset the shortcut
+     */
+    auto cmdBarAction = actionCollection()->action(QStringLiteral("open_kcommand_bar"));
+    if (enable) {
+        actionCollection()->setDefaultShortcut(cmdBarAction, Qt::CTRL | Qt::ALT | Qt::Key_I);
+    } else {
+        actionCollection()->setDefaultShortcut(cmdBarAction, {});
+    }
+
+    Q_D(KXmlGuiWindow);
+    d->commandBarEnabled = enable;
+}
+
+bool KXmlGuiWindow::isCommandBarEnabled() const
+{
+    Q_D(const KXmlGuiWindow);
+    return d->commandBarEnabled;
 }
 
 #include "moc_kxmlguiwindow.cpp"
