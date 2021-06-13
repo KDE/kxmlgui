@@ -58,12 +58,12 @@ class KToolTipHelperPrivate;
  * return KToolTipHelper::instance()->eventFilter(watched, event);
  * \endcode
  *
- * KMainWindow will have this EventFilter installed by default from framework version TODO onward
+ * KMainWindow will have this EventFilter installed by default from framework version 5.84 onward
  * so if you want to opt out of that, remove the EventFilter in the constructor of your MainWindow
  * class inheriting from KMainWindow.
  *
  * @see QToolTip
- * @since TODO
+ * @since 5.84
  */
 class KXMLGUI_EXPORT KToolTipHelper : public QObject
 {
