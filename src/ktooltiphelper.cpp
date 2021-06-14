@@ -23,6 +23,7 @@
 #include <QToolTip>
 #include <QWhatsThis>
 #include <QWhatsThisClickedEvent>
+#include <QWindow>
 
 KToolTipHelper *KToolTipHelper::instance()
 {
@@ -110,7 +111,20 @@ bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
     ) {
         return false;
     }
+
     QToolTip::hideText();
+    // We need to explicitly hide the tooltip window before showing the whatsthis because hideText()
+    // runs a timer before hiding. On Wayland when hiding a popup Qt will close all popups opened after
+    // it, including the whatsthis popup here. Unfortunately we can't access the tooltip window/widget
+    // directly so we search for it below.
+    Q_ASSERT(QApplication::focusWindow());
+    const auto windows = QGuiApplication::allWindows();
+    auto it = std::find_if(windows.begin(), windows.end(), [](const QWindow *window) {
+        return window->type() == Qt::ToolTip && QGuiApplication::focusWindow()->isAncestorOf(window);
+    });
+    if (it != windows.end()) {
+        (*it)->setVisible(false);
+    }
 
     if (QMenu *menu = qobject_cast<QMenu *>(m_widget)) {
         if (m_action) {
