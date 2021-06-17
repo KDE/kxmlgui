@@ -14,7 +14,6 @@
 #include "kshortcutseditor.h"
 
 #include <KExtendableItemDelegate>
-#include <KLocalizedString>
 
 #include <QCollator>
 #include <QGroupBox>

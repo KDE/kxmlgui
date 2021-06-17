@@ -28,7 +28,6 @@
 #include <QStandardPaths>
 #include <QToolButton>
 
-#include <KConfig>
 #include <KIconDialog>
 #include <KListWidgetSearchLine>
 #include <KLocalizedString>

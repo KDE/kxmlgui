@@ -8,7 +8,6 @@
 #include "kbugreport.h"
 
 #include <QCloseEvent>
-#include <QComboBox>
 #include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QFile>
@@ -28,7 +27,6 @@
 
 #include <KAboutData>
 #include <KConfig>
-#include <KConfigGroup>
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>

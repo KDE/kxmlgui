@@ -11,7 +11,6 @@
 #include "kxmlguibuilder.h"
 #include "kxmlguiclient.h"
 
-#include <QVector>
 #include <QWidget>
 
 #include "debug.h"

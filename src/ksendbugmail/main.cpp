@@ -15,7 +15,6 @@
 #include <KEMailSettings>
 #include <KLocalizedString>
 
-#include <KConfig>
 #include <qcommandlineoption.h>
 #include <qcommandlineparser.h>
 

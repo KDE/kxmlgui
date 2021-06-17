@@ -22,7 +22,6 @@
 
 #include <KAuthorized>
 
-#include <KLocalizedString>
 
 #include "kmainwindow.h"
 #include "ktoolbar.h"

@@ -19,8 +19,6 @@
 #include <QApplication>
 #include <QHBoxLayout>
 #include <QHash>
-#include <QKeyEvent>
-#include <QTimer>
 #include <QToolButton>
 
 #include <KLocalizedString>

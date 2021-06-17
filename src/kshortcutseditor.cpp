@@ -39,7 +39,6 @@
 #endif
 #include "kactioncategory.h"
 #include "kactioncollection.h"
-#include <KMessageBox>
 #include <KTreeWidgetSearchLine>
 
 //---------------------------------------------------------------------

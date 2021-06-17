@@ -46,7 +46,6 @@
 #include <KConfigGui>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KToggleAction>
 #include <KWindowConfig>
 
 //#include <cctype>
