@@ -227,7 +227,7 @@ QSize KShortcutsDialog::sizeHint() const
     return QSize(600, 480);
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 83)
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 84)
 // static
 int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent, bool saveSettings)
 {

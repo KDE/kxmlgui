@@ -169,7 +169,7 @@ public:
     void refreshActionProperties();
 
 public Q_SLOTS:
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 83)
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 84)
     /**
      * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
      * and which can be used to change the shortcuts associated with each action.
@@ -188,7 +188,7 @@ public Q_SLOTS:
      * };
      * KStandardAction::keyBindings(guiFactory(), shortcutsSlot, actionCollection());
      *
-     * // Alternatively, since 5.83, you can use:
+     * // Alternatively, since 5.84, you can use:
      * KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
      * @endcode
      *
@@ -197,9 +197,9 @@ public Q_SLOTS:
      * @param bSaveSettings if @c true, the settings will also be saved back to
      * the @c *ui.rc file which they were intially read from; defaults to @c true
      *
-     * @deprecated since 5.83, use @c KXMLGUIFactory::showConfigureShortcutsDialog() instead.
+     * @deprecated since 5.84, use @c KXMLGUIFactory::showConfigureShortcutsDialog() instead.
      */
-    KXMLGUI_DEPRECATED_VERSION(5, 83, "Use KXMLGUIFactory::showConfigureShortcutsDialog() instead.")
+    KXMLGUI_DEPRECATED_VERSION(5, 84, "Use KXMLGUIFactory::showConfigureShortcutsDialog() instead.")
     int configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true);
 #endif
 
@@ -221,7 +221,7 @@ public Q_SLOTS:
      * By default the changes will be saved back to the @c *ui.rc file
      * which they were intially read from.
      *
-     * @since 5.83
+     * @since 5.84
      */
     void showConfigureShortcutsDialog();
 

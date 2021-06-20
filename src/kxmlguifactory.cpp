@@ -700,7 +700,7 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLG
     }
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 83)
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 84)
 int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
 {
     auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions,

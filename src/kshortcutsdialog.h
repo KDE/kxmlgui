@@ -36,7 +36,7 @@
  * @code
  * KShortcutsDialog::configure(actionCollection(), KShortcutsEditor::LetterShortcutsAllowed, parent);
  *
- * // Alternatively, since 5.83, you can use:
+ * // Alternatively, since 5.84, you can use:
  * KShortcutsDialog::showDialog(actionCollection(),
  *                              KShortcutsEditor::LetterShortcutsAllowed,
  *                              false // dialog non-modal,
@@ -44,7 +44,7 @@
  * @endcode
  *
  * By default this dialog is modal (since 4.3). If you don't want that, call @c setModal(false)
- * and then the non-static configure() method to show the dialog; alternatively, since 5.83,
+ * and then the non-static configure() method to show the dialog; alternatively, since 5.84,
  * you can use the static showDialog() method (see the example above), which lets you pass a
  * boolean arg to control the modality of the dialog.
  * If you want to run some extra code when the dialog is closed, connect to the signals
@@ -126,7 +126,7 @@ public:
     /** @see QWidget::sizeHint() */
     QSize sizeHint() const override;
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 83)
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 84)
     /**
      * Pops up a modal dialog for configuring key settings. The new
      * shortcut settings will become active if the user presses OK.
@@ -140,9 +140,9 @@ public:
      *
      * @return Accept if the dialog was closed with OK, Reject otherwise.
      *
-     * @deprecated since 5.83, use KShortcutsDialog::showDialog() instead.
+     * @deprecated since 5.84, use KShortcutsDialog::showDialog() instead.
      */
-    KXMLGUI_DEPRECATED_VERSION(5, 83, "Use KShortcutsDialog::showDialog() instead, see API documentation for code examples.")
+    KXMLGUI_DEPRECATED_VERSION(5, 84, "Use KShortcutsDialog::showDialog() instead, see API documentation for code examples.")
     static int configure(KActionCollection *collection,
                          KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
                          QWidget *parent = nullptr,
@@ -173,7 +173,7 @@ public:
      * @param parent the parent widget of the dialog, if not @c nullptr it will be used
      * by the window manager to place the dialog relative to it
      *
-     * @since 5.83
+     * @since 5.84
      */
     static void showDialog(KActionCollection *collection,
                            KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
