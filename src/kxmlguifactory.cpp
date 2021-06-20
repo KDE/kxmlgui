@@ -731,7 +731,7 @@ void KXMLGUIFactory::showConfigureShortcutsDialog()
     }
 
     connect(dlg, &KShortcutsDialog::saved, this, &KXMLGUIFactory::shortcutsSaved);
-    dlg->show();
+    dlg->configure(true /*save settings on accept*/);
 }
 
 // Find or create
