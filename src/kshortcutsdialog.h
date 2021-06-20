@@ -68,7 +68,10 @@
  * dlg->addCollection(myOtherActions);
  *
  * connect(&dlg, &KShortcutsDialog::saved, this, &ClassFoo::doExtraStuff);
- * dlg->show();
+ *
+ * // Called with "true" so that the changes are saved if the dialog is accepted,
+ * // see the configure(bool) method for more details
+ * dlg->configure(true);
  * @endcode
  *
  * @image html kshortcutsdialog.png "KShortcutsDialog"
@@ -119,6 +122,9 @@ public:
     /**
      * Run the dialog and call writeSettings() on the action collections
      * that were added if @p saveSettings is true.
+     *
+     * If the dialog is modal this method will use @c QDialog::exec() to open the dialog,
+     * otherwise it will use @c QDialog::show().
      */
     // TODO KF6 remove this method, see configure() static method for more details
     bool configure(bool saveSettings = true);
