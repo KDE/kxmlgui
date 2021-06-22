@@ -38,6 +38,15 @@
 
 #include <cstdio>
 
+static bool actionHasGlobalShortcut(const QAction *action)
+{
+#if HAVE_GLOBALACCEL
+    return KGlobalAccel::self()->hasShortcut(action);
+#else
+    return false;
+#endif
+}
+
 class KActionCollectionPrivate
 {
 public:
@@ -54,11 +63,7 @@ public:
 
     void setComponentForAction(QAction *action)
     {
-#if HAVE_GLOBALACCEL
-        bool hasGlobalShortcut = KGlobalAccel::self()->hasShortcut(action);
-#else
-        bool hasGlobalShortcut = false;
-#endif
+        const bool hasGlobalShortcut = actionHasGlobalShortcut(action);
         if (!hasGlobalShortcut) {
             action->setProperty("componentName", m_componentName);
             action->setProperty("componentDisplayName", m_componentDisplayName);
@@ -159,14 +164,15 @@ bool KActionCollection::isEmpty() const
 
 void KActionCollection::setComponentName(const QString &cName)
 {
-    if (count() > 0) {
-        // Its component name is part of an action's signature in the context of
-        // global shortcuts and the semantics of changing an existing action's
-        // signature are, as it seems, impossible to get right.
-        // As of now this only matters for global shortcuts. We could
-        // thus relax the requirement and only refuse to change the component data
-        // if we have actions with global shortcuts in this collection.
-        qCWarning(DEBUG_KXMLGUI) << "KActionCollection::setComponentName does not work on a KActionCollection containing actions!" << cName;
+    for (QAction *a : qAsConst(d->actions)) {
+        if (actionHasGlobalShortcut(a)) {
+            // Its component name is part of an action's signature in the context of
+            // global shortcuts and the semantics of changing an existing action's
+            // signature are, as it seems, impossible to get right.
+            qCWarning(DEBUG_KXMLGUI) << "KActionCollection::setComponentName does not work on a KActionCollection containing actions with global shortcuts!"
+                                     << cName;
+            break;
+        }
     }
 
     if (!cName.isEmpty()) {
