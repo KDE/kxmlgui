@@ -197,7 +197,11 @@ public Q_SLOTS:
      * @param bSaveSettings if @c true, the settings will also be saved back to
      * the @c *ui.rc file which they were intially read from; defaults to @c true
      *
-     * @deprecated since 5.84, use @c KXMLGUIFactory::showConfigureShortcutsDialog() instead.
+     * @deprecated since 5.84, use @ref KXMLGUIFactory::showConfigureShortcutsDialog() instead.
+     * If your code checked the return value of this method (e.g. to run some extra code if the
+     * dialog was accepted), you can port that code by connecting to the @c shortcutsSaved()
+     * signal before calling @c showConfigureShortcutsDialog() (see the latter's API docs for
+     * a code example).
      */
     KXMLGUI_DEPRECATED_VERSION(5, 84, "Use KXMLGUIFactory::showConfigureShortcutsDialog() instead.")
     int configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true);
@@ -207,7 +211,7 @@ public Q_SLOTS:
      * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
      * and which can be used to change the shortcuts associated with each action.
      *
-     * This slot can be connected directly to the action to configure shortcuts,
+     * This slot can be connected directly to the configure shortcuts action,
      * for example:
      * @code
      * KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
@@ -220,6 +224,14 @@ public Q_SLOTS:
      *
      * By default the changes will be saved back to the @c *ui.rc file
      * which they were intially read from.
+     *
+     * If you need to run some extra code if the dialog is accepted and the settings
+     * are saved, you can simply connect to the @ref KXMLGUIFactory::shortcutsSaved()
+     * signal before calling this method, for example:
+     * @code
+     * connect(guiFactory(), &KXMLGUIFactory::shortcutsSaved, this, &MyClass::slotShortcutSaved);
+     * guiFactory()->showConfigureShortcutsDialog();
+     * @endcode
      *
      * @since 5.84
      */
