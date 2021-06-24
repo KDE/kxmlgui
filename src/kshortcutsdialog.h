@@ -37,17 +37,13 @@
  * KShortcutsDialog::configure(actionCollection(), KShortcutsEditor::LetterShortcutsAllowed, parent);
  *
  * // Alternatively, since 5.84, you can use:
- * KShortcutsDialog::showDialog(actionCollection(),
- *                              KShortcutsEditor::LetterShortcutsAllowed,
- *                              false // dialog non-modal,
- *                              parent);
+ * KShortcutsDialog::showDialog(actionCollection(), KShortcutsEditor::LetterShortcutsAllowed, parent);
  * @endcode
  *
  * By default this dialog is modal (since 4.3). If you don't want that, call @c setModal(false)
- * and then the non-static configure() method to show the dialog; alternatively, since 5.84,
- * you can use the static showDialog() method (see the example above), which lets you pass a
- * boolean arg to control the modality of the dialog.
- * If you want to run some extra code when the dialog is closed, connect to the signals
+ * and then the non-static configure() method to show the dialog.
+ *
+ * If you need to run some extra code when the dialog is closed, connect to the signals
  * emitted by @c QDialog (accepted(), rejected(), finished() ...etc.). However, note
  * that if that extra code depends on the changed settings having already been saved,
  * connect to the @c saved() signal instead to be on the safe side (if you connect to
@@ -61,10 +57,8 @@
  * // You can set the Qt::WA_DeleteOnClose attribute, so that the dialog is
  * // automatically deleted after it's closed:
  * dlg->setAttribute(Qt::WA_DeleteOnClose);
- * // Make the dialog non-modal
- * dlg->setModal(false);
  *
- * // You can add other action collections after constructing the dialog:
+ * // Add an action collection:
  * dlg->addCollection(myOtherActions);
  *
  * connect(&dlg, &KShortcutsDialog::saved, this, &ClassFoo::doExtraStuff);
@@ -156,26 +150,22 @@ public:
 #endif
 
     /**
-     * Shows a dialog that can be used to configure the shortcuts associated
-     * with each action in @p collection. The new shortcut settings will be
-     * saved and applied if the dialog is accepted.
+     * This static method shows a modal dialog that can be used to configure
+     * the shortcuts associated with each action in @p collection. The new
+     * shortcut settings will be saved and applied if the dialog is accepted.
      *
-     * By default the @c Qt::WA_DeleteOnClose attribute is set on the dialog,
-     * so that it's deleted automatically when it's closed. The dialog is opened
-     * by using @c show().
+     * The dialog is opened by using @c QDialog::show(), and it will be deleted
+     * automatically when it's closed.
      *
      * Example:
      * @code
      * // Typical usage is with a KActionCollection:
-     * KShortcutsDialog::showDialog(actionCollection(), KShortcutsEditor::LetterShortcutsAllowed, false, parent);
+     * KShortcutsDialog::showDialog(actionCollection(), KShortcutsEditor::LetterShortcutsAllowed, parent);
      * @endcode
      *
      * @param collection the KActionCollection to configure
      * @param allowLetterShortcuts set to @c KShortcutsEditor::LetterShortcutsDisallowed
      * if unmodified alphanumeric keys ('A', '1', etc.) are not permissible shortcuts
-     * @param isModal this is used in the call to QDialog::setModal(), the default is @c false
-     * (so as to allow interaction with the parent application while the user is configuring
-     * the keyboard shortcuts)
      * @param parent the parent widget of the dialog, if not @c nullptr it will be used
      * by the window manager to place the dialog relative to it
      *
@@ -183,7 +173,6 @@ public:
      */
     static void showDialog(KActionCollection *collection,
                            KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
-                           bool isModal = false,
                            QWidget *parent = nullptr);
 
     /**

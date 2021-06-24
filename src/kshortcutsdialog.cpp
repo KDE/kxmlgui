@@ -137,7 +137,6 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     , d(new KShortcutsDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Keyboard Shortcuts"));
-    // TODO KF6 make this non-modal by default
     setModal(true);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -240,11 +239,10 @@ int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor:
 #endif
 
 // static
-void KShortcutsDialog::showDialog(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, bool isModal, QWidget *parent)
+void KShortcutsDialog::showDialog(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
 {
     auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
     dlg->setAttribute(Qt::WA_DeleteOnClose);
-    dlg->setModal(isModal);
 
     dlg->d->m_saveSettings = true; // Always save settings if the dialog is accepted
 
