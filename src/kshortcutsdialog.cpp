@@ -132,6 +132,11 @@ public:
     bool m_saveSettings = false;
 };
 
+KShortcutsDialog::KShortcutsDialog(QWidget *parent)
+    : KShortcutsDialog(KShortcutsEditor::AllActions, KShortcutsEditor::LetterShortcutsAllowed, parent)
+{
+}
+
 KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
     : QDialog(parent)
     , d(new KShortcutsDialogPrivate(this))

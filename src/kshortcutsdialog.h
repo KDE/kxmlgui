@@ -52,16 +52,19 @@
  *
  * Example:
  * @code
- * KShortcutsDialog *dlg = new KShortcutsDialog(myActions, KShortcutsEditor::LetterShortcutsAllowed, parent);
+ * // Create the dialog; alternatively you can use the other constructor if e.g.
+ * // you need to only show certain action types, or disallow single letter shortcuts
+ * KShortcutsDialog *dlg = new KShortcutsDialog(parent);
  *
- * // You can set the Qt::WA_DeleteOnClose attribute, so that the dialog is
- * // automatically deleted after it's closed:
+ * // Set the Qt::WA_DeleteOnClose attribute, so that the dialog is automatically
+ * // deleted after it's closed
  * dlg->setAttribute(Qt::WA_DeleteOnClose);
  *
- * // Add an action collection:
- * dlg->addCollection(myOtherActions);
+ * // Add an action collection (otherwise the dialog would be empty)
+ * dlg->addCollection(actionCollection());
  *
- * connect(&dlg, &KShortcutsDialog::saved, this, &ClassFoo::doExtraStuff);
+ * // Run some extra code after the settings are saved
+ * connect(dlg, &KShortcutsDialog::saved, this, &ClassFoo::doExtraStuff);
  *
  * // Called with "true" so that the changes are saved if the dialog is accepted,
  * // see the configure(bool) method for more details
@@ -93,6 +96,18 @@ public:
     explicit KShortcutsDialog(KShortcutsEditor::ActionTypes actionTypes = KShortcutsEditor::AllActions,
                               KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
                               QWidget *parent = nullptr);
+    /**
+     * Constructs a KShortcutsDialog as a child of @p parent, with the default settings
+     * (@ref KShortcutsEditor::AllActions and @ref KShortcutsEditor::LetterShortcutsAllowed).
+     *
+     * Typically a @ref KActionCollection is added by using @ref addCollection().
+     *
+     * @param parent the parent widget of the dialog, if not @c nullptr will be
+     * used by the window manager to place the dialog relative to it
+     *
+     * @since 5.85
+     */
+    explicit KShortcutsDialog(QWidget *parent = nullptr);
 
     /**
      * Destructor. Deletes all resources used by a KShortcutsDialog object.
@@ -106,7 +121,7 @@ public:
      * @param title the title associated with the collection (if null, the
      * KAboutData::progName() of the collection's componentData is used)
      */
-    void addCollection(KActionCollection *, const QString &title = QString());
+    void addCollection(KActionCollection *collection, const QString &title = {});
 
     /**
      * @return the list of action collections that are available for configuration in the dialog.
