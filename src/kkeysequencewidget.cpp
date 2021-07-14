@@ -172,7 +172,7 @@ bool KKeySequenceWidgetPrivate::promptStealLocalShortcut(const QList<QAction *> 
                                      action->shortcut().toString(QKeySequence::NativeText),
                                      KLocalizedString::removeAcceleratorMarker(action->text()));
     }
-    QString message = i18ncp("%1 is the number of ambigious shortcut clashes (hidden)",
+    QString message = i18ncp("%1 is the number of ambiguous shortcut clashes (hidden)",
                              "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
                              "Do you want to assign an empty shortcut to this action?\n"
                              "%3",

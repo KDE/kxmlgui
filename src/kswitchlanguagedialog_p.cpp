@@ -79,7 +79,7 @@ void initializeLanguages()
         // but unfortunately this is too late since the QCoreApplication constructor
         // already created a QLocale at this stage so we need to set the reset it
         // by triggering the creation and destruction of a QSystemLocale
-        // this is highly dependant on Qt internals, so may break, but oh well
+        // this is highly dependent on Qt internals, so may break, but oh well
         QSystemLocale *dummy = new QSystemLocale();
         delete dummy;
     }

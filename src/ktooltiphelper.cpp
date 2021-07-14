@@ -128,7 +128,7 @@ bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
 
     if (QMenu *menu = qobject_cast<QMenu *>(m_widget)) {
         if (m_action) {
-            // The widget displaying the whatsThis() text trys to avoid covering the QWidget
+            // The widget displaying the whatsThis() text tries to avoid covering the QWidget
             // given as the third parameter of QWhatsThis::showText(). Normally we would have
             // menu as the third parameter but because QMenus are quite big the text panel
             // oftentimes fails to find a nice position around it and will instead cover

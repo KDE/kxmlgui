@@ -206,7 +206,7 @@ public:
     void save();
 
     /**
-     * Remove and readd all KMXLGUIClients to update the GUI
+     * Remove and re-add all KMXLGUIClients to update the GUI
      */
     void rebuildKXMLGUIClients();
 

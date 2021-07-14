@@ -179,7 +179,7 @@ public Q_SLOTS:
      * @code
      * KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
      * @endcode
-     * Or if you want to use the pointer-to-member-function singal/slot syntax
+     * Or if you want to use the pointer-to-member-function signal/slot syntax
      * (which is generally preferred as it has compile-time type checking) you
      * can use:
      * @code
@@ -195,7 +195,7 @@ public Q_SLOTS:
      * @param bAllowLetterShortcuts Set to @c false if unmodified alphanumeric keys
      * ('A', '1', etc.) are not permissible shortcuts; defaults to @c true
      * @param bSaveSettings if @c true, the settings will also be saved back to
-     * the @c *ui.rc file which they were intially read from; defaults to @c true
+     * the @c *ui.rc file which they were initially read from; defaults to @c true
      *
      * @deprecated since 5.84, use @ref KXMLGUIFactory::showConfigureShortcutsDialog() instead.
      * If your code checked the return value of this method (e.g. to run some extra code if the
@@ -223,7 +223,7 @@ public Q_SLOTS:
      * @see KShortcutsDialog, KShortcutsEditor::ActionTypes, KShortcutsEditor::LetterShortcuts
      *
      * By default the changes will be saved back to the @c *ui.rc file
-     * which they were intially read from.
+     * which they were initially read from.
      *
      * If you need to run some extra code if the dialog is accepted and the settings
      * are saved, you can simply connect to the @ref KXMLGUIFactory::shortcutsSaved()

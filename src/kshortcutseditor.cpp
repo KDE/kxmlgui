@@ -140,7 +140,7 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     // sort the list
     d->ui.list->sortItems(Name, Qt::AscendingOrder);
 
-    // reenable updating
+    // re-enable updating
     setUpdatesEnabled(true);
 
     QTimer::singleShot(0, this, &KShortcutsEditor::resizeColumns);
@@ -530,7 +530,7 @@ more important things):
 */
 void KShortcutsEditorPrivate::printShortcuts() const
 {
-// One cant print on wince
+// One can't print on wince
 #ifndef _WIN32_WCE
     QTreeWidgetItem *root = ui.list->invisibleRootItem();
     QTextDocument doc;

@@ -117,7 +117,7 @@ public:
      *        and will be centered with respect to the parent.
      * @param aboutAppText User definable string that is used in the
      *        default application dialog box.
-     * @param showWhatsThis Decides whether a "Whats this" entry will be
+     * @param showWhatsThis Decides whether a "What's this" entry will be
      *        added to the dialog.
      *
      */
@@ -127,13 +127,13 @@ public:
      * Constructor.
      *
      * This alternative constructor is mainly useful if you want to
-     * overide the standard actions (aboutApplication(), aboutKDE(),
+     * override the standard actions (aboutApplication(), aboutKDE(),
      * helpContents(), reportBug, and optionally whatsThis).
      *
      * @param parent The parent of the dialog boxes. The boxes are modeless
      *        and will be centered with respect to the parent.
      * @param aboutData User and app data used in the About app dialog
-     * @param showWhatsThis Decides whether a "Whats this" entry will be
+     * @param showWhatsThis Decides whether a "What's this" entry will be
      *        added to the dialog.
      */
     KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis = true);
@@ -141,7 +141,7 @@ public:
     /**
      * Destructor
      *
-     * Destroys dialogs and the menu pointer retuned by menu
+     * Destroys dialogs and the menu pointer returned by menu
      */
     ~KHelpMenu();
 
@@ -151,7 +151,7 @@ public:
      *
      * The returned menu is configured with an icon, a title and
      * menu entries. Therefore adding the returned pointer to your menu
-     * is enougth to have access to the help menu.
+     * is enough to have access to the help menu.
      *
      * Note: This method will only create one instance of the menu. If
      * you call this method twice or more the same pointer is returned.

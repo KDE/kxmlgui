@@ -110,7 +110,7 @@ private:
     QPointer<QWidget> m_widget;
 
     /** The global position of where the cursor was when the last QEvent::HideEvent for a
-     * menu occured. @see handleHideEvent() */
+     * menu occurred. @see handleHideEvent() */
     QPoint m_cursorGlobalPosWhenLastMenuHid;
     /** Calls postToolTipEventIfCursorDidntMove().  @see handleHideEvent() */
     QTimer m_toolTipTimeout;
