@@ -719,7 +719,7 @@ int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
 
 void KXMLGUIFactory::showConfigureShortcutsDialog()
 {
-    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions, KShortcutsEditor::LetterShortcutsAllowed, qobject_cast<QWidget *>(parent()));
+    auto *dlg = new KShortcutsDialog(qobject_cast<QWidget *>(parent()));
     dlg->setAttribute(Qt::WA_DeleteOnClose);
 
     for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
