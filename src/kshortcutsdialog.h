@@ -107,7 +107,7 @@ public:
      *
      * @since 5.85
      */
-    explicit KShortcutsDialog(QWidget *parent = nullptr);
+    explicit KShortcutsDialog(QWidget *parent);
 
     /**
      * Destructor. Deletes all resources used by a KShortcutsDialog object.
