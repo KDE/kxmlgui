@@ -52,7 +52,7 @@
  * A helper function that takes a list of KActionCollection* and converts it
  * to KCommandBar::ActionGroup
  */
-static QVector<KCommandBar::ActionGroup> actionCollectionToActionGroup(const QList<KActionCollection *> &actionCollections)
+static QVector<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::vector<KActionCollection *> &actionCollections)
 {
     using ActionGroup = KCommandBar::ActionGroup;
 
@@ -101,6 +101,23 @@ static QVector<KCommandBar::ActionGroup> actionCollectionToActionGroup(const QLi
         actionList.append(ag);
     }
     return actionList;
+}
+
+static void getActionCollections(KXMLGUIClient *client, std::vector<KActionCollection *> &actionCollections)
+{
+    if (!client) {
+        return;
+    }
+
+    auto actionCollection = client->actionCollection();
+    if (actionCollection && !actionCollection->isEmpty()) {
+        actionCollections.push_back(client->actionCollection());
+    }
+
+    const QList<KXMLGUIClient *> childClients = client->childClients();
+    for (auto child : childClients) {
+        getActionCollections(child, actionCollections);
+    }
 }
 
 class KXmlGuiWindowPrivate : public KMainWindowPrivate
@@ -157,7 +174,16 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
         }
 
         KCommandBar kc(this);
-        kc.setActions(actionCollectionToActionGroup(ac->allCollections()));
+        std::vector<KActionCollection *> actionCollections;
+        const auto clients = guiFactory()->clients();
+        actionCollections.reserve(clients.size());
+
+        // Grab action collections recursively
+        for (const auto &client : clients) {
+            getActionCollections(client, actionCollections);
+        }
+
+        kc.setActions(actionCollectionToActionGroup(actionCollections));
         kc.exec();
     });
     a->setText(i18n("Open Command Bar"));
