@@ -147,8 +147,9 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc, const QString &file
     QString componentName = _componentName.isEmpty() ? QCoreApplication::applicationName() : _componentName;
     QString xml_file(filename);
 
-    if (QDir::isRelativePath(xml_file))
+    if (QDir::isRelativePath(xml_file)) {
         xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/%1/%2").arg(componentName, filename);
+    }
 
     QFileInfo fileInfo(xml_file);
     QDir().mkpath(fileInfo.absolutePath());

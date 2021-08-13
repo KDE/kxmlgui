@@ -299,8 +299,9 @@ void debugActions(const QList<QAction *> &actions)
 static void checkActions(const QList<QAction *> &actions, const QStringList &expectedActions)
 {
     for (int i = 0; i < expectedActions.count(); ++i) {
-        if (i >= actions.count())
+        if (i >= actions.count()) {
             break;
+        }
         QAction *action = actions.at(i);
         if (action->isSeparator()) {
             QCOMPARE(QStringLiteral("separator"), expectedActions[i]);

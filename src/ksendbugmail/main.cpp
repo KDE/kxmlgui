@@ -66,7 +66,8 @@ int main(int argc, char **argv)
 
     // d.addAuthor(ki18n("Stephan Kulow"), ki18n("Author"), "coolo@kde.org");
 
-    QString subject, recipient;
+    QString subject;
+    QString recipient;
     {
         QCommandLineParser parser;
         parser.addVersionOption();
@@ -99,7 +100,8 @@ int main(int argc, char **argv)
     }
     QTextStream input(stdin, QIODevice::ReadOnly);
     input.setCodec("UTF-8");
-    QString text, line;
+    QString text;
+    QString line;
     while (!input.atEnd()) {
         line = input.readLine();
         text += line + QLatin1String("\r\n");

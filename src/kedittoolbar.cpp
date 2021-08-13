@@ -682,10 +682,11 @@ void KEditToolBarPrivate::defaultClicked()
             }
             // qDebug(240) << "Deleting local xml file" << file;
             // << "for client" << client << typeid(*client).name();
-            if (QFile::exists(file))
+            if (QFile::exists(file)) {
                 if (!QFile::remove(file)) {
                     qCWarning(DEBUG_KXMLGUI) << "Could not delete" << file;
                 }
+            }
         }
 
         // Reload the xml files in all clients, now that the local files are gone
@@ -701,10 +702,11 @@ void KEditToolBarPrivate::defaultClicked()
         const QString xml_file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kxmlgui5/")
             + QCoreApplication::instance()->applicationName() + QLatin1Char('/') + m_file;
 
-        if (QFile::exists(xml_file))
+        if (QFile::exists(xml_file)) {
             if (!QFile::remove(xml_file)) {
                 qCWarning(DEBUG_KXMLGUI) << "Could not delete " << xml_file;
             }
+        }
 
         m_widget = new KEditToolBarWidget(m_collection, q);
         q->setResourceFile(m_file, m_global);

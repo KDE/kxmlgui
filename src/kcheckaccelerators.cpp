@@ -289,7 +289,9 @@ void KCheckAccelerators::checkAccelerators(bool automatic)
     }
 
     KAcceleratorManager::manage(actWin);
-    QString a, c, r;
+    QString a;
+    QString c;
+    QString r;
     KAcceleratorManager::last_manage(a, c, r);
 
     if (automatic) { // for now we only show dialogs on F12 checks

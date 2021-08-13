@@ -560,8 +560,9 @@ void KMainWindow::closeEvent(QCloseEvent *e)
         e->ignore(); // if the window should not be closed, don't close it
     }
     // If saving session, we are processing a fake close event, and might get the real one later.
-    if (e->isAccepted() && qApp->isSavingSession())
+    if (e->isAccepted() && qApp->isSavingSession()) {
         d->suppressCloseEvent = true;
+    }
 }
 
 bool KMainWindow::queryClose()
@@ -971,10 +972,11 @@ QList<KToolBar *> KMainWindow::toolBars() const
     QList<KToolBar *> ret;
 
     const auto theChildren = children();
-    for (QObject *child : theChildren)
+    for (QObject *child : theChildren) {
         if (KToolBar *toolBar = qobject_cast<KToolBar *>(child)) {
             ret.append(toolBar);
         }
+    }
 
     return ret;
 }

@@ -483,8 +483,9 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
 
             KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
             const QString actionId = item->data(Id).toString();
-            if (!globalShortcutsGroup.hasKey(actionId))
+            if (!globalShortcutsGroup.hasKey(actionId)) {
                 continue;
+            }
 
             QList<QKeySequence> sc = QKeySequence::listFromString(globalShortcutsGroup.readEntry(actionId, QString()));
             changeKeyShortcut(item, GlobalPrimary, primarySequence(sc));
@@ -500,8 +501,9 @@ void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
             }
             KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
             const QString actionId = item->data(Id).toString();
-            if (!localShortcutsGroup.hasKey(actionId))
+            if (!localShortcutsGroup.hasKey(actionId)) {
                 continue;
+            }
 
             QList<QKeySequence> sc = QKeySequence::listFromString(localShortcutsGroup.readEntry(actionId, QString()));
             changeKeyShortcut(item, LocalPrimary, primarySequence(sc));

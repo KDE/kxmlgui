@@ -298,7 +298,8 @@ bool hasExplicitToolTip(const QAction *action)
     Q_CHECK_PTR(action);
     const QString iconText = action->iconText();
     const QString toolTip = action->toolTip();
-    int i = -1, j = -1;
+    int i = -1;
+    int j = -1;
     do {
         i++; j++;
         // Both of these QStrings are considered equal if their only differences are '&' and '.' chars.

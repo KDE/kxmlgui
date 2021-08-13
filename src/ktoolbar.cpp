@@ -1138,7 +1138,7 @@ void KToolBar::dragEnterEvent(QDragEnterEvent *event)
 
 void KToolBar::dragMoveEvent(QDragMoveEvent *event)
 {
-    if (toolBarsEditable())
+    if (toolBarsEditable()) {
         Q_FOREVER {
             if (d->dropIndicatorAction) {
                 QAction *overAction = nullptr;
@@ -1171,6 +1171,7 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
             }
             break;
         }
+    }
 
     QToolBar::dragMoveEvent(event);
 }
@@ -1259,12 +1260,13 @@ void KToolBar::mouseMoveEvent(QMouseEvent *event)
 
     Qt::DropAction dropAction = drag->exec(Qt::MoveAction);
 
-    if (dropAction == Qt::MoveAction)
+    if (dropAction == Qt::MoveAction) {
         // Only remove from this toolbar if it was moved to another toolbar
         // Otherwise the receiver moves it.
         if (drag->target() != this) {
             removeAction(d->dragAction);
         }
+    }
 
     d->dragAction = nullptr;
     event->accept();
@@ -1287,11 +1289,13 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
     // Generate context menu events for disabled buttons too...
     if (event->type() == QEvent::MouseButtonPress) {
         QMouseEvent *me = static_cast<QMouseEvent *>(event);
-        if (me->buttons() & Qt::RightButton)
-            if (QWidget *ww = qobject_cast<QWidget *>(watched))
+        if (me->buttons() & Qt::RightButton) {
+            if (QWidget *ww = qobject_cast<QWidget *>(watched)) {
                 if (ww->parent() == this && !ww->isEnabled()) {
                     QCoreApplication::postEvent(this, new QContextMenuEvent(QContextMenuEvent::Mouse, me->pos(), me->globalPos()));
                 }
+            }
+        }
 
     } else if (event->type() == QEvent::ParentChange) {
         // Make sure we're not leaving stale event filters around,

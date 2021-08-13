@@ -125,16 +125,17 @@ ContainerNode *ContainerNode::findContainer(const QString &name, const QString &
     ContainerNodeList::ConstIterator nIt = children.constBegin();
 
     if (!name.isEmpty()) {
-        for (; nIt != children.constEnd(); ++nIt)
+        for (; nIt != children.constEnd(); ++nIt) {
             if ((*nIt)->name == name && !excludeList->contains((*nIt)->container)) {
                 res = *nIt;
                 break;
             }
+        }
 
         return res;
     }
 
-    if (!tagName.isEmpty())
+    if (!tagName.isEmpty()) {
         for (; nIt != children.constEnd(); ++nIt) {
             if ((*nIt)->tagName == tagName && !excludeList->contains((*nIt)->container)
                 /*
@@ -157,6 +158,7 @@ ContainerNode *ContainerNode::findContainer(const QString &name, const QString &
                 break;
             }
         }
+    }
 
     return res;
 }
@@ -300,10 +302,11 @@ bool ContainerNode::destruct(
 
     // remove all merging indices the client defined
     QMutableVectorIterator<MergingIndex> cmIt = mergingIndices;
-    while (cmIt.hasNext())
+    while (cmIt.hasNext()) {
         if (cmIt.next().clientName == state.clientName) {
             cmIt.remove();
         }
+    }
 
     // ### check for merging index count, too?
     if (clients.isEmpty() && children.isEmpty() && container && client == state.guiClient) {

@@ -84,10 +84,11 @@ public:
     QList<QRadioButton *> severityButtons;
     int currentSeverity() const
     {
-        for (int i = 0; i < severityButtons.count(); i++)
+        for (int i = 0; i < severityButtons.count(); i++) {
             if (severityButtons[i]->isChecked()) {
                 return i;
             }
+        }
         return -1;
     }
     BugDestination bugDestination;
@@ -481,10 +482,11 @@ QString KBugReport::text() const
       }
     */
     bodyText = d->m_lineedit->toPlainText();
-    if (bodyText.length() > 0)
+    if (bodyText.length() > 0) {
         if (bodyText[bodyText.length() - 1] != QLatin1Char('\n')) {
             bodyText += QLatin1Char('\n');
         }
+    }
     if (severity == QLatin1String("i18n") && QLocale().language() != QLocale::system().language()) {
         // Case 1 : i18n bug
         QString package = QLatin1String("i18n_") + QLocale::languageToString(QLocale().language());

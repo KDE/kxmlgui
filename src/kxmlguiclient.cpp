@@ -307,7 +307,8 @@ void KXMLGUIClient::setXML(const QString &document, bool merge)
 {
     QDomDocument doc;
     QString errorMsg;
-    int errorLine = 0, errorColumn = 0;
+    int errorLine = 0;
+    int errorColumn = 0;
     // QDomDocument raises a parse error on empty document, but we accept no app-specific document,
     // in which case you only get ui_standards.rc layout.
     bool result = document.isEmpty() || doc.setContent(document, &errorMsg, &errorLine, &errorColumn);

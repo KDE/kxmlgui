@@ -194,7 +194,8 @@ void SMTP::interactTimedOut()
 
 void SMTP::socketReadyToRead()
 {
-    int n, nl;
+    int n;
+    int nl;
 
     // qCDebug(DEBUG_KXMLGUI) << "socketRead() called...";
     interactTimer.stop();
@@ -244,7 +245,8 @@ void SMTP::socketClosed()
 
 void SMTP::processLine(QByteArray *line)
 {
-    int i, stat;
+    int i;
+    int stat;
     QByteArray tmpstr;
 
     i = line->indexOf(' ');
