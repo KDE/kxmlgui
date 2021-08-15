@@ -41,7 +41,7 @@ option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.15.0)
+set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
 # On non-Apple UNIX DBus is required, on Apple Unix & Windows optional and it does not exist on Android
 if(UNIX AND NOT APPLE)
@@ -65,7 +65,7 @@ if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
     find_package(KF5GlobalAccel ${KF_DEP_VERSION} REQUIRED)
 endif()
 set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
 ki18n_install(po)
