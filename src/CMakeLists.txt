@@ -1,6 +1,6 @@
 add_subdirectory(ksendbugmail)
 
-add_library(KF5XmlGui SHARED)
+add_library(KF5XmlGui)
 add_library(KF5::XmlGui ALIAS KF5XmlGui)
 
 if (HAVE_GLOBALACCEL)
