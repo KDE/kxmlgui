@@ -182,7 +182,7 @@ KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
 
 KXMLGUIFactory::~KXMLGUIFactory()
 {
-    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_clients)) {
         client->setFactory(nullptr);
     }
 }
@@ -293,7 +293,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
 
 void KXMLGUIFactory::refreshActionProperties()
 {
-    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_clients)) {
         d->guiClient = client;
         QDomDocument doc = client->xmlguiBuildDocument();
         if (doc.documentElement().isNull()) {
@@ -511,7 +511,7 @@ QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool
         return node->container;
     }
 
-    for (ContainerNode *child : qAsConst(node->children)) {
+    for (ContainerNode *child : std::as_const(node->children)) {
         QWidget *cont = findRecursive(child, tag);
         if (cont) {
             return cont;
@@ -539,7 +539,7 @@ QList<QWidget *> KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *no
         res.append(node->container);
     }
 
-    for (KXMLGUI::ContainerNode *child : qAsConst(node->children)) {
+    for (KXMLGUI::ContainerNode *child : std::as_const(node->children)) {
         res << findRecursive(child, tagName);
     }
 
@@ -707,7 +707,7 @@ int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
     auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions,
                                      letterCutsOk ? KShortcutsEditor::LetterShortcutsAllowed : KShortcutsEditor::LetterShortcutsDisallowed,
                                      qobject_cast<QWidget *>(parent()));
-    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_clients)) {
         if (client) {
             qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
             dlg->addCollection(client->actionCollection(), client->componentName());
@@ -723,7 +723,7 @@ void KXMLGUIFactory::showConfigureShortcutsDialog()
     auto *dlg = new KShortcutsDialog(qobject_cast<QWidget *>(parent()));
     dlg->setAttribute(Qt::WA_DeleteOnClose);
 
-    for (KXMLGUIClient *client : qAsConst(d->m_clients)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_clients)) {
         if (client) {
             qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
 

@@ -903,7 +903,7 @@ void KEditToolBarWidgetPrivate::initFromFactory(KXMLGUIFactory *factory, const Q
 void KEditToolBarWidget::save()
 {
     // qDebug(240) << "KEditToolBarWidget::save";
-    for (const auto &xmlFile : qAsConst(d->m_xmlFiles)) {
+    for (const auto &xmlFile : std::as_const(d->m_xmlFiles)) {
         // let's not save non-modified files
         if (!xmlFile.m_isModified) {
             continue;
@@ -1171,7 +1171,7 @@ void KEditToolBarWidgetPrivate::loadToolBarCombo(const QString &defaultToolBar)
     int defaultToolBarId = -1;
     int count = 0;
     // load in all of the toolbar names into this combo box
-    for (const auto &xmlFile : qAsConst(m_xmlFiles)) {
+    for (const auto &xmlFile : std::as_const(m_xmlFiles)) {
         // skip the merged one in favor of the local one,
         // so that we can change icons
         // This also makes the app-defined named for "mainToolBar" appear rather than the ui_standards-defined name.
@@ -1180,7 +1180,7 @@ void KEditToolBarWidgetPrivate::loadToolBarCombo(const QString &defaultToolBar)
         }
 
         // each xml file may have any number of toolbars
-        for (const auto &bar : qAsConst(xmlFile.barList())) {
+        for (const auto &bar : std::as_const(xmlFile.barList())) {
             const QString text = xmlFile.toolBarText(bar);
             m_toolbarCombo->addItem(text);
             const QString name = bar.attribute(attrName);
@@ -1598,7 +1598,7 @@ void KEditToolBarWidgetPrivate::updateLocal(QDomElement &elem)
 
         xmlFile.m_isModified = true;
         const QLatin1String attrName("name");
-        for (const auto &bar : qAsConst(xmlFile.barList())) {
+        for (const auto &bar : std::as_const(xmlFile.barList())) {
             const QString name(bar.attribute(attrName));
             const QString tag(bar.tagName());
             if ((tag != elem.tagName()) || (name != elem.attribute(attrName))) {

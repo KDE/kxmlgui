@@ -104,7 +104,7 @@ ContainerNode *ContainerNode::findContainer(const QString &_name, bool tag)
         return this;
     }
 
-    for (ContainerNode *child : qAsConst(children)) {
+    for (ContainerNode *child : std::as_const(children)) {
         ContainerNode *res = child->findContainer(_name, tag);
         if (res) {
             return res;
@@ -167,7 +167,7 @@ ContainerClient *
 ContainerNode::findChildContainerClient(KXMLGUIClient *currentGUIClient, const QString &groupName, const MergingIndexList::iterator &mergingIdx)
 {
     if (!clients.isEmpty()) {
-        for (ContainerClient *client : qAsConst(clients)) {
+        for (ContainerClient *client : std::as_const(clients)) {
             if (client->client == currentGUIClient) {
                 if (groupName.isEmpty()) {
                     return client;
@@ -201,7 +201,7 @@ void ContainerNode::plugActionList(BuildState &state)
         plugActionList(state, mIt);
     }
 
-    for (ContainerNode *child : qAsConst(children)) {
+    for (ContainerNode *child : std::as_const(children)) {
         child->plugActionList(state);
     }
 }
@@ -239,7 +239,7 @@ void ContainerNode::unplugActionList(BuildState &state)
         unplugActionList(state, mIt);
     }
 
-    for (ContainerNode *child : qAsConst(children)) {
+    for (ContainerNode *child : std::as_const(children)) {
         child->unplugActionList(state);
     }
 }
@@ -409,14 +409,14 @@ void ContainerNode::unplugClient(ContainerClient *client)
 
     // unplug all actionslists
 
-    for (const auto &actionList : qAsConst(client->actionLists)) {
+    for (const auto &actionList : std::as_const(client->actionLists)) {
         removeActions(actionList);
     }
 }
 
 void ContainerNode::reset()
 {
-    for (ContainerNode *child : qAsConst(children)) {
+    for (ContainerNode *child : std::as_const(children)) {
         child->reset();
     }
 
@@ -449,7 +449,7 @@ void ContainerNode::dump(int offset)
     QString indent;
     indent.fill(QLatin1Char(' '), offset);
     qCDebug(DEBUG_KXMLGUI) << qPrintable(indent) << name << tagName << groupName << mergingName << mergingIndices;
-    for (ContainerNode *child : qAsConst(children)) {
+    for (ContainerNode *child : std::as_const(children)) {
         child->dump(offset + 2);
     }
 }

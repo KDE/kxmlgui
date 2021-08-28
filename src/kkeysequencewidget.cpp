@@ -212,7 +212,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     // removed from the collection again.
     QList<QAction *> allActions;
     allActions += checkList;
-    for (KActionCollection *collection : qAsConst(checkActionCollections)) {
+    for (KActionCollection *collection : std::as_const(checkActionCollections)) {
         allActions += collection->actions();
     }
 
@@ -236,7 +236,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     QList<QAction *> conflictingActions;
 
     // find conflicting shortcuts with existing actions
-    for (QAction *qaction : qAsConst(allActions)) {
+    for (QAction *qaction : std::as_const(allActions)) {
         if (shortcutsConflictWith(qaction->shortcuts(), keySequence)) {
             // A conflict with a KAction. If that action is configurable
             // ask the user what to do. If not reject this keySequence.
@@ -257,7 +257,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
     if (promptStealLocalShortcut(conflictingActions, keySequence)) {
         stealActions = conflictingActions;
         // Announce that the user agreed
-        for (QAction *stealAction : qAsConst(stealActions)) {
+        for (QAction *stealAction : std::as_const(stealActions)) {
             Q_EMIT q->stealShortcut(keySequence, stealAction);
         }
         return false;
@@ -532,14 +532,14 @@ void KKeySequenceWidget::applyStealShortcut()
 {
     QSet<KActionCollection *> changedCollections;
 
-    for (QAction *stealAction : qAsConst(d->stealActions)) {
+    for (QAction *stealAction : std::as_const(d->stealActions)) {
         // Stealing a shortcut means setting it to an empty one.
         stealAction->setShortcuts(QList<QKeySequence>());
 
         // The following code will find the action we are about to
         // steal from and save it's actioncollection.
         KActionCollection *parentCollection = nullptr;
-        for (KActionCollection *collection : qAsConst(d->checkActionCollections)) {
+        for (KActionCollection *collection : std::as_const(d->checkActionCollections)) {
             if (collection->actions().contains(stealAction)) {
                 parentCollection = collection;
                 break;
@@ -552,7 +552,7 @@ void KKeySequenceWidget::applyStealShortcut()
         }
     }
 
-    for (KActionCollection *col : qAsConst(changedCollections)) {
+    for (KActionCollection *col : std::as_const(changedCollections)) {
         col->writeSettings();
     }
 

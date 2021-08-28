@@ -85,7 +85,7 @@ KXMLGUIClient::~KXMLGUIClient()
         d->m_factory->forgetClient(this);
     }
 
-    for (KXMLGUIClient *client : qAsConst(d->m_children)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_children)) {
         if (d->m_factory) {
             d->m_factory->forgetClient(client);
         }
@@ -102,7 +102,7 @@ QAction *KXMLGUIClient::action(const char *name) const
 {
     QAction *act = actionCollection()->action(QLatin1String(name));
     if (!act) {
-        for (KXMLGUIClient *client : qAsConst(d->m_children)) {
+        for (KXMLGUIClient *client : std::as_const(d->m_children)) {
             act = client->actionCollection()->action(QLatin1String(name));
             if (act) {
                 break;
@@ -764,7 +764,7 @@ void KXMLGUIClient::stateChanged(const QString &newstate, KXMLGUIClient::Reverse
 void KXMLGUIClient::beginXMLPlug(QWidget *w)
 {
     actionCollection()->addAssociatedWidget(w);
-    for (KXMLGUIClient *client : qAsConst(d->m_children)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_children)) {
         client->beginXMLPlug(w);
     }
 }
@@ -776,7 +776,7 @@ void KXMLGUIClient::endXMLPlug()
 void KXMLGUIClient::prepareXMLUnplug(QWidget *w)
 {
     actionCollection()->removeAssociatedWidget(w);
-    for (KXMLGUIClient *client : qAsConst(d->m_children)) {
+    for (KXMLGUIClient *client : std::as_const(d->m_children)) {
         client->prepareXMLUnplug(w);
     }
 }

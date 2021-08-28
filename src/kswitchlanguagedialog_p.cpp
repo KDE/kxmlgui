@@ -250,7 +250,7 @@ void KSwitchLanguageDialog::slotOk()
 {
     QStringList languages;
     languages.reserve(d->languageButtons.size());
-    for (auto *languageButton : qAsConst(d->languageButtons)) {
+    for (auto *languageButton : std::as_const(d->languageButtons)) {
         languages << languageButton->current();
     }
 

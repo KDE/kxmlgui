@@ -75,7 +75,7 @@ public:
         QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
         m_keyChooser->clearCollections();
 
-        for (KActionCollection *collection : qAsConst(m_collections)) {
+        for (KActionCollection *collection : std::as_const(m_collections)) {
             // passing an empty stream forces the clients to reread the XML
             KXMLGUIClient *client = const_cast<KXMLGUIClient *>(collection->parentGUIClient());
             if (client) {
@@ -94,7 +94,7 @@ public:
             }
         }
 
-        for (KActionCollection *collection : qAsConst(m_collections)) {
+        for (KActionCollection *collection : std::as_const(m_collections)) {
             m_keyChooser->addCollection(collection);
         }
 

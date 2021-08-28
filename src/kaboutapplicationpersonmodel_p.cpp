@@ -20,7 +20,7 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList<KAboutPer
 {
     m_profileList.reserve(m_personList.size());
     bool hasAnyAvatars{false};
-    for (const auto &person : qAsConst(m_personList)) {
+    for (const auto &person : std::as_const(m_personList)) {
         KAboutApplicationPersonProfile profile = KAboutApplicationPersonProfile(person.name(), person.task(), person.emailAddress(), person.ocsUsername());
         profile.setHomepage(QUrl(person.webAddress()));
         if (!profile.ocsUsername().isEmpty()) {
@@ -36,7 +36,7 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList<KAboutPer
     connect(this, &KAboutApplicationPersonModel::showRemoteAvatarsChanged, [this, manager]() {
         if (showRemoteAvatars()) {
             int i = 0;
-            for (const auto &profile : qAsConst(m_profileList)) {
+            for (const auto &profile : std::as_const(m_profileList)) {
                 if (!profile.ocsUsername().isEmpty()) {
                     if (profile.avatar().isNull()) {
                         QNetworkRequest request(QUrl(QLatin1String{"https://store.kde.org/avatar/%1?s=%2"}.arg(profile.ocsUsername()).arg(AVATAR_HEIGHT)));

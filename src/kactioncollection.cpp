@@ -164,7 +164,7 @@ bool KActionCollection::isEmpty() const
 
 void KActionCollection::setComponentName(const QString &cName)
 {
-    for (QAction *a : qAsConst(d->actions)) {
+    for (QAction *a : std::as_const(d->actions)) {
         if (actionHasGlobalShortcut(a)) {
             // Its component name is part of an action's signature in the context of
             // global shortcuts and the semantics of changing an existing action's
@@ -216,7 +216,7 @@ QList<QAction *> KActionCollection::actions() const
 const QList<QAction *> KActionCollection::actionsWithoutGroup() const
 {
     QList<QAction *> ret;
-    for (QAction *action : qAsConst(d->actions)) {
+    for (QAction *action : std::as_const(d->actions)) {
         if (!action->actionGroup()) {
             ret.append(action);
         }
@@ -227,7 +227,7 @@ const QList<QAction *> KActionCollection::actionsWithoutGroup() const
 const QList<QActionGroup *> KActionCollection::actionGroups() const
 {
     QSet<QActionGroup *> set;
-    for (QAction *action : qAsConst(d->actions)) {
+    for (QAction *action : std::as_const(d->actions)) {
         if (action->actionGroup()) {
             set.insert(action->actionGroup());
         }
@@ -315,7 +315,7 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     d->actionByName.insert(indexName, action);
     d->actions.append(action);
 
-    for (QWidget *widget : qAsConst(d->associatedWidgets)) {
+    for (QWidget *widget : std::as_const(d->associatedWidgets)) {
         widget->addAction(action);
     }
 
@@ -357,7 +357,7 @@ QAction *KActionCollection::takeAction(QAction *action)
     }
 
     // Remove the action from all widgets
-    for (QWidget *widget : qAsConst(d->associatedWidgets)) {
+    for (QWidget *widget : std::as_const(d->associatedWidgets)) {
         widget->removeAction(action);
     }
 
@@ -767,7 +767,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
         signal.methodSignature() == "actionHovered(QAction*)") {
         if (!d->connectHovered) {
             d->connectHovered = true;
-            for (QAction *action : qAsConst(d->actions)) {
+            for (QAction *action : std::as_const(d->actions)) {
                 connect(action, &QAction::hovered, this, &KActionCollection::slotActionHovered);
             }
         }
@@ -775,7 +775,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
     } else if (signal.methodSignature() == "actionTriggered(QAction*)") {
         if (!d->connectTriggered) {
             d->connectTriggered = true;
-            for (QAction *action : qAsConst(d->actions)) {
+            for (QAction *action : std::as_const(d->actions)) {
                 connect(action, &QAction::triggered, this, &KActionCollection::slotActionTriggered);
             }
         }
@@ -791,7 +791,7 @@ const QList<KActionCollection *> &KActionCollection::allCollections()
 
 void KActionCollection::associateWidget(QWidget *widget) const
 {
-    for (QAction *action : qAsConst(d->actions)) {
+    for (QAction *action : std::as_const(d->actions)) {
         if (!widget->actions().contains(action)) {
             widget->addAction(action);
         }
@@ -812,7 +812,7 @@ void KActionCollection::addAssociatedWidget(QWidget *widget)
 
 void KActionCollection::removeAssociatedWidget(QWidget *widget)
 {
-    for (QAction *action : qAsConst(d->actions)) {
+    for (QAction *action : std::as_const(d->actions)) {
         widget->removeAction(action);
     }
 
@@ -861,8 +861,8 @@ QList<QWidget *> KActionCollection::associatedWidgets() const
 
 void KActionCollection::clearAssociatedWidgets()
 {
-    for (QWidget *widget : qAsConst(d->associatedWidgets)) {
-        for (QAction *action : qAsConst(d->actions)) {
+    for (QWidget *widget : std::as_const(d->associatedWidgets)) {
+        for (QAction *action : std::as_const(d->actions)) {
             widget->removeAction(action);
         }
     }

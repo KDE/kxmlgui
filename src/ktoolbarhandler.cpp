@@ -76,7 +76,7 @@ public:
             return actions;
         }
 
-        for (KToolBar *bar : qAsConst(m_toolBars)) {
+        for (KToolBar *bar : std::as_const(m_toolBars)) {
             handleToolBar(bar);
         }
 
@@ -93,7 +93,7 @@ public:
         KActionMenu *menuAction = new KActionMenu(i18n("Toolbars Shown"), m_actionCollection);
         m_actionCollection->addAction(QStringLiteral("toolbars_submenu_action"), menuAction);
 
-        for (QAction *action : qAsConst(m_toolBarActions)) {
+        for (QAction *action : std::as_const(m_toolBarActions)) {
             menuAction->menu()->addAction(action);
         }
 
@@ -169,7 +169,7 @@ void ToolBarHandler::Private::init(KXmlGuiWindow *mw)
 
 void ToolBarHandler::Private::connectToActionContainers()
 {
-    for (QAction *action : qAsConst(actions)) {
+    for (QAction *action : std::as_const(actions)) {
         connectToActionContainer(action);
     }
 }

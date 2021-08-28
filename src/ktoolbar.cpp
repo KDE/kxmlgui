@@ -360,7 +360,7 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
 
         if (avSizes.count() < 10) {
             // Fixed or threshold type icons
-            for (int it : qAsConst(avSizes)) {
+            for (int it : std::as_const(avSizes)) {
                 QString text;
                 if (it < 19) {
                     text = i18n("Small (%1x%2)", it, it);
@@ -380,7 +380,7 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
             const int progression[] = {16, 22, 32, 48, 64, 96, 128, 192, 256};
 
             for (int p : progression) {
-                for (int it : qAsConst(avSizes)) {
+                for (int it : std::as_const(avSizes)) {
                     if (it >= p) {
                         QString text;
                         if (it < 19) {
@@ -1106,7 +1106,7 @@ void KToolBar::dragEnterEvent(QDragEnterEvent *event)
         stream >> actionNames;
 
         const auto allCollections = KActionCollection::allCollections();
-        for (const QString &actionName : qAsConst(actionNames)) {
+        for (const QString &actionName : std::as_const(actionNames)) {
             for (KActionCollection *ac : allCollections) {
                 QAction *newAction = ac->action(actionName);
                 if (newAction) {
@@ -1194,7 +1194,7 @@ void KToolBar::dragLeaveEvent(QDragLeaveEvent *event)
 void KToolBar::dropEvent(QDropEvent *event)
 {
     if (toolBarsEditable()) {
-        for (QAction *action : qAsConst(d->actionsBeingDragged)) {
+        for (QAction *action : std::as_const(d->actionsBeingDragged)) {
             if (actions().contains(action)) {
                 removeAction(action);
             }
