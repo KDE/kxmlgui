@@ -273,8 +273,8 @@ void KShortcutsEditor::setActionTypes(ActionTypes actionTypes)
 // KShortcutsEditorPrivate
 //---------------------------------------------------------------------
 
-KShortcutsEditorPrivate::KShortcutsEditorPrivate(KShortcutsEditor *q)
-    : q(q)
+KShortcutsEditorPrivate::KShortcutsEditorPrivate(KShortcutsEditor *qq)
+    : q(qq)
     , delegate(nullptr)
 {
 }

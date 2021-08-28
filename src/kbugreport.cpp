@@ -42,8 +42,8 @@
 class KBugReportPrivate
 {
 public:
-    KBugReportPrivate(KBugReport *q)
-        : q(q)
+    KBugReportPrivate(KBugReport *qq)
+        : q(qq)
         , m_aboutData(KAboutData::applicationData())
     {
     }

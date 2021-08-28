@@ -35,7 +35,7 @@ public:
      */
     static KToolTipHelper *instance();
 
-    explicit KToolTipHelperPrivate(KToolTipHelper *q);
+    explicit KToolTipHelperPrivate(KToolTipHelper *qq);
 
     virtual ~KToolTipHelperPrivate();
 

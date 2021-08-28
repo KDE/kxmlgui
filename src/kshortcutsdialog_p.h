@@ -354,7 +354,7 @@ public:
 class KShortcutsEditorPrivate
 {
 public:
-    explicit KShortcutsEditorPrivate(KShortcutsEditor *q);
+    explicit KShortcutsEditorPrivate(KShortcutsEditor *qq);
 
     void initGUI(KShortcutsEditor::ActionTypes actionTypes, KShortcutsEditor::LetterShortcuts allowLetterShortcuts);
     void appendToView(uint nList, const QString &title = QString());

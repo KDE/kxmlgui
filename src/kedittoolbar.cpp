@@ -545,8 +545,8 @@ using namespace KDEPrivate;
 class KEditToolBarPrivate
 {
 public:
-    KEditToolBarPrivate(KEditToolBar *q)
-        : q(q)
+    KEditToolBarPrivate(KEditToolBar *qq)
+        : q(qq)
     {
     }
 

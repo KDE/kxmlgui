@@ -51,7 +51,7 @@ static bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QK
 class KKeySequenceWidgetPrivate
 {
 public:
-    KKeySequenceWidgetPrivate(KKeySequenceWidget *q);
+    KKeySequenceWidgetPrivate(KKeySequenceWidget *qq);
 
     void init();
 
@@ -120,8 +120,8 @@ public:
     QList<QAction *> stealActions;
 };
 
-KKeySequenceWidgetPrivate::KKeySequenceWidgetPrivate(KKeySequenceWidget *q)
-    : q(q)
+KKeySequenceWidgetPrivate::KKeySequenceWidgetPrivate(KKeySequenceWidget *qq)
+    : q(qq)
     , layout(nullptr)
     , keyButton(nullptr)
     , clearButton(nullptr)

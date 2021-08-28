@@ -44,8 +44,8 @@ KToolTipHelper::KToolTipHelper(QObject *parent)
 {
 }
 
-KToolTipHelperPrivate::KToolTipHelperPrivate(KToolTipHelper *q)
-    : q{q}
+KToolTipHelperPrivate::KToolTipHelperPrivate(KToolTipHelper *qq)
+    : q{qq}
 {
     m_toolTipTimeout.setSingleShot(true);
     connect(&m_toolTipTimeout, &QTimer::timeout,

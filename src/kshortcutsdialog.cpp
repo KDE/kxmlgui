@@ -56,8 +56,8 @@ QKeySequence alternateSequence(const QList<QKeySequence> &sequences)
 class KShortcutsDialogPrivate
 {
 public:
-    KShortcutsDialogPrivate(KShortcutsDialog *q)
-        : q(q)
+    KShortcutsDialogPrivate(KShortcutsDialog *qq)
+        : q(qq)
     {
     }
 

@@ -11,8 +11,8 @@
 class KShortcutWidgetPrivate
 {
 public:
-    KShortcutWidgetPrivate(KShortcutWidget *q)
-        : q(q)
+    KShortcutWidgetPrivate(KShortcutWidget *qq)
+        : q(qq)
     {
     }
 
