@@ -140,22 +140,22 @@ KRulerTest::KRulerTest()
     beginMark->setRange(-1000, 1000);
     beginMark->move(5, 15);
     beginMark->setFixedSize(beginMark->sizeHint());
-    connect(beginMark, QOverload<int>::of(&QSpinBox::valueChanged), hruler, &KRuler::slotNewOffset);
-    connect(beginMark, QOverload<int>::of(&QSpinBox::valueChanged), vruler, &KRuler::slotNewOffset);
+    connect(beginMark, qOverload<int>(&QSpinBox::valueChanged), hruler, &KRuler::slotNewOffset);
+    connect(beginMark, qOverload<int>(&QSpinBox::valueChanged), vruler, &KRuler::slotNewOffset);
     endMark = new QSpinBox(lineEdit);
     endMark->setValue(0);
     endMark->setRange(-1000, 1000);
     endMark->move(5, 35);
     endMark->setFixedSize(endMark->sizeHint());
-    connect(endMark, QOverload<int>::of(&QSpinBox::valueChanged), hruler, &KRuler::slotEndOffset);
-    connect(endMark, QOverload<int>::of(&QSpinBox::valueChanged), vruler, &KRuler::slotEndOffset);
+    connect(endMark, qOverload<int>(&QSpinBox::valueChanged), hruler, &KRuler::slotEndOffset);
+    connect(endMark, qOverload<int>(&QSpinBox::valueChanged), vruler, &KRuler::slotEndOffset);
     lengthInput = new QSpinBox(lineEdit);
     lengthInput->setValue(0);
     lengthInput->setRange(-1000, 1000);
     lengthInput->move(5, 55);
     lengthInput->setFixedSize(lengthInput->sizeHint());
-    connect(lengthInput, QOverload<int>::of(&QSpinBox::valueChanged), hruler, &KRuler::slotEndOffset);
-    connect(lengthInput, QOverload<int>::of(&QSpinBox::valueChanged), vruler, &KRuler::slotEndOffset);
+    connect(lengthInput, qOverload<int>(&QSpinBox::valueChanged), hruler, &KRuler::slotEndOffset);
+    connect(lengthInput, qOverload<int>(&QSpinBox::valueChanged), vruler, &KRuler::slotEndOffset);
 
     vertrot = new QGroupBox(QStringLiteral("Value of rotate translate for Vert."), bigwidget);
     vertrot->setFixedSize(140, 80);
@@ -167,7 +167,7 @@ KRulerTest::KRulerTest()
     transX->move(5, 15);
     transX->setFixedSize(transX->sizeHint());
     // transX->setLabel("transx", AlignLeft);
-    connect(transX, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetXTrans);
+    connect(transX, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetXTrans);
     transY = new QDoubleSpinBox(vertrot);
     transY->setValue(-12.0);
     transY->setRange(-1000, 1000);
@@ -175,7 +175,7 @@ KRulerTest::KRulerTest()
     transY->move(5, 35);
     transY->setFixedSize(transY->sizeHint());
     // transY->setLabel("transy", AlignLeft);
-    connect(transY, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetYTrans);
+    connect(transY, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetYTrans);
     rotV = new QDoubleSpinBox(vertrot);
     rotV->setValue(90.0);
     rotV->setRange(-1000, 1000);
@@ -183,7 +183,7 @@ KRulerTest::KRulerTest()
     rotV->move(5, 55);
     rotV->setFixedSize(rotV->sizeHint());
     // rotV->setLabel("rot", AlignLeft);
-    connect(rotV, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetRotate);
+    connect(rotV, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &KRulerTest::slotSetRotate);
 
     metricstyle = new QGroupBox(QStringLiteral("metric styles"), bigwidget);
 

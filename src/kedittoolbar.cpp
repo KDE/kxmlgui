@@ -999,7 +999,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_toolbarCombo = new QComboBox(m_widget);
     m_comboLabel->setBuddy(m_toolbarCombo);
     m_comboSeparator = new KSeparator(m_widget);
-    QObject::connect(m_toolbarCombo, QOverload<int>::of(&QComboBox::activated), m_widget, [this](int index) {
+    QObject::connect(m_toolbarCombo, qOverload<int>(&QComboBox::activated), m_widget, [this](int index) {
         slotToolBarSelected(index);
     });
 

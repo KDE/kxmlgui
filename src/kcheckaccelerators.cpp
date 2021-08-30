@@ -212,7 +212,7 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
             } else {
                 QProcess *script = new QProcess(this);
                 script->start(copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain())), QStringList());
-                connect(script, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), script, &QObject::deleteLater);
+                connect(script, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), script, &QObject::deleteLater);
             }
             e->accept();
             return true;

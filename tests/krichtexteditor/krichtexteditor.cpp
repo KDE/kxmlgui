@@ -48,7 +48,7 @@ void KRichTextEditor::setupActions()
 
     KStandardAction::save(this, &KRichTextEditor::saveFile, actionCollection());
 
-    KStandardAction::saveAs(this, QOverload<>::of(&KRichTextEditor::saveFileAs), actionCollection());
+    KStandardAction::saveAs(this, qOverload<>(&KRichTextEditor::saveFileAs), actionCollection());
 
     KStandardAction::openNew(this, &KRichTextEditor::newFile, actionCollection());
 }
