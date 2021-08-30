@@ -15,7 +15,6 @@ find_dependency(KF5ConfigWidgets "@KF_DEP_VERSION@")
 if (NOT @BUILD_SHARED_LIBS@) 
     find_dependency(Qt5Network "@REQUIRED_QT_VERSION@")
     find_dependency(Qt5PrintSupport "@REQUIRED_QT_VERSION@")
-    find_dependency(Qt5CorePrivate "@REQUIRED_QT_VERSION@")    
 
     if (@KF5GlobalAccel_FOUND@)
         find_dependency(KF5GlobalAccel "@KF_DEP_VERSION@")
