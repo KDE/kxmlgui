@@ -333,9 +333,9 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
     guiFactory()->removeClient(this);
 
     // make sure to have an empty GUI
-    QMenuBar *mb = menuBar();
-    if (mb) {
-        mb->clear();
+    QMenuBar *mBar = menuBar();
+    if (mBar) {
+        mBar->clear();
     }
 
     qDeleteAll(toolBars()); // delete all toolbars
@@ -399,6 +399,16 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
     // do the actual GUI building
     guiFactory()->reset();
     guiFactory()->addClient(this);
+
+    if (mBar) {
+        KActionCollection *collection = actionCollection();
+        const auto bActions = mBar->actions();
+        for (auto *act : bActions) {
+            if (act) {
+                collection->addAction(act->objectName(), act);
+            }
+        }
+    }
 
     checkAmbiguousShortcuts();
 

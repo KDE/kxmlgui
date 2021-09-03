@@ -572,7 +572,7 @@ void KXmlGui_UnitTest::testUiStandardsMerging_data()
         << (QStringList() << QStringLiteral("file_open") << QStringLiteral("options_configure_toolbars"))
         << (QStringList() << QStringLiteral("file") << QStringLiteral("settings")); // we keep empty menus, see #186382
     QTest::newRow("noMerge empty file menu, file_open moved elsewhere")
-        << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n<Menu name=\"foo\"><Action name=\"file_open\"/></Menu>" + xmlEnd)
+        << QByteArray(xmlBegin + "<Menu name=\"file\" noMerge=\"1\"/>\n<Menu name=\"foo\"><Action name=\"file\"/></Menu>" + xmlEnd)
         << (QStringList() << QStringLiteral("file_open"))
         << (QStringList() << QStringLiteral("file") << QStringLiteral("foo"));
     QTest::newRow("noMerge file menu with open before new")
