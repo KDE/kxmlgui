@@ -72,9 +72,17 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
     QTabWidget *tabWidget = new QTabWidget;
     tabWidget->setUsesScrollButtons(false);
 
+    QString extraInformation;
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 87)
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    extraInformation = pluginMetaData.extraInformation();
+    QT_WARNING_POP
+#endif
     // Set up the first page...
-    QWidget *aboutWidget = createAboutWidget(pluginMetaData.description(),
-                                             pluginMetaData.extraInformation(),
+    QWidget *aboutWidget = createAboutWidget(pluginMetaData.description(), //
+                                             extraInformation,
                                              pluginMetaData.copyrightText(),
                                              pluginMetaData.website(),
                                              {pluginLicense},
