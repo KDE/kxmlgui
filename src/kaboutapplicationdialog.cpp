@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2007 Urs Wolfer <uwolfer at kde.org>
     SPDX-FileCopyrightText: 2008 Friedrich W. H. Kossebau <kossebau@kde.org>
     SPDX-FileCopyrightText: 2010 Teo Mrnjavac <teo@kde.org>
+    SPDX-FileCopyrightText: 2021 Julius Künzel <jk.kdedev@smartlab.uber.space>
 
     Parts of this class have been take from the KAboutApplication class, which was:
     SPDX-FileCopyrightText: 2000 Waldo Bastian <bastian@kde.org>
@@ -13,8 +14,8 @@
 
 #include "kaboutapplicationdialog.h"
 
-#include "../kxmlgui_version.h"
 #include "kabstractaboutdialog_p.h"
+#include "klicensedialog_p.h"
 // KF
 #include <KAboutData>
 #include <KLocalizedString>
@@ -96,19 +97,12 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
 
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
 
-    // Library versions
+    // Components page
     if (!(opt & KAboutApplicationDialog::HideLibraries)) {
-        QWidget *versionWidget = new QWidget(q);
-        QVBoxLayout *versionLayout = new QVBoxLayout(versionWidget);
-        QLabel *versionLabel = new QLabel(i18n("<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>%4</em> windowing system</li></ul>",
-                                               QStringLiteral(KXMLGUI_VERSION_STRING),
-                                               QString::fromLocal8Bit(qVersion()),
-                                               QStringLiteral(QT_VERSION_STR),
-                                               QGuiApplication::platformName()));
-        versionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
-        versionLayout->addWidget(versionLabel);
-        versionLayout->addStretch();
-        tabWidget->addTab(versionWidget, i18nc("@title:tab", "Libraries"));
+        QWidget *componentWidget = createComponentWidget(aboutData.components(), q);
+
+        const QString componentPageTitle = i18nc("@title:tab", "Components");
+        tabWidget->addTab(componentWidget, componentPageTitle);
     }
 
     // And here we go, authors page...

@@ -13,8 +13,11 @@
 
 #include "kabstractaboutdialog_p.h"
 
+#include "../kxmlgui_version.h"
+#include "kaboutapplicationcomponentlistdelegate_p.h"
+#include "kaboutapplicationcomponentmodel_p.h"
 #include "kaboutapplicationpersonlistdelegate_p.h"
-#include "kaboutapplicationpersonlistview_p.h"
+#include "kaboutapplicationlistview_p.h"
 #include "kaboutapplicationpersonmodel_p.h"
 #include "klicensedialog_p.h"
 // KF
@@ -22,6 +25,7 @@
 #include <KLocalizedString>
 #include <KTitleWidget>
 // Qt
+#include <QApplication>
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QIcon>
@@ -93,6 +97,31 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
     return aboutWidget;
 }
 
+QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutComponent> &components, QWidget *parent)
+{
+    QWidget *componentWidget = new QWidget(parent);
+    QVBoxLayout *componentLayout = new QVBoxLayout(componentWidget);
+    componentLayout->setContentsMargins(0, 0, 0, 0);
+
+    QList<KAboutComponent> allComponents = components;
+    allComponents.prepend(KAboutComponent(i18n("The <em>%1</em> windowing system", QGuiApplication::platformName())));
+    allComponents.prepend(KAboutComponent(i18n("Qt"), QString(), i18n("%1 (built against %2)", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)), QStringLiteral("https://www.qt.io/")));
+    allComponents.prepend(KAboutComponent(i18n("KDE Frameworks"), QString(), QStringLiteral(KXMLGUI_VERSION_STRING), QStringLiteral("https://develop.kde.org/products/frameworks/")));
+
+    KDEPrivate::KAboutApplicationComponentModel *componentModel = new KDEPrivate::KAboutApplicationComponentModel(allComponents, componentWidget);
+
+    KDEPrivate::KAboutApplicationListView *componentView = new KDEPrivate::KAboutApplicationListView(componentWidget);
+
+    KDEPrivate::KAboutApplicationComponentListDelegate *componentDelegate = new KDEPrivate::KAboutApplicationComponentListDelegate(componentView, componentView);
+
+    componentView->setModel(componentModel);
+    componentView->setItemDelegate(componentDelegate);
+    componentView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    componentLayout->addWidget(componentView);
+
+    return componentWidget;
+}
+
 static QWidget *createAvatarCheck(QWidget *parent, KDEPrivate::KAboutApplicationPersonModel *model)
 {
     // Add in a checkbox to allow people to switch the avatar fetch
@@ -158,7 +187,7 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
 
     KDEPrivate::KAboutApplicationPersonModel *authorModel = new KDEPrivate::KAboutApplicationPersonModel(authors, authorWidget);
 
-    KDEPrivate::KAboutApplicationPersonListView *authorView = new KDEPrivate::KAboutApplicationPersonListView(authorWidget);
+    KDEPrivate::KAboutApplicationListView *authorView = new KDEPrivate::KAboutApplicationListView(authorWidget);
 
     KDEPrivate::KAboutApplicationPersonListDelegate *authorDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(authorView, authorView);
 
@@ -179,7 +208,7 @@ QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerso
 
     KDEPrivate::KAboutApplicationPersonModel *creditModel = new KDEPrivate::KAboutApplicationPersonModel(credits, creditWidget);
 
-    KDEPrivate::KAboutApplicationPersonListView *creditView = new KDEPrivate::KAboutApplicationPersonListView(creditWidget);
+    KDEPrivate::KAboutApplicationListView *creditView = new KDEPrivate::KAboutApplicationListView(creditWidget);
 
     KDEPrivate::KAboutApplicationPersonListDelegate *creditDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(creditView, creditView);
 
@@ -200,7 +229,7 @@ QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAbout
 
     KDEPrivate::KAboutApplicationPersonModel *translatorModel = new KDEPrivate::KAboutApplicationPersonModel(translators, translatorWidget);
 
-    KDEPrivate::KAboutApplicationPersonListView *translatorView = new KDEPrivate::KAboutApplicationPersonListView(translatorWidget);
+    KDEPrivate::KAboutApplicationListView *translatorView = new KDEPrivate::KAboutApplicationListView(translatorWidget);
 
     KDEPrivate::KAboutApplicationPersonListDelegate *translatorDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(translatorView, translatorView);
 

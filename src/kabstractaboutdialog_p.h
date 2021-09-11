@@ -33,6 +33,8 @@ public:
                                const QString &homepage,
                                const QList<KAboutLicense> &licenses,
                                QWidget *parent);
+    QWidget *createComponentWidget(const QList<KAboutComponent> &components,
+                                 QWidget *parent);
     QWidget *createAuthorsWidget(const QList<KAboutPerson> &authors,
                                  bool customAuthorTextEnabled,
                                  const QString &customAuthorRichText,

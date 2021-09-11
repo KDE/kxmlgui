@@ -7,7 +7,7 @@
 
 #include "kaboutapplicationpersonlistdelegate_p.h"
 
-#include "kaboutapplicationpersonlistview_p.h"
+#include "kaboutapplicationlistview_p.h"
 #include "kaboutapplicationpersonmodel_p.h"
 #include "ktoolbar.h"
 

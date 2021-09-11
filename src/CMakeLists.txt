@@ -14,8 +14,10 @@ configure_file(config-xmlgui.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xmlgui.h
 
 target_sources(KF5XmlGui PRIVATE
   kaboutapplicationdialog.cpp
+  kaboutapplicationcomponentlistdelegate_p.cpp
+  kaboutapplicationcomponentmodel_p.cpp
+  kaboutapplicationlistview_p.cpp
   kaboutapplicationpersonlistdelegate_p.cpp
-  kaboutapplicationpersonlistview_p.cpp
   kaboutapplicationpersonmodel_p.cpp
   kaboutkdedialog_p.cpp
   kaboutplugindialog.cpp
