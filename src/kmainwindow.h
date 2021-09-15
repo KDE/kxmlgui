@@ -372,6 +372,12 @@ public:
     virtual void applyMainWindowSettings(const KConfigGroup &config);
 
     /**
+     * Restores the state of the main window
+     * @since 6.0.0
+     */
+    virtual void applyMainWindowState(KConfigGroup &config);
+
+    /**
      * Save settings for statusbar, menubar and toolbar to their respective
      * groups in the config group @p config.
      *

@@ -697,6 +697,50 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
 
+    QStatusBar *sb = internalStatusBar(this);
+    if (sb) {
+        QString entry = cg.readEntry("StatusBar", "Enabled");
+        sb->setVisible(entry != QLatin1String("Disabled"));
+    }
+
+    QMenuBar *mb = internalMenuBar(this);
+    if (mb) {
+        QString entry = cg.readEntry("MenuBar", "Enabled");
+        mb->setVisible(entry != QLatin1String("Disabled"));
+    }
+
+    if (!autoSaveSettings() || cg.name() == autoSaveGroup()) { // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
+        QString entry = cg.readEntry("ToolBarsMovable", "Disabled");
+        KToolBar::setToolBarsLocked(entry == QLatin1String("Disabled"));
+    }
+
+    int n = 1; // Toolbar counter. toolbars are counted from 1,
+    const auto toolBars = this->toolBars();
+    for (KToolBar *toolbar : toolBars) {
+        QByteArray groupName("Toolbar");
+        // Give a number to the toolbar, but prefer a name if there is one,
+        // because there's no real guarantee on the ordering of toolbars
+        groupName += (toolbar->objectName().isEmpty() ? QByteArray::number(n) : QByteArray(" ").append(toolbar->objectName().toUtf8()));
+
+        KConfigGroup toolbarGroup(&cg, groupName.constData());
+        toolbar->applySettings(toolbarGroup);
+        n++;
+    }
+
+    if (focusedWidget) {
+        focusedWidget->setFocus();
+    }
+
+    d->settingsDirty = false;
+    d->letDirtySettings = oldLetDirtySettings;
+}
+
+void KMainWindow::applyMainWindowState(KConfigGroup &cg)
+{
+    Q_D(KMainWindow);
+
+    QWidget *focusedWidget = QApplication::focusWidget();
+
     if (!d->sizeApplied && (!window() || window() == this)) {
         winId(); // ensure there's a window created
         // Set the window's size from the existing widget geometry to respect the
@@ -728,36 +772,6 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
         }
     }
 
-    QStatusBar *sb = internalStatusBar(this);
-    if (sb) {
-        QString entry = cg.readEntry("StatusBar", "Enabled");
-        sb->setVisible(entry != QLatin1String("Disabled"));
-    }
-
-    QMenuBar *mb = internalMenuBar(this);
-    if (mb) {
-        QString entry = cg.readEntry("MenuBar", "Enabled");
-        mb->setVisible(entry != QLatin1String("Disabled"));
-    }
-
-    if (!autoSaveSettings() || cg.name() == autoSaveGroup()) { // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
-        QString entry = cg.readEntry("ToolBarsMovable", "Disabled");
-        KToolBar::setToolBarsLocked(entry == QLatin1String("Disabled"));
-    }
-
-    int n = 1; // Toolbar counter. toolbars are counted from 1,
-    const auto toolBars = this->toolBars();
-    for (KToolBar *toolbar : toolBars) {
-        QByteArray groupName("Toolbar");
-        // Give a number to the toolbar, but prefer a name if there is one,
-        // because there's no real guarantee on the ordering of toolbars
-        groupName += (toolbar->objectName().isEmpty() ? QByteArray::number(n) : QByteArray(" ").append(toolbar->objectName().toUtf8()));
-
-        KConfigGroup toolbarGroup(&cg, groupName.constData());
-        toolbar->applySettings(toolbarGroup);
-        n++;
-    }
-
     QByteArray state;
     if (cg.hasKey("State")) {
         state = cg.readEntry("State", state);
@@ -769,9 +783,6 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     if (focusedWidget) {
         focusedWidget->setFocus();
     }
-
-    d->settingsDirty = false;
-    d->letDirtySettings = oldLetDirtySettings;
 }
 
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
