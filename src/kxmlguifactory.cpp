@@ -172,6 +172,8 @@ KXMLGUIFactory::KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent)
     : QObject(parent)
     , d(new KXMLGUIFactoryPrivate)
 {
+    Q_INIT_RESOURCE(kxmlgui);
+
     d->builder = builder;
     d->guiClient = nullptr;
     if (d->builder) {

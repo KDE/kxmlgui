@@ -70,6 +70,8 @@ KXMLGUIClient::KXMLGUIClient()
 KXMLGUIClient::KXMLGUIClient(KXMLGUIClient *parent)
     : d(new KXMLGUIClientPrivate)
 {
+    Q_INIT_RESOURCE(kxmlgui);
+
     parent->insertChildClient(this);
 }
 
