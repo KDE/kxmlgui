@@ -118,7 +118,7 @@ public:
     void slotContextText();
     void slotContextTextRight();
     void slotContextTextUnder();
-    void slotContextIconSize();
+    void slotContextIconSize(QAction *action);
     void slotLockToolBars(bool lock);
 
     void init(bool readConfig = true, bool isMainToolBar = false);
@@ -353,11 +353,10 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
 
         contextSize = new QMenu(i18n("Icon Size"), context);
 
-        auto contextIconSizeFunc = [this]() {
-            slotContextIconSize();
-        };
-
-        auto *act = contextSize->addAction(i18nc("@item:inmenu Icon size", "Default"), q, contextIconSizeFunc);
+        auto *act = contextSize->addAction(i18nc("@item:inmenu Icon size", "Default"));
+        q->connect(act, &QAction::triggered, q, [this, act]() {
+            slotContextIconSize(act);
+        });
         m_contextIconSizes.push_back({act, iconSizeSettings.defaultValue()});
 
         // Query the current theme for available sizes
@@ -383,8 +382,11 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
                     text = i18n("Huge (%1x%2)", it, it);
                 }
 
-                // save the size in the contextIconSizes map
-                m_contextIconSizes.push_back({contextSize->addAction(text, q, contextIconSizeFunc), it});
+                auto *act = contextSize->addAction(text);
+                q->connect(act, &QAction::triggered, q, [this, act]() {
+                    slotContextIconSize(act);
+                });
+                m_contextIconSizes.push_back({act, it});
             }
         } else {
             // Scalable icons.
@@ -404,8 +406,11 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
                             text = i18n("Huge (%1x%2)", it, it);
                         }
 
-                        // save the size in the contextIconSizes map
-                        m_contextIconSizes.push_back({contextSize->addAction(text, q, contextIconSizeFunc), it});
+                        auto *act = contextSize->addAction(text);
+                        q->connect(act, &QAction::triggered, q, [this, act]() {
+                            slotContextIconSize(act);
+                        });
+                        m_contextIconSizes.push_back({act, it});
                         break;
                     }
                 }
@@ -827,9 +832,8 @@ void KToolBarPrivate::slotContextTextRight()
     toolButtonStyleSettings[Level_UserSettings] = q->toolButtonStyle();
 }
 
-void KToolBarPrivate::slotContextIconSize()
+void KToolBarPrivate::slotContextIconSize(QAction *action)
 {
-    QAction *action = qobject_cast<QAction *>(q->sender());
     if (action) {
         auto it = std::find_if(m_contextIconSizes.cbegin(), m_contextIconSizes.cend(), [action](const ContextIconInfo &info) {
             return info.iconAction == action;
