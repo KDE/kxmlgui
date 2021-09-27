@@ -402,7 +402,7 @@ void KXMLGUIFactory::changeShortcutScheme(const QString &scheme)
 
 void KXMLGUIFactory::forgetClient(KXMLGUIClient *client)
 {
-    d->m_clients.removeAll(client);
+    d->m_clients.erase(std::remove(d->m_clients.begin(), d->m_clients.end(), client), d->m_clients.end());
 }
 
 void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
@@ -419,7 +419,7 @@ void KXMLGUIFactory::removeClient(KXMLGUIClient *client)
     }
 
     // remove this client from our client list
-    d->m_clients.removeAll(client);
+    forgetClient(client);
 
     // remove child clients first (create a copy of the list just in case the
     // original list is modified directly or indirectly in removeClient())

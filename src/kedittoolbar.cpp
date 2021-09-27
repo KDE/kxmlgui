@@ -940,19 +940,16 @@ void KEditToolBarWidget::rebuildKXMLGUIClients()
     }
 
     const QList<KXMLGUIClient *> clients = d->m_factory->clients();
-    // qDebug(240) << "factory: " << clients.count() << " clients";
+    // qDebug() << "factory: " << clients.count() << " clients";
 
-    // remove the elements starting from the last going to the first
     if (clients.isEmpty()) {
         return;
     }
 
-    QListIterator<KXMLGUIClient *> clientIterator = clients;
-    clientIterator.toBack();
-    while (clientIterator.hasPrevious()) {
-        KXMLGUIClient *client = clientIterator.previous();
-        // qDebug(240) << "factory->removeClient " << client;
-        d->m_factory->removeClient(client);
+    // remove the elements starting from the last going to the first
+    for (auto it = clients.crbegin(); it != clients.crend(); ++it) {
+        // qDebug() << "factory->removeClient " << client;
+        d->m_factory->removeClient(*it);
     }
 
     KXMLGUIClient *firstClient = clients.first();

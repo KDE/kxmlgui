@@ -122,63 +122,42 @@ ContainerNode *ContainerNode::findContainer(const QString &_name, bool tag)
  */
 ContainerNode *ContainerNode::findContainer(const QString &name, const QString &tagName, const QList<QWidget *> *excludeList, KXMLGUIClient * /*currClient*/)
 {
-    ContainerNode *res = nullptr;
-    ContainerNodeList::ConstIterator nIt = children.constBegin();
-
     if (!name.isEmpty()) {
-        for (; nIt != children.constEnd(); ++nIt) {
-            if ((*nIt)->name == name && !excludeList->contains((*nIt)->container)) {
-                res = *nIt;
-                break;
-            }
-        }
-
-        return res;
+        auto it = std::find_if(children.cbegin(), children.cend(), [&name, excludeList](ContainerNode *node) {
+            return node->name == name && !excludeList->contains(node->container);
+        });
+        return it != children.cend() ? *it : nullptr;
     }
 
     if (!tagName.isEmpty()) {
-        for (; nIt != children.constEnd(); ++nIt) {
-            if ((*nIt)->tagName == tagName && !excludeList->contains((*nIt)->container)
-                /*
-                 * It is a bad idea to also compare the client, because
-                 * we don't want to do so in situations like these:
-                 *
-                 * <MenuBar>
-                 *   <Menu>
-                 *     ...
-                 *
-                 * other client:
-                 * <MenuBar>
-                 *   <Menu>
-                 *    ...
-                 *
-                && (*nIt)->client == currClient )
-                */
-            ) {
-                res = *nIt;
-                break;
-            }
-        }
-    }
+        // It is a bad idea to also compare the client (node->client == currClient),
+        // because we don't want to do so in situations like these:
+        //
+        // <MenuBar>
+        //   <Menu>
+        //     ...
+        //
+        // other client:
+        // <MenuBar>
+        //   <Menu>
+        //    ...
+        auto it = std::find_if(children.cbegin(), children.cend(), [&tagName, excludeList](ContainerNode *node) {
+            return node->tagName == tagName && !excludeList->contains(node->container);
+        });
+        return it != children.cend() ? *it : nullptr;
+    };
 
-    return res;
+    return {};
 }
 
 ContainerClient *
 ContainerNode::findChildContainerClient(KXMLGUIClient *currentGUIClient, const QString &groupName, const MergingIndexList::iterator &mergingIdx)
 {
-    if (!clients.isEmpty()) {
-        for (ContainerClient *client : std::as_const(clients)) {
-            if (client->client == currentGUIClient) {
-                if (groupName.isEmpty()) {
-                    return client;
-                }
-
-                if (groupName == client->groupName) {
-                    return client;
-                }
-            }
-        }
+    auto it = std::find_if(clients.cbegin(), clients.cend(), [&groupName, currentGUIClient](ContainerClient *cl) {
+        return cl->client == currentGUIClient && (groupName.isEmpty() || groupName == cl->groupName);
+    });
+    if (it != clients.cend()) {
+        return *it;
     }
 
     ContainerClient *client = new ContainerClient;
