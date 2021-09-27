@@ -179,21 +179,18 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
         return;
     }
 
-    QList<DocStruct> allDocuments;
+    std::vector<DocStruct> allDocuments;
     allDocuments.reserve(files.size());
 
     for (const QString &file : files) {
-        DocStruct d;
-        d.file = file;
-        d.data = KXMLGUIFactory::readConfigFile(file);
-        allDocuments.append(d);
+        allDocuments.push_back({file, KXMLGUIFactory::readConfigFile(file)});
     }
 
-    QList<DocStruct>::iterator best = allDocuments.end();
+    auto best = allDocuments.end();
     uint bestVersion = 0;
 
-    QList<DocStruct>::iterator docIt = allDocuments.begin();
-    const QList<DocStruct>::iterator docEnd = allDocuments.end();
+    auto docIt = allDocuments.begin();
+    const auto docEnd = allDocuments.end();
     for (; docIt != docEnd; ++docIt) {
         const QString versionStr = KXMLGUIClient::findVersionNumber((*docIt).data);
         if (versionStr.isEmpty()) {
@@ -217,7 +214,7 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
 
     if (best != docEnd) {
         if (best != allDocuments.begin()) {
-            QList<DocStruct>::iterator local = allDocuments.begin();
+            auto local = allDocuments.begin();
 
             if ((*local).file.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation))) {
                 // load the local document and extract the action properties
@@ -272,7 +269,8 @@ KXmlGuiVersionHandler::KXmlGuiVersionHandler(const QStringList &files)
         m_file = (*best).file;
     } else {
         // qCDebug(DEBUG_KXMLGUI) << "returning first one...";
-        m_doc = allDocuments.first().data;
-        m_file = allDocuments.first().file;
+        const auto &[file, data] = allDocuments.at(0);
+        m_file = file;
+        m_doc = data;
     }
 }
