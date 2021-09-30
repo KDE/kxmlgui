@@ -34,7 +34,14 @@ public:
     bool autoSaveWindowSize : 1;
     bool sizeApplied : 1;
     bool suppressCloseEvent : 1;
+
     KConfigGroup autoSaveGroup;
+    KConfigGroup m_stateConfigGroup;
+    inline KConfigGroup getValidStateConfig(KConfigGroup &cg) const
+    {
+        return m_stateConfigGroup.isValid() ? m_stateConfigGroup : cg;
+    }
+
     QTimer *settingsTimer;
     QTimer *sizeTimer;
     QRect defaultWindowSize;

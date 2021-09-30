@@ -361,6 +361,23 @@ public:
     KConfigGroup autoSaveConfigGroup() const;
 
     /**
+     * Set the config group name for state config returned by @p stateConfigGroup
+     * If this method is called the window size and window state are stored in the resulting KConfigGroup.
+     *
+     * @see KSharedConfig::openStateConfig
+     *
+     * @since 5.88
+     */
+    void setStateConfigGroup(const QString &configGroup);
+
+    /*
+     * Returns the KConfigGroup used to store state data like window sizes or window state.
+     * The resulting group in invalid if @p setStateConfig is not called explicitly.
+     * @since 5.88
+     */
+    KConfigGroup stateConfigGroup() const;
+
+    /**
      * Read settings for statusbar, menubar and toolbar from their respective
      * groups in the config file and apply them.
      *

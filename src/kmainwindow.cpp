@@ -546,7 +546,7 @@ void KMainWindow::closeEvent(QCloseEvent *e)
     // Delete the marker that says we don't want to restore the position of the
     // next-opened instance; now that a window is closing, we do want to do this
     if (d->autoSaveGroup.isValid()) {
-        d->autoSaveGroup.deleteEntry("RestorePositionForNextInstance");
+        d->getValidStateConfig(d->autoSaveGroup).deleteEntry("RestorePositionForNextInstance");
     }
     d->_k_slotSaveAutoSavePosition();
 
@@ -604,16 +604,17 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     Q_D(KMainWindow);
     // qDebug(200) << "KMainWindow::saveMainWindowSettings " << cg.name();
 
+    KConfigGroup stateConfig = d->getValidStateConfig(cg);
     // Called by session management - or if we want to save the window size anyway
     if (d->autoSaveWindowSize) {
-        KWindowConfig::saveWindowSize(windowHandle(), cg);
-        KWindowConfig::saveWindowPosition(windowHandle(), cg);
+        KWindowConfig::saveWindowSize(windowHandle(), stateConfig);
+        KWindowConfig::saveWindowPosition(windowHandle(), stateConfig);
     }
 
     // One day will need to save the version number, but for now, assume 0
     // Utilise the QMainWindow::saveState() functionality.
     const QByteArray state = saveState();
-    cg.writeEntry("State", state.toBase64());
+    stateConfig.writeEntry("State", state.toBase64());
 
     QStatusBar *sb = internalStatusBar(this);
     if (sb) {
@@ -697,6 +698,8 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
 
+    KConfigGroup stateConfig = d->getValidStateConfig(cg);
+
     if (!d->sizeApplied && (!window() || window() == this)) {
         winId(); // ensure there's a window created
         // Set the window's size from the existing widget geometry to respect the
@@ -705,7 +708,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
         // TODO: remove once QTBUG-40584 is fixed; see below
         windowHandle()->setWidth(width());
         windowHandle()->setHeight(height());
-        KWindowConfig::restoreWindowSize(windowHandle(), cg);
+        KWindowConfig::restoreWindowSize(windowHandle(), stateConfig);
         // NOTICE: QWindow::setGeometry() does NOT impact the backing QWidget geometry even if the platform
         // window was created -> QTBUG-40584. We therefore copy the size here.
         // TODO: remove once this was resolved in QWidget QPA
@@ -717,13 +720,12 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
         KSharedConfigPtr config = KSharedConfig::openConfig();
         KConfigGroup group(config, "General");
         if (group.readEntry("AllowKDEAppsToRememberWindowPositions", true)) {
-            if (cg.readEntry("RestorePositionForNextInstance", true)) {
+            if (stateConfig.readEntry("RestorePositionForNextInstance", true)) {
                 KWindowConfig::restoreWindowPosition(windowHandle(), cg);
                 // Save the fact that we now don't want to restore position
                 // anymore; if we did, the next instance would completely cover
                 // the existing one
-                KConfigGroup cgWritable = cg; // because cg is const
-                cgWritable.writeEntry("RestorePositionForNextInstance", false);
+                stateConfig.writeEntry("RestorePositionForNextInstance", false);
             }
         }
     }
@@ -759,8 +761,8 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
     }
 
     QByteArray state;
-    if (cg.hasKey("State")) {
-        state = cg.readEntry("State", state);
+    if (stateConfig.hasKey("State")) {
+        state = stateConfig.readEntry("State", state);
         state = QByteArray::fromBase64(state);
         // One day will need to load the version number, but for now, assume 0
         restoreState(state);
@@ -849,6 +851,18 @@ KConfigGroup KMainWindow::autoSaveConfigGroup() const
 {
     Q_D(const KMainWindow);
     return d->autoSaveSettings ? d->autoSaveGroup : KConfigGroup();
+}
+
+void KMainWindow::setStateConfigGroup(const QString &configGroup)
+{
+    Q_D(KMainWindow);
+    d->m_stateConfigGroup = KSharedConfig::openStateConfig()->group(configGroup);
+}
+
+KConfigGroup KMainWindow::stateConfigGroup() const
+{
+    Q_D(const KMainWindow);
+    return d->m_stateConfigGroup;
 }
 
 void KMainWindow::saveAutoSaveSettings()
