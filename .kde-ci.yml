@@ -1,18 +1,19 @@
 Dependencies:
-- 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
+- 'on': ['@all']
   'require':
     'frameworks/extra-cmake-modules': '@same'
-    'frameworks/attica' : '@same'
     'frameworks/kitemviews' : '@same'
     'frameworks/kconfig' : '@same'
-    'frameworks/kglobalaccel' : '@same'
     'frameworks/kconfigwidgets' : '@same'
     'frameworks/ki18n' : '@same'
     'frameworks/kiconthemes' : '@same'
     'frameworks/ktextwidgets' : '@same'
     'frameworks/kwidgetsaddons' : '@same'
     'frameworks/kwindowsystem' : '@same'
-    'frameworks/breeze-icons' : '@same'
+
+- 'on': ['Linux', 'FreeBSD']
+  'require':
+    'frameworks/kglobalaccel' : '@same'
 
 Options:
   test-before-installing: True
