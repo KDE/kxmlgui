@@ -688,10 +688,13 @@ bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
     return true;
 }
 
-void KMainWindow::applyMainWindowSettings(const KConfigGroup &cg)
+void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
 {
     Q_D(KMainWindow);
     // qDebug(200) << "KMainWindow::applyMainWindowSettings " << cg.name();
+
+    KConfigGroup cg = _cg;
+    d->migrateStateDataIfNeeded(cg);
 
     QWidget *focusedWidget = QApplication::focusWidget();
 

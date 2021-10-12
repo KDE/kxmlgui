@@ -41,6 +41,14 @@ public:
     {
         return m_stateConfigGroup.isValid() ? m_stateConfigGroup : cg;
     }
+    inline void migrateStateDataIfNeeded(KConfigGroup &cg)
+    {
+        if (m_stateConfigGroup.isValid()) {
+            // The window sizes are written in KWindowSystem and RestorePositionForNextInstance is only temporarely written until
+            // all instances of the app are closed
+            cg.moveValuesTo({"State"}, m_stateConfigGroup);
+        }
+    }
 
     QTimer *settingsTimer;
     QTimer *sizeTimer;
