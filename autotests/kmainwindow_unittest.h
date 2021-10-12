@@ -22,6 +22,7 @@ private Q_SLOTS:
     void testNameWithSpecialChars();
     void testNameWithHash();
     void testSaveWindowSize();
+    void testSaveWindowSizeInStateConfig();
     void testAutoSaveSettings();
     void testNoAutoSave();
     void testWidgetWithStatusBar();

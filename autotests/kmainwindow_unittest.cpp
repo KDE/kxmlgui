@@ -165,6 +165,28 @@ void KMainWindow_UnitTest::testSaveWindowSize()
     QTRY_COMPARE(mw2.size(), QSize(800, 600));
 }
 
+void KMainWindow_UnitTest::testSaveWindowSizeInStateConfig()
+{
+    QCOMPARE(KSharedConfig::openConfig()->name(), QStringLiteral("kmainwindow_unittestrc"));
+    KConfigGroup cfg(KSharedConfig::openConfig(), "testSaveWindowSizeInStateConfig");
+    cfg.deleteGroup();
+    QVERIFY(cfg.isValid());
+
+    {
+        MyMainWindow mw;
+        mw.show();
+        mw.reallyResize(800, 600);
+        mw.setStateConfigGroup(QStringLiteral("StateConfigGroup"));
+        mw.saveMainWindowSettings(cfg);
+        mw.close();
+    }
+
+    const KConfigGroup stateGrp = KSharedConfig::openStateConfig()->group(QStringLiteral("StateConfigGroup"));
+    QVERIFY(stateGrp.exists());
+    QVERIFY(stateGrp.hasKey("State"));
+    QVERIFY(!cfg.hasKey("State"));
+}
+
 void KMainWindow_UnitTest::testAutoSaveSettings()
 {
     const QString group(QStringLiteral("AutoSaveTestGroup"));
