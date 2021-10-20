@@ -763,8 +763,8 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
         n++;
     }
 
-    QByteArray state;
     if (stateConfig.hasKey("State")) {
+        QByteArray state;
         state = stateConfig.readEntry("State", state);
         state = QByteArray::fromBase64(state);
         // One day will need to load the version number, but for now, assume 0
