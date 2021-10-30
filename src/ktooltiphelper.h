@@ -97,7 +97,7 @@ public:
 private:
     explicit KToolTipHelper(QObject *parent);
 
-    virtual ~KToolTipHelper();
+    ~KToolTipHelper() override;
 
 private:
     std::unique_ptr<KToolTipHelperPrivate> const d;

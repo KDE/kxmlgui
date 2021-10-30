@@ -37,7 +37,7 @@ public:
 
     explicit KToolTipHelperPrivate(KToolTipHelper *qq);
 
-    virtual ~KToolTipHelperPrivate();
+    ~KToolTipHelperPrivate() override;
 
     /** @see KToolTipHelper::eventFilter() */
     virtual bool eventFilter(QObject* watched, QEvent* event) override;

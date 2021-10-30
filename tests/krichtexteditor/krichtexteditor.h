@@ -25,7 +25,7 @@ class KRichTextEditor : public KXmlGuiWindow
     Q_OBJECT
 public:
     KRichTextEditor();
-    ~KRichTextEditor();
+    ~KRichTextEditor() override;
 
     void setupActions();
 

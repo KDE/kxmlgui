@@ -143,7 +143,7 @@ public:
      *
      * Destroys dialogs and the menu pointer returned by menu
      */
-    ~KHelpMenu();
+    ~KHelpMenu() override;
 
     /**
      * Returns a popup menu you can use in the menu bar or where you

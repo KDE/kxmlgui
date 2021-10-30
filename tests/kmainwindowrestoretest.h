@@ -11,7 +11,7 @@ public:
         : KMainWindow()
     {
     }
-    virtual ~MainWin1()
+    ~MainWin1() override
     {
     }
 };
@@ -24,7 +24,7 @@ public:
         : KMainWindow()
     {
     }
-    virtual ~MainWin2()
+    ~MainWin2() override
     {
     }
 };
@@ -37,7 +37,7 @@ public:
         : KMainWindow()
     {
     }
-    virtual ~MainWin3()
+    ~MainWin3() override
     {
     }
 };
@@ -50,7 +50,7 @@ public:
         : KMainWindow()
     {
     }
-    virtual ~MainWin4()
+    ~MainWin4() override
     {
     }
 };
@@ -63,7 +63,7 @@ public:
         : KMainWindow()
     {
     }
-    virtual ~MainWin5()
+    ~MainWin5() override
     {
     }
 };
@@ -76,7 +76,7 @@ public:
         : KMainWindow()
     {
     }
-    virtual ~MainWin6()
+    ~MainWin6() override
     {
     }
 };

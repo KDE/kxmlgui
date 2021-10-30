@@ -109,7 +109,7 @@ public:
     explicit KShortcutsEditor(QWidget *parent, ActionTypes actionTypes = AllActions, LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
 
     /// Destructor
-    virtual ~KShortcutsEditor();
+    ~KShortcutsEditor() override;
 
     /**
      * Are the unsaved changes?

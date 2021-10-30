@@ -18,7 +18,7 @@ class TestWindow : public KXmlGuiWindow
 
 public:
     TestWindow(QWidget *parent = nullptr);
-    ~TestWindow();
+    ~TestWindow() override;
 
 public Q_SLOTS:
     void beFixed();

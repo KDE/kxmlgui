@@ -42,7 +42,7 @@ class KRulerTest : public QWidget
     Q_OBJECT
 public:
     KRulerTest();
-    ~KRulerTest();
+    ~KRulerTest() override;
 
 private Q_SLOTS:
     void slotNewWidth(int);

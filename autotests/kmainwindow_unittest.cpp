@@ -102,7 +102,7 @@ public:
         m_queryClosedCalled = true;
         return true;
     }
-    ~MyMainWindow()
+    ~MyMainWindow() override
     {
         s_mainWindowDeleted = true;
     }

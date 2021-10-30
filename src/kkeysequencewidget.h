@@ -65,7 +65,7 @@ public:
     /**
      * Destructs the widget.
      */
-    virtual ~KKeySequenceWidget();
+    ~KKeySequenceWidget() override;
 
     /**
      * \name Configuration

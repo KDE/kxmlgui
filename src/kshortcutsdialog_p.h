@@ -269,7 +269,7 @@ public:
      *
      * Will undo pending changes. If you don't want that. Call commitChanges before
      */
-    virtual ~KShortcutsEditorItem();
+    ~KShortcutsEditorItem() override;
 
     //! Undo the changes since the last commit.
     void undo();

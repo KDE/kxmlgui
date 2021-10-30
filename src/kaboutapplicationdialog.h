@@ -100,7 +100,7 @@ public:
      */
     explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = nullptr);
 
-    virtual ~KAboutApplicationDialog();
+    ~KAboutApplicationDialog() override;
 
 private:
     std::unique_ptr<class KAboutApplicationDialogPrivate> const d;

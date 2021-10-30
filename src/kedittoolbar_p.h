@@ -151,7 +151,7 @@ public:
      * @em NOT be saved in the destructor.  You @em must call save()
      * to do that.
      */
-    virtual ~KEditToolBarWidget();
+    ~KEditToolBarWidget() override;
 
     /**
      * Old-style load.
