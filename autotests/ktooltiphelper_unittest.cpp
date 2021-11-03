@@ -16,7 +16,6 @@
 #include <QFrame>
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QMainWindow>
 #include <QMenu>
 #include <QStyle>
 #include <QToolButton>

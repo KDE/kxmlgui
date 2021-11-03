@@ -21,7 +21,6 @@
 #include "kaboutapplicationpersonmodel_p.h"
 #include "klicensedialog_p.h"
 // KF
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KTitleWidget>
 // Qt
