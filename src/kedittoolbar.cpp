@@ -41,12 +41,6 @@
 #include "../kxmlgui_version.h"
 #include "ktoolbarhelper_p.h"
 
-static const char separatorstring[] = I18N_NOOP("--- separator ---");
-static const char spacerstring[] = I18N_NOOP("--- expanding spacer ---");
-
-#define SEPARATORSTRING i18n(separatorstring)
-#define SPACERSTRING i18n(spacerstring)
-
 // static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
 
 typedef QList<QDomElement> ToolBarList;
@@ -1211,6 +1205,9 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
     const QLatin1String tagAction("Action");
     const QLatin1String attrName("name");
 
+    const QString separatorstring = i18n("--- separator ---");
+    const QString spacerstring = i18n("--- expanding spacer ---");
+
     int sep_num = 0;
     QString sep_name(QStringLiteral("separator_%1"));
     int spacer_num = 0;
@@ -1243,14 +1240,14 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
         if (it.tagName() == tagSeparator) {
             ToolBarItem *act = new ToolBarItem(m_activeList, tagSeparator, sep_name.arg(sep_num++), QString());
             act->setSeparator(true);
-            act->setText(SEPARATORSTRING);
+            act->setText(separatorstring);
             it.setAttribute(attrName, act->internalName());
             continue;
         }
         if (it.tagName() == tagSpacer) {
             ToolBarItem *act = new ToolBarItem(m_activeList, tagSpacer, spacer_name.arg(spacer_num++), QString());
             act->setSpacer(true);
-            act->setText(SPACERSTRING);
+            act->setText(spacerstring);
             it.setAttribute(attrName, act->internalName());
             continue;
         }
@@ -1315,12 +1312,12 @@ void KEditToolBarWidgetPrivate::loadActions(const QDomElement &elem)
     // finally, add default separators and spacers to the inactive list
     ToolBarItem *sep = new ToolBarItem(nullptr, tagSeparator, sep_name.arg(sep_num++), QString());
     sep->setSeparator(true);
-    sep->setText(SEPARATORSTRING);
+    sep->setText(separatorstring);
     m_inactiveList->insertItem(0, sep);
 
     ToolBarItem *spacer = new ToolBarItem(nullptr, tagSpacer, spacer_name.arg(spacer_num++), QString());
     spacer->setSpacer(true);
-    spacer->setText(SPACERSTRING);
+    spacer->setText(spacerstring);
     m_inactiveList->insertItem(1, spacer);
 }
 
