@@ -336,9 +336,7 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
     // error it just silently fails. So be nice because this is
     // most likely the first action that is done in the slot
     // listening to keySequenceChanged().
-    for (int i = 0; i < keySequence.count(); ++i) {
-        KGlobalAccel::stealShortcutSystemwide(keySequence[i]);
-    }
+    KGlobalAccel::stealShortcutSystemwide(keySequence);
     return false;
 #else
     Q_UNUSED(keySequence);
