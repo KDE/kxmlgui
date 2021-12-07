@@ -287,6 +287,8 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
 {
     if (!context) {
         context = new QMenu(q);
+        context->setIcon(QIcon::fromTheme(QStringLiteral("configure-toolbars")));
+        context->setTitle(i18nc("@title:menu", "Toolbar Settings"));
 
         contextButtonTitle = context->addSection(i18nc("@title:menu", "Show Text"));
         contextShowText = context->addAction(QString(), q, [this]() {
@@ -441,6 +443,33 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
     // Unplugging a submenu from abouttohide leads to the popupmenu floating around
     // So better simply call that code from after exec() returns (DF)
     // connect(context, SIGNAL(aboutToHide()), this, SLOT(slotContextAboutToHide()));
+
+    // For tool buttons with delay popup or menu button popup (split button)
+    // show the actions of that button for ease of access.
+    // (no need to wait for the menu to open or aim at the arrow)
+    if (auto *contextToolButton = qobject_cast<QToolButton *>(q->widgetForAction(contextButtonAction))) {
+        if (contextToolButton->popupMode() == QToolButton::DelayedPopup || contextToolButton->popupMode() == QToolButton::MenuButtonPopup) {
+            if (auto *actionMenu = contextButtonAction->menu()) {
+                // In case it is populated on demand
+                Q_EMIT actionMenu->aboutToShow();
+
+                auto *contextMenu = new QMenu(q);
+                contextMenu->setAttribute(Qt::WA_DeleteOnClose);
+
+                const auto actions = actionMenu->actions();
+                if (!actions.isEmpty()) {
+                    for (QAction *action : actions) {
+                        contextMenu->addAction(action);
+                    }
+
+                    // Now add the configure actions as submenu
+                    contextMenu->addSeparator();
+                    contextMenu->addMenu(context);
+                    return contextMenu;
+                }
+            }
+        }
+    }
 
     return context;
 }
