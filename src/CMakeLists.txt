@@ -55,7 +55,7 @@ target_sources(KF5XmlGui PRIVATE
   kundoactions.cpp
   kcheckaccelerators.cpp
 )
-if (TARGET Qt5::DBus)
+if (TARGET Qt${QT_MAJOR_VERSION}::DBus)
     target_sources(KF5XmlGui PRIVATE
         kmainwindowiface.cpp
     )
@@ -89,18 +89,18 @@ ecm_generate_export_header(KF5XmlGui
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui>")
+target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui>")
 
 target_link_libraries(KF5XmlGui
 PUBLIC
-    Qt5::Xml            #To parse the configuration (QDomDocument etc)
-    Qt5::Widgets        #QWidget is used everywhere
-    KF5::ConfigCore         #Reading config for ToolbarIcons, Shortcut Schemes...
-    KF5::ConfigWidgets      #KStandardAction, KToggleAction...
+    Qt${QT_MAJOR_VERSION}::Xml      #To parse the configuration (QDomDocument etc)
+    Qt${QT_MAJOR_VERSION}::Widgets  #QWidget is used everywhere
+    KF5::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
+    KF5::ConfigWidgets  #KStandardAction, KToggleAction...
 PRIVATE
-    Qt5::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
-    Qt5::PrintSupport   #QPrinter in kshortcutseditor
-    Qt5::CorePrivate    #QSystemLocale in initializeLanguages
+    Qt${QT_MAJOR_VERSION}::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
+    Qt${QT_MAJOR_VERSION}::PrintSupport   #QPrinter in kshortcutseditor
+    Qt${QT_MAJOR_VERSION}::CorePrivate    #QSystemLocale in initializeLanguages
     KF5::CoreAddons     #KAboutData
     KF5::GuiAddons
     KF5::WidgetsAddons
@@ -108,8 +108,8 @@ PRIVATE
     KF5::I18n                #i18n and i18nc in many places
     KF5::IconThemes         #KIconLoader and KIconThemes in KToolBar
 )
-if (TARGET Qt5::DBus)
-  target_link_libraries(KF5XmlGui PUBLIC Qt5::DBus) #QDBus connect to signal in KToolBar
+if (TARGET Qt${QT_MAJOR_VERSION}::DBus)
+  target_link_libraries(KF5XmlGui PUBLIC Qt${QT_MAJOR_VERSION}::DBus) #QDBus connect to signal in KToolBar
 endif()
 
 set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION}
@@ -148,7 +148,7 @@ install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${KF5_INSTALL_TARGETS_DEFAULT_
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
   ${KXmlGui_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui COMPONENT Devel
 )
 
 # install this file to be compatible, it is bundled in the resource file, too
@@ -198,5 +198,5 @@ if (BUILD_QCH)
 endif()
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui)
+ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

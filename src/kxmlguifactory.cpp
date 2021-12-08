@@ -24,10 +24,12 @@
 #include <QDomDocument>
 #include <QFile>
 #include <QStandardPaths>
-#include <QTextCodec>
 #include <QTextStream>
 #include <QVariant>
 #include <QWidget>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QTextCodec>
+#endif
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -161,7 +163,10 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc, const QString &file
 
     // write out our document
     QTextStream ts(&file);
+    // The default in Qt6 is UTF-8
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     ts.setCodec(QTextCodec::codecForName("UTF-8"));
+#endif
     ts << doc;
 
     file.close();

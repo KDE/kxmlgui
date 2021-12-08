@@ -1,12 +1,12 @@
 
 include(ECMMarkAsTest)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 macro(xmlgui_executable_tests)
   foreach(_testname ${ARGN})
     add_executable(${_testname} ${_testname}.cpp)
-    target_link_libraries(${_testname} Qt5::Test KF5::CoreAddons KF5::WidgetsAddons KF5::I18n KF5::XmlGui)
+    target_link_libraries(${_testname} Qt${QT_MAJOR_VERSION}::Test KF5::CoreAddons KF5::WidgetsAddons KF5::I18n KF5::XmlGui)
     ecm_mark_as_test(${_testname})
   endforeach(_testname)
 endmacro()

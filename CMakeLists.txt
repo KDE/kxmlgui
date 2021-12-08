@@ -42,14 +42,14 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.15.2)
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
 # On non-Apple UNIX DBus is required, on Apple Unix & Windows optional and it does not exist on Android
 if(UNIX AND NOT APPLE)
     if(NOT ANDROID)
-        find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
+        find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
     endif()
 else()
-    find_package(Qt5 ${REQUIRED_QT_VERSION} OPTIONAL_COMPONENTS DBus)
+    find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} OPTIONAL_COMPONENTS DBus)
 endif()
 
 find_package(KF5CoreAddons ${KF_DEP_VERSION} REQUIRED)
@@ -110,7 +110,7 @@ install(EXPORT KF5XmlGuiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
 )
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)

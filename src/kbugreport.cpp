@@ -520,7 +520,7 @@ bool KBugReport::sendBugReport()
 
     QString command = QStandardPaths::findExecutable(QStringLiteral("ksendbugmail"));
     if (command.isEmpty()) {
-        command = QFile::decodeName(CMAKE_INSTALL_PREFIX "/" KDE_INSTALL_LIBEXECDIR_KF5 "/ksendbugmail");
+        command = QFile::decodeName(CMAKE_INSTALL_PREFIX "/" KDE_INSTALL_LIBEXECDIR_KF "/ksendbugmail");
     }
 
     QProcess proc;
