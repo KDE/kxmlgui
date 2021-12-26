@@ -320,7 +320,7 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
     for (int i = 0; i < keySequence.count(); ++i) {
         QKeySequence keys(keySequence[i]);
         if (!KGlobalAccel::isGlobalShortcutAvailable(keySequence, componentName)) {
-            clashing.insert(keySequence, KGlobalAccel::getGlobalShortcutsByKey(keys));
+            clashing.insert(keySequence, KGlobalAccel::globalShortcutsByKey(keys));
         }
     }
     if (clashing.isEmpty()) {
