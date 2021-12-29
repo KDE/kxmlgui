@@ -114,7 +114,7 @@ QSize KAboutApplicationComponentListDelegate::sizeHint(const QStyleOptionViewIte
     return metrics;
 }
 
-void KAboutApplicationComponentListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void KAboutApplicationComponentListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &) const
 {
     QStyle *style = QApplication::style();
     style->drawPrimitive(QStyle::PE_Widget, &option, painter, nullptr);
