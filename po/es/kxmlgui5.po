@@ -1,0 +1,1571 @@
+# translation of kdelibs4.po to Spanish
+# Translation of kdelibs4 to Spanish
+# Copyright (C) 2000-2007
+#
+# Pablo de Vicente <vicente@oan.es>, 2000-2002,2003, 2004.
+# Pablo de Vicente <vicnte@oan.es>, 2003.
+# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+# Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006, 2007.
+# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+# Jaime Robles <jaime@kde.org>, 2007.
+# Javier Viñal <fjvinal@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-21 00:40+0000\n"
+"PO-Revision-Date: 2021-09-12 19:47+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:52
+#, kde-format
+msgid "Visit component's homepage"
+msgstr "Visitar la página web del componente"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:100
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr ""
+"Visitar la página web de los componentes\n"
+"%1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:141
+#, kde-format
+msgctxt "@item Component name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:144
+#, kde-format
+msgid "Version %1"
+msgstr "Versión %1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:153
+#: kabstractaboutdialog_p.cpp:84
+#, kde-format
+msgid "License: %1"
+msgstr "Licencia: %1"
+
+#: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "Acerca de %1"
+
+#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#, kde-format
+msgctxt "@title:tab"
+msgid "About"
+msgstr "Acerca de"
+
+#: kaboutapplicationdialog.cpp:104
+#, kde-format
+msgctxt "@title:tab"
+msgid "Components"
+msgstr "Componentes"
+
+#: kaboutapplicationdialog.cpp:117 kaboutplugindialog.cpp:99
+#, kde-format
+msgctxt "@title:tab"
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] "Autor"
+msgstr[1] "Autores"
+
+#: kaboutapplicationdialog.cpp:124 kaboutplugindialog.cpp:106
+#, kde-format
+msgctxt "@title:tab"
+msgid "Thanks To"
+msgstr "Gracias a"
+
+#: kaboutapplicationdialog.cpp:131 kaboutplugindialog.cpp:112
+#, kde-format
+msgctxt "@title:tab"
+msgid "Translation"
+msgstr "Traducción"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:53
+#, kde-format
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Enviar correo al colaborador"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:58
+#, kde-format
+msgid "Visit contributor's homepage"
+msgstr "Visitar la página web del colaborador"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:106
+#, kde-format
+msgctxt "@info:tooltip Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr ""
+"Enviar correo al colaborador\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:112
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr ""
+"Visitar la página web del colaborador\n"
+"%1"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr ""
+"Visitar el perfil del colaborador en %1\n"
+"%2"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutkdedialog_p.cpp:31
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "Acerca de KDE"
+
+#: kaboutkdedialog_p.cpp:34
+#, kde-format
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr "<html><font size=\"5\">KDE - ¡Libérese!</font></html>"
+
+#: kaboutkdedialog_p.cpp:45
+#, kde-format
+msgid ""
+"<html><b>KDE</b> is a world-wide community of software engineers, artists, "
+"writers, translators and creators who are committed to <a href=\"%1\">Free "
+"Software</a> development. KDE produces the Plasma desktop environment, "
+"hundreds of applications, and the many software libraries that support them."
+"<br /><br />KDE is a cooperative enterprise: no single entity controls its "
+"direction or products. Instead, we work together to achieve the common goal "
+"of building the world's finest Free Software. Everyone is welcome to <a href="
+"\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit <a "
+"href=\"%3\">%3</a> for more information about the KDE community and the "
+"software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> es una comunidad mundial de ingenieros de software, "
+"artistas, escritores, traductores y creadores comprometidos con el "
+"desarrollo de <a href=\"%1\">software libre</a>. KDE produce el entorno de "
+"escritorio Plasma y cientos de aplicaciones , así como las numerosas "
+"bibliotecas de software en las que se basan.<br /><br />KDE es una empresa "
+"cooperativa: ninguna entidad aislada controla su dirección ni sus productos. "
+"En lugar de ello, trabajamos conjuntamente para conseguir el objetivo común "
+"de crear el mejor software libre del mundo. Todo el mundo está invitado a <a "
+"href=\"%2\">unirse y colaborar</a> con KDE, incluido usted.<br /><br /"
+">Visite <a href=\"%3\">%3</a> para obtener más información sobre la "
+"comunidad de KDE y el software que producimos.</html>"
+
+#: kaboutkdedialog_p.cpp:66
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>El software siempre se puede mejorar, y el equipo de KDE está "
+"dispuesto a hacerlo. Sin embargo, usted (el usuario) debe informarnos cuando "
+"algo no funcione como debería, o cuando pudiera hacerlo mejor.<br /><br /"
+">KDE posee un sistema de seguimiento de fallos. Visite <a href=\"%1\">%1</a> "
+"o use el diálogo «Informar de fallo» del menú «Ayuda» para informar de "
+"fallos.<br /><br />Si tiene alguna sugerencia para mejorar el software, le "
+"invitamos a usar el sistema de seguimiento de fallos para registrar su "
+"deseo. En este caso, asegúrese de usar el nivel de gravedad «Wishlist».</"
+"html>"
+
+#: kaboutkdedialog_p.cpp:85
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>No tiene que ser desarrollador de software para ser miembro del equipo "
+"de KDE. Puede unirse a los equipos nacionales que traducen la interfaz de "
+"los programas. Puede proporcionar imágenes, temas, sonidos y mejorar la "
+"documentación. Usted decide.<br /><br />Visite <a href=\"%1\">%1</a> para "
+"más información sobre algunos de los proyectos en los que puede participar."
+"<br /><br />Si necesita más información o documentación, visite <a href="
+"\"%2\">%2</a>, donde encontrará lo que necesita.</html>"
+
+#: kaboutkdedialog_p.cpp:108
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>KDE está y estará siempre disponible gratuitamente, pero crearlo no "
+"está libre de costes.<br /><br />Para apoyar su desarrollo, la comunidad de "
+"KDE formó la asociación sin ánimo de lucro «KDE e.V.», constituida "
+"legalmente en Alemania. «KDE e.V.» representa a la comunidad KDE en "
+"cuestiones legales y financieras. Consulte <a href=\"%1\">%1</a> para "
+"obtener información sobre «KDE e.V.».<br /><br />KDE se beneficia de muchos "
+"tipos de colaboraciones, incluidas las económicas. Este dinero se usa para "
+"reembolsar los gastos de los miembros y de otras personas que se originan al "
+"colaborar con KDE. Otros fondos se usan en concepto de representación legal "
+"y para organizar congresos y encuentros.<br /> <br />Le animamos a colaborar "
+"con KDE con una donación económica, usando alguno de los modos descritos en "
+"<a href=\"%2\">%2</a>.<br /><br />Le agradecemos su ayuda por adelantado.</"
+"html>"
+
+#: kaboutkdedialog_p.cpp:128
+#, kde-format
+msgctxt "@title:tab About KDE"
+msgid "&About"
+msgstr "&Acerca de"
+
+#: kaboutkdedialog_p.cpp:129
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Report Bugs or Wishes"
+msgstr "&Informar de fallos o deseos"
+
+#: kaboutkdedialog_p.cpp:130
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Join KDE"
+msgstr "Ú&nase al equipo KDE"
+
+#: kaboutkdedialog_p.cpp:131
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Support KDE"
+msgstr "&Colabore con KDE"
+
+#: kabstractaboutdialog_p.cpp:41
+#, kde-format
+msgctxt "Version version-number"
+msgid "Version %1"
+msgstr "Versión %1"
+
+#: kabstractaboutdialog_p.cpp:106
+#, kde-format
+msgid "The <em>%1</em> windowing system"
+msgstr "El sistema de ventanas <em>%1</em>"
+
+#: kabstractaboutdialog_p.cpp:107
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:107
+#, kde-format
+msgid "%1 (built against %2)"
+msgstr "%1 (compilado con %2)"
+
+#: kabstractaboutdialog_p.cpp:108
+#, kde-format
+msgid "KDE Frameworks"
+msgstr "KDE Frameworks"
+
+#: kabstractaboutdialog_p.cpp:129
+#, kde-format
+msgid "Show author photos"
+msgstr "Mostrar fotos de los autores"
+
+#: kabstractaboutdialog_p.cpp:130
+#, kde-format
+msgid "Enabling this will fetch images from an online location"
+msgstr "Marque esto para obtener las imágenes de una ubicación en línea"
+
+#: kabstractaboutdialog_p.cpp:169
+#, kde-format
+msgctxt "Reference to website"
+msgid "Please use %1 to report bugs.\n"
+msgstr "Use %1 para informar de fallos.\n"
+
+#: kabstractaboutdialog_p.cpp:177
+#, kde-format
+msgctxt "Reference to email address"
+msgid "Please report bugs to %1.\n"
+msgstr "Informe de fallos a %1.\n"
+
+#: kactionconflictdetector.cpp:38
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+"La secuencia de teclas «%1» es ambigua. Use «Configurar accesos rápidos\n"
+"de teclado» en el menú «Preferencias» para resolver la ambigüedad.\n"
+"No se ejecutará ninguna acción."
+
+#: kactionconflictdetector.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Ambiguous shortcut detected"
+msgstr "Se ha detectado un acceso rápido ambiguo"
+
+#: kbugreport.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "Submit Bug Report"
+msgstr "Enviar informe de error"
+
+#: kbugreport.cpp:129
+#, kde-format
+msgid "Submit Bug Report"
+msgstr "Envía un informe de fallos"
+
+#: kbugreport.cpp:141
+#, kde-format
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Su dirección de correo electrónico. Si no es correcta, use el botón "
+"«Configurar correo electrónico» para cambiarla"
+
+#: kbugreport.cpp:142
+#, kde-format
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "De:"
+
+#: kbugreport.cpp:150
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Email..."
+msgstr "Configurar correo electrónico..."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "The email address this bug report is sent to."
+msgstr ""
+"La dirección de correo electrónico a la que se envía este informe de fallos."
+
+#: kbugreport.cpp:158
+#, kde-format
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Para:"
+
+#: kbugreport.cpp:167
+#, kde-format
+msgctxt "@action:button"
+msgid "&Send"
+msgstr "&Enviar"
+
+#: kbugreport.cpp:169
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send bug report."
+msgstr "Enviar informe de error."
+
+#: kbugreport.cpp:170
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Send this bug report to %1."
+msgstr "Enviar este informe de error a %1."
+
+#: kbugreport.cpp:179
+#, kde-format
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"La aplicación para la cual desea enviar el informe de fallos (si no es "
+"correcta, use la opción de menú «Informar de fallo» de la aplicación "
+"correcta)"
+
+#: kbugreport.cpp:180
+#, kde-format
+msgid "Application: "
+msgstr "Aplicación: "
+
+#: kbugreport.cpp:190
+#, kde-format
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"La versión de esta aplicación - asegúrese de que no hay disponible ninguna "
+"versión más actual antes de enviar un informe de fallos"
+
+#: kbugreport.cpp:191
+#, kde-format
+msgid "Version:"
+msgstr "Versión:"
+
+#: kbugreport.cpp:196
+#, kde-format
+msgid "no version set (programmer error)"
+msgstr "no hay versión (error del programador)"
+
+#: kbugreport.cpp:208
+#, kde-format
+msgid "OS:"
+msgstr "SO:"
+
+#: kbugreport.cpp:218
+#, kde-format
+msgctxt "@title:group"
+msgid "Se&verity"
+msgstr "Gra&vedad"
+
+#: kbugreport.cpp:225
+#, kde-format
+msgctxt "bug severity"
+msgid "Critical"
+msgstr "Crítico"
+
+#: kbugreport.cpp:226
+#, kde-format
+msgctxt "bug severity"
+msgid "Grave"
+msgstr "Grave"
+
+#: kbugreport.cpp:227
+#, kde-format
+msgctxt "bug severity"
+msgid "Normal"
+msgstr "Normal"
+
+#: kbugreport.cpp:228
+#, kde-format
+msgctxt "bug severity"
+msgid "Wishlist"
+msgstr "Lista de deseos"
+
+#: kbugreport.cpp:229
+#, kde-format
+msgctxt "bug severity"
+msgid "Translation"
+msgstr "Traducción"
+
+#: kbugreport.cpp:247
+#, kde-format
+msgid "S&ubject: "
+msgstr "As&unto: "
+
+#: kbugreport.cpp:256
+#, kde-format
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Introduzca el texto (en inglés si es posible) que quiera enviar al sistema "
+"de informe de fallos.\n"
+"Si pulsa «Enviar», se enviará un mensaje al encargado de este programa.\n"
+
+#: kbugreport.cpp:279
+#, kde-format
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>Para enviar un informe de fallos, pulse el botón de abajo. Se abrirá una "
+"ventana del navegador web en <a href=\"https://bugs.kde.org\">https://bugs."
+"kde.org</a> donde encontrará un formulario a rellenar. La información "
+"mostrada arriba será transferida a ese servidor.</qt>"
+
+#: kbugreport.cpp:285
+#, kde-format
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"%1\">%2</a>.</qt>"
+msgstr ""
+"<qt>Pulse el botón inferior para enviar un informe de fallos. Se abrirá una "
+"ventana del navegador web en <a href=\"%1\">%2</a>.</qt>"
+
+#: kbugreport.cpp:302
+#, kde-format
+msgctxt "@action:button"
+msgid "&Launch Bug Report Wizard"
+msgstr "&Lanzar el asistente de informe de errores"
+
+#: kbugreport.cpp:304
+#, kde-format
+msgctxt "@action:button"
+msgid "&Submit Bug Report"
+msgstr "En&viar informe de error"
+
+#: kbugreport.cpp:397
+#, kde-format
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Debe especificar tanto un asunto como una descripción antes de poder enviar "
+"el informe."
+
+#: kbugreport.cpp:406
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Ha elegido gravedad <b>Crítica</b>. Advierta que este nivel de gravedad "
+"solo es para fallos que:</p><ul><li>hagan que software independiente (o el "
+"sistema completo) se dañe</li><li>ocasionen pérdidas de datos importantes</"
+"li><li>introduzcan un agujero de seguridad en el sistema donde se instala "
+"este paquete</li></ul>\n"
+"<p>¿Produce el fallo del que usted informa alguno de los daños anteriores? "
+"Si no lo hace, disminuya el nivel de gravedad. Gracias.</p>"
+
+#: kbugreport.cpp:422
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Ha elegido gravedad <b>Grave</b>. Advierta que este nivel de gravedad "
+"solo es para fallos que:</p><ul><li>hagan inutilizable o prácticamente "
+"inutilizable el paquete en cuestión</li><li>ocasionen pérdidas de datos</"
+"li><li>introduzcan un agujero de seguridad permitiendo el acceso a cuentas "
+"de usuarios que usan el paquete en cuestión</li></ul>\n"
+"<p>¿Produce el fallo del que usted informa alguno de los daños anteriores? "
+"Si no lo hace, disminuya el nivel de gravedad. Gracias.</p>"
+
+#: kbugreport.cpp:441
+#, kde-format
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See https://bugs.kde.org/ for instructions."
+msgstr ""
+"No se ha podido enviar el informe de fallos.\n"
+"Por favor, envíe el informe del fallo manualmente...\n"
+"Consulte las instrucciones en https://bugs.kde.org/."
+
+#: kbugreport.cpp:448
+#, kde-format
+msgid "Bug report sent, thank you for your input."
+msgstr "Informe de fallos enviado, gracias por su contribución."
+
+#: kbugreport.cpp:456
+#, kde-format
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"¿Cerrar y descartar\n"
+"el mensaje editado?"
+
+#: kbugreport.cpp:457
+#, kde-format
+msgctxt "@title:window"
+msgid "Close Message"
+msgstr "Cerrar mensaje"
+
+#: kcheckaccelerators.cpp:255
+#, kde-format
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Diagnóstico de aceleradores de Dr. Klash"
+
+#: kcheckaccelerators.cpp:262
+#, kde-format
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Desactivar la comprobación automática"
+
+#: kcheckaccelerators.cpp:308
+#, kde-format
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Aceleradores cambiados</h2>"
+
+#: kcheckaccelerators.cpp:309 kcheckaccelerators.cpp:313
+#, kde-format
+msgid "Old Text"
+msgstr "Texto antiguo"
+
+#: kcheckaccelerators.cpp:309 kcheckaccelerators.cpp:318
+#, kde-format
+msgid "New Text"
+msgstr "Texto nuevo"
+
+#: kcheckaccelerators.cpp:313
+#, kde-format
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Aceleradores eliminados</h2>"
+
+#: kcheckaccelerators.cpp:317
+#, kde-format
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>Aceleradores añadidos (solo para su información)</h2>"
+
+#: kedittoolbar.cpp:332
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Text"
+msgstr "Cambiar texto"
+
+#: kedittoolbar.cpp:342
+#, kde-format
+msgid "Icon te&xt:"
+msgstr "Te&xto del icono:"
+
+#: kedittoolbar.cpp:347
+#, kde-format
+msgctxt "@option:check"
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+"Ocultar texto cuando la barra de &herramientas muestra texto junto a los "
+"iconos"
+
+#: kedittoolbar.cpp:596
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Toolbars"
+msgstr "Configurar barras de herramientas"
+
+#: kedittoolbar.cpp:659
+#, kde-format
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"¿Desea realmente reiniciar todas las barras de herramientas de esta "
+"aplicación a sus valores predeterminados? Los cambios se aplicarán "
+"inmediatamente."
+
+#: kedittoolbar.cpp:660
+#, kde-format
+msgid "Reset Toolbars"
+msgstr "Reiniciar barras de herramientas"
+
+#: kedittoolbar.cpp:661
+#, kde-format
+msgid "Reset"
+msgstr "Restablecer"
+
+#: kedittoolbar.cpp:992
+#, kde-format
+msgid "&Toolbar:"
+msgstr "Barra de &herramientas:"
+
+#. i18n("&New"), this);
+#. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+#. new_toolbar->setEnabled(false); // disabled until implemented
+#. QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+#. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+#. del_toolbar->setEnabled(false); // disabled until implemented
+#. our list of inactive actions
+#: kedittoolbar.cpp:1008
+#, kde-format
+msgid "A&vailable actions:"
+msgstr "Acciones &disponibles:"
+
+#: kedittoolbar.cpp:1029 kedittoolbar.cpp:1054
+#, kde-format
+msgid "Filter"
+msgstr "Filtro"
+
+#: kedittoolbar.cpp:1032
+#, kde-format
+msgid "Curr&ent actions:"
+msgstr "Acciones a&ctuales:"
+
+#: kedittoolbar.cpp:1057
+#, kde-format
+msgctxt "@action:button"
+msgid "Change &Icon..."
+msgstr "Cambiar &icono..."
+
+#: kedittoolbar.cpp:1066
+#, kde-format
+msgctxt "@action:button"
+msgid "Change Te&xt..."
+msgstr "Cambiar te&xto..."
+
+#: kedittoolbar.cpp:1208
+#, kde-format
+msgid "--- separator ---"
+msgstr "--- separador ---"
+
+#: kedittoolbar.cpp:1209
+#, kde-format
+msgid "--- expanding spacer ---"
+msgstr "--- separador expansible ---"
+
+#: kedittoolbar.cpp:1231
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1259
+#, kde-format
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"Este elemento será remplazado por todos los elementos de un componente "
+"incrustado."
+
+#: kedittoolbar.cpp:1261
+#, kde-format
+msgid "<Merge>"
+msgstr "<Mezclar>"
+
+#: kedittoolbar.cpp:1263
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<Mezclar %1>"
+
+#: kedittoolbar.cpp:1273
+#, kde-format
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Esto es una lista dinámica de acciones. Puede cambiarla de sitio, pero si la "
+"elimina, no le será posible añadirla de nuevo."
+
+#: kedittoolbar.cpp:1274
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Lista de acciones: %1"
+
+#: kedittoolbar.cpp:1375 kedittoolbar.cpp:1400
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1628
+#, kde-format
+msgid "Change Icon"
+msgstr "Cambiar icono"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:178
+#, kde-format
+msgid "&Help"
+msgstr "&Ayuda"
+
+#: khelpmenu.cpp:253
+#, kde-format
+msgid "About %1"
+msgstr "Acerca de %1"
+
+#: kkeysequencewidget.cpp:144
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Pulse sobre el botón e introduzca a continuación el acceso rápido que desee "
+"para el programa.\n"
+"Ejemplo para «Ctrl+A»: mantenga pulsada la tecla «Ctrl» y luego pulse «A»."
+
+#: kkeysequencewidget.cpp:167
+#, kde-format
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Conflicto de acceso rápido"
+msgstr[1] "Conflictos de accesos rápidos"
+
+#: kkeysequencewidget.cpp:171
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Acceso rápido «%1» para la acción «%2»\n"
+
+#: kkeysequencewidget.cpp:176
+#, kde-format
+msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"El acceso rápido «%2» es ambiguo con el siguiente acceso rápido.\n"
+"¿Desea asignar un acceso rápido vacío a esta acción?\n"
+"%3"
+msgstr[1] ""
+"El acceso rápido «%2» es ambiguo con los siguientes accesos rápidos.\n"
+"¿Desea asignar un acceso rápido vacío a estas acciones?\n"
+"%3"
+
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr "Reasignar"
+
+#: kkeysequencewidget.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut conflict"
+msgstr "Conflicto de accesos rápidos"
+
+#: kkeysequencewidget.cpp:193
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt>La combinación de teclas «%1» ya está siendo usada por la acción <b>%2</"
+"b>.<br />Seleccione otra diferente.</qt>"
+
+#: kkeysequencewidget.cpp:275
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr "Acceso rápido «%1» en la aplicación %2 para la acción %3\n"
+
+#: kkeysequencewidget.cpp:284
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] ""
+"El acceso rápido «%2» está en conflicto con la siguiente combinación de "
+"teclas:\n"
+msgstr[1] ""
+"El acceso rápido «%2» está en conflicto con las siguientes combinaciones de "
+"teclas:\n"
+
+#: kkeysequencewidget.cpp:291
+#, kde-format
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Conflicto con un acceso rápido global registrado"
+msgstr[1] "Conflicto con accesos rápidos globales registrados"
+
+#: kkeysequencewidget.cpp:304
+#, kde-format
+msgid "Reserved Shortcut"
+msgstr "Acceso rápido reservado"
+
+#: kkeysequencewidget.cpp:306
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"La tecla F12 está reservada en Windows y no se puede usar como acceso rápido "
+"global.\n"
+"Seleccione otra tecla."
+
+#: kkeysequencewidget.cpp:349
+#, kde-format
+msgctxt "@title:window"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Conflicto con el acceso rápido de la aplicación estándar"
+
+#: kkeysequencewidget.cpp:351
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"La combinación de teclas «%1» ya está asignada a la acción estándar «%2», "
+"que es usada por algunas aplicaciones.\n"
+"¿Realmente quiere usarla también como acceso rápido global?"
+
+#: kkeysequencewidget.cpp:395
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Entrada"
+
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Ninguna"
+
+#: klicensedialog_p.cpp:33
+#, kde-format
+msgctxt "@title:window"
+msgid "License Agreement"
+msgstr "Acuerdo de licencia"
+
+#: kmainwindow.cpp:261
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eloy Cuadra"
+
+#: kmainwindow.cpp:262
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ecuadra@eloihr.net"
+
+#: kmenumenuhandler_p.cpp:37
+#, kde-format
+msgid "Add to Toolbar"
+msgstr "Añadir a la barra de herramientas"
+
+#: kmenumenuhandler_p.cpp:223
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Configure Shortcut..."
+msgstr "Configurar acceso rápido..."
+
+#: ksendbugmail/main.cpp:30
+#, kde-format
+msgid "Error connecting to server."
+msgstr "Error al conectar con el servidor."
+
+#: ksendbugmail/main.cpp:33
+#, kde-format
+msgid "Not connected."
+msgstr "No conectado."
+
+#: ksendbugmail/main.cpp:36
+#, kde-format
+msgid "Connection timed out."
+msgstr "Tiempo de conexión agotado."
+
+#: ksendbugmail/main.cpp:39
+#, kde-format
+msgid "Time out waiting for server interaction."
+msgstr "Se ha agotado el tiempo esperando para conectar al servidor."
+
+#: ksendbugmail/main.cpp:43
+#, kde-format
+msgid "Server said: \"%1\""
+msgstr "El servidor ha dicho: «%1»"
+
+#: ksendbugmail/main.cpp:74
+#, kde-format
+msgid "Sends a bug report by email."
+msgstr "Envía un informe de fallos por correo electrónico."
+
+#: ksendbugmail/main.cpp:76
+#, kde-format
+msgid "The subject line of the email."
+msgstr "La línea del asunto del mensaje."
+
+#: ksendbugmail/main.cpp:78
+#, kde-format
+msgid "The email address to send the bug report to."
+msgstr ""
+"La dirección de correo electrónico a la que se envía el informe de fallos."
+
+#: kshortcuteditwidget.cpp:55
+#, kde-format
+msgctxt "@option:radio"
+msgid "Default:"
+msgstr "Por omisión:"
+
+#: kshortcuteditwidget.cpp:62
+#, kde-format
+msgctxt "@option:radio"
+msgid "Custom:"
+msgstr "Personalizado:"
+
+#: kshortcutschemeseditor.cpp:32
+#, kde-format
+msgctxt "@title:group"
+msgid "Shortcut Schemes"
+msgstr "Esquemas de accesos rápidos"
+
+#: kshortcutschemeseditor.cpp:57
+#, kde-format
+msgid "Current scheme:"
+msgstr "Esquema actual:"
+
+#: kshortcutschemeseditor.cpp:73
+#, kde-format
+msgctxt "@action:button"
+msgid "New..."
+msgstr "Nuevo..."
+
+#: kshortcutschemeseditor.cpp:76
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Borrar"
+
+#: kshortcutschemeseditor.cpp:79
+#, kde-format
+msgctxt "@action:button"
+msgid "More Actions"
+msgstr "Más acciones"
+
+#: kshortcutschemeseditor.cpp:83
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save shortcuts to scheme"
+msgstr "Guardar accesos rápidos en el esquema"
+
+#: kshortcutschemeseditor.cpp:84
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Export Scheme..."
+msgstr "Exportar esquema..."
+
+#: kshortcutschemeseditor.cpp:85
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Import Scheme..."
+msgstr "Importar esquema..."
+
+#: kshortcutschemeseditor.cpp:100
+#, kde-format
+msgctxt "@title:window"
+msgid "Name for New Scheme"
+msgstr "Nombre para el nuevo esquema"
+
+#: kshortcutschemeseditor.cpp:100
+#, kde-format
+msgid "Name for new scheme:"
+msgstr "Nombre del nuevo esquema:"
+
+#: kshortcutschemeseditor.cpp:100
+#, kde-format
+msgid "New Scheme"
+msgstr "Nuevo esquema"
+
+#: kshortcutschemeseditor.cpp:106
+#, kde-format
+msgid "A scheme with this name already exists."
+msgstr "Ya existe un esquema con este nombre."
+
+#: kshortcutschemeseditor.cpp:136
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+"¿Realmente desea eliminar el esquema %1?\n"
+"Tenga en cuenta que esto no eliminará ningún esquema de accesos rápidos del "
+"sistema."
+
+#: kshortcutschemeseditor.cpp:169
+#, kde-format
+msgctxt "@title:window"
+msgid "Export Shortcuts"
+msgstr "Exportar accesos rápidos"
+
+#: kshortcutschemeseditor.cpp:169 kshortcutschemeseditor.cpp:180
+#, kde-format
+msgid "Shortcuts (*.shortcuts)"
+msgstr "Accesos rápidos (*.shortcuts)"
+
+#: kshortcutschemeseditor.cpp:180
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Shortcuts"
+msgstr "Importar accesos rápidos"
+
+#: kshortcutschemeseditor.cpp:191
+#, kde-format
+msgid "Shortcut scheme successfully saved."
+msgstr "El esquema de accesos rápidos se ha guardado correctamente."
+
+#: kshortcutschemeseditor.cpp:194
+#, kde-format
+msgid "Error saving the shortcut scheme."
+msgstr "Ha ocurrido un error al guardar el esquema de accesos rápidos."
+
+#: kshortcutsdialog.cpp:69
+#, kde-format
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+"Se ha modificado el esquema actual de accesos rápidos. ¿Desea guardarlo "
+"antes de cambiar al nuevo esquema?"
+
+#: kshortcutsdialog.cpp:119
+#, kde-format
+msgid "Manage &Schemes"
+msgstr "Ge&stionar esquemas"
+
+#: kshortcutsdialog.cpp:144
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard Shortcuts"
+msgstr "Configurar los accesos rápidos de teclado"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Buscar interactivamente nombres de accesos rápidos (p. ej., Copiar) o "
+"combinaciones de teclas (p. ej., Ctrl+C) introduciéndolas aquí."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Aquí puede ver una lista de las asociaciones de teclas, es decir, "
+"asociaciones entre acciones (p. ej., «Copiar»), que se muestran en la "
+"columna de la izquierda, y teclas o combinaciones de teclas (p. ej., Ctrl"
+"+V), que se muestran en la columna de la derecha."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Acción"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Acceso rápido"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativo"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternativo global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gesto con el botón del ratón"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gesto de forma con el ratón"
+
+#: kshortcutseditor.cpp:547
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Accesos rápidos para %1"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:563 kshortcutwidget.ui:22
+#, kde-format
+msgid "Main:"
+msgstr "Principal:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:564 kshortcutwidget.ui:52
+#, kde-format
+msgid "Alternate:"
+msgstr "Alternativo:"
+
+#: kshortcutseditor.cpp:565
+#, kde-format
+msgid "Global:"
+msgstr "Global:"
+
+#: kshortcutseditor.cpp:566
+#, kde-format
+msgid "Global alternate:"
+msgstr "Alternativo global:"
+
+#: kshortcutseditor.cpp:582
+#, kde-format
+msgid "Action Name"
+msgstr "Nombre de la acción"
+
+#: kshortcutseditor.cpp:586
+#, kde-format
+msgid "Shortcuts"
+msgstr "Accesos rápidos"
+
+#: kshortcutseditor.cpp:590
+#, kde-format
+msgid "Description"
+msgstr "Descripción"
+
+#: kshortcutseditoritem.cpp:35
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:140
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Language"
+msgstr "Configurar idioma"
+
+#: kswitchlanguagedialog_p.cpp:144
+#, kde-format
+msgid "Please choose the language which should be used for this application:"
+msgstr "Elija el idioma que se debe usar en esta aplicación:"
+
+#: kswitchlanguagedialog_p.cpp:171
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Fallback Language"
+msgstr "Añadir un idioma al que recurrir"
+
+#: kswitchlanguagedialog_p.cpp:172
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"Añade un idioma más, que se usará si las otras traducciones no están "
+"completas."
+
+#: kswitchlanguagedialog_p.cpp:264 kswitchlanguagedialog_p.cpp:285
+#, kde-format
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"Se ha cambiado el idioma de esta aplicación. El cambio surtirá efecto la "
+"próxima vez que se inicie la aplicación."
+
+#: kswitchlanguagedialog_p.cpp:265
+#, kde-format
+msgctxt "@title:window"
+msgid "Application Language Changed"
+msgstr "Se ha cambiado el idioma de la aplicación"
+
+#: kswitchlanguagedialog_p.cpp:286
+#, kde-format
+msgid "Application Language Changed"
+msgstr "El idioma de la aplicación ha sido cambiado"
+
+#: kswitchlanguagedialog_p.cpp:373
+#, kde-format
+msgid "Primary language:"
+msgstr "Idioma principal:"
+
+#: kswitchlanguagedialog_p.cpp:373
+#, kde-format
+msgid "Fallback language:"
+msgstr "Idioma al que recurrir:"
+
+#: kswitchlanguagedialog_p.cpp:388
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Eliminar"
+
+#: kswitchlanguagedialog_p.cpp:394
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+"Este el idioma principal de la aplicación, que se usará antes que ningún "
+"otro idioma."
+
+#: kswitchlanguagedialog_p.cpp:395
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"Este es el idioma que se usará si los idiomas anteriores no contienen una "
+"traducción adecuada."
+
+#: ktoolbar.cpp:291 ktoolbar.cpp:298
+#, kde-format
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Preferencias de la barra de herramientas"
+
+#: ktoolbar.cpp:293
+#, kde-format
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Mostrar texto"
+
+#: ktoolbar.cpp:300
+#, kde-format
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Orientación"
+
+#: ktoolbar.cpp:302
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Arriba"
+
+#: ktoolbar.cpp:306
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Izquierda"
+
+#: ktoolbar.cpp:309
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Derecha"
+
+#: ktoolbar.cpp:312
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "Abajo"
+
+#: ktoolbar.cpp:323
+#, kde-format
+msgid "Text Position"
+msgstr "Posición del texto"
+
+#: ktoolbar.cpp:325
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Icons Only"
+msgstr "Solo iconos"
+
+#: ktoolbar.cpp:328
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Text Only"
+msgstr "Solo texto"
+
+#: ktoolbar.cpp:331
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Text Alongside Icons"
+msgstr "Texto junto a los iconos"
+
+#: ktoolbar.cpp:334
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Text Under Icons"
+msgstr "Texto bajo los iconos"
+
+#: ktoolbar.cpp:345
+#, kde-format
+msgid "Icon Size"
+msgstr "Tamaño del icono"
+
+#: ktoolbar.cpp:351
+#, kde-format
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Predeterminado"
+
+#: ktoolbar.cpp:368 ktoolbar.cpp:389
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Pequeño (%1x%2)"
+
+#: ktoolbar.cpp:370 ktoolbar.cpp:391
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Mediano (%1x%2)"
+
+#: ktoolbar.cpp:372 ktoolbar.cpp:393
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Grande (%1x%2)"
+
+#: ktoolbar.cpp:374 ktoolbar.cpp:395
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Enorme (%1x%2)"
+
+#: ktoolbar.cpp:418
+#, kde-format
+msgid "Lock Toolbar Positions"
+msgstr "Bloquear la posición de las barras de herramientas"
+
+#: ktoolbarhandler.cpp:93
+#, kde-format
+msgid "Toolbars Shown"
+msgstr "Barras de herramientas mostradas"
+
+#: ktooltiphelper.cpp:203
+#, kde-format
+msgctxt ""
+"@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ktooltiphelper.cpp:271
+#, kde-format
+msgid ""
+"<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
+msgstr ""
+"<small><font color=\"%1\">Pulse <b>Mayúsculas</b> para más información.</"
+"font></small>"
+
+#: ktooltiphelper.cpp:286
+#, kde-format
+msgid ""
+"%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
+msgstr ""
+"%1<br/><small><font color=\"%2\">Pulse <b>Mayúsculas</b> para más "
+"información.</font></small>"
+
+#: kundoactions.cpp:30
+#, kde-format
+msgid "Redo"
+msgstr "Rehacer"
+
+#: kundoactions.cpp:49
+#, kde-format
+msgid "Undo"
+msgstr "Deshacer"
+
+#: kxmlguibuilder.cpp:182 kxmlguibuilder.cpp:353
+#, kde-format
+msgid "No text"
+msgstr "Sin texto"
+
+#: kxmlguiwindow.cpp:189
+#, kde-format
+msgid "Open Command Bar"
+msgstr "Abrir la barra de órdenes"
+
+#: kxmlguiwindow.cpp:534
+#, kde-format
+msgid ""
+"There are two actions (%1, %2) that want to use the same shortcut (%3). This "
+"is most probably a bug. Please report it in <a href='https://bugs.kde."
+"org'>bugs.kde.org</a>"
+msgstr ""
+"Existen dos acciones (%1, %2) que quieren usar el mismo acceso rápido (%3). "
+"Lo más probable es que se trate de un error. Por favor, informe de ello en "
+"<a href='https://bugs.kde.org'>bugs.kde.org</a>"
+
+#: kxmlguiwindow.cpp:539
+#, kde-format
+msgid "Ambiguous Shortcuts"
+msgstr "Accesos rápidos ambiguos"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Archivo"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "Jue&go"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Editar"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Mover"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+#, kde-format
+msgid "&View"
+msgstr "&Ver"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:120
+#, kde-format
+msgid "&Go"
+msgstr "&Ir"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:141
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Marcadores"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:147
+#, kde-format
+msgid "&Tools"
+msgstr "Herramien&tas"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:151
+#, kde-format
+msgid "&Settings"
+msgstr "Preferencia&s"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:195
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra de herramientas principal"

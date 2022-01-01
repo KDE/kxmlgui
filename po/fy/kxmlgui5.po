@@ -1,0 +1,1674 @@
+# translation of kdelibs4.po to Nederlands
+# translation of kdelibs4.po to
+# KTranslator Generated File
+# Fryske oersetting fan kdelibs.
+# Copyright (C) 2000,2001,2002,2003 KDE e.v..
+# let op! het bestand bevat ter hoogte van string 2470
+# een gesplitste zinnen die mbv. %1 of %2 weer worden samengevoegd!!
+# Bauke Nicolai <mildaam@hotmail.com>, 2002.
+# KDE-oersetgroep Frysk <frysk@kde.nl>, 2000, 2001, 2002,2003.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007.
+# Berend ytsma <berendy@bigfoot.com>, 2004.
+# Rinse de Vries <RinseDeVries@home.nl>, 2006, 2008.
+# Berend Ytsma <berendy@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-21 00:40+0000\n"
+"PO-Revision-Date: 2010-07-22 09:48+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KAider 0.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:52
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgid "Visit component's homepage"
+msgstr "Thúside besykje..."
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:100
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr "Thúside besykje..."
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:141
+#, fuzzy, kde-format
+#| msgctxt "@item Contributor name in about dialog."
+#| msgid "%1"
+msgctxt "@item Component name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:144
+#, fuzzy, kde-format
+#| msgid "Version %1"
+msgid "Version %1"
+msgstr "Ferzje %1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:153
+#: kabstractaboutdialog_p.cpp:84
+#, kde-format
+msgid "License: %1"
+msgstr "Lisinsje: %1"
+
+#: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
+#, fuzzy, kde-format
+#| msgid "About %1"
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "Ynfo oer %1"
+
+#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "&About"
+msgctxt "@title:tab"
+msgid "About"
+msgstr "&Ynfo oer"
+
+#: kaboutapplicationdialog.cpp:104
+#, fuzzy, kde-format
+#| msgid "Comments"
+msgctxt "@title:tab"
+msgid "Components"
+msgstr "Kommentaar"
+
+#: kaboutapplicationdialog.cpp:117 kaboutplugindialog.cpp:99
+#, fuzzy, kde-format
+#| msgid "Author"
+msgctxt "@title:tab"
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] "Skriuwer"
+msgstr[1] "Skriuwer"
+
+#: kaboutapplicationdialog.cpp:124 kaboutplugindialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "&Thanks To"
+msgctxt "@title:tab"
+msgid "Thanks To"
+msgstr "Mei &tank oan"
+
+#: kaboutapplicationdialog.cpp:131 kaboutplugindialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Translation"
+msgctxt "@title:tab"
+msgid "Translation"
+msgstr "Oersetting"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:53
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "Oare stipers:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:58
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgid "Visit contributor's homepage"
+msgstr "Thúside besykje..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:106
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "@info:tooltip Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr "Oare stipers:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:112
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr "Thúside besykje..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:119
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr "Thúside besykje..."
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#, kde-format
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutkdedialog_p.cpp:31
+#, fuzzy, kde-format
+#| msgid "About KDE"
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "Ynfo oer KDE"
+
+#: kaboutkdedialog_p.cpp:34
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
+#| "b></html>"
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+"<html><font size=\"5\">KDE - wês frij</font><br /><b>PLatfoarm ferzje %1</"
+"b></html>"
+
+#: kaboutkdedialog_p.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
+#| "writers, translators and facilitators who are committed to <a href="
+#| "\"%1\">Free Software</a> development. This community has created hundreds "
+#| "of Free Software applications as part of the KDE Development Platform and "
+#| "KDE Software Distribution.<br /><br />KDE is a cooperative enterprise in "
+#| "which no single entity controls the efforts or products of KDE to the "
+#| "exclusion of others. Everyone is welcome to join and contribute to KDE, "
+#| "including you.<br /><br />Visit <a href=\"%2\">%2</a> for more "
+#| "information about the KDE community and the software we produce.</html>"
+msgid ""
+"<html><b>KDE</b> is a world-wide community of software engineers, artists, "
+"writers, translators and creators who are committed to <a href=\"%1\">Free "
+"Software</a> development. KDE produces the Plasma desktop environment, "
+"hundreds of applications, and the many software libraries that support them."
+"<br /><br />KDE is a cooperative enterprise: no single entity controls its "
+"direction or products. Instead, we work together to achieve the common goal "
+"of building the world's finest Free Software. Everyone is welcome to <a href="
+"\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit <a "
+"href=\"%3\">%3</a> for more information about the KDE community and the "
+"software we produce.</html>"
+msgstr ""
+"<html><b>KDE</b> is in wrâld-wide netwurk fan sêftguod ûntwikkelders, "
+"artyste, skriuwers, oersetter en romte ferskaffer dy't ferbûn binnen oan <a "
+"href=\"%1\">fergese sêftguod</a> ûntwikkeling. Dizze mienskip hat hunderten "
+"fan fergese sêftguod programma's is in part fan de KDE Untwikkel platfoarm "
+"en KDE sêftguod distribúsje.<br /><br />KDE is in gearwurkingsferbân wêryn "
+"gjin inkele entiteit de kontrôle fan ynspaning of produkten fan KDE of "
+"ekslusyf eigner is. Elts is dêrom ek welkom om mei te wurkjen oan KDE en it "
+"te dustribuearjen, dus ek jo.<br /><br />besykje <a href=\"%2\">%2</a> foar "
+"mear ynformaasje oer de KDE mienskip en de sêftguod dy't wie meitsje.</html>"
+
+#: kaboutkdedialog_p.cpp:66
+#, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"<html>Sêftguod kin altyd ferbettere wurde en it KDE-team is ree om dat te "
+"dwaan. Jo, as brûker, moat ús dan wol fertelle as der eat net goed wurket of "
+"ferbettere kin wurde.<br /><br /> KDE hat in brek-opspoaringssysteem.  Gean "
+"nei <a href=\"%1\">%1</a> om in brek te melden, of kies yn it menu  \"Help\" "
+"foar de opsje \"Brek rapportearje\" om in brek te melden.<br /><br /> As jo "
+"suggestjes hawwe foar ferbetteringen, dan noegje wy jo graach út om it bug-"
+"opspoaringssysteem te brûken om jo winsk te registrearjen. Kies dan yn it "
+"dialoochfinster fan it brek-opspoaringssysteem by \"Earnst\" foar "
+"\"Ferlanglist\".</html>"
+
+#: kaboutkdedialog_p.cpp:85
+#, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"<html>Om lid te wurden fan it KDE-team hoege jo gjin programmeur te wêzen. "
+"Jo kinne jo bygelyks oanslúte by in oersetteam, jo kinne ôfbyldingen tema's, "
+"lûden en ferbettere dokumintaasje leverje. Oan jo de kar!<br /><br />Sjoch "
+"op <a href=\"%1\">%1</a> foar ynformaasje oer de ferskate projekten dêr't jo "
+"oan dielnimme kinne.<br /><br />Sjoch foar mear ynformaasje en dokumintaasje "
+"op <a href=\"%2\">%2</a>. </html>"
+
+#: kaboutkdedialog_p.cpp:108
+#, kde-format
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"<html>KDE is fergees te krijen, mar it ûntwikkeljen giet perfoarst net "
+"sûnder kosten.<br /><br />Dêrom hat it KDE-team de KDE e.V. foarme, in non-"
+"profit organisaasje dy't stichte is yn Tuebingen, Dútslân. De KDE e.V "
+"fertsjintwurdiget it KDE-projekt yn juridyske en finansjele sitewaasjes. "
+"Sjoch foar mear ynformaasje oer de KDE-Association op  <a href=\"%1\">%1</a> "
+"<br /><br />It KDE-team hat finansjele stipe nedich. It measte jild wurdt "
+"brûkt om de kosten, dy't KDE-leden en oaren meitsje foar harren bydrage oan "
+"KDE, te fergoedzjen. Jo stipe yn de foarm fan donaasje wurdt dan ek tige op "
+"priis steld! Op <a href=\"%2\">%2</a> fine jo ynformaasje hoe't jo bydrage "
+"kinne. Alfêst tige tank foar jo stipe.</html>"
+
+#: kaboutkdedialog_p.cpp:128
+#, fuzzy, kde-format
+#| msgctxt "About KDE"
+#| msgid "&About"
+msgctxt "@title:tab About KDE"
+msgid "&About"
+msgstr "Ynfo oer &KDE"
+
+#: kaboutkdedialog_p.cpp:129
+#, fuzzy, kde-format
+#| msgid "&Report Bugs or Wishes"
+msgctxt "@title:tab"
+msgid "&Report Bugs or Wishes"
+msgstr "&Rapportearje brekkings of winsken"
+
+#: kaboutkdedialog_p.cpp:130
+#, fuzzy, kde-format
+#| msgid "&Join KDE"
+msgctxt "@title:tab"
+msgid "&Join KDE"
+msgstr "&Wurd lid fan KDE"
+
+#: kaboutkdedialog_p.cpp:131
+#, fuzzy, kde-format
+#| msgid "&Support KDE"
+msgctxt "@title:tab"
+msgid "&Support KDE"
+msgstr "KDE &stypje"
+
+#: kabstractaboutdialog_p.cpp:41
+#, fuzzy, kde-format
+#| msgid "Version %1"
+msgctxt "Version version-number"
+msgid "Version %1"
+msgstr "Ferzje %1"
+
+#: kabstractaboutdialog_p.cpp:106
+#, kde-format
+msgid "The <em>%1</em> windowing system"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:107
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:107
+#, kde-format
+msgid "%1 (built against %2)"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:108
+#, kde-format
+msgid "KDE Frameworks"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:129
+#, fuzzy, kde-format
+#| msgid "Show author information"
+msgid "Show author photos"
+msgstr "Skriuwersynformaasje sjen litte"
+
+#: kabstractaboutdialog_p.cpp:130
+#, kde-format
+msgid "Enabling this will fetch images from an online location"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:169
+#, fuzzy, kde-format
+#| msgid "Please use http://bugs.kde.org to report bugs.\n"
+msgctxt "Reference to website"
+msgid "Please use %1 to report bugs.\n"
+msgstr ""
+"Brûk http://bugs.kde.org om brekkings (programmaflaters) te rapportearjen.\n"
+
+#: kabstractaboutdialog_p.cpp:177
+#, fuzzy, kde-format
+#| msgid "Please report bugs to %1.\n"
+msgctxt "Reference to email address"
+msgid "Please report bugs to %1.\n"
+msgstr "Rapportearje brekkings oan %1.\n"
+
+#: kactionconflictdetector.cpp:38
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+
+#: kactionconflictdetector.cpp:42
+#, fuzzy, kde-format
+#| msgid "Ambiguous shortcut detected"
+msgctxt "@title:window"
+msgid "Ambiguous shortcut detected"
+msgstr "Dûbelsinnich fluchtoets ûntdútsen"
+
+#: kbugreport.cpp:101
+#, fuzzy, kde-format
+#| msgid "Submit Bug Report"
+msgctxt "@title:window"
+msgid "Submit Bug Report"
+msgstr "Brekrapport yntsjinje"
+
+#: kbugreport.cpp:129
+#, kde-format
+msgid "Submit Bug Report"
+msgstr "Brekrapport yntsjinje"
+
+#: kbugreport.cpp:141
+#, kde-format
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"Jo e-postadres. As dat net goed is, wizigje it dan troch op de knop E-post "
+"Ynstelle te drukken."
+
+#: kbugreport.cpp:142
+#, kde-format
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "Fan:"
+
+#: kbugreport.cpp:150
+#, fuzzy, kde-format
+#| msgid "Configure Email..."
+msgctxt "@action:button"
+msgid "Configure Email..."
+msgstr "E-post Ynstelle..."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "The email address this bug report is sent to."
+msgstr "It e-postadres dêr't dit brekrapport hinne stjoerd is."
+
+#: kbugreport.cpp:158
+#, kde-format
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "Oan:"
+
+#: kbugreport.cpp:167
+#, fuzzy, kde-format
+#| msgid "&Send"
+msgctxt "@action:button"
+msgid "&Send"
+msgstr "Fer&stjoere"
+
+#: kbugreport.cpp:169
+#, fuzzy, kde-format
+#| msgid "Send bug report."
+msgctxt "@info:tooltip"
+msgid "Send bug report."
+msgstr "Brekrapport ferstjoere."
+
+#: kbugreport.cpp:170
+#, fuzzy, kde-format
+#| msgid "Send this bug report to %1."
+msgctxt "@info:whatsthis"
+msgid "Send this bug report to %1."
+msgstr "Ferstjoer dit brekrapport nei %1."
+
+#: kbugreport.cpp:179
+#, kde-format
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"It programma dêr't jo in brekrapport foar yntsjinje wolle. As dat net goed "
+"is, brûk dan de opsje Brek Rapportearje út it menu fan it programma sels."
+
+#: kbugreport.cpp:180
+#, kde-format
+msgid "Application: "
+msgstr "Applikaasje:"
+
+#: kbugreport.cpp:190
+#, kde-format
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"De ferzje fan dit programma - Graach neigean oft der net in nijere ferzje "
+"fan dit programma beskikber is, foar dat jo it brekrapport ynstjoere."
+
+#: kbugreport.cpp:191
+#, kde-format
+msgid "Version:"
+msgstr "Ferzje:"
+
+#: kbugreport.cpp:196
+#, kde-format
+msgid "no version set (programmer error)"
+msgstr "gjin ferzje ynsteld (programmear flater!)"
+
+#: kbugreport.cpp:208
+#, kde-format
+msgid "OS:"
+msgstr "OS:"
+
+#: kbugreport.cpp:218
+#, fuzzy, kde-format
+#| msgid "Se&verity"
+msgctxt "@title:group"
+msgid "Se&verity"
+msgstr "&Earnst"
+
+#: kbugreport.cpp:225
+#, fuzzy, kde-format
+#| msgid "Critical"
+msgctxt "bug severity"
+msgid "Critical"
+msgstr "Kritysk"
+
+#: kbugreport.cpp:226
+#, fuzzy, kde-format
+#| msgid "Grave"
+msgctxt "bug severity"
+msgid "Grave"
+msgstr "Tekenstyl"
+
+#: kbugreport.cpp:227
+#, fuzzy, kde-format
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "bug severity"
+msgid "Normal"
+msgstr "Normaal"
+
+#: kbugreport.cpp:228
+#, fuzzy, kde-format
+#| msgid "Wishlist"
+msgctxt "bug severity"
+msgid "Wishlist"
+msgstr "Ferlanglist"
+
+#: kbugreport.cpp:229
+#, fuzzy, kde-format
+#| msgid "Translation"
+msgctxt "bug severity"
+msgid "Translation"
+msgstr "Oersetting"
+
+#: kbugreport.cpp:247
+#, kde-format
+msgid "S&ubject: "
+msgstr "&Underwerp: "
+
+#: kbugreport.cpp:256
+#, kde-format
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"Fier hjir (it leafst yn it Ingelsk) de melding fan de brek yn.\n"
+"As jo op\"Ferstjoer\" klikke wurdt der in e-berjocht stjoerd nei de "
+"ûnderhâlder fan it programma.\n"
+
+#: kbugreport.cpp:279
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>To submit a bug report, click on the button below. This will open a "
+#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
+#| "org</a> where you will find a form to fill in. The information displayed "
+#| "above will be transferred to that server.</qt>"
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"<qt>As jo in brekrapport yntsjinje wolle, klik dan op ûndersteande knop. Dit "
+"iepenet in finster yn in blêder  mei de side <a href=\"http://bugs.kde.org"
+"\">http://bugs.kde.org</a> dêr't jo it yn te foljen formulier fine kinne.De "
+"ynformaasje dy't hjir boppe stiet wurdt nei dizze tsjinner stjoerd.</qt>"
+
+#: kbugreport.cpp:285
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>To submit a bug report, click on the button below. This will open a "
+#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
+#| "org</a> where you will find a form to fill in. The information displayed "
+#| "above will be transferred to that server.</qt>"
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"%1\">%2</a>.</qt>"
+msgstr ""
+"<qt>As jo in brekrapport yntsjinje wolle, klik dan op ûndersteande knop. Dit "
+"iepenet in finster yn in blêder  mei de side <a href=\"http://bugs.kde.org"
+"\">http://bugs.kde.org</a> dêr't jo it yn te foljen formulier fine kinne.De "
+"ynformaasje dy't hjir boppe stiet wurdt nei dizze tsjinner stjoerd.</qt>"
+
+#: kbugreport.cpp:302
+#, fuzzy, kde-format
+#| msgid "&Launch Bug Report Wizard"
+msgctxt "@action:button"
+msgid "&Launch Bug Report Wizard"
+msgstr "&Begjinne mei bugrapport tsjoender"
+
+#: kbugreport.cpp:304
+#, fuzzy, kde-format
+#| msgid "Submit Bug Report"
+msgctxt "@action:button"
+msgid "&Submit Bug Report"
+msgstr "Brekrapport yntsjinje"
+
+#: kbugreport.cpp:397
+#, kde-format
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr ""
+"Jo moatte sawol it ûnderwerp as in beskriuwing opjaan foardat jo it rapport "
+"ferstjoere kinne."
+
+#: kbugreport.cpp:406
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Jo keazen as earnst fan de brek foar de opsje <b>Critical</b>. Hâld der "
+"rekken mei dat dy allinne bedoeld is foar programmaflaters dy't:</p><ul><li> "
+"sêftguod dat gjin relaasje hat mei it programma (of it hiele systeem) "
+"meinimme yn de crash</li><li>earnstig ferlies fan data feroarsaakje</"
+"li><li>in befeiligensgat kreëarje op it systeem dêr't it oanbelangjende "
+"programma op ynstallearre is</li></ul>\n"
+"<p>Komt de earnst fan de brek oerien mei ien fan boppesteande kondysjes? As "
+"dat net it gefal is, kies dan in legere earnst foar jo brekrapport. Tankewol!"
+"</p>"
+
+#: kbugreport.cpp:422
+#, kde-format
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>Jo keazen as earnst fan de brek foar de opsje <b>Grave</b>. Hâld der "
+"rekken mei dat dy allinne bedoeld is foar programmaflaters dy't:</p> <ul> "
+"<li>it oanbelangjende sêftguodpakket (gruttendiels) ûnbrûkber meitsje</"
+"li><li>dataferlies feroarsaakje </li> <li>in befeiligingsgat feroarsaakje "
+"dy't tagong kreëaret ta de accounts fan de brûkers fan it oanbelangjende "
+"sêftguodpakket</li></ul>\n"
+"<p>Komt de earnst fan de brek oerien mei ien fan boppesteande kondysjes? As "
+"dat net it gefal is, kies dan in legere earnst foar jo bugrapport. Tankewol!"
+"</p>"
+
+#: kbugreport.cpp:441
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to send the bug report.\n"
+#| "Please submit a bug report manually....\n"
+#| "See http://bugs.kde.org/ for instructions."
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See https://bugs.kde.org/ for instructions."
+msgstr ""
+"It brekrapport koe net ferstjoerd wurde.\n"
+"Graach eigenhandich in brekrapport yntsjinje...\n"
+"Sjoch foar ynstruksjes op http://bugs.kde.org/."
+
+#: kbugreport.cpp:448
+#, kde-format
+msgid "Bug report sent, thank you for your input."
+msgstr "It brekrapport is ferstjoerd. Tige tank foar jo bydrage."
+
+#: kbugreport.cpp:456
+#, kde-format
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"It bewurke berjocht negeare\n"
+"en slúte?"
+
+#: kbugreport.cpp:457
+#, fuzzy, kde-format
+#| msgid "Close Message"
+msgctxt "@title:window"
+msgid "Close Message"
+msgstr "Berjocht slúte"
+
+#: kcheckaccelerators.cpp:255
+#, kde-format
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "'Dr Klash' Akseleraasjetoetsen Diagnoazes"
+
+#: kcheckaccelerators.cpp:262
+#, kde-format
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "Automatyske &diagnoazes útskeakelje"
+
+#: kcheckaccelerators.cpp:308
+#, kde-format
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>Fluchtoetsen wizige</h2>"
+
+#: kcheckaccelerators.cpp:309 kcheckaccelerators.cpp:313
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "Tekst Sykje"
+
+#: kcheckaccelerators.cpp:309 kcheckaccelerators.cpp:318
+#, fuzzy, kde-format
+#| msgid "Show help"
+msgid "New Text"
+msgstr "Help sjen litte"
+
+#: kcheckaccelerators.cpp:313
+#, kde-format
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>Fluchtoetsen fuortsmiten</h2>"
+
+#: kcheckaccelerators.cpp:317
+#, kde-format
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>Fluchtoetsen taheakke (allinne foar jo ynformaasje)</h2>"
+
+#: kedittoolbar.cpp:332
+#, fuzzy, kde-format
+#| msgid "Change Text"
+msgctxt "@title:window"
+msgid "Change Text"
+msgstr "Tekst feroarje"
+
+#: kedittoolbar.cpp:342
+#, kde-format
+msgid "Icon te&xt:"
+msgstr "Te&kst by byldkaike:"
+
+#: kedittoolbar.cpp:347
+#, kde-format
+msgctxt "@option:check"
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+
+#: kedittoolbar.cpp:596
+#, fuzzy, kde-format
+#| msgid "Configure Toolbars"
+msgctxt "@title:window"
+msgid "Configure Toolbars"
+msgstr "Arkbalken ynstelle"
+
+#: kedittoolbar.cpp:659
+#, kde-format
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"Wolle jo alle arkbalken fan dizze applikaasje weromsette nei har "
+"standertynstelling? De wizigings sille direkt tapast wurde."
+
+#: kedittoolbar.cpp:660
+#, kde-format
+msgid "Reset Toolbars"
+msgstr "Arkbalken weromsette"
+
+#: kedittoolbar.cpp:661
+#, kde-format
+msgid "Reset"
+msgstr "Op 'e nij"
+
+#: kedittoolbar.cpp:992
+#, kde-format
+msgid "&Toolbar:"
+msgstr "&Arkbalke:"
+
+#. i18n("&New"), this);
+#. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+#. new_toolbar->setEnabled(false); // disabled until implemented
+#. QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+#. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+#. del_toolbar->setEnabled(false); // disabled until implemented
+#. our list of inactive actions
+#: kedittoolbar.cpp:1008
+#, kde-format
+msgid "A&vailable actions:"
+msgstr "Bes&kikbere aksjes:"
+
+#: kedittoolbar.cpp:1029 kedittoolbar.cpp:1054
+#, kde-format
+msgid "Filter"
+msgstr "Filter"
+
+#: kedittoolbar.cpp:1032
+#, kde-format
+msgid "Curr&ent actions:"
+msgstr "Aktiv&e aksjes:"
+
+#: kedittoolbar.cpp:1057
+#, fuzzy, kde-format
+#| msgid "Change &Icon..."
+msgctxt "@action:button"
+msgid "Change &Icon..."
+msgstr "Feroarje &ikoan..."
+
+#: kedittoolbar.cpp:1066
+#, fuzzy, kde-format
+#| msgid "Change Te&xt..."
+msgctxt "@action:button"
+msgid "Change Te&xt..."
+msgstr "Te&kst feroarje..."
+
+#: kedittoolbar.cpp:1208
+#, kde-format
+msgid "--- separator ---"
+msgstr "--- skieding ---"
+
+#: kedittoolbar.cpp:1209
+#, fuzzy, kde-format
+#| msgid "--- separator ---"
+msgid "--- expanding spacer ---"
+msgstr "--- skieding ---"
+
+#: kedittoolbar.cpp:1231
+#, kde-format
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1259
+#, kde-format
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr ""
+"Dit elemint sil ferfongen wurde troch alle eleminten fan in ynbêde komponint."
+
+#: kedittoolbar.cpp:1261
+#, kde-format
+msgid "<Merge>"
+msgstr "<Gearfoegje>"
+
+#: kedittoolbar.cpp:1263
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<%1 gearfoegje>"
+
+#: kedittoolbar.cpp:1273
+#, kde-format
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"Dit is in dynamyske list mei hannelingen. Jo kinne it ferpleatse, mar as jo "
+"it fourtsmite, dan kinne jo it net op 'e nij taheakje."
+
+#: kedittoolbar.cpp:1274
+#, kde-format
+msgid "ActionList: %1"
+msgstr "Aksjelist: %1"
+
+#: kedittoolbar.cpp:1375 kedittoolbar.cpp:1400
+#, kde-format
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1"
+
+#: kedittoolbar.cpp:1628
+#, kde-format
+msgid "Change Icon"
+msgstr "Feroarje byldkaike"
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:178
+#, kde-format
+msgid "&Help"
+msgstr "&Help"
+
+#: khelpmenu.cpp:253
+#, kde-format
+msgid "About %1"
+msgstr "Ynfo oer %1"
+
+#: kkeysequencewidget.cpp:144
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: kkeysequencewidget.cpp:167
+#, kde-format
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "Fluchtoets konflikt"
+msgstr[1] "Fluchtoets konflikten"
+
+#: kkeysequencewidget.cpp:171
+#, kde-format
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "Fluchtoets '%1' foar aksje '%2'\n"
+
+#: kkeysequencewidget.cpp:176
+#, fuzzy, kde-format
+#| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
+#| msgid ""
+#| "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+#| "Do you want to assign an empty shortcut to this action?\n"
+#| "%3"
+#| msgid_plural ""
+#| "The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+#| "Do you want to assign an empty shortcut to these actions?\n"
+#| "%3"
+msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"De fluchtoets \"%2\" ferdraacht him net mei de neikommende fluchtoets.\n"
+"Wolle jo in lege fluchtoets tawize oan dizze aksje?\n"
+"%3"
+msgstr[1] ""
+"De fluchtoets \"%2\" ferdraacht him net mei de neikommende fluchtoetsen.\n"
+"Wolle jo in lege fluchtoets tawize oan dizze aksjes?\n"
+"%3"
+
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
+#, fuzzy, kde-format
+#| msgid "Reassign"
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr "Opnij tawize"
+
+#: kkeysequencewidget.cpp:191
+#, fuzzy, kde-format
+#| msgid "Shortcut conflict"
+msgctxt "@title:window"
+msgid "Shortcut conflict"
+msgstr "Fluchtoets konflikt"
+
+#: kkeysequencewidget.cpp:193
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+"<qt> De toetskombinaasje '%1' is al tawiisd oan de globale aksje<b>%2</b>. "
+"<br>Graach in oare toetskombinaasje kieze.</qt>"
+
+#: kkeysequencewidget.cpp:275
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr ""
+
+#: kkeysequencewidget.cpp:284
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kkeysequencewidget.cpp:291
+#, kde-format
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "Konflikt mei registrearre globale fluchtoets"
+msgstr[1] "Konflikt mei registrearre globale fluchtoetsen"
+
+#: kkeysequencewidget.cpp:304
+#, kde-format
+msgid "Reserved Shortcut"
+msgstr "Reservearre fluchtoets"
+
+#: kkeysequencewidget.cpp:306
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: kkeysequencewidget.cpp:349
+#, fuzzy, kde-format
+#| msgid "Conflict with Standard Application Shortcut"
+msgctxt "@title:window"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Konflikt mei standert applikaasje-fluchtoets"
+
+#: kkeysequencewidget.cpp:351
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"De toetskombinaasje '%1' wurdt ek brûkt foar de standert aksje \"%2\" hokker "
+"troch guon applikaasje brûkt wurdt.\n"
+"Wolle jo it wier ek brûke as in globale fluchtoets?"
+
+#: kkeysequencewidget.cpp:395
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Ynfier"
+
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Gjint"
+
+#: klicensedialog_p.cpp:33
+#, fuzzy, kde-format
+#| msgid "License Agreement"
+msgctxt "@title:window"
+msgid "License Agreement"
+msgstr "Lisinsje-oerienkomst"
+
+#: kmainwindow.cpp:261
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Berend Ytsma"
+
+#: kmainwindow.cpp:262
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Berendy@gmail.com"
+
+#: kmenumenuhandler_p.cpp:37
+#, kde-format
+msgid "Add to Toolbar"
+msgstr "Oan arkbalke taheakje"
+
+#: kmenumenuhandler_p.cpp:223
+#, fuzzy, kde-format
+#| msgid "Configure Shortcut..."
+msgctxt "@action:inmenu"
+msgid "Configure Shortcut..."
+msgstr "Fluchtoetsen ynstelle..."
+
+#: ksendbugmail/main.cpp:30
+#, fuzzy, kde-format
+#| msgid "Create content on server"
+msgid "Error connecting to server."
+msgstr "Meitsje ynhâld oan op tsjinner"
+
+#: ksendbugmail/main.cpp:33
+#, fuzzy, kde-format
+#| msgid "Not found"
+msgid "Not connected."
+msgstr "Net fûn"
+
+#: ksendbugmail/main.cpp:36
+#, fuzzy, kde-format
+#| msgid "Connection timed out"
+msgid "Connection timed out."
+msgstr "ferbining is ferrûn"
+
+#: ksendbugmail/main.cpp:39
+#, kde-format
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:43
+#, fuzzy, kde-format
+#| msgid "Server: %1"
+msgid "Server said: \"%1\""
+msgstr "Tsjinner: %1"
+
+#: ksendbugmail/main.cpp:74
+#, fuzzy, kde-format
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "Brekrapport ferstjoere."
+
+#: ksendbugmail/main.cpp:76
+#, fuzzy, kde-format
+#| msgid "The size of the dialog"
+msgid "The subject line of the email."
+msgstr "De grutte fan it dialooch"
+
+#: ksendbugmail/main.cpp:78
+#, fuzzy, kde-format
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "It e-postadres dêr't dit brekrapport hinne stjoerd is."
+
+#: kshortcuteditwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Default:"
+msgctxt "@option:radio"
+msgid "Default:"
+msgstr "Standert"
+
+#: kshortcuteditwidget.cpp:62
+#, fuzzy, kde-format
+#| msgid "Custom:"
+msgctxt "@option:radio"
+msgid "Custom:"
+msgstr "Oanpast:"
+
+#: kshortcutschemeseditor.cpp:32
+#, fuzzy, kde-format
+#| msgid "Shortcut Schemes"
+msgctxt "@title:group"
+msgid "Shortcut Schemes"
+msgstr "Fluchtoets skema's"
+
+#: kshortcutschemeseditor.cpp:57
+#, kde-format
+msgid "Current scheme:"
+msgstr "Aktyf skema:"
+
+#: kshortcutschemeseditor.cpp:73
+#, fuzzy, kde-format
+#| msgid "New..."
+msgctxt "@action:button"
+msgid "New..."
+msgstr "Nij..."
+
+#: kshortcutschemeseditor.cpp:76
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Wiskje"
+
+#: kshortcutschemeseditor.cpp:79
+#, fuzzy, kde-format
+#| msgid "More Actions"
+msgctxt "@action:button"
+msgid "More Actions"
+msgstr "Mear aksjes"
+
+#: kshortcutschemeseditor.cpp:83
+#, fuzzy, kde-format
+#| msgid "Shortcut Schemes"
+msgctxt "@action:inmenu"
+msgid "Save shortcuts to scheme"
+msgstr "Fluchtoets skema's"
+
+#: kshortcutschemeseditor.cpp:84
+#, fuzzy, kde-format
+#| msgid "Export Scheme..."
+msgctxt "@action:inmenu"
+msgid "Export Scheme..."
+msgstr "Skema eksportearje..."
+
+#: kshortcutschemeseditor.cpp:85
+#, fuzzy, kde-format
+#| msgid "Export Scheme..."
+msgctxt "@action:inmenu"
+msgid "Import Scheme..."
+msgstr "Skema eksportearje..."
+
+#: kshortcutschemeseditor.cpp:100
+#, fuzzy, kde-format
+#| msgid "Name for New Scheme"
+msgctxt "@title:window"
+msgid "Name for New Scheme"
+msgstr "Namme foar nij skema"
+
+#: kshortcutschemeseditor.cpp:100
+#, kde-format
+msgid "Name for new scheme:"
+msgstr "Namme foar nij skema:"
+
+#: kshortcutschemeseditor.cpp:100
+#, kde-format
+msgid "New Scheme"
+msgstr "Nij skema"
+
+#: kshortcutschemeseditor.cpp:106
+#, kde-format
+msgid "A scheme with this name already exists."
+msgstr "In skema mei dizze namme bestiet al."
+
+#: kshortcutschemeseditor.cpp:136
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:169
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window"
+msgid "Export Shortcuts"
+msgstr "Fluchtoetsen"
+
+#: kshortcutschemeseditor.cpp:169 kshortcutschemeseditor.cpp:180
+#, fuzzy, kde-format
+#| msgid "Shortcut Conflict(s)"
+msgid "Shortcuts (*.shortcuts)"
+msgstr "Fluchtoets konflikt(en)"
+
+#: kshortcutschemeseditor.cpp:180
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window"
+msgid "Import Shortcuts"
+msgstr "Fluchtoetsen"
+
+#: kshortcutschemeseditor.cpp:191
+#, fuzzy, kde-format
+#| msgid "The removal request was successfully registered."
+msgid "Shortcut scheme successfully saved."
+msgstr "It fersyk ta fuortsmiten wie mei sukses registrearre."
+
+#: kshortcutschemeseditor.cpp:194
+#, kde-format
+msgid "Error saving the shortcut scheme."
+msgstr ""
+
+#: kshortcutsdialog.cpp:69
+#, kde-format
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+
+#: kshortcutsdialog.cpp:119
+#, fuzzy, kde-format
+#| msgid "New Scheme"
+msgid "Manage &Schemes"
+msgstr "Nij skema"
+
+#: kshortcutsdialog.cpp:144
+#, fuzzy, kde-format
+#| msgid "Configure Shortcuts"
+msgctxt "@title:window"
+msgid "Configure Keyboard Shortcuts"
+msgstr "Fluchtoetsen ynstelle"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Ynteraktyf sykje nei fluchtoetsnammen (bgl. Kopiearje) of kombinaasjetoetsen "
+"(bgl. Ctrl+C) troch se hjir yn te fieren."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Hjir sjogge jo in list mei toetsferbiningen, dus it ferbân tusken toetsen, "
+"toetskombinaasjes en de aksjes. De aksjes (bgl. kopiearje) wurde yn de "
+"lofterkolom werjûn en de toetsen of toetskombinaasjes (bgl. Ctrl+v) fine jo "
+"yn de rjochterkolom."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Aksje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Fluchtoets"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Ofwikselje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globaal"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Globaal alternatyf"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Mûsknop stjoering"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Mûsfiguer stjoering"
+
+#: kshortcutseditor.cpp:547
+#, kde-format
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "Fluchtoetsen foar %1"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:563 kshortcutwidget.ui:22
+#, kde-format
+msgid "Main:"
+msgstr "Haad:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:564 kshortcutwidget.ui:52
+#, kde-format
+msgid "Alternate:"
+msgstr "Altenatyf:"
+
+#: kshortcutseditor.cpp:565
+#, kde-format
+msgid "Global:"
+msgstr "Globaal:"
+
+#: kshortcutseditor.cpp:566
+#, fuzzy, kde-format
+#| msgid "Global Alternate"
+msgid "Global alternate:"
+msgstr "Globaal alternatyf"
+
+#: kshortcutseditor.cpp:582
+#, kde-format
+msgid "Action Name"
+msgstr "Aksjenamme"
+
+#: kshortcutseditor.cpp:586
+#, kde-format
+msgid "Shortcuts"
+msgstr "Fluchtoetsen"
+
+#: kshortcutseditor.cpp:590
+#, kde-format
+msgid "Description"
+msgstr "Beskriuwing"
+
+#: kshortcutseditoritem.cpp:35
+#, kde-format
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1"
+
+#: kswitchlanguagedialog_p.cpp:140
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@title:window"
+msgid "Configure Language"
+msgstr "Konfigurearje"
+
+#: kswitchlanguagedialog_p.cpp:144
+#, kde-format
+msgid "Please choose the language which should be used for this application:"
+msgstr "Kies de taal dy foar dit programma brûkt moat wurde:"
+
+#: kswitchlanguagedialog_p.cpp:171
+#, fuzzy, kde-format
+#| msgid "Add Fallback Language"
+msgctxt "@action:button"
+msgid "Add Fallback Language"
+msgstr "Tebekfal taal taheakje"
+
+#: kswitchlanguagedialog_p.cpp:172
+#, fuzzy, kde-format
+#| msgid ""
+#| "Adds one more language which will be used if other translations do not "
+#| "contain a proper translation."
+msgctxt "@info:tooltip"
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+"Dit heaket noch ien taal ta hokker brûkt wurdt as in oare oersetting net in "
+"juste oersetting befettet."
+
+#: kswitchlanguagedialog_p.cpp:264 kswitchlanguagedialog_p.cpp:285
+#, kde-format
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+"De taal foar dit porgramma is feroare. De feroaring sil te sjen wêze by de "
+"folgjende kear dat dit programma úteinsetten wurdt."
+
+#: kswitchlanguagedialog_p.cpp:265
+#, fuzzy, kde-format
+#| msgid "Application Language Changed"
+msgctxt "@title:window"
+msgid "Application Language Changed"
+msgstr "Applikaasjetaal is feroare"
+
+#: kswitchlanguagedialog_p.cpp:286
+#, kde-format
+msgid "Application Language Changed"
+msgstr "Applikaasjetaal is feroare"
+
+#: kswitchlanguagedialog_p.cpp:373
+#, kde-format
+msgid "Primary language:"
+msgstr "Standerttaal:"
+
+#: kswitchlanguagedialog_p.cpp:373
+#, kde-format
+msgid "Fallback language:"
+msgstr "Tebekfaltaal:"
+
+#: kswitchlanguagedialog_p.cpp:388
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Fuortsmite"
+
+#: kswitchlanguagedialog_p.cpp:394
+#, fuzzy, kde-format
+#| msgid ""
+#| "This is the main application language which will be used first, before "
+#| "any other languages."
+msgctxt "@info:tooltip"
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+"Dit is de haadprogrammataal, hokker foarôf eltse oare taal brûkt wurdt."
+
+#: kswitchlanguagedialog_p.cpp:395
+#, fuzzy, kde-format
+#| msgid ""
+#| "This is the language which will be used if any previous languages do not "
+#| "contain a proper translation."
+msgctxt "@info:tooltip"
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+"Dizze taal sil brûkt wurde as in foarige taal net in juste oersetting "
+"befettet."
+
+#: ktoolbar.cpp:291 ktoolbar.cpp:298
+#, fuzzy, kde-format
+#| msgid "Toolbar Settings"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "Arkbalke ynstellings"
+
+#: ktoolbar.cpp:293
+#, fuzzy, kde-format
+#| msgid "Show help"
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "Help sjen litte"
+
+#: ktoolbar.cpp:300
+#, fuzzy, kde-format
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "Oriïntaasje"
+
+#: ktoolbar.cpp:302
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "Boppelâns"
+
+#: ktoolbar.cpp:306
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "Lofts"
+
+#: ktoolbar.cpp:309
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "Rjochts"
+
+#: ktoolbar.cpp:312
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "Underlâns"
+
+#: ktoolbar.cpp:323
+#, kde-format
+msgid "Text Position"
+msgstr "Tekstposysje"
+
+#: ktoolbar.cpp:325
+#, fuzzy, kde-format
+#| msgid "Icons Only"
+msgctxt "@item:inmenu"
+msgid "Icons Only"
+msgstr "Allinne byldkaikes"
+
+#: ktoolbar.cpp:328
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgctxt "@item:inmenu"
+msgid "Text Only"
+msgstr "Allinne tekst"
+
+#: ktoolbar.cpp:331
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgctxt "@item:inmenu"
+msgid "Text Alongside Icons"
+msgstr "Tekst njonken de byldkaikes"
+
+#: ktoolbar.cpp:334
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgctxt "@item:inmenu"
+msgid "Text Under Icons"
+msgstr "Tekst ûnder de byldkaikes"
+
+#: ktoolbar.cpp:345
+#, kde-format
+msgid "Icon Size"
+msgstr "Byldkaikegrutte"
+
+#: ktoolbar.cpp:351
+#, kde-format
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "Standert"
+
+#: ktoolbar.cpp:368 ktoolbar.cpp:389
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "Lyts (%1x%2)"
+
+#: ktoolbar.cpp:370 ktoolbar.cpp:391
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "Middel (%1x%2)"
+
+#: ktoolbar.cpp:372 ktoolbar.cpp:393
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "Grut (%1x%2)"
+
+#: ktoolbar.cpp:374 ktoolbar.cpp:395
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "Grut (%1x%2)"
+
+#: ktoolbar.cpp:418
+#, kde-format
+msgid "Lock Toolbar Positions"
+msgstr "Arkbalke posysjes beskoattelje"
+
+#: ktoolbarhandler.cpp:93
+#, kde-format
+msgid "Toolbars Shown"
+msgstr "Arkbalken te sjen"
+
+#: ktooltiphelper.cpp:203
+#, fuzzy, kde-format
+#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
+#| msgid "%1 (%2)"
+msgctxt ""
+"@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ktooltiphelper.cpp:271
+#, kde-format
+msgid ""
+"<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
+msgstr ""
+
+#: ktooltiphelper.cpp:286
+#, kde-format
+msgid ""
+"%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
+msgstr ""
+
+#: kundoactions.cpp:30
+#, kde-format
+msgid "Redo"
+msgstr "Op 'e nij dwaan"
+
+#: kundoactions.cpp:49
+#, kde-format
+msgid "Undo"
+msgstr "Ungedien meitsje"
+
+#: kxmlguibuilder.cpp:182 kxmlguibuilder.cpp:353
+#, kde-format
+msgid "No text"
+msgstr "Gjin tekst"
+
+#: kxmlguiwindow.cpp:189
+#, kde-format
+msgid "Open Command Bar"
+msgstr ""
+
+#: kxmlguiwindow.cpp:534
+#, kde-format
+msgid ""
+"There are two actions (%1, %2) that want to use the same shortcut (%3). This "
+"is most probably a bug. Please report it in <a href='https://bugs.kde."
+"org'>bugs.kde.org</a>"
+msgstr ""
+
+#: kxmlguiwindow.cpp:539
+#, fuzzy, kde-format
+#| msgid "Ambiguous shortcut detected"
+msgid "Ambiguous Shortcuts"
+msgstr "Dûbelsinnich fluchtoets ûntdútsen"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Triem"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Spultsje"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "Be&wurkje"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Fer&pleatse"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+#, kde-format
+msgid "&View"
+msgstr "Byl&d"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:120
+#, kde-format
+msgid "&Go"
+msgstr "&Gean nei"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:141
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Blêdwizers"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:147
+#, kde-format
+msgid "&Tools"
+msgstr "H&elpmiddels"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:151
+#, kde-format
+msgid "&Settings"
+msgstr "&Ynstellings"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:195
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Haadarkbalke"

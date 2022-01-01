@@ -1,0 +1,1641 @@
+# KDE3 - Georgian translation of kdelibs4.po
+# Gia Shervashidze <giasher@telenet.ge>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-21 00:40+0000\n"
+"PO-Revision-Date: 2009-12-17 02:11+0400\n"
+"Last-Translator: George Machitidze <giomac@gmail.com>\n"
+"Language-Team: Georgian <http://www.gia.ge>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:52
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid "Visit component's homepage"
+msgstr "ვებსაიტი"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:100
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr "ვებსაიტი"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:141
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "@item Component name in about dialog."
+msgid "%1"
+msgstr "%1%"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:144
+#, fuzzy, kde-format
+#| msgid "Version"
+msgid "Version %1"
+msgstr "ვერსია"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:153
+#: kabstractaboutdialog_p.cpp:84
+#, kde-format
+msgid "License: %1"
+msgstr "ლიცენზია: %1"
+
+#: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
+#, fuzzy, kde-format
+#| msgid "About %1"
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "%1 პროგრამის შესახებ"
+
+#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "&About"
+msgctxt "@title:tab"
+msgid "About"
+msgstr "&პროგრამის შესახებ"
+
+#: kaboutapplicationdialog.cpp:104
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgctxt "@title:tab"
+msgid "Components"
+msgstr "კომენტარი"
+
+#: kaboutapplicationdialog.cpp:117 kaboutplugindialog.cpp:99
+#, fuzzy, kde-format
+#| msgid "Author"
+msgctxt "@title:tab"
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] "ავტორი"
+
+#: kaboutapplicationdialog.cpp:124 kaboutplugindialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "&Thanks To"
+msgctxt "@title:tab"
+msgid "Thanks To"
+msgstr "&მადლობები"
+
+#: kaboutapplicationdialog.cpp:131 kaboutplugindialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Translation"
+msgctxt "@title:tab"
+msgid "Translation"
+msgstr "თარგმანი"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:53
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "Action to send an email to a contributor"
+msgid "Email contributor"
+msgstr "სხვა მონაწილეები:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:58
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgid "Visit contributor's homepage"
+msgstr "ვებსაიტი"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:106
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "@info:tooltip Action to send an email to a contributor"
+msgid ""
+"Email contributor\n"
+"%1"
+msgstr "სხვა მონაწილეები:"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:112
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's homepage\n"
+"%1"
+msgstr "ვებსაიტი"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:119
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit contributor's profile on %1\n"
+"%2"
+msgstr "ვებსაიტი"
+
+#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "@item Contributor name in about dialog."
+msgid "%1"
+msgstr "%1%"
+
+#: kaboutkdedialog_p.cpp:31
+#, fuzzy, kde-format
+#| msgid "About KDE"
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "KDE-ს შესახებ"
+
+#: kaboutkdedialog_p.cpp:34
+#, kde-format
+msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+msgstr ""
+
+#: kaboutkdedialog_p.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"<html><b>KDE</b> is a world-wide community of software engineers, artists, "
+"writers, translators and creators who are committed to <a href=\"%1\">Free "
+"Software</a> development. KDE produces the Plasma desktop environment, "
+"hundreds of applications, and the many software libraries that support them."
+"<br /><br />KDE is a cooperative enterprise: no single entity controls its "
+"direction or products. Instead, we work together to achieve the common goal "
+"of building the world's finest Free Software. Everyone is welcome to <a href="
+"\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit <a "
+"href=\"%3\">%3</a> for more information about the KDE community and the "
+"software we produce.</html>"
+msgstr ""
+"<b>KDE სამუშაო გარსი</b> დაწერილია KDE გუნდის, პროგრამისტების მსოფლიო ქსელის "
+"წევრების მიერ, რომლებმაც თავი <a href=\"http://www.gnu.org/philosophy/free-"
+"sw.html\">თავისუფალი პროგრამული უზრუნველყოფის</a> შემუშავებას მიუძღვნეს."
+"<br><br>არ არსებობს ჯგუფი ან ორგანიზაცია, რომელიც KDE-ს პირველწყარო კოდებს "
+"აკონტროლებს. მივესალმებით ყველას, ვინც თავის წვლილს შეიტანს KDE-ს "
+"განვითარებაში.<br><br>თუ გსურთ KDE-ს შესახებ მეტი გაიგოთ, მოინახულეთ <A HREF="
+"\"http://www.kde.org/\">http://www.kde.org/</A>. "
+
+#: kaboutkdedialog_p.cpp:66
+#, fuzzy, kde-format
+msgid ""
+"<html>Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.<br /><br />KDE has a bug tracking system. "
+"Visit <a href=\"%1\">%1</a> or use the \"Report Bug...\" dialog from the "
+"\"Help\" menu to report bugs.<br /><br />If you have a suggestion for "
+"improvement then you are welcome to use the bug tracking system to register "
+"your wish. Make sure you use the severity called \"Wishlist\".</html>"
+msgstr ""
+"პროგრამის გაუმჯობესება ყოველთვის შეიძლება და KDE გუნდი ამისთვის მზადაა. "
+"ამისათვის საჭიროა რომ თქვენ - მომხმარებელმა - შეგვატყობინოთ თქვენი სურვილები "
+"და წინადადებები.<br><br>KDE პროექტს გააჩნია შეცდომებისა და წინადადების "
+"თვალმიდევნების სისტემა. მოინახულეთ <A HREF=\"http://bugs.kde.org/\">http://"
+"bugs.kde.org/</A> ან გამოიყენეთ \"შეცდომის პატაკი...\" მენიუდან \"დახმარება"
+"\" შეცდომების საპატაკოდ.<br><br>თქვენი შემოთავაზებები იგივე წესით შეგიძლიათ "
+"გამოგზავნოთ. არ დაგავიწყდეთ მნიშვნელობის დონის მითითება."
+
+#: kaboutkdedialog_p.cpp:85
+#, fuzzy, kde-format
+msgid ""
+"<html>You do not have to be a software developer to be a member of the KDE "
+"team. You can join the national teams that translate program interfaces. You "
+"can provide graphics, themes, sounds, and improved documentation. You decide!"
+"<br /><br />Visit <a href=\"%1\">%1</a> for information on some projects in "
+"which you can participate.<br /><br />If you need more information or "
+"documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
+"what you need.</html>"
+msgstr ""
+"KDE გუნდის მონაწილე რომ გახდეთ აუცილებელი არაა პროგრამისტი იყოთ. შეგიძლიათ "
+"მიუერთდეთ ეროვნულ გუნებს  KDE-ეს მშობლიურ ენაზე სათარგმნელად.  შეგიძლიათ "
+"შექმნათ ნახატები, თემები, ხმოვანი ფაილები და გააუმჯობესოთ დოკუმენტაცია.  "
+"გადაწყვიტეთ რას ისურვებთ!<br><br>არსებული პროექტების გასაცნობად და "
+"მონაწილეობის მისაღებად მოინახულეთ <A HREF=\"http://www.kde.org/jobs/"
+"\">http://www.kde.org/jobs/</A>.<br><br>უფრო დეტალური ინფორმაცია და "
+"დოკუმენტაცია შეგიძლიათ მოიპოვოთ საიტზე <A HREF=\"http://developer.kde.org/"
+"\">http://developer.kde.org/</A>."
+
+#: kaboutkdedialog_p.cpp:108
+#, fuzzy, kde-format
+#| msgid ""
+#| "KDE is available free of charge, but making it is not free.<br><br>Thus, "
+#| "the KDE team formed the KDE e.V., a non-profit organization legally "
+#| "founded in Tuebingen, Germany. The KDE e.V. represents the KDE project in "
+#| "legal and financial matters. See <a href=\"http://www.kde-ev.org/"
+#| "\">http://www.kde-ev.org</a> for information on the KDE e.V.<br><br>The "
+#| "KDE team does need financial support. Most of the money is used to "
+#| "reimburse members and others on expenses they experienced when "
+#| "contributing to KDE. You are encouraged to support KDE through a "
+#| "financial donation, using one of the ways described at <a href=\"http://"
+#| "www.kde.org/support/\">http://www.kde.org/support/</a>.<br><br>Thank you "
+#| "very much in advance for your support."
+msgid ""
+"<html>KDE software is and will always be available free of charge, however "
+"creating it is not free.<br /><br />To support development the KDE community "
+"has formed the KDE e.V., a non-profit organization legally founded in "
+"Germany. KDE e.V. represents the KDE community in legal and financial "
+"matters. See <a href=\"%1\">%1</a> for information on KDE e.V.<br /><br /"
+">KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings. <br /> <br />We would like to encourage you to "
+"support our efforts with a financial donation, using one of the ways "
+"described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
+"advance for your support.</html>"
+msgstr ""
+"KDE უფასოდ ვრცელდება, მაგრამ მისი შექმნა ხარჯებთანაა დაკავშირებული."
+"<br><br>ამიტომ  KDE-ს გუნდმა დააარსა KDE ასოციაცია, არამომგებიანი "
+"ორგანიზაცია, რომელიც ტიუბინგენშია (გერმანია) რეგისტრირებული. KDE ასოციაცია "
+"KDE პროექტს წარმოადგენს იურიდიულ და ფინანსურ ასპექტებში. KDE ასოციაციის "
+"შესახებ უფრო დეტალური ინფორმაციის მისაღებად მოინახულეთ <a href=\"http://www."
+"kde.org/kde-ev/\">http://www.kde.org/kde-ev/<a>.<br><br>KDE გუნდს ესაჭიროება "
+"ფინანსური დახმარება. თანხის უდიდესი ნაწილი იხარჯება მონაწილეების იმ ხარჯების "
+"ასანაზღაურებლად, რომლებიც მათ გასწიეს KDE პროექტში წვლილის შეტანისას. KDE "
+"გუნდის მხარდაჭერა შეგიძლიათ ფინანსური შეწირულობებით ან სხვადასხვა სახით, "
+"რომლებიც აღწერილია საიტზე <a href=\"http://www.kde.org/support/\">http://www."
+"kde.org/support/</a>.<br><br>წინასწარ გმადლობთ მხარდაჭერისთვის!"
+
+#: kaboutkdedialog_p.cpp:128
+#, fuzzy, kde-format
+#| msgctxt "About KDE"
+#| msgid "&About"
+msgctxt "@title:tab About KDE"
+msgid "&About"
+msgstr "&ინფორმაცია"
+
+#: kaboutkdedialog_p.cpp:129
+#, fuzzy, kde-format
+#| msgid "&Report Bugs or Wishes"
+msgctxt "@title:tab"
+msgid "&Report Bugs or Wishes"
+msgstr "შეცდომებისა და სურვილების &პატაკი"
+
+#: kaboutkdedialog_p.cpp:130
+#, fuzzy, kde-format
+#| msgid "&Join the KDE Team"
+msgctxt "@title:tab"
+msgid "&Join KDE"
+msgstr "KDE &გუნდს მიერთება"
+
+#: kaboutkdedialog_p.cpp:131
+#, fuzzy, kde-format
+#| msgid "&Support KDE"
+msgctxt "@title:tab"
+msgid "&Support KDE"
+msgstr "KDE-ს &მხარდაჭერა"
+
+#: kabstractaboutdialog_p.cpp:41
+#, fuzzy, kde-format
+#| msgid "Version"
+msgctxt "Version version-number"
+msgid "Version %1"
+msgstr "ვერსია"
+
+#: kabstractaboutdialog_p.cpp:106
+#, kde-format
+msgid "The <em>%1</em> windowing system"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:107
+#, fuzzy, kde-format
+#| msgid "Quit"
+msgid "Qt"
+msgstr "დასრულება"
+
+#: kabstractaboutdialog_p.cpp:107
+#, kde-format
+msgid "%1 (built against %2)"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:108
+#, kde-format
+msgid "KDE Frameworks"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:129
+#, fuzzy, kde-format
+#| msgid "Show author information"
+msgid "Show author photos"
+msgstr "ავტორის შესახებ ინფორმაციის ჩვენება"
+
+#: kabstractaboutdialog_p.cpp:130
+#, kde-format
+msgid "Enabling this will fetch images from an online location"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:169
+#, fuzzy, kde-format
+#| msgid "Please use http://bugs.kde.org to report bugs.\n"
+msgctxt "Reference to website"
+msgid "Please use %1 to report bugs.\n"
+msgstr "გთხოვთ გამოიყენოთ http://bugs.kde.org შეცდომების შეტყობინებისთვის.\n"
+
+#: kabstractaboutdialog_p.cpp:177
+#, fuzzy, kde-format
+#| msgid "Please report bugs to %1.\n"
+msgctxt "Reference to email address"
+msgid "Please report bugs to %1.\n"
+msgstr "გამოიყენეთ %1 შეცდომების შეტყობინებისთვის.\n"
+
+#: kactionconflictdetector.cpp:38
+#, kde-format
+msgid ""
+"The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
+"from the 'Settings' menu to solve the ambiguity.\n"
+"No action will be triggered."
+msgstr ""
+
+#: kactionconflictdetector.cpp:42
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window"
+msgid "Ambiguous shortcut detected"
+msgstr "მალმხმობები"
+
+#: kbugreport.cpp:101
+#, fuzzy, kde-format
+#| msgid "Submit Bug Report"
+msgctxt "@title:window"
+msgid "Submit Bug Report"
+msgstr "შეცდომის პატაკის გაგზავნა"
+
+#: kbugreport.cpp:129
+#, kde-format
+msgid "Submit Bug Report"
+msgstr "შეცდომის პატაკის გაგზავნა"
+
+#: kbugreport.cpp:141
+#, kde-format
+msgid ""
+"Your email address. If incorrect, use the Configure Email button to change it"
+msgstr ""
+"თქვენი ელფოსტის მისამართი. თუ მცდარია, მის შესაცვლელად დაწკაპეთ ღილაკი "
+"\"ელფოსტის გამართვა\""
+
+#: kbugreport.cpp:142
+#, kde-format
+msgctxt "Email sender address"
+msgid "From:"
+msgstr "ვისგან:"
+
+#: kbugreport.cpp:150
+#, fuzzy, kde-format
+#| msgid "Configure Email..."
+msgctxt "@action:button"
+msgid "Configure Email..."
+msgstr "ელფოსტის გამართვა..."
+
+#: kbugreport.cpp:157
+#, kde-format
+msgid "The email address this bug report is sent to."
+msgstr "შეცდომის პატაკის გასაგზავნი ელფოსტის მისამართი."
+
+#: kbugreport.cpp:158
+#, kde-format
+msgctxt "Email receiver address"
+msgid "To:"
+msgstr "ვის:"
+
+#: kbugreport.cpp:167
+#, fuzzy, kde-format
+#| msgid "&Send"
+msgctxt "@action:button"
+msgid "&Send"
+msgstr "&გაგზავნა"
+
+#: kbugreport.cpp:169
+#, fuzzy, kde-format
+#| msgid "Send bug report."
+msgctxt "@info:tooltip"
+msgid "Send bug report."
+msgstr "შეცდომის პატაკის გაგზავნა."
+
+#: kbugreport.cpp:170
+#, fuzzy, kde-format
+#| msgid "Send this bug report to %1."
+msgctxt "@info:whatsthis"
+msgid "Send this bug report to %1."
+msgstr "შეცდომის პატაკის გაგზავნა მისამართით %1."
+
+#: kbugreport.cpp:179
+#, kde-format
+msgid ""
+"The application for which you wish to submit a bug report - if incorrect, "
+"please use the Report Bug menu item of the correct application"
+msgstr ""
+"პროგრამა რომლის შესახებ შეცდომის პატაკი გამოგზავნას გსურთ - თუ მცდარია. "
+"გთხოვთ გამოიყენოთ მართებული პროგრამის მენიუს /\"შეცდომის პატაკი/\" ელემენტი"
+
+#: kbugreport.cpp:180
+#, kde-format
+msgid "Application: "
+msgstr "პროგრამა: "
+
+#: kbugreport.cpp:190
+#, kde-format
+msgid ""
+"The version of this application - please make sure that no newer version is "
+"available before sending a bug report"
+msgstr ""
+"პროგრამის ვერსია - ვიდრე შეცდომის პატაკს გაგზავნიდეთ, გადაამოწმეთ - ხომ არ "
+"გამოსულა ახალი ვერსია."
+
+#: kbugreport.cpp:191
+#, kde-format
+msgid "Version:"
+msgstr "ვერსია:"
+
+#: kbugreport.cpp:196
+#, fuzzy, kde-format
+#| msgid "no version set (programmer error!)"
+msgid "no version set (programmer error)"
+msgstr "ვერსია არ მითითებულა (პროგრამისტის შეცდომა!)"
+
+#: kbugreport.cpp:208
+#, kde-format
+msgid "OS:"
+msgstr "სისტემა:"
+
+#: kbugreport.cpp:218
+#, fuzzy, kde-format
+#| msgid "Se&verity"
+msgctxt "@title:group"
+msgid "Se&verity"
+msgstr "&მნიშვნელობა"
+
+#: kbugreport.cpp:225
+#, fuzzy, kde-format
+#| msgid "Critical"
+msgctxt "bug severity"
+msgid "Critical"
+msgstr "კრიტიკული"
+
+#: kbugreport.cpp:226
+#, fuzzy, kde-format
+#| msgid "Grave"
+msgctxt "bug severity"
+msgid "Grave"
+msgstr "სახიფათო"
+
+#: kbugreport.cpp:227
+#, fuzzy, kde-format
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "bug severity"
+msgid "Normal"
+msgstr "ჩვეულებრივი"
+
+#: kbugreport.cpp:228
+#, fuzzy, kde-format
+#| msgid "Wishlist"
+msgctxt "bug severity"
+msgid "Wishlist"
+msgstr "სურვილები"
+
+#: kbugreport.cpp:229
+#, fuzzy, kde-format
+#| msgid "Translation"
+msgctxt "bug severity"
+msgid "Translation"
+msgstr "თარგმანი"
+
+#: kbugreport.cpp:247
+#, kde-format
+msgid "S&ubject: "
+msgstr "&თემა: "
+
+#: kbugreport.cpp:256
+#, kde-format
+msgid ""
+"Enter the text (in English if possible) that you wish to submit for the bug "
+"report.\n"
+"If you press \"Send\", a mail message will be sent to the maintainer of this "
+"program.\n"
+msgstr ""
+"მიუთითეთ შეცდომის პატაკის აღწერილობის ტექსტი (სასურველია ინგლისურად).\n"
+"თუ დააჭერთ ღილაკს \"გაგზავნა\", შეტყობინება ელფოსტით გაიგზავნება პროგრამის "
+"წამყვანთან.\n"
+
+#: kbugreport.cpp:279
+#, fuzzy, kde-format
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
+"where you will find a form to fill in. The information displayed above will "
+"be transferred to that server.</qt>"
+msgstr ""
+"შეცდომის პატაკის გასაგზავნად დაწკაპეთ ღილაკი ქვემოთ.\n"
+"გაიხსნება http://bugs.kde.org ფანჯარა, სადაც შეგიძლიათ მოძებნოთ და შეავსოთ "
+"ფორმა.\n"
+"ზემოთ ნაჩვენები ინფორმაცია სერვერზე გადაიგზავნება."
+
+#: kbugreport.cpp:285
+#, fuzzy, kde-format
+msgid ""
+"<qt>To submit a bug report, click on the button below. This will open a web "
+"browser window on <a href=\"%1\">%2</a>.</qt>"
+msgstr ""
+"შეცდომის პატაკის გასაგზავნად დაწკაპეთ ღილაკი ქვემოთ.\n"
+"გაიხსნება http://bugs.kde.org ფანჯარა, სადაც შეგიძლიათ მოძებნოთ და შეავსოთ "
+"ფორმა.\n"
+"ზემოთ ნაჩვენები ინფორმაცია სერვერზე გადაიგზავნება."
+
+#: kbugreport.cpp:302
+#, fuzzy, kde-format
+#| msgid "&Launch Bug Report Wizard"
+msgctxt "@action:button"
+msgid "&Launch Bug Report Wizard"
+msgstr "&შეცდომის პატაკის მმართველის დაწყება"
+
+#: kbugreport.cpp:304
+#, fuzzy, kde-format
+#| msgid "Submit Bug Report"
+msgctxt "@action:button"
+msgid "&Submit Bug Report"
+msgstr "შეცდომის პატაკის გაგზავნა"
+
+#: kbugreport.cpp:397
+#, kde-format
+msgid ""
+"You must specify both a subject and a description before the report can be "
+"sent."
+msgstr "პატაკის გაგზავნამდე უნდა მიუთითოთ ორივე - თემაც და აღწერილობაც."
+
+#: kbugreport.cpp:406
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
+#| "system (or the whole system)</li><li>cause serious data loss</"
+#| "li><li>introduce a security hole on the system where the affected package "
+#| "is installed</li></ul>\n"
+#| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#| "does not, please select a lower severity. Thank you!</p>"
+msgid ""
+"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>break unrelated software on the "
+"system (or the whole system)</li><li>cause serious data loss</"
+"li><li>introduce a security hole on the system where the affected package is "
+"installed</li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>თვენ მიუთითეთ მნიშვნელობა <b>კრიტიკული</b>. ეს დონე გულისხმობს, რომ თუ ეს "
+"პაკეტი ჩადგმულია შეცდომამ</p><ul><li>შესაძლოა გამოიწვის სხვა პროგრამების ან "
+"თავად სისტემის მუშაობის შეწყვეტა</li><li>მონაცემთა დაზიანება ან დაკარგვა</"
+"li><li>სისტემის უსაფრთხოების დარღვევა</li></ul>\n"
+"<p>არის თუ არა შეცდომა, რომლის პატაკიც გსურთ ამდენად სერიოზული? თუ ასე არაა, "
+"აირჩიეთ უფრო შესაფერისი მნიშვნელობა. გმადლობთ!</p>"
+
+#: kbugreport.cpp:422
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#| "intended only for bugs that</p><ul><li>make the package in question "
+#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#| "security hole allowing access to the accounts of users who use the "
+#| "affected package</li></ul>\n"
+#| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#| "does not, please select a lower severity. Thank you!</p>"
+msgid ""
+"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+"intended only for bugs that:</p><ul><li>make the package in question "
+"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
+"hole allowing access to the accounts of users who use the affected package</"
+"li></ul>\n"
+"<p>Does the bug you are reporting cause any of the above damage? If it does "
+"not, please select a lower severity. Thank you.</p>"
+msgstr ""
+"<p>თვენ მიუთითეთ მნიშვნელობა <b>სახიფათო</b>. ეს დონე გულისხმობს, რომ "
+"შეცდომამ</p><ul><li>შესაძლოა გამოიწვის ამ პაკეტის მუშაობის შეუქცევადი "
+"შეწყვეტა</li><li>მონაცემთა დაზიანება ან დაკარგვა</li><li>სისტემის "
+"უსაფრთხოების დარღვევა და ამ პაკეტის ჩამდგმელ მონაწილეთა ფაილების წვდომა</"
+"li></ul>\n"
+"<p>არის თუ არა შეცდომა, რომლის პატაკიც გსურთ ამდენად სერიოზული? თუ ასე არაა, "
+"აირჩიეთ უფრო შესაფერისი მნიშვნელობა. გმადლობთ!</p>"
+
+#: kbugreport.cpp:441
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to send the bug report.\n"
+#| "Please submit a bug report manually...\n"
+#| "See http://bugs.kde.org/ for instructions."
+msgid ""
+"Unable to send the bug report.\n"
+"Please submit a bug report manually....\n"
+"See https://bugs.kde.org/ for instructions."
+msgstr ""
+"შეცდომის პატაკის გაგზავნა ვერ მოხერხდა.\n"
+"შეეცადეთ მის ხელით გაგზავნას.\n"
+"დახმარებისთვის იხ. http://bugs.kde.org/."
+
+#: kbugreport.cpp:448
+#, kde-format
+msgid "Bug report sent, thank you for your input."
+msgstr "შეცდომის პატაკი გაიგზავნა, გმადლობთ.."
+
+#: kbugreport.cpp:456
+#, kde-format
+msgid ""
+"Close and discard\n"
+"edited message?"
+msgstr ""
+"დავხურო და გავაუქმო\n"
+"შეტანილი შეტყობინება?"
+
+#: kbugreport.cpp:457
+#, fuzzy, kde-format
+#| msgid "Close Message"
+msgctxt "@title:window"
+msgid "Close Message"
+msgstr "შეტყობინების დახურვა"
+
+#: kcheckaccelerators.cpp:255
+#, fuzzy, kde-format
+#| msgid "Dr. Klash' Accelerator Diagnosis"
+msgctxt "@title:window"
+msgid "Dr. Klash' Accelerator Diagnosis"
+msgstr "Dr. Klash-ის დამაჩქარებლის დიაგნოსტიკა"
+
+#: kcheckaccelerators.cpp:262
+#, fuzzy, kde-format
+#| msgid "&Disable automatic checking"
+msgctxt "@option:check"
+msgid "Disable automatic checking"
+msgstr "თვითშემოწმების &ამორთვა"
+
+#: kcheckaccelerators.cpp:308
+#, kde-format
+msgid "<h2>Accelerators changed</h2>"
+msgstr "<h2>დამაჩქარებლები შეიცვალა</h2>"
+
+#: kcheckaccelerators.cpp:309 kcheckaccelerators.cpp:313
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Old Text"
+msgstr "ტექსტის პოვნა"
+
+#: kcheckaccelerators.cpp:309 kcheckaccelerators.cpp:318
+#, fuzzy, kde-format
+#| msgid "Show help"
+msgid "New Text"
+msgstr "დახმარების ჩვენება"
+
+#: kcheckaccelerators.cpp:313
+#, kde-format
+msgid "<h2>Accelerators removed</h2>"
+msgstr "<h2>დამაჩქარებლები ამოიშალა</h2> "
+
+#: kcheckaccelerators.cpp:317
+#, kde-format
+msgid "<h2>Accelerators added (just for your info)</h2>"
+msgstr "<h2>დამაჩქარებლები დაემატა (ცნობისთვის)</h2> "
+
+#: kedittoolbar.cpp:332
+#, fuzzy, kde-format
+#| msgid "Change &Icon..."
+msgctxt "@title:window"
+msgid "Change Text"
+msgstr "&პიქტოგრამის შეცვლა..."
+
+#: kedittoolbar.cpp:342
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Icon te&xt:"
+msgstr "ტექსტის პოვნა"
+
+#: kedittoolbar.cpp:347
+#, kde-format
+msgctxt "@option:check"
+msgid "&Hide text when toolbar shows text alongside icons"
+msgstr ""
+
+#: kedittoolbar.cpp:596
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Configure Toolbars"
+msgstr "პულტების გამართვა"
+
+#: kedittoolbar.cpp:659
+#, kde-format
+msgid ""
+"Do you really want to reset all toolbars of this application to their "
+"default? The changes will be applied immediately."
+msgstr ""
+"ნამდვილად გსურთ ყველა პულტისა და პროგრამის საწყისად აღდგენა? ცვლილებები "
+"დაუყოვნებლივ შევა ძალაში."
+
+#: kedittoolbar.cpp:660
+#, fuzzy, kde-format
+msgid "Reset Toolbars"
+msgstr "პულტის აღდგენა"
+
+#: kedittoolbar.cpp:661
+#, kde-format
+msgid "Reset"
+msgstr "აღდგენა"
+
+#: kedittoolbar.cpp:992
+#, fuzzy, kde-format
+msgid "&Toolbar:"
+msgstr "&პულტი:"
+
+#. i18n("&New"), this);
+#. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
+#. new_toolbar->setEnabled(false); // disabled until implemented
+#. QPushButton *del_toolbar = new QPushButton(i18n("&Delete"), this);
+#. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
+#. del_toolbar->setEnabled(false); // disabled until implemented
+#. our list of inactive actions
+#: kedittoolbar.cpp:1008
+#, kde-format
+msgid "A&vailable actions:"
+msgstr "&შესაძლო ქმედებები:"
+
+#: kedittoolbar.cpp:1029 kedittoolbar.cpp:1054
+#, kde-format
+msgid "Filter"
+msgstr "ფილტრი"
+
+#: kedittoolbar.cpp:1032
+#, kde-format
+msgid "Curr&ent actions:"
+msgstr "&მიმდინარე ქმედებები:"
+
+#: kedittoolbar.cpp:1057
+#, fuzzy, kde-format
+#| msgid "Change &Icon..."
+msgctxt "@action:button"
+msgid "Change &Icon..."
+msgstr "&პიქტოგრამის შეცვლა..."
+
+#: kedittoolbar.cpp:1066
+#, fuzzy, kde-format
+#| msgid "Change &Icon..."
+msgctxt "@action:button"
+msgid "Change Te&xt..."
+msgstr "&პიქტოგრამის შეცვლა..."
+
+#: kedittoolbar.cpp:1208
+#, kde-format
+msgid "--- separator ---"
+msgstr "--- გამყოფი ---"
+
+#: kedittoolbar.cpp:1209
+#, fuzzy, kde-format
+#| msgid "--- separator ---"
+msgid "--- expanding spacer ---"
+msgstr "--- გამყოფი ---"
+
+#: kedittoolbar.cpp:1231
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "@item:intable Action name in toolbar editor"
+msgid "%1"
+msgstr "%1%"
+
+#: kedittoolbar.cpp:1259
+#, kde-format
+msgid ""
+"This element will be replaced with all the elements of an embedded component."
+msgstr "ელემენტი სრულად ჩაინაცვლება ჩადგმული კომპონენტის ელემენტებით."
+
+#: kedittoolbar.cpp:1261
+#, kde-format
+msgid "<Merge>"
+msgstr "<შერწყმა>"
+
+#: kedittoolbar.cpp:1263
+#, kde-format
+msgid "<Merge %1>"
+msgstr "<შერწყმა - %1>"
+
+#: kedittoolbar.cpp:1273
+#, fuzzy, kde-format
+msgid ""
+"This is a dynamic list of actions. You can move it, but if you remove it you "
+"will not be able to re-add it."
+msgstr ""
+"ეს ქმედებების დინამიური სიაა. შეგიძლიათ გადაიტანოთ, მაგრამ ამოშლის "
+"შემთხვევაში მას ვეღარ დაამატებთ."
+
+#: kedittoolbar.cpp:1274
+#, kde-format
+msgid "ActionList: %1"
+msgstr "ქმედებების სია: %1"
+
+#: kedittoolbar.cpp:1375 kedittoolbar.cpp:1400
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "@label Action tooltip in toolbar editor, below the action list"
+msgid "%1"
+msgstr "%1%"
+
+#: kedittoolbar.cpp:1628
+#, fuzzy, kde-format
+#| msgid "Change &Icon..."
+msgid "Change Icon"
+msgstr "&პიქტოგრამის შეცვლა..."
+
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:178
+#, kde-format
+msgid "&Help"
+msgstr "&დახმარება"
+
+#: khelpmenu.cpp:253
+#, kde-format
+msgid "About %1"
+msgstr "%1 პროგრამის შესახებ"
+
+#: kkeysequencewidget.cpp:144
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: kkeysequencewidget.cpp:167
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "%1 is the number of conflicts"
+msgid "Shortcut Conflict"
+msgid_plural "Shortcut Conflicts"
+msgstr[0] "მალმხმობი"
+
+#: kkeysequencewidget.cpp:171
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Shortcut '%1' for action '%2'\n"
+msgstr "მალმხმობები"
+
+#: kkeysequencewidget.cpp:176
+#, fuzzy, kde-format
+msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
+msgid ""
+"The \"%2\" shortcut is ambiguous with the following shortcut.\n"
+"Do you want to assign an empty shortcut to this action?\n"
+"%3"
+msgid_plural ""
+"The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
+"Do you want to assign an empty shortcut to these actions?\n"
+"%3"
+msgstr[0] ""
+"კლავიშების ბმული %1 უკვე გამოიყენება \"%2\" ქმედებისთვის.\n"
+"გადმოვამისამართო იგი ახალ ქმედებაზე?"
+
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
+#, fuzzy, kde-format
+#| msgid "Reassign"
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr "გადამისამართება"
+
+#: kkeysequencewidget.cpp:191
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:window"
+msgid "Shortcut conflict"
+msgstr "მალმხმობი"
+
+#: kkeysequencewidget.cpp:193
+#, kde-format
+msgid ""
+"<qt>The '%1' key combination is already used by the <b>%2</b> action."
+"<br>Please select a different one.</qt>"
+msgstr ""
+
+#: kkeysequencewidget.cpp:275
+#, kde-format
+msgid "Shortcut '%1' in Application %2 for action %3\n"
+msgstr ""
+
+#: kkeysequencewidget.cpp:284
+#, kde-format
+msgctxt ""
+"%1 is the number of conflicts (hidden), %2 is the key sequence of the "
+"shortcut that is problematic"
+msgid "The shortcut '%2' conflicts with the following key combination:\n"
+msgid_plural ""
+"The shortcut '%2' conflicts with the following key combinations:\n"
+msgstr[0] ""
+
+#: kkeysequencewidget.cpp:291
+#, fuzzy, kde-format
+#| msgid "Conflict with Global Shortcut"
+msgctxt "%1 is the number of shortcuts with which there is a conflict"
+msgid "Conflict with Registered Global Shortcut"
+msgid_plural "Conflict with Registered Global Shortcuts"
+msgstr[0] "კონფლიქტი გლობალურ მალმხმობთან"
+
+#: kkeysequencewidget.cpp:304
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgid "Reserved Shortcut"
+msgstr "მალმხმობი"
+
+#: kkeysequencewidget.cpp:306
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: kkeysequencewidget.cpp:349
+#, fuzzy, kde-format
+#| msgid "Conflict with Standard Application Shortcut"
+msgctxt "@title:window"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "კონფლიქტი პროგრამის სტანდარტულ მალმხმობთან"
+
+#: kkeysequencewidget.cpp:351
+#, fuzzy, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"კლავიშების ბმული %1 უკვე გამოიყენება \"%2\" სტანდარტული ქმედებისთვის.\n"
+"გადმოვამისამართო იგი ახალ ქმედებაზე?"
+
+#: kkeysequencewidget.cpp:395
+#, fuzzy, kde-format
+#| msgid "Input file"
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "შეტანის ფაილი"
+
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "არა"
+
+#: klicensedialog_p.cpp:33
+#, fuzzy, kde-format
+#| msgid "&License Agreement"
+msgctxt "@title:window"
+msgid "License Agreement"
+msgstr "სა&ლიცენზიო შეთანხმება"
+
+#: kmainwindow.cpp:261
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "გია შერვაშიძე"
+
+#: kmainwindow.cpp:262
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "giasher@telenet.ge"
+
+#: kmenumenuhandler_p.cpp:37
+#, fuzzy, kde-format
+msgid "Add to Toolbar"
+msgstr "&საკუთარი ფერების დამატება"
+
+#: kmenumenuhandler_p.cpp:223
+#, fuzzy, kde-format
+#| msgid "Configure S&hortcuts..."
+msgctxt "@action:inmenu"
+msgid "Configure Shortcut..."
+msgstr "&მალმხმობების მორგება..."
+
+#: ksendbugmail/main.cpp:30
+#, fuzzy, kde-format
+#| msgid "Error opening file."
+msgid "Error connecting to server."
+msgstr "ფაილის გახსნის შეცდომა."
+
+#: ksendbugmail/main.cpp:33
+#, fuzzy, kde-format
+#| msgid "1 match found."
+#| msgid_plural "%1 matches found."
+msgid "Not connected."
+msgstr "მოიძებნა %1 თანხვედრა."
+
+#: ksendbugmail/main.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "Socket error code ConnectionTimedOut"
+#| msgid "connection timed out"
+msgid "Connection timed out."
+msgstr "კავშირის ვადა გავიდა"
+
+#: ksendbugmail/main.cpp:39
+#, kde-format
+msgid "Time out waiting for server interaction."
+msgstr ""
+
+#: ksendbugmail/main.cpp:43
+#, fuzzy, kde-format
+#| msgid "<Merge %1>"
+msgid "Server said: \"%1\""
+msgstr "<შერწყმა - %1>"
+
+#: ksendbugmail/main.cpp:74
+#, fuzzy, kde-format
+#| msgid "Send bug report."
+msgid "Sends a bug report by email."
+msgstr "შეცდომის პატაკის გაგზავნა."
+
+#: ksendbugmail/main.cpp:76
+#, fuzzy, kde-format
+msgid "The subject line of the email."
+msgstr "დღის რჩევა"
+
+#: ksendbugmail/main.cpp:78
+#, fuzzy, kde-format
+#| msgid "The email address this bug report is sent to."
+msgid "The email address to send the bug report to."
+msgstr "შეცდომის პატაკის გასაგზავნი ელფოსტის მისამართი."
+
+#: kshortcuteditwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Default:"
+msgctxt "@option:radio"
+msgid "Default:"
+msgstr "ნაგულისხმები:"
+
+#: kshortcuteditwidget.cpp:62
+#, fuzzy, kde-format
+msgctxt "@option:radio"
+msgid "Custom:"
+msgstr "&შერჩევით"
+
+#: kshortcutschemeseditor.cpp:32
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:group"
+msgid "Shortcut Schemes"
+msgstr "მალმხმობები"
+
+#: kshortcutschemeseditor.cpp:57
+#, fuzzy, kde-format
+#| msgid "Curr&ent actions:"
+msgid "Current scheme:"
+msgstr "&მიმდინარე ქმედებები:"
+
+#: kshortcutschemeseditor.cpp:73
+#, fuzzy, kde-format
+#| msgid "New..."
+msgctxt "@action:button"
+msgid "New..."
+msgstr "ახალი..."
+
+#: kshortcutschemeseditor.cpp:76
+#, fuzzy, kde-format
+#| msgid "Delete"
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "წაშლა"
+
+#: kshortcutschemeseditor.cpp:79
+#, fuzzy, kde-format
+#| msgid "Action"
+msgctxt "@action:button"
+msgid "More Actions"
+msgstr "ქმედება"
+
+#: kshortcutschemeseditor.cpp:83
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@action:inmenu"
+msgid "Save shortcuts to scheme"
+msgstr "მალმხმობები"
+
+#: kshortcutschemeseditor.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@action:inmenu"
+msgid "Export Scheme..."
+msgstr "მალმხმობები"
+
+#: kshortcutschemeseditor.cpp:85
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@action:inmenu"
+msgid "Import Scheme..."
+msgstr "მალმხმობები"
+
+#: kshortcutschemeseditor.cpp:100
+#, fuzzy, kde-format
+#| msgid "Curr&ent actions:"
+msgctxt "@title:window"
+msgid "Name for New Scheme"
+msgstr "&მიმდინარე ქმედებები:"
+
+#: kshortcutschemeseditor.cpp:100
+#, fuzzy, kde-format
+#| msgid "Curr&ent actions:"
+msgid "Name for new scheme:"
+msgstr "&მიმდინარე ქმედებები:"
+
+#: kshortcutschemeseditor.cpp:100
+#, fuzzy, kde-format
+#| msgid "Curr&ent actions:"
+msgid "New Scheme"
+msgstr "&მიმდინარე ქმედებები:"
+
+#: kshortcutschemeseditor.cpp:106
+#, kde-format
+msgid "A scheme with this name already exists."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:136
+#, kde-format
+msgid ""
+"Do you really want to delete the scheme %1?\n"
+"Note that this will not remove any system wide shortcut schemes."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:169
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window"
+msgid "Export Shortcuts"
+msgstr "მალმხმობები"
+
+#: kshortcutschemeseditor.cpp:169 kshortcutschemeseditor.cpp:180
+#, fuzzy, kde-format
+#| msgid "Shortcut Conflict(s)"
+msgid "Shortcuts (*.shortcuts)"
+msgstr "მალმხმობი"
+
+#: kshortcutschemeseditor.cpp:180
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window"
+msgid "Import Shortcuts"
+msgstr "მალმხმობები"
+
+#: kshortcutschemeseditor.cpp:191
+#, kde-format
+msgid "Shortcut scheme successfully saved."
+msgstr ""
+
+#: kshortcutschemeseditor.cpp:194
+#, kde-format
+msgid "Error saving the shortcut scheme."
+msgstr ""
+
+#: kshortcutsdialog.cpp:69
+#, kde-format
+msgid ""
+"The current shortcut scheme is modified. Save before switching to the new "
+"one?"
+msgstr ""
+
+#: kshortcutsdialog.cpp:119
+#, fuzzy, kde-format
+#| msgid "Curr&ent actions:"
+msgid "Manage &Schemes"
+msgstr "&მიმდინარე ქმედებები:"
+
+#: kshortcutsdialog.cpp:144
+#, fuzzy, kde-format
+#| msgid "Configure Shortcuts"
+msgctxt "@title:window"
+msgid "Configure Keyboard Shortcuts"
+msgstr "მალმხმობების გამართვა"
+
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"მალმხმობებს სახელების (მაგალითად, კოპირება) ან თავად კლავიშთა კომბინაციების "
+"(მაგალითად, Ctrl+C) ინტერაქტიული მოძებნა მათი ველში მითითებით."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"აქ მოტანილია <i>კლავიშთა ბმულების</i> სია, ე.ი. შესაბამისობები მარცხენა "
+"სვეტში მითითებულ ქმედებებსა (მაგალითად, 'კოპირება') და კლავიშთა ბმულებს "
+"(მაგალითად, CTRL-V), შორის მარჯვნივ."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "ქმედება"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "მალმხმობი"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ალტერნატული"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, fuzzy, kde-format
+#| msgid "Alternate"
+msgid "Global Alternate"
+msgstr "ალტერნატული"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr ""
+
+#: kshortcutseditor.cpp:547
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "header for an applications shortcut list"
+msgid "Shortcuts for %1"
+msgstr "მალმხმობები"
+
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:563 kshortcutwidget.ui:22
+#, fuzzy, kde-format
+#| msgid "Chain:"
+msgid "Main:"
+msgstr "ჯაჭვი:"
+
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:564 kshortcutwidget.ui:52
+#, fuzzy, kde-format
+#| msgid "Alternate"
+msgid "Alternate:"
+msgstr "ალტერნატული"
+
+#: kshortcutseditor.cpp:565
+#, kde-format
+msgid "Global:"
+msgstr ""
+
+#: kshortcutseditor.cpp:566
+#, fuzzy, kde-format
+#| msgid "Alternate"
+msgid "Global alternate:"
+msgstr "ალტერნატული"
+
+#: kshortcutseditor.cpp:582
+#, fuzzy, kde-format
+#| msgid "Action"
+msgid "Action Name"
+msgstr "ქმედება"
+
+#: kshortcutseditor.cpp:586
+#, kde-format
+msgid "Shortcuts"
+msgstr "მალმხმობები"
+
+#: kshortcutseditor.cpp:590
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgid "Description"
+msgstr "აღწერილობა:"
+
+#: kshortcutseditoritem.cpp:35
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "@item:intable Action name in shortcuts configuration"
+msgid "%1"
+msgstr "%1%"
+
+#: kswitchlanguagedialog_p.cpp:140
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@title:window"
+msgid "Configure Language"
+msgstr "გამართვა"
+
+#: kswitchlanguagedialog_p.cpp:144
+#, kde-format
+msgid "Please choose the language which should be used for this application:"
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:171
+#, fuzzy, kde-format
+#| msgid "Default language:"
+msgctxt "@action:button"
+msgid "Add Fallback Language"
+msgstr "ნაგულისხმები ენა:"
+
+#: kswitchlanguagedialog_p.cpp:172
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Adds one more language which will be used if other translations do not "
+"contain a proper translation."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:264 kswitchlanguagedialog_p.cpp:285
+#, kde-format
+msgid ""
+"The language for this application has been changed. The change will take "
+"effect the next time the application is started."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:265
+#, fuzzy, kde-format
+#| msgid "Application sounds"
+msgctxt "@title:window"
+msgid "Application Language Changed"
+msgstr "პროგრამების ხმოვანი ფაილები"
+
+#: kswitchlanguagedialog_p.cpp:286
+#, fuzzy, kde-format
+#| msgid "Application sounds"
+msgid "Application Language Changed"
+msgstr "პროგრამების ხმოვანი ფაილები"
+
+#: kswitchlanguagedialog_p.cpp:373
+#, kde-format
+msgid "Primary language:"
+msgstr "პირველადი ენა:"
+
+#: kswitchlanguagedialog_p.cpp:373
+#, fuzzy, kde-format
+#| msgid "Default language:"
+msgid "Fallback language:"
+msgstr "ნაგულისხმები ენა:"
+
+#: kswitchlanguagedialog_p.cpp:388
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "ამოშლა"
+
+#: kswitchlanguagedialog_p.cpp:394
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This is the main application language which will be used first, before any "
+"other languages."
+msgstr ""
+
+#: kswitchlanguagedialog_p.cpp:395
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This is the language which will be used if any previous languages do not "
+"contain a proper translation."
+msgstr ""
+
+#: ktoolbar.cpp:291 ktoolbar.cpp:298
+#, fuzzy, kde-format
+#| msgid "Toolbar Menu"
+msgctxt "@title:menu"
+msgid "Toolbar Settings"
+msgstr "პულტის მენიუ"
+
+#: ktoolbar.cpp:293
+#, fuzzy, kde-format
+#| msgid "Show help"
+msgctxt "@title:menu"
+msgid "Show Text"
+msgstr "დახმარების ჩვენება"
+
+#: ktoolbar.cpp:300
+#, fuzzy, kde-format
+#| msgid "Orientation"
+msgctxt "Toolbar orientation"
+msgid "Orientation"
+msgstr "ორიენტაცია"
+
+#: ktoolbar.cpp:302
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Top"
+msgstr "ზემოთ"
+
+#: ktoolbar.cpp:306
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Left"
+msgstr "მარცხნივ"
+
+#: ktoolbar.cpp:309
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Right"
+msgstr "მარჯვნივ"
+
+#: ktoolbar.cpp:312
+#, kde-format
+msgctxt "toolbar position string"
+msgid "Bottom"
+msgstr "ქვემოთ"
+
+#: ktoolbar.cpp:323
+#, kde-format
+msgid "Text Position"
+msgstr "ტექსტის განთავსება"
+
+#: ktoolbar.cpp:325
+#, fuzzy, kde-format
+#| msgid "Icons Only"
+msgctxt "@item:inmenu"
+msgid "Icons Only"
+msgstr "მხოლოდ პიქტოგრამები"
+
+#: ktoolbar.cpp:328
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgctxt "@item:inmenu"
+msgid "Text Only"
+msgstr "მხოლოდ წარწერები"
+
+#: ktoolbar.cpp:331
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgctxt "@item:inmenu"
+msgid "Text Alongside Icons"
+msgstr "წარწერები გვერდიდან"
+
+#: ktoolbar.cpp:334
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgctxt "@item:inmenu"
+msgid "Text Under Icons"
+msgstr "წარწერები ქვემოთ"
+
+#: ktoolbar.cpp:345
+#, kde-format
+msgid "Icon Size"
+msgstr "პიქტოგრამების ზომა"
+
+#: ktoolbar.cpp:351
+#, fuzzy, kde-format
+#| msgid "Default"
+msgctxt "@item:inmenu Icon size"
+msgid "Default"
+msgstr "ნაგულისხმები"
+
+#: ktoolbar.cpp:368 ktoolbar.cpp:389
+#, kde-format
+msgid "Small (%1x%2)"
+msgstr "პატარა (%1x%2)"
+
+#: ktoolbar.cpp:370 ktoolbar.cpp:391
+#, kde-format
+msgid "Medium (%1x%2)"
+msgstr "საშუალო (%1x%2)"
+
+#: ktoolbar.cpp:372 ktoolbar.cpp:393
+#, kde-format
+msgid "Large (%1x%2)"
+msgstr "მოზრდილი (%1x%2)"
+
+#: ktoolbar.cpp:374 ktoolbar.cpp:395
+#, kde-format
+msgid "Huge (%1x%2)"
+msgstr "ვეება (%1x%2)"
+
+#: ktoolbar.cpp:418
+#, fuzzy, kde-format
+msgid "Lock Toolbar Positions"
+msgstr "პულტები"
+
+#: ktoolbarhandler.cpp:93
+#, fuzzy, kde-format
+#| msgid "Toolbars"
+msgid "Toolbars Shown"
+msgstr "პულტები"
+
+#: ktooltiphelper.cpp:203
+#, fuzzy, kde-format
+msgctxt ""
+"@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
+msgid "%1 (%2)"
+msgstr "%1 ( %2 )"
+
+#: ktooltiphelper.cpp:271
+#, kde-format
+msgid ""
+"<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
+msgstr ""
+
+#: ktooltiphelper.cpp:286
+#, kde-format
+msgid ""
+"%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
+msgstr ""
+
+#: kundoactions.cpp:30
+#, fuzzy, kde-format
+#| msgid "Redo"
+msgid "Redo"
+msgstr "გამეორება"
+
+#: kundoactions.cpp:49
+#, kde-format
+msgid "Undo"
+msgstr "დაბრუნება"
+
+#: kxmlguibuilder.cpp:182 kxmlguibuilder.cpp:353
+#, fuzzy, kde-format
+msgid "No text"
+msgstr "ტექსტი არაა!"
+
+#: kxmlguiwindow.cpp:189
+#, kde-format
+msgid "Open Command Bar"
+msgstr ""
+
+#: kxmlguiwindow.cpp:534
+#, kde-format
+msgid ""
+"There are two actions (%1, %2) that want to use the same shortcut (%3). This "
+"is most probably a bug. Please report it in <a href='https://bugs.kde."
+"org'>bugs.kde.org</a>"
+msgstr ""
+
+#: kxmlguiwindow.cpp:539
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Ambiguous Shortcuts"
+msgstr "მალმხმობები"
+
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&ფაილი"
+
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&თამაში"
+
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&რედაქტირება"
+
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, fuzzy, kde-format
+#| msgid "&Move"
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&გადატანა"
+
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:101
+#, kde-format
+msgid "&View"
+msgstr "&ჩვენება"
+
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:120
+#, kde-format
+msgid "&Go"
+msgstr "&გადასვლა"
+
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:141
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&სანიშნეები"
+
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:147
+#, kde-format
+msgid "&Tools"
+msgstr "&ხელსაწყოები"
+
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:151
+#, kde-format
+msgid "&Settings"
+msgstr "&პარამეტრები"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:195
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ხელსაწყოების ძირითადი პულტი"
