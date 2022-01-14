@@ -251,15 +251,16 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
     const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
     if (toolTip.isEmpty() || toolTip == whatsThisHintOnly()) {
-        // i18n: @info:tooltip Pressing Shift will show a longer message with contextual info
-        // about the thing the tooltip was invoked for. If there is no good way to translate
-        // the message, translating "Press Shift to learn more." would also mostly fit what
-        // is supposed to be expressed here.
-        const QString whatsThisHint = i18n("<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>", hintTextColor.name());
+        const QString whatsThisHint =
+            // i18n: Pressing Shift will show a longer message with contextual info
+            // about the thing the tooltip was invoked for. If there is no good way to translate
+            // the message, translating "Press Shift to learn more." would also mostly fit what
+            // is supposed to be expressed here.
+            i18nc("@info:tooltip", "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>", hintTextColor.name());
         QToolTip::showText(m_lastExpandableToolTipGlobalPos, whatsThisHint, m_widget, rect);
     } else {
         const QString toolTipWithHint = QStringLiteral("<qt>") +
-            // i18n: @info:tooltip The 'Press Shift for more' message is added to tooltips that have an
+            // i18n: The 'Press Shift for more' message is added to tooltips that have an
             // available whatsthis help message. Pressing Shift will show this more exhaustive message.
             // It is particularly important to keep this translation short because:
             // 1. A longer translation will increase the size of *every* tooltip that gets this hint
@@ -269,7 +270,8 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
             //
             // %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
             // styling information. The word "more" refers to "information".
-            i18n("%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>", toolTip, hintTextColor.name()) + QStringLiteral("</qt>");
+            i18nc("@info:tooltip keep short", "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>", toolTip, hintTextColor.name())
+            + QStringLiteral("</qt>");
         // Do not replace above HTML tags with KUIT because mixing HTML and KUIT is not allowed and
         // we can not know what kind of markup the tooltip in %1 contains.
         QToolTip::showText(m_lastExpandableToolTipGlobalPos, toolTipWithHint, m_widget, rect);
