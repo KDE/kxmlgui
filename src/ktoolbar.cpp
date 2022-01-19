@@ -269,6 +269,9 @@ void KToolBarPrivate::init(bool readConfig, bool _isMainToolBar)
 
 QString KToolBarPrivate::getPositionAsString() const
 {
+    if (!q->mainWindow()) {
+        return QStringLiteral("None");
+    }
     // get all of the stuff to save
     switch (q->mainWindow()->toolBarArea(const_cast<KToolBar *>(q))) {
     case Qt::BottomToolBarArea:
@@ -549,6 +552,8 @@ Qt::ToolBarArea KToolBarPrivate::positionFromString(const QString &position)
         newposition = Qt::BottomToolBarArea;
     } else if (position == QLatin1String("right")) {
         newposition = Qt::RightToolBarArea;
+    } else if (position == QLatin1String("none")) {
+        newposition = Qt::NoToolBarArea;
     }
     return newposition;
 }

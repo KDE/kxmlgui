@@ -13,10 +13,12 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QDir>
+#include <QHBoxLayout>
 #include <QMenuBar>
 #include <QPushButton>
 #include <QShowEvent>
 #include <QTest>
+#include <QWidget>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -745,6 +747,60 @@ void KXmlGui_UnitTest::testHiddenToolBar()
     QVERIFY(qobject_cast<KToolBar *>(factory->container(QStringLiteral("hiddenToolBar"), &mainWindow))->isHidden());
 
     mainWindow.close();
+}
+
+void KXmlGui_UnitTest::testCustomPlaceToolBar()
+{
+    const QByteArray xml =
+        "<?xml version = '1.0'?>\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+        "<gui version=\"1\" name=\"foo\" >\n"
+        "<MenuBar>\n"
+        "</MenuBar>\n"
+        "<ToolBar name=\"mainToolBar\" noMerge=\"1\">\n"
+        "  <text>Main Toolbar</text>\n"
+        "  <Action name=\"go_up\"/>\n"
+        "</ToolBar>\n"
+        "<ToolBar name=\"customToolBar\" noMerge=\"1\">\n"
+        "  <text>Custom Toolbar</text>\n"
+        "  <Action name=\"go_up\"/>\n"
+        "  <Action name=\"file_open\"/>\n"
+        "  <Action name=\"help_about_kde\"/>\n"
+        "</ToolBar>\n"
+        "</gui>\n";
+    KConfigGroup cg(KSharedConfig::openConfig(), "testHiddenToolBar");
+    TestXmlGuiWindow mw(xml, "kxmlgui_unittest.rc");
+    mw.setAutoSaveSettings(cg);
+
+    QWidget *centralWidget = new QWidget(&mw);
+    centralWidget->setGeometry(0, 0, 100, 100);
+    mw.setCentralWidget(centralWidget);
+    QHBoxLayout *layout = new QHBoxLayout(centralWidget);
+    KToolBar *customToolBar = new KToolBar(QStringLiteral("customToolBar"), centralWidget);
+    layout->addWidget(customToolBar);
+
+    mw.createActions(QStringList() << QStringLiteral("go_up"));
+    mw.createGUI();
+
+    QVERIFY(centralWidget->findChild<KToolBar *>(QStringLiteral("customToolBar")) != nullptr);
+
+    QVERIFY2(mw.toolBarArea(customToolBar) == Qt::NoToolBarArea,
+             "The custom toolbar should not be in a ToolBarArea of the main window");
+
+    // Now open KEditToolBar, just to check it doesn't crash on apply
+    KXMLGUIFactory *factory = mw.guiFactory();
+    KEditToolBar editToolBar(factory);
+    // KEditToolBar loads the stuff in showEvent...
+    QShowEvent ev;
+    qApp->sendEvent(&editToolBar, &ev);
+    clickApply(&editToolBar);
+
+    QVERIFY2(centralWidget->findChild<KToolBar *>(QStringLiteral("customToolBar")) != nullptr,
+            "After a KEditToolBar action the custom toolbar should stay in the widget it was orignally added");
+    QVERIFY2(mw.toolBarArea(mw.toolBarByName(QStringLiteral("customToolBar"))) == Qt::NoToolBarArea,
+             "After a KEditToolBar action the custom toolbar should not be in a ToolBarArea of the main window");
+
+    mw.close();
 }
 
 // taken from KMainWindow_UnitTest::testAutoSaveSettings()

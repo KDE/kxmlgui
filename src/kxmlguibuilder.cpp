@@ -234,6 +234,9 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
                 bar->addXMLGUIClient(d->m_client);
             }
         }
+        if (!bar->mainWindow()) {
+            bar->show();
+        }
 
         bar->loadState(element);
 
@@ -267,7 +270,12 @@ void KXMLGUIBuilder::removeContainer(QWidget *container, QWidget *parent, QDomEl
         KToolBar *tb = static_cast<KToolBar *>(container);
 
         tb->saveState(element);
-        delete tb;
+        if (tb->mainWindow()) {
+            delete tb;
+        } else {
+            tb->clear();
+            tb->hide();
+        }
     } else if (qobject_cast<QMenuBar *>(container)) {
         QMenuBar *mb = static_cast<QMenuBar *>(container);
         mb->hide();

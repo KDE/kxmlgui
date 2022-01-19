@@ -27,6 +27,7 @@ private Q_SLOTS:
     void testUiStandardsMerging();
     void testActionListAndSeparator();
     void testHiddenToolBar();
+    void testCustomPlaceToolBar();
     void testDeletedContainers();
     void testAutoSaveSettings();
     void testXMLFileReplacement();
