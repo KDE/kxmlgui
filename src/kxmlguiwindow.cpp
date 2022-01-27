@@ -16,7 +16,7 @@
 
 #include "kactioncollection.h"
 #include "kmainwindow_p.h"
-#include "kmessagebox.h"
+#include <KMessageBox>
 #ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
 #endif

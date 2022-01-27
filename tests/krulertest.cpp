@@ -1,6 +1,6 @@
 #include "krulertest.h"
 
-#include <kruler.h>
+#include <KRuler>
 
 #include <QApplication>
 #include <QButtonGroup>

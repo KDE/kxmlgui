@@ -8,7 +8,7 @@
 #ifndef KRICHTEXTEDITOR_H
 #define KRICHTEXTEDITOR_H
 
-#include <krichtextwidget.h>
+#include <KRichTextWidget>
 
 #include <kxmlguiwindow.h>
 
