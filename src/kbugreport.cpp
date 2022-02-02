@@ -30,6 +30,7 @@
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KMessageDialog>
 #include <KTitleWidget>
 
 #include "../kxmlgui_version.h"
@@ -352,11 +353,23 @@ void KBugReportPrivate::slotConfigureEmail()
     if (m_process) {
         return;
     }
+
+    const QString exec = QStandardPaths::findExecutable(QStringLiteral("kcmshell5"));
+    if (exec.isEmpty()) {
+        auto *dlg = new KMessageDialog(KMessageDialog::Error,
+                                       i18nc("The arg is the command kcmshell", "Could not find '%1' executable in PATH.", QStringLiteral("kcmshell")),
+                                       q);
+        dlg->setAttribute(Qt::WA_DeleteOnClose);
+        dlg->setModal(true);
+        dlg->show();
+        return;
+    }
+
     m_process = new QProcess;
     QObject::connect(m_process, &QProcess::finished, q, [this]() {
         slotSetFrom();
     });
-    m_process->start(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcm_users"));
+    m_process->start(exec, QStringList{QStringLiteral("kcm_users")});
     if (!m_process->waitForStarted()) {
         // qCDebug(DEBUG_KXMLGUI) << "Couldn't start kcmshell5..";
         delete m_process;

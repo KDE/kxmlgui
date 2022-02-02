@@ -15,6 +15,7 @@
 #include <QCheckBox>
 #include <QClipboard>
 #include <QComboBox>
+#include <QDebug>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QFile>
@@ -212,8 +213,15 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
                 QClipboard *clipboard = QApplication::clipboard();
                 clipboard->setText(text);
             } else {
+                const QString textCmd = copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain()));
+                const QString exec = QStandardPaths::findExecutable(textCmd);
+                if (exec.isEmpty()) {
+                    qWarning() << "Could not find executable:" << textCmd;
+                    return false;
+                }
+
                 QProcess *script = new QProcess(this);
-                script->start(copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain())), QStringList());
+                script->start(exec, QStringList{});
                 connect(script, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), script, &QObject::deleteLater);
             }
             e->accept();
