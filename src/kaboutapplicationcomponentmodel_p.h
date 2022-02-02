@@ -52,7 +52,11 @@ public:
     {
     } // needed for QVariant
 
-    KAboutApplicationComponentProfile(const QString &name, const QString &description, const QString &version, const QString &webAdress, const KAboutLicense &license)
+    KAboutApplicationComponentProfile(const QString &name,
+                                      const QString &description,
+                                      const QString &version,
+                                      const QString &webAdress,
+                                      const KAboutLicense &license)
         : m_name(name)
         , m_description(description)
         , m_version(version)

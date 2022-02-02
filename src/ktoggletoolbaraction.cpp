@@ -22,7 +22,6 @@
 
 #include <KAuthorized>
 
-
 #include "kmainwindow.h"
 #include "ktoolbar.h"
 

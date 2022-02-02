@@ -40,7 +40,7 @@ public:
     ~KToolTipHelperPrivate() override;
 
     /** @see KToolTipHelper::eventFilter() */
-    virtual bool eventFilter(QObject* watched, QEvent* event) override;
+    virtual bool eventFilter(QObject *watched, QEvent *event) override;
 
     /** @see KToolTipHelper::whatsThisHintOnly() */
     static const QString whatsThisHintOnly();
@@ -94,9 +94,7 @@ public:
      *
      * @see QToolTip::showText()
      */
-    void showExpandableToolTip(const QPoint &globalPos,
-                               const QString &toolTip = QStringLiteral(),
-                               const QRect &rect = QRect());
+    void showExpandableToolTip(const QPoint &globalPos, const QString &toolTip = QStringLiteral(), const QRect &rect = QRect());
 
 public:
     KToolTipHelper *const q;

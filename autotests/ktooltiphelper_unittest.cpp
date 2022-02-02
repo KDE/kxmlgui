@@ -27,15 +27,17 @@
 QString KToolTipHelper_UnitTest::shownToolTip(QWidget *widget)
 {
     QTest::mouseMove(m_frameWithoutToolTip);
-    const bool resetWorked = QTest::qWaitFor([](){return !QToolTip::isVisible();}, 3000);
+    const bool resetWorked = QTest::qWaitFor(
+        []() {
+            return !QToolTip::isVisible();
+        },
+        3000);
     if (!resetWorked) {
         qWarning("The tooltip did not properly hide itself after moving to an area without tooltip.");
     }
 
     QTest::mouseMove(widget);
-    if (!QTest::qWaitFor(&QToolTip::isVisible,
-            widget->style()->styleHint(QStyle::SH_ToolTip_WakeUpDelay, nullptr, widget) + 1000)
-    ) {
+    if (!QTest::qWaitFor(&QToolTip::isVisible, widget->style()->styleHint(QStyle::SH_ToolTip_WakeUpDelay, nullptr, widget) + 1000)) {
         return QStringLiteral("");
     }
     return QToolTip::text();
@@ -76,7 +78,7 @@ void KToolTipHelper_UnitTest::testGeneralWidget()
     m_frame->setToolTip(QStringLiteral("frame's tooltip"));
     QCOMPARE(shownToolTip(m_frame), m_frame->toolTip());
 
-    QHelpEvent *helpEvent = new QHelpEvent(QEvent::ToolTip, QPoint(1,1), m_frame->mapToGlobal(QPoint(1, 1)));
+    QHelpEvent *helpEvent = new QHelpEvent(QEvent::ToolTip, QPoint(1, 1), m_frame->mapToGlobal(QPoint(1, 1)));
     QVERIFY2(!KToolTipHelper::instance()->eventFilter(m_frame, helpEvent),
              "These most basic tooltips should not be filtered so applications can still rely"
              "on tooltip events in most cases.");
@@ -84,8 +86,7 @@ void KToolTipHelper_UnitTest::testGeneralWidget()
     // tests with whatsThis()
     m_frame->setToolTip(QStringLiteral(""));
     m_frame->setWhatsThis(QStringLiteral("frame's whatsThis"));
-    QVERIFY2(shownToolTip(m_frame).isEmpty(),
-            "No whatsThisHint should be shown when no toolTip was set.");
+    QVERIFY2(shownToolTip(m_frame).isEmpty(), "No whatsThisHint should be shown when no toolTip was set.");
 
     m_frame->setToolTip(KToolTipHelper::whatsThisHintOnly());
     QVERIFY2(shownToolTip(m_frame) != KToolTipHelper::whatsThisHintOnly(),
@@ -95,8 +96,7 @@ void KToolTipHelper_UnitTest::testGeneralWidget()
     m_frame->setToolTip(QStringLiteral("frame's tooltip"));
     const QString toolTip = shownToolTip(m_frame);
     QVERIFY(toolTip.contains(m_frame->toolTip()));
-    QVERIFY2(toolTip.length() > m_frame->toolTip().length(),
-            "The frame's toolTip is supposed to contain the whatsThisHint.");
+    QVERIFY2(toolTip.length() > m_frame->toolTip().length(), "The frame's toolTip is supposed to contain the whatsThisHint.");
 
     auto layout = new QVBoxLayout(m_frame);
     auto subFrame = std::unique_ptr<QFrame>(new QFrame(m_frame));
@@ -114,7 +114,11 @@ void KToolTipHelper_UnitTest::testInvokingWhatsThis()
     m_frame->setToolTip(KToolTipHelper::whatsThisHintOnly());
     shownToolTip(m_frame);
     QTest::keyClick(m_frame, Qt::Key_Shift);
-    QVERIFY2(QTest::qWaitFor([](){return !QToolTip::isVisible(); }, 4000),
+    QVERIFY2(QTest::qWaitFor(
+                 []() {
+                     return !QToolTip::isVisible();
+                 },
+                 4000),
              "whatsThis should be shown now.");
     QVERIFY2(shownToolTip(m_frame).isEmpty(),
              "A toolTip was shown which shouldn't be possible because a WhatsThis widget"
@@ -134,8 +138,7 @@ void KToolTipHelper_UnitTest::testQToolButton()
     m_toolButton->setDefaultAction(action.get());
     QCOMPARE(shownToolTip(m_toolButton), action->toolTip());
 
-    auto helpEvent = std::unique_ptr<QHelpEvent>(
-            new QHelpEvent(QEvent::ToolTip, QPoint(1,1), m_toolButton->mapToGlobal(QPoint(1, 1))));
+    auto helpEvent = std::unique_ptr<QHelpEvent>(new QHelpEvent(QEvent::ToolTip, QPoint(1, 1), m_toolButton->mapToGlobal(QPoint(1, 1))));
     QVERIFY2(!KToolTipHelper::instance()->eventFilter(m_toolButton, helpEvent.get()),
              "These most basic tooltips should not be filtered so applications can still rely"
              "on tooltip events in most cases.");
@@ -143,16 +146,14 @@ void KToolTipHelper_UnitTest::testQToolButton()
     action->setShortcut(Qt::CTRL | Qt::Key_K);
     const QString toolTip(shownToolTip(m_toolButton));
     QVERIFY(toolTip.contains(action->toolTip()));
-    //qDebug("%s > %s", qPrintable(toolTip), qPrintable(action->toolTip()));
-    QVERIFY2(toolTip.length() > action->toolTip().length(),
-             "The Keyboard shortcut should be visible.");
+    // qDebug("%s > %s", qPrintable(toolTip), qPrintable(action->toolTip()));
+    QVERIFY2(toolTip.length() > action->toolTip().length(), "The Keyboard shortcut should be visible.");
 
     action->setWhatsThis(QStringLiteral("action's whatsThis"));
     const QString toolTipWithWhatsThisHint(shownToolTip(m_toolButton));
     QVERIFY(toolTipWithWhatsThisHint.contains(toolTip));
-    //qDebug("%s > %s", qPrintable(toolTipWithWhatsThisHint), qPrintable(toolTip));
-    QVERIFY2(toolTipWithWhatsThisHint.length() > toolTip.length(),
-             "The whatsThisHint should be visible.");
+    // qDebug("%s > %s", qPrintable(toolTipWithWhatsThisHint), qPrintable(toolTip));
+    QVERIFY2(toolTipWithWhatsThisHint.length() > toolTip.length(), "The whatsThisHint should be visible.");
 
     action->setShortcut(QKeySequence());
     QVERIFY(shownToolTip(m_toolButton).length() < toolTipWithWhatsThisHint.length());
@@ -161,12 +162,10 @@ void KToolTipHelper_UnitTest::testQToolButton()
     QCOMPARE(shownToolTip(m_toolButton), action->toolTip());
 
     action->setToolTip(KToolTipHelper::whatsThisHintOnly());
-    QVERIFY2(shownToolTip(m_toolButton).isEmpty(),
-            "It should not show the whatsThisHint if there is no whatsThis text.");
+    QVERIFY2(shownToolTip(m_toolButton).isEmpty(), "It should not show the whatsThisHint if there is no whatsThis text.");
 
     action->setWhatsThis(QStringLiteral("action's whatsThis"));
-    QVERIFY2(!shownToolTip(m_toolButton).isEmpty(),
-            "The whatsThisHint should be shown.");
+    QVERIFY2(!shownToolTip(m_toolButton).isEmpty(), "The whatsThisHint should be shown.");
 }
 
 void KToolTipHelper_UnitTest::testQMenu()
@@ -186,8 +185,7 @@ void KToolTipHelper_UnitTest::testQMenu()
 
     action->setWhatsThis(QStringLiteral("action's whatsThis"));
     const QString toolTipWithWhatsThisHint(shownToolTip(menu.get()));
-    QVERIFY2(toolTipWithWhatsThisHint.length() > toolTip.length(),
-             "The tooltip is supposed to contain a whatsThisHint.");
+    QVERIFY2(toolTipWithWhatsThisHint.length() > toolTip.length(), "The tooltip is supposed to contain a whatsThisHint.");
 
     action->setToolTip(KToolTipHelper::whatsThisHintOnly());
     QVERIFY(shownToolTip(menu.get()).length() < toolTipWithWhatsThisHint.length());
@@ -196,11 +194,9 @@ void KToolTipHelper_UnitTest::testQMenu()
     QVERIFY(shownToolTip(menu.get()).isEmpty());
 }
 
-
 void KToolTipHelper_UnitTest::cleanupTestCase()
 {
     qApp->removeEventFilter(KToolTipHelper::instance());
 }
-
 
 QTEST_MAIN(KToolTipHelper_UnitTest)

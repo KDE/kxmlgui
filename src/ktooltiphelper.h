@@ -81,7 +81,7 @@ public:
      * @see QObject::eventFilter()
      * @see QHelpEvent
      */
-    virtual bool eventFilter(QObject* watched, QEvent* event) override;
+    virtual bool eventFilter(QObject *watched, QEvent *event) override;
 
     /**
      * Use this to have a widget show "Press Shift for help." as its tooltip.

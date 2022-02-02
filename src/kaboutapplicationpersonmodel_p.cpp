@@ -8,7 +8,6 @@
 #include "kaboutapplicationpersonmodel_p.h"
 #include "debug.h"
 
-
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 

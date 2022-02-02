@@ -18,12 +18,12 @@
 #include <QHelpEvent>
 #include <QMenu>
 #include <QStyle>
-#include <QtGlobal>
 #include <QToolButton>
 #include <QToolTip>
 #include <QWhatsThis>
 #include <QWhatsThisClickedEvent>
 #include <QWindow>
+#include <QtGlobal>
 
 KToolTipHelper *KToolTipHelper::instance()
 {
@@ -39,8 +39,8 @@ KToolTipHelper *KToolTipHelperPrivate::instance()
 }
 
 KToolTipHelper::KToolTipHelper(QObject *parent)
-    : QObject{parent},
-      d{new KToolTipHelperPrivate(this)}
+    : QObject{parent}
+    , d{new KToolTipHelperPrivate(this)}
 {
 }
 
@@ -48,8 +48,7 @@ KToolTipHelperPrivate::KToolTipHelperPrivate(KToolTipHelper *qq)
     : q{qq}
 {
     m_toolTipTimeout.setSingleShot(true);
-    connect(&m_toolTipTimeout, &QTimer::timeout,
-            this, &KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove);
+    connect(&m_toolTipTimeout, &QTimer::timeout, this, &KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove);
 }
 
 KToolTipHelper::~KToolTipHelper() = default;
@@ -69,8 +68,7 @@ bool KToolTipHelperPrivate::eventFilter(QObject *watched, QEvent *event)
     case QEvent::KeyPress:
         return handleKeyPressEvent(event);
     case QEvent::ToolTip:
-        return handleToolTipEvent(static_cast<QWidget *>(watched),
-                                  static_cast<QHelpEvent *>(event));
+        return handleToolTipEvent(static_cast<QWidget *>(watched), static_cast<QHelpEvent *>(event));
     case QEvent::WhatsThisClicked:
         return handleWhatsThisClickedEvent(event);
     default:
@@ -105,10 +103,7 @@ bool KToolTipHelperPrivate::handleHideEvent(QObject *watched, QEvent *event)
 
 bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
 {
-    if (!QToolTip::isVisible()
-        || static_cast<QKeyEvent *>(event)->key() != Qt::Key_Shift
-        || !m_widget
-    ) {
+    if (!QToolTip::isVisible() || static_cast<QKeyEvent *>(event)->key() != Qt::Key_Shift || !m_widget) {
         return false;
     }
 
@@ -136,8 +131,7 @@ bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
             // as the third parameter which only has the size of the hovered menu action entry.
             QWidget positioningHelper{menu};
             positioningHelper.setGeometry(menu->actionGeometry(m_action));
-            QWhatsThis::showText(m_lastExpandableToolTipGlobalPos,
-                                 m_action->whatsThis(), &positioningHelper);
+            QWhatsThis::showText(m_lastExpandableToolTipGlobalPos, m_action->whatsThis(), &positioningHelper);
         }
         return true;
     }
@@ -172,9 +166,8 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
     // a part of the menu.
     const QRect actionGeometry = menu->actionGeometry(m_action);
     const int xOffset = menu->layoutDirection() == Qt::RightToLeft ? 0 : actionGeometry.width();
-    const QPoint toolTipPosition(
-            helpEvent->globalX() - helpEvent->x() + xOffset,
-            helpEvent->globalY() - helpEvent->y() + actionGeometry.y() - actionGeometry.height() / 2);
+    const QPoint toolTipPosition(helpEvent->globalX() - helpEvent->x() + xOffset,
+                                 helpEvent->globalY() - helpEvent->y() + actionGeometry.y() - actionGeometry.height() / 2);
 
     if (explicitToolTip) {
         if (emptyWhatsThis) {
@@ -198,10 +191,10 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEven
     if (QToolButton *toolButton = qobject_cast<QToolButton *>(m_widget)) {
         if (const QAction *action = toolButton->defaultAction()) {
             if (!action->shortcut().isEmpty() && action->toolTip() != whatsThisHintOnly()) {
-                toolButton->setToolTip(i18nc(
-                        "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
-                        "%1 (%2)",
-                        action->toolTip(), action->shortcut().toString(QKeySequence::NativeText)));
+                toolButton->setToolTip(i18nc("@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
+                                             "%1 (%2)",
+                                             action->toolTip(),
+                                             action->shortcut().toString(QKeySequence::NativeText)));
                 // Do not replace the brackets in the above i18n-call with <shortcut> tags from
                 // KUIT because mixing KUIT with HTML is not allowed and %1 could be anything.
 
@@ -247,16 +240,11 @@ void KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove() const
     const auto widgetUnderCursor = qApp->widgetAt(globalCursorPos);
     // We only want a behaviour change for QMenus.
     if (qobject_cast<QMenu *>(widgetUnderCursor)) {
-        qGuiApp->postEvent(widgetUnderCursor,
-                           new QHelpEvent(QEvent::ToolTip,
-                                          widgetUnderCursor->mapFromGlobal(globalCursorPos),
-                                          globalCursorPos));
+        qGuiApp->postEvent(widgetUnderCursor, new QHelpEvent(QEvent::ToolTip, widgetUnderCursor->mapFromGlobal(globalCursorPos), globalCursorPos));
     }
 }
 
-void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos,
-                                                  const QString &toolTip,
-                                                  const QRect &rect)
+void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const QString &toolTip, const QRect &rect)
 {
     m_lastExpandableToolTipGlobalPos = QPoint(globalPos);
     const KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
@@ -298,15 +286,14 @@ bool hasExplicitToolTip(const QAction *action)
     int i = -1;
     int j = -1;
     do {
-        i++; j++;
+        i++;
+        j++;
         // Both of these QStrings are considered equal if their only differences are '&' and '.' chars.
         // Now move both of their indices to the next char that is neither '&' nor '.'.
-        while (i < iconText.size()
-            && (iconText.at(i) == QLatin1Char('&') || iconText.at(i) == QLatin1Char('.'))) {
+        while (i < iconText.size() && (iconText.at(i) == QLatin1Char('&') || iconText.at(i) == QLatin1Char('.'))) {
             i++;
         }
-        while (j < toolTip.size()
-            && (toolTip.at(j) == QLatin1Char('&') || toolTip.at(j) == QLatin1Char('.'))) {
+        while (j < toolTip.size() && (toolTip.at(j) == QLatin1Char('&') || toolTip.at(j) == QLatin1Char('.'))) {
             j++;
         }
 

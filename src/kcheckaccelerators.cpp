@@ -90,17 +90,18 @@ static void startupFunc()
 
     if (!QCoreApplication::startingUp()) {
         // If the app has already started, this means we're not being run as part of
-        // qt_call_pre_routines, which most probably means that we're being run as part
-        // of KXmlGui being loaded as part of some plugin of the app, so don't
+        // qt_call_pre_routines, which most probably means that we're being run as
+        // part of KXmlGui being loaded as part of some plugin of the app, so don't
         // do any magic
         doCheckAccelerators = false;
         return;
     }
 
     if (!QCoreApplication::eventDispatcher()) {
-        // We are called with event dispatcher being null when KXmlGui is being loaded
-        // through plasma-integration instead of being linked to the app (i.e. QtCreator vs Okular)
-        // For apps that don't link directly to KXmlGui do not do the accelerator magic
+        // We are called with event dispatcher being null when KXmlGui is being
+        // loaded through plasma-integration instead of being linked to the app
+        // (i.e. QtCreator vs Okular) For apps that don't link directly to KXmlGui
+        // do not do the accelerator magic
         doCheckAccelerators = false;
         return;
     }
@@ -149,7 +150,8 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
         break;
     case QEvent::ChildAdded:
     case QEvent::ChildRemoved:
-        // Only care about widgets; this also avoids starting the timer in other threads
+        // Only care about widgets; this also avoids starting the timer in other
+        // threads
         if (!static_cast<QChildEvent *>(e)->child()->isWidgetType()) {
             break;
         }
@@ -225,7 +227,8 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
     case QEvent::Paint:
         return false;
     default:
-        // qCDebug(DEBUG_KXMLGUI) << "KCheckAccelerators::eventFilter " << e->type() << " " << autoCheck;
+        // qCDebug(DEBUG_KXMLGUI) << "KCheckAccelerators::eventFilter " << e->type()
+        // << " " << autoCheck;
         break;
     }
     return false;
@@ -306,7 +309,10 @@ void KCheckAccelerators::checkAccelerators(bool automatic)
 
     if (!c.isEmpty()) {
         s += i18n("<h2>Accelerators changed</h2>")
-            + QLatin1String("<table border><tr><th><b>%1</b></th><th><b>%2</b></th></tr>%3</table>").arg(i18n("Old Text"), i18n("New Text"), c);
+            + QLatin1String(
+                  "<table "
+                  "border><tr><th><b>%1</b></th><th><b>%2</b></th></tr>%3</table>")
+                  .arg(i18n("Old Text"), i18n("New Text"), c);
     }
 
     if (!r.isEmpty()) {

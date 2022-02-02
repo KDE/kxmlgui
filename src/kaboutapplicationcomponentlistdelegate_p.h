@@ -40,10 +40,7 @@ private:
     QString buildTextForProfile(const KAboutApplicationComponentProfile &profile) const;
     QRect widgetsRect(const QStyleOptionViewItem &option, const QPersistentModelIndex &index) const;
 
-    enum DelegateWidgets {
-        TextLabel = 0,
-        MainLinks
-    };
+    enum DelegateWidgets { TextLabel = 0, MainLinks };
 
     enum MainLinkActions {
         HomepageAction = 0,

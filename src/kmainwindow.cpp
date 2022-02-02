@@ -18,10 +18,10 @@
 #ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
 #endif
-#include "ktooltiphelper.h"
 #include "khelpmenu.h"
 #include "ktoolbar.h"
 #include "ktoolbarhandler_p.h"
+#include "ktooltiphelper.h"
 
 #include <QApplication>
 #include <QCloseEvent>

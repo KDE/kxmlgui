@@ -108,11 +108,8 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
     // And here we go, authors page...
     const int authorCount = aboutData.authors().count();
     if (authorCount) {
-        QWidget *authorWidget = createAuthorsWidget(aboutData.authors(),
-                                                    aboutData.customAuthorTextEnabled(),
-                                                    aboutData.customAuthorRichText(),
-                                                    aboutData.bugAddress(),
-                                                    q);
+        QWidget *authorWidget =
+            createAuthorsWidget(aboutData.authors(), aboutData.customAuthorTextEnabled(), aboutData.customAuthorRichText(), aboutData.bugAddress(), q);
 
         const QString authorPageTitle = i18ncp("@title:tab", "Author", "Authors", authorCount);
         tabWidget->addTab(authorWidget, authorPageTitle);

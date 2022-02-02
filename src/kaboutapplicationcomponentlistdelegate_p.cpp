@@ -7,11 +7,10 @@
 
 #include "kaboutapplicationcomponentlistdelegate_p.h"
 
-#include "kaboutapplicationlistview_p.h"
 #include "kaboutapplicationcomponentmodel_p.h"
+#include "kaboutapplicationlistview_p.h"
 #include "klicensedialog_p.h"
 #include "ktoolbar.h"
-
 
 #include <KLocalizedString>
 
@@ -65,8 +64,8 @@ QList<QWidget *> KAboutApplicationComponentListDelegate::createItemWidgets(const
 }
 
 void KAboutApplicationComponentListDelegate::updateItemWidgets(const QList<QWidget *> widgets,
-                                                            const QStyleOptionViewItem &option,
-                                                            const QPersistentModelIndex &index) const
+                                                               const QStyleOptionViewItem &option,
+                                                               const QPersistentModelIndex &index) const
 {
     const int margin = option.fontMetrics.height() / 2;
 
@@ -165,7 +164,6 @@ QRect KAboutApplicationComponentListDelegate::widgetsRect(const QStyleOptionView
                               margin / 2, //
                               option.rect.width() - 2 * margin, //
                               0);
-
 
     int textHeight = heightForString(buildTextForProfile(profile), widgetsRect.width() - margin, option);
     widgetsRect.setHeight(textHeight + LINK_HEIGHT + 1.5 * margin);

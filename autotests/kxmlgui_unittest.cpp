@@ -784,8 +784,7 @@ void KXmlGui_UnitTest::testCustomPlaceToolBar()
 
     QVERIFY(centralWidget->findChild<KToolBar *>(QStringLiteral("customToolBar")) != nullptr);
 
-    QVERIFY2(mw.toolBarArea(customToolBar) == Qt::NoToolBarArea,
-             "The custom toolbar should not be in a ToolBarArea of the main window");
+    QVERIFY2(mw.toolBarArea(customToolBar) == Qt::NoToolBarArea, "The custom toolbar should not be in a ToolBarArea of the main window");
 
     // Now open KEditToolBar, just to check it doesn't crash on apply
     KXMLGUIFactory *factory = mw.guiFactory();
@@ -796,7 +795,7 @@ void KXmlGui_UnitTest::testCustomPlaceToolBar()
     clickApply(&editToolBar);
 
     QVERIFY2(centralWidget->findChild<KToolBar *>(QStringLiteral("customToolBar")) != nullptr,
-            "After a KEditToolBar action the custom toolbar should stay in the widget it was orignally added");
+             "After a KEditToolBar action the custom toolbar should stay in the widget it was orignally added");
     QVERIFY2(mw.toolBarArea(mw.toolBarByName(QStringLiteral("customToolBar"))) == Qt::NoToolBarArea,
              "After a KEditToolBar action the custom toolbar should not be in a ToolBarArea of the main window");
 

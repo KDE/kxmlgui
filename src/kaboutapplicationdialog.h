@@ -52,9 +52,9 @@ public:
         NoOptions = 0x0, ///< No options, show the standard about dialog
         HideTranslators = 0x1, ///< Don't show the translators tab
         HideLibraries = 0x2, /**< Don't show the libraries tab @since 5.77
-                               *
-                               * Since 5.87 Don't show the components tab (which replaced the libraries tab)
-                               */
+                              *
+                              * Since 5.87 Don't show the components tab (which replaced the libraries tab)
+                              */
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 77)
         HideKdeVersion KXMLGUI_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 83, 5, 77, "Use HideLibraries") =
             HideLibraries /**<

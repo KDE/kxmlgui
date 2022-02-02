@@ -16,8 +16,8 @@
 #include "../kxmlgui_version.h"
 #include "kaboutapplicationcomponentlistdelegate_p.h"
 #include "kaboutapplicationcomponentmodel_p.h"
-#include "kaboutapplicationpersonlistdelegate_p.h"
 #include "kaboutapplicationlistview_p.h"
+#include "kaboutapplicationpersonlistdelegate_p.h"
 #include "kaboutapplicationpersonmodel_p.h"
 #include "klicensedialog_p.h"
 // KF
@@ -104,14 +104,21 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
 
     QList<KAboutComponent> allComponents = components;
     allComponents.prepend(KAboutComponent(i18n("The <em>%1</em> windowing system", QGuiApplication::platformName())));
-    allComponents.prepend(KAboutComponent(i18n("Qt"), QString(), i18n("%1 (built against %2)", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)), QStringLiteral("https://www.qt.io/")));
-    allComponents.prepend(KAboutComponent(i18n("KDE Frameworks"), QString(), QStringLiteral(KXMLGUI_VERSION_STRING), QStringLiteral("https://develop.kde.org/products/frameworks/")));
+    allComponents.prepend(KAboutComponent(i18n("Qt"),
+                                          QString(),
+                                          i18n("%1 (built against %2)", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)),
+                                          QStringLiteral("https://www.qt.io/")));
+    allComponents.prepend(KAboutComponent(i18n("KDE Frameworks"),
+                                          QString(),
+                                          QStringLiteral(KXMLGUI_VERSION_STRING),
+                                          QStringLiteral("https://develop.kde.org/products/frameworks/")));
 
     KDEPrivate::KAboutApplicationComponentModel *componentModel = new KDEPrivate::KAboutApplicationComponentModel(allComponents, componentWidget);
 
     KDEPrivate::KAboutApplicationListView *componentView = new KDEPrivate::KAboutApplicationListView(componentWidget);
 
-    KDEPrivate::KAboutApplicationComponentListDelegate *componentDelegate = new KDEPrivate::KAboutApplicationComponentListDelegate(componentView, componentView);
+    KDEPrivate::KAboutApplicationComponentListDelegate *componentDelegate =
+        new KDEPrivate::KAboutApplicationComponentListDelegate(componentView, componentView);
 
     componentView->setModel(componentModel);
     componentView->setItemDelegate(componentDelegate);
