@@ -357,7 +357,7 @@ void KBugReportPrivate::slotConfigureEmail()
     const QString exec = QStandardPaths::findExecutable(QStringLiteral("kcmshell5"));
     if (exec.isEmpty()) {
         auto *dlg = new KMessageDialog(KMessageDialog::Error,
-                                       i18nc("The arg is the command kcmshell", "Could not find '%1' executable in PATH.", QStringLiteral("kcmshell")),
+                                       i18nc("The arg is the command kcmshell5", "Could not find '%1' executable in PATH.", QStringLiteral("kcmshell5")),
                                        q);
         dlg->setAttribute(Qt::WA_DeleteOnClose);
         dlg->setModal(true);
