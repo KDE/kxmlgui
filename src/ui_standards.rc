@@ -1,5 +1,5 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui name="standard_containers" version="20" translationDomain="kxmlgui5">
+<gui name="standard_containers" version="21" translationDomain="kxmlgui5">
 <MenuBar>
   <MergeLocal name="first_menu"/>
   <Menu name="file"><text>&amp;File</text>
@@ -178,6 +178,7 @@
   <Menu name="help"><text>&amp;Help</text>
     <Action name="help_contents"/>
     <Action name="help_whats_this"/>
+    <Action name="open_kcommand_bar"/>
     <MergeLocal name="help_whats_this_merge"/>
     <Separator/>
     <MergeLocal/>

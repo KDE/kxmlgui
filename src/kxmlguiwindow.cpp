@@ -186,7 +186,8 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
         kc.setActions(actionCollectionToActionGroup(actionCollections));
         kc.exec();
     });
-    a->setText(i18n("Open Command Bar"));
+    a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
+    a->setText(i18n("Find Action…"));
     actionCollection()->setDefaultShortcut(a, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_I));
 }
 
