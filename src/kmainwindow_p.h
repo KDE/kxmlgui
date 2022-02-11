@@ -83,7 +83,7 @@ public:
     KMWSessionManager();
     ~KMWSessionManager() override;
 
-private Q_SLOTS:
+private:
     void saveState(QSessionManager &);
     void commitData(QSessionManager &);
 };

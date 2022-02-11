@@ -30,7 +30,9 @@
 #include <QList>
 #include <QMenuBar>
 #include <QObject>
+#ifndef QT_NO_SESSIONMANAGER
 #include <QSessionManager>
+#endif
 #include <QStatusBar>
 #include <QStyle>
 #include <QTimer>
@@ -111,8 +113,10 @@ bool DockResizeListener::eventFilter(QObject *watched, QEvent *event)
 
 KMWSessionManager::KMWSessionManager()
 {
+#ifndef QT_NO_SESSIONMANAGER
     connect(qApp, &QGuiApplication::saveStateRequest, this, &KMWSessionManager::saveState);
     connect(qApp, &QGuiApplication::commitDataRequest, this, &KMWSessionManager::commitData);
+#endif
 }
 
 KMWSessionManager::~KMWSessionManager()
@@ -121,6 +125,7 @@ KMWSessionManager::~KMWSessionManager()
 
 void KMWSessionManager::saveState(QSessionManager &sm)
 {
+#ifndef QT_NO_SESSIONMANAGER
     KConfigGui::setSessionConfig(sm.sessionId(), sm.sessionKey());
 
     KConfig *config = KConfigGui::sessionConfig();
@@ -151,10 +156,14 @@ void KMWSessionManager::saveState(QSessionManager &sm)
         discard << localFilePath;
         sm.setDiscardCommand(discard);
     }
+#else
+    Q_UNUSED(sm)
+#endif // QT_NO_SESSIONMANAGER
 }
 
 void KMWSessionManager::commitData(QSessionManager &sm)
 {
+#ifndef QT_NO_SESSIONMANAGER
     if (!sm.allowsInteraction()) {
         return;
     }
@@ -188,6 +197,9 @@ void KMWSessionManager::commitData(QSessionManager &sm)
             return;
         }
     }
+#else
+    Q_UNUSED(sm)
+#endif // QT_NO_SESSIONMANAGER
 }
 
 Q_GLOBAL_STATIC(KMWSessionManager, ksm)
@@ -217,7 +229,9 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 
     // Not needed in Qt6 (and doesn't exist at all)
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#ifndef QT_NO_SESSIONMANAGER
     QGuiApplication::setFallbackSessionManagementEnabled(false);
+#endif
 #endif
 
     q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, nullptr, q));
@@ -232,8 +246,10 @@ void KMainWindowPrivate::init(KMainWindow *_q)
                      q, SLOT(_k_slotSettingsChanged(int)));
 #endif
 
+#ifndef QT_NO_SESSIONMANAGER
     // force KMWSessionManager creation
     ksm();
+#endif
 
     sMemberList()->append(q);
 
@@ -564,10 +580,13 @@ void KMainWindow::closeEvent(QCloseEvent *e)
     } else {
         e->ignore(); // if the window should not be closed, don't close it
     }
+
+#ifndef QT_NO_SESSIONMANAGER
     // If saving session, we are processing a fake close event, and might get the real one later.
     if (e->isAccepted() && qApp->isSavingSession()) {
         d->suppressCloseEvent = true;
     }
+#endif
 }
 
 bool KMainWindow::queryClose()
