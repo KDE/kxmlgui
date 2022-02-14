@@ -35,7 +35,7 @@ KMenuMenuHandler::KMenuMenuHandler(KXMLGUIBuilder *builder)
     , m_builder(builder)
 {
     m_toolbarAction = new KSelectAction(i18n("Add to Toolbar"), this);
-    connect(m_toolbarAction, &QAction::triggered, this, &KMenuMenuHandler::slotAddToToolBar);
+    connect(m_toolbarAction, &KSelectAction::indexTriggered, this, &KMenuMenuHandler::slotAddToToolBar);
 }
 
 void KMenuMenuHandler::insertMenu(QMenu *popup)
