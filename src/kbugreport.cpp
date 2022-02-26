@@ -208,7 +208,27 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
 
     tmpLabel = new QLabel(i18n("OS:"), this);
     glay->addWidget(tmpLabel, ++row, 0);
-    d->os = SystemInformation::operatingSystemVersion();
+
+#ifdef Q_OS_WINDOWS
+    d->os = i18nc("%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU architecture, e.g. 'x86_64'",
+                  "%1 (%2)",
+                  QSysInfo::prettyProductName(),
+                  QSysInfo::currentCpuArchitecture());
+#else
+    if (QSysInfo::productVersion() != QLatin1String("unknown")) {
+        d->os = i18nc(
+            "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'",
+            "%1 %2 (%3)",
+            QSysInfo::prettyProductName(),
+            QSysInfo::productVersion(),
+            QSysInfo::currentCpuArchitecture());
+    } else {
+        d->os = i18nc("%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU architecture, e.g. 'x86_64'",
+                      "%1 (%2)",
+                      QSysInfo::prettyProductName(),
+                      QSysInfo::currentCpuArchitecture());
+    }
+#endif
 
     tmpLabel = new QLabel(d->os, this);
     tmpLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
