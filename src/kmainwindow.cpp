@@ -234,6 +234,8 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 #endif
 #endif
 
+    qApp->setProperty("_breeze_modern_spinbox_style", true);
+
     q->setAnimated(q->style()->styleHint(QStyle::SH_Widget_Animate, nullptr, q));
 
     q->setAttribute(Qt::WA_DeleteOnClose);
