@@ -24,6 +24,7 @@ void Client::slotSec()
 
 int main(int argc, char **argv)
 {
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setApplicationName(QStringLiteral("test"));
     QApplication app(argc, argv);
     QAction *a;

@@ -395,6 +395,7 @@ void TestWindow::slotMakeItem3Current()
 
 int main(int argc, char *argv[])
 {
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setApplicationName(QStringLiteral("kwindowtest"));
 
     QApplication myApp(argc, argv);

@@ -10,6 +10,7 @@
 
 int main(int argc, char **argv)
 {
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setApplicationName(QStringLiteral("krichtexteditor"));
     QApplication app(argc, argv);
     KRichTextEditor *mw = new KRichTextEditor();
