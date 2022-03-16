@@ -27,11 +27,15 @@ KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool all
 {
     Q_ASSERT(qobject_cast<QAbstractItemView *>(parent));
 
-    QPixmap pixmap(16, 16);
+    const QSize indicatorSize(16, 16);
+    const qreal dpr = parent->devicePixelRatioF();
+    QPixmap pixmap(indicatorSize * dpr);
+
     pixmap.fill(QColor(Qt::transparent));
+    pixmap.setDevicePixelRatio(dpr);
     QPainter p(&pixmap);
     QStyleOption option;
-    option.rect = pixmap.rect();
+    option.rect = QRect(QPoint(0, 0), indicatorSize);
 
     bool isRtl = QApplication::isRightToLeft();
     QApplication::style()->drawPrimitive(isRtl ? QStyle::PE_IndicatorArrowLeft : QStyle::PE_IndicatorArrowRight, &option, &p);
@@ -39,6 +43,7 @@ KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool all
     setExtendPixmap(pixmap);
 
     pixmap.fill(QColor(Qt::transparent));
+    pixmap.setDevicePixelRatio(dpr);
     p.begin(&pixmap);
     QApplication::style()->drawPrimitive(QStyle::PE_IndicatorArrowDown, &option, &p);
     p.end();
