@@ -899,6 +899,7 @@ void KMainWindow::saveAutoSaveSettings()
     // qDebug(200) << "KMainWindow::saveAutoSaveSettings -> saving settings";
     saveMainWindowSettings(d->autoSaveGroup);
     d->autoSaveGroup.sync();
+    d->autoSaveStateGroup().sync();
     d->settingsDirty = false;
 }
 
@@ -981,14 +982,14 @@ void KMainWindowPrivate::_k_slotSettingsChanged(int category)
 void KMainWindowPrivate::_k_slotSaveAutoSaveSize()
 {
     if (autoSaveGroup.isValid()) {
-        KWindowConfig::saveWindowSize(q->windowHandle(), autoSaveGroup);
+        KWindowConfig::saveWindowSize(q->windowHandle(), autoSaveStateGroup());
     }
 }
 
 void KMainWindowPrivate::_k_slotSaveAutoSavePosition()
 {
     if (autoSaveGroup.isValid()) {
-        KWindowConfig::saveWindowPosition(q->windowHandle(), autoSaveGroup);
+        KWindowConfig::saveWindowPosition(q->windowHandle(), autoSaveStateGroup());
     }
 }
 

@@ -363,6 +363,7 @@ public:
     /**
      * Set the config group name for state config returned by @p stateConfigGroup
      * If this method is called the window size and window state are stored in the resulting KConfigGroup.
+     * @note If this is used in combination with @p setAutoSaveSettings, you should call this method first
      *
      * @see KSharedConfig::openStateConfig
      *
