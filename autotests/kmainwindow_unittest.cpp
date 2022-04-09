@@ -13,6 +13,7 @@
 #include <QResizeEvent>
 #include <QStatusBar>
 #include <QTest>
+#include <QTimer>
 #include <kmainwindow.h>
 #include <ktoolbar.h>
 
@@ -196,8 +197,22 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
         mw.show();
         KToolBar *tb = new KToolBar(&mw); // we need a toolbar to trigger an old bug in saveMainWindowSettings
         tb->setObjectName(QStringLiteral("testtb"));
+        mw.setStateConfigGroup(group);
         mw.setAutoSaveSettings(group);
         mw.reallyResize(800, 600);
+        QVERIFY(mw.autoSaveSettings());
+
+        // Ensure we save the settings in the correct place
+        const auto hasWidthAndHightSaved = [](const QStringList &keys) {
+            const auto containsKey = [&keys](const QLatin1String &keyToCheck) {
+                return std::any_of(keys.begin(), keys.end(), [&keyToCheck](const QString &key) {
+                    return key.contains(keyToCheck);
+                });
+            };
+            return containsKey(QLatin1String(" Width ")) && containsKey(QLatin1String(" Height "));
+        };
+        QTRY_VERIFY(hasWidthAndHightSaved(mw.stateConfigGroup().keyList()));
+        QTRY_VERIFY(!hasWidthAndHightSaved(mw.autoSaveConfigGroup().keyList()));
         mw.close();
     }
 
@@ -205,6 +220,7 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
     mw2.show();
     KToolBar *tb = new KToolBar(&mw2);
     tb->setObjectName(QStringLiteral("testtb"));
+    mw2.setStateConfigGroup(group);
     mw2.setAutoSaveSettings(group);
     QTRY_COMPARE(mw2.size(), QSize(800, 600));
 }
@@ -217,6 +233,7 @@ void KMainWindow_UnitTest::testNoAutoSave()
         // A mainwindow with autosaving, but not of the window size.
         MyMainWindow mw;
         mw.show();
+        mw.setStateConfigGroup(group);
         mw.setAutoSaveSettings(group, false);
         mw.reallyResize(750, 550);
         mw.close();
@@ -224,6 +241,7 @@ void KMainWindow_UnitTest::testNoAutoSave()
 
     KMainWindow mw2;
     mw2.show();
+    mw2.setStateConfigGroup(group);
     mw2.setAutoSaveSettings(group, false);
     // NOT 750, 550! (the 800,600 comes from testAutoSaveSettings)
     QTRY_COMPARE(mw2.size(), QSize(800, 600));
