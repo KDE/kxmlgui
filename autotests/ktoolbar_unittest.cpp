@@ -239,6 +239,7 @@ void tst_KToolBar::testIconSizeNoXmlGui()
         const bool mainToolBarWasUsingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
         const bool otherToolBarWasUsingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::Toolbar);
 
+#ifndef Q_OS_WIN // the change notification uses DBus
         // Now emulate a change of the kde-global setting (#168480#c12)
         changeGlobalIconSizeSetting(32, 33);
 
@@ -256,6 +257,7 @@ void tst_KToolBar::testIconSizeNoXmlGui()
             QCOMPARE(otherToolBar->iconSize().width(), iconSize);
         }
         QCOMPARE(cleanToolBar->iconSize().width(), 33);
+#endif
     }
 }
 
@@ -321,6 +323,7 @@ void tst_KToolBar::testIconSizeXmlGui()
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
         }
 
+#ifndef Q_OS_WIN // the change notification uses DBus
         // Now emulate a change of the kde-global setting (#168480#c12)
         changeGlobalIconSizeSetting(25, 16);
 
@@ -328,6 +331,7 @@ void tst_KToolBar::testIconSizeXmlGui()
         QCOMPARE(otherToolBar->iconSize().width(), expectedSizeOtherToolbar);
         QCOMPARE(cleanToolBar->iconSize().width(), expectedSizeCleanToolbar);
         QCOMPARE(bigToolBar->iconSize().width(), expectedSizeBigToolbar);
+#endif
 
         // The big unchanged toolbar should be, well, unchanged; AppXml has priority over KDE_Default.
         QCOMPARE(bigUnchangedToolBar->iconSize().width(), 32);
@@ -418,6 +422,7 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)toolButtonStyle);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)toolButtonStyle);
 
+#ifndef Q_OS_WIN // the change notification uses DBus
         // Now change KDE-global setting
         changeGlobalToolButtonStyleSetting(QStringLiteral("IconOnly"), QStringLiteral("TextOnly"));
 
@@ -432,6 +437,7 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
         } else {
             QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)toolButtonStyle);
         }
+#endif
     }
 }
 
@@ -480,12 +486,14 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
         // Save settings
         kmw.saveMainWindowSettings(group);
 
+#ifndef Q_OS_WIN // the change notification uses DBus
         // Now change KDE-global setting
         changeGlobalToolButtonStyleSetting(QStringLiteral("IconOnly"), QStringLiteral("TextOnly"));
 
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)expectedStyleMainToolbar);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)expectedStyleOtherToolbar);
         QCOMPARE((int)cleanToolBar->toolButtonStyle(), (int)expectedStyleCleanToolbar);
+#endif
     }
 }
 
