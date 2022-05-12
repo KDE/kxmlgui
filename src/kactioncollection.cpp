@@ -50,13 +50,11 @@ static bool actionHasGlobalShortcut(const QAction *action)
 class KActionCollectionPrivate
 {
 public:
-    KActionCollectionPrivate()
-        : m_parentGUIClient(nullptr)
-        , configGroup(QStringLiteral("Shortcuts"))
+    KActionCollectionPrivate(KActionCollection *qq)
+        : q(qq)
         , configIsGlobal(false)
         , connectTriggered(false)
         , connectHovered(false)
-        , q(nullptr)
 
     {
     }
@@ -87,15 +85,15 @@ public:
     QMap<QString, QAction *> actionByName;
     QList<QAction *> actions;
 
-    const KXMLGUIClient *m_parentGUIClient;
+    KActionCollection *q = nullptr;
 
-    QString configGroup;
+    const KXMLGUIClient *m_parentGUIClient = nullptr;
+
+    QString configGroup{QStringLiteral("Shortcuts")};
     bool configIsGlobal : 1;
 
     bool connectTriggered : 1;
     bool connectHovered : 1;
-
-    KActionCollection *q;
 
     QList<QWidget *> associatedWidgets;
 };
@@ -104,9 +102,8 @@ QList<KActionCollection *> KActionCollectionPrivate::s_allCollections;
 
 KActionCollection::KActionCollection(QObject *parent, const QString &cName)
     : QObject(parent)
-    , d(new KActionCollectionPrivate)
+    , d(new KActionCollectionPrivate(this))
 {
-    d->q = this;
     KActionCollectionPrivate::s_allCollections.append(this);
 
     setComponentName(cName);
@@ -114,9 +111,8 @@ KActionCollection::KActionCollection(QObject *parent, const QString &cName)
 
 KActionCollection::KActionCollection(const KXMLGUIClient *parent)
     : QObject(nullptr)
-    , d(new KActionCollectionPrivate)
+    , d(new KActionCollectionPrivate(this))
 {
-    d->q = this;
     KActionCollectionPrivate::s_allCollections.append(this);
 
     d->m_parentGUIClient = parent;
