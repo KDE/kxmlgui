@@ -63,6 +63,7 @@ public:
         /// Actions which are triggered by any keypress in the application
         ApplicationAction = Qt::ApplicationShortcut /*2*/,
         /// Actions which are triggered by any keypress in the windowing system
+        /// @note Starting from 5.95, this flag is ignored if there are no actual Global shortcuts in any of the action collections that are added
         GlobalAction = 4,
         /// All actions
         AllActions = 0xffffffff,

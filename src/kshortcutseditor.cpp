@@ -126,7 +126,7 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
         }
     }
 
-    // The rest of the shortcuts is added as a direct shild of the action
+    // The rest of the shortcuts are added as direct children of the action
     // collections root node
     const auto collectionActions = collection->actions();
     for (QAction *action : collectionActions) {
@@ -139,6 +139,9 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
 
     // sort the list
     d->ui.list->sortItems(Name, Qt::AscendingOrder);
+
+    // Hide Global shortcuts columns if there are no global shortcuts
+    d->setGlobalColumnsHidden(!d->m_hasAnyGlobalShortcuts);
 
     // re-enable updating
     setUpdatesEnabled(true);
@@ -289,15 +292,15 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     ui.list->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui.list->header()->hideSection(ShapeGesture); // mouse gestures didn't make it in time...
     ui.list->header()->hideSection(RockerGesture);
+
 #if HAVE_GLOBALACCEL
-    bool hideGlobals = !(actionTypes & KShortcutsEditor::GlobalAction);
+    const bool hideGlobals = !(actionTypes & KShortcutsEditor::GlobalAction);
 #else
-    bool hideGlobals = true;
+    const bool hideGlobals = true;
 #endif
 
     if (hideGlobals) {
-        ui.list->header()->hideSection(GlobalPrimary);
-        ui.list->header()->hideSection(GlobalAlternate);
+        setGlobalColumnsHidden(true);
     } else if (!(actionTypes & ~KShortcutsEditor::GlobalAction)) {
         ui.list->header()->hideSection(LocalPrimary);
         ui.list->header()->hideSection(LocalAlternate);
@@ -324,6 +327,13 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     ui.searchFilter->setFocus();
 }
 
+void KShortcutsEditorPrivate::setGlobalColumnsHidden(bool hide)
+{
+    QHeaderView *header = ui.list->header();
+    header->setSectionHidden(GlobalPrimary, hide);
+    header->setSectionHidden(GlobalAlternate, hide);
+}
+
 void KShortcutsEditorPrivate::setActionTypes(KShortcutsEditor::ActionTypes types)
 {
     if (actionTypes == types) {
@@ -331,15 +341,9 @@ void KShortcutsEditorPrivate::setActionTypes(KShortcutsEditor::ActionTypes types
     }
     actionTypes = types;
 
-    // show/hide the sections based on new selection
+    // Show/hide columns based on the newly set action types
+    setGlobalColumnsHidden(!(actionTypes & KShortcutsEditor::GlobalAction));
     QHeaderView *header = ui.list->header();
-    if (actionTypes & KShortcutsEditor::GlobalAction) {
-        header->showSection(GlobalPrimary);
-        header->showSection(GlobalAlternate);
-    } else {
-        header->hideSection(GlobalPrimary);
-        header->hideSection(GlobalAlternate);
-    }
     if (actionTypes & ~KShortcutsEditor::GlobalAction) {
         header->showSection(LocalPrimary);
         header->showSection(LocalAlternate);
@@ -362,6 +366,13 @@ bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *hier[]
     const QVariant value = action->property("isShortcutConfigurable");
     if (!value.isValid() || value.toBool()) {
         new KShortcutsEditorItem((hier[level]), action);
+
+#if HAVE_GLOBALACCEL
+        if (!m_hasAnyGlobalShortcuts) { // If one global action was found, skip
+            m_hasAnyGlobalShortcuts = KGlobalAccel::self()->hasShortcut(action);
+        }
+#endif
+
         return true;
     }
 

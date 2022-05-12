@@ -404,6 +404,8 @@ public:
 
     void setActionTypes(KShortcutsEditor::ActionTypes actionTypes);
 
+    void setGlobalColumnsHidden(bool hide);
+
     // members
     QList<KActionCollection *> actionCollections;
     KShortcutsEditor *q;
@@ -412,6 +414,9 @@ public:
 
     KShortcutsEditor::ActionTypes actionTypes;
     KShortcutsEditorDelegate *delegate;
+
+    // Tracks if there are any Global shortcuts in any of the action collections shown in the dialog
+    bool m_hasAnyGlobalShortcuts = false;
 };
 
 Q_DECLARE_METATYPE(KShortcutsEditorItem *)
