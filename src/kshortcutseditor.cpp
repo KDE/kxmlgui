@@ -106,10 +106,10 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
         displayTitle = collection->componentDisplayName();
     }
 
-    QTreeWidgetItem *hier[3];
-    hier[KShortcutsEditorPrivate::Root] = d->ui.list->invisibleRootItem();
-    hier[KShortcutsEditorPrivate::Program] = d->findOrMakeItem(hier[KShortcutsEditorPrivate::Root], displayTitle);
-    hier[KShortcutsEditorPrivate::Action] = nullptr;
+    KShortcutsEditorPrivate::HierarchyInfo hierarchy;
+    hierarchy.root = d->ui.list->invisibleRootItem();
+    hierarchy.program = d->findOrMakeItem(hierarchy.root, displayTitle);
+    hierarchy.action = nullptr;
 
     // Set to remember which actions we have seen.
     QSet<QAction *> actionsSeen;
@@ -117,12 +117,12 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     // Add all categories in their own subtree below the collections root node
     const QList<KActionCategory *> categories = collection->findChildren<KActionCategory *>();
     for (KActionCategory *category : categories) {
-        hier[KShortcutsEditorPrivate::Action] = d->findOrMakeItem(hier[KShortcutsEditorPrivate::Program], category->text());
+        hierarchy.action = d->findOrMakeItem(hierarchy.program, category->text());
         const auto categoryActions = category->actions();
         for (QAction *action : categoryActions) {
             // Set a marker that we have seen this action
             actionsSeen.insert(action);
-            d->addAction(action, hier, KShortcutsEditorPrivate::Action);
+            d->addAction(action, hierarchy.action);
         }
     }
 
@@ -134,7 +134,7 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
             continue;
         }
 
-        d->addAction(action, hier, KShortcutsEditorPrivate::Program);
+        d->addAction(action, hierarchy.program);
     }
 
     // sort the list
@@ -302,8 +302,7 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     if (hideGlobals) {
         setGlobalColumnsHidden(true);
     } else if (!(actionTypes & ~KShortcutsEditor::GlobalAction)) {
-        ui.list->header()->hideSection(LocalPrimary);
-        ui.list->header()->hideSection(LocalAlternate);
+        setLocalColumnsHidden(true);
     }
 
     // Create the Delegate. It is responsible for the KKeySeqeunceWidgets that
@@ -334,6 +333,13 @@ void KShortcutsEditorPrivate::setGlobalColumnsHidden(bool hide)
     header->setSectionHidden(GlobalAlternate, hide);
 }
 
+void KShortcutsEditorPrivate::setLocalColumnsHidden(bool hide)
+{
+    QHeaderView *header = ui.list->header();
+    header->setSectionHidden(LocalPrimary, hide);
+    header->setSectionHidden(LocalAlternate, hide);
+}
+
 void KShortcutsEditorPrivate::setActionTypes(KShortcutsEditor::ActionTypes types)
 {
     if (actionTypes == types) {
@@ -343,17 +349,10 @@ void KShortcutsEditorPrivate::setActionTypes(KShortcutsEditor::ActionTypes types
 
     // Show/hide columns based on the newly set action types
     setGlobalColumnsHidden(!(actionTypes & KShortcutsEditor::GlobalAction));
-    QHeaderView *header = ui.list->header();
-    if (actionTypes & ~KShortcutsEditor::GlobalAction) {
-        header->showSection(LocalPrimary);
-        header->showSection(LocalAlternate);
-    } else {
-        header->hideSection(LocalPrimary);
-        header->hideSection(LocalAlternate);
-    }
+    setLocalColumnsHidden(!(actionTypes & ~KShortcutsEditor::GlobalAction));
 }
 
-bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *hier[], hierarchyLevel level)
+bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *parent)
 {
     // If the action name starts with unnamed- spit out a warning and ignore
     // it. That name will change at will and will break loading and writing
@@ -365,7 +364,7 @@ bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *hier[]
 
     const QVariant value = action->property("isShortcutConfigurable");
     if (!value.isValid() || value.toBool()) {
-        new KShortcutsEditorItem((hier[level]), action);
+        new KShortcutsEditorItem(parent, action);
 
 #if HAVE_GLOBALACCEL
         if (!m_hasAnyGlobalShortcuts) { // If one global action was found, skip
