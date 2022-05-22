@@ -737,6 +737,12 @@ void KActionCollection::slotActionHovered()
     }
 }
 
+// The downcast from a QObject to a QAction triggers UBSan
+// but we're only comparing pointers, so UBSan shouldn't check vptrs
+// Similar to https://github.com/itsBelinda/plog/pull/1/files
+#if defined(__clang__) || __GNUC__ >= 8
+__attribute__((no_sanitize("vptr")))
+#endif
 void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
 {
     // obj isn't really a QAction anymore. So make sure we don't do fancy stuff
