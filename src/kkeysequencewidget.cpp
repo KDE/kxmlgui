@@ -67,8 +67,13 @@ public:
 
     bool promptStealLocalShortcut(const QList<QAction *> &actions, const QKeySequence &seq);
     bool promptstealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq);
+
 #if HAVE_GLOBALACCEL
-    bool promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo>> &shortcuts, const QKeySequence &sequence);
+    struct KeyConflictInfo {
+        QKeySequence key;
+        QList<KGlobalShortcutInfo> shortcutInfo;
+    };
+    bool promptStealGlobalShortcut(const std::vector<KeyConflictInfo> &shortcuts, const QKeySequence &sequence);
 #endif
     void wontStealShortcut(QAction *item, const QKeySequence &seq);
 
@@ -266,13 +271,13 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
 }
 
 #if HAVE_GLOBALACCEL
-bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const QHash<QKeySequence, QList<KGlobalShortcutInfo>> &clashing, const QKeySequence &sequence)
+bool KKeySequenceWidgetPrivate::promptStealGlobalShortcut(const std::vector<KeyConflictInfo> &clashing, const QKeySequence &sequence)
 {
     QString clashingKeys;
-    for (auto it = clashing.begin(); it != clashing.end(); ++it) {
-        const auto seqAsString = it.key().toString();
-        for (const KGlobalShortcutInfo &info : it.value()) {
-            clashingKeys += i18n("Shortcut '%1' in Application %2 for action %3\n", //
+    for (const auto &[key, shortcutInfo] : clashing) {
+        const QString seqAsString = key.toString();
+        for (const KGlobalShortcutInfo &info : shortcutInfo) {
+            clashingKeys += i18n("Shortcut '%1' in Application '%2' for action '%3'\n", //
                                  seqAsString,
                                  info.componentFriendlyName(),
                                  info.friendlyName());
@@ -316,14 +321,14 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
     }
     // Global shortcuts are on key+modifier shortcuts. They can clash with
     // each of the keys of a multi key shortcut.
-    QHash<QKeySequence, QList<KGlobalShortcutInfo>> clashing;
+    std::vector<KeyConflictInfo> clashing;
     for (int i = 0; i < keySequence.count(); ++i) {
         QKeySequence keys(keySequence[i]);
         if (!KGlobalAccel::isGlobalShortcutAvailable(keySequence, componentName)) {
-            clashing.insert(keySequence, KGlobalAccel::globalShortcutsByKey(keys));
+            clashing.push_back({keySequence, KGlobalAccel::globalShortcutsByKey(keys)});
         }
     }
-    if (clashing.isEmpty()) {
+    if (clashing.empty()) {
         return false;
     }
 
