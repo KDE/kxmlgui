@@ -309,19 +309,19 @@ static bool stripCountryCode(QString *languageCode)
 void KSwitchLanguageDialogPrivate::fillApplicationLanguages(KLanguageButton *button)
 {
     const QLocale cLocale(QLocale::C);
-    QSet<QString> insertedLanguges;
+    QSet<QString> insertedLanguages;
 
     const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     for (const QLocale &l : allLocales) {
         if (l != cLocale) {
             QString languageCode = l.name();
-            if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+            if (!insertedLanguages.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
                 button->insertLanguage(languageCode);
-                insertedLanguges << languageCode;
+                insertedLanguages << languageCode;
             } else if (stripCountryCode(&languageCode)) {
-                if (!insertedLanguges.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+                if (!insertedLanguages.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
                     button->insertLanguage(languageCode);
-                    insertedLanguges << languageCode;
+                    insertedLanguages << languageCode;
                 }
             }
         }
