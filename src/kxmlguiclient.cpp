@@ -219,7 +219,8 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
         const QString filter = componentName() + QLatin1Char('/') + _file;
 
         // files on filesystem
-        allFiles << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("kxmlgui5/") + filter); // KF >= 5.1
+        allFiles << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                                              QStringLiteral("kxmlgui" QT_STRINGIFY(QT_VERSION_MAJOR)) + QLatin1Char('/') + filter); // KF >= 5.1
 
         // KF >= 5.4 (resource file)
         const QString qrcFile(QLatin1String(":/kxmlgui5/") + filter);
