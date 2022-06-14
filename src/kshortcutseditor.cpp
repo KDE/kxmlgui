@@ -569,11 +569,15 @@ void KShortcutsEditorPrivate::printShortcuts() const
     tableformat.setBorderStyle(QTextFrameFormat::BorderStyle_Solid);
     tableformat.setBorder(0.5);
 
-    const QPair<QString, ColumnDesignation> shortcutTitleToColumnMap[] = {
-        qMakePair(i18n("Main:"), LocalPrimary),
-        qMakePair(i18n("Alternate:"), LocalAlternate),
-        qMakePair(i18n("Global:"), GlobalPrimary),
-        qMakePair(i18n("Global alternate:"), GlobalAlternate),
+    struct ColumnInfo {
+        QString title;
+        ColumnDesignation column;
+    };
+    const ColumnInfo shortcutTitleToColumnMap[] = {
+        {i18n("Main:"), LocalPrimary},
+        {i18n("Alternate:"), LocalAlternate},
+        {i18n("Global:"), GlobalPrimary},
+        {i18n("Global alternate:"), GlobalAlternate},
     };
 
     for (int i = 0; i < root->childCount(); i++) {
@@ -611,8 +615,8 @@ void KShortcutsEditorPrivate::printShortcuts() const
             table->cellAt(currow, 0).firstCursorPosition().insertText(data.toString());
 
             QTextTable *shortcutTable = nullptr;
-            for (const auto &shortcutTitleToColumn : shortcutTitleToColumnMap) {
-                data = editoritem->data(shortcutTitleToColumn.second, Qt::DisplayRole);
+            for (const auto &[title, column] : shortcutTitleToColumnMap) {
+                data = editoritem->data(column, Qt::DisplayRole);
                 QString key = data.value<QKeySequence>().toString();
 
                 if (!key.isEmpty()) {
@@ -626,7 +630,7 @@ void KShortcutsEditorPrivate::printShortcuts() const
                     } else {
                         shortcutTable->insertRows(shortcutTable->rows(), 1);
                     }
-                    shortcutTable->cellAt(shortcutTable->rows() - 1, 0).firstCursorPosition().insertText(shortcutTitleToColumn.first);
+                    shortcutTable->cellAt(shortcutTable->rows() - 1, 0).firstCursorPosition().insertText(title);
                     shortcutTable->cellAt(shortcutTable->rows() - 1, 1).firstCursorPosition().insertText(key);
                 }
             }
