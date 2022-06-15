@@ -129,9 +129,10 @@ bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
             // oftentimes fails to find a nice position around it and will instead cover
             // the hovered action itself! To avoid this we give a smaller positioningHelper-widget
             // as the third parameter which only has the size of the hovered menu action entry.
-            QWidget positioningHelper{menu};
-            positioningHelper.setGeometry(menu->actionGeometry(m_action));
-            QWhatsThis::showText(m_lastExpandableToolTipGlobalPos, m_action->whatsThis(), &positioningHelper);
+            QWidget *positioningHelper = new QWidget(menu);
+            positioningHelper->setGeometry(menu->actionGeometry(m_action));
+            QWhatsThis::showText(m_lastExpandableToolTipGlobalPos, m_action->whatsThis(), positioningHelper);
+            connect(menu, &QMenu::aboutToHide, positioningHelper, &QObject::deleteLater);
         }
         return true;
     }
