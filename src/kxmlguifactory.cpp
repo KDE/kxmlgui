@@ -48,12 +48,8 @@ public:
 
     KXMLGUIFactoryPrivate()
     {
-        m_rootNode = new ContainerNode;
+        m_rootNode = std::make_unique<ContainerNode>();
         attrName = QStringLiteral("name");
-    }
-    ~KXMLGUIFactoryPrivate()
-    {
-        delete m_rootNode;
     }
 
     void pushState()
@@ -71,7 +67,7 @@ public:
         return m_stateStack.isEmpty();
     }
 
-    QWidget *findRecursive(KXMLGUI::ContainerNode *node, bool tag);
+    QWidget *findRecursive(const KXMLGUI::ContainerNode *node, bool tag);
     QList<QWidget *> findRecursive(KXMLGUI::ContainerNode *node, const QString &tagName);
     void applyActionProperties(const QDomElement &element, ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
     void configureAction(QAction *action, const QDomNamedNodeMap &attributes, ShortcutOption shortcutOption = KXMLGUIFactoryPrivate::SetActiveShortcut);
@@ -81,7 +77,7 @@ public:
     void refreshActionProperties(KXMLGUIClient *client, const QList<QAction *> &actions, const QDomDocument &doc);
     void saveDefaultActionProperties(const QList<QAction *> &actions);
 
-    ContainerNode *m_rootNode;
+    std::unique_ptr<ContainerNode> m_rootNode;
 
     /*
      * Contains the container which is searched for in ::container .
@@ -257,7 +253,7 @@ void KXMLGUIFactory::addClient(KXMLGUIClient *client)
         d->refreshActionProperties(client, client->actionCollection()->actions(), doc);
     }
 
-    BuildHelper(*d, d->m_rootNode).build(docElement);
+    BuildHelper(*d, d->m_rootNode.get()).build(docElement);
 
     // let the client know that we built its GUI.
     client->setFactory(this);
@@ -477,7 +473,7 @@ QWidget *KXMLGUIFactory::container(const QString &containerName, KXMLGUIClient *
     d->m_containerName = containerName;
     d->guiClient = client;
 
-    QWidget *result = d->findRecursive(d->m_rootNode, useTagName);
+    QWidget *result = d->findRecursive(d->m_rootNode.get(), useTagName);
 
     d->guiClient = nullptr;
     d->m_containerName.clear();
@@ -489,12 +485,12 @@ QWidget *KXMLGUIFactory::container(const QString &containerName, KXMLGUIClient *
 
 QList<QWidget *> KXMLGUIFactory::containers(const QString &tagName)
 {
-    return d->findRecursive(d->m_rootNode, tagName);
+    return d->findRecursive(d->m_rootNode.get(), tagName);
 }
 
 void KXMLGUIFactory::reset()
 {
-    d->m_rootNode->reset();
+    d->m_rootNode->resetNode();
 
     d->m_rootNode->clearChildren();
 }
@@ -511,7 +507,7 @@ void KXMLGUIFactory::resetContainer(const QString &containerName, bool useTagNam
     }
 }
 
-QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool tag)
+QWidget *KXMLGUIFactoryPrivate::findRecursive(const KXMLGUI::ContainerNode *node, bool tag)
 {
     if (((!tag && node->name == m_containerName) || (tag && node->tagName == m_containerName)) //
         && (!guiClient || node->client == guiClient)) {

@@ -373,10 +373,10 @@ void ContainerNode::unplugClient(ContainerClient *client)
     }
 }
 
-void ContainerNode::reset()
+void ContainerNode::resetNode()
 {
     for (ContainerNode *child : std::as_const(children)) {
-        child->reset();
+        child->resetNode();
     }
 
     if (client) {

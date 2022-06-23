@@ -152,7 +152,7 @@ struct ContainerNode {
     void unplugActions(BuildState &state);
     void unplugClient(ContainerClient *client);
 
-    void reset();
+    void resetNode();
 
     int calcMergingIndex(const QString &mergingName, MergingIndexList::iterator &it, BuildState &state, bool ignoreDefaultMergingIndex);
 
