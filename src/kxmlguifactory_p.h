@@ -96,29 +96,19 @@ typedef QVector<MergingIndex> MergingIndexList;
  * (used when no merging index is used for a certain action, custom element or sub-container)
  */
 struct ContainerNode {
-    ContainerNode(QWidget *_container,
-                  const QString &_tagName,
-                  const QString &_name,
-                  ContainerNode *_parent = nullptr,
-                  KXMLGUIClient *_client = nullptr,
-                  KXMLGUIBuilder *_builder = nullptr,
-                  QAction *containerAction = nullptr,
-                  const QString &_mergingName = QString(),
-                  const QString &groupName = QString(),
-                  const QStringList &customTags = QStringList(),
-                  const QStringList &containerTags = QStringList());
+    ContainerNode(ContainerNode *_parent = nullptr);
     ~ContainerNode();
 
     ContainerNode(const ContainerNode &) = delete;
     ContainerNode &operator=(const ContainerNode &) = delete;
 
-    ContainerNode *parent;
-    KXMLGUIClient *client;
-    KXMLGUIBuilder *builder;
+    ContainerNode *parent = nullptr;
+    KXMLGUIClient *client = nullptr;
+    KXMLGUIBuilder *builder = nullptr;
     QStringList builderCustomTags;
     QStringList builderContainerTags;
-    QWidget *container;
-    QAction *containerAction;
+    QWidget *container = nullptr;
+    QAction *containerAction = nullptr;
 
     QString tagName;
     QString name;
@@ -128,7 +118,7 @@ struct ContainerNode {
     ContainerClientList clients;
     QList<ContainerNode *> children;
 
-    int index;
+    int index = 0;
     MergingIndexList mergingIndices;
 
     QString mergingName;

@@ -48,7 +48,7 @@ public:
 
     KXMLGUIFactoryPrivate()
     {
-        m_rootNode = new ContainerNode(nullptr, QString(), QString());
+        m_rootNode = new ContainerNode;
         attrName = QStringLiteral("name");
     }
     ~KXMLGUIFactoryPrivate()

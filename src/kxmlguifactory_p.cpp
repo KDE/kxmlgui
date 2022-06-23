@@ -35,29 +35,8 @@ void ActionList::plug(QWidget *container, int index) const
     }
 }
 
-ContainerNode::ContainerNode(QWidget *_container,
-                             const QString &_tagName,
-                             const QString &_name,
-                             ContainerNode *_parent,
-                             KXMLGUIClient *_client,
-                             KXMLGUIBuilder *_builder,
-                             QAction *_containerAction,
-                             const QString &_mergingName,
-                             const QString &_groupName,
-                             const QStringList &customTags,
-                             const QStringList &containerTags)
+ContainerNode::ContainerNode(ContainerNode *_parent)
     : parent(_parent)
-    , client(_client)
-    , builder(_builder)
-    , builderCustomTags(customTags)
-    , builderContainerTags(containerTags)
-    , container(_container)
-    , containerAction(_containerAction)
-    , tagName(_tagName)
-    , name(_name)
-    , groupName(_groupName)
-    , index(0)
-    , mergingName(_mergingName)
 {
     if (parent) {
         parent->children.append(this);
@@ -731,7 +710,17 @@ void BuildHelper::processContainerElement(const QDomElement &e, const QString &t
             conTags = m_state.clientBuilderContainerTags;
         }
 
-        containerNode = new ContainerNode(container, tag, name, parentNode, m_state.guiClient, builder, containerAction, mergingName, group, cusTags, conTags);
+        containerNode = new ContainerNode(parentNode);
+        containerNode->container = container;
+        containerNode->tagName = tag;
+        containerNode->name = name;
+        containerNode->client = m_state.guiClient;
+        containerNode->builder = builder;
+        containerNode->containerAction = containerAction;
+        containerNode->mergingName = mergingName;
+        containerNode->groupName = group;
+        containerNode->builderCustomTags = cusTags;
+        containerNode->builderContainerTags = conTags;
     } else {
         if (tag == QLatin1String("toolbar")) {
             KToolBar *bar = qobject_cast<KToolBar *>(containerNode->container);
