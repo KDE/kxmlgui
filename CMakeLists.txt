@@ -24,6 +24,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(KDEGitCommitHooks)
 include(ECMQtDeclareLoggingCategory)
+include(ECMDeprecationSettings)
 include(CMakeDependentOption)
 
 ecm_setup_version(PROJECT
@@ -66,8 +67,13 @@ if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
     find_package(KF5GlobalAccel ${KF_DEP_VERSION} REQUIRED)
 endif()
 set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
+
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.95
+    KCOREADDONS 5.86 # KPluginMetaData::extraInformation
+)
+
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
 ki18n_install(po)
 
