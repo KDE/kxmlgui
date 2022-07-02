@@ -135,7 +135,10 @@ void KShortcutSchemesEditor::deleteScheme()
     if (KMessageBox::questionYesNo(this,
                                    i18n("Do you really want to delete the scheme %1?\n\
 Note that this will not remove any system wide shortcut schemes.",
-                                        currentScheme()))
+                                        currentScheme()),
+                                   QString(),
+                                   KStandardGuiItem::del(),
+                                   KStandardGuiItem::cancel())
         == KMessageBox::No) {
         return;
     }
