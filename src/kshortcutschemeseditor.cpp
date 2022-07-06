@@ -70,20 +70,28 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     schemesLabel->setBuddy(m_schemesList);
     l->addWidget(m_schemesList);
 
-    m_newScheme = new QPushButton(i18nc("@action:button", "New..."));
+    m_newScheme = new QPushButton(QIcon::fromTheme(QStringLiteral("document-new")), i18nc("@action:button", "New..."));
     l->addWidget(m_newScheme);
 
-    m_deleteScheme = new QPushButton(i18nc("@action:button", "Delete"));
+    m_deleteScheme = new QPushButton(QIcon::fromTheme(QStringLiteral("edit-delete")), i18nc("@action:button", "Delete"));
     l->addWidget(m_deleteScheme);
 
-    QPushButton *moreActions = new QPushButton(i18nc("@action:button", "More Actions"));
+    QPushButton *moreActions = new QPushButton(QIcon::fromTheme(QStringLiteral("view-more-symbolic")), i18nc("@action:button", "More Actions"));
     l->addWidget(moreActions);
 
     QMenu *moreActionsMenu = new QMenu(this);
-    moreActionsMenu->addAction(i18nc("@action:inmenu", "Save shortcuts to scheme"), this, &KShortcutSchemesEditor::saveAsDefaultsForScheme);
-    moreActionsMenu->addAction(i18nc("@action:inmenu", "Export Scheme..."), this, &KShortcutSchemesEditor::exportShortcutsScheme);
-    moreActionsMenu->addAction(i18nc("@action:inmenu", "Import Scheme..."), this, &KShortcutSchemesEditor::importShortcutsScheme);
-    moreActions->setMenu(moreActionsMenu);
+    moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-save")),
+                               i18nc("@action:inmenu", "Save shortcuts to scheme"),
+                               this,
+                               &KShortcutSchemesEditor::saveAsDefaultsForScheme);
+    moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-export")),
+                               i18nc("@action:inmenu", "Export Scheme..."),
+                               this,
+                               &KShortcutSchemesEditor::exportShortcutsScheme);
+    moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-import")),
+                               i18nc("@action:inmenu", "Import Scheme..."),
+                               this,
+                               &KShortcutSchemesEditor::importShortcutsScheme);
 
     l->addStretch(1);
 
