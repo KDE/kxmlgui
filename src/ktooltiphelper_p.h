@@ -68,11 +68,11 @@ public:
     bool handleMenuToolTipEvent(QMenu *menu, QHelpEvent *helpEvent);
 
     /**
-     * @param watchedWidget The widget that is receiving the QHelpEvent
+     * @param watched       The object that is receiving the QHelpEvent
      * @param helpEvent     The QEvent::ToolTip that was cast to a QHelpEvent
      * @return false if no special handling of the tooltip event seems necessary. true otherwise.
      */
-    bool handleToolTipEvent(QWidget *watchedWidget, QHelpEvent *helpEvent);
+    bool handleToolTipEvent(QObject *watched, QHelpEvent *helpEvent);
 
     /**
      * Handles links being clicked in whatsThis.

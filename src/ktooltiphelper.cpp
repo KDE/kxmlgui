@@ -68,7 +68,7 @@ bool KToolTipHelperPrivate::eventFilter(QObject *watched, QEvent *event)
     case QEvent::KeyPress:
         return handleKeyPressEvent(event);
     case QEvent::ToolTip:
-        return handleToolTipEvent(static_cast<QWidget *>(watched), static_cast<QHelpEvent *>(event));
+        return handleToolTipEvent(watched, static_cast<QHelpEvent *>(event));
     case QEvent::WhatsThisClicked:
         return handleWhatsThisClickedEvent(event);
     default:
@@ -185,9 +185,16 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
     return true;
 }
 
-bool KToolTipHelperPrivate::handleToolTipEvent(QWidget *watchedWidget, QHelpEvent *helpEvent)
+bool KToolTipHelperPrivate::handleToolTipEvent(QObject *watched, QHelpEvent *helpEvent)
 {
-    m_widget = watchedWidget;
+    if (auto watchedWidget = qobject_cast<QWidget *>(watched)) {
+        m_widget = watchedWidget;
+    } else {
+        // There are fringe cases in which QHelpEvents are sent to QObjects that are not QWidgets
+        // e.g. objects inheriting from QSystemTrayIcon.
+        // We do not know how to handle those so we return false.
+        return false;
+    }
 
     if (QToolButton *toolButton = qobject_cast<QToolButton *>(m_widget)) {
         if (const QAction *action = toolButton->defaultAction()) {
