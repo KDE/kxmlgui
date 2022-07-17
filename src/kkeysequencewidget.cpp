@@ -199,7 +199,7 @@ void KKeySequenceWidgetPrivate::wontStealShortcut(QAction *item, const QKeySeque
              "Please select a different one.</qt>",
              seq.toString(QKeySequence::NativeText),
              KLocalizedString::removeAcceleratorMarker(item->text())));
-    KMessageBox::sorry(q, msg, title);
+    KMessageBox::error(q, msg, title);
 }
 
 bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &keySequence)
@@ -311,7 +311,7 @@ bool KKeySequenceWidgetPrivate::conflictWithGlobalShortcuts(const QKeySequence &
             "The F12 key is reserved on Windows, so cannot be used for a global shortcut.\n"
             "Please choose another one.");
 
-        KMessageBox::sorry(q, message, title);
+        KMessageBox::error(q, message, title);
         return false;
     }
 #endif

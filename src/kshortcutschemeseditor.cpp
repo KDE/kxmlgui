@@ -111,7 +111,7 @@ void KShortcutSchemesEditor::newScheme()
     }
 
     if (m_schemesList->findText(newName) != -1) {
-        KMessageBox::sorry(this, i18n("A scheme with this name already exists."));
+        KMessageBox::error(this, i18n("A scheme with this name already exists."));
         return;
     }
 
@@ -202,7 +202,7 @@ void KShortcutSchemesEditor::saveAsDefaultsForScheme()
         KMessageBox::information(this, i18n("Shortcut scheme successfully saved."));
     } else {
         // We'd need to return to return more than a bool, to show more details here.
-        KMessageBox::sorry(this, i18n("Error saving the shortcut scheme."));
+        KMessageBox::error(this, i18n("Error saving the shortcut scheme."));
     }
 }
 
