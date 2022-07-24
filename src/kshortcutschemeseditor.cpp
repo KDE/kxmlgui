@@ -92,6 +92,7 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
                                i18nc("@action:inmenu", "Import Scheme..."),
                                this,
                                &KShortcutSchemesEditor::importShortcutsScheme);
+    moreActions->setMenu(moreActionsMenu);
 
     l->addStretch(1);
 
