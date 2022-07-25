@@ -272,6 +272,11 @@ void KShortcutsDialog::exportConfiguration(const QString &path) const
     d->m_keyChooser->exportConfiguration(static_cast<KConfigBase *>(&config));
 }
 
+void KShortcutsDialog::refreshSchemes()
+{
+    d->m_schemeEditor->refreshSchemes();
+}
+
 void KShortcutsDialog::addActionToSchemesMoreButton(QAction *action)
 {
     d->m_schemeEditor->addMoreMenuAction(action);

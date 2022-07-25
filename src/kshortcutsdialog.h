@@ -209,6 +209,16 @@ public:
     void exportConfiguration(const QString &path) const;
 
     /**
+     * Reloads the list of schemes in the "Manage Schemes" section
+     *
+     * This is useful if the available scheme files changed for some reason
+     * eg. because KNewStuff was used
+     *
+     * @since 5.97
+     */
+    void refreshSchemes();
+
+    /**
      * This adds a @c QAction to the "More Actions" menu
      *
      * This is useful to add for example an action to download more

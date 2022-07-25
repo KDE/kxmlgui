@@ -32,26 +32,6 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     : QGroupBox(i18nc("@title:group", "Shortcut Schemes"), parent)
     , m_dialog(parent)
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "Shortcut Schemes");
-
-    QStringList schemes;
-    schemes << QStringLiteral("Default");
-    // List files in the shortcuts subdir, each one is a scheme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
-    const QStringList shortcutsDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                                                QCoreApplication::applicationName() + QLatin1String("/shortcuts"),
-                                                                QStandardPaths::LocateDirectory);
-    qCDebug(DEBUG_KXMLGUI) << "shortcut scheme dirs:" << shortcutsDirs;
-    for (const QString &dir : shortcutsDirs) {
-        const auto files = QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot);
-        for (const QString &file : files) {
-            qCDebug(DEBUG_KXMLGUI) << "shortcut scheme file:" << file;
-            schemes << file;
-        }
-    }
-
-    const QString currentScheme = group.readEntry("Current Scheme", "Default");
-    qCDebug(DEBUG_KXMLGUI) << "Current Scheme" << currentScheme;
-
     QHBoxLayout *l = new QHBoxLayout(this);
 
     QLabel *schemesLabel = new QLabel(i18n("Current scheme:"), this);
@@ -59,14 +39,8 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 
     m_schemesList = new QComboBox(this);
     m_schemesList->setEditable(false);
-    m_schemesList->addItems(schemes);
+    refreshSchemes();
     m_schemesList->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-    const int schemeIdx = m_schemesList->findText(currentScheme);
-    if (schemeIdx > -1) {
-        m_schemesList->setCurrentIndex(schemeIdx);
-    } else {
-        qCWarning(DEBUG_KXMLGUI) << "Current scheme" << currentScheme << "not found in" << shortcutsDirs;
-    }
     schemesLabel->setBuddy(m_schemesList);
     l->addWidget(m_schemesList);
 
@@ -100,6 +74,38 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     connect(m_newScheme, &QPushButton::clicked, this, &KShortcutSchemesEditor::newScheme);
     connect(m_deleteScheme, &QPushButton::clicked, this, &KShortcutSchemesEditor::deleteScheme);
     updateDeleteButton();
+}
+
+void KShortcutSchemesEditor::refreshSchemes()
+{
+    QStringList schemes;
+    schemes << QStringLiteral("Default");
+    // List files in the shortcuts subdir, each one is a scheme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
+    const QStringList shortcutsDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                                                                QCoreApplication::applicationName() + QLatin1String("/shortcuts"),
+                                                                QStandardPaths::LocateDirectory);
+    qCDebug(DEBUG_KXMLGUI) << "shortcut scheme dirs:" << shortcutsDirs;
+    for (const QString &dir : shortcutsDirs) {
+        const auto files = QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot);
+        for (const QString &file : files) {
+            qCDebug(DEBUG_KXMLGUI) << "shortcut scheme file:" << file;
+            schemes << file;
+        }
+    }
+
+    m_schemesList->clear();
+    m_schemesList->addItems(schemes);
+
+    KConfigGroup group(KSharedConfig::openConfig(), "Shortcut Schemes");
+    const QString currentScheme = group.readEntry("Current Scheme", "Default");
+    qCDebug(DEBUG_KXMLGUI) << "Current Scheme" << currentScheme;
+
+    const int schemeIdx = m_schemesList->findText(currentScheme);
+    if (schemeIdx > -1) {
+        m_schemesList->setCurrentIndex(schemeIdx);
+    } else {
+        qCWarning(DEBUG_KXMLGUI) << "Current scheme" << currentScheme << "not found in" << shortcutsDirs;
+    }
 }
 
 void KShortcutSchemesEditor::newScheme()

@@ -222,6 +222,7 @@ public:
 
     /** @return the currently selected scheme in the editor (may differ from current app's scheme.*/
     QString currentScheme();
+    void refreshSchemes();
     void addMoreMenuAction(QAction *action);
 
 private Q_SLOTS:
