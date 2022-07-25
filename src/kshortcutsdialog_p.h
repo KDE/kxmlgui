@@ -222,6 +222,7 @@ public:
 
     /** @return the currently selected scheme in the editor (may differ from current app's scheme.*/
     QString currentScheme();
+    void addMoreMenuAction(QAction *action);
 
 private Q_SLOTS:
     void newScheme();
@@ -241,6 +242,7 @@ private:
     QPushButton *m_deleteScheme;
     QPushButton *m_exportScheme;
     QComboBox *m_schemesList;
+    QMenu *m_moreActionsMenu;
 
     KShortcutsDialog *m_dialog;
 };

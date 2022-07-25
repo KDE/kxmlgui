@@ -208,6 +208,16 @@ public:
      */
     void exportConfiguration(const QString &path) const;
 
+    /**
+     * This adds a @c QAction to the "More Actions" menu
+     *
+     * This is useful to add for example an action to download more
+     * keyboard schemes via KNewStuff
+     *
+     * @since 5.97
+     */
+    void addActionToSchemesMoreButton(QAction *action);
+
 public Q_SLOTS:
     /**
      * @reimp

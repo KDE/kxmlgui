@@ -211,3 +211,8 @@ void KShortcutSchemesEditor::updateDeleteButton()
 {
     m_deleteScheme->setEnabled(m_schemesList->count() >= 1);
 }
+
+void KShortcutSchemesEditor::addMoreMenuAction(QAction *action)
+{
+    m_moreActionsMenu->addAction(action);
+}
