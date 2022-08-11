@@ -85,8 +85,12 @@ class KToolBar;
  * the last mainwindow will quit the application unless there is still something
  * that holds a ref in KGlobal - like a KIO job, or a systray icon.
  *
- * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej
- * (radej@kde.org). Maintained by David Faure (faure@kde.org)
+ * @author Reginald Stadlbauer (reggie@kde.org)
+ * @author Stephan Kulow (coolo@kde.org)
+ * @author Matthias Ettrich (ettrich@kde.org)
+ * @author Chris Schlaeger (cs@kde.org)
+ * @author Sven Radej (radej@kde.org)
+ * Maintained by David Faure (faure@kde.org)
  */
 
 class KXMLGUI_EXPORT KMainWindow : public QMainWindow

@@ -51,11 +51,18 @@ class KXMLGUIClient;
    options_show_toolbar=false
    @endverbatim
  *
- * @note If you can't depend on KXmlGui but you want to integrate with KDE, you can use QToolBar with:
- *    Set ToolButtonStyle to Qt::ToolButtonFollowStyle, this will make QToolBar use the settings for "Main Toolbar"
- *    Additionally set QToolBar::setProperty("otherToolbar", true) to use settings for "Other toolbars"
- *    Settings from "Other toolbars" will only work on widget styles derived from KStyle
- * @author Reginald Stadlbauer <reggie@kde.org>, Stephan Kulow <coolo@kde.org>, Sven Radej <radej@kde.org>, Hamish Rodda <rodda@kde.org>.
+ * If you can't depend on KXmlGui but still want to integrate better with KDE,
+ * you can use QToolBar and:
+ * - Set ToolButtonStyle to Qt::ToolButtonFollowStyle, this will make QToolBar
+ *   use the settings for "Main Toolbar"
+ * - Additionally set QToolBar::setProperty("otherToolbar", true) to use settings
+ *   for "Other toolbars"; settings from "Other toolbars" will only work on widget
+ *   styles derived from KStyle
+ *
+ * @author Reginald Stadlbauer <reggie@kde.org>
+ * @author Stephan Kulow <coolo@kde.org>
+ * @author Sven Radej <radej@kde.org>
+ * @author Hamish Rodda <rodda@kde.org>
  */
 class KXMLGUI_EXPORT KToolBar : public QToolBar
 {

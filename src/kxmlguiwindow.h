@@ -38,9 +38,12 @@ class KXmlGuiWindowPrivate;
  * for essential information on the XML file format and usage of this class.
  *
  * @see KMainWindow
- * @author Reginald Stadlbauer (reggie@kde.org) Stephan Kulow (coolo@kde.org), Matthias Ettrich (ettrich@kde.org), Chris Schlaeger (cs@kde.org), Sven Radej
- (radej@kde.org). Maintained by Sven Radej (radej@kde.org)
-
+ * @author Reginald Stadlbauer (reggie@kde.org)
+ * @author Stephan Kulow (coolo@kde.org)
+ * @author Matthias Ettrich (ettrich@kde.org)
+ * @author Chris Schlaeger (cs@kde.org)
+ * @author Sven Radej (radej@kde.org)
+ * Maintained by Sven Radej (radej@kde.org)
  */
 
 class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
