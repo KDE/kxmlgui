@@ -53,20 +53,20 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     QPushButton *moreActions = new QPushButton(QIcon::fromTheme(QStringLiteral("view-more-symbolic")), i18nc("@action:button", "More Actions"));
     l->addWidget(moreActions);
 
-    QMenu *moreActionsMenu = new QMenu(this);
-    moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-save")),
-                               i18nc("@action:inmenu", "Save shortcuts to scheme"),
-                               this,
-                               &KShortcutSchemesEditor::saveAsDefaultsForScheme);
-    moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-export")),
-                               i18nc("@action:inmenu", "Export Scheme..."),
-                               this,
-                               &KShortcutSchemesEditor::exportShortcutsScheme);
-    moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-import")),
-                               i18nc("@action:inmenu", "Import Scheme..."),
-                               this,
-                               &KShortcutSchemesEditor::importShortcutsScheme);
-    moreActions->setMenu(moreActionsMenu);
+    m_moreActionsMenu = new QMenu(this);
+    m_moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-save")),
+                                 i18nc("@action:inmenu", "Save shortcuts to scheme"),
+                                 this,
+                                 &KShortcutSchemesEditor::saveAsDefaultsForScheme);
+    m_moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-export")),
+                                 i18nc("@action:inmenu", "Export Scheme..."),
+                                 this,
+                                 &KShortcutSchemesEditor::exportShortcutsScheme);
+    m_moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-import")),
+                                 i18nc("@action:inmenu", "Import Scheme..."),
+                                 this,
+                                 &KShortcutSchemesEditor::importShortcutsScheme);
+    moreActions->setMenu(m_moreActionsMenu);
 
     l->addStretch(1);
 
