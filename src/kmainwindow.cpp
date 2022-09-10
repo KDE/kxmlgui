@@ -748,7 +748,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
         KConfigGroup group(config, "General");
         if (group.readEntry("AllowKDEAppsToRememberWindowPositions", true)) {
             if (stateConfig.readEntry("RestorePositionForNextInstance", true)) {
-                KWindowConfig::restoreWindowPosition(windowHandle(), cg);
+                KWindowConfig::restoreWindowPosition(windowHandle(), stateConfig);
                 // Save the fact that we now don't want to restore position
                 // anymore; if we did, the next instance would completely cover
                 // the existing one
