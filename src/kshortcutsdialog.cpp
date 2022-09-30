@@ -66,12 +66,12 @@ public:
     void changeShortcutScheme(const QString &scheme)
     {
         if (m_keyChooser->isModified()
-            && KMessageBox::questionYesNo(q,
-                                          i18n("The current shortcut scheme is modified. Save before switching to the new one?"),
-                                          QString(),
-                                          KStandardGuiItem::save(),
-                                          KStandardGuiItem::discard())
-                == KMessageBox::Yes) {
+            && KMessageBox::questionTwoActions(q,
+                                               i18n("The current shortcut scheme is modified. Save before switching to the new one?"),
+                                               QString(),
+                                               KStandardGuiItem::save(),
+                                               KStandardGuiItem::discard())
+                == KMessageBox::PrimaryAction) {
             m_keyChooser->save();
         } else {
             m_keyChooser->undo();

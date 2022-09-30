@@ -437,34 +437,35 @@ void KBugReport::accept()
 
     switch (d->currentSeverity()) {
     case 0: // critical
-        if (KMessageBox::questionYesNo(this,
-                                       i18n("<p>You chose the severity <b>Critical</b>. "
-                                            "Please note that this severity is intended only for bugs that:</p>"
-                                            "<ul><li>break unrelated software on the system (or the whole system)</li>"
-                                            "<li>cause serious data loss</li>"
-                                            "<li>introduce a security hole on the system where the affected package is installed</li></ul>\n"
-                                            "<p>Does the bug you are reporting cause any of the above damage? "
-                                            "If it does not, please select a lower severity. Thank you.</p>"),
-                                       QString(),
-                                       KStandardGuiItem::cont(),
-                                       KStandardGuiItem::cancel())
-            == KMessageBox::No) {
+        if (KMessageBox::questionTwoActions(this,
+                                            i18n("<p>You chose the severity <b>Critical</b>. "
+                                                 "Please note that this severity is intended only for bugs that:</p>"
+                                                 "<ul><li>break unrelated software on the system (or the whole system)</li>"
+                                                 "<li>cause serious data loss</li>"
+                                                 "<li>introduce a security hole on the system where the affected package is installed</li></ul>\n"
+                                                 "<p>Does the bug you are reporting cause any of the above damage? "
+                                                 "If it does not, please select a lower severity. Thank you.</p>"),
+                                            QString(),
+                                            KStandardGuiItem::cont(),
+                                            KStandardGuiItem::cancel())
+            == KMessageBox::SecondaryAction) {
             return;
         }
         break;
     case 1: // grave
-        if (KMessageBox::questionYesNo(this,
-                                       i18n("<p>You chose the severity <b>Grave</b>. "
-                                            "Please note that this severity is intended only for bugs that:</p>"
-                                            "<ul><li>make the package in question unusable or mostly so</li>"
-                                            "<li>cause data loss</li>"
-                                            "<li>introduce a security hole allowing access to the accounts of users who use the affected package</li></ul>\n"
-                                            "<p>Does the bug you are reporting cause any of the above damage? "
-                                            "If it does not, please select a lower severity. Thank you.</p>"),
-                                       QString(),
-                                       KStandardGuiItem::cont(),
-                                       KStandardGuiItem::cancel())
-            == KMessageBox::No) {
+        if (KMessageBox::questionTwoActions(
+                this,
+                i18n("<p>You chose the severity <b>Grave</b>. "
+                     "Please note that this severity is intended only for bugs that:</p>"
+                     "<ul><li>make the package in question unusable or mostly so</li>"
+                     "<li>cause data loss</li>"
+                     "<li>introduce a security hole allowing access to the accounts of users who use the affected package</li></ul>\n"
+                     "<p>Does the bug you are reporting cause any of the above damage? "
+                     "If it does not, please select a lower severity. Thank you.</p>"),
+                QString(),
+                KStandardGuiItem::cont(),
+                KStandardGuiItem::cancel())
+            == KMessageBox::SecondaryAction) {
             return;
         }
         break;
@@ -487,12 +488,12 @@ void KBugReport::accept()
 void KBugReport::closeEvent(QCloseEvent *e)
 {
     if (d->bugDestination == KBugReportPrivate::CustomEmail && ((d->m_lineedit->toPlainText().length() > 0) || d->m_subject->isModified())) {
-        int rc = KMessageBox::warningYesNo(this,
-                                           i18n("Close and discard\nedited message?"),
-                                           i18nc("@title:window", "Close Message"),
-                                           KStandardGuiItem::discard(),
-                                           KStandardGuiItem::cont());
-        if (rc == KMessageBox::No) {
+        int rc = KMessageBox::warningTwoActions(this,
+                                                i18n("Close and discard\nedited message?"),
+                                                i18nc("@title:window", "Close Message"),
+                                                KStandardGuiItem::discard(),
+                                                KStandardGuiItem::cont());
+        if (rc == KMessageBox::SecondaryAction) {
             e->ignore();
             return;
         }
