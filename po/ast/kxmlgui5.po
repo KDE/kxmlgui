@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kxmlgui package.
 #
-# enolp <enolp@softastur.org>, 2020, 2021.
+# enolp <enolp@softastur.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2021-04-20 01:49+0200\n"
+"PO-Revision-Date: 2022-10-19 23:13+0200\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
-"Language-Team: Asturian <alministradores@softastur.org>\n"
+"Language-Team: \n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.03.90\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -31,18 +31,15 @@ msgid ""
 msgstr ""
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
+#, kde-format
 msgctxt "@item Component name in about dialog."
 msgid "%1"
 msgstr "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgid "Version %1"
-msgstr "Versión:"
+msgstr "Versión %1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:152
 #: kabstractaboutdialog_p.cpp:84
@@ -54,33 +51,33 @@ msgstr "Llicencia: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "Tocante a %1"
+msgstr ""
 
 #: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
-msgstr "Tocante a"
+msgstr ""
 
 #: kaboutapplicationdialog.cpp:104
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr ""
+msgstr "Componentes"
 
 #: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "Autor"
-msgstr[1] "Autores"
+msgstr[0] "Autoría"
+msgstr[1] "Autoría"
 
 #: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
-msgstr "Gracies a"
+msgstr "Agradecimientu"
 
 #: kaboutapplicationdialog.cpp:128 kaboutplugindialog.cpp:112
 #, kde-format
@@ -106,8 +103,6 @@ msgid ""
 "Email contributor\n"
 "%1"
 msgstr ""
-"Unviar un corréu al collaborador\n"
-"%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:112
 #, kde-format
@@ -135,7 +130,7 @@ msgstr "%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr "Tocante a KDE"
+msgstr ""
 
 #: kaboutkdedialog_p.cpp:34
 #, kde-format
@@ -168,14 +163,6 @@ msgid ""
 "improvement then you are welcome to use the bug tracking system to register "
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
-"<html>El software pue ameyorar y l'equipu de KDE ta preparáu pa facelo. Por "
-"embargu, tu (l'usuariu) has charrar con nós cuando daqué nun funcione como "
-"s'espera o pueda facese meyor.<br /><br />KDE tien un sistema de rastrexu de "
-"fallos. Visita <a href=\"%1\">%1</a> o usa'l diálogu «Informar d'un fallu» "
-"del menú «Ayuda» pa informar de fallos.<br /><br />Si tienes una suxerencia "
-"p'ameyorar, entós dámoste l'acoyida pa qu'uses el sistema de rastrexu de "
-"fallos pa rexistrar el to deséu. Asegúrate de qu'uses la severidá llamada "
-"«Wishlist».</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -188,13 +175,13 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>Nun tienes de ser un desendolcador de software pa pertenecer al equipu "
-"de KDE. Pues xunite a los equipos nacionales que traducen interfaces de "
-"programes o apurrir gráficos, estilos, soníos y una documentación ameyorada. "
-"¡Tu decides!<br /><br />Visita <a href=\"%1\">%1</a> pa información tocante "
-"a dalgunos proyeutos nos que pues participar.<br /><br /> Si precises más "
-"información o documentación, una visita a <a href=\"%2\">%2</a> va fornite "
-"lo que precises.</html>"
+"<html>Nun tienes de ser desendolcador de software pa ser miembru de "
+"l'equipuKDE. Pues xunite a los equipos nacionales que traducen interfaces de "
+"programes,fornir gráficos, estilos, soníos y una documentación ameyorada. "
+"¡Tú decides!<br /><br />Visita <a href=\"%1\">%1</a> pa consiguir "
+"información tocante a losproyeutos nos que pues participar.<br /><br />Sí "
+"precises más información odocumentación, entós visita <a href=\"%2\">%2</a> "
+"pa consiguir tolo queprecises.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -217,19 +204,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
-msgstr "&Tocante a"
+msgstr ""
 
 #: kaboutkdedialog_p.cpp:129
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "&Informar de fallos y deseos"
+msgstr ""
 
 #: kaboutkdedialog_p.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "&Xunise a KDE"
+msgstr ""
 
 #: kaboutkdedialog_p.cpp:131
 #, kde-format
@@ -238,11 +225,10 @@ msgid "&Support KDE"
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:41
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
-msgstr "Versión:"
+msgstr "Versión %1"
 
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
@@ -252,7 +238,7 @@ msgstr ""
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:109
 #, kde-format
@@ -262,7 +248,7 @@ msgstr ""
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
@@ -281,11 +267,10 @@ msgid "Please use %1 to report bugs.\n"
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:184
-#, fuzzy, kde-format
-#| msgid "Please report bugs to <a href=\"%1\">%2</a>.\n"
+#, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "Informa de fallos en <a href=\"%1\">%2</a>, por favor.\n"
+msgstr ""
 
 #: kactionconflictdetector.cpp:38
 #, kde-format
@@ -322,7 +307,7 @@ msgstr ""
 #, kde-format
 msgctxt "Email sender address"
 msgid "From:"
-msgstr ""
+msgstr "De:"
 
 #: kbugreport.cpp:151
 #, kde-format
@@ -334,18 +319,19 @@ msgstr ""
 #, kde-format
 msgid "The email address this bug report is sent to."
 msgstr ""
+"La direición de corréu electrónicu a la que s'unvia l'informe del fallu."
 
 #: kbugreport.cpp:159
 #, kde-format
 msgctxt "Email receiver address"
 msgid "To:"
-msgstr ""
+msgstr "Pa:"
 
 #: kbugreport.cpp:168
 #, kde-format
 msgctxt "@action:button"
 msgid "&Send"
-msgstr "&Unviar"
+msgstr ""
 
 #: kbugreport.cpp:170
 #, kde-format
@@ -399,7 +385,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:221
 #, kde-format
@@ -407,7 +393,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:227
 #, kde-format
@@ -415,37 +401,37 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:239
 #, kde-format
 msgctxt "@title:group"
 msgid "Se&verity"
-msgstr "Se&veridá"
+msgstr ""
 
 #: kbugreport.cpp:246
 #, kde-format
 msgctxt "bug severity"
 msgid "Critical"
-msgstr "Crítica"
+msgstr ""
 
 #: kbugreport.cpp:247
 #, kde-format
 msgctxt "bug severity"
 msgid "Grave"
-msgstr "Grave"
+msgstr ""
 
 #: kbugreport.cpp:248
 #, kde-format
 msgctxt "bug severity"
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 #: kbugreport.cpp:249
 #, kde-format
 msgctxt "bug severity"
 msgid "Wishlist"
-msgstr "Deséu"
+msgstr ""
 
 #: kbugreport.cpp:250
 #, kde-format
@@ -555,6 +541,8 @@ msgid ""
 "Close and discard\n"
 "edited message?"
 msgstr ""
+"¿Quies zarrar y escartar\n"
+"el mensaxe editáu?"
 
 #: kbugreport.cpp:493
 #, kde-format
@@ -572,7 +560,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
-msgstr ""
+msgstr "Desactivar la revisión automática"
 
 #: kcheckaccelerators.cpp:319
 #, kde-format
@@ -582,12 +570,12 @@ msgstr ""
 #: kcheckaccelerators.cpp:323 kcheckaccelerators.cpp:327
 #, kde-format
 msgid "Old Text"
-msgstr ""
+msgstr "Testu antiguu"
 
 #: kcheckaccelerators.cpp:323 kcheckaccelerators.cpp:332
 #, kde-format
 msgid "New Text"
-msgstr ""
+msgstr "Testu nuevu"
 
 #: kcheckaccelerators.cpp:327
 #, kde-format
@@ -637,7 +625,7 @@ msgstr ""
 #: kedittoolbar.cpp:661
 #, kde-format
 msgid "Reset"
-msgstr "Desfacer"
+msgstr ""
 
 #: kedittoolbar.cpp:989
 #, kde-format
@@ -654,7 +642,7 @@ msgstr ""
 #: kedittoolbar.cpp:1005
 #, kde-format
 msgid "A&vailable actions:"
-msgstr "Aiciones &disponibles:"
+msgstr ""
 
 #: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
 #, kde-format
@@ -664,7 +652,7 @@ msgstr ""
 #: kedittoolbar.cpp:1029
 #, kde-format
 msgid "Curr&ent actions:"
-msgstr ""
+msgstr "Aicion&es actuales:"
 
 #: kedittoolbar.cpp:1054
 #, kde-format
@@ -681,7 +669,7 @@ msgstr ""
 #: kedittoolbar.cpp:1205
 #, kde-format
 msgid "--- separator ---"
-msgstr "--- separtador ---"
+msgstr ""
 
 #: kedittoolbar.cpp:1206
 #, kde-format
@@ -737,7 +725,7 @@ msgstr ""
 #: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
-msgstr ""
+msgstr "&Ayuda"
 
 #: khelpmenu.cpp:253
 #, kde-format
@@ -924,7 +912,7 @@ msgstr ""
 #: ksendbugmail/main.cpp:76
 #, kde-format
 msgid "The subject line of the email."
-msgstr "La llinia pal asuntu del corréu."
+msgstr ""
 
 #: ksendbugmail/main.cpp:78
 #, kde-format
@@ -1004,7 +992,7 @@ msgstr ""
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgid "New Scheme"
-msgstr ""
+msgstr "Esquema nuevu"
 
 #: kshortcutschemeseditor.cpp:121
 #, kde-format
@@ -1022,7 +1010,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr ""
+msgstr "Esportación d'atayos"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:198
 #, kde-format
@@ -1033,17 +1021,17 @@ msgstr "Atayos (*.shortcuts)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
-msgstr ""
+msgstr "Importación d'atayos"
 
 #: kshortcutschemeseditor.cpp:209
 #, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr ""
+msgstr "L'esquema d'atayos guardóse correutamente."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr ""
+msgstr "Prodúxose un error al guardar l'esquema d'atayos."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
@@ -1051,6 +1039,8 @@ msgid ""
 "The current shortcut scheme is modified. Save before switching to the new "
 "one?"
 msgstr ""
+"Modificóse l'esquema d'atayos actual. ¿Quies guardalu enantes de cambiar a "
+"otru?"
 
 #: kshortcutsdialog.cpp:124
 #, kde-format
@@ -1090,25 +1080,25 @@ msgstr "Aición"
 #: kshortcutsdialog.ui:38
 #, kde-format
 msgid "Shortcut"
-msgstr ""
+msgstr "Atayu"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:43
 #, kde-format
 msgid "Alternate"
-msgstr "Alternativa"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:48
 #, kde-format
 msgid "Global"
-msgstr "Global"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:53
 #, kde-format
 msgid "Global Alternate"
-msgstr "Alternativa global"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:58
@@ -1132,7 +1122,7 @@ msgstr ""
 #: kshortcutseditor.cpp:577 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
-msgstr "Principal:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
 #: kshortcutseditor.cpp:578 kshortcutwidget.ui:52
@@ -1143,7 +1133,7 @@ msgstr "Alternativa:"
 #: kshortcutseditor.cpp:579
 #, kde-format
 msgid "Global:"
-msgstr "Global:"
+msgstr ""
 
 #: kshortcutseditor.cpp:580
 #, kde-format
@@ -1158,7 +1148,7 @@ msgstr ""
 #: kshortcutseditor.cpp:600
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atayos"
 
 #: kshortcutseditor.cpp:604
 #, kde-format
@@ -1180,7 +1170,7 @@ msgstr ""
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
-msgstr "Escueyi la llingua que debería usase nesta aplicación:"
+msgstr ""
 
 #: kswitchlanguagedialog_p.cpp:168
 #, kde-format
@@ -1228,7 +1218,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr ""
+msgstr "Quitar"
 
 #: kswitchlanguagedialog_p.cpp:391
 #, kde-format
@@ -1363,7 +1353,7 @@ msgstr ""
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #. i18n: Pressing Shift will show a longer message with contextual info
 #. about the thing the tooltip was invoked for. If there is no good way to translate
@@ -1409,10 +1399,9 @@ msgid "No text"
 msgstr ""
 
 #: kxmlguiwindow.cpp:190
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "Aición"
+msgstr ""
 
 #: kxmlguiwindow.cpp:535
 #, kde-format
@@ -1421,45 +1410,42 @@ msgid ""
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
-"Hai dos aiciones (%1, %2) que quieren ussar el mesmu atayu (%3). Lo más "
-"probable ye que seya un fallu. Informa d'elli en <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>"
 
 #: kxmlguiwindow.cpp:540
 #, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr ""
+msgstr "Atayos ambiguos"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
 #, kde-format
 msgid "&File"
-msgstr ""
+msgstr "&Ficheru"
 
 #. i18n: ectx: Menu (game)
 #: ui_standards.rc:34
 #, kde-format
 msgid "&Game"
-msgstr ""
+msgstr "&Partida"
 
 #. i18n: ectx: Menu (edit)
 #: ui_standards.rc:61
 #, kde-format
 msgid "&Edit"
-msgstr ""
+msgstr "&Editar"
 
 #. i18n: ectx: Menu (move)
 #: ui_standards.rc:84
 #, kde-format
 msgctxt "@title:menu Game move"
 msgid "&Move"
-msgstr ""
+msgstr "&Mover"
 
 #. i18n: ectx: Menu (view)
 #: ui_standards.rc:102
 #, kde-format
 msgid "&View"
-msgstr ""
+msgstr "&Ver"
 
 #. i18n: ectx: Menu (go)
 #: ui_standards.rc:121
@@ -1490,29 +1476,3 @@ msgstr "&Axustes"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra de ferramientes principal"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Libraries"
-#~ msgstr "Biblioteques"
-
-#~ msgctxt "City, Country"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
-
-#~ msgctxt "A type of link."
-#~ msgid "Blog"
-#~ msgstr "Blogue"
-
-#~ msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
-#~ msgstr "<html><font size=\"5\">%1</font><br />Versión %2</html>"
-
-#~ msgid ""
-#~ "Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "
-#~ "report bugs.\n"
-#~ msgstr ""
-#~ "Usa <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> pa informar "
-#~ "de fallos, por favor.\n"
-
-#~ msgctxt "@title:window"
-#~ msgid "Switch Application Language"
-#~ msgstr "Cambéu de la llingua de l'aplicación"
