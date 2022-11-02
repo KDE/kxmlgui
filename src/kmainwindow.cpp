@@ -651,10 +651,9 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
 
     QMenuBar *mb = internalMenuBar(this);
     if (mb) {
-        if (!cg.hasDefault("MenuBar") && !mb->isHidden()) {
-            cg.revertToDefault("MenuBar");
-        } else {
-            cg.writeEntry("MenuBar", mb->isHidden() ? "Disabled" : "Enabled");
+        const char *menuBarStatus = mb->isHidden() ? "Disabled" : "Enabled";
+        if (cg.readEntry("MenuBar", "Enabled") != QLatin1String(menuBarStatus)) {
+            cg.writeEntry("MenuBar", menuBarStatus);
         }
     }
 
