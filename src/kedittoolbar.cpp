@@ -401,11 +401,11 @@ public:
         : m_collection(collection)
         , m_widget(widget)
         , m_factory(nullptr)
+        , m_componentName(cName)
+        , m_helpArea(nullptr)
+        , m_isPart(false)
         , m_loadedOnce(false)
     {
-        m_componentName = cName;
-        m_isPart = false;
-        m_helpArea = nullptr;
         // We want items with an icon to align with items without icon
         // So we use an empty QPixmap for that
         const int iconSize = widget->style()->pixelMetric(QStyle::PM_SmallIconSize);

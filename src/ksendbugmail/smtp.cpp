@@ -14,25 +14,21 @@
 #include <QSslSocket>
 
 SMTP::SMTP(char *serverhost, unsigned short int port, int timeout)
+    : serverHost(QString::fromUtf8(serverhost))
+    , hostPort(port)
+    , timeOut(timeout * 1000)
+    , connected(false)
+    , finished(false)
+    , senderAddress(QStringLiteral("user@example.net"))
+    , recipientAddress(QStringLiteral("user@example.net"))
+    , messageSubject(QStringLiteral("(no subject)"))
+    , messageBody(QStringLiteral("empty"))
+    , messageHeader(QLatin1String(""))
+    , state(Init)
+    , serverState(None)
+    , domainName(QHostInfo::localDomainName())
+    , sock(nullptr)
 {
-    serverHost = QString::fromUtf8(serverhost);
-    hostPort = port;
-    timeOut = timeout * 1000;
-
-    senderAddress = QStringLiteral("user@example.net");
-    recipientAddress = QStringLiteral("user@example.net");
-    messageSubject = QStringLiteral("(no subject)");
-    messageBody = QStringLiteral("empty");
-    messageHeader = QLatin1String("");
-
-    connected = false;
-    finished = false;
-
-    sock = nullptr;
-    state = Init;
-    serverState = None;
-
-    domainName = QHostInfo::localDomainName();
     if (domainName.isEmpty()) {
         domainName = QStringLiteral("somemachine.example.net");
     }
