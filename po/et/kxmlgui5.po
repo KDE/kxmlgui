@@ -5,54 +5,45 @@
 # Marek Laane <bald@smail.ee>, 2003-2009.
 # Peeter Russak <pezz@tkwcy.ee>, 2005.
 # Marek Laane <bald@smail.ee>, 2009, 2010, 2011, 2012, 2014, 2016, 2019, 2020.
-# Mihkel Tõnnov <mihhkel@gmail.com>, 2020, 2021.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2021-10-07 00:55+0200\n"
+"PO-Revision-Date: 2022-10-20 20:01+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgid "Visit component's homepage"
-msgstr "Külasta autori kodulehekülge"
+msgstr "Külasta komponendi kodulehekülge"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Külasta kaasautori kodulehekülge\n"
+"Külasta komponendi kodulehekülge\n"
 "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
+#, kde-format
 msgctxt "@item Component name in about dialog."
 msgid "%1"
 msgstr "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgctxt "Version version-number"
-#| msgid "Version %1"
+#, kde-format
 msgid "Version %1"
 msgstr "Versioon %1"
 
@@ -75,11 +66,10 @@ msgid "About"
 msgstr "Teave"
 
 #: kaboutapplicationdialog.cpp:104
-#, fuzzy, kde-format
-#| msgid "Comments"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr "Kommentaarid"
+msgstr "Komponendid"
 
 #: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
 #, kde-format
@@ -284,7 +274,7 @@ msgstr "Versioon %1"
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
 msgid "The <em>%1</em> windowing system"
-msgstr ""
+msgstr "<em>%1</em> aknahaldur"
 
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
@@ -294,23 +284,22 @@ msgstr "Qt"
 #: kabstractaboutdialog_p.cpp:109
 #, kde-format
 msgid "%1 (built against %2)"
-msgstr ""
+msgstr "%1 (ehitatud %2 peale)"
 
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Show author information"
+#, kde-format
 msgid "Show author photos"
-msgstr "Info autori(te) kohta"
+msgstr "Autorite fotode näitamine"
 
 #: kabstractaboutdialog_p.cpp:137
 #, kde-format
 msgid "Enabling this will fetch images from an online location"
-msgstr ""
+msgstr "Sisselülitamisel laaditakse pildid võrguasukohast"
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
@@ -325,11 +314,7 @@ msgid "Please report bugs to %1.\n"
 msgstr "Palun kasuta vigadest teatamiseks aadressi %1.\n"
 
 #: kactionconflictdetector.cpp:38
-#, fuzzy, kde-format
-#| msgid ""
-#| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
-#| "from the 'Settings' menu to solve the ambiguity.\n"
-#| "No action will be triggered."
+#, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
 "from the 'Settings' menu to solve the ambiguity.\n"
@@ -444,10 +429,7 @@ msgid "OS:"
 msgstr "OS:"
 
 #: kbugreport.cpp:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -455,19 +437,15 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:221
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:227
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -571,6 +549,8 @@ msgid ""
 "Could not find <application>%1</application> executable (usually it's part "
 "of the \"%2\" package)."
 msgstr ""
+"Täitmisfaili <application>%1</application> ei leitud (tavaliselt on see osa "
+"paketist \"%2\")."
 
 #: kbugreport.cpp:432
 #, kde-format
@@ -858,16 +838,7 @@ msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Kiirklahv '%1' toiminguks '%2'\n"
 
 #: kkeysequencewidget.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
-#| msgid ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
-#| "Do you want to assign an empty shortcut to this action?\n"
-#| "%3"
-#| msgid_plural ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
-#| "Do you want to assign an empty shortcut to these actions?\n"
-#| "%3"
+#, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
 "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
@@ -909,10 +880,9 @@ msgstr ""
 "<br>Palun vali mõni muu.</qt>"
 
 #: kkeysequencewidget.cpp:280
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Kiirklahv '%1' rakenduses %2 toimingule %3\n"
+msgstr "Kiirklahv '%1' rakenduses %2 toimingule '%3'\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
@@ -1499,15 +1469,13 @@ msgstr "%1 (%2)"
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
 #: ktooltiphelper.cpp:267
-#, fuzzy, kde-format
-#| msgid ""
-#| "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
-"<small><font color=\"%1\">Lisateabe saamiseks vajuta <b>Shift</b>i.</font></"
-"small>"
+"<small><font color=\"%1\">Lisateabe saamiseks vajuta <b>Shift</b>-klahvi.</"
+"font></small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
 #. available whatsthis help message. Pressing Shift will show this more exhaustive message.
@@ -1520,16 +1488,13 @@ msgstr ""
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
 #: ktooltiphelper.cpp:281
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></"
-#| "small>"
+#, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
-"%1<br/><small><font color=\"%2\">Lisateabe saamiseks vajuta <b>Shift</b>i.</"
-"font></small>"
+"%1<br/><small><font color=\"%2\">Lisateabe saamiseks vajuta <b>Shift</b>-"
+"klahvi.</font></small>"
 
 #: kundoactions.cpp:30
 #, kde-format
@@ -1547,10 +1512,9 @@ msgid "No text"
 msgstr "Tekst puudub"
 
 #: kxmlguiwindow.cpp:190
-#, fuzzy, kde-format
-#| msgid "Long Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "Pikk toiming"
+msgstr "Otsi käske …"
 
 #: kxmlguiwindow.cpp:535
 #, kde-format
