@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2022-07-09 10:26-0700\n"
+"PO-Revision-Date: 2022-11-19 05:27-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -658,11 +658,10 @@ msgid "Icon te&xt:"
 msgstr "ਆਈਕਾਨ ਟੈਕਸਟ(&x):"
 
 #: kedittoolbar.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Hide text when toolbar shows text alongside icons"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "ਜਦੋਂ ਟੂਲਬਾਰ ਆਈਕਾਨ ਨਾਲ ਟੈਕਸਟ ਵੇਖਾਵੇ ਤਾਂ ਟੈਕਸਟ ਓਹਲੇ(&H)"
+msgstr "ਜਦੋਂ ਟੂਲਬਾਰ ਆਈਕਾਨ ਨਾਲ ਲਿਖਤ ਦਿਖਾਉਂਦਾ ਹੈ ਤਾਂ ਲਿਖਤ ਓਹਲੇ ਕਰੋ(&H)"
 
 #: kedittoolbar.cpp:596
 #, kde-format
@@ -854,10 +853,9 @@ msgstr ""
 "ਚੁਣੋ ਜੀ।</qt>"
 
 #: kkeysequencewidget.cpp:280
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ '%2' ਵਿੱਚ ਸ਼ਾਰਟਕੱਟ '%1' ਐਕਸ਼ਨ '%3' ਲਈ ਹੈ\n"
+msgstr "ਐਕਸ਼ਨ '%3' ਲਈ ਐਪਲੀਕੇਸ਼ਨ '%2' ਵਿੱਚ ਸ਼ਾਰਟਕੱਟ '%1' ਹੈ\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
@@ -894,11 +892,10 @@ msgstr ""
 "ਹੋਰ ਚੁਣੋ ਜੀ।"
 
 #: kkeysequencewidget.cpp:354
-#, fuzzy, kde-format
-#| msgid "Conflict with Standard Application Shortcut"
+#, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "ਸਟੈਂਡਰਡ ਐਪਲੀਕੇਸ਼ਨ ਸ਼ਾਰਟਕੱਟਾਂ ਨਾਲ ਟਕਰਾਅ ਹੋ ਰਿਹਾ ਹੈ।"
+msgstr "ਸਟੈਂਡਰਡ ਐਪਲੀਕੇਸ਼ਨ ਸ਼ਾਰਟਕੱਟਾਂ ਨਾਲ ਟਕਰਾਅ ਹੈ"
 
 #: kkeysequencewidget.cpp:356
 #, kde-format
@@ -990,10 +987,9 @@ msgid "The subject line of the email."
 msgstr "ਈਮੇਲ ਦਾ ਵਿਸ਼ਾ ਲਾਈਨ।"
 
 #: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
+#, kde-format
 msgid "The email address to send the bug report to."
-msgstr "ਈ-ਮੇਲ, ਜਿਸ ਤੇ ਇਹ ਬੱਗ ਜਾਣਕਾਰੀ ਭੇਜਣੀ ਹੈ।"
+msgstr "ਬੱਗ ਰਿਪੋਰਟ ਭੇਜਣ ਵਾਸਤੇ ਈਮੇਲ ਐਡਰੈਸ ਹੈ।"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1037,11 +1033,10 @@ msgid "More Actions"
 msgstr "ਹੋਰ ਕਾਰਵਾਈਆਂ"
 
 #: kshortcutschemeseditor.cpp:58
-#, fuzzy, kde-format
-#| msgid "Shortcut Schemes"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "ਸ਼ਾਰਟਕੱਟ ਸਕੀਮ"
+msgstr "ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਸਕੀਮ ਵਿੱਚ ਸੰਭਾਲੋ"
 
 #: kshortcutschemeseditor.cpp:62
 #, kde-format
@@ -1086,11 +1081,10 @@ msgstr ""
 "ਯਾਦ ਰੱਖੋ ਕਿ ਇਸ ਨਾਲ ਕੋਈ ਸਿਸਟਮ ਲੈਵਲ ਦੀ ਸ਼ਾਰਟਕੱਟ ਸਕੀਮ ਹਟਾਈ ਨਹੀਂ ਜਾਵੇਗੀ।"
 
 #: kshortcutschemeseditor.cpp:187
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr "ਸ਼ਾਰਟਕੱਟ"
+msgstr "ਸ਼ਾਰਟਕੱਟ ਐਕਸਪੋਰਟ ਕਰੋ"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:198
 #, kde-format
@@ -1111,7 +1105,7 @@ msgstr "ਸ਼ਾਰਟਕੱਟ ਸਕੀਮ ਕਾਮਯਾਬੀ ਨਾਲ ਸ�
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr ""
+msgstr "ਸ਼ਾਰਟਕੱਟ ਸਕੀਮ ਸੰਭਾਲਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
@@ -1261,15 +1255,12 @@ msgid "Add Fallback Language"
 msgstr "ਫਾਲਬੈਕ ਭਾਸ਼ਾ ਜੋੜੋ"
 
 #: kswitchlanguagedialog_p.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Adds one more language which will be used if other translations do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
-msgstr "ਇੱਕ ਹੋਰ ਭਾਸ਼ਾ ਸ਼ਾਮਲ ਕਰੋ, ਜੋ ਕਿ ਤਾਂ ਵਰਤੀ ਜਾਵੇਗੀ ਜੇ ਹੋਰ ਅਨੁਵਾਦ ਵਿੱਚ ਠੀਕ ਅਨੁਵਾਦ ਨਾ ਹੋਵੇ।"
+msgstr "ਜੇ ਹੋਰ ਟਰਾਂਸਲੇਸ਼ਨਾਂ ਵਿੱਚ ਠੀਕ ਟਰਾਂਸਲੇਸ਼ਨ ਨਾ ਹੋਵੇ ਤਾਂ ਵਰਤਣ ਲਈ ਇੱਕ ਹੋਰ ਭਾਸ਼ਾ ਜੋੜੋ।"
 
 #: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
 #, kde-format
@@ -1507,7 +1498,7 @@ msgstr "ਸ਼ਾਰਟਕੱਟ"
 #: ui_standards.rc:5
 #, kde-format
 msgid "&File"
-msgstr "ਫ਼ਾਈਲ(&F)"
+msgstr "ਫਾਈਲ(&F)"
 
 #. i18n: ectx: Menu (game)
 #: ui_standards.rc:34
