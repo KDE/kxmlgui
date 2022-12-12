@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2022-10-19 23:13+0200\n"
-"Last-Translator: enolp <enolp@softastur.org>\n"
+"PO-Revision-Date: 2022-12-08 13:09+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -175,13 +175,13 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>Nun tienes de ser desendolcador de software pa ser miembru de "
-"l'equipuKDE. Pues xunite a los equipos nacionales que traducen interfaces de "
-"programes,fornir gráficos, estilos, soníos y una documentación ameyorada. "
+"<html>Nun tienes de ser desendolcador de software pa ser miembru de l'equipu "
+"KDE. Pues xunite a los equipos nacionales que traducen interfaces de "
+"programes,fornir gráficos, estilos, soníos ya una documentación ameyorada. "
 "¡Tú decides!<br /><br />Visita <a href=\"%1\">%1</a> pa consiguir "
-"información tocante a losproyeutos nos que pues participar.<br /><br />Sí "
-"precises más información odocumentación, entós visita <a href=\"%2\">%2</a> "
-"pa consiguir tolo queprecises.</html>"
+"información tocante a los proyeutos nos que pues participar.<br /><br />Sí "
+"precises más información o documentación, entós visita <a href=\"%2\">%2</a> "
+"pa consiguir tolo que precises.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -210,7 +210,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr ""
+msgstr "&Fallos o pidimientos"
 
 #: kaboutkdedialog_p.cpp:130
 #, kde-format
@@ -331,7 +331,7 @@ msgstr "Pa:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Send"
-msgstr ""
+msgstr "&Unviar"
 
 #: kbugreport.cpp:170
 #, kde-format
@@ -407,7 +407,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@title:group"
 msgid "Se&verity"
-msgstr ""
+msgstr "Gra&vedá"
 
 #: kbugreport.cpp:246
 #, kde-format
@@ -479,7 +479,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
-msgstr ""
+msgstr "&Unviar l'informe de fallos"
 
 #: kbugreport.cpp:380
 #, kde-format
@@ -541,7 +541,7 @@ msgid ""
 "Close and discard\n"
 "edited message?"
 msgstr ""
-"¿Quies zarrar y escartar\n"
+"¿Quies zarrar ya escartar\n"
 "el mensaxe editáu?"
 
 #: kbugreport.cpp:493
@@ -591,7 +591,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
-msgstr ""
+msgstr "Cambéu del testu"
 
 #: kedittoolbar.cpp:342
 #, kde-format
@@ -608,7 +608,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
-msgstr ""
+msgstr "Configuración de les barres de ferramientes"
 
 #: kedittoolbar.cpp:659
 #, kde-format
@@ -642,7 +642,7 @@ msgstr ""
 #: kedittoolbar.cpp:1005
 #, kde-format
 msgid "A&vailable actions:"
-msgstr ""
+msgstr "Aiciones dis&ponibles:"
 
 #: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
 #, kde-format
@@ -952,7 +952,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete"
-msgstr ""
+msgstr "Desaniciar"
 
 #: kshortcutschemeseditor.cpp:53
 #, kde-format
@@ -982,7 +982,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
-msgstr ""
+msgstr "Nome del esquema nuevu"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -997,7 +997,7 @@ msgstr "Esquema nuevu"
 #: kshortcutschemeseditor.cpp:121
 #, kde-format
 msgid "A scheme with this name already exists."
-msgstr "Yá esiste un esquema con esti nome."
+msgstr "Xá esiste un esquema con esti nome."
 
 #: kshortcutschemeseditor.cpp:151
 #, kde-format
@@ -1365,6 +1365,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
+"<small><font color=\"%1\">Primi <b>Mayús</b> pa consiguir más información.</"
+"font></small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
 #. available whatsthis help message. Pressing Shift will show this more exhaustive message.
@@ -1469,7 +1471,7 @@ msgstr "&Ferramientes"
 #: ui_standards.rc:152
 #, kde-format
 msgid "&Settings"
-msgstr "&Axustes"
+msgstr "&Configuración"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ui_standards.rc:197
