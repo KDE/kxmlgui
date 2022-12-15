@@ -202,7 +202,9 @@ void KMWSessionManager::commitData(QSessionManager &sm)
 #endif // QT_NO_SESSIONMANAGER
 }
 
+#ifndef QT_NO_SESSIONMANAGER
 Q_GLOBAL_STATIC(KMWSessionManager, ksm)
+#endif
 Q_GLOBAL_STATIC(QList<KMainWindow *>, sMemberList)
 
 KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags f)
