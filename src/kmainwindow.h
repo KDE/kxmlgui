@@ -40,50 +40,18 @@ class KToolBar;
 /**
  * @class KMainWindow kmainwindow.h KMainWindow
  *
- * @short Top level main window
+ * KMainWindow represents a top-level main window.
+ * It extends QMainWindow with session management capabilities.
  *
- * Top level widget that provides toolbars, a status line and a frame.
+ * Use setAutoSaveSettings() to automatically save and restore the window geoemtry
+ * and toolbar/menubar/statusbar state when the application is restarted.
  *
- * It should be used as a top level (parent-less) widget.
- * It manages the geometry for all its children, including your
- * main widget.
+ * Use kRestoreMainWindows() in your main function to restore your windows when the session is restored.
  *
- * Normally, you will inherit from KMainWindow,
- * then construct (or use some existing) widget as
- * your main view. You can set only one main view.
+ * Reimplement saveProperties()/readProperties or saveGlobalProperties()/readGlobalProperties()
+ * to save/restore application-specific state during session management.
  *
- * You can add as many toolbars as you like. There can be only one menubar
- * and only one statusbar.
- *
- * The toolbars, menubar, and statusbar can be created by the
- * KMainWindow and - unlike the old KMainWindow - may, but do not
- * have to, be deleted by you. KMainWindow will handle that internally.
- *
- * Height and width can be operated independently from each other. Simply
- * define the minimum/maximum height/width of your main widget and
- * KMainWindow will take this into account. For fixed size windows set
- * your main widget to a fixed size.
- *
- * Fixed aspect ratios (heightForWidth()) and fixed width widgets are
- * not supported.
- *
- * KMainWindow will set icon, mini icon and caption, which it gets
- * from KApplication. It provides full session management, and
- * will save its position, geometry and positions of toolbars and
- * menubar on logout. If you want to save additional data, reimplement
- * saveProperties() and (to read them again on next login)
- * readProperties(). To save special data about your data, reimplement
- * saveGlobalProperties(). To warn user that application or
- * windows have unsaved data on close or logout, reimplement
- * queryClose().
- *
- * You have to implement session restoring also in your main() function.
- * There are also kRestoreMainWindows convenience functions which
- * can do this for you and restore all your windows on next login.
- *
- * Note that KMainWindow uses KGlobal::ref() and KGlobal::deref() so that closing
- * the last mainwindow will quit the application unless there is still something
- * that holds a ref in KGlobal - like a KIO job, or a systray icon.
+ * See https://develop.kde.org/docs/use/session-managment for more information on session management.
  *
  * @author Reginald Stadlbauer (reggie@kde.org)
  * @author Stephan Kulow (coolo@kde.org)
