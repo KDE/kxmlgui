@@ -128,24 +128,23 @@ public:
     virtual KXMLGUIFactory *guiFactory();
 
     /**
-     * Creates a GUI based on a local XML file.
+     * @brief Creates a GUI based on a local XML file.
      *
-     * Typically, i.e. in a regular application, you should use @ref setupGUI()
-     * instead, since it runs some extra code, like setting up the toolbar/shortcut
-     * edit actions ...etc.
+     * Typically, in a regular application, you would use setupGUI()
+     * instead, as it sets up the toolbar/shortcut
+     * edit actions, among other things.
      *
      * If @p xmlfile is an empty string, this method will try to construct
      * a local XML filename like appnameui.rc where 'appname' is your app's
-     * name. Typically that app name is what @ref KXMLGUIClient::componentName()
+     * name. Typically that app name is what KXMLGUIClient::componentName()
      * returns. If that file does not exist, then the XML UI code will only use
-     * the global (standard) XML file for the layout purposes.
+     * the global (standard) XML file for its layout purposes.
      *
-     * @param xmlfile the path (relative or absolute) to the local xmlfile
+     * @param xmlfile The path (relative or absolute) to the local xmlfile
      */
     void createGUI(const QString &xmlfile = QString());
 
     /**
-     * Sets whether @ref KMainWindow should provide a menu that allows
      * showing/hiding the available toolbars (using KToggleToolBarAction).
      *
      * If there is only one toolbar configured, a simple 'Show \<toolbar name\>'
