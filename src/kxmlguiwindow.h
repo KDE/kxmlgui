@@ -121,6 +121,7 @@ public:
 
     /**
      * Returns @c true if the help menu is enabled, @c false otherwise.
+     * @returns @c true if the help menu is enabled, @c false otherwise.
      */
     bool isHelpMenuEnabled() const;
 
