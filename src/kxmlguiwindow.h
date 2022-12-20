@@ -101,9 +101,9 @@ public:
 
     /**
      * \brief Destructor.
+     * @brief Destructor.
      *
-     * Will also destroy the toolbars, and menubar if
-     * needed.
+     * Will also destroy the toolbars and menubar if needed.
      */
     ~KXmlGuiWindow() override;
 
