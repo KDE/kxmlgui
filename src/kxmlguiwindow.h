@@ -88,8 +88,16 @@ public:
      * mails, the name for the folders window should be e.g. "mainwindow" and
      * for the composer windows "composer#".
      *
+     * @param parent The widget parent. This is usually @c nullptr,
+     * but it may also be a top-level window manager class.
+     * In that case, the KXmlGuiWindow becomes a secondary window.
+     *
+     * @param flags Specify the window flags. The default is none.
+     *
+     * @see KMainWindow::KMainWindow
      */
     explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
      * \brief Destructor.
