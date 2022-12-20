@@ -123,11 +123,9 @@ public:
      *
      * @see KMainWindow::KMainWindow
      */
-    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
     explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
-     * \brief Destructor.
      * @brief Destructor.
      *
      * Will also destroy the toolbars and menubar if needed.
@@ -135,19 +133,15 @@ public:
     ~KXmlGuiWindow() override;
 
     /**
-     * Enables the build of a standard help menu when calling @ref createGUI()
      * @brief Enables the build of a standard help menu when calling @ref createGUI()
      * or @ref setupGUI().
      *
-     * The default behavior is to create a help menu, you must call this
-     * function with @c false to disable that.
      * @param showHelpMenu Whether to create a Help Menu. @c true by default.
      *
      */
     void setHelpMenuEnabled(bool showHelpMenu = true);
 
     /**
-     * Returns @c true if the help menu is enabled, @c false otherwise.
      * @returns @c true if the help menu is enabled, @c false otherwise.
      */
     bool isHelpMenuEnabled() const;
