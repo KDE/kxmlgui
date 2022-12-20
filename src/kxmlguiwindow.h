@@ -28,27 +28,22 @@ class KXmlGuiWindowPrivate;
 /**
  * @class KXmlGuiWindow kxmlguiwindow.h KXmlGuiWindow
  *
- * @brief Top-level main window with predefined action layout
+ * @brief KMainWindow with convenience functions and integration with XmlGui files.
  *
- * While a KMainWindow requires manual creation and assignment of menus, menu entries,
- * toolbar buttons and actions to it by hand, this class comes with several
- * convenience \<action\>Enabled() functions to toggle the presence of functionality
- * in your main window, including a KCommandBar instance.
- *
- * This class can be used to load an appnameui.rc file
- * to manage the main window's actions by means of the XmlGui framework.
- *
- * Management of QActions is made trivial in combination with
- * KActionCollection and KStandardAction.
- *
- * After creating an appnameui.rc file and creating the necessary actions,
- * running setupGUI() should automatically generate your menus, actions, status bar
- * and customizations to the right places. KMainWindow::setAutoSaveSettings() is assumed.
+ * This class includes several convenience \<action\>Enabled() functions
+ * to toggle the presence of functionality in your main window,
+ * including a KCommandBar instance.
  *
  * The #StandardWindowOption enum can be used to pass additional options
  * to describe the main window behavior/appearance.
+
+ * Use setupGUI() to load an appnameui.rc file
+ * to manage the main window's actions. KMainWindow::setAutoSaveSettings() is assumed.
+ * For more control and a more traditional way to manage your application's UI,
+ * prefer KMainWindow instead.
  *
- * If you need more control over your main window, prefer subclassing KMainWindow instead.
+ * Management of QActions is made trivial in combination with
+ * KActionCollection and KStandardAction.
  *
  * A minimal example can be created with
  * QMainWindow::setCentralWidget() and setupGUI():
@@ -66,17 +61,11 @@ class KXmlGuiWindowPrivate;
  *
  * See https://develop.kde.org/docs/use/kxmlgui/ for a tutorial
  * on how to create a simple text editor using KXmlGuiWindow.
- *
+ * See https://develop.kde.org/docs/use/session-managment for more information on session management.
  * @see KMainWindow
  * @see KActionCollection
  * @see KStandardAction
  * @see setupGUI()
- * @author Reginald Stadlbauer (reggie@kde.org)
- * @author Stephan Kulow (coolo@kde.org)
- * @author Matthias Ettrich (ettrich@kde.org)
- * @author Chris Schlaeger (cs@kde.org)
- * @author Sven Radej (radej@kde.org)
- * @par Maintainer: Sven Radej (radej@kde.org)
  */
 
 class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
