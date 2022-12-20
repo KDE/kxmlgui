@@ -89,15 +89,9 @@ class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, 
 
 public:
     /**
-     * Construct a main window.
+     * @brief Construct a main window.
      *
-     * @param parent The widget parent. This is usually 0 but it may also be the window
-     * group leader. In that case, the KXmlGuiWindow becomes sort of a
-     * secondary window.
-     *
-     * @param f Specify the window flags. The default is none.
-     *
-     * Note that a KXmlGuiWindow per-default is created with the
+     * Note that by default a KXmlGuiWindow is created with the
      * Qt::WA_DeleteOnClose attribute set, i.e. it is automatically destroyed
      * when the window is closed. If you do not want this behavior, call
      * \code
@@ -112,7 +106,7 @@ public:
      *
      * IMPORTANT: For session management and window management to work
      * properly, all main windows in the application should have a
-     * different name. If you don't do it, the base class KMainWindow will create
+     * different name. Otherwise, the base class KMainWindow will create
      * a unique name, but it's recommended to explicitly pass a window name that will
      * also describe the type of the window. If there can be several windows of the same
      * type, append '#' (hash) to the name, and KMainWindow will replace it with numbers to make
