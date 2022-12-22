@@ -382,11 +382,13 @@ public:
     void setupGUI(StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
     /**
-     * This is an overloaded method.
+     * @brief This is an overloaded function.
      *
-     * You can use @p defaultSize to override the saved window size (e.g.
-     * the window size is saved to the config file if the @ref StandardWindowOption::Save
-     * flag was set previously).
+     * @param defaultSize A manually specified window size that overrides the saved size.
+     * @param options A combination of @ref StandardWindowOptions to specify
+     * UI elements to be present in your application window.
+     * @param xmlfile The relative or absolute path to the local xmlfile.
+     * @see setupGUI()
      */
     void setupGUI(const QSize &defaultSize, StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
