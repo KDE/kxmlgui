@@ -496,7 +496,7 @@ protected:
 
 protected Q_SLOTS:
     /**
-     * Rebuilds the GUI after KEditToolBar changed the toolbar layout.
+     * @brief Rebuilds the GUI after KEditToolBar changes the toolbar layout.
      * @see configureToolbars()
      */
     virtual void saveNewToolbarConfig();
