@@ -123,7 +123,7 @@ public:
      * for the composer windows "composer#".
      *
      * @param parent The widget parent. This is usually @c nullptr,
-     * but it may also be a top-level window manager class.
+     * but it may also be the window group leader.
      * In that case, the KXmlGuiWindow becomes a secondary window.
      *
      * @param flags Specify the window flags. The default is none.
