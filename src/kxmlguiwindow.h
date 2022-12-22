@@ -34,38 +34,56 @@ class KXmlGuiWindowPrivate;
  * to toggle the presence of functionality in your main window,
  * including a KCommandBar instance.
  *
- * The #StandardWindowOption enum can be used to pass additional options
+ * The @ref StandardWindowOptions enum can be used to pass additional options
  * to describe the main window behavior/appearance.
-
- * Use setupGUI() to load an appnameui.rc file
- * to manage the main window's actions. KMainWindow::setAutoSaveSettings() is assumed.
- * For more control and a more traditional way to manage your application's UI,
- * prefer KMainWindow instead.
+ * Use it in conjunction with setupGUI() to load an appnameui.rc file
+ * to manage the main window's actions.
  *
- * Management of QActions is made trivial in combination with
- * KActionCollection and KStandardAction.
+ * setCommandBarEnabled() is set by default.
+ *
+ * If more control is needed, prefer subclassing KMainWindow instead.
  *
  * A minimal example can be created with
  * QMainWindow::setCentralWidget() and setupGUI():
  *
- * \code
+ * @code
  * MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent) {
  *   textArea = new KTextEdit();
  *   setCentralWidget(textArea);
- *   setupGUI();
+ *   setupGUI(Default);
  * }
- * \endcode
+ * @endcode
  *
  * With this, a ready-made main window with menubar and statusbar is created,
  * as well as two default menus, Settings and Help.
  *
+ * Management of QActions is made trivial in combination with
+ * KActionCollection and KStandardAction.
+ *
+ * @code
+ * void MainWindow::setupActions() {
+ *   QAction *clearAction = new QAction(this);
+ *   clearAction->setText(i18n("&Clear"));
+ *   clearAction->setIcon(QIcon::fromTheme("document-new"));
+ *   actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
+ *   actionCollection()->addAction("clear", clearAction);
+ *   connect(clearAction, &QAction::triggered, textArea, &KTextEdit::clear);
+ *   KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
+ *   setupGUI(Default, "texteditorui.rc");
+ * }
+ * @endcode
+ *
  * See https://develop.kde.org/docs/use/kxmlgui/ for a tutorial
  * on how to create a simple text editor using KXmlGuiWindow.
+ *
  * See https://develop.kde.org/docs/use/session-managment for more information on session management.
+ *
  * @see KMainWindow
  * @see KActionCollection
  * @see KStandardAction
  * @see setupGUI()
+ * @see createGUI()
+ * @see setCommandBarEnabled()
  */
 
 class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
