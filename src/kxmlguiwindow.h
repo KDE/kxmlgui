@@ -436,7 +436,10 @@ public:
     void setCommandBarEnabled(bool showCommandBar);
 
     /**
+     * @brief Specifies whether a KCommandBar was set.
+     * @returns @c true by default, @c false if setCommandBarEnabled(false) was set.
      * @since 5.83
+     * @see setCommandBarEnabled()
      */
     bool isCommandBarEnabled() const;
 
