@@ -336,32 +336,48 @@ public:
     Q_DECLARE_FLAGS(StandardWindowOptions, StandardWindowOption)
 
     /**
-     * Configures the current window and its actions in the typical KDE
+     * @brief Configures the current window and its actions in the typical KDE
      * fashion.
      *
      * You can specify which window options/features are going to be set up using
-     * @p options, @see the @ref StandardWindowOption enum for more details.
+     * @p options, see the @ref StandardWindowOptions enum for more details.
      *
-     * Typically this function replaces @ref createGUI().
+     * @code
+     * MainWindow::MainWindow(QWidget* parent) : KXmlGuiWindow(parent){
+     *   textArea = new KTextEdit();
+     *   setCentralWidget(textArea);
+     *   setupGUI(Default, "appnameui.rc");
+     * }
+     * @endcode
      *
-     * @warning If you are calling @ref createGUI() yourself, remember to
-     * remove the @ref StandardWindowOption::Create flag from @p options.
+     * Use a bitwise OR (|) to select multiple enum choices for setupGUI()
+     * (except when using StandardWindowOption::Default).
      *
-     * @see @ref StandardWindowOptions
+     * @code
+     * setupGUI(Save | Create, "appnameui.rc");
+     * @endcode
      *
-     * @note Since this method will restore the state of the application
-     * window (toolbar, dockwindows positions ...etc), you need to have
-     * added all your actions to your toolbars ...etc before calling this
-     * method. (This note is only applicable if you are using the
-     * @c StandardWindowOption::Default or @c StandardWindowOption::Save flags).
+     * Typically this function replaces createGUI(),
+     * but it is possible to call setupGUI(Create) together with helper functions
+     * such as setStandardToolBarMenuEnabled() and createStandardStatusBarAction().
      *
-     * @param options an OR'ed combination of StandardWindowOption to specify
-     * which options are going to be set up for your application window, the
-     * default is @ref StandardWindowOption::Default
-     * @param xmlfile the path (relative or absolute) to the local xmlfile,
-     * if this is an empty string the code will look for a local XML file
-     * appnameui.rc, where 'appname' is the name of your app, see the note
-     * about the xmlfile argument in the @ref createGUI() docs.
+     * @warning To use createGUI() and setupGUI()
+     * for the same window, you must avoid using
+     * @ref StandardWindowOption::Create. Prefer using only setupGUI().
+     *
+     * @note When @ref StandardWindowOption::Save is used,
+     * this method will restore the state of the application
+     * window (toolbar, dockwindows positions ...etc), so you need to have
+     * added all your actions to your UI before calling this
+     * method.
+     *
+     * @param options A combination of @ref StandardWindowOptions to specify
+     * UI elements to be present in your application window.
+     * @param xmlfile The relative or absolute path to the local xmlfile.
+     * If this is an empty string, the code will look for a local XML file
+     * appnameui.rc, where 'appname' is the name of your app. See the note
+     * about the xmlfile argument in createGUI().
+     * @see StandardWindowOption
      */
     void setupGUI(StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
