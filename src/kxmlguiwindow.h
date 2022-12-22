@@ -393,7 +393,7 @@ public:
     void setupGUI(const QSize &defaultSize, StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
     /**
-     * Returns a pointer to the mainwindows action responsible for the toolbars menu
+     * @returns A pointer to the main window's action responsible for the toolbar's menu.
      */
     QAction *toolBarMenuAction();
 
