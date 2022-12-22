@@ -549,20 +549,20 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
     }
 }
 
-void KXmlGuiWindow::setCommandBarEnabled(bool enable)
+void KXmlGuiWindow::setCommandBarEnabled(bool showCommandBar)
 {
     /**
      * Unset the shortcut
      */
     auto cmdBarAction = actionCollection()->action(QStringLiteral("open_kcommand_bar"));
-    if (enable) {
+    if (showCommandBar) {
         actionCollection()->setDefaultShortcut(cmdBarAction, Qt::CTRL | Qt::ALT | Qt::Key_I);
     } else {
         actionCollection()->setDefaultShortcut(cmdBarAction, {});
     }
 
     Q_D(KXmlGuiWindow);
-    d->commandBarEnabled = enable;
+    d->commandBarEnabled = showCommandBar;
 }
 
 bool KXmlGuiWindow::isCommandBarEnabled() const

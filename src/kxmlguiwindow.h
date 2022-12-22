@@ -336,7 +336,7 @@ public:
      *
      * @since 5.83
      */
-    void setCommandBarEnabled(bool enable);
+    void setCommandBarEnabled(bool showCommandBar);
 
     /**
      * @since 5.83
