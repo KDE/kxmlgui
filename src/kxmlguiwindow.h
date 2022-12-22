@@ -182,22 +182,34 @@ public:
     void createGUI(const QString &xmlfile = QString());
 
     /**
-     * showing/hiding the available toolbars (using KToggleToolBarAction).
+     * @brief Creates a toggle under the 'Settings' menu to show/hide the available toolbars.
+     *
+     * The standard toolbar menu toggles the visibility of one or multiple toolbars.
      *
      * If there is only one toolbar configured, a simple 'Show \<toolbar name\>'
-     * menu item is shown; if more than one toolbar are configured, a "Shown Toolbars"
+     * menu item is shown; if more than one toolbar is configured, a "Shown Toolbars"
      * menu is created instead, with 'Show \<toolbar1 name\>', 'Show \<toolbar2 name\>'
-     * ...etc sub-menu actions.
+     * ... sub-menu actions.
      *
-     * The menu / menu item is implemented using xmlgui. It will be inserted in your
-     * menu structure in the 'Settings' menu.
-     *
-     * If your application uses a non-standard xmlgui resource file then you can
-     * specify the exact position of the menu / menu item by adding a
+     * If your application uses a non-default XmlGui resource file, then you can
+     * specify the exact position of the menu/menu item by adding a
      * &lt;Merge name="StandardToolBarMenuHandler" /&gt;
      * line to the settings menu section of your resource file ( usually appname.rc ).
      *
-     * @note You should enable this feature before calling createGUI() ( or similar ).
+     * @param showToolBarMenu Whether to show the standard toolbar menu. @c false by default.
+     *
+     * @note This function only makes sense before calling createGUI().
+     * Using setupGUI(ToolBar) overrides this function.
+     *
+     * @see createGUI()
+     * @see setupGUI()
+     * @see KToggleBarAction
+     * @see StandardWindowOption
+     * @see KMainWindow::toolBar()
+     * @see KMainWindow::toolBars()
+     * @see QMainWindow::addToolBar()
+     * @see QMainWindow::removeToolBar()
+     * @see createStandardStatusBarAction()
      */
     void setStandardToolBarMenuEnabled(bool showToolBarMenu);
 
