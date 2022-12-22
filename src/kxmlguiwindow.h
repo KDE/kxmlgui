@@ -445,14 +445,13 @@ public:
 
 public Q_SLOTS:
     /**
-     * Show a standard configure toolbar dialog.
+     * @brief Show a standard configure toolbar dialog.
      *
-     * This slot can be connected directly to the action to configure toolbar.
-     * This is very simple to do that by adding a single line
-     * \code
-     * KStandardAction::configureToolbars( this, SLOT( configureToolbars() ),
-     *                                actionCollection() );
-     * \endcode
+     * This slot can be connected directly to the action to configure the toolbar.
+     *
+     * @code
+     * KStandardAction::configureToolbars(this, &KXmlGuiWindow::configureToolbars, actionCollection);
+     * @endcode
      */
     virtual void configureToolbars();
 
