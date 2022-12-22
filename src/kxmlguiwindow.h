@@ -212,7 +212,7 @@ public:
     void setStandardToolBarMenuEnabled(bool showToolBarMenu);
 
     /**
-     * @brief Specifies whether setStandardToolBarMenuEnabled() was set.
+     * @brief Returns whether setStandardToolBarMenuEnabled() was set.
      *
      * @note This function only makes sense if createGUI() was used.
      * This function returns true only if setStandardToolBarMenuEnabled() was set
@@ -434,7 +434,7 @@ public:
     void setCommandBarEnabled(bool showCommandBar);
 
     /**
-     * @brief Specifies whether a KCommandBar was set.
+     * @brief Returns whether a KCommandBar was set.
      * @returns @c true by default, @c false if setCommandBarEnabled(false) was set.
      * @since 5.83
      * @see setCommandBarEnabled()
