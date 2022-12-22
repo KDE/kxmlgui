@@ -100,16 +100,18 @@ public:
      *
      * Note that by default a KXmlGuiWindow is created with the
      * Qt::WA_DeleteOnClose attribute set, i.e. it is automatically destroyed
-     * when the window is closed. If you do not want this behavior, call
-     * \code
+     * when the window is closed. If you do not want this behavior, call:
+     *
+     * @code
      * window->setAttribute(Qt::WA_DeleteOnClose, false);
-     * \endcode
+     * @endcode
      *
      * KXmlGuiWindows must be created on the heap with 'new', like:
-     * \code
+     *
+     * @code
      * KXmlGuiWindow *kmw = new KXmlGuiWindow(...);
      * kmw->setObjectName(...);
-     * \endcode
+     * @endcode
      *
      * IMPORTANT: For session management and window management to work
      * properly, all main windows in the application should have a
