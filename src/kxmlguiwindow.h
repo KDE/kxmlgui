@@ -214,7 +214,18 @@ public:
     void setStandardToolBarMenuEnabled(bool showToolBarMenu);
 
     /**
-     * Returns @c true if the toolbar menu is enabled, @c false otherwise.
+     * @brief Specifies whether setStandardToolBarMenuEnabled() was set.
+     *
+     * @note This function only makes sense if createGUI() was used.
+     * This function returns true only if setStandardToolBarMenuEnabled() was set
+     * and will return false even if @ref StandardWindowOption::ToolBar was used.
+     *
+     * @returns @c true if setStandardToolBarMenuEnabled() was set, @c false otherwise.
+     *
+     * @see createGUI()
+     * @see setupGUI()
+     * @see setStandardToolBarMenuEnabled()
+     * @see StandardWindowOption
      */
     bool isStandardToolBarMenuEnabled() const;
 
