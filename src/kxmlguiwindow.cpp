@@ -145,7 +145,7 @@ public:
 };
 
 KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
-    : KMainWindow(*new KXmlGuiWindowPrivate, parent, f)
+    : KMainWindow(*new KXmlGuiWindowPrivate, parent, flags)
     , KXMLGUIBuilder(this)
 {
     Q_D(KXmlGuiWindow);
