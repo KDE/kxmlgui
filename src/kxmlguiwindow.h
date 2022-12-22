@@ -414,11 +414,24 @@ public:
     void applyMainWindowSettings(const KConfigGroup &config) override;
 
     /**
-     * Enable a hud style menu which allows listing and executing actions
+     * @brief Enable a KCommandBar to list and quickly execute actions.
      *
-     * The menu is launchable with the shortcut Alt+Ctrl+I
+     * A KXmlGuiWindow by default automatically creates a KCommandBar,
+     * but it is inaccessible unless createGUI() or setupGUI(Create) is used.
+     *
+     * It provides a HUD-like menu that lists all QActions in your application
+     * and can be activated via Ctrl+Atl+i or via an action in the 'Help' menu.
+     *
+     * If you need more than a global set of QActions listed for your application,
+     * use KCommandBar directly instead.
+     *
+     * @param showCommandBar Whether to show the command bar. @c true by default.
      *
      * @since 5.83
+     *
+     * @see KCommandBar
+     * @see KCommandBar::setActions()
+     * @see isCommandBarEnabled()
      */
     void setCommandBarEnabled(bool showCommandBar);
 
