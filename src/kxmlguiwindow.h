@@ -258,69 +258,80 @@ public:
     void createStandardStatusBarAction();
 
     /**
+     * @brief Use these options for the first argument of setupGUI().
      * @see setupGUI()
-     * @see StandardWindowOptions
+     * @see StandardWindowOption
      */
     enum StandardWindowOption {
         /**
          * Adds action(s) to show/hide the toolbar(s) and adds a menu
          * action to configure the toolbar(s).
          *
-         * @see setStandardToolBarMenuEnabled
+         * @see setStandardToolBarMenuEnabled()
+         * @see isStandardToolBarMenuEnabled()
          */
         ToolBar = 1,
 
         /**
-         * Adds an action to open the configure keyboard shortcuts dialog.
+         * @brief Adds an action in the 'Settings' menu
+         * to open the configure keyboard shortcuts dialog.
          */
         Keys = 2,
 
         /**
-         * Adds action to show/hide the statusbar. Note that setting this
-         * value will create a statusbar if one doesn't already exist.
+         * @brief Adds an action to show/hide the statusbar in the 'Settings' menu.
+         * Note that setting this value will create a statusbar
+         * if one doesn't already exist.
          *
-         * @see createStandardStatusBarAction
+         * @see createStandardStatusBarAction()
          */
         StatusBar = 4,
 
         /**
-         * Auto-saves (and loads) the toolbar/menubar/statusbar settings and
+         * @brief Autosaves (and loads) the toolbar/menubar/statusbar settings and
          * window size using the default name.
          *
-         * Typically you want to let the default window size be determined by
-         * the widgets size hints. Make sure that setupGUI() is called after
-         * all the widgets are created (including setCentralWidget) so that the
-         * default size will be correct.
+         * Like KMainWindow::setAutoSaveSettings(), enabling this causes the application
+         * to save state data upon close in a KConfig-managed configuration file.
          *
-         * @see setAutoSaveSettings
+         * Typically you want to let the default window size be determined by
+         * the widgets' size hints. Make sure that setupGUI() is called after
+         * all the widgets are created (including QMainWindow::setCentralWidget())
+         * so that the default size is managed properly.
+         *
+         * @see KMainWindow::setAutoSaveSettings()
+         * @see KConfig
          */
         Save = 8,
 
         /**
-         * calls createGUI() once ToolBar, Keys and Statusbar have been
+         * @brief Calls createGUI() once ToolBar, Keys and Statusbar have been
          * taken care of.
          *
-         * @note When using @ref KParts::MainWindow, remove this flag from
-         * the @ref setupGUI() call, since you'll be using @c createGUI(part)
-         * instead.
+         * @note When using KParts::MainWindow, remove this flag from
+         * the setupGUI() call, since you'll be using createGUI(part)
+         * instead:
          *
          * @code
          *     setupGUI(ToolBar | Keys | StatusBar | Save);
          * @endcode
          *
-         * @see createGUI
+         * @see createGUI()
          */
         Create = 16,
 
         /**
-         * All the above option
-         * (this is the default)
+         * @brief Sets all of the above options as true.
          */
         Default = ToolBar | Keys | StatusBar | Save | Create,
     };
     Q_FLAG(StandardWindowOption)
     /**
-     * Stores a combination of #StandardWindowOption values.
+     * @brief Stores a combination of @ref StandardWindowOptions values.
+     *
+     * Use these options for the first argument of setupGUI().
+     * @see setupGUI()
+     * @see StandardWindowOption
      */
     Q_DECLARE_FLAGS(StandardWindowOptions, StandardWindowOption)
 
