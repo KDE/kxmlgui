@@ -157,11 +157,11 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
     new KMainWindowInterface(this);
 #endif
 
-    /**
+    /*
      * Set up KCommandBar launcher action
      */
     auto a = actionCollection()->addAction(QStringLiteral("open_kcommand_bar"), this, [this] {
-        /**
+        /*
          * Do nothing when command bar is disabled
          */
         if (!isCommandBarEnabled()) {
