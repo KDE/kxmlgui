@@ -486,8 +486,10 @@ protected:
     bool event(QEvent *event) override;
 
     /**
-     * Checks if there are actions using the same shortcut. This is called
-     * automatically from createGUI.
+     * @brief Checks if there are actions using the same shortcut.
+     *
+     * This is called automatically from createGUI().
+     *
      * @since 5.30
      */
     void checkAmbiguousShortcuts();
