@@ -41,8 +41,6 @@ class KXmlGuiWindowPrivate;
  *
  * setCommandBarEnabled() is set by default.
  *
- * If more control is needed, prefer subclassing KMainWindow instead.
- *
  * A minimal example can be created with
  * QMainWindow::setCentralWidget() and setupGUI():
  *
