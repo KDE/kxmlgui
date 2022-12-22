@@ -230,25 +230,30 @@ public:
     bool isStandardToolBarMenuEnabled() const;
 
     /**
-     * Sets whether KMainWindow should provide a menu that allows showing/hiding
-     * of the statusbar (using KStandardAction::showStatusbar()). Note that calling
-     * this method will create a statusbar if one doesn't already exist.
+     * @brief Creates a toggle under the 'Settings' menu to show/hide the statusbar.
      *
-     * The menu / menu item is implemented using xmlgui. It will be inserted
-     * in your menu structure in the 'Settings' menu.
-     *
-     * @note You should enable this feature before calling createGUI() (or similar).
+     * Calling this method will create a statusbar if one doesn't already exist.
      *
      * If an application maintains the action on its own (i.e. never calls
-     * this function) a connection needs to be made to let KMainWindow
-     * know when that status (hidden/shown) of the statusbar has changed.
+     * this function), a connection needs to be made to let KMainWindow
+     * know when the hidden/shown status of the statusbar has changed.
      * For example:
      * @code
      * connect(action, &QAction::triggered,
      *         kmainwindow, &KMainWindow::setSettingsDirty);
      * @endcode
-     * Otherwise the status (hidden/show) of the statusbar might not be saved
-     * by KMainWindow.
+     * Otherwise the status might not be saved by KMainWindow.
+     *
+     * @note This function only makes sense before calling createGUI()
+     * or when using setupGUI() without @ref StandardWindowOption::StatusBar.
+     *
+     * @see createGUI()
+     * @see setupGUI()
+     * @see StandardWindowOption
+     * @see KStandardAction::showStatusbar()
+     * @see setStandardToolBarMenuEnabled()
+     * @see QMainWindow::setStatusBar()
+     * @see QMainWindow::statusBar()
      */
     void createStandardStatusBarAction();
 
