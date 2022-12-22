@@ -152,7 +152,8 @@ public:
     void setHelpMenuEnabled(bool showHelpMenu = true);
 
     /**
-     * @returns @c true if the help menu is enabled, @c false otherwise.
+     * @returns @c true if the help menu is enabled, @c false if setHelpMenuEnabled(false) was set.
+     * @see setHelpMenuEnabled()
      */
     bool isHelpMenuEnabled() const;
 
