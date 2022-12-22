@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2022-02-16 22:34+0100\n"
+"PO-Revision-Date: 2022-12-21 12:29+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -429,10 +429,7 @@ msgid "OS:"
 msgstr "SO:"
 
 #: kbugreport.cpp:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -440,19 +437,15 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:221
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:227
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -891,10 +884,9 @@ msgstr ""
 "Pro favor, Tu selectiona un altere differente.<qt>"
 
 #: kkeysequencewidget.cpp:280
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Via Breve '%1' in Application %2 per action %3\n"
+msgstr "Via Breve '%1' in Application '%2' per action '%3'\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
