@@ -160,7 +160,10 @@ public:
     virtual KXMLGUIFactory *guiFactory();
 
     /**
-     * @brief Creates a GUI based on a local XML file.
+     * @brief Generates the interface based on a local XML file.
+     *
+     * This is the function that generates UI elements such as the main menu,
+     * toolbar (if any) and statusbar. This is called by setupGUI(Create) as well.
      *
      * Typically, in a regular application, you would use setupGUI()
      * instead, as it sets up the toolbar/shortcut
@@ -169,10 +172,12 @@ public:
      * If @p xmlfile is an empty string, this method will try to construct
      * a local XML filename like appnameui.rc where 'appname' is your app's
      * name. Typically that app name is what KXMLGUIClient::componentName()
-     * returns. If that file does not exist, then the XML UI code will only use
+     * returns. If that file does not exist, then the XML UI code will use only
      * the global (standard) XML file for its layout purposes.
      *
      * @param xmlfile The path (relative or absolute) to the local xmlfile
+     *
+     * @see setupGUI()
      */
     void createGUI(const QString &xmlfile = QString());
 
