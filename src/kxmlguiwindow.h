@@ -456,18 +456,24 @@ public Q_SLOTS:
     virtual void configureToolbars();
 
     /**
-     * Apply a state change
+     * @brief Applies a state change
      *
-     * Enable and disable actions as defined in the XML rc file
+     * Reimplement this to enable and disable actions as defined in the XmlGui rc file.
+     *
+     * @param newstate The state change to be applied.
      */
     virtual void slotStateChanged(const QString &newstate);
 
     /**
-     * Apply a state change
+     * @brief Applies a state change
      *
-     * Enable and disable actions as defined in the XML rc file,
-     * can "reverse" the state (disable the actions which should be
+     * Reimplement this to enable and disable actions as defined in the XmlGui rc file.
+     *
+     * This function can "reverse" the state (disable the actions which should be
      * enabled, and vice-versa) if specified.
+     *
+     * @param newstate The state change to be applied.
+     * @param reverse Whether to reverse @p newstate or not.
      */
     void slotStateChanged(const QString &newstate, bool reverse);
 
