@@ -142,11 +142,12 @@ public:
     ~KXmlGuiWindow() override;
 
     /**
-     * @brief Enables the build of a standard help menu when calling @ref createGUI()
-     * or @ref setupGUI().
+     * @brief Creates a standard help menu when calling createGUI()
+     * or setupGUI().
      *
      * @param showHelpMenu Whether to create a Help Menu. @c true by default.
      *
+     * @see isHelpMenuEnabled()
      */
     void setHelpMenuEnabled(bool showHelpMenu = true);
 
