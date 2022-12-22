@@ -416,10 +416,10 @@ void KXmlGuiWindow::slotStateChanged(const QString &newstate, bool reverse)
     stateChanged(newstate, reverse ? KXMLGUIClient::StateReverse : KXMLGUIClient::StateNoReverse);
 }
 
-void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool enable)
+void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool showToolBarMenu)
 {
     Q_D(KXmlGuiWindow);
-    if (enable) {
+    if (showToolBarMenu) {
         if (d->toolBarHandler) {
             return;
         }

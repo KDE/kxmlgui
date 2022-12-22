@@ -172,7 +172,7 @@ public:
      *
      * @note You should enable this feature before calling createGUI() ( or similar ).
      */
-    void setStandardToolBarMenuEnabled(bool enable);
+    void setStandardToolBarMenuEnabled(bool showToolBarMenu);
 
     /**
      * Returns @c true if the toolbar menu is enabled, @c false otherwise.
