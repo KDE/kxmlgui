@@ -1006,7 +1006,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     m_inactiveList = new ToolBarListWidget(m_widget);
     m_inactiveList->setDragEnabled(true);
     m_inactiveList->setActiveList(false);
-    m_inactiveList->setMinimumSize(180, 250);
+    m_inactiveList->setMinimumSize(180, 200);
     m_inactiveList->setDropIndicatorShown(false); // #165663
     inactive_label->setBuddy(m_inactiveList);
     QObject::connect(m_inactiveList, &QListWidget::itemSelectionChanged, m_widget, [this]() {
