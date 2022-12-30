@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2022-04-04 11:49+0100\n"
+"PO-Revision-Date: 2022-12-28 21:15+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -552,6 +552,8 @@ msgid ""
 "Could not find <application>%1</application> executable (usually it's part "
 "of the \"%2\" package)."
 msgstr ""
+"Executabilul <application>%1</application> nu a fost găsit (de obicei face "
+"parte din pachetul „%2”)."
 
 #: kbugreport.cpp:432
 #, kde-format
@@ -895,10 +897,9 @@ msgstr ""
 "<br>Vă rog să alegeți o altă combinație de taste.</qt>"
 
 #: kkeysequencewidget.cpp:280
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Acceleratorul „%1” în aplicația %2 pentru acțiunea %3\n"
+msgstr "Scurtătura „%1” în aplicația „%2” pentru acțiunea „%3”\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
