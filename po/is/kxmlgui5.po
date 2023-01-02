@@ -7,19 +7,20 @@
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Arnar Leósson <leosson@frisurf.no>, 2003, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2016, 2018, 2021, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:43+0000\n"
-"PO-Revision-Date: 2022-08-03 18:16+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-12-29 16:37+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -136,7 +137,7 @@ msgid ""
 "Visit contributor's profile on %1\n"
 "%2"
 msgstr ""
-"Skoða kynningarsnið þátttakandans á %1\n"
+"Skoða prófíl þátttakandans á %1\n"
 "%2"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:188
@@ -170,17 +171,16 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html><b>KDE</b> er hannað og viðhaldið af meðlimum KDE-hópsins, neti af "
-"hugbúnaðarfólki, listafólki, þýðendum og hönnuðum allsstaðar að úr heiminum "
-"sem styður hugmyndina um <a href=\"%1\">frjálsan hugbúnað</a>. Þetta "
-"samfélag hefur skapað hundruð frjálsra forrita og hugbúnað sem hluta af KDE "
-"þróunarkerfinu og KDE hugbúnaðardreifingunni.<br /><br />Ekkert fyrirtæki "
-"eða hópur manna ræður frumtextanum að KDE forritunum eða þeirri "
-"hugmyndafræði sem þar liggur að baki. Öllum er velkomið að <a href="
-"\"%2\">leggja verkefninu lið.</a><br /><br />Nánari upplýsingar um KDE "
-"verkefnið fást á <a href=\"%3\">%3</a>.<br /><br />Upplýsingar um KDE á "
-"íslensku og íslenskun á KDE fást á <a href=\"https://l10n.kde.org/team-infos."
-"php?teamcode=is\">https://l10n.kde.org/team-infos.php?teamcode=is</a></html>"
+"<html><b>KDE</b> er samfélag hugbúnaðarfólks, listafólks, þýðenda og hönnuða "
+"allsstaðar að úr heiminum sem styður hugmyndina um <a href=\"%1\">frjálsan "
+"hugbúnað</a>. KDE framleiðir Plasma skjáborðsumhverfið, hundruði forrita og "
+"fjölmörg hugbúnaðarsöfn sem styðja þau.<br /><br />KDE er samvinnuverkefni: "
+"engin einn aðili stjórnar því, stefnu þess eða framleiðsluvörum. Í stað þess "
+"vinnum við saman að því að ná því sameiginlega markmiði að búa til besta "
+"frjálsa hugbúnaðinn í heiminum. Öll geta <a href=\"%2\">tekið þátt og lagt "
+"sitt af mörkum</a> í KDE, líka þú.<br /><br />Kíktu á <a href=\"%3\">%3</a> "
+"til að fá meiri upplýsingar um KDE samfélagið og hugbúnaðinn sem við búum "
+"til.</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -193,15 +193,14 @@ msgid ""
 "improvement then you are welcome to use the bug tracking system to register "
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
-"<html>Það má alltaf bæta hugbúnað og KDE hópurinn er boðinn og búinn að gera "
-"það. Hinsvegar þarft þú sem notandi að segja frá því ef eitthvað virkar ekki "
-"sem skyldi eða mætti gera betur.<br /><br />Það er til villugrunnur fyrir "
-"KDE Skjáborðsumhverfið sem finnst á <a href=\"%1\">%1</a>. Þú getur líka "
-"notað valmyndina merkta \"Senda villuskýrslu\" til að senda inn upplýsingar "
+"<html>Það er alltaf hægt að bæta hugbúnað og KDE-hópurinn er boðinn og búinn "
+"að gera það. Hins vegar þarft þú sem notandi að segja frá ef eitthvað virkar "
+"ekki sem skyldi eða mætti gera betur.<br /><br />Það er til villugrunnur "
+"fyrir KDE sem er að finna á <a href=\"%1\">%1</a>. Þú getur líka notað "
+"\"Senda villuskýrslu\" í valmyndinni \"Hjálp\" til að senda innupplýsingar "
 "um villur sem þú hefur fundið.<br /><br />Ef þú hefur tillögur að endurbótum "
-"á KDE Skjáborðsumhverfinu ertu hvattur til að nota KDE villutólið sem að "
-"senda inn tillögu þína. Vertu bara viss um að hafa merkt hana sem \"Óskalisti"
-"\".</html>"
+"skaltu endilega nota KDE villugrunninn til að senda inn tillögu þína. Merktu "
+"hana bara sem \"Wishlist \" (\"óskalisti\").</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -214,13 +213,12 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>Fólk þarf ekki að vera forritarar til að taka þátt í þróun KDE. Þú "
-"gætir til dæmis tekið þátt í að íslenska notendaviðmót forrita eða þýða á "
-"önnur tungumál, hjálpað til við að hanna táknmyndir, þemur, hljóð eða annað "
-"og hjálpað til við að skrifa handbækur, allt eftir því hvar áhugi þinn og "
-"hæfileikar liggja.<br /><br />Á <a href=\"%1\">%1</a> má finna lista yfir "
-"þau verkefni sem vantar fólk í.<br /><br />Nánari upplýsingar og skjölun er "
-"á <a href=\"%2\">%2</a>.</html>"
+"<html>Þú þarft ekki að vera forritari til að taka þátt í þróun KDE. Þú gætir "
+"til dæmis tekið þátt í að íslenska notendaviðmót forrita eða þýða á önnur "
+"tungumál, hannað grafík, þemu, hljóð eða annað og hjálpað til við að bæta "
+"handbækurnar. Það sem þú vilt!<br /><br />Á <a href=\"%1\">%1</a> er listi "
+"yfir verkefni sem hægt er að taka þátt í. <br /><br />Ef þú þarft meiri "
+"upplýsingar eða skýringar skaltu fara á <a href=\"%2\">%2</a>.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -238,17 +236,17 @@ msgid ""
 "described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
 "advance for your support.</html>"
 msgstr ""
-"<html>KDE er ókeypis, en forritun þess er ekki ókeypis <br /><br /> Því "
-"hefur KDE teymið stofnað KDE e.V., löglega stofnuð félagasamtök í "
-"Þýskalandi. Félagið starfar ekki í hagnaðarskyni. Félagið kemur fram fyrir "
-"hönd KDE verkefnisins varðandi lögfræðleg mál og fjárhagsmál. Sjá: <a href="
-"\"%1\">%1</a> varðandi frekari upplýsingar um KDE e.V.<br /><br />KDE teymið "
-"þarf fjárhagslegan stuðning.  Mest af fjármununum er varið til að styrkja "
-"meðlimi og aðra í þeim útgjöldum sem þeir kunna að verða fyrir vegna "
-"stuðnings síns við KDE.  Þú ert hvattur til að leggja þitt að mörkum með "
-"fjárhagslegum stuðningi, með því að notfæra þér einhverja af aðferðum sem "
-"lýst er á <a href=\"%2\">%2</a>.<br /><br /> Með fyrirfram þökk fyrir "
-"stuðning þinn.</html>"
+"<html>KDE er og verður alltaf ókeypis en það er ekki ókeypis að búa það til. "
+"<br /><br /> Því hefur KDE stofnað KDE e.V., félag með aðsetur í Þýskalandi "
+"sem starfar ekki í hagnaðarskyni. Félagið kemur fram fyrir hönd KDE-"
+"verkefnisins varðandi lögfræðileg og fjárhagsleg mál. Sjá frekari "
+"upplýsingar um KDE e.V. á <a href=\"%1\">%1</a>. <br /><br />KDE nýtur góðs "
+"af ýmis konar stuðningi, þ.m.t. fjárhagslegum.  Við notum fjármunina til að "
+"styrkja meðlimi og aðra í þeim útgjöldum sem þeir kunna að verða fyrir vegna "
+"vinnu sinnar við KDE. <br /> <br />Við hvetjum þig til að leggja þitt af "
+"mörkum með fjárhagslegum stuðningi með því að notfæra þér einhverja af þeim "
+"aðferðum sem lýst er á <a href=\"%2\">%2</a>.<br /><br /> Með fyrirfram þökk "
+"fyrir stuðning þinn.</html>"
 
 #: kaboutkdedialog_p.cpp:128
 #, kde-format
@@ -272,7 +270,7 @@ msgstr "&Ganga í KDE-hópinn"
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
-msgstr "&Styðja KDE"
+msgstr "&Styrkja KDE"
 
 #: kabstractaboutdialog_p.cpp:41
 #, kde-format
@@ -298,7 +296,7 @@ msgstr "%1 (byggt miðað við %2)"
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
 msgid "KDE Frameworks"
-msgstr "KDE Frameworks stoðkerfi"
+msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
@@ -308,7 +306,7 @@ msgstr "Sýna myndir höfundar"
 #: kabstractaboutdialog_p.cpp:137
 #, kde-format
 msgid "Enabling this will fetch images from an online location"
-msgstr "Sé þetta virkjað verður náð í myndir af netinu"
+msgstr "Ef þetta er valið verður náð í myndir af netinu"
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
@@ -329,8 +327,8 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"Lyklasamsetningin '%1' er ekki nothæf. Notaðu 'Stilla flýtilykla'\n"
-"úr 'Stillingar' valmyndinni til að leysa úr vandamálinu.\n"
+"Lyklasamsetningin '%1' er ekki nothæf. Notaðu 'Grunnstilla flýtilykla'\n"
+"í valmyndinni 'Stillingar' til að leysa úr vandamálinu.\n"
 "Engin aðgerð verður sett í gang."
 
 #: kactionconflictdetector.cpp:42
@@ -355,8 +353,8 @@ msgstr "Senda villuskýrslu"
 msgid ""
 "Your email address. If incorrect, use the Configure Email button to change it"
 msgstr ""
-"Netfangið þitt. Ef það er rangt getur þú notað \"Stilla netfang\" hnappinn "
-"til að breyta því"
+"Netfangið þitt. Ef það er rangt getur þú notað hnappinn \"Grunnstilla netfang"
+"\" til að breyta því"
 
 #: kbugreport.cpp:143
 #, kde-format
@@ -368,7 +366,7 @@ msgstr "Frá:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Email..."
-msgstr "Stilla tölvupóstfang..."
+msgstr "Grunnstilla netfang..."
 
 #: kbugreport.cpp:158
 #, kde-format
@@ -391,7 +389,7 @@ msgstr "&Senda"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send bug report."
-msgstr "Sendu villuskýrslu."
+msgstr "Senda villuskýrslu."
 
 #: kbugreport.cpp:171
 #, kde-format
@@ -405,8 +403,8 @@ msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr ""
-"Forritið sem þú vilt senda inn villutilkynningu um - Ef það er rangt getur "
-"þú notað \"Senda villuskýrslu\" hnappinn í réttu forriti"
+"Forritið sem þú vilt senda inn villutilkynningu um - ef það er rangt getur "
+"þú notað hnappinn \"Senda villuskýrslu\" í viðeigandi forriti"
 
 #: kbugreport.cpp:181
 #, kde-format
@@ -419,8 +417,8 @@ msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr ""
-"Útgáfa forritsins - Vinsamlega gaktu úr skugga um að ekki sé til nýrri "
-"útgáfa áður en þú sendir villutilkynningu"
+"Útgáfa forritsins - gakktu úr skugga um að ekki sé til nýrri útgáfa áður en "
+"þú sendir villutilkynningu"
 
 #: kbugreport.cpp:192
 #, kde-format
@@ -435,7 +433,7 @@ msgstr "ekkert útgáfunúmer gefið (villa forritara)"
 #: kbugreport.cpp:209
 #, kde-format
 msgid "OS:"
-msgstr "Kerfi:"
+msgstr "Stýrikerfi:"
 
 #: kbugreport.cpp:214
 #, kde-format
@@ -510,7 +508,7 @@ msgid ""
 "If you press \"Send\", a mail message will be sent to the maintainer of this "
 "program.\n"
 msgstr ""
-"Sláðu inn lýsingu á villunni hér, helst á ensku sem fer í villulýsinguna.\n"
+"Sláðu inn lýsingu á villunni hér fyrir villuskýrsluna (helst á ensku).\n"
 "Ef þú ýtir á \"Senda\" verður umsjónarmanni forritsins sendur tölvupóstur.\n"
 
 #: kbugreport.cpp:300
@@ -521,9 +519,9 @@ msgid ""
 "where you will find a form to fill in. The information displayed above will "
 "be transferred to that server.</qt>"
 msgstr ""
-"<qt>Ef þú vilt senda inn villuskýrslu, smelltu þá á hnappinn hér fyrir "
-"neðan. Þá opnast nýr gluggi í vafranum á síðunni <a href=\"https://bugs.kde."
-"org\">https://bugs.kde.org</a> þar sem er eyðublað fyrir villuskýrslur.\n"
+"<qt>Smelltu á hnappinn hér fyrir neðan til að senda inn villuskýrslu. Þá "
+"opnast nýr gluggi í vafranum á síðunni <a href=\"https://bugs.kde.org"
+"\">https://bugs.kde.org</a> með eyðublaði sem þú getur fyllt út.\n"
 "Upplýsingarnar hér að ofan verða sendar inn á þann þjón.</qt>"
 
 #: kbugreport.cpp:306
@@ -532,14 +530,14 @@ msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
-"<qt>Ef þú vilt senda inn villuskýrslu, smelltu þá á hnappinn hér fyrir "
-"neðan. Þá opnast nýr gluggi í vafra á <a href=\"%1\">%2</a>.</qt>"
+"<qt>Smelltu á hnappinn hér fyrir neðan til að senda inn villuskýrslu. Þá "
+"opnast nýr gluggi í vafra á <a href=\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:323
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
-msgstr "&Ræsa leiðbeiningarforrit fyrir villuskýrslu"
+msgstr "&Ræsa hjálparforrit fyrir villuskýrslu"
 
 #: kbugreport.cpp:325
 #, kde-format
@@ -556,8 +554,8 @@ msgid ""
 "Could not find <application>%1</application> executable (usually it's part "
 "of the \"%2\" package)."
 msgstr ""
-"Fann ekki <application>%1</application> keyrsluskrána (venjulega hluti af "
-"\"%2\" pakkanum)."
+"Fann ekki <application>%1</application>-keyrsluskrána (venjulega hluti af "
+"\"%2\"-pakkanum)."
 
 #: kbugreport.cpp:432
 #, kde-format
@@ -565,7 +563,7 @@ msgid ""
 "You must specify both a subject and a description before the report can be "
 "sent."
 msgstr ""
-"Þú verður bæði að gefa upp viðfangsefni og lýsingu til að geta sent\n"
+"Þú verður bæði að gefa upp viðfangsefni og lýsingu til að geta sent "
 "villuskýrsluna."
 
 #: kbugreport.cpp:441
@@ -579,13 +577,13 @@ msgid ""
 "<p>Does the bug you are reporting cause any of the above damage? If it does "
 "not, please select a lower severity. Thank you.</p>"
 msgstr ""
-"<p>Þú valdir alvarleikann <b>Grafalvarlegt</b>. Vinsamlegast athugaðu að "
-"þessi alvarleiki er einungis fyrir villur sem</p> <ul><li>gera ótengdan "
-"hugbúnað á kerfinu (eða allt kerfið) óvirkt</li><li>valda alvarlegum "
-"gagnamissi</li><li>opnar öryggisholu á kerfinu þar sem téður pakki er "
+"<p>Þú valdir alvarleikastigið <b>Mjög alvarlegt</b>. Athugaðu að þetta "
+"alvarleikastig er einungis ætlað fyrir villur sem</p> <ul><li>gera ótengdan "
+"hugbúnað á kerfinu (eða allt kerfið) óvirkan</li><li>valda alvarlegum "
+"gagnamissi</li><li>opna öryggisholu í kerfinu þar sem téður pakki er "
 "uppsettur</li> </ul>\n"
 "<p>Veldur villan sem þú ert að tilkynna einhverjum af ofangreindum skaða? Ef "
-"svo er ekki, veldu þá minni alvarleika. Þakka þér fyrir.</p>"
+"svo er ekki, veldu þá lægra alvarleikastig. Þakka þér fyrir.</p>"
 
 #: kbugreport.cpp:458
 #, kde-format
@@ -598,13 +596,13 @@ msgid ""
 "<p>Does the bug you are reporting cause any of the above damage? If it does "
 "not, please select a lower severity. Thank you.</p>"
 msgstr ""
-"<p>Þú valdir alvarleikann <b>Alvarlegt</b>. Vinsamlegast athugaðu að þessi "
-"alvarleiki er einungis hugsaður fyrir villur sem</p> <ul>   <li>gera téðan "
-"pakka svo gott sem ónothæfan</li>   <li>valda gagnamissi</li>   <li>opna "
-"fyrir öryggisholu sem leyfir aðgang að kerfinu sem notandinn sem keyrir "
-"forritið</li> </ul>\n"
+"<p>Þú valdir alvarleikastigið <b>Alvarlegt</b>. Vinsamlegast athugaðu að "
+"þetta alvarleikastig er einungis hugsað fyrir villur sem</p><ul><li>gera "
+"pakkanna sem um ræðir svo gott sem ónothæfan</li><li>veldur gagnamissi</"
+"li><li>opnar fyrir öryggisholu sem leyfir aðgang að kerfinu sem notandinn "
+"sem keyrir forritið</li></ul>\n"
 "<p>Veldur villan sem þú ert að tilkynna einhverjum af ofangreindum skaða? Ef "
-"svo er ekki, veldu þá minni alvarleika. Þakka þér fyrir.</p>"
+"svo er ekki, veldu þá lægra alvarleikastig. Þakka þér fyrir.</p>"
 
 #: kbugreport.cpp:477
 #, kde-format
@@ -614,8 +612,8 @@ msgid ""
 "See https://bugs.kde.org/ for instructions."
 msgstr ""
 "Ekki tókst að senda villuskýrsluna.\n"
-"Þú verður að gera það handvirkt...\n"
-"Leiðbeiningar finnast á https://bugs.kde.org/ ."
+"Sendu hana inn handvirkt í staðinn...\n"
+"Sjá leiðbeiningar á https://bugs.kde.org/ ."
 
 #: kbugreport.cpp:484
 #, kde-format
@@ -629,13 +627,13 @@ msgid ""
 "edited message?"
 msgstr ""
 "Loka og henda\n"
-"breyttu skeytinu?"
+"skeytinu sem var breytt?"
 
 #: kbugreport.cpp:493
 #, kde-format
 msgctxt "@title:window"
 msgid "Close Message"
-msgstr "Loka skilaboðum"
+msgstr "Loka skeyti"
 
 #: kcheckaccelerators.cpp:266
 #, kde-format
@@ -647,7 +645,7 @@ msgstr "Dr. Klash' flýtilyklaskoðun"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
-msgstr "Aftengja sjáfvirka athugun"
+msgstr "Aftengja sjálfvirka athugun"
 
 #: kcheckaccelerators.cpp:319
 #, kde-format
@@ -672,7 +670,7 @@ msgstr "<h2>Flýtilyklar fjarlægðir</h2>"
 #: kcheckaccelerators.cpp:331
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
-msgstr "<h2>Flýtilyklum bætt við (þér til fróðleiks)</h2>"
+msgstr "<h2>Flýtilyklum bætt við (bara þér til fróðleiks)</h2>"
 
 #: kedittoolbar.cpp:332
 #, kde-format
@@ -683,19 +681,19 @@ msgstr "Breyta texta"
 #: kedittoolbar.cpp:342
 #, kde-format
 msgid "Icon te&xt:"
-msgstr "Te&xti táknmyndar:"
+msgstr "Te&xti tákns:"
 
 #: kedittoolbar.cpp:347
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "&Fela texta þegar verkfærastika sýnir texta við hlið táknmynda"
+msgstr "&Fela texta þegar tækjastika sýnir texta við hlið tákna"
 
 #: kedittoolbar.cpp:596
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
-msgstr "Stilla verkfærastikur"
+msgstr "Grunnstilla tækjastikur"
 
 #: kedittoolbar.cpp:659
 #, kde-format
@@ -703,13 +701,13 @@ msgid ""
 "Do you really want to reset all toolbars of this application to their "
 "default? The changes will be applied immediately."
 msgstr ""
-"Ertu viss um að þú viljir frumstilla allar tækjaslár forritsins? "
-"Breytingarnar munu taka gildi strax."
+"Ertu viss um að þú viljir endurstilla allar tækjastikur forritsins á "
+"sjálfgefnar stillingar? Breytingarnar taka gildi strax."
 
 #: kedittoolbar.cpp:660
 #, kde-format
 msgid "Reset Toolbars"
-msgstr "Frumstilla tækjaslár"
+msgstr "Endurstilla tækjastikur"
 
 #: kedittoolbar.cpp:661
 #, kde-format
@@ -719,7 +717,7 @@ msgstr "Endurstilla"
 #: kedittoolbar.cpp:989
 #, kde-format
 msgid "&Toolbar:"
-msgstr "&Tækjaslá:"
+msgstr "&Tækjastika:"
 
 #. i18n("&New"), this);
 #. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
@@ -731,7 +729,7 @@ msgstr "&Tækjaslá:"
 #: kedittoolbar.cpp:1005
 #, kde-format
 msgid "A&vailable actions:"
-msgstr "Tiltækar &aðgerðir:"
+msgstr "Tiltækar að&gerðir:"
 
 #: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
 #, kde-format
@@ -747,7 +745,7 @@ msgstr "Núv&erandi aðgerðir:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "Breyta &táknmynd..."
+msgstr "Sk&ipta um tákn..."
 
 #: kedittoolbar.cpp:1063
 #, kde-format
@@ -758,12 +756,12 @@ msgstr "Breyta te&xta..."
 #: kedittoolbar.cpp:1205
 #, kde-format
 msgid "--- separator ---"
-msgstr "--- aðskiljari ---"
+msgstr "--- aðgreinir ---"
 
 #: kedittoolbar.cpp:1206
 #, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- útvíkkanlegt biltákn ---"
+msgstr "--- útvíkkanlegt bil ---"
 
 #: kedittoolbar.cpp:1228
 #, kde-format
@@ -775,17 +773,17 @@ msgstr "%1"
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
-msgstr "Þessum hluta verður skipt út fyrir alla hluta ígræddra eininga."
+msgstr "Þessum hluta verður skipt út fyrir alla hluta innfelldrar einingar."
 
 #: kedittoolbar.cpp:1258
 #, kde-format
 msgid "<Merge>"
-msgstr "<Bræða saman>"
+msgstr "<Sameina>"
 
 #: kedittoolbar.cpp:1260
 #, kde-format
 msgid "<Merge %1>"
-msgstr "<Bræða saman %1>"
+msgstr "<Sameina %1>"
 
 #: kedittoolbar.cpp:1270
 #, kde-format
@@ -793,8 +791,8 @@ msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
-"Þetta er breytilegur aðgerðalisti. Þú getur fært hann, en ef honum er eytt, "
-"er ekki hægt að setja hann aftur inn."
+"Þetta er breytilegur aðgerðalisti. Þú getur fært hann til en ef honum er "
+"eytt er ekki hægt að setja hann aftur inn."
 
 #: kedittoolbar.cpp:1271
 #, kde-format
@@ -810,7 +808,7 @@ msgstr "%1"
 #: kedittoolbar.cpp:1625
 #, kde-format
 msgid "Change Icon"
-msgstr "Breyta táknmynd"
+msgstr "Skipta um tákn"
 
 #. i18n: ectx: Menu (help)
 #: khelpmenu.cpp:146 ui_standards.rc:179
@@ -830,9 +828,9 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Smelltu á hnappinn, settu síðan inn flýtilykilinn sem þú vilt nota í "
+"Smelltu á hnappinn og sláðu svo inn flýtilykilinn sem þú vilt nota í "
 "forritinu.\n"
-"Til dæmis Ctrl+A: halda niðri 'Ctrl' lyklinum og ýta á 'A'."
+"Til dæmis Ctrl+A: haltu niðri 'Ctrl'-lyklinum og ýttu á 'A'."
 
 #: kkeysequencewidget.cpp:172
 #, kde-format
@@ -845,7 +843,7 @@ msgstr[1] "Árekstrar milli flýtilykla"
 #: kkeysequencewidget.cpp:176
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "Flýtilyklasamsetning '%1' fyrir aðgerðina '%2'\n"
+msgstr "Flýtilykill '%1' fyrir aðgerðina '%2'\n"
 
 #: kkeysequencewidget.cpp:181
 #, kde-format
@@ -859,11 +857,11 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"Lyklasamsetningin \"%2\" rekst á við eftirfarandi skilgreiningu.\n"
-"Viltu úthluta auðri flýtilyklaskilgreiningu á þá aðgerð?\n"
+"Flýtilykillinn \"%2\" stangast á við eftirfarandi flýtilykil.\n"
+"Viltu úthluta auðri flýtilyklaskilgreiningu á þessa aðgerð?\n"
 "%3 "
 msgstr[1] ""
-"Lyklasamsetningin \"%2\" rekst á við eftirfarandi skilgreiningar.\n"
+"Flýtilykillinn \"%2\" stangast á við eftirfarandi flýtilykla.\n"
 "Viltu úthluta auðri flýtilyklaskilgreiningu á þessar aðgerðir?\n"
 "%3"
 
@@ -886,8 +884,8 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>Lyklasamsetningin %1 er nú þegar í notkun fyrir aðgerðina <b>%2</b>."
-"<br>Veldu ótvíræða samsetningu.</qt>"
+"<qt>Flýtilykillinn %1 er nú þegar í notkun fyrir aðgerðina <b>%2</b>."
+"<br>Veldu annan í staðinn.</qt>"
 
 #: kkeysequencewidget.cpp:280
 #, kde-format
@@ -902,18 +900,16 @@ msgctxt ""
 msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
-msgstr[0] ""
-"Lyklasamsetningin '%2' rekst á við eftirfarandi lyklaskilgreiningu.\n"
-msgstr[1] ""
-"Lyklasamsetningin '%2' rekst á við eftirfarandi lyklaskilgreiningar.\n"
+msgstr[0] "Flýtilykillinn '%2' rekst á við eftirfarandi lyklasamsetningu.\n"
+msgstr[1] "Flýtilykillinn '%2' rekst á við eftirfarandi lyklasamsetningu.\n"
 
 #: kkeysequencewidget.cpp:296
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
-msgstr[0] "Árekstur við víðværan flýtilykil kerfisins"
-msgstr[1] "Árekstur við víðværa flýtilykla kerfisins"
+msgstr[0] "Árekstur við altækan flýtilykil kerfisins"
+msgstr[1] "Árekstur við altæka flýtilykla kerfisins"
 
 #: kkeysequencewidget.cpp:309
 #, kde-format
@@ -927,7 +923,7 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"F12 lykillinn er frátekinn í Windows og er ekki hægt að nota sem víðværan "
+"F12-lykillinn er frátekinn í Windows og er ekki hægt að nota sem altækan "
 "flýtilykil.\n"
 "Veldu einhvern annan."
 
@@ -935,7 +931,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Árekstur við staðlaða fýtilykla forrita"
+msgstr "Árekstur við staðlaða flýtilykla forrita"
 
 #: kkeysequencewidget.cpp:356
 #, kde-format
@@ -944,9 +940,9 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"Lyklasamsetningin '%1' er nú þegar í notkun fyrir stöðluðu aðgerðina \"%2\" "
-"sem mörg forrit nota.\n"
-"Vilt þú í alvörunni nota hana jafnframt sem víðværan flýtilykil?"
+"Flýtilykillinn '%1' er nú þegar í notkun fyrir stöðluðu aðgerðina \"%2\" sem "
+"mörg forrit nota.\n"
+"Viltu í alvörunni nota hann líka sem altækan flýtilykil?"
 
 #: kkeysequencewidget.cpp:400
 #, kde-format
@@ -958,7 +954,7 @@ msgstr "Inntak"
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr "Engin"
+msgstr "Enginn"
 
 #: klicensedialog_p.cpp:33
 #, kde-format
@@ -972,7 +968,7 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Richard Allen, Logi Ragnarsson, Pjetur G. Hjaltason, Arnar Leósson, Svanur "
-"Pálsson, Sveinn í Felli"
+"Pálsson, Sveinn í Felli,Guðmundur Erlingsson"
 
 #: kmainwindow.cpp:278
 #, kde-format
@@ -980,23 +976,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "ra@ra.is, logi@logi.org, pjetur@pjetur.net, leosson@frisurf.no, svanur@tern."
-"is, sv1@fellsnet.is"
+"is, sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
 msgid "Add to Toolbar"
-msgstr "Bæta við tækjaslá"
+msgstr "Bæta við tækjastiku"
 
 #: kmenumenuhandler_p.cpp:223
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "Stilla flýtilykil..."
+msgstr "Grunnstilla flýtilykil..."
 
 #: ksendbugmail/main.cpp:30
 #, kde-format
 msgid "Error connecting to server."
-msgstr "Villa við tengingu við miðlara."
+msgstr "Villa í tengingu við þjón."
 
 #: ksendbugmail/main.cpp:33
 #, kde-format
@@ -1011,12 +1007,12 @@ msgstr "Tenging féll á tíma."
 #: ksendbugmail/main.cpp:39
 #, kde-format
 msgid "Time out waiting for server interaction."
-msgstr "Tíminn rann út meðan beðið var svara frá þjóninum."
+msgstr "Tíminn rann út á meðan beðið var svars frá þjóninum."
 
 #: ksendbugmail/main.cpp:43
 #, kde-format
 msgid "Server said: \"%1\""
-msgstr "Miðlari sagði: \"%1\""
+msgstr "Þjónn sagði: \"%1\""
 
 #: ksendbugmail/main.cpp:74
 #, kde-format
@@ -1031,7 +1027,7 @@ msgstr "Efnislína tölvupóstsins."
 #: ksendbugmail/main.cpp:78
 #, kde-format
 msgid "The email address to send the bug report to."
-msgstr "Tölvupóstfangið sem þessi villulýsing verður send á."
+msgstr "Netfangið sem þessi villuskýrsla verður send á."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1043,7 +1039,7 @@ msgstr "Sjálfgefið:"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Custom:"
-msgstr "Sérsniðið:"
+msgstr "Sérstillt:"
 
 #: kshortcutschemeseditor.cpp:32
 #, kde-format
@@ -1120,7 +1116,7 @@ msgid ""
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
 "Viltu í alvörunni eyða skemanu %1?\n"
-"Athugaðu að það mun ekki eyða neinu af kerfislægu flýtilyklaskemunum."
+"Athugaðu að flýtilyklaskemu kerfisins eyðast ekki."
 
 #: kshortcutschemeseditor.cpp:187
 #, kde-format
@@ -1156,18 +1152,18 @@ msgid ""
 "one?"
 msgstr ""
 "Núverandi flýtilyklaskema hefur verið breytt. Viltu vista það áður en skipt "
-"verður í núja skemað?"
+"verður í nýja skemað?"
 
 #: kshortcutsdialog.cpp:124
 #, kde-format
 msgid "Manage &Schemes"
-msgstr "&Sýsla með flýtilyklaskemu"
+msgstr "Vinna með flýtilykla&skemu"
 
 #: kshortcutsdialog.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Stilla flýtilykla"
+msgstr "Grunnstilla flýtilykla"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -1176,7 +1172,7 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"Leita gagnvirkt að heiti flýtilykla (t.d. Afrita) eða samtengingu lykla (t."
+"Leita gagnvirkt að heiti flýtilykla (t.d. Afrita) eða samsetningu lykla (t."
 "d. Ctrl+C) með því að slá þær inn hér."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
@@ -1187,9 +1183,9 @@ msgid ""
 "(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
 "Ctrl+V) shown in the right column."
 msgstr ""
-"Hér getur þú séð lista af lyklabindingum, sem eru tengingar milli aðgerða "
-"(eins og 'Afrita') sem eru í dálknum til vinstri og lykla eða samsetningu "
-"lykla (t.d. CTRL-V) sem eru í hægri dálknum."
+"Hér getur þú séð lista yfir lyklabindingar, þ.e. tengingar milli aðgerða "
+"(eins og 'Afrita') í dálkinum til vinstri og lykla eða samsetningu lykla (t."
+"d. CTRL-V) í hægri dálkinum."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
@@ -1213,31 +1209,31 @@ msgstr "Varaleið"
 #: kshortcutsdialog.ui:48
 #, kde-format
 msgid "Global"
-msgstr "Víðvært"
+msgstr "Altækt"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:53
 #, kde-format
 msgid "Global Alternate"
-msgstr "Víðvær varaleið"
+msgstr "Altæk varaleið"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:58
 #, kde-format
 msgid "Mouse Button Gesture"
-msgstr "Músarhnappahreyfing"
+msgstr "Hreyfiskipun með músarhnappi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:63
 #, kde-format
 msgid "Mouse Shape Gesture"
-msgstr "Músarformshreyfing"
+msgstr "Hreyfiformsskipun með mús"
 
 #: kshortcutseditor.cpp:557
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
-msgstr "Flýtihnappar fyrir %1"
+msgstr "Flýtilyklar fyrir %1"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
 #: kshortcutseditor.cpp:577 kshortcutwidget.ui:22
@@ -1254,12 +1250,12 @@ msgstr "Vara:"
 #: kshortcutseditor.cpp:579
 #, kde-format
 msgid "Global:"
-msgstr "Víðvært:"
+msgstr "Altækt:"
 
 #: kshortcutseditor.cpp:580
 #, kde-format
 msgid "Global alternate:"
-msgstr "Víðvær varaleið:"
+msgstr "Altæk varaleið:"
 
 #: kshortcutseditor.cpp:596
 #, kde-format
@@ -1286,12 +1282,12 @@ msgstr "%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
-msgstr "Stilla tungumál"
+msgstr "Grunnstilla tungumál"
 
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
-msgstr "Veldu það tungumál sem nota ætti í þessu forriti:"
+msgstr "Veldu tungumálið sem á að nota í þessu forriti:"
 
 #: kswitchlanguagedialog_p.cpp:168
 #, kde-format
@@ -1306,7 +1302,7 @@ msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
 msgstr ""
-"Bætir við einu tungumáli í viðbót sem notað verður ef önnur mál eiga ekki "
+"Bætir við einu tungumáli í viðbót sem notað verður ef ekki eru til "
 "fullnægjandi þýðingar."
 
 #: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
@@ -1315,7 +1311,7 @@ msgid ""
 "The language for this application has been changed. The change will take "
 "effect the next time the application is started."
 msgstr ""
-"Tungumálið sem forritið notar hefur breyst, umskiptin verða sýnileg næst "
+"Tungumálið sem forritið notar hefur breyst. Breytingin verður sýnileg næst "
 "þegar forritið verður ræst."
 
 #: kswitchlanguagedialog_p.cpp:262
@@ -1351,7 +1347,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "This is the main application language which will be used first, before any "
 "other languages."
-msgstr "Þetta er tungumálið sem fyrst verður notað, á undan nokkru öðru máli."
+msgstr "Þetta er tungumálið sem verður notað fyrst á undan nokkru öðru máli."
 
 #: kswitchlanguagedialog_p.cpp:392
 #, kde-format
@@ -1360,20 +1356,20 @@ msgid ""
 "This is the language which will be used if any previous languages do not "
 "contain a proper translation."
 msgstr ""
-"Þetta er tungumálið sem notað verður ef ekkert framantalinna tungumála eiga "
-"sér fullnægjandi þýðingar."
+"Þetta er tungumálið sem verður notað ef ekki eru til fullnægjandi þýðingar á "
+"framangreindum tungumálum."
 
 #: ktoolbar.cpp:300 ktoolbar.cpp:307
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
-msgstr "Stillingar tækjasláar"
+msgstr "Stillingar tækjastiku"
 
 #: ktoolbar.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
-msgstr "Birta texta"
+msgstr "Sýna texta"
 
 #: ktoolbar.cpp:309
 #, kde-format
@@ -1391,13 +1387,13 @@ msgstr "Efst"
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
-msgstr "Til vinstri"
+msgstr "Vinstra megin"
 
 #: ktoolbar.cpp:318
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
-msgstr "Til hægri"
+msgstr "Hægra megin"
 
 #: ktoolbar.cpp:321
 #, kde-format
@@ -1414,7 +1410,7 @@ msgstr "Textastaða"
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
-msgstr "Einungis táknmyndir"
+msgstr "Einungis tákn"
 
 #: ktoolbar.cpp:337
 #, kde-format
@@ -1426,18 +1422,18 @@ msgstr "Einungis texti"
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
-msgstr "Texti við hlið táknmynda"
+msgstr "Texti við hlið tákna"
 
 #: ktoolbar.cpp:343
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
-msgstr "Texti undir táknmyndum"
+msgstr "Texti undir táknum"
 
 #: ktoolbar.cpp:354
 #, kde-format
 msgid "Icon Size"
-msgstr "Stærð táknmynda"
+msgstr "Stærð tákns"
 
 #: ktoolbar.cpp:356
 #, kde-format
@@ -1468,12 +1464,12 @@ msgstr "Risastórt (%1x%2)"
 #: ktoolbar.cpp:432
 #, kde-format
 msgid "Lock Toolbar Positions"
-msgstr "Festa staðsetningu tækjasláa"
+msgstr "Festa staðsetningu tækjastiku"
 
 #: ktoolbarhandler.cpp:93
 #, kde-format
 msgid "Toolbars Shown"
-msgstr "Sýndar tækjaslár"
+msgstr "Sýndar tækjastikur"
 
 #: ktooltiphelper.cpp:203
 #, kde-format
@@ -1527,7 +1523,7 @@ msgstr "Hætta við"
 #: kxmlguibuilder.cpp:182 kxmlguibuilder.cpp:361
 #, kde-format
 msgid "No text"
-msgstr "Engin texti"
+msgstr "Enginn texti"
 
 #: kxmlguiwindow.cpp:190
 #, kde-format
@@ -1548,7 +1544,7 @@ msgstr ""
 #: kxmlguiwindow.cpp:540
 #, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "Gallaðar flýtilyklasamsetningar"
+msgstr "Gallaðir flýtilyklar"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
@@ -1566,20 +1562,20 @@ msgstr "&Leikur"
 #: ui_standards.rc:61
 #, kde-format
 msgid "&Edit"
-msgstr "Sýs&l"
+msgstr "Br&eyta"
 
 #. i18n: ectx: Menu (move)
 #: ui_standards.rc:84
 #, kde-format
 msgctxt "@title:menu Game move"
 msgid "&Move"
-msgstr "&Færa"
+msgstr "F&æra"
 
 #. i18n: ectx: Menu (view)
 #: ui_standards.rc:102
 #, kde-format
 msgid "&View"
-msgstr "Sý&n"
+msgstr "Sk&oða"
 
 #. i18n: ectx: Menu (go)
 #: ui_standards.rc:121
@@ -1597,7 +1593,7 @@ msgstr "&Bókamerki"
 #: ui_standards.rc:148
 #, kde-format
 msgid "&Tools"
-msgstr "&Tól"
+msgstr "&Verkfæri"
 
 #. i18n: ectx: Menu (settings)
 #: ui_standards.rc:152
@@ -1609,7 +1605,7 @@ msgstr "&Stillingar"
 #: ui_standards.rc:197
 #, kde-format
 msgid "Main Toolbar"
-msgstr "Aðaltækjaslá"
+msgstr "Aðaltækjastika"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."
