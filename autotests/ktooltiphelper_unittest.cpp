@@ -93,6 +93,12 @@ void KToolTipHelper_UnitTest::testGeneralWidget()
              "The KToolTipHelper::whatsThisHintOnly()-string is no user-facing string"
              "and should therefore never actually be displayed.");
 
+    // test when whatsThis() == toolTip()
+    m_frame->setToolTip(QStringLiteral("frame's whatsThis"));
+    const QString noWhatsThisToolTip = shownToolTip(m_frame);
+    QVERIFY(noWhatsThisToolTip.contains(m_frame->toolTip()));
+    QVERIFY2(noWhatsThisToolTip.length() == m_frame->toolTip().length(), "No whatsThisHint should be shown when the toolTip is a similar string.");
+
     m_frame->setToolTip(QStringLiteral("frame's tooltip"));
     const QString toolTip = shownToolTip(m_frame);
     QVERIFY(toolTip.contains(m_frame->toolTip()));

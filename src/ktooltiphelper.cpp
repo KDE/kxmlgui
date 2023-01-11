@@ -155,10 +155,10 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
     // All actions have their text as a tooltip by default.
     // We only want to display the tooltip text if it isn't identical
     // to the already visible text in the menu.
-    const bool explicitToolTip = hasExplicitToolTip(m_action);
+    const bool explicitTooltip = !isTextSimilar(m_action->iconText(), m_action->toolTip());
     // We only want to show the whatsThisHint in a tooltip if the whatsThis isn't empty.
     const bool emptyWhatsThis = m_action->whatsThis().isEmpty();
-    if (!explicitToolTip && emptyWhatsThis) {
+    if (!explicitTooltip && emptyWhatsThis) {
         QToolTip::hideText();
         return false;
     }
@@ -170,8 +170,8 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
     const QPoint toolTipPosition(helpEvent->globalX() - helpEvent->x() + xOffset,
                                  helpEvent->globalY() - helpEvent->y() + actionGeometry.y() - actionGeometry.height() / 2);
 
-    if (explicitToolTip) {
-        if (emptyWhatsThis) {
+    if (explicitTooltip) {
+        if (emptyWhatsThis || isTextSimilar(m_action->whatsThis(), m_action->toolTip())) {
             if (m_action->toolTip() != whatsThisHintOnly()) {
                 QToolTip::showText(toolTipPosition, m_action->toolTip(), m_widget, actionGeometry);
             }
@@ -196,9 +196,15 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QObject *watched, QHelpEvent *hel
         return false;
     }
 
+    bool areToolTipAndWhatsThisSimilar = isTextSimilar(m_widget->whatsThis(), m_widget->toolTip());
+
     if (QToolButton *toolButton = qobject_cast<QToolButton *>(m_widget)) {
         if (const QAction *action = toolButton->defaultAction()) {
             if (!action->shortcut().isEmpty() && action->toolTip() != whatsThisHintOnly()) {
+                // Because we set the tool button's tooltip below, we must re-check the whats this, because the shortcut
+                // would technically make it unique.
+                areToolTipAndWhatsThisSimilar = isTextSimilar(action->whatsThis(), action->toolTip());
+
                 toolButton->setToolTip(i18nc("@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut",
                                              "%1 (%2)",
                                              action->toolTip(),
@@ -220,7 +226,8 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QObject *watched, QHelpEvent *hel
             return false;
         }
     }
-    if (m_widget->whatsThis().isEmpty()) {
+
+    if (m_widget->whatsThis().isEmpty() || areToolTipAndWhatsThisSimilar) {
         if (m_widget->toolTip() == whatsThisHintOnly()) {
             return true;
         }
@@ -288,11 +295,8 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
 
 KToolTipHelper *KToolTipHelperPrivate::s_instance = nullptr;
 
-bool hasExplicitToolTip(const QAction *action)
+bool isTextSimilar(const QString &a, const QString &b)
 {
-    Q_CHECK_PTR(action);
-    const QString iconText = action->iconText();
-    const QString toolTip = action->toolTip();
     int i = -1;
     int j = -1;
     do {
@@ -300,19 +304,19 @@ bool hasExplicitToolTip(const QAction *action)
         j++;
         // Both of these QStrings are considered equal if their only differences are '&' and '.' chars.
         // Now move both of their indices to the next char that is neither '&' nor '.'.
-        while (i < iconText.size() && (iconText.at(i) == QLatin1Char('&') || iconText.at(i) == QLatin1Char('.'))) {
+        while (i < a.size() && (a.at(i) == QLatin1Char('&') || a.at(i) == QLatin1Char('.'))) {
             i++;
         }
-        while (j < toolTip.size() && (toolTip.at(j) == QLatin1Char('&') || toolTip.at(j) == QLatin1Char('.'))) {
+        while (j < b.size() && (b.at(j) == QLatin1Char('&') || b.at(j) == QLatin1Char('.'))) {
             j++;
         }
 
-        if (i >= iconText.size()) {
-            return j < toolTip.size();
+        if (i >= a.size()) {
+            return j >= b.size();
         }
-        if (j >= toolTip.size()) {
-            return i < iconText.size();
+        if (j >= b.size()) {
+            return i >= a.size();
         }
-    } while (iconText.at(i) == toolTip.at(j));
-    return true; // We have found a difference.
+    } while (a.at(i) == b.at(j));
+    return false; // We have found a difference.
 }

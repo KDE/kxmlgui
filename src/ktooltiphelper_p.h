@@ -117,13 +117,12 @@ private:
 };
 
 /**
- * All QActions have their iconText() as their toolTip() by default.
- * This method checks if setToolTip() was called for the action explicitly to set a different/more
- * useful tooltip.
+ * This method checks if string "a" is sufficiently different from string "b", barring characters
+ * like periods, ampersands and other characters. Used for determining if tooltips are different from
+ * their icon name counterparts.
  *
- * @return true if the toolTip() isn't just an automatically generated version of iconText().
- *         false otherwise.
+ * @return true if the string "a" is similar to "b" and false otherwise.
  */
-bool hasExplicitToolTip(const QAction *action);
+bool isTextSimilar(const QString &a, const QString &b);
 
 #endif // KTOOLTIPHELPER_P_H
