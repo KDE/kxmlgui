@@ -287,6 +287,8 @@ private:
     friend class KKeySequenceWidgetPrivate;
     KKeySequenceWidgetPrivate *const d;
 
+    bool event(QEvent *ev) override;
+
     Q_DISABLE_COPY(KKeySequenceWidget)
 };
 

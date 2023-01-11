@@ -562,4 +562,19 @@ void KKeySequenceWidget::applyStealShortcut()
     d->stealActions.clear();
 }
 
+bool KKeySequenceWidget::event(QEvent *ev)
+{
+    constexpr char _highlight[] = "_kde_highlight_neutral";
+
+    if (ev->type() == QEvent::DynamicPropertyChange) {
+        auto dpev = static_cast<QDynamicPropertyChangeEvent *>(ev);
+        if (dpev->propertyName() == _highlight) {
+            d->keyButton->setProperty(_highlight, property(_highlight));
+            return true;
+        }
+    }
+
+    return QWidget::event(ev);
+}
+
 #include "moc_kkeysequencewidget.cpp"
