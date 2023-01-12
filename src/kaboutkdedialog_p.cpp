@@ -96,7 +96,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
              "<a href=\"%2\">%2</a> "
              "will provide you with what you need.</html>",
              QStringLiteral("https://community.kde.org/Get_Involved"),
-             QStringLiteral("https://techbase.kde.org/")));
+             QStringLiteral("https://develop.kde.org/")));
 
     QLabel *support = new QLabel;
     support->setMargin(10);
