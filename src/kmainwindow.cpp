@@ -207,8 +207,8 @@ Q_GLOBAL_STATIC(KMWSessionManager, ksm)
 #endif
 Q_GLOBAL_STATIC(QList<KMainWindow *>, sMemberList)
 
-KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags f)
-    : QMainWindow(parent, f)
+KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags flags)
+    : QMainWindow(parent, flags)
     , k_ptr(new KMainWindowPrivate)
 {
     Q_D(KMainWindow);
@@ -473,7 +473,7 @@ QMenu *KMainWindow::customHelpMenu(bool showWhatsThis)
 }
 #endif
 
-bool KMainWindow::canBeRestored(int number)
+bool KMainWindow::canBeRestored(int numberOfInstances)
 {
     KConfig *config = KConfigGui::sessionConfig();
     if (!config) {
@@ -484,17 +484,17 @@ bool KMainWindow::canBeRestored(int number)
     // TODO KF6: we should use 0 as the default value, not 1
     // See also https://bugs.kde.org/show_bug.cgi?id=427552
     const int n = group.readEntry("NumberOfWindows", 1);
-    return number >= 1 && number <= n;
+    return numberOfInstances >= 1 && numberOfInstances <= n;
 }
 
-const QString KMainWindow::classNameOfToplevel(int number)
+const QString KMainWindow::classNameOfToplevel(int instanceNumber)
 {
     KConfig *config = KConfigGui::sessionConfig();
     if (!config) {
         return QString();
     }
 
-    KConfigGroup group(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(number)).constData());
+    KConfigGroup group(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(instanceNumber)).constData());
     if (!group.hasKey("ClassName")) {
         return QString();
     } else {
@@ -502,13 +502,13 @@ const QString KMainWindow::classNameOfToplevel(int number)
     }
 }
 
-bool KMainWindow::restore(int number, bool show)
+bool KMainWindow::restore(int numberOfInstances, bool show)
 {
-    if (!canBeRestored(number)) {
+    if (!canBeRestored(numberOfInstances)) {
         return false;
     }
     KConfig *config = KConfigGui::sessionConfig();
-    if (readPropertiesInternal(config, number)) {
+    if (readPropertiesInternal(config, numberOfInstances)) {
         if (show) {
             KMainWindow::show();
         }
