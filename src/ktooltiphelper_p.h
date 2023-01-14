@@ -106,6 +106,8 @@ private:
     QPoint m_lastExpandableToolTipGlobalPos;
     /** The last widget a QEvent::tooltip was sent for. */
     QPointer<QWidget> m_widget;
+    /** Whether or not the last tooltip was expandable */
+    bool m_lastToolTipWasExpandable = false;
 
     /** The global position of where the cursor was when the last QEvent::HideEvent for a
      * menu occurred. @see handleHideEvent() */
