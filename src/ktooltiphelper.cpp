@@ -107,6 +107,10 @@ bool KToolTipHelperPrivate::handleKeyPressEvent(QEvent *event)
         return false;
     }
 
+    if (!m_lastToolTipWasExpandable) {
+        return false;
+    }
+
     QToolTip::hideText();
     // We need to explicitly hide the tooltip window before showing the whatsthis because hideText()
     // runs a timer before hiding. On Wayland when hiding a popup Qt will close all popups opened after
@@ -196,6 +200,8 @@ bool KToolTipHelperPrivate::handleToolTipEvent(QObject *watched, QHelpEvent *hel
         return false;
     }
 
+    m_lastToolTipWasExpandable = false;
+
     bool areToolTipAndWhatsThisSimilar = isTextSimilar(m_widget->whatsThis(), m_widget->toolTip());
 
     if (QToolButton *toolButton = qobject_cast<QToolButton *>(m_widget)) {
@@ -262,6 +268,7 @@ void KToolTipHelperPrivate::postToolTipEventIfCursorDidntMove() const
 void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const QString &toolTip, const QRect &rect)
 {
     m_lastExpandableToolTipGlobalPos = QPoint(globalPos);
+    m_lastToolTipWasExpandable = true;
     const KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
     const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
