@@ -70,7 +70,7 @@ void initializeLanguages()
         if (languages.isEmpty()) {
             qputenv("LANGUAGE", languageCode);
         } else {
-            qputenv("LANGUAGE", languageCode + ':' + languages);
+            qputenv("LANGUAGE", QByteArray(languageCode + ':' + languages));
         }
         // Ideally setting the LANGUAGE would change the default QLocale too
         // but unfortunately this is too late since the QCoreApplication constructor
