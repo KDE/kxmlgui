@@ -43,7 +43,7 @@ cmake_dependent_option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON "N
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.15.2)
+set(REQUIRED_QT_VERSION 6.4.0)
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
 # On non-Apple UNIX DBus is required, on Apple Unix & Windows optional and it does not exist on Android
 if(UNIX AND NOT APPLE)
