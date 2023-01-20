@@ -30,8 +30,8 @@ include(CMakeDependentOption)
 ecm_setup_version(PROJECT
                   VARIABLE_PREFIX KXMLGUI
                   VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_version.h"
-                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfigVersion.cmake"
-                  SOVERSION 5)
+                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6XmlGuiConfigVersion.cmake"
+                  SOVERSION 6)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
@@ -54,19 +54,19 @@ else()
     find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} OPTIONAL_COMPONENTS DBus)
 endif()
 
-find_package(KF5CoreAddons ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5ItemViews ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5Config ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5ConfigWidgets ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5GuiAddons ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5I18n ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5IconThemes ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6CoreAddons ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6ItemViews ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6Config ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6ConfigWidgets ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6GuiAddons ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 
 if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
-    find_package(KF5GlobalAccel ${KF_DEP_VERSION} REQUIRED)
+    find_package(KF6GlobalAccel ${KF_DEP_VERSION} REQUIRED)
 endif()
-set (HAVE_GLOBALACCEL ${KF5GlobalAccel_FOUND})
+set (HAVE_GLOBALACCEL ${KF6GlobalAccel_FOUND})
 
 ecm_set_disabled_deprecation_versions(
     QT 5.15.2
@@ -85,35 +85,35 @@ if (BUILD_TESTING)
 endif()
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5XmlGui")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6XmlGui")
 
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5XmlGui_QCH
-        FILE KF5XmlGuiQchTargets.cmake
+        TARGETS KF6XmlGui_QCH
+        FILE KF6XmlGuiQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5XmlGuiQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6XmlGuiQchTargets.cmake\")")
 endif()
 
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5XmlGuiConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfig.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/KF6XmlGuiConfig.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF6XmlGuiConfig.cmake"
   PATH_VARS KDE_INSTALL_DBUSINTERFACEDIR
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlGuiConfigVersion.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF6XmlGuiConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF6XmlGuiConfigVersion.cmake"
   DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
   COMPONENT Devel
 )
 
-install(EXPORT KF5XmlGuiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5XmlGuiTargets.cmake NAMESPACE KF5:: )
+install(EXPORT KF6XmlGuiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6XmlGuiTargets.cmake NAMESPACE KF6:: )
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_version.h

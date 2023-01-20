@@ -1,18 +1,18 @@
 add_subdirectory(ksendbugmail)
 
-add_library(KF5XmlGui)
-add_library(KF5::XmlGui ALIAS KF5XmlGui)
+add_library(KF6XmlGui)
+add_library(KF6::XmlGui ALIAS KF6XmlGui)
 
 if (HAVE_GLOBALACCEL)
-    target_link_libraries(KF5XmlGui PRIVATE KF5::GlobalAccel)
+    target_link_libraries(KF6XmlGui PRIVATE KF6::GlobalAccel)
 endif ()
 if(WIN32)
-    target_link_libraries(KF5XmlGui PRIVATE secur32) # GetUserNameEx()
+    target_link_libraries(KF6XmlGui PRIVATE secur32) # GetUserNameEx()
 endif()
 
 configure_file(config-xmlgui.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xmlgui.h )
 
-target_sources(KF5XmlGui PRIVATE
+target_sources(KF6XmlGui PRIVATE
   kaboutapplicationdialog.cpp
   kaboutapplicationcomponentlistdelegate_p.cpp
   kaboutapplicationcomponentmodel_p.cpp
@@ -56,17 +56,17 @@ target_sources(KF5XmlGui PRIVATE
   kcheckaccelerators.cpp
 )
 if (TARGET Qt${QT_MAJOR_VERSION}::DBus)
-    target_sources(KF5XmlGui PRIVATE
+    target_sources(KF6XmlGui PRIVATE
         kmainwindowiface.cpp
     )
 endif()
 
 # add the resource file
-target_sources(KF5XmlGui PRIVATE
+target_sources(KF6XmlGui PRIVATE
     kxmlgui.qrc
 )
 
-ecm_qt_declare_logging_category(KF5XmlGui
+ecm_qt_declare_logging_category(KF6XmlGui
     HEADER debug.h
     IDENTIFIER DEBUG_KXMLGUI
     CATEGORY_NAME kf.xmlgui
@@ -75,12 +75,12 @@ ecm_qt_declare_logging_category(KF5XmlGui
     EXPORT KXMLGUI
 )
 
-ki18n_wrap_ui(KF5XmlGui
+ki18n_wrap_ui(KF6XmlGui
     kshortcutsdialog.ui
     kshortcutwidget.ui
 )
 
-ecm_generate_export_header(KF5XmlGui
+ecm_generate_export_header(KF6XmlGui
     BASE_NAME KXmlGui
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
@@ -89,30 +89,30 @@ ecm_generate_export_header(KF5XmlGui
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_include_directories(KF5XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui>")
+target_include_directories(KF6XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui>")
 
-target_link_libraries(KF5XmlGui
+target_link_libraries(KF6XmlGui
 PUBLIC
     Qt${QT_MAJOR_VERSION}::Xml      #To parse the configuration (QDomDocument etc)
     Qt${QT_MAJOR_VERSION}::Widgets  #QWidget is used everywhere
-    KF5::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
-    KF5::ConfigWidgets  #KStandardAction, KToggleAction...
+    KF6::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
+    KF6::ConfigWidgets  #KStandardAction, KToggleAction...
 PRIVATE
     Qt${QT_MAJOR_VERSION}::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt${QT_MAJOR_VERSION}::PrintSupport   #QPrinter in kshortcutseditor
     Qt${QT_MAJOR_VERSION}::CorePrivate    #QSystemLocale in initializeLanguages
-    KF5::CoreAddons     #KAboutData
-    KF5::GuiAddons
-    KF5::WidgetsAddons
-    KF5::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
-    KF5::I18n                #i18n and i18nc in many places
-    KF5::IconThemes         #KIconLoader and KIconThemes in KToolBar
+    KF6::CoreAddons     #KAboutData
+    KF6::GuiAddons
+    KF6::WidgetsAddons
+    KF6::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
+    KF6::I18n                #i18n and i18nc in many places
+    KF6::IconThemes         #KIconLoader and KIconThemes in KToolBar
 )
 if (TARGET Qt${QT_MAJOR_VERSION}::DBus)
-  target_link_libraries(KF5XmlGui PUBLIC Qt${QT_MAJOR_VERSION}::DBus) #QDBus connect to signal in KToolBar
+  target_link_libraries(KF6XmlGui PUBLIC Qt${QT_MAJOR_VERSION}::DBus) #QDBus connect to signal in KToolBar
 endif()
 
-set_target_properties(KF5XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION}
+set_target_properties(KF6XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION}
                                            SOVERSION ${KXMLGUI_SOVERSION}
                                            EXPORT_NAME XmlGui
 )
@@ -143,7 +143,7 @@ ecm_generate_headers(KXmlGui_HEADERS
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
 
-install(TARGETS KF5XmlGui EXPORT KF5XmlGuiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF6XmlGui EXPORT KF6XmlGuiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
@@ -166,9 +166,9 @@ ecm_qt_install_logging_categories(
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5XmlGui_QCH
+        KF6XmlGui_QCH
         NAME KXmlGui
-        BASE_NAME KF5XmlGui
+        BASE_NAME KF6XmlGui
         VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -179,8 +179,8 @@ if (BUILD_QCH)
             Qt5Xml_QCH
             Qt5DBus_QCH
             Qt5Widgets_QCH
-            KF5Config_QCH
-            KF5ConfigWidgets_QCH
+            KF6Config_QCH
+            KF6ConfigWidgets_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
@@ -198,5 +198,5 @@ if (BUILD_QCH)
 endif()
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui)
+ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF6XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

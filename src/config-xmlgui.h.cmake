@@ -4,5 +4,5 @@
 #define CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}"
 #define KDE_INSTALL_LIBEXECDIR_KF "${KDE_INSTALL_LIBEXECDIR_KF}"
 
-/* KF5GlobalAccel available */
+/* KF6GlobalAccel available */
 #cmakedefine01 HAVE_GLOBALACCEL
