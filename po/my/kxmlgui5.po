@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:43+0000\n"
+"POT-Creation-Date: 2023-01-21 00:55+0000\n"
 "PO-Revision-Date: 2021-09-20 02:06+0630\n"
 "Last-Translator: ဇေယျာလွင် <lw1nzayar@yandex.com>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -1416,7 +1416,7 @@ msgstr "ကရိယာတန်းတည်နေရာများကိုအ
 msgid "Toolbars Shown"
 msgstr "ကရိယာဘားများပြထားသည်"
 
-#: ktooltiphelper.cpp:203
+#: ktooltiphelper.cpp:215
 #, kde-format
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -1427,7 +1427,7 @@ msgstr "%1 (%2)"
 #. about the thing the tooltip was invoked for. If there is no good way to translate
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
-#: ktooltiphelper.cpp:267
+#: ktooltiphelper.cpp:281
 #, fuzzy, kde-format
 #| msgid ""
 #| "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
@@ -1447,7 +1447,7 @@ msgstr ""
 #.
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:295
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></"
