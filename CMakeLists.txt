@@ -70,8 +70,7 @@ set (HAVE_GLOBALACCEL ${KF6GlobalAccel_FOUND})
 
 ecm_set_disabled_deprecation_versions(
     QT 5.15.2
-    KF 5.95
-    KCOREADDONS 5.86 # KPluginMetaData::extraInformation
+    KF 5.240
 )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")

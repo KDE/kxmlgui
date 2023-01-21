@@ -69,16 +69,6 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
         titleIcon = aboutData.programLogo().value<QIcon>();
     } else {
         titleIcon = qApp->windowIcon();
-#if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 2)
-        // Legacy support for deprecated KAboutData::programIconName()
-        QT_WARNING_PUSH
-        QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-        QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-        if (titleIcon.isNull() && !aboutData.programIconName().isEmpty()) {
-            titleIcon = QIcon::fromTheme(aboutData.programIconName());
-        }
-        QT_WARNING_POP
-#endif
     }
 
     QWidget *titleWidget = createTitleWidget(titleIcon, aboutData.displayName(), aboutData.version(), q);
