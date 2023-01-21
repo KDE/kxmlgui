@@ -442,37 +442,6 @@ KMainWindow::~KMainWindow()
     delete static_cast<QObject *>(k_ptr->dockResizeListener); // so we don't get anymore events after k_ptr is destroyed
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-QMenu *KMainWindow::helpMenu(const QString &aboutAppText, bool showWhatsThis)
-{
-    Q_D(KMainWindow);
-    if (!d->helpMenu) {
-        if (aboutAppText.isEmpty()) {
-            d->helpMenu = new KHelpMenu(this, KAboutData::applicationData(), showWhatsThis);
-        } else {
-            d->helpMenu = new KHelpMenu(this, aboutAppText, showWhatsThis);
-        }
-
-        if (!d->helpMenu) {
-            return nullptr;
-        }
-    }
-
-    return d->helpMenu->menu();
-}
-
-QMenu *KMainWindow::customHelpMenu(bool showWhatsThis)
-{
-    Q_D(KMainWindow);
-    if (!d->helpMenu) {
-        d->helpMenu = new KHelpMenu(this, QString(), showWhatsThis);
-        connect(d->helpMenu, &KHelpMenu::showAboutApplication, this, &KMainWindow::showAboutApplication);
-    }
-
-    return d->helpMenu->menu();
-}
-#endif
-
 bool KMainWindow::canBeRestored(int numberOfInstances)
 {
     KConfig *config = KConfigGui::sessionConfig();
@@ -804,20 +773,6 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
     d->settingsDirty = false;
     d->letDirtySettings = oldLetDirtySettings;
 }
-
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KMainWindow::restoreWindowSize(const KConfigGroup &cg)
-{
-    KWindowConfig::restoreWindowSize(windowHandle(), cg);
-}
-#endif
-
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KMainWindow::saveWindowSize(KConfigGroup &cg) const
-{
-    KWindowConfig::saveWindowSize(windowHandle(), cg);
-}
-#endif
 
 void KMainWindow::setSettingsDirty()
 {

@@ -209,17 +209,6 @@ public:
      */
     void setCheckActionCollections(const QList<KActionCollection *> &actionCollections);
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(4, 1)
-    /**
-     * @deprecated since 4.1
-     * use setCheckActionCollections so that KKeySequenceWidget knows
-     * in which action collection to call the writeSettings method after stealing
-     * a shortcut from an action.
-     */
-    KXMLGUI_DEPRECATED_VERSION(4, 1, "Use KKeySequenceWidget::setCheckActionCollections(const QList<KActionCollection *> &)")
-    void setCheckActionList(const QList<QAction *> &checkList);
-#endif
-
     /**
      * If the component using this widget supports shortcuts contexts, it has
      * to set its component name so we can check conflicts correctly.

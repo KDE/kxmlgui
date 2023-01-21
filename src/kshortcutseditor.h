@@ -136,15 +136,6 @@ public:
      */
     void undo();
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 75)
-    /**
-     * Undo all change made since the last commit().
-     * @deprecated Since 5.75, use undo()
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 75, "Use KShortcutsEditor::undo()")
-    void undoChanges();
-#endif
-
     /**
      * Save the changes.
      *
@@ -194,10 +185,6 @@ public:
      * @param config Config object
      */
     void exportConfiguration(KConfigBase *config) const;
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KShortcutsEditor::exportConfiguration(KConfigBase *config)")
-    void exportConfiguration(KConfig *config) const;
-#endif
 
     /**
      * Import the settings from configuration @p config.
@@ -208,10 +195,6 @@ public:
      * @param config Config object
      */
     void importConfiguration(KConfigBase *config);
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KShortcutsEditor::importConfiguration(KConfigBase *config)")
-    void importConfiguration(KConfig *config);
-#endif
 
     /**
      * Sets the types of actions to display in this widget.

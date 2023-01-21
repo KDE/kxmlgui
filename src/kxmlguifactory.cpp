@@ -708,23 +708,6 @@ void KXMLGUIFactoryPrivate::applyShortcutScheme(const QString &schemeName, KXMLG
     }
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 84)
-int KXMLGUIFactory::configureShortcuts(bool letterCutsOk, bool bSaveSettings)
-{
-    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions,
-                                     letterCutsOk ? KShortcutsEditor::LetterShortcutsAllowed : KShortcutsEditor::LetterShortcutsDisallowed,
-                                     qobject_cast<QWidget *>(parent()));
-    for (KXMLGUIClient *client : std::as_const(d->m_clients)) {
-        if (client) {
-            qCDebug(DEBUG_KXMLGUI) << "Adding collection from client" << client->componentName() << "with" << client->actionCollection()->count() << "actions";
-            dlg->addCollection(client->actionCollection(), client->componentName());
-        }
-    }
-    connect(dlg, &KShortcutsDialog::saved, this, &KXMLGUIFactory::shortcutsSaved);
-    return dlg->configure(bSaveSettings);
-}
-#endif
-
 void KXMLGUIFactory::showConfigureShortcutsDialog()
 {
     auto *dlg = new KShortcutsDialog(qobject_cast<QWidget *>(parent()));

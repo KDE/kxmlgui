@@ -267,29 +267,11 @@ Q_SIGNALS:
      */
     void inserted(QAction *action);
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Indicates that @p action was removed from this action collection.
-     * @deprecated Since 5.0, use changed() (added in 5.66) instead.
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "removed() is sometimes emitted with partially destroyed objects; use changed() instead (added in 5.66)")
-    QT_MOC_COMPAT void removed(QAction *action);
-#endif
-
     /**
      * Emitted when an action has been inserted into, or removed from, this action collection.
      * @since 5.66
      */
     void changed();
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Indicates that @p action was highlighted (hovered over).
-     * @deprecated Since 5.0. Replaced by actionHovered(QAction* action);
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KActionCollection::actionHovered(QAction* action)")
-    QT_MOC_COMPAT void actionHighlighted(QAction *action);
-#endif
 
     /**
      * Indicates that @p action was hovered.
@@ -307,15 +289,6 @@ protected:
 
 protected Q_SLOTS:
     virtual void slotActionTriggered();
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * @internal
-     * @deprecated Since 5.0. Replaced by slotActionHovered();
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KActionCollection::slotActionHovered()")
-    QT_MOC_COMPAT virtual void slotActionHighlighted();
-#endif
 
 private Q_SLOTS:
     void slotActionHovered();

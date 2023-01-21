@@ -21,11 +21,7 @@ int main(int argc, char *argv[])
     if (qApp->isSessionRestored()) {
         kRestoreMainWindows<MainWin1, MainWin2, MainWin3>();
         kRestoreMainWindows<MainWin4, MainWin5>();
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-        RESTORE(MainWin6);
-#else
         kRestoreMainWindows<MainWin6>(); // should be equivalent to RESTORE()
-#endif
     } else {
         MAKE_WINDOW(1, QStringLiteral("First 1"));
         MAKE_WINDOW(1, QStringLiteral("Second 1"));

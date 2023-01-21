@@ -145,29 +145,6 @@ public:
     /** @see QWidget::sizeHint() */
     QSize sizeHint() const override;
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 84)
-    /**
-     * Pops up a modal dialog for configuring key settings. The new
-     * shortcut settings will become active if the user presses OK.
-     *
-     * @param collection the KActionCollection to configure
-     * @param allowLetterShortcuts set to KShortcutsEditor::LetterShortcutsDisallowed if unmodified alphanumeric
-     *  keys ('A', '1', etc.) are not permissible shortcuts.
-     * @param parent the parent widget to attach to
-     * @param bSaveSettings if true, the settings will also be saved back
-     * by calling writeSettings() on the action collections that were added.
-     *
-     * @return Accept if the dialog was closed with OK, Reject otherwise.
-     *
-     * @deprecated since 5.84, use KShortcutsDialog::showDialog() instead.
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 84, "Use KShortcutsDialog::showDialog() instead, see API documentation for code examples.")
-    static int configure(KActionCollection *collection,
-                         KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
-                         QWidget *parent = nullptr,
-                         bool bSaveSettings = true);
-#endif
-
     /**
      * This static method shows a modal dialog that can be used to configure
      * the shortcuts associated with each action in @p collection. The new

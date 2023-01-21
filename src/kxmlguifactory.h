@@ -169,44 +169,6 @@ public:
     void refreshActionProperties();
 
 public Q_SLOTS:
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 84)
-    /**
-     * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
-     * and which can be used to change the shortcuts associated with each action.
-     *
-     * This slot can be connected directly to the action to configure shortcuts.
-     * This is very simple to do, for example:
-     * @code
-     * KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
-     * @endcode
-     * Or if you want to use the pointer-to-member-function signal/slot syntax
-     * (which is generally preferred as it has compile-time type checking) you
-     * can use:
-     * @code
-     * auto shortcutsSlot = [this]() {
-     *     guiFactory()->configureShortcuts();
-     * };
-     * KStandardAction::keyBindings(guiFactory(), shortcutsSlot, actionCollection());
-     *
-     * // Alternatively, since 5.84, you can use:
-     * KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
-     * @endcode
-     *
-     * @param bAllowLetterShortcuts Set to @c false if unmodified alphanumeric keys
-     * ('A', '1', etc.) are not permissible shortcuts; defaults to @c true
-     * @param bSaveSettings if @c true, the settings will also be saved back to
-     * the @c *ui.rc file which they were initially read from; defaults to @c true
-     *
-     * @deprecated since 5.84, use @ref KXMLGUIFactory::showConfigureShortcutsDialog() instead.
-     * If your code checked the return value of this method (e.g. to run some extra code if the
-     * dialog was accepted), you can port that code by connecting to the @c shortcutsSaved()
-     * signal before calling @c showConfigureShortcutsDialog() (see the latter's API docs for
-     * a code example).
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 84, "Use KXMLGUIFactory::showConfigureShortcutsDialog() instead.")
-    int configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true);
-#endif
-
     /**
      * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
      * and which can be used to change the shortcuts associated with each action.

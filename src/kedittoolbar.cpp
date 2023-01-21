@@ -718,9 +718,6 @@ void KEditToolBarPrivate::defaultClicked()
     enableApply(false);
 
     Q_EMIT q->newToolBarConfig();
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
-    Q_EMIT q->newToolbarConfig(); // compat
-#endif
 }
 
 void KEditToolBarPrivate::slotButtonClicked(QAbstractButton *button)
@@ -754,9 +751,6 @@ void KEditToolBarPrivate::okClicked()
     if (m_buttonBox->button(QDialogButtonBox::Apply)->isEnabled()) {
         m_widget->save();
         Q_EMIT q->newToolBarConfig();
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
-        Q_EMIT q->newToolbarConfig(); // compat
-#endif
     }
     q->accept();
 }
@@ -766,9 +760,6 @@ void KEditToolBarPrivate::applyClicked()
     (void)m_widget->save();
     enableApply(false);
     Q_EMIT q->newToolBarConfig();
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 0)
-    Q_EMIT q->newToolbarConfig(); // compat
-#endif
 }
 
 void KEditToolBar::setGlobalDefaultToolBar(const char *toolbarName)

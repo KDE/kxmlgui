@@ -154,24 +154,10 @@ void KShortcutsEditor::clearConfiguration()
     d->clearConfiguration();
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KShortcutsEditor::importConfiguration(KConfig *config)
-{
-    d->importConfiguration(config);
-}
-#endif
-
 void KShortcutsEditor::importConfiguration(KConfigBase *config)
 {
     d->importConfiguration(config);
 }
-
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KShortcutsEditor::exportConfiguration(KConfig *config) const
-{
-    exportConfiguration(static_cast<KConfigBase *>(config));
-}
-#endif
 
 void KShortcutsEditor::exportConfiguration(KConfigBase *config) const
 {
@@ -229,13 +215,6 @@ void KShortcutsEditor::save()
     // would vanish for this session.
     commit();
 }
-
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 75)
-void KShortcutsEditor::undoChanges()
-{
-    undo();
-}
-#endif
 
 void KShortcutsEditor::undo()
 {

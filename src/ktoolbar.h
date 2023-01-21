@@ -145,27 +145,6 @@ public:
      */
     int iconSizeDefault() const; // KDE5: hide from public API. Doesn't make sense to export this, and it isn't used.
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * This allows you to enable or disable the context menu.
-     *
-     * @param enable If false, then the context menu will be disabled
-     * @deprecated Since 5.0, use setContextMenuPolicy()
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use QWidget::setContextMenuPolicy(Qt::ContextMenuPolicy)")
-    void setContextMenuEnabled(bool enable = true);
-#endif
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Returns the context menu enabled flag
-     * @return true if the context menu is disabled
-     * @deprecated Since 5.0, use contextMenuPolicy()
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use QWidget::contextMenuPolicy()")
-    bool contextMenuEnabled() const;
-#endif
-
     /**
      * Save the toolbar settings to group @p cg.
      */
@@ -176,15 +155,6 @@ public:
      * and apply them.
      */
     void applySettings(const KConfigGroup &cg);
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Sets the XML gui client.
-     * @deprecated Since 5.0, use addXMLGUIClient()
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KToolBar::addXMLGUIClient(KXMLGUIClient *)")
-    void setXMLGUIClient(KXMLGUIClient *client);
-#endif
 
     /**
      * Adds an XML gui client that uses this toolbar
@@ -246,7 +216,6 @@ protected Q_SLOTS:
     virtual void slotMovableChanged(bool movable);
 
 protected:
-    void contextMenuEvent(QContextMenuEvent *) override;
     void actionEvent(QActionEvent *) override;
 
     // Draggable toolbar configuration

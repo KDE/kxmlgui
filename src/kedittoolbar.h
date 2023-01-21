@@ -144,14 +144,6 @@ Q_SIGNALS:
      */
     void newToolBarConfig();
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(4, 0)
-    /**
-     * @deprecated Since 4.0, use newToolBarConfig()
-     */
-    KXMLGUI_DEPRECATED_VERSION(4, 0, "Use KEditToolBar::newToolBarConfig()")
-    QT_MOC_COMPAT void newToolbarConfig();
-#endif
-
 protected:
     void showEvent(QShowEvent *event) override;
     void hideEvent(QHideEvent *event) override;

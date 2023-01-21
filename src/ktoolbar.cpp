@@ -81,9 +81,6 @@ public:
     KToolBarPrivate(KToolBar *qq)
         : q(qq)
         , isMainToolBar(false)
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-        , enableContext(true)
-#endif
         , unlockedMovable(true)
         , contextOrient(nullptr)
         , contextMode(nullptr)
@@ -108,7 +105,9 @@ public:
 
     void slotAppearanceChanged();
     void slotContextAboutToShow();
+#if 0
     void slotContextAboutToHide();
+#endif
     void slotContextLeft();
     void slotContextRight();
     void slotContextShowText();
@@ -138,9 +137,6 @@ public:
 
     KToolBar *const q;
     bool isMainToolBar : 1;
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    bool enableContext : 1;
-#endif
     bool unlockedMovable : 1;
     static bool s_editable;
     static bool s_locked;
@@ -731,6 +727,8 @@ void KToolBarPrivate::slotContextAboutToShow()
     }
 }
 
+// KF6 TODO: check if this can be removed
+#if 0
 void KToolBarPrivate::slotContextAboutToHide()
 {
     // We have to unplug whatever slotContextAboutToShow plugged into the menu.
@@ -757,6 +755,7 @@ void KToolBarPrivate::slotContextAboutToHide()
 
     context->removeAction(contextLockAction);
 }
+#endif
 
 void KToolBarPrivate::slotContextLeft()
 {
@@ -899,20 +898,6 @@ KToolBar::~KToolBar()
     delete d->contextLockAction;
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KToolBar::setContextMenuEnabled(bool enable)
-{
-    d->enableContext = enable;
-}
-#endif
-
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-bool KToolBar::contextMenuEnabled() const
-{
-    return d->enableContext;
-}
-#endif
-
 void KToolBar::saveSettings(KConfigGroup &cg)
 {
     Q_ASSERT(!cg.name().isEmpty());
@@ -937,14 +922,6 @@ void KToolBar::saveSettings(KConfigGroup &cg)
     }
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KToolBar::setXMLGUIClient(KXMLGUIClient *client)
-{
-    d->xmlguiClients.clear();
-    d->xmlguiClients << client;
-}
-#endif
-
 void KToolBar::addXMLGUIClient(KXMLGUIClient *client)
 {
     d->xmlguiClients << client;
@@ -953,25 +930,6 @@ void KToolBar::addXMLGUIClient(KXMLGUIClient *client)
 void KToolBar::removeXMLGUIClient(KXMLGUIClient *client)
 {
     d->xmlguiClients.remove(client);
-}
-
-void KToolBar::contextMenuEvent(QContextMenuEvent *event)
-{
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    if (mainWindow() && d->enableContext) {
-        QPointer<KToolBar> guard(this);
-        const QPoint globalPos = event->globalPos();
-        d->contextMenu(globalPos)->exec(globalPos);
-
-        // "Configure Toolbars" recreates toolbars, so we might not exist anymore.
-        if (guard) {
-            d->slotContextAboutToHide();
-        }
-        return;
-    }
-#endif
-
-    QToolBar::contextMenuEvent(event);
 }
 
 void KToolBar::loadState(const QDomElement &element)

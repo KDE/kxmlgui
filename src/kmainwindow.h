@@ -27,16 +27,6 @@ class KMWSessionManager;
 class KMainWindowPrivate;
 class KToolBar;
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 65)
-/**
- * @relates KMainWindow
- * @deprecated Since 5.65, use Qt::WindowFlags()
- */
-#define KDE_DEFAULT_WINDOWFLAGS 0
-#else
-#define KDE_DEFAULT_WINDOWFLAGS KDE_DEFAULT_WINDOWFLAGS_is_deprecated_use_Qt_WindowFlags()
-#endif
-
 /**
  * @class KMainWindow kmainwindow.h KMainWindow
  *
@@ -126,63 +116,6 @@ public:
      * needed.
      */
     ~KMainWindow() override;
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Retrieve the standard help menu.
-     *
-     * It contains entries for the
-     * help system (activated by F1), an optional "What's This?" entry
-     * (activated by Shift F1), an application specific dialog box,
-     * and an "About KDE" dialog box.
-     *
-     * Example (adding a standard help menu to your application):
-     * \code
-     * QMenu *help = helpMenu( <myTextString> );
-     * menuBar()->addMenu( help );
-     * \endcode
-     *
-     * @param aboutAppText The string that is used in the application
-     *        specific dialog box. If you leave this string empty the
-     *        information in the global KAboutData of the
-     *        application will be used to make a standard dialog box.
-     *
-     * @param showWhatsThis Set this to false if you do not want to include
-     *        the "What's This" menu entry.
-     *
-     * @return A standard help menu.
-     * @deprecated Since 5.0, use KHelpMenu directly
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KHelpMenu directly")
-    QMenu *helpMenu(const QString &aboutAppText = QString(), bool showWhatsThis = true);
-#endif
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * @returns The help menu. Creates a standard help menu if none exists yet.
-     *
-     * It contains entries for the
-     * help system (activated by F1), an optional "What's This?" entry
-     * (activated by Shift F1), an application specific dialog box,
-     * and an "About KDE" dialog box. You must create the application
-     * specific dialog box yourself. When the "About application"
-     * menu entry is activated, a signal will trigger the
-     * showAboutApplication slot. See showAboutApplication for more
-     * information.
-     *
-     * Example (adding a help menu to your application):
-     * \code
-     * menuBar()->addMenu( customHelpMenu() );
-     * \endcode
-     *
-     * @param showWhatsThis Whether to show the "What's This" menu entry. @c true by default.
-     *
-     * @return A standard help menu.
-     * @deprecated Since 5.0, use XMLGUI instead, or KHelpMenu directly
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use XMLGUI or KHelpMenu")
-    QMenu *customHelpMenu(bool showWhatsThis = true);
-#endif
 
     /**
      * @param numberOfInstances The number of KMainWindow instances in the application.
@@ -444,18 +377,6 @@ public:
      */
     QString dbusName() const;
 
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * @returns Always @c false
-     * @deprecated since 5.0, the functionality got removed
-     **/
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Remove usage, is a no-op now")
-    bool initialGeometrySet() const
-    {
-        return false;
-    }
-#endif
-
 public Q_SLOTS:
     /**
      * @brief Assigns a KDE compliant caption (window title).
@@ -672,57 +593,8 @@ protected:
      * For inherited classes
      */
     bool settingsDirty() const;
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * For inherited classes
-     * @deprecated Since 5.0, use KWindowConfig::saveWindowSize
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KWindowConfig::saveWindowSize(...)")
-    void saveWindowSize(KConfigGroup &config) const;
-#endif
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * For inherited classes
-     * @deprecated Since 5.0, use KWindowConfig::restoreWindowSize
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KWindowConfig::restoreWindowSize(...)")
-    void restoreWindowSize(const KConfigGroup &config);
-#endif
 
 protected Q_SLOTS:
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    /**
-     * This slot does nothing.
-     *
-     * It must be reimplemented if you want
-     * to use a custom About Application dialog box. This slot is
-     * connected to the About Application entry in the menu returned
-     * by customHelpMenu.
-     *
-     * Example:
-     * \code
-     *
-     * void MyMainLevel::setupInterface()
-     * {
-     *   ..
-     *   menuBar()->addMenu( customHelpMenu() );
-     *   ..
-     * }
-     *
-     * void MyMainLevel::showAboutApplication()
-     * {
-     *   <activate your custom dialog>
-     * }
-     * \endcode
-     * @deprecated Since 5.0, use KHelpMenu
-     */
-    KXMLGUI_DEPRECATED_VERSION(5, 0, "Use KHelpMenu")
-    virtual void showAboutApplication()
-    {
-    }
-#endif
-
     /**
      * This slot should only be called in case you reimplement closeEvent() and
      * if you are using the autosave feature. In all other cases,
@@ -765,23 +637,6 @@ private:
  *
  * @{
  */
-
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
-/**
- * @def RESTORE
- * Restores the last session.
- *
- * @deprecated since 5.0, use kRestoreMainWindows() instead
- **/
-#define RESTORE(type)                                                                                                                                          \
-    {                                                                                                                                                          \
-        int n = 1;                                                                                                                                             \
-        while (KMainWindow::canBeRestored(n)) {                                                                                                                \
-            (new type)->restore(n);                                                                                                                            \
-            n++;                                                                                                                                               \
-        }                                                                                                                                                      \
-    }
-#endif
 
 /**
  * @def KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS

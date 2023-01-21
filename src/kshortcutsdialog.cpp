@@ -236,18 +236,6 @@ QSize KShortcutsDialog::sizeHint() const
     return QSize(600, 480);
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 84)
-// static
-int KShortcutsDialog::configure(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent, bool saveSettings)
-{
-    // qDebug(125) << "KShortcutsDialog::configureKeys( KActionCollection*, " << saveSettings << " )";
-    auto *dlg = new KShortcutsDialog(KShortcutsEditor::AllActions, allowLetterShortcuts, parent);
-    dlg->setAttribute(Qt::WA_DeleteOnClose);
-    dlg->addCollection(collection);
-    return dlg->configure(saveSettings);
-}
-#endif
-
 // static
 void KShortcutsDialog::showDialog(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts, QWidget *parent)
 {

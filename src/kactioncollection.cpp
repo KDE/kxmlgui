@@ -359,9 +359,6 @@ QAction *KActionCollection::takeAction(QAction *action)
 
     action->disconnect(this);
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    Q_EMIT removed(action); // deprecated
-#endif
     Q_EMIT changed();
     return action;
 }
@@ -715,20 +712,10 @@ void KActionCollection::slotActionTriggered()
     }
 }
 
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-void KActionCollection::slotActionHighlighted()
-{
-    slotActionHovered();
-}
-#endif
-
 void KActionCollection::slotActionHovered()
 {
     QAction *action = qobject_cast<QAction *>(sender());
     if (action) {
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-        Q_EMIT actionHighlighted(action);
-#endif
         Q_EMIT actionHovered(action);
     }
 }
@@ -749,10 +736,6 @@ void KActionCollectionPrivate::_k_actionDestroyed(QObject *obj)
         return;
     }
 
-    // HACK the object we emit is partly destroyed
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-    Q_EMIT q->removed(action);
-#endif
     Q_EMIT q->changed();
 }
 
@@ -762,11 +745,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
         return;
     }
 
-    if (
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(5, 0)
-        signal.methodSignature() == "actionHighlighted(QAction*)" ||
-#endif
-        signal.methodSignature() == "actionHovered(QAction*)") {
+    if (signal.methodSignature() == "actionHovered(QAction*)") {
         if (!d->connectHovered) {
             d->connectHovered = true;
             for (QAction *action : std::as_const(d->actions)) {

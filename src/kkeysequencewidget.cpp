@@ -110,11 +110,6 @@ public:
     KKeySequenceWidget::ShortcutTypes checkAgainstShortcutTypes;
 
     /**
-     * The list of action to check against for conflict shortcut
-     */
-    QList<QAction *> checkList; // deprecated
-
-    /**
      * The list of action collections to check against for conflict shortcut
      */
     QList<KActionCollection *> checkActionCollections;
@@ -208,15 +203,13 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
         return false;
     }
 
-    // We have actions both in the deprecated checkList and the
-    // checkActionCollections list. Add all the actions to a single list to
+    // Add all the actions from the checkActionCollections list to a single list to
     // be able to process them in a single loop below.
     // Note that this can't be done in setCheckActionCollections(), because we
     // keep pointers to the action collections, and between the call to
     // setCheckActionCollections() and this function some actions might already be
     // removed from the collection again.
     QList<QAction *> allActions;
-    allActions += checkList;
     for (KActionCollection *collection : std::as_const(checkActionCollections)) {
         allActions += collection->actions();
     }
@@ -484,14 +477,6 @@ void KKeySequenceWidget::setClearButtonShown(bool show)
 {
     d->clearButton->setVisible(show);
 }
-
-#if KXMLGUI_BUILD_DEPRECATED_SINCE(4, 1)
-void KKeySequenceWidget::setCheckActionList(const QList<QAction *> &checkList) // deprecated
-{
-    d->checkList = checkList;
-    Q_ASSERT(d->checkActionCollections.isEmpty()); // don't call this method if you call setCheckActionCollections!
-}
-#endif
 
 void KKeySequenceWidget::setCheckActionCollections(const QList<KActionCollection *> &actionCollections)
 {
