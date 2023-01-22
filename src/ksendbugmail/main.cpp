@@ -99,10 +99,6 @@ int main(int argc, char **argv)
         }
     }
     QTextStream input(stdin, QIODevice::ReadOnly);
-    // The default in Qt6 is UTF-8
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    input.setCodec("UTF-8");
-#endif
     QString text;
     QString line;
     while (!input.atEnd()) {

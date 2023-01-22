@@ -55,7 +55,7 @@ target_sources(KF6XmlGui PRIVATE
   kundoactions.cpp
   kcheckaccelerators.cpp
 )
-if (TARGET Qt${QT_MAJOR_VERSION}::DBus)
+if (TARGET Qt6::DBus)
     target_sources(KF6XmlGui PRIVATE
         kmainwindowiface.cpp
     )
@@ -93,14 +93,14 @@ target_include_directories(KF6XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTAL
 
 target_link_libraries(KF6XmlGui
 PUBLIC
-    Qt${QT_MAJOR_VERSION}::Xml      #To parse the configuration (QDomDocument etc)
-    Qt${QT_MAJOR_VERSION}::Widgets  #QWidget is used everywhere
+    Qt6::Xml      #To parse the configuration (QDomDocument etc)
+    Qt6::Widgets  #QWidget is used everywhere
     KF6::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
     KF6::ConfigWidgets  #KStandardAction, KToggleAction...
 PRIVATE
-    Qt${QT_MAJOR_VERSION}::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
-    Qt${QT_MAJOR_VERSION}::PrintSupport   #QPrinter in kshortcutseditor
-    Qt${QT_MAJOR_VERSION}::CorePrivate    #QSystemLocale in initializeLanguages
+    Qt6::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
+    Qt6::PrintSupport   #QPrinter in kshortcutseditor
+    Qt6::CorePrivate    #QSystemLocale in initializeLanguages
     KF6::CoreAddons     #KAboutData
     KF6::GuiAddons
     KF6::WidgetsAddons
@@ -108,8 +108,8 @@ PRIVATE
     KF6::I18n                #i18n and i18nc in many places
     KF6::IconThemes         #KIconLoader and KIconThemes in KToolBar
 )
-if (TARGET Qt${QT_MAJOR_VERSION}::DBus)
-  target_link_libraries(KF6XmlGui PUBLIC Qt${QT_MAJOR_VERSION}::DBus) #QDBus connect to signal in KToolBar
+if (TARGET Qt6::DBus)
+  target_link_libraries(KF6XmlGui PUBLIC Qt6::DBus) #QDBus connect to signal in KToolBar
 endif()
 
 set_target_properties(KF6XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION}
@@ -176,9 +176,9 @@ if (BUILD_QCH)
         MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt5Xml_QCH
-            Qt5DBus_QCH
-            Qt5Widgets_QCH
+            Qt6Xml_QCH
+            Qt6DBus_QCH
+            Qt6Widgets_QCH
             KF6Config_QCH
             KF6ConfigWidgets_QCH
         INCLUDE_DIRS

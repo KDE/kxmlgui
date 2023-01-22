@@ -46,6 +46,8 @@
 
 #include "ktoolbarhelper_p.h"
 
+#include <algorithm>
+
 /*
  Toolbar settings (e.g. icon size or toolButtonStyle)
  =====================================================
@@ -670,8 +672,14 @@ void KToolBarPrivate::slotContextAboutToShow()
         kmw->setupToolbarMenuActions();
         // Only allow hiding a toolbar if the action is also plugged somewhere else (e.g. menubar)
         QAction *tbAction = kmw->toolBarMenuAction();
-        if (!q->toolBarsLocked() && tbAction && !tbAction->associatedWidgets().isEmpty()) {
-            context->addAction(tbAction);
+        if (!q->toolBarsLocked() && tbAction) {
+            const QList<QObject *> associatedObjects = tbAction->associatedObjects();
+            const bool hasAssociatedWidgets = std::any_of(associatedObjects.cbegin(), associatedObjects.cend(), [](QObject *object) {
+                return (qobject_cast<QWidget *>(object) != nullptr);
+            });
+            if (hasAssociatedWidgets) {
+                context->addAction(tbAction);
+            }
         }
     }
 
@@ -1121,7 +1129,7 @@ void KToolBar::dragEnterEvent(QDragEnterEvent *event)
         }
 
         if (!d->actionsBeingDragged.isEmpty()) {
-            QAction *overAction = actionAt(event->pos());
+            QAction *overAction = actionAt(event->position().toPoint());
 
             QFrame *dropIndicatorWidget = new QFrame(this);
             dropIndicatorWidget->resize(8, height() - 4);
@@ -1150,7 +1158,7 @@ void KToolBar::dragMoveEvent(QDragMoveEvent *event)
                 for (QAction *action : actions) {
                     // want to make it feel that half way across an action you're dropping on the other side of it
                     QWidget *widget = widgetForAction(action);
-                    if (event->pos().x() < widget->pos().x() + (widget->width() / 2)) {
+                    if (event->position().toPoint().x() < widget->pos().x() + (widget->width() / 2)) {
                         overAction = action;
                         break;
                     }
@@ -1222,9 +1230,9 @@ void KToolBar::dropEvent(QDropEvent *event)
 void KToolBar::mousePressEvent(QMouseEvent *event)
 {
     if (toolBarsEditable() && event->button() == Qt::LeftButton) {
-        if (QAction *action = actionAt(event->pos())) {
+        if (QAction *action = actionAt(event->position().toPoint())) {
             d->dragAction = action;
-            d->dragStartPosition = event->pos();
+            d->dragStartPosition = event->position().toPoint();
             event->accept();
             return;
         }
@@ -1240,7 +1248,7 @@ void KToolBar::mouseMoveEvent(QMouseEvent *event)
         return;
     }
 
-    if ((event->pos() - d->dragStartPosition).manhattanLength() < QApplication::startDragDistance()) {
+    if ((event->position().toPoint() - d->dragStartPosition).manhattanLength() < QApplication::startDragDistance()) {
         event->accept();
         return;
     }
@@ -1296,7 +1304,8 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
         if (me->buttons() & Qt::RightButton) {
             if (QWidget *ww = qobject_cast<QWidget *>(watched)) {
                 if (ww->parent() == this && !ww->isEnabled()) {
-                    QCoreApplication::postEvent(this, new QContextMenuEvent(QContextMenuEvent::Mouse, me->pos(), me->globalPos()));
+                    QCoreApplication::postEvent(this,
+                                                new QContextMenuEvent(QContextMenuEvent::Mouse, me->position().toPoint(), me->globalPosition().toPoint()));
                 }
             }
         }
@@ -1322,19 +1331,34 @@ bool KToolBar::eventFilter(QObject *watched, QEvent *event)
             switch (event->type()) {
             case QEvent::MouseButtonPress: {
                 QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(), me->button(), me->buttons(), me->modifiers());
+                QMouseEvent newEvent(me->type(),
+                                     mapFromGlobal(ww->mapToGlobal(me->position().toPoint())),
+                                     me->globalPosition().toPoint(),
+                                     me->button(),
+                                     me->buttons(),
+                                     me->modifiers());
                 mousePressEvent(&newEvent);
                 return true;
             }
             case QEvent::MouseMove: {
                 QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(), me->button(), me->buttons(), me->modifiers());
+                QMouseEvent newEvent(me->type(),
+                                     mapFromGlobal(ww->mapToGlobal(me->position().toPoint())),
+                                     me->globalPosition().toPoint(),
+                                     me->button(),
+                                     me->buttons(),
+                                     me->modifiers());
                 mouseMoveEvent(&newEvent);
                 return true;
             }
             case QEvent::MouseButtonRelease: {
                 QMouseEvent *me = static_cast<QMouseEvent *>(event);
-                QMouseEvent newEvent(me->type(), mapFromGlobal(ww->mapToGlobal(me->pos())), me->globalPos(), me->button(), me->buttons(), me->modifiers());
+                QMouseEvent newEvent(me->type(),
+                                     mapFromGlobal(ww->mapToGlobal(me->position().toPoint())),
+                                     me->globalPosition().toPoint(),
+                                     me->button(),
+                                     me->buttons(),
+                                     me->modifiers());
                 mouseReleaseEvent(&newEvent);
                 return true;
             }

@@ -176,10 +176,12 @@ void ToolBarHandler::Private::connectToActionContainers()
 
 void ToolBarHandler::Private::connectToActionContainer(QAction *action)
 {
-    const auto associatedWidgets = action->associatedWidgets();
+    const QList<QObject *> associatedObjects = action->associatedObjects();
 
-    for (auto *widget : associatedWidgets) {
-        connectToActionContainer(widget);
+    for (auto object : associatedObjects) {
+        if (auto widget = qobject_cast<QWidget *>(object)) {
+            connectToActionContainer(widget);
+        }
     }
 }
 

@@ -28,8 +28,8 @@ MouseWidget::MouseWidget(QWidget *parent)
 void MouseWidget::mousePressEvent(QMouseEvent *e)
 {
     mouseButtonDown = true;
-    Q_EMIT newXPos(e->x());
-    Q_EMIT newYPos(e->y());
+    Q_EMIT newXPos(qRound(e->position().x()));
+    Q_EMIT newYPos(qRound(e->position().y()));
 }
 
 void MouseWidget::mouseReleaseEvent(QMouseEvent *)
@@ -40,8 +40,8 @@ void MouseWidget::mouseReleaseEvent(QMouseEvent *)
 void MouseWidget::mouseMoveEvent(QMouseEvent *e)
 {
     if (mouseButtonDown) {
-        Q_EMIT newXPos(e->x());
-        Q_EMIT newYPos(e->y());
+        Q_EMIT newXPos(qRound(e->position().x()));
+        Q_EMIT newYPos(qRound(e->position().y()));
     }
 }
 
@@ -343,7 +343,6 @@ void KRulerTest::slotSetYTrans(double d)
 /* --- MAIN -----------------------*/
 int main(int argc, char **argv)
 {
-    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setApplicationName(QStringLiteral("test"));
     QApplication *testapp;
     KRulerTest *window;

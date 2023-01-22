@@ -18,7 +18,7 @@ ecm_qtdesignerplugin_widget(KShortcutWidget
 
 ecm_add_qtdesignerplugin(kxmlguiwidgets
     NAME KXmlGuiWidgets
-    OUTPUT_NAME kxmlgui5widgets
+    OUTPUT_NAME kxmlgui6widgets
     WIDGETS
         KKeySequenceWidget
         KShortcutsEditor

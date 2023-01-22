@@ -234,7 +234,7 @@ void KXMLGUIClient::setXMLFile(const QString &_file, bool merge, bool setXMLDoc)
 
         if (allFiles.isEmpty() && !compatFiles.isEmpty()) {
             qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << compatFiles
-                                     << "-- please use ${KDE_INSTALL_KXMLGUI5DIR} to install this file instead.";
+                                     << "-- please use ${KDE_INSTALL_KXMLGUIDIR} to install this file instead.";
         }
         allFiles += compatFiles;
     }

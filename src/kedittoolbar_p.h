@@ -53,11 +53,7 @@ protected:
         return QStringList() << QStringLiteral("application/x-kde-action-list");
     }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QMimeData *mimeData(const QList<QListWidgetItem *> items) const override;
-#else
     QMimeData *mimeData(const QList<QListWidgetItem *> &items) const override;
-#endif
 
     bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action) override;
 

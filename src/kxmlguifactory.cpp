@@ -27,9 +27,6 @@
 #include <QTextStream>
 #include <QVariant>
 #include <QWidget>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QTextCodec>
-#endif
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -106,7 +103,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
     if (!QDir::isRelativePath(filename)) {
         xml_file = filename;
     } else {
-        // KF >= 5.1 (KDE_INSTALL_KXMLGUI5DIR)
+        // KF >= 5.1 (KDE_INSTALL_KXMLGUIDIR)
         xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
         if (!QFile::exists(xml_file)) {
             // KF >= 5.4 (resource file)
@@ -130,7 +127,7 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
 
         if (warn && !xml_file.isEmpty()) {
             qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file
-                                     << "-- please use ${KDE_INSTALL_KXMLGUI5DIR} to install these files instead.";
+                                     << "-- please use ${KDE_INSTALL_KXMLGUIDIR} to install these files instead.";
         }
     }
 
@@ -163,10 +160,6 @@ bool KXMLGUIFactory::saveConfigFile(const QDomDocument &doc, const QString &file
 
     // write out our document
     QTextStream ts(&file);
-    // The default in Qt6 is UTF-8
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    ts.setCodec(QTextCodec::codecForName("UTF-8"));
-#endif
     ts << doc;
 
     file.close();
@@ -632,12 +625,12 @@ void KXMLGUIFactoryPrivate::configureAction(QAction *action, const QDomAttr &att
 
     QVariant propertyValue;
 
-    QVariant::Type propertyType = action->property(attrName.toLatin1().constData()).type();
-    bool isShortcut = (propertyType == QVariant::KeySequence);
+    const int propertyType = action->property(attrName.toLatin1().constData()).typeId();
+    bool isShortcut = (propertyType == QMetaType::QKeySequence);
 
-    if (propertyType == QVariant::Int) {
+    if (propertyType == QMetaType::Int) {
         propertyValue = QVariant(attribute.value().toInt());
-    } else if (propertyType == QVariant::UInt) {
+    } else if (propertyType == QMetaType::UInt) {
         propertyValue = QVariant(attribute.value().toUInt());
     } else if (isShortcut) {
         // Setting the shortcut by property also sets the default shortcut (which is incorrect), so we have to do it directly

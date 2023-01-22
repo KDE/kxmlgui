@@ -54,7 +54,7 @@ public Q_SLOTS:
         if (!sKey.isEmpty()) {
             QList<QKeySequence> cuts = QKeySequence::listFromString(sKey);
             if (!cuts.isEmpty()) {
-                key = cuts.first()[0];
+                key = cuts.first()[0].toCombined();
             }
         }
         const bool autoCheck = cg.readEntry("AutoCheckAccelerators", true);

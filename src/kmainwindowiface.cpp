@@ -15,6 +15,8 @@
 #include <QApplication>
 #include <QClipboard>
 
+#include <algorithm>
+
 KMainWindowInterface::KMainWindowInterface(KXmlGuiWindow *mainWindow)
     : QDBusAbstractAdaptor(mainWindow)
     , m_MainWindow(mainWindow)
@@ -30,7 +32,11 @@ QStringList KMainWindowInterface::actions()
     QStringList tmp_actions;
     const QList<QAction *> lst = m_MainWindow->actionCollection()->actions();
     for (QAction *it : lst) {
-        if (!it->associatedWidgets().isEmpty()) {
+        const QList<QObject *> associatedObjects = it->associatedObjects();
+        const bool hasAssociatedWidgets = std::any_of(associatedObjects.cbegin(), associatedObjects.cend(), [](QObject *object) {
+            return (qobject_cast<QWidget *>(object) != nullptr);
+        });
+        if (hasAssociatedWidgets) {
             tmp_actions.append(it->objectName());
         }
     }

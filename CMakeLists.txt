@@ -44,14 +44,14 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 # Dependencies
 set(REQUIRED_QT_VERSION 6.4.0)
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
+find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
 # On non-Apple UNIX DBus is required, on Apple Unix & Windows optional and it does not exist on Android
 if(UNIX AND NOT APPLE)
     if(NOT ANDROID)
-        find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
+        find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
     endif()
 else()
-    find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} OPTIONAL_COMPONENTS DBus)
+    find_package(Qt6 ${REQUIRED_QT_VERSION} OPTIONAL_COMPONENTS DBus)
 endif()
 
 find_package(KF6CoreAddons ${KF_DEP_VERSION} REQUIRED)
@@ -69,7 +69,7 @@ endif()
 set (HAVE_GLOBALACCEL ${KF6GlobalAccel_FOUND})
 
 ecm_set_disabled_deprecation_versions(
-    QT 5.15.2
+    QT 6.4
     KF 5.240
 )
 

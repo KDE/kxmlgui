@@ -325,17 +325,11 @@ protected:
      *
      * Since KF 5.1, the file will then be assumed to be installed in DATADIR/kxmlgui5/, under a directory
      * named after the component name.
-     * You should use ${KDE_INSTALL_KXMLGUI5DIR}/componentname in your CMakeLists.txt file, to install
+     * You should use ${KDE_INSTALL_KXMLGUIDIR}/componentname in your CMakeLists.txt file, to install
      * the .rc file(s).
      *
      * Since KF 5.4, the file will then be assumed to be installed in a Qt resource in :/kxmlgui5/,
      * under a directory named after the component name.
-     *
-     * Compatibility notes:
-     * Fallback lookups exist to older locations: DATADIR/componentname/file and DATADIR/file.
-     * The latter was there so that setXMLFile("componentname/filename") worked (but this was
-     * undocumented). Do not do this anymore after porting to KDE_INSTALL_KXMLGUI5DIR, use
-     * setComponentName("componentname") and setXMLFile("filename").
      **/
     virtual void setXMLFile(const QString &file, bool merge = false, bool setXMLDoc = true);
 
