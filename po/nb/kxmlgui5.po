@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:43+0000\n"
+"POT-Creation-Date: 2023-01-21 00:55+0000\n"
 "PO-Revision-Date: 2015-06-03 18:51+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -155,9 +155,9 @@ msgid ""
 "hundreds of applications, and the many software libraries that support them."
 "<br /><br />KDE is a cooperative enterprise: no single entity controls its "
 "direction or products. Instead, we work together to achieve the common goal "
-"of building the world's finest Free Software. Everyone is welcome to <a href="
-"\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit <a "
-"href=\"%3\">%3</a> for more information about the KDE community and the "
+"of building the world's finest Free Software. Everyone is welcome to <a "
+"href=\"%2\">join and contribute</a> to KDE, including you.<br /><br />Visit "
+"<a href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
 
@@ -195,10 +195,10 @@ msgstr ""
 "<html>Du trenger ikke være programvareutvikler for å være medlem av KDE-"
 "gruppa. Du kan bli med på de nasjonale oversettingslagene som oversetter "
 "programmene. Du kan også bidra med grafikk, temaer, lyder eller forbedret "
-"dokumentasjon. Hva du vil jobbe med bestemmer du selv!<br /><br />På <a href="
-"\"%1\">%1</a>  finner du opplysninger om de prosjektene du kan delta i.<br /"
-"><br />Hvis du trenger mer informasjon kan du gå til <a href=\"%2\">%2</a>.</"
-"html>"
+"dokumentasjon. Hva du vil jobbe med bestemmer du selv!<br /><br />På <a "
+"href=\"%1\">%1</a>  finner du opplysninger om de prosjektene du kan delta i."
+"<br /><br />Hvis du trenger mer informasjon kan du gå til <a href=\"%2\">%2</"
+"a>.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -1421,7 +1421,7 @@ msgstr "Lås verktøylinjeplasseringer"
 msgid "Toolbars Shown"
 msgstr "Viste verktøylinjer"
 
-#: ktooltiphelper.cpp:203
+#: ktooltiphelper.cpp:215
 #, kde-format
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -1432,7 +1432,7 @@ msgstr ""
 #. about the thing the tooltip was invoked for. If there is no good way to translate
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
-#: ktooltiphelper.cpp:267
+#: ktooltiphelper.cpp:281
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1449,7 +1449,7 @@ msgstr ""
 #.
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:295
 #, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
