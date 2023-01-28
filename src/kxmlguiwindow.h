@@ -400,13 +400,11 @@ public:
      */
     void setupToolbarMenuActions();
 
-    // TODO KF6 change it to "using KXMLGUIBuilder::finalizeGUI;"
-    void finalizeGUI(KXMLGUIClient *client) override;
-
     /**
      * @internal
      */
     void finalizeGUI(bool force);
+    using KXMLGUIBuilder::finalizeGUI;
 
     // reimplemented for internal reasons
     void applyMainWindowSettings(const KConfigGroup &config) override;
