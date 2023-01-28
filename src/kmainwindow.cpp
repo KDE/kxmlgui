@@ -101,7 +101,7 @@ bool DockResizeListener::eventFilter(QObject *watched, QEvent *event)
     case QEvent::Move:
     case QEvent::Show:
     case QEvent::Hide:
-        m_win->k_ptr->setSettingsDirty(KMainWindowPrivate::CompressCalls);
+        m_win->d_ptr->setSettingsDirty(KMainWindowPrivate::CompressCalls);
         break;
 
     default:
@@ -209,7 +209,7 @@ Q_GLOBAL_STATIC(QList<KMainWindow *>, sMemberList)
 
 KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags flags)
     : QMainWindow(parent, flags)
-    , k_ptr(new KMainWindowPrivate)
+    , d_ptr(new KMainWindowPrivate)
 {
     Q_D(KMainWindow);
 
@@ -218,7 +218,7 @@ KMainWindow::KMainWindow(QWidget *parent, Qt::WindowFlags flags)
 
 KMainWindow::KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlags f)
     : QMainWindow(parent, f)
-    , k_ptr(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KMainWindow);
 
@@ -432,7 +432,7 @@ void KMainWindowPrivate::setSizeDirty()
 KMainWindow::~KMainWindow()
 {
     sMemberList()->removeAll(this);
-    delete static_cast<QObject *>(k_ptr->dockResizeListener); // so we don't get anymore events after k_ptr is destroyed
+    delete static_cast<QObject *>(d_ptr->dockResizeListener); // so we don't get anymore events after d_ptr is destroyed
 }
 
 bool KMainWindow::canBeRestored(int numberOfInstances)

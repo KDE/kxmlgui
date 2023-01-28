@@ -621,11 +621,10 @@ protected Q_SLOTS:
 protected:
     KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlags f);
 
-    std::unique_ptr<KMainWindowPrivate> const k_ptr;
-    // KF6 TODO: change k_ptr to d_ptr, use normal Q_DECLARE_PRIVATE
+    std::unique_ptr<KMainWindowPrivate> const d_ptr;
 
 private:
-    Q_DECLARE_PRIVATE_D(k_ptr, KMainWindow)
+    Q_DECLARE_PRIVATE(KMainWindow)
 
     Q_PRIVATE_SLOT(d_func(), void _k_slotSettingsChanged(int))
     Q_PRIVATE_SLOT(d_func(), void _k_slotSaveAutoSaveSize())

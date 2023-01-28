@@ -500,7 +500,7 @@ protected Q_SLOTS:
     virtual void saveNewToolbarConfig();
 
 private:
-    Q_DECLARE_PRIVATE_D(k_ptr, KXmlGuiWindow)
+    Q_DECLARE_PRIVATE(KXmlGuiWindow)
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KXmlGuiWindow::StandardWindowOptions)
