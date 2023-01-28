@@ -188,7 +188,7 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
     });
     a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
     a->setText(i18n("Find Action…"));
-    actionCollection()->setDefaultShortcut(a, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_I));
+    KActionCollection::setDefaultShortcut(a, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_I));
 }
 
 QAction *KXmlGuiWindow::toolBarMenuAction()
@@ -549,9 +549,9 @@ void KXmlGuiWindow::setCommandBarEnabled(bool showCommandBar)
      */
     auto cmdBarAction = actionCollection()->action(QStringLiteral("open_kcommand_bar"));
     if (showCommandBar) {
-        actionCollection()->setDefaultShortcut(cmdBarAction, Qt::CTRL | Qt::ALT | Qt::Key_I);
+        KActionCollection::setDefaultShortcut(cmdBarAction, Qt::CTRL | Qt::ALT | Qt::Key_I);
     } else {
-        actionCollection()->setDefaultShortcut(cmdBarAction, {});
+        KActionCollection::setDefaultShortcut(cmdBarAction, {});
     }
 
     Q_D(KXmlGuiWindow);

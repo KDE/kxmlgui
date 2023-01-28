@@ -392,13 +392,13 @@ QAction *KActionCollection::addAction(const QString &name, const QObject *receiv
     return addAction(name, a);
 }
 
-QKeySequence KActionCollection::defaultShortcut(QAction *action) const
+QKeySequence KActionCollection::defaultShortcut(QAction *action)
 {
     const QList<QKeySequence> shortcuts = defaultShortcuts(action);
     return shortcuts.isEmpty() ? QKeySequence() : shortcuts.first();
 }
 
-QList<QKeySequence> KActionCollection::defaultShortcuts(QAction *action) const
+QList<QKeySequence> KActionCollection::defaultShortcuts(QAction *action)
 {
     return action->property("defaultShortcuts").value<QList<QKeySequence>>();
 }
@@ -414,7 +414,7 @@ void KActionCollection::setDefaultShortcuts(QAction *action, const QList<QKeySeq
     action->setProperty("defaultShortcuts", QVariant::fromValue(shortcuts));
 }
 
-bool KActionCollection::isShortcutsConfigurable(QAction *action) const
+bool KActionCollection::isShortcutsConfigurable(QAction *action)
 {
     // Considered as true by default
     const QVariant value = action->property("isShortcutConfigurable");

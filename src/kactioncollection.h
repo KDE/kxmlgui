@@ -535,7 +535,7 @@ public:
      * @return the default primary shortcut of the given action
      * @since 5.0
      */
-    QKeySequence defaultShortcut(QAction *action) const;
+    static QKeySequence defaultShortcut(QAction *action);
 
     /**
      * Get the default shortcuts for the given action.
@@ -544,9 +544,8 @@ public:
      * @return the default shortcuts of the given action
      * @since 5.0
      */
-    QList<QKeySequence> defaultShortcuts(QAction *action) const;
+    static QList<QKeySequence> defaultShortcuts(QAction *action);
 
-    // TODO KF6: Make setDefaultShortcut static
     /**
      * Set the default shortcut for the given action.
      * Since 5.2, this also calls action->setShortcut(shortcut), i.e. the default shortcut is
@@ -556,7 +555,7 @@ public:
      * @param shortcut the shortcut to use for the given action in its specified shortcutContext()
      * @since 5.0
      */
-    void setDefaultShortcut(QAction *action, const QKeySequence &shortcut);
+    static void setDefaultShortcut(QAction *action, const QKeySequence &shortcut);
 
     /**
      * Set the default shortcuts for the given action.
@@ -567,7 +566,7 @@ public:
      * @param shortcuts the shortcuts to use for the given action in its specified shortcutContext()
      * @since 5.0
      */
-    Q_INVOKABLE void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
+    Q_INVOKABLE static void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
 
     /**
      * Returns true if the given action's shortcuts may be configured by the user.
@@ -575,7 +574,7 @@ public:
      * @param action the action for the hint should be verified.
      * @since 5.0
      */
-    bool isShortcutsConfigurable(QAction *action) const;
+    static bool isShortcutsConfigurable(QAction *action);
 
     /**
      * Indicate whether the user may configure the action's shortcuts.
@@ -584,7 +583,7 @@ public:
      * @param configurable set to true if the shortcuts of the given action may be configured by the user, otherwise false.
      * @since 5.0
      */
-    void setShortcutsConfigurable(QAction *action, bool configurable);
+    static void setShortcutsConfigurable(QAction *action, bool configurable);
 
 private:
     KActionCollection(const KXMLGUIClient *parent); // used by KXMLGUIClient

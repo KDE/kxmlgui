@@ -662,7 +662,7 @@ void KXmlGui_UnitTest::testActionListAndSeparator()
 
     QAction *action1 = new QAction(this);
     action1->setObjectName(QStringLiteral("action1"));
-    client.actionCollection()->setDefaultShortcut(action1, QKeySequence(QStringLiteral("Ctrl+2")));
+    KActionCollection::setDefaultShortcut(action1, QKeySequence(QStringLiteral("Ctrl+2")));
     QAction *action2 = new QAction(this);
     action2->setObjectName(QStringLiteral("action2"));
     const QList<QAction *> actionList = {action1, action2};

@@ -28,7 +28,7 @@ QAction *KUndoActions::createRedoAction(QUndoStack *undoStack, KActionCollection
 
     action->setIcon(QIcon::fromTheme(QStringLiteral("edit-redo")));
     action->setIconText(i18n("Redo"));
-    actionCollection->setDefaultShortcuts(action, KStandardShortcut::redo());
+    KActionCollection::setDefaultShortcuts(action, KStandardShortcut::redo());
 
     actionCollection->addAction(action->objectName(), action);
 
@@ -47,7 +47,7 @@ QAction *KUndoActions::createUndoAction(QUndoStack *undoStack, KActionCollection
 
     action->setIcon(QIcon::fromTheme(QStringLiteral("edit-undo")));
     action->setIconText(i18n("Undo"));
-    actionCollection->setDefaultShortcuts(action, KStandardShortcut::undo());
+    KActionCollection::setDefaultShortcuts(action, KStandardShortcut::undo());
 
     actionCollection->addAction(action->objectName(), action);
 

@@ -238,7 +238,7 @@ bool KKeySequenceWidgetPrivate::conflictWithLocalShortcuts(const QKeySequence &k
         if (shortcutsConflictWith(qaction->shortcuts(), keySequence)) {
             // A conflict with a KAction. If that action is configurable
             // ask the user what to do. If not reject this keySequence.
-            if (checkActionCollections.first()->isShortcutsConfigurable(qaction)) {
+            if (KActionCollection::isShortcutsConfigurable(qaction)) {
                 conflictingActions.append(qaction);
             } else {
                 wontStealShortcut(qaction, keySequence);

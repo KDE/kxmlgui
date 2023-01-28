@@ -101,23 +101,23 @@ void tst_KActionCollection::writeSettings()
     temporaryShortcut << Qt::Key_C << Qt::Key_D;
 
     QAction *actionWithDifferentShortcut = new QAction(this);
-    collection->setDefaultShortcuts(actionWithDifferentShortcut, defaultShortcut);
+    KActionCollection::setDefaultShortcuts(actionWithDifferentShortcut, defaultShortcut);
     actionWithDifferentShortcut->setShortcuts(temporaryShortcut);
     collection->addAction(QStringLiteral("actionWithDifferentShortcut"), actionWithDifferentShortcut);
 
     QAction *immutableAction = new QAction(this);
-    collection->setDefaultShortcuts(immutableAction, defaultShortcut);
+    KActionCollection::setDefaultShortcuts(immutableAction, defaultShortcut);
     immutableAction->setShortcuts(temporaryShortcut);
-    collection->setShortcutsConfigurable(immutableAction, false);
+    KActionCollection::setShortcutsConfigurable(immutableAction, false);
     collection->addAction(QStringLiteral("immutableAction"), immutableAction);
 
     QAction *actionWithSameShortcut = new QAction(this);
-    collection->setDefaultShortcuts(actionWithSameShortcut, defaultShortcut);
+    KActionCollection::setDefaultShortcuts(actionWithSameShortcut, defaultShortcut);
     collection->addAction(QStringLiteral("actionWithSameShortcut"), actionWithSameShortcut);
 
     cfg.writeEntry("actionToDelete", QStringLiteral("Foobar"));
     QAction *actionToDelete = new QAction(this);
-    collection->setDefaultShortcuts(actionToDelete, defaultShortcut);
+    KActionCollection::setDefaultShortcuts(actionToDelete, defaultShortcut);
     collection->addAction(QStringLiteral("actionToDelete"), actionToDelete);
 
     collection->writeSettings(&cfg);
@@ -149,13 +149,13 @@ void tst_KActionCollection::readSettings()
 
     QAction *immutable = new QAction(this);
     immutable->setShortcuts(temporaryShortcut);
-    collection->setDefaultShortcuts(immutable, temporaryShortcut);
-    collection->setShortcutsConfigurable(immutable, false);
+    KActionCollection::setDefaultShortcuts(immutable, temporaryShortcut);
+    KActionCollection::setShortcutsConfigurable(immutable, false);
     collection->addAction(QStringLiteral("immutable"), immutable);
 
     QAction *empty = new QAction(this);
     collection->addAction(QStringLiteral("empty"), empty);
-    collection->setDefaultShortcuts(empty, defaultShortcut);
+    KActionCollection::setDefaultShortcuts(empty, defaultShortcut);
     empty->setShortcuts(temporaryShortcut);
     QCOMPARE(QKeySequence::listToString(empty->shortcuts()), QKeySequence::listToString(temporaryShortcut));
 
@@ -227,7 +227,7 @@ void tst_KActionCollection::testSetShortcuts()
 {
     QAction *action = new QAction(/*i18n*/ (QStringLiteral("Next Unread &Folder")), this);
     collection->addAction(QStringLiteral("go_next_unread_folder"), action);
-    collection->setDefaultShortcut(action, QKeySequence(Qt::ALT | Qt::Key_Plus));
+    KActionCollection::setDefaultShortcut(action, QKeySequence(Qt::ALT | Qt::Key_Plus));
     QList<QKeySequence> shortcut = action->shortcuts();
     shortcut << QKeySequence(Qt::CTRL | Qt::Key_Plus);
     action->setShortcuts(shortcut);
