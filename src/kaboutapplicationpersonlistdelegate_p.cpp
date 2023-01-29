@@ -70,7 +70,7 @@ QList<QWidget *> KAboutApplicationPersonListDelegate::createItemWidgets(const QM
     return list;
 }
 
-void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget *> widgets,
+void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget *> &widgets,
                                                             const QStyleOptionViewItem &option,
                                                             const QPersistentModelIndex &index) const
 {
