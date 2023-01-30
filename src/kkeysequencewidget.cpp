@@ -21,9 +21,9 @@
 #include <QHash>
 #include <QToolButton>
 
+#include <KKeySequenceRecorder>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KeySequenceRecorder>
 #if HAVE_GLOBALACCEL
 #include <KGlobalAccel>
 #endif
@@ -97,7 +97,7 @@ public:
 
     // members
     KKeySequenceWidget *const q;
-    KeySequenceRecorder *recorder;
+    KKeySequenceRecorder *recorder;
     QHBoxLayout *layout;
     QPushButton *keyButton;
     QToolButton *clearButton;
@@ -153,7 +153,7 @@ void KKeySequenceWidgetPrivate::init()
         clearButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-locationbar-ltr")));
     }
 
-    recorder = new KeySequenceRecorder(q->window()->windowHandle(), q);
+    recorder = new KKeySequenceRecorder(q->window()->windowHandle(), q);
     recorder->setModifierlessAllowed(false);
     recorder->setMultiKeyShortcutsAllowed(true);
 
@@ -413,10 +413,10 @@ KKeySequenceWidget::KKeySequenceWidget(QWidget *parent)
     connect(d->keyButton, &QPushButton::clicked, this, &KKeySequenceWidget::captureKeySequence);
     connect(d->clearButton, &QToolButton::clicked, this, &KKeySequenceWidget::clearKeySequence);
 
-    connect(d->recorder, &KeySequenceRecorder::currentKeySequenceChanged, this, [this] {
+    connect(d->recorder, &KKeySequenceRecorder::currentKeySequenceChanged, this, [this] {
         d->updateShortcutDisplay();
     });
-    connect(d->recorder, &KeySequenceRecorder::recordingChanged, this, [this] {
+    connect(d->recorder, &KKeySequenceRecorder::recordingChanged, this, [this] {
         if (!d->recorder->isRecording()) {
             d->doneRecording();
         }
