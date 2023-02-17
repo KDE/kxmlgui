@@ -209,7 +209,7 @@ void KMainWindow_UnitTest::testAutoSaveSettings()
                     return key.contains(keyToCheck);
                 });
             };
-            return containsKey(QLatin1String(" Width ")) && containsKey(QLatin1String(" Height "));
+            return containsKey(QLatin1String("Width")) && containsKey(QLatin1String("Height"));
         };
         QTRY_VERIFY(hasWidthAndHightSaved(mw.stateConfigGroup().keyList()));
         QTRY_VERIFY(!hasWidthAndHightSaved(mw.autoSaveConfigGroup().keyList()));
