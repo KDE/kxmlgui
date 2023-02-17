@@ -1,7 +1,5 @@
 @PACKAGE_INIT@
 
-set(XMLGUI_DBUS_INTERFACES_DIR "@PACKAGE_KDE_INSTALL_DBUSINTERFACEDIR@")
-
 include(CMakeFindDependencyMacro)
 if ("@Qt6DBus_FOUND@")
   find_dependency(Qt6DBus @REQUIRED_QT_VERSION@)
