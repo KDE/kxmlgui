@@ -81,6 +81,7 @@ ki18n_wrap_ui(KF6XmlGui
 )
 
 ecm_generate_export_header(KF6XmlGui
+    EXPORT_FILE_NAME kxmlgui_export.h
     BASE_NAME KXmlGui
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
