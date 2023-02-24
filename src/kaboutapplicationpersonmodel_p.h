@@ -95,15 +95,15 @@ public:
         : m_name()
         , m_task()
         , m_email()
-        , m_ocsUsername()
+        , m_avatarUrl()
     {
     } // needed for QVariant
 
-    KAboutApplicationPersonProfile(const QString &name, const QString &task, const QString &email, const QString &ocsUsername = QString())
+    KAboutApplicationPersonProfile(const QString &name, const QString &task, const QString &email, const QUrl &ocsUsername = QUrl())
         : m_name(name)
         , m_task(task)
         , m_email(email)
-        , m_ocsUsername(ocsUsername)
+        , m_avatarUrl(ocsUsername)
     {
     }
 
@@ -119,10 +119,6 @@ public:
     {
         m_location = location;
     }
-    void setOcsProfileUrl(const QString &url)
-    {
-        m_ocsProfileUrl = url;
-    }
 
     const QString &name() const
     {
@@ -136,13 +132,9 @@ public:
     {
         return m_email;
     }
-    const QString &ocsUsername() const
+    const QUrl &avatarUrl() const
     {
-        return m_ocsUsername;
-    }
-    const QString &ocsProfileUrl() const
-    {
-        return m_ocsProfileUrl;
+        return m_avatarUrl;
     }
     const QUrl &homepage() const
     {
@@ -161,8 +153,7 @@ private:
     QString m_name;
     QString m_task;
     QString m_email;
-    QString m_ocsUsername;
-    QString m_ocsProfileUrl;
+    QUrl m_avatarUrl;
     QUrl m_homepage;
     QPixmap m_avatar;
     QString m_location;

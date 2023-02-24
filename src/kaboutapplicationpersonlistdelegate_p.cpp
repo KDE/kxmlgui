@@ -95,7 +95,7 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
 
     label->setText(text);
 
-    // And now we fill in the main links (email + homepage + OCS profile)...
+    // And now we fill in the main links (email + homepage)
     KToolBar *mainLinks = qobject_cast<KToolBar *>(widgets.at(MainLinks));
     mainLinks->setIconSize(QSize(22, 22));
     mainLinks->setContentsMargins(0, 0, 0, 0);
@@ -111,13 +111,6 @@ void KAboutApplicationPersonListDelegate::updateItemWidgets(const QList<QWidget 
         action = mainLinks->actions().at(HomepageAction);
         action->setToolTip(i18nc("@info:tooltip", "Visit contributor's homepage\n%1", profile.homepage().toString()));
         action->setData(profile.homepage().toString());
-        action->setVisible(true);
-    }
-    if (!profile.ocsProfileUrl().isEmpty()) {
-        action = mainLinks->actions().at(VisitProfileAction);
-        KAboutApplicationPersonModel *model = qobject_cast<KAboutApplicationPersonModel *>(itemView()->model());
-        action->setToolTip(i18nc("@info:tooltip", "Visit contributor's profile on %1\n%2", model->providerName(), profile.ocsProfileUrl()));
-        action->setData(profile.ocsProfileUrl());
         action->setVisible(true);
     }
     mainLinks->resize(QSize(mainLinks->sizeHint().width(), MAIN_LINKS_HEIGHT));

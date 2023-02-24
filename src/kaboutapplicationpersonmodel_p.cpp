@@ -20,11 +20,10 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList<KAboutPer
     m_profileList.reserve(m_personList.size());
     bool hasAnyAvatars{false};
     for (const auto &person : std::as_const(m_personList)) {
-        KAboutApplicationPersonProfile profile = KAboutApplicationPersonProfile(person.name(), person.task(), person.emailAddress(), person.ocsUsername());
+        KAboutApplicationPersonProfile profile = KAboutApplicationPersonProfile(person.name(), person.task(), person.emailAddress(), person.avatarUrl());
         profile.setHomepage(QUrl(person.webAddress()));
-        if (!profile.ocsUsername().isEmpty()) {
+        if (!profile.avatarUrl().isEmpty()) {
             hasAnyAvatars = true;
-            profile.setOcsProfileUrl(QLatin1String{"https://store.kde.org/u/%1"}.arg(profile.ocsUsername()));
         }
         m_profileList.append(profile);
     }
@@ -36,9 +35,9 @@ KAboutApplicationPersonModel::KAboutApplicationPersonModel(const QList<KAboutPer
         if (showRemoteAvatars()) {
             int i = 0;
             for (const auto &profile : std::as_const(m_profileList)) {
-                if (!profile.ocsUsername().isEmpty()) {
+                if (!profile.avatarUrl().isEmpty()) {
                     if (profile.avatar().isNull()) {
-                        QNetworkRequest request(QUrl(QLatin1String{"https://store.kde.org/avatar/%1?s=%2"}.arg(profile.ocsUsername()).arg(AVATAR_HEIGHT)));
+                        QNetworkRequest request(profile.avatarUrl());
                         request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
                         QNetworkReply *reply = manager->get(request);
                         reply->setProperty("personProfile", i);
