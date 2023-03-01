@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:43+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2022-08-08 21:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -53,19 +53,19 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "حول %1"
 
-#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "حوْل"
 
-#: kaboutapplicationdialog.cpp:104
+#: kaboutapplicationdialog.cpp:94
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "المكوّنات"
 
-#: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -77,13 +77,13 @@ msgstr[3] "المؤلفين"
 msgstr[4] "المؤلفين"
 msgstr[5] "المؤلفين"
 
-#: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
+#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "الشكر إلى"
 
-#: kaboutapplicationdialog.cpp:128 kaboutplugindialog.cpp:112
+#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -651,30 +651,30 @@ msgstr "<h2>أزيلت المسرّعات</h2>"
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>المسرّعات المضافة ( لمعلوماتك فقط )</h2>>"
 
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:327
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "غيّر النص"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:337
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "نص الأي&قونة:"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:342
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "أ&خفِ النص عندما يعرض شريط الأدوات النص بجانب الأيقونات"
 
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:591
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "اضبط أشرطة الأدوات"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:654
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -683,17 +683,17 @@ msgstr ""
 "هل تريد فعلاً استرجاع كل أشرطة الأدوات الخاصة بهذا التطبيق إلى قيمها "
 "الافتراضية ؟ سيتم تطبيق التغييرات فوراً."
 
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:655
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "أعد ضبط شريط الأدوات"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:656
 #, kde-format
 msgid "Reset"
 msgstr "استرجع"
 
-#: kedittoolbar.cpp:989
+#: kedittoolbar.cpp:975
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&شريط الأدوات:"
@@ -705,66 +705,66 @@ msgstr "&شريط الأدوات:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:991
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "الإجراءات المت&وفرة:"
 
-#: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
+#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
 #, kde-format
 msgid "Filter"
 msgstr "رشّح"
 
-#: kedittoolbar.cpp:1029
+#: kedittoolbar.cpp:1015
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "الإجراءات ال&حالية:"
 
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1040
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
 msgstr "غيّر ال&أيقونة..."
 
-#: kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1049
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
 msgstr "غيّر ال&نصّ..."
 
-#: kedittoolbar.cpp:1205
+#: kedittoolbar.cpp:1191
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- فاصل ---"
 
-#: kedittoolbar.cpp:1206
+#: kedittoolbar.cpp:1192
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "---فراغ موسع ---"
 
-#: kedittoolbar.cpp:1228
+#: kedittoolbar.cpp:1214
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "‏%1"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1242
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "سيتم استبدال هذا العنصر بكل العناصر من المكوّن المدمج"
 
-#: kedittoolbar.cpp:1258
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgid "<Merge>"
 msgstr "<دمج>"
 
-#: kedittoolbar.cpp:1260
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgid "<Merge %1>"
 msgstr "< دمج %1 >"
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1256
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -773,24 +773,23 @@ msgstr ""
 "هذه قائمة إجراءات حركية. يمكنك تحريكها ، لكن إذا حذفتها ، لن يمكنك إضافتها "
 "مرة أخرى."
 
-#: kedittoolbar.cpp:1271
+#: kedittoolbar.cpp:1257
 #, kde-format
 msgid "ActionList: %1"
 msgstr "قائمة الإجراءات: %1"
 
-#: kedittoolbar.cpp:1372 kedittoolbar.cpp:1397
+#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "‏%1"
 
-#: kedittoolbar.cpp:1625
+#: kedittoolbar.cpp:1611
 #, kde-format
 msgid "Change Icon"
 msgstr "غيّر ال&أيقونة..."
 
-#. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:146
 #, kde-format
 msgid "&Help"
 msgstr "م&ساعدة"
@@ -800,7 +799,7 @@ msgstr "م&ساعدة"
 msgid "About %1"
 msgstr "حول %1"
 
-#: kkeysequencewidget.cpp:149
+#: kkeysequencewidget.cpp:144
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -810,7 +809,7 @@ msgstr ""
 "انقر على الزر وبعدها أدخل الاختصار الذي ترغب في البرنامج. \n"
 "مثال Ctrl+A : تضغط على حرف Ctrl و تكبس على حرف A."
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:167
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -822,12 +821,12 @@ msgstr[3] "تضارب بين الإختصارات"
 msgstr[4] "تضارب بين الإختصارات"
 msgstr[5] "تضارب بين الإختصارات"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "الاختصار '%1' للإجراء '%2'\n"
 
-#: kkeysequencewidget.cpp:181
+#: kkeysequencewidget.cpp:176
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -863,20 +862,20 @@ msgstr[5] ""
 "هل تريد اسناد اختصار فارغ إلى هذه الإجراءات؟\n"
 "%3"
 
-#: kkeysequencewidget.cpp:191 kkeysequencewidget.cpp:300
-#: kkeysequencewidget.cpp:362
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
+#: kkeysequencewidget.cpp:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: kkeysequencewidget.cpp:196
+#: kkeysequencewidget.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "تضارب اختصارات"
 
-#: kkeysequencewidget.cpp:198
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -885,12 +884,12 @@ msgstr ""
 "<qt>تجميعة المفاتيح '%1' مستخدمة بالفعل للإجراء <b>%2</b>.<br>المرجو اختيار "
 "تجميعة أخرى.</qt>"
 
-#: kkeysequencewidget.cpp:280
+#: kkeysequencewidget.cpp:273
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "الاختصار '%1' في التطبيق '%2' للإجراء '%3'\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:282
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -905,7 +904,7 @@ msgstr[3] "الاختصار '%2' يتعارض مع مجموعة المفاتيح
 msgstr[4] "الاختصار '%2' يتعارض مع مجموعة المفاتيح التالية:\n"
 msgstr[5] "الاختصار '%2' يتعارض مع مجموعة المفاتيح التالية:\n"
 
-#: kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -917,12 +916,12 @@ msgstr[3] "تعارض مع  اختصارات عالمية مسجلة"
 msgstr[4] "تعارض مع  اختصارات عالمية مسجلة"
 msgstr[5] "تعارض مع  اختصارات عالمية مسجلة"
 
-#: kkeysequencewidget.cpp:309
+#: kkeysequencewidget.cpp:302
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "اختصار محفوظ"
 
-#: kkeysequencewidget.cpp:311
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -932,13 +931,13 @@ msgstr ""
 "مفتاح  F12 محفوظ في الويندوز ؛ لذا لا يمكن استعماله كاختصار عالمي.\n"
 "المرجو أن تختار اختصار أخر."
 
-#: kkeysequencewidget.cpp:354
+#: kkeysequencewidget.cpp:347
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "تضارب مع اختصار تطبيق معياري"
 
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -949,13 +948,13 @@ msgstr ""
 "البرامج.\n"
 "هل تريد استعمالها أيضا كاختصار عام ."
 
-#: kkeysequencewidget.cpp:400
+#: kkeysequencewidget.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "دخل"
 
-#: kkeysequencewidget.cpp:402 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -967,13 +966,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "اتفاقية الترخيص"
 
-#: kmainwindow.cpp:277
+#: kmainwindow.cpp:272
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "زايد السعيدي,محمد هاني صباغ,صفا الفليج"
 
-#: kmainwindow.cpp:278
+#: kmainwindow.cpp:273
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1165,108 +1164,43 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "اضبط اختصارات لوحة المفاتيح"
 
-#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
-#: kshortcutsdialog.ui:16
-#, kde-format
-msgid ""
-"Search interactively for shortcut names (e.g. Copy) or combination of keys "
-"(e.g. Ctrl+C) by typing them here."
-msgstr ""
-"ابحث مباشرة على أسماء المختصرات (انسخ مثلا) أو تركيبة من الأزرار (Ctrl+C "
-"مثلا) بكتابتها هنا."
-
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:23
-#, kde-format
-msgid ""
-"Here you can see a list of key bindings, i.e. associations between actions "
-"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
-"Ctrl+V) shown in the right column."
-msgstr ""
-"تستطيع أن ترى هنا لائحة مواثق أزرار ، أي ربط إجراءات معينة (مثل النسخ) في "
-"العمود الأيسر ، بأزرار أو تركيبة أزرار  (Ctrl+V مثلا) في العمود الأيمن)."
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:33
-#, kde-format
-msgid "Action"
-msgstr "الإجراء"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:38
-#, kde-format
-msgid "Shortcut"
-msgstr "مفاتيح الاختصار"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:43
-#, kde-format
-msgid "Alternate"
-msgstr "الاختصار البديل"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:48
-#, kde-format
-msgid "Global"
-msgstr "الاختصار العام"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:53
-#, kde-format
-msgid "Global Alternate"
-msgstr "الاختصار العام البديل"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:58
-#, kde-format
-msgid "Mouse Button Gesture"
-msgstr "إيماء لزر للفأرة"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:63
-#, kde-format
-msgid "Mouse Shape Gesture"
-msgstr "إيماءة شكلية للفأرة"
-
-#: kshortcutseditor.cpp:557
+#: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "اختصارات لـ %1"
 
-#. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:577 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:556
 #, kde-format
 msgid "Main:"
 msgstr "الأساسي:"
 
-#. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:578 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:557
 #, kde-format
 msgid "Alternate:"
 msgstr "البديل:"
 
-#: kshortcutseditor.cpp:579
+#: kshortcutseditor.cpp:558
 #, kde-format
 msgid "Global:"
 msgstr "عام:"
 
-#: kshortcutseditor.cpp:580
+#: kshortcutseditor.cpp:559
 #, kde-format
 msgid "Global alternate:"
 msgstr "الاختصار العام البديل:"
 
-#: kshortcutseditor.cpp:596
+#: kshortcutseditor.cpp:575
 #, kde-format
 msgid "Action Name"
 msgstr "اسم الإجراء"
 
-#: kshortcutseditor.cpp:600
+#: kshortcutseditor.cpp:579
 #, kde-format
 msgid "Shortcuts"
 msgstr "اختصارات"
 
-#: kshortcutseditor.cpp:604
+#: kshortcutseditor.cpp:583
 #, kde-format
 msgid "Description"
 msgstr "الوصف"
@@ -1353,109 +1287,109 @@ msgid ""
 "contain a proper translation."
 msgstr "هذه هي اللغة التي ستستعمل إذا لم تكن تحتوي اللغات السابقة ترجمة مناسبة"
 
-#: ktoolbar.cpp:300 ktoolbar.cpp:307
+#: ktoolbar.cpp:298 ktoolbar.cpp:305
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "إعدادات شريط الأدوات"
 
-#: ktoolbar.cpp:302
+#: ktoolbar.cpp:300
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "أظهر النص"
 
-#: ktoolbar.cpp:309
+#: ktoolbar.cpp:307
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "الاتجاه"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:309
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "الأعلى"
 
-#: ktoolbar.cpp:315
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "اليسار"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:316
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "اليمين"
 
-#: ktoolbar.cpp:321
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "الأسفل"
 
-#: ktoolbar.cpp:332
+#: ktoolbar.cpp:330
 #, kde-format
 msgid "Text Position"
 msgstr "موضع النص"
 
-#: ktoolbar.cpp:334
+#: ktoolbar.cpp:332
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "الأيقونات فقط"
 
-#: ktoolbar.cpp:337
+#: ktoolbar.cpp:335
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "النص فقط"
 
-#: ktoolbar.cpp:340
+#: ktoolbar.cpp:338
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "النص بجانب الأيقونة"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:341
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "النص أسفل أيقونة"
 
-#: ktoolbar.cpp:354
+#: ktoolbar.cpp:352
 #, kde-format
 msgid "Icon Size"
 msgstr "قياس الأيقونة"
 
-#: ktoolbar.cpp:356
+#: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "الافتراضي"
 
-#: ktoolbar.cpp:376 ktoolbar.cpp:400
+#: ktoolbar.cpp:374 ktoolbar.cpp:398
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "صغير (%1×%2)"
 
-#: ktoolbar.cpp:378 ktoolbar.cpp:402
+#: ktoolbar.cpp:376 ktoolbar.cpp:400
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "متوسط (%1×%2)"
 
-#: ktoolbar.cpp:380 ktoolbar.cpp:404
+#: ktoolbar.cpp:378 ktoolbar.cpp:402
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "كبير (%1×%2)"
 
-#: ktoolbar.cpp:382 ktoolbar.cpp:406
+#: ktoolbar.cpp:380 ktoolbar.cpp:404
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "ضخم (%1×%2)"
 
-#: ktoolbar.cpp:432
+#: ktoolbar.cpp:430
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "اقفل أماكن شريط الأدوات"
@@ -1465,7 +1399,7 @@ msgstr "اقفل أماكن شريط الأدوات"
 msgid "Toolbars Shown"
 msgstr "أشرطة الأدوات المعروضة"
 
-#: ktooltiphelper.cpp:203
+#: ktooltiphelper.cpp:215
 #, kde-format
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -1476,7 +1410,7 @@ msgstr "‏%1 (‏%2)"
 #. about the thing the tooltip was invoked for. If there is no good way to translate
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
-#: ktooltiphelper.cpp:267
+#: ktooltiphelper.cpp:281
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1493,7 +1427,7 @@ msgstr "<small><font color=\"%1\">اضغط <b>Shift</b> للمزيد.</font></sm
 #.
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:295
 #, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
@@ -1521,7 +1455,7 @@ msgstr "بدون نص"
 msgid "Find Action…"
 msgstr "أعثر على الإجراء…"
 
-#: kxmlguiwindow.cpp:535
+#: kxmlguiwindow.cpp:528
 #, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
@@ -1531,71 +1465,77 @@ msgstr ""
 "يوجد إجراءان (%1 و %2) يرغبان باستخدام نفس الاختصار (%3). في الغالب هذه علة. "
 "يرجى التبليغ عنها في <a href='https://bugs.kde.org'>bugs.kde.org</a>"
 
-#: kxmlguiwindow.cpp:540
+#: kxmlguiwindow.cpp:533
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "اختصارات غامضة"
 
-#. i18n: ectx: Menu (file)
-#: ui_standards.rc:5
-#, kde-format
-msgid "&File"
-msgstr "&ملف"
+#~ msgid ""
+#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
+#~ "keys (e.g. Ctrl+C) by typing them here."
+#~ msgstr ""
+#~ "ابحث مباشرة على أسماء المختصرات (انسخ مثلا) أو تركيبة من الأزرار (Ctrl+C "
+#~ "مثلا) بكتابتها هنا."
 
-#. i18n: ectx: Menu (game)
-#: ui_standards.rc:34
-#, kde-format
-msgid "&Game"
-msgstr "&لعبة"
+#~ msgid ""
+#~ "Here you can see a list of key bindings, i.e. associations between "
+#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
+#~ "keys (e.g. Ctrl+V) shown in the right column."
+#~ msgstr ""
+#~ "تستطيع أن ترى هنا لائحة مواثق أزرار ، أي ربط إجراءات معينة (مثل النسخ) في "
+#~ "العمود الأيسر ، بأزرار أو تركيبة أزرار  (Ctrl+V مثلا) في العمود الأيمن)."
 
-#. i18n: ectx: Menu (edit)
-#: ui_standards.rc:61
-#, kde-format
-msgid "&Edit"
-msgstr "ت&حرير"
+#~ msgid "Action"
+#~ msgstr "الإجراء"
 
-#. i18n: ectx: Menu (move)
-#: ui_standards.rc:84
-#, kde-format
-msgctxt "@title:menu Game move"
-msgid "&Move"
-msgstr "اُ&نقل"
+#~ msgid "Shortcut"
+#~ msgstr "مفاتيح الاختصار"
 
-#. i18n: ectx: Menu (view)
-#: ui_standards.rc:102
-#, kde-format
-msgid "&View"
-msgstr "&عرض"
+#~ msgid "Alternate"
+#~ msgstr "الاختصار البديل"
 
-#. i18n: ectx: Menu (go)
-#: ui_standards.rc:121
-#, kde-format
-msgid "&Go"
-msgstr "ا&ذهب"
+#~ msgid "Global"
+#~ msgstr "الاختصار العام"
 
-#. i18n: ectx: Menu (bookmarks)
-#: ui_standards.rc:142
-#, kde-format
-msgid "&Bookmarks"
-msgstr "ع&لامات"
+#~ msgid "Global Alternate"
+#~ msgstr "الاختصار العام البديل"
 
-#. i18n: ectx: Menu (tools)
-#: ui_standards.rc:148
-#, kde-format
-msgid "&Tools"
-msgstr "أ&دوات"
+#~ msgid "Mouse Button Gesture"
+#~ msgstr "إيماء لزر للفأرة"
 
-#. i18n: ectx: Menu (settings)
-#: ui_standards.rc:152
-#, kde-format
-msgid "&Settings"
-msgstr "إ&عدادات"
+#~ msgid "Mouse Shape Gesture"
+#~ msgstr "إيماءة شكلية للفأرة"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: ui_standards.rc:197
-#, kde-format
-msgid "Main Toolbar"
-msgstr "شريط الأدوات الرئيسي"
+#~ msgid "&File"
+#~ msgstr "&ملف"
+
+#~ msgid "&Game"
+#~ msgstr "&لعبة"
+
+#~ msgid "&Edit"
+#~ msgstr "ت&حرير"
+
+#~ msgctxt "@title:menu Game move"
+#~ msgid "&Move"
+#~ msgstr "اُ&نقل"
+
+#~ msgid "&View"
+#~ msgstr "&عرض"
+
+#~ msgid "&Go"
+#~ msgstr "ا&ذهب"
+
+#~ msgid "&Bookmarks"
+#~ msgstr "ع&لامات"
+
+#~ msgid "&Tools"
+#~ msgstr "أ&دوات"
+
+#~ msgid "&Settings"
+#~ msgstr "إ&عدادات"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "شريط الأدوات الرئيسي"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

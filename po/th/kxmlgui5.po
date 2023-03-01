@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:43+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -67,21 +67,21 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "เกี่ยวกับ %1"
 
-#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, fuzzy, kde-format
 #| msgid "&About"
 msgctxt "@title:tab"
 msgid "About"
 msgstr "เ&กี่ยวกับ"
 
-#: kaboutapplicationdialog.cpp:104
+#: kaboutapplicationdialog.cpp:94
 #, fuzzy, kde-format
 #| msgid "Comments"
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "ความคิดเห็น"
 
-#: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
 #, fuzzy, kde-format
 #| msgid "Author"
 msgctxt "@title:tab"
@@ -89,14 +89,14 @@ msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "ผู้เขียน"
 
-#: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
+#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, fuzzy, kde-format
 #| msgid "&Thanks To"
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "ขอ&ขอบคุณ"
 
-#: kaboutapplicationdialog.cpp:128 kaboutplugindialog.cpp:112
+#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
 #, fuzzy, kde-format
 #| msgid "Translation"
 msgctxt "@title:tab"
@@ -747,33 +747,33 @@ msgstr "<h2>มีการลบปุ่มพิมพ์ลัด</h2>"
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>มีการเพิ่มปุ่มพิมพ์ลัด (สำหรับข้อมูลของคุณ)</h2>"
 
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:327
 #, fuzzy, kde-format
 #| msgid "Change Text"
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "เปลี่ยนข้อความ"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:337
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "&ข้อความของไอคอน:"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:342
 #, fuzzy, kde-format
 #| msgid "&Hide text when toolbar shows text alongside icons"
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "ซ่&อนข้อความเมื่อแถบเครื่องมือแสดงข้อความอยู่ทางด้านข้างของไอคอนซ่อนข้อความเมื่อแ"
 
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:591
 #, fuzzy, kde-format
 #| msgid "Configure Toolbars"
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "ปรับแต่งแถบเครื่องมือ"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:654
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -782,17 +782,17 @@ msgstr ""
 "คุณต้องการปรับค่าแถบเครื่องมือของโปรแกรมนี้ให้กลับไปใช้ค่าปริยายของมันจริงหรือไม่? "
 "การเปลี่ยนแปลงจะถูกปรับใช้ในทันที"
 
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:655
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "ปรับแถบเครื่องมือกลับค่าเดิม"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:656
 #, kde-format
 msgid "Reset"
 msgstr "ปรับกลับค่าเดิม"
 
-#: kedittoolbar.cpp:989
+#: kedittoolbar.cpp:975
 #, kde-format
 msgid "&Toolbar:"
 msgstr "แถบเ&ครื่องมือ:"
@@ -804,69 +804,69 @@ msgstr "แถบเ&ครื่องมือ:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:991
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "การกระทำที่มีใ&ห้เลือก:"
 
-#: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
+#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
 #, kde-format
 msgid "Filter"
 msgstr "ตัวกรอง"
 
-#: kedittoolbar.cpp:1029
+#: kedittoolbar.cpp:1015
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "การกระทำ&ปัจจุบัน:"
 
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
 msgid "Change &Icon..."
 msgstr "เปลี่ยนภาพไ&อคอน..."
 
-#: kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
 #| msgid "Change Te&xt..."
 msgctxt "@action:button"
 msgid "Change Te&xt..."
 msgstr "เปลี่ยน&ข้อความ..."
 
-#: kedittoolbar.cpp:1205
+#: kedittoolbar.cpp:1191
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- ตัวแบ่ง ---"
 
-#: kedittoolbar.cpp:1206
+#: kedittoolbar.cpp:1192
 #, fuzzy, kde-format
 #| msgid "--- separator ---"
 msgid "--- expanding spacer ---"
 msgstr "--- ตัวแบ่ง ---"
 
-#: kedittoolbar.cpp:1228
+#: kedittoolbar.cpp:1214
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1242
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "ส่วนประกอบนี้จะแทนที่ส่วนประกอบของคอมโพเนนท์ที่ถูกฝังอยู่ทั้งหมด"
 
-#: kedittoolbar.cpp:1258
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgid "<Merge>"
 msgstr "<ผนวกรวม>"
 
-#: kedittoolbar.cpp:1260
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<ผนวกรวม %1>"
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1256
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -875,24 +875,23 @@ msgstr ""
 "นี่เป็นรายการการกระทำที่ไม่คงที่ คุณสามารถย้ายมันได้ แต่ถ้าคุณได้เอามันออกไป "
 "จะไม่สามารถทำการเพิ่มมันได้อีก"
 
-#: kedittoolbar.cpp:1271
+#: kedittoolbar.cpp:1257
 #, kde-format
 msgid "ActionList: %1"
 msgstr "รายการการกระทำ: %1"
 
-#: kedittoolbar.cpp:1372 kedittoolbar.cpp:1397
+#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1625
+#: kedittoolbar.cpp:1611
 #, kde-format
 msgid "Change Icon"
 msgstr "เปลี่ยนภาพไอคอน"
 
-#. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:146
 #, kde-format
 msgid "&Help"
 msgstr "&ช่วยเหลือ"
@@ -902,7 +901,7 @@ msgstr "&ช่วยเหลือ"
 msgid "About %1"
 msgstr "เกี่ยวกับ %1"
 
-#: kkeysequencewidget.cpp:149
+#: kkeysequencewidget.cpp:144
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -916,19 +915,19 @@ msgstr ""
 "คลิกบนปุ่ม จากนั้นป้อนปุ่มพิมพ์ลัดที่คุณต้องการจะใช้ในโปรแกรม\n"
 "ตัวอย่างเช่น Ctrl+a: กดปุ่มพิมพ์ Ctrl ค้างเอาไว้ ตามด้วยการกดปุมพิมพ์ a"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:167
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "ปุ่มพิมพ์ลัดขัดแย้งกัน"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "ปุ่มพิมพ์ลัด '%1' ของการกระทำ '%2'\n"
 
-#: kkeysequencewidget.cpp:181
+#: kkeysequencewidget.cpp:176
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -953,22 +952,22 @@ msgstr[0] ""
 "คุณต้องการจะกำหนดปุ่มพิมพ์ลัดว่างไปยังการการกระทำเหล่านี้หรือไม่ ?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:191 kkeysequencewidget.cpp:300
-#: kkeysequencewidget.cpp:362
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
+#: kkeysequencewidget.cpp:355
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "กำหนดใหม่"
 
-#: kkeysequencewidget.cpp:196
+#: kkeysequencewidget.cpp:191
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ปุ่มพิมพ์ลัดขัดแย้งกัน"
 
-#: kkeysequencewidget.cpp:198
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -976,13 +975,13 @@ msgid ""
 msgstr ""
 "<qt>การจับคู่ปุ่มพิมพ์ '%1' ถูกใช้โดยการกระทำ <b>%2</b> อยู่แล้ว<br>โปรดเลือกแบบอื่น</qt>"
 
-#: kkeysequencewidget.cpp:280
+#: kkeysequencewidget.cpp:273
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "ปุ่มพิมพ์ลัด '%1' ในโปรแกรม %2 สำหรับการกระทำ %3\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:282
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -992,19 +991,19 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "ปุ่มพิมพ์ลัด '%2' ขัดแย้งกับการจับคู่ปุ่มพิมพ์ต่อไปนี้:\n"
 
-#: kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "ขัดแย้งกับปุ่มพิมพ์ลัดที่ได้ลงทะเบียนไว้ส่วนกลาง"
 
-#: kkeysequencewidget.cpp:309
+#: kkeysequencewidget.cpp:302
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "ปุ่มพิมพ์ลัดที่ถูกสงวนไว้"
 
-#: kkeysequencewidget.cpp:311
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -1015,14 +1014,14 @@ msgstr ""
 "ดังนั้นจึงไม่สามารถนำมาใช้งานเป็นปุ่มพิมพ์ลัดใช้งานส่วนรวมได้\n"
 "โปรดเลือกปุ่มพิมพ์อื่น ๆ"
 
-#: kkeysequencewidget.cpp:354
+#: kkeysequencewidget.cpp:347
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "เกิดความขัดแย้งกับปุ่มพิมพ์ลัดมาตรฐานของโปรแกรม"
 
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -1032,13 +1031,13 @@ msgstr ""
 "ปุ่มพิมพ์ลัด '%1' นี้ ถูกจองไว้ใช้งานกับการกระทำมาตรฐาน \"%2\" ซึ่งมีบางโปรแกรมใช้อยู่\n"
 "คุณต้องการจะใช้มันเป็นปุ่มพิมพ์ลัดใช้งานส่วนรวมของมันเช่นกันหรือไม่ ?"
 
-#: kkeysequencewidget.cpp:400
+#: kkeysequencewidget.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "กดปุ่มพิมพ์"
 
-#: kkeysequencewidget.cpp:402 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -1051,13 +1050,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "ข้อตกลงในสัญญาอนุญาต"
 
-#: kmainwindow.cpp:277
+#: kmainwindow.cpp:272
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
 
-#: kmainwindow.cpp:278
+#: kmainwindow.cpp:273
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1271,110 +1270,44 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "ปรับแต่งปุ่มพิมพ์ลัด"
 
-#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
-#: kshortcutsdialog.ui:16
-#, kde-format
-msgid ""
-"Search interactively for shortcut names (e.g. Copy) or combination of keys "
-"(e.g. Ctrl+C) by typing them here."
-msgstr ""
-"ค้นหาชื่อของปุ่มพิมพ์ลัด (ตัวอย่างเช่น คัดลอก) หรือรูปแบบการกดปุ่มของแป้นพิมพ์ (ตัวอย่าง เช่น Ctrl"
-"+C) แบบปฎิสัมพันธ์ โดยป้อนคำค้นที่นี่"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:23
-#, kde-format
-msgid ""
-"Here you can see a list of key bindings, i.e. associations between actions "
-"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
-"Ctrl+V) shown in the right column."
-msgstr ""
-"คุณสามารถเห็นการจับคู่ปุ่มพิมพ์ที่กำหนดไว้แล้วที่นี่ โดยมีความสัมพันธ์ระหว่างการกระทำ (เช่น "
-"'คัดลอก') จะถูกแสดงไว้ในคอลัมน์ด้านซ้าย และปุ่มพิมพ์ที่ถูกจับคู่ไว้ (เช่น CTRL+V) "
-"จะถูกแสดงไว้ในคอลัมน์ด้านขวา"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:33
-#, kde-format
-msgid "Action"
-msgstr "การกระทำ"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:38
-#, kde-format
-msgid "Shortcut"
-msgstr "ปุ่มพิมพ์ลัด"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:43
-#, kde-format
-msgid "Alternate"
-msgstr "ทางเลือกอื่น"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:48
-#, kde-format
-msgid "Global"
-msgstr "ทั้งระบบ"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:53
-#, kde-format
-msgid "Global Alternate"
-msgstr "ทางเลือกอื่นของทั้งระบบ"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:58
-#, kde-format
-msgid "Mouse Button Gesture"
-msgstr "รูปแบบการกดปุ่มเมาส์"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:63
-#, kde-format
-msgid "Mouse Shape Gesture"
-msgstr "รูปแบบการเคลื่อนเมาส์"
-
-#: kshortcutseditor.cpp:557
+#: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "ปุ่มพิมพ์ลัดสำหรับ %1"
 
-#. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:577 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:556
 #, kde-format
 msgid "Main:"
 msgstr "ปุ่มพิมพ์ลัดหลัก:"
 
-#. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:578 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:557
 #, kde-format
 msgid "Alternate:"
 msgstr "ปุ่มพิมพ์ลัดอื่น:"
 
-#: kshortcutseditor.cpp:579
+#: kshortcutseditor.cpp:558
 #, kde-format
 msgid "Global:"
 msgstr "ทั้งระบบ:"
 
-#: kshortcutseditor.cpp:580
+#: kshortcutseditor.cpp:559
 #, fuzzy, kde-format
 #| msgid "Global Alternate"
 msgid "Global alternate:"
 msgstr "ทางเลือกอื่นของทั้งระบบ"
 
-#: kshortcutseditor.cpp:596
+#: kshortcutseditor.cpp:575
 #, kde-format
 msgid "Action Name"
 msgstr "ชื่อการกระทำ"
 
-#: kshortcutseditor.cpp:600
+#: kshortcutseditor.cpp:579
 #, kde-format
 msgid "Shortcuts"
 msgstr "ปุ่มพิมพ์ลัด"
 
-#: kshortcutseditor.cpp:604
+#: kshortcutseditor.cpp:583
 #, kde-format
 msgid "Description"
 msgstr "รายละเอียด"
@@ -1473,116 +1406,116 @@ msgid ""
 "contain a proper translation."
 msgstr "นี่คือภาษาที่จะใช้ถ้าภาษาที่ใช้ก่อนหน้านี้ไม่มีคำแปลที่เหมาะสม"
 
-#: ktoolbar.cpp:300 ktoolbar.cpp:307
+#: ktoolbar.cpp:298 ktoolbar.cpp:305
 #, fuzzy, kde-format
 #| msgid "Toolbar Settings"
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "ตั้งค่าแถบเครื่องมือ"
 
-#: ktoolbar.cpp:302
+#: ktoolbar.cpp:300
 #, fuzzy, kde-format
 #| msgid "Show help"
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "แสดงความช่วยเหลือ"
 
-#: ktoolbar.cpp:309
+#: ktoolbar.cpp:307
 #, fuzzy, kde-format
 #| msgid "Orientation"
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "ทิศทางการวาง"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:309
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "ด้านบน"
 
-#: ktoolbar.cpp:315
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "ด้านซ้าย"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:316
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "ด้านขวา"
 
-#: ktoolbar.cpp:321
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "ด้านล่าง"
 
-#: ktoolbar.cpp:332
+#: ktoolbar.cpp:330
 #, kde-format
 msgid "Text Position"
 msgstr "ตำแหน่งข้อความ"
 
-#: ktoolbar.cpp:334
+#: ktoolbar.cpp:332
 #, fuzzy, kde-format
 #| msgid "Icons Only"
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "แสดงไอคอนเท่านั้น"
 
-#: ktoolbar.cpp:337
+#: ktoolbar.cpp:335
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "แสดงข้อความเท่านั้น"
 
-#: ktoolbar.cpp:340
+#: ktoolbar.cpp:338
 #, fuzzy, kde-format
 #| msgid "Text Alongside Icons"
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "ข้อความอยู่ด้านข้างไอคอน"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:341
 #, fuzzy, kde-format
 #| msgid "Text Under Icons"
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "ข้อความอยู่ด้านล่างไอคอน"
 
-#: ktoolbar.cpp:354
+#: ktoolbar.cpp:352
 #, kde-format
 msgid "Icon Size"
 msgstr "ขนาดไอคอน"
 
-#: ktoolbar.cpp:356
+#: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "ค่าปริยาย"
 
-#: ktoolbar.cpp:376 ktoolbar.cpp:400
+#: ktoolbar.cpp:374 ktoolbar.cpp:398
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "เล็ก (%1x%2)"
 
-#: ktoolbar.cpp:378 ktoolbar.cpp:402
+#: ktoolbar.cpp:376 ktoolbar.cpp:400
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "ปานกลาง (%1x%2)"
 
-#: ktoolbar.cpp:380 ktoolbar.cpp:404
+#: ktoolbar.cpp:378 ktoolbar.cpp:402
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "ใหญ่ (%1x%2)"
 
-#: ktoolbar.cpp:382 ktoolbar.cpp:406
+#: ktoolbar.cpp:380 ktoolbar.cpp:404
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "ใหญ่มาก (%1x%2)"
 
-#: ktoolbar.cpp:432
+#: ktoolbar.cpp:430
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "ล็อคตำแหน่งแถบเครื่องมือ"
@@ -1592,7 +1525,7 @@ msgstr "ล็อคตำแหน่งแถบเครื่องมือ
 msgid "Toolbars Shown"
 msgstr "แสดงแถบเครื่องมือ"
 
-#: ktooltiphelper.cpp:203
+#: ktooltiphelper.cpp:215
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -1605,7 +1538,7 @@ msgstr "%1 (%2)"
 #. about the thing the tooltip was invoked for. If there is no good way to translate
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
-#: ktooltiphelper.cpp:267
+#: ktooltiphelper.cpp:281
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1622,7 +1555,7 @@ msgstr ""
 #.
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:295
 #, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
@@ -1650,7 +1583,7 @@ msgstr "ไม่มีข้อความ"
 msgid "Find Action…"
 msgstr "การกระทำ"
 
-#: kxmlguiwindow.cpp:535
+#: kxmlguiwindow.cpp:528
 #, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
@@ -1658,72 +1591,79 @@ msgid ""
 "org'>bugs.kde.org</a>"
 msgstr ""
 
-#: kxmlguiwindow.cpp:540
+#: kxmlguiwindow.cpp:533
 #, fuzzy, kde-format
 #| msgid "Ambiguous shortcut detected"
 msgid "Ambiguous Shortcuts"
 msgstr "ตรวจพบปุ่มพิมพ์ลัดที่คลุมเครือ"
 
-#. i18n: ectx: Menu (file)
-#: ui_standards.rc:5
-#, kde-format
-msgid "&File"
-msgstr "แ&ฟ้ม"
+#~ msgid ""
+#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
+#~ "keys (e.g. Ctrl+C) by typing them here."
+#~ msgstr ""
+#~ "ค้นหาชื่อของปุ่มพิมพ์ลัด (ตัวอย่างเช่น คัดลอก) หรือรูปแบบการกดปุ่มของแป้นพิมพ์ (ตัวอย่าง เช่น "
+#~ "Ctrl+C) แบบปฎิสัมพันธ์ โดยป้อนคำค้นที่นี่"
 
-#. i18n: ectx: Menu (game)
-#: ui_standards.rc:34
-#, kde-format
-msgid "&Game"
-msgstr "เ&กม"
+#~ msgid ""
+#~ "Here you can see a list of key bindings, i.e. associations between "
+#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
+#~ "keys (e.g. Ctrl+V) shown in the right column."
+#~ msgstr ""
+#~ "คุณสามารถเห็นการจับคู่ปุ่มพิมพ์ที่กำหนดไว้แล้วที่นี่ โดยมีความสัมพันธ์ระหว่างการกระทำ (เช่น "
+#~ "'คัดลอก') จะถูกแสดงไว้ในคอลัมน์ด้านซ้าย และปุ่มพิมพ์ที่ถูกจับคู่ไว้ (เช่น CTRL+V) "
+#~ "จะถูกแสดงไว้ในคอลัมน์ด้านขวา"
 
-#. i18n: ectx: Menu (edit)
-#: ui_standards.rc:61
-#, kde-format
-msgid "&Edit"
-msgstr "แ&ก้ไข"
+#~ msgid "Action"
+#~ msgstr "การกระทำ"
 
-#. i18n: ectx: Menu (move)
-#: ui_standards.rc:84
-#, kde-format
-msgctxt "@title:menu Game move"
-msgid "&Move"
-msgstr "&ย้าย"
+#~ msgid "Shortcut"
+#~ msgstr "ปุ่มพิมพ์ลัด"
 
-#. i18n: ectx: Menu (view)
-#: ui_standards.rc:102
-#, kde-format
-msgid "&View"
-msgstr "&มุมมอง"
+#~ msgid "Alternate"
+#~ msgstr "ทางเลือกอื่น"
 
-#. i18n: ectx: Menu (go)
-#: ui_standards.rc:121
-#, kde-format
-msgid "&Go"
-msgstr "ไ&ป"
+#~ msgid "Global"
+#~ msgstr "ทั้งระบบ"
 
-#. i18n: ectx: Menu (bookmarks)
-#: ui_standards.rc:142
-#, kde-format
-msgid "&Bookmarks"
-msgstr "ที่&คั่นหน้า"
+#~ msgid "Global Alternate"
+#~ msgstr "ทางเลือกอื่นของทั้งระบบ"
 
-#. i18n: ectx: Menu (tools)
-#: ui_standards.rc:148
-#, kde-format
-msgid "&Tools"
-msgstr "เ&ครื่องมือ"
+#~ msgid "Mouse Button Gesture"
+#~ msgstr "รูปแบบการกดปุ่มเมาส์"
 
-#. i18n: ectx: Menu (settings)
-#: ui_standards.rc:152
-#, kde-format
-msgid "&Settings"
-msgstr "&ตั้งค่า"
+#~ msgid "Mouse Shape Gesture"
+#~ msgstr "รูปแบบการเคลื่อนเมาส์"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: ui_standards.rc:197
-#, kde-format
-msgid "Main Toolbar"
-msgstr "แถบเครื่องมือหลัก"
+#~ msgid "&File"
+#~ msgstr "แ&ฟ้ม"
+
+#~ msgid "&Game"
+#~ msgstr "เ&กม"
+
+#~ msgid "&Edit"
+#~ msgstr "แ&ก้ไข"
+
+#~ msgctxt "@title:menu Game move"
+#~ msgid "&Move"
+#~ msgstr "&ย้าย"
+
+#~ msgid "&View"
+#~ msgstr "&มุมมอง"
+
+#~ msgid "&Go"
+#~ msgstr "ไ&ป"
+
+#~ msgid "&Bookmarks"
+#~ msgstr "ที่&คั่นหน้า"
+
+#~ msgid "&Tools"
+#~ msgstr "เ&ครื่องมือ"
+
+#~ msgid "&Settings"
+#~ msgstr "&ตั้งค่า"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "แถบเครื่องมือหลัก"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

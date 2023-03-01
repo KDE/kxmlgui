@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:43+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2022-03-20 12:04+0100\n"
 "Last-Translator: irfan <irfankurtagic@outlook.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -67,19 +67,19 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "O modulu %1 "
 
-#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "O programu "
 
-#: kaboutapplicationdialog.cpp:104
+#: kaboutapplicationdialog.cpp:94
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "Komponente"
 
-#: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -88,13 +88,13 @@ msgstr[0] "Autor"
 msgstr[1] "Autori"
 msgstr[2] "Autore"
 
-#: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
+#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "Zahvaljujući"
 
-#: kaboutapplicationdialog.cpp:128 kaboutplugindialog.cpp:112
+#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -685,31 +685,31 @@ msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>PreÄice su dodate (tek da znate)</h2>"
 
 # >> @title:window
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:327
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "Promjeni teksta "
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:337
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "&Tekst ikone:"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:342
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&Sakrij tekst kada alatna traka prikazuje tekst pored ikona "
 
 # >> @title:window
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:591
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "Konfigurišite trake sa alatkama"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:654
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -719,17 +719,17 @@ msgstr ""
 "podrazumijevano? Promjene Ä‡e odmah biti primijenjene."
 
 # >> @title:window
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:655
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "Resetovanje alatnih traka"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:656
 #, kde-format
 msgid "Reset"
 msgstr "Resetuj"
 
-#: kedittoolbar.cpp:989
+#: kedittoolbar.cpp:975
 #, kde-format
 msgid "&Toolbar:"
 msgstr "Alatna &traka:"
@@ -741,67 +741,67 @@ msgstr "Alatna &traka:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:991
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "&Dostupne radnje:"
 
-#: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
+#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
 #, kde-format
 msgid "Filter"
 msgstr "Filter"
 
-#: kedittoolbar.cpp:1029
+#: kedittoolbar.cpp:1015
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&Trenutne radnje:"
 
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1040
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
 msgstr "Promijeni &ikonu... "
 
-#: kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1049
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
 msgstr "Promijeni &tekst... "
 
-#: kedittoolbar.cpp:1205
+#: kedittoolbar.cpp:1191
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- razdvajaÄ ---"
 
-#: kedittoolbar.cpp:1206
+#: kedittoolbar.cpp:1192
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- odstojnik za proširenje ---"
 
-#: kedittoolbar.cpp:1228
+#: kedittoolbar.cpp:1214
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1242
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr ""
 "Ovaj element Ä‡e biti zamijenjen svim elementima ugnijeÅ¾Ä‘ene komponente."
 
-#: kedittoolbar.cpp:1258
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgid "<Merge>"
 msgstr "<Stapanje>"
 
-#: kedittoolbar.cpp:1260
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<stapanje %1>"
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1256
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -810,25 +810,24 @@ msgstr ""
 "Ovo je dinamiÄki spisak radnji. MoÅ¾ete ga pomijerati, ali ako ga uklonite "
 "neÄ‡ete moÄ‡i ponovo da ga dodate."
 
-#: kedittoolbar.cpp:1271
+#: kedittoolbar.cpp:1257
 #, kde-format
 msgid "ActionList: %1"
 msgstr "Spisak radnji: %1"
 
-#: kedittoolbar.cpp:1372 kedittoolbar.cpp:1397
+#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
 # >> @title:window
-#: kedittoolbar.cpp:1625
+#: kedittoolbar.cpp:1611
 #, kde-format
 msgid "Change Icon"
 msgstr "Promjena ikone"
 
-#. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:146
 #, kde-format
 msgid "&Help"
 msgstr "Po&moÄ‡"
@@ -838,7 +837,7 @@ msgstr "Po&moÄ‡"
 msgid "About %1"
 msgstr "O modulu %1"
 
-#: kkeysequencewidget.cpp:149
+#: kkeysequencewidget.cpp:144
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -848,7 +847,7 @@ msgstr ""
 "Kliknite na dugme, a zatim unesite prečicu kao u programu.\n"
 " Primer za Ctrl+A: držite taster Ctrl i pritisnite A."
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:167
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -857,12 +856,12 @@ msgstr[0] "Sukob preÄica"
 msgstr[1] "Sukob preÄica"
 msgstr[2] "Sukob preÄica"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "PreÄice '%1' za radnju â€ž%2â€œ\n"
 
-#: kkeysequencewidget.cpp:181
+#: kkeysequencewidget.cpp:176
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -886,20 +885,20 @@ msgstr[2] ""
 " Da li želite da dodelite praznu prečicu ovim radnjama?\n"
 " %3"
 
-#: kkeysequencewidget.cpp:191 kkeysequencewidget.cpp:300
-#: kkeysequencewidget.cpp:362
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
+#: kkeysequencewidget.cpp:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ponovo dodijeli "
 
-#: kkeysequencewidget.cpp:196
+#: kkeysequencewidget.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Sukob prečica "
 
-#: kkeysequencewidget.cpp:198
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -908,13 +907,13 @@ msgstr ""
 "<qt>Kombinaciju tastera <shortcut>%1</shortcut> veÄ‡ koristi radnja <b>%2</"
 "b>.<br/>Izaberite drugu kombinaciju.</qt>"
 
-#: kkeysequencewidget.cpp:280
+#: kkeysequencewidget.cpp:273
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "PreÄica %1 u programu %2 za radnju %3\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:282
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -926,7 +925,7 @@ msgstr[0] "PreÄica '%2' u sukobu je s narednom kombinacijom tastera:\n"
 msgstr[1] "PreÄica '%2' u sukobu je s narednim kombinacijama tastera:\n"
 msgstr[2] "PreÄica '%2' u sukobu je s narednim kombinacijama tastera:\n"
 
-#: kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -935,12 +934,12 @@ msgstr[0] "Sukob sa registrovanim globalnim preÄicama"
 msgstr[1] "Sukob sa registrovanim globalnim preÄicama"
 msgstr[2] "Sukob sa registrovanim globalnim preÄicama"
 
-#: kkeysequencewidget.cpp:309
+#: kkeysequencewidget.cpp:302
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervisana preÄica"
 
-#: kkeysequencewidget.cpp:311
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -951,13 +950,13 @@ msgstr ""
 "preÄica.\n"
 "Izaberite neku drugu."
 
-#: kkeysequencewidget.cpp:354
+#: kkeysequencewidget.cpp:347
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Sukob sa standardnom prečicom aplikacije"
 
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -968,13 +967,13 @@ msgstr ""
 "koju koriste neki programi.\n"
 "Å½elite li zaista da je koristite i kao globalnu preÄicu?"
 
-#: kkeysequencewidget.cpp:400
+#: kkeysequencewidget.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ulaz"
 
-#: kkeysequencewidget.cpp:402 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -986,13 +985,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "Ugovor o licenci"
 
-#: kmainwindow.cpp:277
+#: kmainwindow.cpp:272
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Samir RibiÄ‡,Ademovic Saudin,Vedran Ljubovic"
 
-#: kmainwindow.cpp:278
+#: kmainwindow.cpp:273
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1187,117 +1186,47 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Konfigurišite prečice na tastaturi"
 
-#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
-#: kshortcutsdialog.ui:16
-#, kde-format
-msgid ""
-"Search interactively for shortcut names (e.g. Copy) or combination of keys "
-"(e.g. Ctrl+C) by typing them here."
-msgstr ""
-"Interaktivno traÅ¾enje po imenu preÄice (npr. â€žKopirajâ€œ) ili kombinaciji "
-"tastera (npr. Ctrl+C)."
-
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:23
-#, kde-format
-msgid ""
-"Here you can see a list of key bindings, i.e. associations between actions "
-"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
-"Ctrl+V) shown in the right column."
-msgstr ""
-"Spisak preÄica sa tastature, tj. veza izmeÄ‘u radnji (npr. â€žKopirajâ€œ) "
-"prikazanih u lijevoj koloni, i tastera ili kombinacija tastera (npr. Ctrl+V) "
-"prikazanih u desnoj koloni."
-
-# >> @title:column
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:33
-#, kde-format
-msgid "Action"
-msgstr "radnja"
-
-# >> @title:column
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:38
-#, kde-format
-msgid "Shortcut"
-msgstr "preÄica"
-
-# >> @title:column Alternative shortcut
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:43
-#, kde-format
-msgid "Alternate"
-msgstr "alternativna"
-
-# >> @title:column Alternative shortcut
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:48
-#, kde-format
-msgid "Global"
-msgstr "globalna"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:53
-#, kde-format
-msgid "Global Alternate"
-msgstr "glob. alternativna"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:58
-#, kde-format
-msgid "Mouse Button Gesture"
-msgstr "gest dugmadima miÅ¡a"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:63
-#, kde-format
-msgid "Mouse Shape Gesture"
-msgstr "gest pokretom miÅ¡a"
-
-#: kshortcutseditor.cpp:557
+#: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "PreÄice za %1"
 
 # >> Main shortcut
-#. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:577 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:556
 #, kde-format
 msgid "Main:"
 msgstr "Glavna:"
 
 # >> Alternate shortcut
-#. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:578 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:557
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativna:"
 
 # >> Global shortcut
-#: kshortcutseditor.cpp:579
+#: kshortcutseditor.cpp:558
 #, kde-format
 msgid "Global:"
 msgstr "Globalna:"
 
-#: kshortcutseditor.cpp:580
+#: kshortcutseditor.cpp:559
 #, kde-format
 msgid "Global alternate:"
 msgstr "Globalna alternativa:"
 
-#: kshortcutseditor.cpp:596
+#: kshortcutseditor.cpp:575
 #, kde-format
 msgid "Action Name"
 msgstr "Naziv radnje"
 
-#: kshortcutseditor.cpp:600
+#: kshortcutseditor.cpp:579
 #, kde-format
 msgid "Shortcuts"
 msgstr "PreÄice"
 
 # >! Disambiguate
-#: kshortcutseditor.cpp:604
+#: kshortcutseditor.cpp:583
 #, kde-format
 msgid "Description"
 msgstr "Opis"
@@ -1391,109 +1320,109 @@ msgstr ""
 "Ovo je jezik koji će se koristiti ako neki prethodni jezici ne sadrže "
 "odgovarajući prevod."
 
-#: ktoolbar.cpp:300 ktoolbar.cpp:307
+#: ktoolbar.cpp:298 ktoolbar.cpp:305
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "Postavke alatne trake"
 
-#: ktoolbar.cpp:302
+#: ktoolbar.cpp:300
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "PrikaÅ¾i tekst"
 
-#: ktoolbar.cpp:309
+#: ktoolbar.cpp:307
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "Orijentacija"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:309
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "vrh"
 
-#: ktoolbar.cpp:315
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "lijevo"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:316
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "desno"
 
-#: ktoolbar.cpp:321
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "dno"
 
-#: ktoolbar.cpp:332
+#: ktoolbar.cpp:330
 #, kde-format
 msgid "Text Position"
 msgstr "PoloÅ¾aj teksta"
 
-#: ktoolbar.cpp:334
+#: ktoolbar.cpp:332
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "Samo ikone"
 
-#: ktoolbar.cpp:337
+#: ktoolbar.cpp:335
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "Samo tekst"
 
-#: ktoolbar.cpp:340
+#: ktoolbar.cpp:338
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "Tekst pored ikona"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:341
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "Tekst ispod ikona"
 
-#: ktoolbar.cpp:354
+#: ktoolbar.cpp:352
 #, kde-format
 msgid "Icon Size"
 msgstr "VeliÄina ikona"
 
-#: ktoolbar.cpp:356
+#: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "podrazumijevane"
 
-#: ktoolbar.cpp:376 ktoolbar.cpp:400
+#: ktoolbar.cpp:374 ktoolbar.cpp:398
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "male (%1Ã—%2)"
 
-#: ktoolbar.cpp:378 ktoolbar.cpp:402
+#: ktoolbar.cpp:376 ktoolbar.cpp:400
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "srednje (%1Ã—%2)"
 
-#: ktoolbar.cpp:380 ktoolbar.cpp:404
+#: ktoolbar.cpp:378 ktoolbar.cpp:402
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "velike (%1Ã—%2)"
 
-#: ktoolbar.cpp:382 ktoolbar.cpp:406
+#: ktoolbar.cpp:380 ktoolbar.cpp:404
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "ogromne (%1Ã—%2)"
 
-#: ktoolbar.cpp:432
+#: ktoolbar.cpp:430
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "ZakljuÄaj poloÅ¾aje alatnih traka"
@@ -1504,7 +1433,7 @@ msgstr "ZakljuÄaj poloÅ¾aje alatnih traka"
 msgid "Toolbars Shown"
 msgstr "Prikazane alatne trake"
 
-#: ktooltiphelper.cpp:203
+#: ktooltiphelper.cpp:215
 #, kde-format
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -1515,7 +1444,7 @@ msgstr "%1 (%2) "
 #. about the thing the tooltip was invoked for. If there is no good way to translate
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
-#: ktooltiphelper.cpp:267
+#: ktooltiphelper.cpp:281
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1534,7 +1463,7 @@ msgstr ""
 #.
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:295
 #, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
@@ -1565,7 +1494,7 @@ msgstr "Bez teksta"
 msgid "Find Action…"
 msgstr "Pronađite radnjuâ€¦"
 
-#: kxmlguiwindow.cpp:535
+#: kxmlguiwindow.cpp:528
 #, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
@@ -1576,72 +1505,83 @@ msgstr ""
 "najverovatnije greška. Prijavite je na <a href='https://bugs.kde.org'>bugs."
 "kde.org</a>"
 
-#: kxmlguiwindow.cpp:540
+#: kxmlguiwindow.cpp:533
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "Dvosmislene prečice"
 
-#. i18n: ectx: Menu (file)
-#: ui_standards.rc:5
-#, kde-format
-msgid "&File"
-msgstr "&Datoteka"
+#~ msgid ""
+#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
+#~ "keys (e.g. Ctrl+C) by typing them here."
+#~ msgstr ""
+#~ "Interaktivno traÅ¾enje po imenu preÄice (npr. â€žKopirajâ€œ) ili "
+#~ "kombinaciji tastera (npr. Ctrl+C)."
 
-#. i18n: ectx: Menu (game)
-#: ui_standards.rc:34
-#, kde-format
-msgid "&Game"
-msgstr "&Igra"
+#~ msgid ""
+#~ "Here you can see a list of key bindings, i.e. associations between "
+#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
+#~ "keys (e.g. Ctrl+V) shown in the right column."
+#~ msgstr ""
+#~ "Spisak preÄica sa tastature, tj. veza izmeÄ‘u radnji (npr. â€žKopirajâ€œ) "
+#~ "prikazanih u lijevoj koloni, i tastera ili kombinacija tastera (npr. Ctrl"
+#~ "+V) prikazanih u desnoj koloni."
 
-#. i18n: ectx: Menu (edit)
-#: ui_standards.rc:61
-#, kde-format
-msgid "&Edit"
-msgstr "&Izmijeni"
+# >> @title:column
+#~ msgid "Action"
+#~ msgstr "radnja"
 
-#. i18n: ectx: Menu (move)
-#: ui_standards.rc:84
-#, kde-format
-msgctxt "@title:menu Game move"
-msgid "&Move"
-msgstr "&Pomjeri"
+# >> @title:column
+#~ msgid "Shortcut"
+#~ msgstr "preÄica"
 
-#. i18n: ectx: Menu (view)
-#: ui_standards.rc:102
-#, kde-format
-msgid "&View"
-msgstr "&Prikaz"
+# >> @title:column Alternative shortcut
+#~ msgid "Alternate"
+#~ msgstr "alternativna"
 
-#. i18n: ectx: Menu (go)
-#: ui_standards.rc:121
-#, kde-format
-msgid "&Go"
-msgstr "&Kreni"
+# >> @title:column Alternative shortcut
+#~ msgid "Global"
+#~ msgstr "globalna"
 
-#. i18n: ectx: Menu (bookmarks)
-#: ui_standards.rc:142
-#, kde-format
-msgid "&Bookmarks"
-msgstr "&ZabiljeÅ¡ke"
+#~ msgid "Global Alternate"
+#~ msgstr "glob. alternativna"
 
-#. i18n: ectx: Menu (tools)
-#: ui_standards.rc:148
-#, kde-format
-msgid "&Tools"
-msgstr "&Alatke"
+#~ msgid "Mouse Button Gesture"
+#~ msgstr "gest dugmadima miÅ¡a"
+
+#~ msgid "Mouse Shape Gesture"
+#~ msgstr "gest pokretom miÅ¡a"
+
+#~ msgid "&File"
+#~ msgstr "&Datoteka"
+
+#~ msgid "&Game"
+#~ msgstr "&Igra"
+
+#~ msgid "&Edit"
+#~ msgstr "&Izmijeni"
+
+#~ msgctxt "@title:menu Game move"
+#~ msgid "&Move"
+#~ msgstr "&Pomjeri"
+
+#~ msgid "&View"
+#~ msgstr "&Prikaz"
+
+#~ msgid "&Go"
+#~ msgstr "&Kreni"
+
+#~ msgid "&Bookmarks"
+#~ msgstr "&ZabiljeÅ¡ke"
+
+#~ msgid "&Tools"
+#~ msgstr "&Alatke"
 
 # >! ctxt: @title:menu standard application menu
-#. i18n: ectx: Menu (settings)
-#: ui_standards.rc:152
-#, kde-format
-msgid "&Settings"
-msgstr "&Podešavanja"
+#~ msgid "&Settings"
+#~ msgstr "&Podešavanja"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: ui_standards.rc:197
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Glavna traka"
+#~ msgid "Main Toolbar"
+#~ msgstr "Glavna traka"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

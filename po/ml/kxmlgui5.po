@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:43+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2021-08-19 11:55+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -69,20 +69,20 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "%1 സംബന്ധിച്ചു്"
 
-#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
+#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "സംബന്ധിച്ചു്"
 
-#: kaboutapplicationdialog.cpp:104
+#: kaboutapplicationdialog.cpp:94
 #, fuzzy, kde-format
 #| msgid "Comments"
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "അഭിപ്രായങ്ങള്‍"
 
-#: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -90,14 +90,14 @@ msgid_plural "Authors"
 msgstr[0] "രചയിതാവ്"
 msgstr[1] "രചയിതാക്കൾ"
 
-#: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
+#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "നന്ദി"
 
 #
-#: kaboutapplicationdialog.cpp:128 kaboutplugindialog.cpp:112
+#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -666,30 +666,30 @@ msgstr "<h2>ത്വരിതപ്പെടുത്തുന്നവയെ �
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>ത്വരിതപ്പെടുത്തുന്നവയെ ചേർത്തു (നിങ്ങളുടെ വിവരങ്ങൾക്ക് മാത്രം)</h2>"
 
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:327
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "വാചകം മാറ്റുക"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:337
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "ചിത്രരൂപത്തിനുള്ള പദാവലി: (&X)"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:342
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "ഉപകരപ്പട്ടയിലെ ചിഹ്നങ്ങൾക്കൊപ്പം വാചകം കാണിക്കുമ്പോൾ വാചകം മറയ്ക്കുക (&H)"
 
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:591
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "ഉപകരണപ്പട്ടകൾ ക്രമീകരിക്കുക"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:654
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -698,17 +698,17 @@ msgstr ""
 "ഈ ആപ്ലിക്കേഷന്റെ എല്ലാ ഉപകരണപ്പട്ടകളും പുനഃക്രമീകരിക്കാൻ നിങ്ങൾ ശരിക്കും ആഗ്രഹിക്കുന്നുണ്ടോ? "
 "മാറ്റങ്ങൾ ഉടനടി പ്രയോഗത്തിൽ വരും."
 
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:655
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "ഉപകരണപ്പട്ടകൾ പുനഃക്രമീകരിക്കുക"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:656
 #, kde-format
 msgid "Reset"
 msgstr "പുനഃക്രമീകരിക്കുക"
 
-#: kedittoolbar.cpp:989
+#: kedittoolbar.cpp:975
 #, kde-format
 msgid "&Toolbar:"
 msgstr "ഉപകരണപ്പട്ട: (&T)"
@@ -720,90 +720,89 @@ msgstr "ഉപകരണപ്പട്ട: (&T)"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:991
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "ലഭ്യമായ പ്രവൃത്തികള്‍: (&V)"
 
-#: kedittoolbar.cpp:1026 kedittoolbar.cpp:1051
+#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
 #, kde-format
 msgid "Filter"
 msgstr "അരിപ്പ"
 
-#: kedittoolbar.cpp:1029
+#: kedittoolbar.cpp:1015
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "ഇപ്പോഴുള്ള പ്രവര്‍ത്തനങ്ങള്‍: (&E)"
 
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1040
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
 msgstr "ചിഹ്നം മാറ്റുക... (&I)"
 
-#: kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1049
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
 msgstr "പദാവലി മാറ്റുക... (&X)"
 
-#: kedittoolbar.cpp:1205
+#: kedittoolbar.cpp:1191
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- separator ---"
 
-#: kedittoolbar.cpp:1206
+#: kedittoolbar.cpp:1192
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- expanding spacer ---"
 
-#: kedittoolbar.cpp:1228
+#: kedittoolbar.cpp:1214
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1242
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr ""
 
-#: kedittoolbar.cpp:1258
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgid "<Merge>"
 msgstr "<Merge>"
 
-#: kedittoolbar.cpp:1260
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<Merge %1>"
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1256
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
 
-#: kedittoolbar.cpp:1271
+#: kedittoolbar.cpp:1257
 #, kde-format
 msgid "ActionList: %1"
 msgstr "നടപടിപ്പട്ടിക: %1"
 
-#: kedittoolbar.cpp:1372 kedittoolbar.cpp:1397
+#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1625
+#: kedittoolbar.cpp:1611
 #, kde-format
 msgid "Change Icon"
 msgstr "ചിഹ്നം മാറ്റുക"
 
-#. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:146
 #, kde-format
 msgid "&Help"
 msgstr "സഹായം (&H)"
@@ -813,7 +812,7 @@ msgstr "സഹായം (&H)"
 msgid "About %1"
 msgstr "%1 സംബന്ധിച്ചു്"
 
-#: kkeysequencewidget.cpp:149
+#: kkeysequencewidget.cpp:144
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -823,7 +822,7 @@ msgstr ""
 "ബട്ടണിൽ ക്ലിക്കുചെയ്യുക, തുടർന്ന് പ്രോഗ്രാമിനായി നൽകേണ്ട കുറുക്കുവഴി നൽകുക.\n"
 "Ctrl+A- യ്ക്കുള്ള ഉദാഹരണം: Ctrl കീ അമർത്തിപ്പിടിച്ച് A അമർത്തുക."
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:167
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -831,12 +830,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "കുറുക്കുവഴി പരസ്പര വിരുദ്ധം"
 msgstr[1] "കുറുക്കുവഴികള്‍ പരസ്പര വിരുദ്ധം"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%2' നടപടിയ്ക്കുള്ള '%1' കുറുക്കുവഴി\n"
 
-#: kkeysequencewidget.cpp:181
+#: kkeysequencewidget.cpp:176
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -856,20 +855,20 @@ msgstr[1] ""
 "ഈ പ്രവർത്തനങ്ങൾക്ക് ഒരു ശൂന്യമായ കുറുക്കുവഴി നൽകണോ?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:191 kkeysequencewidget.cpp:300
-#: kkeysequencewidget.cpp:362
+#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
+#: kkeysequencewidget.cpp:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "വീണ്ടും ഏല്‍പ്പിക്കുക"
 
-#: kkeysequencewidget.cpp:196
+#: kkeysequencewidget.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "പരസ്‌പരവിരുദ്ധ കുറുക്കുവഴികള്‍"
 
-#: kkeysequencewidget.cpp:198
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -878,13 +877,13 @@ msgstr ""
 "<qt>'%1'കീ കോമ്പിനേഷൻ ഇതിനകം തന്നെ <b>%2 </b> പ്രവർത്തനം ഉപയോഗിക്കുന്നു.<br> ദയവായി "
 "മറ്റൊന്ന് തിരഞ്ഞെടുക്കുക.</qt>"
 
-#: kkeysequencewidget.cpp:280
+#: kkeysequencewidget.cpp:273
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "%3 ക്ക് ഉള്ള %2 കുറുക്കുവഴി %1 എണ്ണമായി സംഘട്ടിച്ചിരിക്കുന്നു\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:282
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -895,7 +894,7 @@ msgid_plural ""
 msgstr[0] "'%2' കുറുക്കുവഴി ഇതുമായി സംഘട്ടിച്ചിരിക്കുന്നു\n"
 msgstr[1] "'%2' കുറുക്കുവഴി ഇവയുമായി സംഘട്ടിച്ചിരിക്കുന്നു\n"
 
-#: kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -903,12 +902,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "പറഞ്ഞുവച്ച ആഗോള കുറുക്കുവഴിയുമായി പരസ്പര വിരുദ്ധം"
 msgstr[1] "പറഞ്ഞുവച്ച ആഗോള കുറുക്കുവഴികളുമായി പരസ്പര വിരുദ്ധം"
 
-#: kkeysequencewidget.cpp:309
+#: kkeysequencewidget.cpp:302
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "പറഞ്ഞുവച്ച കുറുക്കുവഴി"
 
-#: kkeysequencewidget.cpp:311
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -918,13 +917,13 @@ msgstr ""
 "F12 കീ വിന്‍ഡോസില്‍ പറഞ്ഞുവച്ചിട്ടുള്ളതായതിനാല്‍ ആഗോള കുറുക്കുവഴിയായി ഉപയോഗിയ്ക്കാന്‍ സാധ്യമല്ല.\n"
 "ദയവായി മറ്റൊരെണ്ണം തെരഞ്ഞെടുക്കൂ."
 
-#: kkeysequencewidget.cpp:354
+#: kkeysequencewidget.cpp:347
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "തനത് പ്രയോഗ കുറുക്കുവഴിയുമായി പ്രശ്നം"
 
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -935,13 +934,13 @@ msgstr ""
 "ഉപയോഗിക്കുന്നു.\n"
 "നിങ്ങൾക്ക് ഇത് ഒരു ആഗോള കുറുക്കുവഴിയായി ഉപയോഗിക്കാൻ താൽപ്പര്യമുണ്ടോ?"
 
-#: kkeysequencewidget.cpp:400
+#: kkeysequencewidget.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ഇന്‍പുട്ട്"
 
-#: kkeysequencewidget.cpp:402 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -953,13 +952,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "തൈസൻസ് ഉടമ്പടി"
 
-#: kmainwindow.cpp:277
+#: kmainwindow.cpp:272
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍, അനി പീറ്റര്‍, മാക്സിന്‍ ജോണ്‍, അനൂപ് പനവളപ്പില്‍, മനു എസ് മാധവ്"
 
-#: kmainwindow.cpp:278
+#: kmainwindow.cpp:273
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1152,109 +1151,43 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "കീബോർഡ് കുറുക്കുവഴികൾ ക്രമീകരിക്കുക"
 
-#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
-#: kshortcutsdialog.ui:16
-#, kde-format
-msgid ""
-"Search interactively for shortcut names (e.g. Copy) or combination of keys "
-"(e.g. Ctrl+C) by typing them here."
-msgstr ""
-"കുറുക്കുവഴിയുടെ പേരുകള്‍ക്കായോ (ഉദാ. പകര്‍ത്തുക) കീകളുടെ ശ്രേണികൾക്കായോ (ഉദാ. Ctrl+C) "
-"ഇന്ററാക്റ്റീവായി തിരയാന്‍ ഇവിടെ ടൈപ്പ് ചെയ്യുക."
-
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:23
-#, kde-format
-msgid ""
-"Here you can see a list of key bindings, i.e. associations between actions "
-"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
-"Ctrl+V) shown in the right column."
-msgstr ""
-"ഇവിടെ നിങ്ങള്‍ക്കു് കീകളുടെ വിലകളുടെ പട്ടിക, അതായതു്, ഒരു ഇടതുവശത്തു് കാണിച്ചിരിയ്ക്കുന്ന "
-"നടപടിയുമായി (ഉദാ. 'പകര്‍ത്തുക') ബന്ധപ്പെട്ട കീകളുടേയോ കീകളുടെ കൂട്ടത്തെയോ (ഉദാ. കണ്ട്രോള്‍+V) "
-"വലതുവശത്തു് കാണിച്ചിരിയ്ക്കുന്നു."
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:33
-#, kde-format
-msgid "Action"
-msgstr "പ്രവൃത്തി"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:38
-#, kde-format
-msgid "Shortcut"
-msgstr "കുറുക്കുവഴി"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:43
-#, kde-format
-msgid "Alternate"
-msgstr "പകരമായുള്ളത്"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:48
-#, kde-format
-msgid "Global"
-msgstr "എല്ലായിടത്തും"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:53
-#, kde-format
-msgid "Global Alternate"
-msgstr "എല്ലായിടത്തും പകരമായുള്ളത്"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:58
-#, kde-format
-msgid "Mouse Button Gesture"
-msgstr "മൗസ് ബട്ടൺ ആംഗ്യം"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, list)
-#: kshortcutsdialog.ui:63
-#, kde-format
-msgid "Mouse Shape Gesture"
-msgstr "മൗസിന്റെ ആകൃതി കൊണ്ടുള്ള ആംഗ്യം"
-
-#: kshortcutseditor.cpp:557
+#: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 നായുള്ള കുറുക്കുവഴി"
 
-#. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:577 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:556
 #, kde-format
 msgid "Main:"
 msgstr "പ്രധാനപ്പെട്ട:"
 
-#. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:578 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:557
 #, kde-format
 msgid "Alternate:"
 msgstr "പകരമായുള്ള:"
 
-#: kshortcutseditor.cpp:579
+#: kshortcutseditor.cpp:558
 #, kde-format
 msgid "Global:"
 msgstr "ആഗോളമായുള്ളത്:"
 
-#: kshortcutseditor.cpp:580
+#: kshortcutseditor.cpp:559
 #, kde-format
 msgid "Global alternate:"
 msgstr "എല്ലായിടത്തും പകരാമായുള്ളത്:"
 
-#: kshortcutseditor.cpp:596
+#: kshortcutseditor.cpp:575
 #, kde-format
 msgid "Action Name"
 msgstr "പ്രവൃത്തിയുട പേരു്"
 
-#: kshortcutseditor.cpp:600
+#: kshortcutseditor.cpp:579
 #, kde-format
 msgid "Shortcuts"
 msgstr "കുറുക്കുവഴികള്‍"
 
-#: kshortcutseditor.cpp:604
+#: kshortcutseditor.cpp:583
 #, kde-format
 msgid "Description"
 msgstr "വിവരണം"
@@ -1344,109 +1277,109 @@ msgid ""
 "contain a proper translation."
 msgstr "മുമ്പത്തെ ഏതെങ്കിലും ഭാഷകളിൽ ശരിയായ വിവർത്തനം ഇല്ലെങ്കിൽ ഉപയോഗിക്കുന്ന ഭാഷയാണിത്."
 
-#: ktoolbar.cpp:300 ktoolbar.cpp:307
+#: ktoolbar.cpp:298 ktoolbar.cpp:305
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "ഉപകരണപ്പട്ടയുടെ സജ്ജീകരണങ്ങള്‍"
 
-#: ktoolbar.cpp:302
+#: ktoolbar.cpp:300
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "വാചകം കാണിക്കുക"
 
-#: ktoolbar.cpp:309
+#: ktoolbar.cpp:307
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "ദിശ"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:309
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "മുകളില്‍"
 
-#: ktoolbar.cpp:315
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "ഇടത്തു്"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:316
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "വലത്തു്"
 
-#: ktoolbar.cpp:321
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "താഴെ"
 
-#: ktoolbar.cpp:332
+#: ktoolbar.cpp:330
 #, kde-format
 msgid "Text Position"
 msgstr "പദാവലിയുടെ സ്ഥാനം"
 
-#: ktoolbar.cpp:334
+#: ktoolbar.cpp:332
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "ചിഹ്നങ്ങള്‍ മാത്രം"
 
-#: ktoolbar.cpp:337
+#: ktoolbar.cpp:335
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "പദാവലി മാത്രം"
 
-#: ktoolbar.cpp:340
+#: ktoolbar.cpp:338
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "ചിഹ്നങ്ങളുടെ കൂടെ പദാവലി"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:341
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "ചിഹ്നങ്ങളുടെ താഴെ പദാവലി"
 
-#: ktoolbar.cpp:354
+#: ktoolbar.cpp:352
 #, kde-format
 msgid "Icon Size"
 msgstr "ചിഹ്നത്തിന്റെ വലിപ്പം"
 
-#: ktoolbar.cpp:356
+#: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "തനതായ"
 
-#: ktoolbar.cpp:376 ktoolbar.cpp:400
+#: ktoolbar.cpp:374 ktoolbar.cpp:398
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "ചെറുതു് (%1x%2)"
 
-#: ktoolbar.cpp:378 ktoolbar.cpp:402
+#: ktoolbar.cpp:376 ktoolbar.cpp:400
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "ഇടത്തരം (%1x%2)"
 
-#: ktoolbar.cpp:380 ktoolbar.cpp:404
+#: ktoolbar.cpp:378 ktoolbar.cpp:402
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "വലുതു് (%1x%2)"
 
-#: ktoolbar.cpp:382 ktoolbar.cpp:406
+#: ktoolbar.cpp:380 ktoolbar.cpp:404
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "ഭീമാകാരം (%1x%2)"
 
-#: ktoolbar.cpp:432
+#: ktoolbar.cpp:430
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "ഉപകരണപ്പട്ടയുടെ സ്ഥാനങ്ങള്‍ പൂട്ടുക"
@@ -1456,7 +1389,7 @@ msgstr "ഉപകരണപ്പട്ടയുടെ സ്ഥാനങ്ങ�
 msgid "Toolbars Shown"
 msgstr "കാണിച്ചിരിക്കുന്ന ഉപകരണപ്പട്ടകൾ"
 
-#: ktooltiphelper.cpp:203
+#: ktooltiphelper.cpp:215
 #, kde-format
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -1467,7 +1400,7 @@ msgstr "%1 (%2)"
 #. about the thing the tooltip was invoked for. If there is no good way to translate
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
-#: ktooltiphelper.cpp:267
+#: ktooltiphelper.cpp:281
 #, fuzzy, kde-format
 #| msgid ""
 #| "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
@@ -1487,7 +1420,7 @@ msgstr ""
 #.
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:295
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></"
@@ -1520,7 +1453,7 @@ msgstr "വാചകമില്ല"
 msgid "Find Action…"
 msgstr "പ്രവൃത്തി"
 
-#: kxmlguiwindow.cpp:535
+#: kxmlguiwindow.cpp:528
 #, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
@@ -1531,71 +1464,78 @@ msgstr ""
 "മിക്കവാറും ഒരു പിശക് ആയിരിക്കും. ദയവായി <a href='https://bugs.kde.org'>bugs.kde."
 "org</a>ൽ റിപ്പോർട്ട് ചെയ്യുക"
 
-#: kxmlguiwindow.cpp:540
+#: kxmlguiwindow.cpp:533
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "അവ്യക്തമായ കുറുക്കുവഴികൾ"
 
-#. i18n: ectx: Menu (file)
-#: ui_standards.rc:5
-#, kde-format
-msgid "&File"
-msgstr "ഫയല്‍ (&F)"
+#~ msgid ""
+#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
+#~ "keys (e.g. Ctrl+C) by typing them here."
+#~ msgstr ""
+#~ "കുറുക്കുവഴിയുടെ പേരുകള്‍ക്കായോ (ഉദാ. പകര്‍ത്തുക) കീകളുടെ ശ്രേണികൾക്കായോ (ഉദാ. Ctrl+C) "
+#~ "ഇന്ററാക്റ്റീവായി തിരയാന്‍ ഇവിടെ ടൈപ്പ് ചെയ്യുക."
 
-#. i18n: ectx: Menu (game)
-#: ui_standards.rc:34
-#, kde-format
-msgid "&Game"
-msgstr "കളി (&G)"
+#~ msgid ""
+#~ "Here you can see a list of key bindings, i.e. associations between "
+#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
+#~ "keys (e.g. Ctrl+V) shown in the right column."
+#~ msgstr ""
+#~ "ഇവിടെ നിങ്ങള്‍ക്കു് കീകളുടെ വിലകളുടെ പട്ടിക, അതായതു്, ഒരു ഇടതുവശത്തു് കാണിച്ചിരിയ്ക്കുന്ന "
+#~ "നടപടിയുമായി (ഉദാ. 'പകര്‍ത്തുക') ബന്ധപ്പെട്ട കീകളുടേയോ കീകളുടെ കൂട്ടത്തെയോ (ഉദാ. കണ്ട്രോള്‍"
+#~ "+V) വലതുവശത്തു് കാണിച്ചിരിയ്ക്കുന്നു."
 
-#. i18n: ectx: Menu (edit)
-#: ui_standards.rc:61
-#, kde-format
-msgid "&Edit"
-msgstr "തിരുത്തുക (&E)"
+#~ msgid "Action"
+#~ msgstr "പ്രവൃത്തി"
 
-#. i18n: ectx: Menu (move)
-#: ui_standards.rc:84
-#, kde-format
-msgctxt "@title:menu Game move"
-msgid "&Move"
-msgstr "നീക്കുക (&M)"
+#~ msgid "Shortcut"
+#~ msgstr "കുറുക്കുവഴി"
 
-#. i18n: ectx: Menu (view)
-#: ui_standards.rc:102
-#, kde-format
-msgid "&View"
-msgstr "കാഴ്ച (&V)"
+#~ msgid "Alternate"
+#~ msgstr "പകരമായുള്ളത്"
 
-#. i18n: ectx: Menu (go)
-#: ui_standards.rc:121
-#, kde-format
-msgid "&Go"
-msgstr "പോകുക (&G)"
+#~ msgid "Global"
+#~ msgstr "എല്ലായിടത്തും"
 
-#. i18n: ectx: Menu (bookmarks)
-#: ui_standards.rc:142
-#, kde-format
-msgid "&Bookmarks"
-msgstr "അടയാളകുറിപ്പുകൾ (&B)"
+#~ msgid "Global Alternate"
+#~ msgstr "എല്ലായിടത്തും പകരമായുള്ളത്"
 
-#. i18n: ectx: Menu (tools)
-#: ui_standards.rc:148
-#, kde-format
-msgid "&Tools"
-msgstr "ഉപകരണങ്ങള്‍ (&T)"
+#~ msgid "Mouse Button Gesture"
+#~ msgstr "മൗസ് ബട്ടൺ ആംഗ്യം"
 
-#. i18n: ectx: Menu (settings)
-#: ui_standards.rc:152
-#, kde-format
-msgid "&Settings"
-msgstr "സജ്ജീകരണങ്ങള്‍ (&S)"
+#~ msgid "Mouse Shape Gesture"
+#~ msgstr "മൗസിന്റെ ആകൃതി കൊണ്ടുള്ള ആംഗ്യം"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: ui_standards.rc:197
-#, kde-format
-msgid "Main Toolbar"
-msgstr "പ്രധാന ഉപകരണപ്പട്ട"
+#~ msgid "&File"
+#~ msgstr "ഫയല്‍ (&F)"
+
+#~ msgid "&Game"
+#~ msgstr "കളി (&G)"
+
+#~ msgid "&Edit"
+#~ msgstr "തിരുത്തുക (&E)"
+
+#~ msgctxt "@title:menu Game move"
+#~ msgid "&Move"
+#~ msgstr "നീക്കുക (&M)"
+
+#~ msgid "&View"
+#~ msgstr "കാഴ്ച (&V)"
+
+#~ msgid "&Go"
+#~ msgstr "പോകുക (&G)"
+
+#~ msgid "&Bookmarks"
+#~ msgstr "അടയാളകുറിപ്പുകൾ (&B)"
+
+#~ msgid "&Tools"
+#~ msgstr "ഉപകരണങ്ങള്‍ (&T)"
+
+#~ msgid "&Settings"
+#~ msgstr "സജ്ജീകരണങ്ങള്‍ (&S)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "പ്രധാന ഉപകരണപ്പട്ട"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."
