@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2012-07-04 17:33+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -882,7 +882,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Candjî imådjete..."
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Aidance"
@@ -1252,18 +1253,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Apontyî les Tapes Rascourtis"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Cweri interactivmint après des courts no (eg: «Copyî») ou des combinåjhons "
+"di tapes (eg: Ctrl+C) tot lzès tapant chal."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Vaici, vos voeyoz ene djivêye di tapes-rascourtis, c' est a dire ki les "
+"accions sol hintche costé (eg: 'Copyî') sont-st enondêyes påzès tapes ou "
+"atelêye di tapes (eg: Ctrl-V) ki sont sol droete."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Accion"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Rascourti"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternatif"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globå"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternatif globå"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Djesse avou les botons del sori"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Djesse tot bodjant l' sori"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Rascourtis po %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Mwaisse:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternatif"
@@ -1569,73 +1636,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Rascourtis"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Cweri interactivmint après des courts no (eg: «Copyî») ou des "
-#~ "combinåjhons di tapes (eg: Ctrl+C) tot lzès tapant chal."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fitchî"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Vaici, vos voeyoz ene djivêye di tapes-rascourtis, c' est a dire ki les "
-#~ "accions sol hintche costé (eg: 'Copyî') sont-st enondêyes påzès tapes ou "
-#~ "atelêye di tapes (eg: Ctrl-V) ki sont sol droete."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Djeu"
 
-#~ msgid "Action"
-#~ msgstr "Accion"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Candjî"
 
-#~ msgid "Shortcut"
-#~ msgstr "Rascourti"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Bodjî"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternatif"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Vey"
 
-#~ msgid "Global"
-#~ msgstr "Globå"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Evoye"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Alternatif globå"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Rimåkes"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Djesse avou les botons del sori"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "Us&teyes"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Djesse tot bodjant l' sori"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Tchu&zes"
 
-#~ msgid "&File"
-#~ msgstr "&Fitchî"
-
-#~ msgid "&Game"
-#~ msgstr "&Djeu"
-
-#~ msgid "&Edit"
-#~ msgstr "&Candjî"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Bodjî"
-
-#~ msgid "&View"
-#~ msgstr "&Vey"
-
-#~ msgid "&Go"
-#~ msgstr "&Evoye"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Rimåkes"
-
-#~ msgid "&Tools"
-#~ msgstr "Us&teyes"
-
-#~ msgid "&Settings"
-#~ msgstr "Tchu&zes"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Mwaisse bår ås usteyes"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Mwaisse bår ås usteyes"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

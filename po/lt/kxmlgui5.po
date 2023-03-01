@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2020-01-06 15:03+0200\n"
 "Last-Translator: Andrius Štikonas <andrius@stikonas.eu>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -831,7 +831,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Keisti piktogramą"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Pagalba"
@@ -1213,18 +1214,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Konfigūruoti sparčiuosius klavišus"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Interaktyviai ieškokite sparčiųjų klavišų pavadinimų (pvz., Kopijuoti) arba "
+"klavišų kombinacijų (pvz., Vald+C) įrašydami juos čia."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Čia galite matyti klavišų susiejimų sąrašą, t.y. sąsajas tarp veiksmo (pvz., "
+"„Kopijuoti“), rodomo kairiame stulpelyje, ir klavišų arba jų kombinacijų "
+"(pvz., Vald+C), rodomų dešiniame stulpelyje."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Veiksmas"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Spartusis klavišas"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternatyvusis"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Visuotinis"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Visuotinis alternatyvusis"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Pelės mygtuko gestai"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Pelės figūriniai gestai"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 spartieji klavišai"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Pagrindinis:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternatyvus:"
@@ -1529,73 +1596,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Dviprasmiški spartieji klavišai"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Interaktyviai ieškokite sparčiųjų klavišų pavadinimų (pvz., Kopijuoti) "
-#~ "arba klavišų kombinacijų (pvz., Vald+C) įrašydami juos čia."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Failas"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Čia galite matyti klavišų susiejimų sąrašą, t.y. sąsajas tarp veiksmo "
-#~ "(pvz., „Kopijuoti“), rodomo kairiame stulpelyje, ir klavišų arba jų "
-#~ "kombinacijų (pvz., Vald+C), rodomų dešiniame stulpelyje."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "Ž&aidimas"
 
-#~ msgid "Action"
-#~ msgstr "Veiksmas"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Taisyti"
 
-#~ msgid "Shortcut"
-#~ msgstr "Spartusis klavišas"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Ė&jimas"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternatyvusis"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Rodymas"
 
-#~ msgid "Global"
-#~ msgstr "Visuotinis"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Eiti"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Visuotinis alternatyvusis"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "Ž&ymelės"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Pelės mygtuko gestai"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "Įrank&iai"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Pelės figūriniai gestai"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Nuo&statos"
 
-#~ msgid "&File"
-#~ msgstr "&Failas"
-
-#~ msgid "&Game"
-#~ msgstr "Ž&aidimas"
-
-#~ msgid "&Edit"
-#~ msgstr "&Taisyti"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "Ė&jimas"
-
-#~ msgid "&View"
-#~ msgstr "&Rodymas"
-
-#~ msgid "&Go"
-#~ msgstr "&Eiti"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "Ž&ymelės"
-
-#~ msgid "&Tools"
-#~ msgstr "Įrank&iai"
-
-#~ msgid "&Settings"
-#~ msgstr "Nuo&statos"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Pagrindinė įrankių juosta"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Pagrindinė įrankių juosta"
 
 #~ msgid ""
 #~ "<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "

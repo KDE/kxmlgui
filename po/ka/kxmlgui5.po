@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-09-12 19:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -795,7 +795,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "ხატულის შეცვლა"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&დახმარება"
@@ -1141,18 +1142,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "მალსახმობების გამართვა"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"მალსახმობებს სახელების (მაგალითად, კოპირება) ან თავად კლავიშთა კომბინაციების "
+"(მაგალითად, Ctrl+C) ინტერაქტიული მოძებნა მათი ველში მითითებით."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"აქ მოტანილია <i>კლავიშთა ბმულების</i> სია, ე.ი. შესაბამისობები მარცხენა "
+"სვეტში მითითებულ ქმედებებსა (მაგალითად, 'კოპირება') და კლავიშთა ბმულებს "
+"(მაგალითად, CTRL-V), შორის მარჯვნივ."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "ქმედება"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "მალსახმობი"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ალტერნატული"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "გლობალური"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "გლობალური ალტერნატივა"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "თაგუნას ღილაკის ჟესტი"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "თაგუნას ფორმის ჟესტი"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "მალსახმობები %1-თვის"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "მთავარი:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ალტერნატული:"
@@ -1456,71 +1523,63 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "არასწორი მალსახმობები"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "მალსახმობებს სახელების (მაგალითად, კოპირება) ან თავად კლავიშთა "
-#~ "კომბინაციების (მაგალითად, Ctrl+C) ინტერაქტიული მოძებნა მათი ველში "
-#~ "მითითებით."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&ფაილი"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "აქ მოტანილია <i>კლავიშთა ბმულების</i> სია, ე.ი. შესაბამისობები მარცხენა "
-#~ "სვეტში მითითებულ ქმედებებსა (მაგალითად, 'კოპირება') და კლავიშთა ბმულებს "
-#~ "(მაგალითად, CTRL-V), შორის მარჯვნივ."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&თამაში"
 
-#~ msgid "Action"
-#~ msgstr "ქმედება"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&ჩასწორება"
 
-#~ msgid "Shortcut"
-#~ msgstr "მალსახმობი"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&სვლა"
 
-#~ msgid "Alternate"
-#~ msgstr "ალტერნატული"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&ხედი"
 
-#~ msgid "Global"
-#~ msgstr "გლობალური"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&გადასვლა"
 
-#~ msgid "Global Alternate"
-#~ msgstr "გლობალური ალტერნატივა"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&სანიშნეები"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "თაგუნას ღილაკის ჟესტი"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&ხელსაწყოები"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "თაგუნას ფორმის ჟესტი"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "გამართვა"
 
-#~ msgid "&File"
-#~ msgstr "&ფაილი"
-
-#~ msgid "&Game"
-#~ msgstr "&თამაში"
-
-#~ msgid "&Edit"
-#~ msgstr "&ჩასწორება"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&სვლა"
-
-#~ msgid "&View"
-#~ msgstr "&ხედი"
-
-#~ msgid "&Go"
-#~ msgstr "&გადასვლა"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&სანიშნეები"
-
-#~ msgid "&Tools"
-#~ msgstr "&ხელსაწყოები"
-
-#~ msgid "&Settings"
-#~ msgstr "გამართვა"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "ხელსაწყოთა მთავარი ზოლი"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ხელსაწყოთა მთავარი ზოლი"

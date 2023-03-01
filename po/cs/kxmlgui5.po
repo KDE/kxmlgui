@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-07-14 14:26+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -798,7 +798,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Změnit ikonu"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Nápo&věda"
@@ -1151,18 +1152,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Nastavit klávesové zkratky"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Zde můžete aktivně interaktivně vyhledávat názvy zkratek (např. Kopírovat) "
+"nebo kombinace kláves (např. Ctrl+C)."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Zde máte přehled vazeb kláves, tj. asociace mezi činnostmi (např. "
+"'Kopírování'), které jsou zobrazeny v levém sloupci a příslušnými klávesami "
+"nebo jejich kombinacemi (např. CTRL+V) zobrazených v pravém sloupci."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Činnosti"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Zkratka"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativní"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globální"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Globální alternativa"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gesto tlačítka myši"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gesto tahu myší"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Zkratky pro %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Základ:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativní:"
@@ -1464,71 +1531,63 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Nejednoznačné zkratky"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Zde můžete aktivně interaktivně vyhledávat názvy zkratek (např. "
-#~ "Kopírovat) nebo kombinace kláves (např. Ctrl+C)."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Soubor"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Zde máte přehled vazeb kláves, tj. asociace mezi činnostmi (např. "
-#~ "'Kopírování'), které jsou zobrazeny v levém sloupci a příslušnými "
-#~ "klávesami nebo jejich kombinacemi (např. CTRL+V) zobrazených v pravém "
-#~ "sloupci."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "H&ra"
 
-#~ msgid "Action"
-#~ msgstr "Činnosti"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "Ú&pravy"
 
-#~ msgid "Shortcut"
-#~ msgstr "Zkratka"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Ta&h"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativní"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "Po&hled"
 
-#~ msgid "Global"
-#~ msgstr "Globální"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "Pře&jít"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Globální alternativa"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Záložky"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Gesto tlačítka myši"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Nástroje"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Gesto tahu myší"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Nastav&ení"
 
-#~ msgid "&File"
-#~ msgstr "&Soubor"
-
-#~ msgid "&Game"
-#~ msgstr "H&ra"
-
-#~ msgid "&Edit"
-#~ msgstr "Ú&pravy"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "Ta&h"
-
-#~ msgid "&View"
-#~ msgstr "Po&hled"
-
-#~ msgid "&Go"
-#~ msgstr "Pře&jít"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Záložky"
-
-#~ msgid "&Tools"
-#~ msgstr "&Nástroje"
-
-#~ msgid "&Settings"
-#~ msgstr "Nastav&ení"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Hlavní panel nástrojů"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Hlavní panel nástrojů"

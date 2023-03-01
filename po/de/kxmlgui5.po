@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-08-29 09:46+0200\n"
 "Last-Translator: aheinecke <aheinecke@gnupg.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -825,7 +825,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Symbol ändern"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Hilfe"
@@ -1180,18 +1181,85 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Tastaturkurzbefehle festlegen"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Sie können interaktiv nach Tastenkürzel-Namen (z. B. für „Kopieren“) oder "
+"Tastenkombinationen (wie Strg+C) suchen, indem Sie sie hier eintippen."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Hier sehen Sie eine Liste der Tastenzuordnungen, d. h. Verknüpfungen "
+"zwischen Aktionen (z. B. „Kopieren“), die in der linken Spalte stehen, und "
+"Tasten oder Tastenkombinationen (z. B. Strg+C), die in der rechten Spalte "
+"erscheinen."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Aktion"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Kurzbefehl"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Global Alternativ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Mausknopf-Geste"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Mausbewegung-Geste"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Kurzbefehle für %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Haupt:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativ:"
@@ -1497,74 +1565,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Doppeldeutige Kurzbefehle"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Sie können interaktiv nach Tastenkürzel-Namen (z. B. für „Kopieren“) oder "
-#~ "Tastenkombinationen (wie Strg+C) suchen, indem Sie sie hier eintippen."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Datei"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Hier sehen Sie eine Liste der Tastenzuordnungen, d. h. Verknüpfungen "
-#~ "zwischen Aktionen (z. B. „Kopieren“), die in der linken Spalte stehen, "
-#~ "und Tasten oder Tastenkombinationen (z. B. Strg+C), die in der rechten "
-#~ "Spalte erscheinen."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Spiel"
 
-#~ msgid "Action"
-#~ msgstr "Aktion"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Bearbeiten"
 
-#~ msgid "Shortcut"
-#~ msgstr "Kurzbefehl"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Zug"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativ"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Ansicht"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Gehe zu"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Global Alternativ"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Lesezeichen"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Mausknopf-Geste"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "E&xtras"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Mausbewegung-Geste"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Einstellungen"
 
-#~ msgid "&File"
-#~ msgstr "&Datei"
-
-#~ msgid "&Game"
-#~ msgstr "&Spiel"
-
-#~ msgid "&Edit"
-#~ msgstr "&Bearbeiten"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Zug"
-
-#~ msgid "&View"
-#~ msgstr "&Ansicht"
-
-#~ msgid "&Go"
-#~ msgstr "&Gehe zu"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Lesezeichen"
-
-#~ msgid "&Tools"
-#~ msgstr "E&xtras"
-
-#~ msgid "&Settings"
-#~ msgstr "&Einstellungen"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Haupt-Werkzeugleiste"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Haupt-Werkzeugleiste"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

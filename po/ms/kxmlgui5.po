@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2021-01-29 14:25+0800\n"
 "Last-Translator: ye-yu <rafolwen98@gmail.com>\n"
 "Language-Team: Malay <kde-i18n-doc@kde.org>\n"
@@ -835,7 +835,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Ubah Ikon"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Bantuan (&H)"
@@ -1196,18 +1197,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Tetapkan Pintasan Papan Kekunci"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Cari nama pintasa (misalnya Salin) atau kombinasi kekunci (misalnya Ctrl+C) "
+"secara interaktif dengan menaipkannya di sini."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Di sini anda boleh melihat senarai gabungan kekunci, sebagai contoh;"
+"( 'Salin') yang ditunjukkan di kolum kiri dan merupakan gabungan kekunci "
+"(contoh. Ctrl+V) yang dipaparkan pada kolum kanan."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Tindakan"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Pintasan"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternatif"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternatif Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gerak Isyarat Butang Tetikus"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gerak Isyarat Bentuk Tetikus"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Pintasan untuk %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Utama:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternatif:"
@@ -1512,73 +1579,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Pintasan tidak jelas dikesan"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Cari nama pintasa (misalnya Salin) atau kombinasi kekunci (misalnya Ctrl"
-#~ "+C) secara interaktif dengan menaipkannya di sini."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fail"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Di sini anda boleh melihat senarai gabungan kekunci, sebagai contoh;"
-#~ "( 'Salin') yang ditunjukkan di kolum kiri dan merupakan gabungan kekunci "
-#~ "(contoh. Ctrl+V) yang dipaparkan pada kolum kanan."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "Permainan  (&G)"
 
-#~ msgid "Action"
-#~ msgstr "Tindakan"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Edit"
 
-#~ msgid "Shortcut"
-#~ msgstr "Pintasan"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Pindah (&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternatif"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "Lihat (&V)"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "Pergi (&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Alternatif Global"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "Penanda Laman (&B)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Gerak Isyarat Butang Tetikus"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "Perala&tan"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Gerak Isyarat Bentuk Tetikus"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Tetapan (&S)"
 
-#~ msgid "&File"
-#~ msgstr "&Fail"
-
-#~ msgid "&Game"
-#~ msgstr "Permainan  (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "&Edit"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "Pindah (&M)"
-
-#~ msgid "&View"
-#~ msgstr "Lihat (&V)"
-
-#~ msgid "&Go"
-#~ msgstr "Pergi (&G)"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "Penanda Laman (&B)"
-
-#~ msgid "&Tools"
-#~ msgstr "Perala&tan"
-
-#~ msgid "&Settings"
-#~ msgstr "Tetapan (&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Bar Alatan Utama"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Bar Alatan Utama"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

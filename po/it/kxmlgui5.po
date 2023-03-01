@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-07-06 08:03+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -819,7 +819,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Cambia icona"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Ai&uto"
@@ -1172,18 +1173,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Configura le scorciatoie da tastiera"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Cerca interattivamente i nomi delle scorciatoie (ad es. Copia) o le "
+"combinazioni dei tasti (ad es. Ctrl+C) digitandoli qui."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Questo è un elenco delle associazioni di tasti, cioè associazioni tra le "
+"azioni (ad es.«Copia») mostrate nella colonna di sinistra e i tasti o le "
+"combinazioni di tasti (ad es. Ctrl+V) mostrati nella colonna di destra."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Azione"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Scorciatoia"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativa"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globale"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternativa globale"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gesto coi tasti del mouse"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gesto di movimento del mouse"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Scorciatoie per %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Principale:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativa:"
@@ -1489,73 +1556,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Scorciatoie ambigue"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Cerca interattivamente i nomi delle scorciatoie (ad es. Copia) o le "
-#~ "combinazioni dei tasti (ad es. Ctrl+C) digitandoli qui."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&File"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Questo è un elenco delle associazioni di tasti, cioè associazioni tra le "
-#~ "azioni (ad es.«Copia») mostrate nella colonna di sinistra e i tasti o le "
-#~ "combinazioni di tasti (ad es. Ctrl+V) mostrati nella colonna di destra."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Partita"
 
-#~ msgid "Action"
-#~ msgstr "Azione"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Modifica"
 
-#~ msgid "Shortcut"
-#~ msgstr "Scorciatoia"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Mossa"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativa"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "Visuali&zza"
 
-#~ msgid "Global"
-#~ msgstr "Globale"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Vai"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Alternativa globale"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Segnalibri"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Gesto coi tasti del mouse"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "S&trumenti"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Gesto di movimento del mouse"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Imp&ostazioni"
 
-#~ msgid "&File"
-#~ msgstr "&File"
-
-#~ msgid "&Game"
-#~ msgstr "&Partita"
-
-#~ msgid "&Edit"
-#~ msgstr "&Modifica"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Mossa"
-
-#~ msgid "&View"
-#~ msgstr "Visuali&zza"
-
-#~ msgid "&Go"
-#~ msgstr "&Vai"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Segnalibri"
-
-#~ msgid "&Tools"
-#~ msgstr "S&trumenti"
-
-#~ msgid "&Settings"
-#~ msgstr "Imp&ostazioni"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Barra degli strumenti principale"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra degli strumenti principale"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

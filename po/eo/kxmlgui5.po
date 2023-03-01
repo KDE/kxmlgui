@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2023-01-20 21:48+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -808,7 +808,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Ŝanĝi piktogramon"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Helpo"
@@ -1159,18 +1160,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Agordi klavarajn ŝparvojojn"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Serĉi interageme por ŝparvojnomoj (ekz. Kopii) aŭ kombinaĵo de klavoj (ekz. "
+"Ctrl+C) tajpante ilin ĉi tie."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Ĉui tie vi povas vidi liston de klavkombinoj, kiuj estas asocioj inter agoj "
+"(kiel ekzemple \"kopii\") montritaj en la maldekstra kolumno kaj klavoj aŭ "
+"kombinoj de klavoj (kiel ekzemple Stir+V) montritaj en la dekstra kolumno."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Ago"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Klavkombino"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativa"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Ĉiea"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Ĉiea alternativa"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Musbutona gesto"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Musforma gesto"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Klavkombinoj por %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Ĉefa:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativa:"
@@ -1475,71 +1542,63 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Ambiguaj Ŝparvojoj"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Serĉi interageme por ŝparvojnomoj (ekz. Kopii) aŭ kombinaĵo de klavoj "
-#~ "(ekz. Ctrl+C) tajpante ilin ĉi tie."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Dosiero"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Ĉui tie vi povas vidi liston de klavkombinoj, kiuj estas asocioj inter "
-#~ "agoj (kiel ekzemple \"kopii\") montritaj en la maldekstra kolumno kaj "
-#~ "klavoj aŭ kombinoj de klavoj (kiel ekzemple Stir+V) montritaj en la "
-#~ "dekstra kolumno."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Ludo"
 
-#~ msgid "Action"
-#~ msgstr "Ago"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "R&edakti"
 
-#~ msgid "Shortcut"
-#~ msgstr "Klavkombino"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Movi"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativa"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Vido"
 
-#~ msgid "Global"
-#~ msgstr "Ĉiea"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Iri"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Ĉiea alternativa"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "L&egosignoj"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Musbutona gesto"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "I&loj"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Musforma gesto"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Agordoj"
 
-#~ msgid "&File"
-#~ msgstr "&Dosiero"
-
-#~ msgid "&Game"
-#~ msgstr "&Ludo"
-
-#~ msgid "&Edit"
-#~ msgstr "R&edakti"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Movi"
-
-#~ msgid "&View"
-#~ msgstr "&Vido"
-
-#~ msgid "&Go"
-#~ msgstr "&Iri"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "L&egosignoj"
-
-#~ msgid "&Tools"
-#~ msgstr "I&loj"
-
-#~ msgid "&Settings"
-#~ msgstr "&Agordoj"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Ĉefa Ilobreto"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Ĉefa Ilobreto"

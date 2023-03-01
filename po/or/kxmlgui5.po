@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2009-01-02 17:37+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -793,7 +793,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "ଚିତ୍ର ସଂକେତ ପରିବର୍ତ୍ତନ କରନ୍ତୁ"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "ସହାୟତା (&H)"
@@ -1157,18 +1158,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "ସଂକ୍ଷିପ୍ତ ପଥ ବିନ୍ୟାସ କରନ୍ତୁ"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ନାମଗୁଡିକର ସଂକ୍ଷିପ୍ତପଥ ପାଇଁ ପାରସ୍ପରିକ କ୍ରିୟାକ୍ଷମ ଭାବେ ଖୋଜନ୍ତୁ (e.g. ନକଲ କରନ୍ତୁ) କିମ୍ୱା କି ଗୁଡିକର "
+"ସଂଯୋଗ (e.g. Ctrl+C) ସେମାନଙ୍କୁ ଏଠାରେ ଟାଇପ କରିବା ଦ୍ୱାରା।"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"ଏଠାରେ ଆପଣ କି ବନ୍ଧନଗୁଡିକର ଗୋଟିଏ ତାଲିକା ଦେଖିପାରିବେ, ଯେପରିକି ବାମ ସ୍ତମ୍ଭ ଏବଂ କିରେ ଦର୍ଶାଇଥିବା "
+"କାମଗୁଡିକ ମଧ୍ଯରେ ସାହଚର୍ଯ୍ୟ (ଯେପରିକି 'ନକଲ କରନ୍ତୁ') କିମ୍ୱା ଡାହାଣ ସ୍ତମ୍ଭରେ ଦର୍ଶାଇଥିବା କିଗୁଡିକର "
+"ସଂଯୋଗ (ଯେପରିକି Ctrl+V)।"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "କାମ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "ସଂକ୍ଷିପ୍ତ ପଥ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ବିକଳ୍ପ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "ସାମଗ୍ରିକ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "ସାମଗ୍ରିକ ବିକଳ୍ପ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "ମାଉସ ବଟନ ହାବଭାବ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "ମାଉସ ଆକାର ହାବଭାବ"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 ପାଇଁ ସଂକ୍ଷିପ୍ତ ପଥ"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ମୁଖ୍ୟ:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ବିକଳ୍ପ:"
@@ -1477,75 +1544,67 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "ସଂକ୍ଷିପ୍ତ ପଥ"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "ନାମଗୁଡିକର ସଂକ୍ଷିପ୍ତପଥ ପାଇଁ ପାରସ୍ପରିକ କ୍ରିୟାକ୍ଷମ ଭାବେ ଖୋଜନ୍ତୁ (e.g. ନକଲ କରନ୍ତୁ) କିମ୍ୱା କି "
-#~ "ଗୁଡିକର ସଂଯୋଗ (e.g. Ctrl+C) ସେମାନଙ୍କୁ ଏଠାରେ ଟାଇପ କରିବା ଦ୍ୱାରା।"
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "ଫାଇଲ (&F)"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "ଏଠାରେ ଆପଣ କି ବନ୍ଧନଗୁଡିକର ଗୋଟିଏ ତାଲିକା ଦେଖିପାରିବେ, ଯେପରିକି ବାମ ସ୍ତମ୍ଭ ଏବଂ କିରେ ଦର୍ଶାଇଥିବା "
-#~ "କାମଗୁଡିକ ମଧ୍ଯରେ ସାହଚର୍ଯ୍ୟ (ଯେପରିକି 'ନକଲ କରନ୍ତୁ') କିମ୍ୱା ଡାହାଣ ସ୍ତମ୍ଭରେ ଦର୍ଶାଇଥିବା କିଗୁଡିକର "
-#~ "ସଂଯୋଗ (ଯେପରିକି Ctrl+V)।"
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "ଖେଳ (&G)"
 
-#~ msgid "Action"
-#~ msgstr "କାମ"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (&E)"
 
-#~ msgid "Shortcut"
-#~ msgstr "ସଂକ୍ଷିପ୍ତ ପଥ"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "ଗତି କରନ୍ତୁ (&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "ବିକଳ୍ପ"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "ଦୃଶ୍ୟ (&V)"
 
-#~ msgid "Global"
-#~ msgstr "ସାମଗ୍ରିକ"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "ଯାଆନ୍ତୁ (&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "ସାମଗ୍ରିକ ବିକଳ୍ପ"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, fuzzy, kde-format
+#| msgid "&Edit Bookmarks"
+msgid "&Bookmarks"
+msgstr "ଚିହ୍ନିତ ସ୍ଥାନଗୁଡିକୁ ସମ୍ପାଦନ କରନ୍ତୁ (&E)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "ମାଉସ ବଟନ ହାବଭାବ"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "ସାଧନ (&T)"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "ମାଉସ ଆକାର ହାବଭାବ"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "ବିନ୍ୟାସ (&S)"
 
-#~ msgid "&File"
-#~ msgstr "ଫାଇଲ (&F)"
-
-#~ msgid "&Game"
-#~ msgstr "ଖେଳ (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (&E)"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "ଗତି କରନ୍ତୁ (&M)"
-
-#~ msgid "&View"
-#~ msgstr "ଦୃଶ୍ୟ (&V)"
-
-#~ msgid "&Go"
-#~ msgstr "ଯାଆନ୍ତୁ (&G)"
-
-#, fuzzy
-#~| msgid "&Edit Bookmarks"
-#~ msgid "&Bookmarks"
-#~ msgstr "ଚିହ୍ନିତ ସ୍ଥାନଗୁଡିକୁ ସମ୍ପାଦନ କରନ୍ତୁ (&E)"
-
-#~ msgid "&Tools"
-#~ msgstr "ସାଧନ (&T)"
-
-#~ msgid "&Settings"
-#~ msgstr "ବିନ୍ୟାସ (&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "ମୁଖ୍ୟ ସାଧନପଟି"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ମୁଖ୍ୟ ସାଧନପଟି"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

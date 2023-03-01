@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4libs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2012-01-19 00:20-0500\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -786,7 +786,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Ndrysho Ikonën"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Ndihmë"
@@ -1149,6 +1150,70 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Konfiguro Shkurtoret"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Kërko në mënyrë interaktive për emra shkurtoresh (p.sh. Kopjo) ose për "
+"kombinime butonash (p.sh. Ctrl+C) duke i shtypur ata këtu."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Këtu mund të shihni një listë të kombinimeve të butonave, pra të ndërlidhjes "
+"midis veprimeve (p.sh. 'Kopjo') të shfaqur në shtyllën e majtë dhe butonat "
+"ose kombinimet e butonave (p.sh. Ctrl+V) të shfaqur në shtyllën e djathtë."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Veprim"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Shkurtore"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alterno"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternativë Globale"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Sjellja e Butonit të Miut"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Sjella e Përmasës së Miut"
+
 #: kshortcutseditor.cpp:536
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
@@ -1156,12 +1221,14 @@ msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Shkurtore"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Kryesor:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativ:"
@@ -1474,74 +1541,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "U dallua një shkurtore e dyshimtë"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Kërko në mënyrë interaktive për emra shkurtoresh (p.sh. Kopjo) ose për "
-#~ "kombinime butonash (p.sh. Ctrl+C) duke i shtypur ata këtu."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Skedari"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Këtu mund të shihni një listë të kombinimeve të butonave, pra të "
-#~ "ndërlidhjes midis veprimeve (p.sh. 'Kopjo') të shfaqur në shtyllën e "
-#~ "majtë dhe butonat ose kombinimet e butonave (p.sh. Ctrl+V) të shfaqur në "
-#~ "shtyllën e djathtë."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Lojë"
 
-#~ msgid "Action"
-#~ msgstr "Veprim"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Modifiko"
 
-#~ msgid "Shortcut"
-#~ msgstr "Shkurtore"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Zhvendos"
 
-#~ msgid "Alternate"
-#~ msgstr "Alterno"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Shfaq"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Shko"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Alternativë Globale"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Faqeruajtës"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Sjellja e Butonit të Miut"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Mjetet"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Sjella e Përmasës së Miut"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Parametrat"
 
-#~ msgid "&File"
-#~ msgstr "&Skedari"
-
-#~ msgid "&Game"
-#~ msgstr "&Lojë"
-
-#~ msgid "&Edit"
-#~ msgstr "&Modifiko"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Zhvendos"
-
-#~ msgid "&View"
-#~ msgstr "&Shfaq"
-
-#~ msgid "&Go"
-#~ msgstr "&Shko"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Faqeruajtës"
-
-#~ msgid "&Tools"
-#~ msgstr "&Mjetet"
-
-#~ msgid "&Settings"
-#~ msgstr "&Parametrat"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Shiriti Kryesor"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Shiriti Kryesor"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

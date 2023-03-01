@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -809,7 +809,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "আইকন পরিবর্তন করুন"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "সাহায্য (&H)"
@@ -1170,18 +1171,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "শর্টকাট কনফিগার করুন"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"শর্ট-কাটের নাম (যেমন, কপি করুন) অথবা কি-সংকলন (উদাহরণ, Ctrl+C) এই স্থানে উল্লেখ "
+"করে, ইন্টারেক্টিভ পদ্ধতিতে অনুসন্ধান করুন।"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"এই স্থানে, কি-বাইন্ডিং অর্থাৎ বাঁদিকের সারিতে উল্লিখিত কর্মের সাথে (যেমন 'কপি "
+"করুন') ডানদিকের সারিতে চিহ্নিত সুনির্দিষ্ট কি অথবা কি-সংকলনের (যেমন, Ctrl+V) "
+"যোগাযোগ পরিদর্শন করা যাবে।"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "কর্ম"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "শর্ট-কাট"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "বিকল্প"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "সার্বজনীন"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "সার্বজনীন বিকল্প"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "মাউস বাটনের ভঙ্গিমা"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "মাউস আকারের ভঙ্গিমা"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1-র শর্ট-কাট"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "প্রধান:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "বিকল্প:"
@@ -1504,73 +1571,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "শর্ট-কাট"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "শর্ট-কাটের নাম (যেমন, কপি করুন) অথবা কি-সংকলন (উদাহরণ, Ctrl+C) এই স্থানে "
-#~ "উল্লেখ করে, ইন্টারেক্টিভ পদ্ধতিতে অনুসন্ধান করুন।"
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "ফাইল (&F)"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "এই স্থানে, কি-বাইন্ডিং অর্থাৎ বাঁদিকের সারিতে উল্লিখিত কর্মের সাথে (যেমন 'কপি "
-#~ "করুন') ডানদিকের সারিতে চিহ্নিত সুনির্দিষ্ট কি অথবা কি-সংকলনের (যেমন, Ctrl+V) "
-#~ "যোগাযোগ পরিদর্শন করা যাবে।"
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "খেলা (&G)"
 
-#~ msgid "Action"
-#~ msgstr "কর্ম"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "সম্পাদনা (&E)"
 
-#~ msgid "Shortcut"
-#~ msgstr "শর্ট-কাট"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "স্থানান্তরণ (&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "বিকল্প"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "প্রদর্শন (&V)"
 
-#~ msgid "Global"
-#~ msgstr "সার্বজনীন"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "গন্তব্য (&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "সার্বজনীন বিকল্প"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "বুকমার্ক (&B)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "মাউস বাটনের ভঙ্গিমা"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "সরঞ্জাম (&T)"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "মাউস আকারের ভঙ্গিমা"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "বিবিধ বৈশিষ্ট্য (&S)"
 
-#~ msgid "&File"
-#~ msgstr "ফাইল (&F)"
-
-#~ msgid "&Game"
-#~ msgstr "খেলা (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "সম্পাদনা (&E)"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "স্থানান্তরণ (&M)"
-
-#~ msgid "&View"
-#~ msgstr "প্রদর্শন (&V)"
-
-#~ msgid "&Go"
-#~ msgstr "গন্তব্য (&G)"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "বুকমার্ক (&B)"
-
-#~ msgid "&Tools"
-#~ msgstr "সরঞ্জাম (&T)"
-
-#~ msgid "&Settings"
-#~ msgstr "বিবিধ বৈশিষ্ট্য (&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "প্রধান টুল-বার"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "প্রধান টুল-বার"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

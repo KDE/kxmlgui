@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -895,7 +895,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "سىنبەلگە ئۆزگەرت"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "ياردەم(&H)"
@@ -1278,18 +1279,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "تېزلەتمە سەپلىمە"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"سۆزلىشىشچان ئىزدەش تېزلەتمە ئاتى (مەسىلەن، كۆچۈر) ياكى بىرىكمە كۇنۇپكا "
+"(مەسىلەن، Ctrl+C) نى مۇشۇ جايدا كىرگۈزىدۇ."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"بۇ جايدا ئۇلىنىش تىزىملىكىنى كۆرەلەيسىز، يەنى سول تەرەپتە كۆرۈنگەن مەشغۇلات "
+"(مەسىلەن، «كۆچۈر») ۋە ئوڭ تەرەپتە كۆرۈنگەن كۇنۇپكا ياكى بىرىكمە كۇنۇپكا "
+"(مەسىلەن، Ctrl+V) ئارىسىدىكى ئۇلىنىش."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "مەشغۇلات"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "تېزلەتمە"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "زاپاس"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "ئومۇمىي دائىرىلىك"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "ئومۇمىيەت زاپاس"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "چاشقىنەك توپچا قول ئىشارىتى"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "چاشقىنەك شەكىل قول ئىشارىتى"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 نىڭ تېزلەتمىسى"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ئاساسىي:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "زاپاس:"
@@ -1605,73 +1672,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "مۈجمەل تېزلەتمە بايقالدى"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "سۆزلىشىشچان ئىزدەش تېزلەتمە ئاتى (مەسىلەن، كۆچۈر) ياكى بىرىكمە كۇنۇپكا "
-#~ "(مەسىلەن، Ctrl+C) نى مۇشۇ جايدا كىرگۈزىدۇ."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "ھۆججەت(&F)"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "بۇ جايدا ئۇلىنىش تىزىملىكىنى كۆرەلەيسىز، يەنى سول تەرەپتە كۆرۈنگەن "
-#~ "مەشغۇلات (مەسىلەن، «كۆچۈر») ۋە ئوڭ تەرەپتە كۆرۈنگەن كۇنۇپكا ياكى بىرىكمە "
-#~ "كۇنۇپكا (مەسىلەن، Ctrl+V) ئارىسىدىكى ئۇلىنىش."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "ئويۇن(&G)"
 
-#~ msgid "Action"
-#~ msgstr "مەشغۇلات"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "تەھرىر(&E)"
 
-#~ msgid "Shortcut"
-#~ msgstr "تېزلەتمە"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "يۆتكە(&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "زاپاس"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "كۆرۈنۈش(&V)"
 
-#~ msgid "Global"
-#~ msgstr "ئومۇمىي دائىرىلىك"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "يۆتكەل(&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "ئومۇمىيەت زاپاس"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "خەتكۈچلەر(&B)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "چاشقىنەك توپچا قول ئىشارىتى"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "قوراللار(&T)"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "چاشقىنەك شەكىل قول ئىشارىتى"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "تەڭشەك(&S)"
 
-#~ msgid "&File"
-#~ msgstr "ھۆججەت(&F)"
-
-#~ msgid "&Game"
-#~ msgstr "ئويۇن(&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "تەھرىر(&E)"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "يۆتكە(&M)"
-
-#~ msgid "&View"
-#~ msgstr "كۆرۈنۈش(&V)"
-
-#~ msgid "&Go"
-#~ msgstr "يۆتكەل(&G)"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "خەتكۈچلەر(&B)"
-
-#~ msgid "&Tools"
-#~ msgstr "قوراللار(&T)"
-
-#~ msgid "&Settings"
-#~ msgstr "تەڭشەك(&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "ئاساسىي قورال بالداق"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ئاساسىي قورال بالداق"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

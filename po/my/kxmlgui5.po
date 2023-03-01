@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2021-09-20 02:06+0630\n"
 "Last-Translator: ဇေယျာလွင် <lw1nzayar@yandex.com>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -785,7 +785,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "ဝတ္တူ-မြင်ကွင်း ပြောင်းလဲရန်"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Hအကူအညီ"
@@ -1117,18 +1118,79 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "ကီးဘုတ်အမြန်ခလုတ်များပြင်ဆင်မည်"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr "အမြန်ခလုတ်အမည်များ(သာဓက။ ။ကူးယူ) သို့မဟုတ် ကီးတွဲများ(သာဓက။ ။ Ctrl+C) ရိုက်သွင်းပြီးရှာဖွေရန်"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr "ကီးတွဲများ စာရင်း မြင်ရမည်။"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "လုပ်ဆောင်ချက်"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "အမြန်ခလုတ်"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "အခြား"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "အများနှင့်သက်ဆိုင်သော"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "အများနှင့်သက်ဆိုင်သောအခြား"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "မောက့်စ် ခလုတ် လက်ဟန်"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "မောက့်စ် ပုံစံ လက်ဟန်"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1အတွက် အမြန်ခလုတ်များ"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ပင်မ -"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "အခြား -"
@@ -1433,69 +1495,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "အငြင်းပွားဖွယ်ရှိသည့်အမြန်ခလုတ်များ"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "အမြန်ခလုတ်အမည်များ(သာဓက။ ။ကူးယူ) သို့မဟုတ် ကီးတွဲများ(သာဓက။ ။ Ctrl+C) ရိုက်သွင်းပြီးရှာဖွေရန်"
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fဖိုင်လ်"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr "ကီးတွဲများ စာရင်း မြင်ရမည်။"
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Gဂိမ်း"
 
-#~ msgid "Action"
-#~ msgstr "လုပ်ဆောင်ချက်"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Eတည်းဖြတ်"
 
-#~ msgid "Shortcut"
-#~ msgstr "အမြန်ခလုတ်"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Mရွေ့"
 
-#~ msgid "Alternate"
-#~ msgstr "အခြား"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Vမြင်ကွင်း"
 
-#~ msgid "Global"
-#~ msgstr "အများနှင့်သက်ဆိုင်သော"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Gသွားရန်"
 
-#~ msgid "Global Alternate"
-#~ msgstr "အများနှင့်သက်ဆိုင်သောအခြား"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Bစာမျက်နှာမှတ်သားချက်များ"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "မောက့်စ် ခလုတ် လက်ဟန်"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Tကရိယာများ"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "မောက့်စ် ပုံစံ လက်ဟန်"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Sသတ်မှတ်ချက်များ"
 
-#~ msgid "&File"
-#~ msgstr "&Fဖိုင်လ်"
-
-#~ msgid "&Game"
-#~ msgstr "&Gဂိမ်း"
-
-#~ msgid "&Edit"
-#~ msgstr "&Eတည်းဖြတ်"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Mရွေ့"
-
-#~ msgid "&View"
-#~ msgstr "&Vမြင်ကွင်း"
-
-#~ msgid "&Go"
-#~ msgstr "&Gသွားရန်"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Bစာမျက်နှာမှတ်သားချက်များ"
-
-#~ msgid "&Tools"
-#~ msgstr "&Tကရိယာများ"
-
-#~ msgid "&Settings"
-#~ msgstr "&Sသတ်မှတ်ချက်များ"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "အဓိကကရိယာတန်း"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "အဓိကကရိယာတန်း"
 
 #~ msgid "Open Command Bar"
 #~ msgstr "အမိန့်တန်းဖွင့်ရန်"

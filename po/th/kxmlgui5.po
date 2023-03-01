@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -891,7 +891,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "เปลี่ยนภาพไอคอน"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&ช่วยเหลือ"
@@ -1270,18 +1271,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "ปรับแต่งปุ่มพิมพ์ลัด"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ค้นหาชื่อของปุ่มพิมพ์ลัด (ตัวอย่างเช่น คัดลอก) หรือรูปแบบการกดปุ่มของแป้นพิมพ์ (ตัวอย่าง เช่น Ctrl"
+"+C) แบบปฎิสัมพันธ์ โดยป้อนคำค้นที่นี่"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"คุณสามารถเห็นการจับคู่ปุ่มพิมพ์ที่กำหนดไว้แล้วที่นี่ โดยมีความสัมพันธ์ระหว่างการกระทำ (เช่น "
+"'คัดลอก') จะถูกแสดงไว้ในคอลัมน์ด้านซ้าย และปุ่มพิมพ์ที่ถูกจับคู่ไว้ (เช่น CTRL+V) "
+"จะถูกแสดงไว้ในคอลัมน์ด้านขวา"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "การกระทำ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "ปุ่มพิมพ์ลัด"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ทางเลือกอื่น"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "ทั้งระบบ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "ทางเลือกอื่นของทั้งระบบ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "รูปแบบการกดปุ่มเมาส์"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "รูปแบบการเคลื่อนเมาส์"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "ปุ่มพิมพ์ลัดสำหรับ %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ปุ่มพิมพ์ลัดหลัก:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ปุ่มพิมพ์ลัดอื่น:"
@@ -1597,73 +1664,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "ตรวจพบปุ่มพิมพ์ลัดที่คลุมเครือ"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "ค้นหาชื่อของปุ่มพิมพ์ลัด (ตัวอย่างเช่น คัดลอก) หรือรูปแบบการกดปุ่มของแป้นพิมพ์ (ตัวอย่าง เช่น "
-#~ "Ctrl+C) แบบปฎิสัมพันธ์ โดยป้อนคำค้นที่นี่"
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "แ&ฟ้ม"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "คุณสามารถเห็นการจับคู่ปุ่มพิมพ์ที่กำหนดไว้แล้วที่นี่ โดยมีความสัมพันธ์ระหว่างการกระทำ (เช่น "
-#~ "'คัดลอก') จะถูกแสดงไว้ในคอลัมน์ด้านซ้าย และปุ่มพิมพ์ที่ถูกจับคู่ไว้ (เช่น CTRL+V) "
-#~ "จะถูกแสดงไว้ในคอลัมน์ด้านขวา"
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "เ&กม"
 
-#~ msgid "Action"
-#~ msgstr "การกระทำ"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "แ&ก้ไข"
 
-#~ msgid "Shortcut"
-#~ msgstr "ปุ่มพิมพ์ลัด"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&ย้าย"
 
-#~ msgid "Alternate"
-#~ msgstr "ทางเลือกอื่น"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&มุมมอง"
 
-#~ msgid "Global"
-#~ msgstr "ทั้งระบบ"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "ไ&ป"
 
-#~ msgid "Global Alternate"
-#~ msgstr "ทางเลือกอื่นของทั้งระบบ"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "ที่&คั่นหน้า"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "รูปแบบการกดปุ่มเมาส์"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "เ&ครื่องมือ"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "รูปแบบการเคลื่อนเมาส์"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&ตั้งค่า"
 
-#~ msgid "&File"
-#~ msgstr "แ&ฟ้ม"
-
-#~ msgid "&Game"
-#~ msgstr "เ&กม"
-
-#~ msgid "&Edit"
-#~ msgstr "แ&ก้ไข"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&ย้าย"
-
-#~ msgid "&View"
-#~ msgstr "&มุมมอง"
-
-#~ msgid "&Go"
-#~ msgstr "ไ&ป"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "ที่&คั่นหน้า"
-
-#~ msgid "&Tools"
-#~ msgstr "เ&ครื่องมือ"
-
-#~ msgid "&Settings"
-#~ msgstr "&ตั้งค่า"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "แถบเครื่องมือหลัก"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "แถบเครื่องมือหลัก"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

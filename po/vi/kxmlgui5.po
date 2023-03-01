@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-07-11 09:10+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -801,7 +801,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Đổi biểu tượng"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Trợ &giúp"
@@ -1145,18 +1146,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Cấu hình phím tắt"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Tìm một cách có tương tác các tên phím tắt (vd. Chép) hoặc tổ hợp phím (vd. "
+"Ctrl+C) bằng cách gõ chúng vào đây."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Ở đây bạn có thể thấy một danh sách các kết buộc phím, tức là những liên kết "
+"giữa các hành động (vd. 'Chép') được hiển thị trong cột bên trái và các phím "
+"hay các tổ hợp phím (vd. Ctrl+C) được hiển thị trong cột bên phải."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Hành động"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Phím tắt"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Thay thế"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Toàn cục"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Thay thế toàn cục"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Động tác nút chuột"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Động tác hình chuột"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Lối tắt cho %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Chính:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Thay thế:"
@@ -1462,74 +1529,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Phím tắt nhập nhằng"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Tìm một cách có tương tác các tên phím tắt (vd. Chép) hoặc tổ hợp phím "
-#~ "(vd. Ctrl+C) bằng cách gõ chúng vào đây."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Tệp"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Ở đây bạn có thể thấy một danh sách các kết buộc phím, tức là những liên "
-#~ "kết giữa các hành động (vd. 'Chép') được hiển thị trong cột bên trái và "
-#~ "các phím hay các tổ hợp phím (vd. Ctrl+C) được hiển thị trong cột bên "
-#~ "phải."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "Trò c&hơi"
 
-#~ msgid "Action"
-#~ msgstr "Hành động"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Sửa"
 
-#~ msgid "Shortcut"
-#~ msgstr "Phím tắt"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Nướ&c đi"
 
-#~ msgid "Alternate"
-#~ msgstr "Thay thế"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Xem"
 
-#~ msgid "Global"
-#~ msgstr "Toàn cục"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "Đ&i"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Thay thế toàn cục"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Dấu nhớ"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Động tác nút chuột"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Công cụ"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Động tác hình chuột"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Thiết &lập"
 
-#~ msgid "&File"
-#~ msgstr "&Tệp"
-
-#~ msgid "&Game"
-#~ msgstr "Trò c&hơi"
-
-#~ msgid "&Edit"
-#~ msgstr "&Sửa"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "Nướ&c đi"
-
-#~ msgid "&View"
-#~ msgstr "&Xem"
-
-#~ msgid "&Go"
-#~ msgstr "Đ&i"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Dấu nhớ"
-
-#~ msgid "&Tools"
-#~ msgstr "&Công cụ"
-
-#~ msgid "&Settings"
-#~ msgstr "Thiết &lập"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Thanh công cụ chính"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Thanh công cụ chính"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

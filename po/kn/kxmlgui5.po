@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -820,7 +820,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "ಸಹಾಯ(&H)"
@@ -1202,18 +1203,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "ಸಮೀಪಮಾರ್ಗಗಳನ್ನು ಸಂರಚಿಸಿ"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ಸಮೀಪಮಾರ್ಗಗಳ (ಶಾರ್ಟ್ ಕಟ್) ಹೆಸರುಗಳಿಗೆ ಪಾರಸ್ಪರಿಕವಾಗಿ ಹುಡುಕು. (ಉ.ದಾ. ನಕಲಿಸು (copy), "
+"ಅಥವಾ ಕೀಲಿಕೈಗಳ ಸೇರುವಿಕೆ (ಉ.ದಾ. Ctrl+C) ಯನ್ನು ಇಲ್ಲಿ ಬೆರಳಚ್ಚಿಸುವುದರೊಂದಿಗೆ ಹುಡುಕು."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"ಇಲ್ಲಿ ನೀವು ಕೀಲಿಕೈಗಳ ನಿಬಂಧನೆಗಳ ಪಟ್ಟಿಯನ್ನು (ಬೈಂಡಿಂಗ್) ನೋಡಬಹುದು, ಅಂದರೆ ಎಡ "
+"ಲಂಬಸಾಲಿನಲ್ಲಿನ ಕ್ರಿಯೆಗಳ (ಉ.ದಾ. ನಕಲಿಸು (copy)) ಮತ್ತು ಬಲ ಲಂಬಸಾಲಿನ (ಉ.ದಾ. Ctrl+ನ) "
+"ನಂತಹ ಕೀಲಿಕೈಗಳ ಸೇರುವಿಕೆಯ ನಡುವಿನ ಸಂಬಂಧವನ್ನು ಕಾಣಬಹುದು."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "ಹಕ್ರಿಯೆ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "ಸಮೀಪಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ಪರ್ಯಾಯ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "ಸಾರ್ವತ್ರಿಕ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "ಸಾರ್ವತ್ರಿಕ ಪರ್ಯಾಯ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "ತೆರೆಸೂಚಿ ಗುಂಡಿಯ ವರ್ತನೆ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "ತೆರೆಸೂಚಿ ಆಕಾರ ವರ್ತನೆ"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 ಕ್ಕೆ ಶೀಘ್ರಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ಮುಖ್ಯ:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ಪರ್ಯಾಯ:"
@@ -1537,74 +1604,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "ಅಸ್ಪಷ್ಟವಾದ ಶೀಘ್ರಮಾರ್ಗವು ಕಂಡುಬಂದಿತು"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "ಸಮೀಪಮಾರ್ಗಗಳ (ಶಾರ್ಟ್ ಕಟ್) ಹೆಸರುಗಳಿಗೆ ಪಾರಸ್ಪರಿಕವಾಗಿ ಹುಡುಕು. (ಉ.ದಾ. ನಕಲಿಸು "
-#~ "(copy), ಅಥವಾ ಕೀಲಿಕೈಗಳ ಸೇರುವಿಕೆ (ಉ.ದಾ. Ctrl+C) ಯನ್ನು ಇಲ್ಲಿ "
-#~ "ಬೆರಳಚ್ಚಿಸುವುದರೊಂದಿಗೆ ಹುಡುಕು."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "ಕಡತ(&F)"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "ಇಲ್ಲಿ ನೀವು ಕೀಲಿಕೈಗಳ ನಿಬಂಧನೆಗಳ ಪಟ್ಟಿಯನ್ನು (ಬೈಂಡಿಂಗ್) ನೋಡಬಹುದು, ಅಂದರೆ ಎಡ "
-#~ "ಲಂಬಸಾಲಿನಲ್ಲಿನ ಕ್ರಿಯೆಗಳ (ಉ.ದಾ. ನಕಲಿಸು (copy)) ಮತ್ತು ಬಲ ಲಂಬಸಾಲಿನ (ಉ.ದಾ. Ctrl"
-#~ "+ನ) ನಂತಹ ಕೀಲಿಕೈಗಳ ಸೇರುವಿಕೆಯ ನಡುವಿನ ಸಂಬಂಧವನ್ನು ಕಾಣಬಹುದು."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "ಆಟ(&G)"
 
-#~ msgid "Action"
-#~ msgstr "ಹಕ್ರಿಯೆ"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "ಸಂಪಾದನೆ(&E)"
 
-#~ msgid "Shortcut"
-#~ msgstr "ಸಮೀಪಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "ಚಲಿಸು(&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "ಪರ್ಯಾಯ"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "ನೋಟ(&V)"
 
-#~ msgid "Global"
-#~ msgstr "ಸಾರ್ವತ್ರಿಕ"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "ಹೋಗು(&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "ಸಾರ್ವತ್ರಿಕ ಪರ್ಯಾಯ"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "ಪುಟ ಗುರುತುಗಳು(&B)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "ತೆರೆಸೂಚಿ ಗುಂಡಿಯ ವರ್ತನೆ"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "ಉಪಕರಣಗಳು(&T)"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "ತೆರೆಸೂಚಿ ಆಕಾರ ವರ್ತನೆ"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "ಸಂಯೋಜನೆಗಳು(&S)"
 
-#~ msgid "&File"
-#~ msgstr "ಕಡತ(&F)"
-
-#~ msgid "&Game"
-#~ msgstr "ಆಟ(&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "ಸಂಪಾದನೆ(&E)"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "ಚಲಿಸು(&M)"
-
-#~ msgid "&View"
-#~ msgstr "ನೋಟ(&V)"
-
-#~ msgid "&Go"
-#~ msgstr "ಹೋಗು(&G)"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "ಪುಟ ಗುರುತುಗಳು(&B)"
-
-#~ msgid "&Tools"
-#~ msgstr "ಉಪಕರಣಗಳು(&T)"
-
-#~ msgid "&Settings"
-#~ msgstr "ಸಂಯೋಜನೆಗಳು(&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

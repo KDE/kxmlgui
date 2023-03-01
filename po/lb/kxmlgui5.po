@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2006-06-22 16:29+0200\n"
 "Last-Translator: Michel Ludwig <michel.ludwig@kdemail.net>\n"
 "Language-Team: Luxembourgish <kde-i18n-lb@kde.org>\n"
@@ -883,7 +883,8 @@ msgstr "%1%"
 msgid "Change Icon"
 msgstr "&Symbol änneren..."
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Hëllef"
@@ -1263,6 +1264,71 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Tastekierzel configuréieren"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Sicht interaktiv no Kierzel-Nimm (z.B. fir \"kopéieren\") oder no "
+"Tastekombinatiounen (Ctrl+C), andeems der se hei agitt."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Hei gesitt dir eng Lëscht vun Tastebindungen, dat heescht Verknüpfungen "
+"tëschent den Aktiounen (z.B. \"kopéieren\") an der lénker Kolonn an den "
+"Tastekombinatiounen (z.B. Ctrl+C) an der rietser Kolonn."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Aktioun"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Tastekombinatioun"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, fuzzy, kde-format
+#| msgid "Alternate"
+msgid "Global Alternate"
+msgstr "Alternativ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr ""
+
 #: kshortcutseditor.cpp:536
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
@@ -1270,13 +1336,15 @@ msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Kierzelen"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, fuzzy, kde-format
 #| msgid "Chain:"
 msgid "Main:"
 msgstr "Ketten:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, fuzzy, kde-format
 #| msgid "Alternate"
 msgid "Alternate:"
@@ -1591,68 +1659,67 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Méideideg \"%1\" net verschafft"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Sicht interaktiv no Kierzel-Nimm (z.B. fir \"kopéieren\") oder no "
-#~ "Tastekombinatiounen (Ctrl+C), andeems der se hei agitt."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Datei"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Hei gesitt dir eng Lëscht vun Tastebindungen, dat heescht Verknüpfungen "
-#~ "tëschent den Aktiounen (z.B. \"kopéieren\") an der lénker Kolonn an den "
-#~ "Tastekombinatiounen (z.B. Ctrl+C) an der rietser Kolonn."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "S&pill"
 
-#~ msgid "Action"
-#~ msgstr "Aktioun"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "V&eränneren"
 
-#~ msgid "Shortcut"
-#~ msgstr "Tastekombinatioun"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, fuzzy, kde-format
+#| msgid "&Move"
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Réckelen"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativ"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Usiicht"
 
-#, fuzzy
-#~| msgid "Alternate"
-#~ msgid "Global Alternate"
-#~ msgstr "Alternativ"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Goen"
 
-#~ msgid "&File"
-#~ msgstr "&Datei"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Lieszeechen"
 
-#~ msgid "&Game"
-#~ msgstr "S&pill"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Verschiddenes"
 
-#~ msgid "&Edit"
-#~ msgstr "V&eränneren"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Astellungen"
 
-#, fuzzy
-#~| msgid "&Move"
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Réckelen"
-
-#~ msgid "&View"
-#~ msgstr "&Usiicht"
-
-#~ msgid "&Go"
-#~ msgstr "&Goen"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Lieszeechen"
-
-#~ msgid "&Tools"
-#~ msgstr "&Verschiddenes"
-
-#~ msgid "&Settings"
-#~ msgstr "&Astellungen"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Haapt-Toolbar"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Haapt-Toolbar"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

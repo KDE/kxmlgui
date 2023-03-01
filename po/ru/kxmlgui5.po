@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-08-02 09:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -829,7 +829,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Изменить значок"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Справка"
@@ -1200,18 +1201,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Настройка комбинаций клавиш"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Поиск по мере набора по именам комбинаций клавиш (например, Копировать) или "
+"по самим комбинациям (например, Ctrl+C)."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Здесь показан список <i>комбинаций клавиш</i>. Действия из левого столбца "
+"(например, Копировать), вызываются при нажатии клавиш или их сочетаний "
+"(например, Ctrl+V), указанных в правом столбце."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Действие"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Комбинация клавиш"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Дополнительная"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Глобальная"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Дополнительная глобальная"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Кнопка росчерка мышью"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Фигура росчерка мышью"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Комбинации клавиш для %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Основная:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Дополнительная:"
@@ -1519,73 +1586,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Конфликт действий"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Поиск по мере набора по именам комбинаций клавиш (например, Копировать) "
-#~ "или по самим комбинациям (например, Ctrl+C)."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Файл"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Здесь показан список <i>комбинаций клавиш</i>. Действия из левого столбца "
-#~ "(например, Копировать), вызываются при нажатии клавиш или их сочетаний "
-#~ "(например, Ctrl+V), указанных в правом столбце."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Игра"
 
-#~ msgid "Action"
-#~ msgstr "Действие"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Правка"
 
-#~ msgid "Shortcut"
-#~ msgstr "Комбинация клавиш"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Ход"
 
-#~ msgid "Alternate"
-#~ msgstr "Дополнительная"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Вид"
 
-#~ msgid "Global"
-#~ msgstr "Глобальная"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "Пере&ход"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Дополнительная глобальная"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Закладки"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Кнопка росчерка мышью"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "С&ервис"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Фигура росчерка мышью"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Настройка"
 
-#~ msgid "&File"
-#~ msgstr "&Файл"
-
-#~ msgid "&Game"
-#~ msgstr "&Игра"
-
-#~ msgid "&Edit"
-#~ msgstr "&Правка"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Ход"
-
-#~ msgid "&View"
-#~ msgstr "&Вид"
-
-#~ msgid "&Go"
-#~ msgstr "Пере&ход"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Закладки"
-
-#~ msgid "&Tools"
-#~ msgstr "С&ервис"
-
-#~ msgid "&Settings"
-#~ msgstr "&Настройка"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Основная панель инструментов"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Основная панель инструментов"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

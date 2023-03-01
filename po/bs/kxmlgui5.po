@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-03-20 12:04+0100\n"
 "Last-Translator: irfan <irfankurtagic@outlook.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -827,7 +827,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Promjena ikone"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Po&moÄ‡"
@@ -1186,6 +1187,74 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Konfigurišite prečice na tastaturi"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Interaktivno traÅ¾enje po imenu preÄice (npr. â€žKopirajâ€œ) ili kombinaciji "
+"tastera (npr. Ctrl+C)."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Spisak preÄica sa tastature, tj. veza izmeÄ‘u radnji (npr. â€žKopirajâ€œ) "
+"prikazanih u lijevoj koloni, i tastera ili kombinacija tastera (npr. Ctrl+V) "
+"prikazanih u desnoj koloni."
+
+# >> @title:column
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "radnja"
+
+# >> @title:column
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "preÄica"
+
+# >> @title:column Alternative shortcut
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "alternativna"
+
+# >> @title:column Alternative shortcut
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "globalna"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "glob. alternativna"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "gest dugmadima miÅ¡a"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "gest pokretom miÅ¡a"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
@@ -1193,13 +1262,15 @@ msgid "Shortcuts for %1"
 msgstr "PreÄice za %1"
 
 # >> Main shortcut
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Glavna:"
 
 # >> Alternate shortcut
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativna:"
@@ -1510,78 +1581,67 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Dvosmislene prečice"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Interaktivno traÅ¾enje po imenu preÄice (npr. â€žKopirajâ€œ) ili "
-#~ "kombinaciji tastera (npr. Ctrl+C)."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Datoteka"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Spisak preÄica sa tastature, tj. veza izmeÄ‘u radnji (npr. â€žKopirajâ€œ) "
-#~ "prikazanih u lijevoj koloni, i tastera ili kombinacija tastera (npr. Ctrl"
-#~ "+V) prikazanih u desnoj koloni."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Igra"
 
-# >> @title:column
-#~ msgid "Action"
-#~ msgstr "radnja"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Izmijeni"
 
-# >> @title:column
-#~ msgid "Shortcut"
-#~ msgstr "preÄica"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Pomjeri"
 
-# >> @title:column Alternative shortcut
-#~ msgid "Alternate"
-#~ msgstr "alternativna"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Prikaz"
 
-# >> @title:column Alternative shortcut
-#~ msgid "Global"
-#~ msgstr "globalna"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Kreni"
 
-#~ msgid "Global Alternate"
-#~ msgstr "glob. alternativna"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&ZabiljeÅ¡ke"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "gest dugmadima miÅ¡a"
-
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "gest pokretom miÅ¡a"
-
-#~ msgid "&File"
-#~ msgstr "&Datoteka"
-
-#~ msgid "&Game"
-#~ msgstr "&Igra"
-
-#~ msgid "&Edit"
-#~ msgstr "&Izmijeni"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Pomjeri"
-
-#~ msgid "&View"
-#~ msgstr "&Prikaz"
-
-#~ msgid "&Go"
-#~ msgstr "&Kreni"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&ZabiljeÅ¡ke"
-
-#~ msgid "&Tools"
-#~ msgstr "&Alatke"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Alatke"
 
 # >! ctxt: @title:menu standard application menu
-#~ msgid "&Settings"
-#~ msgstr "&Podešavanja"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Podešavanja"
 
-#~ msgid "Main Toolbar"
-#~ msgstr "Glavna traka"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Glavna traka"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

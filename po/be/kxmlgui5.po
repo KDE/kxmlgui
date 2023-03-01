@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-09-08 10:35\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -802,7 +802,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Змяніць значок"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Даведка"
@@ -1174,18 +1175,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Наладжванне спалучэнняў клавіш"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Інтэрактыўны пошук спалучэнняў клавіш па назве (напр. \"Скапіяваць\") ці па "
+"спалучэнні (напр. Ctrl+C)."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Гэта спіс сувязяў клавіш з дзеяннямі. Назва дзеяння паказваецца ў левым "
+"слупку (напр. \"Скапіяваць\"), а клавіша ці спалучэнне клавіш (напр. Ctrl+V) "
+"паказваецца ў правым слупку."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Дзеянне"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Спалучэнне клавіш"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Дадатковае"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Глабальнае"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Глабальнае дадатковае"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Жэст кнопак мышы"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Жэст рухаў мышы"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Спалучэнні клавіш для %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Галоўнае:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Дадатковае:"
@@ -1489,73 +1556,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Неадназначныя спалучэнні"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Інтэрактыўны пошук спалучэнняў клавіш па назве (напр. \"Скапіяваць\") ці "
-#~ "па спалучэнні (напр. Ctrl+C)."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Файл"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Гэта спіс сувязяў клавіш з дзеяннямі. Назва дзеяння паказваецца ў левым "
-#~ "слупку (напр. \"Скапіяваць\"), а клавіша ці спалучэнне клавіш (напр. Ctrl"
-#~ "+V) паказваецца ў правым слупку."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Гульня"
 
-#~ msgid "Action"
-#~ msgstr "Дзеянне"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Рэдагаванне"
 
-#~ msgid "Shortcut"
-#~ msgstr "Спалучэнне клавіш"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Перамяшчэнне"
 
-#~ msgid "Alternate"
-#~ msgstr "Дадатковае"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Выгляд"
 
-#~ msgid "Global"
-#~ msgstr "Глабальнае"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Пераход"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Глабальнае дадатковае"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Закладкі"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Жэст кнопак мышы"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Інструменты"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Жэст рухаў мышы"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Налады"
 
-#~ msgid "&File"
-#~ msgstr "&Файл"
-
-#~ msgid "&Game"
-#~ msgstr "&Гульня"
-
-#~ msgid "&Edit"
-#~ msgstr "&Рэдагаванне"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Перамяшчэнне"
-
-#~ msgid "&View"
-#~ msgstr "&Выгляд"
-
-#~ msgid "&Go"
-#~ msgstr "&Пераход"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Закладкі"
-
-#~ msgid "&Tools"
-#~ msgstr "&Інструменты"
-
-#~ msgid "&Settings"
-#~ msgstr "&Налады"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Галоўная панэль інструментаў"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Галоўная панэль інструментаў"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

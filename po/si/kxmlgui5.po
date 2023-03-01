@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2011-07-25 07:45+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -893,7 +893,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "අයිකනය වෙනස් කරන්න"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "උදව් (&H)"
@@ -1269,18 +1270,83 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "කෙටි මං සකසන්න"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"කෙටි මාර්‍ග සඳහා අන්තර්ක්‍රියාකාරිව (උදා: පිටපත් කරන්න) හෝ යතුරු සංයෝජන (උදා: Ctrl+C) ඇතුළත් "
+"කරමින් සොයන්න."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"මෙහිදි ඔබට යතුරු බැඳිම්වල ලැයිස්තුවක් දැකගත හැක, එනම්, ක්‍රියා අතර සංඝටන (උදා: 'පිටපත් "
+"කරන්න') වම් තීරුවේ පෙන්නන අතර යතුරු හෝ යතුරු සංයෝජන (උදා: Ctrl+V) දකුණු තීරුවේ පෙන්නයි."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "ක්‍රීයාව"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "කෙටි මාර්‍ගය"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ආදේශකය"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "ගෝලීය"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "ගෝලීය ආදේශකය"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "මූසික බොත්තම් ඉඟිය"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "මූසික හැඬ ඉඟිය"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 සඳහා කෙටි මඟ"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ප්‍රධාන:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ආදේශක:"
@@ -1598,72 +1664,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "උභයාර්ථ කෙටි මඟක් අනාවරණය විය"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "කෙටි මාර්‍ග සඳහා අන්තර්ක්‍රියාකාරිව (උදා: පිටපත් කරන්න) හෝ යතුරු සංයෝජන (උදා: Ctrl+C) "
-#~ "ඇතුළත් කරමින් සොයන්න."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "ගොනු (&F)"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "මෙහිදි ඔබට යතුරු බැඳිම්වල ලැයිස්තුවක් දැකගත හැක, එනම්, ක්‍රියා අතර සංඝටන (උදා: 'පිටපත් "
-#~ "කරන්න') වම් තීරුවේ පෙන්නන අතර යතුරු හෝ යතුරු සංයෝජන (උදා: Ctrl+V) දකුණු තීරුවේ පෙන්නයි."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "ක්‍රීඩා (&G)"
 
-#~ msgid "Action"
-#~ msgstr "ක්‍රීයාව"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "සැකසුම් (&E)"
 
-#~ msgid "Shortcut"
-#~ msgstr "කෙටි මාර්‍ගය"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "ගෙනයන්න (&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "ආදේශකය"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "දසුන (&V)"
 
-#~ msgid "Global"
-#~ msgstr "ගෝලීය"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "යන්න (&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "ගෝලීය ආදේශකය"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "කෙටි මාර්‍ග (&B)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "මූසික බොත්තම් ඉඟිය"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "මෙවලම් (&T)"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "මූසික හැඬ ඉඟිය"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "සැකසුම් (&S)"
 
-#~ msgid "&File"
-#~ msgstr "ගොනු (&F)"
-
-#~ msgid "&Game"
-#~ msgstr "ක්‍රීඩා (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "සැකසුම් (&E)"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "ගෙනයන්න (&M)"
-
-#~ msgid "&View"
-#~ msgstr "දසුන (&V)"
-
-#~ msgid "&Go"
-#~ msgstr "යන්න (&G)"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "කෙටි මාර්‍ග (&B)"
-
-#~ msgid "&Tools"
-#~ msgstr "මෙවලම් (&T)"
-
-#~ msgid "&Settings"
-#~ msgstr "සැකසුම් (&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "ප්‍රධාන මෙවලම් තීරුව"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ප්‍රධාන මෙවලම් තීරුව"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

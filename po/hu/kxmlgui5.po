@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-02-14 09:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -806,7 +806,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Más ikon"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Súgó"
@@ -1156,18 +1157,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Billentyűparancsok beállítása"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Interaktív keresés billentyűparancsokra (például Másolás) vagy "
+"billentyűkombinációkra (például Ctrl+C) egyszerű beírással."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Itt láthatók a definiált billentyűparancsok, a műveletek (például „Másolás”) "
+"nevei a bal oldali oszlopban, a billentyűkombinációk (például Ctrl+V) a jobb "
+"oldali oszlopban."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Művelet"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Billentyűparancs"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Másodlagos"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globális (elsődleges)"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Globális (másodlagos)"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Egérgomb-mozdulatsor"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Egéralakzat-sorozat"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Billentyűkombinációk: %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Alap:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Másodlagos:"
@@ -1473,73 +1540,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Nem egyértelmű billentyűparancsok"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Interaktív keresés billentyűparancsokra (például Másolás) vagy "
-#~ "billentyűkombinációkra (például Ctrl+C) egyszerű beírással."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fájl"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Itt láthatók a definiált billentyűparancsok, a műveletek (például "
-#~ "„Másolás”) nevei a bal oldali oszlopban, a billentyűkombinációk (például "
-#~ "Ctrl+V) a jobb oldali oszlopban."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "Já&ték"
 
-#~ msgid "Action"
-#~ msgstr "Művelet"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "S&zerkesztés"
 
-#~ msgid "Shortcut"
-#~ msgstr "Billentyűparancs"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Lépés"
 
-#~ msgid "Alternate"
-#~ msgstr "Másodlagos"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Nézet"
 
-#~ msgid "Global"
-#~ msgstr "Globális (elsődleges)"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Ugrás"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Globális (másodlagos)"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "Könyv&jelzők"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Egérgomb-mozdulatsor"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Eszközök"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Egéralakzat-sorozat"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Beállítások"
 
-#~ msgid "&File"
-#~ msgstr "&Fájl"
-
-#~ msgid "&Game"
-#~ msgstr "Já&ték"
-
-#~ msgid "&Edit"
-#~ msgstr "S&zerkesztés"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Lépés"
-
-#~ msgid "&View"
-#~ msgstr "&Nézet"
-
-#~ msgid "&Go"
-#~ msgstr "&Ugrás"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "Könyv&jelzők"
-
-#~ msgid "&Tools"
-#~ msgstr "&Eszközök"
-
-#~ msgid "&Settings"
-#~ msgstr "&Beállítások"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Alap eszköztár"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Alap eszköztár"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

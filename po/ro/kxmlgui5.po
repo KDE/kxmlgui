@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-12-28 21:15+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -813,7 +813,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Modifică p&ictograma..."
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Ajutor"
@@ -1174,18 +1175,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Configurează scurtăturile de tastatură"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Caută interactiv un nume de accelerator (de ex: Copiază) sau o combinație de "
+"taste (de ex: Ctrl+C) tastând-o aici."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Aici puteți vedea o listă de asocieri de taste, adică  asocierile dintre "
+"acțiunile afișate în coloana din stânga (de ex. „Copiază”) și tastele sau "
+"combinațiile de taste (de ex. Ctrl-V) afișate în coloana din dreapta."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Acțiune"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Scurtătură"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativă"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternativă globală"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gest buton maus"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gest formă maus"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Scurtături pentru %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Principal:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativ:"
@@ -1490,73 +1557,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Scurtături ambigue"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Caută interactiv un nume de accelerator (de ex: Copiază) sau o combinație "
-#~ "de taste (de ex: Ctrl+C) tastând-o aici."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fișier"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Aici puteți vedea o listă de asocieri de taste, adică  asocierile dintre "
-#~ "acțiunile afișate în coloana din stânga (de ex. „Copiază”) și tastele sau "
-#~ "combinațiile de taste (de ex. Ctrl-V) afișate în coloana din dreapta."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Joc"
 
-#~ msgid "Action"
-#~ msgstr "Acțiune"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Editare"
 
-#~ msgid "Shortcut"
-#~ msgstr "Scurtătură"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Mutare"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativă"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Vizualizare"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Mergi"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Alternativă globală"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Semne de carte"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Gest buton maus"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "Unel&te"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Gest formă maus"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Configurări"
 
-#~ msgid "&File"
-#~ msgstr "&Fișier"
-
-#~ msgid "&Game"
-#~ msgstr "&Joc"
-
-#~ msgid "&Edit"
-#~ msgstr "&Editare"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Mutare"
-
-#~ msgid "&View"
-#~ msgstr "&Vizualizare"
-
-#~ msgid "&Go"
-#~ msgstr "&Mergi"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Semne de carte"
-
-#~ msgid "&Tools"
-#~ msgstr "Unel&te"
-
-#~ msgid "&Settings"
-#~ msgstr "&Configurări"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Bara de unelte principală"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Bara de unelte principală"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

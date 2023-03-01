@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-09-08 10:35\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -855,7 +855,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Zmianić značok"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Daviedka"
@@ -1243,18 +1244,88 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Naladžvannie spalučenniaŭ klaviš"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Interaktyŭny pošuk spalučenniaŭ klaviš pa nazvie (napr. \"Skapijavać\") ci "
+"pa spalučenni (napr. Ctrl+C)."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, fuzzy, kde-format
+#| msgid ""
+#| "Here you can see a list of key bindings, i.e. associations between "
+#| "actions (e.g. Copy) shown in the left column and keys or combination of "
+#| "keys (e.g. Ctrl+V) shown in the right column."
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Heta spis suviaziaŭ klaviš z dziejanniami. Nazva dziejannia pakazvajecca ŭ "
+"lievym slupku (napr. \"Skapijavać\"), a klaviša ci spalučennie klaviš (napr. "
+"Ctrl+V) pakazvajecca ŭ pravym slupku."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Dziejannie"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Spalučennie klaviš"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Dadatkovaje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Hlabaĺnaje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Hlabaĺnaje dadatkovaje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Žest knopak myšy"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Žest ruchaŭ myšy"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Spalučenni klaviš dlia %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Haloŭnaje:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Dadatkovaje:"
@@ -1565,78 +1636,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Nieadnaznačnyja spalučenni"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Interaktyŭny pošuk spalučenniaŭ klaviš pa nazvie (napr. \"Skapijavać\") "
-#~ "ci pa spalučenni (napr. Ctrl+C)."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fajl"
 
-#, fuzzy
-#~| msgid ""
-#~| "Here you can see a list of key bindings, i.e. associations between "
-#~| "actions (e.g. Copy) shown in the left column and keys or combination of "
-#~| "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Heta spis suviaziaŭ klaviš z dziejanniami. Nazva dziejannia pakazvajecca "
-#~ "ŭ lievym slupku (napr. \"Skapijavać\"), a klaviša ci spalučennie klaviš "
-#~ "(napr. Ctrl+V) pakazvajecca ŭ pravym slupku."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Huĺnia"
 
-#~ msgid "Action"
-#~ msgstr "Dziejannie"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Redahavannie"
 
-#~ msgid "Shortcut"
-#~ msgstr "Spalučennie klaviš"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Pieramiaščennie"
 
-#~ msgid "Alternate"
-#~ msgstr "Dadatkovaje"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Vyhliad"
 
-#~ msgid "Global"
-#~ msgstr "Hlabaĺnaje"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Pierachod"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Hlabaĺnaje dadatkovaje"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Zakladki"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Žest knopak myšy"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Instrumienty"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Žest ruchaŭ myšy"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Nalady"
 
-#~ msgid "&File"
-#~ msgstr "&Fajl"
-
-#~ msgid "&Game"
-#~ msgstr "&Huĺnia"
-
-#~ msgid "&Edit"
-#~ msgstr "&Redahavannie"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Pieramiaščennie"
-
-#~ msgid "&View"
-#~ msgstr "&Vyhliad"
-
-#~ msgid "&Go"
-#~ msgstr "&Pierachod"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Zakladki"
-
-#~ msgid "&Tools"
-#~ msgstr "&Instrumienty"
-
-#~ msgid "&Settings"
-#~ msgstr "&Nalady"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Haloŭnaja paneĺ instrumientaŭ"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Haloŭnaja paneĺ instrumientaŭ"
 
 #~ msgctxt ""
 #~ "%1 is the operating system name, e.g. Fedora Linux, %2 is the CPU "

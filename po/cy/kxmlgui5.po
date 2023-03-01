@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-07-09 11:28+0100\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -813,7 +813,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Newid E&icon"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Cymorth"
@@ -1166,18 +1167,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Ffurfweddu Byrlwybrau Bysellfwrdd"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Chwilio yn rhyngweithiol ar gyfer enwau byrlwybrau (e.e. Copïo) neu cyfuniad "
+"o fysellau (e.e. Ctrl+C) gan eu teipio yma."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Gwelir yma rhestr o rhwymiadau bysell, h.y. cysylltiadau rhwng "
+"gweithrediadau (e.e.'Copi') sy'n ymddangos yn y golofn chwith a bysellau neu "
+"cyfuniad o fysellau (e.e. Ctrl+V) sy'n ymddangos yn y golofn dde."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Gweithrediad"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Byrlwybr"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Eiledol"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Hollfydol"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Eiledolyn Hollfydol"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Amneidiad Botwm Llygoden"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Amneidiad Ffurf Llygoden"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Byrlwybrau ar gyfer %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Prifan:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Eiledol:"
@@ -1484,73 +1551,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Byrlwybrau Amwys"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Chwilio yn rhyngweithiol ar gyfer enwau byrlwybrau (e.e. Copïo) neu "
-#~ "cyfuniad o fysellau (e.e. Ctrl+C) gan eu teipio yma."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Ffeil"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Gwelir yma rhestr o rhwymiadau bysell, h.y. cysylltiadau rhwng "
-#~ "gweithrediadau (e.e.'Copi') sy'n ymddangos yn y golofn chwith a bysellau "
-#~ "neu cyfuniad o fysellau (e.e. Ctrl+V) sy'n ymddangos yn y golofn dde."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Gêm"
 
-#~ msgid "Action"
-#~ msgstr "Gweithrediad"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Golygu"
 
-#~ msgid "Shortcut"
-#~ msgstr "Byrlwybr"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Symud"
 
-#~ msgid "Alternate"
-#~ msgstr "Eiledol"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Golwg"
 
-#~ msgid "Global"
-#~ msgstr "Hollfydol"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Mynd"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Eiledolyn Hollfydol"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Tudnodau"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Amneidiad Botwm Llygoden"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Offer"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Amneidiad Ffurf Llygoden"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "Gosod&iadau"
 
-#~ msgid "&File"
-#~ msgstr "&Ffeil"
-
-#~ msgid "&Game"
-#~ msgstr "&Gêm"
-
-#~ msgid "&Edit"
-#~ msgstr "&Golygu"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Symud"
-
-#~ msgid "&View"
-#~ msgstr "&Golwg"
-
-#~ msgid "&Go"
-#~ msgstr "&Mynd"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Tudnodau"
-
-#~ msgid "&Tools"
-#~ msgstr "&Offer"
-
-#~ msgid "&Settings"
-#~ msgstr "Gosod&iadau"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Prif Far Offer"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Prif Far Offer"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

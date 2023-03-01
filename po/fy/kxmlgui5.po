@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2010-07-22 09:48+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
@@ -890,7 +890,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Feroarje byldkaike"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Help"
@@ -1267,18 +1268,85 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Fluchtoetsen ynstelle"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Ynteraktyf sykje nei fluchtoetsnammen (bgl. Kopiearje) of kombinaasjetoetsen "
+"(bgl. Ctrl+C) troch se hjir yn te fieren."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Hjir sjogge jo in list mei toetsferbiningen, dus it ferbân tusken toetsen, "
+"toetskombinaasjes en de aksjes. De aksjes (bgl. kopiearje) wurde yn de "
+"lofterkolom werjûn en de toetsen of toetskombinaasjes (bgl. Ctrl+v) fine jo "
+"yn de rjochterkolom."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Aksje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Fluchtoets"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Ofwikselje"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Globaal"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Globaal alternatyf"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Mûsknop stjoering"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Mûsfiguer stjoering"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Fluchtoetsen foar %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Haad:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Altenatyf:"
@@ -1601,74 +1669,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Dûbelsinnich fluchtoets ûntdútsen"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Ynteraktyf sykje nei fluchtoetsnammen (bgl. Kopiearje) of "
-#~ "kombinaasjetoetsen (bgl. Ctrl+C) troch se hjir yn te fieren."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Triem"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Hjir sjogge jo in list mei toetsferbiningen, dus it ferbân tusken "
-#~ "toetsen, toetskombinaasjes en de aksjes. De aksjes (bgl. kopiearje) wurde "
-#~ "yn de lofterkolom werjûn en de toetsen of toetskombinaasjes (bgl. Ctrl+v) "
-#~ "fine jo yn de rjochterkolom."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Spultsje"
 
-#~ msgid "Action"
-#~ msgstr "Aksje"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "Be&wurkje"
 
-#~ msgid "Shortcut"
-#~ msgstr "Fluchtoets"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "Fer&pleatse"
 
-#~ msgid "Alternate"
-#~ msgstr "Ofwikselje"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "Byl&d"
 
-#~ msgid "Global"
-#~ msgstr "Globaal"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Gean nei"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Globaal alternatyf"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Blêdwizers"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Mûsknop stjoering"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "H&elpmiddels"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Mûsfiguer stjoering"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Ynstellings"
 
-#~ msgid "&File"
-#~ msgstr "&Triem"
-
-#~ msgid "&Game"
-#~ msgstr "&Spultsje"
-
-#~ msgid "&Edit"
-#~ msgstr "Be&wurkje"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "Fer&pleatse"
-
-#~ msgid "&View"
-#~ msgstr "Byl&d"
-
-#~ msgid "&Go"
-#~ msgstr "&Gean nei"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Blêdwizers"
-
-#~ msgid "&Tools"
-#~ msgstr "H&elpmiddels"
-
-#~ msgid "&Settings"
-#~ msgstr "&Ynstellings"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Haadarkbalke"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Haadarkbalke"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

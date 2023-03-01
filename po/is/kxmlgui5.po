@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-12-29 16:37+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -810,7 +810,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Skipta um tákn"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Hjálp"
@@ -1164,18 +1165,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Grunnstilla flýtilykla"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Leita gagnvirkt að heiti flýtilykla (t.d. Afrita) eða samsetningu lykla (t."
+"d. Ctrl+C) með því að slá þær inn hér."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Hér getur þú séð lista yfir lyklabindingar, þ.e. tengingar milli aðgerða "
+"(eins og 'Afrita') í dálkinum til vinstri og lykla eða samsetningu lykla (t."
+"d. CTRL-V) í hægri dálkinum."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Aðgerð"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Flýtilykill"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Varaleið"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Altækt"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Altæk varaleið"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Hreyfiskipun með músarhnappi"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Hreyfiformsskipun með mús"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Flýtilyklar fyrir %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Aðal:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Vara:"
@@ -1479,73 +1546,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Gallaðir flýtilyklar"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Leita gagnvirkt að heiti flýtilykla (t.d. Afrita) eða samsetningu lykla "
-#~ "(t.d. Ctrl+C) með því að slá þær inn hér."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Skrá"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Hér getur þú séð lista yfir lyklabindingar, þ.e. tengingar milli aðgerða "
-#~ "(eins og 'Afrita') í dálkinum til vinstri og lykla eða samsetningu lykla "
-#~ "(t.d. CTRL-V) í hægri dálkinum."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Leikur"
 
-#~ msgid "Action"
-#~ msgstr "Aðgerð"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "Br&eyta"
 
-#~ msgid "Shortcut"
-#~ msgstr "Flýtilykill"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "F&æra"
 
-#~ msgid "Alternate"
-#~ msgstr "Varaleið"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "Sk&oða"
 
-#~ msgid "Global"
-#~ msgstr "Altækt"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Fara"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Altæk varaleið"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Bókamerki"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Hreyfiskipun með músarhnappi"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Verkfæri"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Hreyfiformsskipun með mús"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Stillingar"
 
-#~ msgid "&File"
-#~ msgstr "&Skrá"
-
-#~ msgid "&Game"
-#~ msgstr "&Leikur"
-
-#~ msgid "&Edit"
-#~ msgstr "Br&eyta"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "F&æra"
-
-#~ msgid "&View"
-#~ msgstr "Sk&oða"
-
-#~ msgid "&Go"
-#~ msgstr "&Fara"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Bókamerki"
-
-#~ msgid "&Tools"
-#~ msgstr "&Verkfæri"
-
-#~ msgid "&Settings"
-#~ msgstr "&Stillingar"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Aðaltækjastika"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Aðaltækjastika"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

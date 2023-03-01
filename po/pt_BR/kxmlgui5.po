@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-07-12 11:58-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -820,7 +820,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Alterar ícone"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Aj&uda"
@@ -1177,18 +1178,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Configurar atalhos do teclado"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Procure interativamente por nomes de atalhos (p. ex., Copiar) ou combinações "
+"de teclas (Ctrl+C), digitando-os aqui."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Aqui pode-se ver uma lista de atalhos de teclado, isto é, associações entre "
+"ações (p. ex., 'Copiar'), mostrados na coluna da esquerda e teclas ou "
+"combinação de teclas (p. ex., Ctrl-V) mostradas na coluna da direita."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Ação"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Atalho"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativo"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Alternativo global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gestos de botões do mouse"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gestos de forma do mouse"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Atalhos para %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Principal:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativo:"
@@ -1495,73 +1562,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Atalhos ambíguos"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Procure interativamente por nomes de atalhos (p. ex., Copiar) ou "
-#~ "combinações de teclas (Ctrl+C), digitando-os aqui."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Arquivo"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Aqui pode-se ver uma lista de atalhos de teclado, isto é, associações "
-#~ "entre ações (p. ex., 'Copiar'), mostrados na coluna da esquerda e teclas "
-#~ "ou combinação de teclas (p. ex., Ctrl-V) mostradas na coluna da direita."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "Jo&go"
 
-#~ msgid "Action"
-#~ msgstr "Ação"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Editar"
 
-#~ msgid "Shortcut"
-#~ msgstr "Atalho"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Mover"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativo"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "E&xibir"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Ir"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Alternativo global"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Favoritos"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Gestos de botões do mouse"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "Ferramen&tas"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Gestos de forma do mouse"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Configurações"
 
-#~ msgid "&File"
-#~ msgstr "&Arquivo"
-
-#~ msgid "&Game"
-#~ msgstr "Jo&go"
-
-#~ msgid "&Edit"
-#~ msgstr "&Editar"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Mover"
-
-#~ msgid "&View"
-#~ msgstr "E&xibir"
-
-#~ msgid "&Go"
-#~ msgstr "&Ir"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Favoritos"
-
-#~ msgid "&Tools"
-#~ msgstr "Ferramen&tas"
-
-#~ msgid "&Settings"
-#~ msgstr "&Configurações"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Barra de ferramentas principal"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra de ferramentas principal"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

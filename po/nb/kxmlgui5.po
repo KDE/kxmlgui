@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2015-06-03 18:51+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -776,7 +776,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Endre ikon"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Hjelp"
@@ -1118,18 +1119,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr ""
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Søk interaktivt etter snarveisnavn (f.eks. Kopier) eller kombinasjoner av "
+"taster (f.eks. «Ctrl + C») ved å taste dem her."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Her kan du se en liste over hurtigtaster, dvs tilordninger mellom handlinger "
+"(f eks.«Kopier») vist i den venstre kolonnen og taster eller kombinasjoner "
+"av slike (f.eks. «CTRL-V») vist i den høyre kolonnen."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Handling"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Snarvei"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternativ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Global alternativ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Museknapp-bevegelse"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Musebevegelse"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Hurtigtaster for %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Hoved:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativ:"
@@ -1422,70 +1489,63 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr ""
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Søk interaktivt etter snarveisnavn (f.eks. Kopier) eller kombinasjoner av "
-#~ "taster (f.eks. «Ctrl + C») ved å taste dem her."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fil"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Her kan du se en liste over hurtigtaster, dvs tilordninger mellom "
-#~ "handlinger (f eks.«Kopier») vist i den venstre kolonnen og taster eller "
-#~ "kombinasjoner av slike (f.eks. «CTRL-V») vist i den høyre kolonnen."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "S&pill"
 
-#~ msgid "Action"
-#~ msgstr "Handling"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Rediger"
 
-#~ msgid "Shortcut"
-#~ msgstr "Snarvei"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Flytt"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternativ"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Vis"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Gå"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Global alternativ"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Bokmerker"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Museknapp-bevegelse"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "Verk&tøy"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Musebevegelse"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Innstillinger"
 
-#~ msgid "&File"
-#~ msgstr "&Fil"
-
-#~ msgid "&Game"
-#~ msgstr "S&pill"
-
-#~ msgid "&Edit"
-#~ msgstr "&Rediger"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Flytt"
-
-#~ msgid "&View"
-#~ msgstr "&Vis"
-
-#~ msgid "&Go"
-#~ msgstr "&Gå"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Bokmerker"
-
-#~ msgid "&Tools"
-#~ msgstr "Verk&tøy"
-
-#~ msgid "&Settings"
-#~ msgstr "&Innstillinger"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Hovedverktøylinje"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Hovedverktøylinje"

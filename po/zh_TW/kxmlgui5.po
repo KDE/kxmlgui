@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-07-23 10:40+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -784,7 +784,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "變更圖示"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "說明(&H)"
@@ -1120,18 +1121,82 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "設定鍵盤快捷鍵"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"輸入組合鍵(例如 Ctrl-C)或動作名稱(例如複製)來搜尋對應的動作/組合鍵是什麼。"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"在這裡您可以看到按鍵連結的清單，也就是左邊顯示的動作 (例如「複製」) 和右邊顯"
+"示的按鍵或組合鍵 (例如 Ctrl-V) 之間的關聯。"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "動作"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "快捷鍵"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "備選"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "全域"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "全域替代"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "滑鼠鍵手勢"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "滑鼠形狀手勢"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 的快捷鍵"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "主要："
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "替代:"
@@ -1425,71 +1490,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "不明的快捷鍵"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "輸入組合鍵(例如 Ctrl-C)或動作名稱(例如複製)來搜尋對應的動作/組合鍵是什麼。"
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "檔案(&F)"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "在這裡您可以看到按鍵連結的清單，也就是左邊顯示的動作 (例如「複製」) 和右邊"
-#~ "顯示的按鍵或組合鍵 (例如 Ctrl-V) 之間的關聯。"
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "遊戲(&G)"
 
-#~ msgid "Action"
-#~ msgstr "動作"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "編輯(&E)"
 
-#~ msgid "Shortcut"
-#~ msgstr "快捷鍵"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "移動(&M)"
 
-#~ msgid "Alternate"
-#~ msgstr "備選"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "檢視(&V)"
 
-#~ msgid "Global"
-#~ msgstr "全域"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "跳至(&G)"
 
-#~ msgid "Global Alternate"
-#~ msgstr "全域替代"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "書籤(&B)"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "滑鼠鍵手勢"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "工具(&T)"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "滑鼠形狀手勢"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "設定(&S)"
 
-#~ msgid "&File"
-#~ msgstr "檔案(&F)"
-
-#~ msgid "&Game"
-#~ msgstr "遊戲(&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "編輯(&E)"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "移動(&M)"
-
-#~ msgid "&View"
-#~ msgstr "檢視(&V)"
-
-#~ msgid "&Go"
-#~ msgstr "跳至(&G)"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "書籤(&B)"
-
-#~ msgid "&Tools"
-#~ msgstr "工具(&T)"
-
-#~ msgid "&Settings"
-#~ msgstr "設定(&S)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "主工具列"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "主工具列"
 
 #~ msgid ""
 #~ "<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "

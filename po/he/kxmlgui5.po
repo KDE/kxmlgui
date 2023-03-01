@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2017-05-16 06:50-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -863,7 +863,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "שינוי סמליל"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&עזרה"
@@ -1232,18 +1233,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "הגדרות קיצורים"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"הקלד כאן שמות קיצורים (כגון \"העתק\") או שילובי מקשים (לדוגמה Ctrl+C) "
+"שברצונך לחפש."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"כאן באפשרותך לראות רשימה של קישורי מקשים,  דהיינו שיוכים בין פעולות (כמו "
+"למשל \"העתק\") המוצגות בעמודה שמשמאל, לבין מקשים או שילובי מקשים (לדוגמה Ctrl"
+"+V) המוצגים בעמודה שמימין."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "פעולה"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "קיצור־דרך"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "חלופה"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "גלובלי"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "חלופה גלובלית"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "מחוות לחצני עכבר"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "מחוות תנועת עכבר"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "קיצורי־דרך ל־%1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ראשי:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "חלופי:"
@@ -1553,73 +1620,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "זוהתה התנגשות צירוף מקשים"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "הקלד כאן שמות קיצורים (כגון \"העתק\") או שילובי מקשים (לדוגמה Ctrl+C) "
-#~ "שברצונך לחפש."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&קובץ"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "כאן באפשרותך לראות רשימה של קישורי מקשים,  דהיינו שיוכים בין פעולות (כמו "
-#~ "למשל \"העתק\") המוצגות בעמודה שמשמאל, לבין מקשים או שילובי מקשים (לדוגמה "
-#~ "Ctrl+V) המוצגים בעמודה שמימין."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&משחק"
 
-#~ msgid "Action"
-#~ msgstr "פעולה"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&עריכה"
 
-#~ msgid "Shortcut"
-#~ msgstr "קיצור־דרך"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&הזזה"
 
-#~ msgid "Alternate"
-#~ msgstr "חלופה"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&תצוגה"
 
-#~ msgid "Global"
-#~ msgstr "גלובלי"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&עבור"
 
-#~ msgid "Global Alternate"
-#~ msgstr "חלופה גלובלית"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&סימניות"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "מחוות לחצני עכבר"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&כלים"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "מחוות תנועת עכבר"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&הגדרות"
 
-#~ msgid "&File"
-#~ msgstr "&קובץ"
-
-#~ msgid "&Game"
-#~ msgstr "&משחק"
-
-#~ msgid "&Edit"
-#~ msgstr "&עריכה"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&הזזה"
-
-#~ msgid "&View"
-#~ msgstr "&תצוגה"
-
-#~ msgid "&Go"
-#~ msgstr "&עבור"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&סימניות"
-
-#~ msgid "&Tools"
-#~ msgstr "&כלים"
-
-#~ msgid "&Settings"
-#~ msgstr "&הגדרות"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "סרגל־כלים ראשי"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "סרגל־כלים ראשי"
 
 #, fuzzy
 #~ msgctxt "@title:tab"

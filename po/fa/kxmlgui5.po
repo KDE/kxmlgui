@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2012-06-28 16:40+0430\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
@@ -906,7 +906,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "تغییر شمایل"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&کمک‌"
@@ -1277,18 +1278,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "پیکربندی میان‌برها"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"برای نامهای میانبر (مانند رونوشت) یا ترکیبی از کلیدها (مانند مهار+C) با تایپ "
+"در این محل جستجو کنید."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"در اینجا می‌توانید فهرستی از مقیدسازیهای کلید، یعنی ارتباط بین کنشهای نشان "
+"داده شده در ستون چپ )مثلاً »رونوشت«( و کلیدها یا ترکیبی از کلیدها )مثلاً مهار"
+"+V( نمایش داده‌شده در ستون راست را ببینید."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "کنش"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "میان‌بر"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "تغییر"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "سراسری"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "تغییر سراسری"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "وضعیت دکمه موشی"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "وضعیت شکل موشی"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "میان‌برها برای %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "اصلی:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "تغییر:"
@@ -1607,74 +1674,67 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "میانبر مبهم پیدا شده"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "برای نامهای میانبر (مانند رونوشت) یا ترکیبی از کلیدها (مانند مهار+C) با "
-#~ "تایپ در این محل جستجو کنید."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&پرونده‌"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "در اینجا می‌توانید فهرستی از مقیدسازیهای کلید، یعنی ارتباط بین کنشهای نشان "
-#~ "داده شده در ستون چپ )مثلاً »رونوشت«( و کلیدها یا ترکیبی از کلیدها )مثلاً "
-#~ "مهار+V( نمایش داده‌شده در ستون راست را ببینید."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&بازی‌"
 
-#~ msgid "Action"
-#~ msgstr "کنش"
-
-#~ msgid "Shortcut"
-#~ msgstr "میان‌بر"
-
-#~ msgid "Alternate"
-#~ msgstr "تغییر"
-
-#~ msgid "Global"
-#~ msgstr "سراسری"
-
-#~ msgid "Global Alternate"
-#~ msgstr "تغییر سراسری"
-
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "وضعیت دکمه موشی"
-
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "وضعیت شکل موشی"
-
-#~ msgid "&File"
-#~ msgstr "&پرونده‌"
-
-#~ msgid "&Game"
-#~ msgstr "&بازی‌"
-
-#~ msgid "&Edit"
-#~ msgstr "&ویرایش‌"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&ویرایش‌"
 
 #  msgid "&Move"
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&حرکت‌"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&حرکت‌"
 
-#~ msgid "&View"
-#~ msgstr "&نما‌"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&نما‌"
 
-#~ msgid "&Go"
-#~ msgstr "&برو‌"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&برو‌"
 
-#~ msgid "&Bookmarks"
-#~ msgstr "&چوب الفها‌"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&چوب الفها‌"
 
-#~ msgid "&Tools"
-#~ msgstr "&ابزارها‌"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&ابزارها‌"
 
-#~ msgid "&Settings"
-#~ msgstr "&تنظیمات‌"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&تنظیمات‌"
 
-#~ msgid "Main Toolbar"
-#~ msgstr "میله ابزار اصلی"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "میله ابزار اصلی"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

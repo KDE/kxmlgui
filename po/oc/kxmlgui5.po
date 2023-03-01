@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2008-08-06 00:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: Occitan <oc@li.org>\n"
@@ -828,7 +828,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr ""
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Ajuda"
@@ -1197,6 +1198,72 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Configurar los acorchis clavièr"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Cercar d'un biais interactiu los noms d'acorchis (per ex. Còpia) o las "
+"combinasons de tòcas (per ex. Ctrl+C) en los picant aicí."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"La tièra dels acorchis clavièr es afichada aicí, es a dire las associacions "
+"entre las accions (exemple : « Copiar ») afichadas dins la colomna "
+"d'esquèrra e de tòcas o combinasons de tòcas (exemple Ctrl-V) afichadas dins "
+"la colomna de drecha."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Accion"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Acorchi"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Alternar"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Global"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, fuzzy, kde-format
+#| msgid "Alternate"
+msgid "Global Alternate"
+msgstr "Alternar"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr ""
+
 #: kshortcutseditor.cpp:536
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
@@ -1204,12 +1271,14 @@ msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Acorchis"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr ""
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr ""
@@ -1519,70 +1588,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Acorchis"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Cercar d'un biais interactiu los noms d'acorchis (per ex. Còpia) o las "
-#~ "combinasons de tòcas (per ex. Ctrl+C) en los picant aicí."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Fichièr"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "La tièra dels acorchis clavièr es afichada aicí, es a dire las "
-#~ "associacions entre las accions (exemple : « Copiar ») afichadas dins la "
-#~ "colomna d'esquèrra e de tòcas o combinasons de tòcas (exemple Ctrl-V) "
-#~ "afichadas dins la colomna de drecha."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Jòc"
 
-#~ msgid "Action"
-#~ msgstr "Accion"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Edicion"
 
-#~ msgid "Shortcut"
-#~ msgstr "Acorchi"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Desplaçar"
 
-#~ msgid "Alternate"
-#~ msgstr "Alternar"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "Aficha&tge"
 
-#~ msgid "Global"
-#~ msgstr "Global"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Anar"
 
-#, fuzzy
-#~| msgid "Alternate"
-#~ msgid "Global Alternate"
-#~ msgstr "Alternar"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Favorits"
 
-#~ msgid "&File"
-#~ msgstr "&Fichièr"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Espleches"
 
-#~ msgid "&Game"
-#~ msgstr "&Jòc"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Paramètres"
 
-#~ msgid "&Edit"
-#~ msgstr "&Edicion"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Desplaçar"
-
-#~ msgid "&View"
-#~ msgstr "Aficha&tge"
-
-#~ msgid "&Go"
-#~ msgstr "&Anar"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Favorits"
-
-#~ msgid "&Tools"
-#~ msgstr "&Espleches"
-
-#~ msgid "&Settings"
-#~ msgstr "&Paramètres"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Barra d'espleches principala"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra d'espleches principala"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

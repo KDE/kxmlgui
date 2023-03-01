@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ante-toki-pi-ilo-kde\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2022-02-12 00:24\n"
 "Last-Translator: \n"
 "Language-Team: toki pona\n"
@@ -792,7 +792,8 @@ msgstr "pali \"%1\""
 msgid "Change Icon"
 msgstr "o pana e sitelen lili ante"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Mi pilin ike"
@@ -1154,18 +1155,83 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "o ante e nasin nena"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"sina sitelen e nimi pi nasin nena (sama \"o awen e lipu\") anu nasin nena "
+"(sama \"Ctrl+C\") la mi alasa e ona."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"ni li lipu pi nasin nena. ken pali (sama \"o awen e lipu\") li lon poka "
+"open. nena anu nasin nena (sama \"Ctrl+S\") li lon poka pini."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "ken pali"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "nasin nena"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "nasin nena ante"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "nasin nena lon ilo ale"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "nasin nena ante lon ilo ale"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "nasin nena pi ilo luka"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "nasin tawa pi ilo luka"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "nasin nena tawa %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "nasin nena suli:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "nasin nena ante:"
@@ -1472,72 +1538,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "ilo mute li wile kepeken nena ni. taso wan taso li ken kepeken e nena"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "sina sitelen e nimi pi nasin nena (sama \"o awen e lipu\") anu nasin nena "
-#~ "(sama \"Ctrl+C\") la mi alasa e ona."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&lipu"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "ni li lipu pi nasin nena. ken pali (sama \"o awen e lipu\") li lon poka "
-#~ "open. nena anu nasin nena (sama \"Ctrl+S\") li lon poka pini."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&musi"
 
-#~ msgid "Action"
-#~ msgstr "ken pali"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&ante"
 
-#~ msgid "Shortcut"
-#~ msgstr "nasin nena"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&tawa musi"
 
-#~ msgid "Alternate"
-#~ msgstr "nasin nena ante"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&lukin"
 
-#~ msgid "Global"
-#~ msgstr "nasin nena lon ilo ale"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&tawa"
 
-#~ msgid "Global Alternate"
-#~ msgstr "nasin nena ante lon ilo ale"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&ijo suli"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "nasin nena pi ilo luka"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&ilo"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "nasin tawa pi ilo luka"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&nasin ilo"
 
-#~ msgid "&File"
-#~ msgstr "&lipu"
-
-#~ msgid "&Game"
-#~ msgstr "&musi"
-
-#~ msgid "&Edit"
-#~ msgstr "&ante"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&tawa musi"
-
-#~ msgid "&View"
-#~ msgstr "&lukin"
-
-#~ msgid "&Go"
-#~ msgstr "&tawa"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&ijo suli"
-
-#~ msgid "&Tools"
-#~ msgstr "&ilo"
-
-#~ msgid "&Settings"
-#~ msgstr "&nasin ilo"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "kulupu suli ilo"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "kulupu suli ilo"
 
 #~ msgid "Open Command Bar"
 #~ msgstr "o open e kulupu pi ken pali"

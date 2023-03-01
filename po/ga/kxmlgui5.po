@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -911,7 +911,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "Athraigh Deilbhín"
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Cabhair"
@@ -1331,18 +1332,85 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "Cumraigh Aicearraí"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"Chun cuardach idirghníomhach ar ainmneacha aicearra (m.sh. Cóipeáil) nó "
+"teaglamaí eochracha (m.sh Ctrl+C) a dhéanamh, níl uait ach iad a chlóscríobh "
+"anseo."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"Anseo is féidir liosta aicearraí a fheiceáil, .i. naisc idir gníomhartha (m."
+"sh. 'Cóipeáil') atá sa cholún ar clé agus eochair nó eochracha (m.sh. Ctrl"
+"+V) atá sa cholún ar dheis."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "Gníomh"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "Aicearra"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "Malairt"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "Comhchoiteann"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "Malairt Chomhchoiteann"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "Gotha Cnaipe Luiche"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "Gotha Fíorach Luiche"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Aicearraí le haghaidh %1"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Príomh:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Malairt:"
@@ -1663,74 +1731,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "Braitheadh aicearra athbhríoch"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "Chun cuardach idirghníomhach ar ainmneacha aicearra (m.sh. Cóipeáil) nó "
-#~ "teaglamaí eochracha (m.sh Ctrl+C) a dhéanamh, níl uait ach iad a "
-#~ "chlóscríobh anseo."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "&Comhad"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "Anseo is féidir liosta aicearraí a fheiceáil, .i. naisc idir gníomhartha "
-#~ "(m.sh. 'Cóipeáil') atá sa cholún ar clé agus eochair nó eochracha (m.sh. "
-#~ "Ctrl+V) atá sa cholún ar dheis."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "&Cluiche"
 
-#~ msgid "Action"
-#~ msgstr "Gníomh"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "&Eagar"
 
-#~ msgid "Shortcut"
-#~ msgstr "Aicearra"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "&Bog"
 
-#~ msgid "Alternate"
-#~ msgstr "Malairt"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "&Amharc"
 
-#~ msgid "Global"
-#~ msgstr "Comhchoiteann"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "&Téigh"
 
-#~ msgid "Global Alternate"
-#~ msgstr "Malairt Chomhchoiteann"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "&Leabharmharcanna"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "Gotha Cnaipe Luiche"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "&Uirlisí"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "Gotha Fíorach Luiche"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "&Socruithe"
 
-#~ msgid "&File"
-#~ msgstr "&Comhad"
-
-#~ msgid "&Game"
-#~ msgstr "&Cluiche"
-
-#~ msgid "&Edit"
-#~ msgstr "&Eagar"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "&Bog"
-
-#~ msgid "&View"
-#~ msgstr "&Amharc"
-
-#~ msgid "&Go"
-#~ msgstr "&Téigh"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "&Leabharmharcanna"
-
-#~ msgid "&Tools"
-#~ msgstr "&Uirlisí"
-
-#~ msgid "&Settings"
-#~ msgstr "&Socruithe"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Príomhbharra Uirlisí"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Príomhbharra Uirlisí"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

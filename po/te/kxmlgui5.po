@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-03-01 22:21+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -848,7 +848,8 @@ msgstr "%1"
 msgid "Change Icon"
 msgstr "ప్రతిమను మార్చు..."
 
-#: khelpmenu.cpp:146
+#. i18n: ectx: Menu (help)
+#: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "(&H) సహాయము"
@@ -1218,18 +1219,84 @@ msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
 msgstr "శీఘ్రమార్గాలను అమర్చండి"
 
+#. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
+#: kshortcutsdialog.ui:16
+#, kde-format
+msgid ""
+"Search interactively for shortcut names (e.g. Copy) or combination of keys "
+"(e.g. Ctrl+C) by typing them here."
+msgstr ""
+"ఇచట ప్రవేశపెట్టుట ద్వారా షార్టుకట్ నామములు (ఉ.దా. నకలు) లేదా కీ సమ్మేళనాలు (ఉ.దా. Ctrl+C) కొరకు "
+"యింటరాక్టివుగా శోధించుము."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:23
+#, kde-format
+msgid ""
+"Here you can see a list of key bindings, i.e. associations between actions "
+"(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
+"Ctrl+V) shown in the right column."
+msgstr ""
+"ఇచట మీరు కీ బైండింగ్సు యొక్క జాబితాను చూడవచ్చు, అంటే చర్యల మద్య సంభందాలు (ఉ.దా. 'నకలు') ఎడమ "
+"నిలువువరుస నందు చూపబడుతుంది మరియు కీలు లేదా కీల సమ్మేళనం (ఉ.దా. Ctrl+C) కుడి నిలువువరుస "
+"నందు చూపబడుతుంది."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:33
+#, kde-format
+msgid "Action"
+msgstr "చర్య"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:38
+#, kde-format
+msgid "Shortcut"
+msgstr "శీఘ్ర మార్గం"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:43
+#, kde-format
+msgid "Alternate"
+msgstr "ప్రత్యామ్నాయము"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:48
+#, kde-format
+msgid "Global"
+msgstr "సార్వత్రిక"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:53
+#, kde-format
+msgid "Global Alternate"
+msgstr "సార్వత్రిక ప్రత్యామ్నాయం"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:58
+#, kde-format
+msgid "Mouse Button Gesture"
+msgstr "మౌస్ బటన్ గెస్ట్యూర్"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: kshortcutsdialog.ui:63
+#, kde-format
+msgid "Mouse Shape Gesture"
+msgstr "మౌస్ షేప్ గెస్ట్యూర్"
+
 #: kshortcutseditor.cpp:536
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 కొరకు శీఘ్రమార్గాలు"
 
-#: kshortcutseditor.cpp:556
+#. i18n: ectx: property (text), widget (QLabel, priLabel)
+#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ముఖ్యమైన:"
 
-#: kshortcutseditor.cpp:557
+#. i18n: ectx: property (text), widget (QLabel, altLabel)
+#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ప్రత్యామ్నాయము:"
@@ -1542,73 +1609,66 @@ msgstr ""
 msgid "Ambiguous Shortcuts"
 msgstr "ఎటూకాని శీఘ్రమార్గము గుర్తించబడింది"
 
-#~ msgid ""
-#~ "Search interactively for shortcut names (e.g. Copy) or combination of "
-#~ "keys (e.g. Ctrl+C) by typing them here."
-#~ msgstr ""
-#~ "ఇచట ప్రవేశపెట్టుట ద్వారా షార్టుకట్ నామములు (ఉ.దా. నకలు) లేదా కీ సమ్మేళనాలు (ఉ.దా. Ctrl+C) "
-#~ "కొరకు యింటరాక్టివుగా శోధించుము."
+#. i18n: ectx: Menu (file)
+#: ui_standards.rc:5
+#, kde-format
+msgid "&File"
+msgstr "(&F) దస్త్రం"
 
-#~ msgid ""
-#~ "Here you can see a list of key bindings, i.e. associations between "
-#~ "actions (e.g. 'Copy') shown in the left column and keys or combination of "
-#~ "keys (e.g. Ctrl+V) shown in the right column."
-#~ msgstr ""
-#~ "ఇచట మీరు కీ బైండింగ్సు యొక్క జాబితాను చూడవచ్చు, అంటే చర్యల మద్య సంభందాలు (ఉ.దా. 'నకలు') "
-#~ "ఎడమ నిలువువరుస నందు చూపబడుతుంది మరియు కీలు లేదా కీల సమ్మేళనం (ఉ.దా. Ctrl+C) కుడి "
-#~ "నిలువువరుస నందు చూపబడుతుంది."
+#. i18n: ectx: Menu (game)
+#: ui_standards.rc:34
+#, kde-format
+msgid "&Game"
+msgstr "(&G) ఆట"
 
-#~ msgid "Action"
-#~ msgstr "చర్య"
+#. i18n: ectx: Menu (edit)
+#: ui_standards.rc:61
+#, kde-format
+msgid "&Edit"
+msgstr "(&E) సరిదిద్దు"
 
-#~ msgid "Shortcut"
-#~ msgstr "శీఘ్ర మార్గం"
+#. i18n: ectx: Menu (move)
+#: ui_standards.rc:84
+#, kde-format
+msgctxt "@title:menu Game move"
+msgid "&Move"
+msgstr "(&M) జరుపుము"
 
-#~ msgid "Alternate"
-#~ msgstr "ప్రత్యామ్నాయము"
+#. i18n: ectx: Menu (view)
+#: ui_standards.rc:102
+#, kde-format
+msgid "&View"
+msgstr "(&V) చూడు"
 
-#~ msgid "Global"
-#~ msgstr "సార్వత్రిక"
+#. i18n: ectx: Menu (go)
+#: ui_standards.rc:121
+#, kde-format
+msgid "&Go"
+msgstr "(&G) వెళ్ళు"
 
-#~ msgid "Global Alternate"
-#~ msgstr "సార్వత్రిక ప్రత్యామ్నాయం"
+#. i18n: ectx: Menu (bookmarks)
+#: ui_standards.rc:142
+#, kde-format
+msgid "&Bookmarks"
+msgstr "(&B) పేజీ గుర్తులు"
 
-#~ msgid "Mouse Button Gesture"
-#~ msgstr "మౌస్ బటన్ గెస్ట్యూర్"
+#. i18n: ectx: Menu (tools)
+#: ui_standards.rc:148
+#, kde-format
+msgid "&Tools"
+msgstr "(&T) పనిముట్లు"
 
-#~ msgid "Mouse Shape Gesture"
-#~ msgstr "మౌస్ షేప్ గెస్ట్యూర్"
+#. i18n: ectx: Menu (settings)
+#: ui_standards.rc:152
+#, kde-format
+msgid "&Settings"
+msgstr "(&S) అమరికలు"
 
-#~ msgid "&File"
-#~ msgstr "(&F) దస్త్రం"
-
-#~ msgid "&Game"
-#~ msgstr "(&G) ఆట"
-
-#~ msgid "&Edit"
-#~ msgstr "(&E) సరిదిద్దు"
-
-#~ msgctxt "@title:menu Game move"
-#~ msgid "&Move"
-#~ msgstr "(&M) జరుపుము"
-
-#~ msgid "&View"
-#~ msgstr "(&V) చూడు"
-
-#~ msgid "&Go"
-#~ msgstr "(&G) వెళ్ళు"
-
-#~ msgid "&Bookmarks"
-#~ msgstr "(&B) పేజీ గుర్తులు"
-
-#~ msgid "&Tools"
-#~ msgstr "(&T) పనిముట్లు"
-
-#~ msgid "&Settings"
-#~ msgstr "(&S) అమరికలు"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "ప్రధాన పనిముట్ల పట్టీ"
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ui_standards.rc:197
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ప్రధాన పనిముట్ల పట్టీ"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."
