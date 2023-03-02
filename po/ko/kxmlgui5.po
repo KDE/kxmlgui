@@ -1,14 +1,14 @@
 # Korean messages for kdelibs.
 # Copyright (C) Free Software Foundation, Inc.
 # Cho Sung Jae <cho.sungjae@gmail.com>, 2007.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-21 00:55+0000\n"
-"PO-Revision-Date: 2022-07-13 12:26+0200\n"
+"PO-Revision-Date: 2023-03-01 00:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -1011,12 +1011,12 @@ msgstr "사용자 정의:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
-msgstr "단축키 배열"
+msgstr "단축키 구성표"
 
 #: kshortcutschemeseditor.cpp:37
 #, kde-format
 msgid "Current scheme:"
-msgstr "현재 배열:"
+msgstr "현재 구성표:"
 
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
@@ -1040,40 +1040,40 @@ msgstr "더 많은 동작"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "단축키 배열 저장"
+msgstr "단축키를 구성표로 저장"
 
 #: kshortcutschemeseditor.cpp:62
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "배열 내보내기..."
+msgstr "구성표 내보내기..."
 
 #: kshortcutschemeseditor.cpp:66
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "배열 가져오기..."
+msgstr "구성표 가져오기..."
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
-msgstr "새 배열의 이름"
+msgstr "새 구성표의 이름"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgid "Name for new scheme:"
-msgstr "새 배열의 이름:"
+msgstr "새 구성표의 이름:"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgid "New Scheme"
-msgstr "새 배열"
+msgstr "새 구성표"
 
 #: kshortcutschemeseditor.cpp:121
 #, kde-format
 msgid "A scheme with this name already exists."
-msgstr "같은 이름의 배열이 이미 있습니다."
+msgstr "같은 이름의 단축키 구성표가 이미 있습니다."
 
 #: kshortcutschemeseditor.cpp:151
 #, kde-format
@@ -1081,8 +1081,8 @@ msgid ""
 "Do you really want to delete the scheme %1?\n"
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
-"배열 %1을(를) 삭제하시겠습니까?\n"
-" 시스템 전역 단축키 배열을 삭제하지는 않습니다."
+"단축키 구성표 %1을(를) 삭제하시겠습니까?\n"
+" 시스템 전역 단축키 구성표를 삭제하지는 않습니다."
 
 #: kshortcutschemeseditor.cpp:187
 #, kde-format
@@ -1104,12 +1104,12 @@ msgstr "단축키 가져오기"
 #: kshortcutschemeseditor.cpp:209
 #, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "단축키 배열을 저장했습니다."
+msgstr "단축키 구성표를 저장했습니다."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr "단축키 배열을 저장할 수 없습니다."
+msgstr "단축키 구성표를 저장할 수 없습니다."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
@@ -1117,13 +1117,13 @@ msgid ""
 "The current shortcut scheme is modified. Save before switching to the new "
 "one?"
 msgstr ""
-"현재 단축키 배열이 수정되었습니다. 새로운 것으로 바꾸기 전에 저장하시겠습니"
+"현재 단축키 구성표가 수정되었습니다. 새로운 것으로 바꾸기 전에 저장하시겠습니"
 "까?"
 
 #: kshortcutsdialog.cpp:124
 #, kde-format
 msgid "Manage &Schemes"
-msgstr "배열 관리(&S)"
+msgstr "구성표 관리(&S)"
 
 #: kshortcutsdialog.cpp:149
 #, kde-format
