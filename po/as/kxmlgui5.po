@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4_as\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2008-12-26 15:19+0530\n"
 "Last-Translator: Amitakhya Phukan <অমিতাক্ষ ফুকন>\n"
 "Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
@@ -128,16 +128,7 @@ msgid ""
 "%1"
 msgstr "হোম পৃষ্ঠা"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr "হোম পৃষ্ঠা"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, fuzzy, kde-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -1643,6 +1634,14 @@ msgstr "পছন্দ (&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "প্ৰধান টুল-বাৰ"
+
+#, fuzzy
+#~| msgid "Homepage"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr "হোম পৃষ্ঠা"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -121,17 +121,7 @@ msgstr ""
 "Kunjungi laman para kontributor\n"
 "%1"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr ""
-"Kunjungi profil para kontributor di %1\n"
-"%2"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1610,6 +1600,14 @@ msgstr "Peng&aturan"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Bilah Alat Utama"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Kunjungi profil para kontributor di %1\n"
+#~ "%2"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

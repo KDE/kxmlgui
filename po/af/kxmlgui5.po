@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -123,16 +123,7 @@ msgid ""
 "%1"
 msgstr "Tuisblad"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr "Tuisblad"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "@item Contributor name in about dialog."
@@ -1710,6 +1701,14 @@ msgstr "Instellings"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hoof Nutsbalk"
+
+#, fuzzy
+#~| msgid "Homepage"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr "Tuisblad"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

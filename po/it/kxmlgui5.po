@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-07-06 08:03+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -127,17 +127,7 @@ msgstr ""
 "Visita la pagina web del collaboratore\n"
 "%1"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr ""
-"Visita il profilo del collaboratore su %1\n"
-"%2"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1616,6 +1606,14 @@ msgstr "Imp&ostazioni"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra degli strumenti principale"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Visita il profilo del collaboratore su %1\n"
+#~ "%2"
 
 #~ msgctxt "The arg is the command kcmshell5"
 #~ msgid "Could not find '%1' executable in PATH."

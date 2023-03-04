@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -144,21 +144,7 @@ msgstr ""
 "Posetite domaću stranicu doprinosioca\n"
 "%1"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's profile on %1\n"
-#| "%2"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr ""
-"Posetite profil doprinosioca na %1\n"
-"%2|/|Posetite profil doprinosioca na $[lok %1]\n"
-"%2"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1745,6 +1731,19 @@ msgstr "P&odešavanje"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Glavna traka"
+
+#, fuzzy
+#~| msgid ""
+#~| "Visit contributor's profile on %1\n"
+#~| "%2"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Posetite profil doprinosioca na %1\n"
+#~ "%2|/|Posetite profil doprinosioca na $[lok %1]\n"
+#~ "%2"
 
 #~ msgid ""
 #~ "<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "

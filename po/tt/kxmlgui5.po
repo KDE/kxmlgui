@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2011-11-26 15:12+0400\n"
 "Last-Translator: Ainur Shakirov <ainur.shakirov.tt@gmail.com>\n"
 "Language-Team: Tatar <>\n"
@@ -138,20 +138,7 @@ msgstr ""
 "Катнашучының веб-сәхифәсенә күчү:\n"
 "%1"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's profile on %1\n"
-#| "%2"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr ""
-"Посетить страницу профиля помощника на %1\n"
-"%2"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1758,6 +1745,18 @@ msgstr "&Көйләүләр"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Баш кораллар панеле"
+
+#, fuzzy
+#~| msgid ""
+#~| "Visit contributor's profile on %1\n"
+#~| "%2"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Посетить страницу профиля помощника на %1\n"
+#~ "%2"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

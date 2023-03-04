@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2013-01-31 01:08+0400\n"
 "Last-Translator: Davit <nikdavnik@mail.ru>\n"
 "Language-Team: Armenian Language: hy\n"
@@ -144,20 +144,7 @@ msgstr ""
 "Այցելել մասնակցի էջ:\n"
 "%1"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's profile on %1\n"
-#| "%2"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr ""
-"Այցելել օգնողի էջ %1\n"
-"%2"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1780,6 +1767,18 @@ msgstr "&Կարգավորում"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Հիմնական գործիքներ"
+
+#, fuzzy
+#~| msgid ""
+#~| "Visit contributor's profile on %1\n"
+#~| "%2"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Այցելել օգնողի էջ %1\n"
+#~ "%2"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

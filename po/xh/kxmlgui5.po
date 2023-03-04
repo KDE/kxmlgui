@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -130,16 +130,7 @@ msgid ""
 "%1"
 msgstr "Homepage"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr "Homepage"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, fuzzy, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1686,6 +1677,14 @@ msgstr "&Izicwangciso"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Isixhobo se bar Engundoqo"
+
+#, fuzzy
+#~| msgid "Homepage"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr "Homepage"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

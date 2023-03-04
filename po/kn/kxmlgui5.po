@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -131,16 +131,7 @@ msgid ""
 "%1"
 msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1664,6 +1655,14 @@ msgstr "ಸಂಯೋಜನೆಗಳು(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#, fuzzy
+#~| msgid "Homepage"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr "ನೆಲೆಪುಟ (ಹೋಮ್ ಪೇಜ್)"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."

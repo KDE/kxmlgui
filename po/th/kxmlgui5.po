@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 22:21+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -142,20 +142,7 @@ msgstr ""
 "เยี่ยมชมหน้าเว็บของผู้มีส่วนร่วม\n"
 "%1"
 
-#: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's profile on %1\n"
-#| "%2"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's profile on %1\n"
-"%2"
-msgstr ""
-"ดูข้อมูลโพรไฟล์ของผู้มีส่วนร่วม บน %1\n"
-"%2"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:188
+#: kaboutapplicationpersonlistdelegate_p.cpp:181
 #, kde-format
 msgctxt "@item Contributor name in about dialog."
 msgid "%1"
@@ -1724,6 +1711,18 @@ msgstr "&ตั้งค่า"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "แถบเครื่องมือหลัก"
+
+#, fuzzy
+#~| msgid ""
+#~| "Visit contributor's profile on %1\n"
+#~| "%2"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Visit contributor's profile on %1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "ดูข้อมูลโพรไฟล์ของผู้มีส่วนร่วม บน %1\n"
+#~ "%2"
 
 #, fuzzy
 #~| msgid "Could not find '%1' executable."
