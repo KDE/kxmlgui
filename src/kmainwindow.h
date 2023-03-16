@@ -660,7 +660,7 @@ protected Q_SLOTS:
     void saveAutoSaveSettings();
 
 protected:
-    KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlags f);
+    KXMLGUI_NO_EXPORT KMainWindow(KMainWindowPrivate &dd, QWidget *parent, Qt::WindowFlags f);
 
     std::unique_ptr<KMainWindowPrivate> const k_ptr;
     // KF6 TODO: change k_ptr to d_ptr, use normal Q_DECLARE_PRIVATE
