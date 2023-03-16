@@ -230,7 +230,7 @@ Q_SIGNALS:
 
 private:
     /// Internal, called by KXMLGUIClient destructor
-    void forgetClient(KXMLGUIClient *client);
+    KXMLGUI_NO_EXPORT void forgetClient(KXMLGUIClient *client);
 
 private:
     friend class KXMLGUIClient;

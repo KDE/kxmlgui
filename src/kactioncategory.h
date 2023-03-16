@@ -149,12 +149,12 @@ private:
     /**
      * Remove \action from this category if found.
      */
-    void unlistAction(QAction *action);
+    KXMLGUI_NO_EXPORT void unlistAction(QAction *action);
 
     /**
      * Add action to category
      */
-    void addAction(QAction *action);
+    void addAction(QAction *action); // exported because called from ActionType *add<ActionType>(...)
 
 private:
     //! KActionCollection needs access to some of our helper methods
