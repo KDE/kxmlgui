@@ -95,9 +95,9 @@ public:
     static const QString whatsThisHintOnly();
 
 private:
-    explicit KToolTipHelper(QObject *parent);
+    KXMLGUI_NO_EXPORT explicit KToolTipHelper(QObject *parent);
 
-    ~KToolTipHelper() override;
+    KXMLGUI_NO_EXPORT ~KToolTipHelper() override;
 
 private:
     std::unique_ptr<KToolTipHelperPrivate> const d;
