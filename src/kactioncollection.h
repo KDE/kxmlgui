@@ -614,7 +614,7 @@ public:
     void setShortcutsConfigurable(QAction *action, bool configurable);
 
 private:
-    KActionCollection(const KXMLGUIClient *parent); // used by KXMLGUIClient
+    KXMLGUI_NO_EXPORT explicit KActionCollection(const KXMLGUIClient *parent); // used by KXMLGUIClient
 
     friend class KActionCollectionPrivate;
     std::unique_ptr<class KActionCollectionPrivate> const d;
