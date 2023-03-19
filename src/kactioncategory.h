@@ -154,7 +154,7 @@ private:
     /**
      * Add action to category
      */
-    void addAction(QAction *action); // exported because called from ActionType *add<ActionType>(...)
+    void addAction(QAction *action); // exported because called from template method ActionType *add<ActionType>(...)
 
 private:
     //! KActionCollection needs access to some of our helper methods
