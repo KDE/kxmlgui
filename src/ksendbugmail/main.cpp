@@ -62,7 +62,7 @@ int main(int argc, char **argv)
     a.setApplicationName(QStringLiteral("ksendbugmail"));
     a.setApplicationVersion(QStringLiteral("1.0"));
 
-    KLocalizedString::setApplicationDomain("kxmlgui5");
+    KLocalizedString::setApplicationDomain("kxmlgui6");
 
     // d.addAuthor(ki18n("Stephan Kulow"), ki18n("Author"), "coolo@kde.org");
 

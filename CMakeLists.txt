@@ -73,7 +73,7 @@ ecm_set_disabled_deprecation_versions(
     KF 5.240
 )
 
-add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui6\")
 ki18n_install(po)
 
 # Subdirectories
