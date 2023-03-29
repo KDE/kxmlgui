@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-04 02:12+0000\n"
-"PO-Revision-Date: 2023-03-21 12:48+0300\n"
+"PO-Revision-Date: 2023-03-28 17:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -827,7 +827,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 "Düğmeye tıklayın, ardından kısayol düğmelerine basın.\n"
-"Ctrl+A örneği için: Ctrl düğmesine basılı tutun ve A düğmesine basın."
+"Kontrol+A örneği için: Kontrol düğmesine basılı tutun ve A düğmesine basın."
 
 #: kkeysequencewidget.cpp:167
 #, kde-format
@@ -1169,8 +1169,8 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"Kısayol adlarını (örn: Copy ) veya düğme kombinasyonlarını (örn: Ctrl+C) "
-"buraya yazarak etkileşimli olarak arayabilirsiniz."
+"Kısayol adlarını (örn: Kopyala) veya düğme kombinasyonlarını (örn: Kontrol"
+"+C) buraya yazarak etkileşimli olarak arayabilirsiniz."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
@@ -1181,7 +1181,7 @@ msgid ""
 "Ctrl+V) shown in the right column."
 msgstr ""
 "Burada düğme bağıntılarının, yani düğmelerle eylemler (örnek: 'Kopyala') "
-"arasındaki bağıntılarını (örnek: Ctrl+V) görebilirsiniz."
+"arasındaki bağıntılarını (örnek: Kontrol+V) görebilirsiniz."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
@@ -1484,8 +1484,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
-"<small><font color=\"%1\">Daha fazla bilgi için <b>Shift</b> düğmesine basın."
-"</font></small>"
+"<small><font color=\"%1\">Daha fazla bilgi için <b>Üst Karakter</b> "
+"düğmesine basın.</font></small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
 #. available whatsthis help message. Pressing Shift will show this more exhaustive message.
@@ -1503,8 +1503,8 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
-"%1<br/><small><font color=\"%2\">Daha fazlası için <b>Shift</b> düğmesine "
-"basın.</font></small>"
+"%1<br/><small><font color=\"%2\">Daha fazlası için <b>Üst Karakter</b> "
+"düğmesine basın.</font></small>"
 
 #: kundoactions.cpp:30
 #, kde-format
