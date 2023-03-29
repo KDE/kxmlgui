@@ -318,7 +318,7 @@ protected Q_SLOTS:
 #endif
 
 private Q_SLOTS:
-    void slotActionHovered();
+    KXMLGUI_NO_EXPORT void slotActionHovered();
 
 public:
     /**
