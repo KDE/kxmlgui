@@ -291,7 +291,7 @@ protected Q_SLOTS:
     virtual void slotActionTriggered();
 
 private Q_SLOTS:
-    void slotActionHovered();
+    KXMLGUI_NO_EXPORT void slotActionHovered();
 
 public:
     /**

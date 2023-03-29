@@ -227,20 +227,20 @@ private Q_SLOTS:
      * operation on the pointer. You should not delete the pointer in your
      * code yourself. Let the KHelpMenu destructor do the job.
      */
-    void menuDestroyed();
+    KXMLGUI_NO_EXPORT void menuDestroyed();
 
     /**
      * Connected to the dialogs (about kde and bug report) to detect
      * when they are finished.
      */
-    void dialogFinished();
+    KXMLGUI_NO_EXPORT void dialogFinished();
 
     /**
      * This slot will delete a dialog (about kde or bug report) if the
      * dialog pointer is not zero and the dialog is not visible. This
      * slot is activated by a one shot timer started in dialogHidden
      */
-    void timerExpired();
+    KXMLGUI_NO_EXPORT void timerExpired();
 
 Q_SIGNALS:
     /**
