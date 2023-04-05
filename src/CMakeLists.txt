@@ -3,6 +3,12 @@ add_subdirectory(ksendbugmail)
 add_library(KF6XmlGui)
 add_library(KF6::XmlGui ALIAS KF6XmlGui)
 
+set_target_properties(KF6XmlGui PROPERTIES
+    VERSION     ${KXMLGUI_VERSION}
+    SOVERSION   ${KXMLGUI_SOVERSION}
+    EXPORT_NAME XmlGui
+)
+
 if (HAVE_GLOBALACCEL)
     target_link_libraries(KF6XmlGui PRIVATE KF6::GlobalAccel)
 endif ()
@@ -111,11 +117,6 @@ PRIVATE
 if (TARGET Qt6::DBus)
   target_link_libraries(KF6XmlGui PUBLIC Qt6::DBus) #QDBus connect to signal in KToolBar
 endif()
-
-set_target_properties(KF6XmlGui PROPERTIES VERSION   ${KXMLGUI_VERSION}
-                                           SOVERSION ${KXMLGUI_SOVERSION}
-                                           EXPORT_NAME XmlGui
-)
 
 ecm_generate_headers(KXmlGui_HEADERS
   HEADER_NAMES
