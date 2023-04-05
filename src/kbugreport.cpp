@@ -33,10 +33,10 @@
 #include <KMessageDialog>
 #include <KTitleWidget>
 
-#include "../kxmlgui_version.h"
 #include "config-xmlgui.h"
 #include "debug.h"
 #include "systeminformation_p.h"
+#include <kxmlgui_version.h>
 
 #include <array>
 

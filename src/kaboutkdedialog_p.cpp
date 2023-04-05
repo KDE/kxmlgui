@@ -20,7 +20,7 @@
 #include <KLocalizedString>
 #include <KTitleWidget>
 
-#include "../kxmlgui_version.h"
+#include <kxmlgui_version.h>
 
 namespace KDEPrivate
 {

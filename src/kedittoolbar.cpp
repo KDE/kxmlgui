@@ -38,8 +38,8 @@
 #include "ktoolbar.h"
 #include "kxmlguifactory.h"
 
-#include "../kxmlgui_version.h"
 #include "ktoolbarhelper_p.h"
+#include <kxmlgui_version.h>
 
 // static const char *const s_XmlTypeToString[] = { "Shell", "Part", "Local", "Merged" };
 

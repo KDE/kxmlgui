@@ -13,13 +13,13 @@
 
 #include "kabstractaboutdialog_p.h"
 
-#include "../kxmlgui_version.h"
 #include "kaboutapplicationcomponentlistdelegate_p.h"
 #include "kaboutapplicationcomponentmodel_p.h"
 #include "kaboutapplicationlistview_p.h"
 #include "kaboutapplicationpersonlistdelegate_p.h"
 #include "kaboutapplicationpersonmodel_p.h"
 #include "klicensedialog_p.h"
+#include <kxmlgui_version.h>
 // KF
 #include <KLocalizedString>
 #include <KTitleWidget>
