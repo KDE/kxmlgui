@@ -23,7 +23,6 @@
 #include <QLabel>
 #include <QMenu>
 #include <QMouseEvent>
-#include <QProcess>
 #include <QPushButton>
 #include <QShortcutEvent>
 #include <QTabBar>
@@ -58,13 +57,12 @@ public Q_SLOTS:
             }
         }
         const bool autoCheck = cg.readEntry("AutoCheckAccelerators", true);
-        const bool copyWidgetText = cg.readEntry("CopyWidgetText", false);
-        if (!copyWidgetText && key == 0 && !autoCheck) {
+        if (key == 0 && !autoCheck) {
             deleteLater();
             return;
         }
 
-        new KCheckAccelerators(qApp, key, autoCheck, copyWidgetText);
+        new KCheckAccelerators(qApp, key, autoCheck);
         deleteLater();
     }
 };
@@ -115,25 +113,23 @@ static void startupFunc()
 
 Q_COREAPP_STARTUP_FUNCTION(startupFunc)
 
-KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck_, bool copyWidgetText_)
+KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck_)
     : QObject(parent)
     , key(key_)
     , block(false)
     , autoCheck(autoCheck_)
-    , copyWidgetText(copyWidgetText_)
     , drklash(nullptr)
 {
     setObjectName(QStringLiteral("kapp_accel_filter"));
 
     KConfigGroup cg(KSharedConfig::openConfig(), "Development");
     alwaysShow = cg.readEntry("AlwaysShowCheckAccelerators", false);
-    copyWidgetTextCommand = cg.readEntry("CopyWidgetTextCommand", QString());
 
     parent->installEventFilter(this);
     connect(&autoCheckTimer, &QTimer::timeout, this, &KCheckAccelerators::autoCheckSlot);
 }
 
-bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
+bool KCheckAccelerators::eventFilter(QObject * /*obj*/, QEvent *e)
 {
     if (block) {
         return false;
@@ -165,68 +161,6 @@ bool KCheckAccelerators::eventFilter(QObject *obj, QEvent *e)
         if (autoCheck) {
             autoCheckTimer.setSingleShot(true);
             autoCheckTimer.start(20); // 20 ms
-        }
-        break;
-    // case QEvent::MouseButtonDblClick:
-    case QEvent::MouseButtonPress:
-        if (copyWidgetText && static_cast<QMouseEvent *>(e)->button() == Qt::MiddleButton) {
-            QWidget *w = qobject_cast<QWidget *>(obj);
-            if (!w) {
-                return false;
-            }
-            if (auto child = w->childAt(static_cast<QMouseEvent *>(e)->pos())) {
-                w = child;
-            }
-            // kWarning()<<"MouseButtonDblClick"<<w;
-            QString text;
-            if (qobject_cast<QLabel *>(w)) {
-                text = static_cast<QLabel *>(w)->text();
-            } else if (qobject_cast<QAbstractButton *>(w)) {
-                text = static_cast<QAbstractButton *>(w)->text();
-            } else if (qobject_cast<QComboBox *>(w)) {
-                text = static_cast<QComboBox *>(w)->currentText();
-            } else if (qobject_cast<QTabBar *>(w)) {
-                text = static_cast<QTabBar *>(w)->tabText(static_cast<QTabBar *>(w)->tabAt(static_cast<QMouseEvent *>(e)->pos()));
-            } else if (qobject_cast<QGroupBox *>(w)) {
-                text = static_cast<QGroupBox *>(w)->title();
-            } else if (qobject_cast<QMenu *>(obj)) {
-                QAction *a = static_cast<QMenu *>(obj)->actionAt(static_cast<QMouseEvent *>(e)->pos());
-                if (!a) {
-                    return false;
-                }
-                text = a->text();
-                if (text.isEmpty()) {
-                    text = a->iconText();
-                }
-            }
-            if (text.isEmpty()) {
-                return false;
-            }
-
-            if (static_cast<QMouseEvent *>(e)->modifiers() == Qt::ControlModifier) {
-                text.remove(QChar::fromLatin1('&'));
-            }
-
-            // kWarning()<<KGlobal::activeComponent().catalogName()<<text;
-            if (copyWidgetTextCommand.isEmpty()) {
-                QClipboard *clipboard = QApplication::clipboard();
-                clipboard->setText(text);
-            } else {
-                const QString textCmd = copyWidgetTextCommand.arg(text, QFile::decodeName(KLocalizedString::applicationDomain()));
-                const QString exec = QStandardPaths::findExecutable(textCmd);
-                if (exec.isEmpty()) {
-                    qWarning() << "Could not find executable:" << textCmd;
-                    return false;
-                }
-
-                QProcess *script = new QProcess(this);
-                script->start(exec, QStringList{});
-                connect(script, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), script, &QObject::deleteLater);
-            }
-            e->accept();
-            return true;
-
-            // kWarning()<<"MouseButtonDblClick"<<static_cast<QWidget*>(obj)->childAt(static_cast<QMouseEvent*>(e)->globalPos());
         }
         return false;
     case QEvent::Timer:

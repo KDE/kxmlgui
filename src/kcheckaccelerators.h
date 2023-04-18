@@ -47,29 +47,13 @@ class QTextBrowser;
  window (if there are any checkboxes etc.). For every submenu and all controls
  there are shown all conflicts grouped by accelerator, and a list of all used
  accelerators.
-
- COPY WIDGET TEXT:
-
- You can copy widgets' texts to find them in translation files faster by middle-clicking them.
- Put the following lines in ~/.config/kdeglobals (or in rc file for specific app):
-
- \code
- [Development]
- CopyWidgetText=true
- CopyWidgetTextCommand=find_in_po_script "%1" "%2"
- \endcode
-
- Where %1 gets replaced with program name and %2 - with text.
- CopyWidgetTextCommand may be empty, in which case the text gets copied to clipboard.
- Press Ctrl+MMB to get widget text w/o accelerator mark (&)
-
 */
 
 class KCheckAccelerators : public QObject
 {
     Q_OBJECT
 public:
-    KCheckAccelerators(QObject *parent, int key, bool autoCheck, bool copyWidgetText);
+    KCheckAccelerators(QObject *parent, int key, bool autoCheck);
     /**
      * Re-implemented to filter the parent's events.
      */
@@ -81,9 +65,6 @@ private:
     bool block;
     bool alwaysShow;
     bool autoCheck;
-
-    bool copyWidgetText;
-    QString copyWidgetTextCommand;
 
     QTimer autoCheckTimer;
     void createDialog(QWidget *parent, bool automatic);
