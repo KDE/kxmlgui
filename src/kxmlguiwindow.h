@@ -28,22 +28,60 @@ class KXmlGuiWindowPrivate;
 /**
  * @class KXmlGuiWindow kxmlguiwindow.h KXmlGuiWindow
  *
- * @short Top level main window with predefined action layout
+ * @brief KMainWindow with convenience functions and integration with XmlGui files.
  *
- * Instead of creating a KMainWindow manually and assigning menus, menu entries,
- * toolbar buttons and actions to it by hand, this class can be used to load an
- * rc file to manage the main window's actions.
+ * This class includes several convenience \<action\>Enabled() functions
+ * to toggle the presence of functionality in your main window,
+ * including a KCommandBar instance.
  *
- * See https://techbase.kde.org/Development/Tutorials/Using_KActions#XMLGUI
- * for essential information on the XML file format and usage of this class.
+ * The @ref StandardWindowOptions enum can be used to pass additional options
+ * to describe the main window behavior/appearance.
+ * Use it in conjunction with setupGUI() to load an appnameui.rc file
+ * to manage the main window's actions.
+ *
+ * setCommandBarEnabled() is set by default.
+ *
+ * A minimal example can be created with
+ * QMainWindow::setCentralWidget() and setupGUI():
+ *
+ * @code
+ * MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent) {
+ *   textArea = new KTextEdit();
+ *   setCentralWidget(textArea);
+ *   setupGUI(Default);
+ * }
+ * @endcode
+ *
+ * With this, a ready-made main window with menubar and statusbar is created,
+ * as well as two default menus, Settings and Help.
+ *
+ * Management of QActions is made trivial in combination with
+ * KActionCollection and KStandardAction.
+ *
+ * @code
+ * void MainWindow::setupActions() {
+ *   QAction *clearAction = new QAction(this);
+ *   clearAction->setText(i18n("&Clear"));
+ *   clearAction->setIcon(QIcon::fromTheme("document-new"));
+ *   actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
+ *   actionCollection()->addAction("clear", clearAction);
+ *   connect(clearAction, &QAction::triggered, textArea, &KTextEdit::clear);
+ *   KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
+ *   setupGUI(Default, "texteditorui.rc");
+ * }
+ * @endcode
+ *
+ * See https://develop.kde.org/docs/use/kxmlgui/ for a tutorial
+ * on how to create a simple text editor using KXmlGuiWindow.
+ *
+ * See https://develop.kde.org/docs/use/session-managment for more information on session management.
  *
  * @see KMainWindow
- * @author Reginald Stadlbauer (reggie@kde.org)
- * @author Stephan Kulow (coolo@kde.org)
- * @author Matthias Ettrich (ettrich@kde.org)
- * @author Chris Schlaeger (cs@kde.org)
- * @author Sven Radej (radej@kde.org)
- * Maintained by Sven Radej (radej@kde.org)
+ * @see KActionCollection
+ * @see KStandardAction
+ * @see setupGUI()
+ * @see createGUI()
+ * @see setCommandBarEnabled()
  */
 
 class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
@@ -56,30 +94,26 @@ class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, 
 
 public:
     /**
-     * Construct a main window.
+     * @brief Construct a main window.
      *
-     * @param parent The widget parent. This is usually 0 but it may also be the window
-     * group leader. In that case, the KXmlGuiWindow becomes sort of a
-     * secondary window.
-     *
-     * @param f Specify the window flags. The default is none.
-     *
-     * Note that a KXmlGuiWindow per-default is created with the
+     * Note that by default a KXmlGuiWindow is created with the
      * Qt::WA_DeleteOnClose attribute set, i.e. it is automatically destroyed
-     * when the window is closed. If you do not want this behavior, call
-     * \code
+     * when the window is closed. If you do not want this behavior, call:
+     *
+     * @code
      * window->setAttribute(Qt::WA_DeleteOnClose, false);
-     * \endcode
+     * @endcode
      *
      * KXmlGuiWindows must be created on the heap with 'new', like:
-     * \code
+     *
+     * @code
      * KXmlGuiWindow *kmw = new KXmlGuiWindow(...);
      * kmw->setObjectName(...);
-     * \endcode
+     * @endcode
      *
      * IMPORTANT: For session management and window management to work
      * properly, all main windows in the application should have a
-     * different name. If you don't do it, the base class KMainWindow will create
+     * different name. Otherwise, the base class KMainWindow will create
      * a unique name, but it's recommended to explicitly pass a window name that will
      * also describe the type of the window. If there can be several windows of the same
      * type, append '#' (hash) to the name, and KMainWindow will replace it with numbers to make
@@ -88,207 +122,276 @@ public:
      * mails, the name for the folders window should be e.g. "mainwindow" and
      * for the composer windows "composer#".
      *
+     * @param parent The widget parent. This is usually @c nullptr,
+     * but it may also be the window group leader.
+     * In that case, the KXmlGuiWindow becomes a secondary window.
+     *
+     * @param flags Specify the window flags. The default is none.
+     *
+     * @see KMainWindow::KMainWindow
      */
-    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
-     * \brief Destructor.
+     * @brief Destructor.
      *
-     * Will also destroy the toolbars, and menubar if
-     * needed.
+     * Will also destroy the toolbars and menubar if needed.
      */
     ~KXmlGuiWindow() override;
 
     /**
-     * Enables the build of a standard help menu when calling @ref createGUI()
-     * or @ref setupGUI().
+     * @brief Creates a standard help menu when calling createGUI()
+     * or setupGUI().
      *
-     * The default behavior is to create a help menu, you must call this
-     * function with @c false to disable that.
+     * @param showHelpMenu Whether to create a Help Menu. @c true by default.
+     *
+     * @see isHelpMenuEnabled()
      */
     void setHelpMenuEnabled(bool showHelpMenu = true);
 
     /**
-     * Returns @c true if the help menu is enabled, @c false otherwise.
+     * @returns @c true if the help menu is enabled, @c false if setHelpMenuEnabled(false) was set.
+     * @see setHelpMenuEnabled()
      */
     bool isHelpMenuEnabled() const;
 
     virtual KXMLGUIFactory *guiFactory();
 
     /**
-     * Creates a GUI based on a local XML file.
+     * @brief Generates the interface based on a local XML file.
      *
-     * Typically, i.e. in a regular application, you should use @ref setupGUI()
-     * instead, since it runs some extra code, like setting up the toolbar/shortcut
-     * edit actions ...etc.
+     * This is the function that generates UI elements such as the main menu,
+     * toolbar (if any) and statusbar. This is called by setupGUI(Create) as well.
+     *
+     * Typically, in a regular application, you would use setupGUI()
+     * instead, as it sets up the toolbar/shortcut
+     * edit actions, among other things.
      *
      * If @p xmlfile is an empty string, this method will try to construct
      * a local XML filename like appnameui.rc where 'appname' is your app's
-     * name. Typically that app name is what @ref KXMLGUIClient::componentName()
-     * returns. If that file does not exist, then the XML UI code will only use
-     * the global (standard) XML file for the layout purposes.
+     * name. Typically that app name is what KXMLGUIClient::componentName()
+     * returns. If that file does not exist, then the XML UI code will use only
+     * the global (standard) XML file for its layout purposes.
      *
-     * @param xmlfile the path (relative or absolute) to the local xmlfile
+     * @param xmlfile The path (relative or absolute) to the local xmlfile
+     *
+     * @see setupGUI()
      */
     void createGUI(const QString &xmlfile = QString());
 
     /**
-     * Sets whether @ref KMainWindow should provide a menu that allows
-     * showing/hiding the available toolbars (using KToggleToolBarAction).
+     * @brief Creates a toggle under the 'Settings' menu to show/hide the available toolbars.
+     *
+     * The standard toolbar menu toggles the visibility of one or multiple toolbars.
      *
      * If there is only one toolbar configured, a simple 'Show \<toolbar name\>'
-     * menu item is shown; if more than one toolbar are configured, a "Shown Toolbars"
+     * menu item is shown; if more than one toolbar is configured, a "Shown Toolbars"
      * menu is created instead, with 'Show \<toolbar1 name\>', 'Show \<toolbar2 name\>'
-     * ...etc sub-menu actions.
+     * ... sub-menu actions.
      *
-     * The menu / menu item is implemented using xmlgui. It will be inserted in your
-     * menu structure in the 'Settings' menu.
-     *
-     * If your application uses a non-standard xmlgui resource file then you can
-     * specify the exact position of the menu / menu item by adding a
+     * If your application uses a non-default XmlGui resource file, then you can
+     * specify the exact position of the menu/menu item by adding a
      * &lt;Merge name="StandardToolBarMenuHandler" /&gt;
      * line to the settings menu section of your resource file ( usually appname.rc ).
      *
-     * @note You should enable this feature before calling createGUI() ( or similar ).
+     * @param showToolBarMenu Whether to show the standard toolbar menu. @c false by default.
+     *
+     * @note This function only makes sense before calling createGUI().
+     * Using setupGUI(ToolBar) overrides this function.
+     *
+     * @see createGUI()
+     * @see setupGUI()
+     * @see KToggleBarAction
+     * @see StandardWindowOption
+     * @see KMainWindow::toolBar()
+     * @see KMainWindow::toolBars()
+     * @see QMainWindow::addToolBar()
+     * @see QMainWindow::removeToolBar()
+     * @see createStandardStatusBarAction()
      */
-    void setStandardToolBarMenuEnabled(bool enable);
+    void setStandardToolBarMenuEnabled(bool showToolBarMenu);
 
     /**
-     * Returns @c true if the toolbar menu is enabled, @c false otherwise.
+     * @brief Returns whether setStandardToolBarMenuEnabled() was set.
+     *
+     * @note This function only makes sense if createGUI() was used.
+     * This function returns true only if setStandardToolBarMenuEnabled() was set
+     * and will return false even if @ref StandardWindowOption::ToolBar was used.
+     *
+     * @returns @c true if setStandardToolBarMenuEnabled() was set, @c false otherwise.
+     *
+     * @see createGUI()
+     * @see setupGUI()
+     * @see setStandardToolBarMenuEnabled()
+     * @see StandardWindowOption
      */
     bool isStandardToolBarMenuEnabled() const;
 
     /**
-     * Sets whether KMainWindow should provide a menu that allows showing/hiding
-     * of the statusbar (using KStandardAction::showStatusbar()). Note that calling
-     * this method will create a statusbar if one doesn't already exist.
+     * @brief Creates a toggle under the 'Settings' menu to show/hide the statusbar.
      *
-     * The menu / menu item is implemented using xmlgui. It will be inserted
-     * in your menu structure in the 'Settings' menu.
-     *
-     * @note You should enable this feature before calling createGUI() (or similar).
+     * Calling this method will create a statusbar if one doesn't already exist.
      *
      * If an application maintains the action on its own (i.e. never calls
-     * this function) a connection needs to be made to let KMainWindow
-     * know when that status (hidden/shown) of the statusbar has changed.
+     * this function), a connection needs to be made to let KMainWindow
+     * know when the hidden/shown status of the statusbar has changed.
      * For example:
      * @code
      * connect(action, &QAction::triggered,
      *         kmainwindow, &KMainWindow::setSettingsDirty);
      * @endcode
-     * Otherwise the status (hidden/show) of the statusbar might not be saved
-     * by KMainWindow.
+     * Otherwise the status might not be saved by KMainWindow.
+     *
+     * @note This function only makes sense before calling createGUI()
+     * or when using setupGUI() without @ref StandardWindowOption::StatusBar.
+     *
+     * @see createGUI()
+     * @see setupGUI()
+     * @see StandardWindowOption
+     * @see KStandardAction::showStatusbar()
+     * @see setStandardToolBarMenuEnabled()
+     * @see QMainWindow::setStatusBar()
+     * @see QMainWindow::statusBar()
      */
     void createStandardStatusBarAction();
 
     /**
+     * @brief Use these options for the first argument of setupGUI().
      * @see setupGUI()
-     * @see StandardWindowOptions
+     * @see StandardWindowOption
      */
     enum StandardWindowOption {
         /**
          * Adds action(s) to show/hide the toolbar(s) and adds a menu
          * action to configure the toolbar(s).
          *
-         * @see setStandardToolBarMenuEnabled
+         * @see setStandardToolBarMenuEnabled()
+         * @see isStandardToolBarMenuEnabled()
          */
         ToolBar = 1,
 
         /**
-         * Adds an action to open the configure keyboard shortcuts dialog.
+         * @brief Adds an action in the 'Settings' menu
+         * to open the configure keyboard shortcuts dialog.
          */
         Keys = 2,
 
         /**
-         * Adds action to show/hide the statusbar. Note that setting this
-         * value will create a statusbar if one doesn't already exist.
+         * @brief Adds an action to show/hide the statusbar in the 'Settings' menu.
+         * Note that setting this value will create a statusbar
+         * if one doesn't already exist.
          *
-         * @see createStandardStatusBarAction
+         * @see createStandardStatusBarAction()
          */
         StatusBar = 4,
 
         /**
-         * Auto-saves (and loads) the toolbar/menubar/statusbar settings and
+         * @brief Autosaves (and loads) the toolbar/menubar/statusbar settings and
          * window size using the default name.
          *
-         * Typically you want to let the default window size be determined by
-         * the widgets size hints. Make sure that setupGUI() is called after
-         * all the widgets are created (including setCentralWidget) so that the
-         * default size will be correct.
+         * Like KMainWindow::setAutoSaveSettings(), enabling this causes the application
+         * to save state data upon close in a KConfig-managed configuration file.
          *
-         * @see setAutoSaveSettings
+         * Typically you want to let the default window size be determined by
+         * the widgets' size hints. Make sure that setupGUI() is called after
+         * all the widgets are created (including QMainWindow::setCentralWidget())
+         * so that the default size is managed properly.
+         *
+         * @see KMainWindow::setAutoSaveSettings()
+         * @see KConfig
          */
         Save = 8,
 
         /**
-         * calls createGUI() once ToolBar, Keys and Statusbar have been
+         * @brief Calls createGUI() once ToolBar, Keys and Statusbar have been
          * taken care of.
          *
-         * @note When using @ref KParts::MainWindow, remove this flag from
-         * the @ref setupGUI() call, since you'll be using @c createGUI(part)
-         * instead.
+         * @note When using KParts::MainWindow, remove this flag from
+         * the setupGUI() call, since you'll be using createGUI(part)
+         * instead:
          *
          * @code
          *     setupGUI(ToolBar | Keys | StatusBar | Save);
          * @endcode
          *
-         * @see createGUI
+         * @see createGUI()
          */
         Create = 16,
 
         /**
-         * All the above option
-         * (this is the default)
+         * @brief Sets all of the above options as true.
          */
         Default = ToolBar | Keys | StatusBar | Save | Create,
     };
     Q_FLAG(StandardWindowOption)
     /**
-     * Stores a combination of #StandardWindowOption values.
+     * @brief Stores a combination of @ref StandardWindowOptions values.
+     *
+     * Use these options for the first argument of setupGUI().
+     * @see setupGUI()
+     * @see StandardWindowOption
      */
     Q_DECLARE_FLAGS(StandardWindowOptions, StandardWindowOption)
 
     /**
-     * Configures the current window and its actions in the typical KDE
+     * @brief Configures the current window and its actions in the typical KDE
      * fashion.
      *
      * You can specify which window options/features are going to be set up using
-     * @p options, @see the @ref StandardWindowOption enum for more details.
+     * @p options, see the @ref StandardWindowOptions enum for more details.
      *
-     * Typically this function replaces @ref createGUI().
+     * @code
+     * MainWindow::MainWindow(QWidget* parent) : KXmlGuiWindow(parent){
+     *   textArea = new KTextEdit();
+     *   setCentralWidget(textArea);
+     *   setupGUI(Default, "appnameui.rc");
+     * }
+     * @endcode
      *
-     * @warning If you are calling @ref createGUI() yourself, remember to
-     * remove the @ref StandardWindowOption::Create flag from @p options.
+     * Use a bitwise OR (|) to select multiple enum choices for setupGUI()
+     * (except when using StandardWindowOption::Default).
      *
-     * @see @ref StandardWindowOptions
+     * @code
+     * setupGUI(Save | Create, "appnameui.rc");
+     * @endcode
      *
-     * @note Since this method will restore the state of the application
-     * window (toolbar, dockwindows positions ...etc), you need to have
-     * added all your actions to your toolbars ...etc before calling this
-     * method. (This note is only applicable if you are using the
-     * @c StandardWindowOption::Default or @c StandardWindowOption::Save flags).
+     * Typically this function replaces createGUI(),
+     * but it is possible to call setupGUI(Create) together with helper functions
+     * such as setStandardToolBarMenuEnabled() and createStandardStatusBarAction().
      *
-     * @param options an OR'ed combination of StandardWindowOption to specify
-     * which options are going to be set up for your application window, the
-     * default is @ref StandardWindowOption::Default
-     * @param xmlfile the path (relative or absolute) to the local xmlfile,
-     * if this is an empty string the code will look for a local XML file
-     * appnameui.rc, where 'appname' is the name of your app, see the note
-     * about the xmlfile argument in the @ref createGUI() docs.
+     * @warning To use createGUI() and setupGUI()
+     * for the same window, you must avoid using
+     * @ref StandardWindowOption::Create. Prefer using only setupGUI().
+     *
+     * @note When @ref StandardWindowOption::Save is used,
+     * this method will restore the state of the application
+     * window (toolbar, dockwindows positions ...etc), so you need to have
+     * added all your actions to your UI before calling this
+     * method.
+     *
+     * @param options A combination of @ref StandardWindowOptions to specify
+     * UI elements to be present in your application window.
+     * @param xmlfile The relative or absolute path to the local xmlfile.
+     * If this is an empty string, the code will look for a local XML file
+     * appnameui.rc, where 'appname' is the name of your app. See the note
+     * about the xmlfile argument in createGUI().
+     * @see StandardWindowOption
      */
     void setupGUI(StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
     /**
-     * This is an overloaded method.
+     * @brief This is an overloaded function.
      *
-     * You can use @p defaultSize to override the saved window size (e.g.
-     * the window size is saved to the config file if the @ref StandardWindowOption::Save
-     * flag was set previously).
+     * @param defaultSize A manually specified window size that overrides the saved size.
+     * @param options A combination of @ref StandardWindowOptions to specify
+     * UI elements to be present in your application window.
+     * @param xmlfile The relative or absolute path to the local xmlfile.
+     * @see setupGUI()
      */
     void setupGUI(const QSize &defaultSize, StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
     /**
-     * Returns a pointer to the mainwindows action responsible for the toolbars menu
+     * @returns A pointer to the main window's action responsible for the toolbar's menu.
      */
     QAction *toolBarMenuAction();
 
@@ -309,45 +412,66 @@ public:
     void applyMainWindowSettings(const KConfigGroup &config) override;
 
     /**
-     * Enable a hud style menu which allows listing and executing actions
+     * @brief Enable a KCommandBar to list and quickly execute actions.
      *
-     * The menu is launchable with the shortcut Alt+Ctrl+I
+     * A KXmlGuiWindow by default automatically creates a KCommandBar,
+     * but it is inaccessible unless createGUI() or setupGUI(Create) is used.
+     *
+     * It provides a HUD-like menu that lists all QActions in your application
+     * and can be activated via Ctrl+Atl+i or via an action in the 'Help' menu.
+     *
+     * If you need more than a global set of QActions listed for your application,
+     * use KCommandBar directly instead.
+     *
+     * @param showCommandBar Whether to show the command bar. @c true by default.
      *
      * @since 5.83
+     *
+     * @see KCommandBar
+     * @see KCommandBar::setActions()
+     * @see isCommandBarEnabled()
      */
-    void setCommandBarEnabled(bool enable);
+    void setCommandBarEnabled(bool showCommandBar);
 
     /**
+     * @brief Returns whether a KCommandBar was set.
+     * @returns @c true by default, @c false if setCommandBarEnabled(false) was set.
      * @since 5.83
+     * @see setCommandBarEnabled()
      */
     bool isCommandBarEnabled() const;
 
 public Q_SLOTS:
     /**
-     * Show a standard configure toolbar dialog.
+     * @brief Show a standard configure toolbar dialog.
      *
-     * This slot can be connected directly to the action to configure toolbar.
-     * This is very simple to do that by adding a single line
-     * \code
-     * KStandardAction::configureToolbars( this, SLOT( configureToolbars() ),
-     *                                actionCollection() );
-     * \endcode
+     * This slot can be connected directly to the action to configure the toolbar.
+     *
+     * @code
+     * KStandardAction::configureToolbars(this, &KXmlGuiWindow::configureToolbars, actionCollection);
+     * @endcode
      */
     virtual void configureToolbars();
 
     /**
-     * Apply a state change
+     * @brief Applies a state change
      *
-     * Enable and disable actions as defined in the XML rc file
+     * Reimplement this to enable and disable actions as defined in the XmlGui rc file.
+     *
+     * @param newstate The state change to be applied.
      */
     virtual void slotStateChanged(const QString &newstate);
 
     /**
-     * Apply a state change
+     * @brief Applies a state change
      *
-     * Enable and disable actions as defined in the XML rc file,
-     * can "reverse" the state (disable the actions which should be
+     * Reimplement this to enable and disable actions as defined in the XmlGui rc file.
+     *
+     * This function can "reverse" the state (disable the actions which should be
      * enabled, and vice-versa) if specified.
+     *
+     * @param newstate The state change to be applied.
+     * @param reverse Whether to reverse @p newstate or not.
      */
     void slotStateChanged(const QString &newstate, bool reverse);
 
@@ -360,15 +484,17 @@ protected:
     bool event(QEvent *event) override;
 
     /**
-     * Checks if there are actions using the same shortcut. This is called
-     * automatically from createGUI.
+     * @brief Checks if there are actions using the same shortcut.
+     *
+     * This is called automatically from createGUI().
+     *
      * @since 5.30
      */
     void checkAmbiguousShortcuts();
 
 protected Q_SLOTS:
     /**
-     * Rebuilds the GUI after KEditToolBar changed the toolbar layout.
+     * @brief Rebuilds the GUI after KEditToolBar changes the toolbar layout.
      * @see configureToolbars()
      */
     virtual void saveNewToolbarConfig();

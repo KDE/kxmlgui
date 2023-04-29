@@ -144,8 +144,8 @@ public:
     KXMLGUIFactory *factory;
 };
 
-KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
-    : KMainWindow(*new KXmlGuiWindowPrivate, parent, f)
+KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
+    : KMainWindow(*new KXmlGuiWindowPrivate, parent, flags)
     , KXMLGUIBuilder(this)
 {
     Q_D(KXmlGuiWindow);
@@ -157,11 +157,11 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags f)
     new KMainWindowInterface(this);
 #endif
 
-    /**
+    /*
      * Set up KCommandBar launcher action
      */
     auto a = actionCollection()->addAction(QStringLiteral("open_kcommand_bar"), this, [this] {
-        /**
+        /*
          * Do nothing when command bar is disabled
          */
         if (!isCommandBarEnabled()) {
@@ -416,10 +416,10 @@ void KXmlGuiWindow::slotStateChanged(const QString &newstate, bool reverse)
     stateChanged(newstate, reverse ? KXMLGUIClient::StateReverse : KXMLGUIClient::StateNoReverse);
 }
 
-void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool enable)
+void KXmlGuiWindow::setStandardToolBarMenuEnabled(bool showToolBarMenu)
 {
     Q_D(KXmlGuiWindow);
-    if (enable) {
+    if (showToolBarMenu) {
         if (d->toolBarHandler) {
             return;
         }
@@ -549,20 +549,20 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
     }
 }
 
-void KXmlGuiWindow::setCommandBarEnabled(bool enable)
+void KXmlGuiWindow::setCommandBarEnabled(bool showCommandBar)
 {
     /**
      * Unset the shortcut
      */
     auto cmdBarAction = actionCollection()->action(QStringLiteral("open_kcommand_bar"));
-    if (enable) {
+    if (showCommandBar) {
         actionCollection()->setDefaultShortcut(cmdBarAction, Qt::CTRL | Qt::ALT | Qt::Key_I);
     } else {
         actionCollection()->setDefaultShortcut(cmdBarAction, {});
     }
 
     Q_D(KXmlGuiWindow);
-    d->commandBarEnabled = enable;
+    d->commandBarEnabled = showCommandBar;
 }
 
 bool KXmlGuiWindow::isCommandBarEnabled() const
