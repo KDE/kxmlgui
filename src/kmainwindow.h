@@ -40,57 +40,30 @@ class KToolBar;
 /**
  * @class KMainWindow kmainwindow.h KMainWindow
  *
- * @short Top level main window
+ * @brief KMainWindow represents a top-level main window.
  *
- * Top level widget that provides toolbars, a status line and a frame.
+ * It extends QMainWindow with session management capabilities. For ready-made window functionality and simpler UI management, use KXmlGuiWindow instead.
  *
- * It should be used as a top level (parent-less) widget.
- * It manages the geometry for all its children, including your
- * main widget.
+ * Define the minimum/maximum height/width of your central widget and KMainWindow will take this into account.
+ * For fixed size windows set your main widget to a fixed size. Fixed aspect ratios (QWidget::heightForWidth()) and fixed width widgets are not supported.
  *
- * Normally, you will inherit from KMainWindow,
- * then construct (or use some existing) widget as
- * your main view. You can set only one main view.
+ * Use toolBar() to generate a main toolbar "mainToolBar" or refer to a specific toolbar.
+ * For a simpler way to manage your toolbars, use KXmlGuiWindow::setupGUI() instead.
  *
- * You can add as many toolbars as you like. There can be only one menubar
- * and only one statusbar.
+ * Use setAutoSaveSettings() to automatically save and restore the window geometry and toolbar/menubar/statusbar state when the application is restarted.
  *
- * The toolbars, menubar, and statusbar can be created by the
- * KMainWindow and - unlike the old KMainWindow - may, but do not
- * have to, be deleted by you. KMainWindow will handle that internally.
+ * Use kRestoreMainWindows() in your main function to restore your windows when the session is restored.
  *
- * Height and width can be operated independently from each other. Simply
- * define the minimum/maximum height/width of your main widget and
- * KMainWindow will take this into account. For fixed size windows set
- * your main widget to a fixed size.
+ * The window state is saved when the application is exited.
+ * Reimplement queryClose() to warn the user of unsaved data upon close or exit.
  *
- * Fixed aspect ratios (heightForWidth()) and fixed width widgets are
- * not supported.
+ * Reimplement saveProperties() / readProperties() or saveGlobalProperties() / readGlobalProperties()
+ * to save/restore application-specific state during session management.
  *
- * KMainWindow will set icon, mini icon and caption, which it gets
- * from KApplication. It provides full session management, and
- * will save its position, geometry and positions of toolbars and
- * menubar on logout. If you want to save additional data, reimplement
- * saveProperties() and (to read them again on next login)
- * readProperties(). To save special data about your data, reimplement
- * saveGlobalProperties(). To warn user that application or
- * windows have unsaved data on close or logout, reimplement
- * queryClose().
+ * Note that session saving is automatically called, session restoring is not,
+ * and so it needs to be implemented in your main() function.
  *
- * You have to implement session restoring also in your main() function.
- * There are also kRestoreMainWindows convenience functions which
- * can do this for you and restore all your windows on next login.
- *
- * Note that KMainWindow uses KGlobal::ref() and KGlobal::deref() so that closing
- * the last mainwindow will quit the application unless there is still something
- * that holds a ref in KGlobal - like a KIO job, or a systray icon.
- *
- * @author Reginald Stadlbauer (reggie@kde.org)
- * @author Stephan Kulow (coolo@kde.org)
- * @author Matthias Ettrich (ettrich@kde.org)
- * @author Chris Schlaeger (cs@kde.org)
- * @author Sven Radej (radej@kde.org)
- * Maintained by David Faure (faure@kde.org)
+ * See https://develop.kde.org/docs/use/session-managment for more information on session management.
  */
 
 class KXMLGUI_EXPORT KMainWindow : public QMainWindow
@@ -104,15 +77,15 @@ class KXMLGUI_EXPORT KMainWindow : public QMainWindow
 
 public:
     /**
-     * Construct a main window.
+     * @brief Constructs a main window.
      *
-     * @param parent The widget parent. This is usually 0 but it may also be the window
-     * group leader. In that case, the KMainWindow becomes sort of a
-     * secondary window.
+     * @param parent The parent widget. This is usually @c nullptr, but it may also be
+     * the window group leader. In that case,
+     * the KMainWindow becomes a secondary window.
      *
-     * @param f Specify the window flags. The default is none.
+     * @param flags Specify the window flags. The default is none.
      *
-     * Note that a KMainWindow per-default is created with the
+     * Note that by default a KMainWindow is created with the
      * Qt::WA_DeleteOnClose attribute set, i.e. it is automatically destroyed
      * when the window is closed. If you do not want this behavior, call
      * \code
@@ -125,7 +98,7 @@ public:
      * kmw->setObjectName(...);
      * \endcode
      *
-     * Since the KDE Frameworks 5.16 release, KMainWindow will also enter information regarding
+     * Since KDE Frameworks 5.16, KMainWindow will enter information regarding
      * the application's translators by default, using KAboutData::setTranslator(). This only occurs
      * if no translators are already assigned in KAboutData (see KAboutData::setTranslator() for
      * details -- the auto-assignment here uses the same translated strings as specified for that
@@ -133,7 +106,7 @@ public:
      *
      * IMPORTANT: For session management and window management to work
      * properly, all main windows in the application should have a
-     * different name. If you don't do it, KMainWindow will create
+     * different name. Otherwise, KMainWindow will create
      * a unique name, but it's recommended to explicitly pass a window name that will
      * also describe the type of the window. If there can be several windows of the same
      * type, append '#' (hash) to the name, and KMainWindow will replace it with numbers to make
@@ -142,13 +115,14 @@ public:
      * mails, the name for the folders window should be e.g. "mainwindow" and
      * for the composer windows "composer#".
      *
+     * @see KAboutData
      */
-    explicit KMainWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    explicit KMainWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
-     * \brief Destructor.
+     * @brief Destructor.
      *
-     * Will also destroy the toolbars, and menubar if
+     * Will also destroy the toolbars and menubar if
      * needed.
      */
     ~KMainWindow() override;
@@ -185,7 +159,7 @@ public:
 
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
-     * Returns the help menu. Creates a standard help menu if none exists yet.
+     * @returns The help menu. Creates a standard help menu if none exists yet.
      *
      * It contains entries for the
      * help system (activated by F1), an optional "What's This?" entry
@@ -201,8 +175,7 @@ public:
      * menuBar()->addMenu( customHelpMenu() );
      * \endcode
      *
-     * @param showWhatsThis Set this to @c false if you do not want to include
-     *        the "What's This" menu entry.
+     * @param showWhatsThis Whether to show the "What's This" menu entry. @c true by default.
      *
      * @return A standard help menu.
      * @deprecated Since 5.0, use XMLGUI instead, or KHelpMenu directly
@@ -212,28 +185,31 @@ public:
 #endif
 
     /**
-     * If the session did contain so high a number, @c true is returned,
-     * else @c false.
+     * @param numberOfInstances The number of KMainWindow instances in the application.
+     * @returns @c true if the number of KMainWindow instances of the previous session did contain the requested @p numberOfInstances, @c false otherwise.
      * @see restore()
      **/
-    static bool canBeRestored(int number);
+    static bool canBeRestored(int numberOfInstances);
 
     /**
-     * Returns the className() of the @p number of the toplevel window which
-     * should be restored.
+     * @brief Useful if your application uses
+     * different kinds of top-level windows.
      *
-     * This is only useful if your application uses
-     * different kinds of toplevel windows.
+     * @returns The class name of the top-level window to be restored
+     * that corresponds to @p instanceNumber.
+     *
+     * @param instanceNumber
+     * @see restore()
      */
-    static const QString classNameOfToplevel(int number);
+    static const QString classNameOfToplevel(int instanceNumber);
 
     /**
-     * Try to restore the toplevel widget as defined by @p number (1..X).
+     * @brief Attempt to restore the top-level widget as defined by @p numberOfInstances (1..X).
      *
      * You should call canBeRestored() first.
      *
      * If the session did not contain so high a number, the configuration
-     * is not changed and @c false returned.
+     * is not changed and @c false is returned.
      *
      * That means clients could simply do the following:
      * \code
@@ -250,41 +226,55 @@ public:
      * Note that if @p show is @c true (default), QWidget::show() is called
      * implicitly in restore.
      *
-     * With this you can easily restore all toplevel windows of your
+     * With this you can easily restore all top-level windows of your
      * application.
      *
-     * If your application uses different kinds of toplevel
+     * If your application uses different kinds of top-level
      * windows, then you can use KMainWindow::classNameOfToplevel(n)
      * to determine the exact type before calling the childMW
      * constructor in the example from above.
      *
      * @note You don't need to deal with this function. Use the
      * kRestoreMainWindows() convenience template function instead!
+     *
+     * @param numberOfInstances The number of KMainWindow instances from the last session.
+     * @param show Whether the KMainWindow instances will be visible by default.
+     *
+     * @returns @c true if the session contained
+     * the same number of instances as the requested number,
+     * @c false if the session contained less instances than the requested number,
+     * in which case no configuration is changed.
+     *
      * @see kRestoreMainWindows()
      * @see readProperties()
      * @see canBeRestored()
      */
-    bool restore(int number, bool show = true);
+    bool restore(int numberOfInstances, bool show = true);
 
     /**
-     * Returns true, if there is a menubar
+     * @returns @c true if there is a menubar, @c false otherwise.
      */
     bool hasMenuBar();
 
     /**
-     * List of members of KMainWindow class.
+     * @returns The list of members of the KMainWindow class.
      */
     static QList<KMainWindow *> memberList();
 
     /**
-     * Returns a pointer to the toolbar with the specified name.
+     * @brief This is useful to both call specific toolbars that have been created
+     * or to generate a default one upon call.
+     *
      * This refers to toolbars created dynamically from the XML UI
-     * framework.  If the toolbar does not exist one will be created.
+     * framework via KConfig or appnameui.rc.
+     *
+     * If the toolbar does not exist, one will be created.
      *
      * @param name The internal name of the toolbar. If no name is
-     *             specified "mainToolBar" is assumed.
+     *             specified, "mainToolBar" is assumed.
      *
-     * @return A pointer to the toolbar
+     * @return A pointer to the toolbar with the specified name.
+     * @see toolBars()
      **/
     KToolBar *toolBar(const QString &name = QString());
 
@@ -294,115 +284,162 @@ public:
     QList<KToolBar *> toolBars() const;
 
     /**
-     * Call this to enable "auto-save" of toolbar/menubar/statusbar settings
+     * @brief This enables autosave of toolbar/menubar/statusbar settings
      * (and optionally window size).
-     * If the *bars were moved around/shown/hidden when the window is closed,
-     * saveMainWindowSettings( KConfigGroup(KSharedConfig::openConfig(), groupName) ) will be called.
-     *
-     * @param groupName a name that identifies this "type of window".
+     * @param groupName A name that identifies the type of window.
      * You can have several types of window in the same application.
+     * If no @p groupName is specified, the value defaults to "MainWindow".
      *
-     * @param saveWindowSize set it to true to include the window size
-     * when saving.
+     * @param saveWindowSize Whether to include the window size
+     * when saving. @c true by default.
+     *
+     * If the *bars were modified when the window is closed,
+     * saveMainWindowSettings( KConfigGroup(KSharedConfig::openConfig(), groupName) ) will be called.
      *
      * Typically, you will call setAutoSaveSettings() in your
      * KMainWindow-inherited class constructor, and it will take care
-     * of restoring and saving automatically. Make sure you call this
-     * _after all_ your *bars have been created.
+     * of restoring and saving automatically.
+     *
+     * By default, this generates an
+     * appnamerc ini file as if using default KConfig constructor or KConfig::SimpleConfig.
+     *
+     * Make sure you call this @em after all your *bars have been created.
      *
      * To make sure that KMainWindow properly obtains the default
      * size of the window you should do the following:
-     * - Remove hard coded resize() calls in the constructor or main, they
-     *   should be removed in favor of letting the automatic resizing
-     *   determine the default window size.  Hard coded window sizes will
-     *   be wrong for users that have big fonts, use different styles,
-     *   long/small translations, large toolbars, and other factors.
-     * - Put the setAutoSaveSettings() ( or setupGUI() ) call after all widgets
-     *   have been created and placed inside the main window (i.e. for 99% of
-     *   apps setCentralWidget())
-     * - Widgets that inherit from QWidget (like game boards) should overload
-     *   "virtual QSize sizeHint() const;" to specify a default size rather
-     *   than letting QWidget::adjust use the default size of 0x0.
+     * - Remove hardcoded resize() calls in the constructor or main
+     *   to let the automatic resizing determine the default window size.
+     *   Hardcoded window sizes will be wrong for users that have big fonts,
+     *   use different styles, long/small translations, large toolbars, and other factors.
+     * - Put the setAutoSaveSettings() call after all widgets
+     *   have been created and placed inside the main window
+     *   (for most apps this means QMainWindow::setCentralWidget())
+     * - QWidget-based objects should overload "virtual QSize sizeHint() const;"
+     *   to specify a default size.
+     * @see KConfig
+     * @see KSharedConfig
+     * @see saveMainWindowSettings()
+     * @see toolBar()
+     * @see KXmlGuiWindow::setupGUI()
      */
     void setAutoSaveSettings(const QString &groupName = QStringLiteral("MainWindow"), bool saveWindowSize = true);
 
     /**
-     * Overload that lets you specify a KConfigGroup.
-     * This allows the settings to be saved into another file than KSharedConfig::openConfig().
+     * This is an overloaded function.
+     * This allows the settings to be saved into a different file
+     * that does not correspond to that used for KSharedConfig::openConfig().
+     * @see setAutoSaveSettings(const QString &groupName, bool saveWindowSize)
+     * @see KConfig
+     * @see KSharedConfig
      * @since 4.1
      */
     void setAutoSaveSettings(const KConfigGroup &group, bool saveWindowSize = true);
 
     /**
-     * Disable the auto-save-settings feature.
+     * @brief Disables the autosave settings feature.
      * You don't normally need to call this, ever.
+     * @see setAutoSaveSettings()
+     * @see autoSaveSettings()
      */
     void resetAutoSaveSettings();
 
     /**
-     * @return the current autosave setting, i.e. true if setAutoSaveSettings() was called,
-     * false by default or if resetAutoSaveSettings() was called.
+     * @return @c true if setAutoSaveSettings() was called,
+     * @c false by default or if resetAutoSaveSettings() was called.
+     * @see setAutoSaveSettings()
+     * @see resetAutoSaveSettings()
      */
     bool autoSaveSettings() const;
 
     /**
-     * @return the group used for setting-autosaving.
+     * @return The group used for autosaving settings.
+     *
+     * Do not mistake this with autoSaveConfigGroup.
+     *
      * Only meaningful if setAutoSaveSettings(const QString&, bool) was called.
+     *
+     * Do not use this method if setAutoSaveSettings(const KConfigGroup&, bool) was called.
+     *
      * This can be useful for forcing a save or an apply, e.g. before and after
      * using KEditToolBar.
      *
-     * @note You should rather use saveAutoSaveSettings() for saving or autoSaveConfigGroup() for loading.
-     * This method doesn't make sense if setAutoSaveSettings(const KConfigGroup&, bool) was called.
+     * @note Prefer saveAutoSaveSettings() for saving or autoSaveConfigGroup() for loading.
+     *
+     * @see autoSaveSettings()
+     * @see setAutoSaveSettings()
+     * @see saveAutoSaveSettings()
+     * @see resetAutoSaveSettings()
+     * @see autoSaveConfigGroup()
      */
     QString autoSaveGroup() const;
 
     /**
-     * @return the group used for setting-autosaving.
-     * Only meaningful if setAutoSaveSettings() was called.
+     * @return The group used for autosaving settings.
+     *
+     * Only meaningful if setAutoSaveSettings(const QString&, bool) was called.
+     *
+     * Do not use this method if setAutoSaveSettings(const KConfigGroup&, bool) was called.
+     *
      * This can be useful for forcing an apply, e.g. after using KEditToolBar.
+     *
+     * @see setAutoSaveSettings()
+     * @see autoSaveGroup()
      * @since 4.1
      */
     KConfigGroup autoSaveConfigGroup() const;
 
     /**
-     * Set the config group name for state config returned by @p stateConfigGroup
-     * If this method is called the window size and window state are stored in the resulting KConfigGroup.
-     * @note If this is used in combination with @p setAutoSaveSettings, you should call this method first
+     * @brief Assigns the config group name for the KConfigGroup returned by stateConfigGroup.
+     * @param configGroup The config group to be assigned.
+     * Window size and state are stored in the resulting KConfigGroup when this function is called.
+     * @note If this is used in combination with setAutoSaveSettings, you should call this method first.
      *
-     * @see KSharedConfig::openStateConfig
+     * @see KConfigGroup()
+     * @see KSharedConfig::openStateConfig()
+     * @see stateConfigGroup()
      *
      * @since 5.88
      */
     void setStateConfigGroup(const QString &configGroup);
 
-    /*
-     * Returns the KConfigGroup used to store state data like window sizes or window state.
-     * The resulting group in invalid if @p setStateConfig is not called explicitly.
+    /**
+     * @returns The KConfigGroup used to store state data like window sizes or window state.
+     *
+     * The resulting group is invalid if setStateConfig is not called explicitly.
+     *
+     * @see KConfigGroup
      * @since 5.88
      */
     KConfigGroup stateConfigGroup() const;
 
     /**
-     * Read settings for statusbar, menubar and toolbar from their respective
+     * @brief Read settings for statusbar, menubar and toolbar from their respective
      * groups in the config file and apply them.
      *
      * @param config Config group to read the settings from.
-     *
-     * KF5 porting note: the unused bool argument was removed, make sure to remove it from your
-     * reimplementations too! And add a override for good measure.
      */
     virtual void applyMainWindowSettings(const KConfigGroup &config);
 
     /**
-     * Save settings for statusbar, menubar and toolbar to their respective
-     * groups in the config group @p config.
+     * @brief Manually save the settings for statusbar, menubar and toolbar to their respective
+     * groups in the KConfigGroup @p config.
+     *
+     * Example:
+     * \code
+     * KConfigGroup group(KSharedConfig::openConfig(), "MainWindow");
+     * saveMainWindowSettings(group);
+     * \endcode
      *
      * @param config Config group to save the settings to.
+     * @see setAutoSaveSettings()
+     * @see KConfig
+     * @see KSharedConfig
+     * @see KConfigGroup
      */
     void saveMainWindowSettings(KConfigGroup &config);
 
     /**
-     * Returns the path under which this window's D-Bus object is exported.
+     * @returns The path for the exported window's D-Bus object.
      * @since 4.0.1
      */
     QString dbusName() const;
@@ -421,59 +458,85 @@ public:
 
 public Q_SLOTS:
     /**
-     * Makes a KDE compliant caption (window title).
+     * @brief Assigns a KDE compliant caption (window title).
      *
-     * @param caption Your caption. @em Do @em not include the application name
+     * @param caption The string that will be
+     * displayed in the window title, before the application name.
+     *
+     * @note This function does the same as setPlainCaption().
+     *
+     * @note Do not include the application name
      * in this string. It will be added automatically according to the KDE
      * standard.
+     *
+     * @see setPlainCaption()
      */
     virtual void setCaption(const QString &caption);
     /**
-     * Makes a KDE compliant caption.
+     * @brief Makes a KDE compliant caption.
+     * @param caption Your caption.
+     * @param modified Whether the document is modified. This displays
+     * an additional sign in the title bar, usually "**".
      *
-     * @param caption Your caption. @em Do @em not include the application name
+     * This is an overloaded function.
+     *
+     * @note Do not include the application name
      * in this string. It will be added automatically according to the KDE
      * standard.
-     * @param modified Specify whether the document is modified. This displays
-     * an additional sign in the title bar, usually "**".
      */
     virtual void setCaption(const QString &caption, bool modified);
 
     /**
-     * Make a plain caption without any modifications.
+     * @brief Make a plain caption without any modifications.
      *
-     * @param caption Your caption. This is the string that will be
-     * displayed in the window title.
+     * @param caption The string that will be
+     * displayed in the window title, before the application name.
+     *
+     * @note This function does the same as setCaption().
+     *
+     * @note Do not include the application name
+     * in this string. It will be added automatically according to the KDE
+     * standard.
+     *
+     * @see setCaption()
      */
     virtual void setPlainCaption(const QString &caption);
 
     /**
-     * Open the help page for the application.
+     * @brief Opens the help page for the application.
      *
-     *  The application name is
+     * The application name is
      * used as a key to determine what to display and the system will attempt
      * to open \<appName\>/index.html.
      *
      * This method is intended for use by a help button in the toolbar or
-     * components outside the regular help menu. Use helpMenu() when you
+     * components outside the regular help menu.
+     *
+     * Use helpMenu() when you
      * want to provide access to the help system from the help menu.
      *
      * Example (adding a help button to the first toolbar):
      *
      * \code
-     * toolBar(0)->addAction(QIcon::fromTheme("help-contents"), i18n("Help"),
-     *                       this, SLOT(appHelpActivated()));
+     * toolBar()->addAction(QIcon::fromTheme("help-contents"), i18n("Help"),
+     *                       this, &KMainWindow::appHelpActivated);
      * \endcode
      *
+     * @see helpMenu()
+     * @see toolBar()
      */
     void appHelpActivated();
 
     /**
-     * Tell the main window that it should save its settings when being closed.
-     * This is part of the auto-save-settings feature.
+     * @brief Tell the main window that it should save its settings when being closed.
+     *
+     * This is part of the autosave settings feature.
+     *
      * For everything related to toolbars this happens automatically,
      * but you have to call setSettingsDirty() in the slot that toggles
      * the visibility of the statusbar.
+     *
+     * @see saveAutoSaveSettings()
      */
     void setSettingsDirty();
 
@@ -490,54 +553,61 @@ protected:
      *
      * We recommend that you reimplement queryClose() rather than closeEvent().
      * If you do it anyway, ensure to call the base implementation to keep
-     * the feature of auto-saving window settings working.
+     * the feature of autosaving window settings working.
      */
     void closeEvent(QCloseEvent *) override;
 
     /**
-       Called before the window is closed, either by the user or indirectly by
-       the session manager.
-
-       The purpose of this function is to prepare the window in a way that it is
-       safe to close it, i.e. without the user losing some data.
-
-       Default implementation returns true. Returning @c false will cancel
-       the closing, and, if KApplication::sessionSaving() is true, it will also
-       cancel KDE logout.
-
-       Reimplement this function to prevent the user from losing data.
-       Example:
-       \code
-       switch ( KMessageBox::warningTwoActionsCancel( this,
-                i18n("Save changes to document foo?"), QString(),
-                KStandardGuiItem::save(), KStandardGuiItem::discard())) ) {
-       case KMessageBox::PrimaryAction :
-         // save document here. If saving fails, return false;
-         return true;
-       case KMessageBox::SecondaryAction :
-         return true;
-       default: // cancel
-         return false;
-       \endcode
-
-       Note that you should probably @em not actually close the document from
-       within this method, as it may be called by the session manager before the
-       session is saved. If the document is closed before the session save occurs,
-       its location might not be properly saved. In addition, the session shutdown
-       may be canceled, in which case the document should remain open.
-
-       @see KApplication::sessionSaving()
-    */
+     * @brief This function is called before the window is closed,
+     * either by the user or indirectly by the session manager.
+     *
+     * This can be used to prompt the user to save unsaved data before the window is closed.
+     *
+     * Example:
+     * \code
+     * switch ( KMessageBox::warningTwoActionsCancel( this,
+     *          i18n("Save changes to document foo?"), QString(),
+     *          KStandardGuiItem::save(), KStandardGuiItem::discard())) ) {
+     *   case KMessageBox::PrimaryAction :
+     *     // save document here. If saving fails, return false;
+     *     return true;
+     *   case KMessageBox::SecondaryAction :
+     *     return true;
+     *   default: // cancel
+     *     return false;
+     * \endcode
+     *
+     * @note Do @em not close the document from within this method,
+     * as it may be called by the session manager before the
+     * session is saved. If the document is closed before the session save occurs,
+     * its location might not be properly saved. In addition, the session shutdown
+     * may be canceled, in which case the document should remain open.
+     *
+     * @return @c true by default, @c false according to the reimplementation.
+     * Returning @c false will cancel the closing operation,
+     * and if KApplication::sessionSaving() is true, it cancels logout.
+     *
+     * @see KApplication::sessionSaving()
+     */
     virtual bool queryClose();
 
     /**
-     * Save your instance-specific properties. The function is
+     * @brief Saves your instance-specific properties.
+     *
+     * The function is
      * invoked when the session manager requests your application
      * to save its state.
      *
-     * Please reimplement these function in childclasses.
+     * Reimplement this function in child classes.
      *
-     * Note: No user interaction is allowed
+     * \code
+     * void MainWindow::saveProperties(KConfigGroup &config) {
+     *   config.writeEntry("myKey", "newValue");
+     *   ...
+     * }
+     * \endcode
+     *
+     * @note No user interaction is allowed
      * in this function!
      *
      */
@@ -546,36 +616,53 @@ protected:
     }
 
     /**
-     * Read your instance-specific properties.
+     * @brief Reads your instance-specific properties.
      *
-     * Is called indirectly by restore().
+     * This function is called indirectly by restore().
+     *
+     * \code
+     * void MainWindow::readProperties(KConfigGroup &config) {
+     *   if (config.hasKey("myKey")) {
+     *     config.readEntry("myKey", "DefaultValue");
+     *   }
+     *   ...
+     * }
+     * \endcode
+     *
+     * @see readGlobalProperties()
      */
     virtual void readProperties(const KConfigGroup &)
     {
     }
 
     /**
-      * Save your application-wide properties. The function is
-      * invoked when the session manager requests your application
-      * to save its state.
-      *
-      * This function is similar to saveProperties() but is only called for
-      * the very first main window, regardless how many main window are open.
-
-      * Override it if you need to save other data about your documents on
-      * session end. sessionConfig is a config to which that data should be
-      * saved. Normally, you don't need this function. But if you want to save
-      * data about your documents that are not in opened windows you might need
-      * it.
-      *
-      * Default implementation does nothing.
-      */
+     * @brief Saves your application-wide properties.
+     *
+     * @param sessionConfig A pointer to the KConfig instance
+     * used to save the session data.
+     *
+     * This function is invoked when the session manager
+     * requests your application to save its state.
+     * It is similar to saveProperties(), but it is only called for
+     * the first main window. This is useful to save global state of your application
+     * that isn't bound to a particular window.
+     *
+     * The default implementation does nothing.
+     *
+     * @see readGlobalProperties()
+     * @see saveProperties()
+     */
     virtual void saveGlobalProperties(KConfig *sessionConfig);
 
     /**
-     * The counterpart of saveGlobalProperties().
+     * @brief Reads your application-wide properties.
      *
-     * Read the application-specific properties in again.
+     * @param sessionConfig A pointer to the KConfig instance
+     * used to load the session data.
+     *
+     * @see saveGlobalProperties()
+     * @see readProperties()
+     *
      */
     virtual void readGlobalProperties(KConfig *sessionConfig);
     void savePropertiesInternal(KConfig *, int);
@@ -638,24 +725,24 @@ protected Q_SLOTS:
 
     /**
      * This slot should only be called in case you reimplement closeEvent() and
-     * if you are using the "auto-save" feature. In all other cases,
+     * if you are using the autosave feature. In all other cases,
      * setSettingsDirty() should be called instead to benefit from the delayed
      * saving.
-     *
-     * @see setAutoSaveSettings
-     * @see setSettingsDirty
      *
      * Example:
      * \code
      *
      * void MyMainWindow::closeEvent( QCloseEvent *e )
      * {
-     *   // Save settings if auto-save is enabled, and settings have changed
+     *   // Save settings if autosave is enabled, and settings have changed
      *   if ( settingsDirty() && autoSaveSettings() )
      *     saveAutoSaveSettings();
      *   ..
      * }
      * \endcode
+     *
+     * @see setAutoSaveSettings()
+     * @see setSettingsDirty()
      */
     void saveAutoSaveSettings();
 
@@ -704,12 +791,12 @@ private:
 #define KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS 3
 
 /**
- * Restores the last session. (To be used in your main function).
+ * @brief Restores the last session. (To be used in your main function).
  *
- * These functions work also if you have more than one kind of toplevel
+ * These functions work also if you have more than one kind of top-level
  * widget (each derived from KMainWindow, of course).
  *
- * Imagine you have three kinds of toplevel widgets: the classes @c childMW1,
+ * Imagine you have three kinds of top-level widgets: the classes @c childMW1,
  * @c childMW2 and @c childMW3. Then you can just do:
  *
  * \code
@@ -735,7 +822,9 @@ private:
  * deciding whether or not you can use kRestoreMainWindows, a
  * define #KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS is provided.
  *
- * @tparam T toplevel widget class
+ * @note Prefer this function over directly calling KMainWindow::restore().
+ *
+ * @tparam T Top-level widget class
  *
  * @see KMainWindow::restore()
  * @see KMainWindow::classNameOfToplevel()
@@ -752,12 +841,15 @@ inline void kRestoreMainWindows()
 }
 
 /**
- * Restores the last session.
- * Overloaded method for usage with multiple different toplevel widget classes.
+ * @brief Restores the last session.
+ * This is an overloaded function.
  *
- * @tparam T0 one toplevel widget class
- * @tparam T1 explicit other toplevel widget class for disambiguation from base template
+ * Use this with multiple different top-level widget classes.
+ *
+ * @tparam T0 One top-level widget class
+ * @tparam T1 Explicit other top-level widget class for disambiguation from base template
  * @tparam Tn Parameter pack to take 0..n further KMainWindows
+ * @see kRestoreMainWindows()
  */
 template<typename T0, typename T1, typename... Tn>
 inline void kRestoreMainWindows()
