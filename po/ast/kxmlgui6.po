@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-30 03:35+0000\n"
-"PO-Revision-Date: 2023-04-28 23:07+0200\n"
+"PO-Revision-Date: 2023-05-03 21:11+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -51,7 +51,7 @@ msgstr "Llicencia: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr ""
+msgstr "Tocante a %1"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr ""
+msgstr "Tocante a KDE"
 
 #: kaboutkdedialog_p.cpp:34
 #, kde-format
@@ -167,7 +167,7 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>Nun tienes de ser desendolcador de software pa ser miembru de l'equipu "
+"<html>Nun tienes de ser desendolcador de software pa ser miembru del equipu "
 "KDE. Pues xunite a los equipos nacionales que traducen interfaces de "
 "programes, fornir gráficos, estilos, soníos ya una documentación ameyorada. "
 "¡Tú decides!<br /><br />Visita <a href=\"%1\">%1</a> pa consiguir "
@@ -282,7 +282,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
-msgstr ""
+msgstr "Unviu d'un informe de fallos"
 
 #: kbugreport.cpp:130
 #, kde-format
@@ -1244,7 +1244,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
-msgstr ""
+msgstr "Configuración de la barra de ferramientes"
 
 #: ktoolbar.cpp:300
 #, kde-format
@@ -1262,85 +1262,85 @@ msgstr "Orientación"
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
-msgstr ""
+msgstr "Arriba"
 
 #: ktoolbar.cpp:313
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
-msgstr ""
+msgstr "Esquierda"
 
 #: ktoolbar.cpp:316
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
-msgstr ""
+msgstr "Derecha"
 
 #: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
-msgstr ""
+msgstr "Abaxo"
 
 #: ktoolbar.cpp:330
 #, kde-format
 msgid "Text Position"
-msgstr ""
+msgstr "Posición del testu"
 
 #: ktoolbar.cpp:332
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
-msgstr ""
+msgstr "Namás iconos"
 
 #: ktoolbar.cpp:335
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
-msgstr ""
+msgstr "Namás testu"
 
 #: ktoolbar.cpp:338
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
-msgstr ""
+msgstr "Al llau de los iconos"
 
 #: ktoolbar.cpp:341
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
-msgstr ""
+msgstr "So los iconos"
 
 #: ktoolbar.cpp:352
 #, kde-format
 msgid "Icon Size"
-msgstr ""
+msgstr "Tamañu de los iconos"
 
 #: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
-msgstr ""
+msgstr "Predetermináu"
 
 #: ktoolbar.cpp:374 ktoolbar.cpp:398
 #, kde-format
 msgid "Small (%1x%2)"
-msgstr ""
+msgstr "Pequeñu (%1x%2)"
 
 #: ktoolbar.cpp:376 ktoolbar.cpp:400
 #, kde-format
 msgid "Medium (%1x%2)"
-msgstr ""
+msgstr "Normal (%1x%2)"
 
 #: ktoolbar.cpp:378 ktoolbar.cpp:402
 #, kde-format
 msgid "Large (%1x%2)"
-msgstr ""
+msgstr "Grande (%1x%2)"
 
 #: ktoolbar.cpp:380 ktoolbar.cpp:404
 #, kde-format
 msgid "Huge (%1x%2)"
-msgstr ""
+msgstr "Escomanáu (%1x%2)"
 
 #: ktoolbar.cpp:430
 #, kde-format
@@ -1418,6 +1418,9 @@ msgid ""
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
+"Hai aiciones («%1» ya «%2») que quieren usar el mesmu atayu (%3). Ye mui "
+"probable qu'esta ambigüedá seya un fallu. Informa d'esti problema en <a "
+"href='https://bugs.kde.org'>bugs.kde.org</a>"
 
 #: kxmlguiwindow.cpp:533
 #, kde-format
