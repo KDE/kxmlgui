@@ -1,5 +1,3 @@
-add_subdirectory(ksendbugmail)
-
 add_library(KF6XmlGui)
 add_library(KF6::XmlGui ALIAS KF6XmlGui)
 

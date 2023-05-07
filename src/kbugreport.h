@@ -49,35 +49,16 @@ public:
     ~KBugReport() override;
 
     /**
-     * The message body of the bug report
-     * @return The message body of the bug report.
-     */
-    QString messageBody() const;
-
-    /**
-     * Sets the message body of the bug report.
-     */
-    void setMessageBody(const QString &messageBody);
-
-    /**
      * OK has been clicked
      */
     void accept() override;
 
 protected:
     /**
-     * A complete copy of the bug report
-     * @return QString copy of the bug report.
-     */
-    QString text() const;
-
-    /**
      * Attempt to e-mail the bug report.
      * @return true on success
      */
     bool sendBugReport();
-
-    void closeEvent(QCloseEvent *e) override;
 
 private:
     friend class KBugReportPrivate;
