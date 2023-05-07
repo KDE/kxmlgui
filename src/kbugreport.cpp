@@ -117,7 +117,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     if (d->m_strVersion.isEmpty()) {
         d->m_strVersion = i18n("no version set (programmer error)");
     }
-    d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING) + QLatin1String(", ") + QStringLiteral(XMLGUI_DISTRIBUTION_TEXT);
+    d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING);
     if (d->bugDestination != KBugReportPrivate::BugsKdeOrg) {
         d->m_strVersion += QLatin1Char(' ') + d->kde_version;
     }
