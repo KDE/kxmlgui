@@ -31,7 +31,6 @@ class KBugReportPrivate
 public:
     KBugReportPrivate(KBugReport *qq)
         : q(qq)
-        , m_aboutData(KAboutData::applicationData())
     {
     }
 
@@ -44,7 +43,6 @@ public:
     void updateUrl();
 
     KBugReport *const q;
-    KAboutData m_aboutData;
 
     QLabel *m_version = nullptr;
     QString m_strVersion;
@@ -54,7 +52,7 @@ public:
     QString appname;
     QString os;
     QUrl url;
-    BugDestination bugDestination;
+    BugDestination bugDestination = KBugReportPrivate::CustomUrl;
 };
 
 KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
@@ -68,10 +66,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    d->m_aboutData = aboutData;
-    d->bugDestination = KBugReportPrivate::CustomUrl;
-
-    const QString bugAddress = d->m_aboutData.bugAddress();
+    const QString bugAddress = aboutData.bugAddress();
     if (bugAddress == QLatin1String("submit@bugs.kde.org")) {
         // This is a core KDE application -> redirect to the web form
         d->bugDestination = KBugReportPrivate::BugsKdeOrg;
@@ -103,7 +98,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     glay->addWidget(tmpLabel, row, 0);
     tmpLabel->setWhatsThis(qwtstr);
     QLabel *appLabel = new QLabel(this);
-    d->appname = d->m_aboutData.productName();
+    d->appname = aboutData.productName();
     appLabel->setText(d->appname);
     glay->addWidget(appLabel, row, 1);
     tmpLabel->setWhatsThis(qwtstr);
@@ -113,7 +108,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     tmpLabel = new QLabel(i18n("Version:"), this);
     glay->addWidget(tmpLabel, ++row, 0);
     tmpLabel->setWhatsThis(qwtstr);
-    d->m_strVersion = d->m_aboutData.version();
+    d->m_strVersion = aboutData.version();
     if (d->m_strVersion.isEmpty()) {
         d->m_strVersion = i18n("no version set (programmer error)");
     }
