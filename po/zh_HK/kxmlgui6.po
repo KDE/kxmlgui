@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -351,72 +351,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "含糊的 \"%1\" 沒有被處理"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "提交問題報告"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "提交問題報告"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr "你的 email 地址。如果不正確，請使用 [設定 Email] 按鈕來變更"
-
-#: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgid "From:"
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "來源："
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "設定 Email..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "本問題回覆是寄往此 email 地址"
-
-#: kbugreport.cpp:159
-#, fuzzy, kde-format
-#| msgid "To:"
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "到："
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "送出(&S)"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "送出問題報告。"
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "送出這個問題報告到 %1 問題清單。"
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -425,35 +372,35 @@ msgstr ""
 "你希望提交問題報告的應用程式──如果不正確，請使用正確的應用程式的 [報告問題] "
 "選單"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "應用程式："
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr "這個應用程式的版本──請確定在你提交問題報告之前沒有新的版本"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "版本："
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, fuzzy, kde-format
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
 msgstr "沒有設定版本 (程式設計者的錯誤！)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "作業系統："
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -461,7 +408,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 ( %2 )"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -470,7 +417,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2，%3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -478,66 +425,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 ( %2 )"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "嚴重程度(&V)"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "危險的"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "嚴重的"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "普通的"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "希望清單"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "翻譯"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "主題(&U)："
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"請輸入你要提交的問題報告的文字，盡量使用英文。\n"
-"如果你按下「送出」按鈕，將會傳送郵件訊息到此程式的維護者。\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -550,7 +438,7 @@ msgstr ""
 "的表格。\n"
 "以上所顯示的訊息將會被傳送到該伺服器。"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -561,122 +449,19 @@ msgstr ""
 "的表格。\n"
 "以上所顯示的訊息將會被傳送到該伺服器。"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "執行錯誤報告精靈(&L)"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "提交問題報告"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr "你必須指定主題與描述才能發出問題報告。"
-
-#: kbugreport.cpp:441
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
-#| "system (or the whole system)</li><li>cause serious data loss</"
-#| "li><li>introduce a security hole on the system where the affected package "
-#| "is installed</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>你選擇了 <b>危險的 (Critical)</b> 嚴重性。請注意此嚴重性只適用於以下錯誤："
-"</p><ul><li>使系統中不相關的軟件 (甚或整個系統) 出現問題</li><li>導致嚴重的資"
-"料流失</li><li>在安裝受影響套件的系統上引入安全漏洞</li></ul>\n"
-"<p>你正準備報告的錯誤會造成以上任一個損壞嗎？如果不會，請你選擇較低的嚴重性。"
-"謝謝！</p>"
-
-#: kbugreport.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#| "intended only for bugs that</p><ul><li>make the package in question "
-#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#| "security hole allowing access to the accounts of users who use the "
-#| "affected package</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>你選擇了 <b>嚴重的 (Grave)</b> 嚴重性。請注意此嚴重性只適用於以下錯誤：</"
-"p><ul><li>讓此套件幾乎或完全不能使用</li><li>導致資料流失</li><li>在使用此套"
-"件的使用者帳號中引入安全漏洞</li></ul>\n"
-"<p>你正準備報告的錯誤會造成以上任一個損壞嗎？如果不會，請你選擇較低的嚴重性。"
-"謝謝！</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually...\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"無法傳送此問題報告。\n"
-"請以手動方式提交問題報告...\n"
-"請參閱 http://bugs.kde.org/ 取得指示。"
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "問題報告已送出，感謝你的幫忙。"
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"關閉並放棄\n"
-"已編輯的訊息？"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "關閉訊息"
 
 #: kcheckaccelerators.cpp:199
 #, fuzzy, kde-format
@@ -1045,53 +830,6 @@ msgstr "加入至自訂顏色(&A)"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "設定快速鍵(&H)..."
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-#| msgid "Error parsing providers list."
-msgid "Error connecting to server."
-msgstr "供應者列表有語法錯誤。"
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "locally connected"
-msgid "Not connected."
-msgstr "本地端連接"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Socket error code ConnectionTimedOut"
-#| msgid "connection timed out"
-msgid "Connection timed out."
-msgstr "連線逾時"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "<Merge %1>"
-msgid "Server said: \"%1\""
-msgstr "<合併 %1>"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "送出問題報告。"
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-msgid "The subject line of the email."
-msgstr "每日小祕訣"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "本問題回覆是寄往此 email 地址"
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1697,6 +1435,217 @@ msgstr "設定(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "主工具列"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr "你的 email 地址。如果不正確，請使用 [設定 Email] 按鈕來變更"
+
+#, fuzzy
+#~| msgid "From:"
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "來源："
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "設定 Email..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "本問題回覆是寄往此 email 地址"
+
+#, fuzzy
+#~| msgid "To:"
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "到："
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "送出(&S)"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "送出問題報告。"
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "送出這個問題報告到 %1 問題清單。"
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "嚴重程度(&V)"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "危險的"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "嚴重的"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "普通的"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "希望清單"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "翻譯"
+
+#~ msgid "S&ubject: "
+#~ msgstr "主題(&U)："
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "請輸入你要提交的問題報告的文字，盡量使用英文。\n"
+#~ "如果你按下「送出」按鈕，將會傳送郵件訊息到此程式的維護者。\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr "你必須指定主題與描述才能發出問題報告。"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Critical</b>. Please note that this "
+#~| "severity is intended only for bugs that</p><ul><li>break unrelated "
+#~| "software on the system (or the whole system)</li><li>cause serious data "
+#~| "loss</li><li>introduce a security hole on the system where the affected "
+#~| "package is installed</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>你選擇了 <b>危險的 (Critical)</b> 嚴重性。請注意此嚴重性只適用於以下錯"
+#~ "誤：</p><ul><li>使系統中不相關的軟件 (甚或整個系統) 出現問題</li><li>導致"
+#~ "嚴重的資料流失</li><li>在安裝受影響套件的系統上引入安全漏洞</li></ul>\n"
+#~ "<p>你正準備報告的錯誤會造成以上任一個損壞嗎？如果不會，請你選擇較低的嚴重"
+#~ "性。謝謝！</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Grave</b>. Please note that this severity "
+#~| "is intended only for bugs that</p><ul><li>make the package in question "
+#~| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~| "security hole allowing access to the accounts of users who use the "
+#~| "affected package</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>你選擇了 <b>嚴重的 (Grave)</b> 嚴重性。請注意此嚴重性只適用於以下錯誤："
+#~ "</p><ul><li>讓此套件幾乎或完全不能使用</li><li>導致資料流失</li><li>在使用"
+#~ "此套件的使用者帳號中引入安全漏洞</li></ul>\n"
+#~ "<p>你正準備報告的錯誤會造成以上任一個損壞嗎？如果不會，請你選擇較低的嚴重"
+#~ "性。謝謝！</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually...\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "無法傳送此問題報告。\n"
+#~ "請以手動方式提交問題報告...\n"
+#~ "請參閱 http://bugs.kde.org/ 取得指示。"
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "問題報告已送出，感謝你的幫忙。"
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "關閉並放棄\n"
+#~ "已編輯的訊息？"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "關閉訊息"
+
+#, fuzzy
+#~| msgid "Error parsing providers list."
+#~ msgid "Error connecting to server."
+#~ msgstr "供應者列表有語法錯誤。"
+
+#, fuzzy
+#~| msgid "locally connected"
+#~ msgid "Not connected."
+#~ msgstr "本地端連接"
+
+#, fuzzy
+#~| msgctxt "Socket error code ConnectionTimedOut"
+#~| msgid "connection timed out"
+#~ msgid "Connection timed out."
+#~ msgstr "連線逾時"
+
+#, fuzzy
+#~| msgid "<Merge %1>"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "<合併 %1>"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "送出問題報告。"
+
+#, fuzzy
+#~ msgid "The subject line of the email."
+#~ msgstr "每日小祕訣"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "本問題回覆是寄往此 email 地址"
 
 #, fuzzy
 #~| msgid "Homepage"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2016-04-30 17:56+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -371,72 +371,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Mhothaich sinn dha dh'ath-ghoirid ioma-sheaghach"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Cuir a-null aithris air buga"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Cuir a-null aithris air buga"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"An seòladh puist-d agad. Mur eil e mar bu chòir, Cleachd am putan \"Rèitich "
-"am post-d\" gus atharrachadh"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "O:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Rèitich am post-d..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Am post-d dhan a thèid aithris air a' bhuga a chur."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Gu:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Cuir"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Cuir aithris air buga."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Cuir aithris air a' bhuga seo gu %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -445,12 +392,12 @@ msgstr ""
 "An aplacaid sa bheil am buga - mur eil i mar bu chòir, cleachd an nì clàir-"
 "thaice \"Dèan aithris air buga\" aig an aplacaid cheart"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Aplacaid: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -459,22 +406,22 @@ msgstr ""
 "Tionndadh na h-aplacaid seo - dèan cinnteach nach eil tionndadh nas ùire ri "
 "fhaighinn mus cuir thu aithris air buga a-null"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Tionndadh:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "cha deach tionndadh a shuidheachadh (seo mearachd prògramachaidh)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "Siostam-obrachaidh:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -482,7 +429,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -490,7 +437,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr ""
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -498,68 +445,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "&Cudromachd"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Èiginneach"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Cudromach"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Àbhaisteach"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Miann"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Eadar-theangachadh"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "C&uspair: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Cuir a-steach an teacsa (sa Bheurla mas urrainn dhut) a bu toigh leat a chur "
-"a-null airson na h-aithris air a' bhuga.\n"
-"Nuair a nì thu briogadh air \"Cuir a-null\", thèid teachdaireachd puist-d a "
-"chur gu neach-glèidhidh a' phrògraim seo.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -577,7 +463,7 @@ msgstr ""
 "\">http://bugs.kde.org</a> far am faic thu foirm ri lìonadh. Thèid am "
 "fiosrachadh a chì thu gu h-àrd a chur a-null dhan fhrithealaiche ud.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -593,114 +479,19 @@ msgstr ""
 "\">http://bugs.kde.org</a> far am faic thu foirm ri lìonadh. Thèid am "
 "fiosrachadh a chì thu gu h-àrd a chur a-null dhan fhrithealaiche ud.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Tòisich draoidh airson aithris air buga"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Cuir a-null aithris air buga"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Feumaidh tu an dà chuid cuspair is tuairisgeul a thoirt seachad mus gabh an "
-"aithris a chur a-null."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Thagh thu a' chudromachd <b>Èiginneach</b>. Thoir an aire nach eil a' "
-"chudromachd seo ann ach a chum bugaichean:</p><ul><li>a bhriseas bathar-bog "
-"nach eil co-cheangailte ris air an t-siostam (no an siostam air fad)</"
-"li><li>a dh'adhbharaicheas call dàta mòr</li><li>a dh'adhbharaicheas laigse "
-"tèarainteachd air an t-siostam far an deach a' phacaid bhuailte a stàladh</"
-"li></ul>\n"
-"<p>An adhbharaich am buga a tha thu ag aithris gin dhen dochann gu h-àrd? "
-"Mur adhbharaich, tagh cudromachd nas ìsle. Mòran taing.</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Thagh thu a' chudromachd <b>Cudromach</b>. Thoir an aire nach eil a' "
-"chudromachd seo ann ach a chum bugaichean:</p><ul><li>a dh'adhbharaicheas "
-"nach gabh a' phacaid a chleachdadh gu ìre mhòr</li><li>a dh'adhbharaicheas "
-"call dàta</li><li>a dh'adhbharaicheas laigse tèarainteachd a bheir "
-"inntrigeadh dha chunntasan nan cleachdaichean a chleachdas a' phacaid "
-"bhuailte</li></ul>\n"
-"<p>An adhbharaich am buga a tha thu ag aithris gin dhen dochann gu h-àrd? "
-"Mur adhbharaich, tagh cudromachd nas ìsle. Mòran taing.</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually....\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Cha deach leinn aithris air a' bhuga a chur a-null.\n"
-"An cuir thu aithris air buga dhuinn a làimh?\n"
-"Faic http://bugs.kde.org/ airson stiùireadh."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Chaidh an aithris a chur. Mòran taing airson an fhiosrachaidh."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"A bheil thu airson an teachdaireachd a dheasaich\n"
-"thu a dhùnadh 's a leigeil seachad?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Dùin an teachdaireachd"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -1101,46 +892,6 @@ msgstr "Cuir ris a' bhàr-inneal"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Rèitich an ath-ghoirid..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "Mearachd a' ceangal ris an fhrithealaiche."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "Chan eil ceangal ann."
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "Dh'fhalbh an ùine air a' cheangal."
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "Dh'fhalbh an ùine a' feitheamh air gnìomh on fhrithealaiche."
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "Thuirt am frithealaiche: \"%1\""
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "Cuiridh seo aithris air buga a-null air a' post-d."
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "Cuspair a' phuist-d."
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "An seòladh puist-d dhan dèid aithris air a' bhuga a chur."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1747,6 +1498,196 @@ msgstr "&Roghainnean"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Am prìomh bhàr-inneal"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "An seòladh puist-d agad. Mur eil e mar bu chòir, Cleachd am putan "
+#~ "\"Rèitich am post-d\" gus atharrachadh"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "O:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Rèitich am post-d..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Am post-d dhan a thèid aithris air a' bhuga a chur."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Gu:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Cuir"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Cuir aithris air buga."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Cuir aithris air a' bhuga seo gu %1."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "&Cudromachd"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Èiginneach"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Cudromach"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Àbhaisteach"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Miann"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Eadar-theangachadh"
+
+#~ msgid "S&ubject: "
+#~ msgstr "C&uspair: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Cuir a-steach an teacsa (sa Bheurla mas urrainn dhut) a bu toigh leat a "
+#~ "chur a-null airson na h-aithris air a' bhuga.\n"
+#~ "Nuair a nì thu briogadh air \"Cuir a-null\", thèid teachdaireachd puist-d "
+#~ "a chur gu neach-glèidhidh a' phrògraim seo.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Feumaidh tu an dà chuid cuspair is tuairisgeul a thoirt seachad mus gabh "
+#~ "an aithris a chur a-null."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Thagh thu a' chudromachd <b>Èiginneach</b>. Thoir an aire nach eil a' "
+#~ "chudromachd seo ann ach a chum bugaichean:</p><ul><li>a bhriseas bathar-"
+#~ "bog nach eil co-cheangailte ris air an t-siostam (no an siostam air fad)</"
+#~ "li><li>a dh'adhbharaicheas call dàta mòr</li><li>a dh'adhbharaicheas "
+#~ "laigse tèarainteachd air an t-siostam far an deach a' phacaid bhuailte a "
+#~ "stàladh</li></ul>\n"
+#~ "<p>An adhbharaich am buga a tha thu ag aithris gin dhen dochann gu h-àrd? "
+#~ "Mur adhbharaich, tagh cudromachd nas ìsle. Mòran taing.</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Thagh thu a' chudromachd <b>Cudromach</b>. Thoir an aire nach eil a' "
+#~ "chudromachd seo ann ach a chum bugaichean:</p><ul><li>a dh'adhbharaicheas "
+#~ "nach gabh a' phacaid a chleachdadh gu ìre mhòr</li><li>a "
+#~ "dh'adhbharaicheas call dàta</li><li>a dh'adhbharaicheas laigse "
+#~ "tèarainteachd a bheir inntrigeadh dha chunntasan nan cleachdaichean a "
+#~ "chleachdas a' phacaid bhuailte</li></ul>\n"
+#~ "<p>An adhbharaich am buga a tha thu ag aithris gin dhen dochann gu h-àrd? "
+#~ "Mur adhbharaich, tagh cudromachd nas ìsle. Mòran taing.</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually....\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Cha deach leinn aithris air a' bhuga a chur a-null.\n"
+#~ "An cuir thu aithris air buga dhuinn a làimh?\n"
+#~ "Faic http://bugs.kde.org/ airson stiùireadh."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Chaidh an aithris a chur. Mòran taing airson an fhiosrachaidh."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "A bheil thu airson an teachdaireachd a dheasaich\n"
+#~ "thu a dhùnadh 's a leigeil seachad?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Dùin an teachdaireachd"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "Mearachd a' ceangal ris an fhrithealaiche."
+
+#~ msgid "Not connected."
+#~ msgstr "Chan eil ceangal ann."
+
+#~ msgid "Connection timed out."
+#~ msgstr "Dh'fhalbh an ùine air a' cheangal."
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "Dh'fhalbh an ùine a' feitheamh air gnìomh on fhrithealaiche."
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Thuirt am frithealaiche: \"%1\""
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Cuiridh seo aithris air buga a-null air a' post-d."
+
+#~ msgid "The subject line of the email."
+#~ msgstr "Cuspair a' phuist-d."
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "An seòladh puist-d dhan dèid aithris air a' bhuga a chur."
 
 #, fuzzy
 #~| msgid ""

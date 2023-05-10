@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2008-12-19 22:49+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -386,86 +386,31 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Dwuzmyslna kombinacija namakana"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Wo zmylku rozprawić"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Wo zmylku rozprawić"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Twoja emailowa adresa. Jeli njetrjechi, wužiwaj knefl \"email konfigurować"
-"\", zo by ju změnił."
-
-#: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgid "From:"
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Wot:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Email konfigurować..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Emailowa adresa, na kotruž ma so tuta rozprawa wo zmylku pósłać."
-
-#: kbugreport.cpp:159
-#, fuzzy, kde-format
-#| msgid "To:"
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Na:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Pósćel"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Pósćel rozprawu wo zmylku."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Pósćel rozprawu wo zmylku na %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr "Program, wo kotrymž chceće rozprawić. "
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Program: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -474,23 +419,23 @@ msgstr ""
 "Wersija programa - prošu přepruwujće,hač njeje nowšeje wersije, prjedy hač "
 "wo zmylku rozprawiš."
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Wersija:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, fuzzy, kde-format
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
 msgstr "žana wersija (zmylk programowarja!)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 #| msgctxt "dictionary name. %1-language and %2-country name"
 #| msgid "%1 (%2)"
@@ -500,7 +445,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -509,7 +454,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgctxt "dictionary name. %1-language and %2-country name"
 #| msgid "%1 (%2)"
@@ -519,68 +464,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "&Chutnosć"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Kritiski"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Ćežki"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normalny"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Lisćina přećow"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Přełožk"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "&Tema: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Zapodajće tekst (po móžnosći jendźelsce), kiž chceće z rozprawu wo zmylku "
-"pósłać.\n"
-"Hdyž stłóčiće \"Pósłać\" pósćele so emailka zastaraćelej programa a\n"
-"KDE-lisćinje wo zmylkach.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -598,7 +482,7 @@ msgstr ""
 "kde.org</a>, hdźež namakaće formular za wupjelnjenje. Horjeka pokazana "
 "informacija so serverej pósćele.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -614,125 +498,19 @@ msgstr ""
 "kde.org</a>, hdźež namakaće formular za wupjelnjenje. Horjeka pokazana "
 "informacija so serverej pósćele.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Rozprawu wo zmylku startować"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Wo zmylku rozprawić"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Dyrbiće temu a wopisanje specifikować, prjedy hač móže so rozprawa wotpósłać."
-
-#: kbugreport.cpp:441
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
-#| "system (or the whole system)</li><li>cause serious data loss</"
-#| "li><li>introduce a security hole on the system where the affected package "
-#| "is installed</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Sće chutnostny stopjeń <b>Kritiski</b> wubrał(a). Prošu wobkedźbujće, zo "
-"je tutón stopjeń mysleny za zmylki kiž</p><ul> <li>druhe, njezwisowace "
-"programy abo cyły system wottřěleja</li> <li>daty zniča</li> <li>wěstosć "
-"systema wohrožuja, hdźež je paket instalowany</li></ul>\n"
-"<p>Wuskutkuje so zmylk, wo kotrymž chceć rozprawić, na tajke wašnje? Jeli "
-"nic, prošu wubjerće niši stopjeń. Dźakuju so!</p>"
-
-#: kbugreport.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#| "intended only for bugs that</p><ul><li>make the package in question "
-#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#| "security hole allowing access to the accounts of users who use the "
-#| "affected package</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Sć chutnostny stopjeń <b>Ćežki</b> wubrał(a). Prošu wobkedźbujće, zo je "
-"tutón stopjeń mysleny za zmylki kiž</p><ul> <li>činja cyły paket "
-"njewužiwajomny</li> <li>daty zhubja</li> <li>wěstosć konta wužiwarja "
-"wohrožuja, kiž paket wužiwa</li></ul>\n"
-"<p>Wuskutkuje so zmylk, wo kotrymž chceć rozprawić, na tajke wašnje? Jeli "
-"nic, prošu wubjerće niši stopjeń. Dźakuju so!</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually...\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Njemóžu rozprawu wotpósłać\n"
-"Prošu pósćel pěši ...\n"
-"Hlej http://bugs.kde.org/, zo by zhonił(a), kak."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Rozprawa pósłana, dźakuju so za informaciju."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Začinić a editowanu powěsć\n"
-"zničić?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Powěsć začinić"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -1123,53 +901,6 @@ msgstr "K nastrojowemu paskej dodać"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Konfiguracija skrótšenki..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr ""
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Not found"
-msgid "Not connected."
-msgstr "Njejsym ničo namakał"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Socket error code ConnectionTimedOut"
-#| msgid "connection timed out"
-msgid "Connection timed out."
-msgstr "sym předołho na zwisk čakał"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "Server: %1"
-msgid "Server said: \"%1\""
-msgstr "Serwer: %1"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "Pósćel rozprawu wo zmylku."
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-#| msgid "The size of the dialog"
-msgid "The subject line of the email."
-msgstr "Wulkosć dialoga"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "Emailowa adresa, na kotruž ma so tuta rozprawa wo zmylku pósłać."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1783,6 +1514,221 @@ msgstr "&Nastajenja"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hłowny nastrojowy pas"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Twoja emailowa adresa. Jeli njetrjechi, wužiwaj knefl \"email konfigurować"
+#~ "\", zo by ju změnił."
+
+#, fuzzy
+#~| msgid "From:"
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Wot:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Email konfigurować..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Emailowa adresa, na kotruž ma so tuta rozprawa wo zmylku pósłać."
+
+#, fuzzy
+#~| msgid "To:"
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Na:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Pósćel"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Pósćel rozprawu wo zmylku."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Pósćel rozprawu wo zmylku na %1."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "&Chutnosć"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Kritiski"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Ćežki"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normalny"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Lisćina přećow"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Přełožk"
+
+#~ msgid "S&ubject: "
+#~ msgstr "&Tema: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Zapodajće tekst (po móžnosći jendźelsce), kiž chceće z rozprawu wo zmylku "
+#~ "pósłać.\n"
+#~ "Hdyž stłóčiće \"Pósłać\" pósćele so emailka zastaraćelej programa a\n"
+#~ "KDE-lisćinje wo zmylkach.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Dyrbiće temu a wopisanje specifikować, prjedy hač móže so rozprawa "
+#~ "wotpósłać."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Critical</b>. Please note that this "
+#~| "severity is intended only for bugs that</p><ul><li>break unrelated "
+#~| "software on the system (or the whole system)</li><li>cause serious data "
+#~| "loss</li><li>introduce a security hole on the system where the affected "
+#~| "package is installed</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Sće chutnostny stopjeń <b>Kritiski</b> wubrał(a). Prošu wobkedźbujće, "
+#~ "zo je tutón stopjeń mysleny za zmylki kiž</p><ul> <li>druhe, njezwisowace "
+#~ "programy abo cyły system wottřěleja</li> <li>daty zniča</li> <li>wěstosć "
+#~ "systema wohrožuja, hdźež je paket instalowany</li></ul>\n"
+#~ "<p>Wuskutkuje so zmylk, wo kotrymž chceć rozprawić, na tajke wašnje? Jeli "
+#~ "nic, prošu wubjerće niši stopjeń. Dźakuju so!</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Grave</b>. Please note that this severity "
+#~| "is intended only for bugs that</p><ul><li>make the package in question "
+#~| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~| "security hole allowing access to the accounts of users who use the "
+#~| "affected package</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Sć chutnostny stopjeń <b>Ćežki</b> wubrał(a). Prošu wobkedźbujće, zo "
+#~ "je tutón stopjeń mysleny za zmylki kiž</p><ul> <li>činja cyły paket "
+#~ "njewužiwajomny</li> <li>daty zhubja</li> <li>wěstosć konta wužiwarja "
+#~ "wohrožuja, kiž paket wužiwa</li></ul>\n"
+#~ "<p>Wuskutkuje so zmylk, wo kotrymž chceć rozprawić, na tajke wašnje? Jeli "
+#~ "nic, prošu wubjerće niši stopjeń. Dźakuju so!</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually...\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Njemóžu rozprawu wotpósłać\n"
+#~ "Prošu pósćel pěši ...\n"
+#~ "Hlej http://bugs.kde.org/, zo by zhonił(a), kak."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Rozprawa pósłana, dźakuju so za informaciju."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Začinić a editowanu powěsć\n"
+#~ "zničić?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Powěsć začinić"
+
+#, fuzzy
+#~| msgid "Not found"
+#~ msgid "Not connected."
+#~ msgstr "Njejsym ničo namakał"
+
+#, fuzzy
+#~| msgctxt "Socket error code ConnectionTimedOut"
+#~| msgid "connection timed out"
+#~ msgid "Connection timed out."
+#~ msgstr "sym předołho na zwisk čakał"
+
+#, fuzzy
+#~| msgid "Server: %1"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Serwer: %1"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Pósćel rozprawu wo zmylku."
+
+#, fuzzy
+#~| msgid "The size of the dialog"
+#~ msgid "The subject line of the email."
+#~ msgstr "Wulkosć dialoga"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Emailowa adresa, na kotruž ma so tuta rozprawa wo zmylku pósłać."
 
 #, fuzzy
 #~| msgid "Homepage"

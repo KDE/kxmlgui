@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2008-08-06 00:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: Occitan <oc@li.org>\n"
@@ -299,74 +299,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Acorchis"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Mandar un rapòrt de bòg"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Mandar un rapòrt de bòg"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Aquò es vòstra adreça electronica. Se es incorrècta, utilizatz lo boton "
-"Adreça electronica per la modificar."
-
-#: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgid "From:"
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Expedidor :"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Configurar l'adreça electronica..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "L'adreça electronica a laquala aqueste rapòrt de bòg serà mandat."
-
-#: kbugreport.cpp:159
-#, fuzzy, kde-format
-#| msgid "To:"
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Destinatari :"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Enviar"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Mandar un rapòrt de bòg."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Mandar aqueste rapòrt de bòg a %1.."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -375,12 +320,12 @@ msgstr ""
 "L'aplicacion per laquala desiratz un rapòrt de bòg. En cas d'error, "
 "utilizatz l'element de menut Rapòrt de bòg de l'aplicacion correspondenta."
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Aplicacion : "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -389,23 +334,23 @@ msgstr ""
 "La version d'aquesta aplicacion - Asseguratz-vos qu'existís pas de version "
 "mai recenta abans de mandar un rapòrt de bòg."
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Version :"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, fuzzy, kde-format
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
 msgstr "pas de version definida (error del programaire !)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "Sistèma d'espleitacion :"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 #| msgctxt "dictionary name. %1-language and %2-country name"
 #| msgid "%1 (%2)"
@@ -415,7 +360,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -424,7 +369,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgctxt "dictionary name. %1-language and %2-country name"
 #| msgid "%1 (%2)"
@@ -434,67 +379,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "Se&veritat"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Critic"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Grèva"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normal"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Desirs"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Revirada"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "S&ubjècte : "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Picatz lo tèxt (en anglés se possible) de vòstre rapòrt de bòg.\n"
-"Un clic sus « Mandar » manda un messatge electronic al mantenidor d'aqueste "
-"programa.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -503,135 +388,26 @@ msgid ""
 "be transferred to that server.</qt>"
 msgstr ""
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "Aviar &l'assistent de rapòrt de bòg"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Mandar un rapòrt de bòg"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Devètz indicar un subjècte e una descripcion del bòg abans de mandar lo "
-"rapòrt."
-
-#: kbugreport.cpp:441
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
-#| "system (or the whole system)</li><li>cause serious data loss</"
-#| "li><li>introduce a security hole on the system where the affected package "
-#| "is installed</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Avètz causit la severitat <b>critica</b>. Remarca : aqueste nivèl de "
-"severitat deu èsser utilizat per de bògues qu'</p><ul><li>afectan de "
-"logicials extèrnes sul sistèma (o lo sistèma entièr)</li><li>causant de "
-"pèrdas de donadas grèvas</li><li>introdusent un trauc de seguretat sul "
-"sistèma sulqual los paquetatges son installats</li></ul>\n"
-"<p>Lo bòg qu'anatz senhalar provòca un dels problèmas çaisús ? S'es pas lo "
-"cas, causissètz una severitat inferiora. Mercés !</p>"
-
-#: kbugreport.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#| "intended only for bugs that</p><ul><li>make the package in question "
-#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#| "security hole allowing access to the accounts of users who use the "
-#| "affected package</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Avètz causit la severitat <b>elevada</b>. Remarca : aqueste nivèl de "
-"severitat deu èsser utilizat per de bògues que</p><ul><li>rendisson "
-"l'aplicacion en question inutilizable o gaireben</li><li>causent de pèrdas "
-"de donadas</li><li>introduissent un trauc de seguretat permetent l'accès als "
-"comptes dels utilizaires emplegant l'aplicacion concernida</li></ul>\n"
-"<p>Lo bòg qu'anatz senhalar provòca un dels problèmas çaisús ? S'es pas lo "
-"cas, causissètz una severitat inferiora. Mercés !</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually...\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Impossible de mandar lo rapòrt de bòg.\n"
-"Sometètz-lo manualament, o planhèm...\n"
-"Consultatz « http://bugs.kde.org/ » per las instruccions."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Rapòrt de bòg mndat, mercés per vòstra contribucion."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Tampar e abandonar\n"
-"lo messatge editat ?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Tampar lo messatge"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -994,50 +770,6 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Configurar los acorchis clavièr"
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-#| msgid "Error opening file."
-msgid "Error connecting to server."
-msgstr "Error al moment de dobrir lo fichièr."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr ""
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Continue"
-msgid "Connection timed out."
-msgstr "Contunhar"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr ""
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "Mandar un rapòrt de bòg."
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr ""
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "L'adreça electronica a laquala aqueste rapòrt de bòg serà mandat."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1639,6 +1371,212 @@ msgstr "&Paramètres"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra d'espleches principala"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Aquò es vòstra adreça electronica. Se es incorrècta, utilizatz lo boton "
+#~ "Adreça electronica per la modificar."
+
+#, fuzzy
+#~| msgid "From:"
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Expedidor :"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Configurar l'adreça electronica..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "L'adreça electronica a laquala aqueste rapòrt de bòg serà mandat."
+
+#, fuzzy
+#~| msgid "To:"
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Destinatari :"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Enviar"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Mandar un rapòrt de bòg."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Mandar aqueste rapòrt de bòg a %1.."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "Se&veritat"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Critic"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Grèva"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Desirs"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Revirada"
+
+#~ msgid "S&ubject: "
+#~ msgstr "S&ubjècte : "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Picatz lo tèxt (en anglés se possible) de vòstre rapòrt de bòg.\n"
+#~ "Un clic sus « Mandar » manda un messatge electronic al mantenidor "
+#~ "d'aqueste programa.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Devètz indicar un subjècte e una descripcion del bòg abans de mandar lo "
+#~ "rapòrt."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Critical</b>. Please note that this "
+#~| "severity is intended only for bugs that</p><ul><li>break unrelated "
+#~| "software on the system (or the whole system)</li><li>cause serious data "
+#~| "loss</li><li>introduce a security hole on the system where the affected "
+#~| "package is installed</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Avètz causit la severitat <b>critica</b>. Remarca : aqueste nivèl de "
+#~ "severitat deu èsser utilizat per de bògues qu'</p><ul><li>afectan de "
+#~ "logicials extèrnes sul sistèma (o lo sistèma entièr)</li><li>causant de "
+#~ "pèrdas de donadas grèvas</li><li>introdusent un trauc de seguretat sul "
+#~ "sistèma sulqual los paquetatges son installats</li></ul>\n"
+#~ "<p>Lo bòg qu'anatz senhalar provòca un dels problèmas çaisús ? S'es pas "
+#~ "lo cas, causissètz una severitat inferiora. Mercés !</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Grave</b>. Please note that this severity "
+#~| "is intended only for bugs that</p><ul><li>make the package in question "
+#~| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~| "security hole allowing access to the accounts of users who use the "
+#~| "affected package</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Avètz causit la severitat <b>elevada</b>. Remarca : aqueste nivèl de "
+#~ "severitat deu èsser utilizat per de bògues que</p><ul><li>rendisson "
+#~ "l'aplicacion en question inutilizable o gaireben</li><li>causent de "
+#~ "pèrdas de donadas</li><li>introduissent un trauc de seguretat permetent "
+#~ "l'accès als comptes dels utilizaires emplegant l'aplicacion concernida</"
+#~ "li></ul>\n"
+#~ "<p>Lo bòg qu'anatz senhalar provòca un dels problèmas çaisús ? S'es pas "
+#~ "lo cas, causissètz una severitat inferiora. Mercés !</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually...\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Impossible de mandar lo rapòrt de bòg.\n"
+#~ "Sometètz-lo manualament, o planhèm...\n"
+#~ "Consultatz « http://bugs.kde.org/ » per las instruccions."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Rapòrt de bòg mndat, mercés per vòstra contribucion."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Tampar e abandonar\n"
+#~ "lo messatge editat ?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Tampar lo messatge"
+
+#, fuzzy
+#~| msgid "Error opening file."
+#~ msgid "Error connecting to server."
+#~ msgstr "Error al moment de dobrir lo fichièr."
+
+#, fuzzy
+#~| msgid "Continue"
+#~ msgid "Connection timed out."
+#~ msgstr "Contunhar"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Mandar un rapòrt de bòg."
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "L'adreça electronica a laquala aqueste rapòrt de bòg serà mandat."
 
 #, fuzzy
 #~| msgid "Homepage"

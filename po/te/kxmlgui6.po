@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -343,82 +343,31 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "ఎటూకాని శీఘ్రమార్గము గుర్తించబడింది"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "తప్పుల నివెదిక అందించు"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "తప్పుల నివెదిక అందించు"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr "మీ ఈమెయిల్ చిరునామా. తప్పైన, 'ఈ-మెయిల్ ను అమర్చు' బటన్ ను వాడి మార్చండి"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "ఇట్లు: "
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "ఈ-మెయిల్ ను అమర్చు..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "ఈ తప్పుల నివేదిక ఈ ఈమెయిల్ చిరునామాకు పంపబడును."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "వద్దకు :"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "(&S) పంపు"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "తప్పుల నివేదిక పంపు."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "ఈ తప్పుల నివేదిక %1 కు పంపు."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr "మీరు సమర్పించాలి అన్న దరకాస్థు "
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "అప్లికేషన్:"
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -427,22 +376,22 @@ msgstr ""
 "ఈ వర్షన్ యొక్క దరకాస్ధు - దయచేసి నిర్థారించుకోండి ఏ కొత్త వర్షన్ కొడ అందుబాటులో లేదు ఒక బగ్ నివేదికను "
 "పంపించేఅంతవరకు "
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "వివరణం:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "వివరనం అమర్చుట కుదరదు (ప్రాగ్రామర్ దోషం)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "నిర్వహణా వ్యవస్థ:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -452,7 +401,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -461,7 +410,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -471,66 +420,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "(&v) ఉధృతి"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "సంక్లిష్ట"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "ముఖ్యమైన"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "సాధారణ"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "కోరికల జాబితా"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "అనువాదము"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "(&u) విషయము:"
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"మీరు అందించే తప్పుల నివేదిక కొరకు వచనం వ్రాయండి(సాద్యమైనంత వరకు ఆంగ్లములో).\n"
-"మీరు \"పంపించు\" బటన్ నొక్కిన, ఒక తపాలా సందేశం ఈ ప్రోగ్రామ్ సంరక్షకునికి పంపబడును.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -547,7 +437,7 @@ msgstr ""
 "\"http://bugs.kde.org\">http://bugs.kde.org</a>కు తెరువబడును అక్కడ మీరు ఒక "
 "ఫారంను నింపవసివుంటుది.పైన చూపించబడిన సమాచారం ఆ సెర్వర్ కు పంపబడును.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -562,96 +452,19 @@ msgstr ""
 "\"http://bugs.kde.org\">http://bugs.kde.org</a>కు తెరువబడును అక్కడ మీరు ఒక "
 "ఫారంను నింపవసివుంటుది.పైన చూపించబడిన సమాచారం ఆ సెర్వర్ కు పంపబడును.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&L బగ్ నివేదిక విజర్డ్ను ప్రారంభించు"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "తప్పుల నివెదిక అందించు"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr "తపకుండ మిరు పేర్కొన రెండు ఒక విషయం మరియు ఒక వివరణకి ముందు నివేదిక పంపవచ్చు."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually....\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"బగ్ నివేదికని పంపడనికి సాద్యం కాదు. \n"
-"దయచేసి మాన్యువల్గా బగ్ నివేదికను సమర్పించండి.... \n"
-"సూచనలకొరకు దినిని చుడండి http://bugs.kde.org/"
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "పంపబడిన బగ్ నివేదిక, ధన్యవాదాలు మీ ఇన్పుట్ కొరకు. "
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"మూసివెయ్యి మరియు విస్మరించు\n"
-"సవరించిన సందేశాలు?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "సందేశము మూసివేయుము"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -1009,53 +822,6 @@ msgstr "పనిముట్లపట్టీకు జతచేయుము"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "శీఘ్రమార్గంను అమర్చు..."
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-#| msgid "Create content on server"
-msgid "Error connecting to server."
-msgstr "సర్వర్ విషయాన్ని సృష్టించు "
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Not found"
-msgid "Not connected."
-msgstr "కనబడలేదు"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Connection timed out"
-msgid "Connection timed out."
-msgstr "అనుసంధానమునకు  సమయం అయిపొయినది"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "Server: %1"
-msgid "Server said: \"%1\""
-msgstr "సెర్వర్: %1"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "తప్పుల నివేదిక పంపు."
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-#| msgid "The size of the dialog"
-msgid "The subject line of the email."
-msgstr "డైలాగ్ పరిమాణం"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "ఈ తప్పుల నివేదిక ఈ ఈమెయిల్ చిరునామాకు పంపబడును."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1656,6 +1422,165 @@ msgstr "(&S) అమరికలు"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "ప్రధాన పనిముట్ల పట్టీ"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr "మీ ఈమెయిల్ చిరునామా. తప్పైన, 'ఈ-మెయిల్ ను అమర్చు' బటన్ ను వాడి మార్చండి"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "ఇట్లు: "
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "ఈ-మెయిల్ ను అమర్చు..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "ఈ తప్పుల నివేదిక ఈ ఈమెయిల్ చిరునామాకు పంపబడును."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "వద్దకు :"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "(&S) పంపు"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "తప్పుల నివేదిక పంపు."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "ఈ తప్పుల నివేదిక %1 కు పంపు."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "(&v) ఉధృతి"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "సంక్లిష్ట"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "ముఖ్యమైన"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "సాధారణ"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "కోరికల జాబితా"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "అనువాదము"
+
+#~ msgid "S&ubject: "
+#~ msgstr "(&u) విషయము:"
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "మీరు అందించే తప్పుల నివేదిక కొరకు వచనం వ్రాయండి(సాద్యమైనంత వరకు ఆంగ్లములో).\n"
+#~ "మీరు \"పంపించు\" బటన్ నొక్కిన, ఒక తపాలా సందేశం ఈ ప్రోగ్రామ్ సంరక్షకునికి పంపబడును.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr "తపకుండ మిరు పేర్కొన రెండు ఒక విషయం మరియు ఒక వివరణకి ముందు నివేదిక పంపవచ్చు."
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually....\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "బగ్ నివేదికని పంపడనికి సాద్యం కాదు. \n"
+#~ "దయచేసి మాన్యువల్గా బగ్ నివేదికను సమర్పించండి.... \n"
+#~ "సూచనలకొరకు దినిని చుడండి http://bugs.kde.org/"
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "పంపబడిన బగ్ నివేదిక, ధన్యవాదాలు మీ ఇన్పుట్ కొరకు. "
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "మూసివెయ్యి మరియు విస్మరించు\n"
+#~ "సవరించిన సందేశాలు?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "సందేశము మూసివేయుము"
+
+#, fuzzy
+#~| msgid "Create content on server"
+#~ msgid "Error connecting to server."
+#~ msgstr "సర్వర్ విషయాన్ని సృష్టించు "
+
+#, fuzzy
+#~| msgid "Not found"
+#~ msgid "Not connected."
+#~ msgstr "కనబడలేదు"
+
+#, fuzzy
+#~| msgid "Connection timed out"
+#~ msgid "Connection timed out."
+#~ msgstr "అనుసంధానమునకు  సమయం అయిపొయినది"
+
+#, fuzzy
+#~| msgid "Server: %1"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "సెర్వర్: %1"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "తప్పుల నివేదిక పంపు."
+
+#, fuzzy
+#~| msgid "The size of the dialog"
+#~ msgid "The subject line of the email."
+#~ msgstr "డైలాగ్ పరిమాణం"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "ఈ తప్పుల నివేదిక ఈ ఈమెయిల్ చిరునామాకు పంపబడును."
 
 #, fuzzy
 #~| msgid ""

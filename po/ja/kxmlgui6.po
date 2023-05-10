@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2022-08-28 20:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -324,67 +324,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "あいまいなショートカットを検出"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "バグレポートを送信"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "バグレポートを送信"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"あなたのメールアドレスです。違っている場合は「メールを設定」ボタンを使って変"
-"更してください。"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "差出人:"
-
-#: kbugreport.cpp:151
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "メールを設定..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "このバグレポートの宛先となるメールアドレスです。"
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "宛先:"
-
-#: kbugreport.cpp:168
-#, kde-format
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "送信(&S)"
-
-#: kbugreport.cpp:170
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "バグレポートを送信します。"
-
-#: kbugreport.cpp:171
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "バグレポートを %1 に送信します。"
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -393,12 +344,12 @@ msgstr ""
 "バグレポートを送るアプリケーションです。違っている場合は、正しいアプリケー"
 "ションのメニューから「バグを報告」を選択してください。"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "アプリケーション:"
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -407,22 +358,22 @@ msgstr ""
 "このアプリケーションのバージョンです。バグレポートを送る前に、新しいバージョ"
 "ンが入手可能でないか確認してください。"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "バージョン:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "バージョンが設定されていません (プログラマのミスです)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -430,7 +381,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -438,7 +389,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -446,60 +397,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, kde-format
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "重要度(&V)"
-
-#: kbugreport.cpp:246
-#, kde-format
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "深刻"
-
-#: kbugreport.cpp:247
-#, kde-format
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "重大"
-
-#: kbugreport.cpp:248
-#, kde-format
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "普通"
-
-#: kbugreport.cpp:249
-#, kde-format
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "要望"
-
-#: kbugreport.cpp:250
-#, kde-format
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "翻訳"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "件名(&U): "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"バグレポートとして送るテキストを (可能なら英語で) 入力してください。\n"
-"「送信」を押すと、メールメッセージがこのプログラムのメンテナに送信されま"
-"す。\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -511,7 +409,7 @@ msgstr ""
 "のウィンドウに <a href=\"https://bugs.kde.org\">http://bugs.kde.org</a> が開"
 "かれ、報告用のフォームが表示されます。上の情報がサーバに送られます。</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -520,105 +418,17 @@ msgstr ""
 "<qt>バグレポートを送るには、下のボタンをクリックしてください。ウェブブラウザ"
 "のウィンドウに <a href=\"%1\">%2</a> が開かれます。</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "バグ報告ウィザードを起動(&L)"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "バグレポートを送信(&S)"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-"<application>%1</application> の実行ファイルが見つかりませんでした。(たいて"
-"い \"%2\" パッケージに含まれています。)"
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr "件名と説明の両方を入力しなければレポートを送信することはできません。"
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>重要度に「深刻」を選択しました。これは以下のようなバグを対象とします。</"
-"p><ul><li>システムの他のソフトウェア (あるいはシステム全体) をクラッシュさせ"
-"てしまう。</li><li>深刻なデータの損失を招く。</li><li>影響を受けるパッケージ"
-"がインストールされているシステムにセキュリティホールを設けてしまう。</li></"
-"ul>\n"
-"<p>報告しようとしているバグは上のいずれかに当てはまりますか？そうでなければ、"
-"これより低い重要度に変更してください。ご協力ありがとうございます。</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>重要度に「重大」を選択しました。これは以下のようなバグを対象とします。</"
-"p><ul><li>問題のパッケージは使用できない、あるいはほとんど使用できない。</"
-"li><li>データ損失を引き起こす。</li><li>影響を受けるパッケージを使用している"
-"ユーザのアカウントにセキュリティホールを設けてしまう。</li></ul>\n"
-"<p>報告しようとしているバグは上のいずれかに当てはまりますか？そうでなければ、"
-"これより低い重要度に変更してください。ご協力ありがとうございます。</p>"
-
-#: kbugreport.cpp:477
-#, kde-format
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"バグレポートを送信できません。\n"
-"バグレポートを手動で送信してみてください。\n"
-"方法については https://bugs.kde.org/ を参照してください。"
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr ""
-"バグレポートを送信しました。情報を提供していただきありがとうございます。"
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"閉じて、編集した\n"
-"メッセージを破棄しますか？"
-
-#: kbugreport.cpp:493
-#, kde-format
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "メッセージを閉じる"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -973,46 +783,6 @@ msgstr "ツールバーに追加"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "ショートカットを設定..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "サーバへの接続でエラー。"
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "接続されていません"
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "接続がタイムアウトしました"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "サーバとのインタラクションがタイムアウトしました。"
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "サーバの応答: \"%1\""
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "メールでバグレポートを送信します。"
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "メールの件名です。"
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "このバグレポートの宛先となるメールアドレスです。"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1586,6 +1356,174 @@ msgstr "設定(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "メインツールバー"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "あなたのメールアドレスです。違っている場合は「メールを設定」ボタンを使って"
+#~ "変更してください。"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "差出人:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "メールを設定..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "このバグレポートの宛先となるメールアドレスです。"
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "宛先:"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "送信(&S)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "バグレポートを送信します。"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "バグレポートを %1 に送信します。"
+
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "重要度(&V)"
+
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "深刻"
+
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "重大"
+
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "普通"
+
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "要望"
+
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "翻訳"
+
+#~ msgid "S&ubject: "
+#~ msgstr "件名(&U): "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "バグレポートとして送るテキストを (可能なら英語で) 入力してください。\n"
+#~ "「送信」を押すと、メールメッセージがこのプログラムのメンテナに送信されま"
+#~ "す。\n"
+
+#~ msgctxt ""
+#~ "The second arg is 'kde-cli-tools' which is the package that contains "
+#~ "kcmshell5 (the first arg)"
+#~ msgid ""
+#~ "Could not find <application>%1</application> executable (usually it's "
+#~ "part of the \"%2\" package)."
+#~ msgstr ""
+#~ "<application>%1</application> の実行ファイルが見つかりませんでした。(たい"
+#~ "てい \"%2\" パッケージに含まれています。)"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "件名と説明の両方を入力しなければレポートを送信することはできません。"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>重要度に「深刻」を選択しました。これは以下のようなバグを対象とします。"
+#~ "</p><ul><li>システムの他のソフトウェア (あるいはシステム全体) をクラッシュ"
+#~ "させてしまう。</li><li>深刻なデータの損失を招く。</li><li>影響を受けるパッ"
+#~ "ケージがインストールされているシステムにセキュリティホールを設けてしまう。"
+#~ "</li></ul>\n"
+#~ "<p>報告しようとしているバグは上のいずれかに当てはまりますか？そうでなけれ"
+#~ "ば、これより低い重要度に変更してください。ご協力ありがとうございます。</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>重要度に「重大」を選択しました。これは以下のようなバグを対象とします。"
+#~ "</p><ul><li>問題のパッケージは使用できない、あるいはほとんど使用できない。"
+#~ "</li><li>データ損失を引き起こす。</li><li>影響を受けるパッケージを使用して"
+#~ "いるユーザのアカウントにセキュリティホールを設けてしまう。</li></ul>\n"
+#~ "<p>報告しようとしているバグは上のいずれかに当てはまりますか？そうでなけれ"
+#~ "ば、これより低い重要度に変更してください。ご協力ありがとうございます。</p>"
+
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "バグレポートを送信できません。\n"
+#~ "バグレポートを手動で送信してみてください。\n"
+#~ "方法については https://bugs.kde.org/ を参照してください。"
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr ""
+#~ "バグレポートを送信しました。情報を提供していただきありがとうございます。"
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "閉じて、編集した\n"
+#~ "メッセージを破棄しますか？"
+
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "メッセージを閉じる"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "サーバへの接続でエラー。"
+
+#~ msgid "Not connected."
+#~ msgstr "接続されていません"
+
+#~ msgid "Connection timed out."
+#~ msgstr "接続がタイムアウトしました"
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "サーバとのインタラクションがタイムアウトしました。"
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "サーバの応答: \"%1\""
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "メールでバグレポートを送信します。"
+
+#~ msgid "The subject line of the email."
+#~ msgstr "メールの件名です。"
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "このバグレポートの宛先となるメールアドレスです。"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2022-02-14 09:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -319,67 +319,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Nem egyértelmű az egyik billentyűparancs"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Hibajelentés küldése"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Hibajelentés küldése"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Az Ön e-mail címe. Ha a cím helytelen, használja az „E-mail beállítás” "
-"gombot a módosításához."
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Feladó:"
-
-#: kbugreport.cpp:151
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Az e-mail beállítása…"
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Az az e-mail cím, amelyre a hibabejelentés el lesz küldve."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Címzett:"
-
-#: kbugreport.cpp:168
-#, kde-format
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Küldés"
-
-#: kbugreport.cpp:170
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Hibajelentés küldése."
-
-#: kbugreport.cpp:171
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "A hibajelentés elküldése ide: %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -388,12 +339,12 @@ msgstr ""
 "Az alkalmazás neve, amelynek hibáját be akarja jelenteni - ha nem helyes, "
 "használja a megfelelő alkalmazás Hibabejelentés gombját."
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Alkalmazás: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -402,22 +353,22 @@ msgstr ""
 "Az alkalmazás verziószáma - a hibabejelentés elküldése előtt ellenőrizze, "
 "hogy nincs-e újabb verzió a programból"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Verzió:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "nincs beállítva verzió (programozási hiba)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "Op. rendszer:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -428,7 +379,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -437,7 +388,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
@@ -448,61 +399,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, kde-format
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "A hiba &jellege"
-
-#: kbugreport.cpp:246
-#, kde-format
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Kritikus"
-
-#: kbugreport.cpp:247
-#, kde-format
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Súlyos"
-
-#: kbugreport.cpp:248
-#, kde-format
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normál"
-
-#: kbugreport.cpp:249
-#, kde-format
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Kívánság"
-
-#: kbugreport.cpp:250
-#, kde-format
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Fordítás"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "&Tárgy: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Írja be a szöveget (lehetőleg angolul), amit el szeretne küldeni, mint "
-"hibajelentést.\n"
-"A „Küldés” gomb megnyomása után az üzenet továbbítódik a program "
-"karbantartójának.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -515,7 +412,7 @@ msgstr ""
 "oldal, melyen egy űrlapban meg lehet adni az adatokat. A fent látható adatok "
 "kerülnek bele a jelentésbe.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -524,102 +421,17 @@ msgstr ""
 "<qt>Hiba bejelentéséhez kattintson az alábbi gombra. Ekkor megnyílik egy "
 "böngészőablakban a <a href=\"%1\">%2</a> oldal.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "A hibabejelentő &varázsló elindítása"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Hibajelentés küldé&se"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr "Tárgyat és leírást meg kell adni, mielőtt elküldené a jelentést."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>A <b>kritikus</b> hibafajtát jelölte meg. Ezt csak abban az esetben "
-"válassza, ha a hiba </p><ul><li>más programok vagy az egész rendszer "
-"lefagyásához vezet</li><li>súlyos adatveszteséget okoz</li><li>a rendszer "
-"egészét veszélyeztető biztonsági rést idéz elő</li></ul>\n"
-"<p>Ha a szóban forgó hibára a fentiek egyike sem igaz, akkor vegye "
-"alacsonyabbra a hiba súlyossági fokát. Köszönjük!</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>A <b>súlyos</b> hibafajtát jelölte meg. Ezt csak abban az esetben "
-"válassza, ha a hiba</p><ul><li>a szóban forgó csomagot használhatatlanná "
-"vagy majdnem használhatatlanná teszi</li><li>adatveszteséget okoz</"
-"li><li>olyan biztonsági rést idéz elő, mely a programcsomagot futtató "
-"felhasználók adatainak biztonságát veszélyezteti</li></ul>\n"
-"<p>Ha a szóban forgó hibára a fentiek egyike sem igaz, akkor vegye "
-"alacsonyabbra a hiba súlyossági fokát. Köszönjük!</p>"
-
-#: kbugreport.cpp:477
-#, kde-format
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Nem sikerült elküldeni a hibajelentést.\n"
-"Próbálja meg manuálisan…\n"
-"Segítséget a https://bugs.kde.org/ címen találhat."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "A hibajelentés elküldése sikerült, köszönjük az észrevételt."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Bezárja és eldobja\n"
-"a szerkesztett üzenetet?"
-
-#: kbugreport.cpp:493
-#, kde-format
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Az üzenet bezárása"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -970,46 +782,6 @@ msgstr "Hozzáadás az eszköztárhoz"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Billentyűparancsok beállítása…"
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "Hiba történt a kiszolgálóhoz csatlakozás közben."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "Nincs kapcsolat."
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "A kapcsolat túllépte az időkorlátot."
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "Időtúllépés történt a kiszolgáló válaszára várakozva."
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "A kiszolgáló válasza: „%1”"
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "Hibajelentés küldése e-mailben."
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "Az e-mail tárgysora."
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "Az az e-mail cím, amelyre a hibabejelentés el lesz küldve."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1590,6 +1362,163 @@ msgstr "&Beállítások"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Alap eszköztár"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Az Ön e-mail címe. Ha a cím helytelen, használja az „E-mail beállítás” "
+#~ "gombot a módosításához."
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Feladó:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Az e-mail beállítása…"
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Az az e-mail cím, amelyre a hibabejelentés el lesz küldve."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Címzett:"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Küldés"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Hibajelentés küldése."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "A hibajelentés elküldése ide: %1."
+
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "A hiba &jellege"
+
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Kritikus"
+
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Súlyos"
+
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normál"
+
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Kívánság"
+
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Fordítás"
+
+#~ msgid "S&ubject: "
+#~ msgstr "&Tárgy: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Írja be a szöveget (lehetőleg angolul), amit el szeretne küldeni, mint "
+#~ "hibajelentést.\n"
+#~ "A „Küldés” gomb megnyomása után az üzenet továbbítódik a program "
+#~ "karbantartójának.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr "Tárgyat és leírást meg kell adni, mielőtt elküldené a jelentést."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>A <b>kritikus</b> hibafajtát jelölte meg. Ezt csak abban az esetben "
+#~ "válassza, ha a hiba </p><ul><li>más programok vagy az egész rendszer "
+#~ "lefagyásához vezet</li><li>súlyos adatveszteséget okoz</li><li>a rendszer "
+#~ "egészét veszélyeztető biztonsági rést idéz elő</li></ul>\n"
+#~ "<p>Ha a szóban forgó hibára a fentiek egyike sem igaz, akkor vegye "
+#~ "alacsonyabbra a hiba súlyossági fokát. Köszönjük!</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>A <b>súlyos</b> hibafajtát jelölte meg. Ezt csak abban az esetben "
+#~ "válassza, ha a hiba</p><ul><li>a szóban forgó csomagot használhatatlanná "
+#~ "vagy majdnem használhatatlanná teszi</li><li>adatveszteséget okoz</"
+#~ "li><li>olyan biztonsági rést idéz elő, mely a programcsomagot futtató "
+#~ "felhasználók adatainak biztonságát veszélyezteti</li></ul>\n"
+#~ "<p>Ha a szóban forgó hibára a fentiek egyike sem igaz, akkor vegye "
+#~ "alacsonyabbra a hiba súlyossági fokát. Köszönjük!</p>"
+
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Nem sikerült elküldeni a hibajelentést.\n"
+#~ "Próbálja meg manuálisan…\n"
+#~ "Segítséget a https://bugs.kde.org/ címen találhat."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "A hibajelentés elküldése sikerült, köszönjük az észrevételt."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Bezárja és eldobja\n"
+#~ "a szerkesztett üzenetet?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Az üzenet bezárása"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "Hiba történt a kiszolgálóhoz csatlakozás közben."
+
+#~ msgid "Not connected."
+#~ msgstr "Nincs kapcsolat."
+
+#~ msgid "Connection timed out."
+#~ msgstr "A kapcsolat túllépte az időkorlátot."
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "Időtúllépés történt a kiszolgáló válaszára várakozva."
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "A kiszolgáló válasza: „%1”"
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Hibajelentés küldése e-mailben."
+
+#~ msgid "The subject line of the email."
+#~ msgstr "Az e-mail tárgysora."
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Az az e-mail cím, amelyre a hibabejelentés el lesz küldve."
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""

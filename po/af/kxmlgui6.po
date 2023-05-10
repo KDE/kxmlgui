@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -334,74 +334,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Onduidelike \"%1\" nog nie gehandteer"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Stuur in Fout Raporteer"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Stuur in Fout Raporteer"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Jou e-pos adres. As verkeerd, gebruik die Konfigureer e-pos knoppie na "
-"verander dit"
-
-#: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgid "From:"
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Van:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Konfigureer E-pos..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Die e-pos adres hierdie fout raporteer is gestuur na."
-
-#: kbugreport.cpp:159
-#, fuzzy, kde-format
-#| msgid "To:"
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Na:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "Stuur"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Stuur fout raporteer."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Stuur hierdie fout raport aan %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -410,12 +355,12 @@ msgstr ""
 "Die aansoek vir wat jy wens na stuur in 'n fout raporteer - as verkeerd, "
 "asseblief gebruik Die raporteer fout kieslys item van Die korrek aansoek"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Aansoek: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -424,23 +369,23 @@ msgstr ""
 "Die weergawe van hierdie aansoek - asseblief maak seker wat nee nuwer "
 "weergawe is beskikbaar voor stuur 'n fout raporteer"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Weergawe:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, fuzzy, kde-format
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
 msgstr "nee weergawe stel (programmeerder fout!)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "Os:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -448,7 +393,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 ( %2 )"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -457,7 +402,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -465,68 +410,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 ( %2 )"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "Ernstigheidsgraad"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Krities"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Graf"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normale"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Wenslys"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Vertaling"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "Onderwerp: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Voer die teks (in Engels indien moontlik) in wat jy vir die fout raport wil "
-"instuur.\n"
-"As jy op \"Stuur\" kliek sal 'n e-pos boodskap na die onderhouer van hierdie "
-"program gestuur word.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -539,7 +423,7 @@ msgstr ""
 "vorm sal kry om in te vul.\n"
 "Die informasie wat hierbo vertoon word sal na die bediener oorgedra word."
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -550,128 +434,19 @@ msgstr ""
 "vorm sal kry om in te vul.\n"
 "Die informasie wat hierbo vertoon word sal na die bediener oorgedra word."
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "Lanseer Fourt Raport Helper"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Stuur in Fout Raporteer"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Jy moet spesifiseer beide 'n onderwerp en 'n beskrywing voor die raporteer "
-"kan wees gestuur."
-
-#: kbugreport.cpp:441
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
-#| "system (or the whole system)</li><li>cause serious data loss</"
-#| "li><li>introduce a security hole on the system where the affected package "
-#| "is installed</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Jy kies die ernstigheidsgraad <b>Krities</b>. Asseblief nota wat hierdie "
-"ernstigheidsgraad is bedoel slegs vir bugs wat</p><ul><li>breek onverwante "
-"sagteware op die stelsel (van die volledige stelsel)</li><li>veroorsaak "
-"ernstige data verlies</li><li>bygevoeg 'n sekuriteit gat op die stelsel waar "
-"die geaffekteer paket is geïnstalleer</li></ul>\n"
-"<p>Doen die fout Jy word raporteer veroorsaak enige van die boonste skade? "
-"As dit Doen nie, Asseblief kies 'n sagter ernstigheidsgraad. Dank Jy!</p>"
-
-#: kbugreport.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#| "intended only for bugs that</p><ul><li>make the package in question "
-#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#| "security hole allowing access to the accounts of users who use the "
-#| "affected package</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Jy kies die ernstigheidsgraad <b>Graf</b>. Asseblief nota wat hierdie "
-"ernstigheidsgraad is bedoel slegs vir bugs wat</p><ul><li>maak die paket in "
-"vraag nutteloos van meestal sodat</li><li>veroorsaak data verlies</"
-"li><li>bygevoeg 'n sekuriteit gat toelaat toegang verkry na die rekeninge "
-"van gebruikers wie gebruik die geaffekteer paket</li></ul>\n"
-"<p>Doen die fout Jy word raporteer veroorsaak enige van die boonste skade? "
-"As dit Doen nie, Asseblief kies 'n sagter ernstigheidsgraad. Dank Jy!</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually...\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Nie moontlik na stuur die fout raporteer.\n"
-"Asseblief stuur in 'n fout raporteer eiehandig...\n"
-"Sien http://bugs.kde.org/ vir instruksies."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Fout raporteer gestuur, dank jy vir jou invoer."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Maak toe en gooi weg\n"
-"geredigeerde boodskap?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Maak Boodskap Toe"
 
 #: kcheckaccelerators.cpp:199
 #, fuzzy, kde-format
@@ -1045,53 +820,6 @@ msgstr "Voeg by na Pasmaak Kleure"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Stel Kortpaaie Op..."
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-#| msgid "Error parsing providers list."
-msgid "Error connecting to server."
-msgstr "Fout by verwerking van die verskaffer lys."
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "locally connected"
-msgid "Not connected."
-msgstr "plaaslik gekoppel"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Socket error code ConnectionTimedOut"
-#| msgid "connection timed out"
-msgid "Connection timed out."
-msgstr "koppeltyd het uitgeloop"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "<Merge %1>"
-msgid "Server said: \"%1\""
-msgstr "<Merge %1>"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "Stuur fout raporteer."
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-msgid "The subject line of the email."
-msgstr "Leidraad van die Dag"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "Die e-pos adres hierdie fout raporteer is gestuur na."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1701,6 +1429,229 @@ msgstr "Instellings"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hoof Nutsbalk"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Jou e-pos adres. As verkeerd, gebruik die Konfigureer e-pos knoppie na "
+#~ "verander dit"
+
+#, fuzzy
+#~| msgid "From:"
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Van:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Konfigureer E-pos..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Die e-pos adres hierdie fout raporteer is gestuur na."
+
+#, fuzzy
+#~| msgid "To:"
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Na:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "Stuur"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Stuur fout raporteer."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Stuur hierdie fout raport aan %1."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "Ernstigheidsgraad"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Krities"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Graf"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normale"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Wenslys"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Vertaling"
+
+#~ msgid "S&ubject: "
+#~ msgstr "Onderwerp: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Voer die teks (in Engels indien moontlik) in wat jy vir die fout raport "
+#~ "wil instuur.\n"
+#~ "As jy op \"Stuur\" kliek sal 'n e-pos boodskap na die onderhouer van "
+#~ "hierdie program gestuur word.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Jy moet spesifiseer beide 'n onderwerp en 'n beskrywing voor die "
+#~ "raporteer kan wees gestuur."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Critical</b>. Please note that this "
+#~| "severity is intended only for bugs that</p><ul><li>break unrelated "
+#~| "software on the system (or the whole system)</li><li>cause serious data "
+#~| "loss</li><li>introduce a security hole on the system where the affected "
+#~| "package is installed</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Jy kies die ernstigheidsgraad <b>Krities</b>. Asseblief nota wat "
+#~ "hierdie ernstigheidsgraad is bedoel slegs vir bugs wat</p><ul><li>breek "
+#~ "onverwante sagteware op die stelsel (van die volledige stelsel)</"
+#~ "li><li>veroorsaak ernstige data verlies</li><li>bygevoeg 'n sekuriteit "
+#~ "gat op die stelsel waar die geaffekteer paket is geïnstalleer</li></ul>\n"
+#~ "<p>Doen die fout Jy word raporteer veroorsaak enige van die boonste "
+#~ "skade? As dit Doen nie, Asseblief kies 'n sagter ernstigheidsgraad. Dank "
+#~ "Jy!</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Grave</b>. Please note that this severity "
+#~| "is intended only for bugs that</p><ul><li>make the package in question "
+#~| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~| "security hole allowing access to the accounts of users who use the "
+#~| "affected package</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Jy kies die ernstigheidsgraad <b>Graf</b>. Asseblief nota wat hierdie "
+#~ "ernstigheidsgraad is bedoel slegs vir bugs wat</p><ul><li>maak die paket "
+#~ "in vraag nutteloos van meestal sodat</li><li>veroorsaak data verlies</"
+#~ "li><li>bygevoeg 'n sekuriteit gat toelaat toegang verkry na die rekeninge "
+#~ "van gebruikers wie gebruik die geaffekteer paket</li></ul>\n"
+#~ "<p>Doen die fout Jy word raporteer veroorsaak enige van die boonste "
+#~ "skade? As dit Doen nie, Asseblief kies 'n sagter ernstigheidsgraad. Dank "
+#~ "Jy!</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually...\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Nie moontlik na stuur die fout raporteer.\n"
+#~ "Asseblief stuur in 'n fout raporteer eiehandig...\n"
+#~ "Sien http://bugs.kde.org/ vir instruksies."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Fout raporteer gestuur, dank jy vir jou invoer."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Maak toe en gooi weg\n"
+#~ "geredigeerde boodskap?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Maak Boodskap Toe"
+
+#, fuzzy
+#~| msgid "Error parsing providers list."
+#~ msgid "Error connecting to server."
+#~ msgstr "Fout by verwerking van die verskaffer lys."
+
+#, fuzzy
+#~| msgid "locally connected"
+#~ msgid "Not connected."
+#~ msgstr "plaaslik gekoppel"
+
+#, fuzzy
+#~| msgctxt "Socket error code ConnectionTimedOut"
+#~| msgid "connection timed out"
+#~ msgid "Connection timed out."
+#~ msgstr "koppeltyd het uitgeloop"
+
+#, fuzzy
+#~| msgid "<Merge %1>"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "<Merge %1>"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Stuur fout raporteer."
+
+#, fuzzy
+#~ msgid "The subject line of the email."
+#~ msgstr "Leidraad van die Dag"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Die e-pos adres hierdie fout raporteer is gestuur na."
 
 #, fuzzy
 #~| msgid "Homepage"

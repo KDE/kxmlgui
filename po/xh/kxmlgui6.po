@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -335,73 +335,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Ezimfutshane"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Ngenisa inxelo yeGciwane"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Ngenisa inxelo yeGciwane"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Idilesi yakho ye email. Ukuba ayilunganga, sebenzisa iqhosa loqwalaselo lwe "
-"Email ukuyitshintsha"
-
-#: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgid "From:"
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Ivela ku:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Qwalasela i Email..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Idilesi ye email eli gciwane ethunyelwe kuyo."
-
-#: kbugreport.cpp:159
-#, fuzzy, kde-format
-#| msgid "To:"
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Iya ku:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Thumela"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Thumela ingxelo yegciwane."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Thumela lengxelo yegciwane kuluhlu lwegciwane lwe KDE."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -410,12 +356,12 @@ msgstr ""
 "Isicelo onqwenela ukusingenisela ingxelo yegciwane - ukuba ayilunganga, "
 "nceda sebenzisa umba we menu Yengxelo Yegciwane yesicelo esilungileyo"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Isicelo: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -424,12 +370,12 @@ msgstr ""
 "Uguqulelo lwesi sicelo sebenzi lesi sicelo - nceda qinisekisa ukuba akukho "
 "nguqulelo yamsebenzi intsha ekhoyo phambi kokuthumela ingxelo yegciwane"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Uguqulelo lomsebenzi kolunye ulwimi:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, fuzzy, kde-format
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
@@ -437,12 +383,12 @@ msgstr ""
 "akukho sicwangciso sanguqulelo samsebenzi kolunye ulwimi (imposiso "
 "yomdwelisi woluhlu!)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -450,7 +396,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 %2"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -459,7 +405,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -467,68 +413,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 %2"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "&Ubungqongqo"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Ufumaneko lwempazamo"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Ingcwaba"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Isiqhelo"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Uluhlu lomnqweno"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Uguqulelo lomsebenzi kolunye ulwimi"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "&Umxholo: "
-
-#: kbugreport.cpp:277
-#, fuzzy, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Faka umbhalo oshicilelweyo Ngesingesi ukuba kuyimfuneko) ofuna "
-"ukuwungenisela ingxelo yegciwane.\n"
-"Ukuba ucinezela \"Thumela\", umyalezo ngeposi uzakuthunyelwa kumlondolozi \n"
-"woludweliso lwenkqubo nakuluhlu lwegciwane le KDE."
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -541,7 +426,7 @@ msgstr ""
 "uyakufumana ifomu yokuyigcwalisa.\n"
 "Lenkcazelo iboniswe ngasentla izakunikezelwa kumncedi."
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -552,127 +437,19 @@ msgstr ""
 "uyakufumana ifomu yokuyigcwalisa.\n"
 "Lenkcazelo iboniswe ngasentla izakunikezelwa kumncedi."
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "Ngenisa inxelo yeGciwane"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Ngenisa inxelo yeGciwane"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Kufuneka ukhankanye yomibini imixholo kunye nenkcazelo phambi kokuba "
-"kuthunyelwe ingxelo."
-
-#: kbugreport.cpp:441
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
-#| "system (or the whole system)</li><li>cause serious data loss</"
-#| "li><li>introduce a security hole on the system where the affected package "
-#| "is installed</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Ukhethe ubungnqongqo <b>Ebalulekileyo</b>. Nceda qaphela ukuba "
-"obubungqongo bujolise kuphela kumagciwane a</p><ul><li>phula udweliso "
-"lwenkqubo yekhomputha ezingazalaniyo kulendlela (okanye indlela yonke)</"
-"li><li>yenza idata ezimiseleyo ilahleko</li><li>yazisa umgqobho wokhuseleko "
-"kule ndlela apho umsebenzi ochaphazelekayo ugcinwayo</li></ul>\n"
-"<p>Ingaba ibug onika ingxelo ngayo yenza umonakalo ongentla? Ukuba ayiyenzi, "
-"nceda khetha ubucaka obucothayo. Enkosi!</p>"
-
-#: kbugreport.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#| "intended only for bugs that</p><ul><li>make the package in question "
-#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#| "security hole allowing access to the accounts of users who use the "
-#| "affected package</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Ukhethe ubungqongo <b>Ingcwaba</b>. Nceda qaphela ukuba obu bucaka "
-"bujolise kuphela kwibugs eze</p><ul><li>ezenza umsebenzi kumbuzo "
-"ongasetyenziswanga okanye kakhulu kwi</li><li>zenza ilahleko yedata</"
-"li><li>yazisa umgqobho wokhuseleko ivumela unikezelo lwamatyala "
-"kubasebenzisi abasebenzisa lo msebenzi uchaphazelekayo </li></ ul>\n"
-"<p>Ingaba ibug onika ingxelo ngayo yenza umonakalo ongentla ?Ukuba ayiwenzi, "
-"nceda khetha ubucaka obucothayo. Enkosi!</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually...\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Ayikwazanga ukuthumela ingxelo yegciwane.\n"
-"Ncerda ngenisa ingxelo yegciwane ngokwesandla...\n"
-"Bona http://bugs.kde.org/ ngokwemiyalelo."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Ingxelo yegciwane ithunyelwe, enkosi ngengeniso yakho."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Vala kwaye ulahle ngaphandle\n"
-"umyalezo ohleliweyo?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Vala umyalezo"
 
 #: kcheckaccelerators.cpp:199
 #, fuzzy, kde-format
@@ -1030,51 +807,6 @@ msgstr "&Yongeza Kwimibala Yesiko"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Qwalasela Ii&ndlela ezimfutshane..."
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-msgid "Error connecting to server."
-msgstr "Imposiso ngexesha ukhetha ifayile ye GSM:"
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "locally connected"
-msgid "Not connected."
-msgstr "idityaniswe ngobulali"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Continue"
-msgid "Connection timed out."
-msgstr "Qhubekeka"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "<Merge %1>"
-msgid "Server said: \"%1\""
-msgstr "<Merge %1>"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "Thumela ingxelo yegciwane."
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-msgid "The subject line of the email."
-msgstr "Utsuphe Losuku"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "Idilesi ye email eli gciwane ethunyelwe kuyo."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1677,6 +1409,226 @@ msgstr "&Izicwangciso"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Isixhobo se bar Engundoqo"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Idilesi yakho ye email. Ukuba ayilunganga, sebenzisa iqhosa loqwalaselo "
+#~ "lwe Email ukuyitshintsha"
+
+#, fuzzy
+#~| msgid "From:"
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Ivela ku:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Qwalasela i Email..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Idilesi ye email eli gciwane ethunyelwe kuyo."
+
+#, fuzzy
+#~| msgid "To:"
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Iya ku:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Thumela"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Thumela ingxelo yegciwane."
+
+#, fuzzy
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Thumela lengxelo yegciwane kuluhlu lwegciwane lwe KDE."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "&Ubungqongqo"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Ufumaneko lwempazamo"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Ingcwaba"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Isiqhelo"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Uluhlu lomnqweno"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Uguqulelo lomsebenzi kolunye ulwimi"
+
+#~ msgid "S&ubject: "
+#~ msgstr "&Umxholo: "
+
+#, fuzzy
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Faka umbhalo oshicilelweyo Ngesingesi ukuba kuyimfuneko) ofuna "
+#~ "ukuwungenisela ingxelo yegciwane.\n"
+#~ "Ukuba ucinezela \"Thumela\", umyalezo ngeposi uzakuthunyelwa "
+#~ "kumlondolozi \n"
+#~ "woludweliso lwenkqubo nakuluhlu lwegciwane le KDE."
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Kufuneka ukhankanye yomibini imixholo kunye nenkcazelo phambi kokuba "
+#~ "kuthunyelwe ingxelo."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Critical</b>. Please note that this "
+#~| "severity is intended only for bugs that</p><ul><li>break unrelated "
+#~| "software on the system (or the whole system)</li><li>cause serious data "
+#~| "loss</li><li>introduce a security hole on the system where the affected "
+#~| "package is installed</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Ukhethe ubungnqongqo <b>Ebalulekileyo</b>. Nceda qaphela ukuba "
+#~ "obubungqongo bujolise kuphela kumagciwane a</p><ul><li>phula udweliso "
+#~ "lwenkqubo yekhomputha ezingazalaniyo kulendlela (okanye indlela yonke)</"
+#~ "li><li>yenza idata ezimiseleyo ilahleko</li><li>yazisa umgqobho "
+#~ "wokhuseleko kule ndlela apho umsebenzi ochaphazelekayo ugcinwayo</li></"
+#~ "ul>\n"
+#~ "<p>Ingaba ibug onika ingxelo ngayo yenza umonakalo ongentla? Ukuba "
+#~ "ayiyenzi, nceda khetha ubucaka obucothayo. Enkosi!</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Grave</b>. Please note that this severity "
+#~| "is intended only for bugs that</p><ul><li>make the package in question "
+#~| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~| "security hole allowing access to the accounts of users who use the "
+#~| "affected package</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Ukhethe ubungqongo <b>Ingcwaba</b>. Nceda qaphela ukuba obu bucaka "
+#~ "bujolise kuphela kwibugs eze</p><ul><li>ezenza umsebenzi kumbuzo "
+#~ "ongasetyenziswanga okanye kakhulu kwi</li><li>zenza ilahleko yedata</"
+#~ "li><li>yazisa umgqobho wokhuseleko ivumela unikezelo lwamatyala "
+#~ "kubasebenzisi abasebenzisa lo msebenzi uchaphazelekayo </li></ ul>\n"
+#~ "<p>Ingaba ibug onika ingxelo ngayo yenza umonakalo ongentla ?Ukuba "
+#~ "ayiwenzi, nceda khetha ubucaka obucothayo. Enkosi!</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually...\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Ayikwazanga ukuthumela ingxelo yegciwane.\n"
+#~ "Ncerda ngenisa ingxelo yegciwane ngokwesandla...\n"
+#~ "Bona http://bugs.kde.org/ ngokwemiyalelo."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Ingxelo yegciwane ithunyelwe, enkosi ngengeniso yakho."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Vala kwaye ulahle ngaphandle\n"
+#~ "umyalezo ohleliweyo?"
+
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Vala umyalezo"
+
+#, fuzzy
+#~ msgid "Error connecting to server."
+#~ msgstr "Imposiso ngexesha ukhetha ifayile ye GSM:"
+
+#, fuzzy
+#~| msgid "locally connected"
+#~ msgid "Not connected."
+#~ msgstr "idityaniswe ngobulali"
+
+#, fuzzy
+#~| msgid "Continue"
+#~ msgid "Connection timed out."
+#~ msgstr "Qhubekeka"
+
+#, fuzzy
+#~| msgid "<Merge %1>"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "<Merge %1>"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Thumela ingxelo yegciwane."
+
+#, fuzzy
+#~ msgid "The subject line of the email."
+#~ msgstr "Utsuphe Losuku"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Idilesi ye email eli gciwane ethunyelwe kuyo."
 
 #, fuzzy
 #~| msgid "Homepage"

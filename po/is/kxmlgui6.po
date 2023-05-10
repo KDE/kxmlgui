@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2022-12-29 16:37+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -327,67 +327,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Gölluð flýtilyklasamsetning fannst"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Senda villuskýrslu"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Senda villuskýrslu"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Netfangið þitt. Ef það er rangt getur þú notað hnappinn \"Grunnstilla netfang"
-"\" til að breyta því"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Frá:"
-
-#: kbugreport.cpp:151
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Grunnstilla netfang..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Netfangið sem þessi villulýsing verður send á."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Til:"
-
-#: kbugreport.cpp:168
-#, kde-format
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Senda"
-
-#: kbugreport.cpp:170
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Senda villuskýrslu."
-
-#: kbugreport.cpp:171
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Senda þessa villuskýrslu á %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -396,12 +347,12 @@ msgstr ""
 "Forritið sem þú vilt senda inn villutilkynningu um - ef það er rangt getur "
 "þú notað hnappinn \"Senda villuskýrslu\" í viðeigandi forriti"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Forrit: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -410,22 +361,22 @@ msgstr ""
 "Útgáfa forritsins - gakktu úr skugga um að ekki sé til nýrri útgáfa áður en "
 "þú sendir villutilkynningu"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Útgáfa:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "ekkert útgáfunúmer gefið (villa forritara)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "Stýrikerfi:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -433,7 +384,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -441,7 +392,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -449,59 +400,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, kde-format
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "Hve al&varlegt"
-
-#: kbugreport.cpp:246
-#, kde-format
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Mjög alvarlegt"
-
-#: kbugreport.cpp:247
-#, kde-format
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Alvarlegt"
-
-#: kbugreport.cpp:248
-#, kde-format
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Venjulegt"
-
-#: kbugreport.cpp:249
-#, kde-format
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Óskalisti"
-
-#: kbugreport.cpp:250
-#, kde-format
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Þýðing"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "&Viðfangsefni: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Sláðu inn lýsingu á villunni hér fyrir villuskýrsluna (helst á ensku).\n"
-"Ef þú ýtir á \"Senda\" verður umsjónarmanni forritsins sendur tölvupóstur.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -514,7 +413,7 @@ msgstr ""
 "\">https://bugs.kde.org</a> með eyðublaði sem þú getur fyllt út.\n"
 "Upplýsingarnar hér að ofan verða sendar inn á þann þjón.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -523,107 +422,17 @@ msgstr ""
 "<qt>Smelltu á hnappinn hér fyrir neðan til að senda inn villuskýrslu. Þá "
 "opnast nýr gluggi í vafra á <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Ræsa hjálparforrit fyrir villuskýrslu"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "&Senda villuskýrslu"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-"Fann ekki <application>%1</application>-keyrsluskrána (venjulega hluti af "
-"\"%2\"-pakkanum)."
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Þú verður bæði að gefa upp viðfangsefni og lýsingu til að geta sent "
-"villuskýrsluna."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Þú valdir alvarleikastigið <b>Mjög alvarlegt</b>. Athugaðu að þetta "
-"alvarleikastig er einungis ætlað fyrir villur sem</p> <ul><li>gera ótengdan "
-"hugbúnað á kerfinu (eða allt kerfið) óvirkan</li><li>valda alvarlegum "
-"gagnamissi</li><li>opna öryggisholu í kerfinu þar sem téður pakki er "
-"uppsettur</li> </ul>\n"
-"<p>Veldur villan sem þú ert að tilkynna einhverjum af ofangreindum skaða? Ef "
-"svo er ekki, veldu þá lægra alvarleikastig. Þakka þér fyrir.</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Þú valdir alvarleikastigið <b>Alvarlegt</b>. Vinsamlegast athugaðu að "
-"þetta alvarleikastig er einungis hugsað fyrir villur sem</p><ul><li>gera "
-"pakkanna sem um ræðir svo gott sem ónothæfan</li><li>veldur gagnamissi</"
-"li><li>opnar fyrir öryggisholu sem leyfir aðgang að kerfinu sem notandinn "
-"sem keyrir forritið</li></ul>\n"
-"<p>Veldur villan sem þú ert að tilkynna einhverjum af ofangreindum skaða? Ef "
-"svo er ekki, veldu þá lægra alvarleikastig. Þakka þér fyrir.</p>"
-
-#: kbugreport.cpp:477
-#, kde-format
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Ekki tókst að senda villuskýrsluna.\n"
-"Sendu hana inn handvirkt í staðinn...\n"
-"Sjá leiðbeiningar á https://bugs.kde.org/ ."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Villuskýrsla send, takk fyrir hjálpina."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Loka og henda\n"
-"skeytinu sem var breytt?"
-
-#: kbugreport.cpp:493
-#, kde-format
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Loka skeyti"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -978,46 +787,6 @@ msgstr "Bæta við tækjastiku"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Grunnstilla flýtilykil..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "Villa í tengingu við þjón."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "Ekki tengt."
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "Tenging féll á tíma."
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "Tíminn rann út á meðan beðið var svars frá þjóninum."
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "Þjónn sagði: \"%1\""
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "Sendir villuskýrslu í tölvupósti."
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "Efnislína tölvupóstsins."
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "Netfangið sem þessi villuskýrsla verður send á."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1596,6 +1365,175 @@ msgstr "&Stillingar"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Aðaltækjastika"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Netfangið þitt. Ef það er rangt getur þú notað hnappinn \"Grunnstilla "
+#~ "netfang\" til að breyta því"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Frá:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Grunnstilla netfang..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Netfangið sem þessi villulýsing verður send á."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Til:"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Senda"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Senda villuskýrslu."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Senda þessa villuskýrslu á %1."
+
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "Hve al&varlegt"
+
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Mjög alvarlegt"
+
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Alvarlegt"
+
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Venjulegt"
+
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Óskalisti"
+
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Þýðing"
+
+#~ msgid "S&ubject: "
+#~ msgstr "&Viðfangsefni: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Sláðu inn lýsingu á villunni hér fyrir villuskýrsluna (helst á ensku).\n"
+#~ "Ef þú ýtir á \"Senda\" verður umsjónarmanni forritsins sendur "
+#~ "tölvupóstur.\n"
+
+#~ msgctxt ""
+#~ "The second arg is 'kde-cli-tools' which is the package that contains "
+#~ "kcmshell5 (the first arg)"
+#~ msgid ""
+#~ "Could not find <application>%1</application> executable (usually it's "
+#~ "part of the \"%2\" package)."
+#~ msgstr ""
+#~ "Fann ekki <application>%1</application>-keyrsluskrána (venjulega hluti af "
+#~ "\"%2\"-pakkanum)."
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Þú verður bæði að gefa upp viðfangsefni og lýsingu til að geta sent "
+#~ "villuskýrsluna."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Þú valdir alvarleikastigið <b>Mjög alvarlegt</b>. Athugaðu að þetta "
+#~ "alvarleikastig er einungis ætlað fyrir villur sem</p> <ul><li>gera "
+#~ "ótengdan hugbúnað á kerfinu (eða allt kerfið) óvirkan</li><li>valda "
+#~ "alvarlegum gagnamissi</li><li>opna öryggisholu í kerfinu þar sem téður "
+#~ "pakki er uppsettur</li> </ul>\n"
+#~ "<p>Veldur villan sem þú ert að tilkynna einhverjum af ofangreindum skaða? "
+#~ "Ef svo er ekki, veldu þá lægra alvarleikastig. Þakka þér fyrir.</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Þú valdir alvarleikastigið <b>Alvarlegt</b>. Vinsamlegast athugaðu að "
+#~ "þetta alvarleikastig er einungis hugsað fyrir villur sem</p><ul><li>gera "
+#~ "pakkanna sem um ræðir svo gott sem ónothæfan</li><li>veldur gagnamissi</"
+#~ "li><li>opnar fyrir öryggisholu sem leyfir aðgang að kerfinu sem notandinn "
+#~ "sem keyrir forritið</li></ul>\n"
+#~ "<p>Veldur villan sem þú ert að tilkynna einhverjum af ofangreindum skaða? "
+#~ "Ef svo er ekki, veldu þá lægra alvarleikastig. Þakka þér fyrir.</p>"
+
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Ekki tókst að senda villuskýrsluna.\n"
+#~ "Sendu hana inn handvirkt í staðinn...\n"
+#~ "Sjá leiðbeiningar á https://bugs.kde.org/ ."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Villuskýrsla send, takk fyrir hjálpina."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Loka og henda\n"
+#~ "skeytinu sem var breytt?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Loka skeyti"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "Villa í tengingu við þjón."
+
+#~ msgid "Not connected."
+#~ msgstr "Ekki tengt."
+
+#~ msgid "Connection timed out."
+#~ msgstr "Tenging féll á tíma."
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "Tíminn rann út á meðan beðið var svars frá þjóninum."
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Þjónn sagði: \"%1\""
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Sendir villuskýrslu í tölvupósti."
+
+#~ msgid "The subject line of the email."
+#~ msgstr "Efnislína tölvupóstsins."
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Netfangið sem þessi villuskýrsla verður send á."
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2011-07-06 12:57+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian\n"
@@ -411,72 +411,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Pamanīts divdomīgs īsceļš"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Nosūtīt kļūdas ziņojumu"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Nosūtīt kļūdas ziņojumu"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Jūsu e-pasta adrese. Ja nepareiza, izmantojiet pogu 'Konfigurēt e-pastu', "
-"lai nomainītu to"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "No:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Konfigurēt e-pastu..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "E-pasta adrese, uz kuru nosūtīt kļūdas ziņojumu."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Kam:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Sūtīt"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Nosūtīt kļūdas ziņojumu."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Nosūtīt šo kļūdas ziņojumu uz %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -485,12 +432,12 @@ msgstr ""
 "Programma, par kuru jūs vēlaties sūtīt kļūdas ziņojumu - ja nepareiza, "
 "lūdzu, izmantojiet \"Ziņot par kļūdu\" izvēlnes elementu pareizajā programmā"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Programma: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -499,22 +446,22 @@ msgstr ""
 "Šīs programmas versija - pirms sūtīt kļūdu ziņojumu, pārliecinieties, ka šī "
 "ir jaunākā versija"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Versija:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "versija nav uzrādīta (programmētāja kļūda.)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -524,7 +471,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -533,7 +480,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -543,68 +490,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "Sva&rīgums"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Kritiska"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Nopietna"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normāla"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Vēlme"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Tulkojums"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "T&emats: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Ievadiet tekstu (angliski, ja iespējams), kuru vēlaties iekļaut kļūdas "
-"ziņojumā.\n"
-"Ja nospiedīsiet \"Sūtīt\", vēstule tiks nosūtīta šīs programmas "
-"uzturētājiem.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -622,7 +508,7 @@ msgstr ""
 "atradīsiet aizpildāmo formu. Augstāk attēlotā informācija tiks pārsūtīta uz "
 "šo serveri.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -638,111 +524,19 @@ msgstr ""
 "atradīsiet aizpildāmo formu. Augstāk attēlotā informācija tiks pārsūtīta uz "
 "šo serveri.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Palaist kļūdu ziņošanas vedni"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Nosūtīt kļūdas ziņojumu"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Jums jānorāda gan temats, gan apraksts, pirms ziņojums var tikt nosūtīts."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Jūs izvēlējāties svarīgumu <b>Kritiska</b>. Lūdzu, atcerieties, ka šis "
-"svarīgums ir paredzēts tikai tām kļūdām, kas</p><ul><li>izsauc ar šo "
-"programmu nesaistītu programmu (vai visas sistēmas) apstāšanos</"
-"li><li>izraisa nopietnus datu zudumus</li><li>izveido drošības caurumus "
-"sistēmā, kurā skartā pakotne ir instalēta</li></ul>\n"
-"<p>Vai kļūda, par ko ziņojat, izsauc kādu augstāk minētajiem bojājumiem? Ja "
-"nē, lūdzu, izvēlieties mazāku svarīgumu. Paldies.</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Jūs izvēlējāties svarīgumu <b>Nopietna</b>. Lūdzu, atcerieties, ka šis "
-"svarīgums ir paredzēts tikai tām kļūdām, kas</p><ul><li>padara iesaistīto "
-"pakotni nelietojamu vai gandrīz nelietojamu</li><li>izraisa datu zudumus</"
-"li><li>izveido drošības caurumus, kas ļauj piekļūt šo pakotni izmantojošo "
-"lietotāju kontiem</li></ul>\n"
-"<p>Vai kļūda, par ko ziņojiet, izsauc kādu no augstāk minētajiem bojājumiem? "
-"Ja nē, lūdzu, izvēlieties mazāku svarīgumu. Paldies.</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually....\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Neizdevās nosūtīt kļūdas ziņojumu.\n"
-"Lūdzu, nosūtiet kļūdas ziņojumu pašrocīgi....\n"
-"Instrukciju skatīt http://bugs.kde.org/ ."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Kļūdas ziņojums nosūtīts, paldies par sadarbību."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Aizvērt un izmest\n"
-"rediģēto ziņojumu?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Aizvērt ziņojumu"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -1128,53 +922,6 @@ msgstr "Pievienot rīkjoslai"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Konfigurēt īsceļu..."
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-#| msgid "Create content on server"
-msgid "Error connecting to server."
-msgstr "Izveido saturu uz servera"
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Not found"
-msgid "Not connected."
-msgstr "Nav atrasts"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Connection timed out"
-msgid "Connection timed out."
-msgstr "Savienojums noildzis"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "Server: %1"
-msgid "Server said: \"%1\""
-msgstr "Serveris: %1"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "Nosūtīt kļūdas ziņojumu."
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-#| msgid "The size of the dialog"
-msgid "The subject line of the email."
-msgstr "Dialoga izmērs"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "E-pasta adrese, uz kuru nosūtīt kļūdas ziņojumu."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1784,6 +1531,204 @@ msgstr "Ie&statījumi"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Galvenā rīkjosla"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Jūsu e-pasta adrese. Ja nepareiza, izmantojiet pogu 'Konfigurēt e-pastu', "
+#~ "lai nomainītu to"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "No:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Konfigurēt e-pastu..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "E-pasta adrese, uz kuru nosūtīt kļūdas ziņojumu."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Kam:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Sūtīt"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Nosūtīt kļūdas ziņojumu."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Nosūtīt šo kļūdas ziņojumu uz %1."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "Sva&rīgums"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Kritiska"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Nopietna"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normāla"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Vēlme"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Tulkojums"
+
+#~ msgid "S&ubject: "
+#~ msgstr "T&emats: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Ievadiet tekstu (angliski, ja iespējams), kuru vēlaties iekļaut kļūdas "
+#~ "ziņojumā.\n"
+#~ "Ja nospiedīsiet \"Sūtīt\", vēstule tiks nosūtīta šīs programmas "
+#~ "uzturētājiem.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Jums jānorāda gan temats, gan apraksts, pirms ziņojums var tikt nosūtīts."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Jūs izvēlējāties svarīgumu <b>Kritiska</b>. Lūdzu, atcerieties, ka šis "
+#~ "svarīgums ir paredzēts tikai tām kļūdām, kas</p><ul><li>izsauc ar šo "
+#~ "programmu nesaistītu programmu (vai visas sistēmas) apstāšanos</"
+#~ "li><li>izraisa nopietnus datu zudumus</li><li>izveido drošības caurumus "
+#~ "sistēmā, kurā skartā pakotne ir instalēta</li></ul>\n"
+#~ "<p>Vai kļūda, par ko ziņojat, izsauc kādu augstāk minētajiem bojājumiem? "
+#~ "Ja nē, lūdzu, izvēlieties mazāku svarīgumu. Paldies.</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Jūs izvēlējāties svarīgumu <b>Nopietna</b>. Lūdzu, atcerieties, ka šis "
+#~ "svarīgums ir paredzēts tikai tām kļūdām, kas</p><ul><li>padara iesaistīto "
+#~ "pakotni nelietojamu vai gandrīz nelietojamu</li><li>izraisa datu zudumus</"
+#~ "li><li>izveido drošības caurumus, kas ļauj piekļūt šo pakotni izmantojošo "
+#~ "lietotāju kontiem</li></ul>\n"
+#~ "<p>Vai kļūda, par ko ziņojiet, izsauc kādu no augstāk minētajiem "
+#~ "bojājumiem? Ja nē, lūdzu, izvēlieties mazāku svarīgumu. Paldies.</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually....\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Neizdevās nosūtīt kļūdas ziņojumu.\n"
+#~ "Lūdzu, nosūtiet kļūdas ziņojumu pašrocīgi....\n"
+#~ "Instrukciju skatīt http://bugs.kde.org/ ."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Kļūdas ziņojums nosūtīts, paldies par sadarbību."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Aizvērt un izmest\n"
+#~ "rediģēto ziņojumu?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Aizvērt ziņojumu"
+
+#, fuzzy
+#~| msgid "Create content on server"
+#~ msgid "Error connecting to server."
+#~ msgstr "Izveido saturu uz servera"
+
+#, fuzzy
+#~| msgid "Not found"
+#~ msgid "Not connected."
+#~ msgstr "Nav atrasts"
+
+#, fuzzy
+#~| msgid "Connection timed out"
+#~ msgid "Connection timed out."
+#~ msgstr "Savienojums noildzis"
+
+#, fuzzy
+#~| msgid "Server: %1"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Serveris: %1"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Nosūtīt kļūdas ziņojumu."
+
+#, fuzzy
+#~| msgid "The size of the dialog"
+#~ msgid "The subject line of the email."
+#~ msgstr "Dialoga izmērs"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "E-pasta adrese, uz kuru nosūtīt kļūdas ziņojumu."
 
 #, fuzzy
 #~| msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -364,72 +364,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Otkrivena dvosmislena prečica"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Pošalji izveštaj o grešci"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Pošalji izveštaj o grešci"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"<html>Vaša adresa e‑pošte. Ukoliko nije ispravna, upotrebite dugme <i>Podesi "
-"e‑poštu...</i> da biste je promenili.</html>"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Od:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Podesi e‑poštu..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Adresa e‑pošte na koju se šalje izveštaj."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Za:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Pošalji"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Pošalji izveštaj o grešci."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Pošalji ovaj izveštaj o grešci na %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -438,12 +385,12 @@ msgstr ""
 "<html>Program za koji želite da prijavite grešku — ako nije ovaj, upotrebite "
 "stavku <i>Prijavi grešku...</i> u meniju pomoći tog programa.</html>"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Program: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -452,22 +399,22 @@ msgstr ""
 "Izdanje ovog programa — proverite da li postoji novije pre nego što "
 "pošaljete izveštaj o grešci."
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Izdanje:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "izdanje nije postavljeno (greška programera)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -475,7 +422,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -483,7 +430,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr ""
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -491,67 +438,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "&Ozbiljnost"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "kritična"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "visoka"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "normalna"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "spisak želja"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "prevod"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "&Naslov: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Unesite tekst (na engleskom, ukoliko je moguće) koji želite da pošaljete kao "
-"izveštaj.\n"
-"Kada pritisnete „Pošalji“, poruka će biti poslata održavaocu ovog programa.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -564,7 +451,7 @@ msgstr ""
 "a>, gde ćete dobiti formular koji treba popuniti. Gorenavedeni podaci biće "
 "predati na taj server.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -573,106 +460,19 @@ msgstr ""
 "<qt>Kliknite na dugme ispod da predate izveštaj. Otvoriće se prozor veb "
 "pregledača na <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Pokreni čarobnjak za prijavu grešaka"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "&Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Pošalji &izveštaj o grešci"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr "Morate navesti i naslov i opis pre nego što pošaljete izveštaj."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Izabrali ste <b>kritičnu</b> ozbiljnost. Imajte na umu da je ova "
-"ozbiljnost namenjena samo za greške koje:</p><ul><li>ruše nasumične programe "
-"na sistemu (ili ceo sistem)</li><li>izazivaju ozbiljan gubitak podataka</"
-"li><li>uvode bezbednosne propuste u sistem gde je ovaj program instaliran</"
-"li></ul>\n"
-"<p>Da li greška koju prijavljujete zaista povlači nešto od gore navedenog? "
-"Ako ne, izaberite neku manju ozbiljnost. Hvala.</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Izabrali ste <b>visoku</b> ozbiljnost. Imajte na umu da je ova ozbiljnost "
-"namenjena samo za greške koje:</p><ul> <li>čine program uglavnom ili potpuno "
-"neupotrebljivim</li><li>izazivaju gubitak podataka</li><li>uvode bezbednosne "
-"propuste dozvoljavajući pristup nalozima korisnika koji koriste ovaj "
-"program</li></ul>\n"
-"<p>Da li greška koju prijavljujete zaista povlači nešto od gore navedenog? "
-"Ako ne, izaberite neku manju ozbiljnost. Hvala.</p>"
-
-#: kbugreport.cpp:477
-#, kde-format
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Ne mogu da pošaljem izveštaj o grešci.\n"
-"Pokušajte da ga predate ručno.\n"
-"Potražite uputstva na https://bugs.kde.org/."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Izveštaj je poslat, hvala vam na saradnji."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Zatvoriti i odbaciti\n"
-"izmenjenu poruku?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Zatvori poruku"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -1067,48 +867,6 @@ msgstr "Dodaj na traku alatki"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Podesi prečicu..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "Greška u povezivanju na server."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "Nije povezan."
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "Isteklo je vreme za vezu."
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "Isteklo je vreme za razmenu sa serverom."
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "Server odgovara: „%1“"
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "Šalje izveštaj o grešci e‑poštom."
-
-# rewrite-msgid: /line//
-# rewrite-msgid: /email/message/
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "Naslov poruke."
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "Adresa e‑pošte na koju se šalje izveštaj."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1731,6 +1489,189 @@ msgstr "P&odešavanje"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Glavna traka"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "<html>Vaša adresa e‑pošte. Ukoliko nije ispravna, upotrebite dugme "
+#~ "<i>Podesi e‑poštu...</i> da biste je promenili.</html>"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Od:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Podesi e‑poštu..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Adresa e‑pošte na koju se šalje izveštaj."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Za:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Pošalji"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Pošalji izveštaj o grešci."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Pošalji ovaj izveštaj o grešci na %1."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "&Ozbiljnost"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "kritična"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "visoka"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "normalna"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "spisak želja"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "prevod"
+
+#~ msgid "S&ubject: "
+#~ msgstr "&Naslov: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Unesite tekst (na engleskom, ukoliko je moguće) koji želite da pošaljete "
+#~ "kao izveštaj.\n"
+#~ "Kada pritisnete „Pošalji“, poruka će biti poslata održavaocu ovog "
+#~ "programa.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr "Morate navesti i naslov i opis pre nego što pošaljete izveštaj."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Izabrali ste <b>kritičnu</b> ozbiljnost. Imajte na umu da je ova "
+#~ "ozbiljnost namenjena samo za greške koje:</p><ul><li>ruše nasumične "
+#~ "programe na sistemu (ili ceo sistem)</li><li>izazivaju ozbiljan gubitak "
+#~ "podataka</li><li>uvode bezbednosne propuste u sistem gde je ovaj program "
+#~ "instaliran</li></ul>\n"
+#~ "<p>Da li greška koju prijavljujete zaista povlači nešto od gore "
+#~ "navedenog? Ako ne, izaberite neku manju ozbiljnost. Hvala.</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Izabrali ste <b>visoku</b> ozbiljnost. Imajte na umu da je ova "
+#~ "ozbiljnost namenjena samo za greške koje:</p><ul> <li>čine program "
+#~ "uglavnom ili potpuno neupotrebljivim</li><li>izazivaju gubitak podataka</"
+#~ "li><li>uvode bezbednosne propuste dozvoljavajući pristup nalozima "
+#~ "korisnika koji koriste ovaj program</li></ul>\n"
+#~ "<p>Da li greška koju prijavljujete zaista povlači nešto od gore "
+#~ "navedenog? Ako ne, izaberite neku manju ozbiljnost. Hvala.</p>"
+
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Ne mogu da pošaljem izveštaj o grešci.\n"
+#~ "Pokušajte da ga predate ručno.\n"
+#~ "Potražite uputstva na https://bugs.kde.org/."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Izveštaj je poslat, hvala vam na saradnji."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Zatvoriti i odbaciti\n"
+#~ "izmenjenu poruku?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Zatvori poruku"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "Greška u povezivanju na server."
+
+#~ msgid "Not connected."
+#~ msgstr "Nije povezan."
+
+#~ msgid "Connection timed out."
+#~ msgstr "Isteklo je vreme za vezu."
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "Isteklo je vreme za razmenu sa serverom."
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Server odgovara: „%1“"
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Šalje izveštaj o grešci e‑poštom."
+
+# rewrite-msgid: /line//
+# rewrite-msgid: /email/message/
+#~ msgid "The subject line of the email."
+#~ msgstr "Naslov poruke."
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Adresa e‑pošte na koju se šalje izveštaj."
 
 #, fuzzy
 #~| msgid ""

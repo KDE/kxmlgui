@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2006-06-22 16:29+0200\n"
 "Last-Translator: Michel Ludwig <michel.ludwig@kdemail.net>\n"
 "Language-Team: Luxembourgish <kde-i18n-lb@kde.org>\n"
@@ -343,74 +343,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Méideideg \"%1\" net verschafft"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "E Käfer mellen"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "E Käfer mellen"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Är E-Mail-Adress. Wa se falsch ass, dréckt op den \"E-Mail configuréieren\"-"
-"Knäppche fir se z'änneren"
-
-#: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgid "From:"
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Vun:"
-
-#: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "E-Mail configuréiren..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "D'E-Mail-Adress, wou de Käfer gemellt gëtt."
-
-#: kbugreport.cpp:159
-#, fuzzy, kde-format
-#| msgid "To:"
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Un:"
-
-#: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Fortschécken"
-
-#: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "De Bericht fortschécken."
-
-#: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Dëse Käfer bei %1 mellen."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -419,12 +364,12 @@ msgstr ""
 "De Programm an deem dir de Käfer fonnt hutt - Falls hei dee falsche Programm "
 "steet, bënotzt w.e.g. de \"Käfer Mellen\"-Menü vun deem richtege Programm"
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Programm: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -433,23 +378,23 @@ msgstr ""
 "D'Versioun vum Programm - Kuckt w.e.g. no, ob keng méi nei Versioun eraus "
 "ass, éier dir de Bericht verschéckt"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Versioun:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, fuzzy, kde-format
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
 msgstr "keng Versioun (Feeler vum Programméierer!)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -457,7 +402,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -466,7 +411,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -474,68 +419,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "Gra&vitéit"
-
-#: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Kritësch"
-
-#: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Schlëmm"
-
-#: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normal"
-
-#: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Wonsch"
-
-#: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Iwwersetzung"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "Be&treff: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Gitt hei den Text an (wa méiglech op Englësch), deen dir als Bericht "
-"aschécke wëllt.\n"
-"Wann dir op \"Fortschécken\" klickt, gëtt eng E-Mail un de Verwalter vun "
-"dësem Programm geschéckt.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -549,7 +433,7 @@ msgstr ""
 "wou dir e Formular ausfëlle kënnt.\n"
 "D'Informatioun hei driwwer gëtt op de Server geschéckt."
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -561,129 +445,19 @@ msgstr ""
 "wou dir e Formular ausfëlle kënnt.\n"
 "D'Informatioun hei driwwer gëtt op de Server geschéckt."
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "Käfer-Mellen-Assistent &starten"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "E Käfer mellen"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Dir musst e Betreff an eng Beschreiwung ugin, éier dir de Bericht verschécke "
-"kënnt."
-
-#: kbugreport.cpp:441
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#| "is intended only for bugs that</p><ul><li>break unrelated software on the "
-#| "system (or the whole system)</li><li>cause serious data loss</"
-#| "li><li>introduce a security hole on the system where the affected package "
-#| "is installed</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Dir hutt d'Gravitéit <b>Kritësch</b> gewielt. Dëse Grad ass nëmme fir "
-"Käfere geduecht, déi</p><ul><li>aner Software oder de ganze System mat "
-"ofstierze loossen</li><li>fir ën erhiefleche Verloscht vun Date "
-"verantwortlech sinn</li><li>e serieut Sëcherheetslaach am System, wou dat "
-"infizéiert Pakéit installéiert ass, provozéieren</li></ul>\n"
-"<p>Erfëllt äre Käfer ee vun deene Critèren? Falls net, wielt w.e.g. méi eng "
-"schwaach Gravitéit aus. Merci.</p>"
-
-#: kbugreport.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#| "intended only for bugs that</p><ul><li>make the package in question "
-#| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#| "security hole allowing access to the accounts of users who use the "
-#| "affected package</li></ul>\n"
-#| "<p>Does the bug you are reporting cause any of the above damage? If it "
-#| "does not, please select a lower severity. Thank you!</p>"
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Dir hutt d'Gravitéit <b>Schlëmm</b> gewielt. Dëse Grad ass nëmme fir "
-"Käfere geduecht, déi</p><ul><li>dat a Fro kommend Pakéit gréisstendeels oder "
-"vollstänneg onbrauchbar mëcht</li><li>fir de Verloscht vun Date "
-"verantwortlech sinn</li><li>e Sëcherheetslaach am System provozéieren, dat "
-"den Zougaang zu de Benotzer-Accounte fräigëtt</li></ul>\n"
-"<p>Erfëllt äre Käfer ee vun deene Critèren? Falls net, wielt w.e.g. méi eng "
-"schwaach Gravitéit aus. Merci.</p>"
-
-#: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually...\n"
-#| "See http://bugs.kde.org/ for instructions."
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Konnt de Bericht net fortschécken.\n"
-"Mellt äre Käfer w.e.g. manuell...\n"
-"Gitt op http://bugs.kde.org/ fir Uweisungen."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Käfer gemellt. Merci fir är Hëllef."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Zoumaachen an déi \n"
-"verännert Noricht\n"
-"si loossen?"
-
-#: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Noricht zoumaachen"
 
 #: kcheckaccelerators.cpp:199
 #, fuzzy, kde-format
@@ -1055,53 +829,6 @@ msgstr "Bei d'Benotzerdefinéiert Faarwen &dobäimaachen"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "&Kierzel configuréieren..."
-
-#: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
-#| msgid "Error parsing providers list."
-msgid "Error connecting to server."
-msgstr "Feeler beim duerchliese vun der Providerlëscht."
-
-#: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "locally connected"
-msgid "Not connected."
-msgstr "direkt verbonn"
-
-#: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Socket error code ConnectionTimedOut"
-#| msgid "connection timed out"
-msgid "Connection timed out."
-msgstr "D'Verbindungszäit ass iwwerschratt ginn"
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr ""
-
-#: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "<Merge %1>"
-msgid "Server said: \"%1\""
-msgstr "<Merge %1>"
-
-#: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
-msgid "Sends a bug report by email."
-msgstr "De Bericht fortschécken."
-
-#: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
-msgid "The subject line of the email."
-msgstr "Rotschlag vum Dag"
-
-#: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
-#| msgid "The email address this bug report is sent to."
-msgid "The email address to send the bug report to."
-msgstr "D'E-Mail-Adress, wou de Käfer gemellt gëtt."
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -1711,6 +1438,228 @@ msgstr "&Astellungen"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Haapt-Toolbar"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Är E-Mail-Adress. Wa se falsch ass, dréckt op den \"E-Mail configuréieren"
+#~ "\"-Knäppche fir se z'änneren"
+
+#, fuzzy
+#~| msgid "From:"
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Vun:"
+
+#, fuzzy
+#~| msgid "Configure Email..."
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "E-Mail configuréiren..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "D'E-Mail-Adress, wou de Käfer gemellt gëtt."
+
+#, fuzzy
+#~| msgid "To:"
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Un:"
+
+#, fuzzy
+#~| msgid "&Send"
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Fortschécken"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "De Bericht fortschécken."
+
+#, fuzzy
+#~| msgid "Send this bug report to %1."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Dëse Käfer bei %1 mellen."
+
+#, fuzzy
+#~| msgid "Se&verity"
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "Gra&vitéit"
+
+#, fuzzy
+#~| msgid "Critical"
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Kritësch"
+
+#, fuzzy
+#~| msgid "Grave"
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Schlëmm"
+
+#, fuzzy
+#~| msgctxt "normal severity"
+#~| msgid "Normal"
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#, fuzzy
+#~| msgid "Wishlist"
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Wonsch"
+
+#, fuzzy
+#~| msgid "Translation"
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Iwwersetzung"
+
+#~ msgid "S&ubject: "
+#~ msgstr "Be&treff: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Gitt hei den Text an (wa méiglech op Englësch), deen dir als Bericht "
+#~ "aschécke wëllt.\n"
+#~ "Wann dir op \"Fortschécken\" klickt, gëtt eng E-Mail un de Verwalter vun "
+#~ "dësem Programm geschéckt.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Dir musst e Betreff an eng Beschreiwung ugin, éier dir de Bericht "
+#~ "verschécke kënnt."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Critical</b>. Please note that this "
+#~| "severity is intended only for bugs that</p><ul><li>break unrelated "
+#~| "software on the system (or the whole system)</li><li>cause serious data "
+#~| "loss</li><li>introduce a security hole on the system where the affected "
+#~| "package is installed</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Dir hutt d'Gravitéit <b>Kritësch</b> gewielt. Dëse Grad ass nëmme fir "
+#~ "Käfere geduecht, déi</p><ul><li>aner Software oder de ganze System mat "
+#~ "ofstierze loossen</li><li>fir ën erhiefleche Verloscht vun Date "
+#~ "verantwortlech sinn</li><li>e serieut Sëcherheetslaach am System, wou dat "
+#~ "infizéiert Pakéit installéiert ass, provozéieren</li></ul>\n"
+#~ "<p>Erfëllt äre Käfer ee vun deene Critèren? Falls net, wielt w.e.g. méi "
+#~ "eng schwaach Gravitéit aus. Merci.</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You chose the severity <b>Grave</b>. Please note that this severity "
+#~| "is intended only for bugs that</p><ul><li>make the package in question "
+#~| "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~| "security hole allowing access to the accounts of users who use the "
+#~| "affected package</li></ul>\n"
+#~| "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~| "does not, please select a lower severity. Thank you!</p>"
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Dir hutt d'Gravitéit <b>Schlëmm</b> gewielt. Dëse Grad ass nëmme fir "
+#~ "Käfere geduecht, déi</p><ul><li>dat a Fro kommend Pakéit gréisstendeels "
+#~ "oder vollstänneg onbrauchbar mëcht</li><li>fir de Verloscht vun Date "
+#~ "verantwortlech sinn</li><li>e Sëcherheetslaach am System provozéieren, "
+#~ "dat den Zougaang zu de Benotzer-Accounte fräigëtt</li></ul>\n"
+#~ "<p>Erfëllt äre Käfer ee vun deene Critèren? Falls net, wielt w.e.g. méi "
+#~ "eng schwaach Gravitéit aus. Merci.</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Unable to send the bug report.\n"
+#~| "Please submit a bug report manually...\n"
+#~| "See http://bugs.kde.org/ for instructions."
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Konnt de Bericht net fortschécken.\n"
+#~ "Mellt äre Käfer w.e.g. manuell...\n"
+#~ "Gitt op http://bugs.kde.org/ fir Uweisungen."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Käfer gemellt. Merci fir är Hëllef."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Zoumaachen an déi \n"
+#~ "verännert Noricht\n"
+#~ "si loossen?"
+
+#, fuzzy
+#~| msgid "Close Message"
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Noricht zoumaachen"
+
+#, fuzzy
+#~| msgid "Error parsing providers list."
+#~ msgid "Error connecting to server."
+#~ msgstr "Feeler beim duerchliese vun der Providerlëscht."
+
+#, fuzzy
+#~| msgid "locally connected"
+#~ msgid "Not connected."
+#~ msgstr "direkt verbonn"
+
+#, fuzzy
+#~| msgctxt "Socket error code ConnectionTimedOut"
+#~| msgid "connection timed out"
+#~ msgid "Connection timed out."
+#~ msgstr "D'Verbindungszäit ass iwwerschratt ginn"
+
+#, fuzzy
+#~| msgid "<Merge %1>"
+#~ msgid "Server said: \"%1\""
+#~ msgstr "<Merge %1>"
+
+#, fuzzy
+#~| msgid "Send bug report."
+#~ msgid "Sends a bug report by email."
+#~ msgstr "De Bericht fortschécken."
+
+#, fuzzy
+#~ msgid "The subject line of the email."
+#~ msgstr "Rotschlag vum Dag"
+
+#, fuzzy
+#~| msgid "The email address this bug report is sent to."
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "D'E-Mail-Adress, wou de Käfer gemellt gëtt."
 
 #, fuzzy
 #~| msgid "Homepage"

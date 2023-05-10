@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2021-01-29 14:25+0800\n"
 "Last-Translator: ye-yu <rafolwen98@gmail.com>\n"
 "Language-Team: Malay <kde-i18n-doc@kde.org>\n"
@@ -346,66 +346,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Pintasan tidak jelas dikesan"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Hantar Laporan Pepijat"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Hantar Laporan Pepijat"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Alamat emel anda. Jika salah, gunakan butang Tetapkan Emel untuk mengubahnya"
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Dari:"
-
-#: kbugreport.cpp:151
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Tetapkan Emel..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "Emel laporan pepijat ini dihantar kepada."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Ke:"
-
-#: kbugreport.cpp:168
-#, kde-format
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "Hantar (&S)"
-
-#: kbugreport.cpp:170
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Hantar laporan pepijat."
-
-#: kbugreport.cpp:171
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Hantar laporan pepijat ini kepada %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -414,12 +366,12 @@ msgstr ""
 "Program aplikasi yang berkaitan dengan laporan pepijat - jika tidak benar, "
 "sila gunakan menu Laporan Pepijat untuk memperbaiki aplikasi."
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Aplikasi: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -428,22 +380,22 @@ msgstr ""
 "Versi program aplikasi - sila pastikan tiada versi yang lebih terkini yang "
 "tersedia ada sebelum menghantar laporan pepijat"
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Versi:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "tiada set versi (ralat pengaturcara)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "Sistem Pengendali:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -453,7 +405,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -462,7 +414,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -472,61 +424,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, kde-format
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "Keterukan (&V)"
-
-#: kbugreport.cpp:246
-#, kde-format
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Kritikal"
-
-#: kbugreport.cpp:247
-#, kde-format
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Nazak"
-
-#: kbugreport.cpp:248
-#, kde-format
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Normal"
-
-#: kbugreport.cpp:249
-#, kde-format
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Permintaan"
-
-#: kbugreport.cpp:250
-#, kde-format
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Penterjemahan"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "Tajuk (&S)"
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Masukkan teks (dalam bahasa Inggeris, jika boleh) yang anda ingin "
-"mengemukakan untuk laporan pepijat.\n"
-"Jika anda tekan \"Hantar\", mesej e-mel akan dihantar kepada penyenggara "
-"program ini.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -539,7 +437,7 @@ msgstr ""
 "bugs.kde.org</a> dimana anda akan temui borang untuk diisi. Maklumat yang "
 "dipaparkan di atas akan dihantar ke pelayan itu.</qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -548,107 +446,17 @@ msgstr ""
 "<qt>Untuk menghantar laporan pepijat, klik pada butang di bawah. Ini akan "
 "membuka tetingkap pelayar web pada <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Lancar Wizard Laporan Pepijat"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Hantar Laporan Pepijat (&S)"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Anda mestilah menyatakan subjek dan keterangan sebelum laporan boleh "
-"dihantar."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Anda telah memilih keterukan <b>Kritikal</b>. Sila maklum bahawa "
-"keterukan ini hanyalah untuk pepijat yang:</p><ul><li> menghasilkan ralat "
-"pada perisian sistem (atau pada seluruh sistem)</li><li> menyebabkan "
-"kehilangan data yang serius</li><li> memyebabkan celah keselamatan kepada "
-"sistem yang mana pakej tersebut telah dipasang</li></ul>\n"
-"<p>Adakah pepijat ini menyebabkan mana-mana kerosakan yang dinyatakan diatas?"
-"Sekiranya tidak, sila pilih tahap keterukan yang lebih rendah. Terima kasih."
-"</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Anda telah memilih keterukan <b>Nazak</b>. Sila maklum bahawa keterukan "
-"ini hanyalah untuk pepijat yang:</p> <ul><li> menyebabkan pakej tersebut "
-"hampir ataupun langsung tidak boleh digunakan</li><li> menyebabkan "
-"kehilangan data</li><li> menyebabkan celah keselamatan yang membenarkan "
-"akses kepada akaun pengguna yang menggunakan pakej tersebut</li></ul>\n"
-"<p>Adakah pepijat ini menyebabkan mana-mana kerosakan yang dinyatakan diatas?"
-"Sekiranya tidak, sila pilih tahap keterukan yang lebih rendah. Terima kasih."
-"</p>"
-
-#: kbugreport.cpp:477
-#, kde-format
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Gagal menghantar laporan pepijat.\n"
-"Sila hantar laporan tersebut secara manual....\n"
-"Lihat https://bugs.kde.org/ untuk arahan."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Laporan pepijat telah dihantar, terima kasih atas input anda."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Tutup dan abai\n"
-"mesej yang telah diedit?"
-
-#: kbugreport.cpp:493
-#, kde-format
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Tutup Mesej"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -1009,46 +817,6 @@ msgstr "Tambah ke Bar Alatan"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Tetapkan Pintasan..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "Cipta kandungan pada pelayan."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "Tidak ditemui."
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "Hadmasa sambungan tamat."
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "Tamat masa semasa menunggu interaksi."
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "Pelayan: %1"
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "Hantar laporan pepijat melalui emel."
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "Saiz dialog"
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "Emel laporan pepijat ini dihantar kepada."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1629,6 +1397,169 @@ msgstr "Tetapan (&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Bar Alatan Utama"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Alamat emel anda. Jika salah, gunakan butang Tetapkan Emel untuk "
+#~ "mengubahnya"
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Dari:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Tetapkan Emel..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "Emel laporan pepijat ini dihantar kepada."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Ke:"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "Hantar (&S)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Hantar laporan pepijat."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Hantar laporan pepijat ini kepada %1."
+
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "Keterukan (&V)"
+
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Kritikal"
+
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Nazak"
+
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Permintaan"
+
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Penterjemahan"
+
+#~ msgid "S&ubject: "
+#~ msgstr "Tajuk (&S)"
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Masukkan teks (dalam bahasa Inggeris, jika boleh) yang anda ingin "
+#~ "mengemukakan untuk laporan pepijat.\n"
+#~ "Jika anda tekan \"Hantar\", mesej e-mel akan dihantar kepada penyenggara "
+#~ "program ini.\n"
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Anda mestilah menyatakan subjek dan keterangan sebelum laporan boleh "
+#~ "dihantar."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Anda telah memilih keterukan <b>Kritikal</b>. Sila maklum bahawa "
+#~ "keterukan ini hanyalah untuk pepijat yang:</p><ul><li> menghasilkan ralat "
+#~ "pada perisian sistem (atau pada seluruh sistem)</li><li> menyebabkan "
+#~ "kehilangan data yang serius</li><li> memyebabkan celah keselamatan kepada "
+#~ "sistem yang mana pakej tersebut telah dipasang</li></ul>\n"
+#~ "<p>Adakah pepijat ini menyebabkan mana-mana kerosakan yang dinyatakan "
+#~ "diatas?Sekiranya tidak, sila pilih tahap keterukan yang lebih rendah. "
+#~ "Terima kasih.</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Anda telah memilih keterukan <b>Nazak</b>. Sila maklum bahawa "
+#~ "keterukan ini hanyalah untuk pepijat yang:</p> <ul><li> menyebabkan pakej "
+#~ "tersebut hampir ataupun langsung tidak boleh digunakan</li><li> "
+#~ "menyebabkan kehilangan data</li><li> menyebabkan celah keselamatan yang "
+#~ "membenarkan akses kepada akaun pengguna yang menggunakan pakej tersebut</"
+#~ "li></ul>\n"
+#~ "<p>Adakah pepijat ini menyebabkan mana-mana kerosakan yang dinyatakan "
+#~ "diatas?Sekiranya tidak, sila pilih tahap keterukan yang lebih rendah. "
+#~ "Terima kasih.</p>"
+
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Gagal menghantar laporan pepijat.\n"
+#~ "Sila hantar laporan tersebut secara manual....\n"
+#~ "Lihat https://bugs.kde.org/ untuk arahan."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Laporan pepijat telah dihantar, terima kasih atas input anda."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Tutup dan abai\n"
+#~ "mesej yang telah diedit?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Tutup Mesej"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "Cipta kandungan pada pelayan."
+
+#~ msgid "Not connected."
+#~ msgstr "Tidak ditemui."
+
+#~ msgid "Connection timed out."
+#~ msgstr "Hadmasa sambungan tamat."
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "Tamat masa semasa menunggu interaksi."
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Pelayan: %1"
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Hantar laporan pepijat melalui emel."
+
+#~ msgid "The subject line of the email."
+#~ msgstr "Saiz dialog"
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "Emel laporan pepijat ini dihantar kepada."
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""

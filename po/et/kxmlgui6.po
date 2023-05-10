@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:35+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2022-10-20 20:01+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -320,67 +320,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Tuvastati mitmetimõistetav kiirklahv"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Veateate saatmine"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Veateate saatmine"
 
-#: kbugreport.cpp:142
-#, kde-format
-msgid ""
-"Your email address. If incorrect, use the Configure Email button to change it"
-msgstr ""
-"Sinu e-posti aadress. Kasuta nuppu 'Seadista e-posti', kui see pole "
-"korrektne."
-
-#: kbugreport.cpp:143
-#, kde-format
-msgctxt "Email sender address"
-msgid "From:"
-msgstr "Saatja:"
-
-#: kbugreport.cpp:151
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Email..."
-msgstr "Seadista e-posti..."
-
-#: kbugreport.cpp:158
-#, kde-format
-msgid "The email address this bug report is sent to."
-msgstr "E-posti aadress, kuhu saata vearaport."
-
-#: kbugreport.cpp:159
-#, kde-format
-msgctxt "Email receiver address"
-msgid "To:"
-msgstr "Saaja:"
-
-#: kbugreport.cpp:168
-#, kde-format
-msgctxt "@action:button"
-msgid "&Send"
-msgstr "&Saada"
-
-#: kbugreport.cpp:170
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Send bug report."
-msgstr "Veateate saatmine."
-
-#: kbugreport.cpp:171
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Send this bug report to %1."
-msgstr "Veateate saatmine aadressile %1."
-
-#: kbugreport.cpp:180
+#: kbugreport.cpp:96
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -389,12 +340,12 @@ msgstr ""
 "Rakendus, mille kohta sa soovid veateadet saata - kui see ei ole õige, siis "
 "kasuta veateate saatmiseks õige rakenduse menüüd."
 
-#: kbugreport.cpp:181
+#: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
 msgstr "Rakendus: "
 
-#: kbugreport.cpp:191
+#: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -403,22 +354,22 @@ msgstr ""
 "Rakenduse versioon - enne veateate saatmist veendu, et vahepeal pole ilmunud "
 "uuemat versiooni."
 
-#: kbugreport.cpp:192
+#: kbugreport.cpp:108
 #, kde-format
 msgid "Version:"
 msgstr "Versioon:"
 
-#: kbugreport.cpp:197
+#: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "versioon puudub (programmeerija viga)"
 
-#: kbugreport.cpp:209
+#: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:214
+#: kbugreport.cpp:130
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -426,7 +377,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:221
+#: kbugreport.cpp:137
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -434,7 +385,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:227
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -442,60 +393,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:239
-#, kde-format
-msgctxt "@title:group"
-msgid "Se&verity"
-msgstr "&Raskusaste"
-
-#: kbugreport.cpp:246
-#, kde-format
-msgctxt "bug severity"
-msgid "Critical"
-msgstr "Kriitiline"
-
-#: kbugreport.cpp:247
-#, kde-format
-msgctxt "bug severity"
-msgid "Grave"
-msgstr "Tõsine"
-
-#: kbugreport.cpp:248
-#, kde-format
-msgctxt "bug severity"
-msgid "Normal"
-msgstr "Tavaline"
-
-#: kbugreport.cpp:249
-#, kde-format
-msgctxt "bug severity"
-msgid "Wishlist"
-msgstr "Soov"
-
-#: kbugreport.cpp:250
-#, kde-format
-msgctxt "bug severity"
-msgid "Translation"
-msgstr "Tõlge"
-
-#: kbugreport.cpp:268
-#, kde-format
-msgid "S&ubject: "
-msgstr "T&eema: "
-
-#: kbugreport.cpp:277
-#, kde-format
-msgid ""
-"Enter the text (in English if possible) that you wish to submit for the bug "
-"report.\n"
-"If you press \"Send\", a mail message will be sent to the maintainer of this "
-"program.\n"
-msgstr ""
-"Sisesta veateatega saadetav tekst (kui võimalik, siis inglise keeles).\n"
-"Klõpsuga nupule \"Saada\" saadetakse e-kiri selle rakenduse hooldajale\n"
-"ning ka KDE vigade nimekirja.\n"
-
-#: kbugreport.cpp:300
+#: kbugreport.cpp:157
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -509,7 +407,7 @@ msgstr ""
 "kus leiad täidetava vormi. Ülaltoodud info saadetakse sellesse serverisse.</"
 "qt>"
 
-#: kbugreport.cpp:306
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -518,105 +416,17 @@ msgstr ""
 "<qt>Veateate saatmiseks klõpsa allolevale nupule, mille peale avatakse uues "
 "brauseri aknas aadress <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:323
+#: kbugreport.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Käivita veateate nõustaja"
 
-#: kbugreport.cpp:325
+#: kbugreport.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "&Saada veateade"
-
-#: kbugreport.cpp:380
-#, kde-format
-msgctxt ""
-"The second arg is 'kde-cli-tools' which is the package that contains "
-"kcmshell5 (the first arg)"
-msgid ""
-"Could not find <application>%1</application> executable (usually it's part "
-"of the \"%2\" package)."
-msgstr ""
-"Täitmisfaili <application>%1</application> ei leitud (tavaliselt on see osa "
-"paketist \"%2\")."
-
-#: kbugreport.cpp:432
-#, kde-format
-msgid ""
-"You must specify both a subject and a description before the report can be "
-"sent."
-msgstr ""
-"Enne veateate saatmist pead sa sisestama nii teema kui ka vea kirjelduse."
-
-#: kbugreport.cpp:441
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Critical</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>break unrelated software on the "
-"system (or the whole system)</li><li>cause serious data loss</"
-"li><li>introduce a security hole on the system where the affected package is "
-"installed</li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Sa väidad, et viga on <b>Kriitiline</b>. Palun arvesta, et see raskusaste "
-"on mõeldud selliste vigade tarbeks, mis</p><ul><li>põhjustavad asjasse "
-"mittepuutuvale tarkvarale (või kogu süsteemile) suuri probleeme</li> "
-"<li>põhjustavad andmekadu</li> <li>avavad turvaaugu süsteemis, kuhu rakendus "
-"on paigaldatud</li></ul>\n"
-"<p>Kas raporteeritav viga põhjustab sellist kahju? Kui ei, siis vali palun "
-"madalam raskusaste. Täname.</p>"
-
-#: kbugreport.cpp:458
-#, kde-format
-msgid ""
-"<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-"intended only for bugs that:</p><ul><li>make the package in question "
-"unusable or mostly so</li><li>cause data loss</li><li>introduce a security "
-"hole allowing access to the accounts of users who use the affected package</"
-"li></ul>\n"
-"<p>Does the bug you are reporting cause any of the above damage? If it does "
-"not, please select a lower severity. Thank you.</p>"
-msgstr ""
-"<p>Sa väidad, et viga on <b>Tõsine</b>. Palun arvesta, et see raskusaste on "
-"mõeldud selliste vigade tarbeks, mis</p> <ul><li>teevad antud rakenduse "
-"(suuremalt jaolt) kasutamiskõlbmatuks</li> <li>põhjustavad andmekadu</li> "
-"<li>põhjustavad ohtu tarkvara kasutava kasutaja turvalisusele</li></ul>\n"
-"<p>Kas raporteeritav viga põhjustab sellist kahju? Kui ei, siis siis vali "
-"palun madalam raskusaste. Täname.</p>"
-
-#: kbugreport.cpp:477
-#, kde-format
-msgid ""
-"Unable to send the bug report.\n"
-"Please submit a bug report manually....\n"
-"See https://bugs.kde.org/ for instructions."
-msgstr ""
-"Veateate saatmine nurjus.\n"
-"Pead veast käsitsi.teada andma ...\n"
-"Juhiste saamiseks vt. https://bugs.kde.org/."
-
-#: kbugreport.cpp:484
-#, kde-format
-msgid "Bug report sent, thank you for your input."
-msgstr "Veateade on saadetud, suur tänu abi eest."
-
-#: kbugreport.cpp:492
-#, kde-format
-msgid ""
-"Close and discard\n"
-"edited message?"
-msgstr ""
-"Kas sulgeda ja unustada\n"
-"muudetud teade?"
-
-#: kbugreport.cpp:493
-#, kde-format
-msgctxt "@title:window"
-msgid "Close Message"
-msgstr "Teate sulgemine"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -966,46 +776,6 @@ msgstr "Lisa tööriistaribale"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Seadista kiirklahvi..."
-
-#: ksendbugmail/main.cpp:30
-#, kde-format
-msgid "Error connecting to server."
-msgstr "Tõrge serverisse ühenduse loomisel."
-
-#: ksendbugmail/main.cpp:33
-#, kde-format
-msgid "Not connected."
-msgstr "Pole ühendatud."
-
-#: ksendbugmail/main.cpp:36
-#, kde-format
-msgid "Connection timed out."
-msgstr "Ühendus aegus."
-
-#: ksendbugmail/main.cpp:39
-#, kde-format
-msgid "Time out waiting for server interaction."
-msgstr "Aegumine serverilt vastust oodates."
-
-#: ksendbugmail/main.cpp:43
-#, kde-format
-msgid "Server said: \"%1\""
-msgstr "Server ütles: \"%1\""
-
-#: ksendbugmail/main.cpp:74
-#, kde-format
-msgid "Sends a bug report by email."
-msgstr "Veateate saatmine e-kirjaga."
-
-#: ksendbugmail/main.cpp:76
-#, kde-format
-msgid "The subject line of the email."
-msgstr "E-kirja teemarida."
-
-#: ksendbugmail/main.cpp:78
-#, kde-format
-msgid "The email address to send the bug report to."
-msgstr "E-posti aadress, kuhu saata veateade."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -1582,6 +1352,174 @@ msgstr "&Seadistused"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Peamine tööriistariba"
+
+#~ msgid ""
+#~ "Your email address. If incorrect, use the Configure Email button to "
+#~ "change it"
+#~ msgstr ""
+#~ "Sinu e-posti aadress. Kasuta nuppu 'Seadista e-posti', kui see pole "
+#~ "korrektne."
+
+#~ msgctxt "Email sender address"
+#~ msgid "From:"
+#~ msgstr "Saatja:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Email..."
+#~ msgstr "Seadista e-posti..."
+
+#~ msgid "The email address this bug report is sent to."
+#~ msgstr "E-posti aadress, kuhu saata vearaport."
+
+#~ msgctxt "Email receiver address"
+#~ msgid "To:"
+#~ msgstr "Saaja:"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Send"
+#~ msgstr "&Saada"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Send bug report."
+#~ msgstr "Veateate saatmine."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Send this bug report to %1."
+#~ msgstr "Veateate saatmine aadressile %1."
+
+#~ msgctxt "@title:group"
+#~ msgid "Se&verity"
+#~ msgstr "&Raskusaste"
+
+#~ msgctxt "bug severity"
+#~ msgid "Critical"
+#~ msgstr "Kriitiline"
+
+#~ msgctxt "bug severity"
+#~ msgid "Grave"
+#~ msgstr "Tõsine"
+
+#~ msgctxt "bug severity"
+#~ msgid "Normal"
+#~ msgstr "Tavaline"
+
+#~ msgctxt "bug severity"
+#~ msgid "Wishlist"
+#~ msgstr "Soov"
+
+#~ msgctxt "bug severity"
+#~ msgid "Translation"
+#~ msgstr "Tõlge"
+
+#~ msgid "S&ubject: "
+#~ msgstr "T&eema: "
+
+#~ msgid ""
+#~ "Enter the text (in English if possible) that you wish to submit for the "
+#~ "bug report.\n"
+#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
+#~ "this program.\n"
+#~ msgstr ""
+#~ "Sisesta veateatega saadetav tekst (kui võimalik, siis inglise keeles).\n"
+#~ "Klõpsuga nupule \"Saada\" saadetakse e-kiri selle rakenduse hooldajale\n"
+#~ "ning ka KDE vigade nimekirja.\n"
+
+#~ msgctxt ""
+#~ "The second arg is 'kde-cli-tools' which is the package that contains "
+#~ "kcmshell5 (the first arg)"
+#~ msgid ""
+#~ "Could not find <application>%1</application> executable (usually it's "
+#~ "part of the \"%2\" package)."
+#~ msgstr ""
+#~ "Täitmisfaili <application>%1</application> ei leitud (tavaliselt on see "
+#~ "osa paketist \"%2\")."
+
+#~ msgid ""
+#~ "You must specify both a subject and a description before the report can "
+#~ "be sent."
+#~ msgstr ""
+#~ "Enne veateate saatmist pead sa sisestama nii teema kui ka vea kirjelduse."
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
+#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
+#~ "the system (or the whole system)</li><li>cause serious data loss</"
+#~ "li><li>introduce a security hole on the system where the affected package "
+#~ "is installed</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Sa väidad, et viga on <b>Kriitiline</b>. Palun arvesta, et see "
+#~ "raskusaste on mõeldud selliste vigade tarbeks, mis</p><ul><li>põhjustavad "
+#~ "asjasse mittepuutuvale tarkvarale (või kogu süsteemile) suuri probleeme</"
+#~ "li> <li>põhjustavad andmekadu</li> <li>avavad turvaaugu süsteemis, kuhu "
+#~ "rakendus on paigaldatud</li></ul>\n"
+#~ "<p>Kas raporteeritav viga põhjustab sellist kahju? Kui ei, siis vali "
+#~ "palun madalam raskusaste. Täname.</p>"
+
+#~ msgid ""
+#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
+#~ "intended only for bugs that:</p><ul><li>make the package in question "
+#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
+#~ "security hole allowing access to the accounts of users who use the "
+#~ "affected package</li></ul>\n"
+#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
+#~ "does not, please select a lower severity. Thank you.</p>"
+#~ msgstr ""
+#~ "<p>Sa väidad, et viga on <b>Tõsine</b>. Palun arvesta, et see raskusaste "
+#~ "on mõeldud selliste vigade tarbeks, mis</p> <ul><li>teevad antud "
+#~ "rakenduse (suuremalt jaolt) kasutamiskõlbmatuks</li> <li>põhjustavad "
+#~ "andmekadu</li> <li>põhjustavad ohtu tarkvara kasutava kasutaja "
+#~ "turvalisusele</li></ul>\n"
+#~ "<p>Kas raporteeritav viga põhjustab sellist kahju? Kui ei, siis siis vali "
+#~ "palun madalam raskusaste. Täname.</p>"
+
+#~ msgid ""
+#~ "Unable to send the bug report.\n"
+#~ "Please submit a bug report manually....\n"
+#~ "See https://bugs.kde.org/ for instructions."
+#~ msgstr ""
+#~ "Veateate saatmine nurjus.\n"
+#~ "Pead veast käsitsi.teada andma ...\n"
+#~ "Juhiste saamiseks vt. https://bugs.kde.org/."
+
+#~ msgid "Bug report sent, thank you for your input."
+#~ msgstr "Veateade on saadetud, suur tänu abi eest."
+
+#~ msgid ""
+#~ "Close and discard\n"
+#~ "edited message?"
+#~ msgstr ""
+#~ "Kas sulgeda ja unustada\n"
+#~ "muudetud teade?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Close Message"
+#~ msgstr "Teate sulgemine"
+
+#~ msgid "Error connecting to server."
+#~ msgstr "Tõrge serverisse ühenduse loomisel."
+
+#~ msgid "Not connected."
+#~ msgstr "Pole ühendatud."
+
+#~ msgid "Connection timed out."
+#~ msgstr "Ühendus aegus."
+
+#~ msgid "Time out waiting for server interaction."
+#~ msgstr "Aegumine serverilt vastust oodates."
+
+#~ msgid "Server said: \"%1\""
+#~ msgstr "Server ütles: \"%1\""
+
+#~ msgid "Sends a bug report by email."
+#~ msgstr "Veateate saatmine e-kirjaga."
+
+#~ msgid "The subject line of the email."
+#~ msgstr "E-kirja teemarida."
+
+#~ msgid "The email address to send the bug report to."
+#~ msgstr "E-posti aadress, kuhu saata veateade."
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""
