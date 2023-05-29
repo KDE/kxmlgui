@@ -112,6 +112,7 @@ PRIVATE
     KF6::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF6::I18n                #i18n and i18nc in many places
     KF6::IconThemes         #KIconLoader and KIconThemes in KToolBar
+    KF6::IconWidgets        #KIconDialog
 )
 if (TARGET Qt6::DBus)
   target_link_libraries(KF6XmlGui PUBLIC Qt6::DBus) #QDBus connect to signal in KToolBar
