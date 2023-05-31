@@ -24,7 +24,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.04.1\n"
@@ -85,7 +85,6 @@ msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "作者"
-msgstr[1] "作者"
 
 #: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
 #, kde-format
@@ -833,7 +832,6 @@ msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "ショートカット競合"
-msgstr[1] "ショートカット競合"
 
 #: kkeysequencewidget.cpp:176
 #, kde-format
@@ -852,10 +850,6 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"ショートカット %2 は以下のショートカットと競合します。\n"
-"このアクションに空のショートカットを割り当てますか？\n"
-"%3"
-msgstr[1] ""
 "ショートカット %2 は以下のショートカットと競合します。\n"
 "これらのアクションに空のショートカットを割り当てますか？\n"
 "%3"
@@ -896,7 +890,6 @@ msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "ショートカット %2 は以下のキーの組み合わせと競合します:\n"
-msgstr[1] "ショートカット %2 は以下のキーの組み合わせと競合します:\n"
 
 #: kkeysequencewidget.cpp:296
 #, kde-format
@@ -904,7 +897,6 @@ msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "登録済みのグローバルショートカットと競合します"
-msgstr[1] "登録済みのグローバルショートカットと競合します"
 
 #: kkeysequencewidget.cpp:309
 #, kde-format
