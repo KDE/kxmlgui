@@ -315,7 +315,7 @@ void KHelpMenu::switchApplicationLanguage()
 
 void KHelpMenu::donate()
 {
-    QDesktopServices::openUrl(QUrl(QLatin1String("https://www.kde.org/community/donations?app=") + d->mAboutData.componentName()));
+    QDesktopServices::openUrl(QUrl(QLatin1String("https://www.kde.org/donate?app=") + d->mAboutData.componentName()));
 }
 
 void KHelpMenu::dialogFinished()
