@@ -110,3 +110,5 @@ KActionCategoryPrivate::KActionCategoryPrivate(KActionCategory *host)
     : q(host)
 {
 }
+
+#include "moc_kactioncategory.cpp"

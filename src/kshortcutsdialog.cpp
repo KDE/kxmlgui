@@ -283,3 +283,4 @@ void KShortcutsDialog::addActionToSchemesMoreButton(QAction *action)
 }
 
 #include "moc_kshortcutsdialog.cpp"
+#include "moc_kshortcutsdialog_p.cpp"

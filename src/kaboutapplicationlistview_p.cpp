@@ -36,3 +36,5 @@ void KAboutApplicationListView::wheelEvent(QWheelEvent *e)
 }
 
 } // namespace KDEPrivate
+
+#include "moc_kaboutapplicationlistview_p.cpp"

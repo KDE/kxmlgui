@@ -206,3 +206,5 @@ void KToolTipHelper_UnitTest::cleanupTestCase()
 }
 
 QTEST_MAIN(KToolTipHelper_UnitTest)
+
+#include "moc_ktooltiphelper_unittest.cpp"

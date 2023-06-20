@@ -148,3 +148,5 @@ int main(int argc, char **argv)
     delete sm;
     return r;
 }
+
+#include "moc_main.cpp"

@@ -340,3 +340,4 @@ void KCheckAccelerators::checkAccelerators(bool automatic)
 }
 
 #include "kcheckaccelerators.moc"
+#include "moc_kcheckaccelerators.cpp"

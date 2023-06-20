@@ -258,3 +258,5 @@ void ToolBarHandler::clientAdded(KXMLGUIClient *client)
 {
     d->clientAdded(client);
 }
+
+#include "moc_ktoolbarhandler_p.cpp"

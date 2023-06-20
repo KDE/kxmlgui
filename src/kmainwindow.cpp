@@ -1037,3 +1037,4 @@ QString KMainWindow::dbusName() const
 
 #include "kmainwindow.moc"
 #include "moc_kmainwindow.cpp"
+#include "moc_kmainwindow_p.cpp"

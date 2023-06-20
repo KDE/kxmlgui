@@ -116,3 +116,5 @@ void KRichTextEditor::openFile()
         fileName = fileNameFromDialog;
     }
 }
+
+#include "moc_krichtexteditor.cpp"

@@ -328,3 +328,5 @@ void SMTP::processLine(QByteArray *line)
         Q_EMIT error(UnknownResponse);
     }
 }
+
+#include "moc_smtp.cpp"

@@ -237,3 +237,5 @@ void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
 }
 
 } // END namespace KDEPrivate
+
+#include "moc_kmenumenuhandler_p.cpp"

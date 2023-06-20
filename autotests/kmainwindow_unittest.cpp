@@ -256,3 +256,5 @@ void KMainWindow_UnitTest::testWidgetWithStatusBar()
     QStatusBar *frameStatusBar = new QStatusBar(frame1);
     QVERIFY(mw.statusBar() != frameStatusBar);
 }
+
+#include "moc_kmainwindow_unittest.cpp"
