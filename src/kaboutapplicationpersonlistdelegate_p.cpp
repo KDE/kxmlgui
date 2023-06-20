@@ -215,3 +215,5 @@ QRect KAboutApplicationPersonListDelegate::widgetsRect(const QStyleOptionViewIte
 }
 
 } // namespace KDEPrivate
+
+#include "moc_kaboutapplicationpersonlistdelegate_p.cpp"

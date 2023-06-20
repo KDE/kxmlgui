@@ -57,3 +57,5 @@ Qt::ItemFlags KAboutApplicationComponentModel::flags(const QModelIndex &index) c
 }
 
 } // namespace KDEPrivate
+
+#include "moc_kaboutapplicationcomponentmodel_p.cpp"

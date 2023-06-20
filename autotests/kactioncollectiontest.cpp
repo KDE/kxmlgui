@@ -305,3 +305,5 @@ void tst_KActionCollection::shouldEmitSignals()
 }
 
 QTEST_MAIN(tst_KActionCollection)
+
+#include "moc_kactioncollectiontest.cpp"

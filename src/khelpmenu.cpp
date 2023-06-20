@@ -355,3 +355,5 @@ void KHelpMenu::contextHelpActivated()
 {
     QWhatsThis::enterWhatsThisMode();
 }
+
+#include "moc_khelpmenu.cpp"

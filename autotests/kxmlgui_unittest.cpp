@@ -1204,3 +1204,5 @@ void KXmlGui_UnitTest::testSaveShortcutsAndRefresh()
     a = client.actionCollection()->action(QStringLiteral("file_open"));
     QCOMPARE(a->shortcut(), QKeySequence(Qt::Key_F22));
 }
+
+#include "moc_kxmlgui_unittest.cpp"

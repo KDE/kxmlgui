@@ -152,3 +152,5 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
 }
 
 }
+
+#include "moc_kaboutkdedialog_p.cpp"

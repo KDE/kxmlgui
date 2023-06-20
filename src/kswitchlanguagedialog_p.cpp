@@ -411,3 +411,5 @@ void KSwitchLanguageDialogPrivate::addLanguageButton(const QString &languageCode
 }
 
 }
+
+#include "moc_kswitchlanguagedialog_p.cpp"

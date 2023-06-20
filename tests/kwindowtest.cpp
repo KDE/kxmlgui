@@ -419,3 +419,5 @@ int main(int argc, char *argv[])
     // delete test;
     return ret;
 }
+
+#include "moc_kwindowtest.cpp"

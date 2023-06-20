@@ -136,3 +136,5 @@ void KAboutApplicationPersonModel::onAvatarJobFinished() // SLOT
 }
 
 } // namespace KDEPrivate
+
+#include "moc_kaboutapplicationpersonmodel_p.cpp"

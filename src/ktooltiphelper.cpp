@@ -327,3 +327,6 @@ bool isTextSimilar(const QString &a, const QString &b)
     } while (a.at(i) == b.at(j));
     return false; // We have found a difference.
 }
+
+#include "moc_ktooltiphelper.cpp"
+#include "moc_ktooltiphelper_p.cpp"

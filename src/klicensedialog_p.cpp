@@ -63,3 +63,5 @@ KLicenseDialog::KLicenseDialog(const KAboutLicense &license, QWidget *parent)
 }
 
 KLicenseDialog::~KLicenseDialog() = default;
+
+#include "moc_klicensedialog_p.cpp"

@@ -172,3 +172,5 @@ QRect KAboutApplicationComponentListDelegate::widgetsRect(const QStyleOptionView
 }
 
 } // namespace KDEPrivate
+
+#include "moc_kaboutapplicationcomponentlistdelegate_p.cpp"

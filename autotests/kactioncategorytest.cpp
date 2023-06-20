@@ -156,3 +156,5 @@ void tst_KActionCategory::tstActionCreation()
 }
 
 QTEST_MAIN(tst_KActionCategory)
+
+#include "moc_kactioncategorytest.cpp"

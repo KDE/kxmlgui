@@ -751,3 +751,5 @@ QDomElement KXMLGUIFactory::findActionByName(QDomElement &elem, const QString &s
     }
     return QDomElement();
 }
+
+#include "moc_kxmlguifactory.cpp"

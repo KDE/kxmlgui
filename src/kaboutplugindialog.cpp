@@ -107,3 +107,5 @@ void KAboutPluginDialogPrivate::init(KAboutPluginDialog::Options opt)
 
     createForm(titleWidget, tabWidget, q);
 }
+
+#include "moc_kaboutplugindialog.cpp"

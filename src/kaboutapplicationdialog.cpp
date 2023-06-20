@@ -127,3 +127,5 @@ KAboutApplicationDialog::~KAboutApplicationDialog()
     // complains bitterly about it
     qDeleteAll(findChildren<KWidgetItemDelegate *>());
 }
+
+#include "moc_kaboutapplicationdialog.cpp"
