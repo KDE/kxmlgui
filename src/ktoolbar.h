@@ -216,6 +216,7 @@ protected Q_SLOTS:
     virtual void slotMovableChanged(bool movable);
 
 protected:
+    void contextMenuEvent(QContextMenuEvent *) override;
     void actionEvent(QActionEvent *) override;
 
     // Draggable toolbar configuration
