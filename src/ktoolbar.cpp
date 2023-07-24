@@ -107,9 +107,7 @@ public:
 
     void slotAppearanceChanged();
     void slotContextAboutToShow();
-#if 0
     void slotContextAboutToHide();
-#endif
     void slotContextLeft();
     void slotContextRight();
     void slotContextShowText();
@@ -735,16 +733,19 @@ void KToolBarPrivate::slotContextAboutToShow()
     }
 }
 
-// KF6 TODO: check if this can be removed
-#if 0
 void KToolBarPrivate::slotContextAboutToHide()
 {
     // We have to unplug whatever slotContextAboutToShow plugged into the menu.
     // Unplug the toolbar menu action
     KXmlGuiWindow *kmw = qobject_cast<KXmlGuiWindow *>(q->mainWindow());
-    if (kmw && kmw->toolBarMenuAction()) {
-        if (kmw->toolBarMenuAction()->associatedWidgets().count() > 1) {
-            context->removeAction(kmw->toolBarMenuAction());
+    if (kmw) {
+        QAction *tbAction = kmw->toolBarMenuAction();
+        const QList<QObject *> associatedObjects = tbAction->associatedObjects();
+        const int associatedWidgetsCount = std::count_if(associatedObjects.cbegin(), associatedObjects.cend(), [](QObject *object) {
+            return (qobject_cast<QWidget *>(object) != nullptr);
+        });
+        if (associatedWidgetsCount > 1) {
+            context->removeAction(tbAction);
         }
     }
 
@@ -763,7 +764,6 @@ void KToolBarPrivate::slotContextAboutToHide()
 
     context->removeAction(contextLockAction);
 }
-#endif
 
 void KToolBarPrivate::slotContextLeft()
 {
@@ -938,6 +938,23 @@ void KToolBar::addXMLGUIClient(KXMLGUIClient *client)
 void KToolBar::removeXMLGUIClient(KXMLGUIClient *client)
 {
     d->xmlguiClients.remove(client);
+}
+
+void KToolBar::contextMenuEvent(QContextMenuEvent *event)
+{
+    if (mainWindow()) {
+        QPointer<KToolBar> guard(this);
+        const QPoint globalPos = event->globalPos();
+        d->contextMenu(globalPos)->exec(globalPos);
+
+        // "Configure Toolbars" recreates toolbars, so we might not exist anymore.
+        if (guard) {
+            d->slotContextAboutToHide();
+        }
+        return;
+    }
+
+    QToolBar::contextMenuEvent(event);
 }
 
 void KToolBar::loadState(const QDomElement &element)
