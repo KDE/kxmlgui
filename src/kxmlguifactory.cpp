@@ -34,8 +34,6 @@
 #include <KGlobalAccel>
 #endif
 
-Q_DECLARE_METATYPE(QList<QKeySequence>)
-
 using namespace KXMLGUI;
 
 class KXMLGUIFactoryPrivate : public BuildState
