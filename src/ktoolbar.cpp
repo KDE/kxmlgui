@@ -38,6 +38,7 @@
 #include <KSharedConfig>
 #include <KStandardAction>
 #include <KToggleAction>
+#include <KToolBarPopupAction>
 
 #include "kactioncollection.h"
 #include "kedittoolbar.h"
@@ -459,7 +460,15 @@ QMenu *KToolBarPrivate::contextMenu(const QPoint &globalPos)
     // (no need to wait for the menu to open or aim at the arrow)
     if (auto *contextToolButton = qobject_cast<QToolButton *>(q->widgetForAction(contextButtonAction))) {
         if (contextToolButton->popupMode() == QToolButton::DelayedPopup || contextToolButton->popupMode() == QToolButton::MenuButtonPopup) {
-            if (auto *actionMenu = contextButtonAction->menu()) {
+            auto *actionMenu = contextButtonAction->menu();
+
+            if (!actionMenu) {
+                if (auto *toolBarPopupAction = qobject_cast<KToolBarPopupAction *>(contextButtonAction)) {
+                    actionMenu = toolBarPopupAction->popupMenu();
+                }
+            }
+
+            if (actionMenu) {
                 // In case it is populated on demand
                 Q_EMIT actionMenu->aboutToShow();
 
