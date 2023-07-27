@@ -211,7 +211,7 @@ public:
      * @return A pointer to the QAction in the collection which matches the parameters or
      * null if nothing matches.
      */
-    QAction *action(const QString &name) const;
+    Q_INVOKABLE QAction *action(const QString &name) const;
 
     /**
      * Returns the list of QActions which belong to this action collection.
