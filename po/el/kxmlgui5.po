@@ -16,19 +16,20 @@
 # nikos, 2011.
 # Stelios <sstavra@gmail.com>, 2012, 2013, 2020, 2021.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2015, 2016.
+# Marios Mitsios <xrteach@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-25 00:45+0000\n"
-"PO-Revision-Date: 2021-09-14 08:39+0300\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2023-07-05 13:01+0300\n"
+"Last-Translator: Marios Mitsios <xrteach@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -446,10 +447,7 @@ msgid "OS:"
 msgstr "Λειτουργικό σύστημα:"
 
 #: kbugreport.cpp:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -457,19 +455,15 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:221
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:227
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -573,6 +567,8 @@ msgid ""
 "Could not find <application>%1</application> executable (usually it's part "
 "of the \"%2\" package)."
 msgstr ""
+"Δεν μπόρεσε να βρεθεί το πρόγραμμα <application>%1</application> (συνήθως "
+"είναι μέρος του του πακέτου \"%2\")."
 
 #: kbugreport.cpp:432
 #, kde-format
@@ -910,8 +906,7 @@ msgstr ""
 "b>.<br>Παρακαλώ επιλέξτε κάποιον άλλον.</qt>"
 
 #: kkeysequencewidget.cpp:280
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Ο συνδυασμός πλήκτρων '%1' της εφαρμογής %2 για την ενέργεια %3\n"
 
@@ -1506,9 +1501,7 @@ msgstr "%1 (%2)"
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
 #: ktooltiphelper.cpp:281
-#, fuzzy, kde-format
-#| msgid ""
-#| "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
@@ -1527,10 +1520,7 @@ msgstr ""
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
 #: ktooltiphelper.cpp:295
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></"
-#| "small>"
+#, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
@@ -1554,10 +1544,9 @@ msgid "No text"
 msgstr "Χωρίς κείμενο"
 
 #: kxmlguiwindow.cpp:190
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "Ενέργεια"
+msgstr "Εύρεση Ενέργεια..."
 
 #: kxmlguiwindow.cpp:535
 #, kde-format
