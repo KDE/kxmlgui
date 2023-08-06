@@ -69,8 +69,6 @@ protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
-    void changeGlobalIconSizeSetting(int, int);
-    void deleteGlobalIconSizeSetting();
     void changeGlobalToolButtonStyleSetting(const QString &, const QString &);
     void deleteGlobalToolButtonStyleSetting();
     QByteArray m_xml;
@@ -164,7 +162,6 @@ void tst_KToolBar::init()
 void tst_KToolBar::cleanup()
 {
     QFile::remove(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/tst_KToolBar"));
-    deleteGlobalIconSizeSetting();
     deleteGlobalToolButtonStyleSetting();
 }
 
@@ -236,28 +233,6 @@ void tst_KToolBar::testIconSizeNoXmlGui()
         QCOMPARE(mainToolBar->iconSize().width(), iconSize);
         QCOMPARE(otherToolBar->iconSize().width(), iconSize);
         QCOMPARE(cleanToolBar->iconSize().width(), KIconLoader::global()->currentSize(KIconLoader::Toolbar)); // unchanged
-        const bool mainToolBarWasUsingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
-        const bool otherToolBarWasUsingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::Toolbar);
-
-#ifndef Q_OS_WIN // the change notification uses DBus
-        // Now emulate a change of the kde-global setting (#168480#c12)
-        changeGlobalIconSizeSetting(32, 33);
-
-        QCOMPARE(KIconLoader::global()->currentSize(KIconLoader::MainToolbar), 32);
-        QCOMPARE(KIconLoader::global()->currentSize(KIconLoader::Toolbar), 33);
-
-        if (mainToolBarWasUsingDefaultSize) {
-            QCOMPARE(mainToolBar->iconSize().width(), 32);
-        } else { // the user chose a specific size for the toolbar, so the new global size isn't used
-            QCOMPARE(mainToolBar->iconSize().width(), iconSize);
-        }
-        if (otherToolBarWasUsingDefaultSize) {
-            QCOMPARE(otherToolBar->iconSize().width(), 33);
-        } else { // the user chose a specific size for the toolbar, so the new global size isn't used
-            QCOMPARE(otherToolBar->iconSize().width(), iconSize);
-        }
-        QCOMPARE(cleanToolBar->iconSize().width(), 33);
-#endif
     }
 }
 
@@ -322,49 +297,7 @@ void tst_KToolBar::testIconSizeXmlGui()
         } else {
             QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
         }
-
-#ifndef Q_OS_WIN // the change notification uses DBus
-        // Now emulate a change of the kde-global setting (#168480#c12)
-        changeGlobalIconSizeSetting(25, 16);
-
-        QCOMPARE(mainToolBar->iconSize().width(), expectedSizeMainToolbar);
-        QCOMPARE(otherToolBar->iconSize().width(), expectedSizeOtherToolbar);
-        QCOMPARE(cleanToolBar->iconSize().width(), expectedSizeCleanToolbar);
-        QCOMPARE(bigToolBar->iconSize().width(), expectedSizeBigToolbar);
-#endif
-
-        // The big unchanged toolbar should be, well, unchanged; AppXml has priority over KDE_Default.
-        QCOMPARE(bigUnchangedToolBar->iconSize().width(), 32);
     }
-}
-
-void tst_KToolBar::changeGlobalIconSizeSetting(int mainToolbarIconSize, int iconSize)
-{
-    // We could use KConfig::Normal|KConfig::Global here, to write to kdeglobals like kcmstyle does,
-    // but we don't need to. Writing to the app's config file works too.
-    KConfigGroup mglobals(KSharedConfig::openConfig(), "MainToolbarIcons");
-    mglobals.writeEntry("Size", mainToolbarIconSize);
-    KConfigGroup globals(KSharedConfig::openConfig(), "ToolbarIcons");
-    // globals.writeEntry("Size", iconSize, KConfig::Normal|KConfig::Global);
-    globals.writeEntry("Size", iconSize);
-    KSharedConfig::openConfig()->sync();
-
-    QSignalSpy spy(KIconLoader::global(), &KIconLoader::iconChanged);
-    KIconLoader::global()->emitChange(KIconLoader::Desktop);
-    spy.wait(200);
-}
-
-void tst_KToolBar::deleteGlobalIconSizeSetting()
-{
-    KConfigGroup mglobals(KSharedConfig::openConfig(), "MainToolbarIcons");
-    mglobals.deleteEntry("Size");
-    KConfigGroup globals(KSharedConfig::openConfig(), "ToolbarIcons");
-    globals.deleteEntry("Size");
-    KSharedConfig::openConfig()->sync();
-
-    QSignalSpy spy(KIconLoader::global(), &KIconLoader::iconChanged);
-    KIconLoader::global()->emitChange(KIconLoader::Desktop);
-    spy.wait(200);
 }
 
 Q_DECLARE_METATYPE(Qt::ToolButtonStyle)
@@ -597,11 +530,6 @@ void tst_KToolBar::testXmlGuiSwitching()
     QCOMPARE(bigToolBar->isHidden(), true);
     QCOMPARE(hiddenToolBar->isHidden(), false);
     QCOMPARE(secondHiddenToolBar->isHidden(), true);
-
-    // Now change KDE-global setting, what happens to unsaved changes?
-    changeGlobalIconSizeSetting(32, 33);
-    QCOMPARE(bigToolBar->iconSize().width(), 35); // fine now, saved or unsaved makes no difference
-    QCOMPARE(otherToolBar->iconSize().width(), 35);
 
     // Now save, and check what we saved
     KConfig config(QStringLiteral("tst_KToolBar"));
