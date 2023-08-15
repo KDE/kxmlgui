@@ -101,31 +101,11 @@ QString KXMLGUIFactory::readConfigFile(const QString &filename, const QString &_
     if (!QDir::isRelativePath(filename)) {
         xml_file = filename;
     } else {
-        // KF >= 5.1 (KDE_INSTALL_KXMLGUIDIR)
+        // first look for any custom user config, admin config or the default deployed as file
         xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kxmlgui5/") + componentName + QLatin1Char('/') + filename);
         if (!QFile::exists(xml_file)) {
-            // KF >= 5.4 (resource file)
+            // fall-back to any built-in resource file
             xml_file = QLatin1String(":/kxmlgui5/") + componentName + QLatin1Char('/') + filename;
-        }
-
-        bool warn = false;
-        if (!QFile::exists(xml_file)) {
-            // kdelibs4 / KF 5.0 solution
-            xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, componentName + QLatin1Char('/') + filename);
-            warn = true;
-        }
-
-        if (!QFile::exists(xml_file)) {
-            // kdelibs4 / KF 5.0 solution, and the caller includes the component name
-            // This was broken (lead to component/component/ in kdehome) and unnecessary
-            // (they can specify it with setComponentName instead)
-            xml_file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, filename);
-            warn = true;
-        }
-
-        if (warn && !xml_file.isEmpty()) {
-            qCWarning(DEBUG_KXMLGUI) << "KXMLGUI file found at deprecated location" << xml_file
-                                     << "-- please use ${KDE_INSTALL_KXMLGUIDIR} to install these files instead.";
         }
     }
 
