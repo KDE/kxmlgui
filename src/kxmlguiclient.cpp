@@ -309,24 +309,24 @@ static void propagateTranslationDomain(QDomDocument &doc, const QStringList &tag
 void KXMLGUIClient::setXML(const QString &document, bool merge)
 {
     QDomDocument doc;
-    QString errorMsg;
-    int errorLine = 0;
-    int errorColumn = 0;
     // QDomDocument raises a parse error on empty document, but we accept no app-specific document,
     // in which case you only get ui_standards.rc layout.
-    bool result = document.isEmpty() || doc.setContent(document, &errorMsg, &errorLine, &errorColumn);
-    if (result) {
-        propagateTranslationDomain(doc, d->m_textTagNames);
-        setDOMDocument(doc, merge);
-    } else {
+    if (!document.isEmpty()) {
+        const QDomDocument::ParseResult result = doc.setContent(document);
+        if (!result) {
+            qCCritical(DEBUG_KXMLGUI) << "Error parsing XML document:" << result.errorMessage << "at line" << result.errorLine << "column"
+                                      << result.errorColumn;
 #ifdef NDEBUG
-        qCCritical(DEBUG_KXMLGUI) << "Error parsing XML document:" << errorMsg << "at line" << errorLine << "column" << errorColumn;
-        setDOMDocument(QDomDocument(), merge); // otherwise empty menus from ui_standards.rc stay around
+            setDOMDocument(QDomDocument(), merge); // otherwise empty menus from ui_standards.rc stay around
 #else
-        qCCritical(DEBUG_KXMLGUI) << "Error parsing XML document:" << errorMsg << "at line" << errorLine << "column" << errorColumn;
-        abort();
+            abort();
 #endif
+            return;
+        }
     }
+
+    propagateTranslationDomain(doc, d->m_textTagNames);
+    setDOMDocument(doc, merge);
 }
 
 void KXMLGUIClient::setDOMDocument(const QDomDocument &document, bool merge)
