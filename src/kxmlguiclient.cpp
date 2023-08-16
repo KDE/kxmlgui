@@ -186,7 +186,7 @@ QString KXMLGUIClient::standardsXmlFileLocation()
     if (QStandardPaths::isTestModeEnabled()) {
         return QStringLiteral(":/kxmlgui5/ui_standards.rc");
     }
-    QString file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("ui/ui_standards.rc"));
+    QString file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kxmlgui5/ui_standards.rc"));
     if (file.isEmpty()) {
         // fallback to resource, to allow to use the rc file compiled into this framework, must exist!
         file = QStringLiteral(":/kxmlgui5/ui_standards.rc");
