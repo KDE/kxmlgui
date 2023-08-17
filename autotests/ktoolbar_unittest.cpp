@@ -239,27 +239,17 @@ void tst_KToolBar::testIconSizeNoXmlGui()
 void tst_KToolBar::testIconSizeXmlGui_data()
 {
     QTest::addColumn<int>("iconSize"); // set by user and saved to KConfig
-    QTest::addColumn<int>("expectedSizeMainToolbar"); // ... after kde-global is changed to 25
-    QTest::addColumn<int>("expectedSizeOtherToolbar"); // ... after kde-global is changed to 16
-    QTest::addColumn<int>("expectedSizeCleanToolbar"); // ... after kde-global is changed to 16
-    QTest::addColumn<int>("expectedSizeBigToolbar"); // ... after kde-global is changed to 16
     // When the user chose a specific size for the toolbar (!= its default size), the new kde-global size isn't applied to that toolbar.
     // So, only in case the toolbar was at iconSize already, and there was no setting in xml, we end up with kdeGlobal being used:
-    const int kdeGlobalMain = 25;
-    const int kdeGlobalOther = 16;
-    QTest::newRow("16") << 16 << 16 << 16 << kdeGlobalOther << 16;
-    QTest::newRow("22") << 22 << kdeGlobalMain << kdeGlobalOther << kdeGlobalOther << 22;
-    QTest::newRow("32") << 32 << 32 << 32 << kdeGlobalOther << 32;
-    QTest::newRow("64") << 64 << 64 << 64 << kdeGlobalOther << 64;
+    QTest::newRow("16") << 16;
+    QTest::newRow("22") << 22;
+    QTest::newRow("32") << 32;
+    QTest::newRow("64") << 64;
 }
 
 void tst_KToolBar::testIconSizeXmlGui()
 {
     QFETCH(int, iconSize);
-    QFETCH(int, expectedSizeMainToolbar);
-    QFETCH(int, expectedSizeOtherToolbar);
-    QFETCH(int, expectedSizeCleanToolbar);
-    QFETCH(int, expectedSizeBigToolbar);
     KConfig config(QStringLiteral("tst_KToolBar"));
     KConfigGroup group(&config, "group");
     {
