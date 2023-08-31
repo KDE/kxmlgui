@@ -41,6 +41,16 @@ public:
                                  QWidget *parent);
     QWidget *createCreditWidget(const QList<KAboutPerson> &credits, QWidget *parent);
     QWidget *createTranslatorsWidget(const QList<KAboutPerson> &translators, QWidget *parent);
+    QWidget *createEcoWidget(const QString &displayName,
+                             const QList<KAboutData::EcoCertification> ecoCertifications,
+                             const QString &energyEfficiencyDataLink,
+                             const QString &minimalSystemRequirementsLink,
+                             const QString &openLicenseLink,
+                             const QString &sourceCodeLink,
+                             const QString &apiDocumentationLink,
+                             const QString &dataFormatDocumentationLink,
+                             const QString &installDocumentationLink,
+                             QWidget *parent);
     void createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog);
 };
 
