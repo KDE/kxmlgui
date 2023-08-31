@@ -121,12 +121,25 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
         tabWidget->addTab(creditWidget, i18nc("@title:tab", "Thanks To"));
     }
 
-    // Finally, the optional translators page...
+    // And the optional translators page...
     if (!(opt & KAboutApplicationDialog::HideTranslators) && !aboutData.translators().isEmpty()) {
         QWidget *translatorWidget = createTranslatorsWidget(aboutData.translators(), q);
 
         tabWidget->addTab(translatorWidget, i18nc("@title:tab", "Translation"));
     }
+
+    // Finally, the eco page
+    QWidget *ecoWidget = createEcoWidget(aboutData.displayName(),
+                                         aboutData.ecoCertifications(),
+                                         aboutData.energyEfficiencyDataLink(),
+                                         aboutData.minimalSystemRequirementsLink(),
+                                         aboutData.openLicenseLink(),
+                                         aboutData.sourceCodeLink(),
+                                         aboutData.apiDocumentationLink(),
+                                         aboutData.dataFormatDocumentationLink(),
+                                         aboutData.installDocumentationLink(),
+                                         q);
+    tabWidget->addTab(ecoWidget, i18nc("@title:tab", "Eco"));
 
     createForm(titleWidget, tabWidget, q);
 }

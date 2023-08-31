@@ -30,6 +30,8 @@
 #include <QIcon>
 #include <QLabel>
 #include <QVBoxLayout>
+#include <qstringliteral.h>
+#include <qwidget.h>
 
 QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QIcon &icon, const QString &displayName, const QString &version, QWidget *parent)
 {
@@ -258,6 +260,98 @@ QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAbout
     }
 
     return translatorWidget;
+}
+
+QWidget *KAbstractAboutDialogPrivate::createEcoWidget(const QString &displayName,
+                                                      const QList<KAboutData::EcoCertification> ecoCertifications,
+                                                      const QString &energyEfficiencyDataLink,
+                                                      const QString &minimalSystemRequirementsLink,
+                                                      const QString &openLicenseLink,
+                                                      const QString &sourceCodeLink,
+                                                      const QString &apiDocumentationLink,
+                                                      const QString &dataFormatDocumentationLink,
+                                                      const QString &installDocumentationLink,
+                                                      QWidget *parent)
+{
+    QWidget *ecoWidget = new QWidget(parent);
+    QVBoxLayout *ecoLayout = new QVBoxLayout(ecoWidget);
+    ecoLayout->setContentsMargins(0, 0, 0, 0);
+    ecoLayout->setContentsMargins(0, 0, 0, 0);
+    QString ecoText;
+
+    if (!ecoCertifications.isEmpty()) {
+        for (const KAboutData::EcoCertification &certification : ecoCertifications) {
+            QString logoPath;
+            QString name;
+            switch (certification) {
+            case KAboutData::EcoCertification::KDEEco:
+                logoPath = QStringLiteral(":/kxmlgui5/kdeeco.png");
+                name = i18nc("KDE eco label", "KDE Eco");
+                break;
+            case KAboutData::EcoCertification::BlueAngel:
+                logoPath = QStringLiteral(":/kxmlgui5/blueangel.png");
+                name = i18nc("German eco label", "Blue Angel");
+                break;
+            }
+            ecoText.append(
+                QStringLiteral("<img src=\"%1\" alt=\"%2 %3\" width=\"100\" height=\"100\"/>").arg(logoPath, name, i18n("sustainability certification")));
+        }
+        ecoText.append(QLatin1String("<br /><br />"));
+    }
+
+    ecoText.append(i18n("%1 follows sustainable software design by focusing on:", displayName));
+
+    ecoText.append(QStringLiteral("<h4>%1</h4>").arg(i18n("Resource and Energy Efficiency")));
+    if (!energyEfficiencyDataLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("Energy Efficiency Data")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(energyEfficiencyDataLink));
+    }
+    if (!minimalSystemRequirementsLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("Minimal System Requirements")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(minimalSystemRequirementsLink));
+    }
+
+    ecoText.append(QStringLiteral("<h4>%1</h4>").arg(i18n("Use Autonomy and Flexibility")));
+    if (!openLicenseLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("Open License")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(openLicenseLink));
+    }
+    if (!sourceCodeLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("Source Code")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(sourceCodeLink));
+    }
+    if (!apiDocumentationLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("API Documentation")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(apiDocumentationLink));
+    }
+    if (!dataFormatDocumentationLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("Data Format Documentation")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(dataFormatDocumentationLink));
+    }
+    if (!installDocumentationLink.isEmpty()) {
+        ecoText.append(QStringLiteral("%1: ").arg(i18n("Install/Uninstall Documentation")));
+        ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(installDocumentationLink));
+    }
+
+    ecoText.append(QStringLiteral("<h4>%1</h4>").arg(i18n("Ethical Development and Privacy")));
+    ecoText.append(QStringLiteral("%1: ").arg(i18n("KDE's Code of Conduct")));
+    ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(QLatin1String("https://kde.org/code-of-conduct/")));
+    ecoText.append(QStringLiteral("%1: ").arg(i18n("KDE's Privacy Policy")));
+    ecoText.append(QStringLiteral("<a href=\"%1\">%1</a><br />").arg(QLatin1String("https://kde.org/privacypolicy-apps/")));
+
+    ecoText.append(QLatin1String("<br /><br />"));
+    ecoText.append(i18n("Visit %1 to learn more about KDE Eco.", QLatin1String("<a href=\"https://eco.kde.org\">https://eco.kde.org</a>")));
+
+    QLabel *ecoLabel = new QLabel;
+    ecoLabel->setWordWrap(true);
+    ecoLabel->setOpenExternalLinks(true);
+    ecoLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ecoLabel->setText(ecoText);
+
+    ecoLayout->addWidget(ecoLabel);
+    ecoLayout->addStretch();
+
+    return ecoWidget;
 }
 
 void KAbstractAboutDialogPrivate::createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog)
