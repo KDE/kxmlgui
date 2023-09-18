@@ -559,6 +559,9 @@ bool BuildHelper::processActionElement(const QDomElement &e, int idx)
     }
 
     parentNode->container->insertAction(before, action);
+    if (QToolBar *toolBarContainer = qobject_cast<QToolBar *>(parentNode->container)) {
+        toolBarContainer->widgetForAction(action)->setFocusPolicy(Qt::TabFocus);
+    }
 
     // save a reference to the plugged action, in order to properly unplug it afterwards.
     containerClient->actions.append(action);
