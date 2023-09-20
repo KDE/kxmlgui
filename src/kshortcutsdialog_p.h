@@ -423,6 +423,8 @@ public:
     KShortcutsEditor::ActionTypes actionTypes;
     KShortcutsEditorDelegate *delegate;
 
+    // Tracks if there are any local shortcuts in any of the action collections shown in the dialog
+    bool m_hasAnyLocalShortcuts = false;
     // Tracks if there are any Global shortcuts in any of the action collections shown in the dialog
     bool m_hasAnyGlobalShortcuts = false;
 };

@@ -143,6 +143,9 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     // Hide Global shortcuts columns if there are no global shortcuts
     d->setGlobalColumnsHidden(!d->m_hasAnyGlobalShortcuts);
 
+    // ...And hide local shortcuts columns if there are no local shortcuts
+    d->setLocalColumnsHidden(!d->m_hasAnyLocalShortcuts);
+
     // re-enable updating
     setUpdatesEnabled(true);
 
@@ -349,6 +352,12 @@ bool KShortcutsEditorPrivate::addAction(QAction *action, QTreeWidgetItem *parent
         if (!m_hasAnyGlobalShortcuts) { // If one global action was found, skip
             m_hasAnyGlobalShortcuts = KGlobalAccel::self()->hasShortcut(action);
         }
+
+        if (!m_hasAnyLocalShortcuts) { // If one local action was found, skip
+            m_hasAnyLocalShortcuts = !KGlobalAccel::self()->hasShortcut(action);
+        }
+#else
+        m_hasAnyLocalShortcuts = true;
 #endif
 
         return true;
