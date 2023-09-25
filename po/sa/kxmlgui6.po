@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-08 02:04+0000\n"
-"PO-Revision-Date: 2023-09-19 13:02+0530\n"
+"PO-Revision-Date: 2023-09-21 23:24+0530\n"
 "Last-Translator: Shreekant Kalwar\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -526,16 +526,19 @@ msgid "Curr&ent actions:"
 msgstr "&वर्तमान क्रियाः :"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "&चिह्नं परिवर्तयतु..."
+msgstr "चिह्नं परिवर्तयतु"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "पाठ्यम् परिवर्तयतु..."
+msgstr "पाठं परिवर्तयन्तु"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -750,10 +753,10 @@ msgid "Your names"
 msgstr "भवतः नामानि"
 
 #: kmainwindow.cpp:273
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "भवतः ईमेलपत्राणि"
+msgstr "skkalwar999@gmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
@@ -761,10 +764,12 @@ msgid "Add to Toolbar"
 msgstr "साधनशलाका मध्ये योजयतु"
 
 #: kmenumenuhandler_p.cpp:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut…"
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "संक्षिप्तमार्गः विन्यस्तं कुर्वन्तु..."
+msgstr "संक्षिप्तमार्गः विन्यस्तं कुर्वन्तु…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -793,7 +798,7 @@ msgstr "वर्तमान योजना :"
 #, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr "नूतनम्‌..."
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -814,16 +819,20 @@ msgid "Save shortcuts to scheme"
 msgstr "योजनायां संक्षिप्तमार्गाः रक्षन्तु"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme…"
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "निर्यात योजना..."
+msgstr "निर्यात योजना…"
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme…"
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "आयात योजना..."
+msgstr "आयात योजना…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -1257,10 +1266,9 @@ msgid "No text"
 msgstr "न पाठ्य"
 
 #: kxmlguiwindow.cpp:190
-#, fuzzy, kde-format
-#| msgid "Find Action..."
+#, kde-format
 msgid "Find Action…"
-msgstr "कर्म अन्वेष्टुम्..."
+msgstr "कर्म अन्वेष्टुम्…"
 
 #: kxmlguiwindow.cpp:528
 #, kde-format
@@ -1338,3 +1346,15 @@ msgstr "&समायोजना"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "मुख्य साधनशलाका"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon…"
+#~ msgstr "&चिह्नं परिवर्तयतु…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt…"
+#~ msgstr "पाठ्यम् परिवर्तयतु…"
+
+#~ msgctxt "@action:button"
+#~ msgid "New…"
+#~ msgstr "नूतनम्‌…"
