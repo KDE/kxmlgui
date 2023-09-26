@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:04+0000\n"
-"PO-Revision-Date: 2023-09-21 23:24+0530\n"
+"POT-Creation-Date: 2023-09-26 01:43+0000\n"
+"PO-Revision-Date: 2023-09-25 13:46+0530\n"
 "Last-Translator: Shreekant Kalwar\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -526,19 +526,16 @@ msgid "Curr&ent actions:"
 msgstr "&वर्तमान क्रियाः :"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "चिह्नं परिवर्तयतु"
+msgstr "&चिह्नं परिवर्तयतु..."
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "पाठं परिवर्तयन्तु"
+msgstr "&पाठ्यम् परिवर्तयन्तु..."
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -764,12 +761,10 @@ msgid "Add to Toolbar"
 msgstr "साधनशलाका मध्ये योजयतु"
 
 #: kmenumenuhandler_p.cpp:223
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "संक्षिप्तमार्गः विन्यस्तं कुर्वन्तु…"
+msgstr "संक्षिप्तमार्गः विन्यस्तं कुर्वन्तु..."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -798,7 +793,7 @@ msgstr "वर्तमान योजना :"
 #, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr ""
+msgstr "नूतनम्‌..."
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -819,20 +814,16 @@ msgid "Save shortcuts to scheme"
 msgstr "योजनायां संक्षिप्तमार्गाः रक्षन्तु"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "निर्यात योजना…"
+msgstr "निर्यात योजना..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "आयात योजना…"
+msgstr "आयात योजना..."
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -974,45 +965,45 @@ msgstr "मूषकस्य गण्ड इशारा"
 msgid "Mouse Shape Gesture"
 msgstr "मूषकस्य आकार इशारा"
 
-#: kshortcutseditor.cpp:536
+#: kshortcutseditor.cpp:545
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "%1 कृते संक्षिप्तमार्गाः"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:556 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:565 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "मुख्यम्:"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:557 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:566 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "वैकल्पिक:"
 
-#: kshortcutseditor.cpp:558
+#: kshortcutseditor.cpp:567
 #, kde-format
 msgid "Global:"
 msgstr "वैश्विक:"
 
-#: kshortcutseditor.cpp:559
+#: kshortcutseditor.cpp:568
 #, kde-format
 msgid "Global alternate:"
 msgstr "वैश्विक विकल्प:"
 
-#: kshortcutseditor.cpp:575
+#: kshortcutseditor.cpp:584
 #, kde-format
 msgid "Action Name"
 msgstr "क्रिया नाम"
 
-#: kshortcutseditor.cpp:579
+#: kshortcutseditor.cpp:588
 #, kde-format
 msgid "Shortcuts"
 msgstr "संक्षिप्तमार्गाः"
 
-#: kshortcutseditor.cpp:583
+#: kshortcutseditor.cpp:592
 #, kde-format
 msgid "Description"
 msgstr "वर्णनम्"
