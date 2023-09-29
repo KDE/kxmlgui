@@ -23,6 +23,7 @@ private Q_SLOTS:
     void testVersionHandlerNewVersionUserChanges();
     void testPartMerging();
     void testPartMergingSettings();
+    void testShortcutSchemeMerging();
     void testUiStandardsMerging_data();
     void testUiStandardsMerging();
     void testActionListAndSeparator();

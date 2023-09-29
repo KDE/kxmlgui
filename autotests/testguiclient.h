@@ -42,6 +42,10 @@ public:
 
         setXML(QString::fromLatin1(xml), true);
     }
+    void mergeXML(const QByteArray &xml)
+    {
+        setXML(QString::fromLatin1(xml), true);
+    }
     void createActions(const QStringList &actionNames)
     {
         KActionCollection *coll = actionCollection();

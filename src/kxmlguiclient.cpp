@@ -587,6 +587,8 @@ bool KXMLGUIClientPrivate::isEmptyContainer(const QDomElement &base, KActionColl
 
 QDomElement KXMLGUIClientPrivate::findMatchingElement(const QDomElement &base, const QDomElement &additive)
 {
+    const QString idAttribute(base.tagName() == QLatin1String("ActionProperties") ? QStringLiteral("scheme") : QStringLiteral("name"));
+
     QDomNode n = additive.firstChild();
     while (!n.isNull()) {
         QDomElement e = n.toElement();
@@ -604,7 +606,7 @@ QDomElement KXMLGUIClientPrivate::findMatchingElement(const QDomElement &base, c
 
         // now see if our tags are equivalent
         if (equalstr(tag, base.tagName()) //
-            && e.attribute(QStringLiteral("name")) == base.attribute(QStringLiteral("name"))) {
+            && e.attribute(idAttribute) == base.attribute(idAttribute)) {
             return e;
         }
     }

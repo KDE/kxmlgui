@@ -88,6 +88,26 @@ static void createXmlFile(QFile &file, int version, int flags, const QByteArray 
     file.write("</" + toplevelTag + ">\n");
 }
 
+class ShortcutSchemeHandler
+{
+public:
+    ShortcutSchemeHandler(const QString &scheme)
+        : cgScheme(KSharedConfig::openConfig(), "Shortcut Schemes")
+        , prevScheme(cgScheme.readEntry("Current Scheme", QStringLiteral("Default")))
+    {
+        cgScheme.writeEntry("Current Scheme", scheme);
+    }
+
+    ~ShortcutSchemeHandler()
+    {
+        cgScheme.writeEntry("Current Scheme", prevScheme);
+    }
+
+private:
+    KConfigGroup cgScheme;
+    const QString prevScheme;
+};
+
 static void clickApply(KEditToolBar *dialog)
 {
     QDialogButtonBox *box = dialog->findChild<QDialogButtonBox *>();
@@ -105,6 +125,15 @@ void KXmlGui_UnitTest::initTestCase()
         qDebug() << "Removing old config file";
         QFile::remove(configFile);
         KSharedConfig::openConfig()->reparseConfiguration();
+    }
+
+    // Create "Test" shortcut scheme to eliminate the KF warning
+    QFile testScheme = QFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+        + QLatin1String("/%1/shortcuts/%2").arg(QCoreApplication::applicationName(), QStringLiteral("Test")));
+    if (!testScheme.exists()) {
+        QVERIFY(QFileInfo(testScheme).dir().mkpath(QStringLiteral(".")));
+        QVERIFY(testScheme.open(QIODevice::WriteOnly));
+        testScheme.write(QByteArray("<gui><ActionProperties/></gui>"));
     }
 }
 
@@ -455,6 +484,56 @@ void KXmlGui_UnitTest::testPartMerging()
         // clang-format on
     }
     factory.removeClient(&hostClient);
+}
+
+void KXmlGui_UnitTest::testShortcutSchemeMerging()
+{
+    TestGuiClient client;
+
+    ShortcutSchemeHandler sss(QStringLiteral("Test"));
+
+    KActionCollection *ac = client.actionCollection();
+
+    QAction *a = ac->addAction(QStringLiteral("test_action"));
+    ac->setDefaultShortcut(a, QKeySequence(QStringLiteral("Ctrl+A")));
+
+    const QByteArray appXml = R"(<?xml version = "1.0"?>
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="foo" version="5">
+<MenuBar>
+  <Menu name="file"><text>&amp;File</text>
+    <Action name="test_action" />
+  </Menu>
+</MenuBar></kpartgui>
+)";
+    client.createGUI(appXml, false);
+
+    const QByteArray settingsXml = R"(<!DOCTYPE kpartgui SYSTEM 'kpartgui.dtd'>
+<kpartgui name="foo" version="1">
+ <MenuBar>
+  <Menu name="file">
+   <text>&amp;File</text>
+   <Action name="test_action" />
+  </Menu>
+ </MenuBar>
+ <ActionProperties scheme="Default">
+  <Action name="test_action" shortcut="Ctrl+B"/>
+ </ActionProperties>
+ <ActionProperties scheme="Test">
+  <Action name="test_action" shortcut="Ctrl+C"/>
+ </ActionProperties>
+</kpartgui>
+)";
+    client.mergeXML(settingsXml);
+
+    KMainWindow mainWindow;
+    KXMLGUIBuilder builder(&mainWindow);
+    KXMLGUIFactory factory(&builder);
+    factory.addClient(&client);
+
+    QCOMPARE(a->shortcut(), QKeySequence(QStringLiteral("Ctrl+C")));
+
+    factory.removeClient(&client);
 }
 
 void KXmlGui_UnitTest::testPartMergingSettings() // #252911
