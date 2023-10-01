@@ -147,26 +147,6 @@ public:
     void save();
 
     /**
-     * Export the current setting to configuration @p config.
-     *
-     * This initializes the configuration object. This will export the global
-     * configuration too.
-     *
-     * @param config Config object
-     */
-    void exportConfiguration(KConfigBase *config) const;
-
-    /**
-     * Import the settings from configuration @p config.
-     *
-     * This will remove all current setting before importing. All shortcuts
-     * are set to QList<QKeySequence>() prior to importing from @p config!
-     *
-     * @param config Config object
-     */
-    void importConfiguration(KConfigBase *config);
-
-    /**
      * Sets the types of actions to display in this widget.
      *
      * @param actionTypes New types of actions
@@ -192,16 +172,16 @@ public Q_SLOTS:
      **/
     void allDefault();
 
-    /**
-     * Opens a printing dialog to print all the shortcuts
-     */
-    void printShortcuts() const;
-
 private Q_SLOTS:
     /*
      * Resize columns to width required
      */
     KXMLGUI_NO_EXPORT void resizeColumns();
+
+    /*
+     * Opens a printing dialog to print all the shortcuts
+     */
+    KXMLGUI_NO_EXPORT void printShortcuts() const;
 
 private:
     /*
@@ -219,6 +199,26 @@ private:
      *
      */
     KXMLGUI_NO_EXPORT void writeConfiguration(KConfigGroup *config = nullptr) const;
+
+    /*
+     * Export the current setting to configuration @p config.
+     *
+     * This initializes the configuration object. This will export the global
+     * configuration too.
+     *
+     * @param config Config object
+     */
+    KXMLGUI_NO_EXPORT void exportConfiguration(KConfigBase *config) const;
+
+    /*
+     * Import the settings from configuration @p config.
+     *
+     * This will remove all current setting before importing. All shortcuts
+     * are set to QList<QKeySequence>() prior to importing from @p config!
+     *
+     * @param config Config object
+     */
+    KXMLGUI_NO_EXPORT void importConfiguration(KConfigBase *config);
 
     friend class KShortcutsDialog;
     friend class KShortcutsEditorPrivate;
