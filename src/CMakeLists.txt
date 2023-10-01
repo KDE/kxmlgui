@@ -195,6 +195,3 @@ if (BUILD_QCH)
     )
 endif()
 
-include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF6XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui)
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
