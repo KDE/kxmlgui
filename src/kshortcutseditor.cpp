@@ -200,15 +200,6 @@ void KShortcutsEditor::resizeColumns()
     }
 }
 
-void KShortcutsEditor::commit()
-{
-    for (QTreeWidgetItemIterator it(d->ui.list); (*it); ++it) {
-        if (KShortcutsEditorItem *item = dynamic_cast<KShortcutsEditorItem *>(*it)) {
-            item->commit();
-        }
-    }
-}
-
 void KShortcutsEditor::save()
 {
     writeConfiguration();
@@ -216,7 +207,11 @@ void KShortcutsEditor::save()
     // undone on deletion! That would lead to weird problems. Changes to
     // Global Shortcuts would vanish completely. Changes to local shortcuts
     // would vanish for this session.
-    commit();
+    for (QTreeWidgetItemIterator it(d->ui.list); (*it); ++it) {
+        if (KShortcutsEditorItem *item = dynamic_cast<KShortcutsEditorItem *>(*it)) {
+            item->commit();
+        }
+    }
 }
 
 void KShortcutsEditor::undo()

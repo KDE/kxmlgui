@@ -130,7 +130,7 @@ public:
     void addCollection(KActionCollection *, const QString &title = QString());
 
     /**
-     * Undo all change made since the last commit().
+     * Undo all change made since the last save().
      *
      * @since 5.75
      */
@@ -139,21 +139,12 @@ public:
     /**
      * Save the changes.
      *
-     * Before saving the changes are committed. This saves the actions to disk.
+     * This saves the actions to disk.
      * Any KActionCollection objects with the xmlFile() value set will be
      * written to an XML file.  All other will be written to the application's
      * rc file.
      */
     void save();
-
-    /**
-     * Commit the changes without saving.
-     *
-     * This commits the changes without saving.
-     *
-     * @since 4.2
-     */
-    void commit();
 
     /**
      * Removes all configured shortcuts.
