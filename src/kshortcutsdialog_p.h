@@ -365,9 +365,6 @@ public:
     // Set all shortcuts to their default values (bindings).
     void allDefault();
 
-    // clear all shortcuts
-    void clearConfiguration();
-
     // Import shortcuts from file
     void importConfiguration(KConfigBase *config);
 

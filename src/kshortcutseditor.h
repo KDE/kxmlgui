@@ -147,11 +147,6 @@ public:
     void save();
 
     /**
-     * Removes all configured shortcuts.
-     */
-    void clearConfiguration();
-
-    /**
      * Export the current setting to configuration @p config.
      *
      * This initializes the configuration object. This will export the global

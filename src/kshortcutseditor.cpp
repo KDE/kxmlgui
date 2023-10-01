@@ -152,11 +152,6 @@ void KShortcutsEditor::addCollection(KActionCollection *collection, const QStrin
     QTimer::singleShot(0, this, &KShortcutsEditor::resizeColumns);
 }
 
-void KShortcutsEditor::clearConfiguration()
-{
-    d->clearConfiguration();
-}
-
 void KShortcutsEditor::importConfiguration(KConfigBase *config)
 {
     d->importConfiguration(config);
@@ -441,23 +436,6 @@ void KShortcutsEditorPrivate::changeKeyShortcut(KShortcutsEditorItem *item, uint
     Q_EMIT q->keyChange();
     // force view update
     item->setText(column, capture.toString(QKeySequence::NativeText));
-}
-
-void KShortcutsEditorPrivate::clearConfiguration()
-{
-    for (QTreeWidgetItemIterator it(ui.list); (*it); ++it) {
-        if (!(*it)->parent()) {
-            continue;
-        }
-
-        KShortcutsEditorItem *item = static_cast<KShortcutsEditorItem *>(*it);
-
-        changeKeyShortcut(item, LocalPrimary, QKeySequence());
-        changeKeyShortcut(item, LocalAlternate, QKeySequence());
-
-        changeKeyShortcut(item, GlobalPrimary, QKeySequence());
-        changeKeyShortcut(item, GlobalAlternate, QKeySequence());
-    }
 }
 
 void KShortcutsEditorPrivate::importConfiguration(KConfigBase *config)
