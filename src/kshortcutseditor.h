@@ -152,22 +152,6 @@ public:
     void clearConfiguration();
 
     /**
-     * Write the current settings to the \p config object.
-     *
-     * This does not initialize the \p config object. It adds the
-     * configuration.
-     *
-     * @note This will not save the global configuration! globalaccel holds
-     * that part of the configuration.
-     * @see writeGlobalConfig()
-     *
-     * @param config Config object to save to or, or null to use the
-     *               applications config object
-     *
-     */
-    void writeConfiguration(KConfigGroup *config = nullptr) const;
-
-    /**
      * Export the current setting to configuration @p config.
      *
      * This initializes the configuration object. This will export the global
@@ -209,11 +193,6 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     /**
-     * Resize columns to width required
-     */
-    void resizeColumns();
-
-    /**
      * Set all shortcuts to their default values (bindings).
      **/
     void allDefault();
@@ -223,7 +202,29 @@ public Q_SLOTS:
      */
     void printShortcuts() const;
 
+private Q_SLOTS:
+    /*
+     * Resize columns to width required
+     */
+    KXMLGUI_NO_EXPORT void resizeColumns();
+
 private:
+    /*
+     * Write the current settings to the \p config object.
+     *
+     * This does not initialize the \p config object. It adds the
+     * configuration.
+     *
+     * @note This will not save the global configuration! globalaccel holds
+     * that part of the configuration.
+     * @see writeGlobalConfig()
+     *
+     * @param config Config object to save to or, or null to use the
+     *               applications config object
+     *
+     */
+    KXMLGUI_NO_EXPORT void writeConfiguration(KConfigGroup *config = nullptr) const;
+
     friend class KShortcutsDialog;
     friend class KShortcutsEditorPrivate;
     std::unique_ptr<KShortcutsEditorPrivate> const d;
