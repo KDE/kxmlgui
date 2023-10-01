@@ -249,10 +249,6 @@ private:
 };
 
 class QAction;
-#if 0
-class KShapeGesture;
-class KRockerGesture;
-#endif
 
 /**
  * A QTreeWidgetItem that can handle QActions.
