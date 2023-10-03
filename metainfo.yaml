@@ -12,8 +12,7 @@ portingAid: false
 deprecated: false
 release: true
 libraries:
- - qmake: KXmlGui
-   cmake: "KF6::XmlGui"
+ - cmake: "KF6::XmlGui"
 cmakename: KF6XmlGui
 
 public_lib: true
