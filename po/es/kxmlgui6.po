@@ -5,7 +5,7 @@
 # Pablo de Vicente <vicente@oan.es>, 2000-2002,2003, 2004.
 # Pablo de Vicente <vicnte@oan.es>, 2003.
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006, 2007.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Jaime Robles <jaime@kde.org>, 2007.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:43+0000\n"
-"PO-Revision-Date: 2022-07-05 16:36+0200\n"
+"PO-Revision-Date: 2023-10-02 22:13+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -319,15 +319,15 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"La secuencia de teclas «%1» es ambigua. Use «Configurar accesos rápidos\n"
-"de teclado» en el menú «Preferencias» para resolver la ambigüedad.\n"
+"La secuencia de teclas «%1» es ambigua. Use «Configurar atajos de teclado»\n"
+"en el menú «Preferencias» para resolver la ambigüedad.\n"
 "No se ejecutará ninguna acción."
 
 #: kactionconflictdetector.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
-msgstr "Se ha detectado un acceso rápido ambiguo"
+msgstr "Se ha detectado un atajo de teclado ambiguo"
 
 #: kbugreport.cpp:62
 #, kde-format
@@ -635,8 +635,8 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Pulse sobre el botón e introduzca a continuación el acceso rápido que desee "
-"para el programa.\n"
+"Pulse sobre el botón e introduzca a continuación el atajo de teclado que "
+"desee para el programa.\n"
 "Ejemplo para «Ctrl+A»: mantenga pulsada la tecla «Ctrl» y luego pulse «A»."
 
 #: kkeysequencewidget.cpp:167
@@ -644,13 +644,13 @@ msgstr ""
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
-msgstr[0] "Conflicto de acceso rápido"
-msgstr[1] "Conflictos de accesos rápidos"
+msgstr[0] "Conflicto de atajos de teclado"
+msgstr[1] "Conflictos de atajos de teclado"
 
 #: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "Acceso rápido «%1» para la acción «%2»\n"
+msgstr "Atajo de teclado «%1» para la acción «%2»\n"
 
 #: kkeysequencewidget.cpp:176
 #, kde-format
@@ -664,12 +664,12 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"El acceso rápido «%2» es ambiguo con el siguiente acceso rápido.\n"
-"¿Desea asignar un acceso rápido vacío a esta acción?\n"
+"El atajo de teclado «%2» es ambiguo con el siguiente atajo.\n"
+"¿Desea asignar un atajo vacío para esta acción?\n"
 "%3"
 msgstr[1] ""
-"El acceso rápido «%2» es ambiguo con los siguientes accesos rápidos.\n"
-"¿Desea asignar un acceso rápido vacío a estas acciones?\n"
+"El atajo de teclado «%2» es ambiguo con los siguientes atajos.\n"
+"¿Desea asignar un atajo vacío para estas acciones?\n"
 "%3"
 
 #: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
@@ -683,7 +683,7 @@ msgstr "Reasignar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
-msgstr "Conflicto de accesos rápidos"
+msgstr "Conflicto de atajos de teclado"
 
 #: kkeysequencewidget.cpp:193
 #, kde-format
@@ -697,7 +697,7 @@ msgstr ""
 #: kkeysequencewidget.cpp:273
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Acceso rápido «%1» en la aplicación «%2» para la acción «%3»\n"
+msgstr "Atajo de teclado «%1» en la aplicación «%2» para la acción «%3»\n"
 
 #: kkeysequencewidget.cpp:282
 #, kde-format
@@ -708,24 +708,24 @@ msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] ""
-"El acceso rápido «%2» está en conflicto con la siguiente combinación de "
+"El atajo de teclado «%2» está en conflicto con la siguiente combinación de "
 "teclas:\n"
 msgstr[1] ""
-"El acceso rápido «%2» está en conflicto con las siguientes combinaciones de "
-"teclas:\n"
+"El atajo de teclado «%2» está en conflicto con las siguientes combinaciones "
+"de teclas:\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
-msgstr[0] "Conflicto con un acceso rápido global registrado"
-msgstr[1] "Conflicto con accesos rápidos globales registrados"
+msgstr[0] "Conflicto con atajo de teclado global registrado"
+msgstr[1] "Conflicto con atajos de teclado globales registrados"
 
 #: kkeysequencewidget.cpp:302
 #, kde-format
 msgid "Reserved Shortcut"
-msgstr "Acceso rápido reservado"
+msgstr "Atajo de teclado reservado"
 
 #: kkeysequencewidget.cpp:304
 #, kde-format
@@ -734,15 +734,15 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"La tecla F12 está reservada en Windows y no se puede usar como acceso rápido "
-"global.\n"
+"La tecla F12 está reservada en Windows y no se puede usar como atajo de "
+"teclado global.\n"
 "Seleccione otra tecla."
 
 #: kkeysequencewidget.cpp:347
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Conflicto con el acceso rápido de la aplicación estándar"
+msgstr "Conflicto con el atajo de teclado estándar de la aplicación"
 
 #: kkeysequencewidget.cpp:349
 #, kde-format
@@ -752,8 +752,8 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 "La combinación de teclas «%1» ya está asignada a la acción estándar «%2», "
-"que es usada por algunas aplicaciones.\n"
-"¿Realmente quiere usarla también como acceso rápido global?"
+"que usan algunas aplicaciones.\n"
+"¿Realmente quiere usarla también como atajo de teclado global?"
 
 #: kkeysequencewidget.cpp:393
 #, kde-format
@@ -794,7 +794,7 @@ msgstr "Añadir a la barra de herramientas"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "Configurar acceso rápido..."
+msgstr "Configurar atajo de teclado..."
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -812,7 +812,7 @@ msgstr "Personalizado:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
-msgstr "Esquemas de accesos rápidos"
+msgstr "Esquemas de atajos de teclado"
 
 #: kshortcutschemeseditor.cpp:37
 #, kde-format
@@ -841,7 +841,7 @@ msgstr "Más acciones"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "Guardar accesos rápidos en el esquema"
+msgstr "Guardar atajos de teclado en el esquema"
 
 #: kshortcutschemeseditor.cpp:62
 #, kde-format
@@ -883,35 +883,35 @@ msgid ""
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
 "¿Realmente desea eliminar el esquema %1?\n"
-"Tenga en cuenta que esto no eliminará ningún esquema de accesos rápidos del "
-"sistema."
+"Tenga en cuenta que esto no eliminará ningún esquema de atajos de teclado "
+"del sistema."
 
 #: kshortcutschemeseditor.cpp:187
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr "Exportar accesos rápidos"
+msgstr "Exportar atajos de teclado"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:198
 #, kde-format
 msgid "Shortcuts (*.shortcuts)"
-msgstr "Accesos rápidos (*.shortcuts)"
+msgstr "Atajos de teclado (*.shortcuts)"
 
 #: kshortcutschemeseditor.cpp:198
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
-msgstr "Importar accesos rápidos"
+msgstr "Importar atajos de teclado"
 
 #: kshortcutschemeseditor.cpp:209
 #, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "El esquema de accesos rápidos se ha guardado correctamente."
+msgstr "El esquema de atajos de teclado se ha guardado correctamente."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr "Ha ocurrido un error al guardar el esquema de accesos rápidos."
+msgstr "Ha ocurrido un error al guardar el esquema de atajos de teclado."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
@@ -919,7 +919,7 @@ msgid ""
 "The current shortcut scheme is modified. Save before switching to the new "
 "one?"
 msgstr ""
-"Se ha modificado el esquema actual de accesos rápidos. ¿Desea guardarlo "
+"Se ha modificado el esquema actual de atajos de teclado. ¿Desea guardarlo "
 "antes de cambiar al nuevo esquema?"
 
 #: kshortcutsdialog.cpp:124
@@ -931,7 +931,7 @@ msgstr "Ge&stionar esquemas"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Configurar los accesos rápidos de teclado"
+msgstr "Configurar los atajos de teclado"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -940,7 +940,7 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"Buscar interactivamente nombres de accesos rápidos (p. ej., Copiar) o "
+"Buscar interactivamente nombres de atajos de teclado (por ejemplo, Copiar) o "
 "combinaciones de teclas (p. ej., Ctrl+C) introduciéndolas aquí."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
@@ -966,7 +966,7 @@ msgstr "Acción"
 #: kshortcutsdialog.ui:38
 #, kde-format
 msgid "Shortcut"
-msgstr "Acceso rápido"
+msgstr "Atajo de teclado"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:43
@@ -1002,7 +1002,7 @@ msgstr "Gesto de forma con el ratón"
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
-msgstr "Accesos rápidos para %1"
+msgstr "Atajos de teclado para %1"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
 #: kshortcutseditor.cpp:565 kshortcutwidget.ui:22
@@ -1034,7 +1034,7 @@ msgstr "Nombre de la acción"
 #: kshortcutseditor.cpp:588
 #, kde-format
 msgid "Shortcuts"
-msgstr "Accesos rápidos"
+msgstr "Atajos de teclado"
 
 #: kshortcutseditor.cpp:592
 #, kde-format
@@ -1308,14 +1308,14 @@ msgid ""
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
-"Existen dos acciones (%1, %2) que quieren usar el mismo acceso rápido (%3). "
-"Lo más probable es que se trate de un error. Por favor, informe de ello en "
-"<a href='https://bugs.kde.org'>bugs.kde.org</a>"
+"Existen dos acciones (%1, %2) que quieren usar el mismo atajo de teclado "
+"(%3). Lo más probable es que se trate de un error. Informe de ello en <a "
+"href='https://bugs.kde.org'>bugs.kde.org</a>"
 
 #: kxmlguiwindow.cpp:533
 #, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "Accesos rápidos ambiguos"
+msgstr "Atajos de teclado ambiguos"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
