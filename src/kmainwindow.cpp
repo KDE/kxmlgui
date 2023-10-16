@@ -907,6 +907,23 @@ bool KMainWindow::event(QEvent *ev)
     return QMainWindow::event(ev);
 }
 
+void KMainWindow::keyPressEvent(QKeyEvent *keyEvent)
+{
+    if (keyEvent->key() == Qt::Key_F10 && keyEvent->modifiers() == Qt::ShiftModifier) {
+        if (QWidget *widgetWithKeyboardFocus = qApp->focusWidget()) {
+            const QPoint centerOfWidget(widgetWithKeyboardFocus->width() / 2, widgetWithKeyboardFocus->height() / 2);
+            qApp->postEvent(widgetWithKeyboardFocus,
+                            new QContextMenuEvent(QContextMenuEvent::Keyboard, centerOfWidget, widgetWithKeyboardFocus->mapToGlobal(centerOfWidget)));
+            return;
+        }
+        if (qApp->focusObject()) {
+            qApp->postEvent(qApp->focusObject(), new QContextMenuEvent(QContextMenuEvent::Keyboard, mapFromGlobal(QCursor::pos()), QCursor::pos()));
+            return;
+        }
+    }
+    QMainWindow::keyPressEvent(keyEvent);
+}
+
 bool KMainWindow::hasMenuBar()
 {
     return internalMenuBar(this);

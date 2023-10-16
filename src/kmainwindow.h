@@ -470,6 +470,11 @@ protected:
     bool event(QEvent *event) override;
 
     /**
+     * Reimplemented to open context menus on Shift+F10.
+     */
+    void keyPressEvent(QKeyEvent *keyEvent) override;
+
+    /**
      * Reimplemented to autosave settings and call queryClose().
      *
      * We recommend that you reimplement queryClose() rather than closeEvent().
