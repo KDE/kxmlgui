@@ -52,11 +52,11 @@
  * A helper function that takes a list of KActionCollection* and converts it
  * to KCommandBar::ActionGroup
  */
-static QVector<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::vector<KActionCollection *> &actionCollections)
+static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::vector<KActionCollection *> &actionCollections)
 {
     using ActionGroup = KCommandBar::ActionGroup;
 
-    QVector<ActionGroup> actionList;
+    QList<ActionGroup> actionList;
     actionList.reserve(actionCollections.size());
 
     for (const auto collection : actionCollections) {
@@ -133,7 +133,7 @@ public:
 
     bool commandBarEnabled = true;
     // Last executed actions in command bar
-    QVector<QString> lastExecutedActions;
+    QList<QString> lastExecutedActions;
 
     bool showHelpMenu : 1;
     QSize defaultSize;

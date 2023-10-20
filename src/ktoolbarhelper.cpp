@@ -6,7 +6,7 @@
 
 #include "ktoolbarhelper_p.h"
 
-#include <QVector>
+#include <QList>
 
 #include <KLocalizedString>
 
@@ -16,7 +16,7 @@ QString i18nToolBarName(const QDomElement &element)
 {
     QDomElement textElement;
     bool textElementFound = false;
-    const QVector<QString> textKeys = {QStringLiteral("text"), QStringLiteral("Text")};
+    const QList<QString> textKeys = {QStringLiteral("text"), QStringLiteral("Text")};
     for (const QString &key : textKeys) {
         QDomNode textNode = element.namedItem(key);
         if (textNode.isElement()) {

@@ -11,7 +11,7 @@
 #include "kxmlguibuilder.h"
 #include "kxmlguiclient.h"
 
-#include <QVector>
+#include <QList>
 #include <QWidget>
 
 #include "debug.h"
@@ -281,7 +281,7 @@ bool ContainerNode::destruct(
     unplugActions(state);
 
     // remove all merging indices the client defined
-    QMutableVectorIterator<MergingIndex> cmIt = mergingIndices;
+    QMutableListIterator<MergingIndex> cmIt = mergingIndices;
     while (cmIt.hasNext()) {
         if (cmIt.next().clientName == state.clientName) {
             cmIt.remove();
