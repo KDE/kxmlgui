@@ -75,8 +75,17 @@ public:
      * Retrieves an action of the client by name.  If not found, it looks in its child clients.
      * This method is provided for convenience, as it uses actionCollection()
      * to get the action object.
+     *
+     * @since 6.0
      */
-    QAction *action(const char *name) const;
+    QAction *action(const QString &name) const;
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 240)
+    KXMLGUI_DEPRECATED_VERSION(5, 240, "Use action(const QString &) overload")
+    QAction *action(const char *name) const
+    {
+        return action(QString::fromLatin1(name));
+    }
+#endif
 
     /**
      * Retrieves an action for a given QDomElement. The default

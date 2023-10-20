@@ -100,12 +100,12 @@ KXMLGUIClient::~KXMLGUIClient()
     delete d;
 }
 
-QAction *KXMLGUIClient::action(const char *name) const
+QAction *KXMLGUIClient::action(const QString &name) const
 {
-    QAction *act = actionCollection()->action(QLatin1String(name));
+    QAction *act = actionCollection()->action(name);
     if (!act) {
         for (KXMLGUIClient *client : std::as_const(d->m_children)) {
-            act = client->actionCollection()->action(QLatin1String(name));
+            act = client->actionCollection()->action(name);
             if (act) {
                 break;
             }

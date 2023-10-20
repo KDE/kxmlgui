@@ -1182,8 +1182,8 @@ void KXmlGui_UnitTest::testShortcuts()
     KXMLGUIFactory factory(&builder);
     factory.addClient(&client);
 
-    QAction *actionOpen = client.action("file_open");
-    QAction *actionQuit = client.action("file_quit");
+    QAction *actionOpen = client.action(QStringLiteral("file_open"));
+    QAction *actionQuit = client.action(QStringLiteral("file_quit"));
     QVERIFY(actionOpen && actionQuit);
     QCOMPARE(actionOpen->shortcuts(), QList<QKeySequence>() << QKeySequence(QStringLiteral("Ctrl+O")));
     // #345411
