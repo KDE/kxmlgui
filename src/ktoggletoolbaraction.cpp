@@ -29,8 +29,7 @@ class KToggleToolBarActionPrivate
 {
 public:
     KToggleToolBarActionPrivate(KToggleToolBarAction *q)
-        : toolBarName(nullptr)
-        , toolBar(nullptr)
+        : toolBar(nullptr)
         , beingToggled(false)
     {
         const bool authorized = KAuthorized::authorizeAction(QStringLiteral("options_show_toolbar"));
@@ -38,17 +37,9 @@ public:
         q->setVisible(authorized);
     }
 
-    QByteArray toolBarName;
     QPointer<KToolBar> toolBar;
     bool beingToggled;
 };
-
-KToggleToolBarAction::KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent)
-    : KToggleAction(text, parent)
-    , d(new KToggleToolBarActionPrivate(this))
-{
-    d->toolBarName = toolBarName;
-}
 
 KToggleToolBarAction::KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent)
     : KToggleAction(text, parent)

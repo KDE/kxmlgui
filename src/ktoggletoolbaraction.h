@@ -42,16 +42,6 @@ class KXMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
 
 public:
     /**
-     * Create a KToggleToolBarAction that manages the toolbar
-     * named @p toolBarName. This can be either the name of a
-     * toolbar in an xml ui file, or a toolbar programmatically
-     * created with that name.
-     *
-     * @param parent the action's parent object.
-     */
-    KToggleToolBarAction(const char *toolBarName, const QString &text, QObject *parent);
-
-    /**
      * Create a KToggleToolBarAction that manages the @p toolBar.
      *
      * @param toolBar the toolbar to be managed
