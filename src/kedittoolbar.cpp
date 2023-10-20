@@ -757,9 +757,9 @@ void KEditToolBarPrivate::applyClicked()
     Q_EMIT q->newToolBarConfig();
 }
 
-void KEditToolBar::setGlobalDefaultToolBar(const char *toolbarName)
+void KEditToolBar::setGlobalDefaultToolBar(const QString &toolBarName)
 {
-    *s_defaultToolBarName() = QString::fromLatin1(toolbarName);
+    *s_defaultToolBarName() = toolBarName;
 }
 
 KEditToolBarWidget::KEditToolBarWidget(KActionCollection *collection, QWidget *parent)
