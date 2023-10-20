@@ -662,11 +662,11 @@ void KToolBarPrivate::slotContextAboutToShow()
 
     // try to find "configure toolbars" action
     QAction *configureAction = nullptr;
-    const char *actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
-    configureAction = findAction(QLatin1String(actionName));
+    const QString actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
+    configureAction = findAction(actionName);
 
     if (!configureAction && kmw) {
-        configureAction = kmw->actionCollection()->action(QLatin1String(actionName));
+        configureAction = kmw->actionCollection()->action(actionName);
     }
 
     if (configureAction) {
@@ -760,11 +760,11 @@ void KToolBarPrivate::slotContextAboutToHide()
 
     // Unplug the configure toolbars action too, since it's afterwards anyway
     QAction *configureAction = nullptr;
-    const char *actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
-    configureAction = findAction(QLatin1String(actionName));
+    const QString actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
+    configureAction = findAction(actionName);
 
     if (!configureAction && kmw) {
-        configureAction = kmw->actionCollection()->action(QLatin1String(actionName));
+        configureAction = kmw->actionCollection()->action(actionName);
     }
 
     if (configureAction) {
