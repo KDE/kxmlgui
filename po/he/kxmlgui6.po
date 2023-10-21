@@ -30,7 +30,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Zanata 3.9.6\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, fuzzy, kde-format
@@ -99,6 +100,8 @@ msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "כ&ותב"
 msgstr[1] "כ&ותב"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, fuzzy, kde-format
@@ -671,12 +674,14 @@ msgstr ""
 "דוגמא: לקיצור Ctrl+a: לחץ על המקש Ctrl ועל המקש a"
 
 #: kkeysequencewidget.cpp:167
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "התנגשות קיצור־דרך"
 msgstr[1] "התנגשות קיצורי־דרך"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kkeysequencewidget.cpp:171
 #, kde-format
@@ -709,6 +714,8 @@ msgstr[0] ""
 msgstr[1] ""
 "קיצור מקש \"%2\" מתנגש עם הקיצורים הבאים.\n"
 "האם ברצונך לשייך מחווה ריקה לפעולות אלו? %3"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
 #: kkeysequencewidget.cpp:355
@@ -741,7 +748,7 @@ msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "קיצור־דרך ל־%1 ביישום %2 עבור פעולה %3\n"
 
 #: kkeysequencewidget.cpp:282
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
 "shortcut that is problematic"
@@ -750,14 +757,18 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "הקיצור \"%2\" מתנגש עם קיצור המקשים הבא:\n"
 msgstr[1] "הקיצור \"%2\" מתנגש עם קיצורי המקשים הבאים:\n"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kkeysequencewidget.cpp:289
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "התנגשות עם קיצור גלובלי רשום."
 msgstr[1] "התנגשות עם קיצורים גלובליים רשומים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kkeysequencewidget.cpp:302
 #, kde-format
