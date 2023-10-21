@@ -60,7 +60,11 @@ KShortcutsEditor::KShortcutsEditor(QWidget *parent, ActionTypes actionType, Lett
     d->initGUI(actionType, allowLetterShortcuts);
 }
 
-KShortcutsEditor::~KShortcutsEditor() = default;
+KShortcutsEditor::~KShortcutsEditor()
+{
+    // reset all pending changes
+    undo();
+}
 
 bool KShortcutsEditor::isModified() const
 {
