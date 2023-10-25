@@ -690,7 +690,7 @@ void KToolBarPrivate::slotContextAboutToShow()
         }
     }
 
-    KEditToolBar::setGlobalDefaultToolBar(q->QObject::objectName().toLatin1().constData());
+    KEditToolBar::setGlobalDefaultToolBar(q->QObject::objectName());
 
     // Check the actions that should be checked
     switch (q->toolButtonStyle()) {
