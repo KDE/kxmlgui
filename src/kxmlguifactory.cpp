@@ -285,7 +285,7 @@ void KXMLGUIFactory::refreshActionProperties()
 
 static QString currentShortcutScheme()
 {
-    const KConfigGroup cg = KSharedConfig::openConfig()->group("Shortcut Schemes");
+    const KConfigGroup cg = KSharedConfig::openConfig()->group(QStringLiteral("Shortcut Schemes"));
     return cg.readEntry("Current Scheme", "Default");
 }
 
@@ -365,7 +365,7 @@ void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &
 void KXMLGUIFactory::changeShortcutScheme(const QString &scheme)
 {
     qCDebug(DEBUG_KXMLGUI) << "Changing shortcut scheme to" << scheme;
-    KConfigGroup cg = KSharedConfig::openConfig()->group("Shortcut Schemes");
+    KConfigGroup cg = KSharedConfig::openConfig()->group(QStringLiteral("Shortcut Schemes"));
     cg.writeEntry("Current Scheme", scheme);
 
     refreshActionProperties();

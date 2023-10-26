@@ -92,7 +92,7 @@ class ShortcutSchemeHandler
 {
 public:
     ShortcutSchemeHandler(const QString &scheme)
-        : cgScheme(KSharedConfig::openConfig(), "Shortcut Schemes")
+        : cgScheme(KSharedConfig::openConfig(), QStringLiteral("Shortcut Schemes"))
         , prevScheme(cgScheme.readEntry("Current Scheme", QStringLiteral("Default")))
     {
         cgScheme.writeEntry("Current Scheme", scheme);
@@ -802,7 +802,7 @@ void KXmlGui_UnitTest::testHiddenToolBar()
         "  <Action name=\"go_up\"/>\n"
         "</ToolBar>\n"
         "</gui>\n";
-    KConfigGroup cg(KSharedConfig::openConfig(), "testHiddenToolBar");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("testHiddenToolBar"));
     TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.setAutoSaveSettings(cg);
     mainWindow.createActions(QStringList() << QStringLiteral("go_up"));
@@ -847,7 +847,7 @@ void KXmlGui_UnitTest::testCustomPlaceToolBar()
         "  <Action name=\"help_about_kde\"/>\n"
         "</ToolBar>\n"
         "</gui>\n";
-    KConfigGroup cg(KSharedConfig::openConfig(), "testHiddenToolBar");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("testHiddenToolBar"));
     TestXmlGuiWindow mw(xml, "kxmlgui_unittest.rc");
     mw.setAutoSaveSettings(cg);
 
@@ -899,7 +899,7 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
         "</gui>\n";
     {
         // do not interfere with the "toolbarVisibility" unit test
-        KConfigGroup cg(KSharedConfig::openConfig(), "testAutoSaveSettings");
+        KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("testAutoSaveSettings"));
         TestXmlGuiWindow mw(xml, "kxmlgui_unittest.rc");
         mw.show();
         mw.setAutoSaveSettings(cg);
@@ -934,7 +934,7 @@ void KXmlGui_UnitTest::testAutoSaveSettings()
     }
 
     {
-        KConfigGroup cg(KSharedConfig::openConfig(), "testAutoSaveSettings");
+        KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("testAutoSaveSettings"));
         TestXmlGuiWindow mw2(xml, "kxmlgui_unittest.rc");
         mw2.show();
         mw2.setAutoSaveSettings(cg);
@@ -978,7 +978,7 @@ void KXmlGui_UnitTest::testDeletedContainers() // deleted="true"
         "  <Action name=\"go_up\"/>\n"
         "</ToolBar>\n"
         "</gui>\n";
-    KConfigGroup cg(KSharedConfig::openConfig(), "testDeletedToolBar");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("testDeletedToolBar"));
     TestXmlGuiWindow mainWindow(xml, "kxmlgui_unittest.rc");
     mainWindow.setAutoSaveSettings(cg);
     mainWindow.createActions(QStringList() << QStringLiteral("go_up") << QStringLiteral("file_new") << QStringLiteral("game_new"));

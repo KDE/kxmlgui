@@ -583,7 +583,7 @@ void KToolBarPrivate::slotAppearanceChanged()
 
 Qt::ToolButtonStyle KToolBarPrivate::toolButtonStyleSetting()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
+    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("Toolbar style"));
     const QString fallback = KToolBarPrivate::toolButtonStyleToString(Qt::ToolButtonTextBesideIcon);
     return KToolBarPrivate::toolButtonStyleFromString(group.readEntry("ToolButtonStyle", fallback));
 }
@@ -611,7 +611,7 @@ void KToolBarPrivate::loadKDESettings()
         }
         **/
 
-        KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
+        KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("Toolbar style"));
         const QString value = group.readEntry("ToolButtonStyleOtherToolbars", fallBack);
         toolButtonStyleSettings[Level_KDEDefault] = KToolBarPrivate::toolButtonStyleFromString(value);
     }

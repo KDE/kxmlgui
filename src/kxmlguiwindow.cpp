@@ -260,7 +260,7 @@ KXMLGUIFactory *KXmlGuiWindow::guiFactory()
 void KXmlGuiWindow::configureToolbars()
 {
     Q_D(KXmlGuiWindow);
-    KConfigGroup cg(KSharedConfig::openConfig(), "");
+    KConfigGroup cg(KSharedConfig::openConfig(), QString());
     saveMainWindowSettings(cg);
     if (!d->toolBarEditor) {
         d->toolBarEditor = new KEditToolBar(guiFactory(), this);
@@ -277,7 +277,7 @@ void KXmlGuiWindow::saveNewToolbarConfig()
     guiFactory()->removeClient(this);
     guiFactory()->addClient(this);
 
-    KConfigGroup cg(KSharedConfig::openConfig(), "");
+    KConfigGroup cg(KSharedConfig::openConfig(), QString());
     applyMainWindowSettings(cg);
 }
 

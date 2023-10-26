@@ -142,7 +142,7 @@ void KMainWindow_UnitTest::testDeleteOnClose()
 void KMainWindow_UnitTest::testSaveWindowSize()
 {
     QCOMPARE(KSharedConfig::openConfig()->name(), QStringLiteral("kmainwindow_unittestrc"));
-    KConfigGroup cfg(KSharedConfig::openConfig(), "TestWindowSize");
+    KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("TestWindowSize"));
 
     {
         MyMainWindow mw;
@@ -169,7 +169,7 @@ void KMainWindow_UnitTest::testSaveWindowSize()
 void KMainWindow_UnitTest::testSaveWindowSizeInStateConfig()
 {
     QCOMPARE(KSharedConfig::openConfig()->name(), QStringLiteral("kmainwindow_unittestrc"));
-    KConfigGroup cfg(KSharedConfig::openConfig(), "testSaveWindowSizeInStateConfig");
+    KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("testSaveWindowSizeInStateConfig"));
     cfg.deleteGroup();
     QVERIFY(cfg.isValid());
 

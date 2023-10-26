@@ -100,7 +100,7 @@ bool KShortcutSchemesHelper::saveShortcutScheme(const QList<KActionCollection *>
 
 QString KShortcutSchemesHelper::currentShortcutSchemeName()
 {
-    return KSharedConfig::openConfig()->group("Shortcut Schemes").readEntry("Current Scheme", "Default");
+    return KSharedConfig::openConfig()->group(QStringLiteral("Shortcut Schemes")).readEntry("Current Scheme", "Default");
 }
 
 QString KShortcutSchemesHelper::writableShortcutSchemeFileName(const QString &componentName, const QString &schemeName)

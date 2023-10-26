@@ -52,8 +52,6 @@
 
 //#include <cctype>
 
-static const char WINDOW_PROPERTIES[] = "WindowProperties";
-
 static QMenuBar *internalMenuBar(KMainWindow *mw)
 {
     return mw->findChild<QMenuBar *>(QString(), Qt::FindDirectChildrenOnly);
@@ -142,7 +140,7 @@ void KMWSessionManager::saveState(QSessionManager &sm)
         mw->savePropertiesInternal(config, n);
     }
 
-    KConfigGroup group(config, "Number");
+    KConfigGroup group(config, QStringLiteral("Number"));
     group.writeEntry("NumberOfWindows", n);
 
     // store new status to disk
@@ -442,7 +440,7 @@ bool KMainWindow::canBeRestored(int numberOfInstances)
         return false;
     }
 
-    KConfigGroup group(config, "Number");
+    KConfigGroup group(config, QStringLiteral("Number"));
     // TODO KF6: we should use 0 as the default value, not 1
     // See also https://bugs.kde.org/show_bug.cgi?id=427552
     const int n = group.readEntry("NumberOfWindows", 1);
@@ -456,7 +454,7 @@ const QString KMainWindow::classNameOfToplevel(int instanceNumber)
         return QString();
     }
 
-    KConfigGroup group(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(instanceNumber)).constData());
+    KConfigGroup group(config, QStringLiteral("WindowProperties%1").arg(instanceNumber));
     if (!group.hasKey("ClassName")) {
         return QString();
     } else {
@@ -572,7 +570,7 @@ void KMainWindow::savePropertiesInternal(KConfig *config, int number)
     const bool oldASWS = d->autoSaveWindowSize;
     d->autoSaveWindowSize = true; // make saveMainWindowSettings save the window size
 
-    KConfigGroup cg(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(number)).constData());
+    KConfigGroup cg(config, QStringLiteral("WindowProperties%1").arg(number));
 
     // store objectName, className, Width and Height  for later restoring
     // (Only useful for session management)
@@ -581,7 +579,7 @@ void KMainWindow::savePropertiesInternal(KConfig *config, int number)
 
     saveMainWindowSettings(cg); // Menubar, statusbar and Toolbar settings.
 
-    cg = KConfigGroup(config, QByteArray::number(number).constData());
+    cg = KConfigGroup(config, QString::number(number));
     saveProperties(cg);
 
     d->autoSaveWindowSize = oldASWS;
@@ -634,12 +632,11 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     int n = 1; // Toolbar counter. toolbars are counted from 1,
     const auto toolBars = this->toolBars();
     for (KToolBar *toolbar : toolBars) {
-        QByteArray groupName("Toolbar");
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
-        groupName += (toolbar->objectName().isEmpty() ? QByteArray::number(n) : QByteArray(" ").append(toolbar->objectName().toUtf8()));
+        const QString groupName = toolbar->objectName().isEmpty() ? QStringLiteral("Toolbar%1").arg(n) : (QStringLiteral("Toolbar ") + toolbar->objectName());
 
-        KConfigGroup toolbarGroup(&cg, groupName.constData());
+        KConfigGroup toolbarGroup(&cg, groupName);
         toolbar->saveSettings(toolbarGroup);
         n++;
     }
@@ -657,7 +654,7 @@ bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
     }
 
     // in order they are in toolbar list
-    KConfigGroup cg(config, QByteArray(WINDOW_PROPERTIES).append(QByteArray::number(number)).constData());
+    KConfigGroup cg(config, QStringLiteral("WindowProperties%1").arg(number));
 
     // restore the object name (window role)
     if (cg.hasKey("ObjectName")) {
@@ -668,7 +665,7 @@ bool KMainWindow::readPropertiesInternal(KConfig *config, int number)
     // if necessary. Do it before the call to applyMainWindowSettings.
     applyMainWindowSettings(cg); // Menubar, statusbar and toolbar settings.
 
-    KConfigGroup grp(config, QByteArray::number(number).constData());
+    KConfigGroup grp(config, QString::number(number));
     readProperties(grp);
 
     d->letDirtySettings = oldLetDirtySettings;
@@ -709,7 +706,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
         // Let the user opt out of KDE apps remembering window sizes if they
         // find it annoying or it doesn't work for them due to other bugs.
         KSharedConfigPtr config = KSharedConfig::openConfig();
-        KConfigGroup group(config, "General");
+        KConfigGroup group(config, QStringLiteral("General"));
         if (group.readEntry("AllowKDEAppsToRememberWindowPositions", true)) {
             if (stateConfig.readEntry("RestorePositionForNextInstance", true)) {
                 KWindowConfig::restoreWindowPosition(windowHandle(), stateConfig);
@@ -741,12 +738,11 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
     int n = 1; // Toolbar counter. toolbars are counted from 1,
     const auto toolBars = this->toolBars();
     for (KToolBar *toolbar : toolBars) {
-        QByteArray groupName("Toolbar");
         // Give a number to the toolbar, but prefer a name if there is one,
         // because there's no real guarantee on the ordering of toolbars
-        groupName += (toolbar->objectName().isEmpty() ? QByteArray::number(n) : QByteArray(" ").append(toolbar->objectName().toUtf8()));
+        const QString groupName = toolbar->objectName().isEmpty() ? QStringLiteral("Toolbar%1").arg(n) : (QStringLiteral("Toolbar ") + toolbar->objectName());
 
-        KConfigGroup toolbarGroup(&cg, groupName.constData());
+        KConfigGroup toolbarGroup(&cg, groupName);
         toolbar->applySettings(toolbarGroup);
         n++;
     }

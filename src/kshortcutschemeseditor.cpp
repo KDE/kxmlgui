@@ -96,7 +96,7 @@ void KShortcutSchemesEditor::refreshSchemes()
     m_schemesList->clear();
     m_schemesList->addItems(schemes);
 
-    KConfigGroup group(KSharedConfig::openConfig(), "Shortcut Schemes");
+    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("Shortcut Schemes"));
     const QString currentScheme = group.readEntry("Current Scheme", "Default");
     qCDebug(DEBUG_KXMLGUI) << "Current Scheme" << currentScheme;
 

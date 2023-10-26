@@ -103,7 +103,7 @@ void tst_KToolBar::initTestCase()
     testDataDir.mkpath(QStringLiteral("."));
 
     // setup action restriction so we can test whether this actually disables some functionality
-    KConfigGroup actionRestrictions(KSharedConfig::openConfig(), "KDE Action Restrictions");
+    KConfigGroup actionRestrictions(KSharedConfig::openConfig(), QStringLiteral("KDE Action Restrictions"));
     actionRestrictions.writeEntry("action/options_show_toolbar", false);
 
     // copy a minimal icon theme to where KIconTheme will find it, in case oxygen-icons is not
@@ -191,7 +191,7 @@ void tst_KToolBar::testIconSizeNoXmlGui()
 {
     QFETCH(int, iconSize);
     KConfig config(QStringLiteral("tst_KToolBar"));
-    KConfigGroup group(&config, "group");
+    KConfigGroup group(&config, QStringLiteral("group"));
     {
         KMainWindow kmw;
         KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
@@ -213,10 +213,10 @@ void tst_KToolBar::testIconSizeNoXmlGui()
         // was it the default value?
         if (iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar)) {
             QCOMPARE(group.groupList().count(), 0); // nothing to save
-            QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
+            QVERIFY(!group.group(QStringLiteral("Toolbar mainToolBar")).hasKey("IconSize"));
         } else {
             QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
-            QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
+            QVERIFY(group.group(QStringLiteral("Toolbar mainToolBar")).hasKey("IconSize"));
         }
     }
 
@@ -251,7 +251,7 @@ void tst_KToolBar::testIconSizeXmlGui()
 {
     QFETCH(int, iconSize);
     KConfig config(QStringLiteral("tst_KToolBar"));
-    KConfigGroup group(&config, "group");
+    KConfigGroup group(&config, QStringLiteral("group"));
     {
         TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
         kmw.createActions(QStringList() << QStringLiteral("go_up"));
@@ -283,9 +283,9 @@ void tst_KToolBar::testIconSizeXmlGui()
         const bool usingDefaultSize = iconSize == KIconLoader::global()->currentSize(KIconLoader::MainToolbar);
         if (usingDefaultSize) {
             QVERIFY(!group.groupList().contains(QLatin1String("Toolbar mainToolBar")));
-            QVERIFY(!group.group("Toolbar mainToolBar").hasKey("IconSize"));
+            QVERIFY(!group.group(QStringLiteral("Toolbar mainToolBar")).hasKey("IconSize"));
         } else {
-            QVERIFY(group.group("Toolbar mainToolBar").hasKey("IconSize"));
+            QVERIFY(group.group(QStringLiteral("Toolbar mainToolBar")).hasKey("IconSize"));
         }
     }
 }
@@ -309,7 +309,7 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
     const bool selectedDefaultForOtherToolbar = toolButtonStyle == Qt::ToolButtonTextBesideIcon;
 
     KConfig config(QStringLiteral("tst_KToolBar"));
-    KConfigGroup group(&config, "group");
+    KConfigGroup group(&config, QStringLiteral("group"));
     {
         KMainWindow kmw;
         KToolBar *mainToolBar = kmw.toolBar(QStringLiteral("mainToolBar"));
@@ -328,10 +328,10 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
         kmw.saveMainWindowSettings(group);
         if (selectedDefaultForMainToolbar) {
             QCOMPARE(group.groupList().count(), 0); // nothing to save
-            QVERIFY(!group.group("Toolbar mainToolBar").hasKey("ToolButtonStyle"));
+            QVERIFY(!group.group(QStringLiteral("Toolbar mainToolBar")).hasKey("ToolButtonStyle"));
         } else {
             QCOMPARE(group.groupList().count(), 2); // two subgroups (one for each toolbar)
-            QVERIFY(group.group("Toolbar mainToolBar").hasKey("ToolButtonStyle"));
+            QVERIFY(group.group(QStringLiteral("Toolbar mainToolBar")).hasKey("ToolButtonStyle"));
         }
     }
 
@@ -389,7 +389,7 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
     QFETCH(Qt::ToolButtonStyle, expectedStyleCleanToolbar);
     const Qt::ToolButtonStyle mainToolBarDefaultStyle = Qt::ToolButtonTextBesideIcon; // was TextUnderIcon before KDE-4.4.0
     KConfig config(QStringLiteral("tst_KToolBar"));
-    KConfigGroup group(&config, "group");
+    KConfigGroup group(&config, QStringLiteral("group"));
     {
         TestXmlGuiWindow kmw(m_xml, "tst_ktoolbar.rc");
         kmw.createActions(QStringList() << QStringLiteral("go_up"));
@@ -422,7 +422,7 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
 
 void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar, const QString &otherToolBars)
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
+    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("Toolbar style"));
     group.writeEntry("ToolButtonStyle", mainToolBar);
     group.writeEntry("ToolButtonStyleOtherToolbars", otherToolBars);
     group.sync();
@@ -444,7 +444,7 @@ void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar
 
 void tst_KToolBar::deleteGlobalToolButtonStyleSetting()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "Toolbar style");
+    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("Toolbar style"));
     group.deleteEntry("ToolButtonStyle");
     group.deleteEntry("ToolButtonStyleOtherToolbars");
     KSharedConfig::openConfig()->sync();
@@ -523,11 +523,11 @@ void tst_KToolBar::testXmlGuiSwitching()
 
     // Now save, and check what we saved
     KConfig config(QStringLiteral("tst_KToolBar"));
-    KConfigGroup group(&config, "group");
+    KConfigGroup group(&config, QStringLiteral("group"));
     kmw.saveMainWindowSettings(group);
-    QCOMPARE(group.group("Toolbar bigToolBar").readEntry("IconSize", 0), 35);
-    QCOMPARE(group.group("Toolbar otherToolBar").readEntry("IconSize", 0), 35);
-    QVERIFY(!group.group("Toolbar cleanToolBar").hasKey("IconSize"));
+    QCOMPARE(group.group(QStringLiteral("Toolbar bigToolBar")).readEntry("IconSize", 0), 35);
+    QCOMPARE(group.group(QStringLiteral("Toolbar otherToolBar")).readEntry("IconSize", 0), 35);
+    QVERIFY(!group.group(QStringLiteral("Toolbar cleanToolBar")).hasKey("IconSize"));
     // QCOMPARE(group.group("Toolbar bigToolBar").readEntry("Hidden", false), true);
     // QVERIFY(!group.group("Toolbar cleanToolBar").hasKey("Hidden"));
     // QVERIFY(!group.group("Toolbar hiddenToolBar").hasKey("Hidden"));

@@ -47,7 +47,7 @@ public:
 public Q_SLOTS:
     void initiateIfNeeded()
     {
-        KConfigGroup cg(KSharedConfig::openConfig(), "Development");
+        KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Development"));
         QString sKey = cg.readEntry("CheckAccelerators").trimmed();
         int key = 0;
         if (!sKey.isEmpty()) {
@@ -122,7 +122,7 @@ KCheckAccelerators::KCheckAccelerators(QObject *parent, int key_, bool autoCheck
 {
     setObjectName(QStringLiteral("kapp_accel_filter"));
 
-    KConfigGroup cg(KSharedConfig::openConfig(), "Development");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Development"));
     alwaysShow = cg.readEntry("AlwaysShowCheckAccelerators", false);
 
     parent->installEventFilter(this);

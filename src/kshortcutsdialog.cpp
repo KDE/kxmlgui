@@ -188,13 +188,13 @@ KShortcutsDialog::KShortcutsDialog(KShortcutsEditor::ActionTypes types, KShortcu
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    KConfigGroup group(KSharedConfig::openConfig(), "KShortcutsDialog Settings");
+    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("KShortcutsDialog Settings"));
     resize(group.readEntry("Dialog Size", sizeHint()));
 }
 
 KShortcutsDialog::~KShortcutsDialog()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "KShortcutsDialog Settings");
+    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("KShortcutsDialog Settings"));
     group.writeEntry("Dialog Size", size(), KConfigGroup::Persistent | KConfigGroup::Global);
 }
 
