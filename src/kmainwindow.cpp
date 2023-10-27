@@ -48,6 +48,7 @@
 #include <KConfigGui>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KStandardShortcut>
 #include <KWindowConfig>
 
 //#include <cctype>
@@ -909,7 +910,7 @@ bool KMainWindow::event(QEvent *ev)
 
 void KMainWindow::keyPressEvent(QKeyEvent *keyEvent)
 {
-    if (keyEvent->key() == Qt::Key_F10 && keyEvent->modifiers() == Qt::ShiftModifier) {
+    if (KStandardShortcut::openContextMenu().contains(QKeySequence(keyEvent->key() | keyEvent->modifiers()))) {
         if (QWidget *widgetWithKeyboardFocus = qApp->focusWidget()) {
             const QPoint centerOfWidget(widgetWithKeyboardFocus->width() / 2, widgetWithKeyboardFocus->height() / 2);
             qApp->postEvent(widgetWithKeyboardFocus,
