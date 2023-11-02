@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-30 01:40+0000\n"
-"PO-Revision-Date: 2023-10-24 23:40+0200\n"
+"PO-Revision-Date: 2023-11-01 13:55+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -143,6 +143,17 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
+"<html><b>KDE</b> ye una comunidá global d'inxenieros de software, artistes, "
+"escritores, traductores ya creadores que tán comprometíos col desendolcu del "
+"<a href=\"%1\">software llibre</a>. KDE produz l'entornu d'escritoriu "
+"Plasma, centenares d'aplicaciones ya muches biblioteques de software que les "
+"sofiten.<br /><br />KDE ye una cooperativa, non una entidá única que "
+"controla la direición o los productos de so. En cuentes d'eso, trabayamos "
+"conxuntamente pa llograr l'oxetivu común de crear el software llibre más "
+"refinao del mundu. Damos l'acoyida a toles persones pa que se <a href="
+"\"%2\">xunan ya collaboren</a> con KDE, incluyéndote a ti.<br /><br />Visita "
+"<a href=\"%3\">%3</a> pa consiguir más información tocante a la comunidá KDE "
+"y al software que producimos..</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -155,6 +166,14 @@ msgid ""
 "improvement then you are welcome to use the bug tracking system to register "
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
+"<html>El software siempres pue ameyorar ya l'equipu de KDE ta preparáu pa "
+"facelo. Por embargu, tu -l'usuariu- has dicinos cuando daqué nun funcione "
+"como s'espera o si se pue facer meyor.<br /><br />KDE tien un sistema de "
+"rastrexu de fallos. Visita <a href=\"%1\">%1</a> o usa'l diálogu «Informar "
+"d'un fallu…» dende'l menú «Ayuda» pa informar de los fallos.<br /><br />Si "
+"tienes dalguna suxerencia p'ameyorar, entós convidámoste a qu'uses el "
+"sistema de rastrexu de fallos pa rexistrar el to pidimientu. Asegúrate de "
+"qu'uses la gravedá «Wishlist».</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -225,7 +244,7 @@ msgstr "Versión %1"
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
 msgid "The <em>%1</em> windowing system"
-msgstr ""
+msgstr "El sistema de ventanes <em>%1</em>"
 
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
@@ -256,7 +275,7 @@ msgstr ""
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
-msgstr ""
+msgstr "Usa «%1» pa informar de fallos.\n"
 
 #: kabstractaboutdialog_p.cpp:184
 #, kde-format
