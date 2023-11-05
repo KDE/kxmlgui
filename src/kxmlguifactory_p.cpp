@@ -16,6 +16,7 @@
 
 #include "debug.h"
 #include <cassert>
+#include <qnamespace.h>
 
 using namespace KXMLGUI;
 
@@ -560,7 +561,8 @@ bool BuildHelper::processActionElement(const QDomElement &e, int idx)
 
     parentNode->container->insertAction(before, action);
     if (QToolBar *toolBarContainer = qobject_cast<QToolBar *>(parentNode->container)) {
-        toolBarContainer->widgetForAction(action)->setFocusPolicy(Qt::TabFocus);
+        QWidget *widget = toolBarContainer->widgetForAction(action);
+        widget->setFocusPolicy(widget->focusPolicy() | Qt::TabFocus);
     }
 
     // save a reference to the plugged action, in order to properly unplug it afterwards.
