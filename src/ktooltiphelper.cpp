@@ -185,7 +185,7 @@ bool KToolTipHelperPrivate::handleMenuToolTipEvent(QMenu *menu, QHelpEvent *help
         return true;
     }
     Q_ASSERT(!m_action->whatsThis().isEmpty());
-    showExpandableToolTip(toolTipPosition, QStringLiteral(), actionGeometry);
+    showExpandableToolTip(toolTipPosition, QString(), actionGeometry);
     return true;
 }
 

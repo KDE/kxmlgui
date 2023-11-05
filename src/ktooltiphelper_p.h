@@ -94,7 +94,7 @@ public:
      *
      * @see QToolTip::showText()
      */
-    void showExpandableToolTip(const QPoint &globalPos, const QString &toolTip = QStringLiteral(), const QRect &rect = QRect());
+    void showExpandableToolTip(const QPoint &globalPos, const QString &toolTip = QString(), const QRect &rect = QRect());
 
 public:
     KToolTipHelper *const q;
