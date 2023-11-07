@@ -17,54 +17,49 @@
 # Meni Livne <livne@kde.org>, 2007.
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kxmlgui5\n"
+"Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:35+0000\n"
-"PO-Revision-Date: 2017-05-16 06:50-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-11-06 11:35+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Flags-xgettext: --add-comments\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgid "Visit component's homepage"
-msgstr "בקר באתר הבית של התורם"
+msgstr "ביקור באתר הבית של הרכיב"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"בקר באתר הבית של התורם \n"
+"ביקור באתר הבית של הרכיב\n"
 "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
+#, kde-format
 msgctxt "@item Component name in about dialog."
 msgid "%1"
 msgstr "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgid "Version %1"
-msgstr "גרסה:"
+msgstr "גרסה %1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:152
 #: kabstractaboutdialog_p.cpp:84
@@ -73,46 +68,41 @@ msgid "License: %1"
 msgstr "רישיון: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "אודות %1"
+msgstr "על %1"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab"
 msgid "About"
-msgstr "&אודות"
+msgstr "על אודות"
 
 #: kaboutapplicationdialog.cpp:94
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr ""
+msgstr "רכיבים"
 
 #: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
-#, fuzzy, kde-format
-#| msgid "A&uthor"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "כ&ותב"
-msgstr[1] "כ&ותב"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "יוצר"
+msgstr[1] "יוצרים"
+msgstr[2] "יוצרים"
+msgstr[3] "יוצרים"
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "&Thanks To"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
-msgstr "&תודות"
+msgstr "תודות"
 
 #: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
-#, fuzzy, kde-format
-#| msgid "Translation"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "תרגום"
@@ -121,38 +111,31 @@ msgstr "תרגום"
 #, kde-format
 msgctxt "Action to send an email to a contributor"
 msgid "Email contributor"
-msgstr "דוא\"ל התורם"
+msgstr "דוא״ל המתנדב"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:58
 #, kde-format
 msgid "Visit contributor's homepage"
-msgstr "בקר באתר הבית של התורם"
+msgstr "ביקור באתר הבית של המתנדב"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip Action to send an email to a contributor"
 msgid ""
 "Email contributor\n"
 "%1"
 msgstr ""
-"דוא\"ל התורם\n"
+"שליחת דוא״ל למתנדב\n"
 "%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit contributor's homepage\n"
 "%1"
 msgstr ""
-"בקר באתר הבית של התורם \n"
+"ביקור באתר הבית של המתנדב\n"
 "%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:181
@@ -162,21 +145,18 @@ msgid "%1"
 msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr "אודות KDE"
+msgstr "על KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
+#, kde-format
 msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr ""
-"<html><font size=\"5\">היה חופשי! - KDE</font><br /><b>גרסת הפלטפורמה %1</"
-"b></html>"
+msgstr "<html><font size=\"5\">KDE - החופש להיות!</font></html>"
 
 #: kaboutkdedialog_p.cpp:45
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<html><b>KDE</b> is a world-wide community of software engineers, artists, "
 "writers, translators and creators who are committed to <a href=\"%1\">Free "
@@ -189,12 +169,14 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html> <b>KDE</b> היא רשת כלל־עולמית של מהנדסי תוכנה  מסורים לפיתוח <a href="
-"\"%1\">תוכנה חופשית</a>.קהילה זו מונה מאוד יישומי תוכנה חופשית כחלק מסביבת "
-"הפיתוח של KDE והפצת התוכנה של KDE. <br /><br /> KDE הוא קואופרטיב מסחרי שבו "
-"אף ישות שולט במאמצים או תוצרים של הקבוצה. כולם מוזמנים לתרום ל־KDE. <br /> "
-"<br /> בקר ב־<a href=\"%2\">%2</a> למידע נוסף על קהילת KDE והתוכנה שאנחנו "
-"מייצרים. הפרוייקט של KDE.  </html>"
+"<html><b>KDE</b> היא קהילה בינלאומית של מהנדסי תוכנה, אומנים, יוצרי תוכן, "
+"מתרגמים ומפיקים שמחויבים לפיתוח <a href=\"%1\">תוכנה חופשית</a>. KDE מפיקה "
+"את סביבת שולחן העבודה פלזמה , מאות יישומים ואת מגוון חבילות התוכנה שתומכות "
+"בהם.<br /><br />KDE הוא תאגיד שיתופי: אין ישות יחידה ששולטת בכיוון המוצרים. "
+"במקום, אנו פועלים יחד כדי להגיע למטרה המשותפת שהיא בניית התוכנה החופשית "
+"הטובה בעולם. כולם מוזמנים <a href=\"%2\">להצטרף ולתרום</a> ל־KDE, כולל אותך."
+"<br /><br />כדאי לבקר ב־<a href=\"%3\">%3</a> למידע נוסף על קהילת KDE "
+"והתוכנה שאנו מפיקים.</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -207,13 +189,13 @@ msgid ""
 "improvement then you are welcome to use the bug tracking system to register "
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
-"<html> תוכנה תמיד אפשר לשפר, והצוות של KDE מוכן תמיד לעשות זאת. אבל, אתה - "
-"המשתמש - צריך לומר לנו כאשר משהו לא פועל כצפוי או כאשר ניתן לעשות אותו טוב "
-"יותר. <br /><br /> סביבת שולחן העבודה KDE משתמשת במערכת למעקב אחר באגים. בקר "
-"ב־<a href=\"%1\">%1</a> או השתמש בדו־שיח \"דיווח על באג...\" מתוך התפריט "
-"\"עזרה\" כדי לדווח על באגים. <br /><br /> אם יש לך הצעה לשיפור, אתה מוזמן "
-"להשתמש במערכת למעקב אחר באגים כדי לרשום את המשאלה שלך. ודא שאתה משתמש בדרגת "
-"החומרה הנקראת \"משאלה\". </html>"
+"<html> תוכנה תמיד אפשר לשפר, והצוות של KDE מוכן תמיד לעשות זאת. אבל, על - "
+"המשתמשים לספר לנו כשמשהו לא פועל כצפוי או כשניתן לשפר אותו. <br /><br /> "
+"סביבת שולחן העבודה KDE משתמשת במערכת למעקב אחר תקלות. ניתן לבקר ב־<a href="
+"\"%1\">%1</a> או להשתמש בחלונית „דיווח על תקלה” מתוך תפריט ה„עזרה” כדי לדווח "
+"על תקלות. <br /><br />אם יש לך הצעה לשיפור, אפשר להשתמש במערכת למעקב התקלות "
+"כדי לתעד את המשאלה שלך. כדאי לוודא שהשתמשת בדרגת החומרה (Severity) שנקראת "
+"„משאלה” (Wishlist). </html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -226,12 +208,11 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html> לא צריך להיות מפתח תוכנה כדי להיות חבר בצוות של KDE. באפשרותך להצטרף "
-"לאחד הצוותים הלאומיים שמתרגמים את הממשקים של התוכניות. באפשרותך לספק גרפיקה, "
-"ערכות נושא, צלילים או תיעוד משופר. ההחלטה בידיך! <br /><br /> בקר ב־<a href="
-"\"%1\">%1</a> למידע על פרוייקטים בהם באפשרותך ליטול חלק. <br /><br /> אם אתה "
-"זקוק למידע או תיעוד נוסף, ביקור ב־<a href=\"%2\">%2</a> יוכל לספק את צרכיך. "
-"</html>"
+"<html>אפשר להצטרף לחברות בצוות KDE גם ללא ידע בתכנות .בזכות הצטרפות לצוותים "
+"הלאומיים ניתן לתרגם את ממשקי היישומים. אפשר לספק גרפיקה, ערכות עיצוב, צלילים "
+"ושיפורים בתיעוד. הבחירה בידיך!<br /><br />מומלץ לבקר ב־<a href=\"%1\">%1</a> "
+"לקבלת מידע על חלק מהמיזמים בהם ניתן להשתתף.<br /><br />למידע נוסף או לתיעוד, "
+"ביקור ב־<a href=\"%2\">%2</a> אמור לספק לך את מה שנחוץ.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -249,127 +230,114 @@ msgid ""
 "described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
 "advance for your support.</html>"
 msgstr ""
-"<html> סביבת שולחן העבודה KDE זמינה חינם אין כסף, אך תהליך ההכנה שלה עולה "
-"כסף. <br /><br /> לפיכך, הצוות של KDE הקים את העמותה של KDE, אירגון ללא "
-"מטרות רווח שנוסד בצורה חוקית בטיבינגן, גרמניה. העמותה של KDE מייצגת את "
-"הפרוייקט של KDE בעניינים משפטיים וכספיים. עיין ב־<a href=\"%1\">%1</a> למידע "
-"אודות העמותה של  KDE.  <br /><br /> הצוות של KDE זקוק לתמיכה כספית. רוב הכסף "
-"משמש לשלם לחברים ולגורמים אחרים על הוצאות שהיו להם במסגרת התרומה שלהם ל־KDE. "
-"אתה מוזמן לתמוך ב־KDE באמצעות תרומה כספית, באחת הדרכים המפורטות בכתובת <a "
-"href=\"%2\">%2</a>. <br /><br /> תודה רבה מראש על התמיכה שלך. </html>"
+"<html> סביבת שולחן העבודה KDE זמינה חינם אין כסף, אך תהליך ההפקה שלה עולה "
+"כסף. <br /><br /> לכן, הצוות של KDE הקים את עמותת KDE, ארגון ללא מטרות רווח "
+"שנוסד משפטית בטיבינגן, גרמניה. העמותה של KDE מייצגת את מיזם KDE בעניינים "
+"משפטיים וכספיים. אפשר לעיין ב־<a href=\"%1\">%1</a> למידע על עמותת  KDE.  "
+"<br /><br /> הצוות של KDE זקוק לתמיכה כספית. רוב הכסף משמש לשלם לחברים "
+"ולגורמים אחרים על הוצאות שהיו להם במסגרת התרומה שלהם ל־KDE. מזמינים אותך "
+"לתמוך כספית ב־KDE, באחת הדרכים המפורטות בכתובת <a href=\"%2\">%2</a>. <br /"
+"><br /> תודה רבה מראש על התמיכה שלך. </html>"
 
 #: kaboutkdedialog_p.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "About KDE"
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
-msgstr "&אודות"
+msgstr "על &אודות"
 
 #: kaboutkdedialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "&Report Bugs or Wishes"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "&דיווח על באגים או משאלות"
+msgstr "&דיווח על תקלות או משאלות"
 
 #: kaboutkdedialog_p.cpp:130
-#, fuzzy, kde-format
-#| msgid "&Join KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "&הצטרף לKDE"
+msgstr "ה&צטרפות ל־KDE"
 
 #: kaboutkdedialog_p.cpp:131
-#, fuzzy, kde-format
-#| msgid "&Support KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&תמיכה ב־KDE"
 
 #: kabstractaboutdialog_p.cpp:41
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
-msgstr "גרסה:"
+msgstr "גרסה %1"
 
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
 msgid "The <em>%1</em> windowing system"
-msgstr ""
+msgstr "מערכת החלונות <em>%1</em>"
 
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:109
 #, kde-format
 msgid "%1 (built against %2)"
-msgstr ""
+msgstr "%1 (נבנה כנגד %2)"
 
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "תשתיות KDE"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
 msgid "Show author photos"
-msgstr ""
+msgstr "הצגת תמונות היוצרים"
 
 #: kabstractaboutdialog_p.cpp:137
 #, kde-format
 msgid "Enabling this will fetch images from an online location"
-msgstr ""
+msgstr "הפעלה של זה תמשוך תמונות ממקור מקוון"
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
-msgstr ""
+msgstr "נא להשתמש באתר %1 כדי לדווח על תקלות.\n"
 
 #: kabstractaboutdialog_p.cpp:184
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "דווח על באגים אל <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "נא לדווח על תקלות מול %1.\n"
 
 #: kactionconflictdetector.cpp:38
-#, fuzzy, kde-format
-#| msgid ""
-#| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
-#| "from the 'Settings' menu to solve the ambiguity.\n"
-#| "No action will be triggered."
+#, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"צירוף המקשים \"%1\" לא ייחודי. השתמש ב\"הגדרות קיצורי־מקשים\" מתפריט \"הגדרות"
-"\"\n"
-"כדי לפתור את ההתנגשות.\n"
-"לא תיעשה כל פעולה."
+"צירוף המקשים ‚%1’ אינו ייחודי. אפשר להשתמש ב־‚הגדרת קיצורי מקלדת’\n"
+"מתפריט ה‚הגדרות’ כדי לפתור מצב זה.\n"
+"לא יוזנקו פעולות."
 
 #: kactionconflictdetector.cpp:42
-#, fuzzy, kde-format
-#| msgid "Ambiguous shortcut detected"
+#, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
-msgstr "זוהתה התנגשות צירוף מקשים"
+msgstr "זוהה מקש קיצור לא ייחודי"
 
 #: kbugreport.cpp:62
-#, fuzzy, kde-format
-#| msgid "Submit Bug Report"
+#, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
-msgstr "שליחת דיווח על באג"
+msgstr "דיווח על תקלה"
 
 #: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
-msgstr "שליחת דיווח על באג"
+msgstr "שליחת דיווח על תקלה"
 
 #: kbugreport.cpp:96
 #, kde-format
@@ -377,20 +345,21 @@ msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr ""
-"התכנית שעליה ברצונך לשלוח דיווח על באג - אם זה שגוי, השתמש בפריט התפריט "
-"\"דיווח על באג\" של התוכנית הנכונה"
+"היישום בליבו של דיווח התקלה הזה - אם שגוי, נא להשתמש בפריט התפריט לדיווח על "
+"תקלות של היישום הנכון"
 
 #: kbugreport.cpp:97
 #, kde-format
 msgid "Application: "
-msgstr "תכנית: "
+msgstr "יישום: "
 
 #: kbugreport.cpp:107
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
-msgstr "גירסת התכנית - לפני שליחת הדיווח על הבאג, ודא שלא זמינה גרסה חדשה יותר"
+msgstr ""
+"גרסת היישום - לפני שליחת הדיווח על התקלה, רצוי לוודא שלא קיימת גרסה חדשה יותר"
 
 #: kbugreport.cpp:108
 #, kde-format
@@ -400,7 +369,7 @@ msgstr "גרסה:"
 #: kbugreport.cpp:113
 #, kde-format
 msgid "no version set (programmer error)"
-msgstr "לא הוגדרה גרסה (שגיאה של המתכנת)"
+msgstr "לא הוגדרה גרסה (שגיאת פיתוח)"
 
 #: kbugreport.cpp:125
 #, kde-format
@@ -413,7 +382,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:137
 #, kde-format
@@ -421,7 +390,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:143
 #, kde-format
@@ -429,74 +398,67 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:157
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>To submit a bug report, click on the button below. This will open a "
-#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
-#| "org</a> where you will find a form to fill in. The information displayed "
-#| "above will be transferred to that server.</qt>"
+#, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
 "where you will find a form to fill in. The information displayed above will "
 "be transferred to that server.</qt>"
 msgstr ""
-"<qt> על מנת לשלוח דיווח על באג, לחץ על הקישור הבא. דבר זה יביא לפתיחת חלון "
-"דפדפן בכתובת <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a>, שם "
-"תמצא טופס למילוי. המידע המוצג לעיל יועבר לשרת זה. </qt>"
+"<qt>לדיווח על תהקלה יש ללחוץ על הכפתור שלהלן. הוא יפתח חלון דפדפן עם <a href="
+"\"https://bugs.kde.org\">https://bugs.kde.org</a> שם ניתן למצוא טופס למילוי. "
+"המידע שמוצג לעיל יועבר לשרת הזה.</qt>"
 
 #: kbugreport.cpp:163
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
-"<qt> על מנת לשלוח דיווח על באג, לחץ על הקישור הבא. דבר זה יביא לפתיחת חלון "
-"דפדפן בכתובת <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a>, שם "
-"תמצא טופס למילוי. המידע המוצג לעיל יועבר לשרת זה. </qt>"
+"<qt>לדיווח על תקלה יש ללחוץ על הכפתור שלהלן. הוא יפתח חלון דפדפן עם <a href="
+"\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:180
-#, fuzzy, kde-format
-#| msgid "&Launch Bug Report Wizard"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
-msgstr "&הפעל את אשף הדיווח על באגים"
+msgstr "ה&פעלת אשף דיווח התקלות"
 
 #: kbugreport.cpp:182
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
-msgstr "שליחת דיווח על באג"
+msgstr "ה&גשת דיווח על תקלה"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
-msgstr "האבחנה של ד\"ר Klash לגבי מקשי קיצור"
+msgstr "האבחנה של ד״ר Klash לגבי מקשי קיצור"
 
 #: kcheckaccelerators.cpp:206
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
-msgstr "כבה בדיקה אוטומטית"
+msgstr "כיבוי בדיקה אוטומטית"
 
 #: kcheckaccelerators.cpp:252
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
-msgstr "<h2>קיצורים ששונו</h2>"
+msgstr "<h2>קיצורים שהשתנו</h2>"
 
 #: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:260
-#, fuzzy, kde-format
+#, kde-format
 msgid "Old Text"
-msgstr "חיפוש טקסט"
+msgstr "טקסט ישן"
 
 #: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:265
-#, fuzzy, kde-format
+#, kde-format
 msgid "New Text"
-msgstr "הצג עזרה"
+msgstr "טקסט חדש"
 
 #: kcheckaccelerators.cpp:260
 #, kde-format
@@ -506,14 +468,13 @@ msgstr "<h2>קיצורים שהוסרו</h2>"
 #: kcheckaccelerators.cpp:264
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
-msgstr "<h2>קיצורים שהוספו (לידיעתך)</h2>"
+msgstr "<h2>קיצורים שנוספו (לידיעתך)</h2>"
 
 #: kedittoolbar.cpp:327
-#, fuzzy, kde-format
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
-msgstr "שינוי טקסט"
+msgstr "עריכת טקסט"
 
 #: kedittoolbar.cpp:337
 #, kde-format
@@ -521,27 +482,23 @@ msgid "Icon te&xt:"
 msgstr "טקסט הס&מל:"
 
 #: kedittoolbar.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Hide text when toolbar shows text alongside icons"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "&הסתר טקסט כאשר סרגל הכלים מציג טקסט לצד סמלים"
+msgstr "לה&סתיר את הכיתוב כאשר סרגל הכלים מציג כיתוב לצד הסמלים"
 
 #: kedittoolbar.cpp:591
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
-msgstr "הגדרות סרגלי־כלים"
+msgstr "הגדרת סרגלי־כלים"
 
 #: kedittoolbar.cpp:654
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
 "default? The changes will be applied immediately."
-msgstr ""
-"האם אתה בטוח שברצונך לאפס את כל סרגלי־הכלים בתוכנית זו לברירת המחדל? השינוי "
-"יחול באופן מיידי."
+msgstr "לאפס את כל סרגלי־הכלים ביישום זה לברירת המחדל? השינוי יחול מיידית."
 
 #: kedittoolbar.cpp:655
 #, kde-format
@@ -551,7 +508,7 @@ msgstr "איפוס סרגלי־כלים"
 #: kedittoolbar.cpp:656
 #, kde-format
 msgid "Reset"
-msgstr "אפס"
+msgstr "איפוס"
 
 #: kedittoolbar.cpp:975
 #, kde-format
@@ -581,18 +538,16 @@ msgid "Curr&ent actions:"
 msgstr "פעול&ות נוכחיות:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "שינוי &סמליל..."
+msgstr "החלפת &סמל…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "משנה &טקסט..."
+msgstr "החלפת &כיתוב…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -600,10 +555,9 @@ msgid "--- separator ---"
 msgstr "--- מפריד ---"
 
 #: kedittoolbar.cpp:1192
-#, fuzzy, kde-format
-#| msgid "--- separator ---"
+#, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- מפריד ---"
+msgstr "--- מפריד מתרחב ---"
 
 #: kedittoolbar.cpp:1214
 #, kde-format
@@ -620,12 +574,12 @@ msgstr "פריט זה יוחלף על ידי כל הפריטים של רכיב �
 #: kedittoolbar.cpp:1244
 #, kde-format
 msgid "<Merge>"
-msgstr "<מזג>"
+msgstr "<מיזוג>"
 
 #: kedittoolbar.cpp:1246
 #, kde-format
 msgid "<Merge %1>"
-msgstr "<מזג %1>"
+msgstr "<מיזוג %1>"
 
 #: kedittoolbar.cpp:1256
 #, kde-format
@@ -633,8 +587,7 @@ msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
-"זוהי רשימה דינמית של פעולות. באפשרותך להזיזה, אך אם תסיר אותה לא תוכל "
-"להוסיפה בשנית."
+"זו רשימה דינמית של פעולות. אפשר להזיזה, אך הסרתה מונעת את הוספתה בשנית."
 
 #: kedittoolbar.cpp:1257
 #, kde-format
@@ -650,55 +603,46 @@ msgstr "%1"
 #: kedittoolbar.cpp:1611
 #, kde-format
 msgid "Change Icon"
-msgstr "שינוי סמליל"
+msgstr "שינוי סמל"
 
 #. i18n: ectx: Menu (help)
 #: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
-msgstr "&עזרה"
+msgstr "ע&זרה"
 
 #: khelpmenu.cpp:253
 #, kde-format
 msgid "About %1"
-msgstr "אודות %1"
+msgstr "על %1"
 
 #: kkeysequencewidget.cpp:144
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"לחץ על הכפתור, ואז תוכל ליצור קיצור מקשים לשימוש בתוכנית.\n"
-"דוגמא: לקיצור Ctrl+a: לחץ על המקש Ctrl ועל המקש a"
+"יש ללחוץ על הכפתור ואז לבחור את מקשי הקיצור הרצויים לך בתוכנית.\n"
+"למשל: Ctrl+A: יש להחזיק את מקש Ctrl ואז ללחוץ על A."
 
 #: kkeysequencewidget.cpp:167
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
-msgstr[0] "התנגשות קיצור־דרך"
-msgstr[1] "התנגשות קיצורי־דרך"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "סתירת מקש קיצור"
+msgstr[1] "סתירת מקשי קיצור"
+msgstr[2] "סתירת מקשי קיצור"
+msgstr[3] "סתירת מקשי קיצור"
 
 #: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "קיצור־דרך ל־%1 עבור פעולה \"%2\"\n"
+msgstr "קיצור־דרך ל־‚%1’ עבור הפעולה ‚%2’\n"
 
 #: kkeysequencewidget.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
-#| msgid ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
-#| "Do you want to assign an empty shortcut to this action?\n"
-#| "%3"
-#| msgid_plural ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
-#| "Do you want to assign an empty shortcut to these actions?\n"
-#| "%3"
+#, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
 "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
@@ -709,28 +653,34 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"קיצור מקש \"%2\" מתנגש עם הקיצור הבא.\n"
-"האם ברצונך לשייך מחווה ריקה לפעולה זו? %3"
+"מקש הקיצור „%2” סותר את מקש הקיצור הבא.\n"
+"להקצות מקש קיצור ריק לפעולה הזאת?\n"
+"%3"
 msgstr[1] ""
-"קיצור מקש \"%2\" מתנגש עם הקיצורים הבאים.\n"
-"האם ברצונך לשייך מחווה ריקה לפעולות אלו? %3"
+"מקש הקיצור „%2” סותר את מקשי הקיצור הבאים.\n"
+"להקצות מקש קיצור ריק לפעולות האלה?\n"
+"%3"
 msgstr[2] ""
+"מקש הקיצור „%2” סותר את מקשי הקיצור הבאים.\n"
+"להקצות מקש קיצור ריק לפעולות האלה?\n"
+"%3"
 msgstr[3] ""
+"מקש הקיצור „%2” סותר את מקשי הקיצור הבאים.\n"
+"להקצות מקש קיצור ריק לפעולות האלה?\n"
+"%3"
 
 #: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
 #: kkeysequencewidget.cpp:355
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "שייך מחדש"
+msgstr "הקצאה מחדש"
 
 #: kkeysequencewidget.cpp:191
-#, fuzzy, kde-format
-#| msgid "Shortcut conflict"
+#, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
-msgstr "התנגשות קיצורי־דרך"
+msgstr "סתירת מקשי קיצור"
 
 #: kkeysequencewidget.cpp:193
 #, kde-format
@@ -738,42 +688,41 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt> צירוף המקשים \"%1\" כבר בשימוש על ידי הפעולה<b>%2</b>. <br>אנא בחר "
-"צירוף מקשים אחר. </qt>"
+"<qt> צירוף המקשים ‚%1’ כבר בשימוש לפעולה<b>%2</b>. <br>נא לבחור צירוף מקשים "
+"אחר. </qt>"
 
 #: kkeysequencewidget.cpp:273
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "קיצור־דרך ל־%1 ביישום %2 עבור פעולה %3\n"
+msgstr "קיצור המקשים ‚%1’ ביישום ‚%2’ לפעולה ‚%3’\n"
 
 #: kkeysequencewidget.cpp:282
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
 "shortcut that is problematic"
 msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
-msgstr[0] "הקיצור \"%2\" מתנגש עם קיצור המקשים הבא:\n"
-msgstr[1] "הקיצור \"%2\" מתנגש עם קיצורי המקשים הבאים:\n"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מקשי הקיצור ‚%2’ סותרים את צירוף המקשים הבא:\n"
+msgstr[1] "מקשי הקיצור ‚%2’ סותרים את צירופי המקשים הבאים:\n"
+msgstr[2] "מקשי הקיצור ‚%2’ סותרים את צירופי המקשים הבאים:\n"
+msgstr[3] "מקשי הקיצור ‚%2’ סותרים את צירופי המקשים הבאים:\n"
 
 #: kkeysequencewidget.cpp:289
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
-msgstr[0] "התנגשות עם קיצור גלובלי רשום."
-msgstr[1] "התנגשות עם קיצורים גלובליים רשומים"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "סתירה מול מקש קיצור כללי רשום"
+msgstr[1] "סתירה מול מקשי קיצור כלליים רשומים"
+msgstr[2] "סתירה מול מקשי קיצור כלליים רשומים"
+msgstr[3] "סתירה מול מקשי קיצור כלליים רשומים"
 
 #: kkeysequencewidget.cpp:302
 #, kde-format
 msgid "Reserved Shortcut"
-msgstr "קיצורי מקשים שמורים"
+msgstr "קיצור מקשים שמור"
 
 #: kkeysequencewidget.cpp:304
 #, kde-format
@@ -782,15 +731,14 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"מקש ה-F12 הוא מקש שמור בWindows, ולכן אינו יכול לשמש כמקש קיצור גלובלי.אנא "
+"מקש ה־F12 הוא מקש שמור ב־Windows, לכן אינו יכול לשמש כמקש קיצור כללי. נא "
 "לבחור מקש אחר."
 
 #: kkeysequencewidget.cpp:347
-#, fuzzy, kde-format
-#| msgid "Conflict with Standard Application Shortcut"
+#, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "התנגשות עם קיצור סטנדרטי של ישומים"
+msgstr "סתירה עם קיצור יישום תקני"
 
 #: kkeysequencewidget.cpp:349
 #, kde-format
@@ -799,9 +747,8 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"שילוב המקשים \"%1\" כבר הוקצה לפעולה הסטנדרטית \"%2\", בה משתמשות תוכניות "
-"רבות.\n"
-"מסיבה זו אין באפשרותך להשתמש בו עבור קיצורים גלובליים."
+"צירוף המקשים ‚%1’ כבר הוקצה לפעולה התקנית „%2”, בה משתמשים יישומיםרבים.\n"
+"להשתמש בו כקיצור מקשים כללי בנוסף?"
 
 #: kkeysequencewidget.cpp:393
 #, kde-format
@@ -816,8 +763,7 @@ msgid "None"
 msgstr "ללא"
 
 #: klicensedialog_p.cpp:33
-#, fuzzy, kde-format
-#| msgid "License Agreement"
+#, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "הסכם רישיון"
@@ -837,35 +783,31 @@ msgstr "kde-l10n-he@kde.org"
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
 msgid "Add to Toolbar"
-msgstr "הוסף לסרגל־הכלים"
+msgstr "הוספה לסרגל־הכלים"
 
 #: kmenumenuhandler_p.cpp:223
-#, fuzzy, kde-format
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "הגדרות קיצורי מקשים..."
+msgstr "הגדרות מקש קיצור…"
 
 #: kshortcuteditwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Default:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Default:"
 msgstr "ברירת מחדל:"
 
 #: kshortcuteditwidget.cpp:62
-#, fuzzy, kde-format
-#| msgid "Custom:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Custom:"
-msgstr "מותאם אישית:"
+msgstr "התאמה אישית:"
 
 #: kshortcutschemeseditor.cpp:32
-#, fuzzy, kde-format
-#| msgid "Shortcut Schemes"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
-msgstr "ערכות נושא של קיצור־דרך"
+msgstr "ערכות קיצורי מקשים"
 
 #: kshortcutschemeseditor.cpp:37
 #, kde-format
@@ -873,56 +815,51 @@ msgid "Current scheme:"
 msgstr "ערכה נוכחית:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr "חדש..."
+msgstr "חדש…"
 
 #: kshortcutschemeseditor.cpp:50
-#, fuzzy, kde-format
-#| msgid "Delete"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete"
-msgstr "מחק"
+msgstr "מחיקה"
 
 #: kshortcutschemeseditor.cpp:53
-#, fuzzy, kde-format
-#| msgid "More Actions"
+#, kde-format
 msgctxt "@action:button"
 msgid "More Actions"
 msgstr "פעולות נוספות"
 
 #: kshortcutschemeseditor.cpp:58
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "ערכות נושא של קיצור־דרך"
+msgstr "שמירת קיצורי מקשים לערכה"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "ייצא ערכת נושא..."
+msgstr "ייצוא ערכה…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "ייצא ערכת נושא..."
+msgstr "ייבוא ערכה…"
 
 #: kshortcutschemeseditor.cpp:115
-#, fuzzy, kde-format
-#| msgid "Name for New Scheme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
-msgstr "שם לערכת הנושא חדשה"
+msgstr "שם הערכה החדשה"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgid "Name for new scheme:"
-msgstr "שם לערכת הנושא החדשה:"
+msgstr "שם לערכה החדשה:"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -932,7 +869,7 @@ msgstr "ערכה חדשה"
 #: kshortcutschemeseditor.cpp:121
 #, kde-format
 msgid "A scheme with this name already exists."
-msgstr "כבר קיימת ערכה תחת שם זה."
+msgstr "כבר קיימת ערכה בשם זה."
 
 #: kshortcutschemeseditor.cpp:151
 #, kde-format
@@ -940,55 +877,53 @@ msgid ""
 "Do you really want to delete the scheme %1?\n"
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
-"האם באמת ברצונך למחוק את הערכה %1?\n"
-"שים לב כי אין באפשרותך למחוק ערכות נושא גלובליות."
+"למחוק את הערכה %1?\n"
+"ראוי לשים לב כי אי אפשר למחוק ערכות עיצוב כלליות."
 
 #: kshortcutschemeseditor.cpp:187
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr "קיצורי־דרך"
+msgstr "ייצוא קיצורי מקשים"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgid "Shortcuts (*.shortcuts)"
-msgstr "קיצורי־דרך ל־%1"
+msgstr "קיצורי דרך (‎*.shortcuts)"
 
 #: kshortcutschemeseditor.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
-msgstr "קיצורי־דרך"
+msgstr "ייבוא קיצורי מקלדת"
 
 #: kshortcutschemeseditor.cpp:209
-#, fuzzy, kde-format
+#, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "בקשת ההסרה נרשמה בהצלחה."
+msgstr "ערכת קיצורי הדרך נשמרה בהצלחה."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr ""
+msgstr "שגיאה בשמירת ערכת מקשי הקיצור."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
 msgid ""
 "The current shortcut scheme is modified. Save before switching to the new "
 "one?"
-msgstr ""
-"ערכת הנושא של קיצורי המקלדת שונתה. האם לשמור לפני המעבר לערכת הנושא החדשה?"
+msgstr "ערכת קיצורי המקלדת נערכה. לשמור לפני המעבר לערכה החדשה?"
 
 #: kshortcutsdialog.cpp:124
-#, fuzzy, kde-format
+#, kde-format
 msgid "Manage &Schemes"
-msgstr "ערכה חדשה"
+msgstr "&ניהול ערכות"
 
 #: kshortcutsdialog.cpp:149
-#, fuzzy, kde-format
-#| msgid "Configure Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "הגדרות קיצורים"
+msgstr "הגדרת קיצורי מקלדת"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -997,8 +932,8 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"הקלד כאן שמות קיצורים (כגון \"העתק\") או שילובי מקשים (לדוגמה Ctrl+C) "
-"שברצונך לחפש."
+"חיפוש אינטראקטיבי בשמות קיצורי המקשים (למשל: העתקה) או צירוף מקשים (למשל: "
+"Ctrl+C) באמצעות הקלדה כאן."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
@@ -1008,9 +943,9 @@ msgid ""
 "(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
 "Ctrl+V) shown in the right column."
 msgstr ""
-"כאן באפשרותך לראות רשימה של קישורי מקשים,  דהיינו שיוכים בין פעולות (כמו "
-"למשל \"העתק\") המוצגות בעמודה שמשמאל, לבין מקשים או שילובי מקשים (לדוגמה Ctrl"
-"+V) המוצגים בעמודה שמימין."
+"כאן אפשר לראות רשימה של קישורי מקשים, כלומר שיוכים בין פעולות (כמו למשל "
+"‚העתקה’) המוצגות בעמודה שמשמאל, לבין מקשים או צירופי מקשים (לדוגמה Ctrl+V) "
+"המוצגים בעמודה שמימין."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
@@ -1034,13 +969,13 @@ msgstr "חלופה"
 #: kshortcutsdialog.ui:48
 #, kde-format
 msgid "Global"
-msgstr "גלובלי"
+msgstr "כללי"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:53
 #, kde-format
 msgid "Global Alternate"
-msgstr "חלופה גלובלית"
+msgstr "חלופה כללית"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:58
@@ -1075,12 +1010,12 @@ msgstr "חלופי:"
 #: kshortcutseditor.cpp:544
 #, kde-format
 msgid "Global:"
-msgstr "גלובלי:"
+msgstr "כללי:"
 
 #: kshortcutseditor.cpp:545
-#, fuzzy, kde-format
+#, kde-format
 msgid "Global alternate:"
-msgstr "חלופה גלובלית"
+msgstr "חלופה כללית:"
 
 #: kshortcutseditor.cpp:561
 #, kde-format
@@ -1104,46 +1039,40 @@ msgid "%1"
 msgstr "%1"
 
 #: kswitchlanguagedialog_p.cpp:137
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
-msgstr "הגדרות סרגלי־כלים"
+msgstr "הגדרת שפה"
 
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
-msgstr "בחר את השפה שתשמש עבור יישום זה:"
+msgstr "נא לבחור את השפה לשימוש על ידי יישום זה:"
 
 #: kswitchlanguagedialog_p.cpp:168
-#, fuzzy, kde-format
-#| msgid "Add Fallback Language"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
-msgstr "הוסף שפת גיבוי"
+msgstr "הוספת שפת גיבוי"
 
 #: kswitchlanguagedialog_p.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Adds one more language which will be used if other translations do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
 msgstr ""
-"הוספת שפה אחת או יותר בהן ייעשה שימוש אם אין תרגומים מתאימים בשפות האחרות."
+"הוספת שפה נוספת שייעשה בה שימוש אם תרגומים לשפות אחרות לא מכילים תרגום מתאים."
 
 #: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
 #, kde-format
 msgid ""
 "The language for this application has been changed. The change will take "
 "effect the next time the application is started."
-msgstr "השפה של יישום זה שונתה. השינוי יחול בהפעלה הבאה של היישום."
+msgstr "השפה של יישום זה הוחלפה. השינוי יחול בהפעלה הבאה של היישום."
 
 #: kswitchlanguagedialog_p.cpp:262
-#, fuzzy, kde-format
-#| msgid "Application Language Changed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "שפת היישום שונתה"
@@ -1164,33 +1093,26 @@ msgid "Fallback language:"
 msgstr "שפת גיבוי:"
 
 #: kswitchlanguagedialog_p.cpp:385
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
 #: kswitchlanguagedialog_p.cpp:391
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the main application language which will be used first, before "
-#| "any other languages."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the main application language which will be used first, before any "
 "other languages."
-msgstr "זוהי השפה הראשית של היישום, בה ייעשה שימוש לפני כל שפה אחרת."
+msgstr "זו השפה הראשית של היישום, תשמש לפני כל שפה אחרת."
 
 #: kswitchlanguagedialog_p.cpp:392
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the language which will be used if any previous languages do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the language which will be used if any previous languages do not "
 "contain a proper translation."
-msgstr "זוהי השפה שתשמש במקרה שאין תרגומים מתאימים באף שפה קודמת."
+msgstr "זו השפה שתשמש אם שפות קודמות לא מכילות תרגום מתאים."
 
 #: ktoolbar.cpp:297 ktoolbar.cpp:304
 #, kde-format
@@ -1202,7 +1124,7 @@ msgstr "הגדרות סרגל־כלים"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
-msgstr "הצג עזרה"
+msgstr "הצגת כיתוב"
 
 #: ktoolbar.cpp:306
 #, kde-format
@@ -1237,35 +1159,31 @@ msgstr "מלמטה"
 #: ktoolbar.cpp:329
 #, kde-format
 msgid "Text Position"
-msgstr "מיקום הטקסט"
+msgstr "מיקום הכיתוב"
 
 #: ktoolbar.cpp:331
-#, fuzzy, kde-format
-#| msgid "Icons Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "סמלים בלבד"
 
 #: ktoolbar.cpp:334
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
-msgstr "טקסט בלבד"
+msgstr "כיתוב בלבד"
 
 #: ktoolbar.cpp:337
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
-msgstr "טקסט לצד סמלים"
+msgstr "כיתוב לצד הסמלים"
 
 #: ktoolbar.cpp:340
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
-msgstr "טקסט מתחת לסמלים"
+msgstr "כיתוב מתחת לסמלים"
 
 #: ktoolbar.cpp:351
 #, kde-format
@@ -1301,7 +1219,7 @@ msgstr "ענק (%1 על %2)"
 #: ktoolbar.cpp:429
 #, kde-format
 msgid "Lock Toolbar Positions"
-msgstr "נעל סרגלי־כלים במקומם"
+msgstr "נעילת סרגלי־כלים למקומם"
 
 #: ktoolbarhandler.cpp:93
 #, kde-format
@@ -1313,7 +1231,7 @@ msgstr "סרגלי־כלים מוצגים"
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #. i18n: Pressing Shift will show a longer message with contextual info
 #. about the thing the tooltip was invoked for. If there is no good way to translate
@@ -1325,6 +1243,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
+"<small><font color=\"%1\">יש ללחוץ על <b>Shift</b> למידע נוסף.</font></small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
 #. available whatsthis help message. Pressing Shift will show this more exhaustive message.
@@ -1342,16 +1261,18 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
+"%1<br/><small><font color=\"%2\">יש ללחוץ על <b>Shift</b> לעוד.</font></"
+"small>"
 
 #: kundoactions.cpp:30
 #, kde-format
 msgid "Redo"
-msgstr "בצע שוב"
+msgstr "ביצוע חוזר"
 
 #: kundoactions.cpp:49
 #, kde-format
 msgid "Undo"
-msgstr "בטל"
+msgstr "ביטול"
 
 #: kxmlguibuilder.cpp:182 kxmlguibuilder.cpp:361
 #, kde-format
@@ -1359,10 +1280,9 @@ msgid "No text"
 msgstr "אין טקסט"
 
 #: kxmlguiwindow.cpp:190
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "פעולה"
+msgstr "איתור פעולה…"
 
 #: kxmlguiwindow.cpp:528
 #, kde-format
@@ -1371,11 +1291,13 @@ msgid ""
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
+"יש שתי פעולות (%1, %2) שרוצות להשתמש באותם מקשי הקיצור (%3) זאת כפי הנראה "
+"תקלה. נא לדווח עליה דרך <a href='https://bugs.kde.org'>bugs.kde.org</a>"
 
 #: kxmlguiwindow.cpp:533
-#, fuzzy, kde-format
+#, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "זוהתה התנגשות צירוף מקשים"
+msgstr "סתירה במקשי קיצור"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
@@ -1387,32 +1309,32 @@ msgstr "&קובץ"
 #: ui_standards.rc:34
 #, kde-format
 msgid "&Game"
-msgstr "&משחק"
+msgstr "מ&שחק"
 
 #. i18n: ectx: Menu (edit)
 #: ui_standards.rc:61
 #, kde-format
 msgid "&Edit"
-msgstr "&עריכה"
+msgstr "ע&ריכה"
 
 #. i18n: ectx: Menu (move)
 #: ui_standards.rc:84
 #, kde-format
 msgctxt "@title:menu Game move"
 msgid "&Move"
-msgstr "&הזזה"
+msgstr "ה&זזה"
 
 #. i18n: ectx: Menu (view)
 #: ui_standards.rc:102
 #, kde-format
 msgid "&View"
-msgstr "&תצוגה"
+msgstr "ת&צוגה"
 
 #. i18n: ectx: Menu (go)
 #: ui_standards.rc:122
 #, kde-format
 msgid "&Go"
-msgstr "&עבור"
+msgstr "מ&עבר"
 
 #. i18n: ectx: Menu (bookmarks)
 #: ui_standards.rc:143
@@ -1430,7 +1352,7 @@ msgstr "&כלים"
 #: ui_standards.rc:153
 #, kde-format
 msgid "&Settings"
-msgstr "&הגדרות"
+msgstr "ה&גדרות"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ui_standards.rc:195
