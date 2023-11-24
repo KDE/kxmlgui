@@ -9,14 +9,14 @@
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Sander Koning <sanderkoning@kde.nl>, 2005.
 # Tijmen Baarda <tijmenbaarda@kde.nl>, 2005.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 # Kristof Bal <kristof.bal@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:37+0000\n"
-"PO-Revision-Date: 2022-07-04 08:57+0200\n"
+"PO-Revision-Date: 2023-11-23 10:11+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Files: kfarch.cpp kfdird.cpp kfind.cpp kfindtop.cpp kfoptions.cpp kfsave.cpp "
 "kftabdlg.cpp kftypes.cpp kfwin.cpp main.cpp mkfdird.cpp mkfind.cpp\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -194,15 +194,7 @@ msgstr ""
 "het bug-traceersysteem bij \"Severity\" voor \"Wishlist\".</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -213,12 +205,12 @@ msgid ""
 "what you need.</html>"
 msgstr ""
 "<html>U hoeft geen softwareontwikkelaar te zijn om lid te worden van het KDE-"
-"team. U kunt bijv. deelnemen aan een van de nationale teams die de "
-"programma's en documentatie vertalen. U kunt afbeeldingen, thema's, geluiden "
-"en verbeterde documentatie leveren. Aan u de keuze!<br /><br />Kijk op <a "
-"HREF=\"%1\">%1</a> voor informatie over diverse projecten waaraan u kunt "
-"deelnemen. <br /><br />Kijk voor meer informatie en documentatie op <a HREF="
-"\"%2\">%2</a>.</html>"
+"team. U kunt deelnemen aan een van de vertaalteams die de programma's en "
+"documentatie vertalen. U kunt afbeeldingen, thema's, geluiden en verbeterde "
+"documentatie leveren. Aan u de keuze!<br /><br />Kijk op <a HREF=\"%1\">%1</"
+"a> voor informatie over diverse projecten waaraan u kunt deelnemen. <br /"
+"><br />Kijk voor meer informatie en documentatie op <a HREF=\"%2\">%2</a>.</"
+"html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
