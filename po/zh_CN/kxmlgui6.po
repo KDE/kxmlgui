@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:37+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -176,15 +176,7 @@ msgstr ""
 "单中选择“Wishlist (需求)”。</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -194,8 +186,8 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>即使您不是软件开发人员，我们也欢迎您加入 KDE 的队伍！您可以加入各国语言"
-"的翻译团队来翻译软件的界面，您可以制作图像、主题、音效，还可以改进软件配套的"
+"<html>即使您不是软件开发人员，我们也欢迎您加入 KDE 的队伍！您可以加入各种语言"
+"的翻译团队来翻译软件的界面，您还可以制作图像、主题、音效，或者改进软件配套的"
 "文档……您的角色您来定！<br /><br />请访问 <a href=\"%1\">%1</a> 来物色您感兴趣"
 "的项目。<br /><br />如需了解更多相关信息和文档，请访问 <a href=\"%2\">%2</"
 "a> 。</html>"
@@ -516,7 +508,7 @@ msgstr "可用操作(&V)："
 #: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
 #, kde-format
 msgid "Filter"
-msgstr "筛选"
+msgstr "过滤"
 
 #: kedittoolbar.cpp:1015
 #, kde-format
@@ -743,9 +735,7 @@ msgstr "KDE 中国, Feng Chao, Guo Yunhe, Tyson Tan"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"kde-china@kde.org, chaofeng111@gmail.com, i@guoyunhe.me, tysontan@tysontan."
-"com"
+msgstr "kde-china@kde.org, chaofeng111@gmail.com, i@guoyunhe.me, tds00@qq.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
@@ -900,7 +890,7 @@ msgid ""
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
 "输入操作名称 (如“复制”) 或者按键/按键组合 (如“Ctrl+C”)，可以对列表中的项目进"
-"行筛选。"
+"行过滤。"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
