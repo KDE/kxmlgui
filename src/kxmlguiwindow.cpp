@@ -184,7 +184,7 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
         }
 
         kc.setActions(actionCollectionToActionGroup(actionCollections));
-        kc.exec();
+        kc.show();
     });
     a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
     a->setText(i18n("Find Action…"));
