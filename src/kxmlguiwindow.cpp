@@ -17,6 +17,7 @@
 #include "kactioncollection.h"
 #include "kmainwindow_p.h"
 #include <KMessageBox>
+#include <kcommandbar.h>
 #ifdef QT_DBUS_LIB
 #include "kmainwindowiface_p.h"
 #endif
@@ -173,7 +174,7 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
             return;
         }
 
-        KCommandBar kc(this);
+        auto kc = new KCommandBar(this);
         std::vector<KActionCollection *> actionCollections;
         const auto clients = guiFactory()->clients();
         actionCollections.reserve(clients.size());
@@ -183,8 +184,8 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
             getActionCollections(client, actionCollections);
         }
 
-        kc.setActions(actionCollectionToActionGroup(actionCollections));
-        kc.show();
+        kc->setActions(actionCollectionToActionGroup(actionCollections));
+        kc->show();
     });
     a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
     a->setText(i18n("Find Action…"));
