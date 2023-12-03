@@ -79,7 +79,7 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 void KShortcutSchemesEditor::refreshSchemes()
 {
     QStringList schemes;
-    schemes << QStringLiteral("Default");
+    schemes << i18n("Default");
     // List files in the shortcuts subdir, each one is a scheme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
     const QStringList shortcutsDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                                                                 QCoreApplication::applicationName() + QLatin1String("/shortcuts"),
