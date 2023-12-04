@@ -79,13 +79,6 @@ public:
      * @since 6.0
      */
     QAction *action(const QString &name) const;
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 240)
-    KXMLGUI_DEPRECATED_VERSION(5, 240, "Use action(const QString &) overload")
-    QAction *action(const char *name) const
-    {
-        return action(QString::fromLatin1(name));
-    }
-#endif
 
     /**
      * Retrieves an action for a given QDomElement. The default

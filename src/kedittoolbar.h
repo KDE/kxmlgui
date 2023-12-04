@@ -136,13 +136,6 @@ public:
      * @since 6.0
      */
     static void setGlobalDefaultToolBar(const QString &toolBarName);
-#if KXMLGUI_ENABLE_DEPRECATED_SINCE(5, 240)
-    KXMLGUI_DEPRECATED_VERSION(5, 240, "Use setGlobalDefaultToolBar(const QString &) overload")
-    static void setGlobalDefaultToolBar(const char *toolBarName)
-    {
-        setGlobalDefaultToolBar(QString::fromLatin1(toolBarName));
-    }
-#endif
 
 Q_SIGNALS:
     /**
