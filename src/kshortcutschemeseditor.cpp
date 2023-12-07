@@ -78,8 +78,8 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
 
 void KShortcutSchemesEditor::refreshSchemes()
 {
-    QStringList schemes;
-    schemes << QStringLiteral("Default");
+    m_schemesList->clear();
+    m_schemesList->addItem(i18nc("Default shortcut scheme", "Default"), QStringLiteral("Default"));
     // List files in the shortcuts subdir, each one is a scheme. See KShortcutSchemesHelper::{shortcutSchemeFileName,exportActionCollection}
     const QStringList shortcutsDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                                                                 QCoreApplication::applicationName() + QLatin1String("/shortcuts"),
@@ -89,18 +89,15 @@ void KShortcutSchemesEditor::refreshSchemes()
         const auto files = QDir(dir).entryList(QDir::Files | QDir::NoDotAndDotDot);
         for (const QString &file : files) {
             qCDebug(DEBUG_KXMLGUI) << "shortcut scheme file:" << file;
-            schemes << file;
+            m_schemesList->addItem(file, file);
         }
     }
-
-    m_schemesList->clear();
-    m_schemesList->addItems(schemes);
 
     KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("Shortcut Schemes"));
     const QString currentScheme = group.readEntry("Current Scheme", "Default");
     qCDebug(DEBUG_KXMLGUI) << "Current Scheme" << currentScheme;
 
-    const int schemeIdx = m_schemesList->findText(currentScheme);
+    const int schemeIdx = m_schemesList->findData(currentScheme);
     if (schemeIdx > -1) {
         m_schemesList->setCurrentIndex(schemeIdx);
     } else {
@@ -117,7 +114,7 @@ void KShortcutSchemesEditor::newScheme()
         return;
     }
 
-    if (m_schemesList->findText(newName) != -1) {
+    if (m_schemesList->findData(newName) != -1) {
         KMessageBox::error(this, i18n("A scheme with this name already exists."));
         return;
     }
@@ -140,7 +137,7 @@ void KShortcutSchemesEditor::newScheme()
     out << doc.toString(4);
 
     m_schemesList->addItem(newName);
-    m_schemesList->setCurrentIndex(m_schemesList->findText(newName));
+    m_schemesList->setCurrentIndex(m_schemesList->findData(newName));
     updateDeleteButton();
     Q_EMIT shortcutsSchemeChanged(newName);
 }
@@ -171,7 +168,7 @@ Note that this will not remove any system wide shortcut schemes.",
         QFile::remove(KShortcutSchemesHelper::writableShortcutSchemeFileName(client->componentName(), currentScheme()));
     }
 
-    m_schemesList->removeItem(m_schemesList->findText(currentScheme()));
+    m_schemesList->removeItem(m_schemesList->findData(currentScheme()));
     updateDeleteButton();
     Q_EMIT shortcutsSchemeChanged(currentScheme());
 }
