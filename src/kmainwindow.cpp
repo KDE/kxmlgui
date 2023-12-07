@@ -778,7 +778,7 @@ bool KMainWindow::settingsDirty() const
 
 void KMainWindow::setAutoSaveSettings(const QString &groupName, bool saveWindowSize)
 {
-    setAutoSaveSettings(KConfigGroup(KSharedConfig::openConfig(), groupName), saveWindowSize);
+    setAutoSaveSettings(KConfigGroup(KSharedConfig::openStateConfig(), groupName), saveWindowSize);
 }
 
 void KMainWindow::setAutoSaveSettings(const KConfigGroup &group, bool saveWindowSize)
