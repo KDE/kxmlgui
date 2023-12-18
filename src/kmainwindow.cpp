@@ -51,8 +51,6 @@
 #include <KStandardShortcut>
 #include <KWindowConfig>
 
-//#include <cctype>
-
 static QMenuBar *internalMenuBar(KMainWindow *mw)
 {
     return mw->findChild<QMenuBar *>(QString(), Qt::FindDirectChildrenOnly);
@@ -530,7 +528,7 @@ void KMainWindow::closeEvent(QCloseEvent *e)
     // Delete the marker that says we don't want to restore the position of the
     // next-opened instance; now that a window is closing, we do want to do this
     if (d->autoSaveGroup.isValid()) {
-        d->getValidStateConfig(d->autoSaveGroup).deleteEntry("RestorePositionForNextInstance");
+        d->getStateConfig().deleteEntry("RestorePositionForNextInstance");
     }
     d->_k_slotSaveAutoSavePosition();
 
@@ -591,17 +589,16 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     Q_D(KMainWindow);
     // qDebug(200) << "KMainWindow::saveMainWindowSettings " << cg.name();
 
-    KConfigGroup stateConfig = d->getValidStateConfig(cg);
     // Called by session management - or if we want to save the window size anyway
     if (d->autoSaveWindowSize) {
-        KWindowConfig::saveWindowSize(windowHandle(), stateConfig);
-        KWindowConfig::saveWindowPosition(windowHandle(), stateConfig);
+        KWindowConfig::saveWindowSize(windowHandle(), d->getStateConfig());
+        KWindowConfig::saveWindowPosition(windowHandle(), d->getStateConfig());
     }
 
     // One day will need to save the version number, but for now, assume 0
     // Utilise the QMainWindow::saveState() functionality.
     const QByteArray state = saveState();
-    stateConfig.writeEntry("State", state.toBase64());
+    d->getStateConfig().writeEntry("State", state.toBase64());
 
     QStatusBar *sb = internalStatusBar(this);
     if (sb) {
@@ -687,7 +684,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
 
-    KConfigGroup stateConfig = d->getValidStateConfig(cg);
+    KConfigGroup stateConfig = d->getStateConfig();
 
     if (!d->sizeApplied && (!window() || window() == this)) {
         winId(); // ensure there's a window created
@@ -846,7 +843,7 @@ void KMainWindow::saveAutoSaveSettings()
     // qDebug(200) << "KMainWindow::saveAutoSaveSettings -> saving settings";
     saveMainWindowSettings(d->autoSaveGroup);
     d->autoSaveGroup.sync();
-    d->autoSaveStateGroup().sync();
+    d->m_stateConfigGroup.sync();
     d->settingsDirty = false;
 }
 
@@ -946,14 +943,14 @@ void KMainWindowPrivate::_k_slotSettingsChanged(int category)
 void KMainWindowPrivate::_k_slotSaveAutoSaveSize()
 {
     if (autoSaveGroup.isValid()) {
-        KWindowConfig::saveWindowSize(q->windowHandle(), autoSaveStateGroup());
+        KWindowConfig::saveWindowSize(q->windowHandle(), getStateConfig());
     }
 }
 
 void KMainWindowPrivate::_k_slotSaveAutoSavePosition()
 {
     if (autoSaveGroup.isValid()) {
-        KWindowConfig::saveWindowPosition(q->windowHandle(), autoSaveStateGroup());
+        KWindowConfig::saveWindowPosition(q->windowHandle(), getStateConfig());
     }
 }
 

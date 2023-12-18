@@ -15,6 +15,7 @@
 #define KMAINWINDOW_P_H
 
 #include <KConfigGroup>
+#include <KSharedConfig>
 #include <QEventLoopLocker>
 #include <QPointer>
 
@@ -36,15 +37,15 @@ public:
     bool suppressCloseEvent : 1;
 
     KConfigGroup autoSaveGroup;
-    // If API consumers opt-in to save the state config separately, we want to save the window sizes in the given config
-    KConfigGroup &autoSaveStateGroup()
-    {
-        return m_stateConfigGroup.isValid() ? m_stateConfigGroup : autoSaveGroup;
-    }
     KConfigGroup m_stateConfigGroup;
-    inline KConfigGroup getValidStateConfig(KConfigGroup &cg) const
+
+    inline KConfigGroup &getStateConfig()
     {
-        return m_stateConfigGroup.isValid() ? m_stateConfigGroup : cg;
+        if (!m_stateConfigGroup.isValid()) {
+            // Always use a separate state config here, consumers may override this with a custom/window-specific group
+            m_stateConfigGroup = KSharedConfig::openStateConfig()->group(QStringLiteral("State"));
+        }
+        return m_stateConfigGroup;
     }
     inline void migrateStateDataIfNeeded(KConfigGroup &cg)
     {
