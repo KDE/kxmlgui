@@ -42,7 +42,7 @@ public:
     {
         if (!m_stateConfigGroup.isValid()) {
             // Always use a separate state config here, consumers may override this with a custom/window-specific group
-            m_stateConfigGroup = KSharedConfig::openStateConfig()->group(QStringLiteral("State"));
+            m_stateConfigGroup = KSharedConfig::openStateConfig()->group(QStringLiteral("MainWindow"));
         }
         return m_stateConfigGroup;
     }
