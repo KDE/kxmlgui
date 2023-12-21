@@ -833,7 +833,7 @@ void KMainWindow::setStateConfigGroup(const QString &configGroup)
 KConfigGroup KMainWindow::stateConfigGroup() const
 {
     Q_D(const KMainWindow);
-    return d->m_stateConfigGroup;
+    return d->getStateConfig();
 }
 
 void KMainWindow::saveAutoSaveSettings()

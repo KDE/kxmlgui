@@ -37,9 +37,8 @@ public:
     bool suppressCloseEvent : 1;
 
     KConfigGroup autoSaveGroup;
-    KConfigGroup m_stateConfigGroup;
-
-    inline KConfigGroup &getStateConfig()
+    mutable KConfigGroup m_stateConfigGroup;
+    inline KConfigGroup &getStateConfig() const
     {
         if (!m_stateConfigGroup.isValid()) {
             // Always use a separate state config here, consumers may override this with a custom/window-specific group
@@ -50,7 +49,7 @@ public:
     inline void migrateStateDataIfNeeded(KConfigGroup &cg)
     {
         if (m_stateConfigGroup.isValid()) {
-            // The window sizes are written in KWindowSystem and RestorePositionForNextInstance is only temporarely written until
+            // The window sizes are written in KWindowSystem and RestorePositionForNextInstance is only temporarily written until
             // all instances of the app are closed
             cg.moveValuesTo({"State"}, m_stateConfigGroup);
         }
