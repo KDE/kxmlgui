@@ -1,21 +1,21 @@
 # Kiszel Kristóf <ulysses@kubuntu.org>, 2010.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2018, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2020, 2021, 2022, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:32+0000\n"
-"PO-Revision-Date: 2022-02-14 09:29+0100\n"
-"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"PO-Revision-Date: 2024-01-02 13:42+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -182,15 +182,7 @@ msgstr ""
 "állítsa be).</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -377,10 +369,7 @@ msgid "OS:"
 msgstr "Op. rendszer:"
 
 #: kbugreport.cpp:130
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -388,19 +377,15 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:137
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -693,10 +678,9 @@ msgstr ""
 "művelethez.<br>Válasszon más billentyűkombinációt.</qt>"
 
 #: kkeysequencewidget.cpp:273
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Billentyűkombináció: %1, alkalmazás: %2, művelet: %3\n"
+msgstr "Billentyűkombináció: %1, alkalmazás: „%2”, művelet: „%3”\n"
 
 #: kkeysequencewidget.cpp:282
 #, kde-format
