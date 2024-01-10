@@ -1602,21 +1602,20 @@ void KEditToolBarWidgetPrivate::slotChangeIcon()
     m_currentXmlData->dump();
     Q_ASSERT(m_currentXmlData->type() != XmlData::Merged);
 
-    QString icon = KIconDialog::getIcon(KIconLoader::Toolbar,
-                                        KIconLoader::Action,
-                                        false,
-                                        0,
-                                        false, // all defaults
-                                        m_widget,
-                                        i18n("Change Icon"));
+    KIconDialog dialog(m_widget);
+    dialog.setWindowTitle(i18n("Change Icon"));
+    dialog.setup(KIconLoader::Toolbar, KIconLoader::Action);
 
+    if (ToolBarItem *item = m_activeList->currentItem()) {
+        dialog.setSelectedIcon(item->icon().name());
+    }
+
+    const QString icon = dialog.openDialog();
     if (icon.isEmpty()) {
         return;
     }
 
-    ToolBarItem *item = m_activeList->currentItem();
-    // qCDebug(DEBUG_KXMLGUI) << item;
-    if (item) {
+    if (ToolBarItem *item = m_activeList->currentItem()) {
         item->setIcon(QIcon::fromTheme(icon));
 
         m_currentXmlData->m_isModified = true;
