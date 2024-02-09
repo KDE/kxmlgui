@@ -17,53 +17,47 @@
 # Meni Livne <livne@kde.org>, 2007.
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2017-05-16 06:50-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-02-08 09:58+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgid "Visit component's homepage"
-msgstr "בקר באתר הבית של התורם"
+msgstr "ביקור באתר הבית של הרכיב"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"בקר באתר הבית של התורם \n"
+"ביקור באתר הבית של הרכיב\n"
 "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
+#, kde-format
 msgctxt "@item Component name in about dialog."
 msgid "%1"
 msgstr "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgid "Version %1"
-msgstr "גרסה:"
+msgstr "גרסה %1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:152
 #: kabstractaboutdialog_p.cpp:84
@@ -72,44 +66,39 @@ msgid "License: %1"
 msgstr "רישיון: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "אודות %1"
+msgstr "על %1"
 
 #: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab"
 msgid "About"
-msgstr "&אודות"
+msgstr "על אודות"
 
 #: kaboutapplicationdialog.cpp:104
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr ""
+msgstr "רכיבים"
 
 #: kaboutapplicationdialog.cpp:114 kaboutplugindialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "A&uthor"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "כ&ותב"
-msgstr[1] "כ&ותב"
+msgstr[0] "יוצר"
+msgstr[1] "יוצרים"
 
 #: kaboutapplicationdialog.cpp:121 kaboutplugindialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "&Thanks To"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
-msgstr "&תודות"
+msgstr "תודות ל־"
 
 #: kaboutapplicationdialog.cpp:128 kaboutplugindialog.cpp:112
-#, fuzzy, kde-format
-#| msgid "Translation"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "תרגום"
@@ -126,43 +115,33 @@ msgid "Visit contributor's homepage"
 msgstr "בקר באתר הבית של התורם"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip Action to send an email to a contributor"
 msgid ""
 "Email contributor\n"
 "%1"
 msgstr ""
-"דוא\"ל התורם\n"
+"שליחת דוא״ל למתנדב\n"
 "%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit contributor's homepage\n"
 "%1"
 msgstr ""
-"בקר באתר הבית של התורם \n"
+"ביקור באתר הבית של המתנדב\n"
 "%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's profile on %1\n"
-#| "%2"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit contributor's profile on %1\n"
 "%2"
 msgstr ""
-"בקר בפרופיל התורם ב־%1\n"
+"ביקור בפרופיל המתנדב ב־%1\n"
 "%2"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:188
@@ -172,18 +151,15 @@ msgid "%1"
 msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr "אודות KDE"
+msgstr "על KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
+#, kde-format
 msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr ""
-"<html><font size=\"5\">היה חופשי! - KDE</font><br /><b>גרסת הפלטפורמה %1</"
-"b></html>"
+msgstr "<html><font size=\"5\">להיות חופשי! - KDE</font></html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, fuzzy, kde-format
@@ -269,82 +245,76 @@ msgstr ""
 "href=\"%2\">%2</a>. <br /><br /> תודה רבה מראש על התמיכה שלך. </html>"
 
 #: kaboutkdedialog_p.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "About KDE"
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
-msgstr "&אודות"
+msgstr "על &אודות"
 
 #: kaboutkdedialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "&Report Bugs or Wishes"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "&דיווח על באגים או משאלות"
+msgstr "&דיווח על תקלות או בקשת משאלות"
 
 #: kaboutkdedialog_p.cpp:130
-#, fuzzy, kde-format
-#| msgid "&Join KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "&הצטרף לKDE"
+msgstr "ה&צטרפות ל־KDE"
 
 #: kaboutkdedialog_p.cpp:131
-#, fuzzy, kde-format
-#| msgid "&Support KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&תמיכה ב־KDE"
 
 #: kabstractaboutdialog_p.cpp:41
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
-msgstr "גרסה:"
+msgstr "גרסה %1"
 
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
 msgid "The <em>%1</em> windowing system"
-msgstr ""
+msgstr "המערכת החלונאית <em>%1</em>"
 
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:109
 #, kde-format
 msgid "%1 (built against %2)"
-msgstr ""
+msgstr "%1 (נבנה כנגד %2)"
 
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "תשתיות KDE"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
 msgid "Show author photos"
-msgstr ""
+msgstr "הצגת תמונות היוצרים"
 
 #: kabstractaboutdialog_p.cpp:137
 #, kde-format
 msgid "Enabling this will fetch images from an online location"
-msgstr ""
+msgstr "הפעלת האפשרות הזאת תמשוך תמונות מאתר באינטרנט"
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
-msgstr ""
+msgstr "נא להשתמש ב־%1 כדי לדווח על תקלות.\n"
 
 #: kabstractaboutdialog_p.cpp:184
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "דווח על באגים אל <a href=\"mailto:%1\">%2</a>.\n"
+msgstr "נא לדווח על תקלות דרך %1.\n"
 
 #: kactionconflictdetector.cpp:38
 #, fuzzy, kde-format
@@ -363,18 +333,16 @@ msgstr ""
 "לא תיעשה כל פעולה."
 
 #: kactionconflictdetector.cpp:42
-#, fuzzy, kde-format
-#| msgid "Ambiguous shortcut detected"
+#, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
-msgstr "זוהתה התנגשות צירוף מקשים"
+msgstr "התגלה קיצור מקשים לא ייחודי"
 
 #: kbugreport.cpp:102
-#, fuzzy, kde-format
-#| msgid "Submit Bug Report"
+#, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
-msgstr "שליחת דיווח על באג"
+msgstr "דיווח על תקלה"
 
 #: kbugreport.cpp:130
 #, kde-format
@@ -396,11 +364,10 @@ msgid "From:"
 msgstr "מאת:"
 
 #: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Email..."
-msgstr "הגדרות דוא\"ל..."
+msgstr "הגדרת דוא״ל…"
 
 #: kbugreport.cpp:158
 #, kde-format
@@ -414,25 +381,22 @@ msgid "To:"
 msgstr "אל:"
 
 #: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Send"
-msgstr "&שלח"
+msgstr "&שליחה"
 
 #: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send bug report."
-msgstr "שליחת הדיווח על הבאג."
+msgstr "שליחת דיווח על תקלה."
 
 #: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Send this bug report to %1."
-msgstr "שליחת הדיווח הזה על באג אל %1."
+msgstr "שליחת דיווח התקלה הזה אל %1."
 
 #: kbugreport.cpp:180
 #, kde-format
@@ -476,7 +440,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:221
 #, kde-format
@@ -484,7 +448,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:227
 #, kde-format
@@ -492,47 +456,40 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:239
-#, fuzzy, kde-format
-#| msgid "Se&verity"
+#, kde-format
 msgctxt "@title:group"
 msgid "Se&verity"
-msgstr "ח&ומרה"
+msgstr "דרגת ח&ומרה"
 
 #: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
+#, kde-format
 msgctxt "bug severity"
 msgid "Critical"
-msgstr "קריטי"
+msgstr "משמעותית"
 
 #: kbugreport.cpp:247
-#, fuzzy, kde-format
-#| msgid "Grave"
+#, kde-format
 msgctxt "bug severity"
 msgid "Grave"
-msgstr "קשה"
+msgstr "חוסמת"
 
 #: kbugreport.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "normal severity"
-#| msgid "Normal"
+#, kde-format
 msgctxt "bug severity"
 msgid "Normal"
-msgstr "רגיל"
+msgstr "רגילה"
 
 #: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
+#, kde-format
 msgctxt "bug severity"
 msgid "Wishlist"
 msgstr "משאלה"
 
 #: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
+#, kde-format
 msgctxt "bug severity"
 msgid "Translation"
 msgstr "תרגום"
@@ -602,6 +559,8 @@ msgid ""
 "Could not find <application>%1</application> executable (usually it's part "
 "of the \"%2\" package)."
 msgstr ""
+"לא ניתן למצוא את קובץ ההפעלה <application>%1</application> (בדרך כלל הוא חלק "
+"מהחבילה „%2”)."
 
 #: kbugreport.cpp:432
 #, kde-format
@@ -1067,7 +1026,7 @@ msgstr "תם הזמן המוקצב לחיבור"
 #: ksendbugmail/main.cpp:39
 #, kde-format
 msgid "Time out waiting for server interaction."
-msgstr ""
+msgstr "תם זמן ההמתנה לתגובה מהשרת."
 
 #: ksendbugmail/main.cpp:43
 #, fuzzy, kde-format
@@ -1211,7 +1170,7 @@ msgstr "בקשת ההסרה נרשמה בהצלחה."
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr ""
+msgstr "שגיאה בשמירת סכמת קיצור הדרך."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
@@ -1556,7 +1515,7 @@ msgstr "סרגלי־כלים מוצגים"
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #. i18n: Pressing Shift will show a longer message with contextual info
 #. about the thing the tooltip was invoked for. If there is no good way to translate
@@ -1568,6 +1527,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
+"<small><font color=\"%1\">יש ללחוץ על <b>Shift</b> למידע נוסף.</font></small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
 #. available whatsthis help message. Pressing Shift will show this more exhaustive message.
@@ -1585,6 +1545,8 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
+"%1<br/><small><font color=\"%2\">יש ללחוץ על <b>Shift</b> לעוד.</font></"
+"small>"
 
 #: kundoactions.cpp:30
 #, kde-format
