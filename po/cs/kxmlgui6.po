@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <lukas@kde.org>, 2010, 2011, 2012.
-# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:32+0000\n"
-"PO-Revision-Date: 2023-11-08 15:45+0100\n"
+"PO-Revision-Date: 2024-01-19 15:51+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -183,15 +183,7 @@ msgstr ""
 "jste označili chybové hlášení jako \"Přání\".</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -202,14 +194,12 @@ msgid ""
 "what you need.</html>"
 msgstr ""
 "<html>K tomu, abyste se stali členem KDE týmu, není zapotřebí být vývojářem "
-"softwaru. Můžete se připojit k národním týmům, které překládají programy. "
-"Můžete vytvářet grafiku, motivy, zvuky a lepší dokumentaci. Vy se rozhodněte!"
-"<br /><br />Navštivte <A HREF=\"%1\">%1</A>, kde naleznete informace o "
-"některých projektech, kterých se můžete zúčastnit.<br /><br />Potřebujete-li "
-"více informací nebo dokumentace, pak návštěva na <A HREF=\"%2\">%2</A> vám "
-"poskytne, co potřebujete.<br /><br />České stránky o KDE se nacházejí na "
-"adrese <A HREF=\"http://czechia.kde.org/\">http://czechia.kde.org/</A>. "
-"Přidejte se k nám!</html>"
+"softwaru. Můžete se připojit k překladatelským týmům, které překládají "
+"programy. Můžete vytvářet grafiku, motivy, zvuky a lepší dokumentaci. Vy se "
+"rozhodněte.<br /><br />Navštivte <a href=\"%1\">%1</a>, kde naleznete "
+"informace o některých projektech, kterých se můžete zúčastnit.<br /><br /"
+">Potřebujete-li více informací nebo dokumentace, pak návštěva na <a href="
+"\"%2\">%2</a> vám poskytne, co potřebujete.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
