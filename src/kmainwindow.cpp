@@ -610,7 +610,8 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
     }
 
     QMenuBar *mb = internalMenuBar(this);
-    if (mb) {
+
+    if (mb && !mb->isNativeMenuBar()) {
         if (!cg.hasDefault("MenuBar") && !mb->isHidden()) {
             cg.revertToDefault("MenuBar");
         } else {
@@ -723,7 +724,7 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
     }
 
     QMenuBar *mb = internalMenuBar(this);
-    if (mb) {
+    if (mb && !mb->isNativeMenuBar()) {
         QString entry = cg.readEntry("MenuBar", "Enabled");
         mb->setVisible(entry != QLatin1String("Disabled"));
     }
