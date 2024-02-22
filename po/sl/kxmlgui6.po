@@ -9,7 +9,7 @@
 # Gregor Rakar <gregor.rakar@kiss.uni-lj.si>, 2002,2003.
 # Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2004, 2005.
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2005, 2007, 2008, 2009, 2010.
-# Jure Repinc <jlp@holodeck1.com>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Jure Repinc <jlp@holodeck1.com>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2024.
 # Andrej Vernekar <andrej.vernerkar@moj.net>, 2008, 2011, 2012.
 # Andrej Mernik <andrejm@ubuntu.si>, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:32+0000\n"
-"PO-Revision-Date: 2023-11-23 09:45+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-02-21 19:58+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -42,7 +42,7 @@ msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Obišči domačo stran prispevkarja\n"
+"Obišči domačo stran komponent\n"
 "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:140
@@ -85,9 +85,9 @@ msgstr "Komponente"
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "Avtor"
-msgstr[1] "Avtorja"
-msgstr[2] "Avtorji"
+msgstr[0] "Avtorji"
+msgstr[1] "Avtor"
+msgstr[2] "Avtorja"
 msgstr[3] "Avtorji"
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
@@ -120,7 +120,7 @@ msgid ""
 "Email contributor\n"
 "%1"
 msgstr ""
-"E-pošta prispevkarja\n"
+"Pošlji e-pošto prispevkarju\n"
 "%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:112
@@ -165,13 +165,13 @@ msgid ""
 "software we produce.</html>"
 msgstr ""
 "<html><b>KDE</b> je svetovna skupnost programskih inženirjev, umetnikov, "
-"pisateljev, prevajalcev in ustvarjalcev, ki so zavezani <a href=\"%1\">k "
-"prostem razvoju programske opreme</a>. KDE proizvaja okolje namizja Plasma, "
-"na stotine aplikacij in številne programske knjižnice, ki jih podpirajo.<br /"
-"><br />KDE je kooperativno podjetje: noben sam deležnik ne nadzoruje smeri "
-"ali izdelka. Namesto tega si prizadevamo za dosego skupnega cilja izdelave "
-"najboljše programske opreme na svetu. Vsi ste dobrodošli na <a href=\"%2\"> "
-"da se pridružite in prispevate</a> v KDE, vključno z vami.<br /><br /"
+"piscev, prevajalcev in ustvarjalcev, ki so zavezani <a href=\"%1\">k razvoju "
+"svobodne programske opreme</a>. KDE je ustvaril okolje namizja Plasma, na "
+"stotine aplikacij in številne programske knjižnice, ki jih podpirajo.<br /"
+"><br />KDE je kooperativen podvig: noben sam deležnik ne nadzoruje smeri ali "
+"izdelka. Namesto tega si prizadevamo za dosego skupnega cilja izdelave "
+"najboljše programske opreme na svetu. Vsi so dobrodošli <a href=\"%2\"> da "
+"se nam pridružijo in prispevajo</a> v KDE, vključno z vami.<br /><br /"
 ">Obiščite <a href=\"%3\">%3</a> za več informacij o skupnosti KDE in "
 "programski opremo, ki jo izdelujemo.</html>"
 
@@ -189,11 +189,11 @@ msgstr ""
 "<html>Programsko opremo je vedno mogoče izboljšati in skupnost KDE je to "
 "pripravljena storiti. Vendar nam morate vi – uporabniki – povedati, če kaj "
 "ne dela kot je pričakovano ali pa bi lahko bilo narejeno bolje.<br /><br /"
-">KDE ima sistem sledenja hroščev. Obiščite <a href=\"%1\">%1</a> ali "
-"uporabite pogovorno okno \"Poročaj o hrošču...\" iz menija \"Pomoč\" za "
-"poročanje o hroščih.<br /><br />Če imate predloge za izboljšanje, ste "
-"vabljeni, da v sistem sledenja hroščev vnesete svojo željo. Pazite le, da "
-"boste uporabili raven resnosti \"Seznam želja\".</html>"
+">KDE ima sistem sledenja napakam. Obiščite <a href=\"%1\">%1</a> ali "
+"uporabite pogovorno okno »Poročaj o napaki …« iz menija »Pomoč« za poročanje "
+"o napakah.<br /><br />Če imate predloge za izboljšanje, ste vabljeni, da v "
+"sistem sledenja napakam vnesete svojo željo. Pazite le, da boste uporabili "
+"raven resnosti »Seznam želja« (angl. Severity: wishlist).</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -206,13 +206,13 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>Ne potrebno biti razvijalec programske opreme, da postanete član ekipe "
-"KDE, Pridružite se lahko jezikovnim ekipam, ki prevajajo vmesnike programov. "
-"Lahko zagotovite grafike, teme, zvoke in izboljšano dokumentacijo. O tem "
-"odločate vi!<br /><br />Obiščite <a href=\"%1\">%1</a> za podrobnosti o "
-"projektih, kjer lahko sodelujete.<br /><br />Če potrebujete več podrobnosti "
-"ali dokumentacijo, obiščite <a href=\"%2\">%2</a>, ki bo zagotovila, kar "
-"potrebujete.</html>"
+"<html>Ni potrebno biti razvijalec programske opreme, da postanete član ekipe "
+"KDE, Pridružite se lahko jezikovnim skupinam, ki prevajajo vmesnike "
+"programov. Lahko zagotovite grafike, teme, zvoke in izboljšano "
+"dokumentacijo. O tem odločate vi!<br /><br />Obiščite <a href=\"%1\">%1</a> "
+"za podrobnosti o projektih, kjer lahko sodelujete.<br /><br />Če potrebujete "
+"več podrobnosti ali dokumentacijo, obiščite <a href=\"%2\">%2</a>, ki "
+"ponuja, kar potrebujete.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -247,25 +247,25 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
-msgstr "O"
+msgstr "O &KDE"
 
 #: kaboutkdedialog_p.cpp:129
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "Poročajte o hroščih in željah"
+msgstr "Poročajte o &napakah in željah"
 
 #: kaboutkdedialog_p.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "Pridružite se ekipi KDE"
+msgstr "&Pridružite se nam"
 
 #: kaboutkdedialog_p.cpp:131
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
-msgstr "Podpora KDE"
+msgstr "P&odprite nas"
 
 #: kabstractaboutdialog_p.cpp:41
 #, kde-format
@@ -276,7 +276,7 @@ msgstr "Različica %1"
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
 msgid "The <em>%1</em> windowing system"
-msgstr "Sistem oken <em>%1</em>"
+msgstr "Grafična platforma <em>%1</em>"
 
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
@@ -286,7 +286,7 @@ msgstr "Qt"
 #: kabstractaboutdialog_p.cpp:109
 #, kde-format
 msgid "%1 (built against %2)"
-msgstr "%1 (izdelano z %2)"
+msgstr "%1 (zgrajeno z %2)"
 
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
@@ -296,12 +296,12 @@ msgstr "KDE Frameworks"
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
 msgid "Show author photos"
-msgstr "Pokaži avtorjeve fotografije"
+msgstr "Pokaži fotografije avtorjev"
 
 #: kabstractaboutdialog_p.cpp:137
 #, kde-format
 msgid "Enabling this will fetch images from an online location"
-msgstr "To omogočeno bo pobralo slike iz lokacije na spletu"
+msgstr "Če to omogočite, bodo slike pridobljene z interneta"
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
@@ -313,7 +313,7 @@ msgstr "Za poročanje o napakah uporabite %1.\n"
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "Za poročanje o napakah uporabite %1.\n"
+msgstr "Za poročanje o napakah pišite na %1.\n"
 
 #: kactionconflictdetector.cpp:38
 #, kde-format
@@ -322,8 +322,8 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"Zaporedje tipk '%1' je dvoumno. Uporabite 'Nastavi bližnjice na tipkovnici'\n"
-"iz menija 'Nastavitve', da razrešite dvoumje.\n"
+"Zaporedje tipk »%1« je dvoumno. Uporabite »Nastavi bližnjice …«\n"
+"iz menija »Nastavitve«, da razrešite dvoumje.\n"
 "Nobeno dejanje ne bo sproženo."
 
 #: kactionconflictdetector.cpp:42
@@ -336,12 +336,12 @@ msgstr "Zaznana je bila dvoumna bližnjica"
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
-msgstr "Pošlji poročilo o hrošču"
+msgstr "Poročaj o napaki"
 
 #: kbugreport.cpp:84
 #, kde-format
 msgid "Submit Bug Report"
-msgstr "Pošlji poročilo o hrošču"
+msgstr "Poročaj o napaki"
 
 #: kbugreport.cpp:96
 #, kde-format
@@ -349,8 +349,8 @@ msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr ""
-"Program, za katerega želite poslati poročilo o hrošču. Če ni pravi, "
-"uporabite predmet menija \"Poročaj o hrošču\" v pravilnem programu"
+"Program, za katerega želite poslati poročilo o napaki. Če ni pravi, izberite "
+"pravi vnos programa z menija »Poročaj o napaki«"
 
 #: kbugreport.cpp:97
 #, kde-format
@@ -363,7 +363,7 @@ msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr ""
-"Različica tega programa - prepričajte se, da v času poročanja o hrošču ni na "
+"Različica tega programa – prepričajte se, da v času poročanja o napaki ni na "
 "voljo že novejša različica"
 
 #: kbugreport.cpp:108
@@ -413,8 +413,8 @@ msgid ""
 "where you will find a form to fill in. The information displayed above will "
 "be transferred to that server.</qt>"
 msgstr ""
-"<qt>Kliknite spodnjo povezavo za pošiljanje poročila o hrošču. To bo odprlo "
-"okno spletnega brskalnika na <a href=\"https://bugs.kde.org\">http://bugs."
+"<qt>Kliknite spodnjo povezavo za pošiljanje poročila o napaki. To bo odprlo "
+"okno spletnega brskalnika na <a href=\"https://bugs.kde.org\">https://bugs."
 "kde.org</a>, kjer boste našli obrazec, ki ga izpolnite. Podatki, prikazani "
 "zgoraj, bodo preneseni na ta strežnik.</qt>"
 
@@ -424,20 +424,20 @@ msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
-"<qt>Kliknite spodnjo povezavo za pošiljanje poročila o hrošču. To bo odprlo "
+"<qt>Kliknite spodnjo povezavo za pošiljanje poročila o napaki. To bo odprlo "
 "okno spletnega brskalnika na <a href=\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
-msgstr "Zaženi čarovnika za poročanje o hrošču"
+msgstr "&Zaženi čarovnika za poročanje o napaki"
 
 #: kbugreport.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
-msgstr "Pošlji poročilo o hrošču"
+msgstr "&Pošlji poročilo o napaki"
 
 #: kcheckaccelerators.cpp:199
 #, kde-format
@@ -485,13 +485,13 @@ msgstr "Spremeni besedilo"
 #: kedittoolbar.cpp:337
 #, kde-format
 msgid "Icon te&xt:"
-msgstr "Besedilo ikone:"
+msgstr "&Besedilo ikone:"
 
 #: kedittoolbar.cpp:342
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "Skrij besedilo, ko orodna vrstica prikazuje besedilo poleg ikon"
+msgstr "&Skrij besedilo, ko orodna vrstica prikazuje besedilo poleg ikon"
 
 #: kedittoolbar.cpp:591
 #, kde-format
@@ -521,7 +521,7 @@ msgstr "Ponastavi"
 #: kedittoolbar.cpp:975
 #, kde-format
 msgid "&Toolbar:"
-msgstr "Orodna vrstica:"
+msgstr "&Orodna vrstica:"
 
 #. i18n("&New"), this);
 #. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
@@ -533,7 +533,7 @@ msgstr "Orodna vrstica:"
 #: kedittoolbar.cpp:991
 #, kde-format
 msgid "A&vailable actions:"
-msgstr "Razpoložljiva dejanja:"
+msgstr "&Razpoložljiva dejanja:"
 
 #: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
 #, kde-format
@@ -543,29 +543,29 @@ msgstr "Filter"
 #: kedittoolbar.cpp:1015
 #, kde-format
 msgid "Curr&ent actions:"
-msgstr "Trenutna dejanja:"
+msgstr "&Trenutna dejanja:"
 
 #: kedittoolbar.cpp:1040
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "Spremeni &ikono..."
+msgstr "Spremeni &ikono …"
 
 #: kedittoolbar.cpp:1049
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "Spremeni besedilo..."
+msgstr "Spremeni b&esedilo …"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
 msgid "--- separator ---"
-msgstr "--- ločilnik ---"
+msgstr "— ločilnik —"
 
 #: kedittoolbar.cpp:1192
 #, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- ločilnik ---"
+msgstr "— razširljivi ločilnik —"
 
 #: kedittoolbar.cpp:1214
 #, kde-format
@@ -577,7 +577,7 @@ msgstr "%1"
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
-msgstr "Ta predmet bo zamenjan z vsemi predmeti vgrajenega sestavnega dela."
+msgstr "Ta vnos bo zamenjan z vsemi vnosi vgrajene kompnente."
 
 #: kedittoolbar.cpp:1244
 #, kde-format
@@ -618,12 +618,12 @@ msgstr "Spremeni ikono"
 #: khelpmenu.cpp:146 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
-msgstr "Pomoč"
+msgstr "Po&moč"
 
 #: khelpmenu.cpp:253
 #, kde-format
 msgid "About %1"
-msgstr "O programu %1"
+msgstr "O %1"
 
 #: kkeysequencewidget.cpp:144
 #, kde-format
@@ -640,15 +640,15 @@ msgstr ""
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
-msgstr[0] "Spor z bližnjico"
-msgstr[1] "Spor z bližnjicama"
-msgstr[2] "Spor z bližnjicami"
-msgstr[3] "Spor z bližnjicami"
+msgstr[0] "Spori med bližnjicami"
+msgstr[1] "Spor med bližnjicama"
+msgstr[2] "Spora med bližnjicami"
+msgstr[3] "Spori med bližnjicami"
 
 #: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "Bližnjica '%1' za dejanje '%2'\n"
+msgstr "Bližnjica »%1« za dejanje »%2«\n"
 
 #: kkeysequencewidget.cpp:176
 #, kde-format
@@ -662,19 +662,19 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"Bližnjica \"%2\" je dvoumna, ker se prekriva z naslednjo bližnjico.\n"
-"Ali želite temu dejanju dodeliti prazno bližnjico?\n"
-"%3"
-msgstr[1] ""
-"Bližnjica \"%2\" je dvoumna, se prekriva z naslednjima bližnjicama.\n"
-"Ali želite tema dejanjema dodeliti prazni bližnjici?\n"
-"%3"
-msgstr[2] ""
-"Bližnjica \"%2\" je dvoumna, ker se prekriva z naslednjimi bližnjicami.\n"
+"Bližnjica »%2« je dvoumna, ker se prekriva z naslednjimi bližnjicami.\n"
 "Ali želite tem dejanjem dodeliti prazne bližnjice?\n"
 "%3"
+msgstr[1] ""
+"Bližnjica »%2« je dvoumna, ker se prekriva z naslednjo bližnjico.\n"
+"Ali želite temu dejanju dodeliti prazno bližnjico?\n"
+"%3"
+msgstr[2] ""
+"Bližnjica »%2« je dvoumna, ker se prekriva z naslednjima bližnjicama.\n"
+"Ali želite tema dejanjema dodeliti prazni bližnjici?\n"
+"%3"
 msgstr[3] ""
-"Bližnjica \"%2\" je dvoumna, ker se prekriva z naslednjimi bližnjicami.\n"
+"Bližnjica »%2« je dvoumna, ker se prekriva z naslednjimi bližnjicami.\n"
 "Ali želite tem dejanjem dodeliti prazne bližnjice?\n"
 "%3"
 
@@ -697,13 +697,13 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>Zaporedje tipk '%1' se že uporablja za dejanje <b>%2</b>.<br>Izberite "
+"<qt>Kombinacija tipk »%1« se že uporablja za dejanje <b>%2</b>.<br>Izberite "
 "drugačno.</qt>"
 
 #: kkeysequencewidget.cpp:273
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Bližnjica '%1' v programu '%2' za dejanje '%3'\n"
+msgstr "Bližnjica »%1« v programu »%2« za dejanje »%3«\n"
 
 #: kkeysequencewidget.cpp:282
 #, kde-format
@@ -713,19 +713,19 @@ msgctxt ""
 msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
-msgstr[0] "Bližnjica '%2' je v sporu z naslednjo kombinacijo tipk:\n"
-msgstr[1] "Bližnjica '%2' je v sporu z naslednjima kombinacijama tipk:\n"
-msgstr[2] "Bližnjica '%2' je v sporu z naslednjimi kombinacijami tipk:\n"
-msgstr[3] "Bližnjica '%2' je v sporu z naslednjimi kombinacijami tipk:\n"
+msgstr[0] "Bližnjica »%2« je v sporu z naslednjimi kombinacijami tipk:\n"
+msgstr[1] "Bližnjica »%2« je v sporu z naslednjo kombinacijo tipk:\n"
+msgstr[2] "Bližnjica »%2« je v sporu z naslednjima kombinacijama tipk:\n"
+msgstr[3] "Bližnjica »%2« je v sporu z naslednjimi kombinacijami tipk:\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
-msgstr[0] "Spor z registrirano splošno bližnjico"
-msgstr[1] "Spor z registriranima splošnima bližnjicama"
-msgstr[2] "Spor z registriranimi splošnimi bližnjicami"
+msgstr[0] "Spor z registriranimi splošnimi bližnjicami"
+msgstr[1] "Spor z registrirano splošno bližnjico"
+msgstr[2] "Spor z registriranima splošnima bližnjicama"
 msgstr[3] "Spor z registriranimi splošnimi bližnjicami"
 
 #: kkeysequencewidget.cpp:302
@@ -748,7 +748,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Spor z običajnimi bližnjicami programov"
+msgstr "Spor z običajno bližnjico programov"
 
 #: kkeysequencewidget.cpp:349
 #, kde-format
@@ -757,15 +757,15 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"Zaporedje tipk '%1' se uporablja tudi pri standardnemu dejanju \"%2\", ki \n"
+"Kombinacija tipk »%1« se uporablja tudi za običajno dejanje »%2«, ki \n"
 "ga uporabljajo nekateri programi.\n"
-"Ali ga res želite uporabiti tudi za splošno bližnjico?"
+"Ali jo res želite uporabiti tudi za splošno bližnjico?"
 
 #: kkeysequencewidget.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr "Vhod"
+msgstr "Vnos"
 
 #: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
 #, kde-format
@@ -804,7 +804,7 @@ msgstr "Dodaj v orodno vrstico"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "Nastavi bližnjico..."
+msgstr "Nastavi bližnjico …"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -833,7 +833,7 @@ msgstr "Trenutna shema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr "Nova..."
+msgstr "Nova …"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -857,13 +857,13 @@ msgstr "Shrani bližnjice v shemo"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "Izvozi shemo..."
+msgstr "Izvozi shemo …"
 
 #: kshortcutschemeseditor.cpp:66
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "Uvozi shemo..."
+msgstr "Uvozi shemo …"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -929,8 +929,8 @@ msgid ""
 "The current shortcut scheme is modified. Save before switching to the new "
 "one?"
 msgstr ""
-"Trenutna shema bližnjic je spremenjena. Ali naj jo pred preklopom na drugo "
-"shranim?"
+"Trenutna shema bližnjic je spremenjena. Ali jo pred preklopom na drugo "
+"želite shraniti?"
 
 #: kshortcutsdialog.cpp:124
 #, kde-format
@@ -950,8 +950,8 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"Iščite interaktivno za imeni bližnjic (npr. Kopiranje) ali kombinacijami "
-"tipk (npr. Ctrl+C) tako da jih vnesete sem."
+"Interaktivno poiščite imena bližnjic (npr. Kopiraj) ali kombinacije tipk "
+"(npr. Ctrl+C) tako da jih vnesete sem."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
@@ -962,8 +962,8 @@ msgid ""
 "Ctrl+V) shown in the right column."
 msgstr ""
 "Tu lahko vidite seznam tipkovnih bližnjic, t.j. povezav med dejanji (npr. "
-"'Kopiraj'), prikazanimi v levem stolpcu, in tipkami ali kombinacijami tipk "
-"(npr. CTRL-C), prikazanimi v desnem stolpcu."
+"Kopiraj), prikazanimi v levem stolpcu, in tipkami ali kombinacijami tipk "
+"(npr. CTRL+C), prikazanimi v desnem stolpcu."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
@@ -993,7 +993,7 @@ msgstr "Splošna"
 #: kshortcutsdialog.ui:53
 #, kde-format
 msgid "Global Alternate"
-msgstr "Splošna drugotna"
+msgstr "Drugotna splošna"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:58
@@ -1028,12 +1028,12 @@ msgstr "Drugotna:"
 #: kshortcutseditor.cpp:544
 #, kde-format
 msgid "Global:"
-msgstr "Splošno:"
+msgstr "Splošna:"
 
 #: kshortcutseditor.cpp:545
 #, kde-format
 msgid "Global alternate:"
-msgstr "Splošna drugotna:"
+msgstr "Drugotna splošna:"
 
 #: kshortcutseditor.cpp:561
 #, kde-format
@@ -1065,7 +1065,7 @@ msgstr "Nastavi jezik"
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
-msgstr "Izberite jezik ki naj se uporabi za ta program:"
+msgstr "Izberite jezik, ki naj se uporabi za ta program:"
 
 #: kswitchlanguagedialog_p.cpp:168
 #, kde-format
@@ -1106,7 +1106,7 @@ msgstr "Spremenil se je jezik programa"
 #: kswitchlanguagedialog_p.cpp:370
 #, kde-format
 msgid "Primary language:"
-msgstr "Prvotni jezik:"
+msgstr "Glavni jezik:"
 
 #: kswitchlanguagedialog_p.cpp:370
 #, kde-format
@@ -1268,7 +1268,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
-"<small><font color=\"%1\">Pritisnite<b>Shift</b> za več informacij.</font></"
+"<small><font color=\"%1\">Pritisnite <b>Shift</b> za več informacij.</font></"
 "small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
@@ -1287,7 +1287,7 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
-"%1<br/><small><font color=\"%2\">Pritisnite<b>Shift</b> za več.</font></"
+"%1<br/><small><font color=\"%2\">Pritisnite <b>Shift</b> za več.</font></"
 "small>"
 
 #: kundoactions.cpp:30
@@ -1308,7 +1308,7 @@ msgstr "Brez besedila"
 #: kxmlguiwindow.cpp:191
 #, kde-format
 msgid "Find Action…"
-msgstr "Najdi dejanje…"
+msgstr "Najdi dejanje …"
 
 #: kxmlguiwindow.cpp:529
 #, kde-format
@@ -1318,7 +1318,7 @@ msgid ""
 "org'>bugs.kde.org</a>"
 msgstr ""
 "Obstajata dve dejanji (%1, %2), ki bi radi uporabili isto bližnjico (%3). To "
-"je najverjetneje hrošč. Poročajte o njem na <a href='https://bugs.kde."
+"je najverjetneje napaka. Poročajte o njej na <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 
 #: kxmlguiwindow.cpp:534
@@ -1330,13 +1330,13 @@ msgstr "Dvoumne bližnjice"
 #: ui_standards.rc:5
 #, kde-format
 msgid "&File"
-msgstr "Datoteka"
+msgstr "&Datoteka"
 
 #. i18n: ectx: Menu (game)
 #: ui_standards.rc:34
 #, kde-format
 msgid "&Game"
-msgstr "Igra"
+msgstr "&Igra"
 
 #. i18n: ectx: Menu (edit)
 #: ui_standards.rc:61
@@ -1355,31 +1355,31 @@ msgstr "Pre&makni"
 #: ui_standards.rc:102
 #, kde-format
 msgid "&View"
-msgstr "Pogled"
+msgstr "P&ogled"
 
 #. i18n: ectx: Menu (go)
 #: ui_standards.rc:122
 #, kde-format
 msgid "&Go"
-msgstr "Pojdi"
+msgstr "&Pojdi"
 
 #. i18n: ectx: Menu (bookmarks)
 #: ui_standards.rc:143
 #, kde-format
 msgid "&Bookmarks"
-msgstr "Zaznamki"
+msgstr "&Zaznamki"
 
 #. i18n: ectx: Menu (tools)
 #: ui_standards.rc:149
 #, kde-format
 msgid "&Tools"
-msgstr "Orodja"
+msgstr "O&rodja"
 
 #. i18n: ectx: Menu (settings)
 #: ui_standards.rc:153
 #, kde-format
 msgid "&Settings"
-msgstr "Nastavitve"
+msgstr "&Nastavitve"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ui_standards.rc:195
