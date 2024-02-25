@@ -11,7 +11,7 @@
 # Joonas Niilola <juippis@roskakori.org>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2017, 2018, 2019, 2020, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2017, 2018, 2019, 2020, 2022, 2024.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021.
 #
@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:32+0000\n"
-"PO-Revision-Date: 2022-08-02 22:50+0300\n"
+"PO-Revision-Date: 2024-02-19 11:37+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-POT-Import-Date: 2013-01-13 20:43:21+0000\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -201,15 +201,7 @@ msgstr ""
 "”Wishlist”.</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -219,13 +211,12 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>Sinun ei tarvitse olla ohjelmistokehittäjä liittyäksesi KDE-tiimiin. "
-"Voit liittyä kansallisiin ryhmiin ja auttaa kääntämään KDE:tä omalle "
-"kielellesi. Voit myös tehdä grafiikkaa, teemoja, ääniä tai parantaa "
-"dokumentaatiota. Päätät itse, mitä haluat tehdä.<br /><br />Vieraile "
-"osoitteessa <a href=\"%1\">%1</a>, jos haluat lisätietoa projekteista, "
-"joihin voit osallistua.<br /><br />Lisätietoa ja ohjeistusta löytyy "
-"osoitteesta <a href=\"%2\">%2</a>.</html>"
+"<html>KDE-tiimiin liittyäkseen ei tarvitse olla ohjelmistokehittäjä. Voi "
+"liittyä kansalliseen ryhmään ja auttaa kääntämään KDE:tä omalle kielelleen. "
+"Voi myös tehdä grafiikkaa, teemoja, ääniä tai parantaa dokumentaatiota. "
+"Päätä itse!<br /><br />Käy osoitteessa <a href=\"%1\">%1</a>, jos haluat "
+"lisätietoa projekteista, joihin osallistua.<br /><br />Lisätietoa ja kaikki "
+"tarvitsemasi ohjeet löytyvät osoitteesta <a href=\"%2\">%2</a>.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
