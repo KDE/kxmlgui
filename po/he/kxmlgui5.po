@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2024-02-08 09:58+0200\n"
+"PO-Revision-Date: 2024-02-23 11:52+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -354,8 +354,8 @@ msgstr "שליחת דיווח על באג"
 msgid ""
 "Your email address. If incorrect, use the Configure Email button to change it"
 msgstr ""
-"כתובת הדוא\"ל שלך. אם הכתובת לא נכונה, השתמש בכפתור \"הגדרות דוא\"ל\" כדי "
-"לשנותה"
+"כתובת הדוא״ל שלך. אם הכתובת לא נכונה, יש להשתמש בכפתור „הגדרות דוא״ל” כדי "
+"להחליפה"
 
 #: kbugreport.cpp:143
 #, kde-format
@@ -404,8 +404,8 @@ msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr ""
-"התכנית שעליה ברצונך לשלוח דיווח על באג - אם זה שגוי, השתמש בפריט התפריט "
-"\"דיווח על באג\" של התוכנית הנכונה"
+"היישום כנגדו יוגש דיווח תקלה - אם שגוי, נא להשתמש בתפריט דיווח התקלות של "
+"היישום הנכון"
 
 #: kbugreport.cpp:181
 #, kde-format
@@ -659,14 +659,14 @@ msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>קיצורים ששונו</h2>"
 
 #: kcheckaccelerators.cpp:322 kcheckaccelerators.cpp:326
-#, fuzzy, kde-format
+#, kde-format
 msgid "Old Text"
-msgstr "חיפוש טקסט"
+msgstr "טקסט ישן"
 
 #: kcheckaccelerators.cpp:322 kcheckaccelerators.cpp:331
-#, fuzzy, kde-format
+#, kde-format
 msgid "New Text"
-msgstr "הצג עזרה"
+msgstr "טקסט חדש"
 
 #: kcheckaccelerators.cpp:326
 #, kde-format
@@ -679,8 +679,7 @@ msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>קיצורים שהוספו (לידיעתך)</h2>"
 
 #: kedittoolbar.cpp:332
-#, fuzzy, kde-format
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "שינוי טקסט"
@@ -698,11 +697,10 @@ msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&הסתר טקסט כאשר סרגל הכלים מציג טקסט לצד סמלים"
 
 #: kedittoolbar.cpp:596
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
-msgstr "הגדרות סרגלי־כלים"
+msgstr "הגדרת סרגלי כלים"
 
 #: kedittoolbar.cpp:659
 #, kde-format
@@ -751,18 +749,16 @@ msgid "Curr&ent actions:"
 msgstr "פעול&ות נוכחיות:"
 
 #: kedittoolbar.cpp:1054
-#, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "שינוי &סמליל..."
+msgstr "החלפת &סמל…"
 
 #: kedittoolbar.cpp:1063
-#, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "משנה &טקסט..."
+msgstr "החלפת &טקסט…"
 
 #: kedittoolbar.cpp:1205
 #, kde-format
@@ -770,10 +766,9 @@ msgid "--- separator ---"
 msgstr "--- מפריד ---"
 
 #: kedittoolbar.cpp:1206
-#, fuzzy, kde-format
-#| msgid "--- separator ---"
+#, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- מפריד ---"
+msgstr "--- מפריד מתרחב ---"
 
 #: kedittoolbar.cpp:1228
 #, kde-format
@@ -885,18 +880,16 @@ msgstr[1] ""
 
 #: kkeysequencewidget.cpp:191 kkeysequencewidget.cpp:300
 #: kkeysequencewidget.cpp:362
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "שייך מחדש"
+msgstr "הקצאה מחדש"
 
 #: kkeysequencewidget.cpp:196
-#, fuzzy, kde-format
-#| msgid "Shortcut conflict"
+#, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
-msgstr "התנגשות קיצורי־דרך"
+msgstr "סתירת מקשי קיצור"
 
 #: kkeysequencewidget.cpp:198
 #, kde-format
@@ -978,11 +971,10 @@ msgid "None"
 msgstr "ללא"
 
 #: klicensedialog_p.cpp:33
-#, fuzzy, kde-format
-#| msgid "License Agreement"
+#, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
-msgstr "הסכם רישיון"
+msgstr "הסכם רישוי"
 
 #: kmainwindow.cpp:277
 #, kde-format
@@ -1002,26 +994,25 @@ msgid "Add to Toolbar"
 msgstr "הוסף לסרגל־הכלים"
 
 #: kmenumenuhandler_p.cpp:223
-#, fuzzy, kde-format
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "הגדרות קיצורי מקשים..."
+msgstr "הגדרות קיצורי מקשים…"
 
 #: ksendbugmail/main.cpp:30
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error connecting to server."
-msgstr "צור תוכן על השרת"
+msgstr "שגיאת התחברות לשרת."
 
 #: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
+#, kde-format
 msgid "Not connected."
-msgstr "לא נמצא"
+msgstr "לא מחובר."
 
 #: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Connection timed out."
-msgstr "תם הזמן המוקצב לחיבור"
+msgstr "הזמן שהוקצב לחיבור הסתיים."
 
 #: ksendbugmail/main.cpp:39
 #, kde-format
@@ -1029,9 +1020,9 @@ msgid "Time out waiting for server interaction."
 msgstr "תם זמן ההמתנה לתגובה מהשרת."
 
 #: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
+#, kde-format
 msgid "Server said: \"%1\""
-msgstr "שרת: %1"
+msgstr "השרת החזיר: „%1”"
 
 #: ksendbugmail/main.cpp:74
 #, fuzzy, kde-format
@@ -1075,22 +1066,19 @@ msgid "Current scheme:"
 msgstr "ערכה נוכחית:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr "חדש..."
+msgstr "חדש…"
 
 #: kshortcutschemeseditor.cpp:50
-#, fuzzy, kde-format
-#| msgid "Delete"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete"
-msgstr "מחק"
+msgstr "מחיקה"
 
 #: kshortcutschemeseditor.cpp:53
-#, fuzzy, kde-format
-#| msgid "More Actions"
+#, kde-format
 msgctxt "@action:button"
 msgid "More Actions"
 msgstr "פעולות נוספות"
@@ -1366,22 +1354,18 @@ msgid "Fallback language:"
 msgstr "שפת גיבוי:"
 
 #: kswitchlanguagedialog_p.cpp:385
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
 #: kswitchlanguagedialog_p.cpp:391
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the main application language which will be used first, before "
-#| "any other languages."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the main application language which will be used first, before any "
 "other languages."
-msgstr "זוהי השפה הראשית של היישום, בה ייעשה שימוש לפני כל שפה אחרת."
+msgstr "זו השפה הראשית של היישום, תשמש לפני כל שפה אחרת."
 
 #: kswitchlanguagedialog_p.cpp:392
 #, fuzzy, kde-format
@@ -1442,32 +1426,28 @@ msgid "Text Position"
 msgstr "מיקום הטקסט"
 
 #: ktoolbar.cpp:334
-#, fuzzy, kde-format
-#| msgid "Icons Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "סמלים בלבד"
 
 #: ktoolbar.cpp:337
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
-msgstr "טקסט בלבד"
+msgstr "כיתוב בלבד"
 
 #: ktoolbar.cpp:340
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
-msgstr "טקסט לצד סמלים"
+msgstr "כיתוב לצד הסמלים"
 
 #: ktoolbar.cpp:343
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
-msgstr "טקסט מתחת לסמלים"
+msgstr "כיתוב מתחת לסמלים"
 
 #: ktoolbar.cpp:354
 #, kde-format
@@ -1564,10 +1544,9 @@ msgid "No text"
 msgstr "אין טקסט"
 
 #: kxmlguiwindow.cpp:190
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "פעולה"
+msgstr "איתור פעולה…"
 
 #: kxmlguiwindow.cpp:535
 #, kde-format
@@ -1578,9 +1557,9 @@ msgid ""
 msgstr ""
 
 #: kxmlguiwindow.cpp:540
-#, fuzzy, kde-format
+#, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "זוהתה התנגשות צירוף מקשים"
+msgstr "סתירה במקשי קיצור"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
