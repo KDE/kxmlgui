@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2024-02-23 11:52+0200\n"
+"PO-Revision-Date: 2024-03-07 15:22+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -941,11 +941,10 @@ msgstr ""
 "לבחור מקש אחר."
 
 #: kkeysequencewidget.cpp:354
-#, fuzzy, kde-format
-#| msgid "Conflict with Standard Application Shortcut"
+#, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "התנגשות עם קיצור סטנדרטי של ישומים"
+msgstr "סתירה מול קיצור תקני של יישומים"
 
 #: kkeysequencewidget.cpp:356
 #, kde-format
@@ -1025,30 +1024,28 @@ msgid "Server said: \"%1\""
 msgstr "השרת החזיר: „%1”"
 
 #: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
+#, kde-format
 msgid "Sends a bug report by email."
-msgstr "שליחת הדיווח על הבאג."
+msgstr "שולח דיווח על תקלות בדוא״ל."
 
 #: ksendbugmail/main.cpp:76
-#, fuzzy, kde-format
+#, kde-format
 msgid "The subject line of the email."
-msgstr "גודל הדו־שיח"
+msgstr "שורת הנושא של הודעת הדוא״ל."
 
 #: ksendbugmail/main.cpp:78
-#, fuzzy, kde-format
+#, kde-format
 msgid "The email address to send the bug report to."
-msgstr "כתובת הדוא\"ל אליה יישלח דיווח זה."
+msgstr "כתובת הדוא״ל לשליחת דיווחי תקלות."
 
 #: kshortcuteditwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Default:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Default:"
 msgstr "ברירת מחדל:"
 
 #: kshortcuteditwidget.cpp:62
-#, fuzzy, kde-format
-#| msgid "Custom:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Custom:"
 msgstr "מותאם אישית:"
