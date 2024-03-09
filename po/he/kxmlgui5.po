@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2024-03-07 15:22+0200\n"
+"PO-Revision-Date: 2024-03-08 06:19+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -162,7 +162,7 @@ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 msgstr "<html><font size=\"5\">להיות חופשי! - KDE</font></html>"
 
 #: kaboutkdedialog_p.cpp:45
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<html><b>KDE</b> is a world-wide community of software engineers, artists, "
 "writers, translators and creators who are committed to <a href=\"%1\">Free "
@@ -175,12 +175,14 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html> <b>KDE</b> היא רשת כלל־עולמית של מהנדסי תוכנה  מסורים לפיתוח <a href="
-"\"%1\">תוכנה חופשית</a>.קהילה זו מונה מאוד יישומי תוכנה חופשית כחלק מסביבת "
-"הפיתוח של KDE והפצת התוכנה של KDE. <br /><br /> KDE הוא קואופרטיב מסחרי שבו "
-"אף ישות שולט במאמצים או תוצרים של הקבוצה. כולם מוזמנים לתרום ל־KDE. <br /> "
-"<br /> בקר ב־<a href=\"%2\">%2</a> למידע נוסף על קהילת KDE והתוכנה שאנחנו "
-"מייצרים. הפרוייקט של KDE.  </html>"
+"<html><b>KDE</b> היא קהילה בינלאומית של מהנדסי תוכנה, אומנים, יוצרי תוכן, "
+"מתרגמים ומפיקים שמחויבים לפיתוח <a href=\"%1\">תוכנה חופשית</a>. KDE מפיקה "
+"את סביבת שולחן העבודה פלזמה , מאות יישומים ואת מגוון חבילות התוכנה שתומכות "
+"בהם.<br /><br />KDE הוא תאגיד שיתופי: אין ישות יחידה ששולטת בכיוון המוצרים. "
+"במקום, אנו פועלים יחד כדי להגיע למטרה המשותפת שהיא בניית התוכנה החופשית "
+"הטובה בעולם. כולם מוזמנים <a href=\"%2\">להצטרף ולתרום</a> ל־KDE, כולל אותך."
+"<br /><br />כדאי לבקר ב־<a href=\"%3\">%3</a> למידע נוסף על קהילת KDE "
+"והתוכנה שאנו מפיקים.</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -317,20 +319,15 @@ msgid "Please report bugs to %1.\n"
 msgstr "נא לדווח על תקלות דרך %1.\n"
 
 #: kactionconflictdetector.cpp:38
-#, fuzzy, kde-format
-#| msgid ""
-#| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
-#| "from the 'Settings' menu to solve the ambiguity.\n"
-#| "No action will be triggered."
+#, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"צירוף המקשים \"%1\" לא ייחודי. השתמש ב\"הגדרות קיצורי־מקשים\" מתפריט \"הגדרות"
-"\"\n"
-"כדי לפתור את ההתנגשות.\n"
-"לא תיעשה כל פעולה."
+"צירוף המקשים ‚%1’ אינו ייחודי. אפשר להשתמש ב־‚הגדרת קיצורי מקלדת’\n"
+"מתפריט ה‚הגדרות’ כדי לפתור מצב זה.\n"
+"לא יוזנקו פעולות."
 
 #: kactionconflictdetector.cpp:42
 #, kde-format
@@ -511,44 +508,37 @@ msgstr ""
 "אם תלחץ על \"שלח\", תישלח הודעת דואר אל המתחזק של תוכנית זו\n"
 
 #: kbugreport.cpp:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>To submit a bug report, click on the button below. This will open a "
-#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
-#| "org</a> where you will find a form to fill in. The information displayed "
-#| "above will be transferred to that server.</qt>"
+#, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
 "where you will find a form to fill in. The information displayed above will "
 "be transferred to that server.</qt>"
 msgstr ""
-"<qt> על מנת לשלוח דיווח על באג, לחץ על הקישור הבא. דבר זה יביא לפתיחת חלון "
-"דפדפן בכתובת <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a>, שם "
-"תמצא טופס למילוי. המידע המוצג לעיל יועבר לשרת זה. </qt>"
+"<qt>לדיווח על תהקלה יש ללחוץ על הכפתור שלהלן. הוא יפתח חלון דפדפן עם <a href="
+"\"https://bugs.kde.org\">https://bugs.kde.org</a> שם ניתן למצוא טופס למילוי. "
+"המידע שמוצג לעיל יועבר לשרת הזה.</qt>"
 
 #: kbugreport.cpp:306
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
-"<qt> על מנת לשלוח דיווח על באג, לחץ על הקישור הבא. דבר זה יביא לפתיחת חלון "
-"דפדפן בכתובת <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a>, שם "
-"תמצא טופס למילוי. המידע המוצג לעיל יועבר לשרת זה. </qt>"
+"<qt>לדיווח על תקלה יש ללחוץ על הכפתור שלהלן. הוא יפתח חלון דפדפן עם <a href="
+"\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:323
-#, fuzzy, kde-format
-#| msgid "&Launch Bug Report Wizard"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
-msgstr "&הפעל את אשף הדיווח על באגים"
+msgstr "ה&פעלת אשף דיווח התקלות"
 
 #: kbugreport.cpp:325
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
-msgstr "שליחת דיווח על באג"
+msgstr "ה&גשת דיווח על תקלה"
 
 #: kbugreport.cpp:380
 #, kde-format
@@ -606,19 +596,15 @@ msgstr ""
 "נמוכה יותר.</p>"
 
 #: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually....\n"
-#| "See http://bugs.kde.org/ for instructions."
+#, kde-format
 msgid ""
 "Unable to send the bug report.\n"
 "Please submit a bug report manually....\n"
 "See https://bugs.kde.org/ for instructions."
 msgstr ""
-"אין אפשרות לשלוח את הדיווח על הבאג.\n"
-"שלח דיווח על באג באופן ידני.\n"
-"עיין ב־/http://bugs.kde.org להוראות."
+"לא ניתן לשלוח את דיווח התקלה.\n"
+"נא להגיש דיווח על תקלה ידנית…\n"
+"להנחיות יש לגשת אל https://bugs.kde.org/‎."
 
 #: kbugreport.cpp:484
 #, kde-format
@@ -635,11 +621,10 @@ msgstr ""
 "ההודעה שבעריכה?"
 
 #: kbugreport.cpp:493
-#, fuzzy, kde-format
-#| msgid "Close Message"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close Message"
-msgstr "סגור הודעה"
+msgstr "סגירת הודעה"
 
 #: kcheckaccelerators.cpp:265
 #, kde-format
@@ -690,11 +675,10 @@ msgid "Icon te&xt:"
 msgstr "טקסט הס&מל:"
 
 #: kedittoolbar.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Hide text when toolbar shows text alongside icons"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "&הסתר טקסט כאשר סרגל הכלים מציג טקסט לצד סמלים"
+msgstr "לה&סתיר את הכיתוב כאשר סרגל הכלים מציג כיתוב לצד הסמלים"
 
 #: kedittoolbar.cpp:596
 #, kde-format
@@ -829,14 +813,14 @@ msgid "About %1"
 msgstr "אודות %1"
 
 #: kkeysequencewidget.cpp:149
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"לחץ על הכפתור, ואז תוכל ליצור קיצור מקשים לשימוש בתוכנית.\n"
-"דוגמא: לקיצור Ctrl+a: לחץ על המקש Ctrl ועל המקש a"
+"יש ללחוץ על הכפתור ואז לבחור את מקשי הקיצור הרצויים לך בתוכנית.\n"
+"למשל: Ctrl+A: יש להחזיק את מקש Ctrl ואז ללחוץ על A."
 
 #: kkeysequencewidget.cpp:172
 #, kde-format
@@ -852,16 +836,7 @@ msgid "Shortcut '%1' for action '%2'\n"
 msgstr "קיצור־דרך ל־%1 עבור פעולה \"%2\"\n"
 
 #: kkeysequencewidget.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
-#| msgid ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
-#| "Do you want to assign an empty shortcut to this action?\n"
-#| "%3"
-#| msgid_plural ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
-#| "Do you want to assign an empty shortcut to these actions?\n"
-#| "%3"
+#, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
 "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
@@ -872,11 +847,13 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"קיצור מקש \"%2\" מתנגש עם הקיצור הבא.\n"
-"האם ברצונך לשייך מחווה ריקה לפעולה זו? %3"
+"מקש הקיצור „%2” סותר את מקש הקיצור הבא.\n"
+"להקצות מקש קיצור ריק לפעולה הזאת?\n"
+"%3"
 msgstr[1] ""
-"קיצור מקש \"%2\" מתנגש עם הקיצורים הבאים.\n"
-"האם ברצונך לשייך מחווה ריקה לפעולות אלו? %3"
+"מקש הקיצור „%2” סותר את מקשי הקיצור הבאים.\n"
+"להקצות מקש קיצור ריק לפעולות האלה?\n"
+"%3"
 
 #: kkeysequencewidget.cpp:191 kkeysequencewidget.cpp:300
 #: kkeysequencewidget.cpp:362
@@ -901,10 +878,9 @@ msgstr ""
 "צירוף מקשים אחר. </qt>"
 
 #: kkeysequencewidget.cpp:280
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "קיצור־דרך ל־%1 ביישום %2 עבור פעולה %3\n"
+msgstr "קיצור המקשים ‚%1’ ביישום ‚%2’ לפעולה ‚%3’\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
@@ -1051,11 +1027,10 @@ msgid "Custom:"
 msgstr "מותאם אישית:"
 
 #: kshortcutschemeseditor.cpp:32
-#, fuzzy, kde-format
-#| msgid "Shortcut Schemes"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
-msgstr "ערכות נושא של קיצור־דרך"
+msgstr "ערכות קיצורי מקשים"
 
 #: kshortcutschemeseditor.cpp:37
 #, kde-format
@@ -1081,30 +1056,28 @@ msgid "More Actions"
 msgstr "פעולות נוספות"
 
 #: kshortcutschemeseditor.cpp:58
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "ערכות נושא של קיצור־דרך"
+msgstr "שמירת קיצורי מקשים לערכה"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "ייצא ערכת נושא..."
+msgstr "ייצוא ערכה…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "ייצא ערכת נושא..."
+msgstr "ייבוא ערכה…"
 
 #: kshortcutschemeseditor.cpp:115
-#, fuzzy, kde-format
-#| msgid "Name for New Scheme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
-msgstr "שם לערכת הנושא חדשה"
+msgstr "שם הערכה החדשה"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -1131,26 +1104,26 @@ msgstr ""
 "שים לב כי אין באפשרותך למחוק ערכות נושא גלובליות."
 
 #: kshortcutschemeseditor.cpp:187
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr "קיצורי־דרך"
+msgstr "ייצוא קיצורי מקשים"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgid "Shortcuts (*.shortcuts)"
-msgstr "קיצורי־דרך ל־%1"
+msgstr "קיצורי מקשים (‎*.shortcuts)"
 
 #: kshortcutschemeseditor.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
-msgstr "קיצורי־דרך"
+msgstr "ייבוא קיצורי מקשים"
 
 #: kshortcutschemeseditor.cpp:209
-#, fuzzy, kde-format
+#, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "בקשת ההסרה נרשמה בהצלחה."
+msgstr "ערכת קיצורי המקשים נשמרה בהצלחה."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
@@ -1166,16 +1139,15 @@ msgstr ""
 "ערכת הנושא של קיצורי המקלדת שונתה. האם לשמור לפני המעבר לערכת הנושא החדשה?"
 
 #: kshortcutsdialog.cpp:124
-#, fuzzy, kde-format
+#, kde-format
 msgid "Manage &Schemes"
-msgstr "ערכה חדשה"
+msgstr "&ניהול ערכות"
 
 #: kshortcutsdialog.cpp:149
-#, fuzzy, kde-format
-#| msgid "Configure Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "הגדרות קיצורים"
+msgstr "הגדרת קיצורי מקשים"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -1265,9 +1237,9 @@ msgid "Global:"
 msgstr "גלובלי:"
 
 #: kshortcutseditor.cpp:580
-#, fuzzy, kde-format
+#, kde-format
 msgid "Global alternate:"
-msgstr "חלופה גלובלית"
+msgstr "חלופה כללית:"
 
 #: kshortcutseditor.cpp:596
 #, kde-format
@@ -1291,11 +1263,10 @@ msgid "%1"
 msgstr "%1"
 
 #: kswitchlanguagedialog_p.cpp:137
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
-msgstr "הגדרות סרגלי־כלים"
+msgstr "הגדרת שפה"
 
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
@@ -1303,23 +1274,19 @@ msgid "Please choose the language which should be used for this application:"
 msgstr "בחר את השפה שתשמש עבור יישום זה:"
 
 #: kswitchlanguagedialog_p.cpp:168
-#, fuzzy, kde-format
-#| msgid "Add Fallback Language"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
-msgstr "הוסף שפת גיבוי"
+msgstr "הוספת שפת גיבוי"
 
 #: kswitchlanguagedialog_p.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Adds one more language which will be used if other translations do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
 msgstr ""
-"הוספת שפה אחת או יותר בהן ייעשה שימוש אם אין תרגומים מתאימים בשפות האחרות."
+"הוספת שפה נוספת שייעשה בה שימוש אם תרגומים לשפות אחרות לא מכילים תרגום מתאים."
 
 #: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
 #, kde-format
@@ -1329,8 +1296,7 @@ msgid ""
 msgstr "השפה של יישום זה שונתה. השינוי יחול בהפעלה הבאה של היישום."
 
 #: kswitchlanguagedialog_p.cpp:262
-#, fuzzy, kde-format
-#| msgid "Application Language Changed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "שפת היישום שונתה"
@@ -1365,15 +1331,12 @@ msgid ""
 msgstr "זו השפה הראשית של היישום, תשמש לפני כל שפה אחרת."
 
 #: kswitchlanguagedialog_p.cpp:392
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the language which will be used if any previous languages do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the language which will be used if any previous languages do not "
 "contain a proper translation."
-msgstr "זוהי השפה שתשמש במקרה שאין תרגומים מתאימים באף שפה קודמת."
+msgstr "זו השפה שתשמש אם שפות קודמות לא מכילות תרגום מתאים."
 
 #: ktoolbar.cpp:300 ktoolbar.cpp:307
 #, kde-format
@@ -1552,6 +1515,8 @@ msgid ""
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
+"יש שתי פעולות (%1, %2) שרוצות להשתמש באותם מקשי הקיצור (%3) זאת כפי הנראה "
+"תקלה. נא לדווח עליה דרך <a href='https://bugs.kde.org'>bugs.kde.org</a>"
 
 #: kxmlguiwindow.cpp:540
 #, kde-format
