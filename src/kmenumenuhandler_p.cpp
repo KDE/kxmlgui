@@ -203,6 +203,7 @@ void KMenuMenuHandler::slotAddToToolBar(int tb)
 
     KXMLGUIFactory::findActionByName(toolbarElem, actionName, true);
     KXMLGUIFactory::saveConfigFile(document, xmlFile);
+    factory->refreshActionProperties();
 }
 
 void KMenuMenuHandler::showContextMenu(QMenu *menu, const QPoint &pos)
