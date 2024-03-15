@@ -17,13 +17,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2021.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:32+0000\n"
-"PO-Revision-Date: 2023-12-01 00:20+0300\n"
+"PO-Revision-Date: 2024-03-15 00:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "Katkıcıya e-posta gönder"
 #: kaboutapplicationpersonlistdelegate_p.cpp:58
 #, kde-format
 msgid "Visit contributor's homepage"
-msgstr "Katkıcı ana sayfasını ziyaret et"
+msgstr "Katkıcının ana sayfasını ziyaret et"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:106
 #, kde-format
@@ -149,7 +149,7 @@ msgstr "KDE Hakkında"
 #: kaboutkdedialog_p.cpp:34
 #, kde-format
 msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr "<html><font size=\"5\">KDE - Özgür Olun!</font></html>"
+msgstr "<html><font size=\"5\">KDE — Özgür Olun!</font></html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -192,12 +192,12 @@ msgstr ""
 "<html>Bir yazılım, doğası gereği her zaman iyileştirmeye açıktır ve KDE "
 "takımının tek amacı budur. Kullanıcılar olarak, bir şeyler beklediğiniz gibi "
 "çalışmadığında veya kimi şeylerin daha iyi olabileceğini düşündüğünüzde "
-"lütfen bize bunları bildirin.<br /><br />KDE Masaüstü Ortamı'nın bir hata "
+"lütfen bize bunları bildirin.<br /><br />KDE Masaüstü Ortamı’nın bir hata "
 "izleme sistemi vardır. Hataları bildirmek için <a href=\"%1\">%1</a> "
-"adresini veya uygulamaların \"Yardım\" menüsünde bulunan \"Hata Bildir...\" "
+"adresini veya uygulamaların ‘Yardım’ menüsünde bulunan ‘Hata Bildir…’ "
 "ögesini kullanın.<br /><br />Bir iyileştirme önerisinde bulunmak için de "
-"hata izleme sistemini kullanabilirsiniz. \"Wishlist\" önceliğini "
-"seçtiğinizden emin olun.</html>"
+"hata izleme sistemini kullanabilirsiniz. ‘Wishlist’ önceliğini seçtiğinizden "
+"emin olun.</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -236,14 +236,14 @@ msgid ""
 msgstr ""
 "<html>KDE yazılımları ücretsizdir ve her zaman ücretsiz kalacaktır; ancak "
 "onları yapmak bedava değildir.<br /><br />KDE topluluğu, kar amacı gütmeyen "
-"bir organizasyon olan KDE e.V'i  Almanya'da kurmuştur. KDE e.V, KDE "
+"bir organizasyon olan KDE e.V’yi Almanya'da kurmuştur. KDE e.V, KDE "
 "topluluğunu finansal ve hukuki konularda temsil etmektedir. KDE e.V hakkında "
 "bilgi almak için <a href=\"%1\">%1</a> adresini ziyaret edin. <br /><br /"
-">KDE Takımı'nın  her zaman finansal desteğe gereksinimi vardır. Yapılan "
-"bağışlar; yasal destek, KDE geliştiricilerinin KDE'ye yaptıkları desteğin "
+">KDE Takımı’nın her zaman finansal desteğe gereksinimi vardır. Yapılan "
+"bağışlar; yasal destek, KDE geliştiricilerinin KDE’ye yaptıkları desteğin "
 "sürekliliğini sağlamak ve toplantıların/konferansların organizasyonu için "
 "harcanır. <br /><br />Sizin de <a href=\"%2\">%2</a> adresinde anlatılan "
-"biçimde KDE'ye yardımlarınızı bekliyoruz.<br /><br />Desteğiniz için "
+"biçimde KDE’ye yardımlarınızı bekliyoruz.<br /><br />Desteğiniz için "
 "şimdiden teşekkürler.</html>"
 
 #: kaboutkdedialog_p.cpp:128
@@ -262,13 +262,13 @@ msgstr "&Hata veya İstek Bildir"
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "KDE'ye &Katıl"
+msgstr "KDE’ye &Katıl"
 
 #: kaboutkdedialog_p.cpp:131
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
-msgstr "KDE'yi &Destekle"
+msgstr "KDE’yi &Destekle"
 
 #: kabstractaboutdialog_p.cpp:41
 #, kde-format
@@ -310,13 +310,13 @@ msgstr "Bunu etkinleştirmek görselleri çevrimiçi bir konumdan getirir."
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
-msgstr "Lütfen hataları bildirmek için %1 kullanın.\n"
+msgstr "Lütfen hataları bildirmek için %1 adresini kullanın.\n"
 
 #: kabstractaboutdialog_p.cpp:184
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "Lütfen hataları %1 konumuna bildirin.\n"
+msgstr "Lütfen hataları %1 adresine bildirin.\n"
 
 #: kactionconflictdetector.cpp:38
 #, kde-format
@@ -325,15 +325,15 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"'%1' düğme sırası belirsiz. 'Ayarlar' menüsünden 'Kısayolları Yapılandır'\n"
-"seçeneğini kullanarak bu sorunu çözebilirsiniz.\n"
+"‘%1’ düğme sıralaması belirsiz. ‘Ayarlar’ menüsünden ‘Kısayolları\n"
+"Yapılandır’ seçeneğini kullanarak bu sorunu çözebilirsiniz.\n"
 "Hiçbir eylem tetiklenmeyecek."
 
 #: kactionconflictdetector.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
-msgstr "Belirsiz kısayol tespit edildi"
+msgstr "Belirsiz kısayol algılandı"
 
 #: kbugreport.cpp:62
 #, kde-format
@@ -352,8 +352,8 @@ msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr ""
-"Hata iletisi gönderilecek olan uygulamanın adı - doğru değilse lütfen "
-"uygulamanın Hata Bildir menü ögesini kullanın"
+"Hakkında hata raporu gönderilecek olan uygulamanın adı — doğru değilse "
+"lütfen uygulamanın ‘Hata Bildir’ menü ögesini kullanın"
 
 #: kbugreport.cpp:97
 #, kde-format
@@ -366,8 +366,8 @@ msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr ""
-"Bu uygulamanın sürümü - Bir hata raporu göndermeden önce yeni bir sürümün "
-"çıkmadığına emin olun"
+"Bu uygulamanın sürümü — bir hata raporu göndermeden önce yeni bir sürümün "
+"çıkmadığından emin olun"
 
 #: kbugreport.cpp:108
 #, kde-format
@@ -382,7 +382,7 @@ msgstr "sürüm bilgisi yok (programcı hatası)"
 #: kbugreport.cpp:125
 #, kde-format
 msgid "OS:"
-msgstr "İşletim Sistemi:"
+msgstr "İşletim sistemi:"
 
 #: kbugreport.cpp:130
 #, kde-format
@@ -418,7 +418,7 @@ msgid ""
 msgstr ""
 "<qt>Bir hata raporu iletmek için aşağıdaki düğmeye tıklayın. Bu, içinde "
 "doldurmak için bir form bulacağınız <a href=\"https://bugs.kde.org\">https://"
-"bugs.kde.org</a> adresini bir web tarayıcıda açar. Yukarıda görüntülenen "
+"bugs.kde.org</a> adresini bir web tarayıcısında açar. Yukarıda görüntülenen "
 "bilgi, bu sunucuya gönderilir.</qt>"
 
 #: kbugreport.cpp:163
@@ -428,7 +428,7 @@ msgid ""
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
 "<qt>Bir hata raporu iletmek için aşağıdaki düğmeye tıklayın. Bu, <a href="
-"\"%1\">%2</a> adresini bir web tarayıcıda açar.</qt>"
+"\"%1\">%2</a> adresini bir web tarayıcısında açar.</qt>"
 
 #: kbugreport.cpp:180
 #, kde-format
@@ -446,13 +446,13 @@ msgstr "&Hata Raporu Gönder"
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
-msgstr "Dr. Klash'ın Hızlandırıcı Teşhisi"
+msgstr "Dr. Klash’ın İvmelendirici Tanısı"
 
 #: kcheckaccelerators.cpp:206
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
-msgstr "Otomatik denetlemeyi kapat"
+msgstr "Kendiliğinden denetlemeyi devre dışı bırak"
 
 #: kcheckaccelerators.cpp:252
 #, kde-format
@@ -477,7 +477,7 @@ msgstr "<h2>İvmelendiriciler kaldırıldı</h2>"
 #: kcheckaccelerators.cpp:264
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
-msgstr "<h2>Bilgi: İvmelendiriciler eklendi</h2>"
+msgstr "<h2>İvmelendiriciler eklendi (yalnızca bilginize)</h2>"
 
 #: kedittoolbar.cpp:327
 #, kde-format
@@ -524,7 +524,7 @@ msgstr "Sıfırla"
 #: kedittoolbar.cpp:975
 #, kde-format
 msgid "&Toolbar:"
-msgstr "&Araç Çubuğu:"
+msgstr "&Araç çubuğu:"
 
 #. i18n("&New"), this);
 #. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
@@ -546,19 +546,19 @@ msgstr "Süz"
 #: kedittoolbar.cpp:1015
 #, kde-format
 msgid "Curr&ent actions:"
-msgstr "Kullanılan &eylemler:"
+msgstr "Geçerli &eylemler:"
 
 #: kedittoolbar.cpp:1040
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "&Simgeyi Değiştir..."
+msgstr "&Simgeyi Değiştir…"
 
 #: kedittoolbar.cpp:1049
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "&Metni Değiştir..."
+msgstr "&Metni Değiştir…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -590,7 +590,7 @@ msgstr "<Birleştir>"
 #: kedittoolbar.cpp:1246
 #, kde-format
 msgid "<Merge %1>"
-msgstr "<%1 Ögesini Birleştir>"
+msgstr "<Birleştir: %1>"
 
 #: kedittoolbar.cpp:1256
 #, kde-format
@@ -598,13 +598,13 @@ msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
-"Bu, eylemlerin dinamik oluşturulan bir listesidir. Taşıyabilirsiniz; ancak "
-"silerseniz yeniden ekleyemezsiniz."
+"Bu, eylemlerin devingen bir biçimde oluşturulan bir listesidir. "
+"Taşıyabilirsiniz; ancak silerseniz yeniden ekleyemezsiniz."
 
 #: kedittoolbar.cpp:1257
 #, kde-format
 msgid "ActionList: %1"
-msgstr "Eylem Listesi: %1"
+msgstr "Eylem listesi: %1"
 
 #: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
 #, kde-format
@@ -636,7 +636,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 "Düğmeye tıklayın, ardından kısayol düğmelerine basın.\n"
-"Kontrol+A örneği için: Kontrol düğmesine basılı tutun ve A düğmesine basın."
+"Kontrol + A örneği için: Kontrol düğmesine basılı tutun ve A düğmesine basın."
 
 #: kkeysequencewidget.cpp:167
 #, kde-format
@@ -644,12 +644,12 @@ msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "Kısayol Çakışması"
-msgstr[1] "Kısayol Çakışması"
+msgstr[1] "Kısayol Çakışmaları"
 
 #: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "'%2' eylemi için %1 kısayolu\n"
+msgstr "‘%2’ eylemi için %1 kısayolu\n"
 
 #: kkeysequencewidget.cpp:176
 #, kde-format
@@ -663,12 +663,12 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"\"%2\" kısayolu aşağıdaki kısayolla çakışıyor.\n"
+"‘%2’ kısayolu aşağıdaki kısayolla çakışıyor.\n"
 "Bu eyleme boş bir kısayol atamak istiyor musunuz?\n"
 "%3"
 msgstr[1] ""
-"\"%2\" kısayolu aşağıdaki kısayollarla çakışıyor.\n"
-"Bu eylemlere boş kısayol atamak istiyor musunuz?\n"
+"‘%2’ kısayolu aşağıdaki kısayollarla çakışıyor.\n"
+"Bu eylemlere boş bir kısayol atamak istiyor musunuz?\n"
 "%3"
 
 #: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
@@ -682,7 +682,7 @@ msgstr "Yeniden Ata"
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
-msgstr "Kısayol çakışması"
+msgstr "Kısayol Çakışması"
 
 #: kkeysequencewidget.cpp:193
 #, kde-format
@@ -690,13 +690,13 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>'%1' kısayolu <b>%2</b> eylemi için kullanılıyor.<br>Lütfen başka bir "
+"<qt>‘%1’ kısayolu <b>%2</b> eylemi için kullanılıyor.<br>Lütfen başka bir "
 "tane seçin.</qt>"
 
 #: kkeysequencewidget.cpp:273
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "'%3' eylemi için '%2' uygulamasındaki '%1' kısayolu\n"
+msgstr "‘%3’ eylemi için ‘%2’ uygulamasındaki ‘%1’ kısayolu\n"
 
 #: kkeysequencewidget.cpp:282
 #, kde-format
@@ -706,16 +706,16 @@ msgctxt ""
 msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
-msgstr[0] "'%2' kısayolu aşağıdaki düğme kombinasyonları ile çakışıyor:\n"
-msgstr[1] "'%2' kısayolu aşağıdaki düğme kombinasyonları ile çakışıyor:\n"
+msgstr[0] "‘%2’ kısayolu aşağıdaki düğme kombinasyonu ile çakışıyor:\n"
+msgstr[1] "‘%2’ kısayolu aşağıdaki düğme kombinasyonları ile çakışıyor:\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
-msgstr[0] "Kaydedilmiş Global Kısayolda Çakışma"
-msgstr[1] "Kaydedilmiş Global Kısayollarda Çakışma"
+msgstr[0] "Kayıtlı Global Kısayolla Çakışma"
+msgstr[1] "Kayıtlı Global Kısayollarla Çakışma"
 
 #: kkeysequencewidget.cpp:302
 #, kde-format
@@ -731,13 +731,13 @@ msgid ""
 msgstr ""
 "F12 kısayolu Windows üzerinde önceden atanmış olduğundan global kısayol "
 "olarak kullanılamaz.\n"
-"Lütfen başka bir düğme seçin."
+"Lütfen başka bir tane seçin."
 
 #: kkeysequencewidget.cpp:347
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Standart Uygulama Kısayolu ile Çakışma"
+msgstr "Standart Uygulama Kısayoluyla Çakışma"
 
 #: kkeysequencewidget.cpp:349
 #, kde-format
@@ -746,9 +746,9 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"'%1' düğme kombinasyonu zaten başka bir uygulamanın \"%2\" eylemine "
-"ayrılmıştı.\n"
-"Bu kombinasyonu şu anki eylem için yeniden atamak ister misiniz?"
+"‘%1’ düğme kombinasyonu, halihazırda başka bir uygulamanın ‘%2’ eylemi için "
+"kullanılıyor.\n"
+"Bunu bir global kısayol olarak kullanmayı gerçekten istiyor musunuz?"
 
 #: kkeysequencewidget.cpp:393
 #, kde-format
@@ -766,7 +766,7 @@ msgstr "Yok"
 #, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
-msgstr "Lisans Anlaşması"
+msgstr "Lisans Antlaşması"
 
 #: kmainwindow.cpp:269
 #, kde-format
@@ -792,7 +792,7 @@ msgstr "Araç Çubuğuna Ekle"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "Kısayolu Yapılandır..."
+msgstr "Kısayolu Yapılandır…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -821,7 +821,7 @@ msgstr "Geçerli şema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr "Yeni..."
+msgstr "Yeni…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -845,13 +845,13 @@ msgstr "Kısayolları Şemaya Kaydet"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "Şemayı Dışa Aktar..."
+msgstr "Şemayı Dışa Aktar…"
 
 #: kshortcutschemeseditor.cpp:66
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "Şema İçe Aktar..."
+msgstr "Şema İçe Aktar…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -872,7 +872,7 @@ msgstr "Yeni Şema"
 #: kshortcutschemeseditor.cpp:121
 #, kde-format
 msgid "A scheme with this name already exists."
-msgstr "Bu adı taşıyan bir şema var."
+msgstr "Bu adı taşıyan bir şema halihazırda var."
 
 #: kshortcutschemeseditor.cpp:151
 #, kde-format
@@ -880,7 +880,7 @@ msgid ""
 "Do you really want to delete the scheme %1?\n"
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
-"%1 şemasını gerçekten silmek istiyor musunuz?\n"
+"%1 şemasını silmeyi gerçekten istiyor musunuz?\n"
 "Bu işlemin sistem genelini etkileyecek bir kısayol şemasını silmediğini "
 "unutmayın."
 
@@ -938,8 +938,8 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"Kısayol adlarını (örn: Kopyala) veya düğme kombinasyonlarını (örn: Kontrol"
-"+C) buraya yazarak etkileşimli olarak arayabilirsiniz."
+"Kısayol adlarını (örn: Kopyala) veya düğme kombinasyonlarını (örn: Kontrol + "
+"C) buraya yazarak etkileşimli olarak arayabilirsiniz."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
@@ -949,8 +949,8 @@ msgid ""
 "(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
 "Ctrl+V) shown in the right column."
 msgstr ""
-"Burada düğme bağıntılarının, yani düğmelerle eylemler (örnek: 'Kopyala') "
-"arasındaki bağıntılarını (örnek: Kontrol+V) görebilirsiniz."
+"Burada düğme bağıntılarının, yani düğmelerle eylemler (örnek: ‘Kopyala’) "
+"arasındaki bağıntılarını (örnek: Kontrol + V) görebilirsiniz."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
@@ -986,19 +986,19 @@ msgstr "Global Alternatif"
 #: kshortcutsdialog.ui:58
 #, kde-format
 msgid "Mouse Button Gesture"
-msgstr "Fare Düğmesi Eylemi"
+msgstr "Fare Düğmesi Hareketi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:63
 #, kde-format
 msgid "Mouse Shape Gesture"
-msgstr "Fare Şekli Eylemi"
+msgstr "Fare Şekli Hareketi"
 
 #: kshortcutseditor.cpp:522
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
-msgstr "%1 için kısayollar"
+msgstr "%1 Kısayolları"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
 #: kshortcutseditor.cpp:542 kshortcutwidget.ui:22
@@ -1010,7 +1010,7 @@ msgstr "Ana:"
 #: kshortcutseditor.cpp:543 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
-msgstr "Sırala:"
+msgstr "Alternatif:"
 
 #: kshortcutseditor.cpp:544
 #, kde-format
