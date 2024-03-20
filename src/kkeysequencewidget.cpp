@@ -473,6 +473,16 @@ bool KKeySequenceWidget::isModifierlessAllowed()
     return d->recorder->modifierlessAllowed();
 }
 
+bool KKeySequenceWidget::modifierOnlyAllowed() const
+{
+    return d->recorder->modifierOnlyAllowed();
+}
+
+void KKeySequenceWidget::setModifierOnlyAllowed(bool allow)
+{
+    d->recorder->setModifierOnlyAllowed(allow);
+}
+
 void KKeySequenceWidget::setClearButtonShown(bool show)
 {
     d->clearButton->setVisible(show);

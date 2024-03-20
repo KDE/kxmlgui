@@ -47,6 +47,9 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
 
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 
+    /// @since 6.1
+    Q_PROPERTY(bool modifierOnlyAllowed READ modifierOnlyAllowed WRITE setModifierOnlyAllowed)
+
 public:
     /// An enum about validation when setting a key sequence.
     ///@see setKeySequence()
@@ -170,6 +173,13 @@ public:
      * @see setModifierlessAllowed()
      */
     bool isModifierlessAllowed();
+
+    /**
+     * Whether to allow modifier-only key sequences.
+     * @since 6.1
+     */
+    void setModifierOnlyAllowed(bool allow);
+    bool modifierOnlyAllowed() const;
 
     /**
      * Set whether a small button to set an empty key sequence should be displayed next to the
