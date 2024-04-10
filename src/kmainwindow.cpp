@@ -15,7 +15,7 @@
 #include "kmainwindow.h"
 
 #include "kmainwindow_p.h"
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
 #include "kmainwindowiface_p.h"
 #endif
 #include "khelpmenu.h"
@@ -38,7 +38,7 @@
 #include <QTimer>
 #include <QWidget>
 #include <QWindow>
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
 #include <QDBusConnection>
 #endif
 
@@ -377,7 +377,7 @@ void KMainWindowPrivate::polish(KMainWindow *q)
         }
     }
 
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
     /* clang-format off */
     constexpr auto opts = QDBusConnection::ExportScriptableSlots
                           | QDBusConnection::ExportScriptableProperties

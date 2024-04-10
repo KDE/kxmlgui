@@ -18,7 +18,7 @@
 #include "kmainwindow_p.h"
 #include <KMessageBox>
 #include <kcommandbar.h>
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
 #include "kmainwindowiface_p.h"
 #endif
 #include "kedittoolbar.h"
@@ -27,7 +27,7 @@
 #include "ktoolbarhandler_p.h"
 #include "kxmlguifactory.h"
 
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
 #include <QDBusConnection>
 #endif
 #include <QDomDocument>
@@ -154,7 +154,7 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
     d->toolBarHandler = nullptr;
     d->showStatusBarAction = nullptr;
     d->factory = nullptr;
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
     new KMainWindowInterface(this);
 #endif
 
@@ -220,7 +220,7 @@ bool KXmlGuiWindow::event(QEvent *ev)
 {
     bool ret = KMainWindow::event(ev);
     if (ev->type() == QEvent::Polish) {
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
         /* clang-format off */
         constexpr auto opts = QDBusConnection::ExportScriptableSlots
                               | QDBusConnection::ExportScriptableProperties

@@ -3,6 +3,10 @@ find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Xml Test)
 
 include(ECMAddTests)
 
+if (HAVE_QTDBUS)
+    add_definitions(-DWITH_QTDBUS)
+endif()
+
 ecm_add_tests(
    kactioncategorytest.cpp
    kactioncollectiontest.cpp

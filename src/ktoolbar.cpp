@@ -25,7 +25,7 @@
 #include <QMimeData>
 #include <QMouseEvent>
 #include <QPointer>
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
 #include <QDBusConnection>
 #include <QDBusMessage>
 #endif
@@ -261,7 +261,7 @@ void KToolBarPrivate::init(bool readConfig, bool _isMainToolBar)
 
     q->setAcceptDrops(true);
 
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
     QDBusConnection::sessionBus()
         .connect(QString(), QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"), QStringLiteral("styleChanged"), q, SLOT(slotAppearanceChanged()));
 #endif
@@ -1471,7 +1471,7 @@ bool KToolBar::toolBarsLocked()
 
 void KToolBar::emitToolbarStyleChanged()
 {
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KToolBar"), QStringLiteral("org.kde.KToolBar"), QStringLiteral("styleChanged"));
     QDBusConnection::sessionBus().send(message);
 #endif

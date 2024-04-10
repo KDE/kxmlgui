@@ -1,7 +1,7 @@
 @PACKAGE_INIT@
 
 include(CMakeFindDependencyMacro)
-if ("@Qt6DBus_FOUND@")
+if (@HAVE_QTDBUS@)
   find_dependency(Qt6DBus @REQUIRED_QT_VERSION@)
 endif()
 find_dependency(Qt6Widgets @REQUIRED_QT_VERSION@)

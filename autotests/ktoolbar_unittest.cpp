@@ -8,7 +8,7 @@
 #include "testguiclient.h"
 #include "testxmlguiwindow.h"
 
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
 #include <QDBusConnection>
 #endif
 #include <QDir>
@@ -345,7 +345,7 @@ void tst_KToolBar::testToolButtonStyleNoXmlGui()
         QCOMPARE((int)mainToolBar->toolButtonStyle(), (int)toolButtonStyle);
         QCOMPARE((int)otherToolBar->toolButtonStyle(), (int)toolButtonStyle);
 
-#ifndef Q_OS_WIN // the change notification uses DBus
+#ifdef WITH_QTDBUS // the change notification uses DBus
         // Now change KDE-global setting
         changeGlobalToolButtonStyleSetting(QStringLiteral("IconOnly"), QStringLiteral("TextOnly"));
 
@@ -409,7 +409,7 @@ void tst_KToolBar::testToolButtonStyleXmlGui()
         // Save settings
         kmw.saveMainWindowSettings(group);
 
-#ifndef Q_OS_WIN // the change notification uses DBus
+#ifdef WITH_QTDBUS // the change notification uses DBus
         // Now change KDE-global setting
         changeGlobalToolButtonStyleSetting(QStringLiteral("IconOnly"), QStringLiteral("TextOnly"));
 
@@ -428,7 +428,7 @@ void tst_KToolBar::changeGlobalToolButtonStyleSetting(const QString &mainToolBar
     group.sync();
 
     // Same dbus connect as the one in KToolBar. We want our spy to be notified of receiving it.
-#ifdef QT_DBUS_LIB
+#ifdef WITH_QTDBUS
     QDBusConnection::sessionBus().connect(QString(),
                                           QStringLiteral("/KToolBar"),
                                           QStringLiteral("org.kde.KToolBar"),

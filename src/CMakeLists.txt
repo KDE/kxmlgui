@@ -59,10 +59,9 @@ target_sources(KF6XmlGui PRIVATE
   kundoactions.cpp
   kcheckaccelerators.cpp
 )
-if (TARGET Qt6::DBus)
-    target_sources(KF6XmlGui PRIVATE
-        kmainwindowiface.cpp
-    )
+if (HAVE_QTDBUS)
+    target_sources(KF6XmlGui PRIVATE kmainwindowiface.cpp)
+    target_compile_definitions(KF6XmlGui PRIVATE WITH_QTDBUS)
 endif()
 
 # add the resource file
@@ -114,7 +113,7 @@ PRIVATE
     KF6::IconThemes         #KIconLoader and KIconThemes in KToolBar
     KF6::IconWidgets        #KIconDialog
 )
-if (TARGET Qt6::DBus)
+if (HAVE_QTDBUS)
   target_link_libraries(KF6XmlGui PUBLIC Qt6::DBus) #QDBus connect to signal in KToolBar
 endif()
 
