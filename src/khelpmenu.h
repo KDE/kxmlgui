@@ -36,14 +36,14 @@ class KHelpMenuPrivate;
  * The usage is simple:
  *
  * \code
- * mHelpMenu = new KHelpMenu( this, <someText> );
+ * mHelpMenu = new KHelpMenu( this );
  * kmenubar->addMenu(mHelpMenu->menu() );
  * \endcode
  *
  * or if you just want to open a dialog box:
  *
  * \code
- * mHelpMenu = new KHelpMenu( this, <someText> );
+ * mHelpMenu = new KHelpMenu( this );
  * connect(this, &ClassFoo::someSignal, mHelpMenu, &KHelpMenu::aboutKDE);
  * \endcode
  *
@@ -115,13 +115,12 @@ public:
      *
      * @param parent The parent of the dialog boxes. The boxes are modeless
      *        and will be centered with respect to the parent.
-     * @param aboutAppText User definable string that is used in the
-     *        default application dialog box.
+     * @param unused This value is unused.
      * @param showWhatsThis Decides whether a "What's this" entry will be
      *        added to the dialog.
      *
      */
-    explicit KHelpMenu(QWidget *parent = nullptr, const QString &aboutAppText = QString(), bool showWhatsThis = true);
+    explicit KHelpMenu(QWidget *parent = nullptr, const QString &unused = QString(), bool showWhatsThis = true);
 
     /**
      * Constructor.
@@ -193,10 +192,11 @@ public Q_SLOTS:
      * Opens an application specific dialog box.
      *
      * The method will try to open the about box using the following steps:
-     * - If the showAboutApplication() signal is connected, then it will be called.
+     * - If the showAboutApplication() signal is connected, then it will be emitted.
      *   This means there is an application defined aboutBox.
-     * - If the aboutData was set in the constructor a KAboutApplicationDialog will be created.
-     * - Else a default about box using the aboutAppText from the constructor will be created.
+     * - If the aboutData was set in the constructor a KAboutApplicationDialog will be created
+     *   with this aboutData.
+     * - Else a KAboutApplicationDialog will be created using KAboutData::applicationData().
      */
     void aboutApplication();
 

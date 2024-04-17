@@ -61,7 +61,6 @@ public:
 
     // TODO evaluate if we use static_cast<QWidget*>(parent()) instead of mParent to win that bit of memory
     QWidget *mParent = nullptr;
-    QString mAboutAppText;
 
     bool mShowWhatsThis = false;
     bool mActionsCreated = false;
@@ -76,11 +75,10 @@ public:
     KAboutData mAboutData;
 };
 
-KHelpMenu::KHelpMenu(QWidget *parent, const QString &aboutAppText, bool showWhatsThis)
+KHelpMenu::KHelpMenu(QWidget *parent, const QString &, bool showWhatsThis)
     : QObject(parent)
     , d(new KHelpMenuPrivate)
 {
-    d->mAboutAppText = aboutAppText;
     d->mShowWhatsThis = showWhatsThis;
     d->mParent = parent;
     d->createActions(this);
