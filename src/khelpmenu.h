@@ -110,6 +110,7 @@ class KXMLGUI_EXPORT KHelpMenu : public QObject
     Q_OBJECT
 
 public:
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 9)
     /**
      * Constructor.
      *
@@ -119,8 +120,21 @@ public:
      * @param showWhatsThis Decides whether a "What's this" entry will be
      *        added to the dialog.
      *
+     * @deprecated Since 6.9, use one of the other constructors
      */
-    explicit KHelpMenu(QWidget *parent = nullptr, const QString &unused = QString(), bool showWhatsThis = true);
+    KXMLGUI_DEPRECATED_VERSION(6, 9, "Use one of the other constructors")
+    explicit KHelpMenu(QWidget *parent, const QString &unused, bool showWhatsThis = true);
+#endif
+
+    /**
+     * Creates a KHelpMenu with the default app data (KAboutData::applicationData()).
+     *
+     * @param parent The parent of the dialog boxes. The boxes are modeless
+     *        and will be centered with respect to the parent.
+     *
+     * @since 6.9
+     */
+    explicit KHelpMenu(QWidget *parent = nullptr);
 
     /**
      * Constructor.

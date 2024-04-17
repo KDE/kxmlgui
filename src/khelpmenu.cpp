@@ -72,12 +72,22 @@ public:
     KAboutData mAboutData;
 };
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 9)
 KHelpMenu::KHelpMenu(QWidget *parent, const QString &, bool showWhatsThis)
     : QObject(parent)
     , d(new KHelpMenuPrivate)
 {
     d->mParent = parent;
     d->createActions(this, showWhatsThis);
+}
+#endif
+
+KHelpMenu::KHelpMenu(QWidget *parent)
+    : QObject(parent)
+    , d(new KHelpMenuPrivate)
+{
+    d->mParent = parent;
+    d->createActions(this, true);
 }
 
 KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis)
