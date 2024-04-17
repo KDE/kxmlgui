@@ -32,13 +32,14 @@
 #include <KLocalizedString>
 #include <KStandardActions>
 
+#include <optional>
+
 using namespace KDEPrivate;
 
 class KHelpMenuPrivate
 {
 public:
     KHelpMenuPrivate()
-        : mAboutData(KAboutData::applicationData())
     {
     }
     ~KHelpMenuPrivate()
@@ -69,7 +70,7 @@ public:
     QAction *mAboutAppAction = nullptr;
     QAction *mAboutKDEAction = nullptr;
 
-    KAboutData mAboutData;
+    std::optional<KAboutData> mAboutData;
 };
 
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 9)
@@ -134,11 +135,12 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q, bool showWhatsThis)
         mWhatsThisAction = KStandardActions::whatsThis(q, &KHelpMenu::contextHelpActivated, q);
     }
 
-    if (KAuthorized::authorizeAction(QStringLiteral("help_report_bug")) && !mAboutData.bugAddress().isEmpty()) {
+    const auto bugAddress = mAboutData ? mAboutData->bugAddress() : KAboutData::applicationData().bugAddress();
+    if (KAuthorized::authorizeAction(QStringLiteral("help_report_bug")) && !bugAddress.isEmpty()) {
         mReportBugAction = KStandardActions::reportBug(q, &KHelpMenu::reportBug, q);
     }
 
-    if (KAuthorized::authorizeAction(QStringLiteral("help_donate")) && mAboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
+    if (KAuthorized::authorizeAction(QStringLiteral("help_donate")) && bugAddress == QLatin1String("submit@bugs.kde.org")) {
         mDonateAction = KStandardActions::donate(q, &KHelpMenu::donate, q);
     }
 
@@ -254,7 +256,7 @@ void KHelpMenu::aboutApplication()
         Q_EMIT showAboutApplication();
     } else {
         if (!d->mAboutApp) {
-            d->mAboutApp = new KAboutApplicationDialog(d->mAboutData, d->mParent);
+            d->mAboutApp = new KAboutApplicationDialog(d->mAboutData ? *d->mAboutData : KAboutData::applicationData(), d->mParent);
             connect(d->mAboutApp, &QDialog::finished, this, &KHelpMenu::dialogFinished);
         }
         d->mAboutApp->show();
@@ -273,7 +275,7 @@ void KHelpMenu::aboutKDE()
 void KHelpMenu::reportBug()
 {
     if (!d->mBugReport) {
-        d->mBugReport = new KBugReport(d->mAboutData, d->mParent);
+        d->mBugReport = new KBugReport(d->mAboutData ? *d->mAboutData : KAboutData::applicationData(), d->mParent);
         connect(d->mBugReport, &QDialog::finished, this, &KHelpMenu::dialogFinished);
     }
     d->mBugReport->show();
@@ -290,7 +292,8 @@ void KHelpMenu::switchApplicationLanguage()
 
 void KHelpMenu::donate()
 {
-    QDesktopServices::openUrl(QUrl(QLatin1String("https://www.kde.org/donate?app=") + d->mAboutData.componentName()));
+    const auto componentName = d->mAboutData ? d->mAboutData->componentName() : KAboutData::applicationData().componentName();
+    QDesktopServices::openUrl(QUrl(QLatin1String("https://www.kde.org/donate?app=") + componentName));
 }
 
 void KHelpMenu::dialogFinished()
