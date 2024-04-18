@@ -90,6 +90,7 @@ KHelpMenu::KHelpMenu(QWidget *parent)
     d->createActions(this, true);
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 9)
 KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis)
     : QObject(parent)
     , d(new KHelpMenuPrivate)
@@ -97,6 +98,16 @@ KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhat
     d->mParent = parent;
     d->mAboutData = aboutData;
     d->createActions(this, showWhatsThis);
+}
+#endif
+
+KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData)
+    : QObject(parent)
+    , d(new KHelpMenuPrivate)
+{
+    d->mParent = parent;
+    d->mAboutData = aboutData;
+    d->createActions(this, true);
 }
 
 KHelpMenu::~KHelpMenu()

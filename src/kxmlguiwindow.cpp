@@ -346,7 +346,7 @@ void KXmlGuiWindow::createGUI(const QString &xmlfile)
     if (d->showHelpMenu) {
         delete d->helpMenu;
         // we always want a help menu
-        d->helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
+        d->helpMenu = new KHelpMenu(this, KAboutData::applicationData());
 
         KActionCollection *actions = actionCollection();
         QAction *helpContentsAction = d->helpMenu->action(KHelpMenu::menuHelpContents);
