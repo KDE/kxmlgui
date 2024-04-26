@@ -32,6 +32,7 @@
 #endif
 #include <QDomDocument>
 #include <QEvent>
+#include <QLayout>
 #include <QList>
 #include <QMenuBar>
 #include <QStatusBar>
@@ -130,6 +131,9 @@ public:
         // don't let KMainWindow think those are changes made by the user
         // #105525
         letDirtySettings = !b;
+
+        // Avoid relaying out whilst we're adding and removing toolbars
+        q->layout()->setEnabled(!b);
     }
 
     bool commandBarEnabled = true;
