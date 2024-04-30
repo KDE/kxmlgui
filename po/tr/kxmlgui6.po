@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-24 00:36+0000\n"
-"PO-Revision-Date: 2024-03-17 02:48+0300\n"
+"PO-Revision-Date: 2024-04-30 00:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -325,7 +325,7 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"‘%1’ düğme sıralaması belirsiz. ‘Ayarlar’ menüsünden ‘Kısayolları\n"
+"“%1” düğme sıralaması belirsiz. ‘Ayarlar’ menüsünden ‘Kısayolları\n"
 "Yapılandır’ seçeneğini kullanarak bu sorunu çözebilirsiniz.\n"
 "Hiçbir eylem tetiklenmeyecek."
 
@@ -649,7 +649,7 @@ msgstr[1] "Kısayol Çakışmaları"
 #: kkeysequencewidget.cpp:171
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "‘%2’ eylemi için %1 kısayolu\n"
+msgstr "“%2” eylemi için %1 kısayolu\n"
 
 #: kkeysequencewidget.cpp:176
 #, kde-format
@@ -663,11 +663,11 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"‘%2’ kısayolu aşağıdaki kısayolla çakışıyor.\n"
+"“%2” kısayolu aşağıdaki kısayolla çakışıyor.\n"
 "Bu eyleme boş bir kısayol atamak istiyor musunuz?\n"
 "%3"
 msgstr[1] ""
-"‘%2’ kısayolu aşağıdaki kısayollarla çakışıyor.\n"
+"“%2” kısayolu aşağıdaki kısayollarla çakışıyor.\n"
 "Bu eylemlere boş bir kısayol atamak istiyor musunuz?\n"
 "%3"
 
@@ -690,13 +690,13 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>‘%1’ kısayolu <b>%2</b> eylemi için kullanılıyor.<br>Lütfen başka bir "
+"<qt>“%1” kısayolu <b>%2</b> eylemi için kullanılıyor.<br>Lütfen başka bir "
 "tane seçin.</qt>"
 
 #: kkeysequencewidget.cpp:273
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "‘%3’ eylemi için ‘%2’ uygulamasındaki ‘%1’ kısayolu\n"
+msgstr "“%3” eylemi için “%2” uygulamasındaki “%1” kısayolu\n"
 
 #: kkeysequencewidget.cpp:282
 #, kde-format
@@ -706,8 +706,8 @@ msgctxt ""
 msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
-msgstr[0] "‘%2’ kısayolu aşağıdaki düğme kombinasyonu ile çakışıyor:\n"
-msgstr[1] "‘%2’ kısayolu aşağıdaki düğme kombinasyonları ile çakışıyor:\n"
+msgstr[0] "“%2” kısayolu aşağıdaki düğme kombinasyonu ile çakışıyor:\n"
+msgstr[1] "“%2” kısayolu aşağıdaki düğme kombinasyonları ile çakışıyor:\n"
 
 #: kkeysequencewidget.cpp:289
 #, kde-format
@@ -746,7 +746,7 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"‘%1’ düğme kombinasyonu, halihazırda başka bir uygulamanın ‘%2’ eylemi için "
+"“%1” düğme kombinasyonu, halihazırda başka bir uygulamanın “%2” eylemi için "
 "kullanılıyor.\n"
 "Bunu bir global kısayol olarak kullanmayı gerçekten istiyor musunuz?"
 
