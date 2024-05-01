@@ -24,6 +24,15 @@
 
 #include <memory>
 
+inline bool isWindowsCI()
+{
+#ifdef Q_OS_WIN
+    return qEnvironmentVariable("CI") == QLatin1String("true");
+#else
+    return false;
+#endif
+}
+
 QString KToolTipHelper_UnitTest::shownToolTip(QWidget *widget)
 {
     QTest::mouseMove(m_frameWithoutToolTip);
@@ -45,6 +54,10 @@ QString KToolTipHelper_UnitTest::shownToolTip(QWidget *widget)
 
 void KToolTipHelper_UnitTest::initTestCase()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     m_window.reset(new QMainWindow());
     m_centralWidget = new QWidget(m_window.get());
     m_centralWidget->setGeometry(0, 0, 100, 100);
