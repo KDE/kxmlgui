@@ -44,7 +44,7 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
     schemesLabel->setBuddy(m_schemesList);
     l->addWidget(m_schemesList);
 
-    m_newScheme = new QPushButton(QIcon::fromTheme(QStringLiteral("document-new")), i18nc("@action:button", "New..."));
+    m_newScheme = new QPushButton(QIcon::fromTheme(QStringLiteral("document-new")), i18nc("@action:button", "New…"));
     l->addWidget(m_newScheme);
 
     m_deleteScheme = new QPushButton(QIcon::fromTheme(QStringLiteral("edit-delete")), i18nc("@action:button", "Delete"));
@@ -59,11 +59,11 @@ KShortcutSchemesEditor::KShortcutSchemesEditor(KShortcutsDialog *parent)
                                  this,
                                  &KShortcutSchemesEditor::saveAsDefaultsForScheme);
     m_moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-export")),
-                                 i18nc("@action:inmenu", "Export Scheme..."),
+                                 i18nc("@action:inmenu", "Export Scheme…"),
                                  this,
                                  &KShortcutSchemesEditor::exportShortcutsScheme);
     m_moreActionsMenu->addAction(QIcon::fromTheme(QStringLiteral("document-import")),
-                                 i18nc("@action:inmenu", "Import Scheme..."),
+                                 i18nc("@action:inmenu", "Import Scheme…"),
                                  this,
                                  &KShortcutSchemesEditor::importShortcutsScheme);
     moreActions->setMenu(m_moreActionsMenu);

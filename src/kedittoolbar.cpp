@@ -1037,7 +1037,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     activeListSearchLine->setPlaceholderText(i18n("Filter"));
 
     // "change icon" button
-    m_changeIcon = new QPushButton(i18nc("@action:button", "Change &Icon..."), m_widget);
+    m_changeIcon = new QPushButton(i18nc("@action:button", "Change &Icon…"), m_widget);
     m_changeIcon->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-icons")));
     m_changeIcon->setEnabled(m_activeList->currentItem());
 
@@ -1046,7 +1046,7 @@ void KEditToolBarWidgetPrivate::setupLayout()
     });
 
     // "change icon text" button
-    m_changeIconText = new QPushButton(i18nc("@action:button", "Change Te&xt..."), m_widget);
+    m_changeIconText = new QPushButton(i18nc("@action:button", "Change Te&xt…"), m_widget);
     m_changeIconText->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
     m_changeIconText->setEnabled(m_activeList->currentItem() != nullptr);
 

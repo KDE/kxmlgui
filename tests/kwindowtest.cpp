@@ -217,7 +217,7 @@ void TestWindow::slotGoGoGoo()
 void TestWindow::slotSave()
 {
     qApp->beep();
-    statusBar->showMessage(QStringLiteral("Saving properties..."));
+    statusBar->showMessage(QStringLiteral("Saving properties…"));
 }
 
 void TestWindow::slotPrint()

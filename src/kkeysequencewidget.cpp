@@ -28,6 +28,8 @@
 #include <KGlobalAccel>
 #endif
 
+static constexpr QStringView inputRecordingMarkupSuffix(u" …");
+
 static bool shortcutsConflictWith(const QList<QKeySequence> &shortcuts, const QKeySequence &needle)
 {
     if (needle.isEmpty()) {
@@ -378,7 +380,7 @@ void KKeySequenceWidgetPrivate::doneRecording()
 {
     keyButton->setDown(false);
     stealActions.clear();
-    keyButton->setText(keyButton->text().chopped(strlen(" ...")));
+    keyButton->setText(keyButton->text().chopped(inputRecordingMarkupSuffix.size()));
     q->setKeySequence(recorder->currentKeySequence(), KKeySequenceWidget::Validate);
     updateShortcutDisplay();
 }
@@ -397,7 +399,7 @@ void KKeySequenceWidgetPrivate::updateShortcutDisplay()
 
     if (recorder->isRecording()) {
         // make it clear that input is still going on
-        s.append(QLatin1String(" ..."));
+        s.append(inputRecordingMarkupSuffix);
     }
 
     s = QLatin1Char(' ') + s + QLatin1Char(' ');
