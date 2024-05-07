@@ -346,16 +346,24 @@ void ContainerNode::unplugActions(BuildState &state)
         return;
     }
 
-    QMutableListIterator<ContainerClient *> clientIt(clients);
-    while (clientIt.hasNext()) {
-        // only unplug the actions of the client we want to remove, as the container might be owned
-        // by a different client
-        ContainerClient *cClient = clientIt.next();
-        if (cClient->client == state.guiClient) {
-            unplugClient(cClient);
-            delete cClient;
-            clientIt.remove();
+    // This is done in 2 steps as "clients" can get modified during iteration
+
+    // Collect the elements that need to be removed and remove them from the clients list
+    ContainerClientList toRemove;
+    for (auto it = clients.begin(); it != clients.end();) {
+        if ((*it)->client == state.guiClient) {
+            auto container = *it;
+            it = clients.erase(it);
+            toRemove.push_back(container);
+        } else {
+            ++it;
         }
+    }
+
+    // Do the actual remove
+    for (auto *c : toRemove) {
+        unplugClient(c);
+        delete c;
     }
 }
 
