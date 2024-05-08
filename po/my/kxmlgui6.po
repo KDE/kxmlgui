@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2021-09-20 02:06+0630\n"
 "Last-Translator: ဇေယျာလွင် <lw1nzayar@yandex.com>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -531,16 +531,19 @@ msgid "Curr&ent actions:"
 msgstr "ယခု လုပ်ဆောင်ချက်များ -"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "&Iဝတ္တူ-မြင်ကွင်း ပြောင်းလဲ..."
+msgid "Change &Icon…"
+msgstr "ဝတ္တူ-မြင်ကွင်း ပြောင်းလဲရန်"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "&xစာသားပြောင်းလဲ..."
+msgid "Change Te&xt…"
+msgstr "စာသားပြောင်းလဲရန်"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -610,7 +613,7 @@ msgstr "&Hအကူအညီ"
 msgid "About %1"
 msgstr "%1 အကြောင်း"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -618,19 +621,19 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "ဖြတ်လမ်းအငြင်းပွားမှု"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "လုပ်ဆောင်ချက် '%2' အတွက် ဖြတ်လမ်း '%1'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -643,20 +646,20 @@ msgid_plural ""
 "%3"
 msgstr[0] ""
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "ပြန်လည်ခန့်အပ်"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "အမြန်ခလုတ်အငြင်းပွားဖွယ်ဖြစ်သည်"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -664,13 +667,13 @@ msgid ""
 msgstr ""
 "<qt>'%1' ကီးတွဲကို <b>%2</b> လုပ်ဆောင်ချက်မှ အသုံးပြုပြီးဖြစ်သည်။<br>အခြားတစ်ခုရွေးပါ။</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "အပ္ပလီကေးရှင်း %2 တွင် လုပ်ဆောင်ချက် %3 အတွက် ဖြတ်လမ်း %1\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -680,19 +683,19 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "ဖြတ်လမ်း '%2' သည် အောက်ပါကီးတွဲနှင့် တိုက်နေသည်-\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "စာရင်းသွင်းထားသည့် အများနှင့်သက်ဆိုင်သောအမြန်ခလုတ်ဖြင့် အငြင်းပွားဖွယ်ဖြစ်သည်"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "သုံးစွဲရန်သိမ်း၍ထားသော အမြန်ခလုတ်"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -703,13 +706,13 @@ msgstr ""
 "အမြန်ခလုတ်အဖြစ်သုံးမရပါ။\n"
 "အခြားတစ်ခုရွေးချယ်ပါ။"
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "သမာရိုးကျအမြန်ခလုတ်နှင့် အငြင်းပွားဖွယ်ဖြစ်သည်"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -717,13 +720,13 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "တင်သွင်းမှု"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -753,9 +756,11 @@ msgid "Add to Toolbar"
 msgstr "ကရိယာတန်းသို့ထည့်ရန်"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "အမြန်ခလုတ်ပြင်ဆင်..."
 
 #: kshortcuteditwidget.cpp:55
@@ -784,8 +789,8 @@ msgstr "ယခုသုံးနေသော အစီအစဥ်ပုံ -"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "အသစ်..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -806,15 +811,19 @@ msgid "Save shortcuts to scheme"
 msgstr "အမြန်ခလုတ်များကို အစီအစဥ်ပုံသို့ သိမ်းဆည်းမည်"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "အစီအစဥ်ပုံ ထုတ်ပို့ရန်..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "အစီအစဥ်ပုံ တင်သွင်းရန်..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1329,6 +1338,18 @@ msgstr "&Sသတ်မှတ်ချက်များ"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "အဓိကကရိယာတန်း"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "&Iဝတ္တူ-မြင်ကွင်း ပြောင်းလဲ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "&xစာသားပြောင်းလဲ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "အသစ်..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

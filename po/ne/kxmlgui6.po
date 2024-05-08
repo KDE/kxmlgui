@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2007-11-05 15:41+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -620,14 +620,14 @@ msgstr "हालको कार्य:"
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change &Icon..."
+msgid "Change &Icon…"
 msgstr "प्रतिमा परिवर्तन गर्नुहोस्..."
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change Te&xt..."
+msgid "Change Te&xt…"
 msgstr "प्रतिमा परिवर्तन गर्नुहोस्..."
 
 #: kedittoolbar.cpp:1191
@@ -702,7 +702,7 @@ msgstr "मद्दत"
 msgid "About %1"
 msgstr "%1 बारेमा"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -710,7 +710,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "%1 is the number of conflicts"
@@ -719,13 +719,13 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "सर्टकट द्वन्द्व"
 msgstr[1] "सर्टकट द्वन्द्व"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "सर्टकट"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' rocker gesture has already been allocated to the \"%2\" action.\n"
@@ -746,22 +746,22 @@ msgstr[1] ""
 "'%1' रकर सङ्केत \"%2\" कार्यमा पहिल्यै मानाङ्कन गरिएको छ ।\n"
 "तपाईँ यसलाई हालको एउटाबाट पुन: मानाङ्कन गर्न चाहनुहुन्छ ?"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "फेरि मानाङ्कन गर्नुहोस्"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "सर्टकट द्वन्द्व"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -770,13 +770,13 @@ msgstr ""
 "<qt>'%1' कुञ्जी संयोजन<b>%2</b> कार्यद्वारा पहिल्यै प्रयोग गरिएको छ ।<br>कृपया फरक "
 "एउटा चयन गर्नुहोस् ।</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "सर्टकट"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -787,7 +787,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict with Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -796,13 +796,13 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "विश्वव्यापी सर्टकटसँग द्वन्द्व"
 msgstr[1] "विश्वव्यापी सर्टकटसँग द्वन्द्व"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "सर्टकट"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -810,14 +810,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "मानक अनुप्रयोग सर्टकटसँग द्वन्द्व"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' key combination has already been allocated to the standard "
@@ -831,13 +831,13 @@ msgstr ""
 "'%1' कुञ्जी संयोजन \"%2\" मानक कार्यमा पहिल्यै बाँडफाँट गरिएको छ ।\n"
 "तपाईँ हालको कार्यबाट यसलाई फेरि मानाङ्कन गर्न चाहनुहुन्छ ?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "आगत"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "No shortcut defined"
@@ -873,7 +873,7 @@ msgstr "उपकरणपट्टीमा थप्नुहोस्"
 #, fuzzy, kde-format
 #| msgid "Configure S&hortcuts..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "सर्टकट कन्फिगर गर्नुहोस्..."
 
 #: kshortcuteditwidget.cpp:55
@@ -904,11 +904,10 @@ msgid "Current scheme:"
 msgstr "हालको कार्य:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -935,14 +934,14 @@ msgstr "सर्टकट"
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "सर्टकट"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "सर्टकट"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1494,6 +1493,24 @@ msgstr "सेटिङ"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "मुख्य उपकरणपट्टी"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "प्रतिमा परिवर्तन गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "प्रतिमा परिवर्तन गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

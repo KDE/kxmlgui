@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-02-07 04:10+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -537,16 +537,19 @@ msgid "Curr&ent actions:"
 msgstr "現在のアクション(&E):"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "アイコンを変更(&I)..."
+msgid "Change &Icon…"
+msgstr "アイコンを変更"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "テキストを変更(&X)..."
+msgid "Change Te&xt…"
+msgstr "テキストを変更"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -616,7 +619,7 @@ msgstr "ヘルプ(&H)"
 msgid "About %1"
 msgstr "%1 について"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -627,19 +630,19 @@ msgstr ""
 "い。\n"
 "Ctrl+A の例: Ctrl キーを押しながら A を押す。"
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "ショートカット競合"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "アクション '%2' のショートカット '%1'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -655,20 +658,20 @@ msgstr[0] ""
 "これらのアクションに空のショートカットを割り当てますか？\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "割り当て直す"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ショートカット競合"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -677,12 +680,12 @@ msgstr ""
 "<qt>キーの組み合わせ '%1' はアクション <b>%2</b> に割り当てられています。<br>"
 "他の組み合わせを選択してください。</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "アプリケーション '%2' のアクション '%3' のショートカット '%1'\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -692,19 +695,19 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "ショートカット %2 は以下のキーの組み合わせと競合します:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "登録済みのグローバルショートカットと競合します"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "予約済みのショートカット"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -715,13 +718,13 @@ msgstr ""
 "せん。\n"
 "他のキーを選択してください。"
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "標準アプリケーションショートカットと競合します"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -732,13 +735,13 @@ msgstr ""
 "'%2' に割り当てられています。\n"
 "本当にこれをグローバルショートカットとしても使いますか？"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "入力"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -772,9 +775,11 @@ msgid "Add to Toolbar"
 msgstr "ツールバーに追加"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "ショートカットを設定..."
 
 #: kshortcuteditwidget.cpp:55
@@ -803,8 +808,8 @@ msgstr "現在のスキーム:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "新規..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -825,15 +830,19 @@ msgid "Save shortcuts to scheme"
 msgstr "スキームにショートカットを保存"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "スキームをエクスポート..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "スキームをインポート..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1349,3 +1358,15 @@ msgstr "設定(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "メインツールバー"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "アイコンを変更(&I)..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "テキストを変更(&X)..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "新規..."

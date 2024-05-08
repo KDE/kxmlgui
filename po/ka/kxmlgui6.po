@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-11-23 06:53+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -528,16 +528,19 @@ msgid "Curr&ent actions:"
 msgstr "&მიმდინარე ქმედებები:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "&ხატულის შეცვლა..."
+msgid "Change &Icon…"
+msgstr "ხატულის შეცვლა"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "&ტექსტის შეცვლა..."
+msgid "Change Te&xt…"
+msgstr "ტექსტის შეცვლა"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -607,7 +610,7 @@ msgstr "&დახმარება"
 msgid "About %1"
 msgstr "%1-ის შესახებ"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -617,7 +620,7 @@ msgstr ""
 "დააჭირეთ ღილაკს და და შეიყვანეთ მალსახმობი, როგორც პროგრამაში.\n"
 "მაგალითად Ctrl+A: დააჭირეთ Ctrl-ს და A-ს."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -625,12 +628,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "მალსახმობის კონფლიქტი"
 msgstr[1] "მალსახმობის კონფლიქტები"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "მალსახმობი %1 ქმედებისთვის %2\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -650,20 +653,20 @@ msgstr[1] ""
 "გადმოვამისამართო იგი ახალ ქმედებაზე?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "მალსახმობის თავიდან მინიჭება"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "მალსახმობის კონფლიქტი"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -672,12 +675,12 @@ msgstr ""
 "<qt> ღილაკთა კომბინაცია %1 უკვე გამოიყენება <b>%2</b> ქმედებაში. <br> სხვა "
 "აირჩიეთ </qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "%1 მალსახმობი %2 აპლიკაციაში %3 ქმედებისთვის\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -688,7 +691,7 @@ msgid_plural ""
 msgstr[0] "მალსახმობი %2 კონფლიქტშია კლავიშების კომბინაციასთან:\n"
 msgstr[1] "მალსახმობი %2 კონფლიქტშია კლავიშების კომბინაციებთან:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -696,12 +699,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "კონფლიქტი გლობალურ მალსახმობთან"
 msgstr[1] "კონფლიქტი გლობალურ მალსახმობებთან"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "დარეზერვებულია მალსახმობი"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -712,13 +715,13 @@ msgstr ""
 "აკრძალულია.\n"
 "გამოიყენეთ სხვა."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "კონფლიქტი პროგრამის სტანდარტულ მალსახმობთან"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -728,13 +731,13 @@ msgstr ""
 "კლავიშების ბმული %1 უკვე გამოიყენება \"%2\" სტანდარტული ქმედებისთვის.\n"
 "გადმოვამისამართო იგი ახალ ქმედებაზე?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "შეყვანა"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -764,9 +767,11 @@ msgid "Add to Toolbar"
 msgstr "ხელსაწყოთა ზოლზე დამატება"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "&მალსახმობების მორგება..."
 
 #: kshortcuteditwidget.cpp:55
@@ -795,8 +800,8 @@ msgstr "მიმდინარე სქემა:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "ახალი..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -817,15 +822,19 @@ msgid "Save shortcuts to scheme"
 msgstr "მალსახმობების სქემაში შენახვა"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "სქემის გატანა..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "სქემის შემოტანა..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1344,6 +1353,18 @@ msgstr "გამართვა"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "ხელსაწყოთა მთავარი ზოლი"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "&ხატულის შეცვლა..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "&ტექსტის შეცვლა..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "ახალი..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

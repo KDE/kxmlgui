@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -578,14 +578,14 @@ msgstr "目前的動作(&E)："
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change &Icon..."
+msgid "Change &Icon…"
 msgstr "變更圖示(&I)..."
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change Te&xt..."
+msgid "Change Te&xt…"
 msgstr "變更圖示(&I)..."
 
 #: kedittoolbar.cpp:1191
@@ -659,7 +659,7 @@ msgstr "說明(&H)"
 msgid "About %1"
 msgstr "關於 %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -667,7 +667,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "%1 is the number of conflicts"
@@ -675,13 +675,13 @@ msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "快速鍵"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "內容資訊:：%1\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -696,22 +696,22 @@ msgstr[0] ""
 "'%1' 按鍵組合已配置給 \"%2\" 動作了。\n"
 "你確定要重新設定此組合鍵給此動作？"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "重新指定"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "快速鍵"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' key combination has already been allocated to the \"%2\" "
@@ -724,13 +724,13 @@ msgstr ""
 " '%1' 按鍵組合已配置給 \"%2\" 動作了。\n"
 "請選擇其他唯一的按鍵組合。"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "內容資訊:：%1\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -740,7 +740,7 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict with Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -748,13 +748,13 @@ msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "與系統的全域快速鍵定義衝突"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "快速鍵"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -762,14 +762,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "與標準的應用程式快速鍵定義衝突"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -779,14 +779,14 @@ msgstr ""
 "'%1' 按鍵組合已配置給標準 \"%2\" 動作。\n"
 "你確定要重新設定此組合鍵給此動作？"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, fuzzy, kde-format
 #| msgid "Input file"
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "輸入檔案"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "No shortcut defined"
@@ -826,10 +826,10 @@ msgstr "加入至自訂顏色(&A)"
 
 #: kmenumenuhandler_p.cpp:224
 #, fuzzy, kde-format
-#| msgid "Configure S&hortcuts..."
+#| msgid "Configure Shortcut"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
-msgstr "設定快速鍵(&H)..."
+msgid "Configure Shortcut…"
+msgstr "設定快速鍵"
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -858,11 +858,10 @@ msgid "Current scheme:"
 msgstr "目前的動作(&E)："
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New List..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "新清單..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -889,14 +888,14 @@ msgstr "快速鍵"
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "快速鍵"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "快速鍵"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1435,6 +1434,30 @@ msgstr "設定(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "主工具列"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "變更圖示(&I)..."
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "變更圖示(&I)..."
+
+#, fuzzy
+#~| msgid "Configure S&hortcuts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Configure Shortcut..."
+#~ msgstr "設定快速鍵(&H)..."
+
+#, fuzzy
+#~| msgid "New List..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "新清單..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "
@@ -13129,9 +13152,6 @@ msgstr "主工具列"
 
 #~ msgid "Print Previe&w..."
 #~ msgstr "預覽列印(&W)..."
-
-#~ msgid "Configure Shortcut"
-#~ msgstr "設定快速鍵"
 
 #, fuzzy
 #~ msgid "Could not load interpreter library \"%1\""

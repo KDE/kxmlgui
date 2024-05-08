@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-07-09 11:28+0100\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -553,16 +553,19 @@ msgid "Curr&ent actions:"
 msgstr "Gweith&rediadau cyfredol:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Newid &Eicon..."
+msgid "Change &Icon…"
+msgstr "Newid E&icon"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Newid Tes&tun..."
+msgid "Change Te&xt…"
+msgstr "Newid Testun"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -633,7 +636,7 @@ msgstr "&Cymorth"
 msgid "About %1"
 msgstr "Ynglyn â %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -644,7 +647,7 @@ msgstr ""
 "cymhwysiad.\n"
 "Er enghraifft ar gyfer Ctrl+A: cynnalwch y bysell Ctrl a phwyswch A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -652,12 +655,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Croesdynniad Byrlwybr"
 msgstr[1] "Croesdynniadau Byrlwybr"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Byrlwybr '%1' am weithrediad '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -677,20 +680,20 @@ msgstr[1] ""
 "Ai ydych chi'n eisiau i arddodi byrlwybr gwag i'r gweithrediadau yma?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ailarddodi"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Croesdynniad byrlwybr"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -699,12 +702,12 @@ msgstr ""
 "<qt>Mae cyfuniad bysell %1 wedi ei dyrannu yn barod i'r gweithrediad <b>%2</"
 "b>. <br>Atolwg dewiswch un arall.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Byrlwybr '%1' yn Cymhwysiad '%2' am weithrediad '%3'\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -717,7 +720,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Mae'r llygatlwybr '%2' yn croesdynnu gyda'r cyfuniadau bysell canlynol:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -725,12 +728,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Croestyniad efo Byrlwybr Eangfyd Cofrestrwyd"
 msgstr[1] "Croestyniad efo Byrlwybrau Eangfyd Cofrestrwyd"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Byrlwybr Argadwyd"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -741,13 +744,13 @@ msgstr ""
 "lygatlwybr hollfydol.\n"
 "Atolwg argadwch un arall."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Croestyniad efo Byrlwybr Cymhwysiad Arferol"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -758,13 +761,13 @@ msgstr ""
 "\"%2\" defnyddiwyd gyda rhai o'r cymhwysiadau.\n"
 "Ydych eisiau ei ail-neilltuo fel lygatlwybr hollfydol yn gystal?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Mewnbwn"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -795,10 +798,11 @@ msgid "Add to Toolbar"
 msgstr "Ychwanegu i Offerfar"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Shortcut"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
-msgstr "Ffurfweddu Byrlwybrau..."
+msgid "Configure Shortcut…"
+msgstr "Ffurfweddu Byrlwybr"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -826,8 +830,8 @@ msgstr "Gweithrediadau cyfredol:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Newydd..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -848,15 +852,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Achub llygatlwybrau i gynllun"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Allforio Cynllun..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Mewnforio Cynllun..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1380,6 +1388,22 @@ msgstr "Gosod&iadau"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Prif Far Offer"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Newid &Eicon..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Newid Tes&tun..."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Configure Shortcut..."
+#~ msgstr "Ffurfweddu Byrlwybrau..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Newydd..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "
@@ -12819,9 +12843,6 @@ msgstr "Prif Far Offer"
 
 #~ msgid "Print Previe&w..."
 #~ msgstr "&Rhagweld Argraffiad"
-
-#~ msgid "Configure Shortcut"
-#~ msgstr "Ffurfweddu Byrlwybr"
 
 #, fuzzy
 #~ msgid "Could not load interpreter library \"%1\""

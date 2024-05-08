@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-06-08 13:49+0330\n"
 "Last-Translator: MohammadSaleh Kamyab <mskf1383@envs.net>\n"
 "Language-Team: Persian <kde-i18n-doc@kde.org>\n"
@@ -546,17 +546,22 @@ msgstr "پالایه"
 msgid "Curr&ent actions:"
 msgstr "کنشهای &جاری:"
 
+# Change Icon
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "تغییر &نقشک…"
+msgid "Change &Icon…"
+msgstr "تغییر نقشک"
 
+# Change Icon
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "تغییر &متن…"
+msgid "Change Te&xt…"
+msgstr "تغییر متن"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -630,7 +635,7 @@ msgstr "&کمک‌"
 msgid "About %1"
 msgstr "دربارهٔ %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -640,7 +645,7 @@ msgstr ""
 "روی دکمه کلیک کنید، سپس میان‌بر را -مانند درون برنامه- وارد کنید.\n"
 "مثلاً برای «مهار+ش»: دکمهٔ «مهار» را نگه دارید و «ش» را بفشارید."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -648,12 +653,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "ناسازگاری میان‌بر"
 msgstr[1] "ناسازگاری‌های میانبرها"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "میان‌بر '%1' برای عمل '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -673,20 +678,20 @@ msgstr[1] ""
 "آیا می‌خواید میان‌بری خالی به این کنش اختصاص دهید؟\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "انتساب دوباره"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ناسازگاری میان‌برها"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -695,12 +700,12 @@ msgstr ""
 "<qt>ترکیب کلید '%1' قبلاً توسط عمل <b>%2</b> استفاده شده است.<br>لطفاً ترکیب "
 "متفاوتی انتخاب کنید.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "میان‌بر «%1» در برنامهٔ «%2» برای کنش «%3»\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -711,7 +716,7 @@ msgid_plural ""
 msgstr[0] "میانبر «%2» با ترکیب‌های کلید زیر ناسازگار است:\n"
 msgstr[1] "میانبر «%2» با ترکیب کلید زیر ناسازگار است:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -719,12 +724,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "ناسازگاری با میان‌بر ثبت شدهٔ سراسری"
 msgstr[1] "ناسازگاری با میان‌بر های ثبت شدهٔ سراسری"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "میان‌بر رزرو شده"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -735,13 +740,13 @@ msgstr ""
 "شود.\n"
 "یکی دیگر انتخاب کنید."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "ناسازگاری با میان‌بر استاندارد برنامه"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -752,13 +757,13 @@ msgstr ""
 "می‌کنند، اختصاص یافته است.\n"
 "آیا واقعاً می‌خواهید از آن به عنوان میان‌بری سراسری نیز استفاده کنید؟"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ورودی"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -790,9 +795,11 @@ msgid "Add to Toolbar"
 msgstr "افزودن به نوار ابزار"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "پیکربندی میان‌بر…"
 
 # Default:
@@ -820,12 +827,11 @@ msgstr "طرح‌های میان‌بر"
 msgid "Current scheme:"
 msgstr "شمای جاری:"
 
-# ...
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "جدید…"
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -846,15 +852,19 @@ msgid "Save shortcuts to scheme"
 msgstr "ذخیرهٔ میان‌برها در طرح"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "استخراج طرح…"
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "وارد کردن طرح…"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1377,6 +1387,19 @@ msgstr "&تنظیمات‌"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "نوار ابزار اصلی"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "تغییر &نقشک…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "تغییر &متن…"
+
+# ...
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "جدید…"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""

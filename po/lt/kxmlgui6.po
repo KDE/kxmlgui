@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-01-31 18:09+0200\n"
 "Last-Translator: Andrius Štikonas <andrius@stikonas.eu>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -547,16 +547,19 @@ msgid "Curr&ent actions:"
 msgstr "&Dabartiniai veiksmai:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Keisti p&iktogramą..."
+msgid "Change &Icon…"
+msgstr "Keisti piktogramą"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Keisti &tekstą..."
+msgid "Change Te&xt…"
+msgstr "Keisti tekstą"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -626,7 +629,7 @@ msgstr "&Pagalba"
 msgid "About %1"
 msgstr "Apie %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -637,7 +640,7 @@ msgstr ""
 "spaustumėte jį programoje.\n"
 "Pavyzdžiui kombinacijai Vald+A: laikykite nuspaustą Vald ir paspauskite A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -647,12 +650,12 @@ msgstr[1] "Sparčiųjų klavišų konfliktai"
 msgstr[2] "Sparčiųjų klavišų konfliktai"
 msgstr[3] "Sparčiųjų klavišų konfliktai"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Spartusis klavišas „%1“ skirtas veiksmui „%2“\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -680,20 +683,20 @@ msgstr[3] ""
 "Ar norite šiems veiksmams panaikinti sparčiuosius klavišus?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Priskirti iš naujo"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Sparčiųjų klavišų konfliktas"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -702,12 +705,12 @@ msgstr ""
 "<qt>Klavišų kombinaciją „%1“ jau naudoja veiksmas <b>%2</b>.<br>Pasirinkite "
 "kitą klavišų kombinaciją.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Spartusis klavišas „%1“ programoje „%2“ skirtas veiksmui „%3“\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -723,7 +726,7 @@ msgstr[2] ""
 msgstr[3] ""
 "Spartusis klavišas „%2“ konfliktuoja su šiomis klavišų kombinacijomis:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -733,12 +736,12 @@ msgstr[1] "Konfliktas su įregistruotais visuotiniais sparčiaisiais klavišais"
 msgstr[2] "Konfliktas su įregistruotais visuotiniais sparčiaisiais klavišais"
 msgstr[3] "Konfliktas su įregistruotais visuotiniais sparčiaisiais klavišais"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervuotas spartusis klavišas"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -749,13 +752,13 @@ msgstr ""
 "naudojamas visuotiniu sparčiuoju klavišu.\n"
 "Pasirinkite kitą klavišą."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konfliktas su standartiniu programos sparčiuoju klavišu"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -766,13 +769,13 @@ msgstr ""
 "naudoja kai kurios programos.\n"
 "Ar tikrai norite ją taip pat naudoti kaip visuotinį spartųjį klavišą?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Įvestis"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -806,9 +809,11 @@ msgid "Add to Toolbar"
 msgstr "Pridėti į įrankių juostą"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Konfigūruoti spartųjį klavišą..."
 
 #: kshortcuteditwidget.cpp:55
@@ -837,8 +842,8 @@ msgstr "Dabartinė schema:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nauja..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -859,15 +864,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Įrašyti sparčiuosius klavišus į schemą"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Eksportuoti schemą..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Importuoti schemą..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1391,6 +1400,18 @@ msgstr "Nuo&statos"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Pagrindinė įrankių juosta"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Keisti p&iktogramą..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Keisti &tekstą..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nauja..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

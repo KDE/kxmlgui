@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-09-08 10:35\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -587,16 +587,19 @@ msgid "Curr&ent actions:"
 msgstr "&Biahučyja dziejanni:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Zmianić &značok..."
+msgid "Change &Icon…"
+msgstr "Zmianić značok"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Zmianić &tekst..."
+msgid "Change Te&xt…"
+msgstr "Zmianić tekst"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -666,7 +669,7 @@ msgstr "&Daviedka"
 msgid "About %1"
 msgstr "Pra %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -677,7 +680,7 @@ msgstr ""
 "chočacie vykarystoŭvać u prahramie.\n"
 "Napryklad, dlia Ctrl+A: utrymlivajcie klavišu Ctrl i nacisnicie A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -687,13 +690,13 @@ msgstr[1] "Kanflikty spalučenniaŭ klaviš"
 msgstr[2] "Kanflikty spalučenniaŭ klaviš"
 msgstr[3] "Kanflikty spalučenniaŭ klaviš"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Shortcut %1 for action %2\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Spalučennie \"%1\" dlia dziejannia \"%2\"\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -725,20 +728,20 @@ msgstr[3] ""
 "Chočacie pryznačyć pustoje spalučennie klaviš dlia hetych dziejanniaŭ\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Pryznačyć nanova"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Kanflikt spalučenniaŭ"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>The %1 key combination is already used by the <b>%2</b> action."
@@ -750,13 +753,13 @@ msgstr ""
 "<qt>Spalučennie klaviš \"%1\" užo vykarystoŭvajecca dlia dziejannia <b>%2</"
 "b>.<br>Abiarycie inšaje spalučennie. </qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut %1 in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Spalučennie klaviš \"%1\" u prahramie \"%2\" dlia dziejannia \"%3\"\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -779,7 +782,7 @@ msgstr[2] ""
 msgstr[3] ""
 "Spalučennie klaviš \"%2\" kanfliktuje z nastupnymi spalučenniami klaviš:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -789,12 +792,12 @@ msgstr[1] "Kanfliktuje z zarehistravanymi hlabaĺnymi spalučenniami klaviš"
 msgstr[2] "Kanfliktuje z zarehistravanymi hlabaĺnymi spalučenniami klaviš"
 msgstr[3] "Kanfliktuje z zarehistravanymi hlabaĺnymi spalučenniami klaviš"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Zareziervavanaje spalučennie"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -805,13 +808,13 @@ msgstr ""
 "dlia hlabaĺnaha spalučennia klaviš.\n"
 "Kali laska, abiarycie inšaje spalučennie."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Kanfliktuje sa standartnym spalučenniem prahramy"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 #| msgid ""
 #| "The %1 key combination is also used for the standard action \"%2\" that "
@@ -826,13 +829,13 @@ msgstr ""
 "\"%2\", jakoje vykarystoŭvajecca ŭ niekatorych prahramach.\n"
 "Sapraŭdy chočacie vykarystoŭvać hetaje spalučennie jak hlabaĺnaje?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Uvod"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -862,9 +865,11 @@ msgid "Add to Toolbar"
 msgstr "Dadać na paneĺ instrumientaŭ"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Naladžvannie spalučennia..."
 
 #: kshortcuteditwidget.cpp:55
@@ -893,8 +898,8 @@ msgstr "Biahučaja schiema:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Novaja..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -915,15 +920,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Zachavać spalučenni dlia schiemy"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Ekspartavannie schiemy..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Impartavannie schiemy..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1456,6 +1465,18 @@ msgstr "&Nalady"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Haloŭnaja paneĺ instrumientaŭ"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Zmianić &značok..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Zmianić &tekst..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Novaja..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

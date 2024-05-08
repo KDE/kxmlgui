@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-11-23 14:11+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -545,16 +545,19 @@ msgid "Curr&ent actions:"
 msgstr "Azioni att&uali:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Cambia &icona..."
+msgid "Change &Icon…"
+msgstr "Cambia icona"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Cambia te&sto..."
+msgid "Change Te&xt…"
+msgstr "Cambia testo"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -626,7 +629,7 @@ msgstr "Ai&uto"
 msgid "About %1"
 msgstr "Informazioni su %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -637,7 +640,7 @@ msgstr ""
 "programma.\n"
 "Esempio per Ctrl+A: tieni premuto il tasto Ctrl e premi A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -645,12 +648,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Conflitto tra scorciatoie"
 msgstr[1] "Conflitti tra scorciatoie"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Scorciatoie «%1» per l'azione «%2»\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -670,20 +673,20 @@ msgstr[1] ""
 "Vuoi assegnare una scorciatoia vuota a queste azioni?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Riassegna"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Conflitto tra scorciatoie"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -692,12 +695,12 @@ msgstr ""
 "<qt>La combinazione di tasti «%1» è già usata dall'azione <b>%2</b>."
 "<br>Scegline una diversa.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Scorciatoia «%1» nell'applicazione «%2» per l'azione «%3»\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -710,7 +713,7 @@ msgstr[0] ""
 msgstr[1] ""
 "La scorciatoia «%2» è in conflitto con le seguenti combinazioni di tasti:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -718,12 +721,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Conflitto con scorciatoia globale registrata"
 msgstr[1] "Conflitto con scorciatoie globali registrate"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Scorciatoia riservata"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -734,13 +737,13 @@ msgstr ""
 "scorciatoia globale.\n"
 "Scegline un altro."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Conflitto con una scorciatoia standard delle applicazioni"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -751,13 +754,13 @@ msgstr ""
 "alcune applicazioni usano.\n"
 "Vuoi veramente usarla anche come scorciatoia globale?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Immissione"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -788,9 +791,11 @@ msgid "Add to Toolbar"
 msgstr "Aggiungi alla barra degli strumenti"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Configura scorciatoia..."
 
 #: kshortcuteditwidget.cpp:55
@@ -819,8 +824,8 @@ msgstr "Schema attuale:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nuovo..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -841,15 +846,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Salva le scorciatoie su schema"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Esporta schema..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Importa schema..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1372,6 +1381,18 @@ msgstr "Imp&ostazioni"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra degli strumenti principale"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Cambia &icona..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Cambia te&sto..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nuovo..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

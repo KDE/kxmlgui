@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-10-17 00:34+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -601,17 +601,17 @@ msgstr "&Жорий амаллар:"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Нишончани ў&згартириш"
+msgid "Change &Icon…"
+msgstr "Нишончани ўзгартириш"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Матнни ўз&гартириш..."
+msgid "Change Te&xt…"
+msgstr "Матнни ўзгартириш"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -680,7 +680,7 @@ msgstr "&Ёрдам"
 msgid "About %1"
 msgstr "%1 ҳақида"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -688,20 +688,20 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "Тугмалар бирикмаси"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Маълумот: %1\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -716,20 +716,20 @@ msgstr[0] ""
 "\"%1\" тугма бирикмаси аллақачон \"%2\" билан боғланган.\n"
 "Уни жорий амал билан боғлашни истайсизми?"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr ""
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Тугмалар бирикмаси"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, fuzzy, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -738,13 +738,13 @@ msgstr ""
 "\"%1\" тугма бирикмаси аллақачон \"%2\" билан боғланган. Илтимос бошқа "
 "бирикмани танланг."
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Маълумот: %1\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -754,7 +754,7 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict With Registered Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -762,13 +762,13 @@ msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Умумий тугмалар бирикмаси билан муаммо"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Тугмалар бирикмаси"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -776,14 +776,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Дастурнинг андоза тугмалар бирикмаси билан муаммо"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -793,13 +793,13 @@ msgstr ""
 "\"%1\" тугма бирикмаси аллақачон \"%2\" андоза амали билан боғланган.\n"
 "Уни жорий амал билан боғлашни истайсизми?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, fuzzy, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Киритиш файли"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, fuzzy, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -831,9 +831,9 @@ msgstr "Менинг рангларимга &қўшиш"
 
 #: kmenumenuhandler_p.cpp:224
 #, fuzzy, kde-format
-#| msgid "Configure Shortcut..."
+#| msgid "Configure Shortcut"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Тугмалар бирикмасини мослаш"
 
 #: kshortcuteditwidget.cpp:55
@@ -863,11 +863,10 @@ msgid "Current scheme:"
 msgstr "&Жорий амаллар:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Янги..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -894,14 +893,14 @@ msgstr "Тугмалар бирикмаси"
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Тугмалар бирикмаси"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Тугмалар бирикмаси"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1426,6 +1425,30 @@ msgstr "Мос&ламалар"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Асосий асбоблар панели"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Нишончани ў&згартириш"
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Матнни ўз&гартириш..."
+
+#, fuzzy
+#~| msgid "Configure Shortcut..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Configure Shortcut..."
+#~ msgstr "Тугмалар бирикмасини мослаш"
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Янги..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "
@@ -11445,9 +11468,6 @@ msgstr "Асосий асбоблар панели"
 
 #~ msgid "Print Previe&w..."
 #~ msgstr "&Кўриб чиқиш"
-
-#~ msgid "Configure Shortcut"
-#~ msgstr "Тугмалар бирикмасини мослаш"
 
 #, fuzzy
 #~ msgid "Could not load interpreter library \"%1\""

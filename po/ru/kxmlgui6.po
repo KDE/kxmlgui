@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-12-27 10:08+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -562,16 +562,19 @@ msgid "Curr&ent actions:"
 msgstr "&Текущие действия:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Изменить &значок..."
+msgid "Change &Icon…"
+msgstr "Изменить значок"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Изменить &текст..."
+msgid "Change Te&xt…"
+msgstr "Изменить текст"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -642,7 +645,7 @@ msgstr "&Справка"
 msgid "About %1"
 msgstr "О программе %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -652,7 +655,7 @@ msgstr ""
 "Нажмите на кнопке и введите комбинацию клавиш.\n"
 "Например, для комбинации клавиш Ctrl+A зажмите клавишу Ctrl и нажмите A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -662,12 +665,12 @@ msgstr[1] "Конфликты комбинаций клавиш"
 msgstr[2] "Конфликты комбинаций клавиш"
 msgstr[3] "Конфликт комбинаций клавиш"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Комбинация клавиш «%1» для действия «%2»\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -695,20 +698,20 @@ msgstr[3] ""
 "Отменить назначение комбинации клавиш для указанного действия?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Связать с новым"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Конфликт комбинации клавиш"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -719,12 +722,12 @@ msgstr ""
 
 # [https://bugs.kde.org/show_bug.cgi?id=254400] BUGME: В названии действия не удаляется акселератор. Пока что будем делать это вручную (Transcript)
 #  --aspotashev
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Комбинация клавиш «%1» в приложении «%2» для действия «%3»\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -741,7 +744,7 @@ msgstr[2] ""
 msgstr[3] ""
 "Комбинация клавиш «%2» конфликтует со следующей комбинацией клавиш:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -751,12 +754,12 @@ msgstr[1] "Конфликт с глобальными комбинациями �
 msgstr[2] "Конфликт с глобальными комбинациями клавиш"
 msgstr[3] "Конфликт с глобальной комбинацией клавиш"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Зарезервированная комбинация клавиш"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -767,13 +770,13 @@ msgstr ""
 "глобальных комбинациях клавиш.\n"
 "Выберите другую комбинацию клавиш."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Конфликт со стандартной клавишей приложения"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -784,13 +787,13 @@ msgstr ""
 "во многих программах.\n"
 "Вы действительно хотите использовать эту комбинацию как глобальную?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Сейчас"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -824,9 +827,11 @@ msgid "Add to Toolbar"
 msgstr "Добавить на панель инструментов"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Настроить комбинацию клавиш..."
 
 #: kshortcuteditwidget.cpp:55
@@ -855,8 +860,8 @@ msgstr "Текущая схема:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Создать..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -877,15 +882,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Сохранить схему комбинаций клавиш"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Экспорт схемы..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Импорт схемы..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1408,6 +1417,18 @@ msgstr "&Настройка"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Основная панель инструментов"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Изменить &значок..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Изменить &текст..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Создать..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-08-29 09:46+0200\n"
 "Last-Translator: aheinecke <aheinecke@gnupg.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -558,16 +558,19 @@ msgid "Curr&ent actions:"
 msgstr "&Angezeigte Aktionen:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "S&ymbol ändern ..."
+msgid "Change &Icon…"
+msgstr "Symbol ändern"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Te&xt ändern ..."
+msgid "Change Te&xt…"
+msgstr "Text ändern"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -639,7 +642,7 @@ msgstr "&Hilfe"
 msgid "About %1"
 msgstr "Über %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -651,7 +654,7 @@ msgstr ""
 "Beispielsweise für Strg+A: Halten Sie die Strg-Taste gedrückt und drücken "
 "Sie dann „A“."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -659,12 +662,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Kurzbefehlkonflikt"
 msgstr[1] "Kurzbefehlkonflikte"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Kurzbefehl „%1“ für die Aktion „%2“\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -684,20 +687,20 @@ msgstr[1] ""
 "Möchten Sie die Kurzbefehle für diese Aktionen entfernen?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Neu zuordnen"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Kurzbefehlkonflikt"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -706,12 +709,12 @@ msgstr ""
 "<qt>Die Tastenkombination „%1“ wird bereits von der Aktion <b>%2</b> "
 "verwendet.<br>Bitte wählen Sie eine andere Tastenkombination.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Kurzbefehl „%1“ in der Anwendung „%2“ für die Aktion „%3“\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -726,7 +729,7 @@ msgstr[1] ""
 "Der Kurzbefehl „%2“ steht in Konflikt mit den folgenden globalen "
 "Kurzbefehlen:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -734,12 +737,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Konflikt mit globalem Kurzbefehl"
 msgstr[1] "Konflikt mit globalen Kurzbefehlen"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Reservierter Kurzbefehl"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -750,13 +753,13 @@ msgstr ""
 "Kurzbefehl verwendet werden.\n"
 "Bitte wählen Sie eine andere Taste."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflikt mit Standard-Kurzbefehl des Programms"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -767,13 +770,13 @@ msgstr ""
 "die von einigen Anwendungen benutzt wird.\n"
 "Möchten Sie sie wirklich als globales Tastenkürzel verwenden?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Eingabe"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -803,9 +806,11 @@ msgid "Add to Toolbar"
 msgstr "Zur Werkzeugleiste hinzufügen"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Kurzbefehl festlegen ..."
 
 #: kshortcuteditwidget.cpp:55
@@ -834,8 +839,8 @@ msgstr "Aktuelles Schema:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Neu ..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -856,15 +861,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Kurzbefehl in Schema speichern"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Schema exportieren ..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Schema importieren ..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1388,6 +1397,18 @@ msgstr "&Einstellungen"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Haupt-Werkzeugleiste"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "S&ymbol ändern ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Te&xt ändern ..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Neu ..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

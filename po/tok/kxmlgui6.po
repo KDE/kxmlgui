@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ante-toki-pi-ilo-kde\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-01-15 16:58-0500\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -522,16 +522,19 @@ msgid "Curr&ent actions:"
 msgstr "&pali pi tenpo ni:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "o pana e sitelen lili ante..."
+msgid "Change &Icon…"
+msgstr "o pana e sitelen lili ante"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "o ante e &toki..."
+msgid "Change Te&xt…"
+msgstr "o pana e lipu ante"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -601,7 +604,7 @@ msgstr "lipu &sona"
 msgid "About %1"
 msgstr "sona %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -611,7 +614,7 @@ msgstr ""
 "o pilin e nena o sitelen e nasin nena tawa ilo.\n"
 "o sama ni: o awen pilin e nena \"Ctrl\" o pilin lili e nena \"A\"."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -621,12 +624,12 @@ msgstr[1] "ilo pi wan ala li wile kepeken e nasin nena luka"
 msgstr[2] "ilo pi wan ala li wile kepeken e nasin nena mute"
 msgstr[3] "ilo pi wan ala li wile kepeken e nasin nena mute"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "nasin nena '%1' tawa ken pali '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -650,20 +653,20 @@ msgstr[3] ""
 "ilo li ken ala sona e ante pi nasin nena '%2' pi nasin nena '%3'.\n"
 "sina wile ala wile pana e nasin nena ala tawa ken pali ni?"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "o pana e nena ante"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ilo pi wan ala li wile kepeken e nasin nena wan"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -672,12 +675,12 @@ msgstr ""
 "<qt>ken pali <b>%2</b> li kepeken nasin nena '%1' la ken pali ante li ken "
 "ala kepeken e ona.<br>o toki e nasin nena ante.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "nasin nena '%1' lon ilo %2 tawa ken pali %3\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -690,7 +693,7 @@ msgstr[1] "nasin nena '%2' li utala e nasin nena luka ni:\n"
 msgstr[2] "nasin nena '%2' li utala e nasin nena mute ni:\n"
 msgstr[3] "nasin nena '%2' li utala e nasin nena ni:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -700,12 +703,12 @@ msgstr[1] "ni li utala e nasin nena luka tawa ilo ale"
 msgstr[2] "ni li utala e nasin nena mute tawa ilo ale"
 msgstr[3] "ni li utala e nasin nena tawa ilo ale"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "nasin nena pi jan pali ilo taso"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -716,13 +719,13 @@ msgstr ""
 "kepeken e ona.\n"
 "o alasa e nena ante."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "ni li wile e nasin nena sama tawa ilo"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -733,13 +736,13 @@ msgstr ""
 "pali ni e nasin nena ni tawa ona.\n"
 "sina awen ala awen wile e nasin nena ni?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "nasin nena"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -769,9 +772,11 @@ msgid "Add to Toolbar"
 msgstr "o pana e ni tawa supa ilo"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "o ante e nasin nena..."
 
 #: kshortcuteditwidget.cpp:55
@@ -800,8 +805,8 @@ msgstr "kulupu lon pi nasin nena:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "o lon e lipu sin..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -822,15 +827,19 @@ msgid "Save shortcuts to scheme"
 msgstr "o pana e nasin nena tawa kulupu"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "o pana e kulupu pi nasin nena tawa poki..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "o kepeken kulupu pi nasin nena lon poki..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1347,6 +1356,18 @@ msgstr "&nasin ilo"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "kulupu suli ilo"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "o pana e sitelen lili ante..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "o ante e &toki..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "o lon e lipu sin..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

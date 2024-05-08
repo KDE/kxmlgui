@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2012-06-27 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -602,17 +602,17 @@ msgstr "អំពើ​​បច្ចុប្បន្ន ៖"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "ផ្លាស់ប្តូរ​រូបតំណាង​..."
+msgid "Change &Icon…"
+msgstr "ផ្លាស់ប្តូរ​រូបតំណាង​"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "ផ្លាស់ប្ដូរ​អត្ថបទ..."
+msgid "Change Te&xt…"
+msgstr "ផ្លាស់ប្តូរ​​អត្ថបទ"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -683,7 +683,7 @@ msgstr "ជំនួយ"
 msgid "About %1"
 msgstr "អំពី %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -697,19 +697,19 @@ msgstr ""
 "ចុច​ប៊ូតុង បន្ទាប់មក​បញ្ចូលផ្លូវកាត់​​តាម​ដែល​អ្នក​ចង់​បាន​នៅ​ក្នុង​កម្មវិធី ។\n"
 "ឧទាហរណ៍ បញ្ជា(Ctrl)+a ៖ ចុច​គ្រាប់ចុច​បញ្ជា(Ctrl) ហើយ​ចុច​ a ។"
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "ការ​ប៉ះទង្គិច​ផ្លូវកាត់"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "ផ្លូវកាត់​ '%1' សម្រាប់​សកម្មភាព '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -734,22 +734,22 @@ msgstr[0] ""
 "តើ​អ្នក​ចង់​ផ្ដល់​ផ្លូវកាត់​ទទេ​រ​សម្រាប់​​សកម្មភាព​នេះ​ដែរឬទេ?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "ផ្ដល់ឡើង​វិញ"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ការ​ប៉ះទង្គិច​ផ្លូវកាត់"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -758,13 +758,13 @@ msgstr ""
 "<qt>ការ​បន្សំ​គ្រាប់ចុច '%1' គឺ​ត្រូវ​បាន​ប្រើ​ដោយ​អំពើ <b>%2</b> រួចហើយ ។<br>សូម​ជ្រើស​មួយ​ផ្សេងទៀត ។"
 "</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "ផ្លូវកាត់ '%1' នៅ​ក្នុងកម្មវិធី %2 សម្រាប់​សកម្មភាព %3\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -774,19 +774,19 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "ផ្លូវកាត់ '%2' ប៉ះទង្គិច​ជា​មួយ​នឹង​បន្សំ​គ្រាប់ចុច​ដូច​ខាងក្រោម ៖\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "ប៉ះទង្គិច​ជាមួយ​ផ្លូវកាត់​សកល​ដែល​បាន​ចុះឈ្មោះ"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "ផ្លូវកាត់​ដែល​បានបម្រុង​ទុក"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -796,14 +796,14 @@ msgstr ""
 "គ្រាប់​ចុច F12 ត្រូវ​បាន​បម្រុង​ទុក​នៅ​លើ​វីនដូ ដូច្នេះ​មិនអាច​ត្រូវ​បានប្រើ​សម្រាប់​គ្រាប់​ចុច​ផ្លូវកាត់​សកល​ទេ ។\n"
 "សូម​ជ្រើស​គ្រាប់ចុច​ផ្លូវកាត់​ផ្សេង ។"
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "ប៉ះទង្គិច​ជាមួយ​នឹង​ផ្លូវកាត់​កម្មវិធី​ស្តង់ដា"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -813,13 +813,13 @@ msgstr ""
 "បន្សំ​គ្រាប់​ចុច '%1' ក៏​ត្រូវ​កំពុង​ត្រូវ​បាន​ប្រើ​សម្រាប់​សកម្មភាព​ស្តង់ដារ \"%2\" ដែល​កម្មវិធី​មួយ​ចំនួន​ប្រើ ។\n"
 "តើ​អ្នក​ពិត​ជា​ចង់​ប្រើ​វា​ជា​ផ្លូវកាត់​សកល​ដែរ​ឬ ?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "បញ្ចូល"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -855,7 +855,7 @@ msgstr "បន្ថែម​ទៅ​របារ​ឧបករណ៍"
 #, fuzzy, kde-format
 #| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ផ្លូវ​កាត់..."
 
 #: kshortcuteditwidget.cpp:55
@@ -885,11 +885,10 @@ msgid "Current scheme:"
 msgstr "គ្រោងការណ៍​បច្ចុប្បន្ន ៖"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "ថ្មី..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -915,14 +914,14 @@ msgstr "គ្រោងការណ៍​ផ្លូវកាត់"
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "នាំចេញគ្រោងការណ៍..."
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "នាំចេញគ្រោងការណ៍..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1459,6 +1458,24 @@ msgstr "ការ​កំណត់"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "របារ​ឧបករណ៍​មេ"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "ផ្លាស់ប្តូរ​រូបតំណាង​..."
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "ផ្លាស់ប្ដូរ​អត្ថបទ..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "ថ្មី..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

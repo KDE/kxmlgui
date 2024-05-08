@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -549,17 +549,17 @@ msgstr "ಪ್ರಸ್ತುತ ಕ್ರಿಯೆಗಳು(&e):"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು(&I)..."
+msgid "Change &Icon…"
+msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು(&x)..."
+msgid "Change Te&xt…"
+msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -632,7 +632,7 @@ msgstr "ಸಹಾಯ(&H)"
 msgid "About %1"
 msgstr "%1 ಬಗ್ಗೆ"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -640,7 +640,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -648,13 +648,13 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಅಸಮಂಜಸತೆ"
 msgstr[1] "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಅಸಮಂಜಸತೆಗಳು"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Shortcut(s) '%1' for action '%2'\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%2' ಕ್ರಿಯೆಗೆ '%1' ಸಮೀಪಮಾರ್ಗಗಳು (ಶಾರ್ಟ್ ಕಟ್)\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgid ""
 #| "The \"%1\" shortcut is ambiguous with the following shortcuts.\n"
@@ -678,22 +678,22 @@ msgstr[1] ""
 "ನೀವು ರಿಕ್ತ ಶೀಘ್ರಮಾರ್ಗವನ್ನು ಈ ಕ್ರಿಯೆಗಳಿಗೆ ನಿಗದಿಗೊಳಿಸಲಿಚ್ಛಿಸುವಿರೇನು?\n"
 "%2"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "ಮರುನಿಗದಿಗೊಳಿಸು"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕಲಹ"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -702,13 +702,13 @@ msgstr ""
 "<qt><b>%2</b> ಕ್ರಿಯೆಯು  '%1' ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯನ್ನು ಈಗಾಗಲೇ ಬಳಸುತ್ತಿದೆ. <br> "
 "ದಯವಿಟ್ಟು ಬೇರೊಂದನ್ನು ಆರಿಸು.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "%2 ಅನ್ವಯದ %3 ಕ್ರಿಯೆಗೆ '%1' ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, fuzzy, kde-format
 #| msgid "The shortcut '%1' conflicts with the following key combinations:\n"
 msgctxt ""
@@ -720,7 +720,7 @@ msgid_plural ""
 msgstr[0] "'%1' ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕೆಳಕಂಡ ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯೊಡನೆ ಕಲಹದಲ್ಲಿದೆ:\n"
 msgstr[1] "'%1' ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಕೆಳಕಂಡ ಕೀಲಿಕೈ ಸಂಯೋಜನೆಯೊಡನೆ ಕಲಹದಲ್ಲಿದೆ:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -728,12 +728,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "ನೊಂದಾಯಿತ ಸಾರ್ವತ್ರಿಕ ಸಮೀಪಮಾರ್ಗದೊಡನೆ ಅಸಮಂಜಸತೆ"
 msgstr[1] "ನೊಂದಾಯಿತ ಸಾರ್ವತ್ರಿಕ ಸಮೀಪಮಾರ್ಗಗಳೊಡನೆ ಅಸಮಂಜಸತೆ"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "ಕಾದಿರಿಸಲಾದ ಸಮೀಪಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್)"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -741,14 +741,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "ಮಾನಕ (standard) ಅನ್ವಯಿಕ ಸಮೀಪಮಾರ್ಗಗಳೊಡನೆ ಕಲಹ"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -759,13 +759,13 @@ msgstr ""
 "ಈಗಾಗಲೇ ನಿಗದಿಗೊಳಿಸಲಾಗೆದೆ.\n"
 "ನೀವು ನಿಜಕ್ಕೂ ಇದನ್ನು ಸಾರ್ವತ್ರಿಕ ಸಮೀಪಮಾರ್ಗವಾಗಿ ಬಳಸಲಿಚ್ಛಿಸುವಿರೇನು?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ಆದಾನ (ಇನ್ ಪುಟ್)"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -799,7 +799,7 @@ msgstr "ಉಪಕರಣಪಟ್ಟಿಗೆ ಸೇರಿಸು"
 #, fuzzy, kde-format
 #| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "ಶೀಘ್ರ ಮಾರ್ಗವನ್ನು (ಶಾರ್ಟ್ ಕಟ್) ಸಂರಚಿಸು..."
 
 #: kshortcuteditwidget.cpp:55
@@ -830,11 +830,10 @@ msgid "Current scheme:"
 msgstr "ಪ್ರಸ್ತುತ ಪದ್ಧತಿ:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "ಹೊಸ..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -860,14 +859,14 @@ msgstr "ಶೀಘ್ರಮಾರ್ಗ (ಶಾರ್ಟ್ ಕಟ್) ಪದ್�
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "ಪದ್ಧತಿಯನ್ನು ರಫ್ತುಮಾಡು..."
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "ಪದ್ಧತಿಯನ್ನು ರಫ್ತುಮಾಡು..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1418,6 +1417,24 @@ msgstr "ಸಂಯೋಜನೆಗಳು(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು(&I)..."
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು(&x)..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "ಹೊಸ..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

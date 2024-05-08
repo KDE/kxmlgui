@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-04-30 00:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -549,16 +549,19 @@ msgid "Curr&ent actions:"
 msgstr "Geçerli &eylemler:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "&Simgeyi Değiştir…"
+msgid "Change &Icon…"
+msgstr "Simgeyi Değiştir"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "&Metni Değiştir…"
+msgid "Change Te&xt…"
+msgstr "Metni Değiştir"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -628,7 +631,7 @@ msgstr "&Yardım"
 msgid "About %1"
 msgstr "%1 Hakkında"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -638,7 +641,7 @@ msgstr ""
 "Düğmeye tıklayın, ardından kısayol düğmelerine basın.\n"
 "Kontrol + A örneği için: Kontrol düğmesine basılı tutun ve A düğmesine basın."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -646,12 +649,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Kısayol Çakışması"
 msgstr[1] "Kısayol Çakışmaları"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "“%2” eylemi için %1 kısayolu\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -671,20 +674,20 @@ msgstr[1] ""
 "Bu eylemlere boş bir kısayol atamak istiyor musunuz?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Yeniden Ata"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Kısayol Çakışması"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -693,12 +696,12 @@ msgstr ""
 "<qt>“%1” kısayolu <b>%2</b> eylemi için kullanılıyor.<br>Lütfen başka bir "
 "tane seçin.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "“%3” eylemi için “%2” uygulamasındaki “%1” kısayolu\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -709,7 +712,7 @@ msgid_plural ""
 msgstr[0] "“%2” kısayolu aşağıdaki düğme kombinasyonu ile çakışıyor:\n"
 msgstr[1] "“%2” kısayolu aşağıdaki düğme kombinasyonları ile çakışıyor:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -717,12 +720,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Kayıtlı Global Kısayolla Çakışma"
 msgstr[1] "Kayıtlı Global Kısayollarla Çakışma"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Ayrılmış Kısayol"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -733,13 +736,13 @@ msgstr ""
 "olarak kullanılamaz.\n"
 "Lütfen başka bir tane seçin."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Standart Uygulama Kısayoluyla Çakışma"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -750,13 +753,13 @@ msgstr ""
 "kullanılıyor.\n"
 "Bunu bir global kısayol olarak kullanmayı gerçekten istiyor musunuz?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Giriş"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -789,9 +792,11 @@ msgid "Add to Toolbar"
 msgstr "Araç Çubuğuna Ekle"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Kısayolu Yapılandır…"
 
 #: kshortcuteditwidget.cpp:55
@@ -820,8 +825,8 @@ msgstr "Geçerli şema:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Yeni…"
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -842,15 +847,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Kısayolları Şemaya Kaydet"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Şemayı Dışa Aktar…"
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Şema İçe Aktar…"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1371,3 +1380,15 @@ msgstr "Ayar&lar"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Ana Araç Çubuğu"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "&Simgeyi Değiştir…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "&Metni Değiştir…"
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Yeni…"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2007-10-15 22:19+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jan-mai.drapier@mail.dotcom.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -533,14 +533,14 @@ msgstr "Stokell war implij"
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change &Icon..."
+msgid "Change &Icon…"
 msgstr "Kemmañ an &arlun ..."
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change Te&xt..."
+msgid "Change Te&xt…"
 msgstr "Kemmañ an &arlun ..."
 
 #: kedittoolbar.cpp:1191
@@ -614,7 +614,7 @@ msgstr "&Skoazell"
 msgid "About %1"
 msgstr "Diwar-benn %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -622,7 +622,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "%1 is the number of conflicts"
@@ -631,12 +631,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Berradennoù"
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Titouroù diwar-benn an teul"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -652,21 +652,21 @@ msgstr[0] ""
 "Diuzit mar plij ur blokad stokelloù dieil."
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Rusianeg"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Berradennoù"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' key combination has already been allocated to the \"%2\" "
@@ -679,12 +679,12 @@ msgstr ""
 "Ar blokad stokelloù '%1' zo bet derannet endeo d'an obererezh « %2 ».\n"
 "Diuzit mar plij ur blokad stokelloù dieil."
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Titouroù diwar-benn an teul"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -695,7 +695,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -703,13 +703,13 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Berradennoù"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -717,13 +717,13 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr ""
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -734,13 +734,13 @@ msgstr ""
 "« %2 ».\n"
 "Diuzit mar plij ur blokad stokelloù dieil."
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, fuzzy, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Restr enkas"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "No shortcut defined"
@@ -774,10 +774,10 @@ msgstr "&Ouzhpennañ d'al livioù diouzhoc'h"
 
 #: kmenumenuhandler_p.cpp:224
 #, fuzzy, kde-format
-#| msgid "Configure S&hortcuts..."
+#| msgid "Configure Shortcut"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
-msgstr "Kefluniañ ar berradenn ..."
+msgid "Configure Shortcut…"
+msgstr "Kefluniañ ar Berradenn"
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -806,11 +806,10 @@ msgid "Current scheme:"
 msgstr "Stokell war implij"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New List..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Listenn nevez ..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -837,14 +836,14 @@ msgstr "Berradennoù"
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Berradennoù"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Berradennoù"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1376,6 +1375,30 @@ msgstr "&Kefluniadur"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barrenn kentañ an ostilhoù"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Kemmañ an &arlun ..."
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Kemmañ an &arlun ..."
+
+#, fuzzy
+#~| msgid "Configure S&hortcuts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Configure Shortcut..."
+#~ msgstr "Kefluniañ ar berradenn ..."
+
+#, fuzzy
+#~| msgid "New List..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Listenn nevez ..."
 
 #, fuzzy
 #~| msgid "From:"
@@ -11280,9 +11303,6 @@ msgstr "Barrenn kentañ an ostilhoù"
 
 #~ msgid "Print Previe&w..."
 #~ msgstr "Moulañ ar rakgwel ..."
-
-#~ msgid "Configure Shortcut"
-#~ msgstr "Kefluniañ ar Berradenn"
 
 #, fuzzy
 #~ msgid "Could not load interpreter library \"%1\""

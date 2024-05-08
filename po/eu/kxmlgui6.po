@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-11-25 09:20+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -542,16 +542,19 @@ msgid "Curr&ent actions:"
 msgstr "&Uneko ekintzak:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Aldatu &ikonoa..."
+msgid "Change &Icon…"
+msgstr "Aldatu ikonoa"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Aldatu te&stua..."
+msgid "Change Te&xt…"
+msgstr "Aldatu testua"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -622,7 +625,7 @@ msgstr "&Laguntza"
 msgid "About %1"
 msgstr "%1-(r)i buruz"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -633,7 +636,7 @@ msgstr ""
 "moduan.\n"
 "Adibidez Ktrl+A: sakatuta mantendu Ktrl tekla eta sakatu A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -641,12 +644,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Lasterbideen gatazka"
 msgstr[1] "Lasterbideen gatazkak"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%1' lasterbideak '%2' ekintza\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -666,20 +669,20 @@ msgstr[1] ""
 "Ekintza hauei lasterbide huts bat esleitzea nahi duzu?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Berriz esleitu"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Lasterbide-gatazka"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -688,12 +691,12 @@ msgstr ""
 "'%1' tekla-konbinazio jadanik <b>%2</b> ekintzarekin lotuta dago.\n"
 "Aukeratu tekla-konbinazio bakarra."
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "'%1' lasterbidea '%2' aplikazioan '%3' ekintzarako\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -704,7 +707,7 @@ msgid_plural ""
 msgstr[0] "'%2' lasterbideak honako tekla konbinazioekin gatazkak ditu:\n"
 msgstr[1] "'%2' lasterbideak gatazkak ditu honako tekla konbinazioekin:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -712,12 +715,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Gatazka erregistratutako lasterbide globalarekin"
 msgstr[1] "Gatazka erregistratutako lasterbide globalekin"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Lasterbide erreserbatua"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -728,13 +731,13 @@ msgstr ""
 "orokor gisa.\n"
 "Mesedez hautatu beste bat."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Gatazka aplikazioen lasterbide estandarrekin"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -745,13 +748,13 @@ msgstr ""
 "askok erabiltzen dute tekla-konbinazio hau.\n"
 "Benetan erabili nahi duzu laster-tekla orokor gisa?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Egin tekla konbinazioa"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -781,9 +784,11 @@ msgid "Add to Toolbar"
 msgstr "Gehitu tresna-barrari"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Konfiguratu lasterbidea..."
 
 #: kshortcuteditwidget.cpp:55
@@ -812,8 +817,8 @@ msgstr "Uneko antolaera:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Berria..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -834,15 +839,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Gorde lasterbideak antolaeran"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Esportatu antolaera..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Inportatu antolaera..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1365,6 +1374,18 @@ msgstr "E&zarpenak"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Tresna-barra nagusia"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Aldatu &ikonoa..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Aldatu te&stua..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Berria..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

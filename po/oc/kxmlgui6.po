@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2008-08-06 00:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: Occitan <oc@li.org>\n"
@@ -527,15 +527,15 @@ msgstr "Accions en &cors :"
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change &Icon..."
+msgid "Change &Icon…"
 msgstr "Cambiar l'icòna..."
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Find Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Cambiar l'icòna..."
+msgid "Change Te&xt…"
+msgstr "Recercar de tèxt"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -606,7 +606,7 @@ msgstr "&Ajuda"
 msgid "About %1"
 msgstr "A prepaus de %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -614,7 +614,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "%1 is the number of conflicts"
@@ -623,13 +623,13 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Acorchis"
 msgstr[1] "Acorchis"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Acorchis"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' key combination has already been allocated to the \"%2\" "
@@ -651,35 +651,35 @@ msgstr[1] ""
 "La combinason de tòcas « %1 » ja es associada a l'accion «%2».\n"
 "La volètz reassignar d'aquesta cap a l'accion correnta ?"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reatribuir"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Acorchis"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Acorchis"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -690,7 +690,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict with Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -699,13 +699,13 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Conflicte amb los acorchis clavièr globals"
 msgstr[1] "Conflicte amb los acorchis clavièr globals"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Acorchi"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -713,14 +713,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Conflicte amb un acorchi clavièr d'aplicacion estandarda"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -728,13 +728,13 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Entrada"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -768,7 +768,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Configure Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Configurar los acorchis clavièr"
 
 #: kshortcuteditwidget.cpp:55
@@ -799,11 +799,10 @@ msgid "Current scheme:"
 msgstr "Accions en &cors :"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -830,14 +829,14 @@ msgstr "Acorchis"
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Acorchis"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Acorchis"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1371,6 +1370,18 @@ msgstr "&Paramètres"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra d'espleches principala"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Cambiar l'icòna..."
+
+#, fuzzy
+#~| msgid "..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

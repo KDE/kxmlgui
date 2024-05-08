@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-12-07 21:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -531,16 +531,19 @@ msgid "Curr&ent actions:"
 msgstr "ந&டப்புச் செயல்கள்:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "&சின்னத்தை மாற்று..."
+msgid "Change &Icon…"
+msgstr "சின்னத்தை மாற்று"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "&பெயரை மாற்று..."
+msgid "Change Te&xt…"
+msgstr "பெயரை மாற்று"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -610,7 +613,7 @@ msgstr "&உதவி"
 msgid "About %1"
 msgstr "%1 பற்றி "
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -620,7 +623,7 @@ msgstr ""
 "பட்டனை அழுத்தி, நீங்கள் பயன்படுத்த விரும்பும் சுருக்குவழியை உள்ளிடவும்.\n"
 "Ctrl+A -க்கான உதாரணம்: Ctrl விசையை அழுத்தியபடியே A-ஐ தட்டவும்."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -628,12 +631,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "சுருக்குவழி முரண்பாடு"
 msgstr[1] "சுருக்குவழி முரண்பாடுகள்"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%2' என்ற செயலுக்கான '%1' என்ற சுருக்குவழி\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -653,20 +656,20 @@ msgstr[1] ""
 "இந்த செயல்களுக்கு இந்த சுருக்குவழி இல்லாதவாறு செய்ய விரும்புகிறீர்களா?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "இதற்கே அமர்த்து"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "சுருக்குவழி முரண்பாடு"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -675,12 +678,12 @@ msgstr ""
 "<qt><b>%2</b> என்ற செயல், '%1' என்ற விசைக்கூட்டை ஏற்கனவே பயன்படுத்துகிறது. "
 "<br>வேறொன்றைத் தேர்வு செய்யுங்கள்.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "'%2' என்ற செயலியில் '%3' என்ற செயலுக்கான '%1' என்ற சுருக்குவழி\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -691,7 +694,7 @@ msgid_plural ""
 msgstr[0] "கீழ்க்காணும் விசைக் கூட்டோடு '%2' என்ற சுருக்குவழி முரண்படுகிறது':\n"
 msgstr[1] "கீழ்க்காணும் விசைக் கூட்டுக்களோடு '%2' என்ற சுருக்குவழி முரண்படுகிறது':\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -699,12 +702,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "பொதுவான சுருக்குவழியுடன் முரண்பாடு"
 msgstr[1] "பொதுவான சுருக்குவழிகளுடன் முரண்பாடு"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "ஒதுக்கப்பட்ட சுருக்குவழி"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -715,13 +718,13 @@ msgstr ""
 "முடியாது.\n"
 "வேறொன்றைத் தேர்வு செய்யுங்கள்."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "வழக்கமான செயலி சுருக்குவழியுடன் முரண்பாடு"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -732,13 +735,13 @@ msgstr ""
 "வருகிறது.\n"
 "இருப்பினும் இதை நீங்கள் ஒரு பொது சுருக்குவழியாக பயன்படுத்த விரும்புகிறீர்களா?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "உள்ளீடு"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -768,9 +771,11 @@ msgid "Add to Toolbar"
 msgstr "கருவிப்பட்டையில் சேர்"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "சுருக்குவழியை அமை..."
 
 #: kshortcuteditwidget.cpp:55
@@ -799,8 +804,8 @@ msgstr "தற்போதைய திட்டம்:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "புதியது..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -821,15 +826,19 @@ msgid "Save shortcuts to scheme"
 msgstr "சுருக்குவழிகளை திட்டமுறையாக சேமி"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "திட்டத்தை ஏற்றுமதி செய்..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "திட்டத்தை இறக்குமதி செய்..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1349,6 +1358,18 @@ msgstr "&அமைப்புகள்"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "பிரதானக் கருவிப்பட்டை"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "&சின்னத்தை மாற்று..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "&பெயரை மாற்று..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "புதியது..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

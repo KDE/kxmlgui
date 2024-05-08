@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-12-05 17:24+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -537,16 +537,19 @@ msgid "Curr&ent actions:"
 msgstr "&Aktuálne akcie:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Zmeniť &ikonu..."
+msgid "Change &Icon…"
+msgstr "Zmeniť ikonu"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Zmeniť te&xt..."
+msgid "Change Te&xt…"
+msgstr "Zmena textu"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -616,7 +619,7 @@ msgstr "&Pomocník"
 msgid "About %1"
 msgstr "Informácie o %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -627,7 +630,7 @@ msgstr ""
 "programe.\n"
 "Príklad pre Ctrl+A: držte klávesu Ctrl a stlačte A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -636,12 +639,12 @@ msgstr[0] "Konflikt skratky"
 msgstr[1] "Konflikt skratiek"
 msgstr[2] "Konflikt skratiek"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Skratka '%1' pre akciu '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -665,20 +668,20 @@ msgstr[2] ""
 "Chcete priradiť prázdnu skratku k tejto akcii?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Znovu priradiť"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Konflikt skratiek"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -687,12 +690,12 @@ msgstr ""
 "<qt>Klávesová kombinácia '%1' je už používaná akciou <b>%2</b>.<br>Prosím "
 "vyberte inú skratku.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Skratka '%1' v aplikácii '%2' pre akciu '%3'\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -704,7 +707,7 @@ msgstr[0] "Skratka '%2' koliduje s nasledujúcou kombináciou kláves:\n"
 msgstr[1] "Skratka '%2' koliduje s nasledujúcimi kombináciami kláves:\n"
 msgstr[2] "Skratka '%2' koliduje s nasledujúcimi kombináciami kláves:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -713,12 +716,12 @@ msgstr[0] "Konflikt s použitou globálnou skratkou"
 msgstr[1] "Konflikt s použitými globálnymi skratkami"
 msgstr[2] "Konflikt s použitými globálnymi skratkami"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervovaná skratka"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -729,13 +732,13 @@ msgstr ""
 "skratku.\n"
 "Prosím vyberte inú."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflikt so štandardnou skratkou aplikácie"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -746,13 +749,13 @@ msgstr ""
 "používa viacero aplikácií.\n"
 "Naozaj ju chcete použiť ako globálnu klávesovú skratku?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Vstup"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -786,9 +789,11 @@ msgid "Add to Toolbar"
 msgstr "Pridať do panelu nástrojov"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Nastaviť klávesovú skratku..."
 
 #: kshortcuteditwidget.cpp:55
@@ -817,8 +822,8 @@ msgstr "Aktuálna schéma:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nová..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -839,15 +844,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Uložiť skratky do schémy"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Exportovať schému..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Importovať schému..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1370,6 +1379,18 @@ msgstr "Nas&tavenie"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hlavný panel nástrojov"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Zmeniť &ikonu..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Zmeniť te&xt..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nová..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

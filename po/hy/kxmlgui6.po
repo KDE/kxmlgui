@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2013-01-31 01:08+0400\n"
 "Last-Translator: Davit <nikdavnik@mail.ru>\n"
 "Language-Team: Armenian Language: hy\n"
@@ -627,17 +627,17 @@ msgstr "&Ընթացիկ գործողություններ:"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "&Փոխել նշանը..."
+msgid "Change &Icon…"
+msgstr "Փոխել նշանը"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Փոխել տեքստը..."
+msgid "Change Te&xt…"
+msgstr "Փոխել տեքստը"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -709,7 +709,7 @@ msgstr "&Օգնություն"
 msgid "About %1"
 msgstr "%1 ծրագրի մասին"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -724,7 +724,7 @@ msgstr ""
 "Օրինակ ` Ctrl+A  կոճակների կոմբինացիայի համար սեղմած պահեք  Ctrl կոճակը և "
 "սեղմեք  A։"
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -734,12 +734,12 @@ msgstr[1] "Կոճակների համադրության կոնֆլիկտ"
 msgstr[2] "Կոճակների համադրության կոնֆլիկտ"
 msgstr[3] "Կոճակների համադրության կոնֆլիկտ"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Կոճակների համադրություն «%1» գործողություն «%2»\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -781,22 +781,22 @@ msgstr[3] ""
 "\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Կապել նորի հետ"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Կոճակների համադրության կոնֆլիկտ"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -807,13 +807,13 @@ msgstr ""
 
 # [https://bugs.kde.org/show_bug.cgi?id=254400] BUGME: В названии действия не удаляется акселератор. Пока что будем делать это вручную (Transcript)
 #  --aspotashev
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Կոճակների համադրություն «%1» ծրագիր %2 գործողություն «%3»\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -834,7 +834,7 @@ msgstr[3] ""
 "Կոճակների համադրություն «%2» չի աշխատում հետևյալ կոճակների համադրություն "
 "հետ:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -844,12 +844,12 @@ msgstr[1] "Կոնֆլիկտ կոճակների գլոբալ համադրությ
 msgstr[2] "Կոնֆլիկտ կոճակների գլոբալ համադրության հետ"
 msgstr[3] "Կոնֆլիկտ կոճակների գլոբալ համադրության հետ"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Պահեստավորված կոճակների համադրություն"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -860,14 +860,14 @@ msgstr ""
 "կոճակների գլոբալ կոմբինացիաներում:\n"
 "Ընտրեք կոճակների այլ կոմբինացիա:"
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Կոնֆլիկտ ծրագրի ստանդարտ կոճակի հետ"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -878,13 +878,13 @@ msgstr ""
 "օգտագործվում է մի շարք ծրագրերում։\n"
 "Ուզու՞մ եք օգտագործել այս կոմբինացիան որպես գլոբալ։"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Հիմա"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -918,7 +918,7 @@ msgstr "Ավելացնել գործիքների վահանակի մեջ"
 #, fuzzy, kde-format
 #| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Կարգավորել կոճակների համադրություն..."
 
 #: kshortcuteditwidget.cpp:55
@@ -948,11 +948,10 @@ msgid "Current scheme:"
 msgstr "Ընթացիկ սխեմա:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Նոր..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -978,14 +977,14 @@ msgstr "Միացման սխեմաներ"
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Սխեմայի արտածում..."
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Սխեմայի արտածում..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1525,6 +1524,24 @@ msgstr "&Կարգավորում"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Հիմնական գործիքներ"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "&Փոխել նշանը..."
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Փոխել տեքստը..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Նոր..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

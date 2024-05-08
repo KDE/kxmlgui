@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-12-04 22:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -622,17 +622,17 @@ msgstr "&Biéżné dzejania:"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Zmieni &ikònã..."
+msgid "Change &Icon…"
+msgstr "Zmieni ikònã"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Zmieni te&kst..."
+msgid "Change Te&xt…"
+msgstr "Zmieni tekst"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -703,7 +703,7 @@ msgstr "Pòmò&c"
 msgid "About %1"
 msgstr "Ò %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -711,7 +711,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "%1 is the number of conflicts"
@@ -721,13 +721,13 @@ msgstr[0] "Zwada skrodzëné"
 msgstr[1] "Zwada skrodzëné"
 msgstr[2] "Zwada skrodzëné"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Shortcut(s) '%1' for action '%2'\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Skrodzëna(ë) '%1' dlô dzejaniô '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgid ""
 #| "The \"%1\" shortcut is ambiguous with the following shortcuts.\n"
@@ -755,22 +755,22 @@ msgstr[2] ""
 "Chcesz dac pùstą skrodzënã do nëch dzejaniów?\n"
 "%2"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Przëpiszë"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Zwada skrodzëné"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -779,13 +779,13 @@ msgstr ""
 "<qt>Kòmbinacëjô klawiszów %1 òsta przëpisónô do dzejaniô \"%2\".\n"
 "Proszã wëbrac niebrëkòwóną kòmbinacëjã klawiszów.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut(s) '%1' for action '%2'\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Skrodzëna(ë) '%1' dlô dzejaniô '%2'\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -797,7 +797,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict With Registered Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -807,13 +807,13 @@ msgstr[0] "Zwada z registrowóną òglową skrodzëną"
 msgstr[1] "Zwada z registrowóną òglową skrodzëną"
 msgstr[2] "Zwada z registrowóną òglową skrodzëną"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "New Web Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Nowô sécowô skrodzëna"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -821,14 +821,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Zwada ze sztandardową skrodzëną programë"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -839,13 +839,13 @@ msgstr ""
 "jaczégò brëkùje jinszô aplikacëjô.\n"
 "Chcesz je pò prôwdze przëpisac do globalnëch skrodzrnów?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Nowô skrodzënô"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -879,7 +879,7 @@ msgstr "Dodôj do listwë nôrzãdzów"
 #, fuzzy, kde-format
 #| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Kònfigùracëjô skrodzënów..."
 
 #: kshortcuteditwidget.cpp:55
@@ -909,11 +909,10 @@ msgid "Current scheme:"
 msgstr "&Biéżné schemë:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nowi..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -940,14 +939,14 @@ msgstr "Schemë skrodzënów"
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Ekspòrtëjë schemã..."
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Ekspòrtëjë schemã..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1491,6 +1490,24 @@ msgstr "Nas&tôwë"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Przédnô listew nôrzãdzów"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Zmieni &ikònã..."
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Zmieni te&kst..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nowi..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

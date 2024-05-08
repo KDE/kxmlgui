@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-12-06 21:04+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -541,16 +541,19 @@ msgid "Curr&ent actions:"
 msgstr "Núv&erandi aðgerðir:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Sk&ipta um tákn..."
+msgid "Change &Icon…"
+msgstr "Skipta um tákn"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Breyta te&xta..."
+msgid "Change Te&xt…"
+msgstr "Breyta texta"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -620,7 +623,7 @@ msgstr "&Hjálp"
 msgid "About %1"
 msgstr "Um %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -631,7 +634,7 @@ msgstr ""
 "forritinu.\n"
 "Sem dæmi fyrir Ctrl+A: haltu niðri 'Ctrl'-lyklinum og ýttu á 'A'."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -639,12 +642,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Árekstur milli flýtilykla"
 msgstr[1] "Árekstrar milli flýtilykla"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Flýtilykill '%1' fyrir aðgerðina '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -664,20 +667,20 @@ msgstr[1] ""
 "Viltu setja auðan flýtilykil á þessar aðgerðir?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Endurúthluta"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Árekstur milli flýtilykla"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -686,12 +689,12 @@ msgstr ""
 "<qt>Flýtilykillinn %1 er nú þegar í notkun fyrir aðgerðina <b>%2</b>."
 "<br>Veldu annan í staðinn.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Flýtilykill '%1' í forritinu '%2' fyrir aðgerðina '%3'\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -702,7 +705,7 @@ msgid_plural ""
 msgstr[0] "Flýtilykillinn '%2' stangast á við eftirfarandi lyklasamsetningu.\n"
 msgstr[1] "Flýtilykillinn '%2' rekst á við eftirfarandi lyklasamsetningu.\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -710,12 +713,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Árekstur við altækan flýtilykil kerfisins"
 msgstr[1] "Árekstur við altæka flýtilykla kerfisins"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Frátekinn flýtilykill"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -726,13 +729,13 @@ msgstr ""
 "flýtilykil.\n"
 "Veldu einhvern annan."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Árekstur við staðlaða flýtilykla forrita"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -743,13 +746,13 @@ msgstr ""
 "mörg forrit nota.\n"
 "Viltu samt nota hann líka sem altækan flýtilykil?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Inntak"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -783,9 +786,11 @@ msgid "Add to Toolbar"
 msgstr "Bæta við tækjastiku"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Grunnstilla flýtilykil..."
 
 #: kshortcuteditwidget.cpp:55
@@ -814,8 +819,8 @@ msgstr "Virkt skema:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nýtt..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -836,15 +841,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Vista flýtilykla í skema"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Flytja út skema..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Flytja inn skema..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1365,6 +1374,18 @@ msgstr "&Stillingar"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Aðaltækjastika"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Sk&ipta um tákn..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Breyta te&xta..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nýtt..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

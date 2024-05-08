@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -596,19 +596,21 @@ msgstr "Филтер"
 msgid "Curr&ent actions:"
 msgstr "&Тренутне радње:"
 
+# >> @title:window
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Промени &иконицу..."
+msgid "Change &Icon…"
+msgstr "Промена иконице"
 
+# >> @title:window
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Промени &текст..."
+msgid "Change Te&xt…"
+msgstr "Промена текста"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -680,7 +682,7 @@ msgstr "По&моћ"
 msgid "About %1"
 msgstr "О %1|/|О $[дат %1]"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -694,7 +696,7 @@ msgstr ""
 "Кликните на дугме, па унесите пречицу као што бисте у програму.\n"
 "Пример за Ctrl+A: држите тастер Ctrl и притисните A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -704,12 +706,12 @@ msgstr[1] "Сукоб пречица"
 msgstr[2] "Сукоб пречица"
 msgstr[3] "Сукоб пречице"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Пречице %1 за радњу „%2“\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -746,22 +748,22 @@ msgstr[3] ""
 "Желите ли да доделите празну пречицу овој радњи?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Поново додели"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Сукоб пречица"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -770,13 +772,13 @@ msgstr ""
 "<qt>Комбинацију тастера <b>%1</b> већ користи радња <b>%2</b>.<br/>Изаберите "
 "другу комбинацију.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Пречица %1 у програму %2 за радњу %3\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -789,7 +791,7 @@ msgstr[1] "Пречица %2 у сукобу је с наредним комби
 msgstr[2] "Пречица %2 у сукобу је с наредним комбинацијама тастера:\n"
 msgstr[3] "Пречица %2 у сукобу је с наредном комбинацијом тастера:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -799,12 +801,12 @@ msgstr[1] "Сукоб са регистрованим глобалним пре�
 msgstr[2] "Сукоб са регистрованим глобалним пречицама"
 msgstr[3] "Сукоб са регистрованом глобалном пречицом"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Резервисана пречица"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -815,14 +817,14 @@ msgstr ""
 "пречица.\n"
 "Изаберите неку другу."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Сукоб са стандардном програмском пречицом"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -833,13 +835,13 @@ msgstr ""
 "неки програми.\n"
 "Желите ли заиста да је користите и као глобалну пречицу?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "унесите..."
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -873,7 +875,7 @@ msgstr "Додај на траку алатки"
 #, fuzzy, kde-format
 #| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Подеси пречицу..."
 
 #: kshortcuteditwidget.cpp:55
@@ -902,13 +904,11 @@ msgstr "Шеме пречица"
 msgid "Current scheme:"
 msgstr "Текућа шема:"
 
-# >> @action:button New scheme
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Нова..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -935,14 +935,14 @@ msgstr "Сачувај пречице у шему"
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Извези шему..."
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Увези шему..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1496,6 +1496,25 @@ msgstr "П&одешавање"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Главна трака"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Промени &иконицу..."
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Промени &текст..."
+
+# >> @action:button New scheme
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Нова..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

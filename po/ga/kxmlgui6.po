@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -628,17 +628,17 @@ msgstr "Gníomhartha r&eatha:"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Athraigh &Deilbhín..."
+msgid "Change &Icon…"
+msgstr "Athraigh Deilbhín"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Athraigh &Téacs..."
+msgid "Change Te&xt…"
+msgstr "Athraigh Téacs"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -710,7 +710,7 @@ msgstr "&Cabhair"
 msgid "About %1"
 msgstr "Maidir le %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -726,7 +726,7 @@ msgstr ""
 "Mar shampla, le haghaidh Ctrl+a: coinnigh an eochair Ctrl síos agus brúigh "
 "'a'."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -737,12 +737,12 @@ msgstr[2] "Coinbhleachtaí idir Aicearraí"
 msgstr[3] "Coinbhleachtaí idir Aicearraí"
 msgstr[4] "Coinbhleachtaí idir Aicearraí"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Aicearra '%1' do ghníomh '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -783,22 +783,22 @@ msgstr[4] ""
 "An bhfuil fonn ort aicearraí folmha a thabhairt do na gníomhartha seo?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Athshann"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Coinbhleacht idir Aicearraí"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -807,13 +807,13 @@ msgstr ""
 "<qt>Tá '%1' comhcheangailte leis an ngníomh <b>%2</b> cheana.<br>Roghnaigh "
 "ceann eile, le do thoil.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Aicearra '%1' i bhFeidhmchlár %2 do ghníomh %3\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -832,7 +832,7 @@ msgstr[3] ""
 msgstr[4] ""
 "Tagann aicearra '%2' salach ar na teaglamaí eochracha seo a leanas:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -843,12 +843,12 @@ msgstr[2] "Coimhlint le hAicearraí Comhchoiteanna Cláraithe"
 msgstr[3] "Coimhlint le hAicearraí Comhchoiteanna Cláraithe"
 msgstr[4] "Coimhlint le hAicearraí Comhchoiteanna Cláraithe"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Aicearra In Áirithe"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -859,14 +859,14 @@ msgstr ""
 "úsáid mar aicearra comhchoiteann.\n"
 "Roghnaigh ceann eile."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Coimhlint le hAicearra Feidhmchláir Chaighdeánaithe"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -878,13 +878,13 @@ msgstr ""
 "An bhfuil tú cinnte gur mian leat é a úsáid mar aicearra comhchoiteann "
 "freisin?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ionchur"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -916,10 +916,10 @@ msgstr "Cuir leis an mBarra Uirlisí"
 
 #: kmenumenuhandler_p.cpp:224
 #, fuzzy, kde-format
-#| msgid "Configure Shortcut..."
+#| msgid "Configure Shortcut"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
-msgstr "Cumraigh Aicearra..."
+msgid "Configure Shortcut…"
+msgstr "Cumraigh Aicearra"
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -948,11 +948,10 @@ msgid "Current scheme:"
 msgstr "Scéim reatha:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nua..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -978,14 +977,14 @@ msgstr "Scéimeanna Aicearraí"
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Easpórtáil Scéim..."
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Easpórtáil Scéim..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1532,6 +1531,30 @@ msgstr "&Socruithe"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Príomhbharra Uirlisí"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Athraigh &Deilbhín..."
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Athraigh &Téacs..."
+
+#, fuzzy
+#~| msgid "Configure Shortcut..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Configure Shortcut..."
+#~ msgstr "Cumraigh Aicearra..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nua..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "
@@ -12771,9 +12794,6 @@ msgstr "Príomhbharra Uirlisí"
 
 #~ msgid "Print Previe&w..."
 #~ msgstr "Réamhamharc Prion&tála..."
-
-#~ msgid "Configure Shortcut"
-#~ msgstr "Cumraigh Aicearra"
 
 #~ msgid "Could not load interpreter library \"%1\""
 #~ msgstr "Níorbh fhéidir leabharlann léirmhínithe \"%1\" a luchtú"

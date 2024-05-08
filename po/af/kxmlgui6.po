@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -565,14 +565,14 @@ msgstr "Huidige aksies:"
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change &Icon..."
+msgid "Change &Icon…"
 msgstr "Verander Ikoon..."
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
-msgid "Change Te&xt..."
+msgid "Change Te&xt…"
 msgstr "Verander Ikoon..."
 
 #: kedittoolbar.cpp:1191
@@ -649,7 +649,7 @@ msgstr "Hulp"
 msgid "About %1"
 msgstr "Aangaande %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -657,7 +657,7 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "%1 is the number of conflicts"
@@ -666,13 +666,13 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Kortpad"
 msgstr[1] "Kortpad"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Inhoud informasie: %1\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -690,22 +690,22 @@ msgstr[1] ""
 "Die '%1' sleutel kombinasie is alreeds aan die aksie \"%2\" geallokeer.\n"
 "Wil jy dit eerder aan die nuwe aksie allokeer?"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reassign"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Kortpad"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' key combination has already been allocated to the \"%2\" "
@@ -718,13 +718,13 @@ msgstr ""
 "Die '%1' sleutel kombinasie is alreeds geallokeer aan die \"%2\" aksie.\n"
 "Kies asseblief 'n unieke sleutel kombinasie."
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Inhoud informasie: %1\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -735,7 +735,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict with Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -744,13 +744,13 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Konflik gevind met Globale Kortpad"
 msgstr[1] "Konflik gevind met Globale Kortpad"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Kortpad"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -758,14 +758,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflik met Standaard Program Kortpad"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -776,14 +776,14 @@ msgstr ""
 "\"%2\" geallokeer.\n"
 "Wil jy dit eerder aan die nuwe aksie allokeer?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, fuzzy, kde-format
 #| msgid "Input file"
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Invoer lêer"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "No shortcut defined"
@@ -816,10 +816,10 @@ msgstr "Voeg by na Pasmaak Kleure"
 
 #: kmenumenuhandler_p.cpp:224
 #, fuzzy, kde-format
-#| msgid "Configure S&hortcuts..."
+#| msgid "Configure Shortcut"
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
-msgstr "Stel Kortpaaie Op..."
+msgid "Configure Shortcut…"
+msgstr "Stel Kortpad op"
 
 #: kshortcuteditwidget.cpp:55
 #, fuzzy, kde-format
@@ -848,11 +848,10 @@ msgid "Current scheme:"
 msgstr "Huidige aksies:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New List..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Nuwe Lys..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, fuzzy, kde-format
@@ -879,14 +878,14 @@ msgstr "Kortpaaie"
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Kortpaaie"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Kortpaaie"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1429,6 +1428,30 @@ msgstr "Instellings"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hoof Nutsbalk"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Verander Ikoon..."
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Verander Ikoon..."
+
+#, fuzzy
+#~| msgid "Configure S&hortcuts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Configure Shortcut..."
+#~ msgstr "Stel Kortpaaie Op..."
+
+#, fuzzy
+#~| msgid "New List..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Nuwe Lys..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "
@@ -13293,9 +13316,6 @@ msgstr "Hoof Nutsbalk"
 
 #~ msgid "Print Previe&w..."
 #~ msgstr "Druk Voorskou..."
-
-#~ msgid "Configure Shortcut"
-#~ msgstr "Stel Kortpad op"
 
 #, fuzzy
 #~ msgid "Could not load interpreter library \"%1\""

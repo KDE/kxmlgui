@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-01-07 18:49+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -551,16 +551,19 @@ msgid "Curr&ent actions:"
 msgstr "Aksi s&aat ini:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Ubah &Ikon..."
+msgid "Change &Icon…"
+msgstr "Ubah Ikon"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Ubah Te&ks..."
+msgid "Change Te&xt…"
+msgstr "Ubah Teks"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -631,7 +634,7 @@ msgstr "&Bantuan"
 msgid "About %1"
 msgstr "Tentang %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -642,7 +645,7 @@ msgstr ""
 "program.\n"
 "Misalnya untuk Ctrl+A: tahan tuts Ctrl lalu tekan A."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -650,12 +653,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Bentrok Pintasan"
 msgstr[1] "Bentrokan Pintasan"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Pintasan '%1' untuk aksi '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -675,20 +678,20 @@ msgstr[1] ""
 "Apakah kamu ingin menugaskan sebuah pintasan kosong untuk aksi tersebut?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Tugaskan Ulang"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Konflik pintasan"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -697,13 +700,13 @@ msgstr ""
 "<qt>Kombinasi tombol '%1' telah digunakan oleh aksi <b>%2</b>.<br>Silakan "
 "pilih yang lain.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Pintasan '%1' di Aplikasi %2 untuk aksi %3\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -714,7 +717,7 @@ msgid_plural ""
 msgstr[0] "Pintasan '%2' bentrok dengan kombinasi tuts berikut ini:\n"
 msgstr[1] "Pintasan '%2' bentrok dengan kombinasi tuts berikut ini:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -722,12 +725,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Bentrok dengan Pintasan Global Terdaftar"
 msgstr[1] "Bentrok dengan Pintasan-pintasan Global Terdaftar"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Pintasan Dipesan"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -738,13 +741,13 @@ msgstr ""
 "pintas global.\n"
 "Silakan pilih yang lain"
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflik dengan Pintasan Aplikasi Standar"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -755,13 +758,13 @@ msgstr ""
 "digunakan oleh beberapa aplikasi.\n"
 "Anda yakin ingin menggunakannya sebagai jalan pintas global juga?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Input"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -791,9 +794,11 @@ msgid "Add to Toolbar"
 msgstr "Tambah ke Bilah Alat"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Konfigurasikan Pintasan..."
 
 #: kshortcuteditwidget.cpp:55
@@ -822,8 +827,8 @@ msgstr "Skema saat ini:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Baru..."
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -844,15 +849,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Simpan pintasan untuk skema"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Ekspor Skema..."
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Impor Skema..."
 
 #: kshortcutschemeseditor.cpp:115
@@ -1375,6 +1384,18 @@ msgstr "Peng&aturan"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Bilah Alat Utama"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Ubah &Ikon..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Ubah Te&ks..."
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Baru..."
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

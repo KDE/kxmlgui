@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2011-07-22 16:08+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -629,17 +629,17 @@ msgstr "&Trenutne aktivnosti:"
 
 #: kedittoolbar.cpp:1040
 #, fuzzy, kde-format
-#| msgid "Change &Icon..."
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Promjeni &ikonu…"
+msgid "Change &Icon…"
+msgstr "Promjeni ikonu…"
 
 #: kedittoolbar.cpp:1049
 #, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "Promijeni tekst…"
+msgid "Change Te&xt…"
+msgstr "Promijeni tekst"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -710,7 +710,7 @@ msgstr "&Pomoć"
 msgid "About %1"
 msgstr "O programu %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -724,7 +724,7 @@ msgstr ""
 "Pritisnite gumb, zatim unesite prečac kao što bi napravili u samom programu."
 "\\ Primjer za Ctrl+a: držite tipku Ctrl i pritisnite a."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -733,12 +733,12 @@ msgstr[0] "Konflikt prečaca"
 msgstr[1] "Konflikti prečaca"
 msgstr[2] "Konflikti prečaca"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Prečica '%1' za radnju '%2'\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -771,22 +771,22 @@ msgstr[2] ""
 "Želite li dodijeliti prazan prečac ovoj radnji?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Prenamjeni"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Sukob s prečicom"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -795,13 +795,13 @@ msgstr ""
 "<qt>Kombinacija tipki '%1'  je dodijeljena aktivnosti <b>%2</b>."
 "<br>Odaberite drugu kombinaciju tipki.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Prečak '%1' u aplikaciji %2 za akciju %3\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -813,7 +813,7 @@ msgstr[0] "Prečac '%2' u konfliktu je s sljedećim kombinacijama tipaka:\n"
 msgstr[1] "Prečac '%2' u konfliktima je s sljedećim kombinacijama tipaka:\n"
 msgstr[2] "Prečac '%2' u konfliktima je s sljedećim kombinacijama tipaka:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -822,12 +822,12 @@ msgstr[0] "Konflikt s registriranim globalnim prečacem"
 msgstr[1] "Konflikt s registriranim globalnim prečacima"
 msgstr[2] "Konflikt s registriranim globalnim prečacima"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervirani prečaci"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -838,14 +838,14 @@ msgstr ""
 "prečac.\n"
 "Molim da izaberete drugu tipku."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Sukob sa zadanim prečacem aplikacije"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -856,13 +856,13 @@ msgstr ""
 "koju neka aplikacija koristi.\n"
 "Želite li je zaista koristiti kao opći prečac? "
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ulaz"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -898,7 +898,7 @@ msgstr "Dodaj na alatnu traku"
 #, fuzzy, kde-format
 #| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Podešavanje prečaca"
 
 #: kshortcuteditwidget.cpp:55
@@ -928,11 +928,10 @@ msgid "Current scheme:"
 msgstr "Trenutna shema:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Novo…"
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -958,14 +957,14 @@ msgstr "Prečaci"
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Izvezi shemu…"
 
 #: kshortcutschemeseditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Izvezi shemu…"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1512,6 +1511,24 @@ msgstr "&Postavke"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
+
+#, fuzzy
+#~| msgid "Change &Icon..."
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Promjeni &ikonu…"
+
+#, fuzzy
+#~| msgid "Change Te&xt..."
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "Promijeni tekst…"
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Novo…"
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "

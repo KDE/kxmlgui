@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:36+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-01-02 13:42+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -533,16 +533,19 @@ msgid "Curr&ent actions:"
 msgstr "A &jelenlegi műveletek:"
 
 #: kedittoolbar.cpp:1040
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Icon"
 msgctxt "@action:button"
-msgid "Change &Icon..."
-msgstr "Az ik&on megváltoztatása…"
+msgid "Change &Icon…"
+msgstr "Más ikon"
 
 #: kedittoolbar.cpp:1049
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Text"
 msgctxt "@action:button"
-msgid "Change Te&xt..."
-msgstr "A szö&veg megváltoztatása…"
+msgid "Change Te&xt…"
+msgstr "Más szöveg"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -612,7 +615,7 @@ msgstr "&Súgó"
 msgid "About %1"
 msgstr "Névjegy: %1"
 
-#: kkeysequencewidget.cpp:144
+#: kkeysequencewidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -622,7 +625,7 @@ msgstr ""
 "Kattintson a gombra, majd adja meg a kívánt billentyűkombinációt.\n"
 "Példa Ctrl+A-ra: a Ctrl lenyomva tartása mellett nyomja le az A-t."
 
-#: kkeysequencewidget.cpp:167
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -630,12 +633,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Ütköző billentyűparancsok"
 msgstr[1] "Ütköző billentyűparancsok"
 
-#: kkeysequencewidget.cpp:171
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Billentyűkombináció: „%1”, művelet: „%2”\n"
 
-#: kkeysequencewidget.cpp:176
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -655,20 +658,20 @@ msgstr[1] ""
 "Törölni szeretné a művelethez rendelt billentyűkombinációt?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:186 kkeysequencewidget.cpp:293
-#: kkeysequencewidget.cpp:355
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Igen, az új"
 
-#: kkeysequencewidget.cpp:191
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Ütköző billentyűparancsok"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -677,12 +680,12 @@ msgstr ""
 "<qt>A(z) „%1” billentyűkombináció már hozzá van rendelve a(z) <b>%2</b> "
 "művelethez.<br>Válasszon más billentyűkombinációt.</qt>"
 
-#: kkeysequencewidget.cpp:273
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Billentyűkombináció: %1, alkalmazás: „%2”, művelet: „%3”\n"
 
-#: kkeysequencewidget.cpp:282
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -693,7 +696,7 @@ msgid_plural ""
 msgstr[0] "Ütköző billentyűparancs: „%2”. A következővel ütközik:\n"
 msgstr[1] "Ütköző billentyűparancs: „%2”. A következőkkel ütközik:\n"
 
-#: kkeysequencewidget.cpp:289
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -701,12 +704,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Ütközés egy globális billentyűparanccsal"
 msgstr[1] "Ütközés globális billentyűparancsokkal"
 
-#: kkeysequencewidget.cpp:302
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Foglalt gyorsbillentyű"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -717,13 +720,13 @@ msgstr ""
 "billentyűparancsban.\n"
 "Válasszon más billentyűt."
 
-#: kkeysequencewidget.cpp:347
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Ütközés egy alkalmazásbeli billentyűkombinációval"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -734,13 +737,13 @@ msgstr ""
 "művelethez.\n"
 "Azt szeretné, hogy ez globális billentyűparancs is legyen?"
 
-#: kkeysequencewidget.cpp:393
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Bevitel"
 
-#: kkeysequencewidget.cpp:395 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -770,9 +773,11 @@ msgid "Add to Toolbar"
 msgstr "Hozzáadás az eszköztárhoz"
 
 #: kmenumenuhandler_p.cpp:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Configure Shortcut..."
 msgctxt "@action:inmenu"
-msgid "Configure Shortcut..."
+msgid "Configure Shortcut…"
 msgstr "Billentyűparancsok beállítása…"
 
 #: kshortcuteditwidget.cpp:55
@@ -801,8 +806,8 @@ msgstr "Jelenlegi séma:"
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
-msgid "New..."
-msgstr "Új…"
+msgid "New…"
+msgstr ""
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -823,15 +828,19 @@ msgid "Save shortcuts to scheme"
 msgstr "Billentyűparancsok mentése sémába"
 
 #: kshortcutschemeseditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Export Scheme..."
 msgctxt "@action:inmenu"
-msgid "Export Scheme..."
+msgid "Export Scheme…"
 msgstr "Séma exportálása…"
 
 #: kshortcutschemeseditor.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import Scheme..."
 msgctxt "@action:inmenu"
-msgid "Import Scheme..."
+msgid "Import Scheme…"
 msgstr "Séma importálása…"
 
 #: kshortcutschemeseditor.cpp:115
@@ -1354,6 +1363,18 @@ msgstr "&Beállítások"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Alap eszköztár"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change &Icon..."
+#~ msgstr "Az ik&on megváltoztatása…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change Te&xt..."
+#~ msgstr "A szö&veg megváltoztatása…"
+
+#~ msgctxt "@action:button"
+#~ msgid "New..."
+#~ msgstr "Új…"
 
 #~ msgid ""
 #~ "Your email address. If incorrect, use the Configure Email button to "
