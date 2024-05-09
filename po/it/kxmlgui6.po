@@ -1,5 +1,5 @@
 # translation of kdelibs4.po to Italian
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
 # Federico Cozzi <federicocozzi@federicocozzi.it>, 2004.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2004, 2008, 2009, 2010, 2011.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-11-23 14:11+0100\n"
+"PO-Revision-Date: 2024-05-08 17:28+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -545,19 +545,16 @@ msgid "Curr&ent actions:"
 msgstr "Azioni att&uali:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Cambia icona"
+msgstr "Cambia &icona…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Cambia testo"
+msgstr "Cambia te&sto…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -791,12 +788,10 @@ msgid "Add to Toolbar"
 msgstr "Aggiungi alla barra degli strumenti"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Configura scorciatoia..."
+msgstr "Configura scorciatoia…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -825,7 +820,7 @@ msgstr "Schema attuale:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nuovo…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -846,20 +841,16 @@ msgid "Save shortcuts to scheme"
 msgstr "Salva le scorciatoie su schema"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "Esporta schema..."
+msgstr "Esporta schema…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Importa schema..."
+msgstr "Importa schema…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format

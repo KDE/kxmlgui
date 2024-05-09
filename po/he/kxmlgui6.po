@@ -17,13 +17,13 @@
 # Meni Livne <livne@kde.org>, 2007.
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-11-23 11:37+0200\n"
+"PO-Revision-Date: 2024-05-08 09:13+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Poedit-Flags-xgettext: --add-comments\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -538,19 +538,16 @@ msgid "Curr&ent actions:"
 msgstr "פעול&ות נוכחיות:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "שינוי סמל"
+msgstr "ה&חלפת סמל…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "עריכת טקסט"
+msgstr "ע&ריכת טקסט…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -789,12 +786,10 @@ msgid "Add to Toolbar"
 msgstr "הוספה לסרגל־הכלים"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "הגדרות מקש קיצור…"
+msgstr "הגדרת מקש קיצור…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -823,7 +818,7 @@ msgstr "ערכה נוכחית:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "חדש…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -844,17 +839,13 @@ msgid "Save shortcuts to scheme"
 msgstr "שמירת קיצורי מקשים לערכה"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "ייצוא ערכה…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "ייבוא ערכה…"

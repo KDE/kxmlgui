@@ -5,7 +5,7 @@
 # Pablo de Vicente <vicente@oan.es>, 2000-2002,2003, 2004.
 # Pablo de Vicente <vicnte@oan.es>, 2003.
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# SPDX-FileCopyrightText: 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006, 2007.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Jaime Robles <jaime@kde.org>, 2007.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-11-23 20:32+0100\n"
+"PO-Revision-Date: 2024-05-08 12:46+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -547,19 +547,16 @@ msgid "Curr&ent actions:"
 msgstr "Acciones a&ctuales:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Cambiar icono"
+msgstr "Cambiar &icono..."
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Cambiar texto"
+msgstr "Cambiar te&xto..."
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -794,9 +791,7 @@ msgid "Add to Toolbar"
 msgstr "Añadir a la barra de herramientas"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
 msgstr "Configurar atajo de teclado..."
@@ -828,7 +823,7 @@ msgstr "Esquema actual:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nuevo..."
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -849,17 +844,13 @@ msgid "Save shortcuts to scheme"
 msgstr "Guardar atajos de teclado en el esquema"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "Exportar esquema..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "Importar esquema..."
