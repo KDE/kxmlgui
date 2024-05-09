@@ -245,21 +245,6 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 
     sMemberList()->append(q);
 
-    // Set the icon theme fallback to breeze (if not already set)
-    // Most of our apps use "lots" of icons that most of the times
-    // are only available with breeze, we still honour the user icon
-    // theme but if the icon is not found there, we go to breeze
-    // since it's almost sure it'll be there.
-    // This should be done as soon as possible (preferably via
-    // Q_COREAPP_STARTUP_FUNCTION), but as for now it cannot be done too soon
-    // as at that point QPlatformTheme is not instantiated yet and breaks the
-    // internal status of QIconLoader (see QTBUG-74252).
-    // See also discussion at https://phabricator.kde.org/D22488
-    // TODO: remove this once we depend on Qt 5.15.1, where this is fixed
-    if (QIcon::fallbackThemeName().isEmpty()) {
-        QIcon::setFallbackThemeName(QStringLiteral("breeze"));
-    }
-
     // If application is translated, load translator information for use in
     // KAboutApplicationDialog or other getters. The context and messages below
     // both must be exactly as listed, and are forced to be loaded from the
