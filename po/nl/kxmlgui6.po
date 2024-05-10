@@ -9,14 +9,14 @@
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Sander Koning <sanderkoning@kde.nl>, 2005.
 # Tijmen Baarda <tijmenbaarda@kde.nl>, 2005.
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 # Kristof Bal <kristof.bal@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-11-23 10:11+0100\n"
+"PO-Revision-Date: 2024-05-08 10:57+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Files: kfarch.cpp kfdird.cpp kfind.cpp kfindtop.cpp kfoptions.cpp kfsave.cpp "
 "kftabdlg.cpp kftypes.cpp kfwin.cpp main.cpp mkfdird.cpp mkfind.cpp\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
@@ -546,19 +546,16 @@ msgid "Curr&ent actions:"
 msgstr "Huidig&e acties:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Pictogram wijzigen"
+msgstr "P&ictogram wijzigen…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Tekst wijzigen"
+msgstr "Te&kst wijzigen…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -795,12 +792,10 @@ msgid "Add to Toolbar"
 msgstr "Aan werkbalk toevoegen"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Sneltoets instellen..."
+msgstr "Sneltoets configureren…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -829,7 +824,7 @@ msgstr "Huidig schema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nieuw…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -850,20 +845,16 @@ msgid "Save shortcuts to scheme"
 msgstr "Sneltoetsen opslaan naar schema"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "Schema exporteren..."
+msgstr "Schema exporteren…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Schema importeren..."
+msgstr "Schema importeren…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format

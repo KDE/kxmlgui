@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2024-04-30 00:21+0300\n"
+"PO-Revision-Date: 2024-05-09 19:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -549,19 +549,16 @@ msgid "Curr&ent actions:"
 msgstr "Geçerli &eylemler:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Simgeyi Değiştir"
+msgstr "&Simgeyi Değiştir…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Metni Değiştir"
+msgstr "&Metni Değiştir…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -792,9 +789,7 @@ msgid "Add to Toolbar"
 msgstr "Araç Çubuğuna Ekle"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
 msgstr "Kısayolu Yapılandır…"
@@ -826,7 +821,7 @@ msgstr "Geçerli şema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Yeni…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -847,17 +842,13 @@ msgid "Save shortcuts to scheme"
 msgstr "Kısayolları Şemaya Kaydet"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "Şemayı Dışa Aktar…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "Şema İçe Aktar…"

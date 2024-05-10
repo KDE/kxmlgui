@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-11-23 20:47+0100\n"
+"PO-Revision-Date: 2024-05-09 22:01+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -537,19 +537,16 @@ msgid "Curr&ent actions:"
 msgstr "&Nunaj agoj:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Ŝanĝi piktogramon"
+msgstr "Ŝanĝi P&iktogramon…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Ŝanĝi Tekston"
+msgstr "Ŝanĝi Tek&ston…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -782,12 +779,10 @@ msgid "Add to Toolbar"
 msgstr "Aldoni al Ilobreto"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Agordi Ŝparvojon..."
+msgstr "Agordi Ŝparvojon…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -816,7 +811,7 @@ msgstr "Aktuala skemo:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nova…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -837,20 +832,16 @@ msgid "Save shortcuts to scheme"
 msgstr "Konservi ŝparvojojn al skemo"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "Eksporti Skemon..."
+msgstr "Elporti Skemon…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Importi Skemon..."
+msgstr "Enporti Skemon…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -1370,15 +1361,3 @@ msgstr "&Agordoj"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Ĉefa Ilobreto"
-
-#~ msgctxt "@action:button"
-#~ msgid "Change &Icon..."
-#~ msgstr "Ŝanĝi p&iktogramon..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Change Te&xt..."
-#~ msgstr "Ŝanĝi Te&kston..."
-
-#~ msgctxt "@action:button"
-#~ msgid "New..."
-#~ msgstr "Nova..."

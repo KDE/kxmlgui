@@ -1,12 +1,12 @@
 # Translation of kxmlgui6.po to Catalan (Valencian)
-# Copyright (C) 1998-2023 This_file_is_part_of_KDE
+# Copyright (C) 1998-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2006, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2022.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2007.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Robert Millan <rmh@aybabtu.com>, 2009.
 # Orestes Mas <orestes@tsc.upc.edu>, 2010.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-11-23 11:56+0100\n"
+"PO-Revision-Date: 2024-05-08 19:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -185,7 +185,7 @@ msgstr ""
 "per a fer-ho. En canvi, vós - l'usuari - heu de dir-nos quan alguna cosa no "
 "funciona tal com s'espera o si es pot fer millor.<br /><br />KDE té un "
 "sistema de seguiment d'errors. Visiteu <a href=\"%1\">%1</a> o utilitzeu el "
-"diàleg «Informeu d'un error...» des del menú «Ajuda» per a informar-ne.<br /"
+"diàleg «Informeu d'un error…» des del menú «Ajuda» per a informar-ne.<br /"
 "><br />Si teniu un suggeriment de millora, us convidem a utilitzar el "
 "sistema de seguiment d'errors per a registrar la vostra petició. Assegureu-"
 "vos d'utilitzar la gravetat anomenada «Llista de desitjos» (Wishlist).</html>"
@@ -228,7 +228,7 @@ msgstr ""
 "<html>KDE és i sempre estarà disponible sense càrrecs, però la seua creació "
 "no és debades.<br /><br />Per a donar suport al desenvolupament, la "
 "comunitat KDE va formar la KDE e.V., una organització sense ànim de lucre, "
-"fundada legalment a Alemanya. La KDE e.V. representa la comunitat KDE en "
+"fundada legalment en Alemanya. La KDE e.V. representa la comunitat KDE en "
 "qüestions legals i financeres. Consulteu a <a href=\"%1\">%1</a> la "
 "informació quant a la KDE e.V.<br /><br />KDE es beneficia de molts tipus de "
 "col·laboracions, inclosa la financera. Els fons obtinguts s'utilitzen per a "
@@ -543,19 +543,16 @@ msgid "Curr&ent actions:"
 msgstr "A&ccions actuals:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Canvi de la icona"
+msgstr "Canvia la &icona…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Canvia el text"
+msgstr "Canvia el te&xt…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -792,12 +789,10 @@ msgid "Add to Toolbar"
 msgstr "Afig a la barra d'eines"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Configura les dreceres..."
+msgstr "Configura les dreceres…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -826,7 +821,7 @@ msgstr "Esquema actual:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nou…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -847,20 +842,16 @@ msgid "Save shortcuts to scheme"
 msgstr "Guarda les dreceres a l'esquema"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "Exporta l'esquema..."
+msgstr "Exporta un esquema…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Importa un esquema..."
+msgstr "Importa un esquema…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -1384,15 +1375,3 @@ msgstr "Con&figuració"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra d'eines principal"
-
-#~ msgctxt "@action:button"
-#~ msgid "Change &Icon..."
-#~ msgstr "Canvia la &icona..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Change Te&xt..."
-#~ msgstr "Canvia el te&xt..."
-
-#~ msgctxt "@action:button"
-#~ msgid "New..."
-#~ msgstr "Nou..."
