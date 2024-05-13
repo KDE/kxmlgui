@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2024-02-11 11:56+0100\n"
+"PO-Revision-Date: 2024-05-12 08:48+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -108,7 +108,7 @@ msgstr ""
 ">\n"
 ">\n"
 ">\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -629,24 +629,21 @@ msgid "Curr&ent actions:"
 msgstr "Ob&ecne działania:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Zmień ikonę"
+msgstr "Zmień &ikonę…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Zmień tekst"
+msgstr "Zmień &tekst…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
 msgid "--- separator ---"
-msgstr "--- element oddzielający ---"
+msgstr "--- rozdzielacz ---"
 
 #: kedittoolbar.cpp:1192
 #, kde-format
@@ -879,12 +876,10 @@ msgid "Add to Toolbar"
 msgstr "Dodaj do paska narzędzi"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Ustawienia skrótów..."
+msgstr "Ustawienia skrótów…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -902,7 +897,7 @@ msgstr "Własny:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
-msgstr "Schematy zestaw"
+msgstr "Zestawy skrótów"
 
 #: kshortcutschemeseditor.cpp:37
 #, kde-format
@@ -913,7 +908,7 @@ msgstr "Bieżący zestaw:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nowy…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -934,17 +929,13 @@ msgid "Save shortcuts to scheme"
 msgstr "Zapisz skróty do zestawu"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "Wyeksportuj zestaw..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "Zaimportuj zestaw..."
