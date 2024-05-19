@@ -16,6 +16,7 @@
 #define KACTIONCOLLECTION_H
 
 #include <KStandardAction>
+#include <KStandardActions>
 #include <kxmlgui_export.h>
 
 #include <QAction>
@@ -416,6 +417,33 @@ public:
 #endif
     {
         QAction *action = KStandardAction::create(actionType, receiver, slot, nullptr);
+        action->setParent(this);
+        action->setObjectName(name);
+        return addAction(name, action);
+    }
+
+    /**
+     * This is the same as addAction(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+     * but using KStandardActions from KConfigGui.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @param name The name by which the action be retrieved again from the collection.
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
+     * @return new action of the given type ActionType.
+     * @since 6.3
+     */
+#ifdef K_DOXYGEN
+    inline QAction *addAction(KStandardActions::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+#else
+    template<class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
+    addAction(KStandardActions::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+#endif
+    {
+        // Use implementation from KConfigWidgets instead of KConfigGui
+        // as it provides tighter integration with QtWidgets applications.
+        QAction *action = KStandardAction::create(static_cast<KStandardAction::StandardAction>(actionType), receiver, slot, nullptr);
         action->setParent(this);
         action->setObjectName(name);
         return addAction(name, action);
