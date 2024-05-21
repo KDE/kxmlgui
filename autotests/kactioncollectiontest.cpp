@@ -6,7 +6,7 @@
 #include <QtTestWidgets>
 
 #include <KSharedConfig>
-#include <KStandardAction>
+#include <KStandardActions>
 
 void tst_KActionCollection::init()
 {
@@ -44,7 +44,7 @@ void tst_KActionCollection::clear()
 void tst_KActionCollection::addStandardActionFunctorSignal()
 {
     bool received = false;
-    QAction *a = collection->addAction(KStandardAction::New, QStringLiteral("test"), this, [&]() {
+    QAction *a = collection->addAction(KStandardActions::New, QStringLiteral("test"), this, [&]() {
         received = true;
     });
     a->trigger();
@@ -242,18 +242,18 @@ void tst_KActionCollection::testSetShortcuts()
 void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
 {
     KActionCollection collection(static_cast<QObject *>(nullptr));
-    QAction *a = KStandardAction::create(KStandardAction::Undo, qApp, &QCoreApplication::quit, &collection);
+    QAction *a = KStandardActions::create(KStandardActions::Undo, qApp, &QCoreApplication::quit, &collection);
     QVERIFY(a);
 
     QVERIFY(a->parent() == &collection);
-    QVERIFY(collection.action(KStandardAction::name(KStandardAction::Undo)) == a);
+    QVERIFY(collection.action(KStandardActions::name(KStandardActions::Undo)) == a);
 }
 
 void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
 {
     KActionCollection collection(static_cast<QObject *>(nullptr));
     QAction *cut = KStandardAction::cut(&collection);
-    QAction *a = collection.action(KStandardAction::name(KStandardAction::Cut));
+    QAction *a = collection.action(KStandardActions::name(KStandardActions::Cut));
     QVERIFY(a);
     QVERIFY(a == cut);
 }

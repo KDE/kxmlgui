@@ -7,7 +7,7 @@
 
 #include "krichtexteditor.h"
 
-#include <KStandardAction>
+#include <KStandardActions>
 #include <kactioncollection.h>
 
 #include <QApplication>
@@ -42,15 +42,15 @@ KRichTextEditor::~KRichTextEditor()
 
 void KRichTextEditor::setupActions()
 {
-    KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
+    KStandardActions::quit(qApp, &QCoreApplication::quit, actionCollection());
 
-    KStandardAction::open(this, &KRichTextEditor::openFile, actionCollection());
+    KStandardActions::open(this, &KRichTextEditor::openFile, actionCollection());
 
-    KStandardAction::save(this, &KRichTextEditor::saveFile, actionCollection());
+    KStandardActions::save(this, &KRichTextEditor::saveFile, actionCollection());
 
-    KStandardAction::saveAs(this, qOverload<>(&KRichTextEditor::saveFileAs), actionCollection());
+    KStandardActions::saveAs(this, qOverload<>(&KRichTextEditor::saveFileAs), actionCollection());
 
-    KStandardAction::openNew(this, &KRichTextEditor::newFile, actionCollection());
+    KStandardActions::openNew(this, &KRichTextEditor::newFile, actionCollection());
 }
 
 void KRichTextEditor::cursorPositionChanged()

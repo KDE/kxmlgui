@@ -43,7 +43,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KToggleAction>
 
 #include <cctype>
@@ -292,7 +292,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
     Q_D(KXmlGuiWindow);
 
     if (options & Keys) {
-        KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
+        KStandardActions::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
     }
 
     if ((options & StatusBar) && statusBar()) {
@@ -301,7 +301,7 @@ void KXmlGuiWindow::setupGUI(const QSize &defaultSize, StandardWindowOptions opt
 
     if (options & ToolBar) {
         setStandardToolBarMenuEnabled(true);
-        KStandardAction::configureToolbars(this, &KXmlGuiWindow::configureToolbars, actionCollection());
+        KStandardActions::configureToolbars(this, &KXmlGuiWindow::configureToolbars, actionCollection());
     }
 
     d->defaultSize = defaultSize;

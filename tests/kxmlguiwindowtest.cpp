@@ -67,7 +67,7 @@ void MainWindow::setupActions()
     actionCollection()->addAction(QStringLiteral("test"), testAction);
     connect(testAction, &QAction::triggered, this, &MainWindow::slotTest);
 
-    KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
+    KStandardActions::quit(qApp, &QCoreApplication::quit, actionCollection());
 
     setAutoSaveSettings();
 

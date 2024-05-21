@@ -30,7 +30,7 @@
 #include <KAboutData>
 #include <KAuthorized>
 #include <KLocalizedString>
-#include <KStandardAction>
+#include <KStandardActions>
 
 using namespace KDEPrivate;
 
@@ -109,30 +109,30 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q)
     mActionsCreated = true;
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_contents"))) {
-        mHandBookAction = KStandardAction::helpContents(q, &KHelpMenu::appHelpActivated, q);
+        mHandBookAction = KStandardActions::helpContents(q, &KHelpMenu::appHelpActivated, q);
     }
     if (mShowWhatsThis && KAuthorized::authorizeAction(QStringLiteral("help_whats_this"))) {
-        mWhatsThisAction = KStandardAction::whatsThis(q, &KHelpMenu::contextHelpActivated, q);
+        mWhatsThisAction = KStandardActions::whatsThis(q, &KHelpMenu::contextHelpActivated, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_report_bug")) && !mAboutData.bugAddress().isEmpty()) {
-        mReportBugAction = KStandardAction::reportBug(q, &KHelpMenu::reportBug, q);
+        mReportBugAction = KStandardActions::reportBug(q, &KHelpMenu::reportBug, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_donate")) && mAboutData.bugAddress() == QLatin1String("submit@bugs.kde.org")) {
-        mDonateAction = KStandardAction::donate(q, &KHelpMenu::donate, q);
+        mDonateAction = KStandardActions::donate(q, &KHelpMenu::donate, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("switch_application_language"))) {
-        mSwitchApplicationLanguageAction = KStandardAction::switchApplicationLanguage(q, &KHelpMenu::switchApplicationLanguage, q);
+        mSwitchApplicationLanguageAction = KStandardActions::switchApplicationLanguage(q, &KHelpMenu::switchApplicationLanguage, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_app"))) {
-        mAboutAppAction = KStandardAction::aboutApp(q, &KHelpMenu::aboutApplication, q);
+        mAboutAppAction = KStandardActions::aboutApp(q, &KHelpMenu::aboutApplication, q);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_kde"))) {
-        mAboutKDEAction = KStandardAction::aboutKDE(q, &KHelpMenu::aboutKDE, q);
+        mAboutKDEAction = KStandardActions::aboutKDE(q, &KHelpMenu::aboutKDE, q);
     }
 }
 

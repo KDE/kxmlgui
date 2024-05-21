@@ -36,7 +36,7 @@
 #include <KIconTheme>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KToggleAction>
 #include <KToolBarPopupAction>
 
@@ -662,7 +662,7 @@ void KToolBarPrivate::slotContextAboutToShow()
 
     // try to find "configure toolbars" action
     QAction *configureAction = nullptr;
-    const QString actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
+    const QString actionName = KStandardActions::name(KStandardActions::ConfigureToolbars);
     configureAction = findAction(actionName);
 
     if (!configureAction && kmw) {
@@ -760,7 +760,7 @@ void KToolBarPrivate::slotContextAboutToHide()
 
     // Unplug the configure toolbars action too, since it's afterwards anyway
     QAction *configureAction = nullptr;
-    const QString actionName = KStandardAction::name(KStandardAction::ConfigureToolbars);
+    const QString actionName = KStandardActions::name(KStandardActions::ConfigureToolbars);
     configureAction = findAction(actionName);
 
     if (!configureAction && kmw) {

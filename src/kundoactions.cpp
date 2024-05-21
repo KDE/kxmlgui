@@ -21,7 +21,7 @@ QAction *KUndoActions::createRedoAction(QUndoStack *undoStack, KActionCollection
     QAction *action = undoStack->createRedoAction(actionCollection);
 
     if (actionName.isEmpty()) {
-        action->setObjectName(KStandardAction::name(KStandardAction::Redo));
+        action->setObjectName(KStandardActions::name(KStandardActions::Redo));
     } else {
         action->setObjectName(actionName);
     }
@@ -40,7 +40,7 @@ QAction *KUndoActions::createUndoAction(QUndoStack *undoStack, KActionCollection
     QAction *action = undoStack->createUndoAction(actionCollection);
 
     if (actionName.isEmpty()) {
-        action->setObjectName(KStandardAction::name(KStandardAction::Undo));
+        action->setObjectName(KStandardActions::name(KStandardActions::Undo));
     } else {
         action->setObjectName(actionName);
     }
