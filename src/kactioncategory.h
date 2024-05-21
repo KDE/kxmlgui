@@ -109,9 +109,15 @@ public:
     //@{
     QAction *addAction(const QString &name, QAction *action);
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 9)
+    KXMLGUI_DEPRECATED_VERSION(6, 9, "Use KStandardActions overload")
     QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
+#endif
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 9)
+    KXMLGUI_DEPRECATED_VERSION(6, 9, "Use KStandardActions overload")
     QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
+#endif
 
     QAction *addAction(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 

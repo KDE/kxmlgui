@@ -43,19 +43,23 @@ QAction *KActionCategory::addAction(const QString &name, QAction *action)
     return action;
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 9)
 QAction *KActionCategory::addAction(KStandardAction::StandardAction actionType, const QObject *receiver, const char *member)
 {
     QAction *action = collection()->addAction(actionType, receiver, member);
     addAction(action);
     return action;
 }
+#endif
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 9)
 QAction *KActionCategory::addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member)
 {
     QAction *action = collection()->addAction(actionType, name, receiver, member);
     addAction(action);
     return action;
 }
+#endif
 
 QAction *KActionCategory::addAction(const QString &name, const QObject *receiver, const char *member)
 {
