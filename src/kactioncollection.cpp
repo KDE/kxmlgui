@@ -383,6 +383,15 @@ QAction *KActionCollection::addAction(KStandardAction::StandardAction actionType
     return addAction(name, action);
 }
 
+QAction *KActionCollection::addAction(KStandardActions::StandardAction actionType)
+{
+    // Use implementation from KConfigWidgets instead of KConfigGui
+    // as it provides tighter integration with QtWidgets applications.
+    // KStandardAction automatically adds it to the collection.
+    QAction *action = KStandardAction::create(static_cast<KStandardAction::StandardAction>(actionType), nullptr, {}, this);
+    return action;
+}
+
 QAction *KActionCollection::addAction(const QString &name, const QObject *receiver, const char *member)
 {
     QAction *a = new QAction(this);

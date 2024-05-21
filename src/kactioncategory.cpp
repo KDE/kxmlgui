@@ -64,6 +64,13 @@ QAction *KActionCategory::addAction(const QString &name, const QObject *receiver
     return action;
 }
 
+QAction *KActionCategory::addAction(KStandardActions::StandardAction actionType)
+{
+    QAction *action = collection()->addAction(actionType);
+    addAction(action);
+    return action;
+}
+
 void KActionCategory::addAction(QAction *action)
 {
     // Only add the action if wasn't added earlier.

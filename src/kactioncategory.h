@@ -65,17 +65,17 @@ class QAction;
  *
  * KActionCategory *file = new KActionCategory(i18n("File"), actionCollection());
  * file->addAction(
- *      KStandardAction::New,   //< see KStandardAction
+ *      KStandardActions::New,   //< see KStandardAction
  *      this,                   //< Receiver
- *      SLOT(fileNew()));       //< SLOT
+ *      &MyApp::fileNew);       //< Slot
  *
  * ... more actions added to file ...
  *
  * KActionCategory *edit = new KActionCategory(i18n("Edit"), actionCollection());
  * edit->addAction(
- *      KStandardAction::Copy,  //< see KStandardAction
+ *      KStandardActions::Copy,  //< see KStandardAction
  *      this,                   //< Receiver
- *      SLOT(fileNew()));       //< SLOT
+ *      &MyApp::fileNew);       //< Slot
  *
  * ...
  *
@@ -119,6 +119,76 @@ public:
     ActionType *add(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr)
     {
         ActionType *action = collection()->add<ActionType>(name, receiver, member);
+        addAction(action);
+        return action;
+    }
+
+    /**
+     * Creates a new standard action, adds it to the collection and connects the
+     * action's triggered(bool) signal to the specified receiver/member. The
+     * newly created action is also returned.
+     *
+     * The KActionCollection takes ownership of the action object.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
+     *                 connection is desired.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
+     * @return the created action.
+     *
+     * @since 6.9
+     */
+#ifdef K_DOXYGEN
+    inline QAction *addAction(KStandardActions::StandardAction actionType, const Receiver *receiver, Func slot)
+#else
+    template<class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
+    addAction(KStandardActions::StandardAction actionType, const Receiver *receiver, Func slot)
+#endif
+    {
+        QAction *action = collection()->addAction(actionType, receiver, slot);
+        addAction(action);
+        return action;
+    }
+
+    /**
+     * Creates a new standard action and adds it to the collection.
+     * The newly created action is also returned.
+     *
+     * The KActionCollection takes ownership of the action object.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @return the created action.
+     *
+     * @since 6.9
+     */
+    QAction *addAction(KStandardActions::StandardAction actionType);
+
+    /**
+     * Creates a new standard action, adds it to the collection and connects the
+     * action's triggered(bool) signal to the specified receiver/member. The
+     * newly created action is also returned.
+     *
+     * The KActionCollection takes ownership of the action object.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @param name The name by which the action be retrieved again from the collection.
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
+     *                 connection is desired.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
+     * @return the created action.
+     *
+     * @since 6.9
+     */
+#ifdef K_DOXYGEN
+    inline QAction *addAction(KStandardActions::StandardAction actionType, const Receiver *receiver, Func slot)
+#else
+    template<class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
+    addAction(KStandardActions::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+#endif
+    {
+        QAction *action = collection()->addAction(actionType, name, receiver, slot);
         addAction(action);
         return action;
     }
