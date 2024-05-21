@@ -450,6 +450,42 @@ public:
     }
 
     /**
+     * Creates a new standard action, adds it to the collection and connects the
+     * action's triggered(bool) signal to the specified receiver/member. The
+     * newly created action is also returned.
+     *
+     * @note Using KStandardAction::OpenRecent will cause a different signal than
+     * triggered(bool) to be used, see KStandardAction for more information.
+     *
+     * The action can be retrieved later from the collection by its standard name as per
+     * KStandardAction::stdName.
+     *
+     * The KActionCollection takes ownership of the action object.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
+     *                 connection is desired.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
+     * @return new action of the given type ActionType.
+     *
+     * @since 6.3
+     */
+#ifdef K_DOXYGEN
+    inline QAction *addAction(KStandardActions::StandardAction actionType, const Receiver *receiver, Func slot)
+#else
+    template<class Receiver, class Func>
+    inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
+    addAction(KStandardActions::StandardAction actionType, const Receiver *receiver, Func slot)
+#endif
+    {
+        // Use implementation from KConfigWidgets instead of KConfigGui
+        // as it provides tighter integration with QtWidgets applications.
+        // KStandardAction automatically adds it to the collection.
+        QAction *action = KStandardAction::create(static_cast<KStandardAction::StandardAction>(actionType), receiver, slot, this);
+        return action;
+    }
+
+    /**
      * Creates a new action under the given name to the collection and connects
      * the action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is returned.
