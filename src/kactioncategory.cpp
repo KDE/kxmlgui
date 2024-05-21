@@ -61,12 +61,14 @@ QAction *KActionCategory::addAction(KStandardAction::StandardAction actionType, 
 }
 #endif
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 9)
 QAction *KActionCategory::addAction(const QString &name, const QObject *receiver, const char *member)
 {
     QAction *action = collection()->addAction(name, receiver, member);
     addAction(action);
     return action;
 }
+#endif
 
 QAction *KActionCategory::addAction(KStandardActions::StandardAction actionType)
 {
