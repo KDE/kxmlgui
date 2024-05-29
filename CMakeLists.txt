@@ -66,7 +66,7 @@ endif()
 set (HAVE_GLOBALACCEL ${KF6GlobalAccel_FOUND})
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.5
+    QT 6.7
     KF 5.240
 )
 
