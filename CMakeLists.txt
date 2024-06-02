@@ -46,9 +46,23 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 # Dependencies
 set(REQUIRED_QT_VERSION 6.5.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
-if(UNIX AND NOT APPLE AND NOT ANDROID)
+
+# shall we use DBus?
+# enabled per default on Linux & BSD systems
+set(USE_DBUS_DEFAULT OFF)
+if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT HAIKU)
+    set(USE_DBUS_DEFAULT ON)
+endif()
+option(USE_DBUS "Build components using DBus" ${USE_DBUS_DEFAULT})
+if(USE_DBUS)
     find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
     set(HAVE_QTDBUS ${Qt6DBus_FOUND})
+
+    # needs DBus + is only available on Linux & BSD
+    if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID AND NOT HAIKU)
+        find_package(KF6GlobalAccel ${KF_DEP_VERSION} REQUIRED)
+        set (HAVE_GLOBALACCEL ${KF6GlobalAccel_FOUND})
+    endif()
 endif()
 
 find_package(KF6CoreAddons ${KF_DEP_VERSION} REQUIRED)
@@ -59,11 +73,6 @@ find_package(KF6GuiAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
-
-if (NOT FORCE_DISABLE_KGLOBALACCEL AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
-    find_package(KF6GlobalAccel ${KF_DEP_VERSION} REQUIRED)
-endif()
-set (HAVE_GLOBALACCEL ${KF6GlobalAccel_FOUND})
 
 ecm_set_disabled_deprecation_versions(
     QT 6.7
