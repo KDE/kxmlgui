@@ -18,13 +18,12 @@
 
 namespace KDEPrivate
 {
-enum {
-    AVATAR_HEIGHT = 50,
-    AVATAR_WIDTH = 50,
-    MAIN_LINKS_HEIGHT = 32,
-    SOCIAL_LINKS_HEIGHT = 26,
-    MAX_SOCIAL_LINKS = 9,
-};
+static constexpr int AVATAR_HEIGHT = 50;
+static constexpr int AVATAR_WIDTH = 50;
+static constexpr int MAIN_LINKS_HEIGHT = 32;
+static constexpr int SOCIAL_LINKS_HEIGHT = 26;
+static constexpr int MAX_SOCIAL_LINKS = 9;
+
 class KAboutApplicationPersonProfile;
 
 class KAboutApplicationPersonModel : public QAbstractListModel
