@@ -139,7 +139,11 @@ static QWidget *createAvatarCheck(QWidget *parent, KDEPrivate::KAboutApplication
     QObject::connect(model, &KDEPrivate::KAboutApplicationPersonModel::hasAnyAvatarsChanged, parent, [avatarsCheck, model]() {
         avatarsCheck->setVisible(model->hasAnyAvatars());
     });
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    QObject::connect(avatarsCheck, &QCheckBox::checkStateChanged, parent, [model](int state) {
+#else
     QObject::connect(avatarsCheck, &QCheckBox::stateChanged, parent, [model](int state) {
+#endif
         switch (state) {
         case Qt::Checked:
         case Qt::PartiallyChecked:
