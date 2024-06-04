@@ -399,9 +399,7 @@ protected:
     virtual void virtual_hook(int id, void *data);
 
 private:
-    // TODO  Post KF 5.79 make std::unique_ptr, when there is a Konsole released with bug:432421 fixed
-    // std::unique_ptr<KXMLGUIClientPrivate> const d;
-    KXMLGUIClientPrivate *const d;
+    std::unique_ptr<KXMLGUIClientPrivate> const d;
 };
 
 #endif
