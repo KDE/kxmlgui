@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 00:36+0000\n"
-"PO-Revision-Date: 2024-02-18 14:42+0000\n"
+"PO-Revision-Date: 2024-06-08 16:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -537,19 +537,16 @@ msgid "Curr&ent actions:"
 msgstr "Acțiuni actual&e:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Modifică p&ictograma..."
+msgstr "Schimbă p&ictograma…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Modifică textul"
+msgstr "Schimbă te&xtul…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -791,12 +788,10 @@ msgid "Add to Toolbar"
 msgstr "Adaugă la bara de unelte"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Configurează scurtătura..."
+msgstr "Configurează scurtătura…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -825,7 +820,7 @@ msgstr "Schema curentă:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nou…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -846,20 +841,16 @@ msgid "Save shortcuts to scheme"
 msgstr "Salvează scurtăturile în schemă"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "Export schemă..."
+msgstr "Exportă schema…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Import schemă..."
+msgstr "Importă schemă…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
