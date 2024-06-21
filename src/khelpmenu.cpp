@@ -235,55 +235,13 @@ void KHelpMenu::aboutApplication()
 {
     if (receivers(SIGNAL(showAboutApplication())) > 0) {
         Q_EMIT showAboutApplication();
-    } else { // if (d->mAboutData)
+    } else {
         if (!d->mAboutApp) {
             d->mAboutApp = new KAboutApplicationDialog(d->mAboutData, d->mParent);
             connect(d->mAboutApp, &QDialog::finished, this, &KHelpMenu::dialogFinished);
         }
         d->mAboutApp->show();
     }
-#if 0 // KF5: when can this happen?
-    else {
-        if (!d->mAboutApp) {
-            d->mAboutApp = new QDialog(d->mParent, Qt::Dialog);
-            QString caption = QGuiApplication::applicationDisplayName();
-            if (caption.isEmpty()) {
-                caption = QCoreApplication::applicationName();
-            }
-            d->mAboutApp->setWindowTitle(i18n("About %1", caption));
-            d->mAboutApp->setObjectName(QStringLiteral("about"));
-            connect(d->mAboutApp, SIGNAL(finished(int)), this, SLOT(dialogFinished()));
-
-            const int spacingHint = d->mAboutApp->style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-            const int marginHint = d->mAboutApp->style()->pixelMetric(QStyle::PM_DefaultChildMargin);
-
-            QVBoxLayout *vbox = new QVBoxLayout;
-            d->mAboutApp->setLayout(vbox);
-
-            QHBoxLayout *hbox = new QHBoxLayout;
-            hbox->setSpacing(spacingHint * 3);
-            hbox->setMargin(marginHint * 1);
-
-            const int size = IconSize(KIconLoader::Dialog);
-            QLabel *label1 = new QLabel(d->mAboutApp);
-            label1->setPixmap(qApp->windowIcon().pixmap(size, size));
-            QLabel *label2 = new QLabel(d->mAboutApp);
-            label2->setText(d->mAboutAppText);
-
-            hbox->addWidget(label1);
-            hbox->addWidget(label2);
-
-            vbox->addLayout(hbox);
-
-            QDialogButtonBox *buttonBox = new QDialogButtonBox(d->mAboutApp);
-            buttonBox->setStandardButtons(QDialogButtonBox::Close);
-            connect(buttonBox, SIGNAL(accepted()), d->mAboutApp, SLOT(accept()));
-            connect(buttonBox, SIGNAL(rejected()), d->mAboutApp, SLOT(reject()));
-            vbox->addWidget(buttonBox);
-        }
-        d->mAboutApp->show();
-    }
-#endif
 }
 
 void KHelpMenu::aboutKDE()
