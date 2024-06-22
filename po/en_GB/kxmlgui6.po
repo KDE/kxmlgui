@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:36+0000\n"
+"POT-Creation-Date: 2024-06-22 00:37+0000\n"
 "PO-Revision-Date: 2024-05-20 19:41+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -605,11 +605,6 @@ msgstr "Change Icon"
 #, kde-format
 msgid "&Help"
 msgstr "&Help"
-
-#: khelpmenu.cpp:253
-#, kde-format
-msgid "About %1"
-msgstr "About %1"
 
 #: kkeysequencewidget.cpp:146
 #, kde-format
@@ -1351,6 +1346,9 @@ msgstr "&Settings"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Main Toolbar"
+
+#~ msgid "About %1"
+#~ msgstr "About %1"
 
 #~ msgctxt "@action:button"
 #~ msgid "Change &Icon..."

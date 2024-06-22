@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:36+0000\n"
+"POT-Creation-Date: 2024-06-22 00:37+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -676,11 +676,6 @@ msgstr "Промјена иконице"
 #, kde-format
 msgid "&Help"
 msgstr "По&моћ"
-
-#: khelpmenu.cpp:253
-#, kde-format
-msgid "About %1"
-msgstr "О %1|/|О $[дат %1]"
 
 #: kkeysequencewidget.cpp:146
 #, fuzzy, kde-format
@@ -1497,6 +1492,9 @@ msgstr "П&одешавање"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Главна трака"
+
+#~ msgid "About %1"
+#~ msgstr "О %1|/|О $[дат %1]"
 
 #, fuzzy
 #~| msgid "Change &Icon..."

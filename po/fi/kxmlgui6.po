@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:36+0000\n"
+"POT-Creation-Date: 2024-06-22 00:37+0000\n"
 "PO-Revision-Date: 2024-02-19 11:37+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -625,11 +625,6 @@ msgstr "Vaihda kuvake"
 #, kde-format
 msgid "&Help"
 msgstr "O&hje"
-
-#: khelpmenu.cpp:253
-#, kde-format
-msgid "About %1"
-msgstr "Tietoa: %1|/|Tietoa $[yleisnimi_pienellä $[elat %1] ]"
 
 #: kkeysequencewidget.cpp:146
 #, kde-format
@@ -1382,6 +1377,9 @@ msgstr "&Asetukset"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Päätyökalurivi"
+
+#~ msgid "About %1"
+#~ msgstr "Tietoa: %1|/|Tietoa $[yleisnimi_pienellä $[elat %1] ]"
 
 #~ msgctxt "@action:button"
 #~ msgid "Change &Icon..."

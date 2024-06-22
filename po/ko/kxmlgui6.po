@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:36+0000\n"
+"POT-Creation-Date: 2024-06-22 00:37+0000\n"
 "PO-Revision-Date: 2024-02-06 00:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -600,11 +600,6 @@ msgstr "아이콘 변경"
 #, kde-format
 msgid "&Help"
 msgstr "도움말(&H)"
-
-#: khelpmenu.cpp:253
-#, kde-format
-msgid "About %1"
-msgstr "%1 정보"
 
 #: kkeysequencewidget.cpp:146
 #, kde-format
@@ -1337,6 +1332,9 @@ msgstr "설정(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "주 도구 모음"
+
+#~ msgid "About %1"
+#~ msgstr "%1 정보"
 
 #~ msgctxt "@action:button"
 #~ msgid "Change &Icon..."

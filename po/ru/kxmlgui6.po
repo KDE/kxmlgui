@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:36+0000\n"
+"POT-Creation-Date: 2024-06-22 00:37+0000\n"
 "PO-Revision-Date: 2023-12-27 10:08+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -639,11 +639,6 @@ msgstr "Изменить значок"
 #, kde-format
 msgid "&Help"
 msgstr "&Справка"
-
-#: khelpmenu.cpp:253
-#, kde-format
-msgid "About %1"
-msgstr "О программе %1"
 
 #: kkeysequencewidget.cpp:146
 #, kde-format
@@ -1417,6 +1412,9 @@ msgstr "&Настройка"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Основная панель инструментов"
+
+#~ msgid "About %1"
+#~ msgstr "О программе %1"
 
 #~ msgctxt "@action:button"
 #~ msgid "Change &Icon..."
