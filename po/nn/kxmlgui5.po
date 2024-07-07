@@ -2,7 +2,6 @@
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2003, 2004, 2005, 2006.
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2003, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""
@@ -10,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2023-07-31 21:57+0200\n"
+"PO-Revision-Date: 2024-07-06 16:47+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -247,6 +246,7 @@ msgctxt "@title:tab About KDE"
 msgid "&About"
 msgstr "&Om"
 
+# skip-rule: e-infinitiv
 #: kaboutkdedialog_p.cpp:129
 #, kde-format
 msgctxt "@title:tab"
@@ -320,15 +320,15 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"Snøggtasten «%1» er tvetydig. Vel «Set opp snøggtastar»\n"
-"frå «Innstillingar»-menyen for å løysa konflikta.\n"
+"Snøggtasten «%1» er tvitydig. Vel «Set opp snøggtastar»\n"
+"frå «Innstillingar»-menyen for å løysa konflikten.\n"
 "Inga handling vart utført."
 
 #: kactionconflictdetector.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
-msgstr "Oppdaga tvetydig snøggtast"
+msgstr "Oppdaga tvitydig snøggtast"
 
 #: kbugreport.cpp:102
 #, kde-format
@@ -677,7 +677,7 @@ msgstr "Ikon&tekst:"
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "&Gøym tekst når verktøylinja viser tekst ved sidan av ikona"
+msgstr "&Gøym tekst når verktøylinja viser tekst ved sida av ikona"
 
 #: kedittoolbar.cpp:596
 #, kde-format
@@ -819,7 +819,7 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Trykk på knappen, og skriv så inn snarvegen du ønskjer å bruka.\n"
+"Trykk på knappen, og skriv så inn snøggtasten du ønskjer å bruka.\n"
 "For eksempel for «Ctrl + A»: Hald inne «Ctrl»-tasten og trykk «A»."
 
 #: kkeysequencewidget.cpp:172
@@ -1124,7 +1124,7 @@ msgstr "Importer snøggtastar"
 #: kshortcutschemeseditor.cpp:209
 #, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "Snøggtastoppsetter er no lagra."
+msgstr "Snøggtastoppsettet er no lagra."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
@@ -1527,7 +1527,7 @@ msgstr ""
 #: kxmlguiwindow.cpp:540
 #, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "Tvetydige snøggtastar"
+msgstr "Tvitydige snøggtastar"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
