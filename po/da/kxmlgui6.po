@@ -4,53 +4,45 @@
 #
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
 # Keld Simonsen <keld@keldix.com>, 2010.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 00:37+0000\n"
-"PO-Revision-Date: 2021-09-09 21:39+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-08 16:42+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgid "Visit component's homepage"
-msgstr "Besøg bidragsyders hjemmeside"
+msgstr "Besøg komponenternes hjemmeside"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Besøg bidragsyders hjemmeside\n"
+"Besøg komponenternes hjemmeside\n"
 "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
+#, kde-format
 msgctxt "@item Component name in about dialog."
 msgid "%1"
 msgstr "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgctxt "Version version-number"
-#| msgid "Version %1"
+#, kde-format
 msgid "Version %1"
 msgstr "Version %1"
 
@@ -73,11 +65,10 @@ msgid "About"
 msgstr "Om"
 
 #: kaboutapplicationdialog.cpp:94
-#, fuzzy, kde-format
-#| msgid "Comments"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr "Kommentarer"
+msgstr "Komponenter"
 
 #: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
 #, kde-format
@@ -192,15 +183,7 @@ msgstr ""
 "registrere dit ønske. Husk at angive alvorligheden til \"Wishlist\".</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -211,12 +194,12 @@ msgid ""
 "what you need.</html>"
 msgstr ""
 "<html>Man behøver ikke at være programmør for at være med i KDE-holdet. Du "
-"kan deltage i de nationale hold der oversætter programmernes brugerflader. "
-"Du kan hjælpe med grafik, temaer, lyde og forbedret dokumentation. Du "
-"bestemmer!<br /><br /> Besøg <a href=\"%1\">%1</a> for information om nogle "
-"projekter du kan deltage i.<br /><br /> Hvis du mangler mere information "
-"eller dokumentation, så besøg <a href=\"%2\">%2</a> hvor du vil finde hvad "
-"du har brug for.</html>"
+"kan deltage i de sproghold der oversætter programmernes brugerflader. Du kan "
+"hjælpe med grafik, temaer, lyde og forbedret dokumentation. Du bestemmer!"
+"<br /><br /> Besøg <a href=\"%1\">%1</a> for information om nogle projekter "
+"du kan deltage i.<br /><br /> Hvis du mangler mere information eller "
+"dokumentation, så besøg <a href=\"%2\">%2</a> hvor du vil finde hvad du har "
+"brug for.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -280,7 +263,7 @@ msgstr "Version %1"
 #: kabstractaboutdialog_p.cpp:106
 #, kde-format
 msgid "The <em>%1</em> windowing system"
-msgstr ""
+msgstr "<em>%1</em> vinduesystemet"
 
 #: kabstractaboutdialog_p.cpp:107
 #, kde-format
@@ -290,12 +273,12 @@ msgstr "Qt"
 #: kabstractaboutdialog_p.cpp:109
 #, kde-format
 msgid "%1 (built against %2)"
-msgstr ""
+msgstr "%1 (bygget imod %2)"
 
 #: kabstractaboutdialog_p.cpp:111
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Framworks"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
@@ -388,10 +371,7 @@ msgid "OS:"
 msgstr "OS:"
 
 #: kbugreport.cpp:130
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -399,19 +379,15 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:137
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -559,19 +535,16 @@ msgid "Curr&ent actions:"
 msgstr "&Nuværende handlinger:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Skift ikon"
+msgstr "Skift &ikon..."
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Ændr tekst"
+msgstr "Ændr te&kst..."
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -703,10 +676,9 @@ msgstr ""
 "<br>Vælg venligst en anden.</qt>"
 
 #: kkeysequencewidget.cpp:275
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Genvejen \"%1\" i programmet %2 til handlingen %3\n"
+msgstr "Genvejen '%1' i programmet '%2' til handlingen '%3'\n"
 
 #: kkeysequencewidget.cpp:284
 #, kde-format
@@ -796,9 +768,7 @@ msgid "Add to Toolbar"
 msgstr "Tilføj til værktøjslinje"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
 msgstr "Indstil genvej..."
@@ -830,7 +800,7 @@ msgstr "Nuværende skema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Ny..."
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -851,17 +821,13 @@ msgid "Save shortcuts to scheme"
 msgstr "Gem genveje i skema"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "Eksportér skema..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "Importér skema..."
@@ -1263,9 +1229,7 @@ msgstr "%1 (%2)"
 #. the message, translating "Press Shift to learn more." would also mostly fit what
 #. is supposed to be expressed here.
 #: ktooltiphelper.cpp:281
-#, fuzzy, kde-format
-#| msgid ""
-#| "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
@@ -1284,10 +1248,7 @@ msgstr ""
 #. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
 #. styling information. The word "more" refers to "information".
 #: ktooltiphelper.cpp:295
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></"
-#| "small>"
+#, kde-format
 msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
@@ -1310,10 +1271,9 @@ msgid "No text"
 msgstr "Ingen tekst"
 
 #: kxmlguiwindow.cpp:191
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "Handling"
+msgstr "Find handling..."
 
 #: kxmlguiwindow.cpp:529
 #, kde-format
