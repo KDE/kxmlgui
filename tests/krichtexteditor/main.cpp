@@ -14,5 +14,5 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     KRichTextEditor *mw = new KRichTextEditor();
     mw->show();
-    app.exec();
+    return app.exec();
 }
