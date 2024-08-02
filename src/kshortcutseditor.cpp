@@ -16,7 +16,7 @@
 
 #include "kshortcutseditor.h"
 
-// The following is needed for KShortcutsEditorPrivate and QTreeWidgetHack
+// The following is needed for KShortcutsEditorPrivate
 #include "debug.h"
 #include "kshortcutsdialog_p.h"
 
@@ -391,7 +391,7 @@ void KShortcutsEditorPrivate::allDefault()
 // static
 KShortcutsEditorItem *KShortcutsEditorPrivate::itemFromIndex(QTreeWidget *const w, const QModelIndex &index)
 {
-    QTreeWidgetItem *item = static_cast<QTreeWidgetHack *>(w)->itemFromIndex(index);
+    QTreeWidgetItem *item = w->itemFromIndex(index);
     if (item && item->type() == ActionItem) {
         return static_cast<KShortcutsEditorItem *>(item);
     }
