@@ -29,8 +29,9 @@ namespace KDEPrivate
 class KEditToolBarWidget;
 }
 
-/**
- * @class KXMLGUIClient kxmlguiclient.h KXMLGUIClient
+/*!
+ * \class KXMLGUIClient
+ * \inmodule KXMLGui
  *
  * A KXMLGUIClient can be used with KXMLGUIFactory to create a
  * GUI from actions and an XML document, and can be dynamically merged
@@ -40,14 +41,14 @@ class KXMLGUI_EXPORT KXMLGUIClient
 {
     friend class KDEPrivate::KEditToolBarWidget; // for setXMLFile(3 args)
 public:
-    /**
+    /*!
      * Constructs a KXMLGUIClient which can be used with a
      * KXMLGUIFactory to create a GUI from actions and an XML document, and
      * which can be dynamically merged with other KXMLGUIClients.
      */
     KXMLGUIClient();
 
-    /**
+    /*!
      * Constructs a KXMLGUIClient which can be used with a KXMLGUIFactory
      * to create a GUI from actions and an XML document,
      * and which can be dynamically merged with other KXMLGUIClients.
@@ -60,7 +61,7 @@ public:
      */
     explicit KXMLGUIClient(KXMLGUIClient *parent);
 
-    /**
+    /*!
      * Destructs the KXMLGUIClient.
      *
      * If the client was in a factory, the factory is NOT informed about the client
@@ -71,7 +72,7 @@ public:
      */
     virtual ~KXMLGUIClient();
 
-    /**
+    /*!
      * Retrieves an action of the client by name.  If not found, it looks in its child clients.
      * This method is provided for convenience, as it uses actionCollection()
      * to get the action object.
@@ -80,31 +81,31 @@ public:
      */
     QAction *action(const QString &name) const;
 
-    /**
+    /*!
      * Retrieves an action for a given QDomElement. The default
      * implementation uses the "name" attribute to query the action
      * object via the other action() method.
      */
     virtual QAction *action(const QDomElement &element) const;
 
-    /**
+    /*!
      * Retrieves the entire action collection for the GUI client.
      */
     virtual KActionCollection *actionCollection() const;
 
-    /**
+    /*!
      * @return The component name for this GUI client.
      */
     virtual QString componentName() const;
 
-    /**
+    /*!
      * @return The parsed XML in a QDomDocument, set by
      * setXMLFile() or setXML().
      * This document describes the layout of the GUI.
      */
     virtual QDomDocument domDocument() const;
 
-    /**
+    /*!
      * This will return the name of the XML file as set by setXMLFile().
      * If setXML() is used directly, then this will return an empty string.
      *
@@ -121,35 +122,35 @@ public:
 
     virtual QString localXMLFile() const;
 
-    /**
+    /*!
      * @internal
      */
     void setXMLGUIBuildDocument(const QDomDocument &doc);
-    /**
+    /*!
      * @internal
      */
     QDomDocument xmlguiBuildDocument() const;
 
-    /**
+    /*!
      * This method is called by the KXMLGUIFactory as soon as the client
      * is added to the KXMLGUIFactory's GUI.
      */
     void setFactory(KXMLGUIFactory *factory);
-    /**
+    /*!
      * Retrieves a pointer to the KXMLGUIFactory this client is
      * associated with (will return nullptr if the client's GUI has not been built
      * by a KXMLGUIFactory.
      */
     KXMLGUIFactory *factory() const;
 
-    /**
+    /*!
      * KXMLGUIClients can form a simple child/parent object tree. This
      * method returns a pointer to the parent client or nullptr if it has no
      * parent client assigned.
      */
     KXMLGUIClient *parentClient() const;
 
-    /**
+    /*!
      * Use this method to make a client a child client of another client.
      * Usually you don't need to call this method, as it is called
      * automatically when using the second constructor, which takes a
@@ -157,17 +158,17 @@ public:
      */
     void insertChildClient(KXMLGUIClient *child);
 
-    /**
+    /*!
      * Removes the given @p child from the client's children list.
      */
     void removeChildClient(KXMLGUIClient *child);
 
-    /**
+    /*!
      * Retrieves a list of all child clients.
      */
     QList<KXMLGUIClient *> childClients();
 
-    /**
+    /*!
      * A client can have an own KXMLGUIBuilder.
      * Use this method to assign your builder instance to the client (so that the
      * KXMLGUIFactory can use it when building the client's GUI)
@@ -177,13 +178,13 @@ public:
      */
     void setClientBuilder(KXMLGUIBuilder *builder);
 
-    /**
+    /*!
      * Retrieves the client's GUI builder or nullptr if no client specific
      * builder has been assigned via setClientBuilder()
      */
     KXMLGUIBuilder *clientBuilder() const;
 
-    /**
+    /*!
      * Forces this client to re-read its XML resource file.  This is
      * intended to be used when you know that the resource file has
      * changed and you will soon be rebuilding the GUI. This will only have
@@ -194,7 +195,7 @@ public:
      */
     void reloadXML();
 
-    /**
+    /*!
      * ActionLists are a way for XMLGUI to support dynamic lists of
      * actions.  E.g. if you are writing a file manager, and there is a
      * menu file whose contents depend on the mimetype of the file that
@@ -239,7 +240,7 @@ public:
      */
     void plugActionList(const QString &name, const QList<QAction *> &actionList);
 
-    /**
+    /*!
      * Unplugs the action list \p name from the XMLGUI.
      * Calling this removes the specified action list, i.e. this is the
      * complement to plugActionList(). See plugActionList() for a more
@@ -266,7 +267,7 @@ public:
     void endXMLPlug();
     void prepareXMLUnplug(QWidget *);
 
-    /**
+    /*!
      * Sets a new xmlFile() and localXMLFile(). The purpose of this public
      * method is to allow non-inherited objects to replace the ui definition
      * of an embedded client with a customized version. It corresponds to the
@@ -291,7 +292,7 @@ public:
      */
     void replaceXMLFile(const QString &xmlfile, const QString &localxmlfile, bool merge = false);
 
-    /**
+    /*!
      * Returns the version number of the given xml data (belonging to an xml rc file)
      *
      * @since 5.73
@@ -299,7 +300,7 @@ public:
     static QString findVersionNumber(const QString &xml);
 
 protected:
-    /**
+    /*!
      * Sets the component name for this part.
      *
      * Call this first in the inherited class constructor.
@@ -309,7 +310,7 @@ protected:
      */
     virtual void setComponentName(const QString &componentName, const QString &componentDisplayName);
 
-    /**
+    /*!
      * Sets the name of the rc file containing the XML for the part.
      *
      * Call this in the inherited class constructor, for parts and plugins.
@@ -335,27 +336,27 @@ protected:
      **/
     virtual void setXMLFile(const QString &file, bool merge = false, bool setXMLDoc = true);
 
-    /**
+    /*!
      * Return the full path to the ui_standards.rc, might return a resource path.
      * @return full path to ui_standards.rc, always non-empty.
      * @since 5.16
      */
     static QString standardsXmlFileLocation();
 
-    /**
+    /*!
      * Load the ui_standards.rc file. Usually followed by setXMLFile(xmlFile, true), for merging.
      * @since 4.6
      */
     void loadStandardsXmlFile();
 
-    /**
+    /*!
      * Set the full path to the "local" xml file, the one used for saving
      * toolbar and shortcut changes. You normally don't need to call this,
      * if you pass a simple filename to setXMLFile.
      */
     virtual void setLocalXMLFile(const QString &file);
 
-    /**
+    /*!
      * Sets the XML for the part.
      *
      * Call this in the Part-inherited class constructor if you
@@ -363,7 +364,7 @@ protected:
      **/
     virtual void setXML(const QString &document, bool merge = false);
 
-    /**
+    /*!
      * Sets the Document for the part, describing the layout of the GUI.
      *
      * Call this in the Part-inherited class constructor if you don't call
@@ -380,7 +381,7 @@ protected:
      */
     virtual void setDOMDocument(const QDomDocument &document, bool merge = false);
 
-    /**
+    /*!
      * Actions can collectively be assigned a "State". To accomplish this
      * the respective actions are tagged as \<enable\> or \<disable\> in
      * a \<State\> \</State\> group of the XMLfile. During program execution the

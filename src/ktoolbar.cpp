@@ -600,7 +600,7 @@ void KToolBarPrivate::loadKDESettings()
         toolButtonStyleSettings[Level_KDEDefault] = toolButtonStyleSetting();
     } else {
         const QString fallBack = toolButtonStyleToString(Qt::ToolButtonTextBesideIcon);
-        /**
+        /*!
           TODO: if we get complaints about text beside icons on small screens,
                 try the following code out on such systems - aseigo.
         // if we are on a small screen with a non-landscape ratio, then
@@ -654,7 +654,7 @@ QAction *KToolBarPrivate::findAction(const QString &actionName, KXMLGUIClient **
 
 void KToolBarPrivate::slotContextAboutToShow()
 {
-    /**
+    /*!
      * The idea here is to reuse the "static" part of the menu to save time.
      * But the "Toolbars" action is dynamic (can be a single action or a submenu)
      * and ToolBarHandler::setupActions() deletes it, so better not keep it around.
