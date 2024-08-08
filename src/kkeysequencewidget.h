@@ -20,7 +20,7 @@ class KKeySequenceWidgetPrivate;
 class QAction;
 class KActionCollection;
 
-/**
+/*!
  * @class KKeySequenceWidget kkeysequencewidget.h KKeySequenceWidget
  *
  * @short A widget to input a QKeySequence.
@@ -84,17 +84,17 @@ public:
         NoValidate = 1,
     };
 
-    /**
+    /*!
      * Constructor.
      */
     explicit KKeySequenceWidget(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructs the widget.
      */
     ~KKeySequenceWidget() override;
 
-    /**
+    /*!
      * \name Configuration
      *
      * Configuration options for the widget.
@@ -108,13 +108,13 @@ public:
         StandardShortcuts = 0x02, //!< Check against standard shortcuts. @see KStandardShortcut
         GlobalShortcuts = 0x04, //!< Check against global shortcuts. @see KGlobalAccel
     };
-    /**
+    /*!
      * Stores a combination of #ShortcutType values.
      */
     Q_DECLARE_FLAGS(ShortcutTypes, ShortcutType)
     Q_FLAG(ShortcutTypes)
 
-    /**
+    /*!
      * Configure if the widget should check for conflicts with existing
      * shortcuts.
      *
@@ -170,7 +170,7 @@ public:
      */
     void setCheckForConflictsAgainst(ShortcutTypes types);
 
-    /**
+    /*!
      * The shortcut types we check for conflicts.
      *
      * @see setCheckForConflictsAgainst()
@@ -178,14 +178,14 @@ public:
      */
     ShortcutTypes checkForConflictsAgainst() const;
 
-    /**
+    /*!
      * Allow multikey shortcuts?
      */
     void setMultiKeyShortcutsAllowed(bool);
     bool multiKeyShortcutsAllowed() const;
 
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 12)
-    /**
+    /*!
      * This only applies to user input, not to setKeySequence().
      * Set whether to accept "plain" keys without modifiers (like Ctrl, Alt, Meta).
      * Plain keys by our definition include letter and symbol keys and
@@ -196,14 +196,14 @@ public:
      */
     KXMLGUI_DEPRECATED_VERSION(6, 12, "Use setPatterns()") void setModifierlessAllowed(bool allow);
 
-    /**
+    /*!
      * @see setModifierlessAllowed()
      *
      * @deprecated since 6.12, use patterns() instead
      */
     KXMLGUI_DEPRECATED_VERSION(6, 12, "Use patterns()") bool isModifierlessAllowed();
 
-    /**
+    /*!
      * Whether to allow modifier-only key sequences.
      * @since 6.1
      * @deprecated since 6.12, use setPatterns() instead
@@ -216,7 +216,7 @@ public:
     KXMLGUI_DEPRECATED_VERSION(6, 12, "Use patterns()") bool modifierOnlyAllowed() const;
 #endif
 
-    /**
+    /*!
      * Set whether a small button to set an empty key sequence should be displayed next to the
      * main input widget. The default is to show the clear button.
      */
@@ -224,7 +224,7 @@ public:
 
     //@}
 
-    /**
+    /*!
      * Checks whether the key sequence @p seq is available to grab.
      *
      * The sequence is checked under the same rules as if it has been typed by
@@ -235,12 +235,12 @@ public:
      */
     bool isKeySequenceAvailable(const QKeySequence &seq) const;
 
-    /**
+    /*!
      * Return the currently selected key sequence.
      */
     QKeySequence keySequence() const;
 
-    /**
+    /*!
      * Set a list of action collections to check against for conflictuous shortcut.
      *
      * @see setCheckForConflictsAgainst()
@@ -254,7 +254,7 @@ public:
      */
     void setCheckActionCollections(const QList<KActionCollection *> &actionCollections);
 
-    /**
+    /*!
      * If the component using this widget supports shortcuts contexts, it has
      * to set its component name so we can check conflicts correctly.
      */
@@ -286,13 +286,13 @@ public:
 
 Q_SIGNALS:
 
-    /**
+    /*!
      * This signal is emitted when the current key sequence has changed, be it by user
      * input or programmatically.
      */
     void keySequenceChanged(const QKeySequence &seq);
 
-    /**
+    /*!
      * This signal is emitted after the user agreed to steal a shortcut from
      * an action. This is only done for local shortcuts. So you can be sure \a
      * action is one of the actions you provided with setCheckActionList() or
@@ -313,7 +313,7 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Capture a shortcut from the keyboard. This call will only return once a key sequence
      * has been captured or input was aborted.
      * If a key sequence was input, keySequenceChanged() will be emitted.
@@ -322,7 +322,7 @@ public Q_SLOTS:
      */
     void captureKeySequence();
 
-    /**
+    /*!
      * Set the key sequence.
      *
      * If @p val == Validate, and the call is actually changing the key sequence,
@@ -330,12 +330,12 @@ public Q_SLOTS:
      */
     void setKeySequence(const QKeySequence &seq, Validation val = NoValidate);
 
-    /**
+    /*!
      * Clear the key sequence.
      */
     void clearKeySequence();
 
-    /**
+    /*!
      * Actually remove the shortcut that the user wanted to steal, from the
      * action that was using it. This only applies to actions provided to us
      * by setCheckActionCollections() and setCheckActionList().

@@ -20,7 +20,7 @@
 
 #include "kshortcutseditor.h"
 
-/**
+/*!
  * @class KShortcutsDialog kshortcutsdialog.h KShortcutsDialog
  *
  * @short Dialog for configuration of KActionCollection and KGlobalAccel.
@@ -86,7 +86,7 @@ class KXMLGUI_EXPORT KShortcutsDialog : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructs a KShortcutsDialog as a child of @p parent.
      *
      * @param actionTypes sets the action types to be shown in the dialog,
@@ -100,7 +100,7 @@ public:
     explicit KShortcutsDialog(KShortcutsEditor::ActionTypes actionTypes = KShortcutsEditor::AllActions,
                               KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
                               QWidget *parent = nullptr);
-    /**
+    /*!
      * Constructs a KShortcutsDialog as a child of @p parent, with the default settings
      * (@ref KShortcutsEditor::AllActions and @ref KShortcutsEditor::LetterShortcutsAllowed).
      *
@@ -113,12 +113,12 @@ public:
      */
     explicit KShortcutsDialog(QWidget *parent);
 
-    /**
+    /*!
      * Destructor. Deletes all resources used by a KShortcutsDialog object.
      */
     ~KShortcutsDialog() override;
 
-    /**
+    /*!
      * Add all actions of the collection to the ones displayed and configured
      * by the dialog.
      *
@@ -127,12 +127,12 @@ public:
      */
     void addCollection(KActionCollection *collection, const QString &title = {});
 
-    /**
+    /*!
      * @return the list of action collections that are available for configuration in the dialog.
      */
     QList<KActionCollection *> actionCollections() const;
 
-    /**
+    /*!
      * Run the dialog and call writeSettings() on the action collections
      * that were added if @p saveSettings is true.
      *
@@ -142,10 +142,10 @@ public:
     // TODO KF6 remove this method, see configure() static method for more details
     bool configure(bool saveSettings = true);
 
-    /** @see QWidget::sizeHint() */
+    /*! @see QWidget::sizeHint() */
     QSize sizeHint() const override;
 
-    /**
+    /*!
      * This static method shows a modal dialog that can be used to configure
      * the shortcuts associated with each action in @p collection. The new
      * shortcut settings will be saved and applied if the dialog is accepted.
@@ -171,21 +171,21 @@ public:
                            KShortcutsEditor::LetterShortcuts allowLetterShortcuts = KShortcutsEditor::LetterShortcutsAllowed,
                            QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Imports a shortcuts set up from @p path
      *
      * @since 5.15
      */
     void importConfiguration(const QString &path);
 
-    /**
+    /*!
      * Exports a shortcuts set up from @p path
      *
      * @since 5.15
      */
     void exportConfiguration(const QString &path) const;
 
-    /**
+    /*!
      * Reloads the list of schemes in the "Manage Schemes" section
      *
      * This is useful if the available scheme files changed for some reason
@@ -195,7 +195,7 @@ public:
      */
     void refreshSchemes();
 
-    /**
+    /*!
      * This adds a @c QAction to the "More Actions" menu
      *
      * This is useful to add for example an action to download more
@@ -206,13 +206,13 @@ public:
     void addActionToSchemesMoreButton(QAction *action);
 
 public Q_SLOTS:
-    /**
+    /*!
      * @reimp
      */
     void accept() override;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted after the dialog is accepted (by clicking the OK button) and settings are saved.
      * Connect to this signal if you need to run some extra code after the settings are saved.
      */

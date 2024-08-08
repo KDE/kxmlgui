@@ -64,7 +64,7 @@ static QStatusBar *internalStatusBar(KMainWindow *mw)
     return mw->findChild<QStatusBar *>(QString(), Qt::FindDirectChildrenOnly);
 }
 
-/**
+/*!
 
  * Listens to resize events from QDockWidgets. The KMainWindow
  * settings are set as dirty, as soon as at least one resize

@@ -16,7 +16,7 @@
 
 class QLabel;
 
-/**
+/*!
  * @internal
  * Test window for testing KRichTextWidget
  */

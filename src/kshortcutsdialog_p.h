@@ -49,7 +49,7 @@ enum MyRoles {
     ObjectRole,
 };
 
-/**
+/*!
  * Type used for QTreeWidgetItems
  *
  * @internal
@@ -62,7 +62,7 @@ enum ItemTypes {
 QKeySequence primarySequence(const QList<QKeySequence> &sequences);
 QKeySequence alternateSequence(const QList<QKeySequence> &sequences);
 
-/**
+/*!
  * Mixes the KShortcutWidget into the treeview used by KShortcutsEditor. When selecting an shortcut
  * it changes the display from "CTRL-W" to the Widget.
  *
@@ -84,7 +84,7 @@ public:
     // reimplemented to have some extra height
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
-    /**
+    /*!
      * Set a list of action collections to check against for conflicting
      * shortcuts.
      *
@@ -111,13 +111,13 @@ private:
 private Q_SLOTS:
     void itemActivated(const QModelIndex &index);
 
-    /**
+    /*!
      * When the user collapses a hole subtree of shortcuts then remove eventually
      * extended items. Else we get that artefact bug. See above.
      */
     void itemCollapsed(const QModelIndex &index);
 
-    /**
+    /*!
      * If the user allowed stealing a shortcut we want to be able to undo
      * that.
      */
@@ -131,7 +131,7 @@ private Q_SLOTS:
 #endif
 };
 
-/**
+/*!
  * That widget draws the decoration for KShortCutWidget. That widget is currently the only user.
  *
  * @internal
@@ -149,7 +149,7 @@ protected:
     void paintEvent(QPaintEvent *pe) override;
 };
 
-/**
+/*!
  * Edit a shortcut. Let you select between using the default shortcut and configuring your own.
  *
  * @internal
@@ -220,7 +220,7 @@ class KShortcutSchemesEditor : public QGroupBox
 public:
     explicit KShortcutSchemesEditor(KShortcutsDialog *parent);
 
-    /** @return the currently selected scheme in the editor (may differ from current app's scheme.*/
+    /*! @return the currently selected scheme in the editor (may differ from current app's scheme.*/
     QString currentScheme();
     void refreshSchemes();
     void addMoreMenuAction(QAction *action);
@@ -250,7 +250,7 @@ private:
 
 class QAction;
 
-/**
+/*!
  * A QTreeWidgetItem that can handle QActions.
  *
  * It provides undo, commit functionality for changes made. Changes are effective immediately. You
@@ -263,7 +263,7 @@ class KShortcutsEditorItem : public QTreeWidgetItem
 public:
     KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *action);
 
-    /**
+    /*!
      * Destructor
      *
      * Will undo pending changes. If you don't want that. Call commitChanges before
@@ -329,7 +329,7 @@ private:
 // NEEDED FOR KShortcutsEditorPrivate
 #include "ui_kshortcutsdialog.h"
 
-/**
+/*!
  * This class should belong into kshortcutseditor.cpp. But kshortcutseditordelegate uses a static
  * function of this class. So for now it's here. But i will remove it later.
  *
@@ -377,7 +377,7 @@ public:
         QTreeWidgetItem *action = nullptr;
     };
 
-    /**
+    /*!
      * Add @p action at @p level. Checks for QActions and unnamed actions
      * before adding.
      *

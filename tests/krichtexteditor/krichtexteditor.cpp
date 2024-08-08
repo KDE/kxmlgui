@@ -1,4 +1,4 @@
-/**
+/*!
     KDE Rich Text Editor
     SPDX-FileCopyrightText: 2008 Stephen Kelly <steveire@gmail.com>
 

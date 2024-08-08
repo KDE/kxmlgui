@@ -125,9 +125,9 @@ TestWindow::TestWindow(QWidget *parent)
 
     connect(radioGroup, &QActionGroup::triggered, this, &TestWindow::slotToggled);
 
-    /**************************************************/
+    /*!************************************************/
     /*Now, we setup statusbar; order is not important. */
-    /**************************************************/
+    /*!************************************************/
     statusBar = new QStatusBar(this);
     // statusBar->insertItem("Hi there!                         ", 0);
     // statusBar->insertItem("Look for tooltips to see functions", 1);
@@ -169,9 +169,9 @@ TestWindow::TestWindow(QWidget *parent)
     tb = toolBar();
     tb1 = toolBar(QStringLiteral("AnotherToolBar"));
 }
-/***********************************/
+/*!*********************************/
 /*  Now slots for toolbar actions  */
-/***********************************/
+/*!*********************************/
 void TestWindow::slotToggled(QAction *)
 {
     statusBar->showMessage(QStringLiteral("Button toggled"), 1500);
