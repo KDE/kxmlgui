@@ -25,6 +25,7 @@ include(KDECMakeSettings)
 include(KDEGitCommitHooks)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
+include(ECMGenerateQDoc)
 include(CMakeDependentOption)
 
 set(kxmlgui_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kxmlgui_version.h")
@@ -103,6 +104,8 @@ if (BUILD_QCH)
 endif()
 
 include(CMakePackageConfigHelpers)
+
+ecm_generate_qdoc(KF6XmlGui kxmlgui.qdocconf)
 
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF6XmlGuiConfig.cmake.in"

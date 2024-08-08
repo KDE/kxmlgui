@@ -95,6 +95,8 @@ ecm_generate_export_header(KF6XmlGui
 
 target_include_directories(KF6XmlGui INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui>")
 
+target_include_directories(KF6XmlGui PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+
 target_link_libraries(KF6XmlGui
 PUBLIC
     Qt6::Xml      #To parse the configuration (QDomDocument etc)

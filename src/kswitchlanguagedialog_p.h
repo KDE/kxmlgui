@@ -19,7 +19,7 @@ KXMLGUI_EXPORT void initializeLanguages();
 
 class KSwitchLanguageDialogPrivate;
 
-/**
+/*!
  * @short Standard "switch application language" dialog box.
  *
  * This class provides "switch application language" dialog box that is used
@@ -34,7 +34,7 @@ class KSwitchLanguageDialog : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructor. Creates a fully featured "Switch application language" dialog box.
      * Note that this dialog is made modeless in the KHelpMenu class so
      * the users may expect a modeless dialog.
@@ -52,23 +52,23 @@ public:
     ~KSwitchLanguageDialog() override;
 
 protected Q_SLOTS:
-    /**
+    /*!
      * Activated when the Ok button has been clicked.
      */
     virtual void slotOk();
     void slotDefault();
 
-    /**
+    /*!
         Called when one of language buttons changes state.
     */
     virtual void languageOnButtonChanged(const QString &);
 
-    /**
+    /*!
         Called to add one language button to dialog.
     */
     virtual void slotAddLanguageButton();
 
-    /**
+    /*!
         Called when "Remove" language button is clicked.
     */
     virtual void removeButtonClicked();

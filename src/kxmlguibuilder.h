@@ -21,7 +21,7 @@ class QAction;
 class QDomElement;
 class QWidget;
 
-/**
+/*!
  * @class KXMLGUIBuilder kxmlguibuilder.h KXMLGUIBuilder
  *
  * Implements the creation of the GUI (menubar, menus and toolbars)
@@ -45,7 +45,7 @@ public:
 
     virtual QStringList containerTags() const;
 
-    /**
+    /*!
      * Creates a container (menubar/menu/toolbar/statusbar/separator/...)
      * from an element in the XML file
      *
@@ -59,7 +59,7 @@ public:
      */
     virtual QWidget *createContainer(QWidget *parent, int index, const QDomElement &element, QAction *&containerAction);
 
-    /**
+    /*!
      * Removes the given (and previously via createContainer )
      * created container.
      *

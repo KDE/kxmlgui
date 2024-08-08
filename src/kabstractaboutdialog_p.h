@@ -14,8 +14,8 @@ class QDialog;
 class QWidget;
 class QIcon;
 
-/**
- * @internal
+/*!
+ * \internal
  *
  * Private base class implementing util methods for assembling an About dialog.
  */

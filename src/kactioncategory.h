@@ -23,10 +23,10 @@ struct KActionCategoryPrivate;
 
 class QAction;
 
-/**
- * @class KActionCategory kactioncategory.h KActionCategory
+/*!
+ * \class KActionCategory
  *
- * Categorize actions for KShortcutsEditor.
+ * \brief Categorize actions for KShortcutsEditor.
  *
  * KActionCategory provides a second level to organize the actions in
  * KShortcutsEditor.
@@ -34,6 +34,7 @@ class QAction;
  * The first possibility is using more than one action collection. Each
  * actions collection becomes a top level node.
  *
+ * TODO qdoc
  * + action collection 1
  *   + first action
  *   + second action
@@ -50,8 +51,6 @@ class QAction;
  *     + action 1 in category
  *     + action 2 in category
  *   + second action
- *
- * \section Usage
  *
  * The usage is analog to action collections. Just create a category and use
  * it instead of the collection to create the actions.
@@ -88,25 +87,19 @@ class KXMLGUI_EXPORT KActionCategory : public QObject
     Q_PROPERTY(QString text READ text WRITE setText)
 
 public:
-    /**
+    /*!
      * Default constructor
      */
     explicit KActionCategory(const QString &text, KActionCollection *parent = nullptr);
 
-    /**
-     * Destructor
-     */
     ~KActionCategory() override;
 
-    /**
-     * \name Adding Actions
-     *
+    /*!
      * Add a action to the category.
      *
      * This methods are provided for your convenience. They call the
      * corresponding method of KActionCollection.
      */
-    //@{
     QAction *addAction(const QString &name, QAction *action);
 
     QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
@@ -123,36 +116,34 @@ public:
         return action;
     }
 
-    //@}
-
-    /**
+    /*!
      * Returns the actions belonging to this category
      */
     const QList<QAction *> actions() const;
 
-    /**
+    /*!
      * The action collection this category is associated with.
      */
     KActionCollection *collection() const;
 
-    /**
+    /*!
      * The action categorys descriptive text
      */
     QString text() const;
 
-    /**
+    /*!
      * Set the action categorys descriptive text.
      */
     void setText(const QString &text);
 
 private:
-    /**
-     * Remove \action from this category if found.
+    /*!
+     * Remove \a action from this category if found.
      */
     KXMLGUI_NO_EXPORT void unlistAction(QAction *action);
 
-    /**
-     * Add action to category
+    /*!
+     * Add \a action to category
      */
     void addAction(QAction *action); // exported because called from template method ActionType *add<ActionType>(...)
 

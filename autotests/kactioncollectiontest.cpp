@@ -187,7 +187,7 @@ void tst_KActionCollection::insertReplaces1()
     delete b;
 }
 
-/**
+/*!
  * Check that a action added twice under different names only ends up once in
  * the collection
  */
