@@ -90,8 +90,8 @@ private:
     QDialogButtonBox *m_buttonBox;
 };
 
-/**
- * @short A widget used to customize or configure toolbars
+/*!
+ * \brief A widget used to customize or configure toolbars
  *
  * This is the widget that does all of the work for the
  * KEditToolBar dialog.  In most cases, you will want to use the
@@ -106,14 +106,13 @@ private:
  * files to describe the toolbar layouts and it requires the actions
  * to determine which buttons are active.
  *
- * @author Kurt Granroth <granroth@kde.org>
- * @internal
+ * \internal
  */
 class KEditToolBarWidget : public QWidget, virtual public KXMLGUIClient
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Old constructor for apps that do not use components.
      * This constructor is somewhat deprecated, since it doesn't work
      * with any KXMLGuiClient being added to the mainwindow.
@@ -127,7 +126,7 @@ public:
      */
     explicit KEditToolBarWidget(KActionCollection *collection, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Main constructor.
      *
      * Use this like so:
@@ -142,14 +141,14 @@ public:
      */
     explicit KEditToolBarWidget(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructor.  Note that any changes done in this widget will
      * @em NOT be saved in the destructor.  You @em must call save()
      * to do that.
      */
     ~KEditToolBarWidget() override;
 
-    /**
+    /*!
      * Old-style load.
      *
      * Loads the toolbar configuration into the widget. Should be called before being shown.
@@ -176,7 +175,7 @@ public:
      */
     void load(const QString &resourceFile, bool global = true, const QString &defaultToolBar = QString());
 
-    /**
+    /*!
      * Loads the toolbar configuration into the widget. Should be called before being shown.
      *
      * @param factory pointer to the XML GUI factory object for your application.
@@ -191,12 +190,12 @@ public:
      */
     void load(KXMLGUIFactory *factory, const QString &defaultToolBar = QString());
 
-    /**
+    /*!
      * @internal Reimplemented for internal purposes.
      */
     KActionCollection *actionCollection() const override;
 
-    /**
+    /*!
      * Save any changes the user made.  The file will be in the user's
      * local directory (usually $HOME/.kde/share/apps/\<appname\>).  The
      * filename will be the one specified in the constructor.. or the
@@ -205,13 +204,13 @@ public:
      */
     void save();
 
-    /**
+    /*!
      * Remove and re-add all KMXLGUIClients to update the GUI
      */
     void rebuildKXMLGUIClients();
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted whenever any modifications are made by the user.
      */
     void enableOk(bool);

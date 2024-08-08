@@ -12,7 +12,7 @@
 
 #include <QStringList>
 
-/**
+/*!
  * @internal
  * Helper class for KXMLGUIClient::setXMLFile
  * Finds the xml file with the largest version number and takes

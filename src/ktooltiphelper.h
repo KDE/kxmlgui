@@ -16,7 +16,7 @@
 
 class KToolTipHelperPrivate;
 
-/**
+/*!
  * @class KToolTipHelper ktooltiphelper.h KToolTipHelper
  *
  * @short An event filter used to enhance tooltips
@@ -73,7 +73,7 @@ class KXMLGUI_EXPORT KToolTipHelper : public QObject
 public:
     static KToolTipHelper *instance();
 
-    /**
+    /*!
      * Filters QEvent::ToolTip if an enhanced tooltip is available for the widget.
      * Filters the QEvent::KeyPress that is used to expand an expandable tooltip.
      * Filters QEvent::WhatsThisClicked so hyperlinks in whatsThis() texts work.
@@ -83,7 +83,7 @@ public:
      */
     bool eventFilter(QObject *watched, QEvent *event) override;
 
-    /**
+    /*!
      * Use this to have a widget show "Press Shift for help." as its tooltip.
      * \code
      * widget->setToolTip(KToolTipHelper::whatsThisHintOnly());

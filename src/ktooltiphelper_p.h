@@ -20,7 +20,7 @@ class QAction;
 class QHelpEvent;
 class QMenu;
 
-/**
+/*!
  * The private class of KToolTipHelper used for the PIMPL idiom.
  * \internal
  */
@@ -29,7 +29,7 @@ class KToolTipHelperPrivate : public QObject
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Singleton implementation for KToolTipHelper and
      * NOT of this class (KToolTipHelperPrivate).
      */
@@ -39,13 +39,13 @@ public:
 
     ~KToolTipHelperPrivate() override;
 
-    /** @see KToolTipHelper::eventFilter() */
+    /*! @see KToolTipHelper::eventFilter() */
     bool eventFilter(QObject *watched, QEvent *event) override;
 
-    /** @see KToolTipHelper::whatsThisHintOnly() */
+    /*! @see KToolTipHelper::whatsThisHintOnly() */
     static const QString whatsThisHintOnly();
 
-    /**
+    /*!
      * Makes sure submenus that show up do not mess with tooltips appearing in menus.
      * This is somewhat of a workaround for Qt not posting QEvent::ToolTips when the
      * cursor wasn't moved *after* a submenu hides.
@@ -53,12 +53,12 @@ public:
      */
     bool handleHideEvent(QObject *watched, QEvent *event);
 
-    /**
+    /*!
      * @return true if the key press is used to expand a tooltip. false otherwise.
      */
     bool handleKeyPressEvent(QEvent *event);
 
-    /**
+    /*!
      * Is called from handleToolTipEvent() to handle a QEvent::ToolTip in a menu.
      * This method will show the tooltip of the action that is hovered at a nice
      * position.
@@ -67,24 +67,24 @@ public:
      */
     bool handleMenuToolTipEvent(QMenu *menu, QHelpEvent *helpEvent);
 
-    /**
+    /*!
      * @param watched       The object that is receiving the QHelpEvent
      * @param helpEvent     The QEvent::ToolTip that was cast to a QHelpEvent
      * @return false if no special handling of the tooltip event seems necessary. true otherwise.
      */
     bool handleToolTipEvent(QObject *watched, QHelpEvent *helpEvent);
 
-    /**
+    /*!
      * Handles links being clicked in whatsThis.
      * @return true.
      */
     bool handleWhatsThisClickedEvent(QEvent *event);
 
-    /** @see handleHideEvent()
+    /*! @see handleHideEvent()
      * The name is slightly misleading because it will only post events for QMenus. */
     void postToolTipEventIfCursorDidntMove() const;
 
-    /**
+    /*!
      * Shows a tooltip that contains a whatsThisHint at the location \p globalPos.
      * If \p tooltip is empty, only a whatsThisHint is shown.
      *
@@ -100,25 +100,25 @@ public:
     KToolTipHelper *const q;
 
 private:
-    /** An action in a menu a tooltip was requested for. */
+    /*! An action in a menu a tooltip was requested for. */
     QPointer<QAction> m_action;
-    /** The global position where the last tooltip which had a whatsThisHint was displayed. */
+    /*! The global position where the last tooltip which had a whatsThisHint was displayed. */
     QPoint m_lastExpandableToolTipGlobalPos;
-    /** The last widget a QEvent::tooltip was sent for. */
+    /*! The last widget a QEvent::tooltip was sent for. */
     QPointer<QWidget> m_widget;
-    /** Whether or not the last tooltip was expandable */
+    /*! Whether or not the last tooltip was expandable */
     bool m_lastToolTipWasExpandable = false;
 
-    /** The global position of where the cursor was when the last QEvent::HideEvent for a
+    /*! The global position of where the cursor was when the last QEvent::HideEvent for a
      * menu occurred. @see handleHideEvent() */
     QPoint m_cursorGlobalPosWhenLastMenuHid;
-    /** Calls postToolTipEventIfCursorDidntMove().  @see handleHideEvent() */
+    /*! Calls postToolTipEventIfCursorDidntMove().  @see handleHideEvent() */
     QTimer m_toolTipTimeout;
 
     static KToolTipHelper *s_instance;
 };
 
-/**
+/*!
  * This method checks if string "a" is sufficiently different from string "b", barring characters
  * like periods, ampersands and other characters. Used for determining if tooltips are different from
  * their icon name counterparts.

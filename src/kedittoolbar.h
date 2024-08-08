@@ -18,10 +18,10 @@ class KActionCollection;
 
 class KEditToolBarPrivate;
 class KXMLGUIFactory;
-/**
- * @class KEditToolBar kedittoolbar.h KEditToolBar
+/*!
+ * \class KEditToolBar
  *
- * @short A dialog used to customize or configure toolbars.
+ * \brief A dialog used to customize or configure toolbars.
  *
  * This dialog only works if your application uses the XML UI
  * framework for creating menus and toolbars.  It depends on the XML
@@ -56,14 +56,12 @@ class KXMLGUIFactory;
  *
  * \image html kedittoolbar.png "KEditToolBar (example: usage in KWrite)"
  *
- * @author Kurt Granroth <granroth@kde.org>
- * @maintainer David Faure <faure@kde.org>
  */
 class KXMLGUI_EXPORT KEditToolBar : public QDialog
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Old constructor for apps that do not use components.
      * This constructor is somewhat deprecated, since it doesn't work
      * with any KXMLGuiClient being added to the mainwindow.
@@ -76,7 +74,7 @@ public:
      */
     explicit KEditToolBar(KActionCollection *collection, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Main constructor.
      *
      * The main parameter, @p factory, is a pointer to the
@@ -99,7 +97,7 @@ public:
     /// destructor
     ~KEditToolBar() override;
 
-    /**
+    /*!
      * Sets the default toolbar that will be selected when the dialog is shown.
      * If not set, or QString() is passed in, the global default tool bar name
      * will be used.
@@ -108,7 +106,7 @@ public:
      */
     void setDefaultToolBar(const QString &toolBarName);
 
-    /**
+    /*!
      * The name (absolute or relative) of your application's UI resource file
      * is assumed to be share/apps/appname/appnameui.rc though this can be
      * overridden by calling this method.
@@ -127,7 +125,7 @@ public:
      */
     void setResourceFile(const QString &file, bool global = true);
 
-    /**
+    /*!
      * Sets the default toolbar which will be auto-selected for all
      * KEditToolBar instances. Can be overridden on a per-dialog basis
      * by calling setDefaultToolBar( const QString& ) on the dialog.
@@ -138,7 +136,7 @@ public:
     static void setGlobalDefaultToolBar(const QString &toolBarName);
 
 Q_SIGNALS:
-    /**
+    /*!
      * Signal emitted when 'apply' or 'ok' is clicked or toolbars were reset.
      * Connect to it, to plug action lists and to call applyMainWindowSettings
      * (see sample code in this class's documentation)

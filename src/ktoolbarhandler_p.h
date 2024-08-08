@@ -21,24 +21,24 @@ class ToolBarHandler : public QObject, public KXMLGUIClient
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a new tool bar handler for the supplied
      * @param mainWindow.
      */
     explicit ToolBarHandler(KXmlGuiWindow *mainWindow);
 
-    /**
+    /*!
      * Creates a new tool bar handler for the supplied
      * @param mainWindow and with the supplied parent.
      */
     ToolBarHandler(KXmlGuiWindow *mainWindow, QObject *parent);
 
-    /**
+    /*!
      * Destroys the tool bar handler.
      */
     ~ToolBarHandler() override;
 
-    /**
+    /*!
      * Returns the action which is responsible for the tool bar menu.
      */
     QAction *toolBarMenuAction();

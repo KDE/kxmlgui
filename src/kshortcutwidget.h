@@ -17,7 +17,7 @@
 class KActionCollection;
 class KShortcutWidgetPrivate;
 
-/**
+/*!
  * @class KShortcutWidget kshortcutwidget.h KShortcutWidget
  *
  * \image html kshortcutwidget.png "KShortcutWidget"
@@ -37,7 +37,7 @@ public:
 
     QList<QKeySequence> shortcut() const;
 
-    /**
+    /*!
      * Set a list of action collections to check against for conflictuous shortcut.
      *
      * If there is a conflictuous shortcut with a QAction, and that his shortcut can be configured
@@ -59,7 +59,7 @@ public Q_SLOTS:
     void setShortcut(const QList<QKeySequence> &cut);
     void clearShortcut();
 
-    /**
+    /*!
      * Actually remove the shortcut that the user wanted to steal, from the
      * action that was using it.
      *

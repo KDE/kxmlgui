@@ -28,7 +28,7 @@ class KShortcutsEditorPrivate;
 // free of conflicts. If it is not, nothing will crash, but your users
 // won't like the resulting behavior.
 
-/**
+/*!
  * @class KShortcutsEditor kshortcutseditor.h KShortcutsEditor
  *
  * @short Widget for configuration of KAccel and KGlobalAccel.
@@ -52,7 +52,7 @@ class KXMLGUI_EXPORT KShortcutsEditor : public QWidget
     Q_PROPERTY(ActionTypes actionTypes READ actionTypes WRITE setActionTypes)
 
 public:
-    /**
+    /*!
      * @see ActionTypes
      */
     enum ActionType {
@@ -68,7 +68,7 @@ public:
         /// All actions
         AllActions = 0xffffffff,
     };
-    /**
+    /*!
      * Stores a combination of #ActionType values.
      */
     Q_DECLARE_FLAGS(ActionTypes, ActionType)
@@ -83,7 +83,7 @@ public:
         LetterShortcutsAllowed,
     };
 
-    /**
+    /*!
      * Constructor.
      *
      * @param collection the KActionCollection to configure
@@ -97,7 +97,7 @@ public:
                      ActionTypes actionTypes = AllActions,
                      LetterShortcuts allowLetterShortcuts = LetterShortcutsAllowed);
 
-    /**
+    /*!
      * \overload
      *
      * Creates a key chooser without a starting action collection.
@@ -112,31 +112,31 @@ public:
     /// Destructor
     ~KShortcutsEditor() override;
 
-    /**
+    /*!
      * Are the unsaved changes?
      */
     bool isModified() const;
 
-    /**
+    /*!
      * Removes all action collections from the editor
      */
     void clearCollections();
 
-    /**
+    /*!
      * Insert an action collection, i.e. add all its actions to the ones
      * already associated with the KShortcutsEditor object.
      * @param title subtree title of this collection of shortcut.
      */
     void addCollection(KActionCollection *, const QString &title = QString());
 
-    /**
+    /*!
      * Undo all change made since the last save().
      *
      * @since 5.75
      */
     void undo();
 
-    /**
+    /*!
      * Save the changes.
      *
      * This saves the actions to disk.
@@ -146,14 +146,14 @@ public:
      */
     void save();
 
-    /**
+    /*!
      * Sets the types of actions to display in this widget.
      *
      * @param actionTypes New types of actions
      * @since 5.0
      */
     void setActionTypes(ActionTypes actionTypes);
-    /**
+    /*!
      *
      * @return The types of actions currently displayed in this widget.
      * @since 5.0
@@ -161,13 +161,13 @@ public:
     ActionTypes actionTypes() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when an action's shortcut has been changed.
      **/
     void keyChange();
 
 public Q_SLOTS:
-    /**
+    /*!
      * Set all shortcuts to their default values (bindings).
      **/
     void allDefault();

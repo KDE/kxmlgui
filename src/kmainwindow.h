@@ -27,10 +27,10 @@ class KMWSessionManager;
 class KMainWindowPrivate;
 class KToolBar;
 
-/**
- * @class KMainWindow kmainwindow.h KMainWindow
+/*!
+ * \class KMainWindow
  *
- * @brief KMainWindow represents a top-level main window.
+ * \brief KMainWindow represents a top-level main window.
  *
  * It extends QMainWindow with session management capabilities. For ready-made window functionality and simpler UI management, use KXmlGuiWindow instead.
  *
@@ -66,7 +66,7 @@ class KXMLGUI_EXPORT KMainWindow : public QMainWindow
     Q_PROPERTY(QString autoSaveGroup READ autoSaveGroup)
 
 public:
-    /**
+    /*!
      * @brief Constructs a main window.
      *
      * @param parent The parent widget. This is usually @c nullptr, but it may also be
@@ -109,7 +109,7 @@ public:
      */
     explicit KMainWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
-    /**
+    /*!
      * @brief Destructor.
      *
      * Will also destroy the toolbars and menubar if
@@ -117,14 +117,14 @@ public:
      */
     ~KMainWindow() override;
 
-    /**
+    /*!
      * @param numberOfInstances The number of KMainWindow instances in the application.
      * @returns @c true if the number of KMainWindow instances of the previous session did contain the requested @p numberOfInstances, @c false otherwise.
      * @see restore()
      **/
     static bool canBeRestored(int numberOfInstances);
 
-    /**
+    /*!
      * @brief Useful if your application uses
      * different kinds of top-level windows.
      *
@@ -136,7 +136,7 @@ public:
      */
     static const QString classNameOfToplevel(int instanceNumber);
 
-    /**
+    /*!
      * @brief Attempt to restore the top-level widget as defined by @p numberOfInstances (1..X).
      *
      * You should call canBeRestored() first.
@@ -184,17 +184,17 @@ public:
      */
     bool restore(int numberOfInstances, bool show = true);
 
-    /**
+    /*!
      * @returns @c true if there is a menubar, @c false otherwise.
      */
     bool hasMenuBar();
 
-    /**
+    /*!
      * @returns The list of members of the KMainWindow class.
      */
     static QList<KMainWindow *> memberList();
 
-    /**
+    /*!
      * @brief This is useful to both call specific toolbars that have been created
      * or to generate a default one upon call.
      *
@@ -211,12 +211,12 @@ public:
      **/
     KToolBar *toolBar(const QString &name = QString());
 
-    /**
+    /*!
      * @return A list of all toolbars for this window
      */
     QList<KToolBar *> toolBars() const;
 
-    /**
+    /*!
      * @brief This enables autosave of toolbar/menubar/statusbar settings
      * (and optionally window size).
      * @param groupName A name that identifies the type of window.
@@ -257,7 +257,7 @@ public:
      */
     void setAutoSaveSettings(const QString &groupName = QStringLiteral("MainWindow"), bool saveWindowSize = true);
 
-    /**
+    /*!
      * This is an overloaded function.
      * This allows the settings to be saved into a different file
      * that does not correspond to that used for KSharedConfig::openConfig().
@@ -268,7 +268,7 @@ public:
      */
     void setAutoSaveSettings(const KConfigGroup &group, bool saveWindowSize = true);
 
-    /**
+    /*!
      * @brief Disables the autosave settings feature.
      * You don't normally need to call this, ever.
      * @see setAutoSaveSettings()
@@ -276,7 +276,7 @@ public:
      */
     void resetAutoSaveSettings();
 
-    /**
+    /*!
      * @return @c true if setAutoSaveSettings() was called,
      * @c false by default or if resetAutoSaveSettings() was called.
      * @see setAutoSaveSettings()
@@ -284,7 +284,7 @@ public:
      */
     bool autoSaveSettings() const;
 
-    /**
+    /*!
      * @return The group used for autosaving settings.
      *
      * Do not mistake this with autoSaveConfigGroup.
@@ -306,7 +306,7 @@ public:
      */
     QString autoSaveGroup() const;
 
-    /**
+    /*!
      * @return The group used for autosaving settings.
      *
      * Only meaningful if setAutoSaveSettings(const QString&, bool) was called.
@@ -321,7 +321,7 @@ public:
      */
     KConfigGroup autoSaveConfigGroup() const;
 
-    /**
+    /*!
      * @brief Assigns the config group name for the KConfigGroup returned by stateConfigGroup.
      * @param configGroup The config group to be assigned.
      * Window size and state are stored in the resulting KConfigGroup when this function is called.
@@ -335,7 +335,7 @@ public:
      */
     void setStateConfigGroup(const QString &configGroup);
 
-    /**
+    /*!
      * @returns The KConfigGroup used to store state data like window sizes or window state.
      *
      * The resulting group is invalid if setStateConfig is not called explicitly.
@@ -345,7 +345,7 @@ public:
      */
     KConfigGroup stateConfigGroup() const;
 
-    /**
+    /*!
      * @brief Read settings for statusbar, menubar and toolbar from their respective
      * groups in the config file and apply them.
      *
@@ -353,7 +353,7 @@ public:
      */
     virtual void applyMainWindowSettings(const KConfigGroup &config);
 
-    /**
+    /*!
      * @brief Manually save the settings for statusbar, menubar and toolbar to their respective
      * groups in the KConfigGroup @p config.
      *
@@ -371,14 +371,14 @@ public:
      */
     void saveMainWindowSettings(KConfigGroup &config);
 
-    /**
+    /*!
      * @returns The path for the exported window's D-Bus object.
      * @since 4.0.1
      */
     QString dbusName() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * @brief Assigns a KDE compliant caption (window title).
      *
      * @param caption The string that will be
@@ -393,7 +393,7 @@ public Q_SLOTS:
      * @see setPlainCaption()
      */
     virtual void setCaption(const QString &caption);
-    /**
+    /*!
      * @brief Makes a KDE compliant caption.
      * @param caption Your caption.
      * @param modified Whether the document is modified. This displays
@@ -407,7 +407,7 @@ public Q_SLOTS:
      */
     virtual void setCaption(const QString &caption, bool modified);
 
-    /**
+    /*!
      * @brief Make a plain caption without any modifications.
      *
      * @param caption The string that will be
@@ -423,7 +423,7 @@ public Q_SLOTS:
      */
     virtual void setPlainCaption(const QString &caption);
 
-    /**
+    /*!
      * @brief Opens the help page for the application.
      *
      * The application name is
@@ -448,7 +448,7 @@ public Q_SLOTS:
      */
     void appHelpActivated();
 
-    /**
+    /*!
      * @brief Tell the main window that it should save its settings when being closed.
      *
      * This is part of the autosave settings feature.
@@ -462,19 +462,19 @@ public Q_SLOTS:
     void setSettingsDirty();
 
 protected:
-    /**
+    /*!
      * Reimplemented to catch QEvent::Polish in order to adjust the object name
      * if needed, once all constructor code for the main window has run.
      * Also reimplemented to catch when a QDockWidget is added or removed.
      */
     bool event(QEvent *event) override;
 
-    /**
+    /*!
      * Reimplemented to open context menus on Shift+F10.
      */
     void keyPressEvent(QKeyEvent *keyEvent) override;
 
-    /**
+    /*!
      * Reimplemented to autosave settings and call queryClose().
      *
      * We recommend that you reimplement queryClose() rather than closeEvent().
@@ -483,7 +483,7 @@ protected:
      */
     void closeEvent(QCloseEvent *) override;
 
-    /**
+    /*!
      * @brief This function is called before the window is closed,
      * either by the user or indirectly by the session manager.
      *
@@ -517,7 +517,7 @@ protected:
      */
     virtual bool queryClose();
 
-    /**
+    /*!
      * @brief Saves your instance-specific properties.
      *
      * The function is
@@ -541,7 +541,7 @@ protected:
     {
     }
 
-    /**
+    /*!
      * @brief Reads your instance-specific properties.
      *
      * This function is called indirectly by restore().
@@ -561,7 +561,7 @@ protected:
     {
     }
 
-    /**
+    /*!
      * @brief Saves your application-wide properties.
      *
      * @param sessionConfig A pointer to the KConfig instance
@@ -580,7 +580,7 @@ protected:
      */
     virtual void saveGlobalProperties(KConfig *sessionConfig);
 
-    /**
+    /*!
      * @brief Reads your application-wide properties.
      *
      * @param sessionConfig A pointer to the KConfig instance
@@ -594,13 +594,13 @@ protected:
     void savePropertiesInternal(KConfig *, int);
     bool readPropertiesInternal(KConfig *, int);
 
-    /**
+    /*!
      * For inherited classes
      */
     bool settingsDirty() const;
 
 protected Q_SLOTS:
-    /**
+    /*!
      * This slot should only be called in case you reimplement closeEvent() and
      * if you are using the autosave feature. In all other cases,
      * setSettingsDirty() should be called instead to benefit from the delayed
@@ -636,20 +636,20 @@ private:
     Q_PRIVATE_SLOT(d_func(), void _k_slotSaveAutoSavePosition())
 };
 
-/**
+/*!
  * @defgroup KXMLGUI_Session KXMLGUI Session Macros and Functions
  *
  * @{
  */
 
-/**
+/*!
  * @def KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS
  * Returns the maximal number of arguments that are actually
  * supported by kRestoreMainWindows().
  **/
 #define KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS 3
 
-/**
+/*!
  * @brief Restores the last session. (To be used in your main function).
  *
  * These functions work also if you have more than one kind of top-level
@@ -699,7 +699,7 @@ inline void kRestoreMainWindows()
     }
 }
 
-/**
+/*!
  * @brief Restores the last session.
  * This is an overloaded function.
  *
@@ -716,6 +716,6 @@ inline void kRestoreMainWindows()
     kRestoreMainWindows<T0>();
     kRestoreMainWindows<T1, Tn...>();
 }
-/** @}  */
+/*! @}  */
 
 #endif
