@@ -28,10 +28,10 @@ class KConfigGroup;
 class QActionGroup;
 class QString;
 
-/**
- * @class KActionCollection kactioncollection.h KActionCollection
+/*!
+ * \class KActionCollection
  *
- * \short A container for a set of QAction objects.
+ * \brief A container for a set of QAction objects.
  *
  * KActionCollection manages a set of QAction objects.  It
  * allows them to be grouped for organized presentation of configuration to the user,
@@ -55,28 +55,28 @@ class KXMLGUI_EXPORT KActionCollection : public QObject
     Q_PROPERTY(bool configIsGlobal READ configIsGlobal WRITE setConfigGlobal)
 
 public:
-    /**
+    /*!
      * Constructor.  Allows specification of a component name other than the default
      * application name, where needed (remember to call setComponentDisplayName() too).
      */
     explicit KActionCollection(QObject *parent, const QString &cName = QString());
 
-    /**
+    /*!
      * Destructor.
      */
     ~KActionCollection() override;
 
-    /**
+    /*!
      * Access the list of all action collections in existence for this app
      */
     static const QList<KActionCollection *> &allCollections();
 
-    /**
+    /*!
      * Clears the entire action collection, deleting all actions.
      */
     void clear();
 
-    /**
+    /*!
      * Associate all actions in this collection to the given @p widget.
      * Unlike addAssociatedWidget(), this method only adds all current actions
      * in the collection to the given widget. Any action added after this call
@@ -85,7 +85,7 @@ public:
      */
     void associateWidget(QWidget *widget) const;
 
-    /**
+    /*!
      * Associate all actions in this collection to the given @p widget, including any actions
      * added after this association is made.
      *
@@ -95,45 +95,45 @@ public:
      */
     void addAssociatedWidget(QWidget *widget);
 
-    /**
+    /*!
      * Remove an association between all actions in this collection and the given @p widget, i.e.
      * remove those actions from the widget, and stop associating newly added actions as well.
      */
     void removeAssociatedWidget(QWidget *widget);
 
-    /**
+    /*!
      * Return a list of all associated widgets.
      */
     QList<QWidget *> associatedWidgets() const;
 
-    /**
+    /*!
      * Clear all associated widgets and remove the actions from those widgets.
      */
     void clearAssociatedWidgets();
 
-    /**
+    /*!
      * Returns the KConfig group with which settings will be loaded and saved.
      */
     QString configGroup() const;
 
-    /**
+    /*!
      * Returns whether this action collection's configuration should be global to KDE ( @c true ),
      * or specific to the application ( @c false ).
      */
     bool configIsGlobal() const;
 
-    /**
+    /*!
      * Sets @p group as the KConfig group with which settings will be loaded and saved.
      */
     void setConfigGroup(const QString &group);
 
-    /**
+    /*!
      * Set whether this action collection's configuration should be global to KDE ( @c true ),
      * or specific to the application ( @c false ).
      */
     void setConfigGlobal(bool global);
 
-    /**
+    /*!
      * Read all key associations from @p config.
      *
      * If @p config is zero, read all key associations from the
@@ -142,7 +142,7 @@ public:
      */
     void readSettings(KConfigGroup *config = nullptr);
 
-    /**
+    /*!
      * Import from @p config all configurable global key associations.
      *
      * \since 4.1
@@ -151,7 +151,7 @@ public:
      */
     void importGlobalShortcuts(KConfigGroup *config);
 
-    /**
+    /*!
      * Export the current configurable global key associations to @p config.
      *
      * \since 4.1
@@ -161,7 +161,7 @@ public:
      */
     void exportGlobalShortcuts(KConfigGroup *config, bool writeDefaults = false) const;
 
-    /**
+    /*!
      * Write the current configurable key associations to @p config. What the
      * function does if @p config is zero depends. If this action collection
      * belongs to a KXMLGUIClient the setting are saved to the kxmlgui
@@ -178,26 +178,26 @@ public:
      */
     void writeSettings(KConfigGroup *config = nullptr, bool writeDefaults = false, QAction *oneAction = nullptr) const;
 
-    /**
+    /*!
      * Returns the number of actions in the collection.
      *
      * This is equivalent to actions().count().
      */
     int count() const;
 
-    /**
+    /*!
      * Returns whether the action collection is empty or not.
      */
     bool isEmpty() const;
 
-    /**
+    /*!
      * Return the QAction* at position @p index in the action collection.
      *
      * This is equivalent to actions().value(index);
      */
     QAction *action(int index) const;
 
-    /**
+    /*!
      * Get the action with the given \p name from the action collection.
      *
      * This won't return the action for the menus defined using a "<Menu>" tag
@@ -214,7 +214,7 @@ public:
      */
     Q_INVOKABLE QAction *action(const QString &name) const;
 
-    /**
+    /*!
      * Returns the list of QActions which belong to this action collection.
      *
      * The list is guaranteed to be in the same order the action were put into
@@ -222,17 +222,17 @@ public:
      */
     QList<QAction *> actions() const;
 
-    /**
+    /*!
      * Returns the list of QActions without an QAction::actionGroup() which belong to this action collection.
      */
     const QList<QAction *> actionsWithoutGroup() const;
 
-    /**
+    /*!
      * Returns the list of all QActionGroups associated with actions in this action collection.
      */
     const QList<QActionGroup *> actionGroups() const;
 
-    /**
+    /*!
      * Set the @p componentName associated with this action collection.
      *
      * \warning Don't call this method on a KActionCollection that contains
@@ -244,42 +244,42 @@ public:
      */
     void setComponentName(const QString &componentName);
 
-    /** The component name with which this class is associated. */
+    /*! The component name with which this class is associated. */
     QString componentName() const;
 
-    /**
+    /*!
      * Set the component display name associated with this action collection.
      * (e.g. for the toolbar editor)
      * KXMLGUIClient::setComponentName takes care of calling this.
      */
     void setComponentDisplayName(const QString &displayName);
 
-    /** The display name for the associated component. */
+    /*! The display name for the associated component. */
     QString componentDisplayName() const;
 
-    /**
+    /*!
      * The parent KXMLGUIClient, or null if not available.
      */
     const KXMLGUIClient *parentGUIClient() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Indicates that @p action was inserted into this action collection.
      */
     void inserted(QAction *action);
 
-    /**
+    /*!
      * Emitted when an action has been inserted into, or removed from, this action collection.
      * @since 5.66
      */
     void changed();
 
-    /**
+    /*!
      * Indicates that @p action was hovered.
      */
     void actionHovered(QAction *action);
 
-    /**
+    /*!
      * Indicates that @p action was triggered
      */
     void actionTriggered(QAction *action);
@@ -295,7 +295,7 @@ private Q_SLOTS:
     KXMLGUI_NO_EXPORT void slotActionHovered();
 
 public:
-    /**
+    /*!
      * Add an action under the given name to the collection.
      *
      * Inserting an action that was previously inserted under a different name will replace the
@@ -319,7 +319,7 @@ public:
      */
     Q_INVOKABLE QAction *addAction(const QString &name, QAction *action);
 
-    /**
+    /*!
      * Adds a list of actions to the collection.
      *
      * The objectName of the actions is used as their internal name in the collection.
@@ -336,13 +336,13 @@ public:
      */
     void addActions(const QList<QAction *> &actions);
 
-    /**
+    /*!
      * Removes an action from the collection and deletes it.
      * @param action The action to remove.
      */
     void removeAction(QAction *action);
 
-    /**
+    /*!
      * Removes an action from the collection.
      *
      * The ownership of the action object is not changed.
@@ -351,7 +351,7 @@ public:
      */
     QAction *takeAction(QAction *action);
 
-    /**
+    /*!
      * Creates a new standard action, adds it to the collection and connects the
      * action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
@@ -373,7 +373,7 @@ public:
      */
     QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
 
-    /**
+    /*!
      * Creates a new standard action, adds to the collection under the given name
      * and connects the action's triggered(bool) signal to the specified
      * receiver/member. The newly created action is also returned.
@@ -395,7 +395,7 @@ public:
      */
     QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
-/**
+/*!
  * This is the same as addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member) using
  * new style connect syntax.
  *
@@ -422,7 +422,7 @@ public:
         return addAction(name, action);
     }
 
-    /**
+    /*!
      * This is the same as addAction(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
      * but using KStandardActions from KConfigGui.
      *
@@ -449,7 +449,7 @@ public:
         return addAction(name, action);
     }
 
-    /**
+    /*!
      * Creates a new standard action, adds it to the collection and connects the
      * action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
@@ -485,7 +485,7 @@ public:
         return action;
     }
 
-    /**
+    /*!
      * Creates a new action under the given name to the collection and connects
      * the action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is returned.
@@ -511,7 +511,7 @@ public:
      */
     QAction *addAction(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
-    /**
+    /*!
      * Creates a new action under the given name, adds it to the collection and connects the action's triggered(bool)
      * signal to the specified receiver/member. The receiver slot may accept either a bool or no
      * parameters at all (i.e. slotTriggered(bool) or slotTriggered() ).
@@ -542,7 +542,7 @@ public:
         return a;
     }
 
-/**
+/*!
  * This is the same as add(const QString &name, const QObject *receiver, const char *member) using
  * new style connect syntax.
  *
@@ -569,7 +569,7 @@ public:
         return a;
     }
 
-/**
+/*!
  * This is the same as addAction(const QString &name, const QObject *receiver, const char *member) using
  * new style connect syntax.
  *
@@ -592,7 +592,7 @@ public:
         return add<QAction>(name, receiver, slot);
     }
 
-    /**
+    /*!
      * Get the default primary shortcut for the given action.
      *
      * @param action the action for which the default primary shortcut should be returned.
@@ -601,7 +601,7 @@ public:
      */
     static QKeySequence defaultShortcut(QAction *action);
 
-    /**
+    /*!
      * Get the default shortcuts for the given action.
      *
      * @param action the action for which the default shortcuts should be returned.
@@ -610,7 +610,7 @@ public:
      */
     static QList<QKeySequence> defaultShortcuts(QAction *action);
 
-    /**
+    /*!
      * Set the default shortcut for the given action.
      * Since 5.2, this also calls action->setShortcut(shortcut), i.e. the default shortcut is
      * made active initially.
@@ -621,7 +621,7 @@ public:
      */
     static void setDefaultShortcut(QAction *action, const QKeySequence &shortcut);
 
-    /**
+    /*!
      * Set the default shortcuts for the given action.
      * Since 5.2, this also calls action->setShortcuts(shortcuts), i.e. the default shortcut is
      * made active initially.
@@ -632,7 +632,7 @@ public:
      */
     Q_INVOKABLE static void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
 
-    /**
+    /*!
      * Returns true if the given action's shortcuts may be configured by the user.
      *
      * @param action the action for the hint should be verified.
@@ -640,7 +640,7 @@ public:
      */
     static bool isShortcutsConfigurable(QAction *action);
 
-    /**
+    /*!
      * Indicate whether the user may configure the action's shortcuts.
      *
      * @param action the action for the hint should be verified.

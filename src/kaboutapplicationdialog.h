@@ -19,10 +19,10 @@
 
 class KAboutData;
 
-/**
- * @class KAboutApplicationDialog kaboutapplicationdialog.h KAboutApplicationDialog
+/*!
+ * \class KAboutApplicationDialog
  *
- * @short Standard "About Application" dialog box.
+ * \brief Standard "About Application" dialog box.
  *
  * This class provides the standard "About Application" dialog box
  * that is used by KHelpMenu. It uses the information of the global
@@ -33,55 +33,54 @@ class KAboutData;
  * thereby this dialog box is available through the
  * KMainWindow::helpMenu() function.
  *
- * \image html kaboutapplicationdialog.png "KAboutApplicationDialog"
+ * \image html kaboutapplicationdialog.png "KAboutApplicationDialog" TODO qdoc
  *
- * @author Urs Wolfer uwolfer @ kde.org
  */
 
 class KXMLGUI_EXPORT KAboutApplicationDialog : public QDialog
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Defines some options which can be applied to the about dialog
      *
-     * @see Options
-     * @since 4.4
+     * \value NoOptions No options, show the standard about dialog
+     * \value HideTranslators Don't show the translators tab
+     * \value [since KXMLGUI 5.77] HideLibraries Don't show the components tab
+     *
+     * \since KXMLGUI 4.4
      */
     enum Option {
-        NoOptions = 0x0, ///< No options, show the standard about dialog
-        HideTranslators = 0x1, ///< Don't show the translators tab
-        HideLibraries = 0x2, /**< Don't show the libraries tab @since 5.77
-                              *
-                              * Since 5.87 Don't show the components tab (which replaced the libraries tab)
-                              */
+        NoOptions = 0x0,
+        HideTranslators = 0x1,
+        HideLibraries = 0x2,
     };
-    /**
-     * Stores a combination of #Option values.
-     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
-    /**
+    /*!
      * Constructor. Creates a fully featured "About Application" dialog box.
      *
-     * @param aboutData A KAboutData object which data
+     * \a aboutData A KAboutData object which data
      *        will be used for filling the dialog.
-     * @param opts Additional options that can be applied, such as hiding the KDE version
+     *
+     * \a opts Additional options that can be applied, such as hiding the KDE version
      *             or the translators tab.
-     * @param parent The parent of the dialog box. You should use the
+     *
+     * \a parent The parent of the dialog box. You should use the
      *        toplevel window so that the dialog becomes centered.
      *
-     * @since 4.4
+     * \since KXMLGUI 4.4
      */
     explicit KAboutApplicationDialog(const KAboutData &aboutData, Options opts, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Constructor. Creates a fully featured "About Application" dialog box.
      *
-     * @param aboutData A KAboutData object which data
+     * \a aboutData A KAboutData object which data
      *        will be used for filling the dialog.
-     * @param parent The parent of the dialog box. You should use the
+     *
+     * \a parent The parent of the dialog box. You should use the
      *        toplevel window so that the dialog becomes centered.
      */
     explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = nullptr);

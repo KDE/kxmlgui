@@ -15,7 +15,7 @@
 class KAboutData;
 class KBugReportPrivate;
 
-/**
+/*!
  * @class KBugReport kbugreport.h KBugReport
  *
  * @short A dialog box for sending bug reports.
@@ -35,7 +35,7 @@ class KXMLGUI_EXPORT KBugReport : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a bug-report dialog.
      * Note that you shouldn't have to do this manually,
      * since KHelpMenu takes care of the menu item
@@ -43,18 +43,18 @@ public:
      */
     explicit KBugReport(const KAboutData &aboutData, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructor
      */
     ~KBugReport() override;
 
-    /**
+    /*!
      * OK has been clicked
      */
     void accept() override;
 
 protected:
-    /**
+    /*!
      * Attempt to e-mail the bug report.
      * @return true on success
      */

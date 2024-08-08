@@ -33,7 +33,7 @@ struct ContainerClient;
 class BuildHelper;
 }
 
-/**
+/*!
  * @class KXMLGUIFactory kxmlguifactory.h KXMLGUIFactory
  *
  * KXMLGUIFactory, together with KXMLGUIClient objects, can be used to create
@@ -57,7 +57,7 @@ class KXMLGUI_EXPORT KXMLGUIFactory : public QObject
     friend class KXMLGUI::BuildHelper;
     Q_OBJECT
 public:
-    /**
+    /*!
      * Constructs a KXMLGUIFactory. The provided @p builder KXMLGUIBuilder will be called
      * for creating and removing container widgets, when clients are added/removed from the GUI.
      *
@@ -66,7 +66,7 @@ public:
      */
     explicit KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent = nullptr);
 
-    /**
+    /*!
      * Destructor
      */
     ~KXMLGUIFactory() override;
@@ -77,20 +77,20 @@ public:
     /// @internal
     static bool saveConfigFile(const QDomDocument &doc, const QString &filename, const QString &componentName = QString());
 
-    /**
+    /*!
      * @internal
      * Find or create the ActionProperties element, used when saving custom action properties
      */
     static QDomElement actionPropertiesElement(QDomDocument &doc);
 
-    /**
+    /*!
      * @internal
      * Find or create the element for a given action, by name.
      * Used when saving custom action properties
      */
     static QDomElement findActionByName(QDomElement &elem, const QString &sName, bool create);
 
-    /**
+    /*!
      * Creates the GUI described by the QDomDocument of the client,
      * using the client's actions, and merges it with the previously
      * created GUI.
@@ -102,7 +102,7 @@ public:
      */
     void addClient(KXMLGUIClient *client);
 
-    /**
+    /*!
      * Removes the GUI described by the client, by unplugging all
      * provided actions and removing all owned containers (and storing
      * container state information in the given client)
@@ -112,12 +112,12 @@ public:
     void plugActionList(KXMLGUIClient *client, const QString &name, const QList<QAction *> &actionList);
     void unplugActionList(KXMLGUIClient *client, const QString &name);
 
-    /**
+    /*!
      * Returns a list of all clients currently added to this factory
      */
     QList<KXMLGUIClient *> clients() const;
 
-    /**
+    /*!
      * Use this method to get access to a container widget with the name specified with @p containerName
      * and which is owned by the @p client. The container name is specified with a "name" attribute in the
      * XML document.
@@ -141,7 +141,7 @@ public:
 
     QList<QWidget *> containers(const QString &tagName);
 
-    /**
+    /*!
      * Use this method to free all memory allocated by the KXMLGUIFactory. This deletes the internal node
      * tree and therefore resets the internal state of the class. Please note that the actual GUI is
      * NOT touched at all, meaning no containers are deleted nor any actions unplugged. That is
@@ -151,7 +151,7 @@ public:
      */
     void reset();
 
-    /**
+    /*!
      * Use this method to free all memory allocated by the KXMLGUIFactory for a specific container,
      * including all child containers and actions. This deletes the internal node subtree for the
      * specified container. The actual GUI is not touched, no containers are deleted or any actions
@@ -162,14 +162,14 @@ public:
      */
     void resetContainer(const QString &containerName, bool useTagName = false);
 
-    /**
+    /*!
      * Use this method to reset and reread action properties (shortcuts, etc.) for all actions.
      * This is needed, for example, when you change shortcuts scheme at runtime.
      */
     void refreshActionProperties();
 
 public Q_SLOTS:
-    /**
+    /*!
      * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
      * and which can be used to change the shortcuts associated with each action.
      *
@@ -205,7 +205,7 @@ Q_SIGNALS:
     void clientAdded(KXMLGUIClient *client);
     void clientRemoved(KXMLGUIClient *client);
 
-    /**
+    /*!
      * Emitted when the factory is currently making changes to the GUI,
      * i.e. adding or removing clients.
      * makingChanges(true) is emitted before any change happens, and
@@ -217,7 +217,7 @@ Q_SIGNALS:
      */
     void makingChanges(bool);
 
-    /**
+    /*!
      * Emitted when the shortcuts have been saved (i.e. the user accepted the dialog).
      *
      * If you're using multiple instances of the same KXMLGUIClient, you probably want to

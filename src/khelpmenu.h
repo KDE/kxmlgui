@@ -20,7 +20,7 @@ class QAction;
 class KAboutData;
 class KHelpMenuPrivate;
 
-/**
+/*!
  * @class KHelpMenu khelpmenu.h KHelpMenu
  *
  * @short Standard %KDE help menu with dialog boxes.
@@ -110,7 +110,7 @@ class KXMLGUI_EXPORT KHelpMenu : public QObject
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructor.
      *
      * @param parent The parent of the dialog boxes. The boxes are modeless
@@ -123,7 +123,7 @@ public:
      */
     explicit KHelpMenu(QWidget *parent = nullptr, const QString &aboutAppText = QString(), bool showWhatsThis = true);
 
-    /**
+    /*!
      * Constructor.
      *
      * This alternative constructor is mainly useful if you want to
@@ -138,14 +138,14 @@ public:
      */
     KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis = true);
 
-    /**
+    /*!
      * Destructor
      *
      * Destroys dialogs and the menu pointer returned by menu
      */
     ~KHelpMenu() override;
 
-    /**
+    /*!
      * Returns a popup menu you can use in the menu bar or where you
      * need it.
      *
@@ -168,7 +168,7 @@ public:
         menuDonate = 6, ///< @since 5.24
     };
 
-    /**
+    /*!
      * Returns the QAction * associated with the given parameter
      * Will return a nullptr if menu() has not been called
      *
@@ -177,19 +177,19 @@ public:
     QAction *action(MenuId id) const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Opens the help page for the application. The application name is
      * used as a key to determine what to display and the system will attempt
      * to open \<appName\>/index.html.
      */
     void appHelpActivated();
 
-    /**
+    /*!
      * Activates What's This help for the application.
      */
     void contextHelpActivated();
 
-    /**
+    /*!
      * Opens an application specific dialog box.
      *
      * The method will try to open the about box using the following steps:
@@ -200,42 +200,42 @@ public Q_SLOTS:
      */
     void aboutApplication();
 
-    /**
+    /*!
      * Opens the standard "About KDE" dialog box.
      */
     void aboutKDE();
 
-    /**
+    /*!
      * Opens the standard "Report Bugs" dialog box.
      */
     void reportBug();
 
-    /**
+    /*!
      * Opens the changing default application language dialog box.
      */
     void switchApplicationLanguage();
 
-    /**
+    /*!
      * Opens the donate url.
      * @since 5.24
      */
     void donate();
 
 private Q_SLOTS:
-    /**
+    /*!
      * Connected to the menu pointer (if created) to detect a delete
      * operation on the pointer. You should not delete the pointer in your
      * code yourself. Let the KHelpMenu destructor do the job.
      */
     KXMLGUI_NO_EXPORT void menuDestroyed();
 
-    /**
+    /*!
      * Connected to the dialogs (about kde and bug report) to detect
      * when they are finished.
      */
     KXMLGUI_NO_EXPORT void dialogFinished();
 
-    /**
+    /*!
      * This slot will delete a dialog (about kde or bug report) if the
      * dialog pointer is not zero and the dialog is not visible. This
      * slot is activated by a one shot timer started in dialogHidden
@@ -243,7 +243,7 @@ private Q_SLOTS:
     KXMLGUI_NO_EXPORT void timerExpired();
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted from aboutApplication() if no
      * "about application" string has been defined. The standard
      * application specific dialog box that is normally activated in

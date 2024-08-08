@@ -25,7 +25,7 @@ class KConfigGroup;
 class KToolBar;
 class KXmlGuiWindowPrivate;
 
-/**
+/*!
  * @class KXmlGuiWindow kxmlguiwindow.h KXmlGuiWindow
  *
  * @brief KMainWindow with convenience functions and integration with XmlGui files.
@@ -93,7 +93,7 @@ class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, 
     Q_PROPERTY(bool standardToolBarMenuEnabled READ isStandardToolBarMenuEnabled WRITE setStandardToolBarMenuEnabled)
 
 public:
-    /**
+    /*!
      * @brief Construct a main window.
      *
      * Note that by default a KXmlGuiWindow is created with the
@@ -132,14 +132,14 @@ public:
      */
     explicit KXmlGuiWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
-    /**
+    /*!
      * @brief Destructor.
      *
      * Will also destroy the toolbars and menubar if needed.
      */
     ~KXmlGuiWindow() override;
 
-    /**
+    /*!
      * @brief Creates a standard help menu when calling createGUI()
      * or setupGUI().
      *
@@ -149,7 +149,7 @@ public:
      */
     void setHelpMenuEnabled(bool showHelpMenu = true);
 
-    /**
+    /*!
      * @returns @c true if the help menu is enabled, @c false if setHelpMenuEnabled(false) was set.
      * @see setHelpMenuEnabled()
      */
@@ -157,7 +157,7 @@ public:
 
     virtual KXMLGUIFactory *guiFactory();
 
-    /**
+    /*!
      * @brief Generates the interface based on a local XML file.
      *
      * This is the function that generates UI elements such as the main menu,
@@ -179,7 +179,7 @@ public:
      */
     void createGUI(const QString &xmlfile = QString());
 
-    /**
+    /*!
      * @brief Creates a toggle under the 'Settings' menu to show/hide the available toolbars.
      *
      * The standard toolbar menu toggles the visibility of one or multiple toolbars.
@@ -211,7 +211,7 @@ public:
      */
     void setStandardToolBarMenuEnabled(bool showToolBarMenu);
 
-    /**
+    /*!
      * @brief Returns whether setStandardToolBarMenuEnabled() was set.
      *
      * @note This function only makes sense if createGUI() was used.
@@ -227,7 +227,7 @@ public:
      */
     bool isStandardToolBarMenuEnabled() const;
 
-    /**
+    /*!
      * @brief Creates a toggle under the 'Settings' menu to show/hide the statusbar.
      *
      * Calling this method will create a statusbar if one doesn't already exist.
@@ -255,13 +255,13 @@ public:
      */
     void createStandardStatusBarAction();
 
-    /**
+    /*!
      * @brief Use these options for the first argument of setupGUI().
      * @see setupGUI()
      * @see StandardWindowOption
      */
     enum StandardWindowOption {
-        /**
+        /*!
          * Adds action(s) to show/hide the toolbar(s) and adds a menu
          * action to configure the toolbar(s).
          *
@@ -270,13 +270,13 @@ public:
          */
         ToolBar = 1,
 
-        /**
+        /*!
          * @brief Adds an action in the 'Settings' menu
          * to open the configure keyboard shortcuts dialog.
          */
         Keys = 2,
 
-        /**
+        /*!
          * @brief Adds an action to show/hide the statusbar in the 'Settings' menu.
          * Note that setting this value will create a statusbar
          * if one doesn't already exist.
@@ -285,7 +285,7 @@ public:
          */
         StatusBar = 4,
 
-        /**
+        /*!
          * @brief Autosaves (and loads) the toolbar/menubar/statusbar settings and
          * window size using the default name.
          *
@@ -302,7 +302,7 @@ public:
          */
         Save = 8,
 
-        /**
+        /*!
          * @brief Calls createGUI() once ToolBar, Keys and Statusbar have been
          * taken care of.
          *
@@ -318,13 +318,13 @@ public:
          */
         Create = 16,
 
-        /**
+        /*!
          * @brief Sets all of the above options as true.
          */
         Default = ToolBar | Keys | StatusBar | Save | Create,
     };
     Q_FLAG(StandardWindowOption)
-    /**
+    /*!
      * @brief Stores a combination of @ref StandardWindowOptions values.
      *
      * Use these options for the first argument of setupGUI().
@@ -333,7 +333,7 @@ public:
      */
     Q_DECLARE_FLAGS(StandardWindowOptions, StandardWindowOption)
 
-    /**
+    /*!
      * @brief Configures the current window and its actions in the typical KDE
      * fashion.
      *
@@ -379,7 +379,7 @@ public:
      */
     void setupGUI(StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
-    /**
+    /*!
      * @brief This is an overloaded function.
      *
      * @param defaultSize A manually specified window size that overrides the saved size.
@@ -390,17 +390,17 @@ public:
      */
     void setupGUI(const QSize &defaultSize, StandardWindowOptions options = Default, const QString &xmlfile = QString());
 
-    /**
+    /*!
      * @returns A pointer to the main window's action responsible for the toolbar's menu.
      */
     QAction *toolBarMenuAction();
 
-    /**
+    /*!
      * @internal for KToolBar
      */
     void setupToolbarMenuActions();
 
-    /**
+    /*!
      * @internal
      */
     void finalizeGUI(bool force);
@@ -409,7 +409,7 @@ public:
     // reimplemented for internal reasons
     void applyMainWindowSettings(const KConfigGroup &config) override;
 
-    /**
+    /*!
      * @brief Enable a KCommandBar to list and quickly execute actions.
      *
      * A KXmlGuiWindow by default automatically creates a KCommandBar,
@@ -431,7 +431,7 @@ public:
      */
     void setCommandBarEnabled(bool showCommandBar);
 
-    /**
+    /*!
      * @brief Returns whether a KCommandBar was set.
      * @returns @c true by default, @c false if setCommandBarEnabled(false) was set.
      * @since 5.83
@@ -440,7 +440,7 @@ public:
     bool isCommandBarEnabled() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * @brief Show a standard configure toolbar dialog.
      *
      * This slot can be connected directly to the action to configure the toolbar.
@@ -451,7 +451,7 @@ public Q_SLOTS:
      */
     virtual void configureToolbars();
 
-    /**
+    /*!
      * @brief Applies a state change
      *
      * Reimplement this to enable and disable actions as defined in the XmlGui rc file.
@@ -460,7 +460,7 @@ public Q_SLOTS:
      */
     virtual void slotStateChanged(const QString &newstate);
 
-    /**
+    /*!
      * @brief Applies a state change
      *
      * Reimplement this to enable and disable actions as defined in the XmlGui rc file.
@@ -474,14 +474,14 @@ public Q_SLOTS:
     void slotStateChanged(const QString &newstate, bool reverse);
 
 protected:
-    /**
+    /*!
      * Reimplemented to catch QEvent::Polish in order to adjust the object name
      * if needed, once all constructor code for the main window has run.
      * Also reimplemented to catch when a QDockWidget is added or removed.
      */
     bool event(QEvent *event) override;
 
-    /**
+    /*!
      * @brief Checks if there are actions using the same shortcut.
      *
      * This is called automatically from createGUI().
@@ -491,7 +491,7 @@ protected:
     void checkAmbiguousShortcuts();
 
 protected Q_SLOTS:
-    /**
+    /*!
      * @brief Rebuilds the GUI after KEditToolBar changes the toolbar layout.
      * @see configureToolbars()
      */

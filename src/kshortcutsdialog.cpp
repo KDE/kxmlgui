@@ -31,7 +31,7 @@
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"
 
-/************************************************************************/
+/*!**********************************************************************/
 /* KShortcutsDialog                                                     */
 /*                                                                      */
 /* Originally by Nicolas Hadacek <hadacek@via.ecp.fr>                   */
@@ -41,7 +41,7 @@
 /* And by Espen Sand <espen@kde.org> 1999-10-19                         */
 /* (by using KDialog there is almost no code left ;)                    */
 /*                                                                      */
-/************************************************************************/
+/*!**********************************************************************/
 
 QKeySequence primarySequence(const QList<QKeySequence> &sequences)
 {

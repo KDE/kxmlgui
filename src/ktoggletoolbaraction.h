@@ -22,7 +22,7 @@
 
 class KToolBar;
 
-/**
+/*!
  * @class KToggleToolBarAction ktoggletoolbaraction.h KToggleToolBarAction
  *
  * An action that takes care of everything associated with
@@ -41,7 +41,7 @@ class KXMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Create a KToggleToolBarAction that manages the @p toolBar.
      *
      * @param toolBar the toolbar to be managed
@@ -49,17 +49,17 @@ public:
      */
     KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Destroys toggle toolbar action.
      */
     ~KToggleToolBarAction() override;
 
-    /**
+    /*!
      * Returns a pointer to the tool bar it manages.
      */
     KToolBar *toolBar();
 
-    /**
+    /*!
      * Reimplemented from QObject.
      */
     bool eventFilter(QObject *watched, QEvent *event) override;
