@@ -18,7 +18,7 @@ class KSelectAction;
 
 namespace KDEPrivate
 {
-/**
+/*!
  * @internal
  * This class handle the context menu of QMenu.
  * Used by KXmlGuiBuilder

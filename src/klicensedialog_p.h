@@ -13,7 +13,7 @@
 
 class KAboutLicense;
 
-/**
+/*!
  * @internal
  *
  * A dialog to display a license

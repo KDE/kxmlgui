@@ -18,7 +18,7 @@
 class QDialog;
 class QTextBrowser;
 
-/**
+/*!
  @internal
  This class allows translators (and application developers) to check for accelerator
  conflicts in menu and widgets. Put the following in your kdeglobals (or the config
@@ -57,7 +57,7 @@ public:
 
 private:
     KCheckAccelerators(QObject *parent, int key, bool autoCheck);
-    /**
+    /*!
      * Re-implemented to filter the parent's events.
      */
     bool eventFilter(QObject *, QEvent *e) override;

@@ -26,7 +26,7 @@ class KConfig;
 class KMainWindow;
 class KXMLGUIClient;
 
-/**
+/*!
  * @class KToolBar ktoolbar.h KToolBar
  *
  * @short Floatable toolbar with auto resize.
@@ -69,7 +69,7 @@ class KXMLGUI_EXPORT KToolBar : public QToolBar
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructor.
      *
      * This constructor takes care of adding the toolbar to the mainwindow,
@@ -87,7 +87,7 @@ public:
     // KDE5: remove. The one below is preferred so that all debug output from init() shows the right objectName already,
     // and so that isMainToolBar() and iconSizeDefault() return correct values during loading too.
 
-    /**
+    /*!
      * Constructor.
      *
      * This constructor takes care of adding the toolbar to the mainwindow,
@@ -104,7 +104,7 @@ public:
      */
     explicit KToolBar(const QString &objectName, QWidget *parent, bool readConfig = true);
 
-    /**
+    /*!
      * Alternate constructor with additional arguments, e.g. to choose in which area
      * the toolbar should be auto-added. This is rarely used in KDE. When using XMLGUI
      * you can specify this as an xml attribute instead.
@@ -123,89 +123,89 @@ public:
              bool isMainToolBar = false,
              bool readConfig = true); // KDE5: remove, I don't think anyone is using this.
 
-    /**
+    /*!
      * Destroys the toolbar.
      */
     ~KToolBar() override;
 
-    /**
+    /*!
      * Returns the main window that this toolbar is docked with.
      */
     KMainWindow *mainWindow() const;
 
-    /**
+    /*!
      * Convenience function to set icon size
      */
     void setIconDimensions(int size);
 
-    /**
+    /*!
      * Returns the default size for this type of toolbar.
      *
      * @return the default size for this type of toolbar.
      */
     int iconSizeDefault() const; // KDE5: hide from public API. Doesn't make sense to export this, and it isn't used.
 
-    /**
+    /*!
      * Save the toolbar settings to group @p cg.
      */
     void saveSettings(KConfigGroup &cg);
 
-    /**
+    /*!
      * Read the toolbar settings from group @p cg
      * and apply them.
      */
     void applySettings(const KConfigGroup &cg);
 
-    /**
+    /*!
      * Adds an XML gui client that uses this toolbar
      * @since 4.8.1
      */
     void addXMLGUIClient(KXMLGUIClient *client);
 
-    /**
+    /*!
      * Removes an XML gui client that uses this toolbar
      * @since 4.8.5
      */
     void removeXMLGUIClient(KXMLGUIClient *client);
 
-    /**
+    /*!
      * Load state from an XML @param element, called by KXMLGUIBuilder.
      */
     void loadState(const QDomElement &element);
 
-    /**
+    /*!
      * Save state into an XML @param element, called by KXMLGUIBuilder.
      */
     void saveState(QDomElement &element) const;
 
-    /**
+    /*!
      * Reimplemented to support context menu activation on disabled tool buttons.
      */
     bool eventFilter(QObject *watched, QEvent *event) override;
 
-    /**
+    /*!
      * Returns whether the toolbars are currently editable (drag & drop of actions).
      */
     static bool toolBarsEditable();
 
-    /**
+    /*!
      * Enable or disable toolbar editing via drag & drop of actions.  This is
      * called by KEditToolBar and should generally be set to disabled whenever
      * KEditToolBar is not active.
      */
     static void setToolBarsEditable(bool editable);
 
-    /**
+    /*!
      * Returns whether the toolbars are locked (i.e., moving of the toobars disallowed).
      */
     static bool toolBarsLocked();
 
-    /**
+    /*!
      * Allows you to lock and unlock all toolbars (i.e., disallow/allow moving of the toobars).
      */
     static void setToolBarsLocked(bool locked);
 
-    /**
+    /*!
      * Emits a D-Bus signal to tell all toolbars in all applications, that the user settings have
      * changed.
      * @since 5.0

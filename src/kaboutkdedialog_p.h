@@ -15,8 +15,8 @@
 
 namespace KDEPrivate
 {
-/**
- * @short Standard "About KDE" dialog box
+/*!
+ * \brief Standard "About KDE" dialog box
  *
  * This class provides the standard "About KDE" dialog box that is used
  * in KHelpMenu. Normally you should not use this class directly, but
@@ -25,8 +25,7 @@ namespace KDEPrivate
  * menu and thereby this dialog box is available through the
  * KMainWindow::helpMenu() function.
  *
- * @author Urs Wolfer uwolfer @ kde.org
- * @internal
+ * \internal
  */
 
 class KAboutKdeDialog : public QDialog
@@ -34,12 +33,12 @@ class KAboutKdeDialog : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructor. Creates a fully featured "About KDE" dialog box.
      * Note that this dialog is made modeless in the KHelpMenu class so
      * the users may expect a modeless dialog.
      *
-     * @param parent The parent of the dialog box. You should use the
+     * \a parent The parent of the dialog box. You should use the
      *        toplevel window so that the dialog becomes centered.
      */
     explicit KAboutKdeDialog(QWidget *parent = nullptr);

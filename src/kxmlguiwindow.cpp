@@ -49,7 +49,7 @@
 #include <cctype>
 #include <cstdlib>
 
-/**
+/*!
  * A helper function that takes a list of KActionCollection* and converts it
  * to KCommandBar::ActionGroup
  */
@@ -68,7 +68,7 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
         ag.name = componentName;
         ag.actions.reserve(collection->count());
         for (const auto action : collectionActions) {
-            /**
+            /*!
              * If this action is a menu, fetch all its child actions
              * and skip the menu action itself
              */
@@ -84,7 +84,7 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
                     }
                 }
 
-                /**
+                /*!
                  * If there were no actions in the menu, we
                  * add the menu to the list instead because it could
                  * be that the actions are created on demand i.e., aboutToShow()
@@ -577,7 +577,7 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
 
 void KXmlGuiWindow::setCommandBarEnabled(bool showCommandBar)
 {
-    /**
+    /*!
      * Unset the shortcut
      */
     auto cmdBarAction = actionCollection()->action(QStringLiteral("open_kcommand_bar"));
