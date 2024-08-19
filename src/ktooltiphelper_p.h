@@ -40,7 +40,7 @@ public:
     ~KToolTipHelperPrivate() override;
 
     /** @see KToolTipHelper::eventFilter() */
-    virtual bool eventFilter(QObject *watched, QEvent *event) override;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
     /** @see KToolTipHelper::whatsThisHintOnly() */
     static const QString whatsThisHintOnly();
