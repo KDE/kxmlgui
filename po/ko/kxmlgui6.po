@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 00:37+0000\n"
-"PO-Revision-Date: 2024-02-06 00:42+0100\n"
+"PO-Revision-Date: 2024-08-20 00:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -524,19 +524,16 @@ msgid "Curr&ent actions:"
 msgstr "현재 동작(&E):"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "아이콘 변경"
+msgstr "아이콘 변경(&I)…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "텍스트 변경"
+msgstr "텍스트 변경(&X)…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -750,12 +747,10 @@ msgid "Add to Toolbar"
 msgstr "도구 모음에 추가"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "단축키 설정..."
+msgstr "단축키 설정…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -784,7 +779,7 @@ msgstr "현재 구성표:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "새로 만들기…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -805,20 +800,16 @@ msgid "Save shortcuts to scheme"
 msgstr "단축키를 구성표로 저장"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "구성표 내보내기..."
+msgstr "구성표 내보내기…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "구성표 가져오기..."
+msgstr "구성표 가져오기…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
