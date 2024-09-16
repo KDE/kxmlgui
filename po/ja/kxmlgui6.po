@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 00:37+0000\n"
-"PO-Revision-Date: 2024-02-07 04:10+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2024-09-15 22:38+0900\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -537,19 +537,16 @@ msgid "Curr&ent actions:"
 msgstr "現在のアクション(&E):"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "アイコンを変更"
+msgstr "アイコンを変更(&I)..."
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "テキストを変更"
+msgstr "テキストを変更(&X)..."
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -770,9 +767,7 @@ msgid "Add to Toolbar"
 msgstr "ツールバーに追加"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
 msgstr "ショートカットを設定..."
@@ -804,7 +799,7 @@ msgstr "現在のスキーム:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "新規..."
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -825,17 +820,13 @@ msgid "Save shortcuts to scheme"
 msgstr "スキームにショートカットを保存"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "スキームをエクスポート..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "スキームをインポート..."
@@ -990,7 +981,7 @@ msgstr "%1 のショートカット"
 #: kshortcutseditor.cpp:542 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
-msgstr "主要:"
+msgstr "メイン:"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
 #: kshortcutseditor.cpp:543 kshortcutwidget.ui:52
@@ -1077,7 +1068,7 @@ msgstr "アプリケーションの言語が変更されました"
 #: kswitchlanguagedialog_p.cpp:370
 #, kde-format
 msgid "Primary language:"
-msgstr "一次言語:"
+msgstr "プライマリ言語:"
 
 #: kswitchlanguagedialog_p.cpp:370
 #, kde-format
@@ -1235,8 +1226,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
-"<small><font color=\"%1\">さらなる情報を確認するには <b>Shift</b> を押してく"
-"ださい。</font></small>"
+"<small><font color=\"%1\">詳しい情報については <b>Shift</b> を押してくださ"
+"い。</font></small>"
 
 #. i18n: The 'Press Shift for more' message is added to tooltips that have an
 #. available whatsthis help message. Pressing Shift will show this more exhaustive message.
@@ -1254,8 +1245,8 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
-"%1<br/><small><font color=\"%2\">さらなる情報を確認するには <b>Shift</b> を押"
-"してください。</font></small>"
+"%1<br/><small><font color=\"%2\">詳しい情報については <b>Shift</b> を押してく"
+"ださい。</font></small>"
 
 #: kundoactions.cpp:30
 #, kde-format
@@ -1353,18 +1344,3 @@ msgstr "設定(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "メインツールバー"
-
-#~ msgid "About %1"
-#~ msgstr "%1 について"
-
-#~ msgctxt "@action:button"
-#~ msgid "Change &Icon..."
-#~ msgstr "アイコンを変更(&I)..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Change Te&xt..."
-#~ msgstr "テキストを変更(&X)..."
-
-#~ msgctxt "@action:button"
-#~ msgid "New..."
-#~ msgstr "新規..."
