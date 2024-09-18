@@ -402,13 +402,12 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:137
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:143
 #, kde-format
@@ -705,10 +704,9 @@ msgstr ""
 "b>.<br>Παρακαλώ επιλέξτε κάποιον άλλον.</qt>"
 
 #: kkeysequencewidget.cpp:275
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Ο συνδυασμός πλήκτρων '%1' της εφαρμογής %2 για την ενέργεια %3\n"
+msgstr "Ο συνδυασμός πλήκτρων '%1' της εφαρμογής '%2' για την ενέργεια '%3'\n"
 
 #: kkeysequencewidget.cpp:284
 #, kde-format
