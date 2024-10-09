@@ -12,6 +12,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QTimer>
 #include <QUrl>
 #include <QUrlQuery>
 
@@ -25,6 +26,10 @@
 #include "config-xmlgui.h"
 #include "systeminformation_p.h"
 #include <kxmlgui_version.h>
+
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 class KBugReportPrivate
 {
@@ -211,7 +216,12 @@ void KBugReportPrivate::updateUrl()
 void KBugReport::accept()
 {
     QDesktopServices::openUrl(d->url);
-    QDialog::accept();
+
+    // HACK: accept will close the window, which breaks the xdg-activation handling in QDesktopServices::openUrl()
+    // Slightly delay the closing to give openUrl time to finish
+    QTimer::singleShot(500ms, [this] {
+        QDialog::accept();
+    });
 }
 
 #include "moc_kbugreport.cpp"
