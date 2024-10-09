@@ -12,6 +12,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QTimer>
 #include <QUrl>
 #include <QUrlQuery>
 
@@ -25,6 +26,10 @@
 #include "config-xmlgui.h"
 #include "systeminformation_p.h"
 #include <kxmlgui_version.h>
+
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 class KBugReportPrivate
 {
@@ -211,7 +216,9 @@ void KBugReportPrivate::updateUrl()
 void KBugReport::accept()
 {
     QDesktopServices::openUrl(d->url);
-    QDialog::accept();
+    QTimer::singleShot(1000ms, [this] {
+        QDialog::accept();
+    });
 }
 
 #include "moc_kbugreport.cpp"
