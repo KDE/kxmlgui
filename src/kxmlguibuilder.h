@@ -22,7 +22,8 @@ class QDomElement;
 class QWidget;
 
 /*!
- * @class KXMLGUIBuilder kxmlguibuilder.h KXMLGUIBuilder
+ * \class KXMLGUIBuilder
+ * \inmodule KXmlGui
  *
  * Implements the creation of the GUI (menubar, menus and toolbars)
  * as requested by the GUI factory.
@@ -33,36 +34,51 @@ class QWidget;
 class KXMLGUI_EXPORT KXMLGUIBuilder
 {
 public:
+    /*!
+     * \brief Constructs a new KXMLGUIBuilder object from \a widget.
+     */
     explicit KXMLGUIBuilder(QWidget *widget);
+    /*!
+     * \brief Destructor.
+     */
     virtual ~KXMLGUIBuilder();
 
-    /* @internal */
+    /* \internal */
     KXMLGUIClient *builderClient() const;
-    /* @internal */
+    /* \internal */
     void setBuilderClient(KXMLGUIClient *client);
-    /* @internal */
+    /* \internal */
     QWidget *widget();
 
     virtual QStringList containerTags() const;
 
     /*!
-     * Creates a container (menubar/menu/toolbar/statusbar/separator/...)
-     * from an element in the XML file
+     * \brief Creates a container (menubar/menu/toolbar/statusbar/separator/...)
+     * from an \a element at \a index in the XML file.
      *
-     * @param parent The parent for the container
-     * @param index The index where the container should be inserted
-     *              into the parent container/widget
-     * @param element The element from the DOM tree describing the
-     *                container (use it to access container specified
-     *                attributes or child elements)
-     * @param action The action created for this container; used for e.g. passing to removeContainer.
+     * \a parent The parent for the container.
+     *
+     * \a index The index where the container should be inserted
+     * into the parent container/widget.
+     *
+     * \a element The element from the DOM tree describing the
+     * container (use it to access container specified attributes
+     * or child elements).
+     *
+     * \a containerAction The action created for this container;
+     * used for e.g. passing to removeContainer.
      */
     virtual QWidget *createContainer(QWidget *parent, int index, const QDomElement &element, QAction *&containerAction);
 
     /*!
-     * Removes the given (and previously via createContainer )
-     * created container.
+     * \brief Removes the given \a container.
      *
+     * \a parent The parent for the container.
+     *
+     * \a element The element from the DOM tree describing the container
+     * (use it to access container specified attributes or child elements).
+     *
+     * \a containerAction The action created for this container.
      */
     virtual void removeContainer(QWidget *container, QWidget *parent, QDomElement &element, QAction *containerAction);
 

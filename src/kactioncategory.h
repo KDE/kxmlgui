@@ -25,6 +25,7 @@ class QAction;
 
 /*!
  * \class KActionCategory
+ * \inmodule KXmlGui
  *
  * \brief Categorize actions for KShortcutsEditor.
  *
@@ -34,25 +35,38 @@ class QAction;
  * The first possibility is using more than one action collection. Each
  * actions collection becomes a top level node.
  *
- * TODO qdoc
- * + action collection 1
- *   + first action
- *   + second action
- *   + third action
- * + action collection 2
- *   + first action
- *   + second action
- *   + third action
+ * \list
+ *      \li action collection 1
+ *      \list
+ *          \li first action
+ *          \li second action
+ *          \li third action
+ *      \endlist
+ * \endlist
+ * \list
+ *      \li action collection 2
+ *      \list
+ *          \li first action
+ *          \li second action
+ *          \li third action
+ *      \endlist
+ * \endlist
  *
  * Using KActionCategory it's possible to group the actions of one collection.
- * + action collection 1
- *   + first action
- *   + first category
- *     + action 1 in category
- *     + action 2 in category
- *   + second action
+ * \list
+ *      \li action collection 1
+ *      \list
+ *          \li first action
+ *          \li first category
+ *          \list
+ *              \li action 1 in category
+ *              \li action 2 in category
+ *          \endlist
+ *          \li second action
+ *      \endlist
+ * \endlist
  *
- * The usage is analog to action collections. Just create a category and use
+ * The usage is analogous to action collections. Just create a category and use
  * it instead of the collection to create the actions.
  *
  * The synchronization between KActionCollection and KActionCategory is done
@@ -61,14 +75,13 @@ class QAction;
  * collection.
  *
  * \code
- *
  * KActionCategory *file = new KActionCategory(i18n("File"), actionCollection());
  * file->addAction(
  *      KStandardAction::New,   //< see KStandardAction
  *      this,                   //< Receiver
  *      SLOT(fileNew()));       //< SLOT
  *
- * ... more actions added to file ...
+ * // ... more actions added to file ...
  *
  * KActionCategory *edit = new KActionCategory(i18n("Edit"), actionCollection());
  * edit->addAction(
@@ -76,8 +89,7 @@ class QAction;
  *      this,                   //< Receiver
  *      SLOT(fileNew()));       //< SLOT
  *
- * ...
- *
+ * // ...
  * \endcode
  */
 class KXMLGUI_EXPORT KActionCategory : public QObject
@@ -88,24 +100,37 @@ class KXMLGUI_EXPORT KActionCategory : public QObject
 
 public:
     /*!
-     * Default constructor
+     * \brief Constructs a new KActionCategory object named \a text
+     * as a child of \a parent.
      */
     explicit KActionCategory(const QString &text, KActionCollection *parent = nullptr);
 
+    /*!
+     * \brief Destructor.
+     */
     ~KActionCategory() override;
 
     /*!
-     * Add a action to the category.
+     * \brief Adds an action to the category.
      *
-     * This methods are provided for your convenience. They call the
+     * These methods are provided for your convenience. They call the
      * corresponding method of KActionCollection.
      */
     QAction *addAction(const QString &name, QAction *action);
 
+    /*!
+     * \overload addAction(const QString &name, QAction *action)
+     */
     QAction *addAction(KStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
 
+    /*!
+     * \overload addAction(const QString &name, QAction *action)
+     */
     QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
+    /*!
+     * \overload addAction(const QString &name, QAction *action)
+     */
     QAction *addAction(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
 
     template<class ActionType>
@@ -117,33 +142,33 @@ public:
     }
 
     /*!
-     * Returns the actions belonging to this category
+     * \brief Returns the actions belonging to this category.
      */
     const QList<QAction *> actions() const;
 
     /*!
-     * The action collection this category is associated with.
+     * \brief Returns the action collection this category is associated with.
      */
     KActionCollection *collection() const;
 
     /*!
-     * The action categorys descriptive text
+     * \brief Returns the action category's descriptive text.
      */
     QString text() const;
 
     /*!
-     * Set the action categorys descriptive text.
+     * \brief Sets the action category's descriptive \a text.
      */
     void setText(const QString &text);
 
 private:
     /*!
-     * Remove \a action from this category if found.
+     * \brief Removes \a action from this category if found.
      */
     KXMLGUI_NO_EXPORT void unlistAction(QAction *action);
 
     /*!
-     * Add \a action to category
+     * \brief Adds \a action to this category.
      */
     void addAction(QAction *action); // exported because called from template method ActionType *add<ActionType>(...)
 
