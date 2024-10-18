@@ -31,7 +31,7 @@
 #include "kxmlguiclient.h"
 #include "kxmlguifactory.h"
 
-/*!**********************************************************************/
+/************************************************************************/
 /* KShortcutsDialog                                                     */
 /*                                                                      */
 /* Originally by Nicolas Hadacek <hadacek@via.ecp.fr>                   */

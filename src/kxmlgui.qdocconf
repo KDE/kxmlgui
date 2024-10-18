@@ -1,31 +1,29 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
-project = KXMLGui
-description = Additions to Qt Core
+project = KXmlGui
+description = Collection of convenience classes and widgets to manage your own main QtWidgets window
 
 documentationinheaders = true
 
-headerdirs = .
+headerdirs += .
+sourcedirs += .
 
-headers.fileextensions = "*.qdoc *.h"
+imagedirs = ../docs/pics
 
-outputdir  = doc/html
 outputformats = HTML
 
-depends += \
-    qtcore \
-    qtwidgets
+depends += qtcore qtgui qtwidgets qtxml kcoreaddons kconfigcore kconfiggui kglobalaccel kconfigwidgets
 
-qhp.projects            = KXMLGui
+qhp.projects            = KXmlGui
 
-qhp.KXMLGui.file                = kxmlgui.qhp
-qhp.KXMLGui.namespace           = org.qt-project.kxmlgui.$QT_VERSION_TAG
-qhp.KXMLGui.virtualFolder       = kxmlgui
-qhp.KXMLGui.indexTitle          = KXMLGui
-qhp.KXMLGui.indexRoot           =
+qhp.KXmlGui.file                = kxmlgui.qhp
+qhp.KXmlGui.namespace           = org.kde.kxmlgui.$QT_VERSION_TAG
+qhp.KXmlGui.virtualFolder       = kxmlgui
+qhp.KXmlGui.indexTitle          = KXmlGui
+qhp.KXmlGui.indexRoot           =
 
-qhp.KXMLGui.subprojects         = classes
-qhp.KXMLGui.subprojects.classes.title = C++ Classes
-qhp.KXMLGui.subprojects.classes.indexTitle = KXMLGui C++ Classes
-qhp.KXMLGui.subprojects.classes.selectors = class fake:headerfile
-qhp.KXMLGui.subprojects.classes.sortPages = true
+qhp.KXmlGui.subprojects         = classes
+qhp.KXmlGui.subprojects.classes.title = C++ Classes
+qhp.KXmlGui.subprojects.classes.indexTitle = KXmlGui C++ Classes
+qhp.KXmlGui.subprojects.classes.selectors = class fake:headerfile
+qhp.KXmlGui.subprojects.classes.sortPages = true

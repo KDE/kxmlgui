@@ -27,9 +27,10 @@ class KMainWindow;
 class KXMLGUIClient;
 
 /*!
- * @class KToolBar ktoolbar.h KToolBar
+ * \class KToolBar
+ * \inmodule KXmlGui
  *
- * @short Floatable toolbar with auto resize.
+ * \brief Floatable toolbar with auto resize.
  *
  * A KDE-style toolbar.
  *
@@ -45,24 +46,21 @@ class KXMLGUIClient;
  * from moving toolbars with the "movable_toolbars" action, and from showing or
  * hiding toolbars with the "options_show_toolbar" action.  For example, to
  * disable both, add the following the application or global configuration:
- * @verbatim
-   [KDE Action Restrictions][$i]
-   movable_toolbars=false
-   options_show_toolbar=false
-   @endverbatim
+ * \badcode
+ * [KDE Action Restrictions][$i]
+ * movable_toolbars=false
+ * options_show_toolbar=false
+ * \endcode
  *
  * If you can't depend on KXmlGui but still want to integrate better with KDE,
  * you can use QToolBar and:
- * - Set ToolButtonStyle to Qt::ToolButtonFollowStyle, this will make QToolBar
- *   use the settings for "Main Toolbar"
- * - Additionally set QToolBar::setProperty("otherToolbar", true) to use settings
- *   for "Other toolbars"; settings from "Other toolbars" will only work on widget
- *   styles derived from KStyle
- *
- * @author Reginald Stadlbauer <reggie@kde.org>
- * @author Stephan Kulow <coolo@kde.org>
- * @author Sven Radej <radej@kde.org>
- * @author Hamish Rodda <rodda@kde.org>
+ * \list
+ *      \li Set ToolButtonStyle to Qt::ToolButtonFollowStyle,
+ *          this will make QToolBar use the settings for "Main Toolbar".
+ *      \li Additionally set QToolBar::setProperty("otherToolbar", true)
+ *          to use settings for "Other toolbars"; settings from "Other toolbars"
+ *          will only work on widget styles derived from KStyle.
+ * \endlist
  */
 class KXMLGUI_EXPORT KToolBar : public QToolBar
 {
@@ -70,51 +68,63 @@ class KXMLGUI_EXPORT KToolBar : public QToolBar
 
 public:
     /*!
-     * Constructor.
+     * \brief Constructor.
      *
      * This constructor takes care of adding the toolbar to the mainwindow,
-     * if @p parent is a QMainWindow.
+     * if \a parent is a QMainWindow.
      *
      * Normally KDE applications do not call this directly, they either
      * call KMainWindow::toolBar(), or they use XML-GUI and specify
      * toolbars using XML.
      *
-     * @param parent      The standard toolbar parent (usually a KMainWindow)
-     * @param isMainToolBar  True for the "main toolbar", false for other toolbars. Different settings apply.
-     * @param readConfig  whether to apply the configuration (global and application-specific)
+     * \a parent The standard toolbar parent (usually a KMainWindow).
+     *
+     * \a isMainToolBar True for the "main toolbar", false for other toolbars.
+     * Different settings apply.
+     *
+     * \a readConfig Whether to apply the configuration (global and application-specific)
      */
     explicit KToolBar(QWidget *parent, bool isMainToolBar = false, bool readConfig = true);
     // KDE5: remove. The one below is preferred so that all debug output from init() shows the right objectName already,
     // and so that isMainToolBar() and iconSizeDefault() return correct values during loading too.
 
     /*!
-     * Constructor.
+     * \brief Constructor.
      *
      * This constructor takes care of adding the toolbar to the mainwindow,
-     * if @p parent is a QMainWindow.
+     * if \a parent is a QMainWindow.
      *
      * Normally KDE applications do not call this directly, they either
      * call KMainWindow::toolBar(), or they use XML-GUI and specify
      * toolbars using XML.
      *
-     * @param objectName  The QObject name of this toolbar, required so that QMainWindow can save and load the toolbar position,
-     *                    and so that KToolBar can find out if it's the main toolbar.
-     * @param parent      The standard toolbar parent (usually a KMainWindow)
-     * @param readConfig  whether to apply the configuration (global and application-specific)
+     * \a objectName The QObject name of this toolbar, required
+     * so that QMainWindow can save and load the toolbar position,
+     * and so that KToolBar can find out if it's the main toolbar.
+     *
+     * \a parent The standard toolbar parent (usually a KMainWindow).
+     *
+     * \a readConfig Whether to apply the configuration (global and application-specific).
      */
     explicit KToolBar(const QString &objectName, QWidget *parent, bool readConfig = true);
 
     /*!
-     * Alternate constructor with additional arguments, e.g. to choose in which area
-     * the toolbar should be auto-added. This is rarely used in KDE. When using XMLGUI
+     * \brief Alternate constructor with additional arguments,
+     * e.g. to choose in which area the toolbar should be auto-added.
+     * This is rarely used in KDE. When using XMLGUI
      * you can specify this as an xml attribute instead.
      *
-     * @param objectName  The QObject name of this toolbar, required so that QMainWindow can save and load the toolbar position
-     * @param parentWindow The window that should be the parent of this toolbar
-     * @param area        The position of the toolbar. Usually Qt::TopToolBarArea.
-     * @param newLine     If true, start a new line in the dock for this toolbar.
-     * @param isMainToolBar  True for the "main toolbar", false for other toolbars. Different settings apply.
-     * @param readConfig  whether to apply the configuration (global and application-specific)
+     * \a objectName  The QObject name of this toolbar, required so that QMainWindow can save and load the toolbar position.
+     *
+     * \a parentWindow The window that should be the parent of this toolbar.
+     *
+     * \a area        The position of the toolbar. Usually Qt::TopToolBarArea.
+     *
+     * \a newLine     If true, start a new line in the dock for this toolbar.
+     *
+     * \a isMainToolBar  True for the "main toolbar", false for other toolbars.
+     * Different settings apply.
+     * \a readConfig  whether to apply the configuration (global and application-specific)
      */
     KToolBar(const QString &objectName,
              QMainWindow *parentWindow,
@@ -124,91 +134,94 @@ public:
              bool readConfig = true); // KDE5: remove, I don't think anyone is using this.
 
     /*!
-     * Destroys the toolbar.
+     * \brief Destroys the toolbar.
      */
     ~KToolBar() override;
 
     /*!
-     * Returns the main window that this toolbar is docked with.
+     * \brief Returns the main window that this toolbar is docked with.
      */
     KMainWindow *mainWindow() const;
 
     /*!
-     * Convenience function to set icon size
+     * \brief Convenience function to set icon \a size.
      */
     void setIconDimensions(int size);
 
     /*!
-     * Returns the default size for this type of toolbar.
-     *
-     * @return the default size for this type of toolbar.
+     * \brief Returns the default size for this type of toolbar.
      */
     int iconSizeDefault() const; // KDE5: hide from public API. Doesn't make sense to export this, and it isn't used.
 
     /*!
-     * Save the toolbar settings to group @p cg.
+     * \brief Save the toolbar settings to group \a cg.
      */
     void saveSettings(KConfigGroup &cg);
 
     /*!
-     * Read the toolbar settings from group @p cg
-     * and apply them.
+     * \brief Read the toolbar settings from group \a cg and apply them.
      */
     void applySettings(const KConfigGroup &cg);
 
     /*!
-     * Adds an XML gui client that uses this toolbar
-     * @since 4.8.1
+     * \brief Adds an XML gui \a client that uses this toolbar.
+     * \since 4.8.1
      */
     void addXMLGUIClient(KXMLGUIClient *client);
 
     /*!
-     * Removes an XML gui client that uses this toolbar
-     * @since 4.8.5
+     * \brief Removes an XML gui \a client that uses this toolbar.
+     * \since 4.8.5
      */
     void removeXMLGUIClient(KXMLGUIClient *client);
 
     /*!
-     * Load state from an XML @param element, called by KXMLGUIBuilder.
+     * \brief Load state from an XML \a element, called by KXMLGUIBuilder.
      */
     void loadState(const QDomElement &element);
 
     /*!
-     * Save state into an XML @param element, called by KXMLGUIBuilder.
+     * \brief Save state into an XML \a element, called by KXMLGUIBuilder.
      */
     void saveState(QDomElement &element) const;
 
     /*!
+     * \brief Filters then returns the specified \a event
+     * for a given \a watched object.
+     *
      * Reimplemented to support context menu activation on disabled tool buttons.
      */
     bool eventFilter(QObject *watched, QEvent *event) override;
 
     /*!
-     * Returns whether the toolbars are currently editable (drag & drop of actions).
+     * \brief Returns whether the toolbars are currently editable (drag & drop of actions).
      */
     static bool toolBarsEditable();
 
     /*!
-     * Enable or disable toolbar editing via drag & drop of actions.  This is
-     * called by KEditToolBar and should generally be set to disabled whenever
-     * KEditToolBar is not active.
+     * \brief Makes all toolbars \a editable via drag & drop of actions.
+     *
+     * This is called by KEditToolBar and should generally be set to disabled
+     * whenever KEditToolBar is not active.
      */
     static void setToolBarsEditable(bool editable);
 
     /*!
-     * Returns whether the toolbars are locked (i.e., moving of the toobars disallowed).
+     * \brief Returns whether the toolbars are locked
+     * (that is, disallow moving of the toolbars).
      */
     static bool toolBarsLocked();
 
     /*!
-     * Allows you to lock and unlock all toolbars (i.e., disallow/allow moving of the toobars).
+     * \brief Makes all toolbars \a locked
+     * (that is, disallow/allow moving of the toolbars).
      */
     static void setToolBarsLocked(bool locked);
 
     /*!
-     * Emits a D-Bus signal to tell all toolbars in all applications, that the user settings have
-     * changed.
-     * @since 5.0
+     * \brief Emits a D-Bus signal to tell all toolbars in all applications
+     * that the user settings have changed.
+     * \since 5.0
      */
     static void emitToolbarStyleChanged();
 

@@ -47,7 +47,7 @@ typedef QList<QDomElement> ToolBarList;
 
 namespace KDEPrivate
 {
-/*!
+/*
  * Return a list of toolbar elements given a toplevel element
  */
 static ToolBarList findToolBars(const QDomElement &start)
@@ -122,7 +122,7 @@ public:
         return m_document;
     }
 
-    /*!
+    /*
      * Return the text (user-visible name) of a given toolbar
      */
     QString toolBarText(const QDomElement &it) const;
@@ -385,7 +385,7 @@ void IconTextEditDialog::slotTextChanged(const QString &text)
 class KEditToolBarWidgetPrivate
 {
 public:
-    /*!
+    /*
      *
      * @param collection In the old-style constructor, this is the collection passed
      * to the KEditToolBar constructor.
@@ -441,7 +441,7 @@ public:
         return xml_file.isEmpty() ? m_componentName + QLatin1String("ui.rc") : xml_file;
     }
 
-    /*!
+    /*
      * Load in the specified XML file and dump the raw xml
      */
     QString loadXMLFile(const QString &_xml_file)
@@ -459,7 +459,7 @@ public:
         return raw_xml;
     }
 
-    /*!
+    /*
      * Look for a given item in the current toolbar
      */
     QDomElement findElementForToolBarItem(const ToolBarItem *item) const
