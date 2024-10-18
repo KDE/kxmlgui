@@ -17,9 +17,10 @@
 class KToolTipHelperPrivate;
 
 /*!
- * @class KToolTipHelper ktooltiphelper.h KToolTipHelper
+ * \class KToolTipHelper
+ * \inmodule KXmlGui
  *
- * @short An event filter used to enhance tooltips
+ * \brief An event filter used to enhance tooltips.
  *
  * Example:
  * Without this class, a tooltip of a QToolButton of a "New" action will read something like
@@ -39,31 +40,33 @@ class KToolTipHelperPrivate;
  * If you want the "Press Shift for help." line to be displayed for a widget that has whatsThis()
  * but no toolTip() take a look at KToolTipHelper::whatsThisHintOnly().
  *
- * The enhanced tooltips can be enabled at any time after the QApplication was constructed with
+ * The enhanced tooltips can be enabled at any time after the QApplication was constructed with:
+ *
  * \code
  * qApp->installEventFilter(KToolTipHelper::instance());
  * \endcode
- * Therefore, to de-activate them you can call
+ *
+ * Therefore, to de-activate them you can call the following any time later:
+ *
  * \code
  * qApp->removeEventFilter(KToolTipHelper::instance());
  * \endcode
- * any time later.
  *
  * If you want KToolTipHelper to not tamper with certain QEvents, e.g. you want to handle some
  * tooltips differently or you want to change what happens when a QWhatsThisClickedEvent is
  * processed, first remove KToolTipHelper as an event filter just like in the line of code above.
- * Then create your own custom EventFilter that handles those QEvents differently and for all
- * cases that you don't want to handle differently call
+ * Then create your own custom EventFilter that handles those QEvents differently and, for all
+ * cases that you don't want to handle differently, call:
  * \code
  * return KToolTipHelper::instance()->eventFilter(watched, event);
  * \endcode
  *
- * KMainWindow will have this EventFilter installed by default from framework version 5.84 onward
- * so if you want to opt out of that, remove the EventFilter in the constructor of your MainWindow
- * class inheriting from KMainWindow.
+ * Since 5.84, KMainWindow installs this EventFilter by default.
+ * If you want to opt out of that, remove the EventFilter
+ * in the constructor of your MainWindow class inheriting from KMainWindow.
  *
- * @see QToolTip
- * @since 5.84
+ * \sa QToolTip
+ * \since 5.84
  */
 class KXMLGUI_EXPORT KToolTipHelper : public QObject
 {
@@ -74,23 +77,28 @@ public:
     static KToolTipHelper *instance();
 
     /*!
+     * \brief Filters the given \a event for a given \a watched object.
+     *
      * Filters QEvent::ToolTip if an enhanced tooltip is available for the widget.
      * Filters the QEvent::KeyPress that is used to expand an expandable tooltip.
      * Filters QEvent::WhatsThisClicked so hyperlinks in whatsThis() texts work.
      *
-     * @see QObject::eventFilter()
-     * @see QHelpEvent
+     * \sa QObject::eventFilter()
+     * \sa QHelpEvent
      */
     bool eventFilter(QObject *watched, QEvent *event) override;
 
     /*!
-     * Use this to have a widget show "Press Shift for help." as its tooltip.
+     * \brief Use this to have a widget show "Press Shift for help." as its tooltip.
+     *
+     * Example usage:
      * \code
      * widget->setToolTip(KToolTipHelper::whatsThisHintOnly());
      * \endcode
+     *
      * KToolTipHelper won't show that tooltip if the widget's whatsThis() is empty.
      *
-     * @return a QString that is interpreted by this class to show the expected tooltip.
+     * Returns a QString that is interpreted by this class to show the expected tooltip.
      */
     static const QString whatsThisHintOnly();
 
