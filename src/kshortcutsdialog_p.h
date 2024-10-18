@@ -52,7 +52,7 @@ enum MyRoles {
 /*!
  * Type used for QTreeWidgetItems
  *
- * @internal
+ * \internal
  */
 enum ItemTypes {
     NonActionItem = 0,
@@ -74,7 +74,7 @@ QKeySequence alternateSequence(const QList<QKeySequence> &sequences);
  * remains as a visible artefact in your treeview. Additionally when closing your application you get
  * an assertion failure from KExtendableItemDelegate.
  *
- * @internal
+ * \internal
  */
 class KShortcutsEditorDelegate : public KExtendableItemDelegate
 {
@@ -88,7 +88,7 @@ public:
      * Set a list of action collections to check against for conflicting
      * shortcuts.
      *
-     * @see KKeySequenceWidget::setCheckActionCollections
+     * \sa KKeySequenceWidget::setCheckActionCollections
      */
     void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
 
@@ -134,7 +134,7 @@ private Q_SLOTS:
 /*!
  * That widget draws the decoration for KShortCutWidget. That widget is currently the only user.
  *
- * @internal
+ * \internal
  */
 class TabConnectedWidget : public QWidget
 {
@@ -152,7 +152,7 @@ protected:
 /*!
  * Edit a shortcut. Let you select between using the default shortcut and configuring your own.
  *
- * @internal
+ * \internal
  */
 class ShortcutEditWidget : public TabConnectedWidget
 {
@@ -160,22 +160,22 @@ class ShortcutEditWidget : public TabConnectedWidget
 public:
     ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq, const QKeySequence &activeSeq, bool allowLetterShortcuts);
 
-    //! @see KKeySequenceWidget::setCheckActionCollections()
+    //! \sa KKeySequenceWidget::setCheckActionCollections()
     void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
 
     //@{
-    //! @see KKeySequenceWidget::checkAgainstStandardShortcuts()
+    //! \sa KKeySequenceWidget::checkAgainstStandardShortcuts()
     KKeySequenceWidget::ShortcutTypes checkForConflictsAgainst() const;
     void setCheckForConflictsAgainst(KKeySequenceWidget::ShortcutTypes);
     //@}
 
     //@{
-    //! @see KKeySequenceWidget::checkAgainstStandardShortcuts()
+    //! \sa KKeySequenceWidget::checkAgainstStandardShortcuts()
     bool multiKeyShortcutsAllowed() const;
     void setMultiKeyShortcutsAllowed(bool);
     //@}
 
-    //! @see KKeySequenceWidget::setComponentName
+    //! \sa KKeySequenceWidget::setComponentName
     void setComponentName(const QString &componentName);
 
     void setAction(QObject *action);
@@ -190,7 +190,7 @@ Q_SIGNALS:
     //! Emitted when the key sequence is changed.
     void keySequenceChanged(const QKeySequence &);
 
-    //! @see KKeySequenceWidget::stealShortcut()
+    //! \sa KKeySequenceWidget::stealShortcut()
     void stealShortcut(const QKeySequence &seq, QAction *action);
 
 private Q_SLOTS:
@@ -220,7 +220,7 @@ class KShortcutSchemesEditor : public QGroupBox
 public:
     explicit KShortcutSchemesEditor(KShortcutsDialog *parent);
 
-    /*! @return the currently selected scheme in the editor (may differ from current app's scheme.*/
+    /*! Returns the currently selected scheme in the editor (may differ from current app's scheme.*/
     QString currentScheme();
     void refreshSchemes();
     void addMoreMenuAction(QAction *action);
@@ -256,7 +256,7 @@ class QAction;
  * It provides undo, commit functionality for changes made. Changes are effective immediately. You
  * have to commit them or they will be undone when deleting the item.
  *
- * @internal
+ * \internal
  */
 class KShortcutsEditorItem : public QTreeWidgetItem
 {
@@ -333,7 +333,7 @@ private:
  * This class should belong into kshortcutseditor.cpp. But kshortcutseditordelegate uses a static
  * function of this class. So for now it's here. But i will remove it later.
  *
- * @internal
+ * \internal
  */
 class KShortcutsEditorPrivate
 {
@@ -378,10 +378,10 @@ public:
     };
 
     /*!
-     * Add @p action at @p level. Checks for QActions and unnamed actions
+     * Add \a action at \a level. Checks for QActions and unnamed actions
      * before adding.
      *
-     * @return @c true if the action was really added, @c false if not
+     * Returns \c true if the action was really added, \c false if not
      */
     bool addAction(QAction *action, QTreeWidgetItem *parent);
 

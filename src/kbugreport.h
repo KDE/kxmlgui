@@ -16,9 +16,10 @@ class KAboutData;
 class KBugReportPrivate;
 
 /*!
- * @class KBugReport kbugreport.h KBugReport
+ * \class KBugReport
+ * \inmodule KXmlGui
  *
- * @short A dialog box for sending bug reports.
+ * \brief A dialog box for sending bug reports.
  *
  * All the information needed by the dialog box
  * (program name, version, bug-report address, etc.)
@@ -26,9 +27,7 @@ class KBugReportPrivate;
  * Make sure you create an instance of KAboutData and call
  * KAboutData::setApplicationData(<aboutData>).
  *
- * \image html kbugreport.png "KBugReport"
- *
- * @author David Faure <faure@kde.org>
+ * \image kbugreport.png "KBugReport"
  */
 class KXMLGUI_EXPORT KBugReport : public QDialog
 {
@@ -36,7 +35,9 @@ class KXMLGUI_EXPORT KBugReport : public QDialog
 
 public:
     /*!
-     * Creates a bug-report dialog.
+     * \brief Creates a bug-report dialog using information derived from
+     * \a aboutData as a child of \a parent.
+     *
      * Note that you shouldn't have to do this manually,
      * since KHelpMenu takes care of the menu item
      * for "Report Bug..." and of creating a KBugReport dialog.
@@ -44,19 +45,20 @@ public:
     explicit KBugReport(const KAboutData &aboutData, QWidget *parent = nullptr);
 
     /*!
-     * Destructor
+     * \brief Destructor.
      */
     ~KBugReport() override;
 
     /*!
-     * OK has been clicked
+     * \brief OK has been clicked.
      */
     void accept() override;
 
 protected:
     /*!
-     * Attempt to e-mail the bug report.
-     * @return true on success
+     * \brief Attempt to e-mail the bug report.
+     *
+     * Returns true on success.
      */
     bool sendBugReport();
 

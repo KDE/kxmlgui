@@ -23,7 +23,8 @@
 class KToolBar;
 
 /*!
- * @class KToggleToolBarAction ktoggletoolbaraction.h KToggleToolBarAction
+ * \class KToggleToolBarAction
+ * \inmodule KXmlGui
  *
  * An action that takes care of everything associated with
  * showing or hiding a toolbar by a menu action. It will
@@ -42,24 +43,25 @@ class KXMLGUI_EXPORT KToggleToolBarAction : public KToggleAction
 
 public:
     /*!
-     * Create a KToggleToolBarAction that manages the @p toolBar.
-     *
-     * @param toolBar the toolbar to be managed
-     * @param parent the action's parent object.
+     * \brief Creates a KToggleToolBarAction that manages the \a toolBar
+     * with \a text in its label, as a child of \a parent.
      */
     KToggleToolBarAction(KToolBar *toolBar, const QString &text, QObject *parent);
 
     /*!
-     * Destroys toggle toolbar action.
+     * \brief Destroys the toggle toolbar action.
      */
     ~KToggleToolBarAction() override;
 
     /*!
-     * Returns a pointer to the tool bar it manages.
+     * \brief Returns a pointer to the tool bar it manages.
      */
     KToolBar *toolBar();
 
     /*!
+     * \brief Filters then returns the specified \a event
+     * for a given \a watched object.
+     *
      * Reimplemented from QObject.
      */
     bool eventFilter(QObject *watched, QEvent *event) override;
