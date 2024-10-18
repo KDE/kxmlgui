@@ -140,6 +140,8 @@ ecm_generate_headers(KXmlGui_HEADERS
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
 
+ecm_generate_qdoc(KF6XmlGui kxmlgui.qdocconf)
+
 install(TARGETS KF6XmlGui EXPORT KF6XmlGuiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
@@ -157,36 +159,3 @@ ecm_qt_install_logging_categories(
     FILE kxmlgui.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
-
-if (BUILD_QCH)
-    ecm_add_qch(
-        KF6XmlGui_QCH
-        NAME KXmlGui
-        BASE_NAME KF6XmlGui
-        VERSION ${KF_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${KXmlGui_HEADERS}
-        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-        LINK_QCHS
-            Qt6Xml_QCH
-            Qt6DBus_QCH
-            Qt6Widgets_QCH
-            KF6Config_QCH
-            KF6ConfigWidgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            KXMLGUI_EXPORT
-            KXMLGUI_DEPRECATED_EXPORT
-            KXMLGUI_DEPRECATED
-            "KXMLGUI_DEPRECATED_VERSION(x, y, t)"
-            "KXMLGUI_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
-            "KXMLGUI_ENUMERATOR_DEPRECATED_VERSION(x, y, t)"
-            "KXMLGUI_ENUMERATOR_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()

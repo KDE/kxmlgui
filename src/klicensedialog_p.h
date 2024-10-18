@@ -14,9 +14,9 @@
 class KAboutLicense;
 
 /*!
- * @internal
- *
- * A dialog to display a license
+ * \internal
+ * \brief A dialog to display a license.
+ * \inmodule KXmlGui
  */
 class KLicenseDialog : public QDialog
 {

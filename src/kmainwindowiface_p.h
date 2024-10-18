@@ -14,12 +14,11 @@
 class KXmlGuiWindow;
 
 /*!
- * @short D-Bus interface to KMainWindow.
+ * \brief D-Bus interface to KMainWindow.
+ * \inmodule KXmlGui
  *
- * This is the main interface to the KMainWindow.  This will provide a consistent
+ * This is the main interface to the KMainWindow.  This provides a consistent
  * D-Bus interface to all KDE applications that use it.
- *
- * @author Ian Reinhart Geiser <geiseri@yahoo.com>
  */
 class KMainWindowInterface : public QDBusAbstractAdaptor
 {
@@ -28,73 +27,78 @@ class KMainWindowInterface : public QDBusAbstractAdaptor
 
 public:
     /*!
-    Construct a new interface object.
-    @param mainWindow - The parent KMainWindow object
+    \brief Constructs a new interface object.
+
+    \a mainWindow - The parent KMainWindow object
     that will provide us with the QAction objects.
     */
     explicit KMainWindowInterface(KXmlGuiWindow *mainWindow);
+
     /*!
-    Destructor
+    \brief Destructor.
+
     Cleans up the dcop action proxy object.
-    **/
+    */
     ~KMainWindowInterface() override;
 
 public Q_SLOTS:
     /*!
-    Return a list of actions available to the application's window.
-    @return A QStringList containing valid names actions.
+    \brief Returns a list of actions available to the application's window.
     */
     QStringList actions();
 
     /*!
-    Activates the requested action.
-    @param action The name of the action to activate.  The names of valid
-    actions can be found by calling actions().
-    @return The success of the operation.
+    \brief Activates the requested \a action.
+
+    The names of valid actions can be found by calling actions().
+
+    Returns the success of the operation.
     */
     bool activateAction(const QString &action);
 
     /*!
-    Disables the requested action.
-    @param action The name of the action to disable.  The names of valid
-    actions can be found by calling actions().
-    @return The success of the operation.
+    \brief Disables the requested \a action.
+
+    The names of valid actions can be found by calling actions().
+
+    Returns the success of the operation.
     */
     bool disableAction(const QString &action);
 
     /*!
-    Enables the requested action.
-    @param action The name of the action to enable.  The names of valid
-    actions can be found by calling actions().
-    @return The success of the operation.
+    \brief Enables the requested \a action.
+
+    The names of valid actions can be found by calling actions().
+
+    Returns the success of the operation.
     */
     bool enableAction(const QString &action);
 
     /*!
-    Returns the status of the requested action.
-    @param action The name of the action.  The names of valid
-    actions can be found by calling actions().
-    @returns The state of the action, true - enabled, false - disabled.
+    \brief Returns the status of the requested \a action.
+
+    The names of valid actions can be found by calling actions().
     */
     bool actionIsEnabled(const QString &action);
 
     /*!
-    Returns the tool tip text of the requested action.
-    @param action The name of the action to activate.  The names of valid
-    actions can be found by calling actions().
-    @return A QString containing the text of the action's tool tip.
+    \brief Returns the tool tip text of the requested \a action.
+    The names of valid actions can be found by calling actions().
     */
     QString actionToolTip(const QString &action);
 
     /*!
-    Returns the ID of the current main window.
+    \brief Returns the ID of the current main window.
+
     This is useful for automated screen captures or other evil
     widget fun.
-    @return A integer value of the main window's ID.
+
+    Returns A integer value of the main window's ID.
     **/
     qlonglong winId();
+
     /*!
-    Copies a pixmap representation of the current main window to
+    \brief Copies a pixmap representation of the current main window to
     the clipboard.
     **/
     void grabWindowToClipBoard();

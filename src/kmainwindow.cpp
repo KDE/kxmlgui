@@ -65,7 +65,7 @@ static QStatusBar *internalStatusBar(KMainWindow *mw)
 }
 
 /*!
-
+ * \internal
  * Listens to resize events from QDockWidgets. The KMainWindow
  * settings are set as dirty, as soon as at least one resize
  * event occurred. The listener is attached to the dock widgets

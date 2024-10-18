@@ -20,6 +20,7 @@ class KEditToolBarPrivate;
 class KXMLGUIFactory;
 /*!
  * \class KEditToolBar
+ * \inmodule KXmlGui
  *
  * \brief A dialog used to customize or configure toolbars.
  *
@@ -37,9 +38,9 @@ class KXMLGUIFactory;
  * \code
  * void MyClass::saveNewToolbarConfig()
  * {
- *   KXmlGuiWindow::saveNewToolbarConfig();
- *   plugActionList( "list1", list1Actions );
- *   plugActionList( "list2", list2Actions );
+ *     KXmlGuiWindow::saveNewToolbarConfig();
+ *     plugActionList( "list1", list1Actions );
+ *     plugActionList( "list2", list2Actions );
  * }
  * \endcode
  *
@@ -52,9 +53,10 @@ class KXMLGUIFactory;
  *
  * KXmlGuiWindow and KParts::MainWindow take care of creating KEditToolBar correctly
  * and connecting to its newToolBarConfig slot, but if you really really want to do it
- * yourself, see the KXmlGuiWindow::configureToolbars() and KXmlGuiWindow::saveNewToolbarConfig() code.
+ * yourself, see the KXmlGuiWindow::configureToolbars() and
+ * KXmlGuiWindow::saveNewToolbarConfig() code.
  *
- * \image html kedittoolbar.png "KEditToolBar (example: usage in KWrite)"
+ * \image kedittoolbar.png "KEditToolBar (example: usage in KWrite)"
  *
  */
 class KXMLGUI_EXPORT KEditToolBar : public QDialog
@@ -62,22 +64,24 @@ class KXMLGUI_EXPORT KEditToolBar : public QDialog
     Q_OBJECT
 public:
     /*!
-     * Old constructor for apps that do not use components.
+     * \brief Old constructor for apps that do not use components.
+     *
      * This constructor is somewhat deprecated, since it doesn't work
      * with any KXMLGuiClient being added to the mainwindow.
      * You really want to use the other constructor.
      *
-     * You @em must pass along your collection of actions (some of which appear in your toolbars).
+     * You \b must pass along your collection of actions (some of which appear in your toolbars).
      *
-     * @param collection The collection of actions to work on.
-     * @param parent The parent of the dialog.
+     * \a collection The collection of actions to work on.
+     *
+     * \a parent The parent of the dialog.
      */
     explicit KEditToolBar(KActionCollection *collection, QWidget *parent = nullptr);
 
     /*!
-     * Main constructor.
+     * \brief Main constructor.
      *
-     * The main parameter, @p factory, is a pointer to the
+     * The main parameter, \a factory, is a pointer to the
      * XML GUI factory object for your application.  It contains a list
      * of all of the GUI clients (along with the action collections and
      * xml files) and the toolbar editor uses that.
@@ -86,60 +90,70 @@ public:
      * \code
      * KEditToolBar edit(factory());
      * if (edit.exec())
-     * ...
+     * // ...
      * \endcode
      *
-     * @param factory Your application's factory object
-     * @param parent The usual parent for the dialog.
+     * \a factory Your application's factory object.
+     *
+     * \a parent The usual parent for the dialog.
      */
     explicit KEditToolBar(KXMLGUIFactory *factory, QWidget *parent = nullptr);
 
-    /// destructor
+    /*!
+     * \brief Destructor.
+     */
     ~KEditToolBar() override;
 
     /*!
-     * Sets the default toolbar that will be selected when the dialog is shown.
+     * \brief Sets \a toolBarName as the default toolbar
+     * that will be selected when the dialog is shown.
+     *
      * If not set, or QString() is passed in, the global default tool bar name
      * will be used.
-     * @param toolBarName the name of the tool bar
-     * @see setGlobalDefaultToolBar
+     *
+     * \sa setGlobalDefaultToolBar
      */
     void setDefaultToolBar(const QString &toolBarName);
 
     /*!
-     * The name (absolute or relative) of your application's UI resource file
-     * is assumed to be share/apps/appname/appnameui.rc though this can be
+     * \brief Sets a new resource \a file and whether the global resource file
+     * should be used.
+     *
+     * The name (absolute or relative) of your application's UI resource \a file
+     * is assumed to be share/apps/appname/appnameui.rc, but it can be
      * overridden by calling this method.
      *
-     * The global parameter controls whether or not the
-     * global resource file is used.  If this is @c true, then you may
+     * The \a global parameter controls whether or not the
+     * global resource file is used.  If this is \c true, then you may
      * edit all of the actions in your toolbars -- global ones and
-     * local one.  If it is @c false, then you may edit only your
+     * local one.  If it is \c false, then you may edit only your
      * application's entries.  The only time you should set this to
      * false is if your application does not use the global resource
      * file at all (very rare).
      *
-     * @param file The application's local resource file.
-     * @param global If @c true, then the global resource file will also
-     *               be parsed.
+     * \a file The application's local resource file.
+     *
+     * \a global If \c true, then the global resource file will also be parsed.
      */
     void setResourceFile(const QString &file, bool global = true);
 
     /*!
-     * Sets the default toolbar which will be auto-selected for all
-     * KEditToolBar instances. Can be overridden on a per-dialog basis
+     * \brief Sets \a toolBarName as the default toolbar
+     * which will be auto-selected for all KEditToolBar instances.
+     *
+     * Can be overridden on a per-dialog basis
      * by calling setDefaultToolBar( const QString& ) on the dialog.
      *
-     * @param  toolBarName  the name of the tool bar
-     * @since 6.0
+     * \since 6.0
      */
     static void setGlobalDefaultToolBar(const QString &toolBarName);
 
 Q_SIGNALS:
     /*!
-     * Signal emitted when 'apply' or 'ok' is clicked or toolbars were reset.
-     * Connect to it, to plug action lists and to call applyMainWindowSettings
-     * (see sample code in this class's documentation)
+     * \brief Emitted when 'Apply' or 'Ok' is clicked or toolbars were reset.
+     *
+     * Connect to it to plug action lists and to call applyMainWindowSettings
+     * (see sample code in the documentation for this class).
      */
     void newToolBarConfig();
 

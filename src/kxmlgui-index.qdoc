@@ -1,8 +1,8 @@
 /*!
     \page kxmlgui-index.html
-    \title KXMLGui
+    \title KXmlGui
 
-    KXMLGui are addons to QtCore
+    KXmlGui is a collection of convenience classes and widgets to manage your app's main window.
 
     \section1 Using the Module
 
@@ -10,15 +10,11 @@
 
     \section2 Building with CMake
 
-    \include {module-use.qdocinc} {building with cmake} {Widgets}
+    \include {module-use.qdocinc} {building with cmake} {KF6} {XmlGui} {KF6::XmlGui}
 
     \section1 API Reference
 
     \list
-        \li \l{KXMLGui C++ Classes}
+        \li \l{KXmlGui C++ Classes}
     \endlist
-
-    \section1 Licenses
-
-    TODO
 */
