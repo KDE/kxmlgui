@@ -13,8 +13,10 @@
 #include <QStringList>
 
 /*!
- * @internal
- * Helper class for KXMLGUIClient::setXMLFile
+ * \internal
+ * \inmodule KXmlGui
+ * \brief Helper class for KXMLGUIClient::setXMLFile.
+ *
  * Finds the xml file with the largest version number and takes
  * care of keeping user settings (from the most local file)
  * like action shortcuts or toolbar customizations.

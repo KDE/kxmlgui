@@ -17,15 +17,20 @@ class QAction;
 class QUndoStack;
 
 /*!
- * Provides functions that creates undo/redo actions for a QUndoStack with KDE's default icons and shortcuts.
+ * \brief Provides functions that creates undo/redo actions for a QUndoStack with KDE's default icons and shortcuts.
+ *
+ * \namespace KUndoActions
+ * \inmodule KXmlGui
+ *
  * See QUndoStack for more information.
  *
- * \since KXMLGUI 5.0
+ * \since 5.0
  */
 namespace KUndoActions
 {
 /*!
- * Creates an redo action with the default shortcut and icon and adds it to \a actionCollection
+ * \brief Creates an redo action with the default shortcut and icon
+ * and adds it to \a actionCollection.
  *
  * \a undoStack the QUndoStack the action triggers the redo on
  *
@@ -38,15 +43,17 @@ namespace KUndoActions
 KXMLGUI_EXPORT QAction *createRedoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName = QString());
 
 /*!
- * Creates an undo action with the default KDE shortcut and icon and adds it to \a actionCollection
- *
- * \a undoStack the QUndoStack the action triggers the undo on
- *
- * \a actionCollection the KActionCollection that should be the parent of the action
- *
- * \a actionName the created action's object name, empty string will set it to the KDE default
+ * \brief Creates an undo action with the default KDE shortcut and icon
+ * and adds it to \a actionCollection.
  *
  * Returns the created action.
+ *
+ * \a undoStack The QUndoStack the action triggers the undo on.
+ *
+ * \a actionCollection The KActionCollection that should be the parent of the action.
+ *
+ * \a actionName The created action's object name, empty string
+ * will set it to the KDE default.
  */
 KXMLGUI_EXPORT QAction *createUndoAction(QUndoStack *undoStack, KActionCollection *actionCollection, const QString &actionName = QString());
 }

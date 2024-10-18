@@ -108,17 +108,17 @@ public:
 
     KSwitchLanguageDialog *p; // parent class
 
-    /*!
+    /*
         Fills language button with names of languages for which given application has translation.
     */
     void fillApplicationLanguages(KLanguageButton *button);
 
-    /*!
+    /*
         Adds one button with language to widget.
     */
     void addLanguageButton(const QString &languageCode, bool primaryLanguage);
 
-    /*!
+    /*
         Returns list of languages chosen for application or default languages is they are not set.
     */
     QStringList applicationLanguageList();
@@ -128,7 +128,7 @@ public:
     QGridLayout *languagesLayout;
 };
 
-/*!************************* KSwitchLanguageDialog **************************/
+/*************************** KSwitchLanguageDialog **************************/
 
 KSwitchLanguageDialog::KSwitchLanguageDialog(QWidget *parent)
     : QDialog(parent)
@@ -288,7 +288,7 @@ void KSwitchLanguageDialog::slotDefault()
     accept();
 }
 
-/*!********************** KSwitchLanguageDialogPrivate ***********************/
+/************************ KSwitchLanguageDialogPrivate ***********************/
 
 KSwitchLanguageDialogPrivate::KSwitchLanguageDialogPrivate(KSwitchLanguageDialog *parent)
     : p(parent)

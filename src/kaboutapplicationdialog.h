@@ -21,6 +21,7 @@ class KAboutData;
 
 /*!
  * \class KAboutApplicationDialog
+ * \inmodule KXmlGui
  *
  * \brief Standard "About Application" dialog box.
  *
@@ -33,8 +34,7 @@ class KAboutData;
  * thereby this dialog box is available through the
  * KMainWindow::helpMenu() function.
  *
- * \image html kaboutapplicationdialog.png "KAboutApplicationDialog" TODO qdoc
- *
+ * \image kaboutapplicationdialog.png "KAboutApplicationDialog"
  */
 
 class KXMLGUI_EXPORT KAboutApplicationDialog : public QDialog
@@ -42,13 +42,18 @@ class KXMLGUI_EXPORT KAboutApplicationDialog : public QDialog
     Q_OBJECT
 public:
     /*!
-     * Defines some options which can be applied to the about dialog
+     * \enum KAboutApplicationDialog::Option
      *
-     * \value NoOptions No options, show the standard about dialog
-     * \value HideTranslators Don't show the translators tab
-     * \value [since KXMLGUI 5.77] HideLibraries Don't show the components tab
+     * Defines some options that can be applied to the about dialog.
      *
-     * \since KXMLGUI 4.4
+     * \value NoOptions
+     *        Shows the standard about dialog.
+     * \value HideTranslators
+     *        Hides the translators tab.
+     * \value HideLibraries
+     *        Since 5.77, hides the libraries tab.
+     *        Since 5.87, hides the components tab (which replaces the libraries tab).
+     * \since 4.4
      */
     enum Option {
         NoOptions = 0x0,
@@ -59,29 +64,24 @@ public:
     Q_FLAG(Options)
 
     /*!
-     * Constructor. Creates a fully featured "About Application" dialog box.
+     * Constructs a fully featured "About Application" dialog box
+     * using existing \a aboutData and the specified \a opts.
      *
-     * \a aboutData A KAboutData object which data
-     *        will be used for filling the dialog.
+     * You should set the toplevel window as the parent
+     * so that the dialog becomes centered.
      *
-     * \a opts Additional options that can be applied, such as hiding the KDE version
-     *             or the translators tab.
+     * \sa Options
      *
-     * \a parent The parent of the dialog box. You should use the
-     *        toplevel window so that the dialog becomes centered.
-     *
-     * \since KXMLGUI 4.4
+     * \since 4.4
      */
     explicit KAboutApplicationDialog(const KAboutData &aboutData, Options opts, QWidget *parent = nullptr);
 
     /*!
-     * Constructor. Creates a fully featured "About Application" dialog box.
+     * \brief Constructs a fully featured "About Application" dialog box
+     * using existing \a aboutData.
      *
-     * \a aboutData A KAboutData object which data
-     *        will be used for filling the dialog.
-     *
-     * \a parent The parent of the dialog box. You should use the
-     *        toplevel window so that the dialog becomes centered.
+     * You should set the toplevel window as the \a parent
+     * so that the dialog becomes centered.
      */
     explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = nullptr);
 

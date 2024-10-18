@@ -16,7 +16,6 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMMarkNonGuiExecutable)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
-include(ECMAddQch)
 include(ECMGenerateExportHeader)
 
 include(KDEInstallDirs)
@@ -38,8 +37,6 @@ ecm_setup_version(PROJECT
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
 option(FORCE_DISABLE_KGLOBALACCEL "Force building KXmlGui without KGlobalAccel. Doing this will break global shortcut support. [default=OFF]" OFF)
-option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
-add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 cmake_dependent_option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON "NOT CMAKE_CROSSCOMPILING" OFF)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
@@ -109,19 +106,7 @@ endif()
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6XmlGui")
 
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KF6XmlGui_QCH
-        FILE KF6XmlGuiQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6XmlGuiQchTargets.cmake\")")
-endif()
-
 include(CMakePackageConfigHelpers)
-
-ecm_generate_qdoc(KF6XmlGui kxmlgui.qdocconf)
 
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF6XmlGuiConfig.cmake.in"

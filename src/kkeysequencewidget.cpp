@@ -108,15 +108,15 @@ public:
     QKeySequence oldKeySequence;
     QString componentName;
 
-    //! Check the key sequence against KStandardShortcut::find()
+    // Check the key sequence against KStandardShortcut::find()
     KKeySequenceWidget::ShortcutTypes checkAgainstShortcutTypes;
 
-    /*!
+    /*
      * The list of action collections to check against for conflict shortcut
      */
     QList<KActionCollection *> checkActionCollections;
 
-    /*!
+    /*
      * The action to steal the shortcut from.
      */
     QList<QAction *> stealActions;

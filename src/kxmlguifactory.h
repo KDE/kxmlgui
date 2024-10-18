@@ -34,7 +34,8 @@ class BuildHelper;
 }
 
 /*!
- * @class KXMLGUIFactory kxmlguifactory.h KXMLGUIFactory
+ * \class KXMLGUIFactory
+ * \inmodule KXmlGui
  *
  * KXMLGUIFactory, together with KXMLGUIClient objects, can be used to create
  * a GUI of container widgets (like menus, toolbars, etc.) and container items
@@ -58,8 +59,10 @@ class KXMLGUI_EXPORT KXMLGUIFactory : public QObject
     Q_OBJECT
 public:
     /*!
-     * Constructs a KXMLGUIFactory. The provided @p builder KXMLGUIBuilder will be called
-     * for creating and removing container widgets, when clients are added/removed from the GUI.
+     * \brief Constructs a KXMLGUIFactory.
+     *
+     * The provided \a builder KXMLGUIBuilder with the given \a parent will be called
+     * for creating and removing container widgets when clients are added/removed from the GUI.
      *
      * Note that the ownership of the given KXMLGUIBuilder object won't be transferred to this
      * KXMLGUIFactory, so you have to take care of deleting it properly.
@@ -67,33 +70,34 @@ public:
     explicit KXMLGUIFactory(KXMLGUIBuilder *builder, QObject *parent = nullptr);
 
     /*!
-     * Destructor
+     * \brief Destructor.
      */
     ~KXMLGUIFactory() override;
 
     // XXX move to somewhere else? (Simon)
-    /// @internal
+    /// \internal
     static QString readConfigFile(const QString &filename, const QString &componentName = QString());
-    /// @internal
+    /// \internal
     static bool saveConfigFile(const QDomDocument &doc, const QString &filename, const QString &componentName = QString());
 
     /*!
-     * @internal
+     * \internal
      * Find or create the ActionProperties element, used when saving custom action properties
      */
     static QDomElement actionPropertiesElement(QDomDocument &doc);
 
     /*!
-     * @internal
+     * \internal
      * Find or create the element for a given action, by name.
      * Used when saving custom action properties
      */
     static QDomElement findActionByName(QDomElement &elem, const QString &sName, bool create);
 
     /*!
-     * Creates the GUI described by the QDomDocument of the client,
+     * \brief Creates the GUI described by the QDomDocument of the \a client,
      * using the client's actions, and merges it with the previously
      * created GUI.
+     *
      * This also means that the order in which clients are added to the factory
      * is relevant; assuming that your application supports plugins, you should
      * first add your application to the factory and then the plugin, so that the
@@ -103,9 +107,9 @@ public:
     void addClient(KXMLGUIClient *client);
 
     /*!
-     * Removes the GUI described by the client, by unplugging all
+     * \brief Removes the GUI described by the \a client by unplugging all
      * provided actions and removing all owned containers (and storing
-     * container state information in the given client)
+     * container state information in the given client).
      */
     void removeClient(KXMLGUIClient *client);
 
@@ -113,89 +117,109 @@ public:
     void unplugActionList(KXMLGUIClient *client, const QString &name);
 
     /*!
-     * Returns a list of all clients currently added to this factory
+     * \brief Returns a list of all clients currently added to this factory.
      */
     QList<KXMLGUIClient *> clients() const;
 
     /*!
-     * Use this method to get access to a container widget with the name specified with @p containerName
-     * and which is owned by the @p client. The container name is specified with a "name" attribute in the
+     * \brief Use this method to get access to a container widget with the
+     * name specified with \a containerName that is owned by the \a client.
+     *
+     * The container name is specified with a "name" attribute in the
      * XML document.
      *
-     * This function is particularly useful for getting hold of a popupmenu defined in an XMLUI file.
+     * This function is particularly useful for getting hold of a popupmenu
+     * defined in an XMLUI file.
+     *
      * For instance:
      * \code
      * QMenu *popup = static_cast<QMenu*>(guiFactory()->container("my_popup",this));
      * \endcode
-     * where @p "my_popup" is the name of the menu in the XMLUI file, and
-     * @p "this" is XMLGUIClient which owns the popupmenu (e.g. the mainwindow, or the part, or the plugin...)
+     * Where "my_popup" is the name of the menu in the XMLUI file, and
+     * "this" is XMLGUIClient which owns the popupmenu (e.g. the mainwindow, or the part, or the plugin...).
      *
-     * @param containerName Name of the container widget
-     * @param client Owner of the container widget
-     * @param useTagName Specifies whether to compare the specified name with the name attribute or
-     *        the tag name.
+     * \a containerName The name of the container widget.
      *
-     * This method may return nullptr if no container with the given name exists or is not owned by the client.
+     * \a client Owner of the container widget.
+     *
+     * \a useTagName Whether to compare the specified name with the name attribute
+     * or the tag name.
+     *
+     * This method may return nullptr if no container with the given name
+     * exists or if the container is not owned by the client.
      */
     QWidget *container(const QString &containerName, KXMLGUIClient *client, bool useTagName = false);
 
     QList<QWidget *> containers(const QString &tagName);
 
     /*!
-     * Use this method to free all memory allocated by the KXMLGUIFactory. This deletes the internal node
-     * tree and therefore resets the internal state of the class. Please note that the actual GUI is
-     * NOT touched at all, meaning no containers are deleted nor any actions unplugged. That is
-     * something you have to do on your own. So use this method only if you know what you are doing :-)
+     * \brief Use this method to free all memory allocated by the KXMLGUIFactory.
      *
-     * (also note that this will call KXMLGUIClient::setFactory(nullptr) for all inserted clients)
+     * This deletes the internal node tree and therefore resets the
+     * internal state of the class. Please note that the actual GUI is
+     * NOT touched at all, meaning no containers are deleted nor any
+     * actions unplugged. That is something you have to do on your own.
+     * So use this method only if you know what you are doing :-)
+     *
+     * \note This will call KXMLGUIClient::setFactory(nullptr) for all inserted clients).
      */
     void reset();
 
     /*!
-     * Use this method to free all memory allocated by the KXMLGUIFactory for a specific container,
-     * including all child containers and actions. This deletes the internal node subtree for the
-     * specified container. The actual GUI is not touched, no containers are deleted or any actions
-     * unplugged. Use this method only if you know what you are doing :-)
+     * \brief Free all memory allocated by the KXMLGUIFactory for a container
+     * named \a containerName, including all child containers and actions.
      *
-     * (also note that this will call KXMLGUIClient::setFactory(nullptr) for all clients of the
-     * container)
+     * Additionally, you may set whether to compare the specified \a containerName
+     * with the name attribute or the tag name.
+     *
+     * This deletes the internal node subtree for the specified container.
+     * The actual GUI is not touched, no containers are deleted
+     * or any actions unplugged.
+     *
+     * Use this method only if you know what you are doing :-)
+     *
+     * \a useTagName Whether to compare the specified name with the name attribute.
+     *
+     * \note This will call KXMLGUIClient::setFactory(nullptr) for all clients of the
+     * container).
      */
     void resetContainer(const QString &containerName, bool useTagName = false);
 
     /*!
-     * Use this method to reset and reread action properties (shortcuts, etc.) for all actions.
+     * \brief Use this method to reset and reread action properties
+     * (shortcuts, etc.) for all actions.
+     *
      * This is needed, for example, when you change shortcuts scheme at runtime.
      */
     void refreshActionProperties();
 
 public Q_SLOTS:
     /*!
-     * Shows a dialog (KShortcutsDialog) that lists every action in this factory,
-     * and which can be used to change the shortcuts associated with each action.
+     * \brief Shows a dialog (KShortcutsDialog) that lists every action in this factory,
+     * and that can be used to change the shortcuts associated with each action.
      *
      * This slot can be connected directly to the configure shortcuts action,
      * for example:
-     * @code
+     * \code
      * KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
-     * @endcode
+     * \endcode
      *
      * This method constructs a KShortcutsDialog with the default arguments
      * (KShortcutsEditor::AllActions and KShortcutsEditor::LetterShortcutsAllowed).
      *
-     * @see KShortcutsDialog, KShortcutsEditor::ActionTypes, KShortcutsEditor::LetterShortcuts
-     *
-     * By default the changes will be saved back to the @c *ui.rc file
-     * which they were initially read from.
+     * By default the changes will be saved back to the \c *ui.rc file
+     * they were initially read from.
      *
      * If you need to run some extra code if the dialog is accepted and the settings
-     * are saved, you can simply connect to the @ref KXMLGUIFactory::shortcutsSaved()
+     * are saved, you can simply connect to the \l KXMLGUIFactory::shortcutsSaved()
      * signal before calling this method, for example:
-     * @code
+     * \code
      * connect(guiFactory(), &KXMLGUIFactory::shortcutsSaved, this, &MyClass::slotShortcutSaved);
      * guiFactory()->showConfigureShortcutsDialog();
-     * @endcode
+     * \endcode
      *
-     * @since 5.84
+     * \sa KShortcutsDialog, KShortcutsEditor::ActionTypes, KShortcutsEditor::LetterShortcuts
+     * \since 5.84
      */
     void showConfigureShortcutsDialog();
 
@@ -206,25 +230,27 @@ Q_SIGNALS:
     void clientRemoved(KXMLGUIClient *client);
 
     /*!
-     * Emitted when the factory is currently making changes to the GUI,
+     * \brief Emitted when the factory is currently making changes to the GUI,
      * i.e. adding or removing clients.
+     *
      * makingChanges(true) is emitted before any change happens, and
      * makingChanges(false) is emitted after the change is done.
+     *
      * This allows e.g. KMainWindow to know that the GUI is
      * being changed programmatically and not by the user (so there is no reason to
      * save toolbar settings afterwards).
-     * @since 4.1.3
+     * \since 4.1.3
      */
     void makingChanges(bool);
 
     /*!
-     * Emitted when the shortcuts have been saved (i.e. the user accepted the dialog).
+     * \brief Emitted when the shortcuts have been saved (i.e. the user accepted the dialog).
      *
      * If you're using multiple instances of the same KXMLGUIClient, you probably want to
-     * connect to this signal and call @c KXMLGUIClient::reloadXML() for each of your
+     * connect to this signal and call \c KXMLGUIClient::reloadXML() for each of your
      * KXMLGUIClients, so that the other instances update their shortcuts settings.
      *
-     * @since 5.79
+     * \since 5.79
      */
     void shortcutsSaved();
 
