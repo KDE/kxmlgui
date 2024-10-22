@@ -18,11 +18,6 @@ configure_file(config-xmlgui.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xmlgui.h
 
 target_sources(KF6XmlGui PRIVATE
   kaboutapplicationdialog.cpp
-  kaboutapplicationcomponentlistdelegate_p.cpp
-  kaboutapplicationcomponentmodel_p.cpp
-  kaboutapplicationlistview_p.cpp
-  kaboutapplicationpersonlistdelegate_p.cpp
-  kaboutapplicationpersonmodel_p.cpp
   kaboutkdedialog_p.cpp
   kaboutplugindialog.cpp
   kabstractaboutdialog_p.cpp

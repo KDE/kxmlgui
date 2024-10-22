@@ -13,23 +13,24 @@
 
 #include "kabstractaboutdialog_p.h"
 
-#include "kaboutapplicationcomponentlistdelegate_p.h"
-#include "kaboutapplicationcomponentmodel_p.h"
-#include "kaboutapplicationlistview_p.h"
-#include "kaboutapplicationpersonlistdelegate_p.h"
-#include "kaboutapplicationpersonmodel_p.h"
 #include "klicensedialog_p.h"
 #include <kxmlgui_version.h>
 // KF
+#include <KAdjustingScrollArea>
 #include <KLocalizedString>
+#include <KSeparator>
 #include <KTitleWidget>
 // Qt
 #include <QApplication>
 #include <QCheckBox>
+#include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QLabel>
+#include <QToolButton>
 #include <QVBoxLayout>
+
+using namespace Qt::StringLiterals;
 
 QWidget *KAbstractAboutDialogPrivate::createTitleWidget(const QIcon &icon, const QString &displayName, const QString &version, QWidget *parent)
 {
@@ -49,8 +50,10 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
                                                         const QList<KAboutLicense> &licenses,
                                                         QWidget *parent)
 {
-    QWidget *aboutWidget = new QWidget(parent);
-    QVBoxLayout *aboutLayout = new QVBoxLayout(aboutWidget);
+    auto wrapper = new KAdjustingScrollArea(parent);
+    auto aboutWidget = new QWidget(parent);
+    wrapper->setWidget(aboutWidget);
+    auto aboutLayout = new QVBoxLayout(aboutWidget);
 
     QString aboutPageText = shortDescription + QLatin1Char('\n');
 
@@ -73,7 +76,6 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
     aboutLabel->setText(aboutPageText.replace(QLatin1Char('\n'), QStringLiteral("<br />")));
     aboutLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
 
-    aboutLayout->addStretch();
     aboutLayout->addWidget(aboutLabel);
 
     const int licenseCount = licenses.count();
@@ -93,14 +95,15 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
 
     aboutLayout->addStretch();
 
-    return aboutWidget;
+    return wrapper;
 }
 
 QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutComponent> &components, QWidget *parent)
 {
-    QWidget *componentWidget = new QWidget(parent);
-    QVBoxLayout *componentLayout = new QVBoxLayout(componentWidget);
-    componentLayout->setContentsMargins(0, 0, 0, 0);
+    auto wrapper = new KAdjustingScrollArea(parent);
+    auto componentWidget = new QWidget;
+    auto componentLayout = new QVBoxLayout(componentWidget);
+    wrapper->setWidget(componentWidget);
 
     QList<KAboutComponent> allComponents = components;
     allComponents.prepend(KAboutComponent(i18n("The <em>%1</em> windowing system", QGuiApplication::platformName())));
@@ -113,51 +116,144 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
                                           QStringLiteral(KXMLGUI_VERSION_STRING),
                                           QStringLiteral("https://develop.kde.org/products/frameworks/")));
 
-    KDEPrivate::KAboutApplicationComponentModel *componentModel = new KDEPrivate::KAboutApplicationComponentModel(allComponents, componentWidget);
+    for (qsizetype i = 0, count = allComponents.count(); i < count; i++) {
+        const auto &component = allComponents[i];
+        QVBoxLayout *col = nullptr;
+        QHBoxLayout *row = nullptr;
+        auto name = new QLabel(u"<span style='font-weight: 600'>"_s + component.name() + u"</span>"_s
+                               + (!component.version().isEmpty() ? (u" (" + component.version() + u')') : QString{}));
+        if (!component.description().isEmpty()) {
+            col = new QVBoxLayout;
+            col->setSpacing(0);
+            auto description = new QLabel(component.description());
+            col->addWidget(name);
+            col->addWidget(description);
+        }
 
-    KDEPrivate::KAboutApplicationListView *componentView = new KDEPrivate::KAboutApplicationListView(componentWidget);
+        if (!component.webAddress().isEmpty()) {
+            row = new QHBoxLayout;
+            const auto url = QUrl(component.webAddress());
+            auto webAction = new QAction(QIcon::fromTheme(u"internet-services-symbolic"_s), i18nc("@action:button", "Visit component's homepage"));
+            webAction->setToolTip(i18nc("@info:tooltip", "Visit components's homepage\n%1", component.webAddress()));
+            QObject::connect(webAction, &QAction::triggered, webAction, [url]() {
+                QDesktopServices::openUrl(QUrl(url));
+            });
+            auto web = new QToolButton;
+            web->setDefaultAction(webAction);
+            web->setToolButtonStyle(Qt::ToolButtonIconOnly);
+            web->setAutoRaise(true);
+            if (col) {
+                row->addLayout(col);
+            } else {
+                row->addWidget(name);
+            }
+            row->addWidget(web);
+        }
 
-    KDEPrivate::KAboutApplicationComponentListDelegate *componentDelegate =
-        new KDEPrivate::KAboutApplicationComponentListDelegate(componentView, componentView);
+        if (row) {
+            componentLayout->addLayout(row);
+        } else if (col) {
+            componentLayout->addLayout(col);
+        } else {
+            componentLayout->addWidget(name);
+        }
 
-    componentView->setModel(componentModel);
-    componentView->setItemDelegate(componentDelegate);
-    componentView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    componentLayout->addWidget(componentView);
+        if (i + 1 != count) {
+            auto separator = new KSeparator;
+            separator->setEnabled(false);
+            componentLayout->addWidget(separator);
+        }
+    }
 
-    return componentWidget;
+    componentLayout->addStretch();
+
+    return wrapper;
 }
 
-static QWidget *createAvatarCheck(QWidget *parent, KDEPrivate::KAboutApplicationPersonModel *model)
+static void createPersonLayout(QVBoxLayout *layout, const QList<KAboutPerson> &persons)
 {
-    // Add in a checkbox to allow people to switch the avatar fetch
-    // (off-by-default to avoid unwarned online activity)
-    QCheckBox *avatarsCheck = new QCheckBox(parent);
-    avatarsCheck->setText(i18n("Show author photos"));
-    avatarsCheck->setToolTip(i18n("Enabling this will fetch images from an online location"));
-    avatarsCheck->setVisible(model->hasAnyAvatars());
-    QObject::connect(model, &KDEPrivate::KAboutApplicationPersonModel::hasAnyAvatarsChanged, parent, [avatarsCheck, model]() {
-        avatarsCheck->setVisible(model->hasAnyAvatars());
-    });
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    QObject::connect(avatarsCheck, &QCheckBox::checkStateChanged, parent, [model](int state) {
-#else
-    QObject::connect(avatarsCheck, &QCheckBox::stateChanged, parent, [model](int state) {
-#endif
-        switch (state) {
-        case Qt::Checked:
-        case Qt::PartiallyChecked:
-            // tell model to use avatars
-            model->setShowRemoteAvatars(true);
-            break;
-        case Qt::Unchecked:
-        default:
-            // tell model not to use avatars
-            model->setShowRemoteAvatars(false);
-            break;
+    for (qsizetype i = 0, count = persons.count(); i < count; i++) {
+        const auto &person = persons[i];
+
+        QVBoxLayout *col = nullptr;
+        QHBoxLayout *row = nullptr;
+        auto name = new QLabel(person.name());
+        auto font = name->font();
+        font.setWeight(QFont::DemiBold);
+        name->setFont(font);
+        if (!person.task().isEmpty()) {
+            col = new QVBoxLayout;
+            col->setSpacing(0);
+            auto task = new QLabel(person.task());
+            auto palette = task->palette();
+            auto foregroundColor = palette.color(QPalette::WindowText);
+            foregroundColor.setAlphaF(0.85);
+            palette.setColor(QPalette::WindowText, foregroundColor);
+            task->setPalette(palette);
+
+            col->addWidget(name);
+            col->addWidget(task);
         }
-    });
-    return avatarsCheck;
+
+        if (!person.webAddress().isEmpty()) {
+            row = new QHBoxLayout;
+            const auto url = QUrl(person.webAddress());
+            auto webAction = new QAction(QIcon::fromTheme(u"internet-services-symbolic"_s), i18nc("@action:button", "Visit author's homepage"));
+            webAction->setToolTip(i18nc("@info:tooltip", "Visit author's homepage\n%1", person.webAddress()));
+            QObject::connect(webAction, &QAction::triggered, webAction, [url]() {
+                QDesktopServices::openUrl(url);
+            });
+            auto web = new QToolButton;
+            web->setDefaultAction(webAction);
+            web->setAutoRaise(true);
+            web->setToolButtonStyle(Qt::ToolButtonIconOnly);
+            if (col) {
+                row->addLayout(col);
+            } else {
+                row->addWidget(name);
+            }
+            row->addWidget(web);
+        }
+
+        if (!person.emailAddress().isEmpty()) {
+            if (!row) {
+                row = new QHBoxLayout;
+            }
+            const auto url = person.emailAddress();
+            auto webAction =
+                new QAction(QIcon::fromTheme(u"mail-send-symbolic"_s), i18nc("@action:button Send an email to a contributor", "Email contributor"));
+            webAction->setToolTip(i18nc("@info:tooltip", "Email contributor: %1", person.emailAddress()));
+            QObject::connect(webAction, &QAction::triggered, webAction, [url]() {
+                QDesktopServices::openUrl(QUrl(u"mailto:"_s + url));
+            });
+            auto web = new QToolButton;
+            web->setDefaultAction(webAction);
+            web->setToolButtonStyle(Qt::ToolButtonIconOnly);
+            web->setAutoRaise(true);
+            if (col) {
+                row->addLayout(col);
+            } else {
+                row->addWidget(name);
+            }
+            row->addWidget(web);
+        }
+
+        if (row) {
+            layout->addLayout(row);
+        } else if (col) {
+            layout->addLayout(col);
+        } else {
+            layout->addWidget(name);
+        }
+
+        if (i + 1 != count) {
+            auto separator = new KSeparator;
+            separator->setEnabled(false);
+            layout->addWidget(separator);
+        }
+    }
+
+    layout->addStretch();
 }
 
 QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPerson> &authors,
@@ -166,13 +262,13 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
                                                           const QString &bugAddress,
                                                           QWidget *parent)
 {
-    QWidget *authorWidget = new QWidget(parent);
-    QVBoxLayout *authorLayout = new QVBoxLayout(authorWidget);
-    authorLayout->setContentsMargins(0, 0, 0, 0);
+    auto wrapper = new KAdjustingScrollArea;
+    auto authorWidget = new QWidget(parent);
+    wrapper->setWidget(authorWidget);
+    auto authorLayout = new QVBoxLayout(authorWidget);
 
     if (!customAuthorTextEnabled || !customAuthorRichText.isEmpty()) {
         QLabel *bugsLabel = new QLabel(authorWidget);
-        bugsLabel->setContentsMargins(4, 2, 0, 4);
         bugsLabel->setOpenExternalLinks(true);
         if (!customAuthorTextEnabled) {
             if (bugAddress.isEmpty() || bugAddress == QLatin1String("submit@bugs.kde.org")) {
@@ -195,59 +291,31 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
         authorLayout->addWidget(bugsLabel);
     }
 
-    KDEPrivate::KAboutApplicationPersonModel *authorModel = new KDEPrivate::KAboutApplicationPersonModel(authors, authorWidget);
+    createPersonLayout(authorLayout, authors);
 
-    KDEPrivate::KAboutApplicationListView *authorView = new KDEPrivate::KAboutApplicationListView(authorWidget);
-
-    KDEPrivate::KAboutApplicationPersonListDelegate *authorDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(authorView, authorView);
-
-    authorView->setModel(authorModel);
-    authorView->setItemDelegate(authorDelegate);
-    authorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    authorLayout->addWidget(createAvatarCheck(parent, authorModel));
-    authorLayout->addWidget(authorView);
-
-    return authorWidget;
+    return wrapper;
 }
 
 QWidget *KAbstractAboutDialogPrivate::createCreditWidget(const QList<KAboutPerson> &credits, QWidget *parent)
 {
-    QWidget *creditWidget = new QWidget(parent);
-    QVBoxLayout *creditLayout = new QVBoxLayout(creditWidget);
-    creditLayout->setContentsMargins(0, 0, 0, 0);
+    auto wrapper = new KAdjustingScrollArea;
+    auto creditWidget = new QWidget(parent);
+    wrapper->setWidget(creditWidget);
+    auto creditLayout = new QVBoxLayout(creditWidget);
 
-    KDEPrivate::KAboutApplicationPersonModel *creditModel = new KDEPrivate::KAboutApplicationPersonModel(credits, creditWidget);
+    createPersonLayout(creditLayout, credits);
 
-    KDEPrivate::KAboutApplicationListView *creditView = new KDEPrivate::KAboutApplicationListView(creditWidget);
-
-    KDEPrivate::KAboutApplicationPersonListDelegate *creditDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(creditView, creditView);
-
-    creditView->setModel(creditModel);
-    creditView->setItemDelegate(creditDelegate);
-    creditView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    creditLayout->addWidget(createAvatarCheck(parent, creditModel));
-    creditLayout->addWidget(creditView);
-
-    return creditWidget;
+    return wrapper;
 }
 
 QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAboutPerson> &translators, QWidget *parent)
 {
-    QWidget *translatorWidget = new QWidget(parent);
-    QVBoxLayout *translatorLayout = new QVBoxLayout(translatorWidget);
-    translatorLayout->setContentsMargins(0, 0, 0, 0);
+    auto wrapper = new KAdjustingScrollArea;
+    auto translatorWidget = new QWidget(parent);
+    wrapper->setWidget(translatorWidget);
+    auto translatorLayout = new QVBoxLayout(translatorWidget);
 
-    KDEPrivate::KAboutApplicationPersonModel *translatorModel = new KDEPrivate::KAboutApplicationPersonModel(translators, translatorWidget);
-
-    KDEPrivate::KAboutApplicationListView *translatorView = new KDEPrivate::KAboutApplicationListView(translatorWidget);
-
-    KDEPrivate::KAboutApplicationPersonListDelegate *translatorDelegate = new KDEPrivate::KAboutApplicationPersonListDelegate(translatorView, translatorView);
-
-    translatorView->setModel(translatorModel);
-    translatorView->setItemDelegate(translatorDelegate);
-    translatorView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    translatorLayout->addWidget(createAvatarCheck(parent, translatorModel));
-    translatorLayout->addWidget(translatorView);
+    createPersonLayout(translatorLayout, translators);
 
     QString aboutTranslationTeam = KAboutData::aboutTranslationTeam();
     if (!aboutTranslationTeam.isEmpty()) {
@@ -261,7 +329,7 @@ QWidget *KAbstractAboutDialogPrivate::createTranslatorsWidget(const QList<KAbout
         // TODO: this could be displayed as a view item to save space
     }
 
-    return translatorWidget;
+    return wrapper;
 }
 
 void KAbstractAboutDialogPrivate::createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog)
