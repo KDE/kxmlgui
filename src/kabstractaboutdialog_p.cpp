@@ -72,6 +72,9 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
     aboutLabel->setOpenExternalLinks(true);
     aboutLabel->setText(aboutPageText.replace(QLatin1Char('\n'), QStringLiteral("<br />")));
     aboutLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    QFont font = aboutLabel->font();
+    font.setPointSize(font.pointSize() + 1);
+    aboutLabel->setFont(font);
 
     aboutLayout->addStretch();
     aboutLayout->addWidget(aboutLabel);
