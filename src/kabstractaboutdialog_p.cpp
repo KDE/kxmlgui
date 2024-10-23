@@ -116,7 +116,7 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
                                           QStringLiteral("https://www.qt.io/"),
                                           KAboutLicense::LGPL_V3));
     allComponents.prepend(KAboutComponent(i18n("KDE Frameworks"),
-                                          i18nc("@info", "Collection of library extending Qt and created by the KDE Community"),
+                                          i18nc("@info", "Collection of libraries created by the KDE Community to extend Qt"),
                                           QStringLiteral(KXMLGUI_VERSION_STRING),
                                           QStringLiteral("https://develop.kde.org/products/frameworks/"),
                                           KAboutLicense::LGPL_V2_1));
