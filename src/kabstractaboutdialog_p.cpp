@@ -73,7 +73,6 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
     aboutLabel->setText(aboutPageText.replace(QLatin1Char('\n'), QStringLiteral("<br />")));
     aboutLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
 
-    aboutLayout->addStretch();
     aboutLayout->addWidget(aboutLabel);
 
     const int licenseCount = licenses.count();
