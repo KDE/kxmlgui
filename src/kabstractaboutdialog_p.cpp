@@ -14,6 +14,7 @@
 #include "kabstractaboutdialog_p.h"
 
 #include "klicensedialog_p.h"
+#include <kaboutdata.h>
 #include <kxmlgui_version.h>
 // KF
 #include <KAdjustingScrollArea>
@@ -106,15 +107,19 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
     wrapper->setWidget(componentWidget);
 
     QList<KAboutComponent> allComponents = components;
-    allComponents.prepend(KAboutComponent(i18n("The <em>%1</em> windowing system", QGuiApplication::platformName())));
+    auto platform = QGuiApplication::platformName();
+    platform.replace(0, 1, platform[0].toUpper());
+    allComponents.prepend(KAboutComponent(platform, i18n("Windowing system")));
     allComponents.prepend(KAboutComponent(i18n("Qt"),
-                                          QString(),
-                                          i18n("%1 (built against %2)", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)),
-                                          QStringLiteral("https://www.qt.io/")));
+                                          i18nc("@info", "Cross-platform application development framework"),
+                                          i18n("Using %1 and built against %2", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)),
+                                          QStringLiteral("https://www.qt.io/"),
+                                          KAboutLicense::LGPL_V3));
     allComponents.prepend(KAboutComponent(i18n("KDE Frameworks"),
-                                          QString(),
+                                          i18nc("@info", "Collection of libraries created by the KDE Community to extend Qt"),
                                           QStringLiteral(KXMLGUI_VERSION_STRING),
-                                          QStringLiteral("https://develop.kde.org/products/frameworks/")));
+                                          QStringLiteral("https://develop.kde.org/products/frameworks/"),
+                                          KAboutLicense::LGPL_V2_1));
 
     for (qsizetype i = 0, count = allComponents.count(); i < count; i++) {
         const auto &component = allComponents[i];
@@ -126,6 +131,11 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
             col = new QVBoxLayout;
             col->setSpacing(0);
             auto description = new QLabel(component.description());
+            auto palette = description->palette();
+            auto foregroundColor = palette.color(QPalette::WindowText);
+            foregroundColor.setAlphaF(0.85);
+            palette.setColor(QPalette::WindowText, foregroundColor);
+            description->setPalette(palette);
             col->addWidget(name);
             col->addWidget(description);
         }
