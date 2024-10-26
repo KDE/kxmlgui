@@ -52,7 +52,14 @@ class KXMLGUI_EXPORT KActionCollection : public QObject
 
     Q_OBJECT
 
+    /*!
+     * \property KActionCollection::configGroup
+     */
     Q_PROPERTY(QString configGroup READ configGroup WRITE setConfigGroup)
+
+    /*!
+     * \property KActionCollection::configIsGlobal
+     */
     Q_PROPERTY(bool configIsGlobal READ configIsGlobal WRITE setConfigGlobal)
 
 public:
@@ -430,7 +437,8 @@ public:
  * \sa addAction(KStandardAction::StandardAction, const QString &, const QObject *, const char *)
  * \since 5.80
  */
-#ifdef K_DOXYGEN
+#ifdef Q_QDOC
+    template<class Receiver, class Func>
     inline QAction *addAction(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
 #else
     template<class Receiver, class Func>
@@ -459,7 +467,8 @@ public:
      * Returns new action of the given type ActionType.
      * \since 6.3
      */
-#ifdef K_DOXYGEN
+#ifdef Q_QDOC
+    template<class Receiver, class Func>
     inline QAction *addAction(KStandardActions::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
 #else
     template<class Receiver, class Func>
@@ -499,7 +508,8 @@ public:
      *
      * \since 6.3
      */
-#ifdef K_DOXYGEN
+#ifdef Q_QDOC
+    template<class Receiver, class Func>
     inline QAction *addAction(KStandardActions::StandardAction actionType, const Receiver *receiver, Func slot)
 #else
     template<class Receiver, class Func>
@@ -519,7 +529,7 @@ public:
      * the action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is returned.
      *
-     * NOTE: KDE prior to 4.2 used the triggered() signal instead of the triggered(bool)
+     * \note KDE prior to 4.2 used the triggered() signal instead of the triggered(bool)
      * signal.
      *
      * Inserting an action that was previously inserted under a different name will replace the
@@ -551,7 +561,7 @@ public:
      * parameters at all (i.e. slotTriggered(bool) or slotTriggered() ).
      * The type of the action is specified by the template parameter ActionType.
      *
-     * NOTE: KDE prior to 4.2 connected the triggered() signal instead of the triggered(bool)
+     * \note KDE prior to 4.2 connected the triggered() signal instead of the triggered(bool)
      * signal.
      *
      * The KActionCollection takes ownership of the action object.
@@ -580,6 +590,8 @@ public:
     }
 
 /*!
+ *
+ *
  * \brief This is the same as add(const QString &name, const QObject *receiver, const char *member)
  * but using new style connect syntax.
  *
@@ -594,9 +606,9 @@ public:
  * \sa add(const QString &, const QObject *, const char *)
  * \since 5.28
  */
-#ifdef K_DOXYGEN
-    template<class ActionType>
-    inline ActionType *add(const QString &name, const Receiver *receiver, Func slot)
+#ifdef Q_QDOC
+    template<class ActionType, typename Receiver, typename Func>
+    ActionType *add(const QString &name, const Receiver *receiver, Func slot)
 #else
     template<class ActionType, class Receiver, class Func>
     inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, ActionType>::type *
@@ -624,7 +636,8 @@ public:
  * \sa addAction(const QString &, const QObject *, const char *)
  * \since 5.28
  */
-#ifdef K_DOXYGEN
+#ifdef Q_QDOC
+    template<class Receiver, class Func>
     inline QAction *addAction(const QString &name, const Receiver *receiver, Func slot)
 #else
     template<class Receiver, class Func>

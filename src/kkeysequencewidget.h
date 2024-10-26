@@ -39,14 +39,29 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
 {
     Q_OBJECT
 
+    /*!
+     * \property KKeySequenceWidget::keySequence
+     */
     Q_PROPERTY(QKeySequence keySequence READ keySequence WRITE setKeySequence NOTIFY keySequenceChanged)
 
+    /*!
+     * \property KKeySequenceWidget::multiKeyShortcutsAllowed
+     */
     Q_PROPERTY(bool multiKeyShortcutsAllowed READ multiKeyShortcutsAllowed WRITE setMultiKeyShortcutsAllowed)
 
+    /*!
+     * \property KKeySequenceWidget::checkForConflictsAgainst
+     */
     Q_PROPERTY(ShortcutTypes checkForConflictsAgainst READ checkForConflictsAgainst WRITE setCheckForConflictsAgainst)
 
+    /*!
+     * \property KKeySequenceWidget::modifierlessAllowed
+     */
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 
+    /*!
+     * \property KKeySequenceWidget::modifierOnlyAllowed
+     */
     Q_PROPERTY(bool modifierOnlyAllowed READ modifierOnlyAllowed WRITE setModifierOnlyAllowed)
 
 public:
@@ -72,18 +87,7 @@ public:
      */
     explicit KKeySequenceWidget(QWidget *parent = nullptr);
 
-    /*!
-     * \brief Destructor.
-     */
     ~KKeySequenceWidget() override;
-
-    /**
-     * \name Configuration
-     *
-     * Configuration options for the widget.
-     * \sa ShortcutTypes
-     */
-    //@{
 
     /*!
      * \enum KKeySequenceWidget::ShortcutType
@@ -221,8 +225,6 @@ public:
      * The default is to show the clear button.
      */
     void setClearButtonShown(bool show);
-
-    //@}
 
     /*!
      * \brief Returns whether the key sequence \a seq is available to grab.

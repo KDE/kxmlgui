@@ -47,7 +47,7 @@ typedef QList<QDomElement> ToolBarList;
 
 namespace KDEPrivate
 {
-/*!
+/*
  * Return a list of toolbar elements given a toplevel element
  */
 static ToolBarList findToolBars(const QDomElement &start)

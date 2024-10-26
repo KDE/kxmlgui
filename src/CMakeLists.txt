@@ -145,6 +145,8 @@ ecm_generate_headers(KXmlGui_HEADERS
   REQUIRED_HEADERS KXmlGui_HEADERS
 )
 
+ecm_generate_qdoc(KF6XmlGui kxmlgui.qdocconf)
+
 install(TARGETS KF6XmlGui EXPORT KF6XmlGuiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES

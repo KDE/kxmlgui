@@ -46,11 +46,11 @@ class KXMLGUIClient;
  * from moving toolbars with the "movable_toolbars" action, and from showing or
  * hiding toolbars with the "options_show_toolbar" action.  For example, to
  * disable both, add the following the application or global configuration:
- * @verbatim
+ * \badcode
  * [KDE Action Restrictions][$i]
  * movable_toolbars=false
  * options_show_toolbar=false
- * @endverbatim
+ * \endcode
  *
  * If you can't depend on KXmlGui but still want to integrate better with KDE,
  * you can use QToolBar and:

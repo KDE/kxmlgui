@@ -163,17 +163,13 @@ public:
     //! \sa KKeySequenceWidget::setCheckActionCollections()
     void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
 
-    //@{
     //! \sa KKeySequenceWidget::checkAgainstStandardShortcuts()
     KKeySequenceWidget::ShortcutTypes checkForConflictsAgainst() const;
     void setCheckForConflictsAgainst(KKeySequenceWidget::ShortcutTypes);
-    //@}
 
-    //@{
     //! \sa KKeySequenceWidget::checkAgainstStandardShortcuts()
     bool multiKeyShortcutsAllowed() const;
     void setMultiKeyShortcutsAllowed(bool);
-    //@}
 
     //! \sa KKeySequenceWidget::setComponentName
     void setComponentName(const QString &componentName);
@@ -306,7 +302,6 @@ private:
     //! Should the Name column be painted in bold?
     bool m_isNameBold;
 
-    //@{
     //! The original shortcuts before user changes. 0 means no change.
     QList<QKeySequence> *m_oldLocalShortcut = nullptr;
     QList<QKeySequence> *m_oldGlobalShortcut = nullptr;
@@ -314,7 +309,6 @@ private:
     KShapeGesture *m_oldShapeGesture;
     KRockerGesture *m_oldRockerGesture;
 #endif
-    //@}
 
     //! The localized action name
     QString m_actionNameInTable;

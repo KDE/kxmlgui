@@ -96,6 +96,9 @@ class KXMLGUI_EXPORT KActionCategory : public QObject
 {
     Q_OBJECT
 
+    /*!
+     * \property KActionCategory::text
+     */
     Q_PROPERTY(QString text READ text WRITE setText)
 
 public:

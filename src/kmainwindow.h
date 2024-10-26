@@ -62,8 +62,20 @@ class KXMLGUI_EXPORT KMainWindow : public QMainWindow
     friend class KMWSessionManager;
     friend class DockResizeListener;
     Q_OBJECT
+
+    /*!
+     * \property KMainWindow::hasMenuBar
+     */
     Q_PROPERTY(bool hasMenuBar READ hasMenuBar)
+
+    /*!
+     * \property KMainWindow::autoSaveSettings
+     */
     Q_PROPERTY(bool autoSaveSettings READ autoSaveSettings)
+
+    /*!
+     * \property KMainWindow::autoSaveGroup
+     */
     Q_PROPERTY(QString autoSaveGroup READ autoSaveGroup)
 
 public:
@@ -409,11 +421,13 @@ public Q_SLOTS:
     virtual void setCaption(const QString &caption);
     /*!
      * \brief Makes a KDE compliant caption.
+     *
      * \a caption Your caption.
+     *
      * \a modified Whether the document is modified. This displays
      * an additional sign in the title bar, usually "**".
      *
-     * This is an overloaded function.
+     * \overload
      *
      * \note Do not include the application name
      * in this string. It will be added automatically according to the KDE
@@ -480,6 +494,8 @@ protected:
      * Reimplemented to return the \a event QEvent::Polish in order to adjust the object name
      * if needed, once all constructor code for the main window has run.
      * Also reimplemented to catch when a QDockWidget is added or removed.
+     *
+     * \reimp
      */
     bool event(QEvent *event) override;
 
@@ -487,6 +503,8 @@ protected:
      * \brief Reimplemented to open context menus on Shift+F10.
      *
      * \a keyEvent The event assigned to a key press.
+     *
+     * \reimp
      */
     void keyPressEvent(QKeyEvent *keyEvent) override;
 
@@ -496,6 +514,8 @@ protected:
      * We recommend that you reimplement queryClose() rather than closeEvent().
      * If you do it anyway, ensure to call the base implementation to keep
      * the feature of autosaving window settings working.
+     *
+     * \reimp
      */
     void closeEvent(QCloseEvent *) override;
 
@@ -654,34 +674,34 @@ private:
     Q_PRIVATE_SLOT(d_func(), void _k_slotSaveAutoSavePosition())
 };
 
-/**
- * @defgroup KXMLGUI_Session KXMLGUI Session Macros and Functions
+/*!
+ * \macro KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS
  *
- * @{
- */
-
-/**
- * @def KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS
+ * \relates KMainWindow
+ *
  * Returns the maximal number of arguments that are actually
  * supported by kRestoreMainWindows().
  **/
 #define KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS 3
 
 /*!
+ * \fn template<typename T> void kRestoreMainWindows()
  * \brief Restores the last session. (To be used in your main function).
+ *
+ * \relates KMainWindow
  *
  * These functions work also if you have more than one kind of top-level
  * widget (each derived from KMainWindow, of course).
  *
- * Imagine you have three kinds of top-level widgets: the classes \c childMW1,
- * \c childMW2 and \c childMW3. Then you can just do:
+ * Imagine you have three kinds of top-level widgets: the classes \c ChildMW1,
+ * \c ChildMW2 and \c ChildMW3. Then you can just do:
  *
  * \code
  * int main(int argc, char *argv[])
  * {
  *     // [...]
  *     if (qApp->isSessionRestored())
- *         kRestoreMainWindows<childMW1, childMW2, childMW3>();
+ *         kRestoreMainWindows<ChildMW1, ChildMW2, ChildMW3>();
  *     else {
  *       // create default application as usual
  *     }
@@ -689,7 +709,7 @@ private:
  * }
  * \endcode
  *
- * kRestoreMainWindows<>() will create (on the heap) as many instances
+ * kRestoreMainWindows will create (on the heap) as many instances
  * of your main windows as have existed in the last session and
  * call KMainWindow::restore() with the correct arguments. Note that
  * also QWidget::show() is called implicitly.
@@ -700,8 +720,6 @@ private:
  * define #KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS is provided.
  *
  * \note Prefer this function over directly calling KMainWindow::restore().
- *
- * @tparam T Top-level widget class
  *
  * \sa KMainWindow::restore()
  * \sa KMainWindow::classNameOfToplevel()
@@ -717,26 +735,11 @@ inline void kRestoreMainWindows()
     }
 }
 
-/*!
- * \brief Restores the last session.
- * This is an overloaded function.
- *
- * Use this with multiple different top-level widget classes.
- *
- * \a T0 One top-level widget class.
- *
- * \a T1 Explicit other top-level widget class for disambiguation from base template.
- *
- * \a Tn Parameter pack to take 0..n further KMainWindows.
- *
- * \sa kRestoreMainWindows()
- */
 template<typename T0, typename T1, typename... Tn>
 inline void kRestoreMainWindows()
 {
     kRestoreMainWindows<T0>();
     kRestoreMainWindows<T1, Tn...>();
 }
-/** @}  */
 
 #endif
