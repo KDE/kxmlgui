@@ -717,7 +717,7 @@ private:
  * Currently, these functions are provided for up to three
  * template arguments. If you need more, tell us. To help you in
  * deciding whether or not you can use kRestoreMainWindows, a
- * define #KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS is provided.
+ * define KDE_RESTORE_MAIN_WINDOWS_NUM_TEMPLATE_ARGS is provided.
  *
  * \note Prefer this function over directly calling KMainWindow::restore().
  *
