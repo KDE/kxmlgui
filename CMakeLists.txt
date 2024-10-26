@@ -123,8 +123,6 @@ endif()
 
 include(CMakePackageConfigHelpers)
 
-ecm_generate_qdoc(KF6XmlGui kxmlgui.qdocconf)
-
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF6XmlGuiConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF6XmlGuiConfig.cmake"

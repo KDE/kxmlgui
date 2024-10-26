@@ -24,7 +24,7 @@ class QUndoStack;
  *
  * See QUndoStack for more information.
  *
- * \since KXMLGUI 5.0
+ * \since 5.0
  */
 namespace KUndoActions
 {

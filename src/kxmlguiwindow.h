@@ -88,9 +88,25 @@ class KXmlGuiWindowPrivate;
 class KXMLGUI_EXPORT KXmlGuiWindow : public KMainWindow, public KXMLGUIBuilder, virtual public KXMLGUIClient
 {
     Q_OBJECT
+
+    /*!
+     * \property KXmlGuiWindow::hasMenuBar
+     */
     Q_PROPERTY(bool hasMenuBar READ hasMenuBar)
+
+    /*!
+     * \property KXmlGuiWindow::autoSaveSettings
+     */
     Q_PROPERTY(bool autoSaveSettings READ autoSaveSettings)
+
+    /*!
+     * \property KXmlGuiWindow::autoSaveGroup
+     */
     Q_PROPERTY(QString autoSaveGroup READ autoSaveGroup)
+
+    /*!
+     * \property KXmlGuiWindow::standardToolBarMenuEnabled
+     */
     Q_PROPERTY(bool standardToolBarMenuEnabled READ isStandardToolBarMenuEnabled WRITE setStandardToolBarMenuEnabled)
     Q_PROPERTY(QStringList toolBars READ toolBarNames)
 
@@ -157,6 +173,9 @@ public:
      */
     bool isHelpMenuEnabled() const;
 
+    /*!
+     *
+     */
     virtual KXMLGUIFactory *guiFactory();
 
     /*!

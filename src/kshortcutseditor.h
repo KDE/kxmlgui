@@ -48,6 +48,10 @@ class KShortcutsEditorPrivate;
 class KXMLGUI_EXPORT KShortcutsEditor : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KShortcutsEditor::actionTypes
+     */
     Q_PROPERTY(ActionTypes actionTypes READ actionTypes WRITE setActionTypes)
 
 public:

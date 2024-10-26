@@ -29,6 +29,10 @@ class KShortcutWidgetPrivate;
 class KXMLGUI_EXPORT KShortcutWidget : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KShortcutWidget::modifierlessAllowed
+     */
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 public:
     /*!

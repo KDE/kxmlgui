@@ -80,7 +80,7 @@ public:
      * \brief Constructs a fully featured "About Application" dialog box
      * using existing \a aboutData.
      *
-     * You should set the toplevel window as the parent
+     * You should set the toplevel window as the \a parent
      * so that the dialog becomes centered.
      */
     explicit KAboutApplicationDialog(const KAboutData &aboutData, QWidget *parent = nullptr);

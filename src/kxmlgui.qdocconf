@@ -6,15 +6,13 @@ description = Collection of convenience classes and widgets to manage your own m
 documentationinheaders = true
 
 headerdirs = .
-
-headers.fileextensions = "*.qdoc *.h"
+sourcedirs = .
 
 imagedirs = ../docs/pics
 
-outputdir  = doc/html
 outputformats = HTML
 
-depends += qtcore qtgui qtwidgets qtxml kcoreaddons kconfig
+depends += qtcore qtgui qtwidgets qtxml kcoreaddons kconfigcore
 
 qhp.projects            = KXmlGui
 
