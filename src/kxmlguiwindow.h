@@ -409,9 +409,6 @@ public:
      */
     QStringList toolBarNames() const;
 
-    /*!
-     * \internal
-     */
     void finalizeGUI(bool force);
     using KXMLGUIBuilder::finalizeGUI;
 
@@ -487,30 +484,31 @@ public Q_SLOTS:
     void slotStateChanged(const QString &newstate, bool reverse);
 
     /**
-     * @brief Checks the visual state of a given toolbar. If an invalid name is
+     * \brief Checks the visual state of a given toolbar. If an invalid name is
      * given, the method will always return false.
      *
      * This does not utilize KMainWindow::toolBar(), as that method would
      * create a new toolbar in the case of an invalid name, which is not
      * something that should be freely accessable via the dbus.
      *
-     * @param name The internal name of the toolbar.
+     * \a name The internal name of the toolbar.
      *
-     * @returns whether the toolbar with the specified name is currently visible
-     * @see toolBarNames()
-     * @see setToolBarVisible()
-     * @see KMainWindow::toolBar()
-     * @since 6.10
+     * Returns whether the toolbar with the specified name is currently visible
+     *
+     * \sa toolBarNames()
+     * \sa setToolBarVisible()
+     * \sa KMainWindow::toolBar()
+     * \since 6.10
      */
     bool isToolBarVisible(const QString &name);
 
     /**
-     * @brief Sets the visibility of a given toolbar. If an invalid name is
+     * \brief Sets the visibility of a given toolbar. If an invalid name is
      * given, nothing happens.
      *
-     * @param name The internal name of the toolbar.
-     * @param visible The new state of the toolbar's visibility.
-     * @since 6.10
+     * \a name The internal name of the toolbar.
+     * \a visible The new state of the toolbar's visibility.
+     * \since 6.10
      */
     void setToolBarVisible(const QString &name, bool visible);
 

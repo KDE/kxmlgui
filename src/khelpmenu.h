@@ -132,7 +132,7 @@ public:
     /**
      * Creates a KHelpMenu with the default app data (KAboutData::applicationData()).
      *
-     * @param parent The parent of the dialog boxes. The boxes are modeless
+     * \a parent The parent of the dialog boxes. The boxes are modeless
      *        and will be centered with respect to the parent.
      *
      * @since 6.9
@@ -166,17 +166,18 @@ public:
 #endif
 
     /**
-     * Creates a KHelpMenu with app data @p aboutData.
+     * Creates a KHelpMenu with app data \a aboutData.
      *
      * This constructor is useful if you want to use the help menu with custom
      * application data.
      *
-     * @param parent The parent of the dialog boxes. The boxes are modeless
+     * \a parent The parent of the dialog boxes. The boxes are modeless
      *        and will be centered with respect to the parent.
-     * @param aboutData User and app data used in the About app dialog and for
+     *
+     * \a aboutData User and app data used in the About app dialog and for
      *        the actions in the help menu.
      *
-     * @since 6.9
+     * \since 6.9
      */
     KHelpMenu(QWidget *parent, const KAboutData &aboutData);
 
