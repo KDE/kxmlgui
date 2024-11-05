@@ -117,7 +117,7 @@ void tst_KActionCategory::tstActionCreation()
     //         KStandardAction::StandardAction actionType,
     //         const QObject *receiver = NULL,
     //         const char *member = NULL);
-    QAction *action3 = category.addAction(KStandardAction::Revert);
+    QAction *action3 = category.addAction(KStandardActions::Revert);
     QCOMPARE(category.actions().count(action3), 1);
     QCOMPARE(collection.actions().count(action3), 1);
 
@@ -126,7 +126,7 @@ void tst_KActionCategory::tstActionCreation()
     //         const QString &name,
     //         const QObject *receiver = NULL,
     //         const char *member = NULL);
-    QAction *action4 = category.addAction(KStandardAction::Quit, QStringLiteral("myownname"));
+    QAction *action4 = category.addAction(KStandardActions::Quit, QStringLiteral("myownname"));
     QCOMPARE(action4->objectName(), QStringLiteral("myownname"));
     QCOMPARE(category.actions().count(action4), 1);
     QCOMPARE(collection.actions().count(action4), 1);
