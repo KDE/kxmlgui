@@ -190,6 +190,20 @@ public:
     QAction *addAction(KStandardActions::StandardAction actionType);
 
     /**
+     * Creates a new standard action and adds it to the collection.
+     * The newly created action is also returned.
+     *
+     * The KActionCollection takes ownership of the action object.
+     *
+     * @param actionType The standard action type of the action to create.
+     * @param name The name by which the action be retrieved again from the collection.
+     * @return the created action.
+     *
+     * @since 6.10
+     */
+    QAction *addAction(KStandardActions::StandardAction actionType, const QString &name);
+
+    /**
      * Creates a new standard action, adds it to the collection and connects the
      * action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
