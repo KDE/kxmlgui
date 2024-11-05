@@ -485,7 +485,22 @@ public:
     }
 
     /*!
-     * \brief Creates a new standard action, adds it to the collection and connects the
+     * Creates a new standard action and adds it to the collection.
+     *
+     * The newly created action is also returned.
+     *
+     * \a actionType The standard action type of the action to create.
+     *
+     * \a name The name by which the action be retrieved again from the collection.
+     *
+     * \return new action of the given type ActionType.
+     *
+     * \since 6.15
+     */
+    QAction *addAction(KStandardActions::StandardAction actionType, const QString &name);
+
+    /*!
+     * Creates a new standard action, adds it to the collection and connects the
      * action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
      *
