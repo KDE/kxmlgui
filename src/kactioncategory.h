@@ -15,7 +15,10 @@
 #include <QString>
 #include <memory>
 
+#include <KStandardActions>
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 15)
 #include <KStandardAction>
+#endif
 
 #include "kactioncollection.h"
 
