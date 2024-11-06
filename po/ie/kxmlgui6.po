@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:37+0000\n"
+"POT-Creation-Date: 2024-11-06 00:37+0000\n"
 "PO-Revision-Date: 2022-10-21 16:11+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: kde-i18n-doc@kde.org\n"
@@ -17,38 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.12\n"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, kde-format
-msgid "Visit component's homepage"
-msgstr "Visitar li hem-págine del componente"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit components's homepage\n"
-"%1"
-msgstr ""
-"Visitar li hem-págine del componente\n"
-"%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, kde-format
-msgctxt "@item Component name in about dialog."
-msgid "%1"
-msgstr "%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, kde-format
-msgid "Version %1"
-msgstr "Version %1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:152
-#: kabstractaboutdialog_p.cpp:84
-#, kde-format
-msgid "License: %1"
-msgstr "Licentie: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -87,43 +55,6 @@ msgstr "Providet per"
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "Traduction"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:53
-#, kde-format
-msgctxt "Action to send an email to a contributor"
-msgid "Email contributor"
-msgstr "Scrir al contributor"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:58
-#, kde-format
-msgid "Visit contributor's homepage"
-msgstr "Visitar li hem-págine del contributor"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, kde-format
-msgctxt "@info:tooltip Action to send an email to a contributor"
-msgid ""
-"Email contributor\n"
-"%1"
-msgstr ""
-"Scrir al contributor\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's homepage\n"
-"%1"
-msgstr ""
-"Visitar li hem-págine del contributor\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:181
-#, kde-format
-msgctxt "@item Contributor name in about dialog."
-msgid "%1"
-msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
 #, kde-format
@@ -260,49 +191,116 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Subtener KDE"
 
-#: kabstractaboutdialog_p.cpp:41
+#: kabstractaboutdialog_p.cpp:43
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Version %1"
 
-#: kabstractaboutdialog_p.cpp:106
+#: kabstractaboutdialog_p.cpp:87
 #, kde-format
-msgid "The <em>%1</em> windowing system"
+msgid "License: %1"
+msgstr "Licentie: %1"
+
+#: kabstractaboutdialog_p.cpp:112
+#, fuzzy, kde-format
+#| msgid "The <em>%1</em> windowing system"
+msgid "Windowing system"
 msgstr "Li sistema de fenestres <em>%1</em>"
 
-#: kabstractaboutdialog_p.cpp:107
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:109
+#: kabstractaboutdialog_p.cpp:114
 #, kde-format
-msgid "%1 (built against %2)"
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:115
+#, fuzzy, kde-format
+#| msgid "%1 (built against %2)"
+msgid "Using %1 and built against %2"
 msgstr "%1 (constructet con %2)"
 
-#: kabstractaboutdialog_p.cpp:111
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:136
+#: kabstractaboutdialog_p.cpp:119
 #, kde-format
-msgid "Show author photos"
-msgstr "Monstrar un foto del autor"
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:137
+#: kabstractaboutdialog_p.cpp:146
+#, fuzzy, kde-format
+#| msgid "Visit component's homepage"
+msgctxt "@action:button"
+msgid "Visit component's homepage"
+msgstr "Visitar li hem-págine del componente"
+
+#: kabstractaboutdialog_p.cpp:147
 #, kde-format
-msgid "Enabling this will fetch images from an online location"
-msgstr "Si it es activ, li images va esser obtenet de un lontan localisation"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr ""
+"Visitar li hem-págine del componente\n"
+"%1"
 
-#: kabstractaboutdialog_p.cpp:180
+#: kabstractaboutdialog_p.cpp:211
+#, fuzzy, kde-format
+#| msgid "Visit contributor's homepage"
+msgctxt "@action:button"
+msgid "Visit author's homepage"
+msgstr "Visitar li hem-págine del contributor"
+
+#: kabstractaboutdialog_p.cpp:212
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Visit contributor's homepage\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit author's homepage\n"
+"%1"
+msgstr ""
+"Visitar li hem-págine del contributor\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:234
+#, fuzzy, kde-format
+#| msgctxt "Action to send an email to a contributor"
+#| msgid "Email contributor"
+msgctxt "@action:button Send an email to a contributor"
+msgid "Email contributor"
+msgstr "Scrir al contributor"
+
+#: kabstractaboutdialog_p.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip Action to send an email to a contributor"
+#| msgid ""
+#| "Email contributor\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid "Email contributor: %1"
+msgstr ""
+"Scrir al contributor\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:286
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Ples usar %1 por raportar defectes.\n"
 
-#: kabstractaboutdialog_p.cpp:188
+#: kabstractaboutdialog_p.cpp:294
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1364,6 +1362,24 @@ msgstr "&Parametres"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Panel de instrumentarium"
+
+#~ msgctxt "@item Component name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Version %1"
+#~ msgstr "Version %1"
+
+#~ msgctxt "@item Contributor name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Show author photos"
+#~ msgstr "Monstrar un foto del autor"
+
+#~ msgid "Enabling this will fetch images from an online location"
+#~ msgstr ""
+#~ "Si it es activ, li images va esser obtenet de un lontan localisation"
 
 #~ msgid "About %1"
 #~ msgstr "Pri %1"

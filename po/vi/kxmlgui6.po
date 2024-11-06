@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:37+0000\n"
+"POT-Creation-Date: 2024-11-06 00:37+0000\n"
 "PO-Revision-Date: 2022-07-11 09:10+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -19,38 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.04.1\n"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, kde-format
-msgid "Visit component's homepage"
-msgstr "Xem trang nhà của thành phần"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit components's homepage\n"
-"%1"
-msgstr ""
-"Xem trang nhà của các thành phần\n"
-"%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, kde-format
-msgctxt "@item Component name in about dialog."
-msgid "%1"
-msgstr "%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, kde-format
-msgid "Version %1"
-msgstr "Phiên bản %1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:152
-#: kabstractaboutdialog_p.cpp:84
-#, kde-format
-msgid "License: %1"
-msgstr "Giấy phép: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -88,43 +56,6 @@ msgstr "Cảm ơn"
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "Biên dịch"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:53
-#, kde-format
-msgctxt "Action to send an email to a contributor"
-msgid "Email contributor"
-msgstr "Gửi thư cho người đóng góp"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:58
-#, kde-format
-msgid "Visit contributor's homepage"
-msgstr "Xem trang nhà của người đóng góp"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, kde-format
-msgctxt "@info:tooltip Action to send an email to a contributor"
-msgid ""
-"Email contributor\n"
-"%1"
-msgstr ""
-"Gửi thư cho người đóng góp\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's homepage\n"
-"%1"
-msgstr ""
-"Xem trang nhà của người đóng góp\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:181
-#, kde-format
-msgctxt "@item Contributor name in about dialog."
-msgid "%1"
-msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
 #, kde-format
@@ -261,49 +192,116 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "Ủn&g hộ KDE"
 
-#: kabstractaboutdialog_p.cpp:41
+#: kabstractaboutdialog_p.cpp:43
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Phiên bản %1"
 
-#: kabstractaboutdialog_p.cpp:106
+#: kabstractaboutdialog_p.cpp:87
 #, kde-format
-msgid "The <em>%1</em> windowing system"
+msgid "License: %1"
+msgstr "Giấy phép: %1"
+
+#: kabstractaboutdialog_p.cpp:112
+#, fuzzy, kde-format
+#| msgid "The <em>%1</em> windowing system"
+msgid "Windowing system"
 msgstr "Hệ thống cửa sổ <em>%1</em>"
 
-#: kabstractaboutdialog_p.cpp:107
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:109
+#: kabstractaboutdialog_p.cpp:114
 #, kde-format
-msgid "%1 (built against %2)"
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:115
+#, fuzzy, kde-format
+#| msgid "%1 (built against %2)"
+msgid "Using %1 and built against %2"
 msgstr "%1 (xây trên %2)"
 
-#: kabstractaboutdialog_p.cpp:111
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "Các Kết cấu KDE"
 
-#: kabstractaboutdialog_p.cpp:136
+#: kabstractaboutdialog_p.cpp:119
 #, kde-format
-msgid "Show author photos"
-msgstr "Hiện ảnh của tác giả"
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:137
+#: kabstractaboutdialog_p.cpp:146
+#, fuzzy, kde-format
+#| msgid "Visit component's homepage"
+msgctxt "@action:button"
+msgid "Visit component's homepage"
+msgstr "Xem trang nhà của thành phần"
+
+#: kabstractaboutdialog_p.cpp:147
 #, kde-format
-msgid "Enabling this will fetch images from an online location"
-msgstr "Chọn ô này thì ảnh sẽ được tìm nạp về từ một địa điểm trực tuyến"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr ""
+"Xem trang nhà của các thành phần\n"
+"%1"
 
-#: kabstractaboutdialog_p.cpp:180
+#: kabstractaboutdialog_p.cpp:211
+#, fuzzy, kde-format
+#| msgid "Visit contributor's homepage"
+msgctxt "@action:button"
+msgid "Visit author's homepage"
+msgstr "Xem trang nhà của người đóng góp"
+
+#: kabstractaboutdialog_p.cpp:212
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Visit contributor's homepage\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit author's homepage\n"
+"%1"
+msgstr ""
+"Xem trang nhà của người đóng góp\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:234
+#, fuzzy, kde-format
+#| msgctxt "Action to send an email to a contributor"
+#| msgid "Email contributor"
+msgctxt "@action:button Send an email to a contributor"
+msgid "Email contributor"
+msgstr "Gửi thư cho người đóng góp"
+
+#: kabstractaboutdialog_p.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip Action to send an email to a contributor"
+#| msgid ""
+#| "Email contributor\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid "Email contributor: %1"
+msgstr ""
+"Gửi thư cho người đóng góp\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:286
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Vui lòng sử dụng %1 để báo lỗi.\n"
 
-#: kabstractaboutdialog_p.cpp:188
+#: kabstractaboutdialog_p.cpp:294
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1361,6 +1359,23 @@ msgstr "Thiết &lập"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Thanh công cụ chính"
+
+#~ msgctxt "@item Component name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Version %1"
+#~ msgstr "Phiên bản %1"
+
+#~ msgctxt "@item Contributor name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Show author photos"
+#~ msgstr "Hiện ảnh của tác giả"
+
+#~ msgid "Enabling this will fetch images from an online location"
+#~ msgstr "Chọn ô này thì ảnh sẽ được tìm nạp về từ một địa điểm trực tuyến"
 
 #~ msgid "About %1"
 #~ msgstr "Về %1"

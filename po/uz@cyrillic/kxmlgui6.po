@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:37+0000\n"
+"POT-Creation-Date: 2024-11-06 00:37+0000\n"
 "PO-Revision-Date: 2009-10-17 00:34+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -16,39 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgid "Visit component's homepage"
-msgstr "Веб-саҳифа"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit components's homepage\n"
-"%1"
-msgstr "Веб-саҳифа"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-msgctxt "@item Component name in about dialog."
-msgid "%1"
-msgstr "%1%"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgid "Version %1"
-msgid "Version %1"
-msgstr "Версия %1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:152
-#: kabstractaboutdialog_p.cpp:84
-#, kde-format
-msgid "License: %1"
-msgstr "Лицензия: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, fuzzy, kde-format
@@ -92,43 +59,6 @@ msgstr "&Миннатдорчилик"
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "Таржима"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:53
-#, fuzzy, kde-format
-#| msgid "Other Contributors:"
-msgctxt "Action to send an email to a contributor"
-msgid "Email contributor"
-msgstr "Бошқа ҳисса қўшувчилар:"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:58
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgid "Visit contributor's homepage"
-msgstr "Веб-саҳифа"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, fuzzy, kde-format
-#| msgid "Other Contributors:"
-msgctxt "@info:tooltip Action to send an email to a contributor"
-msgid ""
-"Email contributor\n"
-"%1"
-msgstr "Бошқа ҳисса қўшувчилар:"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "Homepage"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's homepage\n"
-"%1"
-msgstr "Веб-саҳифа"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:181
-#, fuzzy, kde-format
-msgctxt "@item Contributor name in about dialog."
-msgid "%1"
-msgstr "%1%"
 
 #: kaboutkdedialog_p.cpp:31
 #, fuzzy, kde-format
@@ -305,45 +235,97 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "KDE'ни &қўллаб-қувватлаш"
 
-#: kabstractaboutdialog_p.cpp:41
+#: kabstractaboutdialog_p.cpp:43
 #, fuzzy, kde-format
 #| msgid "Version %1"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Версия %1"
 
-#: kabstractaboutdialog_p.cpp:106
+#: kabstractaboutdialog_p.cpp:87
 #, kde-format
-msgid "The <em>%1</em> windowing system"
+msgid "License: %1"
+msgstr "Лицензия: %1"
+
+#: kabstractaboutdialog_p.cpp:112
+#, kde-format
+msgid "Windowing system"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:107
+#: kabstractaboutdialog_p.cpp:113
 #, fuzzy, kde-format
 msgid "Qt"
 msgstr "Чиқиш"
 
-#: kabstractaboutdialog_p.cpp:109
+#: kabstractaboutdialog_p.cpp:114
 #, kde-format
-msgid "%1 (built against %2)"
+msgctxt "@info"
+msgid "Cross-platform application development framework"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:111
+#: kabstractaboutdialog_p.cpp:115
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Show author information"
-msgid "Show author photos"
-msgstr "Муаллиф ҳақида маълумотни кўрсатиш"
-
-#: kabstractaboutdialog_p.cpp:137
+#: kabstractaboutdialog_p.cpp:119
 #, kde-format
-msgid "Enabling this will fetch images from an online location"
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:180
+#: kabstractaboutdialog_p.cpp:146
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@action:button"
+msgid "Visit component's homepage"
+msgstr "Веб-саҳифа"
+
+#: kabstractaboutdialog_p.cpp:147
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr "Веб-саҳифа"
+
+#: kabstractaboutdialog_p.cpp:211
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@action:button"
+msgid "Visit author's homepage"
+msgstr "Веб-саҳифа"
+
+#: kabstractaboutdialog_p.cpp:212
+#, fuzzy, kde-format
+#| msgid "Homepage"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit author's homepage\n"
+"%1"
+msgstr "Веб-саҳифа"
+
+#: kabstractaboutdialog_p.cpp:234
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "@action:button Send an email to a contributor"
+msgid "Email contributor"
+msgstr "Бошқа ҳисса қўшувчилар:"
+
+#: kabstractaboutdialog_p.cpp:235
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "@info:tooltip"
+msgid "Email contributor: %1"
+msgstr "Бошқа ҳисса қўшувчилар:"
+
+#: kabstractaboutdialog_p.cpp:286
 #, fuzzy, kde-format
 #| msgid "Please use http://bugs.kde.org to report bugs.\n"
 msgctxt "Reference to website"
@@ -352,7 +334,7 @@ msgstr ""
 "Илтимос, хато ҳақида хабар бериш учун http://bugs.kde.org веб-сайтидан "
 "фойдаланинг.\n"
 
-#: kabstractaboutdialog_p.cpp:188
+#: kabstractaboutdialog_p.cpp:294
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -1420,6 +1402,26 @@ msgstr "Мос&ламалар"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Асосий асбоблар панели"
+
+#, fuzzy
+#~ msgctxt "@item Component name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1%"
+
+#, fuzzy
+#~| msgid "Version %1"
+#~ msgid "Version %1"
+#~ msgstr "Версия %1"
+
+#, fuzzy
+#~ msgctxt "@item Contributor name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1%"
+
+#, fuzzy
+#~| msgid "Show author information"
+#~ msgid "Show author photos"
+#~ msgstr "Муаллиф ҳақида маълумотни кўрсатиш"
 
 #~ msgid "About %1"
 #~ msgstr "%1 ҳақида"

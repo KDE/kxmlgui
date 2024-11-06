@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:37+0000\n"
+"POT-Creation-Date: 2024-11-06 00:37+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -19,43 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "A link to the description of this Get Hot New Stuff item"
-#| msgid "Visit homepage..."
-msgid "Visit component's homepage"
-msgstr "হোম পেজ পরিদর্শন করুন"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "A link to the description of this Get Hot New Stuff item"
-#| msgid "Visit homepage..."
-msgctxt "@info:tooltip"
-msgid ""
-"Visit components's homepage\n"
-"%1"
-msgstr "হোম পেজ পরিদর্শন করুন"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
-msgctxt "@item Component name in about dialog."
-msgid "%1"
-msgstr "%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgid "Version %1"
-msgid "Version %1"
-msgstr "সংস্করণ %1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:152
-#: kabstractaboutdialog_p.cpp:84
-#, kde-format
-msgid "License: %1"
-msgstr "লাইসেন্স: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, fuzzy, kde-format
@@ -100,45 +63,6 @@ msgstr "ধন্যবাদ জানাই (&T)"
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "অনুবাদ"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:53
-#, fuzzy, kde-format
-#| msgid "Other Contributors:"
-msgctxt "Action to send an email to a contributor"
-msgid "Email contributor"
-msgstr "অন্যান্য যোগদানকারী:"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:58
-#, fuzzy, kde-format
-#| msgctxt "A link to the description of this Get Hot New Stuff item"
-#| msgid "Visit homepage..."
-msgid "Visit contributor's homepage"
-msgstr "হোম পেজ পরিদর্শন করুন"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, fuzzy, kde-format
-#| msgid "Other Contributors:"
-msgctxt "@info:tooltip Action to send an email to a contributor"
-msgid ""
-"Email contributor\n"
-"%1"
-msgstr "অন্যান্য যোগদানকারী:"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "A link to the description of this Get Hot New Stuff item"
-#| msgid "Visit homepage..."
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's homepage\n"
-"%1"
-msgstr "হোম পেজ পরিদর্শন করুন"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:181
-#, kde-format
-msgctxt "@item Contributor name in about dialog."
-msgid "%1"
-msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
 #, fuzzy, kde-format
@@ -242,52 +166,108 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "KDE-কে সমর্থন করুন (&S)"
 
-#: kabstractaboutdialog_p.cpp:41
+#: kabstractaboutdialog_p.cpp:43
 #, fuzzy, kde-format
 #| msgid "Version %1"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "সংস্করণ %1"
 
-#: kabstractaboutdialog_p.cpp:106
+#: kabstractaboutdialog_p.cpp:87
 #, kde-format
-msgid "The <em>%1</em> windowing system"
+msgid "License: %1"
+msgstr "লাইসেন্স: %1"
+
+#: kabstractaboutdialog_p.cpp:112
+#, kde-format
+msgid "Windowing system"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:107
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:109
+#: kabstractaboutdialog_p.cpp:114
 #, kde-format
-msgid "%1 (built against %2)"
+msgctxt "@info"
+msgid "Cross-platform application development framework"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:111
+#: kabstractaboutdialog_p.cpp:115
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Show author information"
-msgid "Show author photos"
-msgstr "লেখকের পরিচিত প্রদর্শন করা হবে"
-
-#: kabstractaboutdialog_p.cpp:137
+#: kabstractaboutdialog_p.cpp:119
 #, kde-format
-msgid "Enabling this will fetch images from an online location"
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:180
+#: kabstractaboutdialog_p.cpp:146
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@action:button"
+msgid "Visit component's homepage"
+msgstr "হোম পেজ পরিদর্শন করুন"
+
+#: kabstractaboutdialog_p.cpp:147
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr "হোম পেজ পরিদর্শন করুন"
+
+#: kabstractaboutdialog_p.cpp:211
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@action:button"
+msgid "Visit author's homepage"
+msgstr "হোম পেজ পরিদর্শন করুন"
+
+#: kabstractaboutdialog_p.cpp:212
+#, fuzzy, kde-format
+#| msgctxt "A link to the description of this Get Hot New Stuff item"
+#| msgid "Visit homepage..."
+msgctxt "@info:tooltip"
+msgid ""
+"Visit author's homepage\n"
+"%1"
+msgstr "হোম পেজ পরিদর্শন করুন"
+
+#: kabstractaboutdialog_p.cpp:234
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "@action:button Send an email to a contributor"
+msgid "Email contributor"
+msgstr "অন্যান্য যোগদানকারী:"
+
+#: kabstractaboutdialog_p.cpp:235
+#, fuzzy, kde-format
+#| msgid "Other Contributors:"
+msgctxt "@info:tooltip"
+msgid "Email contributor: %1"
+msgstr "অন্যান্য যোগদানকারী:"
+
+#: kabstractaboutdialog_p.cpp:286
 #, fuzzy, kde-format
 #| msgid "Please use http://bugs.kde.org to report bugs.\n"
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "অনুগ্রহ করে http://bugs.kde.org-এ বাগ দায়ের করুন।\n"
 
-#: kabstractaboutdialog_p.cpp:188
+#: kabstractaboutdialog_p.cpp:294
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -1382,6 +1362,27 @@ msgstr "বিবিধ বৈশিষ্ট্য (&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "প্রধান টুল-বার"
+
+#, fuzzy
+#~| msgctxt "@item Contributor name in about dialog."
+#~| msgid "%1"
+#~ msgctxt "@item Component name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgid "Version %1"
+#~ msgid "Version %1"
+#~ msgstr "সংস্করণ %1"
+
+#~ msgctxt "@item Contributor name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgid "Show author information"
+#~ msgid "Show author photos"
+#~ msgstr "লেখকের পরিচিত প্রদর্শন করা হবে"
 
 #~ msgid "About %1"
 #~ msgstr "%1 পরিচিতি"

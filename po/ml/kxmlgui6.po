@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:37+0000\n"
+"POT-Creation-Date: 2024-11-06 00:37+0000\n"
 "PO-Revision-Date: 2021-08-19 11:55+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -21,47 +21,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
-msgid "Visit component's homepage"
-msgstr "സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
-msgctxt "@info:tooltip"
-msgid ""
-"Visit components's homepage\n"
-"%1"
-msgstr ""
-"സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക\n"
-"%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@item Contributor name in about dialog."
-#| msgid "%1"
-msgctxt "@item Component name in about dialog."
-msgid "%1"
-msgstr "%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgctxt "Version version-number"
-#| msgid "Version %1"
-msgid "Version %1"
-msgstr "ലക്കം %1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:152
-#: kabstractaboutdialog_p.cpp:84
-#, kde-format
-msgid "License: %1"
-msgstr "ലൈസന്‍സ്: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -102,43 +61,6 @@ msgstr "നന്ദി"
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "തര്‍ജ്ജമ"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:53
-#, kde-format
-msgctxt "Action to send an email to a contributor"
-msgid "Email contributor"
-msgstr "സംഭാവകന് ഈമെയിൽ ചെയ്യുക"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:58
-#, kde-format
-msgid "Visit contributor's homepage"
-msgstr "സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, kde-format
-msgctxt "@info:tooltip Action to send an email to a contributor"
-msgid ""
-"Email contributor\n"
-"%1"
-msgstr ""
-"സംഭാവകന് ഈമെയിൽ ചെയ്യുക\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's homepage\n"
-"%1"
-msgstr ""
-"സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:181
-#, kde-format
-msgctxt "@item Contributor name in about dialog."
-msgid "%1"
-msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
 #, kde-format
@@ -256,49 +178,118 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "കെഡിഇയെ പിന്തുണയ്ക്കുക (&S)"
 
-#: kabstractaboutdialog_p.cpp:41
+#: kabstractaboutdialog_p.cpp:43
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "ലക്കം %1"
 
-#: kabstractaboutdialog_p.cpp:106
+#: kabstractaboutdialog_p.cpp:87
 #, kde-format
-msgid "The <em>%1</em> windowing system"
+msgid "License: %1"
+msgstr "ലൈസന്‍സ്: %1"
+
+#: kabstractaboutdialog_p.cpp:112
+#, kde-format
+msgid "Windowing system"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:107
+#: kabstractaboutdialog_p.cpp:113
 #, fuzzy, kde-format
 msgid "Qt"
 msgstr "ക്യുട്ടി"
 
-#: kabstractaboutdialog_p.cpp:109
+#: kabstractaboutdialog_p.cpp:114
 #, kde-format
-msgid "%1 (built against %2)"
+msgctxt "@info"
+msgid "Cross-platform application development framework"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:111
+#: kabstractaboutdialog_p.cpp:115
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:136
+#: kabstractaboutdialog_p.cpp:119
 #, kde-format
-msgid "Show author photos"
-msgstr "രചയിതാവിന്റെ ചിത്രങ്ങൾ കാണിക്കുക"
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:137
-#, kde-format
-msgid "Enabling this will fetch images from an online location"
-msgstr "ഇത് പ്രവർത്തനക്ഷമമാക്കിയാൽ ഒരു ഓൺലൈൻ ഇടത്തിൽ നിന്ന് ചിത്രങ്ങൾ ലഭ്യമാക്കും"
+#: kabstractaboutdialog_p.cpp:146
+#, fuzzy, kde-format
+#| msgid "Visit contributor's homepage"
+msgctxt "@action:button"
+msgid "Visit component's homepage"
+msgstr "സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക"
 
-#: kabstractaboutdialog_p.cpp:180
+#: kabstractaboutdialog_p.cpp:147
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Visit contributor's homepage\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr ""
+"സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:211
+#, fuzzy, kde-format
+#| msgid "Visit contributor's homepage"
+msgctxt "@action:button"
+msgid "Visit author's homepage"
+msgstr "സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക"
+
+#: kabstractaboutdialog_p.cpp:212
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Visit contributor's homepage\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit author's homepage\n"
+"%1"
+msgstr ""
+"സംഭാവകന്റെ ആസ്ഥാന താള്‍ സന്ദര്‍ശിയ്ക്കുക\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:234
+#, fuzzy, kde-format
+#| msgctxt "Action to send an email to a contributor"
+#| msgid "Email contributor"
+msgctxt "@action:button Send an email to a contributor"
+msgid "Email contributor"
+msgstr "സംഭാവകന് ഈമെയിൽ ചെയ്യുക"
+
+#: kabstractaboutdialog_p.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip Action to send an email to a contributor"
+#| msgid ""
+#| "Email contributor\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid "Email contributor: %1"
+msgstr ""
+"സംഭാവകന് ഈമെയിൽ ചെയ്യുക\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:286
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "പിശകുകൾ അറിയിക്കാൻ %1 ഉപയോഗിക്കുക.\n"
 
-#: kabstractaboutdialog_p.cpp:188
+#: kabstractaboutdialog_p.cpp:294
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1366,6 +1357,29 @@ msgstr "സജ്ജീകരണങ്ങള്‍ (&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "പ്രധാന ഉപകരണപ്പട്ട"
+
+#, fuzzy
+#~| msgctxt "@item Contributor name in about dialog."
+#~| msgid "%1"
+#~ msgctxt "@item Component name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#, fuzzy
+#~| msgctxt "Version version-number"
+#~| msgid "Version %1"
+#~ msgid "Version %1"
+#~ msgstr "ലക്കം %1"
+
+#~ msgctxt "@item Contributor name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Show author photos"
+#~ msgstr "രചയിതാവിന്റെ ചിത്രങ്ങൾ കാണിക്കുക"
+
+#~ msgid "Enabling this will fetch images from an online location"
+#~ msgstr "ഇത് പ്രവർത്തനക്ഷമമാക്കിയാൽ ഒരു ഓൺലൈൻ ഇടത്തിൽ നിന്ന് ചിത്രങ്ങൾ ലഭ്യമാക്കും"
 
 #~ msgid "About %1"
 #~ msgstr "%1 സംബന്ധിച്ചു്"

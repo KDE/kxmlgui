@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:37+0000\n"
+"POT-Creation-Date: 2024-11-06 00:37+0000\n"
 "PO-Revision-Date: 2022-02-10 12:10+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -20,38 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.04.3\n"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:51
-#, kde-format
-msgid "Visit component's homepage"
-msgstr "घटक के मुखपृष्ठ पर जाएँ"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:99
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit components's homepage\n"
-"%1"
-msgstr ""
-"घटक के मुखपृष्ठ पर जाएँ \n"
-"%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:140
-#, kde-format
-msgctxt "@item Component name in about dialog."
-msgid "%1"
-msgstr "%1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, kde-format
-msgid "Version %1"
-msgstr "संस्करण %1"
-
-#: kaboutapplicationcomponentlistdelegate_p.cpp:152
-#: kabstractaboutdialog_p.cpp:84
-#, kde-format
-msgid "License: %1"
-msgstr "अनुज्ञापत्र: %1"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -90,43 +58,6 @@ msgstr "निम्नलिखित को धन्यवाद"
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "अनुवाद"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:53
-#, kde-format
-msgctxt "Action to send an email to a contributor"
-msgid "Email contributor"
-msgstr "ईमेल सहयोगी"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:58
-#, kde-format
-msgid "Visit contributor's homepage"
-msgstr "सहयोगीयों के मुखपृष्ठ पर जाएँ"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, kde-format
-msgctxt "@info:tooltip Action to send an email to a contributor"
-msgid ""
-"Email contributor\n"
-"%1"
-msgstr ""
-"सहयोगी को इमेल करें\n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Visit contributor's homepage\n"
-"%1"
-msgstr ""
-"सहयोगी के मुखपृष्ठ पर जाएँ \n"
-"%1"
-
-#: kaboutapplicationpersonlistdelegate_p.cpp:181
-#, kde-format
-msgctxt "@item Contributor name in about dialog."
-msgid "%1"
-msgstr "%1"
 
 #: kaboutkdedialog_p.cpp:31
 #, kde-format
@@ -260,49 +191,116 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "केडीई का समर्थन करें (&S)"
 
-#: kabstractaboutdialog_p.cpp:41
+#: kabstractaboutdialog_p.cpp:43
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "संस्करण %1"
 
-#: kabstractaboutdialog_p.cpp:106
+#: kabstractaboutdialog_p.cpp:87
 #, kde-format
-msgid "The <em>%1</em> windowing system"
+msgid "License: %1"
+msgstr "अनुज्ञापत्र: %1"
+
+#: kabstractaboutdialog_p.cpp:112
+#, fuzzy, kde-format
+#| msgid "The <em>%1</em> windowing system"
+msgid "Windowing system"
 msgstr "<em>%1</em> विंडो प्रणाली"
 
-#: kabstractaboutdialog_p.cpp:107
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgid "Qt"
 msgstr "क्यूट"
 
-#: kabstractaboutdialog_p.cpp:109
+#: kabstractaboutdialog_p.cpp:114
 #, kde-format
-msgid "%1 (built against %2)"
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:115
+#, fuzzy, kde-format
+#| msgid "%1 (built against %2)"
+msgid "Using %1 and built against %2"
 msgstr "%1 (%2 के प्रती निर्मित)"
 
-#: kabstractaboutdialog_p.cpp:111
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "केडीई फ्रेमवर्कस"
 
-#: kabstractaboutdialog_p.cpp:136
+#: kabstractaboutdialog_p.cpp:119
 #, kde-format
-msgid "Show author photos"
-msgstr "लेखक की फोटोओं को दिखाएँ"
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:137
+#: kabstractaboutdialog_p.cpp:146
+#, fuzzy, kde-format
+#| msgid "Visit component's homepage"
+msgctxt "@action:button"
+msgid "Visit component's homepage"
+msgstr "घटक के मुखपृष्ठ पर जाएँ"
+
+#: kabstractaboutdialog_p.cpp:147
 #, kde-format
-msgid "Enabling this will fetch images from an online location"
-msgstr "इसे सक्षम करने से एक ऑनलाइन स्थान से चित्र प्राप्त होंगे"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr ""
+"घटक के मुखपृष्ठ पर जाएँ \n"
+"%1"
 
-#: kabstractaboutdialog_p.cpp:180
+#: kabstractaboutdialog_p.cpp:211
+#, fuzzy, kde-format
+#| msgid "Visit contributor's homepage"
+msgctxt "@action:button"
+msgid "Visit author's homepage"
+msgstr "सहयोगीयों के मुखपृष्ठ पर जाएँ"
+
+#: kabstractaboutdialog_p.cpp:212
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Visit contributor's homepage\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit author's homepage\n"
+"%1"
+msgstr ""
+"सहयोगी के मुखपृष्ठ पर जाएँ \n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:234
+#, fuzzy, kde-format
+#| msgctxt "Action to send an email to a contributor"
+#| msgid "Email contributor"
+msgctxt "@action:button Send an email to a contributor"
+msgid "Email contributor"
+msgstr "ईमेल सहयोगी"
+
+#: kabstractaboutdialog_p.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip Action to send an email to a contributor"
+#| msgid ""
+#| "Email contributor\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid "Email contributor: %1"
+msgstr ""
+"सहयोगी को इमेल करें\n"
+"%1"
+
+#: kabstractaboutdialog_p.cpp:286
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "कृपया %1 का उपयोग बग रिपोर्ट के लिए करें।\n"
 
-#: kabstractaboutdialog_p.cpp:188
+#: kabstractaboutdialog_p.cpp:294
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1369,6 +1367,23 @@ msgstr "विन्यास (&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "मुख्य औज़ार पट्टी"
+
+#~ msgctxt "@item Component name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Version %1"
+#~ msgstr "संस्करण %1"
+
+#~ msgctxt "@item Contributor name in about dialog."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Show author photos"
+#~ msgstr "लेखक की फोटोओं को दिखाएँ"
+
+#~ msgid "Enabling this will fetch images from an online location"
+#~ msgstr "इसे सक्षम करने से एक ऑनलाइन स्थान से चित्र प्राप्त होंगे"
 
 #~ msgid "About %1"
 #~ msgstr "%1 के बारे में"
