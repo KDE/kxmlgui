@@ -185,10 +185,9 @@ msgid "License: %1"
 msgstr "许可证：%1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
+#, kde-format
 msgid "Windowing system"
-msgstr "%1 窗口系统"
+msgstr ""
 
 #: kabstractaboutdialog_p.cpp:113
 #, kde-format
@@ -202,10 +201,9 @@ msgid "Cross-platform application development framework"
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (使用 %2 构建)"
+msgstr ""
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -219,11 +217,10 @@ msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "访问组件的主页"
+msgstr ""
 
 #: kabstractaboutdialog_p.cpp:147
 #, kde-format
@@ -236,45 +233,30 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "访问贡献者的主页"
+msgstr ""
 
 #: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"访问贡献者的主页\n"
-"%1"
 
 #: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "发送邮件给贡献者"
+msgstr ""
 
 #: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr ""
-"发送邮件给贡献者\n"
-"%1"
 
 #: kabstractaboutdialog_p.cpp:286
 #, kde-format
@@ -1307,20 +1289,3 @@ msgstr "设置(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "主工具栏"
-
-#~ msgctxt "@item Component name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Version %1"
-#~ msgstr "版本 %1"
-
-#~ msgctxt "@item Contributor name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Show author photos"
-#~ msgstr "显示作者照片"
-
-#~ msgid "Enabling this will fetch images from an online location"
-#~ msgstr "启用此选项将从在线位置获取图像"

@@ -213,10 +213,9 @@ msgid "License: %1"
 msgstr "Lisans: %1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
+#, kde-format
 msgid "Windowing system"
-msgstr "<em>%1</em> pencereleme sistemi"
+msgstr "Pencereleme sistemi"
 
 #: kabstractaboutdialog_p.cpp:113
 #, kde-format
@@ -227,13 +226,12 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "Çapraz platform uygulama geliştirme çatısı"
 
 #: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (%2 üzerine yapılı)"
+msgstr "%1 kullanarak ve %2 üzerine yapılı"
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -245,13 +243,14 @@ msgstr "KDE Frameworks"
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
+"Qt’yi genişletmek üzere KDE Topluluğu tarafından oluşturulan kitaplıklar "
+"koleksiyonu"
 
 #: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "Bileşen ana sayfasını ziyaret et"
+msgstr "Bileşen Sayfasına Git"
 
 #: kabstractaboutdialog_p.cpp:147
 #, kde-format
@@ -260,49 +259,36 @@ msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Bileşen ana sayfasını ziyaret et\n"
+"Bileşenin ana sayfasını ziyaret et\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Katkıcının ana sayfasını ziyaret et"
+msgstr "Yazar Sayfasına Git"
 
 #: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Katkıcının ana sayfasını ziyaret et\n"
+"Yazarın ana sayfasını ziyaret et\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "Katkıcıya e-posta gönder"
+msgstr "Katkıcıya E-posta Gönder"
 
 #: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Katkıcıya e-posta gönder:\n"
-"%1"
+msgstr "Katkıcıya e-posta gönder: %1"
 
 #: kabstractaboutdialog_p.cpp:286
 #, kde-format
@@ -1364,35 +1350,3 @@ msgstr "Ayar&lar"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Ana Araç Çubuğu"
-
-#~ msgctxt "@item Component name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Version %1"
-#~ msgstr "Sürüm %1"
-
-#~ msgctxt "@item Contributor name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Show author photos"
-#~ msgstr "Yazar fotoğraflarını göster"
-
-#~ msgid "Enabling this will fetch images from an online location"
-#~ msgstr "Bunu etkinleştirmek görselleri çevrimiçi bir konumdan getirir."
-
-#~ msgid "About %1"
-#~ msgstr "%1 Hakkında"
-
-#~ msgctxt "@action:button"
-#~ msgid "Change &Icon..."
-#~ msgstr "&Simgeyi Değiştir…"
-
-#~ msgctxt "@action:button"
-#~ msgid "Change Te&xt..."
-#~ msgstr "&Metni Değiştir…"
-
-#~ msgctxt "@action:button"
-#~ msgid "New..."
-#~ msgstr "Yeni…"
