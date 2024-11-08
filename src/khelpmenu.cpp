@@ -50,7 +50,7 @@ public:
         delete mSwitchApplicationLanguage;
     }
 
-    void createActions(KHelpMenu *q);
+    void createActions(KHelpMenu *q, bool showWhatsThis);
 
     QMenu *mMenu = nullptr;
     QDialog *mAboutApp = nullptr;
@@ -61,9 +61,6 @@ public:
 
     // TODO evaluate if we use static_cast<QWidget*>(parent()) instead of mParent to win that bit of memory
     QWidget *mParent = nullptr;
-
-    bool mShowWhatsThis = false;
-    bool mActionsCreated = false;
 
     QAction *mHandBookAction = nullptr;
     QAction *mWhatsThisAction = nullptr;
@@ -79,19 +76,17 @@ KHelpMenu::KHelpMenu(QWidget *parent, const QString &, bool showWhatsThis)
     : QObject(parent)
     , d(new KHelpMenuPrivate)
 {
-    d->mShowWhatsThis = showWhatsThis;
     d->mParent = parent;
-    d->createActions(this);
+    d->createActions(this, showWhatsThis);
 }
 
 KHelpMenu::KHelpMenu(QWidget *parent, const KAboutData &aboutData, bool showWhatsThis)
     : QObject(parent)
     , d(new KHelpMenuPrivate)
 {
-    d->mShowWhatsThis = showWhatsThis;
     d->mParent = parent;
     d->mAboutData = aboutData;
-    d->createActions(this);
+    d->createActions(this, showWhatsThis);
 }
 
 KHelpMenu::~KHelpMenu()
@@ -99,17 +94,12 @@ KHelpMenu::~KHelpMenu()
     delete d;
 }
 
-void KHelpMenuPrivate::createActions(KHelpMenu *q)
+void KHelpMenuPrivate::createActions(KHelpMenu *q, bool showWhatsThis)
 {
-    if (mActionsCreated) {
-        return;
-    }
-    mActionsCreated = true;
-
     if (KAuthorized::authorizeAction(QStringLiteral("help_contents"))) {
         mHandBookAction = KStandardActions::helpContents(q, &KHelpMenu::appHelpActivated, q);
     }
-    if (mShowWhatsThis && KAuthorized::authorizeAction(QStringLiteral("help_whats_this"))) {
+    if (showWhatsThis && KAuthorized::authorizeAction(QStringLiteral("help_whats_this"))) {
         mWhatsThisAction = KStandardActions::whatsThis(q, &KHelpMenu::contextHelpActivated, q);
     }
 
@@ -142,8 +132,6 @@ QMenu *KHelpMenu::menu()
         connect(d->mMenu, &QObject::destroyed, this, &KHelpMenu::menuDestroyed);
 
         d->mMenu->setTitle(i18n("&Help"));
-
-        d->createActions(this);
 
         bool need_separator = false;
         if (d->mHandBookAction) {
