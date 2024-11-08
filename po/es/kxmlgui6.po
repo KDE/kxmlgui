@@ -2,20 +2,20 @@
 # Translation of kdelibs4 to Spanish
 # Copyright (C) 2000-2007
 #
-# Pablo de Vicente <vicente@oan.es>, 2000-2002,2003, 2004.
-# Pablo de Vicente <vicnte@oan.es>, 2003.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
+# SPDX-FileCopyrightText: 2000-2002, 2003, 2004 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003 Pablo de Vicente <vicnte@oan.es>
+# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
 # SPDX-FileCopyrightText: 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006, 2007.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Jaime Robles <jaime@kde.org>, 2007.
-# Javier Viñal <fjvinal@gmail.com>, 2013.
+# SPDX-FileCopyrightText: 2005, 2006, 2007 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2007 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2013 Javier Viñal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-06 00:37+0000\n"
-"PO-Revision-Date: 2024-05-08 12:46+0200\n"
+"PO-Revision-Date: 2024-11-07 02:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
@@ -207,10 +207,9 @@ msgid "License: %1"
 msgstr "Licencia: %1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
+#, kde-format
 msgid "Windowing system"
-msgstr "El sistema de ventanas <em>%1</em>"
+msgstr "Sistema de ventanas"
 
 #: kabstractaboutdialog_p.cpp:113
 #, kde-format
@@ -221,13 +220,12 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "Infraestructura de desarrollo de aplicaciones multiplataforma"
 
 #: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (compilado con %2)"
+msgstr "Usando %1 y compilado con %2"
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -238,11 +236,10 @@ msgstr "KDE Frameworks"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
-msgstr ""
+msgstr "Colección de bibliotecas creadas por la comunidad KDE para extender Qt"
 
 #: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Visitar la página web del componente"
@@ -258,45 +255,32 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Visitar la página web del colaborador"
+msgstr "Visitar la página web del autor"
 
 #: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Visitar la página web del colaborador\n"
+"Visitar la página web del autor\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Enviar correo al colaborador"
 
 #: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Enviar correo al colaborador\n"
-"%1"
+msgstr "Enviar correo al colaborador: %1"
 
 #: kabstractaboutdialog_p.cpp:286
 #, kde-format
