@@ -115,6 +115,16 @@ KHelpMenu::~KHelpMenu()
     delete d;
 }
 
+void KHelpMenu::setShowWhatsThis(bool showWhatsThis)
+{
+    if (!showWhatsThis) {
+        delete d->mWhatsThisAction;
+        d->mWhatsThisAction = nullptr;
+    } else if (KAuthorized::authorizeAction(QStringLiteral("help_whats_this"))) {
+        d->mWhatsThisAction = KStandardActions::whatsThis(this, &KHelpMenu::contextHelpActivated, this);
+    }
+}
+
 void KHelpMenuPrivate::createActions(KHelpMenu *q, bool showWhatsThis)
 {
     if (KAuthorized::authorizeAction(QStringLiteral("help_contents"))) {

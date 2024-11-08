@@ -179,6 +179,13 @@ public:
     ~KHelpMenu() override;
 
     /**
+     * Set whether to show the What's This menu entry in the help menu.
+     * The default is to show the menu entry (if Kiosk settings allow it).
+     * @since 6.9
+     */
+    void setShowWhatsThis(bool showWhatsThis);
+
+    /**
      * Returns a popup menu you can use in the menu bar or where you
      * need it.
      *
