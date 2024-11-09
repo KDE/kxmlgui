@@ -107,9 +107,6 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
     wrapper->setWidget(componentWidget);
 
     QList<KAboutComponent> allComponents = components;
-    auto platform = QGuiApplication::platformName();
-    platform.replace(0, 1, platform[0].toUpper());
-    allComponents.prepend(KAboutComponent(platform, i18n("Windowing system")));
     allComponents.prepend(KAboutComponent(i18n("Qt"),
                                           i18nc("@info", "Cross-platform application development framework"),
                                           i18n("Using %1 and built against %2", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)),
