@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-06 00:37+0000\n"
-"PO-Revision-Date: 2024-07-05 19:25+0200\n"
+"PO-Revision-Date: 2024-11-06 10:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -205,10 +205,9 @@ msgid "License: %1"
 msgstr "Llicència: %1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
+#, kde-format
 msgid "Windowing system"
-msgstr "El sistema de finestres <em>%1</em>"
+msgstr "Sistema de finestres"
 
 #: kabstractaboutdialog_p.cpp:113
 #, kde-format
@@ -219,13 +218,12 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "Entorn de desenvolupament d'aplicacions multiplataforma"
 
 #: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (construïdes amb %2)"
+msgstr "S'utilitza %1 i s'ha construït amb %2"
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -237,10 +235,11 @@ msgstr "Frameworks de KDE"
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
+"Col·lecció de biblioteques creades per la Comunitat de KDE per a ampliar les "
+"Qt"
 
 #: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Visiteu la pàgina del component"
@@ -256,45 +255,32 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Visiteu la pàgina personal del col·laborador"
+msgstr "Visiteu la pàgina personal de l'autor/a"
 
 #: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Visiteu la pàgina personal del col·laborador\n"
+"Visiteu la pàgina personal de l'autor/a\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Envieu un correu al col·laborador"
 
 #: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Envieu un correu al col·laborador\n"
-"%1"
+msgstr "Enviament d'un correu al col·laborador: %1"
 
 #: kabstractaboutdialog_p.cpp:286
 #, kde-format
@@ -1368,20 +1354,3 @@ msgstr "Con&figuració"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra d'eines principal"
-
-#~ msgctxt "@item Component name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Version %1"
-#~ msgstr "Versió %1"
-
-#~ msgctxt "@item Contributor name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Show author photos"
-#~ msgstr "Mostra les fotos dels autors"
-
-#~ msgid "Enabling this will fetch images from an online location"
-#~ msgstr "Activant açò es recuperaran les imatges d'una ubicació en línia"
