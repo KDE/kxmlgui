@@ -14,21 +14,21 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-06 00:37+0000\n"
-"PO-Revision-Date: 2024-07-09 13:57+0200\n"
+"PO-Revision-Date: 2024-11-10 20:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "%1-(r)i buruz"
+msgstr "%1(r)i buruz"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
@@ -204,10 +204,9 @@ msgid "License: %1"
 msgstr "Lizentzia: %1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
+#, kde-format
 msgid "Windowing system"
-msgstr "<em>%1</em> leiho-sistema"
+msgstr "Leiho-sistema"
 
 #: kabstractaboutdialog_p.cpp:113
 #, kde-format
@@ -218,13 +217,12 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "Plataforma anitzeko aplikazioak garatzeko armazoia"
 
 #: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (%2 erabiliz eraikia)"
+msgstr "%1 erabiltzen du eta %2 erabiliz eraikia"
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -235,11 +233,10 @@ msgstr "KDE Frameworks"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
-msgstr ""
+msgstr "Qt hedatzeko KDE Komunitateak eraikitako liburutegi-bilduma"
 
 #: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Bisitatu osagaiaren atariko orrialdea"
@@ -255,45 +252,32 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Bisitatu laguntzaile baten atariko orrialdea"
+msgstr "Bisitatu egilearen atariko orrialdea"
 
 #: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Bisitatu laguntzailearen orri nagusia\n"
+"Bisitatu egilearen orri nagusia\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "Post@ bidali laguntzaileari"
+msgstr "Kolaboratzaileari e-posta bidali"
 
 #: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Eposta bidali laguntzaile honi\n"
-"%1"
+msgstr "Kolaboratzaileari e-posta bidali: %1"
 
 #: kabstractaboutdialog_p.cpp:286
 #, kde-format
