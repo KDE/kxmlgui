@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-06 00:37+0000\n"
-"PO-Revision-Date: 2024-05-09 09:56+0400\n"
+"PO-Revision-Date: 2024-11-11 17:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -13,6 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -188,10 +189,9 @@ msgid "License: %1"
 msgstr "الترخيص: %1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
+#, kde-format
 msgid "Windowing system"
-msgstr "نظام نوافذ <em>%1</em>"
+msgstr "نظام النوافذ"
 
 #: kabstractaboutdialog_p.cpp:113
 #, kde-format
@@ -202,13 +202,12 @@ msgstr "كيوت"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "إطار عمل لتطوير التطبيقات متعددة الأنظمة"
 
 #: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "‏%1 (بني على %2)"
+msgstr "يستخدم %1 وبنيت على %2"
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -219,11 +218,10 @@ msgstr "إطار كِيدِي"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
-msgstr ""
+msgstr "مجموعة من المكتبات التي أنشأها مجتمع كيدي لتوسيع كيو تي"
 
 #: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "زر صفحة المكون"
@@ -239,45 +237,32 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "زر صفحة المساهم الرئيسية"
+msgstr "زر صفحة المساهم الرئيسة"
 
 #: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"زر صفحة المساهم الرئيسية\n"
+"زر صفحة المساهم الرئيسة\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "راسل المساهم"
 
 #: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"راسل المساهم:\n"
-"%1"
+msgstr "راسل المساهم: %1"
 
 #: kabstractaboutdialog_p.cpp:286
 #, kde-format
