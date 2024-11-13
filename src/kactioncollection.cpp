@@ -32,85 +32,20 @@
 #include <QDomDocument>
 #include <QGuiApplication>
 #include <QList>
+#include <QMap>
 #include <QMetaMethod>
 #include <QSet>
+
+#include <cstdio>
 
 static bool actionHasGlobalShortcut(const QAction *action)
 {
 #if HAVE_GLOBALACCEL
     return KGlobalAccel::self()->hasShortcut(action);
 #else
-    Q_UNUSED(action)
     return false;
 #endif
 }
-
-struct ActionStorage {
-    void addAction(const QString &name, QAction *action)
-    {
-        auto it = std::lower_bound(m_names.begin(), m_names.end(), name);
-        // We can't have an action with this name already
-        Q_ASSERT(it == m_names.end() || *it != name);
-        auto idx = std::distance(m_names.begin(), it);
-        m_names.insert(idx, name);
-        m_actions.insert(idx, action);
-        Q_ASSERT(m_names.size() == m_actions.size());
-    }
-
-    bool removeAction(QAction *action)
-    {
-        auto it = std::find(m_actions.begin(), m_actions.end(), action);
-        if (it != m_actions.end()) {
-            // We can't have the same action twice.
-            Q_ASSERT(std::find(it + 1, m_actions.end(), action) == m_actions.end());
-            auto idx = std::distance(m_actions.begin(), it);
-            m_names.erase(m_names.begin() + idx);
-            m_actions.erase(it);
-            return true;
-        }
-        Q_ASSERT(m_names.size() == m_actions.size());
-        return false;
-    }
-
-    QAction *findAction(const QString &name) const
-    {
-        auto it = std::lower_bound(m_names.begin(), m_names.end(), name);
-        if (it != m_names.end() && *it == name) {
-            return m_actions[std::distance(m_names.begin(), it)];
-        }
-        return nullptr;
-    }
-
-    void clear()
-    {
-        m_actions = {};
-        m_names = {};
-    }
-
-    int size() const
-    {
-        return m_actions.size();
-    }
-
-    template<typename F>
-    void foreachAction(F f)
-    {
-        Q_ASSERT(m_names.size() == m_actions.size());
-        for (int i = 0; i < m_actions.size(); ++i) {
-            f(m_names.at(i), m_actions.at(i));
-        }
-    }
-
-    const QList<QAction *> &actions() const
-    {
-        return m_actions;
-    }
-
-private:
-    // 1:1 list of names and actions
-    QList<QString> m_names;
-    QList<QAction *> m_actions;
-};
 
 class KActionCollectionPrivate
 {
@@ -147,7 +82,8 @@ public:
     //! action doesn't belong to us.
     QAction *unlistAction(QAction *);
 
-    ActionStorage actionStore;
+    QMap<QString, QAction *> actionByName;
+    QList<QAction *> actions;
 
     KActionCollection *q = nullptr;
 
@@ -190,17 +126,20 @@ KActionCollection::~KActionCollection()
 
 void KActionCollection::clear()
 {
-    const QList<QAction *> copy = d->actionStore.actions();
-    qDeleteAll(copy);
-    d->actionStore.clear();
+    d->actionByName.clear();
+    qDeleteAll(d->actions);
+    d->actions.clear();
 }
 
 QAction *KActionCollection::action(const QString &name) const
 {
+    QAction *action = nullptr;
+
     if (!name.isEmpty()) {
-        return d->actionStore.findAction(name);
+        action = d->actionByName.value(name);
     }
-    return nullptr;
+
+    return action;
 }
 
 QAction *KActionCollection::action(int index) const
@@ -211,7 +150,7 @@ QAction *KActionCollection::action(int index) const
 
 int KActionCollection::count() const
 {
-    return d->actionStore.size();
+    return d->actions.count();
 }
 
 bool KActionCollection::isEmpty() const
@@ -221,7 +160,7 @@ bool KActionCollection::isEmpty() const
 
 void KActionCollection::setComponentName(const QString &cName)
 {
-    for (auto *a : d->actionStore.actions()) {
+    for (QAction *a : std::as_const(d->actions)) {
         if (actionHasGlobalShortcut(a)) {
             // Its component name is part of an action's signature in the context of
             // global shortcuts and the semantics of changing an existing action's
@@ -267,13 +206,13 @@ const KXMLGUIClient *KActionCollection::parentGUIClient() const
 
 QList<QAction *> KActionCollection::actions() const
 {
-    return d->actionStore.actions();
+    return d->actions;
 }
 
 const QList<QAction *> KActionCollection::actionsWithoutGroup() const
 {
     QList<QAction *> ret;
-    for (auto *action : std::as_const(d->actionStore.actions())) {
+    for (QAction *action : std::as_const(d->actions)) {
         if (!action->actionGroup()) {
             ret.append(action);
         }
@@ -284,7 +223,7 @@ const QList<QAction *> KActionCollection::actionsWithoutGroup() const
 const QList<QActionGroup *> KActionCollection::actionGroups() const
 {
     QSet<QActionGroup *> set;
-    for (auto *action : std::as_const(d->actionStore.actions())) {
+    for (QAction *action : std::as_const(d->actions)) {
         if (action->actionGroup()) {
             set.insert(action->actionGroup());
         }
@@ -341,8 +280,9 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     Q_ASSERT(!action->objectName().isEmpty());
 
     // look if we already have THIS action under THIS name ;)
-    auto oldAction = d->actionStore.findAction(indexName);
-    if (oldAction == action) {
+    if (d->actionByName.value(indexName, nullptr) == action) {
+        // This is not a multi map!
+        Q_ASSERT(d->actionByName.count(indexName) == 1);
         return action;
     }
 
@@ -354,17 +294,22 @@ QAction *KActionCollection::addAction(const QString &name, QAction *action)
     }
 
     // Check if we have another action under this name
-    if (oldAction) {
+    if (QAction *oldAction = d->actionByName.value(indexName)) {
         takeAction(oldAction);
     }
 
-    // Remove if we have this action under a different name.
+    // Check if we have this action under a different name.
     // Not using takeAction because we don't want to remove it from categories,
     // and because it has the new name already.
-    d->actionStore.removeAction(action);
+    const int oldIndex = d->actions.indexOf(action);
+    if (oldIndex != -1) {
+        d->actionByName.remove(d->actionByName.key(action));
+        d->actions.removeAt(oldIndex);
+    }
 
     // Add action to our lists.
-    d->actionStore.addAction(indexName, action);
+    d->actionByName.insert(indexName, action);
+    d->actions.append(action);
 
     for (QWidget *widget : std::as_const(d->associatedWidgets)) {
         widget->addAction(action);
@@ -518,10 +463,13 @@ void KActionCollection::importGlobalShortcuts(KConfigGroup *config)
         return;
     }
 
-    d->actionStore.foreachAction([config](const QString &actionName, QAction *action) {
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
+        QAction *action = it.value();
         if (!action) {
-            return;
+            continue;
         }
+
+        const QString &actionName = it.key();
 
         if (isShortcutsConfigurable(action)) {
             QString entry = config->readEntry(actionName, QString());
@@ -532,7 +480,7 @@ void KActionCollection::importGlobalShortcuts(KConfigGroup *config)
                 KGlobalAccel::self()->setShortcut(action, defaultShortcut, KGlobalAccel::NoAutoloading);
             }
         }
-    });
+    }
 #else
     Q_UNUSED(config);
 #endif
@@ -549,12 +497,14 @@ void KActionCollection::readSettings(KConfigGroup *config)
         return;
     }
 
-    d->actionStore.foreachAction([config](const QString &actionName, QAction *action) {
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
+        QAction *action = it.value();
         if (!action) {
-            return;
+            continue;
         }
 
         if (isShortcutsConfigurable(action)) {
+            const QString &actionName = it.key();
             QString entry = config->readEntry(actionName, QString());
             if (!entry.isEmpty()) {
                 action->setShortcuts(QKeySequence::listFromString(entry));
@@ -562,7 +512,7 @@ void KActionCollection::readSettings(KConfigGroup *config)
                 action->setShortcuts(defaultShortcuts(action));
             }
         }
-    });
+    }
 
     // qCDebug(DEBUG_KXMLGUI) << " done";
 }
@@ -575,15 +525,18 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
         return;
     }
 
-    d->actionStore.foreachAction([config, this, writeAll](const QString &actionName, QAction *action) {
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
+        QAction *action = it.value();
         if (!action) {
-            return;
+            continue;
         }
+        const QString &actionName = it.key();
+
         // If the action name starts with unnamed- spit out a warning. That name
         // will change at will and will break loading writing
         if (actionName.startsWith(QLatin1String("unnamed-"))) {
             qCCritical(DEBUG_KXMLGUI) << "Skipped exporting Shortcut for action without name " << action->text() << "!";
-            return;
+            continue;
         }
 
         if (isShortcutsConfigurable(action) && KGlobalAccel::self()->hasShortcut(action)) {
@@ -610,7 +563,7 @@ void KActionCollection::exportGlobalShortcuts(KConfigGroup *config, bool writeAl
                 config->deleteEntry(actionName, flags);
             }
         }
-    });
+    }
 
     config->sync();
 #else
@@ -642,16 +595,19 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
     QDomElement elem = KXMLGUIFactory::actionPropertiesElement(doc);
 
     // now, iterate through our actions
-    actionStore.foreachAction([&elem, &attrShortcut, this](const QString &actionName, QAction *action) {
+    for (QMap<QString, QAction *>::ConstIterator it = actionByName.constBegin(); it != actionByName.constEnd(); ++it) {
+        QAction *action = it.value();
         if (!action) {
-            return;
+            continue;
         }
+
+        const QString &actionName = it.key();
 
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
         if (actionName.startsWith(QLatin1String("unnamed-"))) {
             qCCritical(DEBUG_KXMLGUI) << "Skipped writing shortcut for action " << actionName << "(" << action->text() << ")!";
-            return;
+            continue;
         }
 
         bool bSameAsDefault = (action->shortcuts() == q->defaultShortcuts(action));
@@ -665,7 +621,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
         // and create it if necessary (unless bSameAsDefault)
         QDomElement act_elem = KXMLGUIFactory::findActionByName(elem, actionName, !bSameAsDefault);
         if (act_elem.isNull()) {
-            return;
+            continue;
         }
 
         if (bSameAsDefault) {
@@ -677,7 +633,7 @@ bool KActionCollectionPrivate::writeKXMLGUIConfigFile()
         } else {
             act_elem.setAttribute(attrShortcut, QKeySequence::listToString(action->shortcuts()));
         }
-    });
+    }
 
     // Write back to XML file
     KXMLGUIFactory::saveConfigFile(doc, kxmlguiClient->localXMLFile(), q->componentName());
@@ -707,16 +663,19 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
         writeActions = actions();
     }
 
-    d->actionStore.foreachAction([config, this, writeAll](const QString &actionName, QAction *action) {
+    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
+        QAction *action = it.value();
         if (!action) {
-            return;
+            continue;
         }
+
+        const QString &actionName = it.key();
 
         // If the action name starts with unnamed- spit out a warning and ignore
         // it. That name will change at will and will break loading writing
         if (actionName.startsWith(QLatin1String("unnamed-"))) {
             qCCritical(DEBUG_KXMLGUI) << "Skipped saving Shortcut for action without name " << action->text() << "!";
-            return;
+            continue;
         }
 
         // Write the shortcut
@@ -749,7 +708,7 @@ void KActionCollection::writeSettings(KConfigGroup *config, bool writeAll, QActi
                 config->deleteEntry(actionName, flags);
             }
         }
-    });
+    }
 
     config->sync();
 }
@@ -798,8 +757,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
     if (signal.methodSignature() == "actionHovered(QAction*)") {
         if (!d->connectHovered) {
             d->connectHovered = true;
-
-            for (auto *action : d->actionStore.actions()) {
+            for (QAction *action : std::as_const(d->actions)) {
                 connect(action, &QAction::hovered, this, &KActionCollection::slotActionHovered);
             }
         }
@@ -807,7 +765,7 @@ void KActionCollection::connectNotify(const QMetaMethod &signal)
     } else if (signal.methodSignature() == "actionTriggered(QAction*)") {
         if (!d->connectTriggered) {
             d->connectTriggered = true;
-            for (auto *action : d->actionStore.actions()) {
+            for (QAction *action : std::as_const(d->actions)) {
                 connect(action, &QAction::triggered, this, &KActionCollection::slotActionTriggered);
             }
         }
@@ -823,7 +781,7 @@ const QList<KActionCollection *> &KActionCollection::allCollections()
 
 void KActionCollection::associateWidget(QWidget *widget) const
 {
-    for (auto *action : d->actionStore.actions()) {
+    for (QAction *action : std::as_const(d->actions)) {
         if (!widget->actions().contains(action)) {
             widget->addAction(action);
         }
@@ -844,7 +802,7 @@ void KActionCollection::addAssociatedWidget(QWidget *widget)
 
 void KActionCollection::removeAssociatedWidget(QWidget *widget)
 {
-    for (auto *action : d->actionStore.actions()) {
+    for (QAction *action : std::as_const(d->actions)) {
         widget->removeAction(action);
     }
 
@@ -859,10 +817,23 @@ QAction *KActionCollectionPrivate::unlistAction(QAction *action)
     //   during _k_actionDestroyed(). So don't do fancy stuff here that needs a
     //   real QAction!
 
-    // Remove the action
-    if (!actionStore.removeAction(action)) {
+    // Get the index for the action
+    int index = actions.indexOf(action);
+
+    // Action not found.
+    if (index == -1) {
         return nullptr;
     }
+
+    // An action collection can't have the same action twice.
+    Q_ASSERT(actions.indexOf(action, index + 1) == -1);
+
+    // Get the actions name
+    const QString name = action->objectName();
+
+    // Remove the action
+    actionByName.remove(name);
+    actions.removeAt(index);
 
     // Remove the action from the categories. Should be only one
     const QList<KActionCategory *> categories = q->findChildren<KActionCategory *>();
@@ -881,7 +852,7 @@ QList<QWidget *> KActionCollection::associatedWidgets() const
 void KActionCollection::clearAssociatedWidgets()
 {
     for (QWidget *widget : std::as_const(d->associatedWidgets)) {
-        for (auto *action : d->actionStore.actions()) {
+        for (QAction *action : std::as_const(d->actions)) {
             widget->removeAction(action);
         }
     }
