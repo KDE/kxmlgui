@@ -194,7 +194,11 @@ void KShortcutsEditor::writeConfiguration(KConfigGroup *config) const
 // slot
 void KShortcutsEditor::resizeColumns()
 {
-    for (int i = 0; i < d->ui.list->columnCount(); i++) {
+    // skip Name column as its section resize mode will take care of resizing to contents
+    for (int i = Name + 1; i < d->ui.list->columnCount(); i++) {
+        if (d->ui.list->isColumnHidden(i)) {
+            continue;
+        }
         d->ui.list->resizeColumnToContents(i);
     }
 }
