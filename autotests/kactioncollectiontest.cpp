@@ -304,6 +304,22 @@ void tst_KActionCollection::shouldEmitSignals()
     changedSpy.clear();
 }
 
+void tst_KActionCollection::testPreserveOrder()
+{
+    QVERIFY(collection->actions().empty());
+    QList<QAction *> insertOrder;
+    QAction *first = new QAction();
+    collection->addAction(QStringLiteral("SomeKey"), first);
+    insertOrder.push_back(first);
+    QAction *second = new QAction();
+    collection->addAction(QStringLiteral("EarlyInAlphabet"), second);
+    insertOrder.push_back(second);
+    QAction *third = new QAction();
+    collection->addAction(QStringLiteral("ZZLateInAlphabet"), third);
+    insertOrder.push_back(third);
+    QCOMPARE(collection->actions(), insertOrder);
+}
+
 QTEST_MAIN(tst_KActionCollection)
 
 #include "moc_kactioncollectiontest.cpp"
