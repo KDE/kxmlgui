@@ -304,6 +304,38 @@ void tst_KActionCollection::shouldEmitSignals()
     changedSpy.clear();
 }
 
+void tst_KActionCollection::testActionsAreInInsertionOrder()
+{
+    collection->clear();
+
+    QAction *a = new QAction(nullptr);
+    QAction *b = new QAction(nullptr);
+    QAction *c = new QAction(nullptr);
+
+    collection->addAction(QStringLiteral("b"), b);
+    collection->addAction(QStringLiteral("a"), a);
+    collection->addAction(QStringLiteral("c"), c);
+
+    QList<QAction *> expected{b, a, c};
+    QCOMPARE(collection->actions(), expected);
+    collection->clear();
+}
+
+void tst_KActionCollection::testActionForName()
+{
+    QAction *a = new QAction(nullptr);
+    QAction *b = new QAction(nullptr);
+    QAction *c = new QAction(nullptr);
+
+    collection->addAction(QStringLiteral("ba"), b);
+    collection->addAction(QStringLiteral("ae"), a);
+    collection->addAction(QStringLiteral("cf"), c);
+
+    QCOMPARE(collection->action(QStringLiteral("ba")), b);
+    QCOMPARE(collection->action(QStringLiteral("cf")), c);
+    QCOMPARE(collection->action(QStringLiteral("ae")), a);
+}
+
 QTEST_MAIN(tst_KActionCollection)
 
 #include "moc_kactioncollectiontest.cpp"

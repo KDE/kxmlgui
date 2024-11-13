@@ -25,6 +25,8 @@ private Q_SLOTS:
     void implicitStandardActionInsertionUsingCut();
     void shouldEmitSignals();
     void addStandardActionFunctorSignal();
+    void testActionsAreInInsertionOrder();
+    void testActionForName();
 
 private:
     KConfigGroup clearConfig();

@@ -48,12 +48,9 @@ static bool actionHasGlobalShortcut(const QAction *action)
 struct ActionStorage {
     void addAction(const QString &name, QAction *action)
     {
-        auto it = std::lower_bound(m_names.begin(), m_names.end(), name);
-        // We can't have an action with this name already
-        Q_ASSERT(it == m_names.end() || *it != name);
-        auto idx = std::distance(m_names.begin(), it);
-        m_names.insert(idx, name);
-        m_actions.insert(idx, action);
+        Q_ASSERT(std::find(m_actions.begin(), m_actions.end(), action) == m_actions.end());
+        m_actions.push_back(action);
+        m_names.push_back(name);
         Q_ASSERT(m_names.size() == m_actions.size());
     }
 
@@ -74,7 +71,7 @@ struct ActionStorage {
 
     QAction *findAction(const QString &name) const
     {
-        auto it = std::lower_bound(m_names.begin(), m_names.end(), name);
+        auto it = std::find(m_names.begin(), m_names.end(), name);
         if (it != m_names.end() && *it == name) {
             return m_actions[std::distance(m_names.begin(), it)];
         }
