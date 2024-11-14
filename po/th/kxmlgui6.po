@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-06 00:37+0000\n"
+"POT-Creation-Date: 2024-11-14 00:38+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -671,7 +671,7 @@ msgid "Change Icon"
 msgstr "เปลี่ยนภาพไอคอน"
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:165 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&ช่วยเหลือ"
@@ -1061,46 +1061,46 @@ msgstr "รูปแบบการกดปุ่มเมาส์"
 msgid "Mouse Shape Gesture"
 msgstr "รูปแบบการเคลื่อนเมาส์"
 
-#: kshortcutseditor.cpp:522
+#: kshortcutseditor.cpp:526
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "ปุ่มพิมพ์ลัดสำหรับ %1"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:542 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:546 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "ปุ่มพิมพ์ลัดหลัก:"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:543 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:547 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "ปุ่มพิมพ์ลัดอื่น:"
 
-#: kshortcutseditor.cpp:544
+#: kshortcutseditor.cpp:548
 #, kde-format
 msgid "Global:"
 msgstr "ทั้งระบบ:"
 
-#: kshortcutseditor.cpp:545
+#: kshortcutseditor.cpp:549
 #, fuzzy, kde-format
 #| msgid "Global Alternate"
 msgid "Global alternate:"
 msgstr "ทางเลือกอื่นของทั้งระบบ"
 
-#: kshortcutseditor.cpp:561
+#: kshortcutseditor.cpp:565
 #, kde-format
 msgid "Action Name"
 msgstr "ชื่อการกระทำ"
 
-#: kshortcutseditor.cpp:565
+#: kshortcutseditor.cpp:569
 #, kde-format
 msgid "Shortcuts"
 msgstr "ปุ่มพิมพ์ลัด"
 
-#: kshortcutseditor.cpp:569
+#: kshortcutseditor.cpp:573
 #, kde-format
 msgid "Description"
 msgstr "รายละเอียด"

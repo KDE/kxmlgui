@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-06 00:37+0000\n"
+"POT-Creation-Date: 2024-11-14 00:38+0000\n"
 "PO-Revision-Date: 2011-07-22 16:08+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -683,7 +683,7 @@ msgid "Change Icon"
 msgstr "Promjeni ikonu…"
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:165 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Pomoć"
@@ -1094,46 +1094,46 @@ msgstr "Gesta s gumbom miša"
 msgid "Mouse Shape Gesture"
 msgstr "Gesta s pokretom miša"
 
-#: kshortcutseditor.cpp:522
+#: kshortcutseditor.cpp:526
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
 msgstr "Prečaci za %1"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:542 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:546 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
 msgstr "Glavno:"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:543 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:547 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
 msgstr "Alternativno:"
 
-#: kshortcutseditor.cpp:544
+#: kshortcutseditor.cpp:548
 #, kde-format
 msgid "Global:"
 msgstr "Opće:"
 
-#: kshortcutseditor.cpp:545
+#: kshortcutseditor.cpp:549
 #, fuzzy, kde-format
 #| msgid "Global Alternate"
 msgid "Global alternate:"
 msgstr "Opće alternativno"
 
-#: kshortcutseditor.cpp:561
+#: kshortcutseditor.cpp:565
 #, kde-format
 msgid "Action Name"
 msgstr "Naziv radnje"
 
-#: kshortcutseditor.cpp:565
+#: kshortcutseditor.cpp:569
 #, kde-format
 msgid "Shortcuts"
 msgstr "Prečaci"
 
-#: kshortcutseditor.cpp:569
+#: kshortcutseditor.cpp:573
 #, kde-format
 msgid "Description"
 msgstr "Opis"

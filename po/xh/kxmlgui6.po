@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-06 00:37+0000\n"
+"POT-Creation-Date: 2024-11-14 00:38+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -615,7 +615,7 @@ msgid "Change Icon"
 msgstr "Tshintsha..."
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:146 ui_standards.rc:179
+#: khelpmenu.cpp:165 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Uncedo"
@@ -1000,7 +1000,7 @@ msgstr ""
 msgid "Mouse Shape Gesture"
 msgstr ""
 
-#: kshortcutseditor.cpp:522
+#: kshortcutseditor.cpp:526
 #, fuzzy, kde-format
 #| msgid "Shortcuts"
 msgctxt "header for an applications shortcut list"
@@ -1008,42 +1008,42 @@ msgid "Shortcuts for %1"
 msgstr "Ezimfutshane"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
-#: kshortcutseditor.cpp:542 kshortcutwidget.ui:22
+#: kshortcutseditor.cpp:546 kshortcutwidget.ui:22
 #, fuzzy, kde-format
 #| msgid "Chain:"
 msgid "Main:"
 msgstr "Ikhonkco:"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: kshortcutseditor.cpp:543 kshortcutwidget.ui:52
+#: kshortcutseditor.cpp:547 kshortcutwidget.ui:52
 #, fuzzy, kde-format
 #| msgid "Alternate"
 msgid "Alternate:"
 msgstr "Hambelana"
 
-#: kshortcutseditor.cpp:544
+#: kshortcutseditor.cpp:548
 #, kde-format
 msgid "Global:"
 msgstr ""
 
-#: kshortcutseditor.cpp:545
+#: kshortcutseditor.cpp:549
 #, fuzzy, kde-format
 #| msgid "Alternate"
 msgid "Global alternate:"
 msgstr "Hambelana"
 
-#: kshortcutseditor.cpp:561
+#: kshortcutseditor.cpp:565
 #, fuzzy, kde-format
 #| msgid "Additional Names"
 msgid "Action Name"
 msgstr "Amagama Ongezelelweyo"
 
-#: kshortcutseditor.cpp:565
+#: kshortcutseditor.cpp:569
 #, kde-format
 msgid "Shortcuts"
 msgstr "Ezimfutshane"
 
-#: kshortcutseditor.cpp:569
+#: kshortcutseditor.cpp:573
 #, fuzzy, kde-format
 #| msgid "Description:"
 msgid "Description"
