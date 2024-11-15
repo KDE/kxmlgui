@@ -75,8 +75,8 @@ find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.7
-    KF 5.240
+    QT 6.8
+    KF 6.8
 )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui6\")
