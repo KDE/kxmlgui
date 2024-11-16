@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:38+0000\n"
+"POT-Creation-Date: 2024-11-16 00:38+0000\n"
 "PO-Revision-Date: 2024-11-10 20:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -205,43 +205,43 @@ msgstr "Lizentzia: %1"
 
 #: kabstractaboutdialog_p.cpp:112
 #, kde-format
-msgid "Windowing system"
-msgstr "Leiho-sistema"
-
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
-msgid "Qt"
-msgstr "Qt"
-
-#: kabstractaboutdialog_p.cpp:114
-#, kde-format
-msgctxt "@info"
-msgid "Cross-platform application development framework"
-msgstr "Plataforma anitzeko aplikazioak garatzeko armazoia"
-
-#: kabstractaboutdialog_p.cpp:115
-#, kde-format
-msgid "Using %1 and built against %2"
-msgstr "%1 erabiltzen du eta %2 erabiliz eraikia"
-
-#: kabstractaboutdialog_p.cpp:118
-#, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr "Qt hedatzeko KDE Komunitateak eraikitako liburutegi-bilduma"
 
-#: kabstractaboutdialog_p.cpp:146
+#: kabstractaboutdialog_p.cpp:118
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr "Plataforma anitzeko aplikazioak garatzeko armazoia"
+
+#: kabstractaboutdialog_p.cpp:120
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "%1 erabiltzen du eta %2 erabiliz eraikia"
+
+#: kabstractaboutdialog_p.cpp:124
+#, kde-format
+msgid "Windowing system"
+msgstr "Leiho-sistema"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Bisitatu osagaiaren atariko orrialdea"
 
-#: kabstractaboutdialog_p.cpp:147
+#: kabstractaboutdialog_p.cpp:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -251,13 +251,13 @@ msgstr ""
 "Bisitatu osagaiaren atariko orria\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:211
+#: kabstractaboutdialog_p.cpp:213
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Bisitatu egilearen atariko orrialdea"
 
-#: kabstractaboutdialog_p.cpp:212
+#: kabstractaboutdialog_p.cpp:214
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -267,25 +267,25 @@ msgstr ""
 "Bisitatu egilearen orri nagusia\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:234
+#: kabstractaboutdialog_p.cpp:236
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Kolaboratzaileari e-posta bidali"
 
-#: kabstractaboutdialog_p.cpp:235
+#: kabstractaboutdialog_p.cpp:237
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Kolaboratzaileari e-posta bidali: %1"
 
-#: kabstractaboutdialog_p.cpp:286
+#: kabstractaboutdialog_p.cpp:288
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Mesedez, erabili %1 erroreen berri emateko.\n"
 
-#: kabstractaboutdialog_p.cpp:294
+#: kabstractaboutdialog_p.cpp:296
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"

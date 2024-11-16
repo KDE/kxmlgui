@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:38+0000\n"
+"POT-Creation-Date: 2024-11-16 00:38+0000\n"
 "PO-Revision-Date: 2024-11-06 10:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -215,43 +215,43 @@ msgstr "Licenca: %1"
 
 #: kabstractaboutdialog_p.cpp:112
 #, kde-format
-msgid "Windowing system"
-msgstr "Sistem oken"
-
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
-msgid "Qt"
-msgstr "Qt"
-
-#: kabstractaboutdialog_p.cpp:114
-#, kde-format
-msgctxt "@info"
-msgid "Cross-platform application development framework"
-msgstr "Ogrodje za razvoj aplikacij na več platformah"
-
-#: kabstractaboutdialog_p.cpp:115
-#, kde-format
-msgid "Using %1 and built against %2"
-msgstr "Uporaba %1 in zgrajeno proti %2"
-
-#: kabstractaboutdialog_p.cpp:118
-#, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr "Zbirka knjižnic, ki jih je ustvarila skupnost KDE za razširitev Qt"
 
-#: kabstractaboutdialog_p.cpp:146
+#: kabstractaboutdialog_p.cpp:118
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr "Ogrodje za razvoj aplikacij na več platformah"
+
+#: kabstractaboutdialog_p.cpp:120
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "Uporaba %1 in zgrajeno proti %2"
+
+#: kabstractaboutdialog_p.cpp:124
+#, kde-format
+msgid "Windowing system"
+msgstr "Sistem oken"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Obišči domačo stran komponente"
 
-#: kabstractaboutdialog_p.cpp:147
+#: kabstractaboutdialog_p.cpp:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -261,13 +261,13 @@ msgstr ""
 "Obišči domačo stran komponent\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:211
+#: kabstractaboutdialog_p.cpp:213
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Obišči domačo stran avtorja"
 
-#: kabstractaboutdialog_p.cpp:212
+#: kabstractaboutdialog_p.cpp:214
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -277,25 +277,25 @@ msgstr ""
 "Obišči domačo stran avtorja\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:234
+#: kabstractaboutdialog_p.cpp:236
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Pošlji e-pošto avtorju"
 
-#: kabstractaboutdialog_p.cpp:235
+#: kabstractaboutdialog_p.cpp:237
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Pošlji e-pošto avtorju: %1"
 
-#: kabstractaboutdialog_p.cpp:286
+#: kabstractaboutdialog_p.cpp:288
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Za poročanje o napakah uporabite %1.\n"
 
-#: kabstractaboutdialog_p.cpp:294
+#: kabstractaboutdialog_p.cpp:296
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"

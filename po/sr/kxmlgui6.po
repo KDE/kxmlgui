@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:38+0000\n"
+"POT-Creation-Date: 2024-11-16 00:38+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -231,44 +231,44 @@ msgstr "Лиценца: %1"
 
 #: kabstractaboutdialog_p.cpp:112
 #, kde-format
-msgid "Windowing system"
-msgstr ""
-
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
-msgid "Qt"
-msgstr ""
-
-#: kabstractaboutdialog_p.cpp:114
-#, kde-format
-msgctxt "@info"
-msgid "Cross-platform application development framework"
-msgstr ""
-
-#: kabstractaboutdialog_p.cpp:115
-#, kde-format
-msgid "Using %1 and built against %2"
-msgstr ""
-
-#: kabstractaboutdialog_p.cpp:118
-#, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:146
+#: kabstractaboutdialog_p.cpp:118
+#, kde-format
+msgid "Qt"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:120
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:124
+#, kde-format
+msgid "Windowing system"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:148
 #, fuzzy, kde-format
 #| msgid "Visit contributor's homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Посетите домаћу страницу доприносиоца"
 
-#: kabstractaboutdialog_p.cpp:147
+#: kabstractaboutdialog_p.cpp:149
 #, fuzzy, kde-format
 #| msgid ""
 #| "Visit contributor's homepage\n"
@@ -281,14 +281,14 @@ msgstr ""
 "Посетите домаћу страницу доприносиоца\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:211
+#: kabstractaboutdialog_p.cpp:213
 #, fuzzy, kde-format
 #| msgid "Visit contributor's homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Посетите домаћу страницу доприносиоца"
 
-#: kabstractaboutdialog_p.cpp:212
+#: kabstractaboutdialog_p.cpp:214
 #, fuzzy, kde-format
 #| msgid ""
 #| "Visit contributor's homepage\n"
@@ -301,7 +301,7 @@ msgstr ""
 "Посетите домаћу страницу доприносиоца\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:234
+#: kabstractaboutdialog_p.cpp:236
 #, fuzzy, kde-format
 #| msgctxt "Action to send an email to a contributor"
 #| msgid "Email contributor"
@@ -309,7 +309,7 @@ msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Пишите доприносиоцу е‑поштом"
 
-#: kabstractaboutdialog_p.cpp:235
+#: kabstractaboutdialog_p.cpp:237
 #, fuzzy, kde-format
 #| msgctxt "Action to send an email to a contributor"
 #| msgid ""
@@ -321,13 +321,13 @@ msgstr ""
 "Пишите доприносиоцу е‑поштом\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:286
+#: kabstractaboutdialog_p.cpp:288
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:294
+#: kabstractaboutdialog_p.cpp:296
 #, fuzzy, kde-format
 #| msgid "Please report bugs to <a href=\"%1\">%2</a>.\n"
 msgctxt "Reference to email address"

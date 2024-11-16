@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:38+0000\n"
+"POT-Creation-Date: 2024-11-16 00:38+0000\n"
 "PO-Revision-Date: 2024-11-06 11:08+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -210,31 +210,10 @@ msgstr "Licentie: %1"
 
 #: kabstractaboutdialog_p.cpp:112
 #, kde-format
-msgid "Windowing system"
-msgstr "Venstersysteem"
-
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
-msgid "Qt"
-msgstr "Qt"
-
-#: kabstractaboutdialog_p.cpp:114
-#, kde-format
-msgctxt "@info"
-msgid "Cross-platform application development framework"
-msgstr "Cross-platform framework voor ontwikkeling van toepassingen"
-
-#: kabstractaboutdialog_p.cpp:115
-#, kde-format
-msgid "Using %1 and built against %2"
-msgstr "%1 gebruiken en gebouwd tegen %2"
-
-#: kabstractaboutdialog_p.cpp:118
-#, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
@@ -242,13 +221,34 @@ msgstr ""
 "Verzameling van bibliotheken aangemaakt door de KDE gemeenschap om Qt uit te "
 "breiden"
 
-#: kabstractaboutdialog_p.cpp:146
+#: kabstractaboutdialog_p.cpp:118
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr "Cross-platform framework voor ontwikkeling van toepassingen"
+
+#: kabstractaboutdialog_p.cpp:120
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "%1 gebruiken en gebouwd tegen %2"
+
+#: kabstractaboutdialog_p.cpp:124
+#, kde-format
+msgid "Windowing system"
+msgstr "Venstersysteem"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Homepage van component bezoeken"
 
-#: kabstractaboutdialog_p.cpp:147
+#: kabstractaboutdialog_p.cpp:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -258,13 +258,13 @@ msgstr ""
 "Homepage van componenten bezoeken\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:211
+#: kabstractaboutdialog_p.cpp:213
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Homepage van auteur bezoeken"
 
-#: kabstractaboutdialog_p.cpp:212
+#: kabstractaboutdialog_p.cpp:214
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -274,25 +274,25 @@ msgstr ""
 "Homepage van auteur bezoeken\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:234
+#: kabstractaboutdialog_p.cpp:236
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "E-mail naar medewerker"
 
-#: kabstractaboutdialog_p.cpp:235
+#: kabstractaboutdialog_p.cpp:237
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "E-mail naar medewerker: %1"
 
-#: kabstractaboutdialog_p.cpp:286
+#: kabstractaboutdialog_p.cpp:288
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Gebruik %1 om bugs (programmafouten) te rapporteren.\n"
 
-#: kabstractaboutdialog_p.cpp:294
+#: kabstractaboutdialog_p.cpp:296
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"

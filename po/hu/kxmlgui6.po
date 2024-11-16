@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:38+0000\n"
-"PO-Revision-Date: 2024-06-20 22:08+0200\n"
+"POT-Creation-Date: 2024-11-16 00:38+0000\n"
+"PO-Revision-Date: 2024-11-15 20:26+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -197,47 +197,44 @@ msgid "License: %1"
 msgstr "Licenc: %1"
 
 #: kabstractaboutdialog_p.cpp:112
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
-msgid "Windowing system"
-msgstr "A(z) <em>%1</em> ablakkezelő rendszer"
-
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
-msgid "Qt"
-msgstr "Qt"
-
-#: kabstractaboutdialog_p.cpp:114
-#, kde-format
-msgctxt "@info"
-msgid "Cross-platform application development framework"
-msgstr ""
-
-#: kabstractaboutdialog_p.cpp:115
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
-msgid "Using %1 and built against %2"
-msgstr "%1 (fordítva ezzel: %2)"
-
-#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
-msgstr ""
+msgstr "Függvénykönyvtárak gyűjteménye a KDE közösségtől a Qt kiterjesztésére"
 
-#: kabstractaboutdialog_p.cpp:146
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#: kabstractaboutdialog_p.cpp:118
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr "Keresztplatformos alkalmazásfejlesztő keretrendszer"
+
+#: kabstractaboutdialog_p.cpp:120
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "A(z) %1 használatával (fordítva ezzel: %2)"
+
+#: kabstractaboutdialog_p.cpp:124
+#, kde-format
+msgid "Windowing system"
+msgstr "Ablakkezelő rendszer"
+
+#: kabstractaboutdialog_p.cpp:148
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "A komponens honlapjának megnyitása"
+msgstr "Komponens honlapjának megnyitása"
 
-#: kabstractaboutdialog_p.cpp:147
+#: kabstractaboutdialog_p.cpp:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -247,54 +244,41 @@ msgstr ""
 "A komponens honlapjának megnyitása\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:211
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#: kabstractaboutdialog_p.cpp:213
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "A közreműködő honlapjának megtekintése"
+msgstr "Szerző honlapjának megtekintése"
 
-#: kabstractaboutdialog_p.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#: kabstractaboutdialog_p.cpp:214
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"A közreműködő honlapjának megtekintése\n"
+"Szerző honlapjának megtekintése\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#: kabstractaboutdialog_p.cpp:236
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Levél írása a közreműködőnek"
 
-#: kabstractaboutdialog_p.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#: kabstractaboutdialog_p.cpp:237
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Levél írása a közreműködőnek\n"
-"%1"
+msgstr "Levél írása a közreműködőnek: %1"
 
-#: kabstractaboutdialog_p.cpp:286
+#: kabstractaboutdialog_p.cpp:288
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Kérjük, használja a %1 weboldalt a hibák jelentéséhez.\n"
 
-#: kabstractaboutdialog_p.cpp:294
+#: kabstractaboutdialog_p.cpp:296
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
