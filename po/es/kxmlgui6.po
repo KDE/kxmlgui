@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-16 00:38+0000\n"
+"POT-Creation-Date: 2024-11-18 00:37+0000\n"
 "PO-Revision-Date: 2024-11-07 02:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -195,56 +195,71 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Colabore con KDE"
 
-#: kabstractaboutdialog_p.cpp:43
+#: kabstractaboutdialog_p.cpp:46
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Versión %1"
 
-#: kabstractaboutdialog_p.cpp:87
+#: kabstractaboutdialog_p.cpp:90
 #, kde-format
 msgid "License: %1"
 msgstr "Licencia: %1"
 
-#: kabstractaboutdialog_p.cpp:112
+#: kabstractaboutdialog_p.cpp:117
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
+#| "architecture, e.g. 'x86_64'"
+#| msgid "%1 (%2)"
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: kabstractaboutdialog_p.cpp:122
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
+#: kabstractaboutdialog_p.cpp:123
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr "Colección de bibliotecas creadas por la comunidad KDE para extender Qt"
 
-#: kabstractaboutdialog_p.cpp:118
+#: kabstractaboutdialog_p.cpp:127
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:119
-#, kde-format
+#: kabstractaboutdialog_p.cpp:128
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Cross-platform application development framework"
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Cross-platform application development framework."
 msgstr "Infraestructura de desarrollo de aplicaciones multiplataforma"
 
-#: kabstractaboutdialog_p.cpp:120
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "Usando %1 y compilado con %2"
 
-#: kabstractaboutdialog_p.cpp:124
+#: kabstractaboutdialog_p.cpp:132
 #, kde-format
-msgid "Windowing system"
-msgstr "Sistema de ventanas"
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:148
+#: kabstractaboutdialog_p.cpp:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Visitar la página web del componente"
 
-#: kabstractaboutdialog_p.cpp:149
+#: kabstractaboutdialog_p.cpp:157
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -254,13 +269,20 @@ msgstr ""
 "Visitar la página web de los componentes\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:213
+#: kabstractaboutdialog_p.cpp:190
+#, fuzzy, kde-format
+#| msgid "Copy selection to clipboard"
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr "Copiar la selección al portapapeles"
+
+#: kabstractaboutdialog_p.cpp:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Visitar la página web del autor"
 
-#: kabstractaboutdialog_p.cpp:214
+#: kabstractaboutdialog_p.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -270,25 +292,25 @@ msgstr ""
 "Visitar la página web del autor\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:236
+#: kabstractaboutdialog_p.cpp:269
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Enviar correo al colaborador"
 
-#: kabstractaboutdialog_p.cpp:237
+#: kabstractaboutdialog_p.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Enviar correo al colaborador: %1"
 
-#: kabstractaboutdialog_p.cpp:288
+#: kabstractaboutdialog_p.cpp:321
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Use %1 para informar de fallos.\n"
 
-#: kabstractaboutdialog_p.cpp:296
+#: kabstractaboutdialog_p.cpp:329
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1354,6 +1376,9 @@ msgstr "Preferencia&s"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra de herramientas principal"
+
+#~ msgid "Windowing system"
+#~ msgstr "Sistema de ventanas"
 
 #~ msgctxt "@item Component name in about dialog."
 #~ msgid "%1"
@@ -4362,9 +4387,6 @@ msgstr "Barra de herramientas principal"
 
 #~ msgid "&Copy"
 #~ msgstr "&Copiar"
-
-#~ msgid "Copy selection to clipboard"
-#~ msgstr "Copiar la selección al portapapeles"
 
 #~ msgid "&Paste"
 #~ msgstr "&Pegar"

@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-16 00:38+0000\n"
+"POT-Creation-Date: 2024-11-18 00:37+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -210,60 +210,67 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "支援 KDE(&S)"
 
-#: kabstractaboutdialog_p.cpp:43
+#: kabstractaboutdialog_p.cpp:46
 #, fuzzy, kde-format
 #| msgid "Version"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "版本"
 
-#: kabstractaboutdialog_p.cpp:87
+#: kabstractaboutdialog_p.cpp:90
 #, fuzzy, kde-format
 #| msgid "License:"
 msgid "License: %1"
 msgstr "許可證："
 
-#: kabstractaboutdialog_p.cpp:112
+#: kabstractaboutdialog_p.cpp:117
+#, fuzzy, kde-format
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr "%1 ( %2 )"
+
+#: kabstractaboutdialog_p.cpp:122
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:113
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:118
+#: kabstractaboutdialog_p.cpp:127
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgid "Qt"
 msgstr "離開"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:120
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:124
+#: kabstractaboutdialog_p.cpp:132
 #, kde-format
-msgid "Windowing system"
+msgctxt "@info"
+msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:148
+#: kabstractaboutdialog_p.cpp:156
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "首頁"
 
-#: kabstractaboutdialog_p.cpp:149
+#: kabstractaboutdialog_p.cpp:157
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -272,14 +279,20 @@ msgid ""
 "%1"
 msgstr "首頁"
 
-#: kabstractaboutdialog_p.cpp:213
+#: kabstractaboutdialog_p.cpp:190
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:246
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "首頁"
 
-#: kabstractaboutdialog_p.cpp:214
+#: kabstractaboutdialog_p.cpp:247
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -288,28 +301,28 @@ msgid ""
 "%1"
 msgstr "首頁"
 
-#: kabstractaboutdialog_p.cpp:236
+#: kabstractaboutdialog_p.cpp:269
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "其他貢獻者："
 
-#: kabstractaboutdialog_p.cpp:237
+#: kabstractaboutdialog_p.cpp:270
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "其他貢獻者："
 
-#: kabstractaboutdialog_p.cpp:288
+#: kabstractaboutdialog_p.cpp:321
 #, fuzzy, kde-format
 #| msgid "Please use http://bugs.kde.org to report bugs.\n"
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "請使用 http://bugs.kde.org 報告問題。\n"
 
-#: kabstractaboutdialog_p.cpp:296
+#: kabstractaboutdialog_p.cpp:329
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-16 00:38+0000\n"
+"POT-Creation-Date: 2024-11-18 00:37+0000\n"
 "PO-Revision-Date: 2022-02-10 12:10+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -191,59 +191,68 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "केडीई का समर्थन करें (&S)"
 
-#: kabstractaboutdialog_p.cpp:43
+#: kabstractaboutdialog_p.cpp:46
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "संस्करण %1"
 
-#: kabstractaboutdialog_p.cpp:87
+#: kabstractaboutdialog_p.cpp:90
 #, kde-format
 msgid "License: %1"
 msgstr "अनुज्ञापत्र: %1"
 
-#: kabstractaboutdialog_p.cpp:112
+#: kabstractaboutdialog_p.cpp:117
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
+#| msgid "%1 (%2)"
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: kabstractaboutdialog_p.cpp:122
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "केडीई फ्रेमवर्कस"
 
-#: kabstractaboutdialog_p.cpp:113
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:118
+#: kabstractaboutdialog_p.cpp:127
 #, kde-format
 msgid "Qt"
 msgstr "क्यूट"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:120
+#: kabstractaboutdialog_p.cpp:129
 #, fuzzy, kde-format
 #| msgid "%1 (built against %2)"
 msgid "Using %1 and built against %2"
 msgstr "%1 (%2 के प्रती निर्मित)"
 
-#: kabstractaboutdialog_p.cpp:124
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
-msgid "Windowing system"
-msgstr "<em>%1</em> विंडो प्रणाली"
+#: kabstractaboutdialog_p.cpp:132
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:148
+#: kabstractaboutdialog_p.cpp:156
 #, fuzzy, kde-format
 #| msgid "Visit component's homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "घटक के मुखपृष्ठ पर जाएँ"
 
-#: kabstractaboutdialog_p.cpp:149
+#: kabstractaboutdialog_p.cpp:157
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -253,14 +262,21 @@ msgstr ""
 "घटक के मुखपृष्ठ पर जाएँ \n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:213
+#: kabstractaboutdialog_p.cpp:190
+#, fuzzy, kde-format
+#| msgid "Copy selection to clipboard"
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr "चयन को क्लिपबोर्ड में नक़ल करें"
+
+#: kabstractaboutdialog_p.cpp:246
 #, fuzzy, kde-format
 #| msgid "Visit contributor's homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "सहयोगीयों के मुखपृष्ठ पर जाएँ"
 
-#: kabstractaboutdialog_p.cpp:214
+#: kabstractaboutdialog_p.cpp:247
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -274,7 +290,7 @@ msgstr ""
 "सहयोगी के मुखपृष्ठ पर जाएँ \n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:236
+#: kabstractaboutdialog_p.cpp:269
 #, fuzzy, kde-format
 #| msgctxt "Action to send an email to a contributor"
 #| msgid "Email contributor"
@@ -282,7 +298,7 @@ msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "ईमेल सहयोगी"
 
-#: kabstractaboutdialog_p.cpp:237
+#: kabstractaboutdialog_p.cpp:270
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip Action to send an email to a contributor"
 #| msgid ""
@@ -294,13 +310,13 @@ msgstr ""
 "सहयोगी को इमेल करें\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:288
+#: kabstractaboutdialog_p.cpp:321
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "कृपया %1 का उपयोग बग रिपोर्ट के लिए करें।\n"
 
-#: kabstractaboutdialog_p.cpp:296
+#: kabstractaboutdialog_p.cpp:329
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1367,6 +1383,11 @@ msgstr "विन्यास (&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "मुख्य औज़ार पट्टी"
+
+#, fuzzy
+#~| msgid "The <em>%1</em> windowing system"
+#~ msgid "Windowing system"
+#~ msgstr "<em>%1</em> विंडो प्रणाली"
 
 #~ msgctxt "@item Component name in about dialog."
 #~ msgid "%1"
@@ -4021,9 +4042,6 @@ msgstr "मुख्य औज़ार पट्टी"
 
 #~ msgid "&Copy"
 #~ msgstr "नक़ल (&C)"
-
-#~ msgid "Copy selection to clipboard"
-#~ msgstr "चयन को क्लिपबोर्ड में नक़ल करें"
 
 #~ msgid "&Paste"
 #~ msgstr "चिपकाएँ (&P)"

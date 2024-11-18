@@ -4,13 +4,13 @@
 # Sivakumar Shanmugasundaram <sshanmu@yahoo.com>, 2000.
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000-2001.
 # ம. ஸ்ரீ ராமதாஸ் | Sri Ramadoss M <amachu@yavarkkum.org>, 2007-2012.
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-16 00:38+0000\n"
-"PO-Revision-Date: 2023-12-07 21:22+0530\n"
+"POT-Creation-Date: 2024-11-18 00:37+0000\n"
+"PO-Revision-Date: 2024-11-17 22:14+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -183,59 +183,71 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "கே.டீ.யீ.-ஐ &ஆதரியுங்கள்"
 
-#: kabstractaboutdialog_p.cpp:43
+#: kabstractaboutdialog_p.cpp:46
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "பதிப்பு %1"
 
-#: kabstractaboutdialog_p.cpp:87
+#: kabstractaboutdialog_p.cpp:90
 #, kde-format
 msgid "License: %1"
 msgstr "உரிமம்: %1"
 
-#: kabstractaboutdialog_p.cpp:112
+#: kabstractaboutdialog_p.cpp:117
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
+#| "architecture, e.g. 'x86_64'"
+#| msgid "%1 (%2)"
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: kabstractaboutdialog_p.cpp:122
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "கே.டீ.யீ. நிரலகங்கள்"
 
-#: kabstractaboutdialog_p.cpp:113
-#, kde-format
+#: kabstractaboutdialog_p.cpp:123
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
-msgstr ""
+msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgstr "Qt-யுடன் பயன்படுத்தக்கூடிய, கே.டீ.யீ. சமூகம் உருவாக்கியுள்ள, நிரலகங்கள்"
 
-#: kabstractaboutdialog_p.cpp:118
+#: kabstractaboutdialog_p.cpp:127
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:119
+#: kabstractaboutdialog_p.cpp:128
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Cross-platform application development framework"
+msgctxt "@info"
+msgid "Cross-platform application development framework."
+msgstr "பல்லியக்குதள செயலி உருவாக்க நிரலகம்"
+
+#: kabstractaboutdialog_p.cpp:129
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "%1 பயனிலுள்ளது; %2 கொண்டு தொகுக்கப்பட்டுள்ளது"
+
+#: kabstractaboutdialog_p.cpp:132
 #, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:120
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
-msgid "Using %1 and built against %2"
-msgstr "%1 (%2 கொண்டு தொகுக்கப்பட்டது)"
-
-#: kabstractaboutdialog_p.cpp:124
-#, fuzzy, kde-format
-#| msgid "The <em>%1</em> windowing system"
-msgid "Windowing system"
-msgstr "<em>%1</em> சாளர நெறிமுறை"
-
-#: kabstractaboutdialog_p.cpp:148
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#: kabstractaboutdialog_p.cpp:156
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "கூறின் முதற்பக்கத்துக்கு செல்"
+msgstr "கூறின் முகப்புப்பக்கத்துக்கு செல்"
 
-#: kabstractaboutdialog_p.cpp:149
+#: kabstractaboutdialog_p.cpp:157
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -245,54 +257,47 @@ msgstr ""
 "கூறுகளின் முதற்பக்கத்துக்கு செல்\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:213
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#: kabstractaboutdialog_p.cpp:190
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:246
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "பங்களிப்பாளரது முதற்பக்கத்துக்கு செல்"
+msgstr "இயற்றியவரது முகப்புப்பக்கத்துக்கு செல்"
 
-#: kabstractaboutdialog_p.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#: kabstractaboutdialog_p.cpp:247
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"பங்களிப்பாளரது முதற்பக்கத்துக்கு செல்\n"
+"இயற்றியவரது முகப்புப்பக்கத்துக்கு செல்\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:236
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#: kabstractaboutdialog_p.cpp:269
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "பங்களிப்பாளருக்கு மின்னஞ்சல் அனுப்பு"
+msgstr "இயற்றியவருக்கு மின்னஞ்சல் அனுப்பு"
 
-#: kabstractaboutdialog_p.cpp:237
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#: kabstractaboutdialog_p.cpp:270
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"பங்களிப்பாளருக்கு மின்னஞ்சல் அனுப்பு\n"
-"%1"
+msgstr "இயற்றியவருக்கு மின்னஞ்சல் அனுப்பு: %1"
 
-#: kabstractaboutdialog_p.cpp:288
+#: kabstractaboutdialog_p.cpp:321
 #, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "பிழைகளை தெரிவிக்க %1 என்ற இணையதளத்தை பயன்படுத்துங்கள்.\n"
 
-#: kabstractaboutdialog_p.cpp:296
+#: kabstractaboutdialog_p.cpp:329
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -529,19 +534,16 @@ msgid "Curr&ent actions:"
 msgstr "ந&டப்புச் செயல்கள்:"
 
 #: kedittoolbar.cpp:1040
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "சின்னத்தை மாற்று"
+msgstr "&சின்னத்தை மாற்று…"
 
 #: kedittoolbar.cpp:1049
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "பெயரை மாற்று"
+msgstr "&பெயரை மாற்று…"
 
 #: kedittoolbar.cpp:1191
 #, kde-format
@@ -750,13 +752,13 @@ msgstr "உரிம ஒப்பந்தம்"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ம. ஸ்ரீ ராமதாஸ்"
+msgstr "ம. ஸ்ரீ ராமதாஸ், கோ. கிஷோர்"
 
 #: kmainwindow.cpp:255
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "amachu@yavarkkum.org"
+msgstr "amachu@yavarkkum.org, Kde-l10n-ta@kde.org"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
@@ -764,12 +766,10 @@ msgid "Add to Toolbar"
 msgstr "கருவிப்பட்டையில் சேர்"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "சுருக்குவழியை அமை..."
+msgstr "சுருக்குவழியை அமை…"
 
 #: kshortcuteditwidget.cpp:55
 #, kde-format
@@ -798,7 +798,7 @@ msgstr "தற்போதைய திட்டம்:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "புதியது…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -819,20 +819,16 @@ msgid "Save shortcuts to scheme"
 msgstr "சுருக்குவழிகளை திட்டமுறையாக சேமி"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "திட்டத்தை ஏற்றுமதி செய்..."
+msgstr "திட்டத்தை ஏற்றுமதி செய்…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "திட்டத்தை இறக்குமதி செய்..."
+msgstr "திட்டத்தை இறக்குமதி செய்…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -1351,6 +1347,10 @@ msgstr "&அமைப்புகள்"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "பிரதானக் கருவிப்பட்டை"
+
+#~| msgid "The <em>%1</em> windowing system"
+#~ msgid "Windowing system"
+#~ msgstr "சாளர நெறிமுறை"
 
 #~ msgctxt "@item Component name in about dialog."
 #~ msgid "%1"
