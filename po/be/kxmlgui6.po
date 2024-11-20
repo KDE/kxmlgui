@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-18 00:37+0000\n"
-"PO-Revision-Date: 2024-06-11 08:11\n"
+"PO-Revision-Date: 2024-11-11 19:00\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -213,10 +213,13 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
+"Калекцыя бібліятэк, створаных супольнасцю KDE для пашырэння магчымасцяў Qt"
 
 #: kabstractaboutdialog_p.cpp:127
 #, kde-format
@@ -224,16 +227,17 @@ msgid "Qt"
 msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Cross-platform application development framework"
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Кросплатформенны фрэймворк для распрацоўвання праграм"
 
 #: kabstractaboutdialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (створана на %2)"
+msgstr "Выкарыстоўвае %1 і сабраны на %2"
 
 #: kabstractaboutdialog_p.cpp:132
 #, kde-format
@@ -242,8 +246,7 @@ msgid "Underlying platform."
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:156
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Наведаць хатнюю старонку кампанента"
@@ -263,45 +266,30 @@ msgid "Copy to Clipboard"
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:246
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Наведаць асабістую старонку ўдзельніка"
+msgstr "Наведаць асабістую старонку аўтара"
 
 #: kabstractaboutdialog_p.cpp:247
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
-msgstr ""
-"Наведаць асабістую старонку ўдзельніка\n"
-"%1"
+msgstr "Наведаць асабістую старонку аўтара %1"
 
 #: kabstractaboutdialog_p.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Напісаць удзельніку"
 
 #: kabstractaboutdialog_p.cpp:270
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Напісаць удзельніку\n"
-"%1"
+msgstr "Email удзельніка: %1"
 
 #: kabstractaboutdialog_p.cpp:321
 #, kde-format
@@ -1387,10 +1375,9 @@ msgstr "&Налады"
 msgid "Main Toolbar"
 msgstr "Галоўная панэль інструментаў"
 
-#, fuzzy
 #~| msgid "The <em>%1</em> windowing system"
 #~ msgid "Windowing system"
-#~ msgstr "Сістэма кіравання вокнамі <em>%1</em>"
+#~ msgstr "Аконная сістэма"
 
 #~ msgctxt "@item Component name in about dialog."
 #~ msgid "%1"
