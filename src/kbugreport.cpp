@@ -114,7 +114,7 @@ KBugReport::KBugReport(const KAboutData &aboutData, QWidget *_parent)
     }
     d->kde_version = QStringLiteral(KXMLGUI_VERSION_STRING);
     if (d->bugDestination != KBugReportPrivate::BugsKdeOrg) {
-        d->m_strVersion += QLatin1Char(' ') + d->kde_version;
+        d->m_strVersion = i18nc("%1 is the program version, %2 is the kde framework version", "%1 with KDE Frameworks %2", d->m_strVersion, d->kde_version);
     }
     d->m_version = new QLabel(d->m_strVersion, this);
     d->m_version->setTextInteractionFlags(Qt::TextBrowserInteraction);
