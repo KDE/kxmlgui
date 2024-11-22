@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-18 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2009-02-10 20:44+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -412,6 +412,12 @@ msgstr "संस्करनः"
 #| msgid "no version set (programmer error!)"
 msgid "no version set (programmer error)"
 msgstr "कोई संस्करन सेट नइ (प्रोग्रामर गलती!)"
+
+#: kbugreport.cpp:117
+#, kde-format
+msgctxt "%1 is the program version, %2 is the kde framework version"
+msgid "%1 with KDE Frameworks %2"
+msgstr ""
 
 #: kbugreport.cpp:125
 #, kde-format

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-18 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2022-09-08 10:35\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -407,6 +407,13 @@ msgstr "Viersija:"
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "viersija nie vyznačana (pamylka prahramista)"
+
+#: kbugreport.cpp:117
+#, fuzzy, kde-format
+#| msgid "KDE Frameworks"
+msgctxt "%1 is the program version, %2 is the kde framework version"
+msgid "%1 with KDE Frameworks %2"
+msgstr "KDE Frameworks"
 
 #: kbugreport.cpp:125
 #, kde-format

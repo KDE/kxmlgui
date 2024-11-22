@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-18 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2012-06-27 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -406,6 +406,12 @@ msgstr "កំណែ ៖"
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "គ្មា​កំណែ​បាន​កំណត់​ទេ (កំហុស​របស់​អ្នក​សរសេរ​កម្មវិធី)"
+
+#: kbugreport.cpp:117
+#, kde-format
+msgctxt "%1 is the program version, %2 is the kde framework version"
+msgid "%1 with KDE Frameworks %2"
+msgstr ""
 
 #: kbugreport.cpp:125
 #, kde-format

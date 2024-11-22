@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-18 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2024-11-17 22:14+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -363,6 +363,13 @@ msgstr "பதிப்பு:"
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "பதிப்பு குறிப்பிடப்படவில்லை (நிரலாளரின் தவறு) "
+
+#: kbugreport.cpp:117
+#, fuzzy, kde-format
+#| msgid "KDE Frameworks"
+msgctxt "%1 is the program version, %2 is the kde framework version"
+msgid "%1 with KDE Frameworks %2"
+msgstr "கே.டீ.யீ. நிரலகங்கள்"
 
 #: kbugreport.cpp:125
 #, kde-format
