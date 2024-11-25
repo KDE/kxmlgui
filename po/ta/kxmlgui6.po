@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:38+0000\n"
-"PO-Revision-Date: 2024-11-17 22:14+0530\n"
+"PO-Revision-Date: 2024-11-24 17:12+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -195,11 +195,7 @@ msgid "License: %1"
 msgstr "உரிமம்: %1"
 
 #: kabstractaboutdialog_p.cpp:117
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -210,12 +206,10 @@ msgid "KDE Frameworks"
 msgstr "கே.டீ.யீ. நிரலகங்கள்"
 
 #: kabstractaboutdialog_p.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "Qt-யுடன் பயன்படுத்தக்கூடிய, கே.டீ.யீ. சமூகம் உருவாக்கியுள்ள, நிரலகங்கள்"
+msgstr "Qt-யுடன் பயன்படுத்தக்கூடிய, கே.டீ.யீ. சமூகம் உருவாக்கியுள்ள, நிரலகங்கள்."
 
 #: kabstractaboutdialog_p.cpp:127
 #, kde-format
@@ -223,12 +217,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "பல்லியக்குதள செயலி உருவாக்க நிரலகம்"
+msgstr "பல்லியக்குதள செயலி உருவாக்க நிரலகம்."
 
 #: kabstractaboutdialog_p.cpp:129
 #, kde-format
@@ -239,7 +231,7 @@ msgstr "%1 பயனிலுள்ளது; %2 கொண்டு தொகு
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "அடிப்படை இயக்குதளம்."
 
 #: kabstractaboutdialog_p.cpp:156
 #, kde-format
@@ -261,7 +253,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
 #: kabstractaboutdialog_p.cpp:246
 #, kde-format
@@ -365,11 +357,10 @@ msgid "no version set (programmer error)"
 msgstr "பதிப்பு குறிப்பிடப்படவில்லை (நிரலாளரின் தவறு) "
 
 #: kbugreport.cpp:117
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "கே.டீ.யீ. நிரலகங்கள்"
+msgstr "%1, கே.டீ.யீ. நிரலகங்களுடன் (%2 பதிப்பு)"
 
 #: kbugreport.cpp:125
 #, kde-format

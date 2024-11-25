@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:38+0000\n"
-"PO-Revision-Date: 2024-06-19 20:52+0200\n"
+"PO-Revision-Date: 2024-11-24 19:29+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
@@ -203,11 +203,7 @@ msgid "License: %1"
 msgstr "Licens: %1"
 
 #: kabstractaboutdialog_p.cpp:117
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -221,7 +217,7 @@ msgstr "KDE Ramverk"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Bibliotekssamling skapad av KDE-gemenskapen för att utöka Qt."
 
 #: kabstractaboutdialog_p.cpp:127
 #, kde-format
@@ -232,23 +228,21 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Ramverk för applikationsutveckling för flera plattformar."
 
 #: kabstractaboutdialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (byggd med %2)"
+msgstr "Använder %1 och byggd med %2"
 
 #: kabstractaboutdialog_p.cpp:132
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Underliggande plattform."
 
 #: kabstractaboutdialog_p.cpp:156
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Besök komponentens hemsida"
@@ -264,52 +258,38 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:190
-#, fuzzy, kde-format
-#| msgid "Copy selection to clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Kopiera markeringen till klippbordet"
+msgstr "Kopiera till klippbordet"
 
 #: kabstractaboutdialog_p.cpp:246
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Besök bidragsgivarens hemsida"
+msgstr "Besök upphovsmannens hemsida"
 
 #: kabstractaboutdialog_p.cpp:247
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Besök bidragsgivarens hemsida\n"
+"Besök upphovsmannens hemsida\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Skicka e-post till bidragsgivare"
 
 #: kabstractaboutdialog_p.cpp:270
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Skicka e-post till bidragsgivare\n"
-"%1"
+msgstr "Skicka e-post till bidragsgivare: %1"
 
 #: kabstractaboutdialog_p.cpp:321
 #, kde-format
@@ -385,11 +365,10 @@ msgid "no version set (programmer error)"
 msgstr "ingen version inställd (programmeringsfel)"
 
 #: kbugreport.cpp:117
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "KDE Ramverk"
+msgstr "%1 med KDE Ramverk %2"
 
 #: kbugreport.cpp:125
 #, kde-format
