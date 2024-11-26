@@ -74,6 +74,11 @@ find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 
+# For the Python bindings
+find_package(Python3 3.10 COMPONENTS Interpreter Development)
+find_package(Shiboken6)
+find_package(PySide6)
+
 ecm_set_disabled_deprecation_versions(
     QT 6.8
     KF 6.8
@@ -82,11 +87,24 @@ ecm_set_disabled_deprecation_versions(
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui6\")
 ki18n_install(po)
 
+cmake_dependent_option(BUILD_PYTHON_BINDINGS "Generate Python Bindings" ON "TARGET Shiboken6::libshiboken AND TARGET PySide6::pyside6" OFF)
+add_feature_info(PYTHON_BINDINGS ${BUILD_PYTHON_BINDINGS} "Python bindings")
+
+# FreeBSD CI is missing required packages
+if (CMAKE_SYSTEM_NAME MATCHES FreeBSD)
+    set(BUILD_PYTHON_BINDINGS OFF)
+endif()
+
 # Subdirectories
 add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(tests)
     add_subdirectory(autotests)
+endif()
+
+if (BUILD_PYTHON_BINDINGS)
+    include(ECMGeneratePythonBindings)
+    add_subdirectory(python)
 endif()
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
