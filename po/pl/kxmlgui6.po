@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 08:48+0200\n"
+"PO-Revision-Date: 2024-11-30 09:58+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -26,6 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -208,11 +209,7 @@ msgid "License: %1"
 msgstr "Licencja: %1"
 
 #: kabstractaboutdialog_p.cpp:117
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -220,13 +217,13 @@ msgstr "%1 (%2)"
 #: kabstractaboutdialog_p.cpp:122
 #, kde-format
 msgid "KDE Frameworks"
-msgstr "Szkielety KDE"
+msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Zbiór bibliotek utworzonych przez Społeczność KDE do rozszerzenia Qt."
 
 #: kabstractaboutdialog_p.cpp:127
 #, kde-format
@@ -237,23 +234,21 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Szkielet do rozwoju wieloplatformowych aplikacji."
 
 #: kabstractaboutdialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (zbudowane na %2)"
+msgstr "Użyto %1 (zbudowane na %2)"
 
 #: kabstractaboutdialog_p.cpp:132
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Platforma uruchomieniowa."
 
 #: kabstractaboutdialog_p.cpp:156
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Odwiedź stronę domową składnika"
@@ -269,52 +264,38 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:190
-#, fuzzy, kde-format
-#| msgid "Copy selection to clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Kopiuj zaznaczenie do schowka"
+msgstr "Skopiuj do schowka"
 
 #: kabstractaboutdialog_p.cpp:246
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Odwiedź stronę domową współtwórcy"
+msgstr "Odwiedź stronę domową autora"
 
 #: kabstractaboutdialog_p.cpp:247
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Odwiedź stronę domową współtwórcy\n"
+"Odwiedź stronę domową autora\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Napisz do współtwórcy"
 
 #: kabstractaboutdialog_p.cpp:270
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Adres pocztowy współtwórcy\n"
-"%1"
+msgstr "Adres pocztowy współtwórcy: %1"
 
 #: kabstractaboutdialog_p.cpp:321
 #, kde-format
@@ -390,11 +371,10 @@ msgid "no version set (programmer error)"
 msgstr "nie ustawiono wersji (błąd programisty)"
 
 #: kbugreport.cpp:117
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "Szkielety KDE"
+msgstr "%1 na KDE Frameworks %2"
 
 #: kbugreport.cpp:125
 #, kde-format
