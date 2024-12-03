@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:38+0000\n"
-"PO-Revision-Date: 2024-05-09 07:10+0900\n"
+"PO-Revision-Date: 2024-12-02 17:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -193,11 +193,7 @@ msgid "License: %1"
 msgstr "授權：%1"
 
 #: kabstractaboutdialog_p.cpp:117
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -211,7 +207,7 @@ msgstr "KDE Frameworks"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "擴展 Qt 的多個函式庫的集合，由 KDE 社群所開發。"
 
 #: kabstractaboutdialog_p.cpp:127
 #, kde-format
@@ -222,23 +218,21 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "跨平台的應用程式開發框架。"
 
 #: kabstractaboutdialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (建置於 %2 上)"
+msgstr "使用 %1 並建置於 %2 之上"
 
 #: kabstractaboutdialog_p.cpp:132
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "基底平台。"
 
 #: kabstractaboutdialog_p.cpp:156
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "造訪元件的首頁"
@@ -257,48 +251,35 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "複製到剪貼簿"
 
 #: kabstractaboutdialog_p.cpp:246
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "造訪貢獻者的首頁"
+msgstr "造訪作者的首頁"
 
 #: kabstractaboutdialog_p.cpp:247
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"造訪貢獻者的首頁\n"
+"造訪作者的首頁\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:269
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "發信給貢獻者"
+msgstr "寄信給貢獻者"
 
 #: kabstractaboutdialog_p.cpp:270
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"發信給貢獻者\n"
-"%1"
+msgstr "寄信給貢獻者：%1"
 
 #: kabstractaboutdialog_p.cpp:321
 #, kde-format
@@ -372,11 +353,10 @@ msgid "no version set (programmer error)"
 msgstr "沒有設定版本 (程式設計者的錯誤！)"
 
 #: kbugreport.cpp:117
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "KDE Frameworks"
+msgstr "%1 使用 KDE Frameworks %2"
 
 #: kbugreport.cpp:125
 #, kde-format
