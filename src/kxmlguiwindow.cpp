@@ -210,6 +210,38 @@ void KXmlGuiWindow::setupToolbarMenuActions()
     }
 }
 
+bool KXmlGuiWindow::isToolBarVisible(const QString &name)
+{
+    KToolBar *tb = findChild<KToolBar *>(name);
+    if (!tb) {
+        return false;
+    }
+
+    return tb->isVisible();
+}
+
+void KXmlGuiWindow::setToolBarVisible(const QString &name, bool visible)
+{
+    KToolBar *tb = findChild<KToolBar *>(name);
+    if (!tb) {
+        return;
+    }
+
+    tb->setVisible(visible);
+}
+
+QStringList KXmlGuiWindow::toolBarNames() const
+{
+    QList<KToolBar *> bars = toolBars();
+    QStringList ret;
+
+    for (KToolBar *bar : bars) {
+        ret.append(bar->objectName());
+    }
+
+    return ret;
+}
+
 KXmlGuiWindow::~KXmlGuiWindow()
 {
     Q_D(KXmlGuiWindow);
