@@ -150,6 +150,16 @@ public:
 
 Q_SIGNALS:
     /*!
+     * \brief Emitted just before a toolbar configuration is applied.
+     *
+     * Connect to this signal to call saveMainWindowSettings(). When newToolBarConfig()
+     * is emitted afterwards, pass the same config group to applyMainWindowSettings()
+     * in order to properly restore the UI after a toolbar configuration change.
+     *
+     * \since 6.20
+     */
+    void aboutToUpdateToolBarConfig();
+    /*!
      * \brief Emitted when 'Apply' or 'Ok' is clicked or toolbars were reset.
      *
      * Connect to it to plug action lists and to call applyMainWindowSettings

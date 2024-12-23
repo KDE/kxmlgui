@@ -293,11 +293,13 @@ KXMLGUIFactory *KXmlGuiWindow::guiFactory()
 void KXmlGuiWindow::configureToolbars()
 {
     Q_D(KXmlGuiWindow);
-    KConfigGroup cg(KSharedConfig::openConfig(), QString());
-    saveMainWindowSettings(cg);
     if (!d->toolBarEditor) {
         d->toolBarEditor = new KEditToolBar(guiFactory(), this);
         d->toolBarEditor->setAttribute(Qt::WA_DeleteOnClose);
+        connect(d->toolBarEditor, &KEditToolBar::aboutToUpdateToolBarConfig, this, [this] {
+            KConfigGroup cg(KSharedConfig::openConfig(), QString());
+            saveMainWindowSettings(cg);
+        });
         connect(d->toolBarEditor, &KEditToolBar::newToolBarConfig, this, &KXmlGuiWindow::saveNewToolbarConfig);
     }
     d->toolBarEditor->show();

@@ -662,6 +662,7 @@ void KEditToolBarPrivate::defaultClicked()
         != KMessageBox::Continue) {
         return;
     }
+    Q_EMIT q->aboutToUpdateToolBarConfig();
 
     KEditToolBarWidget *oldWidget = m_widget;
     m_widget = nullptr;
@@ -749,6 +750,7 @@ void KEditToolBarPrivate::okClicked()
     // Do not rebuild GUI and emit the "newToolBarConfig" signal again here if the "Apply"
     // button was already pressed and no further changes were made.
     if (m_buttonBox->button(QDialogButtonBox::Apply)->isEnabled()) {
+        Q_EMIT q->aboutToUpdateToolBarConfig();
         m_widget->save();
         Q_EMIT q->newToolBarConfig();
     }
@@ -757,6 +759,7 @@ void KEditToolBarPrivate::okClicked()
 
 void KEditToolBarPrivate::applyClicked()
 {
+    Q_EMIT q->aboutToUpdateToolBarConfig();
     (void)m_widget->save();
     enableApply(false);
     Q_EMIT q->newToolBarConfig();
