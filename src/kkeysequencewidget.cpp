@@ -422,6 +422,7 @@ KKeySequenceWidget::KKeySequenceWidget(QWidget *parent)
         if (!d->recorder->isRecording()) {
             d->doneRecording();
         }
+        Q_EMIT recordingChanged();
     });
 }
 
@@ -438,6 +439,11 @@ KKeySequenceWidget::ShortcutTypes KKeySequenceWidget::checkForConflictsAgainst()
 void KKeySequenceWidget::setComponentName(const QString &componentName)
 {
     d->componentName = componentName;
+}
+
+bool KKeySequenceWidget::isRecording() const
+{
+    return d->recorder->isRecording();
 }
 
 bool KKeySequenceWidget::multiKeyShortcutsAllowed() const

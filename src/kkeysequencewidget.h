@@ -50,6 +50,13 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
     /// @since 6.1
     Q_PROPERTY(bool modifierOnlyAllowed READ modifierOnlyAllowed WRITE setModifierOnlyAllowed)
 
+    /**
+     * Indicates whether a key sequence is currently being recorded.
+     *
+     * @since 6.12
+     */
+    Q_PROPERTY(bool recording READ isRecording NOTIFY recordingChanged)
+
 public:
     /// An enum about validation when setting a key sequence.
     ///@see setKeySequence()
@@ -225,6 +232,13 @@ public:
      */
     void setComponentName(const QString &componentName);
 
+    /**
+     * Returns @c true if a key sequence is currently being recorded; otherwise returns @c false.
+     *
+     * @since 6.12
+     */
+    bool isRecording() const;
+
 Q_SIGNALS:
 
     /**
@@ -243,6 +257,14 @@ Q_SIGNALS:
      * are supposed to steal the shortcut and save this change.
      */
     void stealShortcut(const QKeySequence &seq, QAction *action);
+
+    /**
+     * This signal is emitted when the user begins or finishes recording a key sequence. It
+     * is not emitted when the current key sequence is changed using setKeySequence().
+     *
+     * @since 6.12
+     */
+    void recordingChanged();
 
 public Q_SLOTS:
 
