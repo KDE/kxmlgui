@@ -75,7 +75,7 @@ find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 
 # For the Python bindings
-find_package(Python3 3.10 COMPONENTS Interpreter Development)
+find_package(Python3 3.9 COMPONENTS Interpreter Development)
 find_package(Shiboken6)
 find_package(PySide6)
 
