@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-07 00:38+0000\n"
-"PO-Revision-Date: 2024-11-11 19:00\n"
+"PO-Revision-Date: 2025-01-06 19:10\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -198,11 +198,7 @@ msgid "License: %1"
 msgstr "Ліцэнзія: %1"
 
 #: kabstractaboutdialog_p.cpp:117
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -213,13 +209,11 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
-"Калекцыя бібліятэк, створаных супольнасцю KDE для пашырэння магчымасцяў Qt"
+"Калекцыя бібліятэк, створаных супольнасцю KDE для пашырэння магчымасцяў Qt."
 
 #: kabstractaboutdialog_p.cpp:127
 #, kde-format
@@ -227,12 +221,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Кросплатформенны фрэймворк для распрацоўвання праграм"
+msgstr "Кросплатформенны фрэймворк для распрацоўвання праграм."
 
 #: kabstractaboutdialog_p.cpp:129
 #, kde-format
@@ -243,7 +235,7 @@ msgstr "Выкарыстоўвае %1 і сабраны на %2"
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Базавая платформа."
 
 #: kabstractaboutdialog_p.cpp:156
 #, kde-format
@@ -263,7 +255,7 @@ msgstr "Наведаць хатнюю старонку кампанента %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Скапіяваць у буфер абмену"
 
 #: kabstractaboutdialog_p.cpp:246
 #, kde-format
@@ -366,11 +358,10 @@ msgid "no version set (programmer error)"
 msgstr "версія не вызначана (памылка праграміста)"
 
 #: kbugreport.cpp:117
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "KDE Frameworks"
+msgstr "%1 з фрэймворкамі KDE %2"
 
 #: kbugreport.cpp:125
 #, kde-format
