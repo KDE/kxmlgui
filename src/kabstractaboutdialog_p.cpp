@@ -133,8 +133,10 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
 
     for (qsizetype i = 0, count = allComponents.count(); i < count; i++) {
         const auto &component = allComponents[i];
+
         QVBoxLayout *col = nullptr;
-        QHBoxLayout *row = nullptr;
+        QHBoxLayout *row = new QHBoxLayout;
+
         auto name = new QLabel(u"<span style='font-weight: 600'>"_s + component.name() + u"</span>"_s
                                + (!component.version().isEmpty() ? (u" (" + component.version() + u')') : QString{}));
         if (!component.description().isEmpty()) {
@@ -148,10 +150,12 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
             description->setPalette(palette);
             col->addWidget(name);
             col->addWidget(description);
+            row->addLayout(col);
+        } else {
+            row->addWidget(name);
         }
 
         if (!component.webAddress().isEmpty()) {
-            row = new QHBoxLayout;
             const auto url = QUrl(component.webAddress());
             auto webAction = new QAction(QIcon::fromTheme(u"internet-services-symbolic"_s), i18nc("@action:button", "Visit component's homepage"));
             webAction->setToolTip(i18nc("@info:tooltip", "Visit components's homepage\n%1", component.webAddress()));
@@ -162,21 +166,10 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
             web->setDefaultAction(webAction);
             web->setToolButtonStyle(Qt::ToolButtonIconOnly);
             web->setAutoRaise(true);
-            if (col) {
-                row->addLayout(col);
-            } else {
-                row->addWidget(name);
-            }
             row->addWidget(web);
         }
 
-        if (row) {
-            componentLayout->addLayout(row);
-        } else if (col) {
-            componentLayout->addLayout(col);
-        } else {
-            componentLayout->addWidget(name);
-        }
+        componentLayout->addLayout(row);
 
         if (i + 1 != count) {
             auto separator = new KSeparator;
@@ -221,11 +214,13 @@ static void createPersonLayout(QVBoxLayout *layout, const QList<KAboutPerson> &p
         const auto &person = persons[i];
 
         QVBoxLayout *col = nullptr;
-        QHBoxLayout *row = nullptr;
+        QHBoxLayout *row = new QHBoxLayout;
+
         auto name = new QLabel(person.name());
         auto font = name->font();
         font.setWeight(QFont::DemiBold);
         name->setFont(font);
+
         if (!person.task().isEmpty()) {
             col = new QVBoxLayout;
             col->setSpacing(0);
@@ -238,10 +233,12 @@ static void createPersonLayout(QVBoxLayout *layout, const QList<KAboutPerson> &p
 
             col->addWidget(name);
             col->addWidget(task);
+            row->addLayout(col);
+        } else {
+            row->addWidget(name);
         }
 
         if (!person.webAddress().isEmpty()) {
-            row = new QHBoxLayout;
             const auto url = QUrl(person.webAddress());
             auto webAction = new QAction(QIcon::fromTheme(u"internet-services-symbolic"_s), i18nc("@action:button", "Visit author's homepage"));
             webAction->setToolTip(i18nc("@info:tooltip", "Visit author's homepage\n%1", person.webAddress()));
@@ -252,18 +249,10 @@ static void createPersonLayout(QVBoxLayout *layout, const QList<KAboutPerson> &p
             web->setDefaultAction(webAction);
             web->setAutoRaise(true);
             web->setToolButtonStyle(Qt::ToolButtonIconOnly);
-            if (col) {
-                row->addLayout(col);
-            } else {
-                row->addWidget(name);
-            }
             row->addWidget(web);
         }
 
         if (!person.emailAddress().isEmpty()) {
-            if (!row) {
-                row = new QHBoxLayout;
-            }
             const auto url = person.emailAddress();
             auto webAction =
                 new QAction(QIcon::fromTheme(u"mail-send-symbolic"_s), i18nc("@action:button Send an email to a contributor", "Email contributor"));
@@ -275,22 +264,10 @@ static void createPersonLayout(QVBoxLayout *layout, const QList<KAboutPerson> &p
             web->setDefaultAction(webAction);
             web->setToolButtonStyle(Qt::ToolButtonIconOnly);
             web->setAutoRaise(true);
-            if (col) {
-                row->addLayout(col);
-            } else {
-                row->addWidget(name);
-            }
             row->addWidget(web);
         }
 
-        if (row) {
-            layout->addLayout(row);
-        } else if (col) {
-            layout->addLayout(col);
-        } else {
-            layout->addWidget(name);
-        }
-
+        layout->addLayout(row);
         if (i + 1 != count) {
             auto separator = new KSeparator;
             separator->setEnabled(false);
