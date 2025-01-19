@@ -461,9 +461,14 @@ void KKeySequenceWidget::setCheckForConflictsAgainst(ShortcutTypes types)
     d->checkAgainstShortcutTypes = types;
 }
 
-void KKeySequenceWidget::setModifierlessAllowed(bool allow)
+void KKeySequenceWidget::setPatterns(const QList<KKeySequenceRecorder::Pattern> &patterns)
 {
-    d->recorder->setModifierlessAllowed(allow);
+    d->recorder->setPatterns(patterns);
+}
+
+QList<KKeySequenceRecorder::Pattern> KKeySequenceWidget::patterns() const
+{
+    return d->recorder->patterns();
 }
 
 bool KKeySequenceWidget::isKeySequenceAvailable(const QKeySequence &keySequence) const
@@ -476,9 +481,15 @@ bool KKeySequenceWidget::isKeySequenceAvailable(const QKeySequence &keySequence)
              || d->conflictWithStandardShortcuts(keySequence));
 }
 
+#if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 11)
 bool KKeySequenceWidget::isModifierlessAllowed()
 {
     return d->recorder->modifierlessAllowed();
+}
+
+void KKeySequenceWidget::setModifierlessAllowed(bool allow)
+{
+    d->recorder->setModifierlessAllowed(allow);
 }
 
 bool KKeySequenceWidget::modifierOnlyAllowed() const
@@ -490,6 +501,7 @@ void KKeySequenceWidget::setModifierOnlyAllowed(bool allow)
 {
     d->recorder->setModifierOnlyAllowed(allow);
 }
+#endif
 
 void KKeySequenceWidget::setClearButtonShown(bool show)
 {
