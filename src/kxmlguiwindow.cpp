@@ -15,6 +15,7 @@
 #include "debug.h"
 
 #include "kactioncollection.h"
+#include "kactionconflictdetector_p.h"
 #include "kmainwindow_p.h"
 #include <KMessageBox>
 #include <kcommandbar.h>
@@ -157,6 +158,15 @@ KXmlGuiWindow::KXmlGuiWindow(QWidget *parent, Qt::WindowFlags flags)
 #ifdef WITH_QTDBUS
     new KMainWindowInterface(this);
 #endif
+
+    // create the conflict detector only if some main window got created
+    // before we did that on library load, that might mess with plain Qt applications
+    // see bug 467130
+    static QPointer<KActionConflictDetector> conflictDetector;
+    if (!conflictDetector) {
+        conflictDetector = new KActionConflictDetector(QCoreApplication::instance());
+        QCoreApplication::instance()->installEventFilter(conflictDetector);
+    }
 
     /*
      * Set up KCommandBar launcher action
