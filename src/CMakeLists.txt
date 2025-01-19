@@ -84,7 +84,7 @@ ecm_generate_export_header(KF6XmlGui
     VERSION ${KF_VERSION}
     USE_VERSION_HEADER
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 6.9
+    DEPRECATION_VERSIONS 6.9 6.12
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
@@ -96,12 +96,12 @@ PUBLIC
     Qt6::Widgets  #QWidget is used everywhere
     KF6::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
     KF6::ConfigWidgets  #KStandardAction
+    KF6::GuiAddons      #KKeySequenceWidget
 PRIVATE
     Qt6::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt6::PrintSupport   #QPrinter in kshortcutseditor
     Qt6::CorePrivate    #QSystemLocale in initializeLanguages
     KF6::CoreAddons     #KAboutData
-    KF6::GuiAddons
     KF6::WidgetsAddons  #KToggleAction
     KF6::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF6::I18n                #i18n and i18nc in many places
@@ -188,4 +188,3 @@ if (BUILD_QCH)
         COMPONENT Devel
     )
 endif()
-

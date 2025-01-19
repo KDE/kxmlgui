@@ -11,6 +11,8 @@
 
 #include <kxmlgui_export.h>
 
+#include <KKeySequenceRecorder>
+
 #include <QList>
 #include <QPushButton>
 
@@ -45,9 +47,15 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
 
     Q_PROPERTY(ShortcutTypes checkForConflictsAgainst READ checkForConflictsAgainst WRITE setCheckForConflictsAgainst)
 
+    /**
+     * @deprecated since 6.12, use the patterns property
+     */
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 
-    /// @since 6.1
+    /**
+     * @since 6.1
+     * @deprecated since 6.12, use the patterns property
+     */
     Q_PROPERTY(bool modifierOnlyAllowed READ modifierOnlyAllowed WRITE setModifierOnlyAllowed)
 
     /**
@@ -56,6 +64,15 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
      * @since 6.12
      */
     Q_PROPERTY(bool recording READ isRecording NOTIFY recordingChanged)
+
+    /**
+     * Specifies the accepted shortcut formats.
+     *
+     * Default is `KKeySequenceRecorder::ModifierAndKey`.
+     *
+     * @since 6.12
+     */
+    Q_PROPERTY(KKeySequenceRecorder::Patterns patterns READ patterns WRITE setPatterns)
 
 public:
     /// An enum about validation when setting a key sequence.
@@ -167,26 +184,37 @@ public:
     void setMultiKeyShortcutsAllowed(bool);
     bool multiKeyShortcutsAllowed() const;
 
+#if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 12)
     /**
      * This only applies to user input, not to setKeySequence().
      * Set whether to accept "plain" keys without modifiers (like Ctrl, Alt, Meta).
      * Plain keys by our definition include letter and symbol keys and
      * text editing keys (Return, Space, Tab, Backspace, Delete).
      * "Special" keys like F1, Cursor keys, Insert, PageDown will always work.
+     *
+     * @deprecated since 6.12, use setPatterns() instead
      */
-    void setModifierlessAllowed(bool allow);
+    KXMLGUI_DEPRECATED_VERSION(6, 12, "Use setPatterns()") void setModifierlessAllowed(bool allow);
 
     /**
      * @see setModifierlessAllowed()
+     *
+     * @deprecated since 6.12, use patterns() instead
      */
-    bool isModifierlessAllowed();
+    KXMLGUI_DEPRECATED_VERSION(6, 12, "Use patterns()") bool isModifierlessAllowed();
 
     /**
      * Whether to allow modifier-only key sequences.
      * @since 6.1
+     * @deprecated since 6.12, use setPatterns() instead
      */
-    void setModifierOnlyAllowed(bool allow);
-    bool modifierOnlyAllowed() const;
+    KXMLGUI_DEPRECATED_VERSION(6, 12, "Use setPatterns()") void setModifierOnlyAllowed(bool allow);
+
+    /**
+     * @deprecated since 6.12, use patterns() instead
+     */
+    KXMLGUI_DEPRECATED_VERSION(6, 12, "Use patterns()") bool modifierOnlyAllowed() const;
+#endif
 
     /**
      * Set whether a small button to set an empty key sequence should be displayed next to the
@@ -238,6 +266,23 @@ public:
      * @since 6.12
      */
     bool isRecording() const;
+
+    /**
+     * Sets the accepted shortcut patterns to @a patterns. A shortcut pattern specifies what
+     * components the recoreded shortcut must have, e.g. whether it should include modifier keys, etc.
+     *
+     * @since 6.12
+     */
+    void setPatterns(KKeySequenceRecorder::Patterns patterns);
+
+    /**
+     * Returns the accepted shortcut patterns.
+     *
+     * Default is `Modifier | Key`.
+     *
+     * @since 6.12
+     */
+    KKeySequenceRecorder::Patterns patterns() const;
 
 Q_SIGNALS:
 
