@@ -14,6 +14,7 @@
 
 #include "kmainwindow.h"
 
+#include "kactionconflictdetector_p.h"
 #include "kmainwindow_p.h"
 #ifdef WITH_QTDBUS
 #include "kmainwindowiface_p.h"
@@ -272,6 +273,15 @@ void KMainWindowPrivate::init(KMainWindow *_q)
     suppressCloseEvent = false;
 
     qApp->installEventFilter(KToolTipHelper::instance());
+
+    // create the conflict detector only if some main window got created
+    // before we did that on library load, that might mess with plain Qt applications
+    // see bug 467130
+    static QPointer<KActionConflictDetector> conflictDetector;
+    if (!conflictDetector) {
+        conflictDetector = new KActionConflictDetector(QCoreApplication::instance());
+        QCoreApplication::instance()->installEventFilter(conflictDetector);
+    }
 }
 
 static bool endsWithHashNumber(const QString &s)

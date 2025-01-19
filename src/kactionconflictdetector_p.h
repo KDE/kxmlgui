@@ -14,7 +14,6 @@
 */
 
 #include <QAction>
-#include <QCoreApplication>
 #include <QShortcutEvent>
 
 #include <KLocalizedString>
@@ -47,13 +46,3 @@ public:
         return QObject::eventFilter(watched, event);
     }
 };
-
-void _k_installConflictDetector()
-{
-    QCoreApplication *app = QCoreApplication::instance();
-    app->installEventFilter(new KActionConflictDetector(app));
-}
-
-Q_COREAPP_STARTUP_FUNCTION(_k_installConflictDetector)
-
-#include "kactionconflictdetector.moc"

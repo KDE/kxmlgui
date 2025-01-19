@@ -23,7 +23,7 @@ target_sources(KF6XmlGui PRIVATE
   kabstractaboutdialog_p.cpp
   kactioncategory.cpp
   kactioncollection.cpp
-  kactionconflictdetector.cpp
+  kactionconflictdetector_p.h
   kbugreport.cpp
   kedittoolbar.cpp
   khelpmenu.cpp
