@@ -606,7 +606,7 @@ void KMainWindow::saveMainWindowSettings(KConfigGroup &cg)
 
     if (!autoSaveSettings() || cg.name() == autoSaveGroup()) {
         // TODO should be cg == d->autoSaveGroup, to compare both kconfig and group name
-        if (!cg.hasDefault("ToolBarsMovable") && !KToolBar::toolBarsLocked()) {
+        if (!cg.hasDefault("ToolBarsMovable") && KToolBar::toolBarsLocked()) {
             cg.revertToDefault("ToolBarsMovable");
         } else {
             cg.writeEntry("ToolBarsMovable", KToolBar::toolBarsLocked() ? "Disabled" : "Enabled");
