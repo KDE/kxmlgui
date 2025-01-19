@@ -11,6 +11,8 @@
 
 #include <kxmlgui_export.h>
 
+#include <KKeySequenceRecorder>
+
 #include <QList>
 #include <QPushButton>
 
@@ -45,9 +47,15 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
 
     Q_PROPERTY(ShortcutTypes checkForConflictsAgainst READ checkForConflictsAgainst WRITE setCheckForConflictsAgainst)
 
+    /**
+     * @deprecated since 6.11, use the patterns property
+     */
     Q_PROPERTY(bool modifierlessAllowed READ isModifierlessAllowed WRITE setModifierlessAllowed)
 
-    /// @since 6.1
+    /**
+     * @since 6.1
+     * @deprecated since 6.11, use the patterns property
+     */
     Q_PROPERTY(bool modifierOnlyAllowed READ modifierOnlyAllowed WRITE setModifierOnlyAllowed)
 
     /**
@@ -56,6 +64,15 @@ class KXMLGUI_EXPORT KKeySequenceWidget : public QWidget
      * @since 6.11
      */
     Q_PROPERTY(bool recording READ isRecording NOTIFY recordingChanged)
+
+    /**
+     * Specifies the accepted shortcut formats.
+     *
+     * Default is `[Modifier | Key]`.
+     *
+     * @since 6.11
+     */
+    Q_PROPERTY(QList<KKeySequenceRecorder::Pattern> patterns READ patterns WRITE setPatterns)
 
 public:
     /// An enum about validation when setting a key sequence.
@@ -238,6 +255,9 @@ public:
      * @since 6.11
      */
     bool isRecording() const;
+
+    void setPatterns(const QList<KKeySequenceRecorder::Pattern> &patterns);
+    QList<KKeySequenceRecorder::Pattern> patterns() const;
 
 Q_SIGNALS:
 

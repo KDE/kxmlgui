@@ -96,12 +96,12 @@ PUBLIC
     Qt6::Widgets  #QWidget is used everywhere
     KF6::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
     KF6::ConfigWidgets  #KStandardAction, KToggleAction...
+    KF6::GuiAddons
 PRIVATE
     Qt6::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt6::PrintSupport   #QPrinter in kshortcutseditor
     Qt6::CorePrivate    #QSystemLocale in initializeLanguages
     KF6::CoreAddons     #KAboutData
-    KF6::GuiAddons
     KF6::WidgetsAddons
     KF6::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF6::I18n                #i18n and i18nc in many places

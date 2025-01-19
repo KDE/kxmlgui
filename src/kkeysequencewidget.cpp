@@ -466,6 +466,16 @@ void KKeySequenceWidget::setModifierlessAllowed(bool allow)
     d->recorder->setModifierlessAllowed(allow);
 }
 
+void KKeySequenceWidget::setPatterns(const QList<KKeySequenceRecorder::Pattern> &patterns)
+{
+    d->recorder->setPatterns(patterns);
+}
+
+QList<KKeySequenceRecorder::Pattern> KKeySequenceWidget::patterns() const
+{
+    return d->recorder->patterns();
+}
+
 bool KKeySequenceWidget::isKeySequenceAvailable(const QKeySequence &keySequence) const
 {
     if (keySequence.isEmpty()) {
