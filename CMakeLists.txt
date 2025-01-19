@@ -81,7 +81,7 @@ find_package(PySide6)
 
 ecm_set_disabled_deprecation_versions(
     QT 6.8
-    KF 6.8
+    KF 6.10
 )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui6\")
