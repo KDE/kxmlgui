@@ -15,6 +15,7 @@
 #include "kmainwindow.h"
 
 #include "kactionconflictdetector_p.h"
+#include "kcheckaccelerators.h"
 #include "kmainwindow_p.h"
 #ifdef WITH_QTDBUS
 #include "kmainwindowiface_p.h"
@@ -282,6 +283,9 @@ void KMainWindowPrivate::init(KMainWindow *_q)
         conflictDetector = new KActionConflictDetector(QCoreApplication::instance());
         QCoreApplication::instance()->installEventFilter(conflictDetector);
     }
+
+    // same for accelerator checking
+    KCheckAccelerators::initiateIfNeeded();
 }
 
 static bool endsWithHashNumber(const QString &s)

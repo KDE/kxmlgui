@@ -53,6 +53,9 @@ class KCheckAccelerators : public QObject
 {
     Q_OBJECT
 public:
+    static void initiateIfNeeded();
+
+private:
     KCheckAccelerators(QObject *parent, int key, bool autoCheck);
     /**
      * Re-implemented to filter the parent's events.
