@@ -441,10 +441,8 @@ bool KMainWindow::canBeRestored(int numberOfInstances)
         return false;
     }
 
-    KConfigGroup group(config, QStringLiteral("Number"));
-    // TODO KF6: we should use 0 as the default value, not 1
-    // See also https://bugs.kde.org/show_bug.cgi?id=427552
-    const int n = group.readEntry("NumberOfWindows", 1);
+    const KConfigGroup group(config, QStringLiteral("Number"));
+    const int n = group.readEntry("NumberOfWindows", 0);
     return numberOfInstances >= 1 && numberOfInstances <= n;
 }
 
