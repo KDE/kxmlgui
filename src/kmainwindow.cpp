@@ -30,6 +30,7 @@
 #include <QList>
 #include <QMenuBar>
 #include <QObject>
+#include <QRandomGenerator>
 #ifndef QT_NO_SESSIONMANAGER
 #include <QSessionManager>
 #endif
@@ -385,7 +386,8 @@ void KMainWindowPrivate::setSettingsDirty(CallCompression callCompression)
         if (callCompression == CompressCalls) {
             if (!settingsTimer) {
                 settingsTimer = new QTimer(q);
-                settingsTimer->setInterval(500);
+                // don't trigger sync of config always at same time to avoid clashes if x instances are running
+                settingsTimer->setInterval(QRandomGenerator::global()->bounded(500, 1500));
                 settingsTimer->setSingleShot(true);
                 QObject::connect(settingsTimer, &QTimer::timeout, q, &KMainWindow::saveAutoSaveSettings);
             }
@@ -401,7 +403,8 @@ void KMainWindowPrivate::setSizeDirty()
     if (autoSaveWindowSize) {
         if (!sizeTimer) {
             sizeTimer = new QTimer(q);
-            sizeTimer->setInterval(500);
+            // don't trigger sync of config always at same time to avoid clashes if x instances are running
+            sizeTimer->setInterval(QRandomGenerator::global()->bounded(500, 1500));
             sizeTimer->setSingleShot(true);
             QObject::connect(sizeTimer, &QTimer::timeout, q, [this]() {
                 _k_slotSaveAutoSaveSize();
