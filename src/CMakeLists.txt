@@ -95,14 +95,14 @@ PUBLIC
     Qt6::Xml      #To parse the configuration (QDomDocument etc)
     Qt6::Widgets  #QWidget is used everywhere
     KF6::ConfigCore     #Reading config for ToolbarIcons, Shortcut Schemes...
-    KF6::ConfigWidgets  #KStandardAction, KToggleAction...
+    KF6::ConfigWidgets  #KStandardAction
 PRIVATE
     Qt6::Network        #QNetworkAccessManager in kaboutapplicationpersonmodel_p
     Qt6::PrintSupport   #QPrinter in kshortcutseditor
     Qt6::CorePrivate    #QSystemLocale in initializeLanguages
     KF6::CoreAddons     #KAboutData
     KF6::GuiAddons
-    KF6::WidgetsAddons
+    KF6::WidgetsAddons  #KToggleAction
     KF6::ItemViews           #KWidgetItemDelegate in KAboutApplicationPersonListDelegate
     KF6::I18n                #i18n and i18nc in many places
     KF6::IconThemes         #KIconLoader and KIconThemes in KToolBar
