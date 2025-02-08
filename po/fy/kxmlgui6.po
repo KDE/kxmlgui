@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:38+0000\n"
+"POT-Creation-Date: 2025-02-08 00:38+0000\n"
 "PO-Revision-Date: 2010-07-22 09:48+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
@@ -348,7 +348,7 @@ msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
 msgstr "Rapportearje brekkings oan %1.\n"
 
-#: kactionconflictdetector.cpp:38
+#: kactionconflictdetector_p.h:37
 #, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
@@ -356,7 +356,7 @@ msgid ""
 "No action will be triggered."
 msgstr ""
 
-#: kactionconflictdetector.cpp:42
+#: kactionconflictdetector_p.h:41
 #, fuzzy, kde-format
 #| msgid "Ambiguous shortcut detected"
 msgctxt "@title:window"
@@ -496,41 +496,41 @@ msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Brekrapport yntsjinje"
 
-#: kcheckaccelerators.cpp:199
+#: kcheckaccelerators.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
 msgstr "'Dr Klash' Akseleraasjetoetsen Diagnoazes"
 
-#: kcheckaccelerators.cpp:206
+#: kcheckaccelerators.cpp:128
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
 msgstr "Automatyske &diagnoazes útskeakelje"
 
-#: kcheckaccelerators.cpp:252
+#: kcheckaccelerators.cpp:174
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>Fluchtoetsen wizige</h2>"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
 #, fuzzy, kde-format
 #| msgid "Find Text"
 msgid "Old Text"
 msgstr "Tekst Sykje"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:265
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
 #, fuzzy, kde-format
 #| msgid "Show help"
 msgid "New Text"
 msgstr "Help sjen litte"
 
-#: kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:182
 #, kde-format
 msgid "<h2>Accelerators removed</h2>"
 msgstr "<h2>Fluchtoetsen fuortsmiten</h2>"
 
-#: kcheckaccelerators.cpp:264
+#: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>Fluchtoetsen taheakke (allinne foar jo ynformaasje)</h2>"
@@ -834,13 +834,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "Lisinsje-oerienkomst"
 
-#: kmainwindow.cpp:255
+#: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Berend Ytsma"
 
-#: kmainwindow.cpp:256
+#: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

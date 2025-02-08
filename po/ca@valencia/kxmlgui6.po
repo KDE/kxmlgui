@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:38+0000\n"
+"POT-Creation-Date: 2025-02-08 00:38+0000\n"
 "PO-Revision-Date: 2024-11-22 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -307,7 +307,7 @@ msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
 msgstr "Informeu dels errors a %1.\n"
 
-#: kactionconflictdetector.cpp:38
+#: kactionconflictdetector_p.h:37
 #, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
@@ -318,7 +318,7 @@ msgstr ""
 "teclat» del menú «Configuració» per a solucionar l'ambigüitat.\n"
 "No s'activarà cap acció."
 
-#: kactionconflictdetector.cpp:42
+#: kactionconflictdetector_p.h:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
@@ -438,39 +438,39 @@ msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "E&nvia un informe d'error"
 
-#: kcheckaccelerators.cpp:199
+#: kcheckaccelerators.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
 msgstr "Diagnòstic d'acceleradors del Dr. Klash"
 
-#: kcheckaccelerators.cpp:206
+#: kcheckaccelerators.cpp:128
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
 msgstr "Desactiva la comprovació automàtica"
 
-#: kcheckaccelerators.cpp:252
+#: kcheckaccelerators.cpp:174
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>Acceleradors canviats</h2>"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
 #, kde-format
 msgid "Old Text"
 msgstr "Text antic"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:265
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
 #, kde-format
 msgid "New Text"
 msgstr "Text nou"
 
-#: kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:182
 #, kde-format
 msgid "<h2>Accelerators removed</h2>"
 msgstr "<h2>Acceleradors eliminats</h2>"
 
-#: kcheckaccelerators.cpp:264
+#: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>Acceleradors afegits (només per a la vostra informació)</h2>"
@@ -766,14 +766,14 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "Acord de llicència"
 
-#: kmainwindow.cpp:255
+#: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Empar Montoro Martín,Sebastià Pla,Antoni Bella,Albert Astals,Josep M. Ferrer"
 
-#: kmainwindow.cpp:256
+#: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

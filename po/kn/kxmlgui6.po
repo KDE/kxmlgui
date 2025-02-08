@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:38+0000\n"
+"POT-Creation-Date: 2025-02-08 00:38+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -300,7 +300,7 @@ msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
 msgstr "ದಯವಿಟ್ಟು %1 ಗೆ ದೋಶಗಳನ್ನು ವರದಿಮಾಡಿ.\n"
 
-#: kactionconflictdetector.cpp:38
+#: kactionconflictdetector_p.h:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
@@ -315,7 +315,7 @@ msgstr ""
 "ಸಂಯೋಜಿಸು' ವನ್ನು ಬಳಸಿ, ಅಸ್ಪಷ್ಟತೆತೆಯನ್ನು ಕೊನೆಗಾಣಿಸು. \n"
 "ಯಾವುದೇ ಕ್ರಿಯೆಯೂ ಪ್ರಚೋದಿತಗೊಳ್ಳುವುದಿಲ್ಲ (ಟ್ರಿಗರ್)."
 
-#: kactionconflictdetector.cpp:42
+#: kactionconflictdetector_p.h:41
 #, fuzzy, kde-format
 #| msgid "Ambiguous shortcut detected"
 msgctxt "@title:window"
@@ -437,41 +437,41 @@ msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "ದೋಷ ವರದಿಯನ್ನು ಮಂಡಿಸಿ"
 
-#: kcheckaccelerators.cpp:199
+#: kcheckaccelerators.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
 msgstr "ಡಾ. ಕ್ಲ್ಯಾಶ್ ವೇಗವರ್ಧಕ ಪರೀಕ್ಷೆ"
 
-#: kcheckaccelerators.cpp:206
+#: kcheckaccelerators.cpp:128
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
 msgstr "ಸ್ವಯಂಚಾಲಿತ ಪರೀಕ್ಷಣೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು"
 
-#: kcheckaccelerators.cpp:252
+#: kcheckaccelerators.cpp:174
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>ವೇಗವರ್ಧಕಗಳು ಬದಲಿಯಾಗಿವೆ</h2>"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
 #, fuzzy, kde-format
 #| msgid "Find Text"
 msgid "Old Text"
 msgstr "ಪಠ್ಯ ಹುಡುಕು"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:265
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
 #, fuzzy, kde-format
 #| msgid "Show help"
 msgid "New Text"
 msgstr "ಸಹಾಯ ತೋರಿಸು"
 
-#: kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:182
 #, kde-format
 msgid "<h2>Accelerators removed</h2>"
 msgstr "<h2>ವೇಗವರ್ಧಕಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಗಿದೆ</h2>"
 
-#: kcheckaccelerators.cpp:264
+#: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>ವೇಗವರ್ಧಕಗಳನ್ನು ಸೇರಿಸಲಾಯಿತು(ನಿಮ್ಮ ಮಾಹಿತಿಗೆ ಮಾತ್ರ)</h2>"
@@ -774,13 +774,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "ಪರವಾನಗಿ ಒಪ್ಪಂದ"
 
-#: kmainwindow.cpp:255
+#: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "ಉಮೇಶ್ ರುದ್ರಪಟ್ಟಣ, ಸಿದ್ಧಾರೂಢ ಪಿ ಟಿ, ಶಂಕರ ಪ್ರಸಾದ್ ಎಂ ವಿ"
 
-#: kmainwindow.cpp:256
+#: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

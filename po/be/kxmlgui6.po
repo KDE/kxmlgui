@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:38+0000\n"
+"POT-Creation-Date: 2025-02-08 00:38+0000\n"
 "PO-Revision-Date: 2025-01-06 19:10\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -295,7 +295,7 @@ msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
 msgstr "Паведамляйце пра хібы на %1.\n"
 
-#: kactionconflictdetector.cpp:38
+#: kactionconflictdetector_p.h:37
 #, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
@@ -306,7 +306,7 @@ msgstr ""
 "раздзел \"Наладжванне спалучэнняў клавіш\" у меню \"Налады\".\n"
 "Ніводнае дзеянне не будзе выканана."
 
-#: kactionconflictdetector.cpp:42
+#: kactionconflictdetector_p.h:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
@@ -426,39 +426,39 @@ msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "&Паведаміць пра хібу"
 
-#: kcheckaccelerators.cpp:199
+#: kcheckaccelerators.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
 msgstr "Правяранне гарачай клавішы Dr. Klash"
 
-#: kcheckaccelerators.cpp:206
+#: kcheckaccelerators.cpp:128
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
 msgstr "Адключыць аўтаматычнае правяранне"
 
-#: kcheckaccelerators.cpp:252
+#: kcheckaccelerators.cpp:174
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>Гарачыя клавішы змененыя</h2>"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
 #, kde-format
 msgid "Old Text"
 msgstr "Стары тэкст"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:265
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
 #, kde-format
 msgid "New Text"
 msgstr "Новы тэкст"
 
-#: kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:182
 #, kde-format
 msgid "<h2>Accelerators removed</h2>"
 msgstr "<h2>Гарачыя клавішы выдаленыя</h2>"
 
-#: kcheckaccelerators.cpp:264
+#: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>Гарачыя клавішы дададзеныя</h2>"
@@ -772,13 +772,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "Ліцэнзійнае пагадненне"
 
-#: kmainwindow.cpp:255
+#: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Alaksandr Suša, Antikruk"
 
-#: kmainwindow.cpp:256
+#: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

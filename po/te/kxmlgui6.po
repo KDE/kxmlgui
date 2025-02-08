@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:38+0000\n"
+"POT-Creation-Date: 2025-02-08 00:38+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -320,7 +320,7 @@ msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
 msgstr "%1 కు తప్పులను తెలియచేయండి.\n"
 
-#: kactionconflictdetector.cpp:38
+#: kactionconflictdetector_p.h:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
@@ -335,7 +335,7 @@ msgstr ""
 "'అమరికలు' మెనూనుండి 'శీఘ్రమార్గములను ఆకృతీకరించు' ను\n"
 "వుపయోగించుము. ఏ చర్య ప్రయోగించబడదు."
 
-#: kactionconflictdetector.cpp:42
+#: kactionconflictdetector_p.h:41
 #, fuzzy, kde-format
 #| msgid "Ambiguous shortcut detected"
 msgctxt "@title:window"
@@ -471,42 +471,42 @@ msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "తప్పుల నివెదిక అందించు"
 
-#: kcheckaccelerators.cpp:199
+#: kcheckaccelerators.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
 msgstr "డా. క్లాష్ వారి ఎక్సెలరెటర్ కారణనిర్ణయం"
 
-#: kcheckaccelerators.cpp:206
+#: kcheckaccelerators.cpp:128
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
 msgstr "స్వయం తనఖి చెయకు"
 
-#: kcheckaccelerators.cpp:252
+#: kcheckaccelerators.cpp:174
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>ఎక్సెలరెటర్లు మార్చబడినవి</h2>"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
 #, fuzzy, kde-format
 #| msgid "Find Text"
 msgid "Old Text"
 msgstr "వచనం కనుగొనుట"
 
-#: kcheckaccelerators.cpp:256 kcheckaccelerators.cpp:265
+#: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Show Text"
 msgid "New Text"
 msgstr "పాటాన్ని  చూపుము"
 
-#: kcheckaccelerators.cpp:260
+#: kcheckaccelerators.cpp:182
 #, kde-format
 msgid "<h2>Accelerators removed</h2>"
 msgstr "<h2>ఎక్సెలరెటర్లు తీసివేయబడినవి</h2>"
 
-#: kcheckaccelerators.cpp:264
+#: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>ఎక్సెలరెటర్లు కలపడినవి (మీ సమాచారం కొరకు)</h2>"
@@ -797,13 +797,13 @@ msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "లైసెన్సు ఒప్పందం"
 
-#: kmainwindow.cpp:255
+#: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "విజయ్ కిరణ్ కముజు,కృష్ణబాబు కె, భువన్ కృష్ణ, జి వి యస్ గిరి, శ్రీ కళ్యన్న్, ననిన్"
 
-#: kmainwindow.cpp:256
+#: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
