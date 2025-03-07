@@ -31,7 +31,7 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "About KDE"));
 
     KTitleWidget *titleWidget = new KTitleWidget(this);
-    titleWidget->setText(i18n("<html><font size=\"5\">KDE - Be Free!</font></html>"));
+    titleWidget->setText(i18n("<html><font size=\"5\">KDE</font><br />Be Free!</html>"));
     titleWidget->setIconSize(QSize(48, 48));
     titleWidget->setIcon(QIcon::fromTheme(QStringLiteral("kde")), KTitleWidget::ImageLeft);
 
