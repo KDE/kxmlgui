@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:38+0000\n"
+"POT-Creation-Date: 2025-03-08 00:41+0000\n"
 "PO-Revision-Date: 2022-07-11 09:10+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -340,18 +340,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Đã phát hiện phím tắt nhập nhằng"
 
-#: kbugreport.cpp:62
+#: kbugreport.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Gửi bản báo lỗi"
 
-#: kbugreport.cpp:84
+#: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Gửi bản báo lỗi"
 
-#: kbugreport.cpp:96
+#: kbugreport.cpp:101
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -360,12 +360,12 @@ msgstr ""
 "Ứng dụng có lỗi mà bạn muốn báo - nếu không đúng, vui lòng dùng mục trình "
 "đơn \"Báo lỗi\" trong ứng dụng đúng"
 
-#: kbugreport.cpp:97
+#: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
 msgstr "Ứng dụng: "
 
-#: kbugreport.cpp:107
+#: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -374,29 +374,29 @@ msgstr ""
 "Phiên bản của ứng dụng này - trước khi gửi bản báo lỗi, vui lòng kiểm tra "
 "rằng chưa có phiên bản nào mới hơn"
 
-#: kbugreport.cpp:108
+#: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
 msgstr "Phiên bản:"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "chưa đặt phiên bản (lỗi lập trình viên)"
 
-#: kbugreport.cpp:117
+#: kbugreport.cpp:122
 #, fuzzy, kde-format
 #| msgid "KDE Frameworks"
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr "Các Kết cấu KDE"
 
-#: kbugreport.cpp:125
+#: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
 msgstr "HĐH:"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:135
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -404,7 +404,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:137
+#: kbugreport.cpp:142
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -412,7 +412,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:143
+#: kbugreport.cpp:148
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -420,7 +420,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:157
+#: kbugreport.cpp:162
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -433,7 +433,7 @@ msgstr ""
 "mà bạn sẽ thấy một đơn để điền vào. Thông tin hiển thị ở trên kia sẽ được "
 "truyền đến máy chủ đó.</qt>"
 
-#: kbugreport.cpp:163
+#: kbugreport.cpp:168
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -442,13 +442,13 @@ msgstr ""
 "<qt>Để gửi một bản báo lỗi, bấm vào nút bên dưới. Việc này sẽ mở một cửa sổ "
 "trình duyệt web ở <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:180
+#: kbugreport.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Khởi chạy trình hướng dẫn báo lỗi"
 
-#: kbugreport.cpp:182
+#: kbugreport.cpp:187
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"

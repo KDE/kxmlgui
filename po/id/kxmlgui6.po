@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:38+0000\n"
+"POT-Creation-Date: 2025-03-08 00:41+0000\n"
 "PO-Revision-Date: 2024-01-07 18:49+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -345,18 +345,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Pintasan ambigu terdeteksi"
 
-#: kbugreport.cpp:62
+#: kbugreport.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Ajukan Laporan Bug"
 
-#: kbugreport.cpp:84
+#: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Kirimkan Laporan Bug"
 
-#: kbugreport.cpp:96
+#: kbugreport.cpp:101
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -365,12 +365,12 @@ msgstr ""
 "Aplikasi yang ingin Anda masukkan laporan bugnya - jika salah, silakan "
 "gunakan butir menu Laporkan Bug aplikasi yang benar"
 
-#: kbugreport.cpp:97
+#: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
 msgstr "Aplikasi: "
 
-#: kbugreport.cpp:107
+#: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -379,29 +379,29 @@ msgstr ""
 "Versi dari aplikasi ini - tolong pastikan bahwa tidak ada versi lebih baru "
 "yang tersedia sebelum mengirim laporan bug"
 
-#: kbugreport.cpp:108
+#: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
 msgstr "Versi:"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "tak ada versi yang diatur (error pemrogram)"
 
-#: kbugreport.cpp:117
+#: kbugreport.cpp:122
 #, fuzzy, kde-format
 #| msgid "KDE Frameworks"
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr "Framework KDE"
 
-#: kbugreport.cpp:125
+#: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -411,7 +411,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:137
+#: kbugreport.cpp:142
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -420,7 +420,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:143
+#: kbugreport.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -430,7 +430,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:157
+#: kbugreport.cpp:162
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -443,7 +443,7 @@ msgstr ""
 "org</a> yang akan Anda temukan sebuah formulir untuk diisi. Informasi di "
 "atas yang ditampilkan akan ditransfer ke server tersebut.</qt>"
 
-#: kbugreport.cpp:163
+#: kbugreport.cpp:168
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -452,13 +452,13 @@ msgstr ""
 "<qt>Untuk menyampaikan laporan bug, klik tombol di bawah. Ini akan membuka "
 "jendela penelusur web pada <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:180
+#: kbugreport.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Luncurkan Asisten Laporan Bug"
 
-#: kbugreport.cpp:182
+#: kbugreport.cpp:187
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"

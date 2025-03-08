@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:38+0000\n"
+"POT-Creation-Date: 2025-03-08 00:41+0000\n"
 "PO-Revision-Date: 2016-04-30 17:56+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -376,19 +376,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Mhothaich sinn dha dh'ath-ghoirid ioma-sheaghach"
 
-#: kbugreport.cpp:62
+#: kbugreport.cpp:67
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Cuir a-null aithris air buga"
 
-#: kbugreport.cpp:84
+#: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Cuir a-null aithris air buga"
 
-#: kbugreport.cpp:96
+#: kbugreport.cpp:101
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -397,12 +397,12 @@ msgstr ""
 "An aplacaid sa bheil am buga - mur eil i mar bu chòir, cleachd an nì clàir-"
 "thaice \"Dèan aithris air buga\" aig an aplacaid cheart"
 
-#: kbugreport.cpp:97
+#: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
 msgstr "Aplacaid: "
 
-#: kbugreport.cpp:107
+#: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -411,28 +411,28 @@ msgstr ""
 "Tionndadh na h-aplacaid seo - dèan cinnteach nach eil tionndadh nas ùire ri "
 "fhaighinn mus cuir thu aithris air buga a-null"
 
-#: kbugreport.cpp:108
+#: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
 msgstr "Tionndadh:"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "cha deach tionndadh a shuidheachadh (seo mearachd prògramachaidh)"
 
-#: kbugreport.cpp:117
+#: kbugreport.cpp:122
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr ""
 
-#: kbugreport.cpp:125
+#: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
 msgstr "Siostam-obrachaidh:"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:135
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -440,7 +440,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: kbugreport.cpp:137
+#: kbugreport.cpp:142
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -448,7 +448,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr ""
 
-#: kbugreport.cpp:143
+#: kbugreport.cpp:148
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -456,7 +456,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: kbugreport.cpp:157
+#: kbugreport.cpp:162
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -474,7 +474,7 @@ msgstr ""
 "\">http://bugs.kde.org</a> far am faic thu foirm ri lìonadh. Thèid am "
 "fiosrachadh a chì thu gu h-àrd a chur a-null dhan fhrithealaiche ud.</qt>"
 
-#: kbugreport.cpp:163
+#: kbugreport.cpp:168
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -490,14 +490,14 @@ msgstr ""
 "\">http://bugs.kde.org</a> far am faic thu foirm ri lìonadh. Thèid am "
 "fiosrachadh a chì thu gu h-àrd a chur a-null dhan fhrithealaiche ud.</qt>"
 
-#: kbugreport.cpp:180
+#: kbugreport.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Tòisich draoidh airson aithris air buga"
 
-#: kbugreport.cpp:182
+#: kbugreport.cpp:187
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"

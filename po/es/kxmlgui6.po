@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:38+0000\n"
+"POT-Creation-Date: 2025-03-08 00:41+0000\n"
 "PO-Revision-Date: 2024-11-22 12:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -325,18 +325,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Se ha detectado un atajo de teclado ambiguo"
 
-#: kbugreport.cpp:62
+#: kbugreport.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Enviar informe de error"
 
-#: kbugreport.cpp:84
+#: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Envía un informe de fallos"
 
-#: kbugreport.cpp:96
+#: kbugreport.cpp:101
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -346,12 +346,12 @@ msgstr ""
 "correcta, use la opción de menú «Informar de fallo» de la aplicación "
 "correcta)"
 
-#: kbugreport.cpp:97
+#: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
 msgstr "Aplicación: "
 
-#: kbugreport.cpp:107
+#: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -360,28 +360,28 @@ msgstr ""
 "La versión de esta aplicación - asegúrese de que no hay disponible ninguna "
 "versión más actual antes de enviar un informe de fallos"
 
-#: kbugreport.cpp:108
+#: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
 msgstr "Versión:"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "no hay versión (error del programador)"
 
-#: kbugreport.cpp:117
+#: kbugreport.cpp:122
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr "%1 con KDE Frameworks %2"
 
-#: kbugreport.cpp:125
+#: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
 msgstr "SO:"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:135
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -389,7 +389,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:137
+#: kbugreport.cpp:142
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -397,7 +397,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:143
+#: kbugreport.cpp:148
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -405,7 +405,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:157
+#: kbugreport.cpp:162
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -418,7 +418,7 @@ msgstr ""
 "kde.org</a> donde encontrará un formulario a rellenar. La información "
 "mostrada arriba será transferida a ese servidor.</qt>"
 
-#: kbugreport.cpp:163
+#: kbugreport.cpp:168
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -427,13 +427,13 @@ msgstr ""
 "<qt>Pulse el botón inferior para enviar un informe de fallos. Se abrirá una "
 "ventana del navegador web en <a href=\"%1\">%2</a>.</qt>"
 
-#: kbugreport.cpp:180
+#: kbugreport.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Lanzar el asistente de informe de errores"
 
-#: kbugreport.cpp:182
+#: kbugreport.cpp:187
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"

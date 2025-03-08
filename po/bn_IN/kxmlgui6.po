@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:38+0000\n"
+"POT-Creation-Date: 2025-03-08 00:41+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -304,19 +304,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "শর্ট-কাট"
 
-#: kbugreport.cpp:62
+#: kbugreport.cpp:67
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "বাগ রিপোর্ট জমা করুন"
 
-#: kbugreport.cpp:84
+#: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "বাগ রিপোর্ট জমা করুন"
 
-#: kbugreport.cpp:96
+#: kbugreport.cpp:101
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -325,12 +325,12 @@ msgstr ""
 "যে অ্যাপ্লিকেশনের জন্য বাগ রিপোর্ট দায়ের করা হচ্ছে - সঠিক না হলে, অনুগ্রহ করে 'বাগ "
 "রিপোর্ট দায়ের করুন' শীর্ষক মেনু থেকে যথাযত অ্যাপ্লিকেশন নির্বাচন করুন"
 
-#: kbugreport.cpp:97
+#: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
 msgstr "অ্যাপ্লিকেশন: "
 
-#: kbugreport.cpp:107
+#: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -339,28 +339,28 @@ msgstr ""
 "অ্যাপ্লিকেশনের সংস্করণ সংখ্যা - বাগ রিপোর্ট দায়ের করার আগে অনুগ্রহ করে পরীক্ষা করে "
 "নিন এই অ্যাপ্লিকেশনের কোনো নতুন সংস্করণ উপলব্ধ রয়েছে কি না।"
 
-#: kbugreport.cpp:108
+#: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
 msgstr "সংস্করণ:"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "কোনো সংস্করণ নির্ধারিত হয়নি (প্রোগ্রামারের ত্রুটি)"
 
-#: kbugreport.cpp:117
+#: kbugreport.cpp:122
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr ""
 
-#: kbugreport.cpp:125
+#: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
 msgstr "অপারেটিং সিস্টেম:"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -370,7 +370,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:137
+#: kbugreport.cpp:142
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -379,7 +379,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:143
+#: kbugreport.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -389,7 +389,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:157
+#: kbugreport.cpp:162
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -406,7 +406,7 @@ msgstr ""
 "\"http://bugs.kde.org\">http://bugs.kde.org</a> প্রদর্শনকারী একটি ওয়েব ব্রাউজার "
 "উইন্ডো খোলা হবে। উপরোক্ত তথ্যগুলি সংশ্লিষ্ট সার্ভারে প্রেরিত হবে।</qt>"
 
-#: kbugreport.cpp:163
+#: kbugreport.cpp:168
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -421,14 +421,14 @@ msgstr ""
 "\"http://bugs.kde.org\">http://bugs.kde.org</a> প্রদর্শনকারী একটি ওয়েব ব্রাউজার "
 "উইন্ডো খোলা হবে। উপরোক্ত তথ্যগুলি সংশ্লিষ্ট সার্ভারে প্রেরিত হবে।</qt>"
 
-#: kbugreport.cpp:180
+#: kbugreport.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "বাগ রিপোর্ট প্রস্তুতির উইজার্ড আরম্ভ করুন (&L)"
 
-#: kbugreport.cpp:182
+#: kbugreport.cpp:187
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"

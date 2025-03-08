@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:38+0000\n"
+"POT-Creation-Date: 2025-03-08 00:41+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -307,18 +307,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "अस्पष्टः संक्षिप्तमार्गः ज्ञातः"
 
-#: kbugreport.cpp:62
+#: kbugreport.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "दोषप्रतिवेदनं प्रस्तौतु"
 
-#: kbugreport.cpp:84
+#: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "दोषप्रतिवेदनं प्रस्तौतु"
 
-#: kbugreport.cpp:96
+#: kbugreport.cpp:101
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -327,12 +327,12 @@ msgstr ""
 "यस्य अनुप्रयोगस्य कृते भवान् दोषप्रतिवेदनं दातुम् इच्छति - यदि अशुद्धं तर्हि कृपया सम्यक् "
 "अनुप्रयोगस्य Report Bug विकल्पसूचि-वस्तुं उपयुज्यताम्"
 
-#: kbugreport.cpp:97
+#: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
 msgstr "अनुप्रयोगः: "
 
-#: kbugreport.cpp:107
+#: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -341,28 +341,28 @@ msgstr ""
 "अस्य अनुप्रयोगस्य संस्करणम् - कृपया सुनिश्चितं कुर्वन्तु यत् दोषप्रतिवेदनं प्रेषयितुं पूर्वं नूतनतरं "
 "संस्करणं उपलब्धं नास्ति"
 
-#: kbugreport.cpp:108
+#: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
 msgstr "संस्करण:"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "कोऽपि संस्करणः निरूपयत् नास्ति (विधिकारदोषः)"
 
-#: kbugreport.cpp:117
+#: kbugreport.cpp:122
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr "%1 KDE Frameworks %2 इत्यनेन सह"
 
-#: kbugreport.cpp:125
+#: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
 msgstr "OS:"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:135
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -370,7 +370,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:137
+#: kbugreport.cpp:142
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -378,7 +378,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:143
+#: kbugreport.cpp:148
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -386,7 +386,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:157
+#: kbugreport.cpp:162
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -398,7 +398,7 @@ msgstr ""
 "\">https://bugs.kde.org</a> इत्यत्र web browser विण्डो उद्घाट्यते यत्र भवान् पूरयितुं "
 "प्रपत्रं प्राप्स्यति प्रदर्शिता सूचना उपरि तस्मिन् वितारके स्थानान्तरितम् भविष्यति।</qt>"
 
-#: kbugreport.cpp:163
+#: kbugreport.cpp:168
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -407,13 +407,13 @@ msgstr ""
 "<qt>दोषप्रतिवेदनं प्रस्तूय अधोलिखितं गण्ड नुदन्तु । एतेन <a href=\"%1\">%2</a> इत्यत्र web "
 "browser उद्घाट्यते ।</qt>"
 
-#: kbugreport.cpp:180
+#: kbugreport.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&दोषप्रतिवेदनविजार्डं प्रारभत"
 
-#: kbugreport.cpp:182
+#: kbugreport.cpp:187
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
