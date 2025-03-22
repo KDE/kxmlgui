@@ -156,7 +156,6 @@ void KKeySequenceWidgetPrivate::init()
     }
 
     recorder = new KKeySequenceRecorder(q->window()->windowHandle(), q);
-    recorder->setModifierlessAllowed(false);
     recorder->setMultiKeyShortcutsAllowed(true);
 
     updateShortcutDisplay();
@@ -484,22 +483,30 @@ bool KKeySequenceWidget::isKeySequenceAvailable(const QKeySequence &keySequence)
 #if KXMLGUI_BUILD_DEPRECATED_SINCE(6, 12)
 bool KKeySequenceWidget::isModifierlessAllowed()
 {
-    return d->recorder->modifierlessAllowed();
+    return d->recorder->patterns() & KKeySequenceRecorder::Key;
 }
 
 void KKeySequenceWidget::setModifierlessAllowed(bool allow)
 {
-    d->recorder->setModifierlessAllowed(allow);
+    if (allow) {
+        setPatterns(patterns() | KKeySequenceRecorder::Key);
+    } else {
+        setPatterns(patterns() & ~KKeySequenceRecorder::Key);
+    }
 }
 
 bool KKeySequenceWidget::modifierOnlyAllowed() const
 {
-    return d->recorder->modifierOnlyAllowed();
+    return patterns() & KKeySequenceRecorder::Modifier;
 }
 
 void KKeySequenceWidget::setModifierOnlyAllowed(bool allow)
 {
-    d->recorder->setModifierOnlyAllowed(allow);
+    if (allow) {
+        setPatterns(patterns() | KKeySequenceRecorder::Modifier);
+    } else {
+        setPatterns(patterns() & ~KKeySequenceRecorder::Modifier);
+    }
 }
 #endif
 
