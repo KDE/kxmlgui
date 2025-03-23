@@ -80,7 +80,7 @@ find_package(Shiboken6)
 find_package(PySide6)
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.8
+    QT 6.9
     KF 6.11
 )
 
