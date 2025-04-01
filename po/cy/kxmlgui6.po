@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2022-07-09 11:28+0100\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -663,7 +663,7 @@ msgstr ""
 "cymhwysiad.\n"
 "Er enghraifft ar gyfer Ctrl+A: cynnalwch y bysell Ctrl a phwyswch A."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -671,12 +671,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Croesdynniad Byrlwybr"
 msgstr[1] "Croesdynniadau Byrlwybr"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Byrlwybr '%1' am weithrediad '%2'\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -696,20 +696,20 @@ msgstr[1] ""
 "Ai ydych chi'n eisiau i arddodi byrlwybr gwag i'r gweithrediadau yma?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ailarddodi"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Croesdynniad byrlwybr"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -718,12 +718,12 @@ msgstr ""
 "<qt>Mae cyfuniad bysell %1 wedi ei dyrannu yn barod i'r gweithrediad <b>%2</"
 "b>. <br>Atolwg dewiswch un arall.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Byrlwybr '%1' yn Cymhwysiad '%2' am weithrediad '%3'\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -736,7 +736,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Mae'r llygatlwybr '%2' yn croesdynnu gyda'r cyfuniadau bysell canlynol:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -744,12 +744,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Croestyniad efo Byrlwybr Eangfyd Cofrestrwyd"
 msgstr[1] "Croestyniad efo Byrlwybrau Eangfyd Cofrestrwyd"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Byrlwybr Argadwyd"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -760,13 +760,13 @@ msgstr ""
 "lygatlwybr hollfydol.\n"
 "Atolwg argadwch un arall."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Croestyniad efo Byrlwybr Cymhwysiad Arferol"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -777,13 +777,13 @@ msgstr ""
 "\"%2\" defnyddiwyd gyda rhai o'r cymhwysiadau.\n"
 "Ydych eisiau ei ail-neilltuo fel lygatlwybr hollfydol yn gystal?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Mewnbwn"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

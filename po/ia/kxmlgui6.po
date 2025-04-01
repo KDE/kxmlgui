@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2024-11-22 17:18+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -624,7 +624,7 @@ msgstr ""
 "programma\n"
 "Exemplo per CTRL+A: tu pressa le clave CTRL e pressa A."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -632,12 +632,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Conflicto de Via Breve"
 msgstr[1] "Conflictos de Via Breve"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Via Breve '%1' per action '%2'\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -657,20 +657,20 @@ msgstr[1] ""
 "Tu vole assignar un vacue via breve a iste actiones?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reassigna"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "conflicto de via breve"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -679,12 +679,12 @@ msgstr ""
 "<qt> Le combination de clave '%1' ja es usate per le action <b>%2</b>. <br> "
 "Pro favor, Tu selectiona un altere differente.<qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Via Breve '%1' in Application '%2' per action '%3'\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -695,7 +695,7 @@ msgid_plural ""
 msgstr[0] "Le Via Breve '%2' conflige con le sequente combination clave:\n"
 msgstr[1] "Le Via Breve '%2' conflige con le sequente combinationes clave:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -703,12 +703,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Conflige con le Via Breve Global Registrate"
 msgstr[1] "Conflige con le Vias Breve Global Registrate"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Via breve reservate"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -719,7 +719,7 @@ msgstr ""
 "global.\n"
 "Pro favor tu selectiona un altere."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
@@ -727,7 +727,7 @@ msgstr ""
 "Conflicto con Standard Application Shortcut (Via Breve de application "
 "standard)"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -738,13 +738,13 @@ msgstr ""
 "que alicun applicationes usa.\n"
 "Etiam tu vole realmente usar lo como via breve global?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ingresso"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

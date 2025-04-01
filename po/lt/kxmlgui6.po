@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2024-08-25 23:11+0300\n"
 "Last-Translator: Andrius Štikonas <andrius@stikonas.eu>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -653,7 +653,7 @@ msgstr ""
 "spaustumėte jį programoje.\n"
 "Pavyzdžiui kombinacijai Vald+A: laikykite nuspaustą Vald ir paspauskite A."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -663,12 +663,12 @@ msgstr[1] "Sparčiųjų klavišų konfliktai"
 msgstr[2] "Sparčiųjų klavišų konfliktai"
 msgstr[3] "Sparčiųjų klavišų konfliktai"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Spartusis klavišas „%1“ skirtas veiksmui „%2“\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -696,20 +696,20 @@ msgstr[3] ""
 "Ar norite šiems veiksmams panaikinti sparčiuosius klavišus?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Priskirti iš naujo"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Sparčiųjų klavišų konfliktas"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -718,12 +718,12 @@ msgstr ""
 "<qt>Klavišų kombinaciją „%1“ jau naudoja veiksmas <b>%2</b>.<br>Pasirinkite "
 "kitą klavišų kombinaciją.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Spartusis klavišas „%1“ programoje „%2“ skirtas veiksmui „%3“\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -739,7 +739,7 @@ msgstr[2] ""
 msgstr[3] ""
 "Spartusis klavišas „%2“ konfliktuoja su šiomis klavišų kombinacijomis:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -749,12 +749,12 @@ msgstr[1] "Konfliktas su įregistruotais visuotiniais sparčiaisiais klavišais"
 msgstr[2] "Konfliktas su įregistruotais visuotiniais sparčiaisiais klavišais"
 msgstr[3] "Konfliktas su įregistruotais visuotiniais sparčiaisiais klavišais"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervuotas spartusis klavišas"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -765,13 +765,13 @@ msgstr ""
 "naudojamas visuotiniu sparčiuoju klavišu.\n"
 "Pasirinkite kitą klavišą."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konfliktas su standartiniu programos sparčiuoju klavišu"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -782,13 +782,13 @@ msgstr ""
 "naudoja kai kurios programos.\n"
 "Ar tikrai norite ją taip pat naudoti kaip visuotinį spartųjį klavišą?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Įvestis"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -726,7 +726,7 @@ msgstr ""
 "Mar shampla, le haghaidh Ctrl+a: coinnigh an eochair Ctrl síos agus brúigh "
 "'a'."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -737,12 +737,12 @@ msgstr[2] "Coinbhleachtaí idir Aicearraí"
 msgstr[3] "Coinbhleachtaí idir Aicearraí"
 msgstr[4] "Coinbhleachtaí idir Aicearraí"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Aicearra '%1' do ghníomh '%2'\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -783,22 +783,22 @@ msgstr[4] ""
 "An bhfuil fonn ort aicearraí folmha a thabhairt do na gníomhartha seo?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Athshann"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Coinbhleacht idir Aicearraí"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -807,13 +807,13 @@ msgstr ""
 "<qt>Tá '%1' comhcheangailte leis an ngníomh <b>%2</b> cheana.<br>Roghnaigh "
 "ceann eile, le do thoil.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Aicearra '%1' i bhFeidhmchlár %2 do ghníomh %3\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -832,7 +832,7 @@ msgstr[3] ""
 msgstr[4] ""
 "Tagann aicearra '%2' salach ar na teaglamaí eochracha seo a leanas:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -843,12 +843,12 @@ msgstr[2] "Coimhlint le hAicearraí Comhchoiteanna Cláraithe"
 msgstr[3] "Coimhlint le hAicearraí Comhchoiteanna Cláraithe"
 msgstr[4] "Coimhlint le hAicearraí Comhchoiteanna Cláraithe"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Aicearra In Áirithe"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -859,14 +859,14 @@ msgstr ""
 "úsáid mar aicearra comhchoiteann.\n"
 "Roghnaigh ceann eile."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Coimhlint le hAicearra Feidhmchláir Chaighdeánaithe"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -878,13 +878,13 @@ msgstr ""
 "An bhfuil tú cinnte gur mian leat é a úsáid mar aicearra comhchoiteann "
 "freisin?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ionchur"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

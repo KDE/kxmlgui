@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -600,19 +600,19 @@ msgstr ""
 "单击此按钮，然后按下您想在软件中使用的快捷键。\n"
 "例如：Ctrl+A 就是按住 Ctrl 键不放并按下 A。"
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "快捷键冲突"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "“%2”操作的快捷键“%1”\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -628,20 +628,20 @@ msgstr[0] ""
 "您想要重新分配这些快捷键吗？\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "重新分配"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "快捷键冲突"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -650,12 +650,12 @@ msgstr ""
 "<qt>按键/按键组合“%1”已被<b>%2</b>操作占用。<br>请选用其他按键/按键组合。</"
 "qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "程序“%2”的快捷键“%1”，分配给 %3 操作\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -665,19 +665,19 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "快捷键“%2”和下述按键/按键组合存在冲突：\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "与已注册的全局快捷键冲突"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "保留快捷方式"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -687,13 +687,13 @@ msgstr ""
 "F12 在 Windows 系统中是一个保留按键，无法被用作全局快捷键。\n"
 "请另选一个按键/按键组合。"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "与标准应用程序快捷键冲突"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -703,13 +703,13 @@ msgstr ""
 "按键/按键组合“%1”已被其他程序的标准操作“%2”占用。\n"
 "您还要将它用作全局快捷键吗？"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "输入"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

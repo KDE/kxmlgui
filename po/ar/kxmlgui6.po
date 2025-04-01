@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2024-11-28 12:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -610,7 +610,7 @@ msgstr ""
 "انقر على الزر وبعدها أدخل الاختصار الذي ترغب في البرنامج. \n"
 "مثال Ctrl+A : تضغط على حرف Ctrl و تكبس على حرف A."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -622,12 +622,12 @@ msgstr[3] "تضارب بين الإختصارات"
 msgstr[4] "تضارب بين الإختصارات"
 msgstr[5] "تضارب بين الإختصارات"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "الاختصار '%1' للإجراء '%2'\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -663,20 +663,20 @@ msgstr[5] ""
 "هل تريد اسناد اختصار فارغ إلى هذه الإجراءات؟\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "تضارب اختصارات"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -685,12 +685,12 @@ msgstr ""
 "<qt>تجميعة المفاتيح '%1' مستخدمة بالفعل للإجراء <b>%2</b>.<br>المرجو اختيار "
 "تجميعة أخرى.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "الاختصار '%1' في التطبيق '%2' للإجراء '%3'\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -705,7 +705,7 @@ msgstr[3] "الاختصار '%2' يتعارض مع مجموعة المفاتيح
 msgstr[4] "الاختصار '%2' يتعارض مع مجموعة المفاتيح التالية:\n"
 msgstr[5] "الاختصار '%2' يتعارض مع مجموعة المفاتيح التالية:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -717,12 +717,12 @@ msgstr[3] "تعارض مع  اختصارات عالمية مسجلة"
 msgstr[4] "تعارض مع  اختصارات عالمية مسجلة"
 msgstr[5] "تعارض مع  اختصارات عالمية مسجلة"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "اختصار محفوظ"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -732,13 +732,13 @@ msgstr ""
 "مفتاح  F12 محفوظ في الويندوز ؛ لذا لا يمكن استعماله كاختصار عالمي.\n"
 "المرجو أن تختار اختصار أخر."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "تضارب مع اختصار تطبيق معياري"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -749,13 +749,13 @@ msgstr ""
 "البرامج.\n"
 "هل تريد استعمالها أيضا كاختصار عام ."
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "دخل"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

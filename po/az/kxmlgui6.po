@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2022-07-31 23:12+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -650,7 +650,7 @@ msgstr ""
 "Bu düyməyə basın və qısayil kombinasiyalarını seçin.\n"
 "Məsələn Ctrl+A üçün CRTL və A düymələrini basın."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -658,12 +658,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Qısayol Ziddiyəti"
 msgstr[1] "Qısayol Ziddiyyətləri"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%2' əməli üçün '%1' qısayolu\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -683,20 +683,20 @@ msgstr[1] ""
 "Bu fəaliyyətlər üçün boş bir qısayol təyin etmək istəyirsiniz?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Yenisini Təyin Et"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Qısayol ziddiyyəti"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -705,12 +705,12 @@ msgstr ""
 "<qt>'%1'düymə kombinasiyası artıq <b>%2</b> üçün təyin edilib. <br>Başqa "
 "birini seçin.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "\"%3\" əməli üçün \"%2\" tətbiqində \"%1\" qısa yolu\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -723,7 +723,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Bu '%2' qısayolu aşağıdakı düymə kombinasiyaları ilə ziddiyyət təşkil edir:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -731,12 +731,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Qeydiyyata Alınan Qlobal Qısayolla Ziddiyət"
 msgstr[1] "Qeydiyyata Alınan Qlobal Qısayollarla Ziddiyət"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezerv Olunan Qısayolu"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -747,13 +747,13 @@ msgstr ""
 "oluna bilməz.\n"
 "Başqasını seçin."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Standart Tətbiq Qısayolları ilə ziddiyyət"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -764,13 +764,13 @@ msgstr ""
 "üçün istifadə olunur.\n"
 "Siz bu kombinasiyanı qlobal olaraq istifadə etmək istəyirsinizmi?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Daxil Et"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

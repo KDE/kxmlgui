@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2024-12-13 12:33+0000\n"
 "Last-Translator: Kizito Birabwa <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -638,7 +638,7 @@ msgstr ""
 "Okugeza, oba oyagala Ctrl+A gabe nga ge ganguya mulimu: Nyweza erya Ctrl "
 "onyige n'erya A."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -646,12 +646,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Waliwo amapeesa agategekedwa okwanguya ebikolwa ebisukka mu kimu"
 msgstr[1] "Waliwo amapeesa agategekedwa okwanguya ebikolwa ebisukka mu kimu"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Amapeesa '%1' gategekedwa okwanguya ekikolwa '%2'\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -671,20 +671,20 @@ msgstr[1] ""
 "Oyagala agategekedwa ekikolwa kino galekerawo okukireetawo?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Kyusa ntegeka"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Entegeka z'amapeesa ag'anguya ezikontanagana"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -693,12 +693,12 @@ msgstr ""
 "<qt>Amapeesa '%1' gategekedwa okuleetawo ekikolwa <b>%2</b>.<br>Londayo "
 "amalala.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Mu Puloguramu '%2' amapeesa '%1' galeetawo ekikolwa '%3'\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -709,7 +709,7 @@ msgid_plural ""
 msgstr[0] "Entegeka ya mapeesa '%2' ekontana n'eya gano:\n"
 msgstr[1] "Entegeka ya mapeesa '%2' ekontana n'eza gano:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -717,12 +717,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Waliwo okukontanagana n'entegeka y'amapeesa eya ku sisitemu yonna"
 msgstr[1] "Waliwo okukontanagana n'entegeka z'amapeesa eza ku sisitemu yonna"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Mapeesa agatakyusibwa"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -733,13 +733,13 @@ msgstr ""
 "mulimu gugwo.\n"
 "Londayo eddala."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Entegeka z'amapeesa ag'anguya ezikontana n'ezisangidwawo mu puloguramu"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -750,13 +750,13 @@ msgstr ""
 "mu puloguramu ezimu.\n"
 "Okakasa oyagala era okugategeka ku kikolwa ekirala wonna mu sisitemu?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Nyiga mapeesa aganaakolanga"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

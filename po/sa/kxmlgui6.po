@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:39+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -610,7 +610,7 @@ msgstr ""
 "गण्ड नुदन्तु, ततः कार्यक्रमे इव शॉर्टकट् प्रविशन्तु ।\n"
 "Ctrl+A कृते उदाहरणम् : Ctrl कीलं धारयित्वा A नुदन्तु ।."
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:168
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -618,12 +618,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "संक्षिप्तमार्गः विग्रह"
 msgstr[1] "संक्षिप्तमार्गः विग्रहाः"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:172
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%2' क्रियायाः कृते '%1' संक्षिप्तमार्गः ।\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:177
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -643,20 +643,20 @@ msgstr[1] ""
 "एतेषु क्रियासु रिक्तं शॉर्टकट् नियुक्तं कर्तुम् इच्छति वा?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
+#: kkeysequencewidget.cpp:356
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "पुनः नियुक्ति"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "संक्षिप्तमार्गः विग्रह"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -665,12 +665,12 @@ msgstr ""
 "<qt>'%1' कीलसंयोजनं <b>%2</b> क्रियाद्वारा पूर्वमेव उपयुज्यते ।<br>कृपया भिन्नं चिनोतु ।</"
 "qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:274
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "'%3' क्रियायाः कृते अनुप्रयोगे '%2' मध्ये संक्षिप्तमार्गः '%1' ।\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:283
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -681,7 +681,7 @@ msgid_plural ""
 msgstr[0] "'%2' इति संक्षिप्तमार्गः निम्नलिखितकुञ्जीसंयोजनेन सह विग्रहं करोति ।\n"
 msgstr[1] "'%2' इति संक्षिप्तमार्गः निम्नलिखितकुञ्जीसंयोजनैः सह विग्रहं करोति ।\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:290
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -689,12 +689,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "पञ्जीकृतवैश्विकसंक्षिप्तमार्गः इत्यनेन सह द्वन्द्वः"
 msgstr[1] "पञ्जीकृतवैश्विकसंक्षिप्तमार्गाः इत्यनेन सह द्वन्द्वः"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:303
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "आरक्षितः संक्षिप्तमार्गः"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -704,13 +704,13 @@ msgstr ""
 "F12 कीलम् विण्डोज इत्यत्र आरक्षितम् अस्ति, अतः वैश्विकसंक्षिप्तमार्गः कृते उपयोक्तुं न शक्यते ।\n"
 "अन्यं चिनुत ।."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:348
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "मानक-अनुप्रयोग-संक्षिप्तमार्गः-सहितं द्वन्द्वः"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -720,13 +720,13 @@ msgstr ""
 "'%1' कीलसंयोजनं मानकक्रियायाः \"%2\" कृते अपि उपयुज्यते यत् केचन अनुप्रयोगाः उपयुञ्जते ।\n"
 "किं भवान् वास्तवमेव तस्य उपयोगं वैश्विकसंक्षिप्तमार्गः रूपेण अपि कर्तुम् इच्छति?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:394
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "निवेशः"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
