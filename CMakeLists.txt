@@ -46,6 +46,9 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 # Dependencies
 set(REQUIRED_QT_VERSION 6.7.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
+if(Qt6Core_VERSION VERSION_GREATER_EQUAL "6.9.0")
+    find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED CorePrivate)
+endif()
 
 # shall we use DBus?
 # enabled per default on Linux & BSD systems
