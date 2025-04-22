@@ -99,6 +99,8 @@ public:
         , contextTextRight(nullptr)
         , contextText(nullptr)
         , contextTextUnder(nullptr)
+        , contextConfigureAction(nullptr)
+        , contextToolBarAction(nullptr)
         , contextLockAction(nullptr)
         , dropIndicatorAction(nullptr)
         , context(nullptr)
@@ -159,6 +161,8 @@ public:
     QAction *contextTextRight;
     QAction *contextText;
     QAction *contextTextUnder;
+    QAction *contextConfigureAction; // nullptr if not in context
+    QAction *contextToolBarAction; // nullptr if not in context
     KToggleAction *contextLockAction;
 
     struct ContextIconInfo {
@@ -661,31 +665,32 @@ void KToolBarPrivate::slotContextAboutToShow()
     KXmlGuiWindow *kmw = qobject_cast<KXmlGuiWindow *>(q->mainWindow());
 
     // try to find "configure toolbars" action
-    QAction *configureAction = nullptr;
     const QString actionName = KStandardActions::name(KStandardActions::ConfigureToolbars);
-    configureAction = findAction(actionName);
-
+    QAction *configureAction = findAction(actionName);
     if (!configureAction && kmw) {
         configureAction = kmw->actionCollection()->action(actionName);
     }
-
+    contextConfigureAction = configureAction;
     if (configureAction) {
         context->addAction(configureAction);
     }
 
     context->addAction(contextLockAction);
 
+    contextToolBarAction = nullptr;
     if (kmw) {
         kmw->setupToolbarMenuActions();
         // Only allow hiding a toolbar if the action is also plugged somewhere else (e.g. menubar)
         QAction *tbAction = kmw->toolBarMenuAction();
         if (!q->toolBarsLocked() && tbAction) {
+            // this compiles to less code than `for (QObject *object : tbAction->associatedObjects()) {`
             const QList<QObject *> associatedObjects = tbAction->associatedObjects();
-            const bool hasAssociatedWidgets = std::any_of(associatedObjects.cbegin(), associatedObjects.cend(), [](QObject *object) {
-                return (qobject_cast<QWidget *>(object) != nullptr);
-            });
-            if (hasAssociatedWidgets) {
-                context->addAction(tbAction);
+            for (QObject *object : associatedObjects) {
+                if (qobject_cast<QWidget *>(object)) {
+                    contextToolBarAction = tbAction;
+                    context->addAction(tbAction);
+                    break;
+                }
             }
         }
     }
@@ -745,32 +750,14 @@ void KToolBarPrivate::slotContextAboutToShow()
 void KToolBarPrivate::slotContextAboutToHide()
 {
     // We have to unplug whatever slotContextAboutToShow plugged into the menu.
-    // Unplug the toolbar menu action
-    KXmlGuiWindow *kmw = qobject_cast<KXmlGuiWindow *>(q->mainWindow());
-    if (kmw) {
-        QAction *tbAction = kmw->toolBarMenuAction();
-        const QList<QObject *> associatedObjects = tbAction->associatedObjects();
-        const int associatedWidgetsCount = std::count_if(associatedObjects.cbegin(), associatedObjects.cend(), [](QObject *object) {
-            return (qobject_cast<QWidget *>(object) != nullptr);
-        });
-        if (associatedWidgetsCount > 1) {
-            context->removeAction(tbAction);
-        }
+    if (contextConfigureAction) {
+        context->removeAction(contextConfigureAction);
+        contextConfigureAction = nullptr;
     }
-
-    // Unplug the configure toolbars action too, since it's afterwards anyway
-    QAction *configureAction = nullptr;
-    const QString actionName = KStandardActions::name(KStandardActions::ConfigureToolbars);
-    configureAction = findAction(actionName);
-
-    if (!configureAction && kmw) {
-        configureAction = kmw->actionCollection()->action(actionName);
+    if (contextToolBarAction) {
+        context->removeAction(contextToolBarAction);
+        contextToolBarAction = nullptr;
     }
-
-    if (configureAction) {
-        context->removeAction(configureAction);
-    }
-
     context->removeAction(contextLockAction);
 }
 
