@@ -134,9 +134,13 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     QIcon icon(QStringLiteral(":/kxmlgui5/aboutkde.svg"));
     image->setPixmap(icon.pixmap(150, 250));
 
+    QVBoxLayout *sideLayout = new QVBoxLayout;
+    sideLayout->addWidget(titleWidget);
+    sideLayout->addWidget(image, 1000);
+
     QHBoxLayout *midLayout = new QHBoxLayout;
-    midLayout->addWidget(image);
-    midLayout->addWidget(tabWidget);
+    midLayout->addLayout(sideLayout);
+    midLayout->addWidget(tabWidget, 1000);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox;
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
@@ -144,7 +148,6 @@ KAboutKdeDialog::KAboutKdeDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
-    mainLayout->addWidget(titleWidget);
     mainLayout->addLayout(midLayout);
     mainLayout->addWidget(buttonBox);
 
