@@ -8,7 +8,6 @@
 #include "ktooltiphelper.h"
 #include "ktooltiphelper_p.h"
 
-#include <KColorScheme>
 #include <KLocalizedString>
 
 #include <QAction>
@@ -269,8 +268,6 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
 {
     m_lastExpandableToolTipGlobalPos = QPoint(globalPos);
     m_lastToolTipWasExpandable = true;
-    const KColorScheme colorScheme = KColorScheme(QPalette::Normal, KColorScheme::Tooltip);
-    const QColor hintTextColor = colorScheme.foreground(KColorScheme::InactiveText).color();
 
     if (toolTip.isEmpty() || toolTip == whatsThisHintOnly()) {
         const QString whatsThisHint =
@@ -278,7 +275,9 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
             // about the thing the tooltip was invoked for. If there is no good way to translate
             // the message, translating "Press Shift to learn more." would also mostly fit what
             // is supposed to be expressed here.
-            i18nc("@info:tooltip", "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>", hintTextColor.name());
+            i18nc("@info:tooltip",
+                  "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>",
+                  qApp->palette().placeholderText().color().name());
         QToolTip::showText(m_lastExpandableToolTipGlobalPos, whatsThisHint, m_widget, rect);
     } else {
         const QString toolTipWithHint = QStringLiteral("<qt>") +
@@ -292,7 +291,10 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
             //
             // %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
             // styling information. The word "more" refers to "information".
-            i18nc("@info:tooltip keep short", "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>", toolTip, hintTextColor.name())
+            i18nc("@info:tooltip keep short",
+                  "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>",
+                  toolTip,
+                  qApp->palette().placeholderText().color().name())
             + QStringLiteral("</qt>");
         // Do not replace above HTML tags with KUIT because mixing HTML and KUIT is not allowed and
         // we can not know what kind of markup the tooltip in %1 contains.
