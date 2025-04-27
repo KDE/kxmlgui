@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:39+0000\n"
+"POT-Creation-Date: 2025-04-27 00:39+0000\n"
 "PO-Revision-Date: 2019-09-19 18:05+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -1339,7 +1339,7 @@ msgstr "Бастани мавқеи навори абзорҳо"
 msgid "Toolbars Shown"
 msgstr "Навори абзорҳои намоён"
 
-#: ktooltiphelper.cpp:215
+#: ktooltiphelper.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -1348,27 +1348,13 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#. i18n: Pressing Shift will show a longer message with contextual info
-#. about the thing the tooltip was invoked for. If there is no good way to translate
-#. the message, translating "Press Shift to learn more." would also mostly fit what
-#. is supposed to be expressed here.
-#: ktooltiphelper.cpp:281
+#: ktooltiphelper.cpp:279
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
 
-#. i18n: The 'Press Shift for more' message is added to tooltips that have an
-#. available whatsthis help message. Pressing Shift will show this more exhaustive message.
-#. It is particularly important to keep this translation short because:
-#. 1. A longer translation will increase the size of *every* tooltip that gets this hint
-#. added e.g. a two word tooltip followed by a four word hint.
-#. 2. The purpose of this hint is so we can keep the tooltip shorter than it would have to
-#. be if we couldn't refer to the message that appears when pressing Shift.
-#.
-#. %1 can be any tooltip. <br/> produces a linebreak. The other things between < and > are
-#. styling information. The word "more" refers to "information".
 #: ktooltiphelper.cpp:295
 #, kde-format
 msgctxt "@info:tooltip keep short"
