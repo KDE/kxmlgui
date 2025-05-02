@@ -54,9 +54,7 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
                                                         const QList<KAboutLicense> &licenses,
                                                         QWidget *parent)
 {
-    auto wrapper = new KAdjustingScrollArea(parent);
     auto aboutWidget = new QWidget(parent);
-    wrapper->setWidget(aboutWidget);
     auto aboutLayout = new QVBoxLayout(aboutWidget);
 
     QString aboutPageText = shortDescription + QLatin1Char('\n');
@@ -99,7 +97,7 @@ QWidget *KAbstractAboutDialogPrivate::createAboutWidget(const QString &shortDesc
 
     aboutLayout->addStretch();
 
-    return wrapper;
+    return aboutWidget;
 }
 
 QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutComponent> &components, QWidget *parent)
