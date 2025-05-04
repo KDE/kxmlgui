@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:39+0000\n"
+"POT-Creation-Date: 2025-05-04 00:39+0000\n"
 "PO-Revision-Date: 2025-01-19 11:45+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -71,9 +71,10 @@ msgid "About KDE"
 msgstr "Sobre KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, kde-format
-msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr "<html><font size=\"5\">KDE - Sexa libre!</font></html>"
+#, fuzzy, kde-format
+#| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
+msgstr "<html><font size=\"5\">%1</font><br />Versión %2</html>"
 
 # skip-rule: PT-2011_commit
 #: kaboutkdedialog_p.cpp:45
@@ -1352,6 +1353,9 @@ msgstr "&Configuración"
 msgid "Main Toolbar"
 msgstr "Barra de ferramentas principal"
 
+#~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+#~ msgstr "<html><font size=\"5\">KDE - Sexa libre!</font></html>"
+
 #~ msgid "Windowing system"
 #~ msgstr "Sistema de xanelas"
 
@@ -1625,9 +1629,6 @@ msgstr "Barra de ferramentas principal"
 #~ msgctxt "A type of link."
 #~ msgid "Homepage"
 #~ msgstr "Páxina web"
-
-#~ msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
-#~ msgstr "<html><font size=\"5\">%1</font><br />Versión %2</html>"
 
 #~ msgid ""
 #~ "Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "

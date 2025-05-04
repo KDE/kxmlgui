@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:39+0000\n"
+"POT-Creation-Date: 2025-05-04 00:39+0000\n"
 "PO-Revision-Date: 2009-01-02 17:37+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -77,11 +77,12 @@ msgstr "KDE ବିଷୟରେ"
 #: kaboutkdedialog_p.cpp:34
 #, fuzzy, kde-format
 #| msgid ""
-#| "<html><font size=\"5\">K Desktop Environment</font><br /><b>Version %1</"
-#| "b></html>"
-msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+#| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
+#| "%3</html>"
+msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
 msgstr ""
-"<html><font size=\"5\">K ଡେସ୍କଟପ ପରିବେଶ</font><br /><b>ସଂସ୍କରଣ %1</b></html>"
+"<html><ଅକ୍ଷରରୂପ ଆକାର=\"5\">%1</font><br /><b>ସଂସ୍କରଣ %2</b><br />KDE %3 ବ୍ୟବହାର "
+"କରି</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -1341,6 +1342,14 @@ msgid "Main Toolbar"
 msgstr "ମୁଖ୍ୟ ସାଧନପଟି"
 
 #, fuzzy
+#~| msgid ""
+#~| "<html><font size=\"5\">K Desktop Environment</font><br /><b>Version %1</"
+#~| "b></html>"
+#~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+#~ msgstr ""
+#~ "<html><font size=\"5\">K ଡେସ୍କଟପ ପରିବେଶ</font><br /><b>ସଂସ୍କରଣ %1</b></html>"
+
+#, fuzzy
 #~| msgctxt "@application/plain"
 #~| msgid "%1"
 #~ msgctxt "@item Component name in about dialog."
@@ -1592,15 +1601,6 @@ msgstr "ମୁଖ୍ୟ ସାଧନପଟି"
 #~ msgctxt "A type of link."
 #~ msgid "Homepage"
 #~ msgstr "ମୂଳସ୍ଥାନ ପୃଷ୍ଠା"
-
-#, fuzzy
-#~| msgid ""
-#~| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />Using KDE "
-#~| "%3</html>"
-#~ msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
-#~ msgstr ""
-#~ "<html><ଅକ୍ଷରରୂପ ଆକାର=\"5\">%1</font><br /><b>ସଂସ୍କରଣ %2</b><br />KDE %3 "
-#~ "ବ୍ୟବହାର କରି</html>"
 
 #, fuzzy
 #~| msgid ""

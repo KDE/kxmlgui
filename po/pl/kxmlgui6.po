@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:39+0000\n"
+"POT-Creation-Date: 2025-05-04 00:39+0000\n"
 "PO-Revision-Date: 2024-12-29 10:44+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -74,9 +74,10 @@ msgid "About KDE"
 msgstr "O KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, kde-format
-msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr "<html><font size=\"5\">KDE - Bądź wolny!</font></html>"
+#, fuzzy, kde-format
+#| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
+msgstr "<html><font size=\"5\">%1</font><br />Wersja %2</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -1357,6 +1358,9 @@ msgstr "U&stawienia"
 msgid "Main Toolbar"
 msgstr "Główny pasek narzędzi"
 
+#~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+#~ msgstr "<html><font size=\"5\">KDE - Bądź wolny!</font></html>"
+
 #, fuzzy
 #~| msgid "The <em>%1</em> windowing system"
 #~ msgid "Windowing system"
@@ -1619,9 +1623,6 @@ msgstr "Główny pasek narzędzi"
 #~ msgctxt "A type of link."
 #~ msgid "Homepage"
 #~ msgstr "Strona domowa"
-
-#~ msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
-#~ msgstr "<html><font size=\"5\">%1</font><br />Wersja %2</html>"
 
 #~ msgid ""
 #~ "Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "

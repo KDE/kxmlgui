@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:39+0000\n"
+"POT-Creation-Date: 2025-05-04 00:39+0000\n"
 "PO-Revision-Date: 2011-07-22 16:08+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -84,12 +84,10 @@ msgstr "O KDE-u"
 #: kaboutkdedialog_p.cpp:34
 #, fuzzy, kde-format
 #| msgid ""
-#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
-#| "b></html>"
-msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+#| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
 msgstr ""
-"<html><font size=\"5\">KDE – budi slobodan!</font><br /><b>Inačica platforme "
-"%1</b></html>"
+"<html><font size=\"5\">%1</font><br /><b>Inačica %2</b><br />&nbsp;</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, fuzzy, kde-format
@@ -1498,6 +1496,15 @@ msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
 #, fuzzy
+#~| msgid ""
+#~| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version "
+#~| "%1</b></html>"
+#~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
+#~ msgstr ""
+#~ "<html><font size=\"5\">KDE – budi slobodan!</font><br /><b>Inačica "
+#~ "platforme %1</b></html>"
+
+#, fuzzy
 #~| msgctxt "@item Contributor name in about dialog."
 #~| msgid "%1"
 #~ msgctxt "@item Component name in about dialog."
@@ -1801,14 +1808,6 @@ msgstr "Glavna alatna traka"
 #~ msgctxt "A type of link."
 #~ msgid "Homepage"
 #~ msgstr "Osobna stranica"
-
-#, fuzzy
-#~| msgid ""
-#~| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</"
-#~| "html>"
-#~ msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
-#~ msgstr ""
-#~ "<html><font size=\"5\">%1</font><br /><b>Inačica %2</b><br />&nbsp;</html>"
 
 #, fuzzy
 #~| msgid ""
