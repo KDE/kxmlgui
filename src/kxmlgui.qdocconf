@@ -12,6 +12,8 @@ imagedirs = ../docs/pics
 
 outputformats = HTML
 
+navigation.landingpage = "KXmlGui"
+
 depends += qtcore qtgui qtwidgets qtxml kcoreaddons kconfigcore kconfiggui kglobalaccel kconfigwidgets
 
 qhp.projects            = KXmlGui
