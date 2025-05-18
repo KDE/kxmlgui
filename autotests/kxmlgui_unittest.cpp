@@ -129,7 +129,7 @@ void KXmlGui_UnitTest::initTestCase()
 
     // Create "Test" shortcut scheme to eliminate the KF warning
     QFile testScheme = QFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-        + QLatin1String("/%1/shortcuts/%2").arg(QCoreApplication::applicationName(), QStringLiteral("Test")));
+                             + QLatin1String("/%1/shortcuts/%2").arg(QCoreApplication::applicationName(), QStringLiteral("Test")));
     if (!testScheme.exists()) {
         QVERIFY(QFileInfo(testScheme).dir().mkpath(QStringLiteral(".")));
         QVERIFY(testScheme.open(QIODevice::WriteOnly));

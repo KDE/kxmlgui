@@ -271,7 +271,10 @@ public:
 
     void addStateActionDisabled(const QString &state, const QString &action);
 
-    enum ReverseStateChange { StateNoReverse, StateReverse };
+    enum ReverseStateChange {
+        StateNoReverse,
+        StateReverse
+    };
     struct StateChange {
         QStringList actionsToEnable;
         QStringList actionsToDisable;

@@ -29,7 +29,7 @@ inline QString SystemInformation::userName()
 #include <qt_windows.h>
 #define SECURITY_WIN32
 #include <security.h>
-//#include <secext.h> // GetUserNameEx
+// #include <secext.h> // GetUserNameEx
 
 inline QString SystemInformation::userName()
 {

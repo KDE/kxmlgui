@@ -72,7 +72,12 @@ static ToolBarList findToolBars(const QDomElement &start)
 class XmlData
 {
 public:
-    enum XmlType { Shell = 0, Part, Local, Merged };
+    enum XmlType {
+        Shell = 0,
+        Part,
+        Local,
+        Merged
+    };
 
     explicit XmlData(XmlType xmlType, const QString &xmlFile, KActionCollection *collection)
         : m_isModified(false)

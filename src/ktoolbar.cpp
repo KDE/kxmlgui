@@ -75,8 +75,15 @@
  on a given toolbar depends on whether there are settings at Level_AppXML or Level_UserSettings.
  Only if there are no settings at those levels, should the change of KDEDefault make a difference.
 */
-enum SettingLevel { Level_KDEDefault, Level_AppXML, Level_UserSettings, NSettingLevels };
-enum { Unset = -1 };
+enum SettingLevel {
+    Level_KDEDefault,
+    Level_AppXML,
+    Level_UserSettings,
+    NSettingLevels
+};
+enum {
+    Unset = -1
+};
 
 class KToolBarPrivate
 {

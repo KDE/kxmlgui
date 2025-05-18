@@ -39,7 +39,10 @@ using namespace KXMLGUI;
 class KXMLGUIFactoryPrivate : public BuildState
 {
 public:
-    enum ShortcutOption { SetActiveShortcut = 1, SetDefaultShortcut = 2 };
+    enum ShortcutOption {
+        SetActiveShortcut = 1,
+        SetDefaultShortcut = 2
+    };
 
     KXMLGUIFactoryPrivate()
     {
