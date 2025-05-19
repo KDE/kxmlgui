@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-04 00:39+0000\n"
+"POT-Creation-Date: 2025-05-19 00:39+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -457,30 +457,30 @@ msgstr "<h2>त्वरकाः निष्कासिताः</h2>"
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>त्वरकाः योजिताः (केवलं भवतः सूचनार्थम्)</h2>"
 
-#: kedittoolbar.cpp:327
+#: kedittoolbar.cpp:332
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "पाठं परिवर्तयन्तु"
 
-#: kedittoolbar.cpp:337
+#: kedittoolbar.cpp:342
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "चिह्न &पाठ्य:"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:347
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&यदा साधनशलाका चिह्नानां पार्श्वे पाठ्यम् दर्शयति तदा पाठ्यम् गोपयन्तु"
 
-#: kedittoolbar.cpp:591
+#: kedittoolbar.cpp:596
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "साधनशलाकाम् विन्यस्यताम्"
 
-#: kedittoolbar.cpp:654
+#: kedittoolbar.cpp:659
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -489,17 +489,17 @@ msgstr ""
 "किं भवान् वास्तवम् अस्य अनुप्रयोगस्य सर्वाणि साधनपट्टिकाः पूर्वनिर्धारितरूपेण पुनः निरूपयत् "
 "कर्तुम् इच्छति? परिवर्तनं तत्क्षणमेव प्रयुक्तं भविष्यति।."
 
-#: kedittoolbar.cpp:655
+#: kedittoolbar.cpp:660
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "साधनशलाकाम् पूर्वनिर्धारितरूपेण पुनः निरूपयत् कुर्वन्तु"
 
-#: kedittoolbar.cpp:656
+#: kedittoolbar.cpp:661
 #, kde-format
 msgid "Reset"
 msgstr "पूर्वनिर्धारितरूपेण पुनः निरूपयत् कुर्वन्तु"
 
-#: kedittoolbar.cpp:975
+#: kedittoolbar.cpp:980
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&साधनशलाका:"
@@ -511,66 +511,66 @@ msgstr "&साधनशलाका:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:991
+#: kedittoolbar.cpp:996
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "&उपलब्धाः क्रियाः :"
 
-#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
+#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
 #, kde-format
 msgid "Filter"
 msgstr "&छानकाः"
 
-#: kedittoolbar.cpp:1015
+#: kedittoolbar.cpp:1020
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&वर्तमान क्रियाः :"
 
-#: kedittoolbar.cpp:1040
+#: kedittoolbar.cpp:1045
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "&चिह्नं परिवर्तयतु…"
 
-#: kedittoolbar.cpp:1049
+#: kedittoolbar.cpp:1054
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "पाठ्यम् परिवर्तयतु…"
 
-#: kedittoolbar.cpp:1191
+#: kedittoolbar.cpp:1196
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- विच्छेदकः ---"
 
-#: kedittoolbar.cpp:1192
+#: kedittoolbar.cpp:1197
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- विस्तारं कुर्वन् अन्तरं निर्माता ---"
 
-#: kedittoolbar.cpp:1214
+#: kedittoolbar.cpp:1219
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1242
+#: kedittoolbar.cpp:1247
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "एतत् तत्त्वं निविष्ट घटकस्य सर्वैः भूत इत्यनेन प्रतिस्थापितं भविष्यति ।."
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1249
 #, kde-format
 msgid "<Merge>"
 msgstr "<Merge>"
 
-#: kedittoolbar.cpp:1246
+#: kedittoolbar.cpp:1251
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<Merge %1>"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1261
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -579,18 +579,18 @@ msgstr ""
 "एषा क्रियाणां गतिशीलसूची अस्ति । भवन्तः तत् चालयितुं शक्नुवन्ति, परन्तु यदि भवन्तः तत् "
 "निष्कासयन्ति तर्हि भवन्तः पुनः योजयितुं न शक्नुवन्ति ।."
 
-#: kedittoolbar.cpp:1257
+#: kedittoolbar.cpp:1262
 #, kde-format
 msgid "ActionList: %1"
 msgstr "क्रियासूची: %1"
 
-#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
+#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1611
+#: kedittoolbar.cpp:1616
 #, kde-format
 msgid "Change Icon"
 msgstr "चिह्नं परिवर्तयतु"
@@ -1088,109 +1088,109 @@ msgid ""
 "contain a proper translation."
 msgstr "एषा एव भाषा यस्याः उपयोगः भविष्यति यदि पूर्वभाषासु सम्यक् अनुवादः नास्ति।."
 
-#: ktoolbar.cpp:301 ktoolbar.cpp:308
+#: ktoolbar.cpp:308 ktoolbar.cpp:315
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "साधनशलाका विन्यासः"
 
-#: ktoolbar.cpp:303
+#: ktoolbar.cpp:310
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "पाठ्यम् दर्शयतु"
 
-#: ktoolbar.cpp:310
+#: ktoolbar.cpp:317
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "आभिमुख्य"
 
-#: ktoolbar.cpp:312
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "शीर्षम्"
 
-#: ktoolbar.cpp:316
+#: ktoolbar.cpp:323
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "वामम्"
 
-#: ktoolbar.cpp:319
+#: ktoolbar.cpp:326
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "दक्षिणः"
 
-#: ktoolbar.cpp:322
+#: ktoolbar.cpp:329
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "तलम्"
 
-#: ktoolbar.cpp:333
+#: ktoolbar.cpp:340
 #, kde-format
 msgid "Text Position"
 msgstr "पाठ्यस्थानम्"
 
-#: ktoolbar.cpp:335
+#: ktoolbar.cpp:342
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "केवलं चिह्नानि"
 
-#: ktoolbar.cpp:338
+#: ktoolbar.cpp:345
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "केवलं पाठ्य"
 
-#: ktoolbar.cpp:341
+#: ktoolbar.cpp:348
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "चिह्नानां पार्श्वे पाठ्य"
 
-#: ktoolbar.cpp:344
+#: ktoolbar.cpp:351
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "चिह्नानां अन्तर्गतं पाठ्य"
 
-#: ktoolbar.cpp:355
+#: ktoolbar.cpp:362
 #, kde-format
 msgid "Icon Size"
 msgstr "चिह्नस्य आकार"
 
-#: ktoolbar.cpp:357
+#: ktoolbar.cpp:364
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "पूर्वनिर्धारितरूपेण"
 
-#: ktoolbar.cpp:377 ktoolbar.cpp:401
+#: ktoolbar.cpp:384 ktoolbar.cpp:408
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "लघु (%1x%2)"
 
-#: ktoolbar.cpp:379 ktoolbar.cpp:403
+#: ktoolbar.cpp:386 ktoolbar.cpp:410
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "मध्यम (%1x%2)"
 
-#: ktoolbar.cpp:381 ktoolbar.cpp:405
+#: ktoolbar.cpp:388 ktoolbar.cpp:412
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "बृहत्‌ (%1x%2)"
 
-#: ktoolbar.cpp:383 ktoolbar.cpp:407
+#: ktoolbar.cpp:390 ktoolbar.cpp:414
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "विशालः (%1x%2)"
 
-#: ktoolbar.cpp:433
+#: ktoolbar.cpp:440
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "साधनशलाकाथानानि ताडयन्तु"

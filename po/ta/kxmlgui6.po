@@ -4,13 +4,13 @@
 # Sivakumar Shanmugasundaram <sshanmu@yahoo.com>, 2000.
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000-2001.
 # ம. ஸ்ரீ ராமதாஸ் | Sri Ramadoss M <amachu@yavarkkum.org>, 2007-2012.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-04 00:39+0000\n"
-"PO-Revision-Date: 2024-11-24 17:12+0530\n"
+"POT-Creation-Date: 2025-05-19 00:39+0000\n"
+"PO-Revision-Date: 2025-05-18 21:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -65,10 +65,9 @@ msgid "About KDE"
 msgstr "கே.டீ.யீ. பற்றி"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
-#| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+#, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">%1</font><br />பதிப்பு %2</html>"
+msgstr "<html><font size=\"5\">கே.டீ.யீ.</font><br />சுதந்திரமாக இரு!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -463,30 +462,30 @@ msgstr "<h2>விரைவுபடுத்திகள் நீக்கப�
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>விரைவுபடுத்திகள் சேர்க்கப்பட்டன (இச்செய்தி உங்கள் தகவலுக்காக தான்)</h2>"
 
-#: kedittoolbar.cpp:327
+#: kedittoolbar.cpp:332
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "பெயரை மாற்று"
 
-#: kedittoolbar.cpp:337
+#: kedittoolbar.cpp:342
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "சின்னத்தின் &பெயர்:"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:347
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "கருவிப்பட்டையில் சின்னங்களுக்கு அருகே பெயர்களைக் காட்டும் போது &இந்தப் பெயரை மறை"
 
-#: kedittoolbar.cpp:591
+#: kedittoolbar.cpp:596
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "கருவிப்பட்டைகளை அமை"
 
-#: kedittoolbar.cpp:654
+#: kedittoolbar.cpp:659
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -495,17 +494,17 @@ msgstr ""
 "இச்செயலியின் அனைத்து கருவிப்பட்டைகளையும் அதனதன் இயல்பிருப்பு நிலைக்கே மாற்ற வேண்டுமா? "
 "மாற்றங்கள் உடனே செயல்படுத்தப்படும்."
 
-#: kedittoolbar.cpp:655
+#: kedittoolbar.cpp:660
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "கருவிப்பட்டைகளை மீட்டமை"
 
-#: kedittoolbar.cpp:656
+#: kedittoolbar.cpp:661
 #, kde-format
 msgid "Reset"
 msgstr "மீட்டமை"
 
-#: kedittoolbar.cpp:975
+#: kedittoolbar.cpp:980
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&கருவிப்பட்டை:"
@@ -517,66 +516,66 @@ msgstr "&கருவிப்பட்டை:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:991
+#: kedittoolbar.cpp:996
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "கி&டைக்கக்கூடிய செயல்கள்:"
 
-#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
+#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
 #, kde-format
 msgid "Filter"
 msgstr "வடிகட்டி"
 
-#: kedittoolbar.cpp:1015
+#: kedittoolbar.cpp:1020
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "ந&டப்புச் செயல்கள்:"
 
-#: kedittoolbar.cpp:1040
+#: kedittoolbar.cpp:1045
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "&சின்னத்தை மாற்று…"
 
-#: kedittoolbar.cpp:1049
+#: kedittoolbar.cpp:1054
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "&பெயரை மாற்று…"
 
-#: kedittoolbar.cpp:1191
+#: kedittoolbar.cpp:1196
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- பிரிப்பான் ---"
 
-#: kedittoolbar.cpp:1192
+#: kedittoolbar.cpp:1197
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- விரியக்கூடிய இடைவெளி ---"
 
-#: kedittoolbar.cpp:1214
+#: kedittoolbar.cpp:1219
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1242
+#: kedittoolbar.cpp:1247
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "பதிந்த பாகமொன்றின் அனைத்து பொருட்களாலும் இப்பொருளானது மாற்றப்படும்."
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1249
 #, kde-format
 msgid "<Merge>"
 msgstr "<சேர்>"
 
-#: kedittoolbar.cpp:1246
+#: kedittoolbar.cpp:1251
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<%1-ஐ சேர்>"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1261
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -585,18 +584,18 @@ msgstr ""
 "தன்னிச்சையான செயற்களின் பட்டியல் இது. இதனை நீங்கள் நகர்த்தலாம், ஆனால் அகற்றி விட்டால் இதை "
 "மீண்டும் சேர்க்க முடியாது."
 
-#: kedittoolbar.cpp:1257
+#: kedittoolbar.cpp:1262
 #, kde-format
 msgid "ActionList: %1"
 msgstr "செயற்பட்டியல்: %1"
 
-#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
+#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1611
+#: kedittoolbar.cpp:1616
 #, kde-format
 msgid "Change Icon"
 msgstr "சின்னத்தை மாற்று"
@@ -1099,109 +1098,109 @@ msgid ""
 msgstr ""
 "மேலுள்ள மொழிகளுக்குரிய மொழிபெயர்ப்புகள் சரியாக இல்லாத பட்சத்தில் இம்மொழி பயன்படுத்தப்படும்."
 
-#: ktoolbar.cpp:301 ktoolbar.cpp:308
+#: ktoolbar.cpp:308 ktoolbar.cpp:315
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "கருவிப்பட்டை அமைப்புகள்"
 
-#: ktoolbar.cpp:303
+#: ktoolbar.cpp:310
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "பெயர்களைக் காட்டு"
 
-#: ktoolbar.cpp:310
+#: ktoolbar.cpp:317
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "நோக்குநிலை"
 
-#: ktoolbar.cpp:312
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "மேல் "
 
-#: ktoolbar.cpp:316
+#: ktoolbar.cpp:323
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "இடது"
 
-#: ktoolbar.cpp:319
+#: ktoolbar.cpp:326
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "வலது"
 
-#: ktoolbar.cpp:322
+#: ktoolbar.cpp:329
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "கீழ் "
 
-#: ktoolbar.cpp:333
+#: ktoolbar.cpp:340
 #, kde-format
 msgid "Text Position"
 msgstr "பெயர்களின் இருப்பிடம்"
 
-#: ktoolbar.cpp:335
+#: ktoolbar.cpp:342
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "சின்னங்கள் மட்டும்"
 
-#: ktoolbar.cpp:338
+#: ktoolbar.cpp:345
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "பெயர் மட்டும்"
 
-#: ktoolbar.cpp:341
+#: ktoolbar.cpp:348
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "சின்னங்களுக்கு பக்கத்தில் பெயர்கள்"
 
-#: ktoolbar.cpp:344
+#: ktoolbar.cpp:351
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "சின்னங்களுக்கு கீழே பெயர்கள்"
 
-#: ktoolbar.cpp:355
+#: ktoolbar.cpp:362
 #, kde-format
 msgid "Icon Size"
 msgstr "சின்னத்தின் அளவு"
 
-#: ktoolbar.cpp:357
+#: ktoolbar.cpp:364
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "இயல்பிருப்பு"
 
-#: ktoolbar.cpp:377 ktoolbar.cpp:401
+#: ktoolbar.cpp:384 ktoolbar.cpp:408
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "சிறிய (%1x%2)"
 
-#: ktoolbar.cpp:379 ktoolbar.cpp:403
+#: ktoolbar.cpp:386 ktoolbar.cpp:410
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "நடுத்தர (%1x%2)"
 
-#: ktoolbar.cpp:381 ktoolbar.cpp:405
+#: ktoolbar.cpp:388 ktoolbar.cpp:412
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "பெரிய (%1x%2)"
 
-#: ktoolbar.cpp:383 ktoolbar.cpp:407
+#: ktoolbar.cpp:390 ktoolbar.cpp:414
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "மிகப்பெரிய (%1x%2)"
 
-#: ktoolbar.cpp:433
+#: ktoolbar.cpp:440
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "கருவிப்பட்டைகளின் நிலையைப் பூட்டு"

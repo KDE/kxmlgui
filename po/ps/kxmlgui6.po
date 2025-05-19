@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-04 00:39+0000\n"
+"POT-Creation-Date: 2025-05-19 00:39+0000\n"
 "PO-Revision-Date: 2008-08-16 16:01-0800\n"
 "Last-Translator: Zabeeh Khan <zabeehkhan@gmail.com>\n"
 "Language-Team: Pashto <pathanisation@googlegroups.com>\n"
@@ -451,33 +451,33 @@ msgstr "<h2>ګړنديوال وړنګول شو</h2>"
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>ګړنديوال زيات شول (يوازې ستاسو د خبرتيا لپاره)</h2>"
 
-#: kedittoolbar.cpp:327
+#: kedittoolbar.cpp:332
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "انځورن بدلول"
 
-#: kedittoolbar.cpp:337
+#: kedittoolbar.cpp:342
 #, fuzzy, kde-format
 #| msgid "Link Text:"
 msgid "Icon te&xt:"
 msgstr ":د تړنۍ ليکنه"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:347
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr ""
 
-#: kedittoolbar.cpp:591
+#: kedittoolbar.cpp:596
 #, fuzzy, kde-format
 #| msgid "Configure Toolbars"
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "توکپټې سازول"
 
-#: kedittoolbar.cpp:654
+#: kedittoolbar.cpp:659
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -486,17 +486,17 @@ msgstr ""
 "تاسو په رښتيا غواړﺉ چې د دې کاريال ټولې توکپټې خپل تلواله امستنو ته بيا "
 "وزېرمﺉ؟ بدلونونه به په سمدستي توګه وکارول شي."
 
-#: kedittoolbar.cpp:655
+#: kedittoolbar.cpp:660
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "توکپټې بياټاکل"
 
-#: kedittoolbar.cpp:656
+#: kedittoolbar.cpp:661
 #, kde-format
 msgid "Reset"
 msgstr "بياټاکل"
 
-#: kedittoolbar.cpp:975
+#: kedittoolbar.cpp:980
 #, kde-format
 msgid "&Toolbar:"
 msgstr ":توکپټه"
@@ -508,88 +508,88 @@ msgstr ":توکپټه"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:991
+#: kedittoolbar.cpp:996
 #, kde-format
 msgid "A&vailable actions:"
 msgstr ":ش&ته چارونه"
 
-#: kedittoolbar.cpp:1012 kedittoolbar.cpp:1037
+#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
 #, fuzzy, kde-format
 #| msgid "&Filter:"
 msgid "Filter"
 msgstr ":چاڼ&"
 
-#: kedittoolbar.cpp:1015
+#: kedittoolbar.cpp:1020
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr ":اوس&ني چارونه"
 
-#: kedittoolbar.cpp:1040
+#: kedittoolbar.cpp:1045
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "انځورن بدلول"
 
-#: kedittoolbar.cpp:1049
+#: kedittoolbar.cpp:1054
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "انځورن بدلول"
 
-#: kedittoolbar.cpp:1191
+#: kedittoolbar.cpp:1196
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- بېلند ---"
 
-#: kedittoolbar.cpp:1192
+#: kedittoolbar.cpp:1197
 #, fuzzy, kde-format
 #| msgid "--- separator ---"
 msgid "--- expanding spacer ---"
 msgstr "--- بېلند ---"
 
-#: kedittoolbar.cpp:1214
+#: kedittoolbar.cpp:1219
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1242
+#: kedittoolbar.cpp:1247
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr ""
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1249
 #, kde-format
 msgid "<Merge>"
 msgstr "<سره ننويستل>"
 
-#: kedittoolbar.cpp:1246
+#: kedittoolbar.cpp:1251
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<سره ننويستل %1>"
 
-#: kedittoolbar.cpp:1256
+#: kedittoolbar.cpp:1261
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
 
-#: kedittoolbar.cpp:1257
+#: kedittoolbar.cpp:1262
 #, kde-format
 msgid "ActionList: %1"
 msgstr "%1 چارلړ:"
 
-#: kedittoolbar.cpp:1358 kedittoolbar.cpp:1383
+#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1611
+#: kedittoolbar.cpp:1616
 #, kde-format
 msgid "Change Icon"
 msgstr "انځورن بدلول"
@@ -1098,116 +1098,116 @@ msgid ""
 "contain a proper translation."
 msgstr ""
 
-#: ktoolbar.cpp:301 ktoolbar.cpp:308
+#: ktoolbar.cpp:308 ktoolbar.cpp:315
 #, fuzzy, kde-format
 #| msgid "Toolbar Menu"
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "توکپټه غورنۍ"
 
-#: ktoolbar.cpp:303
+#: ktoolbar.cpp:310
 #, fuzzy, kde-format
 #| msgid "Show help"
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "مرسته ښودل"
 
-#: ktoolbar.cpp:310
+#: ktoolbar.cpp:317
 #, fuzzy, kde-format
 #| msgid "Orientation"
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "لورموندنه"
 
-#: ktoolbar.cpp:312
+#: ktoolbar.cpp:319
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "پاس"
 
-#: ktoolbar.cpp:316
+#: ktoolbar.cpp:323
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "کيڼ"
 
-#: ktoolbar.cpp:319
+#: ktoolbar.cpp:326
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "ښي"
 
-#: ktoolbar.cpp:322
+#: ktoolbar.cpp:329
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "لاندې"
 
-#: ktoolbar.cpp:333
+#: ktoolbar.cpp:340
 #, kde-format
 msgid "Text Position"
 msgstr "د ليکنې ځای"
 
-#: ktoolbar.cpp:335
+#: ktoolbar.cpp:342
 #, fuzzy, kde-format
 #| msgid "Icons Only"
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "يوازې انځورنونه"
 
-#: ktoolbar.cpp:338
+#: ktoolbar.cpp:345
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "يوازې ليکنه"
 
-#: ktoolbar.cpp:341
+#: ktoolbar.cpp:348
 #, fuzzy, kde-format
 #| msgid "Text Alongside Icons"
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "ليکنه د انځورنونو ترڅنګ"
 
-#: ktoolbar.cpp:344
+#: ktoolbar.cpp:351
 #, fuzzy, kde-format
 #| msgid "Text Under Icons"
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "ليکنه د انځورنونو لاندې"
 
-#: ktoolbar.cpp:355
+#: ktoolbar.cpp:362
 #, kde-format
 msgid "Icon Size"
 msgstr "انځورن کچ"
 
-#: ktoolbar.cpp:357
+#: ktoolbar.cpp:364
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "تلواله"
 
-#: ktoolbar.cpp:377 ktoolbar.cpp:401
+#: ktoolbar.cpp:384 ktoolbar.cpp:408
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "(%1x%2) کوچنی"
 
-#: ktoolbar.cpp:379 ktoolbar.cpp:403
+#: ktoolbar.cpp:386 ktoolbar.cpp:410
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "(%1x%2) منځی"
 
-#: ktoolbar.cpp:381 ktoolbar.cpp:405
+#: ktoolbar.cpp:388 ktoolbar.cpp:412
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "(%1x%2) لوی"
 
-#: ktoolbar.cpp:383 ktoolbar.cpp:407
+#: ktoolbar.cpp:390 ktoolbar.cpp:414
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "(%1x%2) غټ"
 
-#: ktoolbar.cpp:433
+#: ktoolbar.cpp:440
 #, fuzzy, kde-format
 #| msgid "Lock Toolbars"
 msgid "Lock Toolbar Positions"
