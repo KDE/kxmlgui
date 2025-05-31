@@ -146,18 +146,22 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         // the popup won't be hidden if it is used as a standalone menu as well.
         // Note: menus with a parent of 0, coming from child clients, can be
         // leaked if the child client is deleted without a proper removeClient call, though.
+        //
+        // IMPORTANT: only do that if we have no parent, else we trigger on Wayland:
+        // qt.qpa.wayland: Creating a popup with a parent, QWidgetWindow(0x5624748a9220, name="MainWindow#1Window")
+        // which does not match the current topmost grabbing popup, QWidgetWindow(0x5624762b0b30, name="ktexteditor_popupWindow")
+        // With some shell surface protocols, this is not allowed. The wayland QPA plugin is currently handling it by setting the parent to
+        // the topmost grabbing popup. Note, however, that this may cause positioning errors and popups closing unxpectedly.
+        // Please fix the transient parent of the popup.
         QWidget *p = parent;
-
-        if (!p && qobject_cast<QMainWindow *>(d->m_widget)) {
+        if (!p && d->m_widget) {
             p = d->m_widget;
+            while (p && !qobject_cast<QMainWindow *>(p)) {
+                p = p->parentWidget();
+            }
         }
 
-        while (p && !qobject_cast<QMainWindow *>(p)) {
-            p = p->parentWidget();
-        }
-
-        QString name = element.attribute(d->attrName);
-
+        const QString name = element.attribute(d->attrName);
         if (!KAuthorized::authorizeAction(name)) {
             return nullptr;
         }
