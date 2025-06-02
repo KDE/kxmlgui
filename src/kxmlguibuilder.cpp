@@ -140,20 +140,9 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
     }
 
     if (tagName == d->tagMenu) {
-        // Look up to see if we are inside a mainwindow. If yes, then
-        // use it as parent widget (to get kaction to plug itself into the
-        // mainwindow). Don't use a popupmenu as parent widget, otherwise
-        // the popup won't be hidden if it is used as a standalone menu as well.
-        // Note: menus with a parent of 0, coming from child clients, can be
-        // leaked if the child client is deleted without a proper removeClient call, though.
-        QWidget *p = parent;
-
-        if (!p && qobject_cast<QMainWindow *>(d->m_widget)) {
-            p = d->m_widget;
-        }
-
-        while (p && !qobject_cast<QMainWindow *>(p)) {
-            p = p->parentWidget();
+        QWidget *effectiveParent = parent;
+        if (!effectiveParent) {
+            effectiveParent = d->m_widget;
         }
 
         QString name = element.attribute(d->attrName);
@@ -162,7 +151,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
             return nullptr;
         }
 
-        QMenu *popup = new QMenu(p);
+        QMenu *popup = new QMenu(effectiveParent);
         popup->setObjectName(name);
 
         d->m_menumenuhandler->insertMenu(popup);
