@@ -75,10 +75,18 @@ find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 
-# For the Python bindings
-find_package(Python3 3.9 COMPONENTS Interpreter Development)
-find_package(Shiboken6)
-find_package(PySide6)
+option(BUILD_PYTHON_BINDINGS "Build Python bindings" ON)
+
+# Only Linux and FreeBSD CI has the relevant packages
+if (ANDROID OR APPLE OR WIN32 OR NOT BUILD_SHARED_LIBS)
+    set(BUILD_PYTHON_BINDINGS OFF)
+endif()
+
+if (BUILD_PYTHON_BINDINGS)
+    find_package(Python3 3.9 REQUIRED COMPONENTS Interpreter Development)
+    find_package(Shiboken6 REQUIRED)
+    find_package(PySide6 REQUIRED)
+endif()
 
 ecm_set_disabled_deprecation_versions(
     QT 6.9
@@ -88,7 +96,6 @@ ecm_set_disabled_deprecation_versions(
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui6\")
 ki18n_install(po)
 
-cmake_dependent_option(BUILD_PYTHON_BINDINGS "Generate Python Bindings" ON "TARGET Shiboken6::libshiboken AND TARGET PySide6::pyside6" OFF)
 add_feature_info(PYTHON_BINDINGS ${BUILD_PYTHON_BINDINGS} "Python bindings")
 
 # Subdirectories
