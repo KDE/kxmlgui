@@ -295,8 +295,10 @@ QWidget *KAbstractAboutDialogPrivate::createAuthorsWidget(const QList<KAboutPers
         if (!customAuthorTextEnabled) {
             if (bugAddress.isEmpty() || bugAddress == QLatin1String("submit@bugs.kde.org")) {
                 bugsLabel->setText(i18nc("Reference to website",
-                                         "Please use %1 to report bugs.\n",
-                                         QLatin1String("<a href=\"https://bugs.kde.org\">https://bugs.kde.org</a>")));
+                                         "Please use %1 to report bugs.<br/>"
+                                         "If you have questions or need help, please visit %2.<br/>",
+                                         QLatin1String("<a href=\"https://bugs.kde.org\">https://bugs.kde.org</a>"),
+                                         QLatin1String("<a href=\"https://kde.org/support/\">https://kde.org/support/</a>")));
             } else {
                 QUrl bugUrl(bugAddress);
                 if (bugUrl.scheme().isEmpty()) {
