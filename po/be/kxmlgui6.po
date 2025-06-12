@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2025-01-06 19:10\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -287,10 +287,12 @@ msgstr "Email удзельніка: %1"
 #: kabstractaboutdialog_p.cpp:298
 #, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "Для адпраўлення справаздач пра хібы выкарыстоўвайце %1.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1359,6 +1361,10 @@ msgstr "&Налады"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Галоўная панэль інструментаў"
+
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "Для адпраўлення справаздач пра хібы выкарыстоўвайце %1.\n"
 
 #~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 #~ msgstr "<html><font size=\"5\">KDE - будзьце вольнымі!</font></html>"

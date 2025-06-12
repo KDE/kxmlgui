@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -285,13 +285,14 @@ msgid "Email contributor: %1"
 msgstr "ಇತರ ಸಹಭಾಗಿಗಳು:"
 
 #: kabstractaboutdialog_p.cpp:298
-#, fuzzy, kde-format
-#| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "ದಯವಿಟ್ಟು ದೋಶಗಳನ್ನು ವರದಿ ಮಾಡಲು http://bugs.kde.org ಬಳಸಿ.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -1397,6 +1398,12 @@ msgstr "ಸಂಯೋಜನೆಗಳು(&S)"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#, fuzzy
+#~| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "ದಯವಿಟ್ಟು ದೋಶಗಳನ್ನು ವರದಿ ಮಾಡಲು http://bugs.kde.org ಬಳಸಿ.\n"
 
 #, fuzzy
 #~| msgid ""

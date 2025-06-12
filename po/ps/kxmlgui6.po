@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2008-08-16 16:01-0800\n"
 "Last-Translator: Zabeeh Khan <zabeehkhan@gmail.com>\n"
 "Language-Team: Pashto <pathanisation@googlegroups.com>\n"
@@ -270,13 +270,14 @@ msgid "Email contributor: %1"
 msgstr ":نور ګډونوال"
 
 #: kabstractaboutdialog_p.cpp:298
-#, fuzzy, kde-format
-#| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr ".وکاروﺉ http://bugs.kde.org لورينه وکړﺉ د کړاونو راپورولو لپاره\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -1337,6 +1338,12 @@ msgstr "امستنې"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "اره توکپټه"
+
+#, fuzzy
+#~| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr ".وکاروﺉ http://bugs.kde.org لورينه وکړﺉ د کړاونو راپورولو لپاره\n"
 
 #, fuzzy
 #~| msgid ""

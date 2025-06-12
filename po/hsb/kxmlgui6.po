@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2008-12-19 22:49+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -345,13 +345,14 @@ msgid "Email contributor: %1"
 msgstr "Dalši přinošowarjo"
 
 #: kabstractaboutdialog_p.cpp:298
-#, fuzzy, kde-format
-#| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "Prošu wužiwaj http://bugs.kde.org, zo by wo zmylku rozprawił.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -1493,6 +1494,12 @@ msgstr "&Nastajenja"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hłowny nastrojowy pas"
+
+#, fuzzy
+#~| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "Prošu wužiwaj http://bugs.kde.org, zo by wo zmylku rozprawił.\n"
 
 #, fuzzy
 #~| msgid ""

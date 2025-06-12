@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-07 18:49+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -320,10 +320,12 @@ msgstr ""
 #: kabstractaboutdialog_p.cpp:298
 #, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "Silakan menggunakan %1 untuk melaporkan kutu.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1386,6 +1388,10 @@ msgstr "Peng&aturan"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Bilah Alat Utama"
+
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "Silakan menggunakan %1 untuk melaporkan kutu.\n"
 
 #~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 #~ msgstr "<html><font size=\"5\">KDE - Bebas!</font></html>"

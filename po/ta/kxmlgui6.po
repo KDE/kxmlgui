@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2025-05-18 21:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -286,10 +286,12 @@ msgstr "இயற்றியவருக்கு மின்னஞ்சல�
 #: kabstractaboutdialog_p.cpp:298
 #, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "பிழைகளை தெரிவிக்க %1 என்ற இணையதளத்தை பயன்படுத்துங்கள்.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1331,6 +1333,10 @@ msgstr "&அமைப்புகள்"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "பிரதானக் கருவிப்பட்டை"
+
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "பிழைகளை தெரிவிக்க %1 என்ற இணையதளத்தை பயன்படுத்துங்கள்.\n"
 
 #~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 #~ msgstr "<html><font size=\"5\">கே.டீ.யீ. - சுதந்திரமாக இரு!</font></html>"

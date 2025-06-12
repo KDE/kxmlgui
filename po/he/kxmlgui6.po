@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2025-05-05 13:08+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -297,10 +297,12 @@ msgstr "שליחת דוא״ל למתנדב: %1"
 #: kabstractaboutdialog_p.cpp:298
 #, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "נא להשתמש באתר %1 כדי לדווח על תקלות.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1341,6 +1343,10 @@ msgstr "ה&גדרות"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "סרגל־כלים ראשי"
+
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "נא להשתמש באתר %1 כדי לדווח על תקלות.\n"
 
 #~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 #~ msgstr "<html><font size=\"5\">KDE - החופש להיות!</font></html>"

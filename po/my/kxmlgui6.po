@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2021-09-20 02:06+0630\n"
 "Last-Translator: ဇေယျာလွင် <lw1nzayar@yandex.com>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -305,10 +305,12 @@ msgstr ""
 #: kabstractaboutdialog_p.cpp:298
 #, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
-msgstr "ဆော့ဖ်လ်ဝဲလ်ပြစ်ချက်အစီရင်ခံရန် %1 ကို အသုံးပြုပါ။\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1339,6 +1341,10 @@ msgstr "&Sသတ်မှတ်ချက်များ"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "အဓိကကရိယာတန်း"
+
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr "ဆော့ဖ်လ်ဝဲလ်ပြစ်ချက်အစီရင်ခံရန် %1 ကို အသုံးပြုပါ။\n"
 
 #, fuzzy
 #~| msgid "The <em>%1</em> windowing system"

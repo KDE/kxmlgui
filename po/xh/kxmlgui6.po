@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:40+0000\n"
+"POT-Creation-Date: 2025-06-12 00:39+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -301,14 +301,14 @@ msgid "Email contributor: %1"
 msgstr "Abanye Abanikeli:"
 
 #: kabstractaboutdialog_p.cpp:298
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Reference to website"
-msgid "Please use %1 to report bugs.\n"
+msgid ""
+"Please use %1 to report bugs.<br/>If you have questions or need help, please "
+"visit %2.<br/>"
 msgstr ""
-"Nceda sebenzisa i http://bugs.kde.org ukuchaza amagciwane, ungabhaleli "
-"ababhali nkqo.\n"
 
-#: kabstractaboutdialog_p.cpp:306
+#: kabstractaboutdialog_p.cpp:308
 #, fuzzy, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -1390,6 +1390,13 @@ msgstr "&Izicwangciso"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Isixhobo se bar Engundoqo"
+
+#, fuzzy
+#~ msgctxt "Reference to website"
+#~ msgid "Please use %1 to report bugs.\n"
+#~ msgstr ""
+#~ "Nceda sebenzisa i http://bugs.kde.org ukuchaza amagciwane, ungabhaleli "
+#~ "ababhali nkqo.\n"
 
 #, fuzzy
 #~ msgctxt "@item Component name in about dialog."
