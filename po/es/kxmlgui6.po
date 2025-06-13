@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-12 00:39+0000\n"
-"PO-Revision-Date: 2025-05-18 15:12+0100\n"
+"PO-Revision-Date: 2025-06-12 18:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
@@ -302,6 +302,8 @@ msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
 msgstr ""
+"Use %1 para informar de errores.<br/>Si tiene alguna pregunta o necesita "
+"ayuda, visite %2.<br/>"
 
 #: kabstractaboutdialog_p.cpp:308
 #, kde-format
@@ -1361,7 +1363,3 @@ msgstr "Preferencia&s"
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Barra de herramientas principal"
-
-#~ msgctxt "Reference to website"
-#~ msgid "Please use %1 to report bugs.\n"
-#~ msgstr "Use %1 para informar de fallos.\n"
