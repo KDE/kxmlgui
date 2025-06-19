@@ -303,11 +303,7 @@ void KXMLGUIClient::setXML(const QString &document, bool merge)
         if (!result) {
             qCCritical(DEBUG_KXMLGUI) << "Error parsing XML document:" << result.errorMessage << "at line" << result.errorLine << "column"
                                       << result.errorColumn;
-#ifdef NDEBUG
             setDOMDocument(QDomDocument(), merge); // otherwise empty menus from ui_standards.rc stay around
-#else
-            abort();
-#endif
             return;
         }
     }
