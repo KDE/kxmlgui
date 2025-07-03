@@ -72,13 +72,8 @@ void initializeLanguages()
         } else {
             qputenv("LANGUAGE", QByteArray(languageCode + ':' + languages));
         }
-        // Ideally setting the LANGUAGE would change the default QLocale too
-        // but unfortunately this is too late since the QCoreApplication constructor
-        // already created a QLocale at this stage so we need to set the reset it
-        // by triggering the creation and destruction of a QSystemLocale
-        // this is highly dependent on Qt internals, so may break, but oh well
-        QSystemLocale *dummy = new QSystemLocale();
-        delete dummy;
+
+        QLocale::setDefault(QLocale(QString::fromUtf8(languageCode)));
     }
 }
 
