@@ -90,7 +90,7 @@ endif()
 
 ecm_set_disabled_deprecation_versions(
     QT 6.10
-    KF 6.14
+    KF 6.16
 )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kxmlgui6\")
