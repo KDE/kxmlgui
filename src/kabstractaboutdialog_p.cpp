@@ -19,6 +19,7 @@
 // KF
 #include <KAdjustingScrollArea>
 #include <KLocalizedString>
+#include <KSandbox>
 #include <KSeparator>
 #include <KTitleWidget>
 // Qt
@@ -129,6 +130,21 @@ QWidget *KAbstractAboutDialogPrivate::createComponentWidget(const QList<KAboutCo
                                          i18n("Using %1 and built against %2", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)),
                                          QStringLiteral("https://www.qt.io/"),
                                          KAboutLicense::LGPL_V3));
+
+    QString packageText;
+    if (KSandbox::isFlatpak()) {
+        packageText = i18nc("Linux packaging format", "Flatpak");
+    }
+    if (KSandbox::isSnap()) {
+        packageText = i18nc("Linux packaging format", "Snap");
+    }
+    if (qEnvironmentVariableIsSet("APPIMAGE")) {
+        packageText = i18nc("Linux packaging format", "AppImage");
+    }
+    if (!packageText.isEmpty()) {
+        allComponents.append(KAboutComponent(packageText, i18nc("@info", "Distribution method.")));
+    }
+
     allComponents.append(KAboutComponent(platform, i18nc("@info", "Underlying platform.")));
 
     for (qsizetype i = 0, count = allComponents.count(); i < count; i++) {
