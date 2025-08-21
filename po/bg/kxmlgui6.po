@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2025-06-12 10:11+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -188,64 +188,88 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Поддръжка на KDE"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Версия %1"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, kde-format
 msgid "License: %1"
 msgstr "Лиценз: %1"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Колекция от библиотеки, създадени от общността на KDE за разширяване на Qt"
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "Софтуерна рамка за разработка на междуплатформени приложения"
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "Използва %1 и изградено спрямо %2"
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:145
+#, kde-format
+msgctxt "@info"
+msgid "Distribution method."
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr "Основна платформа."
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Посещаване на началната страница на компонента"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -255,19 +279,19 @@ msgstr ""
 "Посещаване на началната страница на компонента\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Копиране в клипборда"
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Посещаване страницата на автора"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -277,19 +301,19 @@ msgstr ""
 "Посещаване на началната страница на автора\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Изпращане на Е-поща до сътрудника"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Имейл сътрудник: %1"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -299,7 +323,7 @@ msgstr ""
 "Моля, използвайте %1, за да докладвате грешки.<br/>Ако имате въпроси или се "
 "нуждаете от помощ, моля, посетете %2.<br/>"
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"

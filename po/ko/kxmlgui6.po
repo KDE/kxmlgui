@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2025-07-20 01:40+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -176,63 +176,87 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "KDE 지원(&S)"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "버전 %1"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, kde-format
 msgid "License: %1"
 msgstr "라이선스: %1"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1(%2)"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE 프레임워크"
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr "KDE 커뮤니티에서 제작한 Qt를 확장하는 라이브러리 모음입니다."
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "크로스 플랫폼 앱 개발 프레임워크입니다."
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "%1 사용, %2(으)로 빌드됨"
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:145
+#, kde-format
+msgctxt "@info"
+msgid "Distribution method."
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr "기반 플랫폼입니다."
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "구성 요소의 홈페이지 보기"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -242,19 +266,19 @@ msgstr ""
 "구성 요소의 홈페이지 보기\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "개발자의 홈페이지 보기"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -264,19 +288,19 @@ msgstr ""
 "개발자의 홈페이지 보기\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "기여자에게 이메일 보내기"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "기여자에게 이메일 보내기: %1"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -286,7 +310,7 @@ msgstr ""
 "버그를 보고하려면 %1을(를) 사용하십시오.<br/>질문이 있거나 도움이 필요하면 "
 "%2 사이트를 방문하십시오.<br/>"
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"

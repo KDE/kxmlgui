@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -197,65 +197,93 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Ixhasa i KDE"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, fuzzy, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Uguqulelo lomsebenzi kolunye ulwimi:"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, fuzzy, kde-format
 msgid "License: %1"
 msgstr "Umsinga wesandi Phezulu"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, fuzzy, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 %2"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgid "Qt"
 msgstr "Shiya"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, fuzzy, kde-format
+#| msgctxt "min toolbar"
+#| msgid "Flat"
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr "Mcaba"
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, fuzzy, kde-format
+#| msgid "Pager"
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr "Pager"
+
+#: kabstractaboutdialog_p.cpp:145
+#, fuzzy, kde-format
+#| msgid "Distribution List"
+msgctxt "@info"
+msgid "Distribution method."
+msgstr "Uluhlu Lonikezelo"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -264,20 +292,20 @@ msgid ""
 "%1"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -286,21 +314,21 @@ msgid ""
 "%1"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Abanye Abanikeli:"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Abanye Abanikeli:"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -308,7 +336,7 @@ msgid ""
 "visit %2.<br/>"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, fuzzy, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -9064,12 +9092,6 @@ msgstr "Isixhobo se bar Engundoqo"
 #~ msgstr "Video"
 
 #, fuzzy
-#~| msgid "Pager"
-#~ msgctxt "@option:check A filter on file type"
-#~ msgid "Images"
-#~ msgstr "Pager"
-
-#, fuzzy
 #~| msgid "no error"
 #~ msgctxt ""
 #~ "@option:radio A filter on prioritizing/sorting a selection of resources"
@@ -12751,9 +12773,6 @@ msgstr "Isixhobo se bar Engundoqo"
 #~ msgid "Change Email..."
 #~ msgstr "Tshintsha i Email..."
 
-#~ msgid "Distribution List"
-#~ msgstr "Uluhlu Lonikezelo"
-
 #, fuzzy
 #~ msgid "Please change &name:"
 #~ msgstr "Nceda tshintsha igama:"
@@ -13230,10 +13249,6 @@ msgstr "Isixhobo se bar Engundoqo"
 #~ "Xa unqakraza <b>Faka</b>, izicwangciso zizaku\n"
 #~ "nikezelwa kudweliso lwenkqubo, kodwa incoko yababini\n"
 #~ "ayizukuvalwa.Sebenzisa oku ukuzama izicwangciso ezintsha."
-
-#~ msgctxt "min toolbar"
-#~ msgid "Flat"
-#~ msgstr "Mcaba"
 
 #~ msgid "%1 %2 (Using KDE %3)"
 #~ msgstr "%1 %2 (Isebenzisa i KDE %3)"

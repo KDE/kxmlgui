@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2010-09-24 15:44+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -187,19 +187,19 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "केडीइ केँ सहयोग दिअ'(&S)"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, fuzzy, kde-format
 #| msgid "Version %1"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "संस्करण %1"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, kde-format
 msgid "License: %1"
 msgstr "लाइसेंस: %1"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -207,47 +207,72 @@ msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgid "Qt"
 msgstr "क्यूटी"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, fuzzy, kde-format
+#| msgid "Pages"
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr "पृष्ठसभ"
+
+#: kabstractaboutdialog_p.cpp:145
+#, kde-format
+msgctxt "@info"
+msgid "Distribution method."
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "आन सहयोगीः"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
@@ -256,20 +281,20 @@ msgid ""
 "%1"
 msgstr "आन सहयोगीः"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "आन सहयोगीः"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
@@ -278,21 +303,21 @@ msgid ""
 "%1"
 msgstr "आन सहयोगीः"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "आन सहयोगीः"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "आन सहयोगीः"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -300,7 +325,7 @@ msgid ""
 "visit %2.<br/>"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -9590,12 +9615,6 @@ msgstr "मुख्य अओजार पट्टी"
 #~ msgctxt "@option:check A filter on file type - media video"
 #~ msgid "Video"
 #~ msgstr "दृश्य (&V)"
-
-#, fuzzy
-#~| msgid "Pages"
-#~ msgctxt "@option:check A filter on file type"
-#~ msgid "Images"
-#~ msgstr "पृष्ठसभ"
 
 #, fuzzy
 #~| msgid "Job priority:"

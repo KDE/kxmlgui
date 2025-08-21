@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2022-07-09 11:28+0100\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -204,18 +204,18 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Cefnogi KDE"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Fersiwn %1"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, kde-format
 msgid "License: %1"
 msgstr "Trwydded: %1"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -225,48 +225,76 @@ msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "Fframweithiau KDE"
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, fuzzy, kde-format
 #| msgid "%1 (built against %2)"
 msgid "Using %1 and built against %2"
 msgstr "%1 (adeiladwyd yn erbyn %2)"
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, fuzzy, kde-format
+#| msgctxt "min toolbar"
+#| msgid "Flat"
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr " Gwastad"
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, fuzzy, kde-format
+#| msgid "Pager"
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr "Blîp"
+
+#: kabstractaboutdialog_p.cpp:145
+#, fuzzy, kde-format
+#| msgid "Distribution List"
+msgctxt "@info"
+msgid "Distribution method."
+msgstr "Rhestr Dosbarthu"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, fuzzy, kde-format
 #| msgid "Visit component's homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Ymwelwch hafandudalen y cydran"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -276,20 +304,20 @@ msgstr ""
 "Ymwelwch hafandudalen y cydran\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, fuzzy, kde-format
 #| msgid "Visit contributor's homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Ymwelwch tudalen hafan cydroddiwr"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -303,7 +331,7 @@ msgstr ""
 "Ymwelwch tudalen hafan cydroddiwr\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, fuzzy, kde-format
 #| msgctxt "Action to send an email to a contributor"
 #| msgid "Email contributor"
@@ -311,7 +339,7 @@ msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Ebost cydroddiwr"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip Action to send an email to a contributor"
 #| msgid ""
@@ -323,7 +351,7 @@ msgstr ""
 "Ebost cyfrannwyr\n"
 "%1"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -331,7 +359,7 @@ msgid ""
 "visit %2.<br/>"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
@@ -9875,12 +9903,6 @@ msgstr "Prif Far Offer"
 #~ msgstr "Fideo"
 
 #, fuzzy
-#~| msgid "Pager"
-#~ msgctxt "@option:check A filter on file type"
-#~ msgid "Images"
-#~ msgstr "Blîp"
-
-#, fuzzy
 #~| msgid "no error"
 #~ msgctxt ""
 #~ "@option:radio A filter on prioritizing/sorting a selection of resources"
@@ -14184,9 +14206,6 @@ msgstr "Prif Far Offer"
 #~ msgid "Change Email..."
 #~ msgstr "Newid Ebost..."
 
-#~ msgid "Distribution List"
-#~ msgstr "Rhestr Dosbarthu"
-
 #~ msgid "Please change &name:"
 #~ msgstr "Newidiwch &enw:"
 
@@ -14641,10 +14660,6 @@ msgstr "Prif Far Offer"
 #~ " Wrth wthio<b>Gweithredu</b>, rhoddir y gosodiadau\n"
 #~ " i'r rhaglen, ond ni chaeir y blwch dewis.\n"
 #~ " Defnyddiwch hwn er mwyn arbrofi dewisiadau gwahanol."
-
-#~ msgctxt "min toolbar"
-#~ msgid "Flat"
-#~ msgstr " Gwastad"
 
 #~ msgid "%1 %2 (Using KDE %3)"
 #~ msgstr "%1 %2 (Defnyddio KDE %3)"

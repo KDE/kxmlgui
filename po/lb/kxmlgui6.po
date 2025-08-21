@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2006-06-22 16:29+0200\n"
 "Last-Translator: Michel Ludwig <michel.ludwig@kdemail.net>\n"
 "Language-Team: Luxembourgish <kde-i18n-lb@kde.org>\n"
@@ -202,67 +202,95 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "KDE ënner&stëtzen"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, fuzzy, kde-format
 #| msgid "Version"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Versioun"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, fuzzy, kde-format
 #| msgid "License:"
 msgid "License: %1"
 msgstr "Lizenz:"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, fuzzy, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgid "Qt"
 msgstr "Ophalen"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, fuzzy, kde-format
+#| msgctxt "min toolbar"
+#| msgid "Flat"
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr "Verstoppt"
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, fuzzy, kde-format
+#| msgid "Pager"
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr "Pager"
+
+#: kabstractaboutdialog_p.cpp:145
+#, fuzzy, kde-format
+#| msgid "Distribution List"
+msgctxt "@info"
+msgid "Distribution method."
+msgstr "Distributiounslëscht"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -271,20 +299,20 @@ msgid ""
 "%1"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -293,21 +321,21 @@ msgid ""
 "%1"
 msgstr "Homepage"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Aner Mataarbëchter:"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Aner Mataarbëchter:"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -315,7 +343,7 @@ msgid ""
 "visit %2.<br/>"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -10312,12 +10340,6 @@ msgstr "Haapt-Toolbar"
 #~ msgstr "Video"
 
 #, fuzzy
-#~| msgid "Pager"
-#~ msgctxt "@option:check A filter on file type"
-#~ msgid "Images"
-#~ msgstr "Pager"
-
-#, fuzzy
 #~| msgid "no error"
 #~ msgctxt ""
 #~ "@option:radio A filter on prioritizing/sorting a selection of resources"
@@ -14730,9 +14752,6 @@ msgstr "Haapt-Toolbar"
 #~ msgid "Change Email..."
 #~ msgstr "E-Mail-Adress änneren..."
 
-#~ msgid "Distribution List"
-#~ msgstr "Distributiounslëscht"
-
 #~ msgid "Please change &name:"
 #~ msgstr "Ännert den &Numm w.e.g.:"
 
@@ -15189,10 +15208,6 @@ msgstr "Haapt-Toolbar"
 #~ "Wann dir op <b>Uwenden</b> klickt, ginn d'Astellungen\n"
 #~ "iwwerholl, ouni dass d'Fënster zougemaach gëtt.\n"
 #~ "Probéiert domat verschidden Astellungen. "
-
-#~ msgctxt "min toolbar"
-#~ msgid "Flat"
-#~ msgstr "Verstoppt"
 
 #~ msgid "%1 %2 (Using KDE %3)"
 #~ msgstr "%1 %2 (KDE %3)"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -193,67 +193,95 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "Ondersteun KDE"
 
-#: kabstractaboutdialog_p.cpp:46
+#: kabstractaboutdialog_p.cpp:47
 #, fuzzy, kde-format
 #| msgid "Version"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Weergawe"
 
-#: kabstractaboutdialog_p.cpp:90
+#: kabstractaboutdialog_p.cpp:91
 #, fuzzy, kde-format
 #| msgid "License:"
 msgid "License: %1"
 msgstr "Lisensie:"
 
-#: kabstractaboutdialog_p.cpp:117
+#: kabstractaboutdialog_p.cpp:118
 #, fuzzy, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 ( %2 )"
 
-#: kabstractaboutdialog_p.cpp:122
+#: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:123
+#: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:127
+#: kabstractaboutdialog_p.cpp:128
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgid "Qt"
 msgstr "Gaan uit"
 
-#: kabstractaboutdialog_p.cpp:128
+#: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:129
+#: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:132
+#: kabstractaboutdialog_p.cpp:136
+#, fuzzy, kde-format
+#| msgctxt "min toolbar"
+#| msgid "Flat"
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr "Plat"
+
+#: kabstractaboutdialog_p.cpp:139
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:142
+#, fuzzy, kde-format
+#| msgid "Pager"
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr "Bieper"
+
+#: kabstractaboutdialog_p.cpp:145
+#, fuzzy, kde-format
+#| msgid "Distribution List"
+msgctxt "@info"
+msgid "Distribution method."
+msgstr "Verspreidingslys"
+
+#: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:160
+#: kabstractaboutdialog_p.cpp:176
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Tuisblad"
 
-#: kabstractaboutdialog_p.cpp:161
+#: kabstractaboutdialog_p.cpp:177
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -262,20 +290,20 @@ msgid ""
 "%1"
 msgstr "Tuisblad"
 
-#: kabstractaboutdialog_p.cpp:183
+#: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:243
+#: kabstractaboutdialog_p.cpp:259
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Tuisblad"
 
-#: kabstractaboutdialog_p.cpp:244
+#: kabstractaboutdialog_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "Homepage"
 msgctxt "@info:tooltip"
@@ -284,21 +312,21 @@ msgid ""
 "%1"
 msgstr "Tuisblad"
 
-#: kabstractaboutdialog_p.cpp:258
+#: kabstractaboutdialog_p.cpp:274
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Ander Bydraers:"
 
-#: kabstractaboutdialog_p.cpp:259
+#: kabstractaboutdialog_p.cpp:275
 #, fuzzy, kde-format
 #| msgid "Other Contributors:"
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr "Ander Bydraers:"
 
-#: kabstractaboutdialog_p.cpp:298
+#: kabstractaboutdialog_p.cpp:314
 #, kde-format
 msgctxt "Reference to website"
 msgid ""
@@ -306,7 +334,7 @@ msgid ""
 "visit %2.<br/>"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:308
+#: kabstractaboutdialog_p.cpp:324
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -10296,12 +10324,6 @@ msgstr "Hoof Nutsbalk"
 #~ msgstr "Video"
 
 #, fuzzy
-#~| msgid "Pager"
-#~ msgctxt "@option:check A filter on file type"
-#~ msgid "Images"
-#~ msgstr "Bieper"
-
-#, fuzzy
 #~| msgid "no error"
 #~ msgctxt ""
 #~ "@option:radio A filter on prioritizing/sorting a selection of resources"
@@ -14707,9 +14729,6 @@ msgstr "Hoof Nutsbalk"
 #~ msgid "Change Email..."
 #~ msgstr "Verander E-pos..."
 
-#~ msgid "Distribution List"
-#~ msgstr "Verspreidingslys"
-
 #~ msgid "Please change &name:"
 #~ msgstr "Verander asseblief die naam:"
 
@@ -15166,10 +15185,6 @@ msgstr "Hoof Nutsbalk"
 #~ "Wanneer te kliek <b>Wend aan</b>, die instellings sal wees\n"
 #~ "handig bo na die program, maar die dialoog\n"
 #~ "sal nie wees gesluit. Gebruik hierdie na probeer ander instellings. "
-
-#~ msgctxt "min toolbar"
-#~ msgid "Flat"
-#~ msgstr "Plat"
 
 #~ msgid "%1 %2 (Using KDE %3)"
 #~ msgstr "%1 %2 (Te gebruik Kde %3)"
