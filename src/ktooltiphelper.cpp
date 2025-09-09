@@ -268,6 +268,9 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
 {
     m_lastExpandableToolTipGlobalPos = QPoint(globalPos);
     m_lastToolTipWasExpandable = true;
+    QColor toolTipHintColor = qApp->palette().color(QPalette::ToolTipText);
+    toolTipHintColor.setAlpha(128);
+    const QString toolTipHintColorStr = toolTipHintColor.name(QColor::HexArgb);
 
     if (toolTip.isEmpty() || toolTip == whatsThisHintOnly()) {
         const QString whatsThisHint =
@@ -277,7 +280,7 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
             // is supposed to be expressed here.
             i18nc("@info:tooltip",
                   "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>",
-                  qApp->palette().placeholderText().color().name());
+                  toolTipHintColorStr);
         QToolTip::showText(m_lastExpandableToolTipGlobalPos, whatsThisHint, m_widget, rect);
     } else {
         const QString toolTipWithHint = QStringLiteral("<qt>") +
@@ -294,7 +297,7 @@ void KToolTipHelperPrivate::showExpandableToolTip(const QPoint &globalPos, const
             i18nc("@info:tooltip keep short",
                   "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>",
                   toolTip,
-                  qApp->palette().placeholderText().color().name())
+                  toolTipHintColorStr)
             + QStringLiteral("</qt>");
         // Do not replace above HTML tags with KUIT because mixing HTML and KUIT is not allowed and
         // we can not know what kind of markup the tooltip in %1 contains.
