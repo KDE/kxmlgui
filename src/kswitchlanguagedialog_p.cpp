@@ -350,11 +350,7 @@ QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
         QString languageCode = languagesList[i];
         if (!KLocalizedString::isApplicationTranslatedInto(languageCode)) {
             if (stripCountryCode(&languageCode)) {
-                if (KLocalizedString::isApplicationTranslatedInto(languageCode)) {
-                    languagesList[i] = languageCode;
-                    ++i;
-                    continue;
-                }
+                languagesList.push_back(languageCode);
             }
             languagesList.removeAt(i);
         } else {
