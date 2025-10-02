@@ -331,6 +331,7 @@ void KSwitchLanguageDialogPrivate::fillApplicationLanguages(KLanguageButton *but
 QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
 {
     QStringList languagesList;
+    QSet<QString> resultSet;
 
     QByteArray languageCode = getApplicationSpecificLanguage();
     if (!languageCode.isEmpty()) {
@@ -348,13 +349,14 @@ QStringList KSwitchLanguageDialogPrivate::applicationLanguageList()
 
     for (int i = 0; i < languagesList.count();) {
         QString languageCode = languagesList[i];
-        if (!KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+        if (!resultSet.contains(languageCode) && KLocalizedString::isApplicationTranslatedInto(languageCode)) {
+            resultSet.insert(languageCode);
+            ++i;
+        } else {
             if (stripCountryCode(&languageCode)) {
                 languagesList.push_back(languageCode);
             }
             languagesList.removeAt(i);
-        } else {
-            ++i;
         }
     }
 
