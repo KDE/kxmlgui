@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:40+0000\n"
-"PO-Revision-Date: 2025-08-21 08:16+0300\n"
+"POT-Creation-Date: 2025-10-06 00:39+0000\n"
+"PO-Revision-Date: 2025-10-05 12:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Poedit-Flags-xgettext: --add-comments\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
@@ -139,7 +139,7 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>אפשר להצטרף לחברות בצוות KDE גם ללא ידע בתכנות .בזכות הצטרפות לצוותים "
+"<html>אפשר להצטרף לחברות בצוות KDE גם ללא ידע בתכנות. בזכות הצטרפות לצוותים "
 "לפי שפה ניתן לתרגם את ממשקי היישומים. אפשר לספק גרפיקה, ערכות עיצוב, צלילים "
 "ושיפורים בתיעוד. הבחירה בידיך!<br /><br />מומלץ לבקר ב־<a href=\"%1\">%1</a> "
 "לקבלת מידע על חלק מהמיזמים בהם ניתן להשתתף.<br /><br />למידע נוסף או לתיעוד, "
@@ -164,11 +164,11 @@ msgstr ""
 "<html> סביבת שולחן העבודה KDE זמינה חינם אין כסף, אך תהליך ההפקה שלה עולה "
 "כסף. <br /><br /> לכן, הצוות של KDE הקים את עמותת KDE, ארגון ללא מטרות רווח "
 "שנוסד משפטית בטיבינגן, גרמניה. העמותה של KDE מייצגת את מיזם KDE בעניינים "
-"משפטיים וכספיים. אפשר לעיין ב־<a href=\"%1\">%1</a> למידע על עמותת  KDE.  "
-"<br /><br /> הצוות של KDE זקוק לתמיכה כספית. רוב הכסף משמש לשלם לחברים "
-"ולגורמים אחרים על הוצאות שהיו להם במסגרת התרומה שלהם ל־KDE. מזמינים אותך "
-"לתמוך כספית ב־KDE, באחת הדרכים המפורטות בכתובת <a href=\"%2\">%2</a>. <br /"
-"><br /> תודה רבה מראש על התמיכה שלך. </html>"
+"משפטיים וכספיים. אפשר לעיין ב־<a href=\"%1\">%1</a> למידע על עמותת KDE. <br /"
+"><br /> הצוות של KDE זקוק לתמיכה כספית. רוב הכסף משמש לשלם לחברים ולגורמים "
+"אחרים על הוצאות שהיו להם במסגרת התרומה שלהם ל־KDE. מזמינים אותך לתמוך כספית "
+"ב־KDE, באחת הדרכים המפורטות בכתובת <a href=\"%2\">%2</a>. <br /><br /> תודה "
+"רבה מראש על התמיכה שלך. </html>"
 
 #: kaboutkdedialog_p.cpp:128
 #, kde-format
@@ -1105,23 +1105,23 @@ msgstr "שפת היישום שונתה"
 msgid "Application Language Changed"
 msgstr "שפת היישום שונתה"
 
-#: kswitchlanguagedialog_p.cpp:366
+#: kswitchlanguagedialog_p.cpp:368
 #, kde-format
 msgid "Primary language:"
 msgstr "שפה עיקרית:"
 
-#: kswitchlanguagedialog_p.cpp:366
+#: kswitchlanguagedialog_p.cpp:368
 #, kde-format
 msgid "Fallback language:"
 msgstr "שפת גיבוי:"
 
-#: kswitchlanguagedialog_p.cpp:381
+#: kswitchlanguagedialog_p.cpp:383
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "הסרה"
 
-#: kswitchlanguagedialog_p.cpp:387
+#: kswitchlanguagedialog_p.cpp:389
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1129,7 +1129,7 @@ msgid ""
 "other languages."
 msgstr "זו השפה הראשית של היישום, תשמש לפני כל שפה אחרת."
 
-#: kswitchlanguagedialog_p.cpp:388
+#: kswitchlanguagedialog_p.cpp:390
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
