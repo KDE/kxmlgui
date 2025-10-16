@@ -42,7 +42,7 @@ cmake_dependent_option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON "N
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
 # Dependencies
-set(REQUIRED_QT_VERSION 6.7.0)
+set(REQUIRED_QT_VERSION 6.8.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Xml Network PrintSupport)
 if(Qt6Core_VERSION VERSION_GREATER_EQUAL "6.9.0")
     find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED CorePrivate)
