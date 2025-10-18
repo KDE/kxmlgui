@@ -176,12 +176,12 @@ void tst_KActionCollection::insertReplaces1()
 
     collection->addAction(QStringLiteral("a"), a);
     QVERIFY(collection->actions().contains(a));
-    QVERIFY(collection->action(QStringLiteral("a")) == a);
+    QCOMPARE(collection->action(QStringLiteral("a")), a);
 
     collection->addAction(QStringLiteral("a"), b);
     QVERIFY(!collection->actions().contains(a));
     QVERIFY(collection->actions().contains(b));
-    QVERIFY(collection->action(QStringLiteral("a")) == b);
+    QCOMPARE(collection->action(QStringLiteral("a")), b);
 
     delete a;
     delete b;
@@ -197,13 +197,13 @@ void tst_KActionCollection::insertReplaces2()
 
     collection->addAction(QStringLiteral("a"), a);
     QVERIFY(collection->actions().contains(a));
-    QVERIFY(collection->action(QStringLiteral("a")) == a);
+    QCOMPARE(collection->action(QStringLiteral("a")), a);
 
     // Simple test: Just add it twice
     collection->addAction(QStringLiteral("b"), a);
     QVERIFY(collection->actions().contains(a));
     QVERIFY(!collection->action(QStringLiteral("a")));
-    QVERIFY(collection->action(QStringLiteral("b")) == a);
+    QCOMPARE(collection->action(QStringLiteral("b")), a);
 
     // Complex text: Mesh with the objectname
     a->setObjectName(QStringLiteral("c"));
@@ -211,7 +211,7 @@ void tst_KActionCollection::insertReplaces2()
     QVERIFY(collection->actions().contains(a));
     QVERIFY(!collection->action(QStringLiteral("b")));
     QVERIFY(!collection->action(QStringLiteral("c")));
-    QVERIFY(collection->action(QStringLiteral("d")) == a);
+    QCOMPARE(collection->action(QStringLiteral("d")), a);
 
     delete a;
 }
@@ -245,8 +245,8 @@ void tst_KActionCollection::implicitStandardActionInsertionUsingCreate()
     QAction *a = KStandardActions::create(KStandardActions::Undo, qApp, &QCoreApplication::quit, &collection);
     QVERIFY(a);
 
-    QVERIFY(a->parent() == &collection);
-    QVERIFY(collection.action(KStandardActions::name(KStandardActions::Undo)) == a);
+    QCOMPARE(a->parent(), &collection);
+    QCOMPARE(collection.action(KStandardActions::name(KStandardActions::Undo)), a);
 }
 
 void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
@@ -255,7 +255,7 @@ void tst_KActionCollection::implicitStandardActionInsertionUsingCut()
     QAction *cut = KStandardAction::cut(&collection);
     QAction *a = collection.action(KStandardActions::name(KStandardActions::Cut));
     QVERIFY(a);
-    QVERIFY(a == cut);
+    QCOMPARE(a, cut);
 }
 
 void tst_KActionCollection::shouldEmitSignals()
