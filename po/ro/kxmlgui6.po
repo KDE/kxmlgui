@@ -1,13 +1,13 @@
 # Traducerea kdelibs4.po în Română
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2012, 2013, 2014, 2020, 2021, 2022, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008, 2009.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2014, 2020, 2021, 2022, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2010, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:39+0000\n"
-"PO-Revision-Date: 2024-06-08 16:59+0100\n"
+"PO-Revision-Date: 2025-10-05 02:47+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -64,10 +64,9 @@ msgid "About KDE"
 msgstr "Despre KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
-#| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+#, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">%1</font><br />Versiunea %2</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Fii liber!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -200,11 +199,7 @@ msgid "License: %1"
 msgstr "Licență: %1"
 
 #: kabstractaboutdialog_p.cpp:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -219,6 +214,7 @@ msgstr "KDE Frameworks"
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
+"Colecție de biblioteci create de către comunitatea KDE pentru a extinde Qt."
 
 #: kabstractaboutdialog_p.cpp:128
 #, kde-format
@@ -229,49 +225,45 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Suită de dezvoltare a aplicațiilor multiplatformă."
 
 #: kabstractaboutdialog_p.cpp:130
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 (construit cu %2)"
+msgstr "Folosind %1 și construit cu %2"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: kabstractaboutdialog_p.cpp:139
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: kabstractaboutdialog_p.cpp:142
-#, fuzzy, kde-format
-#| msgctxt "@option:check A filter on file type"
-#| msgid "Images"
+#, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr "Imagini"
+msgstr "AppImage"
 
 #: kabstractaboutdialog_p.cpp:145
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Metoda de distribuție."
 
 #: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Platforma de bază."
 
 #: kabstractaboutdialog_p.cpp:176
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Vizitează pagina componentei"
@@ -287,52 +279,38 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:199
-#, fuzzy, kde-format
-#| msgid "Copy selection to clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Copiază selecția în clipboard"
+msgstr "Copiază în clipboard"
 
 #: kabstractaboutdialog_p.cpp:259
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Vizitează pagina contribuitorului"
+msgstr "Vizitează pagina autorului"
 
 #: kabstractaboutdialog_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Vizitează pagina contribuitorului\n"
+"Vizitează pagina autorului\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "Trimite un mesaj contribuitorului"
+msgstr "Trimite un mesaj colaboratorului"
 
 #: kabstractaboutdialog_p.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Trimite mesaj contribuitorului\n"
-"%1"
+msgstr "Trimite mesaj colaboratorului: %1"
 
 #: kabstractaboutdialog_p.cpp:314
 #, kde-format
@@ -341,6 +319,8 @@ msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
 msgstr ""
+"Folosiți %1 pentru a raporta defecte.<br/>Dacă aveți întrebări sau aveți "
+"nevoie de ajutor, vizitați %2.<br/>"
 
 #: kabstractaboutdialog_p.cpp:324
 #, kde-format
@@ -412,11 +392,10 @@ msgid "no version set (programmer error)"
 msgstr "fără versiune (eroarea programatorului!)"
 
 #: kbugreport.cpp:122
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "KDE Frameworks"
+msgstr "%1 cu KDE Frameworks %2"
 
 #: kbugreport.cpp:130
 #, kde-format
