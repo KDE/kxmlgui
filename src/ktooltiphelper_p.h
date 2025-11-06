@@ -8,7 +8,7 @@
 #ifndef KTOOLTIPHELPER_P_H
 #define KTOOLTIPHELPER_P_H
 
-#include <qobject.h>
+#include <QObject>
 
 #include <QPointer>
 #include <QRect>
