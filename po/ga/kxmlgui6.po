@@ -4,46 +4,43 @@
 # Sean V. Kelley <s_oceallaigh@yahoo.com>, 1999
 # Séamus Ó Ciardhuáin <seoc at iolfree.ie>, 2003,2004
 # Kevin Scannell <kscanne@gmail.com>, 2004-2009
+# SPDX-FileCopyrightText: 2025 charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:49+0000\n"
-"PO-Revision-Date: 2004-12-14 09:11-0600\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2025-12-03 13:53+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish Translation Team\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Maidir le %1"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab"
 msgid "About"
-msgstr "&Eolas"
+msgstr "Eolas"
 
 #: kaboutapplicationdialog.cpp:94
-#, fuzzy, kde-format
-#| msgid "Comments"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr "Nótaí"
+msgstr "Baill"
 
 #: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
-#, fuzzy, kde-format
-#| msgid "Author"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
@@ -54,33 +51,27 @@ msgstr[3] "Údar"
 msgstr[4] "Údar"
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "&Thanks To"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
-msgstr "&Buíochas le"
+msgstr "Buíochas le"
 
 #: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
-#, fuzzy, kde-format
-#| msgid "Translation"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
 msgstr "Aistriúchán"
 
 #: kaboutkdedialog_p.cpp:31
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Maidir le KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html><font size=\"5\">%1</font><br /><b>Version %2</b><br />&nbsp;</html>"
+#, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr ""
-"<html><font size=\"5\">%1</font><br /><b>Leagan %2</b><br />&nbsp;</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, fuzzy, kde-format
@@ -138,15 +129,7 @@ msgstr ""
 "</html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -196,37 +179,31 @@ msgstr ""
 "maith agat as do chabhair!</html>"
 
 #: kaboutkdedialog_p.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "About KDE"
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
 msgstr "&Maidir le KDE"
 
 #: kaboutkdedialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "&Report Bugs or Wishes"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
 msgstr "Déan &Tuairisc ar Fhabhtanna nó ar Mhianta"
 
 #: kaboutkdedialog_p.cpp:130
-#, fuzzy, kde-format
-#| msgid "&Join KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
 msgstr "Bí i do &bhall d'fhoireann KDE"
 
 #: kaboutkdedialog_p.cpp:131
-#, fuzzy, kde-format
-#| msgid "&Support KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "Tabhair &Tacaíocht do KDE"
 
 #: kabstractaboutdialog_p.cpp:47
-#, fuzzy, kde-format
-#| msgid "Version %1"
+#, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "Leagan %1"
@@ -237,9 +214,7 @@ msgid "License: %1"
 msgstr "Ceadúnas: %1"
 
 #: kabstractaboutdialog_p.cpp:118
-#, fuzzy, kde-format
-#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -247,7 +222,7 @@ msgstr "%1 (%2)"
 #: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frámaíochta"
 
 #: kabstractaboutdialog_p.cpp:124
 #, kde-format
@@ -269,37 +244,32 @@ msgstr ""
 #: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "Ag baint úsáide as %1 agus tógtha i gcoinne %2"
 
 #: kabstractaboutdialog_p.cpp:136
-#, fuzzy, kde-format
-#| msgctxt "min toolbar"
-#| msgid "Flat"
+#, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr "Maol"
+msgstr "Flatpak"
 
 #: kabstractaboutdialog_p.cpp:139
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 # OK
 #: kabstractaboutdialog_p.cpp:142
-#, fuzzy, kde-format
-#| msgctxt "@option:check A filter on file type"
-#| msgid "Images"
+#, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr "Íomhánna"
+msgstr "AppImage"
 
 #: kabstractaboutdialog_p.cpp:145
-#, fuzzy, kde-format
-#| msgid "Distribution List"
+#, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr "Liosta Dáilte"
+msgstr "Modh Dáilte"
 
 #: kabstractaboutdialog_p.cpp:148
 #, kde-format
@@ -308,71 +278,54 @@ msgid "Underlying platform."
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:176
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "Féach ar leathanach baile an rannpháirtí"
+msgstr "Féach ar leathanach baile an comhpháirte"
 
 #: kabstractaboutdialog_p.cpp:177
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Féach ar leathanach baile an rannpháirtí\n"
+"Féach ar leathanach baile na gcomhpháirteanna\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:199
-#, fuzzy, kde-format
-#| msgid "Copy selection to clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Sábháil an téacs roghnaithe sa ghearrthaisce"
+msgstr "Sábháil sa ghearrthaisce"
 
 #: kabstractaboutdialog_p.cpp:259
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Féach ar leathanach baile an rannpháirtí"
+msgstr "Féach ar leathanach baile an údair"
 
 #: kabstractaboutdialog_p.cpp:260
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Féach ar leathanach baile an rannpháirtí\n"
+"Féach ar leathanach baile an údair\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Seol ríomhphost chuig rannpháirtí"
 
 #: kabstractaboutdialog_p.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Seol ríomhphost chuig rannpháirtí\n"
-"%1"
+msgstr "Seol ríomhphost chuig rannpháirtí: %1"
 
 #: kabstractaboutdialog_p.cpp:314
 #, kde-format
@@ -381,39 +334,34 @@ msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
 msgstr ""
+"Úsáid %1 chun tuairiscí fabhtanna a sheoladh le do thoil.<br/>Má ceisteanna "
+"agat nó cúnamh, déan cuairt %2 le do thoil.<br/>"
 
 #: kabstractaboutdialog_p.cpp:324
-#, fuzzy, kde-format
-#| msgid "Please report bugs to %1.\n"
+#, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
 msgstr "Seol tuairiscí fabhtanna chuig %1.\n"
 
 #: kactionconflictdetector_p.h:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
-#| "from the 'Settings' menu to solve the ambiguity.\n"
-#| "No action will be triggered."
+#, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"Tá teaglaim eochracha '%1' débhríoch. Úsáid 'Cumraigh Aicearraí'\n"
+"Tá teaglaim eochracha '%1' débhríoch. Úsáid 'Cumraigh Aicearraí Méarchláir'\n"
 "ón roghchlár 'Socruithe' chun an débhríocht a réiteach.\n"
 "Ní chuirfear tús le gníomh ar bith."
 
 #: kactionconflictdetector_p.h:41
-#, fuzzy, kde-format
-#| msgid "Ambiguous shortcut detected"
+#, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Braitheadh aicearra athbhríoch"
 
 #: kbugreport.cpp:67
-#, fuzzy, kde-format
-#| msgid "Submit Bug Report"
+#, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Seol Tuairisc ar Fhabht"
@@ -461,7 +409,7 @@ msgstr "níl leagan sonraithe (earráid de chuid an ríomhchláraitheora)"
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr ""
+msgstr "%1, le KDE Frámaíochta %2"
 
 #: kbugreport.cpp:130
 #, kde-format
@@ -469,9 +417,7 @@ msgid "OS:"
 msgstr "Córas:"
 
 #: kbugreport.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -479,18 +425,15 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:142
-#, fuzzy, kde-format
-#| msgid "%1 %2, %3"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2, %3"
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
@@ -498,12 +441,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: kbugreport.cpp:162
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>To submit a bug report, click on the button below. This will open a "
-#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
-#| "org</a> where you will find a form to fill in. The information displayed "
-#| "above will be transferred to that server.</qt>"
+#, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> "
@@ -511,39 +449,30 @@ msgid ""
 "be transferred to that server.</qt>"
 msgstr ""
 "<qt>Chun tuairisc ar fhabht a sheoladh, cliceáil an cnaipe thíos. Osclófar "
-"an leathanach <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> i "
+"an leathanach <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> i "
 "mbrabhsálaí, agus feicfidh tú foirm le líonadh isteach. Aistreofar na "
 "mionsonraí a fheiceann tú thuas go dtí an freastalaí sin.</qt>"
 
 #: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>To submit a bug report, click on the button below. This will open a "
-#| "web browser window on <a href=\"http://bugs.kde.org\">http://bugs.kde."
-#| "org</a> where you will find a form to fill in. The information displayed "
-#| "above will be transferred to that server.</qt>"
+#, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
 "<qt>Chun tuairisc ar fhabht a sheoladh, cliceáil an cnaipe thíos. Osclófar "
-"an leathanach <a href=\"http://bugs.kde.org\">http://bugs.kde.org</a> i "
-"mbrabhsálaí, agus feicfidh tú foirm le líonadh isteach. Aistreofar na "
-"mionsonraí a fheiceann tú thuas go dtí an freastalaí sin.</qt>"
+"an leathanach <a href=\"%1\">%2</a> i mbrabhsálaí.</qt>"
 
 #: kbugreport.cpp:185
-#, fuzzy, kde-format
-#| msgid "&Launch Bug Report Wizard"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Tosaigh an Treoraí Fabhtanna"
 
 #: kbugreport.cpp:187
-#, fuzzy, kde-format
-#| msgid "Submit Bug Report"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
-msgstr "Seol Tuairisc ar Fhabht"
+msgstr "&Seol Tuairisc ar Fhabht"
 
 #: kcheckaccelerators.cpp:121
 #, kde-format
@@ -563,17 +492,14 @@ msgid "<h2>Accelerators changed</h2>"
 msgstr "<h2>Aicearraí athraithe</h2>"
 
 #: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
-#, fuzzy, kde-format
-#| msgid "Find Text"
+#, kde-format
 msgid "Old Text"
-msgstr "Aimsigh Téacs"
+msgstr "Téacs Sean"
 
 #: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:menu"
-#| msgid "Show Text"
+#, kde-format
 msgid "New Text"
-msgstr "Taispeáin an Téacs"
+msgstr "Téacs nua"
 
 #: kcheckaccelerators.cpp:182
 #, kde-format
@@ -586,8 +512,7 @@ msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>Aicearraí curtha leis (mar eolas duit)</h2>"
 
 #: kedittoolbar.cpp:332
-#, fuzzy, kde-format
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "Athraigh Téacs"
@@ -598,8 +523,7 @@ msgid "Icon te&xt:"
 msgstr "Téa&cs an deilbhín:"
 
 #: kedittoolbar.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Hide text when toolbar shows text alongside icons"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr ""
@@ -607,8 +531,7 @@ msgstr ""
 "le deilbhíní"
 
 #: kedittoolbar.cpp:596
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "Cumraigh Barraí Uirlisí"
@@ -661,18 +584,16 @@ msgid "Curr&ent actions:"
 msgstr "Gníomhartha r&eatha:"
 
 #: kedittoolbar.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Athraigh Deilbhín"
+msgstr "Athraigh &Deilbhín..."
 
 #: kedittoolbar.cpp:1054
-#, fuzzy, kde-format
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Athraigh Téacs"
+msgstr "Athraigh &Téacs..."
 
 #: kedittoolbar.cpp:1196
 #, kde-format
@@ -680,10 +601,9 @@ msgid "--- separator ---"
 msgstr "--- deighilteoir ---"
 
 #: kedittoolbar.cpp:1197
-#, fuzzy, kde-format
-#| msgid "--- line separator ---"
+#, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- deighilteoir línte ---"
+msgstr "--- spásaire leathnaithe ---"
 
 #: kedittoolbar.cpp:1219
 #, kde-format
@@ -740,11 +660,7 @@ msgid "&Help"
 msgstr "&Cabhair"
 
 #: kkeysequencewidget.cpp:146
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click on the button, then enter the shortcut like you would in the "
-#| "program.\n"
-#| "Example for Ctrl+a: hold the Ctrl key and press a."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -752,8 +668,8 @@ msgid ""
 msgstr ""
 "Cliceáil an cnaipe, ansin cuir isteach an t-aicearra ba mhaith leat sa "
 "ríomhchlár.\n"
-"Mar shampla, le haghaidh Ctrl+a: coinnigh an eochair Ctrl síos agus brúigh "
-"'a'."
+"Mar shampla, le haghaidh Ctrl+A: coinnigh an eochair Ctrl síos agus brúigh "
+"'A'."
 
 #: kkeysequencewidget.cpp:168
 #, kde-format
@@ -772,16 +688,7 @@ msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Aicearra '%1' do ghníomh '%2'\n"
 
 #: kkeysequencewidget.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
-#| msgid ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
-#| "Do you want to assign an empty shortcut to this action?\n"
-#| "%3"
-#| msgid_plural ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
-#| "Do you want to assign an empty shortcut to these actions?\n"
-#| "%3"
+#, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
 "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
@@ -814,15 +721,13 @@ msgstr[4] ""
 
 #: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
 #: kkeysequencewidget.cpp:356
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Athshann"
 
 #: kkeysequencewidget.cpp:192
-#, fuzzy, kde-format
-#| msgid "Shortcut conflict"
+#, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Coinbhleacht idir Aicearraí"
@@ -837,10 +742,9 @@ msgstr ""
 "ceann eile, le do thoil.</qt>"
 
 #: kkeysequencewidget.cpp:274
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Aicearra '%1' i bhFeidhmchlár %2 do ghníomh %3\n"
+msgstr "Aicearra '%1' i bhFeidhmchlár '%2' do ghníomh '%3'\n"
 
 #: kkeysequencewidget.cpp:283
 #, kde-format
@@ -889,8 +793,7 @@ msgstr ""
 "Roghnaigh ceann eile."
 
 #: kkeysequencewidget.cpp:348
-#, fuzzy, kde-format
-#| msgid "Conflict with Standard Application Shortcut"
+#, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Coimhlint le hAicearra Feidhmchláir Chaighdeánaithe"
@@ -920,8 +823,7 @@ msgid "None"
 msgstr "Gan aicearra"
 
 #: klicensedialog_p.cpp:33
-#, fuzzy, kde-format
-#| msgid "License Agreement"
+#, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
 msgstr "Comhaontú um Cheadúnas"
@@ -930,13 +832,15 @@ msgstr "Comhaontú um Cheadúnas"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Séamus Ó Ciardhuáin,Kevin Scannell,Sean V. Kelley"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell,Sean V. Kelley,Charlotte"
 
 #: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "seoc@iolfree.ie,kscanne@gmail.com,s_oceallaigh@yahoo.com"
+msgstr ""
+"seoc@iolfree.ie,kscanne@gmail.com,s_oceallaigh@yahoo.com,"
+"altronic25@protonmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
@@ -944,29 +848,25 @@ msgid "Add to Toolbar"
 msgstr "Cuir leis an mBarra Uirlisí"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgid "Configure Shortcut"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Cumraigh Aicearra"
+msgstr "Cumraigh Aicearra..."
 
 #: kshortcuteditwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Default:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Default:"
 msgstr "Réamhshocrú:"
 
 #: kshortcuteditwidget.cpp:62
-#, fuzzy, kde-format
-#| msgid "Custom:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Custom:"
 msgstr "Saincheaptha:"
 
 #: kshortcutschemeseditor.cpp:32
-#, fuzzy, kde-format
-#| msgid "Shortcut Schemes"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
 msgstr "Scéimeanna Aicearraí"
@@ -980,7 +880,7 @@ msgstr "Scéim reatha:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nua..."
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -989,36 +889,31 @@ msgid "Delete"
 msgstr "Scrios"
 
 #: kshortcutschemeseditor.cpp:53
-#, fuzzy, kde-format
-#| msgid "More Actions"
+#, kde-format
 msgctxt "@action:button"
 msgid "More Actions"
 msgstr "Tuilleadh Gníomhartha"
 
 #: kshortcutschemeseditor.cpp:58
-#, fuzzy, kde-format
-#| msgid "Shortcut Schemes"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "Scéimeanna Aicearraí"
+msgstr "Sábháil an aicearraí i scéim"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "Easpórtáil Scéim..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Easpórtáil Scéim..."
+msgstr "Allmhairiú Scéim..."
 
 #: kshortcutschemeseditor.cpp:115
-#, fuzzy, kde-format
-#| msgid "Name for New Scheme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
 msgstr "Ainm na Scéime Nuaí"
@@ -1049,30 +944,26 @@ msgstr ""
 "aicearraí."
 
 #: kshortcutschemeseditor.cpp:187
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr "Aicearraí"
+msgstr "Easpórtáil Aicearraí"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:198
-#, fuzzy, kde-format
-#| msgid "Shortcut Conflict(s)"
+#, kde-format
 msgid "Shortcuts (*.shortcuts)"
-msgstr "Coinbhleacht(aí) idir Aicearraí"
+msgstr "Aicearraí (*.shortcuts)"
 
 #: kshortcutschemeseditor.cpp:198
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
-msgstr "Aicearraí"
+msgstr "Allmhairiú Aicearraí"
 
 #: kshortcutschemeseditor.cpp:209
-#, fuzzy, kde-format
-#| msgid "The removal request was successfully registered."
+#, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "D'éirigh le clárú an iarratais bainte."
+msgstr "D'éirigh le scéim aicearra sábháil."
 
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
@@ -1089,17 +980,15 @@ msgstr ""
 "shábháil sula n-athróidh tú é?"
 
 #: kshortcutsdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "New Scheme"
+#, kde-format
 msgid "Manage &Schemes"
-msgstr "Scéim Nua"
+msgstr "Bainistigh &Scéimeanna"
 
 #: kshortcutsdialog.cpp:149
-#, fuzzy, kde-format
-#| msgid "Configure Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Cumraigh Aicearraí"
+msgstr "Cumraigh Aicearraí Méarchláir"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -1190,10 +1079,9 @@ msgid "Global:"
 msgstr "Comhchoiteann:"
 
 #: kshortcutseditor.cpp:549
-#, fuzzy, kde-format
-#| msgid "Global Alternate"
+#, kde-format
 msgid "Global alternate:"
-msgstr "Malairt Chomhchoiteann"
+msgstr "Malairt Chomhchoiteann:"
 
 #: kshortcutseditor.cpp:565
 #, kde-format
@@ -1217,11 +1105,10 @@ msgid "%1"
 msgstr "%1"
 
 #: kswitchlanguagedialog_p.cpp:137
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
-msgstr "Cumraigh"
+msgstr "Cumraigh Teanga"
 
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
@@ -1229,17 +1116,13 @@ msgid "Please choose the language which should be used for this application:"
 msgstr "Roghnaigh teanga le haghaidh an fheidhmchláir seo:"
 
 #: kswitchlanguagedialog_p.cpp:168
-#, fuzzy, kde-format
-#| msgid "Add Fallback Language"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
 msgstr "Cuir Teanga Cúltaca Leis"
 
 #: kswitchlanguagedialog_p.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Adds one more language which will be used if other translations do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Adds one more language which will be used if other translations do not "
@@ -1258,8 +1141,7 @@ msgstr ""
 "an chéad uair eile a thosaíonn tú an feidhmchlár."
 
 #: kswitchlanguagedialog_p.cpp:262
-#, fuzzy, kde-format
-#| msgid "Application Language Changed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "Athraíodh teanga an fheidhmchláir"
@@ -1280,17 +1162,13 @@ msgid "Fallback language:"
 msgstr "Teanga cúltaca:"
 
 #: kswitchlanguagedialog_p.cpp:383
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Bain"
 
 #: kswitchlanguagedialog_p.cpp:389
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the main application language which will be used first, before "
-#| "any other languages."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the main application language which will be used first, before any "
@@ -1300,10 +1178,7 @@ msgstr ""
 "eile."
 
 #: kswitchlanguagedialog_p.cpp:390
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the language which will be used if any previous languages do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the language which will be used if any previous languages do not "
@@ -1360,29 +1235,25 @@ msgid "Text Position"
 msgstr "Ionad an Téacs"
 
 #: ktoolbar.cpp:342
-#, fuzzy, kde-format
-#| msgid "Icons Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "Deilbhíní Amháin"
 
 #: ktoolbar.cpp:345
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "Téacs Amháin"
 
 #: ktoolbar.cpp:348
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "Téacs Taobh Leis na Deilbhíní"
 
 #: ktoolbar.cpp:351
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "Téacs Faoi na Deilbhíní"
@@ -1429,9 +1300,7 @@ msgid "Toolbars Shown"
 msgstr "Barraí Uirlisí Ar Taispeáint"
 
 #: ktooltiphelper.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
 msgid "%1 (%2)"
@@ -1443,6 +1312,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
+"<small><font color=\"%1\">Brúigh <b>Shift</b> le haghaidh tuilleadh eolais.</"
+"font></small>"
 
 #: ktooltiphelper.cpp:298
 #, kde-format
@@ -1450,6 +1321,8 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
+"%1<br/><small><font color=\"%2\">Brúigh <b>Shift</b> le haghaidh tuilleadh.</"
+"font></small>"
 
 #: kundoactions.cpp:30
 #, kde-format
@@ -1467,24 +1340,24 @@ msgid "No text"
 msgstr "Gan téacs"
 
 #: kxmlguiwindow.cpp:191
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "Gníomh"
+msgstr "Aimsigh Gníomh..."
 
 #: kxmlguiwindow.cpp:561
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
+"Tá dhá ghníomhartha (%1, %2) ann ar mian leo an aicearra céanna (%3). Is "
+"dócha gur fabht é seo."
 
 #: kxmlguiwindow.cpp:566
-#, fuzzy, kde-format
-#| msgid "Ambiguous shortcut detected"
+#, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "Braitheadh aicearra athbhríoch"
+msgstr "Aicearraí athbhríoch"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
