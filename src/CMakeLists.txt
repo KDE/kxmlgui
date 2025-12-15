@@ -55,7 +55,10 @@ target_sources(KF6XmlGui PRIVATE
   kcheckaccelerators.cpp
 )
 if (HAVE_QTDBUS)
-    target_sources(KF6XmlGui PRIVATE kmainwindowiface.cpp)
+    target_sources(KF6XmlGui PRIVATE
+        kmainwindowiface.cpp
+        xdgsessionmanager.cpp
+    )
     target_compile_definitions(KF6XmlGui PRIVATE WITH_QTDBUS)
 endif()
 

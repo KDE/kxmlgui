@@ -20,7 +20,6 @@
 #include <QPointer>
 
 class QObject;
-class QSessionManager;
 class QTimer;
 class KHelpMenu;
 class KMainWindow;
@@ -89,8 +88,7 @@ public:
     ~KMWSessionManager() override;
 
 private:
-    void saveState(QSessionManager &);
-    void commitData(QSessionManager &);
+    void portalQueryEnd();
 };
 
 #endif

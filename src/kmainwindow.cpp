@@ -33,8 +33,8 @@
 #include <QMenuBar>
 #include <QObject>
 #include <QRandomGenerator>
-#ifndef QT_NO_SESSIONMANAGER
-#include <QSessionManager>
+#ifdef WITH_QTDBUS
+#include "xdgsessionmanager.h"
 #endif
 #include <QStatusBar>
 #include <QStyle>
@@ -113,9 +113,10 @@ bool DockResizeListener::eventFilter(QObject *watched, QEvent *event)
 
 KMWSessionManager::KMWSessionManager()
 {
-#ifndef QT_NO_SESSIONMANAGER
-    connect(qApp, &QGuiApplication::saveStateRequest, this, &KMWSessionManager::saveState);
-    connect(qApp, &QGuiApplication::commitDataRequest, this, &KMWSessionManager::commitData);
+#ifdef WITH_QTDBUS
+    // Ensure the XDG session monitor is created and listen for queryEnd
+    auto xdg = XdgSessionManager::instance();
+    connect(xdg, &XdgSessionManager::appCommitData, this, &KMWSessionManager::portalQueryEnd);
 #endif
 }
 
@@ -123,68 +124,9 @@ KMWSessionManager::~KMWSessionManager()
 {
 }
 
-void KMWSessionManager::saveState(QSessionManager &sm)
+void KMWSessionManager::portalQueryEnd()
 {
-#ifndef QT_NO_SESSIONMANAGER
-    KConfigGui::setSessionConfig(sm.sessionId(), sm.sessionKey());
-
-    KConfig *config = KConfigGui::sessionConfig();
-    const auto windows = KMainWindow::memberList();
-    if (!windows.isEmpty()) {
-        // According to Jochen Wilhelmy <digisnap@cs.tu-berlin.de>, this
-        // hook is useful for better document orientation
-        windows.at(0)->saveGlobalProperties(config);
-    }
-
-    int n = 0;
-    for (KMainWindow *mw : windows) {
-        n++;
-        mw->savePropertiesInternal(config, n);
-    }
-
-    KConfigGroup group(config, QStringLiteral("Number"));
-    group.writeEntry("NumberOfWindows", n);
-
-    // store new status to disk
-    config->sync();
-
-    // generate discard command for new file
-    QString localFilePath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + config->name();
-    if (QFile::exists(localFilePath)) {
-        QStringList discard;
-        discard << QStringLiteral("rm");
-        discard << localFilePath;
-        sm.setDiscardCommand(discard);
-    }
-#else
-    Q_UNUSED(sm)
-#endif // QT_NO_SESSIONMANAGER
-}
-
-void KMWSessionManager::commitData(QSessionManager &sm)
-{
-#ifndef QT_NO_SESSIONMANAGER
-    if (!sm.allowsInteraction()) {
-        return;
-    }
-
-    /*
-       Purpose of this exercise: invoke queryClose() without actually closing the
-       windows, because
-       - queryClose() may contain session management code, so it must be invoked
-       - actually closing windows may quit the application - cf.
-         QGuiApplication::quitOnLastWindowClosed()
-       - quitting the application and thus closing the session manager connection
-         violates the X11 XSMP protocol.
-         The exact requirement of XSMP that would be broken is,
-         in the description of the client's state machine:
-
-           save-yourself-done: (changing state is forbidden)
-
-         Closing the session manager connection causes a state change.
-         Worst of all, that is a real problem with ksmserver - it will not save
-         applications that quit on their own in state save-yourself-done.
-     */
+    // This mirrors the old commitData() logic: ask each window if it can close.
     const auto windows = KMainWindow::memberList();
     for (KMainWindow *window : windows) {
         if (window->testAttribute(Qt::WA_WState_Hidden)) {
@@ -193,16 +135,17 @@ void KMWSessionManager::commitData(QSessionManager &sm)
         QCloseEvent e;
         QApplication::sendEvent(window, &e);
         if (!e.isAccepted()) {
-            sm.cancel();
+#ifdef WITH_QTDBUS
+            XdgSessionManager::instance()->cancel();
+#endif
             return;
         }
     }
-#else
-    Q_UNUSED(sm)
-#endif // QT_NO_SESSIONMANAGER
 }
 
-#ifndef QT_NO_SESSIONMANAGER
+// (Old QSessionManager paths removed in favor of portal-based flow.)
+
+#ifdef WITH_QTDBUS
 Q_GLOBAL_STATIC(KMWSessionManager, ksm)
 #endif
 Q_GLOBAL_STATIC(QList<KMainWindow *>, sMemberList)
@@ -241,8 +184,8 @@ void KMainWindowPrivate::init(KMainWindow *_q)
                      q, SLOT(_k_slotSettingsChanged(int)));
 #endif
 
-#ifndef QT_NO_SESSIONMANAGER
-    // force KMWSessionManager creation
+#ifdef WITH_QTDBUS
+    // force KMWSessionManager creation so we monitor XDG session state
     ksm();
 #endif
 
