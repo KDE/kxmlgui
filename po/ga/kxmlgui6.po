@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:49+0000\n"
-"PO-Revision-Date: 2025-12-03 13:53+0000\n"
+"PO-Revision-Date: 2025-12-17 23:57+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
-"Language-Team: Irish Translation Team\n"
+"Language-Team: Irish Team\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
@@ -45,10 +45,10 @@ msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Údar"
-msgstr[1] "Údar"
-msgstr[2] "Údar"
-msgstr[3] "Údar"
-msgstr[4] "Údar"
+msgstr[1] "Údair"
+msgstr[2] "Údair"
+msgstr[3] "Údair"
+msgstr[4] "Údair"
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Maidir le KDE"
 #: kaboutkdedialog_p.cpp:34
 #, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Bí Saor!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, fuzzy, kde-format
@@ -188,7 +188,7 @@ msgstr "&Maidir le KDE"
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "Déan &Tuairisc ar Fhabhtanna nó ar Mhianta"
+msgstr "Déan Tuairisc ar &Fhabhtanna nó ar Mhianta"
 
 #: kaboutkdedialog_p.cpp:130
 #, kde-format
@@ -229,6 +229,7 @@ msgstr "KDE Frámaíochta"
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
+"Chruthaigh bailiúchán leabharlainne ag na Pobal KDE chuig leathnaigh Qt."
 
 #: kabstractaboutdialog_p.cpp:128
 #, kde-format
@@ -239,7 +240,7 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Trasardán feidhmchlár forbairt frámaíochta."
 
 #: kabstractaboutdialog_p.cpp:130
 #, kde-format
@@ -275,7 +276,7 @@ msgstr "Modh Dáilte"
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Bun-ardán"
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
@@ -968,7 +969,7 @@ msgstr "D'éirigh le scéim aicearra sábháil."
 #: kshortcutschemeseditor.cpp:212
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr ""
+msgstr "Níorbh fhéidir an scéim aicearra a shábháil."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
@@ -1345,14 +1346,15 @@ msgid "Find Action…"
 msgstr "Aimsigh Gníomh..."
 
 #: kxmlguiwindow.cpp:561
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
 "Tá dhá ghníomhartha (%1, %2) ann ar mian leo an aicearra céanna (%3). Is "
-"dócha gur fabht é seo."
+"dócha gur fabht é seo. Úsáid <a href='https://bugs.kde.org'>bugs.kde.org</a> "
+"chun a sheoladh é, le do thoil."
 
 #: kxmlguiwindow.cpp:566
 #, kde-format
