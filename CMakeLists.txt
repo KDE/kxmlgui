@@ -89,7 +89,7 @@ if (BUILD_PYTHON_BINDINGS)
 endif()
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.10
+    QT 6.11
     KF 6.21
 )
 
