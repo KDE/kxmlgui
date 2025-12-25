@@ -119,11 +119,6 @@ private Q_SLOTS:
     void stealShortcut(const QKeySequence &seq, QAction *action);
 
     void keySequenceChanged(const QKeySequence &);
-
-#if 0
-    void shapeGestureChanged(const KShapeGesture &);
-    void rockerGestureChanged(const KRockerGesture &);
-#endif
 };
 
 /*!
@@ -200,11 +195,6 @@ private:
     const QString m_noneText; // Translated "None" text for labels
 };
 
-#if 0
-Q_DECLARE_METATYPE(KShapeGesture)
-Q_DECLARE_METATYPE(KRockerGesture)
-#endif
-
 class KShortcutSchemesEditor : public QGroupBox
 {
     Q_OBJECT
@@ -272,10 +262,6 @@ public:
 
     QKeySequence keySequence(uint column) const;
     void setKeySequence(uint column, const QKeySequence &seq);
-#if 0
-    void setShapeGesture(const KShapeGesture &gst);
-    void setRockerGesture(const KRockerGesture &gst);
-#endif
 
     bool isModified(uint column) const;
     bool isModified() const;
@@ -300,10 +286,6 @@ private:
     //! The original shortcuts before user changes. 0 means no change.
     QList<QKeySequence> *m_oldLocalShortcut = nullptr;
     QList<QKeySequence> *m_oldGlobalShortcut = nullptr;
-#if 0
-    KShapeGesture *m_oldShapeGesture;
-    KRockerGesture *m_oldRockerGesture;
-#endif
 
     //! The localized action name
     QString m_actionNameInTable;
@@ -342,18 +324,8 @@ public:
     // Import shortcuts from file
     void importConfiguration(KConfigBase *config);
 
-#if 0
-    //helper functions for conflict resolution
-    bool stealShapeGesture(KShortcutsEditorItem *item, const KShapeGesture &gest);
-    bool stealRockerGesture(KShortcutsEditorItem *item, const KRockerGesture &gest);
-#endif
-
     // conflict resolution functions
     void changeKeyShortcut(KShortcutsEditorItem *item, uint column, const QKeySequence &capture);
-#if 0
-    void changeShapeGesture(KShortcutsEditorItem *item, const KShapeGesture &capture);
-    void changeRockerGesture(KShortcutsEditorItem *item, const KRockerGesture &capture);
-#endif
 
     // private slots
     // this invokes the appropriate conflict resolution function

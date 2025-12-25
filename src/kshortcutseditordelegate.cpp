@@ -295,22 +295,3 @@ void KShortcutsEditorDelegate::setCheckActionCollections(const QList<KActionColl
 {
     m_checkActionCollections = checkActionCollections;
 }
-
-#if 0
-//slot
-void KShortcutsEditorDelegate::shapeGestureChanged(const KShapeGesture &gest)
-{
-    //this is somewhat verbose because the gesture types are not "built in" to QVariant
-    QVariant ret = QVariant::fromValue(gest);
-    Q_EMIT shortcutChanged(ret, m_editingIndex);
-}
-#endif
-
-#if 0
-//slot
-void KShortcutsEditorDelegate::rockerGestureChanged(const KRockerGesture &gest)
-{
-    QVariant ret = QVariant::fromValue(gest);
-    Q_EMIT shortcutChanged(ret, m_editingIndex);
-}
-#endif
