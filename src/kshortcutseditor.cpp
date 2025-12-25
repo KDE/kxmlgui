@@ -298,7 +298,17 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
 
     // TODO listen to changes to global shortcuts
     QObject::connect(delegate, &KShortcutsEditorDelegate::shortcutChanged, q, [this](const QKeySequence &newShortcut, const QModelIndex &index) {
-        capturedShortcut(newShortcut, index);
+        // dispatch to the right handler
+        if (!index.isValid()) {
+            return;
+        }
+        int column = index.column();
+        KShortcutsEditorItem *item = itemFromIndex(ui.list, index);
+        Q_ASSERT(item);
+
+        if (column >= LocalPrimary && column <= GlobalAlternate) {
+            changeKeyShortcut(item, column, newShortcut);
+        }
     });
     // hide the editor widget chen its item becomes hidden
     QObject::connect(ui.searchFilter->searchLine(), &KTreeWidgetSearchLine::hiddenChanged, delegate, &KShortcutsEditorDelegate::hiddenBySearchLine);
@@ -418,21 +428,6 @@ QTreeWidgetItem *KShortcutsEditorPrivate::findOrMakeItem(QTreeWidgetItem *parent
 }
 
 // private slot
-void KShortcutsEditorPrivate::capturedShortcut(const QKeySequence &newShortcut, const QModelIndex &index)
-{
-    // dispatch to the right handler
-    if (!index.isValid()) {
-        return;
-    }
-    int column = index.column();
-    KShortcutsEditorItem *item = itemFromIndex(ui.list, index);
-    Q_ASSERT(item);
-
-    if (column >= LocalPrimary && column <= GlobalAlternate) {
-        changeKeyShortcut(item, column, newShortcut);
-    }
-}
-
 void KShortcutsEditorPrivate::changeKeyShortcut(KShortcutsEditorItem *item, uint column, const QKeySequence &capture)
 {
     // The keySequence we get is cleared by KKeySequenceWidget. No conflicts.

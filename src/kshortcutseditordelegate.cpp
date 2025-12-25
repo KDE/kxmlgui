@@ -167,7 +167,9 @@ void KShortcutsEditorDelegate::itemActivated(const QModelIndex &_index)
 
             editor->setCheckActionCollections(m_checkActionCollections);
 
-            connect(editor, &ShortcutEditWidget::keySequenceChanged, this, &KShortcutsEditorDelegate::keySequenceChanged);
+            connect(editor, &ShortcutEditWidget::keySequenceChanged, this, [this](const QKeySequence &seq) {
+                Q_EMIT shortcutChanged(seq, m_editingIndex);
+            });
             connect(editor, &ShortcutEditWidget::stealShortcut, this, &KShortcutsEditorDelegate::stealShortcut);
 
         } else if (column == RockerGesture) {
@@ -285,11 +287,6 @@ bool KShortcutsEditorDelegate::eventFilter(QObject *o, QEvent *e)
 }
 
 // slot
-void KShortcutsEditorDelegate::keySequenceChanged(const QKeySequence &seq)
-{
-    Q_EMIT shortcutChanged(seq, m_editingIndex);
-}
-
 void KShortcutsEditorDelegate::setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections)
 {
     m_checkActionCollections = checkActionCollections;

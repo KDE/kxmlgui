@@ -117,8 +117,6 @@ private Q_SLOTS:
      * that.
      */
     void stealShortcut(const QKeySequence &seq, QAction *action);
-
-    void keySequenceChanged(const QKeySequence &);
 };
 
 /*!
@@ -326,10 +324,6 @@ public:
 
     // conflict resolution functions
     void changeKeyShortcut(KShortcutsEditorItem *item, uint column, const QKeySequence &capture);
-
-    // private slots
-    // this invokes the appropriate conflict resolution function
-    void capturedShortcut(const QKeySequence &, const QModelIndex &);
 
     //! Represents the three hierarchies the dialog handles.
     struct HierarchyInfo {
