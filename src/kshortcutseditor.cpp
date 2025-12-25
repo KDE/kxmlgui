@@ -297,7 +297,7 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
     ui.list->setAlternatingRowColors(true);
 
     // TODO listen to changes to global shortcuts
-    QObject::connect(delegate, &KShortcutsEditorDelegate::shortcutChanged, q, [this](const QVariant &newShortcut, const QModelIndex &index) {
+    QObject::connect(delegate, &KShortcutsEditorDelegate::shortcutChanged, q, [this](const QKeySequence &newShortcut, const QModelIndex &index) {
         capturedShortcut(newShortcut, index);
     });
     // hide the editor widget chen its item becomes hidden
@@ -418,7 +418,7 @@ QTreeWidgetItem *KShortcutsEditorPrivate::findOrMakeItem(QTreeWidgetItem *parent
 }
 
 // private slot
-void KShortcutsEditorPrivate::capturedShortcut(const QVariant &newShortcut, const QModelIndex &index)
+void KShortcutsEditorPrivate::capturedShortcut(const QKeySequence &newShortcut, const QModelIndex &index)
 {
     // dispatch to the right handler
     if (!index.isValid()) {
@@ -429,7 +429,7 @@ void KShortcutsEditorPrivate::capturedShortcut(const QVariant &newShortcut, cons
     Q_ASSERT(item);
 
     if (column >= LocalPrimary && column <= GlobalAlternate) {
-        changeKeyShortcut(item, column, newShortcut.value<QKeySequence>());
+        changeKeyShortcut(item, column, newShortcut);
     }
 }
 

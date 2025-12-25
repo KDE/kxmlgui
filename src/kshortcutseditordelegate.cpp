@@ -287,8 +287,7 @@ bool KShortcutsEditorDelegate::eventFilter(QObject *o, QEvent *e)
 // slot
 void KShortcutsEditorDelegate::keySequenceChanged(const QKeySequence &seq)
 {
-    QVariant ret = QVariant::fromValue(seq);
-    Q_EMIT shortcutChanged(ret, m_editingIndex);
+    Q_EMIT shortcutChanged(seq, m_editingIndex);
 }
 
 void KShortcutsEditorDelegate::setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections)

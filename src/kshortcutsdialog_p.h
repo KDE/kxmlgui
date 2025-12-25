@@ -88,7 +88,7 @@ public:
     void setCheckActionCollections(const QList<KActionCollection *> &checkActionCollections);
 
 Q_SIGNALS:
-    void shortcutChanged(const QVariant &, const QModelIndex &);
+    void shortcutChanged(const QKeySequence &, const QModelIndex &);
 public Q_SLOTS:
     void hiddenBySearchLine(QTreeWidgetItem *, bool);
 
@@ -329,7 +329,7 @@ public:
 
     // private slots
     // this invokes the appropriate conflict resolution function
-    void capturedShortcut(const QVariant &, const QModelIndex &);
+    void capturedShortcut(const QKeySequence &, const QModelIndex &);
 
     //! Represents the three hierarchies the dialog handles.
     struct HierarchyInfo {
