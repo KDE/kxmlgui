@@ -27,8 +27,6 @@ KShortcutsEditorItem::KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *act
     : QTreeWidgetItem(parent, ActionItem)
     , m_action(action)
     , m_isNameBold(false)
-    , m_oldLocalShortcut(nullptr)
-    , m_oldGlobalShortcut(nullptr)
 {
     // Filtering message requested by translators (scripting).
     m_id = m_action->objectName();
@@ -42,11 +40,7 @@ KShortcutsEditorItem::KShortcutsEditorItem(QTreeWidgetItem *parent, QAction *act
     m_collator.setCaseSensitivity(Qt::CaseSensitive);
 }
 
-KShortcutsEditorItem::~KShortcutsEditorItem()
-{
-    delete m_oldLocalShortcut;
-    delete m_oldGlobalShortcut;
-}
+KShortcutsEditorItem::~KShortcutsEditorItem() = default;
 
 bool KShortcutsEditorItem::isModified() const
 {
@@ -197,14 +191,14 @@ void KShortcutsEditorItem::setKeySequence(uint column, const QKeySequence &seq)
     if (column == GlobalPrimary || column == GlobalAlternate) {
         ks = KGlobalAccel::self()->shortcut(m_action);
         if (!m_oldGlobalShortcut) {
-            m_oldGlobalShortcut = new QList<QKeySequence>(ks);
+            m_oldGlobalShortcut = ks;
         }
     } else
 #endif
     {
         ks = m_action->shortcuts();
         if (!m_oldLocalShortcut) {
-            m_oldLocalShortcut = new QList<QKeySequence>(ks);
+            m_oldLocalShortcut = ks;
         }
     }
 
@@ -244,13 +238,11 @@ void KShortcutsEditorItem::setKeySequence(uint column, const QKeySequence &seq)
 void KShortcutsEditorItem::updateModified()
 {
     if (m_oldLocalShortcut && *m_oldLocalShortcut == m_action->shortcuts()) {
-        delete m_oldLocalShortcut;
-        m_oldLocalShortcut = nullptr;
+        m_oldLocalShortcut.reset();
     }
 #if HAVE_GLOBALACCEL
     if (m_oldGlobalShortcut && *m_oldGlobalShortcut == KGlobalAccel::self()->shortcut(m_action)) {
-        delete m_oldGlobalShortcut;
-        m_oldGlobalShortcut = nullptr;
+        m_oldGlobalShortcut.reset();
     }
 #endif
 }
@@ -305,8 +297,6 @@ void KShortcutsEditorItem::undo()
 
 void KShortcutsEditorItem::commit()
 {
-    delete m_oldLocalShortcut;
-    m_oldLocalShortcut = nullptr;
-    delete m_oldGlobalShortcut;
-    m_oldGlobalShortcut = nullptr;
+    m_oldLocalShortcut.reset();
+    m_oldGlobalShortcut.reset();
 }

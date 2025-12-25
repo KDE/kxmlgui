@@ -23,6 +23,8 @@
 #include <QModelIndex>
 #include <QTreeWidget>
 
+#include <optional>
+
 class QLabel;
 class QTreeWidgetItem;
 class QRadioButton;
@@ -281,9 +283,9 @@ private:
     //! Should the Name column be painted in bold?
     bool m_isNameBold;
 
-    //! The original shortcuts before user changes. 0 means no change.
-    QList<QKeySequence> *m_oldLocalShortcut = nullptr;
-    QList<QKeySequence> *m_oldGlobalShortcut = nullptr;
+    //! The original shortcuts before user changes
+    std::optional<QList<QKeySequence>> m_oldLocalShortcut;
+    std::optional<QList<QKeySequence>> m_oldGlobalShortcut;
 
     //! The localized action name
     QString m_actionNameInTable;
