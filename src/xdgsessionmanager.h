@@ -6,7 +6,7 @@
 #include <memory>
 
 class QDBusObjectPath;
-class XdgInhibitionSession;
+class KSystemInhibitor;
 
 class XdgSessionManager : public QObject
 {
@@ -30,6 +30,6 @@ private:
     void ackQueryEnd();
 
     bool m_logoutCancelled = false;
-    std::unique_ptr<XdgInhibitionSession> m_logoutLock;
+    std::unique_ptr<KSystemInhibitor> m_logoutLock;
     QString m_monitorSessionHandle;
 };
