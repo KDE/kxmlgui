@@ -166,6 +166,7 @@ KXMLGUIFactory::~KXMLGUIFactory()
     for (KXMLGUIClient *client : std::as_const(d->m_clients)) {
         client->setFactory(nullptr);
     }
+    delete d;
 }
 
 void KXMLGUIFactory::addClient(KXMLGUIClient *client)

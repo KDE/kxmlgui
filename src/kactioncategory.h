@@ -13,7 +13,6 @@
 #include <QList>
 #include <QObject>
 #include <QString>
-#include <memory>
 
 #include <KStandardActions>
 #if KXMLGUI_ENABLE_DEPRECATED_SINCE(6, 15)
@@ -380,9 +379,10 @@ private:
     void addAction(QAction *action); // exported because called from template method ActionType *add<ActionType>(...)
 
 private:
+    //! KActionCollection needs access to some of our helper methods
     friend class KActionCollectionPrivate;
-
-    std::unique_ptr<KActionCategoryPrivate> const d;
+    //! Implementation details
+    KActionCategoryPrivate *const d;
 };
 
 #endif /* #ifndef KACTIONCATEGORY_H */

@@ -29,7 +29,10 @@ KActionCategory::KActionCategory(const QString &text, KActionCollection *parent)
     d->text = text;
 }
 
-KActionCategory::~KActionCategory() = default;
+KActionCategory::~KActionCategory()
+{
+    delete d;
+}
 
 const QList<QAction *> KActionCategory::actions() const
 {

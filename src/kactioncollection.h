@@ -21,7 +21,6 @@
 
 #include <QAction>
 #include <QObject>
-#include <memory>
 
 class KXMLGUIClient;
 class KConfigGroup;
@@ -734,7 +733,7 @@ private:
     KXMLGUI_NO_EXPORT explicit KActionCollection(const KXMLGUIClient *parent); // used by KXMLGUIClient
 
     friend class KActionCollectionPrivate;
-    std::unique_ptr<class KActionCollectionPrivate> const d;
+    class KActionCollectionPrivate *const d;
 };
 
 #endif

@@ -10,7 +10,6 @@
 #define kxmlguibuilder_h
 
 #include <kxmlgui_export.h>
-#include <memory>
 
 #include <QStringList>
 
@@ -92,7 +91,7 @@ protected:
     virtual void virtual_hook(int id, void *data);
 
 private:
-    std::unique_ptr<KXMLGUIBuilderPrivate> const d;
+    KXMLGUIBuilderPrivate *const d;
 };
 
 #endif

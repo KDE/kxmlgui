@@ -97,6 +97,7 @@ KXMLGUIBuilder::KXMLGUIBuilder(QWidget *widget)
 KXMLGUIBuilder::~KXMLGUIBuilder()
 {
     delete d->m_menumenuhandler;
+    delete d;
 }
 
 QWidget *KXMLGUIBuilder::widget()

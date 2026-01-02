@@ -12,7 +12,6 @@
 #include <kxmlgui_export.h>
 
 #include <QObject>
-#include <memory>
 
 class QAction;
 class KXMLGUIFactoryPrivate;
@@ -255,12 +254,11 @@ Q_SIGNALS:
     void shortcutsSaved();
 
 private:
+    friend class KXMLGUIClient;
     /// Internal, called by KXMLGUIClient destructor
     KXMLGUI_NO_EXPORT void forgetClient(KXMLGUIClient *client);
 
-private:
-    friend class KXMLGUIClient;
-    std::unique_ptr<KXMLGUIFactoryPrivate> const d;
+    KXMLGUIFactoryPrivate *const d;
 };
 
 #endif
