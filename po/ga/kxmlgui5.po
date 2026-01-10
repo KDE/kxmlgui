@@ -3,16 +3,16 @@
 # Copyright (C) 1999,2003,2004 Free Software Foundation, Inc.
 # Sean V. Kelley <s_oceallaigh@yahoo.com>, 1999
 # Kevin Scannell <kscanne@gmail.com>, 2004-2009
-# SPDX-FileCopyrightText: 2025 charlotte <altronic25@protonmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 charlotte <altronic25@protonmail.com>
 # Séamus Ó Ciardhuáin <seoc at iolfree.ie>, 2003,2004
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:00+0000\n"
-"PO-Revision-Date: 2025-12-17 23:57+0000\n"
+"PO-Revision-Date: 2026-01-04 16:34+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
-"Language-Team: Irish Team\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,8 +45,7 @@ msgid "%1"
 msgstr "%1"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:143
-#, fuzzy, kde-format
-#| msgid "Version %1"
+#, kde-format
 msgid "Version %1"
 msgstr "Leagan %1"
 
@@ -109,11 +108,7 @@ msgid "Visit contributor's homepage"
 msgstr "Féach ar leathanach baile an rannpháirtí"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip Action to send an email to a contributor"
 msgid ""
 "Email contributor\n"
@@ -123,10 +118,7 @@ msgstr ""
 "%1"
 
 #: kaboutapplicationpersonlistdelegate_p.cpp:112
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit contributor's homepage\n"
@@ -161,14 +153,9 @@ msgid "About KDE"
 msgstr "Maidir le KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html><font size=\"5\">KDE - Be Free!</font><br /><b>Platform Version %1</"
-#| "b></html>"
+#, kde-format
 msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr ""
-"<html><font size=\"5\">KDE - Bí Saor!</font><br /><b>Leagan Ardáin %1</b></"
-"html>"
+msgstr "<html><font size=\"5\">KDE - Bí Saor!</font></html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, fuzzy, kde-format
@@ -337,11 +324,10 @@ msgid "Enabling this will fetch images from an online location"
 msgstr ""
 
 #: kabstractaboutdialog_p.cpp:175
-#, fuzzy, kde-format
-#| msgid "Please use http://bugs.kde.org to report bugs.\n"
+#, kde-format
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
-msgstr "Bain úsáid as http://bugs.kde.org chun tuairiscí fabht a sheoladh.\n"
+msgstr "Bain úsáid as %1 chun tuairiscí fabht a sheoladh.\n"
 
 #: kabstractaboutdialog_p.cpp:183
 #, kde-format
@@ -392,8 +378,7 @@ msgid "From:"
 msgstr "Ó:"
 
 #: kbugreport.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Email..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Email..."
 msgstr "Cumraigh Ríomhphost..."
@@ -410,22 +395,19 @@ msgid "To:"
 msgstr "Go:"
 
 #: kbugreport.cpp:168
-#, fuzzy, kde-format
-#| msgid "&Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Send"
 msgstr "&Seol"
 
 #: kbugreport.cpp:170
-#, fuzzy, kde-format
-#| msgid "Send bug report."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send bug report."
 msgstr "Seol tuairisc ar fhabht."
 
 #: kbugreport.cpp:171
-#, fuzzy, kde-format
-#| msgid "Send this bug report to %1."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Send this bug report to %1."
 msgstr "Seol an tuairisc fhabht seo chuig %1."
@@ -501,8 +483,7 @@ msgid "Se&verity"
 msgstr "&Géire"
 
 #: kbugreport.cpp:246
-#, fuzzy, kde-format
-#| msgid "Critical"
+#, kde-format
 msgctxt "bug severity"
 msgid "Critical"
 msgstr "Criticiúil"
@@ -523,15 +504,13 @@ msgid "Normal"
 msgstr "Gnáthghéire"
 
 #: kbugreport.cpp:249
-#, fuzzy, kde-format
-#| msgid "Wishlist"
+#, kde-format
 msgctxt "bug severity"
 msgid "Wishlist"
 msgstr "Liosta Mianta"
 
 #: kbugreport.cpp:250
-#, fuzzy, kde-format
-#| msgid "Translation"
+#, kde-format
 msgctxt "bug severity"
 msgid "Translation"
 msgstr "Aistriúchán"
@@ -646,11 +625,7 @@ msgstr ""
 "roghnaigh géire níos ísle.  Go raibh maith agat.</p>"
 
 #: kbugreport.cpp:477
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to send the bug report.\n"
-#| "Please submit a bug report manually....\n"
-#| "See http://bugs.kde.org/ for instructions."
+#, kde-format
 msgid ""
 "Unable to send the bug report.\n"
 "Please submit a bug report manually....\n"
@@ -658,7 +633,7 @@ msgid ""
 msgstr ""
 "Ní féidir an tuairisc fhabht a sheoladh.\n"
 "Seol an tuairisc tú féin, le do thoil.\n"
-"Féach ar http://bugs.kde.org/ le haghaidh treoracha."
+"Féach ar https://bugs.kde.org/ le haghaidh treoracha."
 
 #: kbugreport.cpp:484
 #, kde-format
@@ -798,8 +773,7 @@ msgid "Change &Icon..."
 msgstr "Athraigh &Deilbhín..."
 
 #: kedittoolbar.cpp:1063
-#, fuzzy, kde-format
-#| msgid "Change Te&xt..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
 msgstr "Athraigh &Téacs..."
@@ -1060,8 +1034,7 @@ msgid "Add to Toolbar"
 msgstr "Cuir leis an mBarra Uirlisí"
 
 #: kmenumenuhandler_p.cpp:223
-#, fuzzy, kde-format
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
 msgstr "Cumraigh Aicearra..."
@@ -1073,16 +1046,14 @@ msgid "Error connecting to server."
 msgstr "Cruthaigh inneachar ar an bhfreastalaí"
 
 #: ksendbugmail/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "locally connected"
+#, kde-format
 msgid "Not connected."
-msgstr "ceangailte go logánta"
+msgstr "Níl ceangailte."
 
 #: ksendbugmail/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Connection timed out"
+#, kde-format
 msgid "Connection timed out."
-msgstr "Ceangal imithe thar am"
+msgstr "Ceangal imithe thar am."
 
 #: ksendbugmail/main.cpp:39
 #, kde-format
@@ -1090,16 +1061,14 @@ msgid "Time out waiting for server interaction."
 msgstr ""
 
 #: ksendbugmail/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "Server: %1"
+#, kde-format
 msgid "Server said: \"%1\""
-msgstr "Freastalaí: %1"
+msgstr "Dúirt freastalaí: \"%1\""
 
 #: ksendbugmail/main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Send bug report."
+#, kde-format
 msgid "Sends a bug report by email."
-msgstr "Seol tuairisc ar fhabht."
+msgstr "Seolann sé tuairisc ar fhabht trí ríomhphost."
 
 #: ksendbugmail/main.cpp:76
 #, fuzzy, kde-format
@@ -1137,8 +1106,7 @@ msgid "Current scheme:"
 msgstr "Scéim reatha:"
 
 #: kshortcutschemeseditor.cpp:47
-#, fuzzy, kde-format
-#| msgid "New..."
+#, kde-format
 msgctxt "@action:button"
 msgid "New..."
 msgstr "Nua..."
@@ -1162,18 +1130,16 @@ msgid "Save shortcuts to scheme"
 msgstr "Sábháil an aicearraí i scéim"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
 msgstr "Easpórtáil Scéim..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "Easpórtáil Scéim..."
+msgstr "Iompórtáil Scéim..."
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
