@@ -13,20 +13,21 @@
 # SPDX-FileCopyrightText: 2024, 2025 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2026 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:00+0000\n"
-"PO-Revision-Date: 2024-12-29 19:09+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2026-01-07 10:06+0100\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -195,13 +196,12 @@ msgstr ""
 "<html>Programme sind immer verbesserungsfähig, und das KDE-Team ist bereit, "
 "daran zu arbeiten. Allerdings sollten Sie uns mitteilen, falls etwas nicht "
 "wie erwartet funktioniert oder es in Ihren Augen einfach besser gemacht "
-"werden könnte.<br /><br />KDE besitzt ein System zum Verfolgen von "
-"Problemen. Besuchen Sie <a HREF=\"%1\">%1</a>, oder benutzen Sie den Dialog "
-"„Probleme oder Wünsche berichten ...“ im Menü „Hilfe“, um auf Probleme "
-"hinzuweisen.<br /><br />Auch wenn Sie einen Verbesserungsvorschlag haben, "
-"können Sie das System für die Fehlerverfolgung benutzen. Stellen Sie nur "
-"sicher, dass Sie unter „Severity“ („Schweregrad“) die Auswahl „Wishlist“ "
-"treffen.</html>"
+"werden könnte.<br /><br />KDE besitzt ein Fehlerverfolgungssystem. Besuchen "
+"Sie <a HREF=\"%1\">%1</a>, oder verwenden Sie den Dialog „Probleme oder "
+"Wünsche berichten …“ im Menü „Hilfe“, um auf Probleme hinzuweisen.<br /><br /"
+">Auch wenn Sie einen Verbesserungsvorschlag haben, können Sie das "
+"Fehlerverfolgungssystem verwenden. Stellen Sie nur sicher, dass Sie unter "
+"„Severity“ („Schweregrad“) die Auswahl „Wishlist“ treffen.</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -334,8 +334,8 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"Der Kurzbefehl „%1“ ist doppeldeutig. Rufen Sie bitte „Einstellungen“ -> "
-"„Tastaturkurzbefehle festlegen“\n"
+"Der Kurzbefehl „%1“ ist doppeldeutig. Rufen Sie bitte „Einstellungen“ → "
+"„Tastaturkurzbefehle einrichten“\n"
 "im Menü auf und beheben Sie den Konflikt.\n"
 "Es wird keine Aktion ausgeführt."
 
@@ -361,8 +361,8 @@ msgstr "Problembericht einschicken"
 msgid ""
 "Your email address. If incorrect, use the Configure Email button to change it"
 msgstr ""
-"Ihre E-Mail-Adresse. Sollte sie nicht korrekt sein, dann benutzen Sie bitte "
-"den Knopf „E-Mail einrichten“, um sie zu ändern"
+"Ihre E-Mail-Adresse. Falls inkorrekt, verwenden Sie bitte den Knopf „E-Mail "
+"einrichten …“, um sie zu ändern"
 
 #: kbugreport.cpp:143
 #, kde-format
@@ -374,7 +374,7 @@ msgstr "Absender:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Email..."
-msgstr "E-Mail einrichten ..."
+msgstr "E-Mail einrichten …"
 
 #: kbugreport.cpp:158
 #, kde-format
@@ -412,8 +412,8 @@ msgid ""
 "please use the Report Bug menu item of the correct application"
 msgstr ""
 "Das Programm, zu dem Sie einen Fehlerbericht einschicken möchten. Falls "
-"inkorrekt, benutzen Sie bitte den Knopf „Probleme oder Wünsche "
-"berichten ...“ des betreffenden Programms."
+"inkorrekt, verwenden Sie bitte den Knopf „Probleme oder Wünsche berichten …“ "
+"des betreffenden Programms."
 
 #: kbugreport.cpp:181
 #, kde-format
@@ -761,13 +761,13 @@ msgstr "&Angezeigte Aktionen:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon..."
-msgstr "S&ymbol ändern ..."
+msgstr "S&ymbol ändern …"
 
 #: kedittoolbar.cpp:1063
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt..."
-msgstr "Te&xt ändern ..."
+msgstr "Te&xt ändern …"
 
 #: kedittoolbar.cpp:1205
 #, kde-format
@@ -1006,7 +1006,7 @@ msgstr "Zur Werkzeugleiste hinzufügen"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut..."
-msgstr "Kurzbefehl festlegen ..."
+msgstr "Kurzbefehl einrichten …"
 
 #: ksendbugmail/main.cpp:30
 #, kde-format
@@ -1075,7 +1075,7 @@ msgstr "Aktuelles Schema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New..."
-msgstr "Neu ..."
+msgstr "Neu …"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -1099,13 +1099,13 @@ msgstr "Kurzbefehl in Schema speichern"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme..."
-msgstr "Schema exportieren ..."
+msgstr "Schema exportieren …"
 
 #: kshortcutschemeseditor.cpp:66
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme..."
-msgstr "Schema importieren ..."
+msgstr "Schema importieren …"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
@@ -1182,7 +1182,7 @@ msgstr "&Schemata verwalten"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Tastaturkurzbefehle festlegen"
+msgstr "Tastaturkurzbefehle einrichten"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -1550,7 +1550,7 @@ msgstr "Kein Text"
 #: kxmlguiwindow.cpp:190
 #, kde-format
 msgid "Find Action…"
-msgstr "Aktion suchen ..."
+msgstr "Aktion suchen …"
 
 #: kxmlguiwindow.cpp:535
 #, kde-format
