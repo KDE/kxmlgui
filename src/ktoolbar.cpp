@@ -46,6 +46,7 @@
 #include "kxmlguiwindow.h"
 
 #include "ktoolbarhelper_p.h"
+#include "utils_p.h"
 
 #include <algorithm>
 
@@ -543,12 +544,12 @@ void KToolBarPrivate::adjustSeparatorVisibility()
 
 Qt::ToolButtonStyle KToolBarPrivate::toolButtonStyleFromString(const QString &_style)
 {
-    QString style = _style.toLower();
-    if (style == QLatin1String("textbesideicon") || style == QLatin1String("icontextright")) {
+    QString style = _style;
+    if (equals(style, "textbesideicon") || equals(style, "icontextright")) {
         return Qt::ToolButtonTextBesideIcon;
-    } else if (style == QLatin1String("textundericon") || style == QLatin1String("icontextbottom")) {
+    } else if (equals(style, "textundericon") || equals(style, "icontextbottom")) {
         return Qt::ToolButtonTextUnderIcon;
-    } else if (style == QLatin1String("textonly")) {
+    } else if (equals(style, "textonly")) {
         return Qt::ToolButtonTextOnly;
     } else {
         return Qt::ToolButtonIconOnly;
@@ -573,13 +574,13 @@ QString KToolBarPrivate::toolButtonStyleToString(Qt::ToolButtonStyle style)
 Qt::ToolBarArea KToolBarPrivate::positionFromString(const QString &position)
 {
     Qt::ToolBarArea newposition = Qt::TopToolBarArea;
-    if (position == QLatin1String("left")) {
+    if (equals(position, "left")) {
         newposition = Qt::LeftToolBarArea;
-    } else if (position == QLatin1String("bottom")) {
+    } else if (equals(position, "bottom")) {
         newposition = Qt::BottomToolBarArea;
-    } else if (position == QLatin1String("right")) {
+    } else if (equals(position, "right")) {
         newposition = Qt::RightToolBarArea;
-    } else if (position == QLatin1String("none")) {
+    } else if (equals(position, "none")) {
         newposition = Qt::NoToolBarArea;
     }
     return newposition;
@@ -1001,9 +1002,9 @@ void KToolBar::loadState(const QDomElement &element)
     } else {
         // loading app defaults
         bool newLine = false;
-        QString attrNewLine = element.attribute(QStringLiteral("newline")).toLower();
+        QString attrNewLine = element.attribute(QStringLiteral("newline"));
         if (!attrNewLine.isEmpty()) {
-            newLine = (attrNewLine == QLatin1String("true"));
+            newLine = equals(attrNewLine, "true");
         }
         if (newLine && mw) {
             mw->insertToolBarBreak(this);
@@ -1029,15 +1030,15 @@ void KToolBar::loadState(const QDomElement &element)
 
     bool hidden = false;
     {
-        QString attrHidden = element.attribute(QStringLiteral("hidden")).toLower();
+        QString attrHidden = element.attribute(QStringLiteral("hidden"));
         if (!attrHidden.isEmpty()) {
-            hidden = (attrHidden == QLatin1String("true"));
+            hidden = equals(attrHidden, "true");
         }
     }
 
     Qt::ToolBarArea pos = Qt::NoToolBarArea;
     {
-        QString attrPosition = element.attribute(QStringLiteral("position")).toLower();
+        QString attrPosition = element.attribute(QStringLiteral("position"));
         if (!attrPosition.isEmpty()) {
             pos = KToolBarPrivate::positionFromString(attrPosition);
         }

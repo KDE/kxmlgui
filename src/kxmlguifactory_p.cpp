@@ -10,6 +10,7 @@
 #include "ktoolbar.h"
 #include "kxmlguibuilder.h"
 #include "kxmlguiclient.h"
+#include "utils_p.h"
 
 #include <QList>
 #include <QWidget>
@@ -143,7 +144,7 @@ ContainerNode *ContainerNode::findContainer(const QString &name, const QString &
         //   <Menu>
         //    ...
         auto it = std::find_if(children.cbegin(), children.cend(), [&tagName, excludeList](ContainerNode *node) {
-            return node->tagName == tagName && !excludeList->contains(node->container);
+            return equals(node->tagName, tagName) && !excludeList->contains(node->container);
         });
         return it != children.cend() ? *it : nullptr;
     };
@@ -331,7 +332,7 @@ QDomElement ContainerNode::findElementForChild(const QDomElement &baseElement, C
     // ### slow
     for (QDomNode n = baseElement.firstChild(); !n.isNull(); n = n.nextSibling()) {
         QDomElement e = n.toElement();
-        if (e.tagName().toLower() == childNode->tagName //
+        if (equals(e.tagName(), childNode->tagName) //
             && e.attribute(QStringLiteral("name")) == childNode->name) {
             return e;
         }
@@ -507,18 +508,18 @@ void BuildHelper::build(const QDomElement &element)
 
 void BuildHelper::processElement(const QDomElement &e)
 {
-    QString tag(e.tagName().toLower());
+    const QString tag = e.tagName();
     QString currName(e.attribute(QStringLiteral("name")));
 
-    const bool isActionTag = (tag == QLatin1String("action"));
+    const bool isActionTag = equals(tag, "action");
 
-    if (isActionTag || customTags.indexOf(tag) != -1) {
+    if (isActionTag || customTags.indexOf(tag, 0, Qt::CaseInsensitive) != -1) {
         processActionOrCustomElement(e, isActionTag);
-    } else if (containerTags.indexOf(tag) != -1) {
+    } else if (containerTags.indexOf(tag, 0, Qt::CaseInsensitive) != -1) {
         processContainerElement(e, tag, currName);
-    } else if (tag == QLatin1String("merge") || tag == QLatin1String("definegroup") || tag == QLatin1String("actionlist")) {
+    } else if (equals(tag, "merge") || equals(tag, "definegroup") || equals(tag, "actionlist")) {
         processMergeElement(tag, currName, e);
-    } else if (tag == QLatin1String("state")) {
+    } else if (equals(tag, "state")) {
         processStateElement(e);
     }
 }
@@ -609,13 +610,13 @@ void BuildHelper::processStateElement(const QDomElement &element)
             continue;
         }
 
-        QString tagName = e.tagName().toLower();
+        QString tagName = e.tagName();
 
-        if (tagName != QLatin1String("enable") && tagName != QLatin1String("disable")) {
+        if (!equals(tagName, "enable") && !equals(tagName, "disable")) {
             continue;
         }
 
-        const bool processingActionsToEnable = (tagName == QLatin1String("enable"));
+        const bool processingActionsToEnable = equals(tagName, "enable");
 
         // process action names
         for (QDomNode n2 = n.firstChild(); !n2.isNull(); n2 = n2.nextSibling()) {
@@ -640,28 +641,28 @@ void BuildHelper::processStateElement(const QDomElement &element)
 
 void BuildHelper::processMergeElement(const QString &tag, const QString &name, const QDomElement &e)
 {
-    const QLatin1String tagDefineGroup("definegroup");
-    const QLatin1String tagActionList("actionlist");
-    const QLatin1String defaultMergingName("<default>");
+    const std::string_view tagDefineGroup("definegroup");
+    const std::string_view tagActionList("actionlist");
+    const QString defaultMergingName(QStringLiteral("<default>"));
     const QLatin1String attrGroup("group");
 
     QString mergingName(name);
     if (mergingName.isEmpty()) {
-        if (tag == tagDefineGroup) {
+        if (equals(tag, tagDefineGroup)) {
             qCCritical(DEBUG_KXMLGUI) << "cannot define group without name!";
             return;
         }
-        if (tag == tagActionList) {
+        if (equals(tag, tagActionList)) {
             qCCritical(DEBUG_KXMLGUI) << "cannot define actionlist without name!";
             return;
         }
         mergingName = defaultMergingName;
     }
 
-    if (tag == tagDefineGroup) {
+    if (equals(tag, tagDefineGroup)) {
         mergingName.prepend(attrGroup); // avoid possible name clashes by prepending
                                         // "group" to group definitions
-    } else if (tag == tagActionList) {
+    } else if (equals(tag, tagActionList)) {
         mergingName.prepend(tagActionList);
     }
 
@@ -747,9 +748,10 @@ void BuildHelper::processContainerElement(const QDomElement &e, const QString &t
             conTags = m_state.clientBuilderContainerTags;
         }
 
-        containerNode = new ContainerNode(container, tag, name, parentNode, m_state.guiClient, builder, containerAction, mergingName, group, cusTags, conTags);
+        containerNode =
+            new ContainerNode(container, tag.toLower(), name, parentNode, m_state.guiClient, builder, containerAction, mergingName, group, cusTags, conTags);
     } else {
-        if (tag == QLatin1String("toolbar")) {
+        if (equals(tag, "toolbar")) {
             KToolBar *bar = qobject_cast<KToolBar *>(containerNode->container);
             if (bar) {
                 if (m_state.guiClient && !m_state.guiClient->xmlFile().isEmpty()) {

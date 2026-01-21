@@ -14,6 +14,7 @@
 #include "ktoolbar.h"
 #include "kxmlguiclient.h"
 #include "kxmlguiwindow.h"
+#include "utils_p.h"
 
 #include <KAuthorized>
 #include <KLocalizedString>
@@ -117,17 +118,17 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
 {
     containerAction = nullptr;
 
-    if (element.attribute(QStringLiteral("deleted")).toLower() == QLatin1String("true")) {
+    if (equals(element.attribute(QStringLiteral("deleted")), "true")) {
         return nullptr;
     }
 
-    const QString tagName = element.tagName().toLower();
-    if (tagName == d->tagMainWindow) {
+    const QString tagName = element.tagName();
+    if (equals(tagName, d->tagMainWindow)) {
         KMainWindow *mainwindow = qobject_cast<KMainWindow *>(d->m_widget); // could be 0
         return mainwindow;
     }
 
-    if (tagName == d->tagMenuBar) {
+    if (equals(tagName, d->tagMenuBar)) {
         KMainWindow *mainWin = qobject_cast<KMainWindow *>(d->m_widget);
         QMenuBar *bar = nullptr;
         if (mainWin) {
@@ -140,7 +141,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         return bar;
     }
 
-    if (tagName == d->tagMenu) {
+    if (equals(tagName, d->tagMenu)) {
         QWidget *effectiveParent = parent;
         if (!effectiveParent) {
             effectiveParent = d->m_widget;
@@ -211,7 +212,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         return popup;
     }
 
-    if (tagName == d->tagToolBar) {
+    if (equals(tagName, d->tagToolBar)) {
         QString name = element.attribute(d->attrName);
 
         KToolBar *bar = static_cast<KToolBar *>(d->m_widget->findChild<KToolBar *>(name));
@@ -233,7 +234,7 @@ QWidget *KXMLGUIBuilder::createContainer(QWidget *parent, int index, const QDomE
         return bar;
     }
 
-    if (tagName == d->tagStatusBar) {
+    if (equals(tagName, d->tagStatusBar)) {
         KMainWindow *mainWin = qobject_cast<KMainWindow *>(d->m_widget);
         if (mainWin) {
             mainWin->statusBar()->show();
@@ -298,8 +299,8 @@ QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const Q
         before = parent->actions().at(index);
     }
 
-    const QString tagName = element.tagName().toLower();
-    if (tagName == d->tagSeparator) {
+    const QString tagName = element.tagName();
+    if (equals(tagName, d->tagSeparator)) {
         if (QMenu *menu = qobject_cast<QMenu *>(parent)) {
             // QMenu already cares for leading/trailing/repeated separators
             // no need to check anything
@@ -333,16 +334,16 @@ QAction *KXMLGUIBuilder::createCustomElement(QWidget *parent, int index, const Q
 
             return bar->insertSeparator(before);
         }
-    } else if (tagName == d->tagSpacer) {
+    } else if (equals(tagName, d->tagSpacer)) {
         if (QToolBar *bar = qobject_cast<QToolBar *>(parent)) {
             // Create the simple spacer widget
             QWidget *spacer = new QWidget(parent);
             spacer->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
             return bar->insertWidget(before, spacer);
         }
-    } else if (tagName == d->tagTearOffHandle) {
+    } else if (equals(tagName, d->tagTearOffHandle)) {
         static_cast<QMenu *>(parent)->setTearOffEnabled(true);
-    } else if (tagName == d->tagMenuTitle) {
+    } else if (equals(tagName, d->tagMenuTitle)) {
         if (QMenu *m = qobject_cast<QMenu *>(parent)) {
             QString i18nText;
             const QString text = element.text();
