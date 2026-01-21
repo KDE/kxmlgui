@@ -17,6 +17,7 @@
 #include "kxmlguibuilder.h"
 #include "kxmlguiclient.h"
 #include "kxmlguifactory_p.h"
+#include "utils_p.h"
 
 #include <QAction>
 #include <QCoreApplication>
@@ -501,16 +502,6 @@ QWidget *KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, bool
     }
 
     return nullptr;
-}
-
-// Case insensitive equality without calling toLower which allocates a new string
-static inline bool equals(const QString &str1, const char *str2)
-{
-    return str1.compare(QLatin1String(str2), Qt::CaseInsensitive) == 0;
-}
-static inline bool equals(const QString &str1, const QString &str2)
-{
-    return str1.compare(str2, Qt::CaseInsensitive) == 0;
 }
 
 QList<QWidget *> KXMLGUIFactoryPrivate::findRecursive(KXMLGUI::ContainerNode *node, const QString &tagName)
