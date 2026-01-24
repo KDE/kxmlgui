@@ -91,8 +91,8 @@ void KToolTipHelper_UnitTest::testGeneralWidget()
     m_frame->setToolTip(QStringLiteral("frame's tooltip"));
     QCOMPARE(shownToolTip(m_frame), m_frame->toolTip());
 
-    QHelpEvent *helpEvent = new QHelpEvent(QEvent::ToolTip, QPoint(1, 1), m_frame->mapToGlobal(QPoint(1, 1)));
-    QVERIFY2(!KToolTipHelper::instance()->eventFilter(m_frame, helpEvent),
+    QHelpEvent helpEvent(QEvent::ToolTip, QPoint(1, 1), m_frame->mapToGlobal(QPoint(1, 1)));
+    QVERIFY2(!KToolTipHelper::instance()->eventFilter(m_frame, &helpEvent),
              "These most basic tooltips should not be filtered so applications can still rely"
              "on tooltip events in most cases.");
 

@@ -334,6 +334,10 @@ void tst_KActionCollection::testActionForName()
     QCOMPARE(collection->action(QStringLiteral("ba")), b);
     QCOMPARE(collection->action(QStringLiteral("cf")), c);
     QCOMPARE(collection->action(QStringLiteral("ae")), a);
+
+    delete a;
+    delete b;
+    delete c;
 }
 
 QTEST_MAIN(tst_KActionCollection)
