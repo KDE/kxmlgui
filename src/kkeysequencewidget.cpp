@@ -147,6 +147,7 @@ void KKeySequenceWidgetPrivate::init()
     layout->addWidget(keyButton);
 
     clearButton = new QToolButton(q);
+    clearButton->setText(i18nc("@action:button", "Clear"));
     layout->addWidget(clearButton);
 
     if (qApp->isLeftToRight()) {
