@@ -14,21 +14,21 @@
 # Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>, 2010, 2012.
 # Aracele Torres <araceletorres@gmail.com>, 2010.
 # SPDX-FileCopyrightText: 2025 Frederico Goncalves Guimaraes <frederico@teia.bio.br>
-# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-27 00:40+0000\n"
-"PO-Revision-Date: 2026-01-14 13:03-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2026-03-06 16:32-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "Tradução"
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr "Sobre o KDE"
+msgstr "Sobre a KDE"
 
 #: kaboutkdedialog_p.cpp:34
 #, kde-format
@@ -93,17 +93,17 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html>O <b>KDE</b> é uma comunidade mundial de engenheiros de software,"
+"<html>A <b>KDE</b> é uma comunidade mundial de engenheiros de software, "
 "artistas, escritores, tradutores e criadores, comprometidos com o "
-"desenvolvimento de <a href=\"%1\">Software livre</a>. O KDE produz o "
+"desenvolvimento de <a href=\"%1\">Software livre</a>. A KDE produz o "
 "ambiente de trabalho Plasma, centenas de aplicativos e muitas bibliotecas de "
-"software que os suportam.<br /><br />O KDE é uma organização cooperativa: "
+"software que os suportam.<br /><br />A KDE é uma organização cooperativa: "
 "nenhuma entidade única controla sua direção ou produtos. Ao invés disto, "
 "trabalhamos juntos para alcançar o objetivo comum de construir o melhor "
 "software livre do mundo. Todos são bem-vindos a <a href=\"%2\">participar e "
-"contribuir</a> com o KDE, incluindo você.<br /><br />Para mais informações "
-"sobre a comunidade KDE e os softwares que produzimos, para o visite <a href="
-"\"%3\">%3</a>.</html>"
+"contribuir</a> com a KDE, incluindo você.<br /><br />Para mais informações "
+"sobre a comunidade KDE e os softwares que produzimos, visite <a href=\"%3\">"
+"%3</a>.</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -118,7 +118,7 @@ msgid ""
 msgstr ""
 "<html>Os programas podem sempre ser melhorados, e a equipe KDE está "
 "empenhada nisso. Entretanto, você - o usuário - precisa nos dizer quando "
-"algo não funciona como esperado ou poderia ser melhorado.<br /><br />O KDE "
+"algo não funciona como esperado ou poderia ser melhorado.<br /><br />A KDE "
 "possui um sistema de detecção de erros de programação. Visite <a href=\"%1\">"
 "%1</a> ou use o diálogo \"Relatar bug\" no menu \"Ajuda\", para relatar "
 "erros.<br /><br />Se você tiver uma sugestão de melhoria, seja bem-vindo "
@@ -138,7 +138,7 @@ msgid ""
 "what you need.</html>"
 msgstr ""
 "<html>Não é necessário ser um desenvolvedor de software para ser um membro "
-"da equipe do KDE. Você pode tornar-se um membro das equipes de idiomas que "
+"da equipe da KDE. Você pode tornar-se um membro das equipes de idiomas que "
 "traduzem as interfaces dos programas. Você pode fornecer gráficos, temas, "
 "sons e documentação atualizada. Você decide!<br /><br />Visite <a href="
 "\"%1\">%1</a> para obter informações sobre alguns projetos em que você possa "
@@ -161,16 +161,16 @@ msgid ""
 "described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
 "advance for your support.</html>"
 msgstr ""
-"<html>O KDE está e sempre estará disponível gratuitamente, mas seu "
-"desenvolvimento não é gratuito.<br /><br />Para apoiar o seu "
+"<html>Os programas da KDE estão e sempre estarão disponíveis gratuitamente, "
+"mas seu desenvolvimento não é gratuito.<br /><br />Para apoiar o seu "
 "desenvolvimento, a comunidade KDE formou a KDE e.V., uma organização sem "
 "fins lucrativos fundada na Alemanha. A KDE e.V. representa o projeto KDE em "
 "questões jurídicas e financeiras. Acesse <a href=\"%1\">%1</a> para mais "
-"informações sobre o KDE e.V.<br /><br />O KDE se beneficia de vários tipos "
+"informações sobre a KDE e.V.<br /><br />A KDE se beneficia de vários tipos "
 "de contribuições, incluindo a financeira. Nós usamos o dinheiro para "
 "reembolsar membros e outras pessoas, pelos gastos que tiveram com o projeto. "
 "Parte do dinheiro é usado para dar assistência jurídica e organizar "
-"conferências e reuniões. <br /> <br />Você pode ajudar o KDE com uma "
+"conferências e reuniões. <br /> <br />Você pode ajudar a KDE com uma "
 "contribuição financeira, usando uma das formas descritas em <a href=\"%2\">"
 "%2</a>.<br /><br />Obrigado pela sua ajuda.</html>"
 
@@ -190,13 +190,13 @@ msgstr "&Relatar bugs ou desejos"
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "&Junte-se ao KDE"
+msgstr "&Junte-se à KDE"
 
 #: kaboutkdedialog_p.cpp:131
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
-msgstr "&Apoiando o KDE"
+msgstr "&Apoiando a KDE"
 
 #: kabstractaboutdialog_p.cpp:47
 #, kde-format
