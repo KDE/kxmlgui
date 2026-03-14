@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2024-01-07 18:49+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -689,7 +689,15 @@ msgstr ""
 "program.\n"
 "Misalnya untuk Ctrl+A: tahan tuts Ctrl lalu tekan A."
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Clear"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Bersihkan"
+
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -697,12 +705,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Bentrok Pintasan"
 msgstr[1] "Bentrokan Pintasan"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Pintasan '%1' untuk aksi '%2'\n"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -722,20 +730,20 @@ msgstr[1] ""
 "Apakah kamu ingin menugaskan sebuah pintasan kosong untuk aksi tersebut?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Tugaskan Ulang"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Konflik pintasan"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -744,13 +752,13 @@ msgstr ""
 "<qt>Kombinasi tombol '%1' telah digunakan oleh aksi <b>%2</b>.<br>Silakan "
 "pilih yang lain.</qt>"
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Pintasan '%1' di Aplikasi %2 untuk aksi %3\n"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -761,7 +769,7 @@ msgid_plural ""
 msgstr[0] "Pintasan '%2' bentrok dengan kombinasi tuts berikut ini:\n"
 msgstr[1] "Pintasan '%2' bentrok dengan kombinasi tuts berikut ini:\n"
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -769,12 +777,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Bentrok dengan Pintasan Global Terdaftar"
 msgstr[1] "Bentrok dengan Pintasan-pintasan Global Terdaftar"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Pintasan Dipesan"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -785,13 +793,13 @@ msgstr ""
 "pintas global.\n"
 "Silakan pilih yang lain"
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflik dengan Pintasan Aplikasi Standar"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -802,13 +810,13 @@ msgstr ""
 "digunakan oleh beberapa aplikasi.\n"
 "Anda yakin ingin menggunakannya sebagai jalan pintas global juga?"
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Input"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -5819,10 +5827,6 @@ msgstr "Bilah Alat Utama"
 #~ msgctxt "@action"
 #~ msgid "Mail"
 #~ msgstr "Surat"
-
-#~ msgctxt "@action"
-#~ msgid "Clear"
-#~ msgstr "Bersihkan"
 
 #~ msgctxt "@action"
 #~ msgid "Actual Size"

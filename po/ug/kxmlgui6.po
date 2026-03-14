@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2026-01-23 11:10-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -650,19 +650,27 @@ msgstr ""
 "توپچىنى چېكىپ، ئاندىن بۇ پىروگراممىغا تېزلەتمە كىرگۈزۈلىدۇ.\n"
 "مەسىلەن، Ctrl+a يەنى Ctrl كۇنۇپكىسىنى بېسىپ تۇرۇپ ئاندىن a كۇنۇپكا بېسىلىدۇ."
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Clear"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "تازىلا"
+
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
 msgstr[0] "تېزلەتمە توقۇنۇشى"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "مەشغۇلات «%2» نىڭ تېزلەتمىسى «%1»\n"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -678,20 +686,20 @@ msgstr[0] ""
 "بۇ مەشغۇلاتقا بوش تېزلەتمە بەلگىلىسۇنمۇ؟\n"
 "%3"
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "قايتا تەقسىملە"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "تېزلەتمە توقۇنۇشى"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -700,12 +708,12 @@ msgstr ""
 "<qt>بىرىكمە كۇنۇپكا «%1» مەشغۇلات <b>%2</b> نىڭدا ئىشلىتىلگەن. باشقا بىرىكمە "
 "كۇنۇپكا تاللاڭ</qt>"
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "«%2» پىروگراممىدىكى «%3» مەشغۇلاتنىڭ  تېزلەتمىسى «%1»\n"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -715,19 +723,19 @@ msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
 msgstr[0] "تېزلەتمە «%2» تۆۋەندىكى تېزلەتمە بىلەن توقۇنۇشۇپ قالدى:\n"
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "خەتلىتىلگەن ئومۇمىيەت تېزلەتمە بىلەن توقۇنۇشۇپ قالدى"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "بەلگىلىنىپ بولغان تېزلەتمە"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -738,13 +746,13 @@ msgstr ""
 "بولمايدۇ\n"
 "باشقا كۇنۇپكا تاللاڭ."
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "پىروگراممىنىڭ ئۆلچەملىك تېزلەتمىسى بىلەن توقۇنۇشۇپ قالدى"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -755,13 +763,13 @@ msgstr ""
 "ئۈچۈن بېكىتىلگەن\n"
 "بۇنى راستلا ئومۇمىيەت تېزلەتمە سۈپىتىدە ئىشلىتەمسىز؟"
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "كىرگۈز"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -5777,10 +5785,6 @@ msgstr "ئاساسىي قورال بالداق"
 #~ msgctxt "@action"
 #~ msgid "Mail"
 #~ msgstr "خەت"
-
-#~ msgctxt "@action"
-#~ msgid "Clear"
-#~ msgstr "تازىلا"
 
 #~ msgctxt "@action"
 #~ msgid "Actual Size"

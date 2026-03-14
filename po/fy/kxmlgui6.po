@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2010-07-22 09:48+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
@@ -716,7 +716,15 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Clear"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Begjinwearde"
+
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -724,12 +732,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Fluchtoets konflikt"
 msgstr[1] "Fluchtoets konflikten"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Fluchtoets '%1' foar aksje '%2'\n"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -758,22 +766,22 @@ msgstr[1] ""
 "Wolle jo in lege fluchtoets tawize oan dizze aksjes?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Opnij tawize"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Fluchtoets konflikt"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -782,13 +790,13 @@ msgstr ""
 "<qt> De toetskombinaasje '%1' is al tawiisd oan de globale aksje<b>%2</b>. "
 "<br>Graach in oare toetskombinaasje kieze.</qt>"
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' for action '%2'\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Fluchtoets '%1' foar aksje '%2'\n"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -799,7 +807,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -807,12 +815,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Konflikt mei registrearre globale fluchtoets"
 msgstr[1] "Konflikt mei registrearre globale fluchtoetsen"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Reservearre fluchtoets"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -820,14 +828,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflikt mei standert applikaasje-fluchtoets"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -838,13 +846,13 @@ msgstr ""
 "troch guon applikaasje brûkt wurdt.\n"
 "Wolle jo it wier ek brûke as in globale fluchtoets?"
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ynfier"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -5861,10 +5869,6 @@ msgstr "Haadarkbalke"
 #~ msgctxt "@action"
 #~ msgid "Mail"
 #~ msgstr "E-post"
-
-#~ msgctxt "@action"
-#~ msgid "Clear"
-#~ msgstr "Begjinwearde"
 
 #~ msgctxt "@action"
 #~ msgid "Actual Size"

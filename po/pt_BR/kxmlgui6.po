@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2026-03-06 16:32-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -667,7 +667,13 @@ msgstr ""
 "Exemplo para o Ctrl+A: mantenha pressionada a tecla Ctrl e pressione a tecla "
 "A."
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear"
+msgstr ""
+
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -675,12 +681,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Conflito de atalho"
 msgstr[1] "Conflitos de atalhos"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Atalho '%1' para a ação '%2'\n"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -700,20 +706,20 @@ msgstr[1] ""
 "Deseja atribuir um atalho vazio para estas ações?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Reatribuir"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Conflito de atalho"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -722,12 +728,12 @@ msgstr ""
 "<qt>A combinação de teclas '%1' já está em uso pela ação <b>%2</b>. <br>Por "
 "favor, selecione uma diferente.</qt>"
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "O atalho '%1' no aplicativo '%2' para a ação '%3'\n"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -740,7 +746,7 @@ msgstr[0] ""
 msgstr[1] ""
 "O atalho '%2' entra em conflito com as seguintes combinações de teclas:\n"
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -748,12 +754,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Conflito com o atalho global registrado"
 msgstr[1] "Conflito com os atalhos globais registrados"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Atalho reservado"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -764,13 +770,13 @@ msgstr ""
 "atalho global.\n"
 "Escolha outra tecla."
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Conflito com o atalho padrão do aplicativo"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -781,13 +787,13 @@ msgstr ""
 "por alguns aplicativos.\n"
 "Deseja realmente usá-la como um atalho global?"
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Entrada"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"

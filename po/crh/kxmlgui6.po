@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2009-02-12 23:29-0600\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
 "Language-Team: Qırımtatarca (Qırım Türkçesi)\n"
@@ -633,7 +633,15 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Clear"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Temizle"
+
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "%1 is the number of conflicts"
@@ -642,13 +650,13 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Qısqa-yol çatışması"
 msgstr[1] "Qısqa-yol çatışması"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Shortcut(s) '%1' for action '%2'\n"
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "'%2' ameli içün '%1' qısqa-yolları\n"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 #| msgid ""
 #| "The \"%1\" shortcut is ambiguous with the following shortcuts.\n"
@@ -672,22 +680,22 @@ msgstr[1] ""
 "Bu amellerge boş qısqa-yolnı tahsis etmege isteysiñizmi?\n"
 "%2"
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Kene-tayinle"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Qısqa-yol çatışması"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -696,13 +704,13 @@ msgstr ""
 "<qt>'%1' tuş kombinatsiyası artıq <b>%2</b> ameli içün qullanılmaqta."
 "<br>Lütfen deñişik birini saylañız.</qt>"
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 #| msgid "Shortcut(s) '%1' for action '%2'\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "'%2' ameli içün '%1' qısqa-yolları\n"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -713,7 +721,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 #| msgid "Conflict With Registered Global Shortcut"
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
@@ -722,13 +730,13 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Qayd Etilgen Alemiy Qısqa-yolnen Çatışma"
 msgstr[1] "Qayd Etilgen Alemiy Qısqa-yolnen Çatışma"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "New Web Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Yañı İnternet Qısqa-yolu"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -736,14 +744,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Standart Uyğulama Qısqa-yolunen Çatışma"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -754,13 +762,13 @@ msgstr ""
 "içün de qullanılır.\n"
 "Onı kerçekten de umumiy qısqa-yol olaraq ta qullanmağa isteysiñizmi?"
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Kirdi"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -5339,10 +5347,6 @@ msgstr "Ana Alet Çubuğı"
 #~ msgctxt "@action"
 #~ msgid "Mail"
 #~ msgstr "Poçtala:"
-
-#~ msgctxt "@action"
-#~ msgid "Clear"
-#~ msgstr "Temizle"
 
 #~ msgctxt "@action"
 #~ msgid "Actual Size"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -675,7 +675,14 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, fuzzy, kde-format
+#| msgid "Clear"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Cacileyo"
+
+#: kkeysequencewidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "%1 is the number of conflicts"
@@ -684,12 +691,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Indlela emfutshane"
 msgstr[1] "Indlela emfutshane"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, fuzzy, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Ulwazi lwetyala"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, fuzzy, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -707,21 +714,21 @@ msgstr[1] ""
 "Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
 "Nceda khetha indibaniselwano yesinye isitshixo."
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Isirashiya"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Indlela emfutshane"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "The '%1' key combination has already been allocated to the \"%2\" "
@@ -734,12 +741,12 @@ msgstr ""
 "Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
 "Nceda khetha indibaniselwano yesinye isitshixo."
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, fuzzy, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Ulwazi lwetyala"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -750,7 +757,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, fuzzy, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -758,13 +765,13 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Ungqubano Neendlela ezimfutshane Zamazwe"
 msgstr[1] "Ungqubano Neendlela ezimfutshane Zamazwe"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Indlela emfutshane"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -772,14 +779,14 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Ungqubano Nesicelo Esisezantsi Sendlela emfutshane"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -789,13 +796,13 @@ msgstr ""
 "Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
 "Nceda khetha indibaniselwano yesinye isitshixo."
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, fuzzy, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "&Igalelo Elisuka"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "No shortcut defined"
@@ -5376,12 +5383,6 @@ msgstr "Isixhobo se bar Engundoqo"
 #~ msgctxt "@action"
 #~ msgid "Mail"
 #~ msgstr "Ibhosi yeposi"
-
-#, fuzzy
-#~| msgid "Clear"
-#~ msgctxt "@action"
-#~ msgid "Clear"
-#~ msgstr "Cacileyo"
 
 #, fuzzy
 #~| msgid "&Actual Size"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:40+0000\n"
+"POT-Creation-Date: 2026-03-14 00:40+0000\n"
 "PO-Revision-Date: 2025-11-18 10:43+0100\n"
 "Last-Translator: Igor Dobrača <igor.dobraca@skole.hr>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -657,7 +657,15 @@ msgstr ""
 "programu.\n"
 "Primjer za Ctrl+A: držite tipku Ctrl i pritisnite A."
 
-#: kkeysequencewidget.cpp:168
+#: kkeysequencewidget.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Clear"
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Izbriši"
+
+#: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -666,12 +674,12 @@ msgstr[0] "Konflikt prečaca"
 msgstr[1] "Konflikti prečaca"
 msgstr[2] "Konflikti prečaca"
 
-#: kkeysequencewidget.cpp:172
+#: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Prečica '%1' za radnju '%2'\n"
 
-#: kkeysequencewidget.cpp:177
+#: kkeysequencewidget.cpp:178
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -695,20 +703,20 @@ msgstr[2] ""
 "Želite li dodijeliti prazan prečac ovoj radnji?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:187 kkeysequencewidget.cpp:294
-#: kkeysequencewidget.cpp:356
+#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
+#: kkeysequencewidget.cpp:357
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Dodijeli"
 
-#: kkeysequencewidget.cpp:192
+#: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Sukob prečaca"
 
-#: kkeysequencewidget.cpp:194
+#: kkeysequencewidget.cpp:195
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -717,12 +725,12 @@ msgstr ""
 "<qt>Kombinacija tipki '%1'  je dodijeljena aktivnosti <b>%2</b>."
 "<br>Odaberite drugu kombinaciju tipki.</qt>"
 
-#: kkeysequencewidget.cpp:274
+#: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Prečac '%1' u aplikaciji '%2' za radnju '%3'\n"
 
-#: kkeysequencewidget.cpp:283
+#: kkeysequencewidget.cpp:284
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -734,7 +742,7 @@ msgstr[0] "Prečac '%2' u konfliktu je s sljedećim kombinacijama tipaka:\n"
 msgstr[1] "Prečac '%2' u konfliktima je s sljedećim kombinacijama tipaka:\n"
 msgstr[2] "Prečac '%2' u konfliktima je s sljedećim kombinacijama tipaka:\n"
 
-#: kkeysequencewidget.cpp:290
+#: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -743,12 +751,12 @@ msgstr[0] "Konflikt s registriranim globalnim prečacem"
 msgstr[1] "Konflikt s registriranim globalnim prečacima"
 msgstr[2] "Konflikt s registriranim globalnim prečacima"
 
-#: kkeysequencewidget.cpp:303
+#: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervirani prečaci"
 
-#: kkeysequencewidget.cpp:305
+#: kkeysequencewidget.cpp:306
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -759,13 +767,13 @@ msgstr ""
 "prečac.\n"
 "Molim da izaberete drugu tipku."
 
-#: kkeysequencewidget.cpp:348
+#: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Sukob sa standardnim prečacem aplikacije"
 
-#: kkeysequencewidget.cpp:350
+#: kkeysequencewidget.cpp:351
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -776,13 +784,13 @@ msgstr ""
 "koju neka aplikacija koristi.\n"
 "Želite li je zaista koristiti kao opći prečac?"
 
-#: kkeysequencewidget.cpp:394
+#: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ulaz"
 
-#: kkeysequencewidget.cpp:396 kshortcuteditwidget.cpp:51
+#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:51
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -6201,10 +6209,6 @@ msgstr "Glavna alatna traka"
 #~ msgctxt "@action"
 #~ msgid "Mail"
 #~ msgstr "Pošta"
-
-#~ msgctxt "@action"
-#~ msgid "Clear"
-#~ msgstr "Izbriši"
 
 #~ msgctxt "@action"
 #~ msgid "Actual Size"
