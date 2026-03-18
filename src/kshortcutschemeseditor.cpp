@@ -189,6 +189,10 @@ void KShortcutSchemesEditor::exportShortcutsScheme()
         return;
     }
 
+    if (QFileInfo(path).suffix().isEmpty()) {
+        path.append(QStringLiteral(".shortcuts"));
+    }
+
     m_dialog->exportConfiguration(path);
 }
 
