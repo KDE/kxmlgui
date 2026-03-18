@@ -1,5 +1,5 @@
 # translation of kdelibs4.po to Italian
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
 # Federico Cozzi <federicocozzi@federicocozzi.it>, 2004.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2004, 2008, 2009, 2010, 2011.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:40+0000\n"
-"PO-Revision-Date: 2025-08-21 16:12+0200\n"
+"PO-Revision-Date: 2026-03-16 07:46+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -660,9 +660,7 @@ msgstr ""
 "Esempio per Ctrl+A: tieni premuto il tasto Ctrl e premi A."
 
 #: kkeysequencewidget.cpp:150
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Clear"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Pulisci"
