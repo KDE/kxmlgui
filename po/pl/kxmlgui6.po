@@ -1,7 +1,7 @@
 # translation of kdelibs4.po to Polish
 # translation of kdelibs4.po to
 # Version: $Revision: 685926 $
-# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Ostatnie poprawki przed 2.0 Jacek Stolarczyk <jstolarz@kde.org>
 # Jacek Stolarczyk <jstolarz@kde.org>, 2001.
 # Piotr Roszatycki <dexter@debian.org>, 1997-2000.
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:40+0000\n"
-"PO-Revision-Date: 2025-11-01 10:37+0100\n"
+"PO-Revision-Date: 2026-03-21 07:20+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -662,9 +662,7 @@ msgstr ""
 "Na przykład, żeby użyć skrótu Ctrl+A, przytrzymaj klawisz Ctrl i naciśnij A."
 
 #: kkeysequencewidget.cpp:150
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Clear"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "Wyczyść"
@@ -674,9 +672,9 @@ msgstr "Wyczyść"
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
-msgstr[0] "Sprzeczność skrótu"
-msgstr[1] "Sprzeczności skrótów"
-msgstr[2] "Sprzeczności skrótów"
+msgstr[0] "Sprzeczny skrót"
+msgstr[1] "Sprzeczne skróty"
+msgstr[2] "Sprzeczne skróty"
 
 #: kkeysequencewidget.cpp:173
 #, kde-format
@@ -718,7 +716,7 @@ msgstr "Przypisz ponownie"
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
-msgstr "Sprzeczność skrótów"
+msgstr "Sprzeczne skróty"
 
 #: kkeysequencewidget.cpp:195
 #, kde-format
