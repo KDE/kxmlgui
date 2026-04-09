@@ -23,8 +23,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -72,10 +72,9 @@ msgid "About KDE"
 msgstr "O prostredí KDE"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
-#| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+#, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">%1</font><br />Verzia %2</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -201,11 +200,7 @@ msgid "License: %1"
 msgstr "Licencia: %1"
 
 #: kabstractaboutdialog_p.cpp:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
-#| "architecture, e.g. 'x86_64'"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -219,7 +214,7 @@ msgstr "KDE Frameworky"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Kolekcia knižníc vytvorených komunitou KDE na rozšírenie Qt."
 
 #: kabstractaboutdialog_p.cpp:128
 #, kde-format
@@ -230,11 +225,10 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Multiplatformový vývojový rámec pre aplikácie."
 
 #: kabstractaboutdialog_p.cpp:130
-#, fuzzy, kde-format
-#| msgid "%1 (built against %2)"
+#, kde-format
 msgid "Using %1 and built against %2"
 msgstr "%1 (zostavené pomocou %2)"
 
@@ -242,18 +236,16 @@ msgstr "%1 (zostavené pomocou %2)"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: kabstractaboutdialog_p.cpp:139
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Prichytiť"
 
 #: kabstractaboutdialog_p.cpp:142
-#, fuzzy, kde-format
-#| msgctxt "@option:check A filter on file type"
-#| msgid "Images"
+#, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
 msgstr "Obrázky"
@@ -262,17 +254,16 @@ msgstr "Obrázky"
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Metóda distribúcie."
 
 #: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Základná platforma."
 
 #: kabstractaboutdialog_p.cpp:176
-#, fuzzy, kde-format
-#| msgid "Visit component's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
 msgstr "Navštíviť domovskú stránku súčasti"
@@ -288,25 +279,19 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:199
-#, fuzzy, kde-format
-#| msgid "Copy selection to clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Skopírovať výber do schránky"
+msgstr "Kopírovať do schránky"
 
 #: kabstractaboutdialog_p.cpp:259
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
 msgstr "Navštíviť domovskú stránku prispievateľa"
 
 #: kabstractaboutdialog_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
@@ -316,19 +301,13 @@ msgstr ""
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Poslať e-mail prispievateľovi"
 
 #: kabstractaboutdialog_p.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
 msgstr ""
@@ -342,6 +321,8 @@ msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
 msgstr ""
+"Prosím, use %1 to report bugs.<br/>If you have questions or need help, "
+"please visit %2.<br/>"
 
 #: kabstractaboutdialog_p.cpp:324
 #, kde-format
@@ -412,11 +393,10 @@ msgid "no version set (programmer error)"
 msgstr "nenastavená verzia (chyba programátora)"
 
 #: kbugreport.cpp:122
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks"
+#, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "KDE Frameworky"
+msgstr "%1 with KDE Frameworks %2"
 
 #: kbugreport.cpp:130
 #, kde-format
@@ -588,16 +568,13 @@ msgid "Curr&ent actions:"
 msgstr "&Aktuálne akcie:"
 
 #: kedittoolbar.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "Zmeniť ikonu"
 
 #: kedittoolbar.cpp:1054
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "Zmena textu"
@@ -677,12 +654,10 @@ msgstr ""
 "Príklad pre Ctrl+A: držte klávesu Ctrl a stlačte A."
 
 #: kkeysequencewidget.cpp:150
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Clear"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Vyčistiť"
+msgstr "Vymazať"
 
 #: kkeysequencewidget.cpp:169
 #, kde-format
@@ -843,9 +818,7 @@ msgid "Add to Toolbar"
 msgstr "Pridať do panelu nástrojov"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
 msgstr "Nastaviť klávesovú skratku..."
@@ -877,7 +850,7 @@ msgstr "Aktuálna schéma:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nový…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -898,17 +871,13 @@ msgid "Save shortcuts to scheme"
 msgstr "Uložiť skratky do schémy"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
 msgstr "Exportovať schému..."
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
 msgstr "Importovať schému..."
@@ -1428,7 +1397,6 @@ msgstr "Hlavný panel nástrojov"
 #~ msgstr "<html><font size=\"5\">KDE - Buďte voľní!</font></html>"
 
 #, fuzzy
-#~| msgid "The <em>%1</em> windowing system"
 #~ msgid "Windowing system"
 #~ msgstr "Systém tvorby okien <em>%1</em>"
 
