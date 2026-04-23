@@ -30,6 +30,7 @@
 #ifdef WITH_QTDBUS
 #include <QDBusConnection>
 #endif
+#include <QApplication>
 #include <QDomDocument>
 #include <QEvent>
 #include <QList>
@@ -46,9 +47,6 @@
 #include <KStandardActions>
 #include <KToggleAction>
 
-#include <cctype>
-#include <cstdlib>
-
 /*
  * A helper function that takes a list of KActionCollection* and converts it
  * to KCommandBar::ActionGroup
@@ -57,31 +55,35 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
 {
     using ActionGroup = KCommandBar::ActionGroup;
 
-    QList<ActionGroup> actionList;
-    actionList.reserve(actionCollections.size());
+    QList<ActionGroup> actionList(actionCollections.size());
 
-    for (const auto collection : actionCollections) {
-        const QList<QAction *> collectionActions = collection->actions();
-        const QString componentName = collection->componentDisplayName();
+    std::function<void(QList<QAction *> actions, ActionGroup & ag)> addSubGroupActions;
+    addSubGroupActions = [&addSubGroupActions, &actionList, actionCollections](QList<QAction *> actions, ActionGroup &ag) {
+        // make sure to insert the action through their parent menu first
+        std::partition(actions.begin(), actions.end(), [](const QAction *action) {
+            return action->menu();
+        });
+        for (const auto action : actions) {
+            if (!action) {
+                continue;
+            }
+            if (action->isSeparator()) {
+                continue;
+            }
 
-        ActionGroup ag;
-        ag.name = componentName;
-        ag.actions.reserve(collection->count());
-        for (const auto action : collectionActions) {
-            /*
-             * If this action is a menu, fetch all its child actions
-             * and skip the menu action itself
-             */
             if (QMenu *menu = action->menu()) {
-                const QList<QAction *> menuActions = menu->actions();
+                QList<QAction *> menuActions = menu->actions();
+                const QString actionName = KLocalizedString::removeAcceleratorMarker(action->text());
 
                 ActionGroup menuActionGroup;
-                menuActionGroup.name = KLocalizedString::removeAcceleratorMarker(action->text());
-                menuActionGroup.actions.reserve(menuActions.size());
-                for (const auto mAct : menuActions) {
-                    if (mAct) {
-                        menuActionGroup.actions.append(mAct);
-                    }
+                menuActionGroup.name = ag.name.isEmpty() ? actionName : ag.name + u" > " + actionName;
+                menuActionGroup.actions.reserve(actions.size());
+
+                addSubGroupActions(menuActions, menuActionGroup);
+
+                if (!menuActionGroup.actions.isEmpty()) {
+                    actionList.append(menuActionGroup);
+                    continue;
                 }
 
                 /*
@@ -89,17 +91,22 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
                  * add the menu to the list instead because it could
                  * be that the actions are created on demand i.e., aboutToShow()
                  */
-                if (!menuActions.isEmpty()) {
-                    actionList.append(menuActionGroup);
-                    continue;
+                if (!action->text().isEmpty()) {
+                    ag.actions.append(action);
                 }
-            }
-
-            if (action && !action->text().isEmpty()) {
+            } else if (!action->text().isEmpty()) {
                 ag.actions.append(action);
             }
         }
-        actionList.append(ag);
+    };
+
+    for (const auto collection : actionCollections) {
+        QList<QAction *> collectionActions = collection->actions();
+
+        ActionGroup ag;
+        ag.name = collection->componentDisplayName() != qApp->applicationDisplayName() ? collection->componentDisplayName() : QString();
+        ag.actions.reserve(collection->count());
+        addSubGroupActions(collectionActions, ag);
     }
     return actionList;
 }
