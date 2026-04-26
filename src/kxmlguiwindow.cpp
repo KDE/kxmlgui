@@ -73,26 +73,21 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
 
             if (QMenu *menu = action->menu()) {
                 QList<QAction *> menuActions = menu->actions();
+
+                if (menuActions.isEmpty()) {
+                    menu->aboutToShow();
+                }
                 const QString actionName = KLocalizedString::removeAcceleratorMarker(action->text());
 
                 ActionGroup menuActionGroup;
                 menuActionGroup.name = ag.name.isEmpty() ? actionName : ag.name + u" > " + actionName;
                 menuActionGroup.actions.reserve(actions.size());
 
-                addSubGroupActions(menuActions, menuActionGroup);
+                addSubGroupActions(menu->actions(), menuActionGroup);
 
                 if (!menuActionGroup.actions.isEmpty()) {
                     actionList.append(menuActionGroup);
                     continue;
-                }
-
-                /*
-                 * If there were no actions in the menu, we
-                 * add the menu to the list instead because it could
-                 * be that the actions are created on demand i.e., aboutToShow()
-                 */
-                if (!action->text().isEmpty()) {
-                    ag.actions.append(action);
                 }
             } else if (!action->text().isEmpty()) {
                 ag.actions.append(action);
