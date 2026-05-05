@@ -363,9 +363,12 @@ void KMainWindowPrivate::polish(KMainWindow *q)
         s = objname + s;
     }
     q->setObjectName(s);
-    if (!q->window() || q->window() == q) {
-        q->winId(); // workaround for setWindowRole() crashing, and set also window role, just in case TT
-        q->setWindowRole(s); // will keep insisting that object name suddenly should not be used for window role
+    if (!QCoreApplication::testAttribute(Qt::AA_DisableSessionManager)) {
+        // setting a windowRole only makes sense with sessionManagement, also avoids a crash (QTBUG-146567)
+        if (!q->window() || q->window() == q) {
+            q->winId(); // workaround for setWindowRole() crashing, and set also window role, just in case TT
+            q->setWindowRole(s); // will keep insisting that object name suddenly should not be used for window role
+        }
     }
 
     dbusName = QLatin1Char('/') + QCoreApplication::applicationName() + QLatin1Char('/');
