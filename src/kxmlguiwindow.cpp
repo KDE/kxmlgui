@@ -46,6 +46,7 @@
 #include <KSharedConfig>
 #include <KStandardActions>
 #include <KToggleAction>
+#include <KToolBarPopupAction>
 
 /*
  * A helper function that takes a list of KActionCollection* and converts it
@@ -71,7 +72,14 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
                 continue;
             }
 
-            if (QMenu *menu = action->menu()) {
+            QMenu *menu = action->menu();
+            if (!menu) {
+                auto popupAction = qobject_cast<KToolBarPopupAction *>(action);
+                if (popupAction) {
+                    menu = popupAction->popupMenu();
+                }
+            }
+            if (menu) {
                 QList<QAction *> menuActions = menu->actions();
 
                 if (menuActions.isEmpty()) {
