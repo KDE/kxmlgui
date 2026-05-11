@@ -102,6 +102,8 @@ static QList<KCommandBar::ActionGroup> actionCollectionToActionGroup(const std::
         ag.name = collection->componentDisplayName() != qApp->applicationDisplayName() ? collection->componentDisplayName() : QString();
         ag.actions.reserve(collection->count());
         addSubGroupActions(collectionActions, ag);
+
+        actionList.append(ag);
     }
     return actionList;
 }
