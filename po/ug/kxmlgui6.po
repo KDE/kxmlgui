@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-12 00:41+0000\n"
-"PO-Revision-Date: 2026-01-23 11:10-0500\n"
+"PO-Revision-Date: 2026-05-31 20:12-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -516,7 +516,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
-msgstr "قورال بالداق سەپلىمە"
+msgstr "قورال بالداق سەپلە"
 
 #: kedittoolbar.cpp:659
 #, kde-format
@@ -648,12 +648,10 @@ msgid ""
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 "توپچىنى چېكىپ، ئاندىن بۇ پىروگراممىغا تېزلەتمە كىرگۈزۈلىدۇ.\n"
-"مەسىلەن، Ctrl+a يەنى Ctrl كۇنۇپكىسىنى بېسىپ تۇرۇپ ئاندىن a كۇنۇپكا بېسىلىدۇ."
+"مەسىلەن، Ctrl+A يەنى Ctrl كۇنۇپكىسىنى بېسىپ تۇرۇپ ئاندىن A كۇنۇپكا بېسىلىدۇ."
 
 #: kkeysequencewidget.cpp:150
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Clear"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "تازىلا"
@@ -705,7 +703,7 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>بىرىكمە كۇنۇپكا «%1» مەشغۇلات <b>%2</b> نىڭدا ئىشلىتىلگەن. باشقا بىرىكمە "
+"<qt>بىرىكمە كۇنۇپكا «%1» مەشغۇلات <b>%2</b> دا ئىشلىتىلگەن. باشقا بىرىكمە "
 "كۇنۇپكا تاللاڭ</qt>"
 
 #: kkeysequencewidget.cpp:275
@@ -759,9 +757,9 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"بىرىكمە كۇنۇپكا «%1» بىر قانچە پىروگراممىلاردا ئۆلچەملىك مەشغۇلات \"%2\" "
-"ئۈچۈن بېكىتىلگەن\n"
-"بۇنى راستلا ئومۇمىيەت تېزلەتمە سۈپىتىدە ئىشلىتەمسىز؟"
+"«%1» بىرىكمە كۇنۇپكا بەزى پىروگراممىدا «%2» ئۆلچەملىك مەشغۇلات ئۈچۈن "
+"بېكىتىلگەن.\n"
+"بۇنى راستتىنلا ئومۇمىيەت تېزلەتمە سۈپىتىدە ئىشلىتەمسىز؟"
 
 #: kkeysequencewidget.cpp:395
 #, kde-format
@@ -890,7 +888,7 @@ msgid ""
 "Do you really want to delete the scheme %1?\n"
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
-"راستلا %1 لايىھەنى ئۆچۈرەمسىز؟\n"
+"راستتىنلا %1 لايىھەنى ئۆچۈرەمسىز؟\n"
 "پۈتكۈل سىستېما مىقياسىدا ئىشلىتىلىدىغان لايىھە تېزلەتمىسى ئۆچۈرۈلىدۇ."
 
 #: kshortcutschemeseditor.cpp:187
@@ -1240,7 +1238,7 @@ msgstr "قورال بالدىقىنىڭ ئورنىنى قۇلۇپلا"
 #: ktoolbarhandler.cpp:93
 #, kde-format
 msgid "Toolbars Shown"
-msgstr "قورال بالدىقى كۆرۈندى"
+msgstr "كۆرسەتكەن قورال بالداق"
 
 #: ktooltiphelper.cpp:211
 #, kde-format
