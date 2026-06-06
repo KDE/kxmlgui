@@ -48,7 +48,7 @@ public:
     }
     inline void migrateStateDataIfNeeded(KConfigGroup &cg)
     {
-        if (m_stateConfigGroup.isValid()) {
+        if (cg.isValid() && m_stateConfigGroup.isValid()) {
             // The window sizes are written in KWindowSystem and RestorePositionForNextInstance is only temporarily written until
             // all instances of the app are closed
             cg.moveValuesTo({"State"}, m_stateConfigGroup);
