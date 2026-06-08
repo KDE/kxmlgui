@@ -21,9 +21,9 @@
 #include <QPainter>
 #include <QTreeWidgetItemIterator>
 
-KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, bool allowLetterShortcuts)
+KShortcutsEditorDelegate::KShortcutsEditorDelegate(QTreeWidget *parent, KKeySequenceRecorder::Patterns patterns)
     : KExtendableItemDelegate(parent)
-    , m_allowLetterShortcuts(allowLetterShortcuts)
+    , m_patterns(patterns)
 {
     Q_ASSERT(qobject_cast<QAbstractItemView *>(parent));
 
@@ -146,7 +146,7 @@ void KShortcutsEditorDelegate::itemActivated(const QModelIndex &_index)
             ShortcutEditWidget *editor = new ShortcutEditWidget(viewport,
                                                                 index.data(DefaultShortcutRole).value<QKeySequence>(),
                                                                 index.data(ShortcutRole).value<QKeySequence>(),
-                                                                m_allowLetterShortcuts);
+                                                                m_patterns);
             if (column == GlobalPrimary) {
                 QObject *action = index.data(ObjectRole).value<QObject *>();
                 editor->setAction(action);

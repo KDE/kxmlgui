@@ -285,9 +285,14 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
         setLocalColumnsHidden(true);
     }
 
+    KKeySequenceRecorder::Patterns patterns = KKeySequenceRecorder::Pattern::ModifierAndKey;
+    if (allowLetterShortcuts == KShortcutsEditor::LetterShortcutsAllowed) {
+        patterns |= KKeySequenceRecorder::Pattern::Key;
+    }
+
     // Create the Delegate. It is responsible for the KKeySeqeunceWidgets that
     // really change the shortcuts.
-    delegate = new KShortcutsEditorDelegate(ui.list, allowLetterShortcuts == KShortcutsEditor::LetterShortcutsAllowed);
+    delegate = new KShortcutsEditorDelegate(ui.list, patterns);
 
     ui.list->setItemDelegate(delegate);
     ui.list->setSelectionBehavior(QAbstractItemView::SelectItems);

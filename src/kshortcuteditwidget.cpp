@@ -43,7 +43,10 @@ void TabConnectedWidget::paintEvent(QPaintEvent *e)
     }
 }
 
-ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &defaultSeq, const QKeySequence &activeSeq, bool allowLetterShortcuts)
+ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport,
+                                       const QKeySequence &defaultSeq,
+                                       const QKeySequence &activeSeq,
+                                       KKeySequenceRecorder::Patterns patterns)
     : TabConnectedWidget(viewport)
     , m_defaultKeySequence(defaultSeq)
     , m_isUpdating(false)
@@ -61,7 +64,7 @@ ShortcutEditWidget::ShortcutEditWidget(QWidget *viewport, const QKeySequence &de
 
     m_customRadio = new QRadioButton(i18nc("@option:radio", "Custom:"), this);
     m_customEditor = new KKeySequenceWidget(this);
-    m_customEditor->setModifierlessAllowed(allowLetterShortcuts);
+    m_customEditor->setPatterns(patterns);
 
     layout->addWidget(m_defaultRadio, 0, 0);
     layout->addWidget(m_defaultLabel, 0, 1);
