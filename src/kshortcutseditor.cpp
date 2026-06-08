@@ -285,7 +285,7 @@ void KShortcutsEditorPrivate::initGUI(KShortcutsEditor::ActionTypes types, KShor
         setLocalColumnsHidden(true);
     }
 
-    KKeySequenceRecorder::Patterns patterns = KKeySequenceRecorder::Pattern::ModifierAndKey;
+    KKeySequenceRecorder::Patterns patterns = KKeySequenceRecorder::Pattern::Modifier | KKeySequenceRecorder::Pattern::ModifierAndKey;
     if (allowLetterShortcuts == KShortcutsEditor::LetterShortcutsAllowed) {
         patterns |= KKeySequenceRecorder::Pattern::Key;
     }
