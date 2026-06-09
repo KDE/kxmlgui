@@ -11,15 +11,16 @@
 # Fuminobu Takeyama <ftake@geeko.jp>, 2017.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2006, 2007, 2008, 2010, 2011, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:00+0000\n"
-"PO-Revision-Date: 2025-02-23 13:34+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-06-07 12:14+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: kaboutapplicationcomponentlistdelegate_p.cpp:51
 #, kde-format
@@ -156,6 +157,7 @@ msgstr "KDE について"
 msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 msgstr "<html><font size=\"5\">KDE - Be Free!</font></html>"
 
+# kirigami-addons/kirigami-addons6.po, kdeconnect-android/kdeconnect-android._static_.po, krita/krita.po に同じ内容の原文あり
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
 msgid ""
@@ -172,15 +174,16 @@ msgid ""
 msgstr ""
 "<html><b>KDE</b> はソフトウェアエンジニア、アーティスト、作家、翻訳者などの"
 "<a href=\"%1\">フリーソフトウェア</a>の開発に協力する人々による世界的なコミュ"
-"ニティです。KDE は Plasma デスクトップ環境や、数百ものアプリケーション、それ"
-"らをサポートするたくさんのライブラリを作り出しています。<br /><br />KDE は協"
-"力事業です: 一つの企業が方向性や製品をコントロールすることはありません。代わ"
-"りに、私達は世界最高級のフリーソフトウェアを作成するという共通のゴールを達成"
-"するために共に働いています。あなたを含む誰もが KDE に<a href=\"%2\">参加して"
-"貢献</a>することが歓迎されています。<br /><br /><a href=\"%3\">%3</a> を訪れ"
-"て KDE Community と私達が作り出したソフトウェアの詳細情報をご覧ください。</"
-"html>"
+"ニティです。KDE は Plasma デスクトップ環境や多くのアプリケーション、そしてそ"
+"れを支えるたくさんのライブラリを作り出しています。\n"
+"<br /><br />KDE はみなさんによる共同プロジェクトです。単一の企業が方向性や製"
+"品をコントロールすることはありません。代わりに、KDE のコミュニティは世界最高"
+"級のフリーソフトウェアを作成するという共通のゴールを達成するために共に働いて"
+"います。あなたを含め誰でも、自由に KDE に<a href=\"%2\">参加･貢献</a>すること"
+"ができます。<br /><br />KDE コミュニティとそのソフトウェアについては、<a "
+"href=\"%3\">%3</a> をご覧ください。</html>"
 
+# kirigami-addons/kirigami-addons6.po, kdeconnect-android/kdeconnect-android._static_.po, krita/krita.po に同じ内容の原文あり
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
 msgid ""
@@ -192,14 +195,13 @@ msgid ""
 "improvement then you are welcome to use the bug tracking system to register "
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
-"<html>ソフトウェアは常に進化しています。KDE チームも日々改良に努めています"
-"が、それにはユーザであるあなたの協力が必要です。何かがうまく動作しなかった"
-"り、改善できる個所に気が付かれたりしたときには、ぜひ私たちに教えてください。"
-"<br /><br />KDE にはバグ追跡システムがあります。ウェブサイト <a href=\"%1\">"
-"%1</a> または \"ヘルプ\" メニューの \"バグを報告...\" ダイアログを使って不具"
-"合を報告してください。<br /><br />改良のためのいいアイデアをお持ちの場合も、"
-"バグ追跡システムを使ってあなたの要望をどしどしお寄せください。この場合、重要"
-"度には \"Wishlist\" (要望) を指定してください。</html>"
+"<html>ソフトウェアの改善に終わりはありません。KDE チームも日々改良に努めてい"
+"ますが、それにはユーザーであるあなたの協力が必要です。不具合や改善点を見つけ"
+"た場合は、ぜひ教えてください。<br /><br />KDE にはバグ追跡システムがありま"
+"す。<a href=\"%1\">%1</a> または「ヘルプ」メニューの「バグを報告...」画面から"
+"不具合を報告してください。<br /><br />改良のためのいいアイデアをお持ちの場合"
+"も、バグ追跡システムを使ってご要望をどしどしお寄せください。このとき、重要度"
+"には \"Wishlist\" (要望) を指定してください。</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -212,13 +214,14 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>KDE チームに加わるには、必ずしもソフトウェア開発者である必要はありませ"
-"ん。プログラムのインターフェースを翻訳する各国語の翻訳チームに参加したり、グ"
-"ラフィック、テーマ、サウンドあるいはドキュメントの改善で貢献していただくこと"
-"もできます。さあ、あとはあなた次第です!<br /><br /><a href=\"%1\">%1</a> で参"
-"加できそうなプロジェクトを見つけてください。<br /><br />さらに詳しい情報やド"
-"キュメントが必要な場合は <a href=\"%2\">%2</a> をご覧ください。</html>"
+"<html>KDE チームに加わる際に、ソフトウェア開発者である必要はありません。プロ"
+"グラムの UI を翻訳する各言語の翻訳チームに参加したり、グラフィック、テーマ、"
+"サウンドやドキュメントの改善で貢献していただくこともできます。さあ、あとはあ"
+"なた次第です！<br /><br /><a href=\"%1\">%1</a> で参加できそうなプロジェクト"
+"を見つけてください。<br /><br />さらに詳しい情報やドキュメントについては <a "
+"href=\"%2\">%2</a> をご覧ください。</html>"
 
+# kirigami-addons/kirigami-addons6.po, kdeconnect-android/kdeconnect-android._static_.po, krita/krita.po に同じ内容の原文あり
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
 msgid ""
@@ -235,14 +238,16 @@ msgid ""
 "described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
 "advance for your support.</html>"
 msgstr ""
-"<html>KDE は無償で配布されていますが、開発には費用がかかります。<br /><br /"
-">KDE コミュニティはドイツの Tuebingen で法的に創設された KDE e.V. という非営"
-"利組織を形成しています。KDE e.V. は KDE プロジェクトの法的、経済的なことを"
-"扱っています。KDE e.V. については  <a href=\"%1\">%1</a> の情報をご覧くださ"
-"い。<br /><br />KDE チームは経済的な援助も必要としています。お金のほとんど"
-"は、メンバーその他の人々が KDE に貢献するために支払った費用の払い戻しに充てら"
-"れます。<a href=\"%2\">%2</a> に説明されている方法で KDE を経済的に援助してい"
-"ただくこともできます。<br /><br />将来のあなたのサポートに感謝します。</html>"
+"<html>KDE のソフトウェアは無償で配布されていますが、開発には費用がかかりま"
+"す。<br /><br />KDE コミュニティはドイツの Tuebingen で KDE e.V. という非営利"
+"組織を法的に設立しています。KDE e.V. は法的･財務的な仕事を、KDE プロジェクト"
+"を代表して担っています。KDE e.V. については <a href=\"%1\">%1</a> をご覧くだ"
+"さい。<br /><br />KDE チームは経済的な援助も必要としています。いただいた資金"
+"は、メンバーやその他の人々が KDE に貢献する際にかかった費用の払い戻しをはじ"
+"め、法的支援、カンファレンス、ミーティングの開催にも充てられます。KDE の活動"
+"を維持･発展させるため、ぜひ寄付による支援をご検討ください。寄付の方法について"
+"は <a href=\"%2\">%2</a> をご覧ください。<br /><br />皆さまのご協力を、よろし"
+"くお願いいたします。</html>"
 
 #: kaboutkdedialog_p.cpp:128
 #, kde-format
@@ -956,7 +961,7 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Taiki Komoda,Noboru Sinohara,Toyohiro Asukai,Kurose Shushi,Shinichi Tsunoda,"
-"Ryuichi Yamada"
+"Ryuichi Yamada,Mint"
 
 #: kmainwindow.cpp:278
 #, kde-format
@@ -964,7 +969,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "kom@kde.gr.jp,shinobo@leo.bekkoame.ne.jp,toyohiro@ksmplus.com,md81@bird."
-"email.ne.jp,tsuno@ngy.1st.ne.jp,ryuichi_ya220@outlook.jp"
+"email.ne.jp,tsuno@ngy.1st.ne.jp,ryuichi_ya220@outlook.jp,5602mint@gmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
