@@ -1,69 +1,69 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the kxmlgui package.
+#
+# SPDX-FileCopyrightText: 2025-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:41+0000\n"
-"PO-Revision-Date: 2024-04-22 15:58\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2026-06-04 11:27+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Taiwanese Hokkien <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kxmlgui/kxmlgui6.pot\n"
-"X-Crowdin-File-ID: 43627\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "关于 %1"
+msgstr "%1 ê Siāu-kài"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
-msgstr "关于"
+msgstr "Siāu-kài"
 
 #: kaboutapplicationdialog.cpp:94
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr "组件"
+msgstr "Guân-kiānn"
 
 #: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "作者"
+msgstr[0] "Tsok-tsiá"
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
-msgstr "特别鸣谢"
+msgstr "Kám-siā"
 
 #: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
-msgstr "翻译人员"
+msgstr "Huan-i̍k"
 
 #: kaboutkdedialog_p.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr "关于 KDE"
+msgstr "KDE ê siāu-kài"
 
 #: kaboutkdedialog_p.cpp:34
 #, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">KDE</font><br />为自由而生！</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Hiáng-siū tsū-iû!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -79,14 +79,17 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html><b>KDE</b> 是由一群致力于<a href=\"%1\">自由软件</a>事业的人们所组成的"
-"全球性协作社区。它的成员包括了来自世界各地的软件工程师、艺术工作者、文字工作"
-"者、翻译人员和其他创意人员。KDE 社区开发了 Plasma 桌面环境、数百款功能各异的"
-"应用软件、以及用于支持它们的大量程序库。<br /><br />KDE 是一项立足于协作精神"
-"的事业，它的运作和产出不受任何单一个人或者机构的控制。我们的共同目标是为全世"
-"界带来高品质的自由软件。不管您来自何方，我们都欢迎您加入 KDE 并做出<a href="
-"\"%2\">贡献</a>。<br /><br />请访问 <a href=\"%3\">%3</a> 来了解 KDE 社区和软"
-"件的更多信息。</html>"
+"<html><b>KDE</b> sī tsi̍t-ê sè-kài ê siā-kûn, pau-kuat nńg-thé kang-tîng-su, "
+"gē-su̍t-ka, tsok-ka, huan-i̍k-tsiá kah kî-thann tshòng-tsok-tsiá, tsò-hué phah-"
+"piànn khai-huat <a href=\"%1\">Tsū-iû Nńg-thé</a>. KDE tsò-ê ū Plasma toh-"
+"bīn-khuân-kíng, tsiânn-pah ê îng-ióng-tîng-sik, kah tsi-uān in ê tsiok-tsē "
+"nńg-thé hâm-sik-khòo.<br /><br />KDE sī ha̍p-tsok sū-gia̍p: bô tan-it ê lâng á-"
+"sī tsoo-tsit khòng-tsè KDE ài tsò siánn-mih sán-phín á-sī ài uì tó-uī khì. "
+"Gún tsò-hué phah-piànn lâi ta̍t-sîng tsè-tsō sè-kài siōng-hó ê Tsū-iû Nńg-thé "
+"ê kiōng-tông bo̍k-piau. Gún huan-gîng jīm-hô lâng <a href=\"%2\">ka-ji̍p kah "
+"kòng-hiàn</a> hōo KDE - tse tong-jiân mā pau-kuat lí!<br /><br />Nā ài "
+"khuànn koh-khah tsē ê KDE siā-kûn kap gún tsò ê nńg-thé ê tsu-sìn, tshiánn "
+"pài-hóng <a href=\"%3\">%3</a>.</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -99,12 +102,15 @@ msgid ""
 "improvement then you are welcome to use the bug tracking system to register "
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
-"<html>KDE 团队一直致力于改进软件的品质。为了做到这一点，倾听来自用户的反馈非"
-"常重要。如果遇到软件不能正常工作，请务必告诉我们。如果您有关于改进软件的想"
-"法，也请与我们分享。<br /><br />KDE 建有程序缺陷跟踪系统，请访问 <a href="
-"\"%1\">%1</a> 或者使用“帮助”菜单中的“报告缺陷”对话框填写报告。<br /><br />如"
-"果您想要提出改进建议而不是报告程序缺陷，请确保在表格的 Severity (严重程度) 选"
-"单中选择“Wishlist (需求)”。</html>"
+"<html>Nńg-thé íng-uán ū ē-sái koh-khah hó ê sóo-tsāi, KDE thuân-tuī mā tsún-"
+"pī hó-sè ē-sái kā KDE nńg-thé kái koh-khah hó. M̄-koh gún su-iàu iōng-tsiá, "
+"mā tio̍h-sī lín, lâi tī ū tshut būn-tê á-sī ū sóo-tsāi ē-sái kái-siān ê sî-"
+"tsūn kah gún kóng.<br /><br />KDE ū tsit-ê tui-tsong būn-tê ê hē-thóng (bug "
+"tracking system). Tshiánn pài-hóng<a href=\"%1\">%1</a> á-sī iōng \"Suat-bîng"
+"\" suán-tuann lāi-té ê \"Huê-pò Tshò-gōo\" tuì-uē-khing lâi huê-pò būn-tê."
+"<br /><br />Nā lí ū kái-siān nńg-thé ê kiàn-gī mā ē-sái iōng būn-tê tui-"
+"tsong hē-thóng lâi hōo gún tsai-iánn lí ê guān-bōng. Tsit-khuán sî-tsūn "
+"tshiánn iōng \"Wishlist\" tsit-ê severity suán-hāng.</html>"
 
 #: kaboutkdedialog_p.cpp:85
 #, kde-format
@@ -117,11 +123,13 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html>即使您不是软件开发人员，我们也欢迎您加入 KDE 的队伍！您可以加入各种语言"
-"的翻译团队来翻译软件的界面，您还可以制作图像、主题、音效，或者改进软件配套的"
-"文档……您的角色您来定！<br /><br />请访问 <a href=\"%1\">%1</a> 来物色您感兴趣"
-"的项目。<br /><br />如需了解更多相关信息和文档，请访问 <a href=\"%2\">%2</"
-"a> 。</html>"
+"<html>Lí m̄-bián tsò nńg-thé khai-huat-tsiá mā ē-sái tsò KDE thuân-tuī ê tsi̍t-"
+"pōo-hūn. Lí ē-sái ka-ji̍p huan-i̍k thuân-tuī lâi huan-i̍k tîng-sik kài-bīn; á-"
+"sī thê-kiong tôo-hîng siat-kè, tsú-tê, im-hāu, á-sī kái-siān bûn-kiānn. Tse "
+"lóng ē-sái ka-kī kuat-tīng!<br /><br />Tshiánn pài-hóng <a href=\"%1\">%1</"
+"a> lâi khuànn ē-sái tsham-ka siánn-mih tsuan-àn.<br /><br />Nā lí su-iàu koh-"
+"khah tsē tsu-sìn á-sī suat-bîng bûn-kiānn, mā ē-sái pài-hóng <a href=\"%2\">"
+"%2</a>.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -139,50 +147,52 @@ msgid ""
 "described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
 "advance for your support.</html>"
 msgstr ""
-"<html>KDE 开发的软件是自由且免费的，但是开发这些软件必须投入大量人力物力。"
-"<br /><br />为了支持软件的开发工作，KDE 社区成立了非营利机构 KDE e.V. ，它是"
-"在德国合法注册的协会组织。KDE e.V. 代表 KDE 社区进行法务和财务工作。如需了解 "
-"KDE e.V. 的更多信息，请访问 <a href=\"%1\">%1</a> 。<br /><br />KDE 的正常运"
-"作需要来自各方面的支持，其中资金支持也是必不可少的。我们的经费主要用于补贴团"
-"队成员和其他人员在为 KDE 进行贡献时的开支，其次则是满足法务支持和组织活动所需"
-"的开支。<br /><br />我们期待您能通过捐助资金的方式来支持 KDE 的运作和发展。如"
-"需了解具体的捐助途径，请访问 <a href=\"%2\">%2</a> 。<br /><br />您的慷慨支"
-"持，我们必当涌泉相报。</html>"
+"<html>KDE nńg-thé tsit-má sī bián-tsînn ê, í-āu mā lóng ē sī bián-tsînn ê, m̄-"
+"koh gún tsè-tsō tse nńg-thé m̄-sī bián khai-tsînn ê.<br /><br />Uī-tio̍h tsi-"
+"uān khai-huat kang-tsok, KDE siā-kûn tsoo-tsit--ah KDE e.V. tsit-ê tī Tik-"
+"kok huat-lu̍t sîng-li̍p ê hui-îng-lī-sū-gia̍p. KDE e.V. tī huat-lu̍t kap kim-"
+"iông sū-bū tíng-kuân tāi-piáu kui-ê KDE siā-kûn. KDE e.V. ê tsu-sìn tshiánn "
+"khuànn <a href=\"%1\">%1</a>.<br /><br />Kok-tsióng kòng-hiàn tuì KDE lóng "
+"tsin hó, pau-kuat kim-tsînn ê kòng-hiàn. Gún iōng kià-hù lâi ê tsînn lâi póo-"
+"tsōo sîng-uân kap kî-thann ê lâng kòng-hiàn ê sî-tsūn khai ê tsînn. Koh-khah "
+"tsē ê tsînn ē iōng tī huat-lu̍t tsi-uān kah tsoo-tsit huē-gī kap gián-thó-huē."
+"<br /><br />Gún huan-gîng lí iōng tī <a href=\"%2\">%2</a> suat-bîng ê hong-"
+"huat kā gún kià-hù.<br /><br />Sing to-siā lí ê tsi-uān.</html>"
 
 #: kaboutkdedialog_p.cpp:128
 #, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
-msgstr "关于(&A)"
+msgstr "S&iāu-kài"
 
 #: kaboutkdedialog_p.cpp:129
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "报告缺陷或需求(&R)"
+msgstr "&Huê-pò Tshò-gōo á-sī Guān-bōng"
 
 #: kaboutkdedialog_p.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "加入 KDE(&J)"
+msgstr "Ka-&ji̍p KDE"
 
 #: kaboutkdedialog_p.cpp:131
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
-msgstr "支持 KDE(&S)"
+msgstr "T&si-tshî KDE"
 
 #: kabstractaboutdialog_p.cpp:47
 #, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
-msgstr "版本 %1"
+msgstr "Pán-pún %1"
 
 #: kabstractaboutdialog_p.cpp:91
 #, kde-format
 msgid "License: %1"
-msgstr "许可证：%1"
+msgstr "Siū-khuân: %1"
 
 #: kabstractaboutdialog_p.cpp:118
 #, kde-format
@@ -193,13 +203,13 @@ msgstr "%1 (%2)"
 #: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
-msgstr "KDE 程序框架"
+msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "KDE 社区打造的 Qt 功能扩展程序库集合。"
+msgstr "KDE siā-kûn tsò-lâi khok-tshiong Qt ê hâm-sit-khòo tsi̍p."
 
 #: kabstractaboutdialog_p.cpp:128
 #, kde-format
@@ -210,12 +220,12 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "跨平台应用程序开发框架。"
+msgstr "Khuà-pîng-tâi ìng-iōng-tîng-sik khai-huat khing-kè."
 
 #: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr "使用 %1，用 %2 构建。"
+msgstr "Sú-iōng %1, tuì %2 pian-i̍k"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
@@ -239,19 +249,19 @@ msgstr "AppImage"
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr "分发方式。"
+msgstr "Huat-hîng hong-huat."
 
 #: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr "底层平台。"
+msgstr "Ki-tshóo pênn-tâi."
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "访问组件主页"
+msgstr "Pài-hóng guân-kiānn ê tsú-ia̍h"
 
 #: kabstractaboutdialog_p.cpp:177
 #, kde-format
@@ -260,20 +270,20 @@ msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"访问组件的主页\n"
+"Pài-hóng guân-kiānn ê tsú-ia̍h\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "复制到剪贴板"
+msgstr "Khóo-pih kàu Tsián-tah-phōo"
 
 #: kabstractaboutdialog_p.cpp:259
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "访问作者主页"
+msgstr "Pài-hóng tsok-tsiá ê tsú-ia̍h"
 
 #: kabstractaboutdialog_p.cpp:260
 #, kde-format
@@ -282,20 +292,20 @@ msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"访问作者主页\n"
+"Pài-hóng tsok-tsiá ê tsú-ia̍h\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "发送邮件给贡献者"
+msgstr "Hiòng kòng-hiàn-tsiá thuân email"
 
 #: kabstractaboutdialog_p.cpp:275
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr "发送邮件给贡献者：%1"
+msgstr "Hiòng kòng-hiàn-tsiá thuân email: %1"
 
 #: kabstractaboutdialog_p.cpp:314
 #, kde-format
@@ -303,13 +313,15 @@ msgctxt "Reference to website"
 msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
-msgstr "请使用 %1 报告程序缺陷。<br/>如果您有疑问或需要帮助，请访问 %2。"
+msgstr ""
+"Tshiánn iōng %1 lâi huê-pò tshò-gōo.<br/>Nā-sī ū būn-tê á-sī su-iàu láng kā "
+"lí tàu-sann-kāng, ē-sái pài-hóng %2.<br/>"
 
 #: kabstractaboutdialog_p.cpp:324
 #, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "请将程序缺陷报告到 %1。\n"
+msgstr "Tshò-gōo tshiánn tuì %1 huê-pò.\n"
 
 #: kactionconflictdetector_p.h:37
 #, kde-format
@@ -318,26 +330,27 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"按键序列“%1”与其他操作冲突。\n"
-"请使用“设置”菜单下的“配置键盘快捷键”对话框解决冲突。\n"
-"该按键序列目前不会触发任何操作。"
+"Khí tsoo-ha̍p '%1' sī bông-bông-ê. Tshiánn iōng 'Siat-tīng' suán-tuann lāi-té "
+"ê 'Siat-tīng Khí-puânn Khuài-sok-khí' suán-hāng lâi kái-kuat tsit-ê tshiong-"
+"tu̍t.\n"
+"Bē tshiok-huat tōng-tsok."
 
 #: kactionconflictdetector_p.h:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
-msgstr "检测到快捷键冲突"
+msgstr "Tsing-tshik--tio̍h ū bông-bông-ê khuài-sok-khí"
 
 #: kbugreport.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
-msgstr "提交缺陷报告"
+msgstr "The̍h-tshut Tshò-gōo Huê-pò"
 
 #: kbugreport.cpp:89
 #, kde-format
 msgid "Submit Bug Report"
-msgstr "提交缺陷报告"
+msgstr "The̍h-tshut Tshò-gōo Huê-pò"
 
 #: kbugreport.cpp:101
 #, kde-format
@@ -345,41 +358,44 @@ msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
 "please use the Report Bug menu item of the correct application"
 msgstr ""
-"您想要提交缺陷报告的目标程序 - 如果信息有误，请从正确的程序中打开“报告缺陷”对"
-"话框。"
+"Lí ài the̍h-tshut tshò-gōo huê-pò ê îng-ióng tîng-sik - tse nā-sī m̄-tio̍h, "
+"tshiánn uì tio̍h--ê tîng-sik ê suán-tuann khì iōng i ê Huê-pò Tshò-gōo ê suán-"
+"hāng"
 
 #: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
-msgstr "应用程序："
+msgstr "Ìng-iōng tîng-sik: "
 
 #: kbugreport.cpp:112
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
-msgstr "该程序的版本 - 请在发送缺陷报告前确定您运行的是最新版本。"
+msgstr ""
+"Tsit-ê ìng-iōng tîng-sik ê pán-pún - tshiánn sin khak-tīng bô kok khah sin ê "
+"pán-pún tsiah koh-lâi thuân bug report"
 
 #: kbugreport.cpp:113
 #, kde-format
 msgid "Version:"
-msgstr "版本："
+msgstr "Pán-pún: "
 
 #: kbugreport.cpp:118
 #, kde-format
 msgid "no version set (programmer error)"
-msgstr "未指定程序版本 (开发人员失误)"
+msgstr "bô siat-tīng pán-pún (tse-sī khai-huat-tsiá ê būn-tê)"
 
 #: kbugreport.cpp:122
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "%1，使用 KDE 程序框架 %2"
+msgstr "%1 (KDE Frameworks %2)"
 
 #: kbugreport.cpp:130
 #, kde-format
 msgid "OS:"
-msgstr "操作系统："
+msgstr "Tshau-tsok-hē-thóng:"
 
 #: kbugreport.cpp:135
 #, kde-format
@@ -413,9 +429,10 @@ msgid ""
 "where you will find a form to fill in. The information displayed above will "
 "be transferred to that server.</qt>"
 msgstr ""
-"<qt>要提交缺陷报告，请点击下面的按钮。这将打开网页浏览器并访问 KDE 程序缺陷管"
-"理网站：<a href=\"https://bugs.kde.org\">https://bugs.kde.org</a>。请在该网站"
-"填写报告缺陷的表格。此对话框上方显示的信息也会被转发到该网站。</qt>"
+"<qt>Ài thê-tshut tshò-gōo huê-pò, tshiánn tshi̍h ē-kha ê tshi̍h-liú. Tse ē tī "
+"liû-lám-khì pài-hóng <a href=\"https://bugs.kde.org\">https://bugs.kde.org</"
+"a>, lāi-té ū pió-tuann ē-sái su-ji̍p lí ê huê-pò (m̄-koh su-iàu iōng Ing-gí). "
+"Tíng-kuân hiān-sî ê tsu-liāu ē thuân khì hit-ê sù-ho̍k-khì.</qt>"
 
 #: kbugreport.cpp:168
 #, kde-format
@@ -423,102 +440,105 @@ msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
-"<qt>要提交缺陷报告，请点击下面的按钮。这将打开网页浏览器并访问 <a href="
-"\"%1\">%2</a> 网站。</qt>"
+"<qt>Ài thê-tshut tshò-gōo huê-pò, tshiánn tshi̍h ē-kha ê tshi̍h-liú. Tse ē tī "
+"liû-lám-khì pài-hóng <a href=\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:185
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
-msgstr "启动缺陷报告向导(&L)"
+msgstr "Kā Tshò-gōo Huê-pò Kang-kū Khí-tāng(&L)"
 
 #: kbugreport.cpp:187
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
-msgstr "提交缺陷报告(&S)"
+msgstr "The̍h-t&shut Tshò-gōo Huê-pò"
 
 #: kcheckaccelerators.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Dr. Klash' Accelerator Diagnosis"
-msgstr "Dr. Klash 快捷键分析工具"
+msgstr "Dr. Klash ê Ka-sok-khì Hun-sik"
 
 #: kcheckaccelerators.cpp:128
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable automatic checking"
-msgstr "禁用自动检查"
+msgstr "Tîng-iōng tsū-tōng kiám-tsa"
 
 #: kcheckaccelerators.cpp:174
 #, kde-format
 msgid "<h2>Accelerators changed</h2>"
-msgstr "<h2>快捷键已更改</h2>"
+msgstr "<h2>Ka-sok-khì ū piàn</h2>"
 
 #: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:182
 #, kde-format
 msgid "Old Text"
-msgstr "旧文本"
+msgstr "Kū ê bûn"
 
 #: kcheckaccelerators.cpp:178 kcheckaccelerators.cpp:187
 #, kde-format
 msgid "New Text"
-msgstr "新文本"
+msgstr "Sin ê bûn"
 
 #: kcheckaccelerators.cpp:182
 #, kde-format
 msgid "<h2>Accelerators removed</h2>"
-msgstr "<h2>快捷键已移除</h2>"
+msgstr "<h2>Ka-sok-khì hōo î-tû tiāu--ah</h2>"
 
 #: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
-msgstr "<h2>快捷键已添加 (仅作提示)</h2>"
+msgstr "<h2>Ka-sok-khì thiam-hó--ah</h2>"
 
 #: kedittoolbar.cpp:332
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
-msgstr "更改文本"
+msgstr "Kái-piàn bûn-jī"
 
 #: kedittoolbar.cpp:342
 #, kde-format
 msgid "Icon te&xt:"
-msgstr "图标文本(&X)："
+msgstr "Tôo-sī bûn-jī(&X):"
 
 #: kedittoolbar.cpp:347
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
-msgstr "当工具栏项目同时具有文本和图标时隐藏文本(&H)"
+msgstr ""
+"Kang-kū-lia̍t tī tôo-sī pinn-á &hiān-sî bûn-jī ê sî-tsūn bái hiān-sî bûn-jī"
 
 #: kedittoolbar.cpp:596
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
-msgstr "配置工具栏"
+msgstr "Siat-tīng Kang-khū-lia̍t"
 
 #: kedittoolbar.cpp:659
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
 "default? The changes will be applied immediately."
-msgstr "您要将此应用程序的全部工具栏重置为默认值吗？更改将会立即生效。"
+msgstr ""
+"Lí kám tsin-tsiànn ài kā tsit-ê ìng-iōng-tîng-sik ê sóo-ū ê kang-kū-lia̍t "
+"lóng-tsóng tîng-siat--tiāu? Tsit-kuá kái-piàn ē má-siōng ū-hāu."
 
 #: kedittoolbar.cpp:660
 #, kde-format
 msgid "Reset Toolbars"
-msgstr "重置工具栏"
+msgstr "Tîng-siat Kang-kū-lia̍t"
 
 #: kedittoolbar.cpp:661
 #, kde-format
 msgid "Reset"
-msgstr "重置"
+msgstr "Tîng-siat"
 
 #: kedittoolbar.cpp:980
 #, kde-format
 msgid "&Toolbar:"
-msgstr "工具栏(&T)："
+msgstr "Kang-khū lia̍t(&T):"
 
 #. i18n("&New"), this);
 #. new_toolbar->setPixmap(BarIcon("document-new", KIconLoader::SizeSmall));
@@ -530,39 +550,39 @@ msgstr "工具栏(&T)："
 #: kedittoolbar.cpp:996
 #, kde-format
 msgid "A&vailable actions:"
-msgstr "可用操作(&V)："
+msgstr "Ē-sái iōng ê tōng-tsok(&V):"
 
 #: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
 #, kde-format
 msgid "Filter"
-msgstr "过滤"
+msgstr "Kè-lī"
 
 #: kedittoolbar.cpp:1020
 #, kde-format
 msgid "Curr&ent actions:"
-msgstr "当前操作(&E)："
+msgstr "T&sit-má ê tōng-tsok:"
 
 #: kedittoolbar.cpp:1045
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "更改图标(&I)…"
+msgstr "Kái-p&iàn Tôo-sī…"
 
 #: kedittoolbar.cpp:1054
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "更改文本(&X)…"
+msgstr "Kái-piàn Bûn-jī(&X)…"
 
 #: kedittoolbar.cpp:1196
 #, kde-format
 msgid "--- separator ---"
-msgstr "--- 分隔线 ---"
+msgstr "--- hun-lī-khì ---"
 
 #: kedittoolbar.cpp:1197
 #, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- 空白占位符 ---"
+msgstr "--- khok-tshiong khong-kan ---"
 
 #: kedittoolbar.cpp:1219
 #, kde-format
@@ -574,17 +594,18 @@ msgstr "%1"
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
-msgstr "该元素将被一个嵌入组件的全部元素代替。"
+msgstr ""
+"Tsit-ê element ē tshú-tāi tsò tsi̍t-ê an-ji̍p component ê sóo-ū ê element."
 
 #: kedittoolbar.cpp:1249
 #, kde-format
 msgid "<Merge>"
-msgstr "<合并>"
+msgstr "<Ha̍p-pìng>"
 
 #: kedittoolbar.cpp:1251
 #, kde-format
 msgid "<Merge %1>"
-msgstr "<合并 %1>"
+msgstr "<Ha̍p-pìng %1>"
 
 #: kedittoolbar.cpp:1261
 #, kde-format
@@ -592,12 +613,13 @@ msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
-"这是一个动态的操作列表。您可以移动它，但如果您移除了它，您将无法重新添加它。"
+"Tsit-ê tōng-tsok tuann sī tōng-thài king-sin ê. Tōng-tsok ē-sái suá-uī, m̄-"
+"koh nā-sī î-tû ē suá bô-huat-tōo koh kā i thiam li̍p-lâi."
 
 #: kedittoolbar.cpp:1262
 #, kde-format
 msgid "ActionList: %1"
-msgstr "操作列表：%1"
+msgstr "Tōng-tsok Tuann: %1"
 
 #: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
 #, kde-format
@@ -608,13 +630,13 @@ msgstr "%1"
 #: kedittoolbar.cpp:1616
 #, kde-format
 msgid "Change Icon"
-msgstr "更改图标"
+msgstr "Kái-piàn Tôo-sī"
 
 #. i18n: ectx: Menu (help)
 #: khelpmenu.cpp:167 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
-msgstr "帮助(&H)"
+msgstr "Suat-bîng(&H)"
 
 #: kkeysequencewidget.cpp:146
 #, kde-format
@@ -623,26 +645,27 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"单击此按钮，然后按下您想在软件中使用的快捷键。\n"
-"例如：Ctrl+A 就是按住 Ctrl 键不放并按下 A。"
+"Tshi̍h tsit-ê liú, jiân-āu tshin-tshiūnn tī he tîng-sik lāi-té kāng-khuán su-"
+"ji̍p khuài-sok-khí.\n"
+"Lē: uì Ctrl+A, tshi̍h-leh Ctrl khì, jiân-āu tshi̍h A."
 
 #: kkeysequencewidget.cpp:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "清除"
+msgstr "Tshing-tû"
 
 #: kkeysequencewidget.cpp:169
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
 msgid_plural "Shortcut Conflicts"
-msgstr[0] "快捷键冲突"
+msgstr[0] "Khuài-sok-khí Tshiong-tu̍t"
 
 #: kkeysequencewidget.cpp:173
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
-msgstr "“%2”操作的快捷键“%1”\n"
+msgstr "Tōng-tsok '%2' ê Khuài-sok-khí '%1'\n"
 
 #: kkeysequencewidget.cpp:178
 #, kde-format
@@ -656,8 +679,8 @@ msgid_plural ""
 "Do you want to assign an empty shortcut to these actions?\n"
 "%3"
 msgstr[0] ""
-"快捷键“%2”已被下列操作占用。\n"
-"您想要重新分配这些快捷键吗？\n"
+"\"%2\" khuài-sok-khí kap tsia-ê khuài-sok-khí ū tshiong-tu̍t.\n"
+"Lí kám ài kā tsia-ê tōng-tsok kái tsí-phài khàng-pe̍h ê khuài-sok-khí?\n"
 "%3"
 
 #: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
@@ -665,13 +688,13 @@ msgstr[0] ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "重新分配"
+msgstr "Tîng tsí-phài"
 
 #: kkeysequencewidget.cpp:193
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
-msgstr "快捷键冲突"
+msgstr "Khuài-sok-khí tshiong-tu̍t"
 
 #: kkeysequencewidget.cpp:195
 #, kde-format
@@ -679,13 +702,13 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>按键/按键组合“%1”已被<b>%2</b>操作占用。<br>请选用其他按键/按键组合。</"
-"qt>"
+"<qt>'%1' ê khí tsoo-ha̍p í-king hōo <b>%2</b> tōng-tsok iōng--ah.<br>Tshiánn "
+"suán līng-guā tsi̍t-ê.</qt>"
 
 #: kkeysequencewidget.cpp:275
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "程序“%2”的快捷键“%1”，分配给 %3 操作\n"
+msgstr "Ìng-iōng-tîng-sik '%2' ê Tōng-tsok '%3' ê Khuài-sok-khí '%1'\n"
 
 #: kkeysequencewidget.cpp:284
 #, kde-format
@@ -695,19 +718,19 @@ msgctxt ""
 msgid "The shortcut '%2' conflicts with the following key combination:\n"
 msgid_plural ""
 "The shortcut '%2' conflicts with the following key combinations:\n"
-msgstr[0] "快捷键“%2”和下述按键/按键组合存在冲突：\n"
+msgstr[0] "Khuài-sok-khí '%2' kap tsia-ê khí tsoo-ha̍p ū tshiong-tu̍t:\n"
 
 #: kkeysequencewidget.cpp:291
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
 msgid_plural "Conflict with Registered Global Shortcuts"
-msgstr[0] "与已注册的全局快捷键冲突"
+msgstr[0] "Kā ū Tsù-tsheh ê Tsuân-i̍k Khuài-sok-khí ū Tshiong-tu̍t"
 
 #: kkeysequencewidget.cpp:304
 #, kde-format
 msgid "Reserved Shortcut"
-msgstr "系统保留的快捷键"
+msgstr "Hōo Pó-liû ê Khuài-sok-khí"
 
 #: kkeysequencewidget.cpp:306
 #, kde-format
@@ -716,14 +739,15 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"F12 在 Windows 系统中是一个保留按键，无法被用作全局快捷键。\n"
-"请另选一个按键/按键组合。"
+"F12 khí tī Windows í-king hōo pó-liû--ah, bô-huat-tōo iōng tsò tsuân-i̍k "
+"khuài-sok-khí.\n"
+"Tshiánn suán pa̍t-ê khí."
 
 #: kkeysequencewidget.cpp:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "与标准应用程序快捷键冲突"
+msgstr "Kap piau-tsún ê ìng-iōng-tîng-sik khuài-sok-khí ū tshiong-tu̍t"
 
 #: kkeysequencewidget.cpp:351
 #, kde-format
@@ -732,129 +756,130 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"按键/按键组合“%1”已被其他程序的标准操作“%2”占用。\n"
-"您还要将它用作全局快捷键吗？"
+"'%1' khí tsoo-ha̍p mā uì tsi̍t-kuá îng-ióng-tîng-sik iōng ê piau-tsún tōng-"
+"tsok \"%2\" sú-iōng.\n"
+"Lí kám tsin-tsiànn ài kā i tòng-tsò tsuân-i̍k khuài-sok-khí lâi iōng?"
 
 #: kkeysequencewidget.cpp:395
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr "输入"
+msgstr "Su-ji̍p"
 
 #: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:54
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr "无"
+msgstr "Bô"
 
 #: klicensedialog_p.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
-msgstr "许可证协议"
+msgstr "Siū-khuân-tiâu-khuán"
 
 #: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, Feng Chao, Guo Yunhe, Tyson Tan"
+msgstr "Kisaragi Hiu"
 
 #: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org, chaofeng111@gmail.com, i@guoyunhe.me, tds00@qq.com"
+msgstr "mail@kisaragi-hiu.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
 msgid "Add to Toolbar"
-msgstr "添加到工具栏"
+msgstr "Ka kàu Kang-kū-lia̍t"
 
 #: kmenumenuhandler_p.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "配置快捷键…"
+msgstr "Siat-tīng Khuài-sok-khí…"
 
 #: kshortcuteditwidget.cpp:58
 #, kde-format
 msgctxt "@option:radio"
 msgid "Default:"
-msgstr "默认："
+msgstr "Ū-siat:"
 
 #: kshortcuteditwidget.cpp:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Custom:"
-msgstr "自定义："
+msgstr "Tsū-tīng:"
 
 #: kshortcutschemeseditor.cpp:32
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
-msgstr "快捷键方案"
+msgstr "Khuài-sok-khí hong-àn"
 
 #: kshortcutschemeseditor.cpp:37
 #, kde-format
 msgid "Current scheme:"
-msgstr "当前方案："
+msgstr "Tsit-má ê hong-àn:"
 
 #: kshortcutschemeseditor.cpp:47
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr "新建…"
+msgstr "Kiàn-li̍p…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete"
-msgstr "删除"
+msgstr "Thâi-tiāu"
 
 #: kshortcutschemeseditor.cpp:53
 #, kde-format
 msgctxt "@action:button"
 msgid "More Actions"
-msgstr "更多操作"
+msgstr "Khah-tsè tōng-tsok"
 
 #: kshortcutschemeseditor.cpp:58
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "保存快捷键方案"
+msgstr "Kā khuài-sok-khí tû-tsûn kàu hong-àn"
 
 #: kshortcutschemeseditor.cpp:62
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "导出方案…"
+msgstr "Huē-tshut Hong-àn…"
 
 #: kshortcutschemeseditor.cpp:66
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "导入方案…"
+msgstr "Huē-ji̍p Hong-àn…"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
-msgstr "新方案名称"
+msgstr "Sin Hong-àn ê Miâ"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgid "Name for new scheme:"
-msgstr "新建方案名称："
+msgstr "Sin hong-àn ê miâ:"
 
 #: kshortcutschemeseditor.cpp:115
 #, kde-format
 msgid "New Scheme"
-msgstr "新快捷键方案"
+msgstr "Sin Hong-àn"
 
 #: kshortcutschemeseditor.cpp:121
 #, kde-format
 msgid "A scheme with this name already exists."
-msgstr "已存在同名快捷键方案。"
+msgstr "Í-king ū pa̍t-ê kiò-tsò tsit-ê miâ ê hong-àn--ah."
 
 #: kshortcutschemeseditor.cpp:151
 #, kde-format
@@ -862,53 +887,55 @@ msgid ""
 "Do you really want to delete the scheme %1?\n"
 "Note that this will not remove any system wide shortcut schemes."
 msgstr ""
-"您要删除快捷键方案 %1 吗？\n"
-"提示：此操作不会删除系统全局的快捷键方案。"
+"Lí kám tsin-tsiànn ài thâi-tiāu %1 tsit-ê hong-àn?\n"
+"Tshiánn tsù-ì, tse buē thâi-tiāu jīm-hô hē-thóng ê khuài-sok-khí hong-àn."
 
 #: kshortcutschemeseditor.cpp:187
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
-msgstr "导出快捷键"
+msgstr "Huē-tshut Khuài-sok-khí"
 
 #: kshortcutschemeseditor.cpp:187 kshortcutschemeseditor.cpp:202
 #, kde-format
 msgid "Shortcuts (*.shortcuts)"
-msgstr "快捷键方案文件 (*.shortcuts)"
+msgstr "Khuài-sok-khí (*.shortcuts)"
 
 #: kshortcutschemeseditor.cpp:202
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
-msgstr "导入快捷键"
+msgstr "Huē-ji̍p Khuài-sok-khí"
 
 #: kshortcutschemeseditor.cpp:213
 #, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "快捷键方案已保存。"
+msgstr "Sîng-kong tû-tsûn khuài-sok-khí hong-àn."
 
 #: kshortcutschemeseditor.cpp:216
 #, kde-format
 msgid "Error saving the shortcut scheme."
-msgstr "保存快捷键方案出错。"
+msgstr "Tû-tsûn khuài-sok-khí hong-àn ê sî-tsūn huat-sing tshò-ngōo."
 
 #: kshortcutsdialog.cpp:70
 #, kde-format
 msgid ""
 "The current shortcut scheme is modified. Save before switching to the new "
 "one?"
-msgstr "当前快捷键方案已被修改，要在切换到新方案之前保存它吗？"
+msgstr ""
+"Tsit-má ê khuài-sok-khí hong-àn í-king hō kái-piàn kuè--ah. Kám ài tī tshiat-"
+"uānn kàu sin-ê khuài-sok-khí hong-àn tsìn-tsîng sing tû-tsûn?"
 
 #: kshortcutsdialog.cpp:124
 #, kde-format
 msgid "Manage &Schemes"
-msgstr "管理方案(&S)"
+msgstr "Kuán-lí Hong-àn(&S)"
 
 #: kshortcutsdialog.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "配置键盘快捷键"
+msgstr "Siat-tīng Khí-puânn Khuài-sok-khí"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -917,8 +944,8 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"输入操作名称 (如“复制”) 或者按键/按键组合 (如“Ctrl+C”)，可以对列表中的项目进"
-"行过滤。"
+"Tī tsia su-ji̍p khuài-sok-khí ê miâ (lē: Khóo-pih) á-sī khí tsoo-ha̍p (lē: Ctrl"
+"+C) lâi kā in tshiau-tshuē."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
@@ -928,93 +955,93 @@ msgid ""
 "(e.g. 'Copy') shown in the left column and keys or combination of keys (e.g. "
 "Ctrl+V) shown in the right column."
 msgstr ""
-"这是快捷键的绑定列表，它反映了左栏显示的操作 (例如“复制”) 和右栏显示的按键/按"
-"键组合 (例如“Ctrl+V”) 之间的关联情况。"
+"Tsia sī khuài-sok-khí ê pió, tò-pîn sī tōng-tsok (lē: 'Khóo-pih'), tsiànn-"
+"pîn sī khí á-sī khí ê tsoo-ha̍p (lē: Ctrl+V)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
 #, kde-format
 msgid "Action"
-msgstr "操作"
+msgstr "Tōng-tsok"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:38
 #, kde-format
 msgid "Shortcut"
-msgstr "快捷键"
+msgstr "Khuài-sok-khí"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:43
 #, kde-format
 msgid "Alternate"
-msgstr "备选"
+msgstr "Tāi-thè"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:48
 #, kde-format
 msgid "Global"
-msgstr "全局"
+msgstr "Tsuân-i̍k"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:53
 #, kde-format
 msgid "Global Alternate"
-msgstr "全局备选"
+msgstr "Tsuân-i̍k Tāi-thè"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:58
 #, kde-format
 msgid "Mouse Button Gesture"
-msgstr "鼠标按键手势"
+msgstr "Ku̍t-tshí Tshi̍h-liú Tshiú-sè"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:63
 #, kde-format
 msgid "Mouse Shape Gesture"
-msgstr "鼠标形状手势"
+msgstr "Ku̍t-tshí Hîng-tsōng Tshiú-sè"
 
 #: kshortcutseditor.cpp:526
 #, kde-format
 msgctxt "header for an applications shortcut list"
 msgid "Shortcuts for %1"
-msgstr "%1 的快捷键"
+msgstr "%1 ê khuài-sok-khí"
 
 #. i18n: ectx: property (text), widget (QLabel, priLabel)
 #: kshortcutseditor.cpp:546 kshortcutwidget.ui:22
 #, kde-format
 msgid "Main:"
-msgstr "首选："
+msgstr "Tsú-iàu:"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
 #: kshortcutseditor.cpp:547 kshortcutwidget.ui:52
 #, kde-format
 msgid "Alternate:"
-msgstr "备选："
+msgstr "Tāi-thè:"
 
 #: kshortcutseditor.cpp:548
 #, kde-format
 msgid "Global:"
-msgstr "全局："
+msgstr "Tsuân-i̍k:"
 
 #: kshortcutseditor.cpp:549
 #, kde-format
 msgid "Global alternate:"
-msgstr "全局备选："
+msgstr "Tsuân-i̍k tāi-thè:"
 
 #: kshortcutseditor.cpp:565
 #, kde-format
 msgid "Action Name"
-msgstr "操作名称"
+msgstr "Tōng-tsok Miâ"
 
 #: kshortcutseditor.cpp:569
 #, kde-format
 msgid "Shortcuts"
-msgstr "快捷键"
+msgstr "Khuài-sok-khí"
 
 #: kshortcutseditor.cpp:573
 #, kde-format
 msgid "Description"
-msgstr "描述"
+msgstr "Suat-bîng"
 
 #: kshortcutseditoritem.cpp:33
 #, kde-format
@@ -1026,18 +1053,18 @@ msgstr "%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
-msgstr "配置语言"
+msgstr "Siat-tīng Gí-giân"
 
 #: kswitchlanguagedialog_p.cpp:141
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
-msgstr "请选择此应用程序使用的语言："
+msgstr "Tshiánn suán tsit-ê ìng-iōng-tîng-sik ài iōng ê gí-giân:"
 
 #: kswitchlanguagedialog_p.cpp:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
-msgstr "添加备选语言"
+msgstr "Ke Pī-iōng Gí-giân"
 
 #: kswitchlanguagedialog_p.cpp:169
 #, kde-format
@@ -1045,41 +1072,43 @@ msgctxt "@info:tooltip"
 msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
-msgstr "添加备选语言。它们将在其他语言缺失翻译时作为补充。"
+msgstr ""
+"Ke līng-guā tsi̍t-ê tī kî-thann gí-giân bô ē-sái iōng ê huan-i̍k ê sî-tsūn ài "
+"lâi iōng ê gí-giân."
 
 #: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
 #, kde-format
 msgid ""
 "The language for this application has been changed. The change will take "
 "effect the next time the application is started."
-msgstr "此应用程序的语言已经更改。重新启动软件即可生效。"
+msgstr "Tsit-ê ìng-iōng-tîng-sik ê gí-giân"
 
 #: kswitchlanguagedialog_p.cpp:262
 #, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
-msgstr "应用程序的语言已经更改"
+msgstr "Ìng-iōng-tîng-sik ê gí-giân piàn--ah"
 
 #: kswitchlanguagedialog_p.cpp:283
 #, kde-format
 msgid "Application Language Changed"
-msgstr "应用程序的语言已经更改"
+msgstr "Ìng-iōng-tîng-sik ê gí-giân piàn--ah"
 
 #: kswitchlanguagedialog_p.cpp:368
 #, kde-format
 msgid "Primary language:"
-msgstr "首选语言："
+msgstr "Tsú-iàu gí-giân:"
 
 #: kswitchlanguagedialog_p.cpp:368
 #, kde-format
 msgid "Fallback language:"
-msgstr "备选语言："
+msgstr "Pī-iōng gí-giân:"
 
 #: kswitchlanguagedialog_p.cpp:383
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr "移除"
+msgstr "Î-tû"
 
 #: kswitchlanguagedialog_p.cpp:389
 #, kde-format
@@ -1087,7 +1116,9 @@ msgctxt "@info:tooltip"
 msgid ""
 "This is the main application language which will be used first, before any "
 "other languages."
-msgstr "这是此应用程序的首选语言。它会优先使用此语言的翻译。"
+msgstr ""
+"Tse sī ìng-iōng-tîng-sik tsú-iàu ê gí-giân, nā-sī tsi̍t-ê sû tī tsit-ê gí-"
+"giân bô ê sî-tsūn tsiah-ē tshì kî-thann ê gí-giân."
 
 #: kswitchlanguagedialog_p.cpp:390
 #, kde-format
@@ -1095,119 +1126,121 @@ msgctxt "@info:tooltip"
 msgid ""
 "This is the language which will be used if any previous languages do not "
 "contain a proper translation."
-msgstr "如果上一种语言中缺少合适的翻译，则使用此语言中的翻译。"
+msgstr ""
+"Tse sī tī tíng-kuân ê gí-giân lóng bô ē-sái iōng ê huan-i̍k ê sî-tsūn tsiah-ē "
+"tshì ê pī-iōng gí-giân."
 
 #: ktoolbar.cpp:309 ktoolbar.cpp:316
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
-msgstr "工具栏设置"
+msgstr "Kang-kū-lia̍t Siat-tīng"
 
 #: ktoolbar.cpp:311
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
-msgstr "显示文本"
+msgstr "Hián-sī Bûn-jī"
 
 #: ktoolbar.cpp:318
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
-msgstr "位置"
+msgstr "Hong-hiòng"
 
 #: ktoolbar.cpp:320
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
-msgstr "上方"
+msgstr "Tíng-kuân"
 
 #: ktoolbar.cpp:324
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
-msgstr "左方"
+msgstr "Tò-pîng"
 
 #: ktoolbar.cpp:327
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
-msgstr "右方"
+msgstr "Tsiànn-pîng"
 
 #: ktoolbar.cpp:330
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
-msgstr "下方"
+msgstr "Ē-kha"
 
 #: ktoolbar.cpp:341
 #, kde-format
 msgid "Text Position"
-msgstr "文本位置"
+msgstr "Bûn-jī Uī-tì"
 
 #: ktoolbar.cpp:343
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
-msgstr "仅图标"
+msgstr "Kan-na Tôo-sī"
 
 #: ktoolbar.cpp:346
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
-msgstr "仅文本"
+msgstr "Kan-na Bûn-jī"
 
 #: ktoolbar.cpp:349
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
-msgstr "文本在图标一侧"
+msgstr "Bûn-jī Tī Tôo-sī Pinn-á"
 
 #: ktoolbar.cpp:352
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
-msgstr "文本在图标下方"
+msgstr "Bûn-jī Tī Tôo-sī Ē-kha"
 
 #: ktoolbar.cpp:363
 #, kde-format
 msgid "Icon Size"
-msgstr "图标大小"
+msgstr "Tôo-sī Tuā-sè"
 
 #: ktoolbar.cpp:365
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
-msgstr "默认"
+msgstr "Ū-siat"
 
 #: ktoolbar.cpp:385 ktoolbar.cpp:409
 #, kde-format
 msgid "Small (%1x%2)"
-msgstr "小 (%1x%2)"
+msgstr "Sè (%1x%2)"
 
 #: ktoolbar.cpp:387 ktoolbar.cpp:411
 #, kde-format
 msgid "Medium (%1x%2)"
-msgstr "中 (%1x%2)"
+msgstr "Tiong (%1x%2)"
 
 #: ktoolbar.cpp:389 ktoolbar.cpp:413
 #, kde-format
 msgid "Large (%1x%2)"
-msgstr "大 (%1x%2)"
+msgstr "Tuā (%1x%2)"
 
 #: ktoolbar.cpp:391 ktoolbar.cpp:415
 #, kde-format
 msgid "Huge (%1x%2)"
-msgstr "超大 (%1x%2)"
+msgstr "Tsiok-tuā (%1x%2)"
 
 #: ktoolbar.cpp:441
 #, kde-format
 msgid "Lock Toolbar Positions"
-msgstr "锁定工具栏位置"
+msgstr "Só-tīng Kang-kū-lia̍t Uī-tì"
 
 #: ktoolbarhandler.cpp:93
 #, kde-format
 msgid "Toolbars Shown"
-msgstr "显示工具栏"
+msgstr "Hián-sī ê Kang-kū-lia̍t"
 
 #: ktooltiphelper.cpp:211
 #, kde-format
@@ -1222,7 +1255,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
-"<small><font color=\"%1\">按 <b>Shift</b> 获取更多信息。</font></small>"
+"<small><font color=\"%1\">Tshi̍h <b>Shift</b> lâi khuànn khah-tsè tsu-liāu.</"
+"font></small>"
 
 #: ktooltiphelper.cpp:295
 #, kde-format
@@ -1230,28 +1264,28 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
-"%1<br/><small><font color=\"%2\">按 <b>Shift</b> 获取更多信息。</font></"
-"small>"
+"%1<br/><small><font color=\"%2\">Tshi̍h <b>Shift</b> lâi khuànn khah-tsè.</"
+"font></small>"
 
 #: kundoactions.cpp:30
 #, kde-format
 msgid "Redo"
-msgstr "重做"
+msgstr "Tshú-siau ho̍k-guân"
 
 #: kundoactions.cpp:49
 #, kde-format
 msgid "Undo"
-msgstr "撤销"
+msgstr "Ho̍k-guân"
 
 #: kxmlguibuilder.cpp:173 kxmlguibuilder.cpp:352
 #, kde-format
 msgid "No text"
-msgstr "无文本"
+msgstr "Bô bûn-jī"
 
 #: kxmlguiwindow.cpp:203
 #, kde-format
 msgid "Find Action…"
-msgstr "查找操作…"
+msgstr "Tshuē tōng-tsok…"
 
 #: kxmlguiwindow.cpp:573
 #, kde-format
@@ -1260,71 +1294,72 @@ msgid ""
 "is most probably a bug. Please report it in <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 msgstr ""
-"发现两项操作 (%1, %2) 试图使用同一个快捷键 (%3)。这很可能是程序缺陷造成的。请"
-"前往 <a href='https://bugs.kde.org'>bugs.kde.org</a> 网站进行报告。"
+"Ū nn̄g-ê tōng-tsok (%1, %2) beh iōng kâng tsi̍t-ê khuài-sok-khí (%3). Tse ing-"
+"kai sī tîng-sik ê būn-tê. Tshiánn khì <a href='https://bugs.kde.org'>bugs."
+"kde.org</a> huê-pò tsit-ê būn-tê"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
 msgid "Ambiguous Shortcuts"
-msgstr "快捷键冲突"
+msgstr "Bông-bông-ê Khuài-sok-khí"
 
 #. i18n: ectx: Menu (file)
 #: ui_standards.rc:5
 #, kde-format
 msgid "&File"
-msgstr "文件(&F)"
+msgstr "&Tóng-àn"
 
 #. i18n: ectx: Menu (game)
 #: ui_standards.rc:34
 #, kde-format
 msgid "&Game"
-msgstr "游戏(&G)"
+msgstr "&Iû-hì"
 
 #. i18n: ectx: Menu (edit)
 #: ui_standards.rc:61
 #, kde-format
 msgid "&Edit"
-msgstr "编辑(&E)"
+msgstr "&Pian-tsi̍p"
 
 #. i18n: ectx: Menu (move)
 #: ui_standards.rc:84
 #, kde-format
 msgctxt "@title:menu Game move"
 msgid "&Move"
-msgstr "移动(&M)"
+msgstr "Î-tōng(&M)"
 
 #. i18n: ectx: Menu (view)
 #: ui_standards.rc:102
 #, kde-format
 msgid "&View"
-msgstr "视图(&V)"
+msgstr "&Kiám-sī"
 
 #. i18n: ectx: Menu (go)
 #: ui_standards.rc:122
 #, kde-format
 msgid "&Go"
-msgstr "转到(&G)"
+msgstr "Tsiân-óng(&G)"
 
 #. i18n: ectx: Menu (bookmarks)
 #: ui_standards.rc:143
 #, kde-format
 msgid "&Bookmarks"
-msgstr "书签(&B)"
+msgstr "Su-tshiam(&B)"
 
 #. i18n: ectx: Menu (tools)
 #: ui_standards.rc:149
 #, kde-format
 msgid "&Tools"
-msgstr "工具(&T)"
+msgstr "K&e-si"
 
 #. i18n: ectx: Menu (settings)
 #: ui_standards.rc:153
 #, kde-format
 msgid "&Settings"
-msgstr "设置(&S)"
+msgstr "&Siat-tīng"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ui_standards.rc:195
 #, kde-format
 msgid "Main Toolbar"
-msgstr "主工具栏"
+msgstr "Tsú kang-kū-lia̍t"
