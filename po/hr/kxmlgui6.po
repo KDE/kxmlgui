@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:41+0000\n"
-"PO-Revision-Date: 2025-11-18 10:43+0100\n"
+"PO-Revision-Date: 2026-06-21 23:17+0200\n"
 "Last-Translator: Igor Dobrača <igor.dobraca@skole.hr>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
 "Language: hr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Bookmarks: 1601,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -658,12 +658,10 @@ msgstr ""
 "Primjer za Ctrl+A: držite tipku Ctrl i pritisnite A."
 
 #: kkeysequencewidget.cpp:150
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Clear"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear"
-msgstr "Izbriši"
+msgstr "Obriši"
 
 #: kkeysequencewidget.cpp:169
 #, kde-format
