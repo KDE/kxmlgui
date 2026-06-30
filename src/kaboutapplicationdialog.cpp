@@ -23,6 +23,7 @@
 // Qt
 #include <QApplication>
 #include <QLabel>
+#include <QScrollArea>
 #include <QTabWidget>
 #include <QVBoxLayout>
 
@@ -86,6 +87,39 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
                                              q);
 
     tabWidget->addTab(aboutWidget, i18nc("@title:tab", "About"));
+
+    if (!aboutData.plugins().isEmpty()) {
+        auto scrollArea = new QScrollArea();
+        auto plugins = new QWidget();
+        auto layout = new QVBoxLayout();
+        plugins->setLayout(layout);
+        bool first = true;
+        for (auto pluginMetaData : aboutData.plugins()) {
+            if (!first) {
+                QFrame *f = new QFrame();
+                f->setFrameStyle(QFrame::HLine);
+                layout->addWidget(f);
+            }
+            first = false;
+            QIcon pluginIcon;
+            if (pluginMetaData.programLogo().canConvert<QPixmap>()) {
+                pluginIcon = QIcon(pluginMetaData.programLogo().value<QPixmap>());
+            } else if (aboutData.programLogo().canConvert<QImage>()) {
+                pluginIcon = QIcon(QPixmap::fromImage(pluginMetaData.programLogo().value<QImage>()));
+            } else if (pluginMetaData.programLogo().canConvert<QIcon>()) {
+                pluginIcon = pluginMetaData.programLogo().value<QIcon>();
+            }
+            layout->addWidget(createTitleWidget(pluginIcon, pluginMetaData.displayName(), pluginMetaData.version(), plugins));
+            layout->addWidget(createAboutWidget(pluginMetaData.shortDescription(),
+                                                pluginMetaData.otherText(),
+                                                pluginMetaData.copyrightStatement(),
+                                                pluginMetaData.homepage(),
+                                                pluginMetaData.licenses(),
+                                                plugins));
+        }
+        scrollArea->setWidget(plugins);
+        tabWidget->addTab(scrollArea, i18nc("@title:tab", "Plugins"));
+    }
 
     // Components page
     if (!(opt & KAboutApplicationDialog::HideLibraries)) {
