@@ -680,6 +680,8 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
     Q_D(KMainWindow);
     // qDebug(200) << "KMainWindow::applyMainWindowSettings " << cg.name();
 
+    KConfigGroup stateConfig = d->getStateConfig();
+
     KConfigGroup cg = _cg;
     d->migrateStateDataIfNeeded(cg);
 
@@ -687,8 +689,6 @@ void KMainWindow::applyMainWindowSettings(const KConfigGroup &_cg)
 
     const bool oldLetDirtySettings = d->letDirtySettings;
     d->letDirtySettings = false;
-
-    KConfigGroup stateConfig = d->getStateConfig();
 
     if (!d->sizeApplied && (!window() || window() == this)) {
         winId(); // ensure there's a window created
