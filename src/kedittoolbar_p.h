@@ -57,6 +57,8 @@ protected:
 
     bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action) override;
 
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dragMoveEvent(QDragMoveEvent *event) override;
     // Skip internal dnd handling in QListWidget ---- how is one supposed to figure this out
     // without reading the QListWidget code !?
     void dropEvent(QDropEvent *ev) override

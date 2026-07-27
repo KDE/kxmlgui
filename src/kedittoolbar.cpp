@@ -18,6 +18,8 @@
 #include <QDialogButtonBox>
 #include <QDir>
 #include <QDomDocument>
+#include <QDragEnterEvent>
+#include <QDragMoveEvent>
 #include <QFile>
 #include <QGridLayout>
 #include <QLabel>
@@ -324,6 +326,25 @@ bool ToolBarListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::D
 ToolBarItem *ToolBarListWidget::currentItem() const
 {
     return static_cast<ToolBarItem *>(QListWidget::currentItem());
+}
+
+void ToolBarListWidget::dragEnterEvent(QDragEnterEvent *event)
+{
+    // no internal drag in inactive list
+    if (!m_activeList && (event->source() == this)) {
+        event->ignore();
+        return;
+    }
+    QListWidget::dragEnterEvent(event);
+}
+void ToolBarListWidget::dragMoveEvent(QDragMoveEvent *event)
+{
+    // no internal drag in inactive list
+    if (!m_activeList && (event->source() == this)) {
+        event->ignore();
+        return;
+    }
+    QListWidget::dragMoveEvent(event);
 }
 
 IconTextEditDialog::IconTextEditDialog(QWidget *parent)
