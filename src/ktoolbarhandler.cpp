@@ -192,7 +192,9 @@ void ToolBarHandler::Private::connectToActionContainer(QWidget *container)
         return;
     }
 
-    connect(popupMenu, &QMenu::aboutToShow, parent, &ToolBarHandler::setupActions);
+    // Unique, otherwise a duplicate connection is added on every rebuild, i.e. on
+    // every GUI client change (i.e. every tab switch in Konsole).
+    connect(popupMenu, &QMenu::aboutToShow, parent, &ToolBarHandler::setupActions, Qt::UniqueConnection);
 }
 
 ToolBarHandler::ToolBarHandler(KXmlGuiWindow *mainWindow)
