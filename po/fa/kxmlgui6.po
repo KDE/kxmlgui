@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:41+0000\n"
+"POT-Creation-Date: 2026-08-03 00:39+0000\n"
 "PO-Revision-Date: 2023-06-08 13:49+0330\n"
 "Last-Translator: MohammadSaleh Kamyab <mskf1383@envs.net>\n"
 "Language-Team: Persian <kde-i18n-doc@kde.org>\n"
@@ -528,30 +528,30 @@ msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>شتاب‌دهنده‌ها افزوده شدند (صرفاً محض اطلاع)</h2>"
 
 # Change Icon
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:353
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "تغییر متن"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:363
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "متن نقشک:"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:368
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&نهفتن متن هنگامی که نوار ابزار، متن را در کنار نقشک‌ها نمایش می‌دهد"
 
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:617
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "پیکربندی نوارهای ابزار"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:680
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -560,17 +560,17 @@ msgstr ""
 "آیا واقعاً می‌خواهید همه میله‌ابزارهای این کاربرد را به پیش‌فرضشان باز نشانید؟ "
 "تغییرات فوراً اعمال می‌شوند."
 
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:681
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "بازنشانی نوار ابزارها"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:682
 #, kde-format
 msgid "Reset"
 msgstr "بازنشانی"
 
-#: kedittoolbar.cpp:980
+#: kedittoolbar.cpp:1001
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&نوار ابزار:"
@@ -582,23 +582,23 @@ msgstr "&نوار ابزار:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:996
+#: kedittoolbar.cpp:1017
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "کنشهای &دسترس‌پذیر:"
 
-#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
+#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
 #, kde-format
 msgid "Filter"
 msgstr "پالایه"
 
-#: kedittoolbar.cpp:1020
+#: kedittoolbar.cpp:1041
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "کنشهای &جاری:"
 
 # Change Icon
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1066
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
@@ -606,7 +606,7 @@ msgid "Change &Icon…"
 msgstr "تغییر نقشک"
 
 # Change Icon
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1075
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Change Text"
@@ -614,41 +614,41 @@ msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "تغییر متن"
 
-#: kedittoolbar.cpp:1196
+#: kedittoolbar.cpp:1217
 #, kde-format
 msgid "--- separator ---"
 msgstr "---  جداساز ---"
 
-#: kedittoolbar.cpp:1197
+#: kedittoolbar.cpp:1218
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- فضای گسترده ---"
 
 # %1
-#: kedittoolbar.cpp:1219
+#: kedittoolbar.cpp:1240
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1247
+#: kedittoolbar.cpp:1268
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "این عنصر جایگزین عناصر مؤلفه نهفته خواهد شد."
 
 # <Merge>
-#: kedittoolbar.cpp:1249
+#: kedittoolbar.cpp:1270
 #, kde-format
 msgid "<Merge>"
 msgstr "<Merge>"
 
-#: kedittoolbar.cpp:1251
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid "<Merge %1>"
 msgstr ">ادغام %1<"
 
-#: kedittoolbar.cpp:1261
+#: kedittoolbar.cpp:1282
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -657,20 +657,20 @@ msgstr ""
 "این فهرست پویایی از کنشهاست. می‌توانید آن را حرکت دهید، ولی اگر آن را حذف "
 "کنید، قادر نیستید دوباره آن را اضافه کنید."
 
-#: kedittoolbar.cpp:1262
+#: kedittoolbar.cpp:1283
 #, kde-format
 msgid "ActionList: %1"
 msgstr "فهرست کنش: %1"
 
 # %1
-#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
+#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
 # Change Icon
-#: kedittoolbar.cpp:1616
+#: kedittoolbar.cpp:1637
 #, kde-format
 msgid "Change Icon"
 msgstr "تغییر نقشک"

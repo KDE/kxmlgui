@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:41+0000\n"
+"POT-Creation-Date: 2026-08-03 00:39+0000\n"
 "PO-Revision-Date: 2026-05-25 21:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -483,30 +483,30 @@ msgstr "<h2>가속기 삭제됨</h2>"
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>가속기 추가됨(정보를 위해서)</h2>"
 
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:353
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "텍스트 변경"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:363
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "아이콘 텍스트(&X):"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:368
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "도구 모음에서 텍스트를 아이콘 옆에 표시할 때 텍스트 숨기기(&H)"
 
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:617
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "도구 모음 설정"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:680
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -515,17 +515,17 @@ msgstr ""
 "이 앱의 도구 모음 설정을 기본값으로 초기화하시겠습니까? 이 변경은 즉시 적용됩"
 "니다."
 
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:681
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "도구 모음 초기화"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:682
 #, kde-format
 msgid "Reset"
 msgstr "초기화"
 
-#: kedittoolbar.cpp:980
+#: kedittoolbar.cpp:1001
 #, kde-format
 msgid "&Toolbar:"
 msgstr "도구 모음(&T):"
@@ -537,66 +537,66 @@ msgstr "도구 모음(&T):"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:996
+#: kedittoolbar.cpp:1017
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "사용 가능한 동작(&V):"
 
-#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
+#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
 #, kde-format
 msgid "Filter"
 msgstr "필터"
 
-#: kedittoolbar.cpp:1020
+#: kedittoolbar.cpp:1041
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "현재 동작(&E):"
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1066
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "아이콘 변경(&I)…"
 
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1075
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "텍스트 변경(&X)…"
 
-#: kedittoolbar.cpp:1196
+#: kedittoolbar.cpp:1217
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- 구분선 ---"
 
-#: kedittoolbar.cpp:1197
+#: kedittoolbar.cpp:1218
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- 확장 가능한 공백 ---"
 
-#: kedittoolbar.cpp:1219
+#: kedittoolbar.cpp:1240
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1|/|$[~stripAccel %1]"
 
-#: kedittoolbar.cpp:1247
+#: kedittoolbar.cpp:1268
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "이 원소는 내장된 구성 요소의 원소로 대체됩니다."
 
-#: kedittoolbar.cpp:1249
+#: kedittoolbar.cpp:1270
 #, kde-format
 msgid "<Merge>"
 msgstr "<합치기>"
 
-#: kedittoolbar.cpp:1251
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<%1 합치기>"
 
-#: kedittoolbar.cpp:1261
+#: kedittoolbar.cpp:1282
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -605,18 +605,18 @@ msgstr ""
 "이것은 동작의 동적인 목록입니다. 이 항목을 이동할 수는 있지만 삭제하면 다시 "
 "추가할 수는 없습니다."
 
-#: kedittoolbar.cpp:1262
+#: kedittoolbar.cpp:1283
 #, kde-format
 msgid "ActionList: %1"
 msgstr "동작 목록: %1"
 
-#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
+#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1|/|$[~stripAccel %1]"
 
-#: kedittoolbar.cpp:1616
+#: kedittoolbar.cpp:1637
 #, kde-format
 msgid "Change Icon"
 msgstr "아이콘 변경"

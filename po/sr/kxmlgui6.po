@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:41+0000\n"
+"POT-Creation-Date: 2026-08-03 00:39+0000\n"
 "PO-Revision-Date: 2017-10-14 23:06+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -552,19 +552,19 @@ msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>Пречице су додате (тек да знате)</h2>"
 
 # >> @title:window
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:353
 #, fuzzy, kde-format
 #| msgid "Change Text"
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "Промена текста"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:363
 #, kde-format
 msgid "Icon te&xt:"
 msgstr "&Текст иконице:"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:368
 #, fuzzy, kde-format
 #| msgid "&Hide text when toolbar shows text alongside icons"
 msgctxt "@option:check"
@@ -572,14 +572,14 @@ msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&Сакриј текст када на траци алатки стоји поред иконица"
 
 # >> @title:window
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:617
 #, fuzzy, kde-format
 #| msgid "Configure Toolbars"
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "Подешавање трака алатки"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:680
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -589,17 +589,17 @@ msgstr ""
 "подразумевано? Промене ће одмах бити примењене."
 
 # >> @title:window
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:681
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "Ресетовање трака алатки"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:682
 #, kde-format
 msgid "Reset"
 msgstr "Ресетуј"
 
-#: kedittoolbar.cpp:980
+#: kedittoolbar.cpp:1001
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&Трака алатки:"
@@ -611,23 +611,23 @@ msgstr "&Трака алатки:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:996
+#: kedittoolbar.cpp:1017
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "&Доступне радње:"
 
-#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
+#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
 #, kde-format
 msgid "Filter"
 msgstr "Филтер"
 
-#: kedittoolbar.cpp:1020
+#: kedittoolbar.cpp:1041
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&Тренутне радње:"
 
 # >> @title:window
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1066
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
@@ -635,47 +635,47 @@ msgid "Change &Icon…"
 msgstr "Промена иконице"
 
 # >> @title:window
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1075
 #, fuzzy, kde-format
 #| msgid "Change Text"
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "Промена текста"
 
-#: kedittoolbar.cpp:1196
+#: kedittoolbar.cpp:1217
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- раздвајач ---"
 
-#: kedittoolbar.cpp:1197
+#: kedittoolbar.cpp:1218
 #, fuzzy, kde-format
 #| msgid "--- separator ---"
 msgid "--- expanding spacer ---"
 msgstr "--- раздвајач ---"
 
-#: kedittoolbar.cpp:1219
+#: kedittoolbar.cpp:1240
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1|/|$[Списковно %1]"
 
-#: kedittoolbar.cpp:1247
+#: kedittoolbar.cpp:1268
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "Овај елемент ће бити замењен свим елементима угнежђене компоненте."
 
-#: kedittoolbar.cpp:1249
+#: kedittoolbar.cpp:1270
 #, kde-format
 msgid "<Merge>"
 msgstr "<стапање>"
 
-#: kedittoolbar.cpp:1251
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<стапање %1>"
 
-#: kedittoolbar.cpp:1261
+#: kedittoolbar.cpp:1282
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -684,19 +684,19 @@ msgstr ""
 "Ово је динамички списак радњи. Можете га померати, али ако га уклоните "
 "нећете моћи поново да га додате."
 
-#: kedittoolbar.cpp:1262
+#: kedittoolbar.cpp:1283
 #, kde-format
 msgid "ActionList: %1"
 msgstr "Списак радњи: %1"
 
-#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
+#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
 # >> @title:window
-#: kedittoolbar.cpp:1616
+#: kedittoolbar.cpp:1637
 #, kde-format
 msgid "Change Icon"
 msgstr "Промена иконице"

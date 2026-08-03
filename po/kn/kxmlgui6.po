@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:41+0000\n"
+"POT-Creation-Date: 2026-08-03 00:39+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -500,33 +500,33 @@ msgstr "<h2>ವೇಗವರ್ಧಕಗಳನ್ನು ತೆಗೆದುಹಾ�
 msgid "<h2>Accelerators added (just for your info)</h2>"
 msgstr "<h2>ವೇಗವರ್ಧಕಗಳನ್ನು ಸೇರಿಸಲಾಯಿತು(ನಿಮ್ಮ ಮಾಹಿತಿಗೆ ಮಾತ್ರ)</h2>"
 
-#: kedittoolbar.cpp:332
+#: kedittoolbar.cpp:353
 #, fuzzy, kde-format
 #| msgid "Change Text"
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು"
 
-#: kedittoolbar.cpp:342
+#: kedittoolbar.cpp:363
 #, fuzzy, kde-format
 #| msgid "Link Text:"
 msgid "Icon te&xt:"
 msgstr "ಕೊಂಡಿ ಪಠ್ಯ:"
 
-#: kedittoolbar.cpp:347
+#: kedittoolbar.cpp:368
 #, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr ""
 
-#: kedittoolbar.cpp:596
+#: kedittoolbar.cpp:617
 #, fuzzy, kde-format
 #| msgid "Configure Toolbars"
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "ಉಪಕರಣಪಟ್ಟಿಯನ್ನು ಸಂರಚಿಸು"
 
-#: kedittoolbar.cpp:659
+#: kedittoolbar.cpp:680
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -535,17 +535,17 @@ msgstr ""
 "ನೀವು ನಿಜಕ್ಕೂ ಈ ಅನ್ವಯಿಕದ ಎಲ್ಲಾ ಉಪಕರಣಪಟ್ಟಿಗಳನ್ನು ಅವುಗಳ ಪೂರ್ವಸಂಯೋಜಿತ ಸ್ಥಿತಿಗೆ "
 "ಮರುಸಿದ್ಧಗೊಳಿಸಬೇಕೆಂದಿದ್ದೀರೇನು? ಬದವಾವಣೆಗಳು ತತ್ಷಣವೇ ಜಾರಿಗೊಳ್ಳುತ್ತವೆ."
 
-#: kedittoolbar.cpp:660
+#: kedittoolbar.cpp:681
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "ಉಪಕರಣಪಟ್ಟಿಗಳನ್ನು ಮರುಸಿದ್ಧಗೊಳಿಸು"
 
-#: kedittoolbar.cpp:661
+#: kedittoolbar.cpp:682
 #, kde-format
 msgid "Reset"
 msgstr "ಮರುಸಿದ್ಧಗೊಳಿಸು (ರಿಸೆಟ್)"
 
-#: kedittoolbar.cpp:980
+#: kedittoolbar.cpp:1001
 #, kde-format
 msgid "&Toolbar:"
 msgstr "ಉಪಕರಣಪಟ್ಟಿ(&T):"
@@ -557,53 +557,53 @@ msgstr "ಉಪಕರಣಪಟ್ಟಿ(&T):"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:996
+#: kedittoolbar.cpp:1017
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "ಲಭ್ಯವಿರುವ ಕ್ರಿಯೆಗಳು(&v):"
 
-#: kedittoolbar.cpp:1017 kedittoolbar.cpp:1042
+#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
 #, kde-format
 msgid "Filter"
 msgstr "ಶೋಧಕ (ಫಿಲ್ಟರ್)"
 
-#: kedittoolbar.cpp:1020
+#: kedittoolbar.cpp:1041
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "ಪ್ರಸ್ತುತ ಕ್ರಿಯೆಗಳು(&e):"
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1066
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು"
 
-#: kedittoolbar.cpp:1054
+#: kedittoolbar.cpp:1075
 #, fuzzy, kde-format
 #| msgid "Change Text"
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು"
 
-#: kedittoolbar.cpp:1196
+#: kedittoolbar.cpp:1217
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- ವಿಭಾಜಕ ---"
 
-#: kedittoolbar.cpp:1197
+#: kedittoolbar.cpp:1218
 #, fuzzy, kde-format
 #| msgid "--- separator ---"
 msgid "--- expanding spacer ---"
 msgstr "--- ವಿಭಾಜಕ ---"
 
-#: kedittoolbar.cpp:1219
+#: kedittoolbar.cpp:1240
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1247
+#: kedittoolbar.cpp:1268
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
@@ -611,17 +611,17 @@ msgstr ""
 "ಈ ಅಂಶವು ಎಲ್ಲಾ ಅಂಶಗಳನ್ನೊಳಗೊಂಡ ಒಂದು ಹುದು ಅಂಶದಿಂದ (embedded component) "
 "ಬದಲಾಯಿಸಲ್ಪಡುತ್ತದೆ."
 
-#: kedittoolbar.cpp:1249
+#: kedittoolbar.cpp:1270
 #, kde-format
 msgid "<Merge>"
 msgstr "<ಒಂದಾಗಿಸು>"
 
-#: kedittoolbar.cpp:1251
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<%1 ಅನ್ನು ಒಂದಾಗಿಸು>"
 
-#: kedittoolbar.cpp:1261
+#: kedittoolbar.cpp:1282
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -630,18 +630,18 @@ msgstr ""
 "ಇದು ಕ್ರಿಯೆಗಳ ಒಂದು ಪರಿವರ್ತನಶೀಲ (dynamic) ಪಟ್ಟಿ. ಇದನ್ನು ನೀವು ಜರುಗಿಸಬಹುದು, ಆದರೆ "
 "ನೀವು ಇದನ್ನು ತೆಗೆದುಹಾಕಿದರೆ, ಇದಕ್ಕೆ ಮತ್ತೆ ಸೇರಿಸಲಾಗುವುದಿಲ್ಲ."
 
-#: kedittoolbar.cpp:1262
+#: kedittoolbar.cpp:1283
 #, kde-format
 msgid "ActionList: %1"
 msgstr "ಕ್ರಿಯಾಪಟ್ಟಿ: %1"
 
-#: kedittoolbar.cpp:1363 kedittoolbar.cpp:1388
+#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1616
+#: kedittoolbar.cpp:1637
 #, kde-format
 msgid "Change Icon"
 msgstr "ಚಿಹ್ನೆಯನ್ನು ಬದಲಾಯಿಸು"
