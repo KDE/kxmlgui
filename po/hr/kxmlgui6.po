@@ -21,11 +21,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.9\n"
-"X-Poedit-Bookmarks: 1601,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -370,12 +365,12 @@ msgid ""
 "please use the Report Bug menu item of the correct application"
 msgstr ""
 "Aplikacija za koju želite poslati prijavu nedostatka. Ako je netočno, putem "
-"izbornika \"Prijava nedostatka\" odaberite željenu aplikaciju"
+"izbornika \"Prijava nedostatka\" odaberite željenu aplikaciju."
 
 #: kbugreport.cpp:102
 #, kde-format
 msgid "Application: "
-msgstr "Aplikacija: "
+msgstr "Aplikacija:"
 
 #: kbugreport.cpp:112
 #, kde-format
@@ -384,7 +379,7 @@ msgid ""
 "available before sending a bug report"
 msgstr ""
 "Verzija ove aplikacije. Provjerite ne postoji li novija verzije prije slanja "
-"prijava nedostatka"
+"prijava nedostatka."
 
 #: kbugreport.cpp:113
 #, kde-format
@@ -638,7 +633,7 @@ msgstr "%1"
 #: kedittoolbar.cpp:1637
 #, kde-format
 msgid "Change Icon"
-msgstr "Promjeni ikonu"
+msgstr "Promjeni ikonu…"
 
 #. i18n: ectx: Menu (help)
 #: khelpmenu.cpp:167 ui_standards.rc:179
@@ -780,7 +775,7 @@ msgid ""
 msgstr ""
 "Kombinacija tipki '%1'  već je dodijeljena standardnoj aktivnosti \"%2\" "
 "koju neka aplikacija koristi.\n"
-"Želite li je zaista koristiti kao opći prečac?"
+"Želite li je zaista koristiti kao opći prečac? "
 
 #: kkeysequencewidget.cpp:395
 #, kde-format
@@ -804,16 +799,15 @@ msgstr "Licencni ugovor"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
-"Igor Dobrača,Renato Pavičić,Žarko Pintar,Marko Dimjašević,Andrej Dundović"
+msgstr "Renato Pavičić, Žarko Pintar, Marko Dimjašević, Andrej Dundović"
 
 #: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"igor.dobraca@skole.hr,renato@translator-shop.org,zarko.pintar@gmail.com,"
-"marko@dimjasevic.net,adundovi@gmail.com"
+"renato@translator-shop.org, zarko.pintar@gmail.com, marko@dimjasevic.net, "
+"adundovi@gmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
