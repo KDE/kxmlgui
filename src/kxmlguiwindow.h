@@ -536,8 +536,11 @@ protected:
 
 protected Q_SLOTS:
     /*!
-     * \brief Rebuilds the GUI after KEditToolBar changes the toolbar layout.
+     * \brief Completes the rebuild of the GUI after KEditToolBar changed the toolbar layout.
+     * The default implementation invokes applyMainWindowSettings().
+     * Reimplement this method in your subclass when other actions need to be plugged in manually again.
      * \sa configureToolbars()
+     * \sa KEditToolBar::newToolBarConfig()
      */
     virtual void saveNewToolbarConfig();
 

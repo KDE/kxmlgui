@@ -317,11 +317,6 @@ void KXmlGuiWindow::configureToolbars()
 
 void KXmlGuiWindow::saveNewToolbarConfig()
 {
-    // createGUI(xmlFile()); // this loses any plugged-in guiclients, so we use remove+add instead.
-
-    guiFactory()->removeClient(this);
-    guiFactory()->addClient(this);
-
     KConfigGroup cg(KSharedConfig::openConfig(), QString());
     applyMainWindowSettings(cg);
 }
