@@ -146,7 +146,9 @@ public:
     static Qt::ToolBarArea positionFromString(const QString &position);
     static Qt::ToolButtonStyle toolButtonStyleSetting();
 
+public:
     KToolBar *const q;
+
     bool isMainToolBar : 1;
     bool unlockedMovable : 1;
     static bool s_editable;

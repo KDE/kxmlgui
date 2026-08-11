@@ -104,7 +104,7 @@ public Q_SLOTS:
     void grabWindowToClipBoard();
 
 private:
-    KXmlGuiWindow *m_MainWindow;
+    KXmlGuiWindow *const m_MainWindow;
 };
 
 #endif // KMAINWINDOWIFACE_P_H

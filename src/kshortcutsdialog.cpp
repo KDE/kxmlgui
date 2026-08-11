@@ -130,7 +130,9 @@ public:
         Q_EMIT q->saved();
     }
 
+public:
     KShortcutsDialog *const q;
+
     KShortcutsEditor *m_keyChooser = nullptr; // ### move
     KShortcutSchemesEditor *m_schemeEditor = nullptr;
     QPushButton *m_detailsButton = nullptr;

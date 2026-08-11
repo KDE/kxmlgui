@@ -97,8 +97,9 @@ public:
     // private slot
     void doneRecording();
 
-    // members
+public: // members
     KKeySequenceWidget *const q;
+
     KKeySequenceRecorder *recorder;
     QHBoxLayout *layout;
     QPushButton *keyButton;

@@ -47,6 +47,7 @@ public:
     // Update the url to match the current OS, selected app, etc
     void updateUrl();
 
+public:
     KBugReport *const q;
 
     QLabel *m_version = nullptr;

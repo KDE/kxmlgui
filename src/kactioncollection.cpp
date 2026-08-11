@@ -137,6 +137,9 @@ public:
 
     bool writeKXMLGUIConfigFile();
 
+public:
+    KActionCollection *const q;
+
     QString m_componentName;
     QString m_componentDisplayName;
 
@@ -145,8 +148,6 @@ public:
     QAction *unlistAction(QAction *);
 
     ActionStorage actionStore;
-
-    KActionCollection *q = nullptr;
 
     const KXMLGUIClient *m_parentGUIClient = nullptr;
 

@@ -350,9 +350,10 @@ public:
     void setGlobalColumnsHidden(bool hide);
     void setLocalColumnsHidden(bool hide);
 
-    // members
+public: // members
+    KShortcutsEditor *const q;
+
     QList<KActionCollection *> actionCollections;
-    KShortcutsEditor *q;
 
     Ui::KShortcutsDialog ui;
 

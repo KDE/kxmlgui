@@ -12,7 +12,7 @@ struct KActionCategoryPrivate {
     KActionCategoryPrivate(KActionCategory *host);
 
     //! Our host
-    KActionCategory *q;
+    KActionCategory *const q;
 
     //! The text for this category
     QString text;

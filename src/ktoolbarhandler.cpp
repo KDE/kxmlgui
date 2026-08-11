@@ -148,7 +148,9 @@ public:
     void connectToActionContainer(QAction *action);
     void connectToActionContainer(QWidget *container);
 
-    ToolBarHandler *parent;
+public:
+    ToolBarHandler *const parent;
+
     QPointer<KXmlGuiWindow> mainWindow;
     QList<QAction *> actions;
     QList<KToolBar *> toolBars;

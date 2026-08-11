@@ -106,8 +106,6 @@ class KSwitchLanguageDialogPrivate
 public:
     KSwitchLanguageDialogPrivate(KSwitchLanguageDialog *parent);
 
-    KSwitchLanguageDialog *p; // parent class
-
     /*
         Fills language button with names of languages for which given application has translation.
     */
@@ -122,6 +120,9 @@ public:
         Returns list of languages chosen for application or default languages is they are not set.
     */
     QStringList applicationLanguageList();
+
+public:
+    KSwitchLanguageDialog *const p;
 
     QMap<QPushButton *, LanguageRowData> languageRows;
     QList<KLanguageButton *> languageButtons;
