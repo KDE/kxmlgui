@@ -35,6 +35,11 @@ public:
     bool autoSaveWindowSize : 1;
     bool sizeApplied : 1;
     bool suppressCloseEvent : 1;
+    // Dock/toolbar geometry is only persisted once the window has been shown and its initial
+    // layout has settled, so the transient sizes produced while showing (a dock squeezed before
+    // the window reaches its final/maximized size) are not saved over the user's chosen size.
+    bool initialLayoutSettled : 1;
+    bool initialLayoutSettleScheduled : 1;
 
     KConfigGroup autoSaveGroup;
     mutable KConfigGroup m_stateConfigGroup;
