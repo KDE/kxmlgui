@@ -101,7 +101,13 @@ bool DockResizeListener::eventFilter(QObject *watched, QEvent *event)
     case QEvent::Move:
     case QEvent::Show:
     case QEvent::Hide:
-        m_win->d_ptr->setSettingsDirty(KMainWindowPrivate::CompressCalls);
+        // Ignore these until the window has been shown and its initial layout has settled.
+        // Restoring the state resizes docks before the window reaches its final size, which
+        // transiently squeezes them; saving that would shrink the panel a little on every launch
+        // (Bug 430969). Once settled, genuine resizes and visibility changes are saved as before.
+        if (m_win->d_ptr->initialLayoutSettled) {
+            m_win->d_ptr->setSettingsDirty(KMainWindowPrivate::CompressCalls);
+        }
         break;
 
     default:
@@ -272,6 +278,8 @@ void KMainWindowPrivate::init(KMainWindow *_q)
 
     sizeApplied = false;
     suppressCloseEvent = false;
+    initialLayoutSettled = false;
+    initialLayoutSettleScheduled = false;
 
     qApp->installEventFilter(KToolTipHelper::instance());
 
@@ -860,6 +868,16 @@ bool KMainWindow::event(QEvent *ev)
 #endif
     case QEvent::Resize:
         d->setSizeDirty();
+        break;
+    case QEvent::Show:
+        // The first show synchronously lays out (and transiently squeezes) the docks. Arm dock
+        // geometry saving only once that batch has drained, so those startup sizes are not saved.
+        if (!d->initialLayoutSettled && !d->initialLayoutSettleScheduled) {
+            d->initialLayoutSettleScheduled = true;
+            QTimer::singleShot(0, this, [d]() {
+                d->initialLayoutSettled = true;
+            });
+        }
         break;
     case QEvent::Polish:
         d->polish(this);
