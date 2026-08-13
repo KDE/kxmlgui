@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:39+0000\n"
+"POT-Creation-Date: 2026-08-13 00:42+0000\n"
 "PO-Revision-Date: 2026-05-04 17:17+0300\n"
 "Last-Translator: Wesenseged <kde-i18n-de@kde.org>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -329,18 +329,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "አሻሚ አቋራጭ ተገኝቷል"
 
-#: kbugreport.cpp:67
+#: kbugreport.cpp:68
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "የስህተት ሪፖርት ላክ"
 
-#: kbugreport.cpp:89
+#: kbugreport.cpp:90
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "የስህተት ሪፖርት ላክ"
 
-#: kbugreport.cpp:101
+#: kbugreport.cpp:102
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -349,40 +349,40 @@ msgstr ""
 "የሳንካ ሪፖርት ማስገባት የሚፈልጉበት መተግበሪያ - የተሳሳተ ከሆነ፣ እባክዎን ትክክለኛውን መተግበሪያ የስህተት ሪፖርት "
 "አድርግ ምናሌ ንጥል ይጠቀሙ።"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:103
 #, kde-format
 msgid "Application: "
 msgstr "መተግበሪያ፦"
 
-#: kbugreport.cpp:112
+#: kbugreport.cpp:113
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr "የዚህ መተግበሪያ ስሪት - የሳንካ (bug) ሪፖርት ከመላክዎ በፊት አዲስ ስሪት እንዳልተገኘ እባክዎ ያረጋግጡ"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:114
 #, kde-format
 msgid "Version:"
 msgstr "ስሪት፦"
 
-#: kbugreport.cpp:118
+#: kbugreport.cpp:119
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "ምንም ዕትም አልተገኘም (የፕሮግራም አድራጊ ስህተት)"
 
-#: kbugreport.cpp:122
+#: kbugreport.cpp:123
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr "%1 ከKDE Frameworks ጋር %2"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:131
 #, kde-format
 msgid "OS:"
 msgstr "OS፦"
 
-#: kbugreport.cpp:135
+#: kbugreport.cpp:136
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -390,7 +390,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:142
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -398,7 +398,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:148
+#: kbugreport.cpp:149
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -406,7 +406,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:162
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -418,7 +418,7 @@ msgstr ""
 "bugs.kde.org\">https://bugs.kde.org</a> ላይ የድር አሳሽ መስኮት ይከፍታል እና የሚሞሉትን ፎርም "
 "ያገኛሉ። ከላይ የታየው መረጃ ወደዚያ አገልጋይ ይላካል።</qt>"
 
-#: kbugreport.cpp:168
+#: kbugreport.cpp:169
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -427,13 +427,13 @@ msgstr ""
 "<qt>የሳንካ ሪፖርት ለማስገባት ከታች ያለውን አዝራር ጠቅ ያድርጉ። ይህ በ <a href=\"%1\">%2</a> ላይ "
 "የድር አሳሽ መስኮት ይከፍታል።</qt>"
 
-#: kbugreport.cpp:185
+#: kbugreport.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "የሳንካ ሪፖርት አዋቂን አስጀምር(&L)"
 
-#: kbugreport.cpp:187
+#: kbugreport.cpp:188
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
@@ -493,13 +493,13 @@ msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "የመሳሪያ አሞሌ ከአዶዎች ጋር ጽሑፍ ሲያሳይ ጽሑፍን ደብቅ(&H)"
 
-#: kedittoolbar.cpp:617
+#: kedittoolbar.cpp:621
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "የመሣሪያ አሞሌዎችን ያዋቅሩ"
 
-#: kedittoolbar.cpp:680
+#: kedittoolbar.cpp:684
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -508,17 +508,17 @@ msgstr ""
 "በእርግጥ የዚህን መተግበሪያ ሁሉንም የመሣሪያ አሞሌዎች ወደ ነባሪ ሁኔታቸው መመለስ ይፈልጋሉ? ለውጦቹ ወዲያውኑ ተግባራዊ "
 "ይሆናሉ።"
 
-#: kedittoolbar.cpp:681
+#: kedittoolbar.cpp:685
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "የመሣሪያ አሞሌዎችን ዳግም አስጀምር"
 
-#: kedittoolbar.cpp:682
+#: kedittoolbar.cpp:686
 #, kde-format
 msgid "Reset"
 msgstr "ዳግም አስጀምር"
 
-#: kedittoolbar.cpp:1001
+#: kedittoolbar.cpp:1005
 #, kde-format
 msgid "&Toolbar:"
 msgstr "የመሣሪያ አሞሌ(&T)፦"
@@ -530,66 +530,66 @@ msgstr "የመሣሪያ አሞሌ(&T)፦"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1017
+#: kedittoolbar.cpp:1021
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "ዝግጁ ተግባራት(&A)፦"
 
-#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
 #, kde-format
 msgid "Filter"
 msgstr "አጣራ"
 
-#: kedittoolbar.cpp:1041
+#: kedittoolbar.cpp:1045
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&ያሉ ተግባራት፦"
 
-#: kedittoolbar.cpp:1066
+#: kedittoolbar.cpp:1070
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "&አዶ ቀይር…"
 
-#: kedittoolbar.cpp:1075
+#: kedittoolbar.cpp:1079
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "&ጽሁፍ ቀይር…"
 
-#: kedittoolbar.cpp:1217
+#: kedittoolbar.cpp:1221
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- separator ---"
 
-#: kedittoolbar.cpp:1218
+#: kedittoolbar.cpp:1222
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- expanding spacer ---"
 
-#: kedittoolbar.cpp:1240
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1268
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "ይህ ኤለመንት በሁሉም የተከተተ አካል ንጥረ ነገሮች ይተካል።"
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid "<Merge>"
 msgstr "<Merge>"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<Merge %1>"
 
-#: kedittoolbar.cpp:1282
+#: kedittoolbar.cpp:1286
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -597,18 +597,18 @@ msgid ""
 msgstr ""
 "ይህ ተለዋዋጭ የእርምጃዎች ዝርዝር ነው። ማንቀሳቀስ ይችላሉ ነገር ግን ካስወገዱት እርስዎ እንደገና መጨመር አይችሉም።"
 
-#: kedittoolbar.cpp:1283
+#: kedittoolbar.cpp:1287
 #, kde-format
 msgid "ActionList: %1"
 msgstr "የተግባራት ዝርዝር፦ %1"
 
-#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
+#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1637
+#: kedittoolbar.cpp:1641
 #, kde-format
 msgid "Change Icon"
 msgstr "አዶ ቀይር"
@@ -619,7 +619,7 @@ msgstr "አዶ ቀይር"
 msgid "&Help"
 msgstr "እርዳታ(&H)"
 
-#: kkeysequencewidget.cpp:146
+#: kkeysequencewidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -629,13 +629,13 @@ msgstr ""
 "አዝራሩን ይጫኑ፣ ከዚያ በፕሮግራሙ ውስጥ እንደሚጠቀሙት አቋራጩን ያስገቡ።ምሳሌ፦ ለ Ctrl+A የ Ctrl ቁልፍን ተጭነው "
 "ይያዙ እና Aን ይጫኑ።"
 
-#: kkeysequencewidget.cpp:150
+#: kkeysequencewidget.cpp:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "አጽዳ"
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:170
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -643,12 +643,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "የአቋራጭ ግጭት"
 msgstr[1] "የአቋራጭ ግጭቶች"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:174
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "አቋራጭ '%1' ለተግባር '%2'\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:179
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -668,20 +668,20 @@ msgstr[1] ""
 "ለእነዚህ ድርጊቶች ባዶ አቋራጭ መመደብ ይፈልጋሉ?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:189 kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "እንደገና መመደብ"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "የአቋራጭ ግጭት"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:196
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -689,12 +689,12 @@ msgid ""
 msgstr ""
 "<qt>የ '%1' ቁልፍ ጥምረት አስቀድሞ በ<b>%2</b> ድርጊት ጥቅም ላይ ውሏል።<br>እባክዎ የተለየ ይምረጡ።</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:276
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "አቋራጭ '%1' በመተግበሪያ '%2' ለድርጊት '%3'\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:285
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -705,7 +705,7 @@ msgid_plural ""
 msgstr[0] "አቋራጭ '%2' ከሚከተለው የቁልፍ ጥምር ጋር ይጣራል፦\n"
 msgstr[1] "አቋራጭ '%2' ከሚከተሉት የቁልፍ ጥምሮች ጋር ይጋጫል፦\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:292
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -713,12 +713,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "ከተመዘገበ ዓለም-አቀፍ አቋራጭ ጋር ግጭት"
 msgstr[1] "ከተመዘገበ ዓለም-አቀፍ አቋራጮች ጋር ግጭት"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "የተያዘ አቋራጭ"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:307
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -728,13 +728,13 @@ msgstr ""
 "F12 ቁልፍ በዊንዶውስ ላይ የተያዘ ነው፣ ስለዚህ ለአጠቃላይ አቋራጭ መጠቀም አይቻልም።\n"
 "እባክዎ ሌላ ይምረጡ።"
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "ከመደበኛ መተግበሪያ አቋራጭ ጋር ግጭት"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:352
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -744,13 +744,13 @@ msgstr ""
 "የ'%1' የቁልፍ ጥምረት አንዳንድ መተግበሪያዎች የሚጠቀሙበት መደበኛ እርምጃ \"%2\" ተብሎም ጥቅም ላይ ይውላል።\n"
 "በእርግጥ እንደ ዓለም አቀፍ አቋራጭ መጠቀም ይፈልጋሉ?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:396
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ግቤት"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:54
+#: kkeysequencewidget.cpp:398 kshortcuteditwidget.cpp:54
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -912,7 +912,7 @@ msgstr "አሁን ያለው የአቋራጭ ስኪም ተቀይሯል። ወደ 
 msgid "Manage &Schemes"
 msgstr "ስኪሞችን አስተዳድር (&S)"
 
-#: kshortcutsdialog.cpp:149
+#: kshortcutsdialog.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
@@ -1028,24 +1028,24 @@ msgctxt "@item:intable Action name in shortcuts configuration"
 msgid "%1"
 msgstr "%1"
 
-#: kswitchlanguagedialog_p.cpp:137
+#: kswitchlanguagedialog_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
 msgstr "ቋንቋ ያዋቅሩ"
 
-#: kswitchlanguagedialog_p.cpp:141
+#: kswitchlanguagedialog_p.cpp:142
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
 msgstr "እባክዎ ለዚህ መተግበሪያ ጥቅም ላይ መዋል ያለበትን ቋንቋ ይምረጡ፦"
 
-#: kswitchlanguagedialog_p.cpp:168
+#: kswitchlanguagedialog_p.cpp:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
 msgstr "የመተኪያ ቋንቋ ጨምር"
 
-#: kswitchlanguagedialog_p.cpp:169
+#: kswitchlanguagedialog_p.cpp:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1053,41 +1053,41 @@ msgid ""
 "contain a proper translation."
 msgstr "ሌሎች ትርጉሞች ትክክለኛ ትርጉም ካልያዙ ጥቅም ላይ የሚውል ተጨማሪ አንድ ቋንቋ ይጨምራል።"
 
-#: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
+#: kswitchlanguagedialog_p.cpp:262 kswitchlanguagedialog_p.cpp:283
 #, kde-format
 msgid ""
 "The language for this application has been changed. The change will take "
 "effect the next time the application is started."
 msgstr "የዚህ መተግበሪያ ቋንቋ ተቀይሯል። ለውጡ ተግባራዊ የሚሆነው መተግበሪያው በሚቀጥለው ጊዜ ሲጀመር ነው።"
 
-#: kswitchlanguagedialog_p.cpp:262
+#: kswitchlanguagedialog_p.cpp:263
 #, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "የመተግበሪያ ቋንቋ ተቀይሯል"
 
-#: kswitchlanguagedialog_p.cpp:283
+#: kswitchlanguagedialog_p.cpp:284
 #, kde-format
 msgid "Application Language Changed"
 msgstr "የመተግበሪያ ቋንቋ ተቀይሯል"
 
-#: kswitchlanguagedialog_p.cpp:368
+#: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Primary language:"
 msgstr "ዋና ቋንቋ፡"
 
-#: kswitchlanguagedialog_p.cpp:368
+#: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Fallback language:"
 msgstr "ተጠባባቂ ቋንቋ፦"
 
-#: kswitchlanguagedialog_p.cpp:383
+#: kswitchlanguagedialog_p.cpp:384
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "አስውግድ"
 
-#: kswitchlanguagedialog_p.cpp:389
+#: kswitchlanguagedialog_p.cpp:390
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1095,7 +1095,7 @@ msgid ""
 "other languages."
 msgstr "ይህ ማንኛውም ሌላ ቋንቋ ከመጠቀሙ በፊት ቅድሚያ የሚሰጠው ዋናው የመተግበሪያ ቋንቋ ነው።"
 
-#: kswitchlanguagedialog_p.cpp:390
+#: kswitchlanguagedialog_p.cpp:391
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1103,109 +1103,109 @@ msgid ""
 "contain a proper translation."
 msgstr "ቀደምት ቋንቋዎች ትክክለኛ ትርጉም ካላካተቱ ጥቅም ላይ የሚውለው ቋንቋ ይህ ነው።"
 
-#: ktoolbar.cpp:309 ktoolbar.cpp:316
+#: ktoolbar.cpp:311 ktoolbar.cpp:318
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "የመሣሪያ አሞሌ ቅንብሮች"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "ጽሑፍ አሳይ"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:320
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "አቀማመጥ"
 
-#: ktoolbar.cpp:320
+#: ktoolbar.cpp:322
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "ከላይ"
 
-#: ktoolbar.cpp:324
+#: ktoolbar.cpp:326
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "ግራ"
 
-#: ktoolbar.cpp:327
+#: ktoolbar.cpp:329
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "ቀኝ"
 
-#: ktoolbar.cpp:330
+#: ktoolbar.cpp:332
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "ከታች"
 
-#: ktoolbar.cpp:341
+#: ktoolbar.cpp:343
 #, kde-format
 msgid "Text Position"
 msgstr "የጽሑፍ አቀማመጥ"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:345
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "አዶዎች ብቻ"
 
-#: ktoolbar.cpp:346
+#: ktoolbar.cpp:348
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "ጽሑፍ ብቻ"
 
-#: ktoolbar.cpp:349
+#: ktoolbar.cpp:351
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "ጽሑፍ ከአዶዎች ጎን ለጎን"
 
-#: ktoolbar.cpp:352
+#: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "ጽሑፍ ከአዶዎች ስር"
 
-#: ktoolbar.cpp:363
+#: ktoolbar.cpp:365
 #, kde-format
 msgid "Icon Size"
 msgstr "የአዶ መጠን"
 
-#: ktoolbar.cpp:365
+#: ktoolbar.cpp:367
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "ነባሪ"
 
-#: ktoolbar.cpp:385 ktoolbar.cpp:409
+#: ktoolbar.cpp:387 ktoolbar.cpp:411
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "ትንሽ (%1x%2)"
 
-#: ktoolbar.cpp:387 ktoolbar.cpp:411
+#: ktoolbar.cpp:389 ktoolbar.cpp:413
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "መካከለኛ (%1x%2)"
 
-#: ktoolbar.cpp:389 ktoolbar.cpp:413
+#: ktoolbar.cpp:391 ktoolbar.cpp:415
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "ትልቅ (%1x%2)"
 
-#: ktoolbar.cpp:391 ktoolbar.cpp:415
+#: ktoolbar.cpp:393 ktoolbar.cpp:417
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "ግዙፍ (%1x%2)"
 
-#: ktoolbar.cpp:441
+#: ktoolbar.cpp:443
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "የመሣሪያ አሞሌ ቦታዎችን ቆልፍ"

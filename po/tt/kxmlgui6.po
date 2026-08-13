@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:39+0000\n"
+"POT-Creation-Date: 2026-08-13 00:42+0000\n"
 "PO-Revision-Date: 2011-11-26 15:12+0400\n"
 "Last-Translator: Ainur Shakirov <ainur.shakirov.tt@gmail.com>\n"
 "Language-Team: Tatar <>\n"
@@ -402,19 +402,19 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Гамәлләрнең бәрелеше"
 
-#: kbugreport.cpp:67
+#: kbugreport.cpp:68
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Хата турында хисапны тапшыру"
 
-#: kbugreport.cpp:89
+#: kbugreport.cpp:90
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "Хата турында хисапны тапшыру"
 
-#: kbugreport.cpp:101
+#: kbugreport.cpp:102
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -424,12 +424,12 @@ msgstr ""
 "кулланылган булса, \"Хата турында хәбәр җибәрү\" менюсындагы пунктны "
 "кулланыгыз."
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:103
 #, kde-format
 msgid "Application: "
 msgstr "Кушымта: "
 
-#: kbugreport.cpp:112
+#: kbugreport.cpp:113
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -438,28 +438,28 @@ msgstr ""
 "Кушымтаның юрамасы. Хата турында хисапны җибәргәнче, яңа юраманың тәшкил "
 "булуын тикшерегез."
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:114
 #, kde-format
 msgid "Version:"
 msgstr "Юрама:"
 
-#: kbugreport.cpp:118
+#: kbugreport.cpp:119
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "юрама турында мәгълумат юк (кушымта ясаучының хатасы!)"
 
-#: kbugreport.cpp:122
+#: kbugreport.cpp:123
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr ""
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:131
 #, kde-format
 msgid "OS:"
 msgstr "ОС:"
 
-#: kbugreport.cpp:135
+#: kbugreport.cpp:136
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -469,7 +469,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:142
+#: kbugreport.cpp:143
 #, fuzzy, kde-format
 #| msgid "%1 %2, %3"
 msgctxt ""
@@ -478,7 +478,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2, %3"
 
-#: kbugreport.cpp:148
+#: kbugreport.cpp:149
 #, fuzzy, kde-format
 #| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
 #| msgid "%1 (%2)"
@@ -488,7 +488,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:162
+#: kbugreport.cpp:163
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -506,7 +506,7 @@ msgstr ""
 "org</a>, где можно будет заполнить форму. Информация будет отправлена на "
 "сервер учёта ошибок.</qt>"
 
-#: kbugreport.cpp:168
+#: kbugreport.cpp:169
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>To submit a bug report, click on the button below. This will open a "
@@ -522,14 +522,14 @@ msgstr ""
 "org</a>, где можно будет заполнить форму. Информация будет отправлена на "
 "сервер учёта ошибок.</qt>"
 
-#: kbugreport.cpp:185
+#: kbugreport.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Launch Bug Report Wizard"
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Хата турында хәбәр тапшыру остасын җибәрү"
 
-#: kbugreport.cpp:187
+#: kbugreport.cpp:188
 #, fuzzy, kde-format
 #| msgid "Submit Bug Report"
 msgctxt "@action:button"
@@ -595,14 +595,14 @@ msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&Билгечек янында язулар күрсәтелгәндә текстны качыру"
 
-#: kedittoolbar.cpp:617
+#: kedittoolbar.cpp:621
 #, fuzzy, kde-format
 #| msgid "Configure Toolbars"
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "Кораллар панелен көйләү"
 
-#: kedittoolbar.cpp:680
+#: kedittoolbar.cpp:684
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -611,17 +611,17 @@ msgstr ""
 "Алданук билгеләнгән кораллар панелен торгызыргамы? Үзгәрешләр шунда ук "
 "гамәлгә ашачак."
 
-#: kedittoolbar.cpp:681
+#: kedittoolbar.cpp:685
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "Кораллар панелен торгызу"
 
-#: kedittoolbar.cpp:682
+#: kedittoolbar.cpp:686
 #, kde-format
 msgid "Reset"
 msgstr "Кайтару"
 
-#: kedittoolbar.cpp:1001
+#: kedittoolbar.cpp:1005
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&Кораллар панеле:"
@@ -633,69 +633,69 @@ msgstr "&Кораллар панеле:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1017
+#: kedittoolbar.cpp:1021
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "&Рөхсәт ителгән гамәлләр:"
 
-#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
 #, kde-format
 msgid "Filter"
 msgstr "Сөзгеч"
 
-#: kedittoolbar.cpp:1041
+#: kedittoolbar.cpp:1045
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&Хәзерге гамәлләр:"
 
-#: kedittoolbar.cpp:1066
+#: kedittoolbar.cpp:1070
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "Билгечекне үзгәртү"
 
-#: kedittoolbar.cpp:1075
+#: kedittoolbar.cpp:1079
 #, fuzzy, kde-format
 #| msgid "Change Text"
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "Текстны үзгәртү"
 
-#: kedittoolbar.cpp:1217
+#: kedittoolbar.cpp:1221
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- бүлгеч ---"
 
-#: kedittoolbar.cpp:1218
+#: kedittoolbar.cpp:1222
 #, fuzzy, kde-format
 #| msgid "--- separator ---"
 msgid "--- expanding spacer ---"
 msgstr "--- бүлгеч ---"
 
-#: kedittoolbar.cpp:1240
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1268
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "Кертелгән компонент бу элементны тулысынча алыштырачак."
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid "<Merge>"
 msgstr "<Кертү ноктасы>"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<%1 кертү ноктасы>"
 
-#: kedittoolbar.cpp:1282
+#: kedittoolbar.cpp:1286
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -704,18 +704,18 @@ msgstr ""
 "Бу гамәлләр исемлеге. Сез аны икенче урынга күчерә аласыз, ләкин бетергән "
 "вакытта сез аны кире торгыза алмаячаксыз."
 
-#: kedittoolbar.cpp:1283
+#: kedittoolbar.cpp:1287
 #, kde-format
 msgid "ActionList: %1"
 msgstr "Гамәлләр җыелмасы: %1"
 
-#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
+#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1637
+#: kedittoolbar.cpp:1641
 #, kde-format
 msgid "Change Icon"
 msgstr "Билгечекне үзгәртү"
@@ -726,7 +726,7 @@ msgstr "Билгечекне үзгәртү"
 msgid "&Help"
 msgstr "Белешмә"
 
-#: kkeysequencewidget.cpp:146
+#: kkeysequencewidget.cpp:147
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -740,7 +740,7 @@ msgstr ""
 "Нажмите на кнопке и введите комбинацию клавиш.\n"
 "Например, для комбинации клавиш Ctrl+A зажмите клавишу Ctrl и нажмите A."
 
-#: kkeysequencewidget.cpp:150
+#: kkeysequencewidget.cpp:151
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Clear"
@@ -748,7 +748,7 @@ msgctxt "@action:button"
 msgid "Clear"
 msgstr "Чистарту"
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:170
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -756,12 +756,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "Конфликты комбинаций клавиш"
 msgstr[1] "Конфликты комбинаций клавиш"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:174
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Комбинация клавиш «%1» для действия «%2»\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:179
 #, fuzzy, kde-format
 #| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
 #| msgid ""
@@ -799,22 +799,22 @@ msgstr[1] ""
 "\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:189 kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:358
 #, fuzzy, kde-format
 #| msgid "Reassign"
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Яңа белән бәйләү"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:194
 #, fuzzy, kde-format
 #| msgid "Shortcut conflict"
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Төймә тезмәләре бәрелештә"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:196
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -823,13 +823,13 @@ msgstr ""
 "<qt>Комбинация клавиш %1 уже связана с действием <b>%2</b>.<br>Выберите "
 "уникальную комбинацию клавиш.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:276
 #, fuzzy, kde-format
 #| msgid "Shortcut '%1' in Application %2 for action %3\n"
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "Комбинация клавиш «%1» в приложении %2 для действия «%3»\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:285
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -844,7 +844,7 @@ msgstr[1] ""
 "Комбинация клавиш «%2» конфликтует со следующими комбинациями клавиш:\n"
 "Комбинация клавиш «%2» конфликтует со следующей комбинацией клавиш:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:292
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -852,12 +852,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "Конфликт с глобальными комбинациями клавиш"
 msgstr[1] "Конфликт с глобальными комбинациями клавиш"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Зарезервированная комбинация клавиш"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:307
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -868,14 +868,14 @@ msgstr ""
 "глобальных комбинациях клавиш.\n"
 "Выберите другую комбинацию клавиш."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:350
 #, fuzzy, kde-format
 #| msgid "Conflict with Standard Application Shortcut"
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Стандартлы төймә функциясе белән конфликт"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:352
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -886,13 +886,13 @@ msgstr ""
 "во многих программах.\n"
 "Вы действительно хотите использовать эту комбинацию как глобальную?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:396
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Кертү"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:54
+#: kkeysequencewidget.cpp:398 kshortcuteditwidget.cpp:54
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -1071,7 +1071,7 @@ msgstr ""
 msgid "Manage &Schemes"
 msgstr "Яңа схема"
 
-#: kshortcutsdialog.cpp:149
+#: kshortcutsdialog.cpp:151
 #, fuzzy, kde-format
 #| msgid "Configure Shortcuts"
 msgctxt "@title:window"
@@ -1192,26 +1192,26 @@ msgctxt "@item:intable Action name in shortcuts configuration"
 msgid "%1"
 msgstr "%1"
 
-#: kswitchlanguagedialog_p.cpp:137
+#: kswitchlanguagedialog_p.cpp:138
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure Language"
 msgstr "Көйләү"
 
-#: kswitchlanguagedialog_p.cpp:141
+#: kswitchlanguagedialog_p.cpp:142
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
 msgstr "Бу кушымтада кулланырга теләгән телне сайлагыз:"
 
-#: kswitchlanguagedialog_p.cpp:168
+#: kswitchlanguagedialog_p.cpp:169
 #, fuzzy, kde-format
 #| msgid "Add Fallback Language"
 msgctxt "@action:button"
 msgid "Add Fallback Language"
 msgstr "Запас телне кушу:"
 
-#: kswitchlanguagedialog_p.cpp:169
+#: kswitchlanguagedialog_p.cpp:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "Adds one more language which will be used if other translations do not "
@@ -1224,7 +1224,7 @@ msgstr ""
 "Сезнең телегезгә тәрҗемә булмаган вакытта бер яисә берничә кулланыла торган "
 "телне күрсәтү."
 
-#: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
+#: kswitchlanguagedialog_p.cpp:262 kswitchlanguagedialog_p.cpp:283
 #, kde-format
 msgid ""
 "The language for this application has been changed. The change will take "
@@ -1233,36 +1233,36 @@ msgstr ""
 "Бу кушымтаның теле үзгәртелде. Үзгәрешләр кушымтаның яңадан җибәргән вакытта "
 "тормышка ашырылачак."
 
-#: kswitchlanguagedialog_p.cpp:262
+#: kswitchlanguagedialog_p.cpp:263
 #, fuzzy, kde-format
 #| msgid "Application Language Changed"
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "Кушымтаның теле үзгәрелде"
 
-#: kswitchlanguagedialog_p.cpp:283
+#: kswitchlanguagedialog_p.cpp:284
 #, kde-format
 msgid "Application Language Changed"
 msgstr "Кушымтаның теле үзгәрелде"
 
-#: kswitchlanguagedialog_p.cpp:368
+#: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Primary language:"
 msgstr "Төп тел:"
 
-#: kswitchlanguagedialog_p.cpp:368
+#: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Fallback language:"
 msgstr "Запас язык:"
 
-#: kswitchlanguagedialog_p.cpp:383
+#: kswitchlanguagedialog_p.cpp:384
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Бетерү"
 
-#: kswitchlanguagedialog_p.cpp:389
+#: kswitchlanguagedialog_p.cpp:390
 #, fuzzy, kde-format
 #| msgid ""
 #| "This is the main application language which will be used first, before "
@@ -1273,7 +1273,7 @@ msgid ""
 "other languages."
 msgstr "Бу төп тел, кушымта өчен ул башка телләрдән өстенрәк тора."
 
-#: kswitchlanguagedialog_p.cpp:390
+#: kswitchlanguagedialog_p.cpp:391
 #, fuzzy, kde-format
 #| msgid ""
 #| "This is the language which will be used if any previous languages do not "
@@ -1284,114 +1284,114 @@ msgid ""
 "contain a proper translation."
 msgstr "Сезнең телегезгә тәрҗемә булмаган вакытта бу тел кулланылачак."
 
-#: ktoolbar.cpp:309 ktoolbar.cpp:316
+#: ktoolbar.cpp:311 ktoolbar.cpp:318
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "Меню панели инструментов"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "Подписи кнопок"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:320
 #, fuzzy, kde-format
 #| msgid "Orientation"
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "Урнашу"
 
-#: ktoolbar.cpp:320
+#: ktoolbar.cpp:322
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "Өскә"
 
-#: ktoolbar.cpp:324
+#: ktoolbar.cpp:326
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "Сул кыры буенча"
 
-#: ktoolbar.cpp:327
+#: ktoolbar.cpp:329
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "Уң кыры буенча"
 
-#: ktoolbar.cpp:330
+#: ktoolbar.cpp:332
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "Аска"
 
-#: ktoolbar.cpp:341
+#: ktoolbar.cpp:343
 #, kde-format
 msgid "Text Position"
 msgstr "Текст урнашуы"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:345
 #, fuzzy, kde-format
 #| msgid "Icons Only"
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "Билгечекләр генә"
 
-#: ktoolbar.cpp:346
+#: ktoolbar.cpp:348
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "Текст кына"
 
-#: ktoolbar.cpp:349
+#: ktoolbar.cpp:351
 #, fuzzy, kde-format
 #| msgid "Text Alongside Icons"
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "Имзалар билгечекләр янында"
 
-#: ktoolbar.cpp:352
+#: ktoolbar.cpp:354
 #, fuzzy, kde-format
 #| msgid "Text Under Icons"
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "Имзалар билгечекләр астында"
 
-#: ktoolbar.cpp:363
+#: ktoolbar.cpp:365
 #, kde-format
 msgid "Icon Size"
 msgstr "Билгечекләр зурлыгы"
 
-#: ktoolbar.cpp:365
+#: ktoolbar.cpp:367
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "Үрнәкле"
 
-#: ktoolbar.cpp:385 ktoolbar.cpp:409
+#: ktoolbar.cpp:387 ktoolbar.cpp:411
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "Кече (%1x%2)"
 
-#: ktoolbar.cpp:387 ktoolbar.cpp:411
+#: ktoolbar.cpp:389 ktoolbar.cpp:413
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "Уртача (%1x%2)"
 
-#: ktoolbar.cpp:389 ktoolbar.cpp:413
+#: ktoolbar.cpp:391 ktoolbar.cpp:415
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "Зур (%1x%2)"
 
-#: ktoolbar.cpp:391 ktoolbar.cpp:415
+#: ktoolbar.cpp:393 ktoolbar.cpp:417
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "Бик зур (%1x%2)"
 
-#: ktoolbar.cpp:441
+#: ktoolbar.cpp:443
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "Корал панелен катыру"

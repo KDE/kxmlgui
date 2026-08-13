@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:39+0000\n"
+"POT-Creation-Date: 2026-08-13 00:42+0000\n"
 "PO-Revision-Date: 2026-03-28 21:46+0530\n"
 "Last-Translator: CrazyCourt651 <CrazyCourt651@gmail.com>\n"
 "Language-Team: Gujarati\n"
@@ -338,18 +338,18 @@ msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "ગૂંચવાડાભર્યો ટૂંકાણ શોધવામાં આવ્યો"
 
-#: kbugreport.cpp:67
+#: kbugreport.cpp:68
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "ક્ષતિ અહેવાલ રજૂ કરો"
 
-#: kbugreport.cpp:89
+#: kbugreport.cpp:90
 #, kde-format
 msgid "Submit Bug Report"
 msgstr "ક્ષતિ અહેવાલ રજૂ કરો"
 
-#: kbugreport.cpp:101
+#: kbugreport.cpp:102
 #, kde-format
 msgid ""
 "The application for which you wish to submit a bug report - if incorrect, "
@@ -358,12 +358,12 @@ msgstr ""
 "કાર્યક્રમ કે જેના માટે તમે ક્ષતિ અહેવાલ જમા કરવા ઈચ્છો છો - જો ખોટું હોય તો, મહેરબાની "
 "કરીને યોગ્ય કાર્યક્રમનો ક્ષતિ અહેવાલ મેનુ વસ્તુ વાપરો"
 
-#: kbugreport.cpp:102
+#: kbugreport.cpp:103
 #, kde-format
 msgid "Application: "
 msgstr "કાર્યક્રમ: "
 
-#: kbugreport.cpp:112
+#: kbugreport.cpp:113
 #, kde-format
 msgid ""
 "The version of this application - please make sure that no newer version is "
@@ -372,28 +372,28 @@ msgstr ""
 "આ કાર્યક્રમની આવૃત્તિ - ક્ષતિનો અહેવાલ મોકલતાં પહેલાં મહેરબાની કરી ખાતરી કરો કે કોઈ નવી "
 "આવૃત્તિ ઉપલબ્ધ નથી"
 
-#: kbugreport.cpp:113
+#: kbugreport.cpp:114
 #, kde-format
 msgid "Version:"
 msgstr "આવૃત્તિ:"
 
-#: kbugreport.cpp:118
+#: kbugreport.cpp:119
 #, kde-format
 msgid "no version set (programmer error)"
 msgstr "કોઈ આવૃત્તિ સુયોજિત નથી (પ્રોગ્રામર ક્ષતિ)"
 
-#: kbugreport.cpp:122
+#: kbugreport.cpp:123
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
 msgstr "%1 સાથે KDE ફ્રેમવર્ક્સ %2"
 
-#: kbugreport.cpp:130
+#: kbugreport.cpp:131
 #, kde-format
 msgid "OS:"
 msgstr "ઓપરેટિંગ સિસ્ટમ:"
 
-#: kbugreport.cpp:135
+#: kbugreport.cpp:136
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
@@ -401,7 +401,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:142
+#: kbugreport.cpp:143
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
@@ -409,7 +409,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: kbugreport.cpp:148
+#: kbugreport.cpp:149
 #, kde-format
 msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
@@ -417,7 +417,7 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kbugreport.cpp:162
+#: kbugreport.cpp:163
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -429,7 +429,7 @@ msgstr ""
 "kde.org\">http://bugs.kde.org</a> પર વેબ બ્રાઉઝર વિન્ડો ખોલશે,જ્યાં તમે ભરવા માટેનું "
 "ફોર્મ જોઇ શકશો. દર્શાવેલ ઉપરની માહિતી તે સર્વર પર મોકલવામાં આવશે.</qt>"
 
-#: kbugreport.cpp:168
+#: kbugreport.cpp:169
 #, kde-format
 msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
@@ -438,13 +438,13 @@ msgstr ""
 "<qt>ક્ષતિની નોંધ કરવા માટે નીચેના બટન પર ક્લિક કરો. આ <a href=\"%1\">%2</a> પર વેબ "
 "બ્રાઉઝર વિંડો ખોલશે.</qt>"
 
-#: kbugreport.cpp:185
+#: kbugreport.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "ક્ષતિ અહેવાલ વિઝાર્ડ ખોલો (&L)"
 
-#: kbugreport.cpp:187
+#: kbugreport.cpp:188
 #, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
@@ -504,13 +504,13 @@ msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&ટૂલબારમાં આઇકોન્સ સાથે ટેક્સ્ટ દેખાય ત્યારે ટેક્સ્ટ છુપાવો"
 
-#: kedittoolbar.cpp:617
+#: kedittoolbar.cpp:621
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "સાધનપટ્ટી રૂપરેખાંકિત કરો"
 
-#: kedittoolbar.cpp:680
+#: kedittoolbar.cpp:684
 #, kde-format
 msgid ""
 "Do you really want to reset all toolbars of this application to their "
@@ -519,17 +519,17 @@ msgstr ""
 "શું તમે ખરેખર આ કાર્યક્રમની બધી સાધનપટ્ટીઓ તેમના મૂળભૂત સ્વરૂપમાં ફેરવવા માંગો છો? ફેરફારો "
 "તરત જ લાગુ પાડશે."
 
-#: kedittoolbar.cpp:681
+#: kedittoolbar.cpp:685
 #, kde-format
 msgid "Reset Toolbars"
 msgstr "સાધનપટ્ટીઓ ફરી ગોઠવો"
 
-#: kedittoolbar.cpp:682
+#: kedittoolbar.cpp:686
 #, kde-format
 msgid "Reset"
 msgstr "ફરી ગોઠવો"
 
-#: kedittoolbar.cpp:1001
+#: kedittoolbar.cpp:1005
 #, kde-format
 msgid "&Toolbar:"
 msgstr "સાધનપટ્ટી (&T):"
@@ -541,66 +541,66 @@ msgstr "સાધનપટ્ટી (&T):"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1017
+#: kedittoolbar.cpp:1021
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "ઉપલબ્ધ ક્રિયાઓ (&v):"
 
-#: kedittoolbar.cpp:1038 kedittoolbar.cpp:1063
+#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
 #, kde-format
 msgid "Filter"
 msgstr "ગાળક"
 
-#: kedittoolbar.cpp:1041
+#: kedittoolbar.cpp:1045
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "વર્તમાન ક્રિયાઓ (&e):"
 
-#: kedittoolbar.cpp:1066
+#: kedittoolbar.cpp:1070
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "ચિહ્ન બદલો..."
 
-#: kedittoolbar.cpp:1075
+#: kedittoolbar.cpp:1079
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "લ&xખાણ બદલો..."
 
-#: kedittoolbar.cpp:1217
+#: kedittoolbar.cpp:1221
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- વિભાજક ---"
 
-#: kedittoolbar.cpp:1218
+#: kedittoolbar.cpp:1222
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "---ખેચાંતુ વિભાજક ---"
 
-#: kedittoolbar.cpp:1240
+#: kedittoolbar.cpp:1244
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1268
+#: kedittoolbar.cpp:1272
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "આ ઘટક જડિત ભાગનાં બધા ઘટકો સાથે બદલી નાખવામાં આવશે."
 
-#: kedittoolbar.cpp:1270
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid "<Merge>"
 msgstr "<ભેગું કરો>"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<ભેગું કરો %1>"
 
-#: kedittoolbar.cpp:1282
+#: kedittoolbar.cpp:1286
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -609,18 +609,18 @@ msgstr ""
 "આ ડાયનેમિક ક્રિયાઓની યાદી છે. તમે તેને ખસેડી શકો છો, પણ જો તમે તેને દૂર કરશો તો તમે તેને "
 "ફરી-ઉમેરી શકશો નહી."
 
-#: kedittoolbar.cpp:1283
+#: kedittoolbar.cpp:1287
 #, kde-format
 msgid "ActionList: %1"
 msgstr "ક્રિયાયાદી: %1"
 
-#: kedittoolbar.cpp:1384 kedittoolbar.cpp:1409
+#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1637
+#: kedittoolbar.cpp:1641
 #, kde-format
 msgid "Change Icon"
 msgstr "ચિહ્ન બદલો"
@@ -631,7 +631,7 @@ msgstr "ચિહ્ન બદલો"
 msgid "&Help"
 msgstr "મદદ (&H)"
 
-#: kkeysequencewidget.cpp:146
+#: kkeysequencewidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -641,7 +641,7 @@ msgstr ""
 "બટન પર ક્લિક કરો, ત્યારબાદ શોર્ટકટ દાખલ કરો જેમ તમે પ્રોગ્રામમાં કરશો.\n"
 "Ctrl+A માટે ઉદાહરણ: Ctrl કી દબાવો અને A દબાવો."
 
-#: kkeysequencewidget.cpp:150
+#: kkeysequencewidget.cpp:151
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Clear"
@@ -649,7 +649,7 @@ msgctxt "@action:button"
 msgid "Clear"
 msgstr "સાફ કરો"
 
-#: kkeysequencewidget.cpp:169
+#: kkeysequencewidget.cpp:170
 #, kde-format
 msgctxt "%1 is the number of conflicts"
 msgid "Shortcut Conflict"
@@ -657,12 +657,12 @@ msgid_plural "Shortcut Conflicts"
 msgstr[0] "ટુંકાણ તકરાર"
 msgstr[1] "ટુંકાણ તકરાર"
 
-#: kkeysequencewidget.cpp:173
+#: kkeysequencewidget.cpp:174
 #, kde-format
 msgid "Shortcut '%1' for action '%2'\n"
 msgstr "ક્રિયા '%2' માટે '%1' ટુંકાણ(ણો)\n"
 
-#: kkeysequencewidget.cpp:178
+#: kkeysequencewidget.cpp:179
 #, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
@@ -682,20 +682,20 @@ msgstr[1] ""
 "શું તમે આ ક્રિયાઓને ખાલી ટુંકાણ આપવા માંગો છો?\n"
 "%3"
 
-#: kkeysequencewidget.cpp:188 kkeysequencewidget.cpp:295
-#: kkeysequencewidget.cpp:357
+#: kkeysequencewidget.cpp:189 kkeysequencewidget.cpp:296
+#: kkeysequencewidget.cpp:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "પુનઃસોંપણી"
 
-#: kkeysequencewidget.cpp:193
+#: kkeysequencewidget.cpp:194
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "ટુંકાણ તકરાર"
 
-#: kkeysequencewidget.cpp:195
+#: kkeysequencewidget.cpp:196
 #, kde-format
 msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
@@ -704,12 +704,12 @@ msgstr ""
 "<qt>'%1' કી સંયોજન પહેલેથી જ <b>%2</b> ક્રિયા દ્વારા ઉપયોગમાં છે.<br>કૃપા કરીને કોઈ "
 "બીજું સંયોજન પસંદ કરો.</qt>"
 
-#: kkeysequencewidget.cpp:275
+#: kkeysequencewidget.cpp:276
 #, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
 msgstr "શોર્ટકટ '%1' એપ્લિકેશન '%2' માં ક્રિયા '%3' માટે\n"
 
-#: kkeysequencewidget.cpp:284
+#: kkeysequencewidget.cpp:285
 #, kde-format
 msgctxt ""
 "%1 is the number of conflicts (hidden), %2 is the key sequence of the "
@@ -720,7 +720,7 @@ msgid_plural ""
 msgstr[0] "ટૂંકાણ '%2' નીચેનાં કળ જોડાણો સાથે મુશ્કેલી સર્જે છે:\n"
 msgstr[1] "ટૂંકાણ '%2' નીચેનાં કળ જોડાણો સાથે મુશ્કેલી સર્જે છે:\n"
 
-#: kkeysequencewidget.cpp:291
+#: kkeysequencewidget.cpp:292
 #, kde-format
 msgctxt "%1 is the number of shortcuts with which there is a conflict"
 msgid "Conflict with Registered Global Shortcut"
@@ -728,12 +728,12 @@ msgid_plural "Conflict with Registered Global Shortcuts"
 msgstr[0] "નોંધણી કરેલ વૈશ્વિક ટૂંકાણ સાથે તકરાર"
 msgstr[1] "નોંધણી કરેલ વૈશ્વિક ટૂંકાણો સાથે તકરાર"
 
-#: kkeysequencewidget.cpp:304
+#: kkeysequencewidget.cpp:305
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "નિર્ધારિત શોર્ટકટ"
 
-#: kkeysequencewidget.cpp:306
+#: kkeysequencewidget.cpp:307
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -743,13 +743,13 @@ msgstr ""
 "F12 કી વિન્ડોઝ માટે નિર્ધારિત છે, તેથી તેને ગ્લોબલ શોર્ટકટ માટે ઉપયોગમાં લઈ શકાતું નથી.\n"
 "કૃપા કરીને બીજું કી પસંદ કરો."
 
-#: kkeysequencewidget.cpp:349
+#: kkeysequencewidget.cpp:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "પ્રમાણભૂત કાર્યક્રમ ટૂંકાણ સાથે તકરાર થાય છે"
 
-#: kkeysequencewidget.cpp:351
+#: kkeysequencewidget.cpp:352
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -760,13 +760,13 @@ msgstr ""
 "છે.\n"
 "તમે તેને ખરેખર વૈશ્વિક ટૂંકાણો તરીકે પણ વાપરવા માંગો છો?"
 
-#: kkeysequencewidget.cpp:395
+#: kkeysequencewidget.cpp:396
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ઈનપુટ"
 
-#: kkeysequencewidget.cpp:397 kshortcuteditwidget.cpp:54
+#: kkeysequencewidget.cpp:398 kshortcuteditwidget.cpp:54
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
@@ -929,7 +929,7 @@ msgstr "હાલની ટૂંકાણ પધ્ધતિ બદલાઇ �
 msgid "Manage &Schemes"
 msgstr "પધ્ધતિઓનુ સંચાલન કરો"
 
-#: kshortcutsdialog.cpp:149
+#: kshortcutsdialog.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
@@ -1047,24 +1047,24 @@ msgctxt "@item:intable Action name in shortcuts configuration"
 msgid "%1"
 msgstr "%1"
 
-#: kswitchlanguagedialog_p.cpp:137
+#: kswitchlanguagedialog_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
 msgstr "ભાષા રૂપરેખાંકિત કરો"
 
-#: kswitchlanguagedialog_p.cpp:141
+#: kswitchlanguagedialog_p.cpp:142
 #, kde-format
 msgid "Please choose the language which should be used for this application:"
 msgstr "મહેરબાની કરી આ કાર્યક્રમ માટે ઉપયોગ કરવાની ભાષા પસંદ કરો:"
 
-#: kswitchlanguagedialog_p.cpp:168
+#: kswitchlanguagedialog_p.cpp:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
 msgstr "બીજી ભાષા ઉમેરો"
 
-#: kswitchlanguagedialog_p.cpp:169
+#: kswitchlanguagedialog_p.cpp:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1074,7 +1074,7 @@ msgstr ""
 "એક અથવા વધુ ભાષાઓ ઉમેરો જે ઉપયોગમાં લેવાશે જો બીજા ભાષાંતરો બરોબર ભાષાંતર નહી ધરાવતા "
 "હોય"
 
-#: kswitchlanguagedialog_p.cpp:261 kswitchlanguagedialog_p.cpp:282
+#: kswitchlanguagedialog_p.cpp:262 kswitchlanguagedialog_p.cpp:283
 #, kde-format
 msgid ""
 "The language for this application has been changed. The change will take "
@@ -1083,34 +1083,34 @@ msgstr ""
 "આ કાર્યક્રમની ભાષા બદલાઇ ગઇ છે. આ ફેરફાર કાર્યક્રમને ફરી વખત શરૂ કરાતાં અમલમાં મૂકવામાં "
 "આવશે."
 
-#: kswitchlanguagedialog_p.cpp:262
+#: kswitchlanguagedialog_p.cpp:263
 #, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "કાર્યક્રમ ભાષા બદલાઇ ગઇ છે"
 
-#: kswitchlanguagedialog_p.cpp:283
+#: kswitchlanguagedialog_p.cpp:284
 #, kde-format
 msgid "Application Language Changed"
 msgstr "કાર્યક્રમ ભાષા બદલાઇ ગઇ છે"
 
-#: kswitchlanguagedialog_p.cpp:368
+#: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Primary language:"
 msgstr "મુખ્ય ભાષા:"
 
-#: kswitchlanguagedialog_p.cpp:368
+#: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Fallback language:"
 msgstr "બીજી ભાષા:"
 
-#: kswitchlanguagedialog_p.cpp:383
+#: kswitchlanguagedialog_p.cpp:384
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "દૂર કરો"
 
-#: kswitchlanguagedialog_p.cpp:389
+#: kswitchlanguagedialog_p.cpp:390
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1118,7 +1118,7 @@ msgid ""
 "other languages."
 msgstr "આ કાર્યક્રમની મુખ્ય ભાષા છે જે બીજી ભાષાઓ કરતાં પહેલાં, પ્રથમ ઉપયોગમાં લેવામાં આવશે."
 
-#: kswitchlanguagedialog_p.cpp:390
+#: kswitchlanguagedialog_p.cpp:391
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1127,109 +1127,109 @@ msgid ""
 msgstr ""
 "આ ભાષા જે ઉપયોગમાં લેવામાં આવશે જો કોઇ બીજી ભાષાઓ યોગ્ય ભાષાંતર સમાવેશ નહી કરતી હોય."
 
-#: ktoolbar.cpp:309 ktoolbar.cpp:316
+#: ktoolbar.cpp:311 ktoolbar.cpp:318
 #, kde-format
 msgctxt "@title:menu"
 msgid "Toolbar Settings"
 msgstr "સાધનપટ્ટી મેનુ"
 
-#: ktoolbar.cpp:311
+#: ktoolbar.cpp:313
 #, kde-format
 msgctxt "@title:menu"
 msgid "Show Text"
 msgstr "મદદ બતાવો"
 
-#: ktoolbar.cpp:318
+#: ktoolbar.cpp:320
 #, kde-format
 msgctxt "Toolbar orientation"
 msgid "Orientation"
 msgstr "દિશા"
 
-#: ktoolbar.cpp:320
+#: ktoolbar.cpp:322
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Top"
 msgstr "ઉપર"
 
-#: ktoolbar.cpp:324
+#: ktoolbar.cpp:326
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Left"
 msgstr "ડાબે"
 
-#: ktoolbar.cpp:327
+#: ktoolbar.cpp:329
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Right"
 msgstr "જમણે"
 
-#: ktoolbar.cpp:330
+#: ktoolbar.cpp:332
 #, kde-format
 msgctxt "toolbar position string"
 msgid "Bottom"
 msgstr "તળિયે"
 
-#: ktoolbar.cpp:341
+#: ktoolbar.cpp:343
 #, kde-format
 msgid "Text Position"
 msgstr "લખાણ સ્થાન"
 
-#: ktoolbar.cpp:343
+#: ktoolbar.cpp:345
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "ફકત ચિહ્નો"
 
-#: ktoolbar.cpp:346
+#: ktoolbar.cpp:348
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "ફક્ત લખાણ"
 
-#: ktoolbar.cpp:349
+#: ktoolbar.cpp:351
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "ચિહ્નોની સાથેનું લખાણ"
 
-#: ktoolbar.cpp:352
+#: ktoolbar.cpp:354
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "ચિહ્નો નીચે લખાણ"
 
-#: ktoolbar.cpp:363
+#: ktoolbar.cpp:365
 #, kde-format
 msgid "Icon Size"
 msgstr "ચિહ્ન માપ"
 
-#: ktoolbar.cpp:365
+#: ktoolbar.cpp:367
 #, kde-format
 msgctxt "@item:inmenu Icon size"
 msgid "Default"
 msgstr "મૂળભૂત"
 
-#: ktoolbar.cpp:385 ktoolbar.cpp:409
+#: ktoolbar.cpp:387 ktoolbar.cpp:411
 #, kde-format
 msgid "Small (%1x%2)"
 msgstr "નાનું (%1x%2)"
 
-#: ktoolbar.cpp:387 ktoolbar.cpp:411
+#: ktoolbar.cpp:389 ktoolbar.cpp:413
 #, kde-format
 msgid "Medium (%1x%2)"
 msgstr "મધ્યમ (%1x%2)"
 
-#: ktoolbar.cpp:389 ktoolbar.cpp:413
+#: ktoolbar.cpp:391 ktoolbar.cpp:415
 #, kde-format
 msgid "Large (%1x%2)"
 msgstr "મોટું (%1x%2)"
 
-#: ktoolbar.cpp:391 ktoolbar.cpp:415
+#: ktoolbar.cpp:393 ktoolbar.cpp:417
 #, kde-format
 msgid "Huge (%1x%2)"
 msgstr "વિશાળ (%1x%2)"
 
-#: ktoolbar.cpp:441
+#: ktoolbar.cpp:443
 #, kde-format
 msgid "Lock Toolbar Positions"
 msgstr "સાધનપટ્ટીઓને તાળું મારો"
