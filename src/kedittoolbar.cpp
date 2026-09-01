@@ -924,15 +924,17 @@ void KEditToolBarWidget::save()
             continue;
         }
 
-        // Add noMerge="1" to all the menus since we are saving the merged data
-        QDomNodeList menuNodes = xmlFile.domDocument().elementsByTagName(QStringLiteral("Menu"));
-        for (int i = 0; i < menuNodes.length(); ++i) {
-            QDomNode menuNode = menuNodes.item(i);
-            QDomElement menuElement = menuNode.toElement();
-            if (menuElement.isNull()) {
-                continue;
+        if (xmlFile.type() == XmlData::Local) {
+            // Add noMerge="1" to all the menus since we are saving the merged data
+            QDomNodeList menuNodes = xmlFile.domDocument().elementsByTagName(QStringLiteral("Menu"));
+            for (int i = 0; i < menuNodes.length(); ++i) {
+                QDomNode menuNode = menuNodes.item(i);
+                QDomElement menuElement = menuNode.toElement();
+                if (menuElement.isNull()) {
+                    continue;
+                }
+                menuElement.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
             }
-            menuElement.setAttribute(QStringLiteral("noMerge"), QStringLiteral("1"));
         }
 
         // qCDebug(DEBUG_KXMLGUI) << (*it).domDocument().toString();
