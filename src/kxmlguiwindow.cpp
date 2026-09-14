@@ -564,12 +564,17 @@ void KXmlGuiWindow::checkAmbiguousShortcuts()
                         const QString existingShortcutActionName = KLocalizedString::removeAcceleratorMarker(existingShortcutAction->text());
                         QString dontShowAgainString = existingShortcutActionName + actionName + shortcut.toString();
                         dontShowAgainString.remove(QLatin1Char('\\'));
+                        QString bugAddress = KAboutData::applicationData().bugAddress();
+                        if (bugAddress == QLatin1String("submit@bugs.kde.org")) {
+                            bugAddress = QLatin1String("https://bugs.kde.org");
+                        }
                         KMessageBox::information(this,
                                                  i18n("There are two actions (%1, %2) that want to use the same shortcut (%3). This is most probably a bug. "
-                                                      "Please report it in <a href='https://bugs.kde.org'>bugs.kde.org</a>",
+                                                      "Please report it in <a href=\"%4\">%4</a>",
                                                       existingShortcutActionName,
                                                       actionName,
-                                                      shortcut.toString(QKeySequence::NativeText)),
+                                                      shortcut.toString(QKeySequence::NativeText),
+                                                      bugAddress),
                                                  i18n("Ambiguous Shortcuts"),
                                                  dontShowAgainString,
                                                  KMessageBox::Notify | KMessageBox::AllowLink);
