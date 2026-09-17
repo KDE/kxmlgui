@@ -25,6 +25,7 @@ include(KDEGitCommitHooks)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMGenerateQDoc)
+include(ECMInstalledLibraryCheck)
 include(CMakeDependentOption)
 
 set(kxmlgui_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kxmlgui_version.h")

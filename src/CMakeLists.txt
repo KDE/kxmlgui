@@ -114,7 +114,7 @@ if (HAVE_QTDBUS)
   target_link_libraries(KF6XmlGui PUBLIC Qt6::DBus) #QDBus connect to signal in KToolBar
 endif()
 
-ecm_generate_headers(KXmlGui_HEADERS
+ecm_generate_headers(KXmlGui_CamelCase_HEADERS
   HEADER_NAMES
   KAboutApplicationDialog
   KAboutPluginDialog
@@ -147,6 +147,7 @@ install(TARGETS KF6XmlGui EXPORT KF6XmlGuiTargets ${KF_INSTALL_TARGETS_DEFAULT_A
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kxmlgui_export.h
   ${KXmlGui_HEADERS}
+  ${KXmlGui_CamelCase_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KXmlGui COMPONENT Devel
 )
 
@@ -158,4 +159,17 @@ ecm_qt_install_logging_categories(
     EXPORT KXMLGUI
     FILE kxmlgui.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
+
+ecm_add_installed_library_check(KF6XmlGui
+    PACKAGE_NAME "KF6XmlGui"
+    PACKAGE_TARGET_NAMESPACE "KF6::"
+)
+
+ecm_installed_library_check_include_strings(KF6XmlGui
+    HEADERS ${KXmlGui_CamelCase_HEADERS}
+)
+
+ecm_installed_library_check_version_preprocessor_macros(KF6XmlGui
+    PREFIX KXMLGUI
 )
