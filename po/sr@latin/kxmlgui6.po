@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:42+0000\n"
-"PO-Revision-Date: 2017-10-14 23:06+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-09-18 12:00+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -20,78 +21,61 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
-"X-Associated-UI-Catalogs: kconfigwidgets5\n"
+"X-Associated-UI-Catalogs: kconfigwidgets6\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "O %1|/|O $[dat %1]"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab"
 msgid "About"
-msgstr "&O programu"
+msgstr "O programu"
 
 #: kaboutapplicationdialog.cpp:94
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
-msgstr ""
+msgstr "Komponente"
 
 #: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
-#, fuzzy, kde-format
-#| msgid "A&uthor"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "&Autor"
-msgstr[1] "&Autor"
-msgstr[2] "&Autor"
-msgstr[3] "&Autor"
+msgstr[0] "Autori"
+msgstr[1] "Autori"
+msgstr[2] "Autori"
+msgstr[3] "Autor"
 
 #: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "&Thanks To"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
-msgstr "&Zahvalnice"
+msgstr "Zahvalnice"
 
 #: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
-#, fuzzy, kde-format
-#| msgid "Translation"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
-msgstr "prevod"
+msgstr "Prevod"
 
 #: kaboutkdedialog_p.cpp:31
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "O KDE‑u"
 
 #: kaboutkdedialog_p.cpp:34
-#, fuzzy, kde-format
-#| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
+#, kde-format
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">%1</font><br />izdanje %2</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Budite slobodni!</html>"
 
 #: kaboutkdedialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html><b>KDE</b> is a world-wide network of software engineers, artists, "
-#| "writers, translators and facilitators who are committed to <a href="
-#| "\"%1\">Free Software</a> development. This community has created hundreds "
-#| "of Free Software applications as part of the KDE frameworks, workspaces "
-#| "and applications.<br /><br />KDE is a cooperative enterprise in which no "
-#| "single entity controls the efforts or products of KDE to the exclusion of "
-#| "others. Everyone is welcome to join and contribute to KDE, including you."
-#| "<br /><br />Visit <a href=\"%2\">%2</a> for more information about the "
-#| "KDE community and the software we produce.</html>"
+#, kde-format
 msgid ""
 "<html><b>KDE</b> is a world-wide community of software engineers, artists, "
 "writers, translators and creators who are committed to <a href=\"%1\">Free "
@@ -104,15 +88,15 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html><p><b>KDE</b> je svetska mreža softverskih inženjera, grafičara, "
-"pisaca, prevodilaca i organizatora koji su posvećeni razvoju <a href="
-"\"%1\">slobodnog softvera</a>. Ova zajednica je stvorila stotine slobodnih "
-"programa kao deo radnih okvira, radnih prostora i programa.</p><p>KDE je "
-"zajednički poduhvat u kojem ne postoji jedan entitet koji bi upravljao "
-"naporima i rezultatima tako da isključuje druge. Svi su dobrodošli da se "
-"priključe i doprinesu KDE‑u.</p><p>Posetite <a href=\"%2\">%2</a> za "
-"detaljnije informacije o zajednici KDE‑a i softveru koji razvijamo.</p></"
-"html>"
+"<html><p><b>KDE</b> je svetska zajednica softverskih inženjera, grafičara, "
+"pisaca, prevodilaca i stvaralaca posvećenih razvoju <a href=\"%1\">slobodnog "
+"softvera</a>. KDE stvara radno okruženje Plazma, stotine programa i mnoge "
+"softverske biblioteke koje ih podržavaju.</p><p>KDE je zajednički poduhvat: "
+"nijedan entitet ne upravlja njegovim smerom ni proizvodima. Umesto toga, "
+"radimo zajedno na zajedničkom cilju — stvaranju najboljeg slobodnog softvera "
+"na svetu. Svi su dobrodošli da se <a href=\"%2\">priključe i doprinesu</a> "
+"KDE‑u, uključujući i vas.</p><p>Posetite <a href=\"%3\">%3</a> za detaljnije "
+"informacije o zajednici KDE‑a i softveru koji razvijamo.</p></html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -136,15 +120,7 @@ msgstr ""
 "i> (spisak želja).</p></html>"
 
 #: kaboutkdedialog_p.cpp:85
-#, fuzzy, kde-format
-#| msgid ""
-#| "<html>You do not have to be a software developer to be a member of the "
-#| "KDE team. You can join the national teams that translate program "
-#| "interfaces. You can provide graphics, themes, sounds, and improved "
-#| "documentation. You decide!<br /><br />Visit <a href=\"%1\">%1</a> for "
-#| "information on some projects in which you can participate.<br /><br />If "
-#| "you need more information or documentation, then a visit to <a href="
-#| "\"%2\">%2</a> will provide you with what you need.</html>"
+#, kde-format
 msgid ""
 "<html>You do not have to be a software developer to be a member of the KDE "
 "team. You can join the language teams that translate program interfaces. You "
@@ -191,39 +167,34 @@ msgstr ""
 "p><p>Unapred vam se zahvaljujemo na podršci.</p></html>"
 
 #: kaboutkdedialog_p.cpp:128
-#, fuzzy, kde-format
-#| msgid "&About"
+#, kde-format
 msgctxt "@title:tab About KDE"
 msgid "&About"
-msgstr "&O programu"
+msgstr "&O KDE‑u"
 
 #: kaboutkdedialog_p.cpp:129
-#, fuzzy, kde-format
-#| msgid "&Report Bugs or Wishes"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
 msgstr "Prijavite &greške ili želje"
 
 #: kaboutkdedialog_p.cpp:130
-#, fuzzy, kde-format
-#| msgid "&Join KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
 msgstr "Pri&družite se KDE‑u"
 
 #: kaboutkdedialog_p.cpp:131
-#, fuzzy, kde-format
-#| msgid "&Support KDE"
+#, kde-format
 msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Podržite KDE"
 
 #: kabstractaboutdialog_p.cpp:47
-#, fuzzy, kde-format
-#| msgid "Version:"
+#, kde-format
 msgctxt "Version version-number"
 msgid "Version %1"
-msgstr "Izdanje:"
+msgstr "Izdanje %1"
 
 #: kabstractaboutdialog_p.cpp:91
 #, kde-format
@@ -234,130 +205,115 @@ msgstr "Licenca: %1"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kabstractaboutdialog_p.cpp:123
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "Radni okviri KDE‑a"
 
 #: kabstractaboutdialog_p.cpp:124
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
+"Zbirka biblioteka koje je napravila zajednica KDE‑a radi proširenja Qt‑a."
 
 #: kabstractaboutdialog_p.cpp:128
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Višeplatformski radni okvir za razvoj programa."
 
 #: kabstractaboutdialog_p.cpp:130
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "Koristi %1, izgrađeno prema %2"
 
 #: kabstractaboutdialog_p.cpp:136
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: kabstractaboutdialog_p.cpp:139
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: kabstractaboutdialog_p.cpp:142
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "Apimidž"
 
 #: kabstractaboutdialog_p.cpp:145
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Metod distribucije."
 
 #: kabstractaboutdialog_p.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Osnovna platforma."
 
 #: kabstractaboutdialog_p.cpp:176
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "Posetite domaću stranicu doprinosioca"
+msgstr "Posetite domaću stranicu komponente"
 
 #: kabstractaboutdialog_p.cpp:177
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Posetite domaću stranicu doprinosioca\n"
+"Posetite domaću stranicu komponente\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiraj u klipbord"
 
 #: kabstractaboutdialog_p.cpp:259
-#, fuzzy, kde-format
-#| msgid "Visit contributor's homepage"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Posetite domaću stranicu doprinosioca"
+msgstr "Posetite domaću stranicu autora"
 
 #: kabstractaboutdialog_p.cpp:260
-#, fuzzy, kde-format
-#| msgid ""
-#| "Visit contributor's homepage\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Posetite domaću stranicu doprinosioca\n"
+"Posetite domaću stranicu autora\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid "Email contributor"
+#, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
 msgstr "Pišite doprinosiocu e‑poštom"
 
 #: kabstractaboutdialog_p.cpp:275
-#, fuzzy, kde-format
-#| msgctxt "Action to send an email to a contributor"
-#| msgid ""
-#| "Email contributor\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr ""
-"Pišite doprinosiocu e‑poštom\n"
-"%1"
+msgstr "Pišite doprinosiocu e‑poštom: %1"
 
 #: kabstractaboutdialog_p.cpp:314
 #, kde-format
@@ -366,39 +322,34 @@ msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
 msgstr ""
+"<html>Koristite %1 za prijavu grešaka.<br/>Ako imate pitanja ili vam treba "
+"pomoć, posetite %2.<br/></html>"
 
 #: kabstractaboutdialog_p.cpp:324
-#, fuzzy, kde-format
-#| msgid "Please report bugs to <a href=\"%1\">%2</a>.\n"
+#, kde-format
 msgctxt "Reference to email address"
 msgid "Please report bugs to %1.\n"
-msgstr "Prijavljujte greške na <a href=\"%1\">%2</a>.\n"
+msgstr "Prijavljujte greške na %1.\n"
 
 #: kactionconflictdetector_p.h:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "The key sequence '%1' is ambiguous. Use 'Configure Shortcuts'\n"
-#| "from the 'Settings' menu to solve the ambiguity.\n"
-#| "No action will be triggered."
+#, kde-format
 msgid ""
 "The key sequence '%1' is ambiguous. Use 'Configure Keyboard Shortcuts'\n"
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
 "<html><p>Dvosmislena kombinacija tastera <b>%1</b>.</p><p>Upotrebite "
-"<i>Podešavanje prečica</i> iz menija <i>Podešavanje</i> da je razrešite, a "
-"dotle neće okidati nijednu radnju.</p></html>"
+"<i>Podešavanje prečica sa tastature</i> iz menija <i>Podešavanje</i> da je "
+"razrešite, a dotle neće okidati nijednu radnju.</p></html>"
 
 #: kactionconflictdetector_p.h:41
-#, fuzzy, kde-format
-#| msgid "Ambiguous shortcut detected"
+#, kde-format
 msgctxt "@title:window"
 msgid "Ambiguous shortcut detected"
 msgstr "Otkrivena dvosmislena prečica"
 
 #: kbugreport.cpp:68
-#, fuzzy, kde-format
-#| msgid "Submit Bug Report"
+#, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
 msgstr "Pošalji izveštaj o grešci"
@@ -445,7 +396,7 @@ msgstr "izdanje nije postavljeno (greška programera)"
 #, kde-format
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr ""
+msgstr "%1 sa Radnim okvirima KDE‑a %2"
 
 #: kbugreport.cpp:131
 #, kde-format
@@ -458,7 +409,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Windows 10', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:143
 #, kde-format
@@ -466,7 +417,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the operating "
 "system version, e.g. '35', %3 is the CPU architecture, e.g. 'x86_64'"
 msgid "%1 %2 (%3)"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: kbugreport.cpp:149
 #, kde-format
@@ -474,7 +425,7 @@ msgctxt ""
 "%1 is the operating system name, e.g. 'Fedora Linux', %2 is the CPU "
 "architecture, e.g. 'x86_64'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: kbugreport.cpp:163
 #, kde-format
@@ -499,15 +450,13 @@ msgstr ""
 "pregledača na <a href=\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:186
-#, fuzzy, kde-format
-#| msgid "&Launch Bug Report Wizard"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Launch Bug Report Wizard"
 msgstr "&Pokreni čarobnjak za prijavu grešaka"
 
 #: kbugreport.cpp:188
-#, fuzzy, kde-format
-#| msgid "&Submit Bug Report"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Submit Bug Report"
 msgstr "Pošalji &izveštaj o grešci"
@@ -553,8 +502,7 @@ msgstr "<h2>Prečice su dodate (tek da znate)</h2>"
 
 # >> @title:window
 #: kedittoolbar.cpp:353
-#, fuzzy, kde-format
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Text"
 msgstr "Promena teksta"
@@ -565,16 +513,14 @@ msgid "Icon te&xt:"
 msgstr "&Tekst ikonice:"
 
 #: kedittoolbar.cpp:368
-#, fuzzy, kde-format
-#| msgid "&Hide text when toolbar shows text alongside icons"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Hide text when toolbar shows text alongside icons"
 msgstr "&Sakrij tekst kada na traci alatki stoji pored ikonica"
 
 # >> @title:window
 #: kedittoolbar.cpp:621
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Toolbars"
 msgstr "Podešavanje traka alatki"
@@ -624,23 +570,21 @@ msgstr "Filter"
 #: kedittoolbar.cpp:1045
 #, kde-format
 msgid "Curr&ent actions:"
-msgstr "&Trenutne radnje:"
+msgstr "T&renutne radnje:"
 
 # >> @title:window
 #: kedittoolbar.cpp:1070
-#, fuzzy, kde-format
-#| msgid "Change Icon"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Promena ikonice"
+msgstr "Promena &ikonice…"
 
 # >> @title:window
 #: kedittoolbar.cpp:1079
-#, fuzzy, kde-format
-#| msgid "Change Text"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Promena teksta"
+msgstr "Promena t&eksta…"
 
 #: kedittoolbar.cpp:1221
 #, kde-format
@@ -648,10 +592,9 @@ msgid "--- separator ---"
 msgstr "--- razdvajač ---"
 
 #: kedittoolbar.cpp:1222
-#, fuzzy, kde-format
-#| msgid "--- separator ---"
+#, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- razdvajač ---"
+msgstr "--- rastegljivi razmak ---"
 
 #: kedittoolbar.cpp:1244
 #, kde-format
@@ -708,11 +651,7 @@ msgid "&Help"
 msgstr "Po&moć"
 
 #: kkeysequencewidget.cpp:147
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click on the button, then enter the shortcut like you would in the "
-#| "program.\n"
-#| "Example for Ctrl+A: hold the Ctrl key and press A."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -725,7 +664,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear"
-msgstr ""
+msgstr "Očisti"
 
 #: kkeysequencewidget.cpp:170
 #, kde-format
@@ -743,16 +682,7 @@ msgid "Shortcut '%1' for action '%2'\n"
 msgstr "Prečice %1 za radnju „%2“\n"
 
 #: kkeysequencewidget.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "%1 is the number of ambigious shortcut clashes (hidden)"
-#| msgid ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
-#| "Do you want to assign an empty shortcut to this action?\n"
-#| "%3"
-#| msgid_plural ""
-#| "The \"%2\" shortcut is ambiguous with the following shortcuts.\n"
-#| "Do you want to assign an empty shortcut to these actions?\n"
-#| "%3"
+#, kde-format
 msgctxt "%1 is the number of ambiguous shortcut clashes (hidden)"
 msgid ""
 "The \"%2\" shortcut is ambiguous with the following shortcut.\n"
@@ -781,15 +711,13 @@ msgstr[3] ""
 
 #: kkeysequencewidget.cpp:189 kkeysequencewidget.cpp:296
 #: kkeysequencewidget.cpp:358
-#, fuzzy, kde-format
-#| msgid "Reassign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
 msgstr "Ponovo dodeli"
 
 #: kkeysequencewidget.cpp:194
-#, fuzzy, kde-format
-#| msgid "Shortcut conflict"
+#, kde-format
 msgctxt "@title:window"
 msgid "Shortcut conflict"
 msgstr "Sukob prečica"
@@ -804,10 +732,9 @@ msgstr ""
 ">Izaberite drugu kombinaciju.</qt>"
 
 #: kkeysequencewidget.cpp:276
-#, fuzzy, kde-format
-#| msgid "Shortcut '%1' in Application %2 for action %3\n"
+#, kde-format
 msgid "Shortcut '%1' in Application '%2' for action '%3'\n"
-msgstr "Prečica %1 u programu %2 za radnju %3\n"
+msgstr "Prečica „%1“ u programu „%2“ za radnju „%3“\n"
 
 #: kkeysequencewidget.cpp:285
 #, kde-format
@@ -849,8 +776,7 @@ msgstr ""
 "Izaberite neku drugu."
 
 #: kkeysequencewidget.cpp:350
-#, fuzzy, kde-format
-#| msgid "Conflict with Standard Application Shortcut"
+#, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Sukob sa standardnom programskom prečicom"
@@ -879,23 +805,22 @@ msgid "None"
 msgstr "nijedna"
 
 #: klicensedialog_p.cpp:33
-#, fuzzy, kde-format
-#| msgid "License Agreement"
+#, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
-msgstr "&Ugovor o korišćenju"
+msgstr "Ugovor o korišćenju"
 
 #: kmainwindow.cpp:257
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Toplica Tanasković,Časlav Ilić"
+msgstr "Toplica Tanasković,Časlav Ilić,Nemanja Hiršl"
 
 #: kmainwindow.cpp:258
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
+msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
@@ -903,29 +828,25 @@ msgid "Add to Toolbar"
 msgstr "Dodaj na traku alatki"
 
 #: kmenumenuhandler_p.cpp:224
-#, fuzzy, kde-format
-#| msgid "Configure Shortcut..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Shortcut…"
-msgstr "Podesi prečicu..."
+msgstr "Podesi prečicu…"
 
 #: kshortcuteditwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Default:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Default:"
 msgstr "Podrazumevana:"
 
 #: kshortcuteditwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Custom:"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Custom:"
 msgstr "Posebna:"
 
 #: kshortcutschemeseditor.cpp:32
-#, fuzzy, kde-format
-#| msgid "Shortcut Schemes"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcut Schemes"
 msgstr "Šeme prečica"
@@ -939,46 +860,40 @@ msgstr "Tekuća šema:"
 #, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Nova…"
 
 #: kshortcutschemeseditor.cpp:50
-#, fuzzy, kde-format
-#| msgid "Delete"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete"
 msgstr "Obriši"
 
 #: kshortcutschemeseditor.cpp:53
-#, fuzzy, kde-format
-#| msgid "More Actions"
+#, kde-format
 msgctxt "@action:button"
 msgid "More Actions"
 msgstr "Još radnji"
 
 #: kshortcutschemeseditor.cpp:58
-#, fuzzy, kde-format
-#| msgid "Save shortcuts to scheme"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
 msgstr "Sačuvaj prečice u šemu"
 
 #: kshortcutschemeseditor.cpp:62
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Export Scheme…"
-msgstr "Izvezi šemu..."
+msgstr "Izvezi šemu…"
 
 #: kshortcutschemeseditor.cpp:66
-#, fuzzy, kde-format
-#| msgid "Import Scheme..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Import Scheme…"
-msgstr "Uvezi šemu..."
+msgstr "Uvezi šemu…"
 
 #: kshortcutschemeseditor.cpp:115
-#, fuzzy, kde-format
-#| msgid "Name for New Scheme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Name for New Scheme"
 msgstr "Ime nove šeme"
@@ -1009,8 +924,7 @@ msgstr ""
 
 # >> @title:window
 #: kshortcutschemeseditor.cpp:187
-#, fuzzy, kde-format
-#| msgid "Export Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Shortcuts"
 msgstr "Izvoz prečica"
@@ -1023,8 +937,7 @@ msgstr "prečice (*.shortcuts)"
 
 # >> @title:window
 #: kshortcutschemeseditor.cpp:202
-#, fuzzy, kde-format
-#| msgid "Import Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import Shortcuts"
 msgstr "Uvoz prečica"
@@ -1054,11 +967,10 @@ msgstr "Upravljaj &šemama"
 
 # >> @title:window
 #: kshortcutsdialog.cpp:151
-#, fuzzy, kde-format
-#| msgid "Configure Shortcuts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard Shortcuts"
-msgstr "Podešavanje prečica"
+msgstr "Podešavanje prečica sa tastature"
 
 #. i18n: ectx: property (whatsThis), widget (KTreeWidgetSearchLineWidget, searchFilter)
 #: kshortcutsdialog.ui:16
@@ -1082,12 +994,12 @@ msgstr ""
 "prikazanih u levoj koloni, i tastera ili kombinacija tastera (npr. Ctrl+V) "
 "prikazanih u desnoj koloni."
 
+# >> @title:column
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:33
-#, fuzzy, kde-format
-#| msgid "Action Name"
+#, kde-format
 msgid "Action"
-msgstr "Naziv radnje"
+msgstr "radnja"
 
 # >> @title:column
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
@@ -1184,11 +1096,10 @@ msgstr "%1|/|$[Spiskovno %1]"
 
 # >> @title:window
 #: kswitchlanguagedialog_p.cpp:138
-#, fuzzy, kde-format
-#| msgid "Configure Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Language"
-msgstr "Podešavanje traka alatki"
+msgstr "Podešavanje jezika"
 
 #: kswitchlanguagedialog_p.cpp:142
 #, kde-format
@@ -1196,24 +1107,20 @@ msgid "Please choose the language which should be used for this application:"
 msgstr "Izaberite jezik koji želite da koristite za ovaj program:"
 
 #: kswitchlanguagedialog_p.cpp:169
-#, fuzzy, kde-format
-#| msgid "Add Fallback Language"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
-msgstr "Dodaj pozadinski jezik"
+msgstr "Dodaj rezervni jezik"
 
 #: kswitchlanguagedialog_p.cpp:170
-#, fuzzy, kde-format
-#| msgid ""
-#| "Adds one more language which will be used if other translations do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
 msgstr ""
-"Dodaje jedan ili više jezika na koje se može spasti u slučaju da glavni "
-"jezik ne sadrži odgovarajući prevod."
+"Dodaje još jedan jezik, koji će biti upotrebljen ako ostali prevodi ne "
+"sadrže odgovarajući prevod."
 
 #: kswitchlanguagedialog_p.cpp:262 kswitchlanguagedialog_p.cpp:283
 #, kde-format
@@ -1225,8 +1132,7 @@ msgstr ""
 "pokretanju programa."
 
 #: kswitchlanguagedialog_p.cpp:263
-#, fuzzy, kde-format
-#| msgid "Application Language Changed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
 msgstr "Promenjen jezik programa"
@@ -1244,20 +1150,16 @@ msgstr "Glavni jezik:"
 #: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Fallback language:"
-msgstr "Pozadinski jezik:"
+msgstr "Rezervni jezik:"
 
 #: kswitchlanguagedialog_p.cpp:384
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Ukloni"
 
 #: kswitchlanguagedialog_p.cpp:390
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the main application language which will be used first, before "
-#| "any other languages."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the main application language which will be used first, before any "
@@ -1265,10 +1167,7 @@ msgid ""
 msgstr "Ovo je glavni jezik programa, u kojem će se prvo tražiti svi prevodi."
 
 #: kswitchlanguagedialog_p.cpp:391
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is the language which will be used if any previous languages do not "
-#| "contain a proper translation."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "This is the language which will be used if any previous languages do not "
@@ -1325,29 +1224,25 @@ msgid "Text Position"
 msgstr "Položaj teksta"
 
 #: ktoolbar.cpp:345
-#, fuzzy, kde-format
-#| msgid "Icons Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Icons Only"
 msgstr "samo ikonice"
 
 #: ktoolbar.cpp:348
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Only"
 msgstr "samo tekst"
 
 #: ktoolbar.cpp:351
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Alongside Icons"
 msgstr "tekst pored ikonica"
 
 #: ktoolbar.cpp:354
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "Text Under Icons"
 msgstr "tekst ispod ikonica"
@@ -1399,7 +1294,7 @@ msgstr "Prikazane trake alatki"
 msgctxt ""
 "@info:tooltip %1 is the tooltip of an action, %2 is its keyboard shorcut"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: ktooltiphelper.cpp:279
 #, kde-format
@@ -1407,6 +1302,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "<small><font color=\"%1\">Press <b>Shift</b> for more Info.</font></small>"
 msgstr ""
+"<small><font color=\"%1\">Pritisnite <b>Shift</b> za više informacija.</"
+"font></small>"
 
 #: ktooltiphelper.cpp:295
 #, kde-format
@@ -1414,6 +1311,8 @@ msgctxt "@info:tooltip keep short"
 msgid ""
 "%1<br/><small><font color=\"%2\">Press <b>Shift</b> for more.</font></small>"
 msgstr ""
+"%1<br/><small><font color=\"%2\">Pritisnite <b>Shift</b> za više.</font></"
+"small>"
 
 #: kundoactions.cpp:30
 #, kde-format
@@ -1432,10 +1331,9 @@ msgstr "Bez teksta"
 
 # >> @title:column
 #: kxmlguiwindow.cpp:203
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgid "Find Action…"
-msgstr "radnja"
+msgstr "Nađi radnju…"
 
 #: kxmlguiwindow.cpp:568
 #, kde-format
@@ -1476,7 +1374,7 @@ msgstr "&Uređivanje"
 #, kde-format
 msgctxt "@title:menu Game move"
 msgid "&Move"
-msgstr "&Potez"
+msgstr "Po&tez"
 
 #. i18n: ectx: Menu (view)
 #: ui_standards.rc:102
@@ -1507,322 +1405,10 @@ msgstr "&Alatke"
 #: ui_standards.rc:153
 #, kde-format
 msgid "&Settings"
-msgstr "P&odešavanje"
+msgstr "Pode&šavanje"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ui_standards.rc:195
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Glavna traka"
-
-#~ msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-#~ msgstr "<html><font size=\"5\">KDE — ka slobodi!</font></html>"
-
-#, fuzzy
-#~| msgctxt "@item Contributor name in about dialog."
-#~| msgid "%1"
-#~ msgctxt "@item Component name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1|/|$[nom %1] (<i>$[_izv %1]</i>)"
-
-#, fuzzy
-#~| msgid "Version:"
-#~ msgid "Version %1"
-#~ msgstr "Izdanje:"
-
-#~ msgctxt "@item Contributor name in about dialog."
-#~ msgid "%1"
-#~ msgstr "%1|/|$[nom %1] (<i>$[_izv %1]</i>)"
-
-#~ msgid "About %1"
-#~ msgstr "O %1|/|O $[dat %1]"
-
-#, fuzzy
-#~| msgid "Change &Icon..."
-#~ msgctxt "@action:button"
-#~ msgid "Change &Icon..."
-#~ msgstr "Promeni &ikonicu..."
-
-#, fuzzy
-#~| msgid "Change Te&xt..."
-#~ msgctxt "@action:button"
-#~ msgid "Change Te&xt..."
-#~ msgstr "Promeni &tekst..."
-
-# >> @action:button New scheme
-#, fuzzy
-#~| msgid "New..."
-#~ msgctxt "@action:button"
-#~ msgid "New..."
-#~ msgstr "Nova..."
-
-#~ msgid ""
-#~ "Your email address. If incorrect, use the Configure Email button to "
-#~ "change it"
-#~ msgstr ""
-#~ "<html>Vaša adresa e‑pošte. Ukoliko nije ispravna, upotrebite dugme "
-#~ "<i>Podesi e‑poštu...</i> da biste je promenili.</html>"
-
-#~ msgctxt "Email sender address"
-#~ msgid "From:"
-#~ msgstr "Od:"
-
-#, fuzzy
-#~| msgid "Configure Email..."
-#~ msgctxt "@action:button"
-#~ msgid "Configure Email..."
-#~ msgstr "Podesi e‑poštu..."
-
-#~ msgid "The email address this bug report is sent to."
-#~ msgstr "Adresa e‑pošte na koju se šalje izveštaj."
-
-#~ msgctxt "Email receiver address"
-#~ msgid "To:"
-#~ msgstr "Za:"
-
-#, fuzzy
-#~| msgid "&Send"
-#~ msgctxt "@action:button"
-#~ msgid "&Send"
-#~ msgstr "&Pošalji"
-
-#, fuzzy
-#~| msgid "Send bug report."
-#~ msgctxt "@info:tooltip"
-#~ msgid "Send bug report."
-#~ msgstr "Pošalji izveštaj o grešci."
-
-#, fuzzy
-#~| msgid "Send this bug report to %1."
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Send this bug report to %1."
-#~ msgstr "Pošalji ovaj izveštaj o grešci na %1."
-
-#, fuzzy
-#~| msgid "Se&verity"
-#~ msgctxt "@title:group"
-#~ msgid "Se&verity"
-#~ msgstr "&Ozbiljnost"
-
-#, fuzzy
-#~| msgid "Critical"
-#~ msgctxt "bug severity"
-#~ msgid "Critical"
-#~ msgstr "kritična"
-
-#, fuzzy
-#~| msgid "Grave"
-#~ msgctxt "bug severity"
-#~ msgid "Grave"
-#~ msgstr "visoka"
-
-#, fuzzy
-#~| msgctxt "normal severity"
-#~| msgid "Normal"
-#~ msgctxt "bug severity"
-#~ msgid "Normal"
-#~ msgstr "normalna"
-
-#, fuzzy
-#~| msgid "Wishlist"
-#~ msgctxt "bug severity"
-#~ msgid "Wishlist"
-#~ msgstr "spisak želja"
-
-#, fuzzy
-#~| msgid "Translation"
-#~ msgctxt "bug severity"
-#~ msgid "Translation"
-#~ msgstr "prevod"
-
-#~ msgid "S&ubject: "
-#~ msgstr "&Naslov: "
-
-#~ msgid ""
-#~ "Enter the text (in English if possible) that you wish to submit for the "
-#~ "bug report.\n"
-#~ "If you press \"Send\", a mail message will be sent to the maintainer of "
-#~ "this program.\n"
-#~ msgstr ""
-#~ "Unesite tekst (na engleskom, ukoliko je moguće) koji želite da pošaljete "
-#~ "kao izveštaj.\n"
-#~ "Kada pritisnete „Pošalji“, poruka će biti poslata održavaocu ovog "
-#~ "programa.\n"
-
-#~ msgid ""
-#~ "You must specify both a subject and a description before the report can "
-#~ "be sent."
-#~ msgstr "Morate navesti i naslov i opis pre nego što pošaljete izveštaj."
-
-#~ msgid ""
-#~ "<p>You chose the severity <b>Critical</b>. Please note that this severity "
-#~ "is intended only for bugs that:</p><ul><li>break unrelated software on "
-#~ "the system (or the whole system)</li><li>cause serious data loss</"
-#~ "li><li>introduce a security hole on the system where the affected package "
-#~ "is installed</li></ul>\n"
-#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
-#~ "does not, please select a lower severity. Thank you.</p>"
-#~ msgstr ""
-#~ "<p>Izabrali ste <b>kritičnu</b> ozbiljnost. Imajte na umu da je ova "
-#~ "ozbiljnost namenjena samo za greške koje:</p><ul><li>ruše nasumične "
-#~ "programe na sistemu (ili ceo sistem)</li><li>izazivaju ozbiljan gubitak "
-#~ "podataka</li><li>uvode bezbednosne propuste u sistem gde je ovaj program "
-#~ "instaliran</li></ul>\n"
-#~ "<p>Da li greška koju prijavljujete zaista povlači nešto od gore "
-#~ "navedenog? Ako ne, izaberite neku manju ozbiljnost. Hvala.</p>"
-
-#~ msgid ""
-#~ "<p>You chose the severity <b>Grave</b>. Please note that this severity is "
-#~ "intended only for bugs that:</p><ul><li>make the package in question "
-#~ "unusable or mostly so</li><li>cause data loss</li><li>introduce a "
-#~ "security hole allowing access to the accounts of users who use the "
-#~ "affected package</li></ul>\n"
-#~ "<p>Does the bug you are reporting cause any of the above damage? If it "
-#~ "does not, please select a lower severity. Thank you.</p>"
-#~ msgstr ""
-#~ "<p>Izabrali ste <b>visoku</b> ozbiljnost. Imajte na umu da je ova "
-#~ "ozbiljnost namenjena samo za greške koje:</p><ul> <li>čine program "
-#~ "uglavnom ili potpuno neupotrebljivim</li><li>izazivaju gubitak podataka</"
-#~ "li><li>uvode bezbednosne propuste dozvoljavajući pristup nalozima "
-#~ "korisnika koji koriste ovaj program</li></ul>\n"
-#~ "<p>Da li greška koju prijavljujete zaista povlači nešto od gore "
-#~ "navedenog? Ako ne, izaberite neku manju ozbiljnost. Hvala.</p>"
-
-#~ msgid ""
-#~ "Unable to send the bug report.\n"
-#~ "Please submit a bug report manually....\n"
-#~ "See https://bugs.kde.org/ for instructions."
-#~ msgstr ""
-#~ "Ne mogu da pošaljem izveštaj o grešci.\n"
-#~ "Pokušajte da ga predate ručno.\n"
-#~ "Potražite uputstva na https://bugs.kde.org/."
-
-#~ msgid "Bug report sent, thank you for your input."
-#~ msgstr "Izveštaj je poslat, hvala vam na saradnji."
-
-#~ msgid ""
-#~ "Close and discard\n"
-#~ "edited message?"
-#~ msgstr ""
-#~ "Zatvoriti i odbaciti\n"
-#~ "izmenjenu poruku?"
-
-#, fuzzy
-#~| msgid "Close Message"
-#~ msgctxt "@title:window"
-#~ msgid "Close Message"
-#~ msgstr "Zatvori poruku"
-
-#~ msgid "Error connecting to server."
-#~ msgstr "Greška u povezivanju na server."
-
-#~ msgid "Not connected."
-#~ msgstr "Nije povezan."
-
-#~ msgid "Connection timed out."
-#~ msgstr "Isteklo je vreme za vezu."
-
-#~ msgid "Time out waiting for server interaction."
-#~ msgstr "Isteklo je vreme za razmenu sa serverom."
-
-#~ msgid "Server said: \"%1\""
-#~ msgstr "Server odgovara: „%1“"
-
-#~ msgid "Sends a bug report by email."
-#~ msgstr "Šalje izveštaj o grešci e‑poštom."
-
-# rewrite-msgid: /line//
-# rewrite-msgid: /email/message/
-#~ msgid "The subject line of the email."
-#~ msgstr "Naslov poruke."
-
-#~ msgid "The email address to send the bug report to."
-#~ msgstr "Adresa e‑pošte na koju se šalje izveštaj."
-
-#, fuzzy
-#~| msgid ""
-#~| "Visit contributor's profile on %1\n"
-#~| "%2"
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Visit contributor's profile on %1\n"
-#~ "%2"
-#~ msgstr ""
-#~ "Posetite profil doprinosioca na %1\n"
-#~ "%2|/|Posetite profil doprinosioca na $[lok %1]\n"
-#~ "%2"
-
-#~ msgid ""
-#~ "<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The "
-#~ "<em>%4</em> windowing system</li></ul>"
-#~ msgstr ""
-#~ "<ul><li>Radni okviri KDE‑a %1</li><li>Qt %2 (gradnja prema %3)</"
-#~ "li><li>prozorski sistem <em>%4</em></li></ul>"
-
-#, fuzzy
-#~| msgid "&Libraries"
-#~ msgctxt "@title:tab"
-#~ msgid "Libraries"
-#~ msgstr "&Biblioteke"
-
-#, fuzzy
-#~| msgid ""
-#~| "Visit contributor's page\n"
-#~| "%1"
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Visit contributor's page\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Posetite stranicu doprinosioca\n"
-#~ "%1"
-
-#, fuzzy
-#~| msgid ""
-#~| "Visit contributor's blog\n"
-#~| "%1"
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Visit contributor's blog\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Posetite blog doprinosioca\n"
-#~ "%1"
-
-#~ msgctxt "City, Country"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
-
-#~ msgctxt "A generic social network or homepage link of an unlisted type."
-#~ msgid "Other"
-#~ msgstr "(nepoznato)|/|$[svojstva lok '(nepoznatom)']"
-
-#~ msgctxt "A type of link."
-#~ msgid "Blog"
-#~ msgstr "blog|/|$[svojstva lok 'blogu']"
-
-#~ msgctxt "A type of link."
-#~ msgid "Homepage"
-#~ msgstr "domaća stranica|/|$[svojstva lok 'domaćoj stranici']"
-
-#~ msgid ""
-#~ "Please use <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> to "
-#~ "report bugs.\n"
-#~ msgstr ""
-#~ "Koristite <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a> za "
-#~ "prijavljivanje grešaka.\n"
-
-#~ msgid "The key you just pressed is not supported by Qt."
-#~ msgstr "Qt ne podržava taster koji ste upravo pritisnuli."
-
-#, fuzzy
-#~| msgid "Unsupported Key"
-#~ msgctxt "@title:window"
-#~ msgid "Unsupported Key"
-#~ msgstr "Nepodržani taster"
-
-#, fuzzy
-#~| msgid "Switch Application Language"
-#~ msgctxt "@title:window"
-#~ msgid "Switch Application Language"
-#~ msgstr "Promeni jezik programa"
