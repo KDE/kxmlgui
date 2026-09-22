@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:42+0000\n"
+"POT-Creation-Date: 2026-09-22 15:57+0000\n"
 "PO-Revision-Date: 2026-06-28 15:02+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -546,7 +546,7 @@ msgstr "ツールバーをリセット"
 msgid "Reset"
 msgstr "リセット"
 
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:1007
 #, kde-format
 msgid "&Toolbar:"
 msgstr "ツールバー(&T):"
@@ -558,66 +558,66 @@ msgstr "ツールバー(&T):"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1021
+#: kedittoolbar.cpp:1023
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "利用可能なアクション(&V):"
 
-#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
+#: kedittoolbar.cpp:1044 kedittoolbar.cpp:1069
 #, kde-format
 msgid "Filter"
 msgstr "フィルタ"
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1047
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "現在のアクション(&E):"
 
-#: kedittoolbar.cpp:1070
+#: kedittoolbar.cpp:1072
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "アイコンを変更(&I)..."
 
-#: kedittoolbar.cpp:1079
+#: kedittoolbar.cpp:1081
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "テキストを変更(&X)..."
 
-#: kedittoolbar.cpp:1221
+#: kedittoolbar.cpp:1223
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- セパレータ ---"
 
-#: kedittoolbar.cpp:1222
+#: kedittoolbar.cpp:1224
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- スペーサ ---"
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "この要素は、すべての埋め込みコンポーネントの要素で置き換えられます。"
 
-#: kedittoolbar.cpp:1274
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge>"
 msgstr "<マージ>"
 
-#: kedittoolbar.cpp:1276
+#: kedittoolbar.cpp:1278
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<マージ %1>"
 
-#: kedittoolbar.cpp:1286
+#: kedittoolbar.cpp:1288
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -626,18 +626,18 @@ msgstr ""
 "これはアクションの動的なリストです。アクションは移動できますが、削除すると再"
 "び追加することはできません。"
 
-#: kedittoolbar.cpp:1287
+#: kedittoolbar.cpp:1289
 #, kde-format
 msgid "ActionList: %1"
 msgstr "アクションリスト: %1"
 
-#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
+#: kedittoolbar.cpp:1390 kedittoolbar.cpp:1415
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1641
+#: kedittoolbar.cpp:1643
 #, kde-format
 msgid "Change Icon"
 msgstr "アイコンを変更"

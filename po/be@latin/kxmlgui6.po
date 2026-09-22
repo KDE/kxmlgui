@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:42+0000\n"
+"POT-Creation-Date: 2026-09-22 15:57+0000\n"
 "PO-Revision-Date: 2022-09-08 10:35\n"
 "Last-Translator: Alaksandr Suša <isushik94@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -601,7 +601,7 @@ msgstr "Skinuć nalady paneliaŭ instrumientaŭ"
 msgid "Reset"
 msgstr "Skinuć"
 
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:1007
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&Paneĺ instrumientaŭ:"
@@ -613,29 +613,29 @@ msgstr "&Paneĺ instrumientaŭ:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1021
+#: kedittoolbar.cpp:1023
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "&Dastupnyja dziejanni:"
 
-#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
+#: kedittoolbar.cpp:1044 kedittoolbar.cpp:1069
 #, kde-format
 msgid "Filter"
 msgstr "&Fiĺtr:"
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1047
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&Biahučyja dziejanni:"
 
-#: kedittoolbar.cpp:1070
+#: kedittoolbar.cpp:1072
 #, fuzzy, kde-format
 #| msgid "Change Icon"
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "Zmianić značok"
 
-#: kedittoolbar.cpp:1079
+#: kedittoolbar.cpp:1081
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Change Text"
@@ -643,39 +643,39 @@ msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "Zmianić tekst"
 
-#: kedittoolbar.cpp:1221
+#: kedittoolbar.cpp:1223
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- padzialiaĺnik ---"
 
-#: kedittoolbar.cpp:1222
+#: kedittoolbar.cpp:1224
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- pašyraĺny eliemient ---"
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "Hety eliemient budzie zamienieny eliemientami ŭbudavanaha kampanienta."
 
-#: kedittoolbar.cpp:1274
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge>"
 msgstr "<Abjadnać>"
 
-#: kedittoolbar.cpp:1276
+#: kedittoolbar.cpp:1278
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<Abjadnać %1>"
 
-#: kedittoolbar.cpp:1286
+#: kedittoolbar.cpp:1288
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -684,18 +684,18 @@ msgstr ""
 "Heta dynamičny spis dziejanniaŭ. Vy možacie pieramiascić jaho, alie kali "
 "vydalicie jaho, vy nie zmožacie dadać jaho znoŭ."
 
-#: kedittoolbar.cpp:1287
+#: kedittoolbar.cpp:1289
 #, kde-format
 msgid "ActionList: %1"
 msgstr "Spis dziejanniaŭ: %1"
 
-#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
+#: kedittoolbar.cpp:1390 kedittoolbar.cpp:1415
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1641
+#: kedittoolbar.cpp:1643
 #, kde-format
 msgid "Change Icon"
 msgstr "Zmianić značok"

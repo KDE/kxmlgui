@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:42+0000\n"
+"POT-Creation-Date: 2026-09-22 15:57+0000\n"
 "PO-Revision-Date: 2021-09-14 08:39+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -571,7 +571,7 @@ msgstr "Επαναφορά γραμμών εργαλείων"
 msgid "Reset"
 msgstr "Επαναφορά"
 
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:1007
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&Γραμμή εργαλείων:"
@@ -583,50 +583,50 @@ msgstr "&Γραμμή εργαλείων:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1021
+#: kedittoolbar.cpp:1023
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "Διαθέσιμες ενέρ&γειες:"
 
-#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
+#: kedittoolbar.cpp:1044 kedittoolbar.cpp:1069
 #, kde-format
 msgid "Filter"
 msgstr "Φίλτρο"
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1047
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "&Τρέχουσες ενέργειες:"
 
-#: kedittoolbar.cpp:1070
+#: kedittoolbar.cpp:1072
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "Αλλαγή εικονι&δίου…"
 
-#: kedittoolbar.cpp:1079
+#: kedittoolbar.cpp:1081
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "Τρο&ποποίηση κειμένου…"
 
-#: kedittoolbar.cpp:1221
+#: kedittoolbar.cpp:1223
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- διαχωριστικό ---"
 
-#: kedittoolbar.cpp:1222
+#: kedittoolbar.cpp:1224
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "--- εκτεταμένο κενό ---"
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
@@ -634,17 +634,17 @@ msgstr ""
 "Αυτό το στοιχείο θα αντικατασταθεί με όλα τα στοιχεία ενός ενσωματωμένου "
 "συστατικού."
 
-#: kedittoolbar.cpp:1274
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge>"
 msgstr "<Μίξη>"
 
-#: kedittoolbar.cpp:1276
+#: kedittoolbar.cpp:1278
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<Μίξη %1>"
 
-#: kedittoolbar.cpp:1286
+#: kedittoolbar.cpp:1288
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -653,18 +653,18 @@ msgstr ""
 "Αυτή είναι μια δυναμική λίστα ενεργειών. Μπορείτε να τη μετακινήσετε, αλλά "
 "αν την αφαιρέσετε δε θα μπορείτε να την προσθέσετε ξανά."
 
-#: kedittoolbar.cpp:1287
+#: kedittoolbar.cpp:1289
 #, kde-format
 msgid "ActionList: %1"
 msgstr "Λίστα ενεργειών: %1"
 
-#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
+#: kedittoolbar.cpp:1390 kedittoolbar.cpp:1415
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1641
+#: kedittoolbar.cpp:1643
 #, kde-format
 msgid "Change Icon"
 msgstr "Αλλαγή εικονιδίου"

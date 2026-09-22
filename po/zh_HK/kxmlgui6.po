@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:42+0000\n"
+"POT-Creation-Date: 2026-09-22 15:57+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -574,7 +574,7 @@ msgstr "重設工具列"
 msgid "Reset"
 msgstr "重設"
 
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:1007
 #, fuzzy, kde-format
 msgid "&Toolbar:"
 msgstr "工具列(&T)："
@@ -586,71 +586,71 @@ msgstr "工具列(&T)："
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1021
+#: kedittoolbar.cpp:1023
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "可用的動作(&V)："
 
-#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
+#: kedittoolbar.cpp:1044 kedittoolbar.cpp:1069
 #, fuzzy, kde-format
 #| msgid "Filter:"
 msgid "Filter"
 msgstr "過濾器："
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1047
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "目前的動作(&E)："
 
-#: kedittoolbar.cpp:1070
+#: kedittoolbar.cpp:1072
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "變更圖示(&I)..."
 
-#: kedittoolbar.cpp:1079
+#: kedittoolbar.cpp:1081
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "變更圖示(&I)..."
 
-#: kedittoolbar.cpp:1221
+#: kedittoolbar.cpp:1223
 #, kde-format
 msgid "--- separator ---"
 msgstr "--- 分隔 ---"
 
-#: kedittoolbar.cpp:1222
+#: kedittoolbar.cpp:1224
 #, fuzzy, kde-format
 #| msgid "--- line separator ---"
 msgid "--- expanding spacer ---"
 msgstr "--- 行分隔 ---"
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1246
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1%"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr "此元件將會被內嵌部分的所有元件取代。"
 
-#: kedittoolbar.cpp:1274
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge>"
 msgstr "<合併>"
 
-#: kedittoolbar.cpp:1276
+#: kedittoolbar.cpp:1278
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<合併 %1>"
 
-#: kedittoolbar.cpp:1286
+#: kedittoolbar.cpp:1288
 #, fuzzy, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -658,19 +658,19 @@ msgid ""
 msgstr ""
 "這是一個動作的動態清單。你可以移動它，但如果你移除它，你將無法再加入它。"
 
-#: kedittoolbar.cpp:1287
+#: kedittoolbar.cpp:1289
 #, kde-format
 msgid "ActionList: %1"
 msgstr "動作清單: %1"
 
-#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
+#: kedittoolbar.cpp:1390 kedittoolbar.cpp:1415
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1%"
 
-#: kedittoolbar.cpp:1641
+#: kedittoolbar.cpp:1643
 #, fuzzy, kde-format
 #| msgid "Change &Icon..."
 msgid "Change Icon"
