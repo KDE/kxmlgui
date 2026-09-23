@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 15:57+0000\n"
+"POT-Creation-Date: 2026-09-23 00:42+0000\n"
 "PO-Revision-Date: 2026-09-18 12:00+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1338,18 +1338,21 @@ msgstr "Bez teksta"
 msgid "Find Action…"
 msgstr "Nađi radnju…"
 
-#: kxmlguiwindow.cpp:568
-#, kde-format
+#: kxmlguiwindow.cpp:572
+#, fuzzy, kde-format
+#| msgid ""
+#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
+#| "This is most probably a bug. Please report it in <a href='https://bugs."
+#| "kde.org'>bugs.kde.org</a>"
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
-"is most probably a bug. Please report it in <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>"
+"is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Postoje dve radnje (%1, %2) kojima je dodeljena ista prečica (%3). Ovo je "
 "verovatno greška. Prijavite na <a href='https://bugs.kde.org'>bugs.kde.org</"
 "a>."
 
-#: kxmlguiwindow.cpp:573
+#: kxmlguiwindow.cpp:578
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "Dvosmislene prečice"

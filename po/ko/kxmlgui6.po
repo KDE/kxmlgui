@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 15:57+0000\n"
+"POT-Creation-Date: 2026-09-23 00:42+0000\n"
 "PO-Revision-Date: 2026-05-25 21:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1269,17 +1269,20 @@ msgstr "텍스트 없음"
 msgid "Find Action…"
 msgstr "동작 검색..."
 
-#: kxmlguiwindow.cpp:568
-#, kde-format
+#: kxmlguiwindow.cpp:572
+#, fuzzy, kde-format
+#| msgid ""
+#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
+#| "This is most probably a bug. Please report it in <a href='https://bugs."
+#| "kde.org'>bugs.kde.org</a>"
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
-"is most probably a bug. Please report it in <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>"
+"is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "같은 단축키(%3)를 사용하는 동작이 두 개 있습니다(%1, %2). 버그일 수도 있으므"
 "로, <a href='https://bugs.kde.org'>bugs.kde.org</a>에 버그를 보고해 주십시오."
 
-#: kxmlguiwindow.cpp:573
+#: kxmlguiwindow.cpp:578
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "모호한 단축키"

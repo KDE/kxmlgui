@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 15:57+0000\n"
+"POT-Creation-Date: 2026-09-23 00:42+0000\n"
 "PO-Revision-Date: 2026-03-14 11:51+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1318,18 +1318,21 @@ msgstr "Geen tekst"
 msgid "Find Action…"
 msgstr "Actie zoeken…"
 
-#: kxmlguiwindow.cpp:568
-#, kde-format
+#: kxmlguiwindow.cpp:572
+#, fuzzy, kde-format
+#| msgid ""
+#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
+#| "This is most probably a bug. Please report it in <a href='https://bugs."
+#| "kde.org'>bugs.kde.org</a>"
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
-"is most probably a bug. Please report it in <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>"
+"is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Er zijn twee acties (%1, %2) die dezelfde sneltoets (%3) willen gebruiken. "
 "Dit is waarschijnlijk een bug. Rapporteer dit op <a href='https://bugs.kde."
 "org'>bugs.kde.org</a>"
 
-#: kxmlguiwindow.cpp:573
+#: kxmlguiwindow.cpp:578
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "Meerduidige sneltoets"

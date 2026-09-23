@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:42+0000\n"
+"POT-Creation-Date: 2026-09-23 00:42+0000\n"
 "PO-Revision-Date: 2025-02-15 17:53+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -73,7 +73,6 @@ msgstr "Om KDE"
 
 #: kaboutkdedialog_p.cpp:34
 #, fuzzy, kde-format
-#| msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
 msgstr "<html><font size=\"5\">KDE – Vær fri!</font></html>"
 
@@ -538,7 +537,7 @@ msgstr "Tilbakestill verktøylinjer"
 msgid "Reset"
 msgstr "Tilbakestill"
 
-#: kedittoolbar.cpp:1005
+#: kedittoolbar.cpp:1007
 #, kde-format
 msgid "&Toolbar:"
 msgstr "&Verktøylinje:"
@@ -550,67 +549,67 @@ msgstr "&Verktøylinje:"
 #. del_toolbar->setPixmap(BarIcon("edit-delete", KIconLoader::SizeSmall));
 #. del_toolbar->setEnabled(false); // disabled until implemented
 #. our list of inactive actions
-#: kedittoolbar.cpp:1021
+#: kedittoolbar.cpp:1023
 #, kde-format
 msgid "A&vailable actions:"
 msgstr "Tilgjengelige &handlinger:"
 
-#: kedittoolbar.cpp:1042 kedittoolbar.cpp:1067
+#: kedittoolbar.cpp:1044 kedittoolbar.cpp:1069
 #, kde-format
 msgid "Filter"
 msgstr "Filter"
 
-#: kedittoolbar.cpp:1045
+#: kedittoolbar.cpp:1047
 #, kde-format
 msgid "Curr&ent actions:"
 msgstr "Gjeld&ende handlinger:"
 
-#: kedittoolbar.cpp:1070
+#: kedittoolbar.cpp:1072
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
 msgstr "Endre &ikon ..."
 
-#: kedittoolbar.cpp:1079
+#: kedittoolbar.cpp:1081
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
 msgstr "Endre &tekst …"
 
-#: kedittoolbar.cpp:1221
+#: kedittoolbar.cpp:1223
 #, kde-format
 msgid "--- separator ---"
 msgstr "— skillelinje —"
 
-#: kedittoolbar.cpp:1222
+#: kedittoolbar.cpp:1224
 #, kde-format
 msgid "--- expanding spacer ---"
 msgstr "— utvidende mellomrom —"
 
-#: kedittoolbar.cpp:1244
+#: kedittoolbar.cpp:1246
 #, kde-format
 msgctxt "@item:intable Action name in toolbar editor"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1272
+#: kedittoolbar.cpp:1274
 #, kde-format
 msgid ""
 "This element will be replaced with all the elements of an embedded component."
 msgstr ""
 "Dette elementet blir erstattet med alle elementene til en innebygd komponent."
 
-#: kedittoolbar.cpp:1274
+#: kedittoolbar.cpp:1276
 #, kde-format
 msgid "<Merge>"
 msgstr "<Slå sammen>"
 
-#: kedittoolbar.cpp:1276
+#: kedittoolbar.cpp:1278
 #, kde-format
 msgid "<Merge %1>"
 msgstr "<Slå sammen %1>"
 
-#: kedittoolbar.cpp:1286
+#: kedittoolbar.cpp:1288
 #, kde-format
 msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
@@ -619,18 +618,18 @@ msgstr ""
 "Dette er en dynamisk handlingsliste. Du kan flytte den, men hvis du fjerner "
 "den, kan du ikke legge den inn igjen senere."
 
-#: kedittoolbar.cpp:1287
+#: kedittoolbar.cpp:1289
 #, kde-format
 msgid "ActionList: %1"
 msgstr "Handlingsliste: %1"
 
-#: kedittoolbar.cpp:1388 kedittoolbar.cpp:1413
+#: kedittoolbar.cpp:1390 kedittoolbar.cpp:1415
 #, kde-format
 msgctxt "@label Action tooltip in toolbar editor, below the action list"
 msgid "%1"
 msgstr "%1"
 
-#: kedittoolbar.cpp:1641
+#: kedittoolbar.cpp:1643
 #, kde-format
 msgid "Change Icon"
 msgstr "Endre ikon"
@@ -1296,18 +1295,21 @@ msgstr "Ingen tekst"
 msgid "Find Action…"
 msgstr "Finn handling …"
 
-#: kxmlguiwindow.cpp:568
-#, kde-format
+#: kxmlguiwindow.cpp:572
+#, fuzzy, kde-format
+#| msgid ""
+#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
+#| "This is most probably a bug. Please report it in <a href='https://bugs."
+#| "kde.org'>bugs.kde.org</a>"
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
-"is most probably a bug. Please report it in <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>"
+"is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Det finnes to handlinger (%1 og %2) som ønsker å bruke den samme "
 "hurtigtasten (%3). Dette er sannsynligvis en feil. Meld gjerne fra om feilen "
 "på <a href='https://bugs.kde.org'>bugs.kde.org</a>."
 
-#: kxmlguiwindow.cpp:573
+#: kxmlguiwindow.cpp:578
 #, kde-format
 msgid "Ambiguous Shortcuts"
 msgstr "Tvetydige hurtigtaster"
