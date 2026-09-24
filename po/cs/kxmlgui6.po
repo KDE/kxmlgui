@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-08-13 22:58+0200\n"
-"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
+"PO-Revision-Date: 2026-09-23 23:23+0200\n"
+"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -1299,18 +1299,14 @@ msgid "Find Action…"
 msgstr "Najít činnost…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Existují dvě akce (%1, %2), které chtějí používat stejnou klávesovou zkratku "
 "(%3). S největší pravděpodobností se jedná o chybu. Nahlaste ji prosím na <a "
-"href='https://bugs.kde.org'>bugs.kde.org</a>"
+"href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format

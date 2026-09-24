@@ -5,7 +5,7 @@
 # Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002, 2003, 2004.
 # Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2003, 2004, 2005.
 # Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
-# SPDX-FileCopyrightText: 2006, 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2006, 2025-2026 Marcus Gama <marcus.gama@gmail.com>
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2008, 2009, 2010, 2012, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
@@ -20,15 +20,15 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-03-14 09:50-0300\n"
+"PO-Revision-Date: 2026-09-23 06:56-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -1323,18 +1323,13 @@ msgid "Find Action…"
 msgstr "Encontrar ação…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Existem duas ações (%1, %2) que querem usar o mesmo atalho (%3). Isto "
-"provavelmente é um erro. Relate ele em <a href='https://bugs.kde.org'>bugs."
-"kde.org</a>"
+"provavelmente é um erro. Relate ele em <a href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format

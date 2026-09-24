@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-03-14 07:33+0100\n"
+"PO-Revision-Date: 2026-09-23 11:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, kde-format
@@ -1331,18 +1331,13 @@ msgid "Find Action…"
 msgstr "Najdi dejanje …"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
-"Obstajata dve dejanji (%1, %2), ki bi radi uporabili isto bližnjico (%3). To "
-"je najverjetneje napaka. Poročajte o njej na <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>"
+"Dve dejanji (%1, %2) želita uporabiti isto bližnjico (%3). To je "
+"najverjetneje napaka. Prosimo, prijavite jo na <a href=\"%4\">%4</a>."
 
 #: kxmlguiwindow.cpp:578
 #, kde-format

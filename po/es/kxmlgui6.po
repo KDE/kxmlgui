@@ -2,10 +2,10 @@
 # Copyright (C) 2000-2026 This file is copyright:
 # This file is distributed under the same license as the kxmlgui package.
 #
-# SPDX-FileCopyrightText: 2000-2002, 2003, 2004 Pablo de Vicente <vicente@oan.es>
-# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
-# SPDX-FileCopyrightText: 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
-# SPDX-FileCopyrightText: 2005, 2006, 2007 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2000-2004 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2004-2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005, 2007-2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2005-2007 Pablo de Vicente <pablo.devicente@gmail.com>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
 # SPDX-FileCopyrightText: 2007 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2013 Javier Viñal <fjvinal@gmail.com>
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-03-14 11:52+0100\n"
+"PO-Revision-Date: 2026-09-24 00:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
@@ -1318,18 +1318,14 @@ msgid "Find Action…"
 msgstr "Buscar acción…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Existen dos acciones (%1, %2) que quieren usar el mismo atajo de teclado "
 "(%3). Lo más probable es que se trate de un error. Informe de ello en <a "
-"href='https://bugs.kde.org'>bugs.kde.org</a>"
+"href=\"%4\">%4</a>."
 
 #: kxmlguiwindow.cpp:578
 #, kde-format

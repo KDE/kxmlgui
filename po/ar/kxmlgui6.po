@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-08-29 11:27+0400\n"
+"PO-Revision-Date: 2026-09-23 17:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1302,17 +1302,13 @@ msgid "Find Action…"
 msgstr "أعثر على الإجراء…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "يوجد إجراءان (%1 و %2) يرغبان باستخدام نفس الاختصار (%3). في الغالب هذه علة. "
-"يرجى التبليغ عنها في <a href='https://bugs.kde.org'>bugs.kde.org</a>"
+"يرجى التبليغ عنها في <a href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
