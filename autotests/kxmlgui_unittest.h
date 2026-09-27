@@ -41,6 +41,7 @@ private Q_SLOTS:
     void testSpecificApplicationLanguageQLocale();
     void testSingleModifierQKeySequenceEndsWithPlus();
     void testSaveShortcutsAndRefresh();
+    void testSaveShortcutsAndRefreshNoXmlFile();
 };
 
 #endif

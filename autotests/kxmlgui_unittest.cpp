@@ -1284,4 +1284,44 @@ void KXmlGui_UnitTest::testSaveShortcutsAndRefresh()
     QCOMPARE(a->shortcut(), QKeySequence(Qt::Key_F22));
 }
 
+void KXmlGui_UnitTest::testSaveShortcutsAndRefreshNoXmlFile()
+{
+    KSharedConfig::openConfig()->deleteGroup(QStringLiteral("Shortcuts"));
+
+    const QByteArray xml =
+        "<?xml version = '1.0'?>\n"
+        "<!DOCTYPE gui SYSTEM \"kpartgui.dtd\">\n"
+        "<gui version=\"2\" name=\"foo\" >\n"
+        "<MenuBar>\n"
+        "<Menu noMerge=\"1\" name=\"file\" >\n"
+        "<text>&amp;File</text>\n"
+        "<Action name=\"file_open\" />\n"
+        "</Menu>\n"
+        "</MenuBar>\n"
+        "</gui>\n";
+
+    TestGuiClient client;
+    client.createActions({QStringLiteral("file_open")});
+    client.createGUI(xml, false);
+
+    QWidget w;
+    KXMLGUIBuilder builder(&w);
+    KXMLGUIFactory factory(&builder);
+    factory.addClient(&client);
+    factory.removeClient(&client);
+    factory.addClient(&client);
+
+    QAction *a = client.actionCollection()->action(QStringLiteral("file_open"));
+    QCOMPARE(a->shortcut(), QKeySequence());
+    a->setShortcut(Qt::Key_F22);
+    QCOMPARE(a->shortcut(), QKeySequence(Qt::Key_F22));
+
+    client.actionCollection()->writeSettings();
+
+    factory.refreshActionProperties();
+
+    a = client.actionCollection()->action(QStringLiteral("file_open"));
+    QCOMPARE(a->shortcut(), QKeySequence(Qt::Key_F22));
+}
+
 #include "moc_kxmlgui_unittest.cpp"

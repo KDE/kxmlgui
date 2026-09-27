@@ -337,6 +337,9 @@ void KXMLGUIFactoryPrivate::refreshActionProperties(KXMLGUIClient *client, const
     if (!actionPropElement.isNull()) {
         applyActionProperties(actionPropElement);
     }
+    if (client->xmlFile().isEmpty()) {
+        client->actionCollection()->readSettings();
+    }
 }
 
 void KXMLGUIFactoryPrivate::saveDefaultActionProperties(const QList<QAction *> &actions)
