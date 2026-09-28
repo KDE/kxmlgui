@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-07-05 16:26+0200\n"
+"PO-Revision-Date: 2026-09-27 14:56+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
@@ -1306,18 +1306,13 @@ msgid "Find Action…"
 msgstr "Sök efter åtgärd…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Det finns två åtgärder (%1, %2) som vill använda samma genväg (%3). Det är "
-"troligen ett fel. Rapportera det gärna på <a href='https://bugs.kde."
-"org'>bugs.kde.org</a>."
+"troligen ett fel. Rapportera det gärna på <a href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
