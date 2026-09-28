@@ -26,6 +26,7 @@ private Q_SLOTS:
     void testAutoSaveSettings();
     void testNoAutoSave();
     void testWidgetWithStatusBar();
+    void testStartupDoesNotDirtyDockState();
 
     void testDeleteOnClose();
 };

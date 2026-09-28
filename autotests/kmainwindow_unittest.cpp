@@ -9,6 +9,7 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QDockWidget>
 #include <QEventLoopLocker>
 #include <QResizeEvent>
 #include <QStatusBar>
@@ -109,6 +110,9 @@ public:
     }
     bool m_queryClosedCalled;
 
+    using KMainWindow::saveAutoSaveSettings;
+    using KMainWindow::settingsDirty;
+
     void reallyResize(int width, int height)
     {
         const QSize oldSize = size();
@@ -127,6 +131,62 @@ public:
 // Here we test
 // - that queryClose is called
 // - that autodeletion happens
+// A dock's size and visibility are part of QMainWindow::saveState(). Restoring that state at
+// startup makes QMainWindow lay the docks out again, and the docks get resize, show and hide
+// events before the user has touched anything. Those events must not mark the settings dirty,
+// because the autosave would then write the startup layout back over what the user saved. See
+// bug 430969, where the Dolphin places panel lost a little width on every launch.
+void KMainWindow_UnitTest::testStartupDoesNotDirtyDockState()
+{
+    const QString group(QStringLiteral("DockStateTestGroup"));
+
+    // Without a central widget the dock takes the whole window and cannot be resized.
+    const auto addDock = [](KMainWindow *mw) {
+        mw->setCentralWidget(new QWidget(mw));
+        QDockWidget *dock = new QDockWidget(QStringLiteral("dock"), mw);
+        dock->setObjectName(QStringLiteral("testdock"));
+        dock->setWidget(new QWidget(dock));
+        mw->addDockWidget(Qt::LeftDockWidgetArea, dock);
+        return dock;
+    };
+
+    // First run: the user widens the dock, and that width is saved.
+    QByteArray savedState;
+    {
+        MyMainWindow mw;
+        mw.setStateConfigGroup(group);
+        addDock(&mw);
+        mw.resize(800, 600);
+        mw.setAutoSaveSettings(group);
+        mw.show();
+        QVERIFY(QTest::qWaitForWindowExposed(&mw));
+
+        mw.resizeDocks({mw.findChild<QDockWidget *>()}, {300}, Qt::Horizontal);
+        mw.saveAutoSaveSettings();
+
+        savedState = mw.stateConfigGroup().readEntry("State", QByteArray());
+        QVERIFY(!savedState.isEmpty());
+    }
+
+    // Second run: the window is built and shown exactly as before, and the user does nothing.
+    MyMainWindow mw2;
+    mw2.setStateConfigGroup(group);
+    QDockWidget *dock = addDock(&mw2);
+    mw2.resize(800, 600);
+    mw2.setAutoSaveSettings(group); // reads the state back, the way setupGUI() does
+    mw2.show();
+    QVERIFY(QTest::qWaitForWindowExposed(&mw2));
+    qApp->processEvents();
+
+    // Nothing the user did, so nothing to save.
+    QVERIFY(!mw2.settingsDirty());
+    QCOMPARE(mw2.stateConfigGroup().readEntry("State", QByteArray()), savedState);
+
+    // A resize the user asks for is still saved.
+    mw2.resizeDocks({dock}, {200}, Qt::Horizontal);
+    QTRY_VERIFY(mw2.settingsDirty());
+}
+
 void KMainWindow_UnitTest::testDeleteOnClose()
 {
     QEventLoopLocker locker; // don't let the deref in KMainWindow quit the app.
