@@ -124,12 +124,12 @@ msgid ""
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
 "<html>Программное обеспечение всегда можно улучшить, и команда KDE готова "
-"этим заниматься. Однако, для этого надо, чтобы вы, обычный пользователь, "
+"этим заниматься. Однако для этого надо, чтобы вы, обычный пользователь, "
 "сообщили нам о том, что не соответствует вашим ожиданиям и что можно было бы "
 "улучшить.<br /><br />В рамках проекта KDE создана система учёта ошибок и "
 "пожеланий. Для того чтобы сообщить об ошибке, зайдите на сайт <a href=\"%1\">"
 "%1</a> или отправьте сообщение по электронной почте, используя пункт "
-"«Сообщить об ошибке...» из меню «Справка» содержащего ошибку приложения. "
+"«Сообщить об ошибке…» из меню «Справка» содержащего ошибку приложения. "
 "Сообщение должно быть на английском языке.<br /><br />Ваши пожелания можно "
 "зарегистрировать тем же способом. При регистрации пожеланий не забудьте "
 "установить уровень важности «Wishlist» (пожелание).<br /><br />Для связи с "
@@ -358,7 +358,7 @@ msgid ""
 "No action will be triggered."
 msgstr ""
 "Конфликт действий на комбинации клавиш «%1». Используйте пункт \n"
-"«Комбинации клавиш» меню «Настройка» чтобы исправить конфликт.\n"
+"«Настроить комбинации клавиш» меню «Настройка», чтобы исправить конфликт.\n"
 "Не выполнено ни одно из конфликтующих действий."
 
 #: kactionconflictdetector_p.h:41
@@ -385,8 +385,7 @@ msgid ""
 "please use the Report Bug menu item of the correct application"
 msgstr ""
 "Приложение, содержащее описываемую ошибку. Если здесь указано не то "
-"приложение, используйте пункт меню «Отправить сообщение об ошибке» нужного "
-"приложения"
+"приложение, используйте пункт меню «Сообщить об ошибке» нужного приложения"
 
 #: kbugreport.cpp:103
 #, kde-format
@@ -399,7 +398,7 @@ msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr ""
-"Версия программы. Прежде чем отправлять сообщение об ошибке, проверьте, не "
+"Версия приложения. Прежде чем отправлять сообщение об ошибке, проверьте, не "
 "вышла ли более свежая версия."
 
 #: kbugreport.cpp:114
@@ -455,10 +454,10 @@ msgid ""
 "where you will find a form to fill in. The information displayed above will "
 "be transferred to that server.</qt>"
 msgstr ""
-"<qt>Для того, чтобы отправить сообщение об ошибке, нажмите на кнопку внизу. "
-"Откроется окно с адресом <a href=\"https://bugs.kde.org\">https://bugs.kde."
-"org</a>, где можно будет заполнить форму. Информация будет отправлена на "
-"сервер учёта ошибок.</qt>"
+"<qt>Чтобы отправить сообщение об ошибке, нажмите на кнопку внизу. Откроется "
+"окно с адресом <a href=\"https://bugs.kde.org\">https://bugs.kde.org</a>, "
+"где можно будет заполнить форму. Информация будет отправлена на сервер учёта "
+"ошибок.</qt>"
 
 #: kbugreport.cpp:169
 #, kde-format
@@ -466,8 +465,8 @@ msgid ""
 "<qt>To submit a bug report, click on the button below. This will open a web "
 "browser window on <a href=\"%1\">%2</a>.</qt>"
 msgstr ""
-"<qt>Для того, чтобы отправить сообщение об ошибке, нажмите на кнопку внизу. "
-"В веб-браузере откроется адрес <a href=\"%1\">%2</a>.</qt>"
+"<qt>Чтобы отправить сообщение об ошибке, нажмите на кнопку внизу. В веб-"
+"браузере откроется адрес <a href=\"%1\">%2</a>.</qt>"
 
 #: kbugreport.cpp:186
 #, kde-format
@@ -520,7 +519,7 @@ msgstr "<h2>Акселераторы удалены</h2>"
 #: kcheckaccelerators.cpp:186
 #, kde-format
 msgid "<h2>Accelerators added (just for your info)</h2>"
-msgstr "<h2>Акселераторы добавлены</h2>"
+msgstr "<h2>Акселераторы добавлены (для сведения)</h2>"
 
 #: kedittoolbar.cpp:353
 #, kde-format
@@ -642,8 +641,8 @@ msgid ""
 "This is a dynamic list of actions. You can move it, but if you remove it you "
 "will not be able to re-add it."
 msgstr ""
-"Это список действий. Вы можете перемещать его, однако при удалении "
-"восстановить его будет невозможно."
+"Это динамический список действий. Вы можете перемещать его, однако при "
+"удалении восстановить его будет невозможно."
 
 #: kedittoolbar.cpp:1289
 #, kde-format
@@ -674,8 +673,8 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Нажмите на кнопке и введите комбинацию клавиш.\n"
-"Например, для комбинации клавиш Ctrl+A зажмите клавишу Ctrl и нажмите A."
+"Нажмите кнопку и введите комбинацию клавиш.\n"
+"Например, для комбинации клавиш Ctrl+A удерживайте клавишу Ctrl и нажмите A."
 
 #: kkeysequencewidget.cpp:151
 #, kde-format
@@ -731,7 +730,7 @@ msgstr[3] ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "Связать с новым"
+msgstr "Переназначить"
 
 #: kkeysequencewidget.cpp:194
 #, kde-format
@@ -802,7 +801,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Конфликт со стандартной клавишей приложения"
+msgstr "Конфликт со стандартной комбинацией клавиш приложения"
 
 #: kkeysequencewidget.cpp:352
 #, kde-format
@@ -812,14 +811,14 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 "Комбинация клавиш %1 уже связана со стандартным действием «%2», используемым "
-"во многих программах.\n"
+"в некоторых приложениях.\n"
 "Вы действительно хотите использовать эту комбинацию как глобальную?"
 
 #: kkeysequencewidget.cpp:396
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr "Сейчас"
+msgstr "Ввод"
 
 #: kkeysequencewidget.cpp:398 kshortcuteditwidget.cpp:54
 #, kde-format
@@ -905,7 +904,7 @@ msgstr "Дополнительно"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save shortcuts to scheme"
-msgstr "Сохранить схему комбинаций клавиш"
+msgstr "Сохранить комбинации клавиш в схему"
 
 #: kshortcutschemeseditor.cpp:62
 #, kde-format
@@ -945,7 +944,9 @@ msgstr "Схема с таким названием уже существует"
 msgid ""
 "Do you really want to delete the scheme %1?\n"
 "Note that this will not remove any system wide shortcut schemes."
-msgstr "Удалить схему «%1»?"
+msgstr ""
+"Удалить схему «%1»?\n"
+"Общесистемные схемы комбинаций клавиш при этом не удаляются."
 
 #: kshortcutschemeseditor.cpp:187
 #, kde-format
@@ -981,12 +982,12 @@ msgid ""
 "one?"
 msgstr ""
 "Текущая схема комбинаций клавиш была изменена. Сохранить изменения перед "
-"переключением на другую схему."
+"переключением на другую схему?"
 
 #: kshortcutsdialog.cpp:124
 #, kde-format
 msgid "Manage &Schemes"
-msgstr "Настройка &схем"
+msgstr "Управление &схемами"
 
 #: kshortcutsdialog.cpp:151
 #, kde-format
@@ -1001,8 +1002,8 @@ msgid ""
 "Search interactively for shortcut names (e.g. Copy) or combination of keys "
 "(e.g. Ctrl+C) by typing them here."
 msgstr ""
-"Поиск по мере набора по именам комбинаций клавиш (например, Копировать) или "
-"по самим комбинациям (например, Ctrl+C)."
+"Поиск по мере набора по названиям действий (например, Копировать) или по "
+"самим комбинациям (например, Ctrl+C)."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, list)
 #: kshortcutsdialog.ui:23
@@ -1013,7 +1014,7 @@ msgid ""
 "Ctrl+V) shown in the right column."
 msgstr ""
 "Здесь показан список <i>комбинаций клавиш</i>. Действия из левого столбца "
-"(например, Копировать), вызываются при нажатии клавиш или их сочетаний "
+"(например, Копировать) вызываются при нажатии клавиш или их сочетаний "
 "(например, Ctrl+V), указанных в правом столбце."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, list)
@@ -1132,8 +1133,8 @@ msgid ""
 "Adds one more language which will be used if other translations do not "
 "contain a proper translation."
 msgstr ""
-"Установить один или несколько языков, которые будут использоваться, если нет "
-"перевода на основной язык."
+"Добавить ещё один язык, который будет использоваться, если в других "
+"переводах нет нужного перевода."
 
 #: kswitchlanguagedialog_p.cpp:262 kswitchlanguagedialog_p.cpp:283
 #, kde-format
@@ -1148,7 +1149,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Application Language Changed"
-msgstr "Язык приложения переключен"
+msgstr "Язык приложения изменён"
 
 #: kswitchlanguagedialog_p.cpp:284
 #, kde-format
@@ -1347,7 +1348,7 @@ msgstr "Нет текста"
 #: kxmlguiwindow.cpp:203
 #, kde-format
 msgid "Find Action…"
-msgstr "Найти действие..."
+msgstr "Найти действие…"
 
 #: kxmlguiwindow.cpp:572
 #, kde-format
