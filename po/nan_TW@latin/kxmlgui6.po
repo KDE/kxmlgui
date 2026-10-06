@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-08-18 04:10+0900\n"
+"PO-Revision-Date: 2026-10-06 00:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -1288,18 +1288,14 @@ msgid "Find Action…"
 msgstr "Tshuē tōng-tsok…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Ū nn̄g-ê tōng-tsok (%1, %2) beh iōng kâng tsi̍t-ê khuài-sok-khí (%3). Tse ing-"
-"kai sī tîng-sik ê būn-tê. Tshiánn khì <a href='https://bugs.kde.org'>bugs."
-"kde.org</a> huê-pò tsit-ê būn-tê"
+"kai sī tîng-sik ê būn-tê. Tshiánn khì <a href='%4'>%4</a> huê-pò tsit-ê būn-"
+"tê"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
