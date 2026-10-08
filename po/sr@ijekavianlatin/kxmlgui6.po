@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kxmlgui5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-23 00:42+0000\n"
-"PO-Revision-Date: 2026-09-18 12:00+0200\n"
+"PO-Revision-Date: 2026-10-07 11:45+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -88,16 +88,16 @@ msgid ""
 "href=\"%3\">%3</a> for more information about the KDE community and the "
 "software we produce.</html>"
 msgstr ""
-"<html><p><b>KDE</b> je svjetska zajednica softverskih inženjera, grafičara, "
+"<html><b>KDE</b> je svjetska zajednica softverskih inženjera, grafičara, "
 "pisaca, prevodilaca i stvaralaca posvećenih razvoju <a href=\"%1\">slobodnog "
-"softvera</a>. KDE stvara radno okruženje Plazma, stotine programa i mnoge "
-"softverske biblioteke koje ih podržavaju.</p><p>KDE je zajednički poduhvat: "
-"nijedan entitet ne upravlja njegovim smjerom ni proizvodima. Umjesto toga, "
-"radimo zajedno na zajedničkom cilju — stvaranju najboljeg slobodnog softvera "
-"na svijetu. Svi su dobrodošli da se <a href=\"%2\">priključe i doprinesu</a> "
-"KDE‑u, uključujući i vas.</p><p>Posjetite <a href=\"%3\">%3</a> za "
-"detaljnije informacije o zajednici KDE‑a i softveru koji razvijamo.</p></"
-"html>"
+"softvera</a>. KDE stvara okruženje površi Plasma, stotine programa i mnoge "
+"softverske biblioteke koje ih podržavaju.<br /><br />KDE je zajednički "
+"poduhvat: nijedan entitet ne upravlja njegovim smjerom ni proizvodima. "
+"Umjesto toga, radimo zajedno na zajedničkom cilju — stvaranju najboljeg "
+"slobodnog softvera na svijetu. Svi su dobrodošli da se <a href="
+"\"%2\">priključe i doprinesu</a> KDE‑u, uključujući i vas.<br /><br /"
+">Posjetite <a href=\"%3\">%3</a> za detaljnije informacije o zajednici KDE‑a "
+"i softveru koji razvijamo.</html>"
 
 #: kaboutkdedialog_p.cpp:66
 #, kde-format
@@ -131,13 +131,13 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need.</html>"
 msgstr ""
-"<html><p>Ne morate biti programer da biste postali član tima. Možete se "
+"<html>Ne morate biti programer da biste postali član tima KDE‑a. Možete se "
 "pridružiti jezičkim timovima koji prevode programska sučelja. Možete crtati "
 "grafiku, teme, snimati zvukove, ili pisati dokumentaciju. Na vama je da "
-"odlučite!</p><p>Posjetite <a href=\"%1\">%1</a> za detalje o nekim "
-"projektima u kojima možete učestvovati.</p><p>Ako vam je potrebno još "
+"odlučite!<br /><br />Posjetite <a href=\"%1\">%1</a> za detalje o nekim "
+"projektima u kojima možete učestvovati.<br /><br />Ako vam je potrebno još "
 "informacija ili dokumentacije, posjetite <a href=\"%2\">%2</a> i pronaći "
-"ćete što vas zanima.</p></html>"
+"ćete što vas zanima.</html>"
 
 #: kaboutkdedialog_p.cpp:108
 #, kde-format
@@ -155,17 +155,17 @@ msgid ""
 "described at <a href=\"%2\">%2</a>.<br /><br />Thank you very much in "
 "advance for your support.</html>"
 msgstr ""
-"<html><p>Softver KDE‑a je dostupan besplatno, i to će uvek biti tako, ali se "
-"u njegovo stvaranje ulažu sredstva.</p><p>Radi podrške razvoju, zajednica "
-"KDE‑a je oformila KDE e.V., neprofitnu organizaciju sa sjedištem u "
+"<html>Softver KDE‑a je dostupan besplatno, i to će uvijek biti tako, ali se "
+"u njegovo stvaranje ulažu sredstva.<br /><br />Radi podrške razvoju, "
+"zajednica KDE‑a je oformila KDE e.V., neprofitnu organizaciju sa sjedištem u "
 "Njemačkoj. KDE e.V. predstavlja zajednicu KDE‑a u pravnim i finansijskim "
-"pitanjima. Pogledajte <a href=\"%1\">%1</a> za informacije o KDE‑u e.V..</"
-"p><p>KDE‑u znače raznovrsni vidovi podrške, uključujući i finansijsku. "
+"pitanjima. Pogledajte <a href=\"%1\">%1</a> za informacije o KDE‑u e.V..<br /"
+"><br />KDE‑u znače raznovrsni vidovi podrške, uključujući i finansijsku. "
 "Novčanim sredstvima pokrivamo izdatke nastale tokom doprinošenja, članovima "
 "i drugima. Sredstva se takođe koriste za zakonsku zaštitu i organizovanje "
-"konferencija i susreta.</p><p>Želimo da vas podstaknemo da podržite KDE "
-"novčanom donacijom, na jedan od načina opisanih na <a href=\"%2\">%2</a>.</"
-"p><p>Unaprijed vam se zahvaljujemo na podršci.</p></html>"
+"konferencija i susreta.<br /><br />Želimo da vas podstaknemo da podržite KDE "
+"novčanom donacijom, na jedan od načina opisanih na <a href=\"%2\">%2</a>."
+"<br /><br />Unaprijed vam se zahvaljujemo na podršci.</html>"
 
 #: kaboutkdedialog_p.cpp:128
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "Snap"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr "Apimidž"
+msgstr "AppImage"
 
 #: kabstractaboutdialog_p.cpp:145
 #, kde-format
@@ -270,7 +270,7 @@ msgstr "Osnovna platforma."
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit component's homepage"
-msgstr "Posjetite domaću stranicu komponente"
+msgstr "Posjeti domaću stranicu komponente"
 
 #: kabstractaboutdialog_p.cpp:177
 #, kde-format
@@ -279,7 +279,7 @@ msgid ""
 "Visit components's homepage\n"
 "%1"
 msgstr ""
-"Posjetite domaću stranicu komponente\n"
+"Posjeti domaću stranicu komponente\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:199
@@ -292,7 +292,7 @@ msgstr "Kopiraj u klipbord"
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Posjetite domaću stranicu autora"
+msgstr "Posjeti domaću stranicu autora"
 
 #: kabstractaboutdialog_p.cpp:260
 #, kde-format
@@ -301,20 +301,20 @@ msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Posjetite domaću stranicu autora\n"
+"Posjeti domaću stranicu autora\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
 #, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "Pišite doprinosiocu e‑poštom"
+msgstr "Pošalji e‑poštu doprinosiocu"
 
 #: kabstractaboutdialog_p.cpp:275
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr "Pišite doprinosiocu e‑poštom: %1"
+msgstr "Pošalji e‑poštu doprinosiocu: %1"
 
 #: kabstractaboutdialog_p.cpp:314
 #, kde-format
@@ -339,9 +339,10 @@ msgid ""
 "from the 'Settings' menu to solve the ambiguity.\n"
 "No action will be triggered."
 msgstr ""
-"<html><p>Dvosmislena kombinacija tastera <b>%1</b>.</p><p>Upotrijebite "
-"<i>Podešavanje prečica sa tastature</i> iz menija <i>Podešavanje</i> da je "
-"razriješite, a dotle neće okidati nijednu radnju.</p></html>"
+"Dvosmislena kombinacija tastera „%1“. Upotrijebite „Podešavanje prečica sa "
+"tastature“\n"
+"iz menija „Podešavanje“ da je razriješite.\n"
+"Nijedna radnja neće biti okinuta."
 
 #: kactionconflictdetector_p.h:41
 #, kde-format
@@ -353,7 +354,7 @@ msgstr "Otkrivena dvosmislena prečica"
 #, kde-format
 msgctxt "@title:window"
 msgid "Submit Bug Report"
-msgstr "Pošalji izvještaj o grešci"
+msgstr "Slanje izvještaja o grešci"
 
 #: kbugreport.cpp:90
 #, kde-format
@@ -367,7 +368,7 @@ msgid ""
 "please use the Report Bug menu item of the correct application"
 msgstr ""
 "<html>Program za koji želite da prijavite grešku — ako nije ovaj, "
-"upotrijebite stavku <i>Prijavi grešku...</i> u meniju pomoći tog programa.</"
+"upotrijebite stavku <i>Prijavi grešku...</i> u meniju pomoći tog programa</"
 "html>"
 
 #: kbugreport.cpp:103
@@ -382,7 +383,7 @@ msgid ""
 "available before sending a bug report"
 msgstr ""
 "Izdanje ovog programa — provjerite da li postoji novije prije nego što "
-"pošaljete izvještaj o grešci."
+"pošaljete izvještaj o grešci"
 
 #: kbugreport.cpp:114
 #, kde-format
@@ -534,7 +535,7 @@ msgid ""
 "default? The changes will be applied immediately."
 msgstr ""
 "Želite li zaista da vratite sve trake alatki u ovom programu na "
-"podrazumijevano? Promjene će odmah biti primijenjene."
+"podrazumijevano? Izmjene će odmah biti primijenjene."
 
 # >> @title:window
 #: kedittoolbar.cpp:685
@@ -579,14 +580,14 @@ msgstr "T&renutne radnje:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change &Icon…"
-msgstr "Promjena &ikonice…"
+msgstr "Promijeni &ikonicu…"
 
 # >> @title:window
 #: kedittoolbar.cpp:1081
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Te&xt…"
-msgstr "Promjena t&eksta…"
+msgstr "Promijeni t&ekst…"
 
 #: kedittoolbar.cpp:1223
 #, kde-format
@@ -731,8 +732,8 @@ msgid ""
 "<qt>The '%1' key combination is already used by the <b>%2</b> action."
 "<br>Please select a different one.</qt>"
 msgstr ""
-"<qt>Kombinaciju tastera <b>%1</b> već koristi radnja <b>%2</b>.<br/"
-">Izaberite drugu kombinaciju.</qt>"
+"<qt>Kombinaciju tastera „%1“ već koristi radnja <b>%2</b>.<br/>Izaberite "
+"drugu kombinaciju.</qt>"
 
 #: kkeysequencewidget.cpp:276
 #, kde-format
@@ -799,7 +800,7 @@ msgstr ""
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr "unesite..."
+msgstr "unesite"
 
 #: kkeysequencewidget.cpp:398 kshortcuteditwidget.cpp:54
 #, kde-format
@@ -875,7 +876,7 @@ msgstr "Obriši"
 #, kde-format
 msgctxt "@action:button"
 msgid "More Actions"
-msgstr "Još radnji"
+msgstr "Više radnji"
 
 #: kshortcutschemeseditor.cpp:58
 #, kde-format
@@ -948,7 +949,7 @@ msgstr "Uvoz prečica"
 #: kshortcutschemeseditor.cpp:213
 #, kde-format
 msgid "Shortcut scheme successfully saved."
-msgstr "Šema prečica uspešno sačuvana."
+msgstr "Šema prečica uspješno sačuvana."
 
 #: kshortcutschemeseditor.cpp:216
 #, kde-format
@@ -1113,7 +1114,7 @@ msgstr "Izaberite jezik koji želite da koristite za ovaj program:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Fallback Language"
-msgstr "Dodaj rezervni jezik"
+msgstr "Dodaj pozadinski jezik"
 
 #: kswitchlanguagedialog_p.cpp:170
 #, kde-format
@@ -1131,7 +1132,7 @@ msgid ""
 "The language for this application has been changed. The change will take "
 "effect the next time the application is started."
 msgstr ""
-"Jezik ovog programa je izmijenjen. Promjena će se iskazati po sljedećem "
+"Jezik ovog programa je izmijenjen. Promjena će se iskazati pri sljedećem "
 "pokretanju programa."
 
 #: kswitchlanguagedialog_p.cpp:263
@@ -1153,7 +1154,7 @@ msgstr "Glavni jezik:"
 #: kswitchlanguagedialog_p.cpp:369
 #, kde-format
 msgid "Fallback language:"
-msgstr "Rezervni jezik:"
+msgstr "Pozadinski jezik:"
 
 #: kswitchlanguagedialog_p.cpp:384
 #, kde-format
@@ -1339,18 +1340,13 @@ msgid "Find Action…"
 msgstr "Nađi radnju…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
-"Postoje dve radnje (%1, %2) kojima je dodeljena ista prečica (%3). Ovo je "
-"verovatno greška. Prijavite na <a href='https://bugs.kde.org'>bugs.kde.org</"
-"a>."
+"Postoje dvije radnje (%1, %2) kojima je dodijeljena ista prečica (%3). Ovo "
+"je vjerovatno greška. Prijavite na <a href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
