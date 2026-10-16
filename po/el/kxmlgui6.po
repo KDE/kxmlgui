@@ -32,10 +32,10 @@ msgstr ""
 "X-Generator: Lokalize 20.04.2\n"
 
 #: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "Σχετικά με το %1"
+msgstr "Σχετικά με %1"
 
 #: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "Σχετικά με το KDE"
 #, fuzzy, kde-format
 #| msgid "<html><font size=\"5\">%1</font><br />Version %2</html>"
 msgid "<html><font size=\"5\">KDE</font><br />Be Free!</html>"
-msgstr "<html><font size=\"5\">%1</font><br />Έκδοση %2</html>"
+msgstr "<html><font size=\"5\">KDE</font><br />Και ελεύθεροι!</html>"
 
 #: kaboutkdedialog_p.cpp:45
 #, kde-format
@@ -149,7 +149,7 @@ msgid ""
 "what you need.</html>"
 msgstr ""
 "<html>Δε χρειάζεται να είστε προγραμματιστής για να γίνετε μέλος της ομάδας "
-"του KDE. Μπορείτε να μπείτε στις εθνικές ομάδες που μεταφράζουν τα "
+"του KDE. Μπορείτε να μπείτε στις ομάδες γλωσσών που μεταφράζουν τα "
 "περιβάλλοντα των προγραμμάτων. Μπορείτε να προσφέρετε γραφικά, θέματα, ήχους "
 "και βελτιωμένη τεκμηρίωση. Εσείς αποφασίζετε!<br /><br /> Επισκεφθείτε το <a "
 "href=\"%1\">%1</a> για πληροφορίες σχετικά με κάποια έργα στα οποία μπορείτε "
@@ -192,16 +192,16 @@ msgid "&About"
 msgstr "Σ&χετικά"
 
 #: kaboutkdedialog_p.cpp:129
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:tab"
 msgid "&Report Bugs or Wishes"
-msgstr "Αναφο&ρά σφαλμάτων ή επιθυμιών"
+msgstr "Αναφο&ρά Σφαλμάτων ή Επιθυμιών"
 
 #: kaboutkdedialog_p.cpp:130
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:tab"
 msgid "&Join KDE"
-msgstr "Συ&μμετοχή στην ομάδα του KDE"
+msgstr "Συ&μμετοχή στο KDE"
 
 #: kaboutkdedialog_p.cpp:131
 #, kde-format
@@ -232,10 +232,12 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: kabstractaboutdialog_p.cpp:124
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
+"Συλλογή βιβλιοθηκών δημιουργημένες από την κοινότητα του KDE για να "
+"επεκτείνουν το Qt."
 
 #: kabstractaboutdialog_p.cpp:128
 #, kde-format
@@ -243,28 +245,28 @@ msgid "Qt"
 msgstr "Qt"
 
 #: kabstractaboutdialog_p.cpp:129
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Εργαλείο ανάπτυξης εφαρμογών ανεξαρτήτου πλατφόρμας."
 
 #: kabstractaboutdialog_p.cpp:130
 #, fuzzy, kde-format
 #| msgid "%1 (built against %2)"
 msgid "Using %1 and built against %2"
-msgstr "%1 (κατασκευάστηκε για το %2)"
+msgstr "Χρησιμοποιεί %1 και κατασκευάστηκε με %2"
 
 #: kabstractaboutdialog_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: kabstractaboutdialog_p.cpp:139
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: kabstractaboutdialog_p.cpp:142
 #, fuzzy, kde-format
@@ -272,19 +274,19 @@ msgstr ""
 #| msgid "Images"
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr "Εικόνες"
+msgstr "AppImage"
 
 #: kabstractaboutdialog_p.cpp:145
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Μέθοδος διανομής."
 
 #: kabstractaboutdialog_p.cpp:148
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Υποκείμενη πλατφόρμα."
 
 #: kabstractaboutdialog_p.cpp:176
 #, kde-format
@@ -307,14 +309,14 @@ msgstr ""
 #| msgid "Copy selection to clipboard"
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Αντιγραφή επιλογής στο πρόχειρο"
+msgstr "Αντιγραφή στο Πρόχειρο"
 
 #: kabstractaboutdialog_p.cpp:259
 #, fuzzy, kde-format
 #| msgid "Visit contributor's homepage"
 msgctxt "@action:button"
 msgid "Visit author's homepage"
-msgstr "Επισκεφθείτε την ιστοσελίδα του συντελεστή"
+msgstr "Επισκεφθείτε την ιστοσελίδα του δημιουργού"
 
 #: kabstractaboutdialog_p.cpp:260
 #, fuzzy, kde-format
@@ -327,28 +329,30 @@ msgid ""
 "Visit author's homepage\n"
 "%1"
 msgstr ""
-"Επισκεφθείτε την ιστοσελίδα του συντελεστή\n"
+"Επισκεφθείτε την ιστοσελίδα του δημιουργού\n"
 "%1"
 
 #: kabstractaboutdialog_p.cpp:274
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button Send an email to a contributor"
 msgid "Email contributor"
-msgstr "Αποστολή αλληλογραφίας στον συνεισφέροντα"
+msgstr "Αποστολή email στον συνεισφέροντα"
 
 #: kabstractaboutdialog_p.cpp:275
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Email contributor: %1"
-msgstr "Στείλτε μήνυμα σε συντελεστή: %1"
+msgstr "Αποστολή email στον συνεισφέροντα: %1"
 
 #: kabstractaboutdialog_p.cpp:314
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Reference to website"
 msgid ""
 "Please use %1 to report bugs.<br/>If you have questions or need help, please "
 "visit %2.<br/>"
 msgstr ""
+"Παρακαλούμε χρησιμοποιήστε το %1 για αναφορά σφαλμάτων.<br/>Αν έχετε "
+"ερωτήσεις ή θέλετε βοήθεια επισκεφθείτε το %2.<br/>"
 
 #: kabstractaboutdialog_p.cpp:324
 #, kde-format
@@ -424,12 +428,12 @@ msgstr "δεν υπάρχει έκδοση (σφάλμα του προγραμμ
 #| msgid "KDE Frameworks"
 msgctxt "%1 is the program version, %2 is the kde framework version"
 msgid "%1 with KDE Frameworks %2"
-msgstr "KDE Frameworks"
+msgstr "%1 με KDE Frameworks %2"
 
 #: kbugreport.cpp:131
-#, kde-format
+#, fuzzy, kde-format
 msgid "OS:"
-msgstr "Λειτουργικό σύστημα:"
+msgstr "ΛΣ:"
 
 #: kbugreport.cpp:136
 #, kde-format
@@ -616,9 +620,9 @@ msgid "--- separator ---"
 msgstr "--- διαχωριστικό ---"
 
 #: kedittoolbar.cpp:1224
-#, kde-format
+#, fuzzy, kde-format
 msgid "--- expanding spacer ---"
-msgstr "--- εκτεταμένο κενό ---"
+msgstr "--- επεκτεινόμενο κενό ---"
 
 #: kedittoolbar.cpp:1246
 #, kde-format
@@ -635,14 +639,14 @@ msgstr ""
 "συστατικού."
 
 #: kedittoolbar.cpp:1276
-#, kde-format
+#, fuzzy, kde-format
 msgid "<Merge>"
-msgstr "<Μίξη>"
+msgstr "<Merge>"
 
 #: kedittoolbar.cpp:1278
-#, kde-format
+#, fuzzy, kde-format
 msgid "<Merge %1>"
-msgstr "<Μίξη %1>"
+msgstr "<Merge %1>"
 
 #: kedittoolbar.cpp:1288
 #, kde-format
@@ -820,22 +824,24 @@ msgid "None"
 msgstr "Καμία"
 
 #: klicensedialog_p.cpp:33
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "License Agreement"
-msgstr "Άδεια χρήσης"
+msgstr "Συμφωνητικό Άδειας χρήσης"
 
 #: kmainwindow.cpp:257
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Πέτρος Βιδάλης"
+msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Πέτρος Βιδάλης, Λευτέρης Τ."
 
 #: kmainwindow.cpp:258
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org, p_vidalis@hotmail.com"
+msgstr ""
+"sng@hellug.gr, manolis@koppermind.homelinux.org, p_vidalis@hotmail.com, "
+"tripoleft@protonmail.com"
 
 #: kmenumenuhandler_p.cpp:37
 #, kde-format
@@ -872,10 +878,10 @@ msgid "Current scheme:"
 msgstr "Τρέχον θέμα:"
 
 #: kshortcutschemeseditor.cpp:47
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "New…"
-msgstr ""
+msgstr "Νέο…"
 
 #: kshortcutschemeseditor.cpp:50
 #, kde-format
@@ -1337,7 +1343,7 @@ msgstr "Χωρίς κείμενο"
 #, fuzzy, kde-format
 #| msgid "Action"
 msgid "Find Action…"
-msgstr "Ενέργεια"
+msgstr "Εύρεση Ενέργειας..."
 
 #: kxmlguiwindow.cpp:572
 #, fuzzy, kde-format
@@ -1351,7 +1357,7 @@ msgid ""
 msgstr ""
 "Υπάρχουν δύο ενέργειες (%1, %2) που θέλουν να χρησιμοποιήσουν την ίδια "
 "συντόμευση (%3). Είναι σχεδόν σίγουρο ότι πρόκειται για σφάλμα. Μπορείτε να "
-"το αναφέρετε στο <a href='https://bugs.kde.org'>bugs.kde.org</a>"
+"το αναφέρετε στο <a href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
