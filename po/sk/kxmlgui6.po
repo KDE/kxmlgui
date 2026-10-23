@@ -1313,18 +1313,14 @@ msgid "Find Action…"
 msgstr "Nájsť akciu..."
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Existujú dve akcie (%1, %2), ktoré chcú používať tú istú skratku (%3). S "
-"najväčšou pravdepodobnosťou sa jedná o chybu. Nahláste ju, prosím, na <a "
-"href='https://bugs.kde.org'>bugs.kde.org</a>"
+"najväčšou pravdepodobnosťou ide o chybu. Nahláste ju, prosím, na <a href="
+"\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
