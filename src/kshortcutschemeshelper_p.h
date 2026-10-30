@@ -11,7 +11,6 @@
 #include <QString>
 
 class KActionCollection;
-class KXMLGUIClient;
 
 class KShortcutSchemesHelper
 {
