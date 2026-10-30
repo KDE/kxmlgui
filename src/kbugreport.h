@@ -54,14 +54,6 @@ public:
      */
     void accept() override;
 
-protected:
-    /*!
-     * \brief Attempt to e-mail the bug report.
-     *
-     * Returns true on success.
-     */
-    bool sendBugReport();
-
 private:
     friend class KBugReportPrivate;
     std::unique_ptr<KBugReportPrivate> const d;
