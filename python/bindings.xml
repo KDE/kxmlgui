@@ -14,9 +14,7 @@ SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accept
     </object-type>
     <object-type name="KActionCategory" />
     <object-type name="KActionCollection" />
-    <object-type name="KBugReport">
-        <modify-function signature="sendBugReport()" remove="all" />
-    </object-type>
+    <object-type name="KBugReport" />
     <object-type name="KEditToolBar" />
     <object-type name="KHelpMenu">
         <enum-type name="MenuId" />
