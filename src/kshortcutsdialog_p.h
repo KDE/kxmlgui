@@ -313,7 +313,6 @@ public:
     explicit KShortcutsEditorPrivate(KShortcutsEditor *qq);
 
     void initGUI(KShortcutsEditor::ActionTypes actionTypes, KShortcutsEditor::LetterShortcuts allowLetterShortcuts);
-    void appendToView(uint nList, const QString &title = QString());
     // used in appendToView
     QTreeWidgetItem *findOrMakeItem(QTreeWidgetItem *parent, const QString &name);
 
