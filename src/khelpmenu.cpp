@@ -24,6 +24,7 @@
 
 #include "kaboutapplicationdialog.h"
 #include "kaboutkdedialog_p.h"
+#include "kabstractaboutdialog_p.h"
 #include "kbugreport.h"
 #include "kswitchlanguagedialog_p.h"
 
@@ -150,6 +151,10 @@ void KHelpMenuPrivate::createActions(KHelpMenu *q, bool showWhatsThis)
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_app"))) {
         mAboutAppAction = KStandardActions::aboutApp(q, &KHelpMenu::aboutApplication, q);
+        // KStandardActions is in KConfig and cannot depend on KAboutData from KCoreAddons.
+        if (mAboutData) {
+            mAboutAppAction->setIcon(KAbstractAboutDialogPrivate::applicationIcon(*mAboutData));
+        }
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("help_about_kde"))) {

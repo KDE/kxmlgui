@@ -14,6 +14,8 @@ class QDialog;
 class QWidget;
 class QIcon;
 
+class KAboutData;
+
 /*!
  * \internal
  *
@@ -42,6 +44,8 @@ public:
     QWidget *createCreditWidget(const QList<KAboutPerson> &credits, QWidget *parent);
     QWidget *createTranslatorsWidget(const QList<KAboutPerson> &translators, QWidget *parent);
     void createForm(QWidget *titleWidget, QWidget *tabWidget, QDialog *dialog);
+
+    static QIcon applicationIcon(const KAboutData &aboutData);
 };
 
 #endif

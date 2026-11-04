@@ -60,16 +60,7 @@ void KAboutApplicationDialogPrivate::init(KAboutApplicationDialog::Options opt)
     q->setWindowTitle(i18nc("@title:window", "About %1", aboutData.displayName()));
 
     // Set up the title widget...
-    QIcon titleIcon;
-    if (aboutData.programLogo().canConvert<QPixmap>()) {
-        titleIcon = QIcon(aboutData.programLogo().value<QPixmap>());
-    } else if (aboutData.programLogo().canConvert<QImage>()) {
-        titleIcon = QIcon(QPixmap::fromImage(aboutData.programLogo().value<QImage>()));
-    } else if (aboutData.programLogo().canConvert<QIcon>()) {
-        titleIcon = aboutData.programLogo().value<QIcon>();
-    } else {
-        titleIcon = qApp->windowIcon();
-    }
+    const QIcon titleIcon = applicationIcon(aboutData);
 
     QWidget *titleWidget = createTitleWidget(titleIcon, aboutData.displayName(), aboutData.version(), q);
 
