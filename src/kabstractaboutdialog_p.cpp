@@ -385,3 +385,16 @@ void KAbstractAboutDialogPrivate::createForm(QWidget *titleWidget, QWidget *tabW
     mainLayout->addWidget(tabWidget);
     mainLayout->addWidget(buttonBox);
 }
+
+QIcon KAbstractAboutDialogPrivate::applicationIcon(const KAboutData &aboutData)
+{
+    if (aboutData.programLogo().canConvert<QPixmap>()) {
+        return QIcon(aboutData.programLogo().value<QPixmap>());
+    } else if (aboutData.programLogo().canConvert<QImage>()) {
+        return QIcon(QPixmap::fromImage(aboutData.programLogo().value<QImage>()));
+    } else if (aboutData.programLogo().canConvert<QIcon>()) {
+        return aboutData.programLogo().value<QIcon>();
+    } else {
+        return qApp->windowIcon();
+    }
+}
