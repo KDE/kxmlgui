@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-04 00:59+0000\n"
-"PO-Revision-Date: 2026-09-05 11:10+0300\n"
+"PO-Revision-Date: 2026-10-06 15:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -1315,18 +1315,13 @@ msgid "Find Action…"
 msgstr "Etsi toiminto…"
 
 #: kxmlguiwindow.cpp:572
-#, fuzzy, kde-format
-#| msgid ""
-#| "There are two actions (%1, %2) that want to use the same shortcut (%3). "
-#| "This is most probably a bug. Please report it in <a href='https://bugs."
-#| "kde.org'>bugs.kde.org</a>"
+#, kde-format
 msgid ""
 "There are two actions (%1, %2) that want to use the same shortcut (%3). This "
 "is most probably a bug. Please report it in <a href=\"%4\">%4</a>"
 msgstr ""
 "Kaksi eri toimintoa (%1, %2) haluaa käyttää samaa pikanäppäintä (%3). Tämä "
-"on luultavasti ohjelmavirhe. Ilmoita siitä sivulla <a href='https://bugs.kde."
-"org/'>bugs.kde.org</a>"
+"on luultavasti ohjelmavirhe. Ilmoita siitä sivulla <a href=\"%4\">%4</a>"
 
 #: kxmlguiwindow.cpp:578
 #, kde-format
