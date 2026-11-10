@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:53+0000\n"
+"POT-Creation-Date: 2026-11-10 00:54+0000\n"
 "PO-Revision-Date: 2024-03-15 01:19+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -23,19 +23,19 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "Tocante a %1"
 
-#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
+#: kaboutapplicationdialog.cpp:79 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr ""
 
-#: kaboutapplicationdialog.cpp:94
+#: kaboutapplicationdialog.cpp:85
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "Componentes"
 
-#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
+#: kaboutapplicationdialog.cpp:95 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -43,13 +43,13 @@ msgid_plural "Authors"
 msgstr[0] "Autoría"
 msgstr[1] "Autoría"
 
-#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:102 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "Agradecimientu"
 
-#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
+#: kaboutapplicationdialog.cpp:109 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -605,7 +605,7 @@ msgid "Change Icon"
 msgstr ""
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:167 ui_standards.rc:179
+#: khelpmenu.cpp:172 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Ayuda"

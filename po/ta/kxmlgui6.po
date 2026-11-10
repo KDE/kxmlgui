@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:53+0000\n"
+"POT-Creation-Date: 2026-11-10 00:54+0000\n"
 "PO-Revision-Date: 2025-09-07 18:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -26,19 +26,19 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "%1 பற்றி "
 
-#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
+#: kaboutapplicationdialog.cpp:79 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "இதனை பற்றி"
 
-#: kaboutapplicationdialog.cpp:94
+#: kaboutapplicationdialog.cpp:85
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "கூறுகள்"
 
-#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
+#: kaboutapplicationdialog.cpp:95 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -46,13 +46,13 @@ msgid_plural "Authors"
 msgstr[0] "இயற்றியவர்"
 msgstr[1] "இயற்றியவர்கள்"
 
-#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:102 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "இவர்களுக்கு நன்றி"
 
-#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
+#: kaboutapplicationdialog.cpp:109 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -629,7 +629,7 @@ msgid "Change Icon"
 msgstr "சின்னத்தை மாற்று"
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:167 ui_standards.rc:179
+#: khelpmenu.cpp:172 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&உதவி"

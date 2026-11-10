@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:53+0000\n"
+"POT-Creation-Date: 2026-11-10 00:54+0000\n"
 "PO-Revision-Date: 2022-07-11 09:10+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -26,32 +26,32 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "Về %1"
 
-#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
+#: kaboutapplicationdialog.cpp:79 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "Thông tin"
 
-#: kaboutapplicationdialog.cpp:94
+#: kaboutapplicationdialog.cpp:85
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "Thành phần"
 
-#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
+#: kaboutapplicationdialog.cpp:95 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Tác giả"
 
-#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:102 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "Cảm ơn"
 
-#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
+#: kaboutapplicationdialog.cpp:109 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -661,7 +661,7 @@ msgid "Change Icon"
 msgstr "Đổi biểu tượng"
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:167 ui_standards.rc:179
+#: khelpmenu.cpp:172 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "Trợ &giúp"

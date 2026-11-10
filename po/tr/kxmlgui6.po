@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:53+0000\n"
+"POT-Creation-Date: 2026-11-10 00:54+0000\n"
 "PO-Revision-Date: 2026-09-23 09:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -36,19 +36,19 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "%1 Hakkında"
 
-#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
+#: kaboutapplicationdialog.cpp:79 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "Hakkında"
 
-#: kaboutapplicationdialog.cpp:94
+#: kaboutapplicationdialog.cpp:85
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "Bileşenler"
 
-#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
+#: kaboutapplicationdialog.cpp:95 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -56,13 +56,13 @@ msgid_plural "Authors"
 msgstr[0] "Yazar"
 msgstr[1] "Yazarlar"
 
-#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:102 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "Teşekkürler"
 
-#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
+#: kaboutapplicationdialog.cpp:109 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -646,7 +646,7 @@ msgid "Change Icon"
 msgstr "Simgeyi Değiştir"
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:167 ui_standards.rc:179
+#: khelpmenu.cpp:172 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "&Yardım"

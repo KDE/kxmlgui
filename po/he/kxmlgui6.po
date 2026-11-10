@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxmlgui6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:53+0000\n"
+"POT-Creation-Date: 2026-11-10 00:54+0000\n"
 "PO-Revision-Date: 2026-09-27 09:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -41,19 +41,19 @@ msgctxt "@title:window"
 msgid "About %1"
 msgstr "על %1"
 
-#: kaboutapplicationdialog.cpp:88 kaboutplugindialog.cpp:84
+#: kaboutapplicationdialog.cpp:79 kaboutplugindialog.cpp:84
 #, kde-format
 msgctxt "@title:tab"
 msgid "About"
 msgstr "על אודות"
 
-#: kaboutapplicationdialog.cpp:94
+#: kaboutapplicationdialog.cpp:85
 #, kde-format
 msgctxt "@title:tab"
 msgid "Components"
 msgstr "רכיבים"
 
-#: kaboutapplicationdialog.cpp:104 kaboutplugindialog.cpp:92
+#: kaboutapplicationdialog.cpp:95 kaboutplugindialog.cpp:92
 #, kde-format
 msgctxt "@title:tab"
 msgid "Author"
@@ -63,13 +63,13 @@ msgstr[1] "יוצרים"
 msgstr[2] "יוצרים"
 msgstr[3] "יוצרים"
 
-#: kaboutapplicationdialog.cpp:111 kaboutplugindialog.cpp:99
+#: kaboutapplicationdialog.cpp:102 kaboutplugindialog.cpp:99
 #, kde-format
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "תודות"
 
-#: kaboutapplicationdialog.cpp:118 kaboutplugindialog.cpp:105
+#: kaboutapplicationdialog.cpp:109 kaboutplugindialog.cpp:105
 #, kde-format
 msgctxt "@title:tab"
 msgid "Translation"
@@ -634,7 +634,7 @@ msgid "Change Icon"
 msgstr "שינוי סמל"
 
 #. i18n: ectx: Menu (help)
-#: khelpmenu.cpp:167 ui_standards.rc:179
+#: khelpmenu.cpp:172 ui_standards.rc:179
 #, kde-format
 msgid "&Help"
 msgstr "ע&זרה"
