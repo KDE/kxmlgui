@@ -283,12 +283,9 @@ bool ContainerNode::destruct(
     unplugActions(state);
 
     // remove all merging indices the client defined
-    QMutableListIterator<MergingIndex> cmIt = mergingIndices;
-    while (cmIt.hasNext()) {
-        if (cmIt.next().clientName == state.clientName) {
-            cmIt.remove();
-        }
-    }
+    mergingIndices.removeIf([&state](const MergingIndex &index) {
+        return index.clientName == state.clientName;
+    });
 
     // ### check for merging index count, too?
     if (clients.isEmpty() && children.isEmpty() && container && client == state.guiClient) {
@@ -313,16 +310,17 @@ bool ContainerNode::destruct(
 
 void ContainerNode::destructChildren(const QDomElement &element, BuildState &state)
 {
-    QMutableListIterator<ContainerNode *> childIt = children;
-    while (childIt.hasNext()) {
-        ContainerNode *childNode = childIt.next();
+    for (auto childIt = children.begin(); childIt != children.end();) {
+        ContainerNode *childNode = *childIt;
 
         QDomElement childElement = findElementForChild(element, childNode);
 
         // destruct returns true in case the container really got deleted
         if (childNode->destruct(childElement, state)) {
             deleteChild(childNode);
-            childIt.remove();
+            childIt = children.erase(childIt);
+        } else {
+            ++childIt;
         }
     }
 }
